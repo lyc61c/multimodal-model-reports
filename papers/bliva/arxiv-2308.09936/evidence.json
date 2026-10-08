@@ -1,0 +1,14 @@
+{
+  "source_version": "2308.09936v1",
+  "source_url": "https://arxiv.org/pdf/2308.09936v1",
+  "read_scope": "PDF pages 1–11, including Appendix",
+  "facts": [
+    {"claim": "Q-Former and direct patch projection jointly feed frozen LLM", "location": "Figure 2 and Architecture Overview, PDF page 3"},
+    {"claim": "558K caption pairs, 3 epochs/batch 64; instruction batch 24/max 200K steps", "location": "Appendix Implementation Details, PDF page 10"},
+    {"claim": "OCR-free OCR-VQA 47.62 to 65.38; OCR-VQA is not zero-shot", "location": "Table 1 caption, PDF page 5"},
+    {"claim": "Local retrained baseline OCR-VQA 65.8 exceeds full BLIVA 65.38", "location": "Table 4, PDF page 7"},
+    {"claim": "TextVQA Table 2 uses OCR tokens, unlike Table 1", "location": "Table 2 caption, PDF page 6"},
+    {"claim": "YTTB-VQA 100 pairs/13 categories, 92 versus 89 accuracy", "location": "Thumbnails Dataset, PDF page 4; Table 6, PDF page 7"}
+  ],
+  "math": "No original numbered new equations; architecture, CE loss, candidate likelihood and quadratic attention cost explicitly marked as explanatory standard formulations."
+}

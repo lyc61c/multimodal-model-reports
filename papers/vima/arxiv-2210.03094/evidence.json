@@ -1,0 +1,17 @@
+{
+  "paper_id": "0c005b277aba",
+  "source_url": "https://arxiv.org/pdf/2210.03094v1",
+  "source_version": "2210.03094v1",
+  "source_sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c",
+  "verification_notes": [
+    "Read v1 main sections1–5 and appendicesA/C/D/E pages22/33–40; rendered and inspected original Figures1–5 and Tables6/12/13.",
+    "VIMA is offline behavior cloning robot policy; action outputs not chatbot text and simulation only, no realrobot claim.",
+    "650K training trajectories13 metatasks50K each, four of17heldout; oracle privileged state not policy observation.",
+    "Model2M–200M counts control decoder only excluding pretrained T5; Table13 L1/2/3/4 values81.5/81.5/78.7/48.6 explicit.",
+    "Text frozen-language-model summary conflicts with Table1 and appendixE fine-tuning lasttwo T5layers; concrete configuration retained.",
+    "Actions twoSE2poses with independent heads and X50Y100rotation50bins; temporal autoregression not peractioncomponent autoregression or jointmotorcontrols.",
+    "L4 Table12 Tasks10 and13 zero even200M; average gains not every-task superiority; adapted baselines not original general capability rankings.",
+    "Object augmentation5percent one falsepositive object not robustness to all missing detections; T5Large negligibleL4 difference and simulation training pretrained asset costs disclosed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

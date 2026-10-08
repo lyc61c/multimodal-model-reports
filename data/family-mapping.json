@@ -1,0 +1,4032 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-08",
+  "scope": [
+    "Multimodal Instruction Tuning (& Latest Works)",
+    "Foundation Models"
+  ],
+  "grouping_policy": {
+    "group_by": "model_family",
+    "secondary_group_by": "organization",
+    "precedence": [
+      "exact_title_overrides",
+      "repo_overrides",
+      "title_rules",
+      "repository_model_name",
+      "singleton_title"
+    ],
+    "repository_key": "Lowercase owner/repo from Code GitHub URL; use canonical redirect aliases when available.",
+    "unknown_organization": "Use repo:<owner> as repository-maintainer label, not a confirmed legal manufacturer; use authors if no repo.",
+    "singleton": "Unknown or single-version works retain their own model/project family. Do not force all unknowns into one group.",
+    "official_lineage": "A model built on Qwen/Llama/LLaVA/Gemini is not automatically a release of that upstream family.",
+    "shared_repo": "A shared repository's stars are a repository-level signal, not per-model or per-paper stars.",
+    "taxonomy_limits": "Only official project names/explicit source evidence are mapped; does not audit all paper author affiliations.",
+    "item_kind": "Metadata for review. Do not independently delete surveys/datasets/tooling unless the main task's scope policy says so.",
+    "distinct_company_families": "Google Gemini/Gemma/PaLI/PaLM-E and Meta Llama/Chameleon/CM3Leon/Muse are separate model families, with the same company field."
+  },
+  "organizations": {
+    "alibaba_cloud": {
+      "name": "阿里云 Qwen 团队",
+      "kind": "company_team",
+      "repo_owners": [
+        "QwenLM"
+      ],
+      "evidence": [
+        "https://github.com/QwenLM/Qwen3-VL"
+      ]
+    },
+    "alibaba_ovis": {
+      "name": "阿里巴巴 Ovis 团队",
+      "kind": "company_team",
+      "repo_owners": [
+        "AIDC-AI",
+        "ATH-MaaS"
+      ],
+      "evidence": [
+        "https://github.com/ATH-MaaS/Ovis"
+      ]
+    },
+    "alibaba_mplug": {
+      "name": "阿里巴巴 mPLUG / X-PLUG / DAMO 研究团队",
+      "kind": "company_team",
+      "repo_owners": [
+        "X-PLUG",
+        "DAMO-NLP-SG"
+      ],
+      "evidence": [
+        "https://github.com/X-PLUG/mPLUG-Owl",
+        "https://github.com/DAMO-NLP-SG/VideoLLaMA3"
+      ]
+    },
+    "deepseek": {
+      "name": "DeepSeek（深度求索）",
+      "kind": "company",
+      "repo_owners": [
+        "deepseek-ai"
+      ],
+      "evidence": [
+        "https://github.com/deepseek-ai/DeepSeek-VL2"
+      ]
+    },
+    "openai": {
+      "name": "OpenAI",
+      "kind": "company",
+      "repo_owners": [],
+      "evidence": [
+        "https://openai.com/index/gpt-4-research/"
+      ]
+    },
+    "google": {
+      "name": "Google / Google DeepMind",
+      "kind": "company",
+      "repo_owners": [],
+      "evidence": [
+        "https://deepmind.google/technologies/gemini/"
+      ]
+    },
+    "meta": {
+      "name": "Meta",
+      "kind": "company",
+      "repo_owners": [
+        "facebookresearch"
+      ],
+      "evidence": [
+        "https://github.com/facebookresearch/chameleon",
+        "https://www.llama.com/"
+      ]
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "kind": "company",
+      "repo_owners": [],
+      "evidence": [
+        "https://www.anthropic.com/news/claude-3-family"
+      ]
+    },
+    "microsoft": {
+      "name": "Microsoft Research",
+      "kind": "company_team",
+      "repo_owners": [
+        "microsoft"
+      ],
+      "evidence": [
+        "https://github.com/microsoft/unilm"
+      ]
+    },
+    "mistral": {
+      "name": "Mistral AI",
+      "kind": "company",
+      "repo_owners": [],
+      "evidence": [
+        "https://mistral.ai/news/pixtral-12b"
+      ]
+    },
+    "moonshot": {
+      "name": "Moonshot AI（月之暗面）",
+      "kind": "company",
+      "repo_owners": [
+        "MoonshotAI"
+      ],
+      "evidence": [
+        "https://github.com/MoonshotAI/Kimi-VL"
+      ]
+    },
+    "xiaomi": {
+      "name": "小米 MiMo 团队",
+      "kind": "company_team",
+      "repo_owners": [
+        "XiaomiMiMo"
+      ],
+      "evidence": [
+        "https://github.com/XiaomiMiMo/MiMo-VL"
+      ]
+    },
+    "bytedance_seed": {
+      "name": "字节跳动 Seed",
+      "kind": "company_team",
+      "repo_owners": [
+        "bytedance-seed"
+      ],
+      "evidence": [
+        "https://github.com/ByteDance-Seed/Bagel"
+      ]
+    },
+    "bytedance": {
+      "name": "字节跳动研究团队",
+      "kind": "company_team",
+      "repo_owners": [
+        "bytedance"
+      ],
+      "evidence": [
+        "https://github.com/bytedance/SALMONN"
+      ]
+    },
+    "zhipu_glm": {
+      "name": "智谱 / Z.ai / THUDM 的 GLM 团队",
+      "kind": "company_and_academic_team",
+      "repo_owners": [
+        "zai-org",
+        "THUDM"
+      ],
+      "evidence": [
+        "https://github.com/zai-org/GLM-V"
+      ],
+      "notes": "THUDM 是仓库组织标识，历史论文作者机构可能不同；不把所有 THUDM 模型当成 GLM 的版本。"
+    },
+    "nvidia": {
+      "name": "NVIDIA",
+      "kind": "company",
+      "repo_owners": [
+        "NVlabs",
+        "nvidia"
+      ],
+      "evidence": [
+        "https://github.com/NVlabs/VILA",
+        "https://github.com/nvidia/cosmos"
+      ]
+    },
+    "apple": {
+      "name": "Apple",
+      "kind": "company",
+      "repo_owners": [
+        "apple",
+        "apple-aiml-research"
+      ],
+      "evidence": [
+        "https://github.com/apple-aiml-research/ml-ferret"
+      ]
+    },
+    "salesforce": {
+      "name": "Salesforce AI Research",
+      "kind": "company_team",
+      "repo_owners": [
+        "salesforce"
+      ],
+      "evidence": [
+        "https://github.com/salesforce/LAVIS"
+      ]
+    },
+    "baai": {
+      "name": "北京智源研究院（BAAI）",
+      "kind": "research_institute",
+      "repo_owners": [
+        "baaivision",
+        "BAAI-DCAI"
+      ],
+      "evidence": [
+        "https://github.com/baaivision/Emu3"
+      ]
+    },
+    "openbmb": {
+      "name": "OpenBMB / ModelBest（面壁智能）/ 清华 THUNLP",
+      "kind": "company_and_academic_team",
+      "repo_owners": [
+        "OpenBMB"
+      ],
+      "evidence": [
+        "https://github.com/OpenBMB/MiniCPM-V"
+      ],
+      "notes": "MiniCPM-V/o 官网仓库 Institutions 明列 THUNLP 和 ModelBest。VisCPM 是关联研究模型，单独保留家族。"
+    },
+    "opengvlab": {
+      "name": "OpenGVLab 研究团队",
+      "kind": "research_team",
+      "repo_owners": [
+        "OpenGVLab"
+      ],
+      "evidence": [
+        "https://github.com/OpenGVLab/InternVL"
+      ],
+      "notes": "仅标注明确的项目团队；不得仅凭 GitHub owner 断言所有合作机构。"
+    },
+    "internlm": {
+      "name": "InternLM-XComposer 研究团队",
+      "kind": "research_team",
+      "repo_owners": [
+        "InternLM"
+      ],
+      "evidence": [
+        "https://github.com/InternLM/InternLM-XComposer"
+      ]
+    },
+    "vita": {
+      "name": "VITA 联合研究团队 / 腾讯合作项目",
+      "kind": "research_collaboration",
+      "repo_owners": [
+        "VITA-MLLM",
+        "Tencent"
+      ],
+      "evidence": [
+        "https://github.com/VITA-MLLM/VITA",
+        "https://github.com/Tencent/VITA"
+      ],
+      "notes": "VITA-MLLM owner 下的 Sparrow、Omni-Diffusion 不因 owner 相同自动归入 VITA 模型家族；各论文合作机构以论文首页为准。"
+    },
+    "llava": {
+      "name": "LLaVA 官方研究团队",
+      "kind": "research_team",
+      "repo_owners": [
+        "haotian-liu",
+        "LLaVA-VL"
+      ],
+      "evidence": [
+        "https://github.com/haotian-liu/LLaVA",
+        "https://github.com/LLaVA-VL/LLaVA-NeXT"
+      ]
+    },
+    "evolvinglmms": {
+      "name": "EvolvingLMMs Lab / LLaVA-OneVision 研究团队",
+      "kind": "research_team",
+      "repo_owners": [
+        "EvolvingLMMs-Lab"
+      ],
+      "evidence": [
+        "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2"
+      ],
+      "notes": "只对明确 OneVision 条目归入 LLaVA 官方研究谱系；LongVA、MMSearch-R1 单独家族。"
+    },
+    "mbzuai": {
+      "name": "MBZUAI Oryx 研究团队",
+      "kind": "academic_team",
+      "repo_owners": [
+        "mbzuai-oryx"
+      ],
+      "evidence": [
+        "https://github.com/mbzuai-oryx/Video-ChatGPT"
+      ]
+    },
+    "vision_cair": {
+      "name": "Vision-CAIR 研究团队",
+      "kind": "academic_team",
+      "repo_owners": [
+        "Vision-CAIR"
+      ],
+      "evidence": [
+        "https://github.com/Vision-CAIR/MiniGPT-4"
+      ]
+    },
+    "pku_yuan": {
+      "name": "PKU-YuanGroup 研究团队",
+      "kind": "academic_team",
+      "repo_owners": [
+        "PKU-YuanGroup"
+      ],
+      "evidence": [
+        "https://github.com/PKU-YuanGroup/Video-LLaVA"
+      ]
+    },
+    "dvlab": {
+      "name": "DVLab 研究团队",
+      "kind": "academic_team",
+      "repo_owners": [
+        "dvlab-research"
+      ],
+      "evidence": [
+        "https://github.com/dvlab-research/MiniGemini"
+      ]
+    },
+    "stepfun": {
+      "name": "StepFun（阶跃星辰）",
+      "kind": "company",
+      "repo_owners": [
+        "stepfun-ai"
+      ],
+      "evidence": [
+        "https://github.com/stepfun-ai/Step3"
+      ]
+    },
+    "baichuan": {
+      "name": "百川智能",
+      "kind": "company",
+      "repo_owners": [
+        "baichuan-inc"
+      ],
+      "evidence": [
+        "https://github.com/baichuan-inc/Baichuan-Omni-1.5"
+      ]
+    },
+    "rednote": {
+      "name": "小红书 HiLab",
+      "kind": "company_team",
+      "repo_owners": [
+        "rednote-hilab"
+      ],
+      "evidence": [
+        "https://github.com/rednote-hilab/dots.vlm1"
+      ]
+    },
+    "skywork": {
+      "name": "Skywork / 昆仑万维研究团队",
+      "kind": "company_team",
+      "repo_owners": [
+        "SkyworkAI"
+      ],
+      "evidence": [
+        "https://github.com/SkyworkAI/Skywork-R1V"
+      ]
+    },
+    "meituan": {
+      "name": "美团 AutoML 团队",
+      "kind": "company_team",
+      "repo_owners": [
+        "Meituan-AutoML"
+      ],
+      "evidence": [
+        "https://github.com/Meituan-AutoML/MobileVLM"
+      ]
+    },
+    "sensetime": {
+      "name": "商汤 SenseTime-FVG 研究团队",
+      "kind": "company_team",
+      "repo_owners": [
+        "SenseTime-FVG"
+      ],
+      "evidence": [
+        "https://github.com/SenseTime-FVG/InteractiveOmni"
+      ]
+    },
+    "zeroone": {
+      "name": "01.AI（零一万物）",
+      "kind": "company",
+      "repo_owners": [
+        "01-ai"
+      ],
+      "evidence": [
+        "https://github.com/01-ai/Yi"
+      ]
+    },
+    "allenai": {
+      "name": "Allen Institute for AI（Ai2）",
+      "kind": "research_institute",
+      "repo_owners": [
+        "allenai"
+      ],
+      "evidence": [
+        "https://molmo.allenai.org/"
+      ]
+    },
+    "adept": {
+      "name": "Adept",
+      "kind": "company",
+      "repo_owners": [],
+      "evidence": [
+        "https://www.adept.ai/blog/fuyu-8b/"
+      ]
+    },
+    "physical_intelligence": {
+      "name": "Physical Intelligence",
+      "kind": "company",
+      "repo_owners": [],
+      "evidence": [
+        "https://www.pi.website/"
+      ]
+    },
+    "kakaobrain": {
+      "name": "Kakao Brain",
+      "kind": "company_team",
+      "repo_owners": [
+        "kakaobrain"
+      ],
+      "evidence": [
+        "https://github.com/kakaobrain/honeybee"
+      ]
+    },
+    "tri": {
+      "name": "Toyota Research Institute / Prismatic 研究团队",
+      "kind": "research_team",
+      "repo_owners": [
+        "TRI-ML"
+      ],
+      "evidence": [
+        "https://github.com/TRI-ML/prismatic-vlms"
+      ]
+    },
+    "thudm": {
+      "name": "清华 THUDM 研究团队",
+      "kind": "academic_team",
+      "repo_owners": [
+        "THUDM"
+      ],
+      "evidence": [
+        "https://github.com/THUDM/CogCoM"
+      ],
+      "notes": "仅以仓库组织标注研究团队；不把所有 THUDM 仓库视为智谱产品。"
+    },
+    "google_epfl": {
+      "name": "Google / EPFL 联合研究",
+      "kind": "research_collaboration",
+      "repo_owners": [],
+      "evidence": [
+        "https://arxiv.org/html/2404.07204v1"
+      ]
+    },
+    "meta_stanford": {
+      "name": "Meta GenAI / Stanford 联合研究",
+      "kind": "research_collaboration",
+      "repo_owners": [],
+      "evidence": [
+        "https://arxiv.org/html/2412.10360v1"
+      ]
+    },
+    "mcg_nju": {
+      "name": "MCG-NJU / VideoChat3 研究团队",
+      "kind": "research_team",
+      "repo_owners": [
+        "MCG-NJU"
+      ],
+      "evidence": [
+        "https://github.com/MCG-NJU/VideoChat3"
+      ]
+    }
+  },
+  "owner_to_organization": {
+    "qwenlm": "alibaba_cloud",
+    "aidc-ai": "alibaba_ovis",
+    "ath-maas": "alibaba_ovis",
+    "x-plug": "alibaba_mplug",
+    "damo-nlp-sg": "alibaba_mplug",
+    "deepseek-ai": "deepseek",
+    "facebookresearch": "meta",
+    "microsoft": "microsoft",
+    "moonshotai": "moonshot",
+    "xiaomimimo": "xiaomi",
+    "bytedance-seed": "bytedance_seed",
+    "bytedance": "bytedance",
+    "zai-org": "zhipu_glm",
+    "thudm": "thudm",
+    "nvlabs": "nvidia",
+    "nvidia": "nvidia",
+    "apple": "apple",
+    "apple-aiml-research": "apple",
+    "salesforce": "salesforce",
+    "baaivision": "baai",
+    "baai-dcai": "baai",
+    "openbmb": "openbmb",
+    "opengvlab": "opengvlab",
+    "internlm": "internlm",
+    "vita-mllm": "vita",
+    "tencent": "vita",
+    "haotian-liu": "llava",
+    "llava-vl": "llava",
+    "evolvinglmms-lab": "evolvinglmms",
+    "mbzuai-oryx": "mbzuai",
+    "vision-cair": "vision_cair",
+    "pku-yuangroup": "pku_yuan",
+    "dvlab-research": "dvlab",
+    "stepfun-ai": "stepfun",
+    "baichuan-inc": "baichuan",
+    "rednote-hilab": "rednote",
+    "skyworkai": "skywork",
+    "meituan-automl": "meituan",
+    "sensetime-fvg": "sensetime",
+    "01-ai": "zeroone",
+    "allenai": "allenai",
+    "kakaobrain": "kakaobrain",
+    "tri-ml": "tri"
+  },
+  "title_rules": [
+    {
+      "pattern": "^(Qwen|QVQ)(?:[0-9 .-]|:|$)",
+      "ignore_case": true,
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    {
+      "pattern": "^DeepSeek(?:[ -]|$)",
+      "ignore_case": true,
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek"
+    },
+    {
+      "pattern": "^(?:Introducing |Hello |Addendum to )?GPT-[0-9]",
+      "ignore_case": true,
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai"
+    },
+    {
+      "pattern": "^Gemini(?:[0-9 .:-]|$)|^Introducing Gemini ",
+      "ignore_case": true,
+      "family": "gemini",
+      "name": "Gemini",
+      "organization": "google"
+    },
+    {
+      "pattern": "^Gemma(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "gemma",
+      "name": "Gemma",
+      "organization": "google"
+    },
+    {
+      "pattern": "^(?:The )?Llama(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "llama",
+      "name": "Llama",
+      "organization": "meta"
+    },
+    {
+      "pattern": "^The Claude |^Claude(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "claude",
+      "name": "Claude",
+      "organization": "anthropic"
+    },
+    {
+      "pattern": "^Kimi(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "kimi",
+      "name": "Kimi",
+      "organization": "moonshot"
+    },
+    {
+      "pattern": "^(?:Xiaomi )?MiMo(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "mimo",
+      "name": "MiMo",
+      "organization": "xiaomi"
+    },
+    {
+      "pattern": "^Seed(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "seed",
+      "name": "Seed",
+      "organization": "bytedance_seed"
+    },
+    {
+      "pattern": "^(?:Visual)?GLM(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "glm",
+      "name": "GLM / VisualGLM",
+      "organization": "zhipu_glm"
+    },
+    {
+      "pattern": "^CogVLM(?:[0-9 .:-]|$)|^CogAgent(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "cogvlm",
+      "name": "CogVLM / CogAgent",
+      "organization": "zhipu_glm"
+    },
+    {
+      "pattern": "^InternVL(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab"
+    },
+    {
+      "pattern": "^InternLM-XComposer(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "internlm-xcomposer",
+      "name": "InternLM-XComposer",
+      "organization": "internlm"
+    },
+    {
+      "pattern": "^MiniCPM(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "minicpm",
+      "name": "MiniCPM-V / MiniCPM-o",
+      "organization": "openbmb"
+    },
+    {
+      "pattern": "^(?:Long-)?VITA(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita"
+    },
+    {
+      "pattern": "^VideoLLaMA(?:[0-9 .:-]|$)|^Video-LLaMA(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "videollama",
+      "name": "VideoLLaMA",
+      "organization": "alibaba_mplug"
+    },
+    {
+      "pattern": "^VideoChat(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "videochat",
+      "name": "VideoChat",
+      "organization": "opengvlab"
+    },
+    {
+      "pattern": "^mPLUG-(?:Owl|DocOwl|PaperOwl)(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "mplug",
+      "name": "mPLUG",
+      "organization": "alibaba_mplug"
+    },
+    {
+      "pattern": "^Emu(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "emu",
+      "name": "Emu",
+      "organization": "baai"
+    },
+    {
+      "pattern": "^(?:N)?VILA(?:[0-9 ^.:-]|$)",
+      "ignore_case": true,
+      "family": "vila",
+      "name": "VILA / NVILA",
+      "organization": "nvidia"
+    },
+    {
+      "pattern": "^EAGLE(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "eagle",
+      "name": "Eagle",
+      "organization": "nvidia"
+    },
+    {
+      "pattern": "^MiniGPT(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "minigpt",
+      "name": "MiniGPT",
+      "organization": "vision_cair"
+    },
+    {
+      "pattern": "^MobileVLM(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "mobilevlm",
+      "name": "MobileVLM",
+      "organization": "meituan"
+    },
+    {
+      "pattern": "^(?:video-)?SALMONN(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "salmonn",
+      "name": "SALMONN",
+      "organization": "bytedance"
+    },
+    {
+      "pattern": "^Show-o(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "show-o",
+      "name": "Show-o",
+      "organization": "repo:showlab"
+    },
+    {
+      "pattern": "^Baichuan(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "baichuan",
+      "name": "Baichuan",
+      "organization": "baichuan"
+    },
+    {
+      "pattern": "^Phi(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "phi",
+      "name": "Phi",
+      "organization": "microsoft"
+    },
+    {
+      "pattern": "^Cosmos(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "cosmos",
+      "name": "Cosmos",
+      "organization": "nvidia"
+    },
+    {
+      "pattern": "^Ferret(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "ferret",
+      "name": "Ferret",
+      "organization": "apple"
+    },
+    {
+      "pattern": "^MM1(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "mm1",
+      "name": "MM1",
+      "organization": "apple"
+    },
+    {
+      "pattern": "^Monkey(?:[0-9 .:-]|$)|^TextMonkey(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "monkey",
+      "name": "Monkey / TextMonkey",
+      "organization": "repo:Yuliang-Liu"
+    },
+    {
+      "pattern": "^Otter(?:HD|[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "otter",
+      "name": "Otter",
+      "organization": "repo:Luodian"
+    },
+    {
+      "pattern": "^InstructBLIP(?:[0-9 .:-]|$)|^BLIP-2(?:[0-9 .:-]|$)|^xGen-MM",
+      "ignore_case": true,
+      "family": "blip",
+      "name": "BLIP / xGen-MM",
+      "organization": "salesforce"
+    },
+    {
+      "pattern": "^Introducing Mistral |^Pixtral(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "mistral-pixtral",
+      "name": "Mistral / Pixtral",
+      "organization": "mistral"
+    },
+    {
+      "pattern": "^PaLI(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "pali",
+      "name": "PaLI",
+      "organization": "google"
+    },
+    {
+      "pattern": "^PaLM-E(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "palm-e",
+      "name": "PaLM-E",
+      "organization": "google"
+    },
+    {
+      "pattern": "^Fuyu(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "fuyu",
+      "name": "Fuyu",
+      "organization": "adept"
+    },
+    {
+      "pattern": "^π0(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "pi",
+      "name": "π / Pi",
+      "organization": "physical_intelligence"
+    },
+    {
+      "pattern": "^Step(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "step",
+      "name": "Step",
+      "organization": "stepfun"
+    },
+    {
+      "pattern": "^Skywork(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "skywork",
+      "name": "Skywork",
+      "organization": "skywork"
+    },
+    {
+      "pattern": "^Molmo(?:[0-9 .:-]|$)",
+      "ignore_case": true,
+      "family": "molmo",
+      "name": "Molmo",
+      "organization": "allenai"
+    },
+    {
+      "pattern": "^The All-Seeing Project",
+      "ignore_case": true,
+      "family": "all-seeing",
+      "name": "All-Seeing",
+      "organization": "opengvlab"
+    }
+  ],
+  "repo_overrides": {
+    "qwenlm/qwen-vl": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    "qwenlm/qwen2-vl": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    "qwenlm/qwen2.5-vl": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    "qwenlm/qwen3-vl": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    "qwenlm/qwen2.5-omni": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    "qwenlm/qwen3-omni": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    "qwenlm/qwen3.5": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    "qwenlm/qwen-mm-plugins": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud"
+    },
+    "deepseek-ai/deepseek-vl": {
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek"
+    },
+    "deepseek-ai/deepseek-vl2": {
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek"
+    },
+    "deepseek-ai/deepseek-ocr": {
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek"
+    },
+    "deepseek-ai/deepseek-ocr-2": {
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek"
+    },
+    "deepseek-ai/deepseek-harness": {
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek"
+    },
+    "moonshotai/kimi-vl": {
+      "family": "kimi",
+      "name": "Kimi",
+      "organization": "moonshot"
+    },
+    "moonshotai/kimi-k2.5": {
+      "family": "kimi",
+      "name": "Kimi",
+      "organization": "moonshot"
+    },
+    "moonshotai/kimi-k3": {
+      "family": "kimi",
+      "name": "Kimi",
+      "organization": "moonshot"
+    },
+    "opengvlab/internvl": {
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab"
+    },
+    "opengvlab/internvl-u": {
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab"
+    },
+    "internlm/internlm-xcomposer": {
+      "family": "internlm-xcomposer",
+      "name": "InternLM-XComposer",
+      "organization": "internlm",
+      "notes": "ShareGPT4V 另设 exact_title_override；共享仓库星数不等于 ShareGPT4V 独立星数。"
+    },
+    "openbmb/minicpm-o": {
+      "family": "minicpm",
+      "name": "MiniCPM-V / MiniCPM-o",
+      "organization": "openbmb"
+    },
+    "openbmb/minicpm-v": {
+      "family": "minicpm",
+      "name": "MiniCPM-V / MiniCPM-o",
+      "organization": "openbmb"
+    },
+    "openbmb/viscpm": {
+      "family": "viscpm",
+      "name": "VisCPM",
+      "organization": "openbmb"
+    },
+    "vita-mllm/vita": {
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita"
+    },
+    "vita-mllm/vita-audio": {
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita"
+    },
+    "vita-mllm/vita-qinyu": {
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita"
+    },
+    "vita-mllm/long-vita": {
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita"
+    },
+    "tencent/vita": {
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita"
+    },
+    "vita-mllm/sparrow": {
+      "family": "sparrow",
+      "name": "Sparrow",
+      "organization": "vita"
+    },
+    "vita-mllm/omni-diffusion": {
+      "family": "omni-diffusion",
+      "name": "Omni-Diffusion",
+      "organization": "vita"
+    },
+    "mcg-nju/videochat3": {
+      "family": "videochat",
+      "name": "VideoChat",
+      "organization": "mcg_nju",
+      "notes": "VideoChat3 的直接仓库 owner 为 MCG-NJU；family 归并仅表示 VideoChat 模型谱系，不表示机构完全相同。"
+    },
+    "opengvlab/ask-anything": {
+      "family": "videochat",
+      "name": "VideoChat",
+      "organization": "opengvlab",
+      "notes": "VideoChat3 的直接仓库 owner 为 MCG-NJU；family 归并仅表示 VideoChat 模型谱系，不表示机构完全相同。"
+    },
+    "damo-nlp-sg/video-llama": {
+      "family": "videollama",
+      "name": "VideoLLaMA",
+      "organization": "alibaba_mplug"
+    },
+    "damo-nlp-sg/videollama2": {
+      "family": "videollama",
+      "name": "VideoLLaMA",
+      "organization": "alibaba_mplug"
+    },
+    "damo-nlp-sg/videollama3": {
+      "family": "videollama",
+      "name": "VideoLLaMA",
+      "organization": "alibaba_mplug"
+    },
+    "x-plug/mplug-owl": {
+      "family": "mplug",
+      "name": "mPLUG",
+      "organization": "alibaba_mplug"
+    },
+    "x-plug/mplug-docowl": {
+      "family": "mplug",
+      "name": "mPLUG",
+      "organization": "alibaba_mplug"
+    },
+    "baaivision/emu": {
+      "family": "emu",
+      "name": "Emu",
+      "organization": "baai"
+    },
+    "baaivision/emu3": {
+      "family": "emu",
+      "name": "Emu",
+      "organization": "baai"
+    },
+    "baaivision/emu3.5": {
+      "family": "emu",
+      "name": "Emu",
+      "organization": "baai"
+    },
+    "baaivision/eve": {
+      "family": "eve",
+      "name": "EVE",
+      "organization": "baai"
+    },
+    "nvlabs/vila": {
+      "family": "vila",
+      "name": "VILA / NVILA",
+      "organization": "nvidia"
+    },
+    "nvlabs/eagle": {
+      "family": "eagle",
+      "name": "Eagle",
+      "organization": "nvidia"
+    },
+    "nvidia/cosmos": {
+      "family": "cosmos",
+      "name": "Cosmos",
+      "organization": "nvidia"
+    },
+    "nvlabs/omnivinci": {
+      "family": "omnivinci",
+      "name": "OmniVinci",
+      "organization": "nvidia"
+    },
+    "nvlabs/lita": {
+      "family": "lita",
+      "name": "LITA",
+      "organization": "nvidia"
+    },
+    "nvlabs/prismer": {
+      "family": "prismer",
+      "name": "Prismer",
+      "organization": "nvidia"
+    },
+    "salesforce/lavis": {
+      "family": "blip",
+      "name": "BLIP / xGen-MM",
+      "organization": "salesforce",
+      "notes": "LAVIS 是共享库；不能用该库判断每篇 BLIP / InstructBLIP / xGen-MM 的独立关注度。"
+    },
+    "jiuhaichen/blip3o": {
+      "family": "blip3-o",
+      "name": "BLIP3-o",
+      "organization": "repo:JiuhaiChen",
+      "notes": "独立官方实现；不得仅凭 BLIP 名称并入 Salesforce BLIP。"
+    },
+    "haotian-liu/llava": {
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava",
+      "notes": "仅明确允许的官方仓库；不能对包含 LLaVA 的所有标题使用通配归并。"
+    },
+    "llava-vl/llava-next": {
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava",
+      "notes": "仅明确允许的官方仓库；不能对包含 LLaVA 的所有标题使用通配归并。"
+    },
+    "llava-vl/llava-plus-codebase": {
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava",
+      "notes": "仅明确允许的官方仓库；不能对包含 LLaVA 的所有标题使用通配归并。"
+    },
+    "evolvinglmms-lab/llava-onevision-1.5": {
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "evolvinglmms",
+      "notes": "OneVision 明确谱系归并；owner 记录保留 EvolvingLMMs Lab。"
+    },
+    "evolvinglmms-lab/llava-onevision-2": {
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "evolvinglmms",
+      "notes": "OneVision 明确谱系归并；owner 记录保留 EvolvingLMMs Lab。"
+    },
+    "evolvinglmms-lab/longva": {
+      "family": "longva",
+      "name": "LongVA",
+      "organization": "evolvinglmms"
+    },
+    "evolvinglmms-lab/multimodal-search-r1": {
+      "family": "mmsearch-r1",
+      "name": "MMSearch-R1",
+      "organization": "evolvinglmms"
+    },
+    "vision-cair/minigpt-4": {
+      "family": "minigpt",
+      "name": "MiniGPT",
+      "organization": "vision_cair"
+    },
+    "vision-cair/longvu": {
+      "family": "longvu",
+      "name": "LongVU",
+      "organization": "vision_cair"
+    },
+    "apple/ml-ferret": {
+      "family": "ferret",
+      "name": "Ferret",
+      "organization": "apple"
+    },
+    "apple-aiml-research/ml-ferret": {
+      "family": "ferret",
+      "name": "Ferret",
+      "organization": "apple"
+    },
+    "meituan-automl/mobilevlm": {
+      "family": "mobilevlm",
+      "name": "MobileVLM",
+      "organization": "meituan"
+    },
+    "meituan-automl/lenna": {
+      "family": "lenna",
+      "name": "Lenna",
+      "organization": "meituan"
+    },
+    "thudm/glm-4.1v-thinking": {
+      "family": "glm",
+      "name": "GLM / VisualGLM",
+      "organization": "zhipu_glm"
+    },
+    "zai-org/glm-v": {
+      "family": "glm",
+      "name": "GLM / VisualGLM",
+      "organization": "zhipu_glm"
+    },
+    "thudm/visualglm-6b": {
+      "family": "glm",
+      "name": "GLM / VisualGLM",
+      "organization": "zhipu_glm"
+    },
+    "thudm/cogvlm": {
+      "family": "cogvlm",
+      "name": "CogVLM / CogAgent",
+      "organization": "zhipu_glm"
+    },
+    "thudm/cogcom": {
+      "family": "cogcom",
+      "name": "CogCoM",
+      "organization": "thudm"
+    },
+    "bytedance/salmonn": {
+      "family": "salmonn",
+      "name": "SALMONN",
+      "organization": "bytedance"
+    },
+    "bytedance/lynx-llm": {
+      "family": "lynx",
+      "name": "Lynx",
+      "organization": "bytedance"
+    },
+    "bytedance-seed/bagel": {
+      "family": "bagel",
+      "name": "BAGEL",
+      "organization": "bytedance_seed"
+    },
+    "aidc-ai/ovis": {
+      "family": "ovis",
+      "name": "Ovis",
+      "organization": "alibaba_ovis"
+    },
+    "ath-maas/ovis": {
+      "family": "ovis",
+      "name": "Ovis",
+      "organization": "alibaba_ovis"
+    },
+    "aidc-ai/parrot": {
+      "family": "parrot",
+      "name": "Parrot",
+      "organization": "alibaba_ovis"
+    },
+    "alibaba/conv-llava": {
+      "family": "convllava",
+      "name": "ConvLLaVA",
+      "organization": "repo:alibaba",
+      "notes": "独立论文和家族，不属于 Qwen，也不并入 LLaVA 官方研究谱系。"
+    },
+    "xiaomimimo/mimo-vl": {
+      "family": "mimo",
+      "name": "MiMo",
+      "organization": "xiaomi"
+    },
+    "stepfun-ai/step3": {
+      "family": "step",
+      "name": "Step",
+      "organization": "stepfun"
+    },
+    "rednote-hilab/dots.vlm1": {
+      "family": "dots",
+      "name": "dots",
+      "organization": "rednote"
+    },
+    "baichuan-inc/baichuan-omni-1.5": {
+      "family": "baichuan",
+      "name": "Baichuan",
+      "organization": "baichuan"
+    },
+    "skyworkai/skywork-r1v": {
+      "family": "skywork",
+      "name": "Skywork",
+      "organization": "skywork"
+    },
+    "skyworkai/vitron": {
+      "family": "vitron",
+      "name": "VITRON",
+      "organization": "skywork"
+    },
+    "sensetime-fvg/interactiveomni": {
+      "family": "interactiveomni",
+      "name": "InteractiveOmni",
+      "organization": "sensetime"
+    },
+    "01-ai/yi": {
+      "family": "yi",
+      "name": "Yi-VL",
+      "organization": "zeroone"
+    },
+    "showlab/show-o": {
+      "family": "show-o",
+      "name": "Show-o",
+      "organization": "repo:showlab"
+    },
+    "showlab/videollm-online": {
+      "family": "videollm-online",
+      "name": "VideoLLM-online",
+      "organization": "repo:showlab"
+    },
+    "yuliang-liu/monkey": {
+      "family": "monkey",
+      "name": "Monkey / TextMonkey",
+      "organization": "repo:Yuliang-Liu"
+    },
+    "opengvlab/llama-adapter": {
+      "family": "llama-adapter",
+      "name": "LLaMA-Adapter",
+      "organization": "opengvlab",
+      "notes": "ImageBind-LLM 独立家族，见 exact_title_overrides；它共用 LLaMA-Adapter 仓库。"
+    },
+    "opengvlab/all-seeing": {
+      "family": "all-seeing",
+      "name": "All-Seeing",
+      "organization": "opengvlab"
+    },
+    "opengvlab/visionllm": {
+      "family": "visionllm",
+      "name": "VisionLLM",
+      "organization": "opengvlab"
+    },
+    "opengvlab/chartast": {
+      "family": "chartassistant",
+      "name": "ChartAssistant",
+      "organization": "opengvlab"
+    },
+    "luodian/otter": {
+      "family": "otter",
+      "name": "Otter",
+      "organization": "repo:Luodian",
+      "notes": "MIMIC-IT 属于该项目的数据/方法条目，独立 item_kind 注记。"
+    },
+    "pku-yuangroup/video-llava": {
+      "family": "video-llava",
+      "name": "Video-LLaVA",
+      "organization": "pku_yuan"
+    },
+    "pku-yuangroup/chat-univi": {
+      "family": "chat-univi",
+      "name": "Chat-UniVi",
+      "organization": "pku_yuan"
+    },
+    "pku-yuangroup/moe-llava": {
+      "family": "moe-llava",
+      "name": "MoE-LLaVA",
+      "organization": "pku_yuan"
+    },
+    "pku-yuangroup/languagebind": {
+      "family": "languagebind",
+      "name": "LanguageBind",
+      "organization": "pku_yuan"
+    },
+    "mbzuai-oryx/video-chatgpt": {
+      "family": "video-chatgpt",
+      "name": "Video-ChatGPT",
+      "organization": "mbzuai"
+    },
+    "mbzuai-oryx/llamav-o1": {
+      "family": "llamav-o1",
+      "name": "LlamaV-o1",
+      "organization": "mbzuai"
+    },
+    "mbzuai-oryx/groundinglmm": {
+      "family": "glamm",
+      "name": "GLaMM",
+      "organization": "mbzuai"
+    },
+    "dvlab-research/minigemini": {
+      "family": "mini-gemini",
+      "name": "Mini-Gemini",
+      "organization": "dvlab"
+    },
+    "dvlab-research/llama-vid": {
+      "family": "llama-vid",
+      "name": "LLaMA-VID",
+      "organization": "dvlab"
+    },
+    "dvlab-research/lisa": {
+      "family": "lisa",
+      "name": "LISA",
+      "organization": "dvlab"
+    },
+    "dvlab-research/llmga": {
+      "family": "llmga",
+      "name": "LLMGA",
+      "organization": "dvlab"
+    },
+    "microsoft/llava-med": {
+      "family": "llava-med",
+      "name": "LLaVA-Med",
+      "organization": "microsoft",
+      "notes": "Microsoft 的医疗领域研究项目，单独家族，不能等同于 LLaVA 官方版本。"
+    },
+    "microsoft/pengi": {
+      "family": "pengi",
+      "name": "Pengi",
+      "organization": "microsoft"
+    },
+    "freedomintelligence/longllava": {
+      "family": "longllava",
+      "name": "LongLLaVA",
+      "organization": "repo:FreedomIntelligence"
+    },
+    "freedomintelligence/allava": {
+      "family": "allava",
+      "name": "ALLaVA",
+      "organization": "repo:FreedomIntelligence"
+    },
+    "shufangxun/llava-mod": {
+      "family": "llava-mod",
+      "name": "LLaVA-MoD",
+      "organization": "repo:shufangxun"
+    },
+    "lxtgh/omg-seg": {
+      "family": "omg-llava",
+      "name": "OMG-LLaVA",
+      "organization": "repo:lxtGH"
+    },
+    "gordonhu608/mqt-llava": {
+      "family": "mqt-llava",
+      "name": "MQT-LLaVA",
+      "organization": "repo:gordonhu608"
+    },
+    "yfzhang114/slime": {
+      "family": "slime",
+      "name": "SliME",
+      "organization": "repo:yfzhang114"
+    },
+    "mu-cai/vip-llava": {
+      "family": "vip-llava",
+      "name": "VIP-LLaVA",
+      "organization": "repo:mu-cai"
+    },
+    "icoz69/stablellava": {
+      "family": "stablellava",
+      "name": "StableLLaVA",
+      "organization": "repo:icoz69"
+    },
+    "salt-nlp/llavar": {
+      "family": "llavar",
+      "name": "LLaVAR",
+      "organization": "repo:SALT-NLP"
+    },
+    "tri-ml/prismatic-vlms": {
+      "family": "prismatic",
+      "name": "Prismatic",
+      "organization": "tri"
+    },
+    "kakaobrain/honeybee": {
+      "family": "honeybee",
+      "name": "Honeybee",
+      "organization": "kakaobrain"
+    },
+    "jshilong/gpt4roi": {
+      "family": "gpt4roi",
+      "name": "GPT4RoI",
+      "organization": "repo:jshilong",
+      "notes": "独立区域指令微调模型；名称含 GPT4 不表示 OpenAI 产品。"
+    },
+    "stevengrove/gpt4tools": {
+      "family": "gpt4tools",
+      "name": "GPT4Tools",
+      "organization": "repo:StevenGrove",
+      "notes": "独立工具调用模型；名称含 GPT4 不表示 OpenAI 产品。"
+    }
+  },
+  "exact_title_overrides": {
+    "Visual Instruction Tuning": {
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava"
+    },
+    "Improved Baselines with Visual Instruction Tuning": {
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava"
+    },
+    "ShareGPT4V: Improving Large Multi-Modal Models with Better Captions": {
+      "family": "sharegpt4v",
+      "name": "ShareGPT4V",
+      "organization": "internlm",
+      "item_kind": "model_and_data",
+      "notes": "使用 InternLM-XComposer 共享仓库，不是 XComposer 的版本号。"
+    },
+    "ImageBind-LLM: Multi-modality Instruction Tuning": {
+      "family": "imagebind-llm",
+      "name": "ImageBind-LLM",
+      "organization": "opengvlab",
+      "notes": "与 LLaMA-Adapter 共用仓库，但模型名称/实验独立。"
+    },
+    "Emerging Properties in Unified Multimodal Pretraining": {
+      "family": "bagel",
+      "name": "BAGEL",
+      "organization": "bytedance_seed"
+    },
+    "An LMM for Efficient Video Understanding via Reinforced Compression of Video Cubes": {
+      "family": "quicksviewer",
+      "name": "Quicksviewer",
+      "organization": "repo:quicksviewer"
+    },
+    "Long Context Transfer from Language to Vision": {
+      "family": "longva",
+      "name": "LongVA",
+      "organization": "evolvinglmms"
+    },
+    "Unveiling Encoder-Free Vision-Language Models": {
+      "family": "eve",
+      "name": "EVE",
+      "organization": "baai"
+    },
+    "Beyond LLaVA-HD: Diving into High-Resolution Large Multimodal Models": {
+      "family": "slime",
+      "name": "SliME",
+      "organization": "repo:yfzhang114"
+    },
+    "Matryoshka Query Transformer for Large Vision-Language Models": {
+      "family": "mqt-llava",
+      "name": "MQT-LLaVA",
+      "organization": "repo:gordonhu608"
+    },
+    "Making Large Multimodal Models Understand Arbitrary Visual Prompts": {
+      "family": "vip-llava",
+      "name": "VIP-LLaVA",
+      "organization": "repo:mu-cai"
+    },
+    "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites": {
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab"
+    },
+    "Expanding Performance Boundaries of Open-Source Multimodal Models with Model, Data, and Test-Time Scaling": {
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab"
+    },
+    "Graphic Design with Large Multimodal Model": {
+      "family": "graphist",
+      "name": "Graphist",
+      "organization": "repo:graphic-design-ai"
+    },
+    "An Embodied Generalist Agent in 3D World": {
+      "family": "leo",
+      "name": "LEO",
+      "organization": "repo:embodied-generalist"
+    },
+    "What Matters in Training a GPT4-Style Language Model with Multimodal Inputs?": {
+      "family": "lynx",
+      "name": "Lynx",
+      "organization": "bytedance"
+    },
+    "Fine-tuning Multimodal LLMs to Follow Zero-shot Demonstrative Instructions": {
+      "family": "cheetah",
+      "name": "Cheetah",
+      "organization": "repo:DCDmllm"
+    },
+    "Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models": {
+      "family": "lavin",
+      "name": "LaVIN",
+      "organization": "repo:luogen1996"
+    },
+    "Large Multilingual Models Pivot Zero-Shot Multimodal Learning across Languages": {
+      "family": "viscpm",
+      "name": "VisCPM",
+      "organization": "openbmb"
+    },
+    "Reformulating Vision-Language Foundation Models and Datasets Towards Universal Multimodal Assistants": {
+      "family": "muffin",
+      "name": "Muffin",
+      "organization": "repo:thunlp"
+    },
+    "Unified Model for Image, Video, Audio and Language Tasks": {
+      "family": "unival",
+      "name": "UnIVAL",
+      "organization": "repo:mshukor"
+    },
+    "Unified Language-Vision Pretraining in LLM with Dynamic Discrete Visual Tokenization": {
+      "family": "lavit",
+      "name": "LaVIT",
+      "organization": "repo:jy0205"
+    },
+    "Bootstrapping Vision-Language Learning with Decoupled Language Pre-training": {
+      "family": "blitext",
+      "name": "BLIText",
+      "organization": "repo:yiren-jian"
+    },
+    "Generative Pretraining in Multimodality": {
+      "family": "emu",
+      "name": "Emu",
+      "organization": "baai"
+    },
+    "Language Is Not All You Need: Aligning Perception with Language Models": {
+      "family": "kosmos",
+      "name": "Kosmos",
+      "organization": "microsoft"
+    },
+    "Kosmos-2: Grounding Multimodal Large Language Models to the World": {
+      "family": "kosmos",
+      "name": "Kosmos",
+      "organization": "microsoft"
+    },
+    "Language Models are General-Purpose Interfaces": {
+      "family": "metalm",
+      "name": "MetaLM",
+      "organization": "microsoft",
+      "notes": "Microsoft MetaLM；不能因名称含 Meta 归到 Meta 厂商，也不是 Kosmos-2 的版本。",
+      "evidence": [
+        "https://arxiv.org/abs/2206.06336"
+      ]
+    },
+    "Write and Paint: Generative Vision-Language Models are Unified Modal Learners": {
+      "family": "davinci",
+      "name": "DaVinci",
+      "organization": "repo:shizhediao"
+    },
+    "Scaling Autoregressive Multi-Modal Models: Pretraining and Instruction Tuning": {
+      "family": "cm3leon",
+      "name": "CM3Leon",
+      "organization": "meta",
+      "notes": "CM3Leon 与 2024 Chameleon 不是同一报告或版本编号，分别建家族。",
+      "evidence": [
+        "https://arxiv.org/abs/2309.02591"
+      ]
+    },
+    "Chameleon: Mixed-Modal Early-Fusion Foundation Models": {
+      "family": "chameleon",
+      "name": "Chameleon",
+      "organization": "meta"
+    },
+    "AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model": {
+      "family": "anymal",
+      "name": "AnyMAL",
+      "organization": "meta"
+    },
+    "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models": {
+      "family": "molmo",
+      "name": "Molmo",
+      "organization": "allenai",
+      "item_kind": "model_and_data"
+    },
+    "Introducing Muse Spark: Scaling Towards Personal Superintelligence": {
+      "family": "muse",
+      "name": "Muse",
+      "organization": "meta"
+    },
+    "Listen, Think, and Understand": {
+      "family": "ltu",
+      "name": "LTU",
+      "organization": "repo:YuanGongND"
+    },
+    "Position-Enhanced Visual Instruction Tuning for Multimodal Large Language Models": {
+      "family": "pvit",
+      "name": "PVIT",
+      "organization": "repo:PVIT-official"
+    },
+    "Visual Instruction Tuning with Polite Flamingo": {
+      "family": "polite-flamingo",
+      "name": "Polite Flamingo",
+      "organization": "repo:ChenDelong1999"
+    },
+    "Transfer Visual Prompt Generator across LLMs": {
+      "family": "vpgtrans",
+      "name": "VPGTrans",
+      "organization": "repo:VPGTrans"
+    },
+    "Perception, Reason, Think, and Plan: A Survey on Large Multimodal Reasoning Models": {
+      "family": "multimodal-reasoning-survey",
+      "name": "Large Multimodal Reasoning Survey",
+      "organization": "repo:HITsz-TMG",
+      "item_kind": "survey"
+    },
+    "Multimodal Foundation Models: From Specialists to General-Purpose Assistants": {
+      "family": "multimodal-foundation-survey",
+      "name": "Multimodal Foundation Models Survey",
+      "organization": "authors",
+      "item_kind": "survey",
+      "evidence": [
+        "https://arxiv.org/abs/2309.10020"
+      ]
+    },
+    "OmniVideo-100K: A Dataset for Audio-Visual Reasoning through Structured Scripts and Evidence Chains": {
+      "family": "omnivideo-100k",
+      "name": "OmniVideo-100K",
+      "organization": "repo:MiG-NJU",
+      "item_kind": "dataset"
+    },
+    "Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding": {
+      "family": "video-mme",
+      "name": "Video-MME",
+      "organization": "repo:MME-Benchmarks",
+      "item_kind": "benchmark"
+    },
+    "DenseWorld-1M: Towards Detailed Dense Grounded Caption in the Real World": {
+      "family": "denseworld-1m",
+      "name": "DenseWorld-1M",
+      "organization": "repo:lxtGH",
+      "item_kind": "dataset"
+    },
+    "MIMIC-IT: Multi-Modal In-Context Instruction Tuning": {
+      "family": "otter",
+      "name": "Otter / MIMIC-IT",
+      "organization": "repo:Luodian",
+      "item_kind": "dataset_and_model"
+    },
+    "MLLM-DataEngine: An Iterative Refinement Approach for MLLM": {
+      "family": "mllm-dataengine",
+      "name": "MLLM-DataEngine",
+      "organization": "repo:opendatalab",
+      "item_kind": "data_pipeline"
+    },
+    "M<sup>3</sup>IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning": {
+      "family": "m3it",
+      "name": "M3IT",
+      "organization": "authors",
+      "item_kind": "dataset"
+    },
+    "SVIT: Scaling up Visual Instruction Tuning": {
+      "family": "svit",
+      "name": "SVIT",
+      "organization": "baai",
+      "item_kind": "dataset"
+    },
+    "To See is to Believe: Prompting GPT-4V for Better Visual Instruction Tuning": {
+      "family": "lvis-instruct4v",
+      "name": "LVIS-INSTRUCT4V",
+      "organization": "repo:X2FD",
+      "item_kind": "dataset_or_training_method"
+    },
+    "Qwen-MM-Plugins": {
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "item_kind": "tooling"
+    },
+    "DeepSeek Harness": {
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek",
+      "item_kind": "tooling"
+    },
+    "M3IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning": {
+      "family": "m3it",
+      "name": "M3IT",
+      "organization": "authors",
+      "item_kind": "dataset"
+    },
+    "BRAVE: Broadening the visual encoding of vision-language models": {
+      "title": "BRAVE: Broadening the visual encoding of vision-language models",
+      "family": "brave",
+      "name": "BRAVE",
+      "organization": "google_epfl",
+      "evidence": [
+        "https://arxiv.org/html/2404.07204v1"
+      ],
+      "notes": "论文首页列 Google 与 EPFL，独立家族。"
+    },
+    "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities": {
+      "title": "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
+      "family": "spatialvlm",
+      "name": "SpatialVLM",
+      "organization": "google",
+      "evidence": [
+        "https://arxiv.org/html/2401.12168v1"
+      ],
+      "notes": "论文首页列 Google DeepMind / Google Research。"
+    },
+    "Apollo: An Exploration of Video Understanding in Large Multimodal Models": {
+      "title": "Apollo: An Exploration of Video Understanding in Large Multimodal Models",
+      "family": "apollo",
+      "name": "Apollo",
+      "organization": "meta_stanford",
+      "evidence": [
+        "https://arxiv.org/html/2412.10360v1"
+      ],
+      "notes": "论文首页列 Meta GenAI 与 Stanford；独立于 Llama / Chameleon 家族。"
+    }
+  },
+  "repository_redirect_aliases": {
+    "openbmb/minicpm-o": "openbmb/minicpm-v",
+    "thudm/glm-4.1v-thinking": "zai-org/glm-v",
+    "aidc-ai/ovis": "ath-maas/ovis",
+    "apple/ml-ferret": "apple-aiml-research/ml-ferret",
+    "evolvinglmms-lab/llava-onevision-1.5": "evolvinglmms-lab/llava-onevision-2"
+  },
+  "special_cautions": [
+    {
+      "example": "Step3",
+      "issue": "Upstream Star badge points to THUDM/GLM-4.1V-Thinking, but Code points to stepfun-ai/Step3. Use Code repository."
+    },
+    {
+      "example": "Mini-Gemini",
+      "issue": "An independent DVLab project, not Google Gemini."
+    },
+    {
+      "example": "BLIP3-o",
+      "issue": "JiuhaiChen/BLIP3o is a separate project; not a Salesforce BLIP release."
+    },
+    {
+      "example": "Microsoft MetaLM",
+      "issue": "Name does not mean Meta is the manufacturer."
+    },
+    {
+      "example": "LLaVA-Med / Video-LLaVA / StableLLaVA / MoE-LLaVA / LongLLaVA",
+      "issue": "Separate research teams and families, despite the LLaVA substring."
+    },
+    {
+      "example": "ImageBind-LLM / ShareGPT4V",
+      "issue": "Shared repository does not imply same model family as LLaMA-Adapter / InternLM-XComposer."
+    },
+    {
+      "example": "microsoft/unilm",
+      "issue": "Shared repository contains Kosmos and MetaLM; never use repository-only override to merge all papers."
+    }
+  ],
+  "by_entry_id": {
+    "a07676c13763": {
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "family": "gemini",
+      "name": "Gemini",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "2ea7273632dc": {
+      "title": "Qwen3.8-Omni-Flash: Omni Senses. Agentic Delivery.",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "title_rule"
+    },
+    "0d9109ba3678": {
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai",
+      "method": "title_rule"
+    },
+    "390f20b2fe8b": {
+      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "family": "gemini",
+      "name": "Gemini",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "e213666dcb0d": {
+      "title": "GLM-5.3-Flash: Frontier Intelligence, Flash Cost",
+      "family": "glm",
+      "name": "GLM / VisualGLM",
+      "organization": "zhipu_glm",
+      "method": "title_rule"
+    },
+    "6648a6adbc11": {
+      "title": "DeepSeek-V4-Flash-Vision-Exp",
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek",
+      "method": "title_rule"
+    },
+    "ebaf67f69f80": {
+      "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "title_rule"
+    },
+    "ddf539694eca": {
+      "title": "DeepSeek Harness",
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek",
+      "method": "exact_title_override",
+      "item_kind": "tooling"
+    },
+    "0aebb3826b29": {
+      "title": "Qwen-MM-Plugins",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "exact_title_override",
+      "item_kind": "tooling"
+    },
+    "eb106a710a29": {
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "family": "kimi",
+      "name": "Kimi",
+      "organization": "moonshot",
+      "method": "repo_override"
+    },
+    "6527e8551a9d": {
+      "title": "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding",
+      "family": "videochat",
+      "name": "VideoChat",
+      "organization": "mcg_nju",
+      "method": "repo_override",
+      "notes": "VideoChat3 的直接仓库 owner 为 MCG-NJU；family 归并仅表示 VideoChat 模型谱系，不表示机构完全相同。"
+    },
+    "188b7c797733": {
+      "title": "Seed2.0 Model Card: Towards Intelligence Frontier for Real-World Complexity",
+      "family": "seed",
+      "name": "Seed",
+      "organization": "bytedance_seed",
+      "method": "title_rule"
+    },
+    "28acd80eab47": {
+      "title": "Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models",
+      "family": "pretrained-to-imagine-fine-tuned-to-act-the-rise-of-wor-28acd80eab47",
+      "name": "Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "6f94cf51e082": {
+      "title": "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "title_rule"
+    },
+    "f6c601234462": {
+      "title": "OmniVideo-100K: A Dataset for Audio-Visual Reasoning through Structured Scripts and Evidence Chains",
+      "family": "omnivideo-100k",
+      "name": "OmniVideo-100K",
+      "organization": "repo:MiG-NJU",
+      "method": "exact_title_override",
+      "item_kind": "dataset"
+    },
+    "dd2d1990e567": {
+      "title": "Cosmos 3: Omnimodal World Models for Physical AI",
+      "family": "cosmos",
+      "name": "Cosmos",
+      "organization": "nvidia",
+      "method": "repo_override"
+    },
+    "1a94548cd5cc": {
+      "title": "π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+      "family": "pi",
+      "name": "π / Pi",
+      "organization": "physical_intelligence",
+      "method": "title_rule"
+    },
+    "08e9e69bb6bb": {
+      "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek",
+      "method": "title_rule"
+    },
+    "e122aca8cc58": {
+      "title": "Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "title_rule"
+    },
+    "bc763cf700ef": {
+      "title": "Xiaomi MiMo-V2.5",
+      "family": "mimo",
+      "name": "MiMo",
+      "organization": "xiaomi",
+      "method": "title_rule"
+    },
+    "fba7c87c09df": {
+      "title": "Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding",
+      "family": "video-mme",
+      "name": "Video-MME",
+      "organization": "repo:MME-Benchmarks",
+      "method": "exact_title_override",
+      "item_kind": "benchmark"
+    },
+    "52928aca6048": {
+      "title": "Introducing Muse Spark: Scaling Towards Personal Superintelligence",
+      "family": "muse",
+      "name": "Muse",
+      "organization": "meta",
+      "method": "exact_title_override"
+    },
+    "3a7f77dffb3b": {
+      "title": "VITA-QinYu: Expressive Spoken Language Model for Role-Playing and Singing",
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "92d16b8c59c9": {
+      "title": "Gemma 4: Byte for byte, the most capable open models",
+      "family": "gemma",
+      "name": "Gemma",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "67bea1fbb2c5": {
+      "title": "Qwen3.6-Plus: Towards Real World Agents",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "title_rule"
+    },
+    "54010b187750": {
+      "title": "Qwen3.5-Omni: Scaling Up, Toward Native Omni-Modal AGI",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "title_rule"
+    },
+    "1ccf04ffaeaa": {
+      "title": "Xiaomi MiMo-V2-Omni",
+      "family": "mimo",
+      "name": "MiMo",
+      "organization": "xiaomi",
+      "method": "title_rule"
+    },
+    "4213cab70d10": {
+      "title": "InternVL-U: Democratizing Unified Multimodal Models for Understanding, Reasoning, Generation and Editing",
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab",
+      "method": "repo_override"
+    },
+    "1dfedbb1e043": {
+      "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion",
+      "family": "omni-diffusion",
+      "name": "Omni-Diffusion",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "0343cb473d18": {
+      "title": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
+      "family": "beyond-language-modeling",
+      "name": "Beyond Language Modeling",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "7cca3ca5d4d3": {
+      "title": "Gemini 3.1 Pro: A smarter model for your most complex tasks",
+      "family": "gemini",
+      "name": "Gemini",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "7cdfed4ac9e5": {
+      "title": "Qwen3.5: Towards Native Multimodal Agents",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "repo_override"
+    },
+    "9be303a31d11": {
+      "title": "MiniCPM-o 4.5",
+      "family": "minicpm",
+      "name": "MiniCPM-V / MiniCPM-o",
+      "organization": "openbmb",
+      "method": "repo_override"
+    },
+    "783b062a88f0": {
+      "title": "Kimi K2.5: Visual Agentic Intelligence",
+      "family": "kimi",
+      "name": "Kimi",
+      "organization": "moonshot",
+      "method": "repo_override"
+    },
+    "536ef2604f4a": {
+      "title": "DeepSeek-OCR 2: Visual Causal Flow",
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek",
+      "method": "repo_override"
+    },
+    "6cb43357175b": {
+      "title": "Seed1.8 Model Card: Towards Generalized Real-World Agency",
+      "family": "seed",
+      "name": "Seed",
+      "organization": "bytedance_seed",
+      "method": "title_rule"
+    },
+    "e2a1f413a7a5": {
+      "title": "Introducing GPT-5.2",
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai",
+      "method": "title_rule"
+    },
+    "6276d6c37ba5": {
+      "title": "Introducing Mistral 3",
+      "family": "mistral-pixtral",
+      "name": "Mistral / Pixtral",
+      "organization": "mistral",
+      "method": "title_rule"
+    },
+    "f0c46ccf05fd": {
+      "title": "Qwen3-VL Technical Report",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "repo_override"
+    },
+    "256dc49b7c06": {
+      "title": "Emu3.5: Native Multimodal Models are World Learners",
+      "family": "emu",
+      "name": "Emu",
+      "organization": "baai",
+      "method": "repo_override"
+    },
+    "00501b0da246": {
+      "title": "VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking, and Acting",
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "c352e12407c2": {
+      "title": "DeepSeek-OCR: Contexts Optical Compression",
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek",
+      "method": "repo_override"
+    },
+    "e625e0db2452": {
+      "title": "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM",
+      "family": "omnivinci",
+      "name": "OmniVinci",
+      "organization": "nvidia",
+      "method": "repo_override"
+    },
+    "a0635d8ae9e6": {
+      "title": "NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching",
+      "family": "next-omni",
+      "name": "NExT-OMNI",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "f926eb2fbaf9": {
+      "title": "InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue",
+      "family": "interactiveomni",
+      "name": "InteractiveOmni",
+      "organization": "sensetime",
+      "method": "repo_override"
+    },
+    "9faa140a0b57": {
+      "title": "VITA-VLA: Efficiently Teaching Vision-Language Models to Act via Action Expert Distillation",
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "61fb40e0922c": {
+      "title": "LLaVA-OneVision-1.5: Fully Open Framework for Democratized Multimodal Training",
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "evolvinglmms",
+      "method": "repo_override",
+      "notes": "OneVision 明确谱系归并；owner 记录保留 EvolvingLMMs Lab。"
+    },
+    "3b40d0cc757b": {
+      "title": "Qwen3-Omni Technical Report",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "repo_override"
+    },
+    "3d5274c82d6d": {
+      "title": "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency",
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab",
+      "method": "repo_override"
+    },
+    "5679fdac7d01": {
+      "title": "MiniCPM-V 4.5: A GPT-4o Level MLLM for Single Image, Multi Image and Video Understanding on Your Phone",
+      "family": "minicpm",
+      "name": "MiniCPM-V / MiniCPM-o",
+      "organization": "openbmb",
+      "method": "repo_override"
+    },
+    "534b58b82f31": {
+      "title": "Thyme: Think Beyond Images",
+      "family": "thyme",
+      "name": "Thyme",
+      "organization": "repo:yfzhang114",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "d0807662cb93": {
+      "title": "Introducing GPT-5",
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai",
+      "method": "title_rule"
+    },
+    "bdf40c9e7783": {
+      "title": "dots.vlm1",
+      "family": "dots",
+      "name": "dots",
+      "organization": "rednote",
+      "method": "repo_override"
+    },
+    "26d59ba3132d": {
+      "title": "Step3: Cost-Effective Multimodal Intelligence",
+      "family": "step",
+      "name": "Step",
+      "organization": "stepfun",
+      "method": "repo_override"
+    },
+    "ee7e46a385e1": {
+      "title": "GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning",
+      "family": "glm",
+      "name": "GLM / VisualGLM",
+      "organization": "zhipu_glm",
+      "method": "repo_override"
+    },
+    "54e8efcf3e7e": {
+      "title": "DenseWorld-1M: Towards Detailed Dense Grounded Caption in the Real World",
+      "family": "denseworld-1m",
+      "name": "DenseWorld-1M",
+      "organization": "repo:lxtGH",
+      "method": "exact_title_override",
+      "item_kind": "dataset"
+    },
+    "244376c2123a": {
+      "title": "Qwen VLo: From \"Understanding\" the World to \"Depicting\" It",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "title_rule"
+    },
+    "314d5fc9e979": {
+      "title": "MMSearch-R1: Incentivizing LMMs to Search",
+      "family": "mmsearch-r1",
+      "name": "MMSearch-R1",
+      "organization": "evolvinglmms",
+      "method": "repo_override"
+    },
+    "3b9bfda2a47f": {
+      "title": "Show-o2: Improved Native Unified Multimodal Models",
+      "family": "show-o",
+      "name": "Show-o",
+      "organization": "repo:showlab",
+      "method": "repo_override"
+    },
+    "8c1dda86c921": {
+      "title": "Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities",
+      "family": "gemini",
+      "name": "Gemini",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "9e3cb917f6e0": {
+      "title": "Ego-R1: Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning",
+      "family": "ego-r1",
+      "name": "Ego-R1",
+      "organization": "repo:egolife-ai",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "cfe0bfb02a66": {
+      "title": "MiMo-VL Technical Report",
+      "family": "mimo",
+      "name": "MiMo",
+      "organization": "xiaomi",
+      "method": "repo_override"
+    },
+    "e8057196e511": {
+      "title": "OpenUni: A Simple Baseline for Unified Multimodal Understanding and Generation",
+      "family": "openuni",
+      "name": "OpenUni",
+      "organization": "repo:wusize",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "08e2182e1746": {
+      "title": "Emerging Properties in Unified Multimodal Pretraining",
+      "family": "bagel",
+      "name": "BAGEL",
+      "organization": "bytedance_seed",
+      "method": "exact_title_override"
+    },
+    "b2f9a2e04391": {
+      "title": "MMaDA: Multimodal Large Diffusion Language Models",
+      "family": "mmada",
+      "name": "MMaDA",
+      "organization": "repo:Gen-Verse",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "cfb536a3a112": {
+      "title": "UniGen: Enhanced Training & Test-Time Strategies for Unified Multimodal Understanding and Generation",
+      "family": "unigen",
+      "name": "UniGen",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "49419f245339": {
+      "title": "BLIP3-o: A Family of Fully Open Unified Multimodal Models-Architecture, Training and Dataset",
+      "family": "blip3-o",
+      "name": "BLIP3-o",
+      "organization": "repo:JiuhaiChen",
+      "method": "repo_override",
+      "notes": "独立官方实现；不得仅凭 BLIP 名称并入 Salesforce BLIP。"
+    },
+    "45ba78abafbb": {
+      "title": "Seed1.5-VL Technical Report",
+      "family": "seed",
+      "name": "Seed",
+      "organization": "bytedance_seed",
+      "method": "title_rule"
+    },
+    "d3f532e98132": {
+      "title": "Perception, Reason, Think, and Plan: A Survey on Large Multimodal Reasoning Models",
+      "family": "multimodal-reasoning-survey",
+      "name": "Large Multimodal Reasoning Survey",
+      "organization": "repo:HITsz-TMG",
+      "method": "exact_title_override",
+      "item_kind": "survey"
+    },
+    "69f7e479479c": {
+      "title": "VITA-Audio: Fast Interleaved Cross-Modal Token Generation for Efficient Large Speech-Language Model",
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "d9cbc42c82ec": {
+      "title": "Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning",
+      "family": "skywork",
+      "name": "Skywork",
+      "organization": "skywork",
+      "method": "repo_override"
+    },
+    "9f31ab035853": {
+      "title": "Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models",
+      "family": "eagle",
+      "name": "Eagle",
+      "organization": "nvidia",
+      "method": "repo_override"
+    },
+    "85b01c49ebfe": {
+      "title": "An LMM for Efficient Video Understanding via Reinforced Compression of Video Cubes",
+      "family": "quicksviewer",
+      "name": "Quicksviewer",
+      "organization": "repo:quicksviewer",
+      "method": "exact_title_override"
+    },
+    "c93332aa16ea": {
+      "title": "InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models",
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab",
+      "method": "repo_override"
+    },
+    "32a268f7f1d8": {
+      "title": "Introducing GPT-4.1 in the API",
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai",
+      "method": "title_rule"
+    },
+    "b4ed240e59d1": {
+      "title": "Kimi-VL Technical Report",
+      "family": "kimi",
+      "name": "Kimi",
+      "organization": "moonshot",
+      "method": "repo_override"
+    },
+    "4003084812b3": {
+      "title": "The Llama 4 herd: The beginning of a new era of natively multimodal AI innovation",
+      "family": "llama",
+      "name": "Llama",
+      "organization": "meta",
+      "method": "title_rule"
+    },
+    "1093f7b31e5b": {
+      "title": "Qwen2.5-Omni Technical Report",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "repo_override"
+    },
+    "0b8790d1de58": {
+      "title": "Addendum to GPT-4o System Card: Native image generation",
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai",
+      "method": "title_rule"
+    },
+    "37df4ef2d71b": {
+      "title": "Sparrow: Data-Efficient Video-LLM with Text-to-Image Augmentation",
+      "family": "sparrow",
+      "name": "Sparrow",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "35036f86d753": {
+      "title": "Nexus-O: An Omni-Perceptive And -Interactive Model for Language, Audio, And Vision",
+      "family": "nexus-o",
+      "name": "Nexus-O",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "14ecd062f291": {
+      "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs",
+      "family": "phi",
+      "name": "Phi",
+      "organization": "microsoft",
+      "method": "title_rule"
+    },
+    "14aa0b2943d0": {
+      "title": "Long-VITA: Scaling Large Multi-modal Models to 1 Million Tokens with Leading Short-Context Accuray",
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "365932f60cc3": {
+      "title": "Qwen2.5-VL Technical Report",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "repo_override"
+    },
+    "165201d8355a": {
+      "title": "Baichuan-Omni-1.5 Technical Report",
+      "family": "baichuan",
+      "name": "Baichuan",
+      "organization": "baichuan",
+      "method": "repo_override"
+    },
+    "82234a35c6a4": {
+      "title": "LlamaV-o1: Rethinking Step-by-step Visual Reasoning in LLMs",
+      "family": "llamav-o1",
+      "name": "LlamaV-o1",
+      "organization": "mbzuai",
+      "method": "repo_override"
+    },
+    "33ab7b32ee03": {
+      "title": "VITA-1.5: Towards GPT-4o Level Real-Time Vision and Speech Interaction",
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "b615730dc322": {
+      "title": "QVQ: To See the World with Wisdom",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "repo_override"
+    },
+    "1bd54f613caa": {
+      "title": "DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for Advanced Multimodal Understanding",
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek",
+      "method": "repo_override"
+    },
+    "b50cc85db3e1": {
+      "title": "InternLM-XComposer2.5-OmniLive: A Comprehensive Multimodal System for Long-term Streaming Video and Audio Interactions",
+      "family": "internlm-xcomposer",
+      "name": "InternLM-XComposer",
+      "organization": "internlm",
+      "method": "repo_override",
+      "notes": "ShareGPT4V 另设 exact_title_override；共享仓库星数不等于 ShareGPT4V 独立星数。"
+    },
+    "f074a90123d2": {
+      "title": "StreamChat: Chatting with Streaming Video",
+      "family": "streamchat",
+      "name": "StreamChat",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "6a394cea1d1e": {
+      "title": "CompCap: Improving Multimodal Large Language Models with Composite Captions",
+      "family": "compcap",
+      "name": "CompCap",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "50900dd4918c": {
+      "title": "LinVT: Empower Your Image-level Large Language Model to Understand Videos",
+      "family": "linvt",
+      "name": "LinVT",
+      "organization": "repo:gls0425",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "c698100db08f": {
+      "title": "Expanding Performance Boundaries of Open-Source Multimodal Models with Model, Data, and Test-Time Scaling",
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab",
+      "method": "exact_title_override"
+    },
+    "1773ce2a23e8": {
+      "title": "NVILA: Efficient Frontier Visual Language Models",
+      "family": "vila",
+      "name": "VILA / NVILA",
+      "organization": "nvidia",
+      "method": "repo_override"
+    },
+    "6b4382b69bce": {
+      "title": "Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning",
+      "family": "inst-it",
+      "name": "Inst-IT",
+      "organization": "repo:inst-it",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "474539d7100c": {
+      "title": "TimeMarker: A Versatile Video-LLM for Long and Short Video Understanding with Superior Temporal Localization Ability",
+      "family": "timemarker",
+      "name": "TimeMarker",
+      "organization": "repo:TimeMarker-LLM",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "6aa52f4e3f6d": {
+      "title": "ChatRex: Taming Multimodal LLM for Joint Perception and Understanding",
+      "family": "chatrex",
+      "name": "ChatRex",
+      "organization": "repo:IDEA-Research",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "9b2b1ee3cca4": {
+      "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
+      "family": "longvu",
+      "name": "LongVU",
+      "organization": "vision_cair",
+      "method": "repo_override"
+    },
+    "04898d842f0c": {
+      "title": "Deciphering Cross-Modal Alignment in Large Vision-Language Models with Modality Integration Rate",
+      "family": "modality-integration-rate",
+      "name": "Modality-Integration-Rate",
+      "organization": "repo:shikiw",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "7c5f11db06d6": {
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "family": "auroracap",
+      "name": "AuroraCap",
+      "organization": "repo:rese1f",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "8f717e2b456f": {
+      "title": "EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions",
+      "family": "emova",
+      "name": "EMOVA",
+      "organization": "repo:emova-ollm",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "16bdceae9f46": {
+      "title": "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models",
+      "family": "molmo",
+      "name": "Molmo",
+      "organization": "allenai",
+      "method": "exact_title_override",
+      "item_kind": "model_and_data"
+    },
+    "32bc63503a35": {
+      "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "repo_override"
+    },
+    "44d7362792f1": {
+      "title": "ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding",
+      "family": "chartmoe",
+      "name": "ChartMoE",
+      "organization": "repo:IDEA-FinAI",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "189d4e96133c": {
+      "title": "LongLLaVA: Scaling Multi-modal LLMs to 1000 Images Efficiently via Hybrid Architecture",
+      "family": "longllava",
+      "name": "LongLLaVA",
+      "organization": "repo:FreedomIntelligence",
+      "method": "repo_override"
+    },
+    "43a04598fc70": {
+      "title": "EAGLE: Exploring The Design Space for Multimodal LLMs with Mixture of Encoders",
+      "family": "eagle",
+      "name": "Eagle",
+      "organization": "nvidia",
+      "method": "repo_override"
+    },
+    "28cff82a03c5": {
+      "title": "LLaVA-MoD: Making LLaVA Tiny via MoE Knowledge Distillation",
+      "family": "llava-mod",
+      "name": "LLaVA-MoD",
+      "organization": "repo:shufangxun",
+      "method": "repo_override"
+    },
+    "7d81a24fd25c": {
+      "title": "mPLUG-Owl3: Towards Long Image-Sequence Understanding in Multi-Modal Large Language Models",
+      "family": "mplug",
+      "name": "mPLUG",
+      "organization": "alibaba_mplug",
+      "method": "repo_override"
+    },
+    "118dd38c7a7a": {
+      "title": "VITA: Towards Open-Source Interactive Omni Multimodal LLM",
+      "family": "vita",
+      "name": "VITA",
+      "organization": "vita",
+      "method": "repo_override"
+    },
+    "3982811bbd36": {
+      "title": "LLaVA-OneVision: Easy Visual Task Transfer",
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava",
+      "method": "repo_override",
+      "notes": "仅明确允许的官方仓库；不能对包含 LLaVA 的所有标题使用通配归并。"
+    },
+    "694e2e46c3f0": {
+      "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+      "family": "minicpm",
+      "name": "MiniCPM-V / MiniCPM-o",
+      "organization": "openbmb",
+      "method": "repo_override"
+    },
+    "1d245a12f207": {
+      "title": "VILA^2: VILA Augmented VILA",
+      "family": "vila",
+      "name": "VILA / NVILA",
+      "organization": "nvidia",
+      "method": "title_rule"
+    },
+    "8d5b451aee7d": {
+      "title": "SlowFast-LLaVA: A Strong Training-Free Baseline for Video Large Language Models",
+      "family": "slowfast-llava",
+      "name": "SlowFast-LLaVA",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "c609f22c00f9": {
+      "title": "EVLM: An Efficient Vision-Language Model for Visual Understanding",
+      "family": "evlm",
+      "name": "EVLM",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "65521b2e566a": {
+      "title": "IDA-VLM: Towards Movie Understanding via ID-Aware Large Vision-Language Model",
+      "family": "ida-vlm",
+      "name": "IDA-VLM",
+      "organization": "repo:jiyt17",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "4ce7489403d3": {
+      "title": "InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output",
+      "family": "internlm-xcomposer",
+      "name": "InternLM-XComposer",
+      "organization": "internlm",
+      "method": "repo_override",
+      "notes": "ShareGPT4V 另设 exact_title_override；共享仓库星数不等于 ShareGPT4V 独立星数。"
+    },
+    "3be9597e0637": {
+      "title": "OMG-LLaVA: Bridging Image-level, Object-level, Pixel-level Reasoning and Understanding",
+      "family": "omg-llava",
+      "name": "OMG-LLaVA",
+      "organization": "repo:lxtGH",
+      "method": "repo_override"
+    },
+    "38142f31108b": {
+      "title": "DocKylin: A Large Multimodal Model for Visual Document Understanding with Efficient Visual Slimming",
+      "family": "dockylin",
+      "name": "DocKylin",
+      "organization": "repo:ZZZHANG-jx",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "59ef5f35121a": {
+      "title": "Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs",
+      "family": "cambrian-1",
+      "name": "Cambrian-1",
+      "organization": "repo:cambrian-mllm",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "80ba1aca81a3": {
+      "title": "Long Context Transfer from Language to Vision",
+      "family": "longva",
+      "name": "LongVA",
+      "organization": "evolvinglmms",
+      "method": "exact_title_override"
+    },
+    "ca69d196c301": {
+      "title": "video-SALMONN: Speech-Enhanced Audio-Visual Large Language Models",
+      "family": "salmonn",
+      "name": "SALMONN",
+      "organization": "bytedance",
+      "method": "repo_override"
+    },
+    "c71bde928b45": {
+      "title": "TroL: Traversal of Layers for Large Language and Vision Models",
+      "family": "trol",
+      "name": "TroL",
+      "organization": "repo:ByungKwanLee",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "85842e4c40d6": {
+      "title": "Unveiling Encoder-Free Vision-Language Models",
+      "family": "eve",
+      "name": "EVE",
+      "organization": "baai",
+      "method": "exact_title_override"
+    },
+    "cecc6a20b4b8": {
+      "title": "VideoLLM-online: Online Video Large Language Model for Streaming Video",
+      "family": "videollm-online",
+      "name": "VideoLLM-online",
+      "organization": "repo:showlab",
+      "method": "repo_override"
+    },
+    "7bf0daebcd98": {
+      "title": "RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for Robotics",
+      "family": "robopoint",
+      "name": "RoboPoint",
+      "organization": "repo:wentaoyuan",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "f3ccc8a656c8": {
+      "title": "Comparison Visual Instruction Tuning",
+      "family": "comparison-visual-instruction-tuning",
+      "name": "Comparison Visual Instruction Tuning",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "0e50bfd7b81c": {
+      "title": "Beyond LLaVA-HD: Diving into High-Resolution Large Multimodal Models",
+      "family": "slime",
+      "name": "SliME",
+      "organization": "repo:yfzhang114",
+      "method": "exact_title_override"
+    },
+    "f1c390102dd0": {
+      "title": "VideoLLaMA 2: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMs",
+      "family": "videollama",
+      "name": "VideoLLaMA",
+      "organization": "alibaba_mplug",
+      "method": "repo_override"
+    },
+    "ccf22118b14b": {
+      "title": "Parrot: Multilingual Visual Instruction Tuning",
+      "family": "parrot",
+      "name": "Parrot",
+      "organization": "alibaba_ovis",
+      "method": "repo_override"
+    },
+    "515954506dd5": {
+      "title": "Ovis: Structural Embedding Alignment for Multimodal Large Language Model",
+      "family": "ovis",
+      "name": "Ovis",
+      "organization": "alibaba_ovis",
+      "method": "repo_override"
+    },
+    "ced90da09c5d": {
+      "title": "Matryoshka Query Transformer for Large Vision-Language Models",
+      "family": "mqt-llava",
+      "name": "MQT-LLaVA",
+      "organization": "repo:gordonhu608",
+      "method": "exact_title_override"
+    },
+    "ad0e7c1e8b23": {
+      "title": "ConvLLaVA: Hierarchical Backbones as Visual Encoder for Large Multimodal Models",
+      "family": "convllava",
+      "name": "ConvLLaVA",
+      "organization": "repo:alibaba",
+      "method": "repo_override",
+      "notes": "独立论文和家族，不属于 Qwen，也不并入 LLaVA 官方研究谱系。"
+    },
+    "a9bd8a70a04d": {
+      "title": "Meteor: Mamba-based Traversal of Rationale for Large Language and Vision Models",
+      "family": "meteor",
+      "name": "Meteor",
+      "organization": "repo:ByungKwanLee",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "a7e45338d121": {
+      "title": "Libra: Building Decoupled Vision System on Large Language Models",
+      "family": "libra",
+      "name": "Libra",
+      "organization": "repo:YifanXu74",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "3aceb543bb4d": {
+      "title": "CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts",
+      "family": "cumo",
+      "name": "CuMo",
+      "organization": "repo:SHI-Labs",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "85233c027ab7": {
+      "title": "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites",
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab",
+      "method": "exact_title_override"
+    },
+    "b23f276af3c7": {
+      "title": "Graphic Design with Large Multimodal Model",
+      "family": "graphist",
+      "name": "Graphist",
+      "organization": "repo:graphic-design-ai",
+      "method": "exact_title_override"
+    },
+    "b3fa7d6669df": {
+      "title": "InternLM-XComposer2-4KHD: A Pioneering Large Vision-Language Model Handling Resolutions from 336 Pixels to 4K HD",
+      "family": "internlm-xcomposer",
+      "name": "InternLM-XComposer",
+      "organization": "internlm",
+      "method": "repo_override",
+      "notes": "ShareGPT4V 另设 exact_title_override；共享仓库星数不等于 ShareGPT4V 独立星数。"
+    },
+    "3b84e8a511a7": {
+      "title": "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs",
+      "family": "ferret",
+      "name": "Ferret",
+      "organization": "apple",
+      "method": "title_rule"
+    },
+    "e217a2f7dee4": {
+      "title": "MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understanding",
+      "family": "ma-lmm",
+      "name": "MA-LMM",
+      "organization": "repo:boheumd",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "f588b0cc5a2b": {
+      "title": "VITRON: A Unified Pixel-level Vision LLM for Understanding, Generating, Segmenting, Editing",
+      "family": "vitron",
+      "name": "VITRON",
+      "organization": "skywork",
+      "method": "repo_override"
+    },
+    "d730f529319b": {
+      "title": "TOMGPT: Reliable Text-Only Training Approach for Cost-Effective Multi-modal Large Language Model",
+      "family": "tomgpt",
+      "name": "TOMGPT",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "010869b30cc2": {
+      "title": "LITA: Language Instructed Temporal-Localization Assistant",
+      "family": "lita",
+      "name": "LITA",
+      "organization": "nvidia",
+      "method": "repo_override"
+    },
+    "73a7060a7335": {
+      "title": "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models",
+      "family": "mini-gemini",
+      "name": "Mini-Gemini",
+      "organization": "dvlab",
+      "method": "repo_override"
+    },
+    "bf65e963e9a4": {
+      "title": "MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training",
+      "family": "mm1",
+      "name": "MM1",
+      "organization": "apple",
+      "method": "title_rule"
+    },
+    "ce90899e45f9": {
+      "title": "MoAI: Mixture of All Intelligence for Large Language and Vision Models",
+      "family": "moai",
+      "name": "MoAI",
+      "organization": "repo:ByungKwanLee",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "e8e055db30fe": {
+      "title": "DeepSeek-VL: Towards Real-World Vision-Language Understanding",
+      "family": "deepseek",
+      "name": "DeepSeek",
+      "organization": "deepseek",
+      "method": "repo_override"
+    },
+    "4aebd8866807": {
+      "title": "TextMonkey: An OCR-Free Large Multimodal Model for Understanding Document",
+      "family": "monkey",
+      "name": "Monkey / TextMonkey",
+      "organization": "repo:Yuliang-Liu",
+      "method": "repo_override"
+    },
+    "60c8f90edfca": {
+      "title": "The All-Seeing Project V2: Towards General Relation Comprehension of the Open World",
+      "family": "all-seeing",
+      "name": "All-Seeing",
+      "organization": "opengvlab",
+      "method": "repo_override"
+    },
+    "271326464386": {
+      "title": "GROUNDHOG: Grounding Large Language Models to Holistic Segmentation",
+      "family": "groundhog",
+      "name": "GROUNDHOG",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "d8431f38c1b7": {
+      "title": "AnyGPT: Unified Multimodal LLM with Discrete Sequence Modeling",
+      "family": "anygpt",
+      "name": "AnyGPT",
+      "organization": "repo:OpenMOSS",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "52091e08000d": {
+      "title": "Momentor: Advancing Video Large Language Model with Fine-Grained Temporal Reasoning",
+      "family": "momentor",
+      "name": "Momentor",
+      "organization": "repo:DCDmllm",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "ee804bbbd9e2": {
+      "title": "ALLaVA: Harnessing GPT4V-synthesized Data for A Lite Vision-Language Model",
+      "family": "allava",
+      "name": "ALLaVA",
+      "organization": "repo:FreedomIntelligence",
+      "method": "repo_override"
+    },
+    "367279b775eb": {
+      "title": "CoLLaVO: Crayon Large Language and Vision mOdel",
+      "family": "collavo",
+      "name": "CoLLaVO",
+      "organization": "repo:ByungKwanLee",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "82948b475ada": {
+      "title": "Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models",
+      "family": "prismatic",
+      "name": "Prismatic",
+      "organization": "tri",
+      "method": "repo_override"
+    },
+    "3c88228a1567": {
+      "title": "CogCoM: Train Large Vision-Language Models Diving into Details through Chain of Manipulations",
+      "family": "cogcom",
+      "name": "CogCoM",
+      "organization": "thudm",
+      "method": "repo_override"
+    },
+    "e221f65190af": {
+      "title": "MobileVLM V2: Faster and Stronger Baseline for Vision Language Model",
+      "family": "mobilevlm",
+      "name": "MobileVLM",
+      "organization": "meituan",
+      "method": "repo_override"
+    },
+    "df7497e8b61f": {
+      "title": "GITA: Graph to Visual and Textual Integration for Vision-Language Graph Reasoning",
+      "family": "gita",
+      "name": "GITA",
+      "organization": "repo:WEIYanbin1999",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "e94f5590857f": {
+      "title": "Enhancing Multimodal Large Language Models with Vision Detection Models: An Empirical Study",
+      "family": "enhancing-multimodal-large-language-models-with-vision-e94f5590857f",
+      "name": "Enhancing Multimodal Large Language Models with Vision Detection Models: An Empirical Study",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "86e88fe4b1ec": {
+      "title": "LLaVA-NeXT: Improved reasoning, OCR, and world knowledge",
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava",
+      "method": "repo_override",
+      "notes": "仅明确允许的官方仓库；不能对包含 LLaVA 的所有标题使用通配归并。"
+    },
+    "d1278457cf12": {
+      "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
+      "family": "moe-llava",
+      "name": "MoE-LLaVA",
+      "organization": "pku_yuan",
+      "method": "repo_override"
+    },
+    "4fac110a8bc0": {
+      "title": "InternLM-XComposer2: Mastering Free-form Text-Image Composition and Comprehension in Vision-Language Large Model",
+      "family": "internlm-xcomposer",
+      "name": "InternLM-XComposer",
+      "organization": "internlm",
+      "method": "repo_override",
+      "notes": "ShareGPT4V 另设 exact_title_override；共享仓库星数不等于 ShareGPT4V 独立星数。"
+    },
+    "5991ef3fff72": {
+      "title": "Yi-VL",
+      "family": "yi",
+      "name": "Yi-VL",
+      "organization": "zeroone",
+      "method": "repo_override"
+    },
+    "b2ee855497bf": {
+      "title": "ChartAssisstant: A Universal Chart Multimodal Language Model via Chart-to-Table Pre-training and Multitask Instruction Tuning",
+      "family": "chartassistant",
+      "name": "ChartAssistant",
+      "organization": "opengvlab",
+      "method": "repo_override"
+    },
+    "64f6e640117f": {
+      "title": "MobileVLM : A Fast, Reproducible and Strong Vision Language Assistant for Mobile Devices",
+      "family": "mobilevlm",
+      "name": "MobileVLM",
+      "organization": "meituan",
+      "method": "repo_override"
+    },
+    "4c5b6e3fdc3c": {
+      "title": "InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks",
+      "family": "internvl",
+      "name": "InternVL",
+      "organization": "opengvlab",
+      "method": "repo_override"
+    },
+    "7dd657f0b348": {
+      "title": "Osprey: Pixel Understanding with Visual Instruction Tuning",
+      "family": "osprey",
+      "name": "Osprey",
+      "organization": "repo:CircleRadon",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "98206802ffba": {
+      "title": "CogAgent: A Visual Language Model for GUI Agents",
+      "family": "cogvlm",
+      "name": "CogVLM / CogAgent",
+      "organization": "zhipu_glm",
+      "method": "repo_override"
+    },
+    "704f6450d39f": {
+      "title": "Pixel Aligned Language Models",
+      "family": "pixel-aligned-language-models",
+      "name": "Pixel Aligned Language Models",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "1acc7b9da68d": {
+      "title": "VILA: On Pre-training for Visual Language Models",
+      "family": "vila",
+      "name": "VILA / NVILA",
+      "organization": "nvidia",
+      "method": "repo_override"
+    },
+    "b46cedd95a4b": {
+      "title": "See, Say, and Segment: Teaching LMMs to Overcome False Premises",
+      "family": "see-say-and-segment-teaching-lmms-to-overcome-false-premises",
+      "name": "See, Say, and Segment: Teaching LMMs to Overcome False Premises",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "e7d5fa625fde": {
+      "title": "Vary: Scaling up the Vision Vocabulary for Large Vision-Language Models",
+      "family": "vary",
+      "name": "Vary",
+      "organization": "repo:Ucas-HaoranWei",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "ea869973b3f4": {
+      "title": "Honeybee: Locality-enhanced Projector for Multimodal LLM",
+      "family": "honeybee",
+      "name": "Honeybee",
+      "organization": "kakaobrain",
+      "method": "repo_override"
+    },
+    "044099a491e0": {
+      "title": "Gemini: A Family of Highly Capable Multimodal Models",
+      "family": "gemini",
+      "name": "Gemini",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "c5d0078138d7": {
+      "title": "OneLLM: One Framework to Align All Modalities with Language",
+      "family": "onellm",
+      "name": "OneLLM",
+      "organization": "repo:csuhan",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "90e5b24c5091": {
+      "title": "Lenna: Language Enhanced Reasoning Detection Assistant",
+      "family": "lenna",
+      "name": "Lenna",
+      "organization": "meituan",
+      "method": "repo_override"
+    },
+    "9700d0fb0a43": {
+      "title": "VaQuitA: Enhancing Alignment in LLM-Assisted Video Understanding",
+      "family": "vaquita",
+      "name": "VaQuitA",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "3409e698d392": {
+      "title": "TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Understanding",
+      "family": "timechat",
+      "name": "TimeChat",
+      "organization": "repo:RenShuhuai-Andy",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "a0d99f32668c": {
+      "title": "Making Large Multimodal Models Understand Arbitrary Visual Prompts",
+      "family": "vip-llava",
+      "name": "VIP-LLaVA",
+      "organization": "repo:mu-cai",
+      "method": "exact_title_override"
+    },
+    "8c1b1445f136": {
+      "title": "Dolphins: Multimodal Language Model for Driving",
+      "family": "dolphins",
+      "name": "Dolphins",
+      "organization": "repo:vlm-driver",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "2e176468b484": {
+      "title": "LL3DA: Visual Interactive Instruction Tuning for Omni-3D Understanding, Reasoning, and Planning",
+      "family": "ll3da",
+      "name": "LL3DA",
+      "organization": "repo:Open3DA",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "e364433c1393": {
+      "title": "VTimeLLM: Empower LLM to Grasp Video Moments",
+      "family": "vtimellm",
+      "name": "VTimeLLM",
+      "organization": "repo:huangb23",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "b9f56cfcf73f": {
+      "title": "mPLUG-PaperOwl: Scientific Diagram Analysis with the Multimodal Large Language Model",
+      "family": "mplug",
+      "name": "mPLUG",
+      "organization": "alibaba_mplug",
+      "method": "repo_override"
+    },
+    "eedfaab008bf": {
+      "title": "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
+      "family": "llama-vid",
+      "name": "LLaMA-VID",
+      "organization": "dvlab",
+      "method": "repo_override"
+    },
+    "043e8b783fad": {
+      "title": "LLMGA: Multimodal Large Language Model based Generation Assistant",
+      "family": "llmga",
+      "name": "LLMGA",
+      "organization": "dvlab",
+      "method": "repo_override"
+    },
+    "243076aca63f": {
+      "title": "ChartLlama: A Multimodal LLM for Chart Understanding and Generation",
+      "family": "chartllama",
+      "name": "ChartLlama",
+      "organization": "repo:tingxueronghua",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "7d194d7a209f": {
+      "title": "ShareGPT4V: Improving Large Multi-Modal Models with Better Captions",
+      "family": "sharegpt4v",
+      "name": "ShareGPT4V",
+      "organization": "internlm",
+      "method": "exact_title_override",
+      "notes": "使用 InternLM-XComposer 共享仓库，不是 XComposer 的版本号。",
+      "item_kind": "model_and_data"
+    },
+    "538866b2b3e5": {
+      "title": "LION : Empowering Multimodal Large Language Model with Dual-Level Visual Knowledge",
+      "family": "lion",
+      "name": "LION (JiuTian)",
+      "organization": "repo:rshaojimmy",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "f5075f04641a": {
+      "title": "An Embodied Generalist Agent in 3D World",
+      "family": "leo",
+      "name": "LEO",
+      "organization": "repo:embodied-generalist",
+      "method": "exact_title_override"
+    },
+    "64c86d5eafd7": {
+      "title": "Video-LLaVA: Learning United Visual Representation by Alignment Before Projection",
+      "family": "video-llava",
+      "name": "Video-LLaVA",
+      "organization": "pku_yuan",
+      "method": "repo_override"
+    },
+    "e3d9f4f47a74": {
+      "title": "Chat-UniVi: Unified Visual Representation Empowers Large Language Models with Image and Video Understanding",
+      "family": "chat-univi",
+      "name": "Chat-UniVi",
+      "organization": "pku_yuan",
+      "method": "repo_override"
+    },
+    "d361fe1e8636": {
+      "title": "To See is to Believe: Prompting GPT-4V for Better Visual Instruction Tuning",
+      "family": "lvis-instruct4v",
+      "name": "LVIS-INSTRUCT4V",
+      "organization": "repo:X2FD",
+      "method": "exact_title_override",
+      "item_kind": "dataset_or_training_method"
+    },
+    "89f6c4738085": {
+      "title": "SPHINX: The Joint Mixing of Weights, Tasks, and Visual Embeddings for Multi-modal Large Language Models",
+      "family": "sphinx",
+      "name": "SPHINX",
+      "organization": "repo:Alpha-VLLM",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "694f3d557578": {
+      "title": "Monkey: Image Resolution and Text Label Are Important Things for Large Multi-modal Models",
+      "family": "monkey",
+      "name": "Monkey / TextMonkey",
+      "organization": "repo:Yuliang-Liu",
+      "method": "repo_override"
+    },
+    "84a7abb884a3": {
+      "title": "LLaVA-Plus: Learning to Use Tools for Creating Multimodal Agents",
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava",
+      "method": "repo_override",
+      "notes": "仅明确允许的官方仓库；不能对包含 LLaVA 的所有标题使用通配归并。"
+    },
+    "9f624d5a9663": {
+      "title": "NExT-Chat: An LMM for Chat, Detection and Segmentation",
+      "family": "next-chat",
+      "name": "NExT-Chat",
+      "organization": "repo:NExT-ChatV",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "5fd6c12daf4f": {
+      "title": "mPLUG-Owl2: Revolutionizing Multi-modal Large Language Model with Modality Collaboration",
+      "family": "mplug",
+      "name": "mPLUG",
+      "organization": "alibaba_mplug",
+      "method": "repo_override"
+    },
+    "fc3fb82e955e": {
+      "title": "OtterHD: A High-Resolution Multi-modality Model",
+      "family": "otter",
+      "name": "Otter",
+      "organization": "repo:Luodian",
+      "method": "repo_override",
+      "notes": "MIMIC-IT 属于该项目的数据/方法条目，独立 item_kind 注记。"
+    },
+    "ba17caefc898": {
+      "title": "CoVLM: Composing Visual Entities and Relationships in Large Language Models Via Communicative Decoding",
+      "family": "covlm",
+      "name": "CoVLM",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "7fa226a145bd": {
+      "title": "GLaMM: Pixel Grounding Large Multimodal Model",
+      "family": "glamm",
+      "name": "GLaMM",
+      "organization": "mbzuai",
+      "method": "repo_override"
+    },
+    "0f48395fa28a": {
+      "title": "What Makes for Good Visual Instructions? Synthesizing Complex Visual Reasoning Instructions for Visual Instruction Tuning",
+      "family": "comvint",
+      "name": "ComVint",
+      "organization": "repo:RUCAIBox",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "395568228602": {
+      "title": "MiniGPT-v2: large language model as a unified interface for vision-language multi-task learning",
+      "family": "minigpt",
+      "name": "MiniGPT",
+      "organization": "vision_cair",
+      "method": "repo_override"
+    },
+    "162553e9a74f": {
+      "title": "SALMONN: Towards Generic Hearing Abilities for Large Language Models",
+      "family": "salmonn",
+      "name": "SALMONN",
+      "organization": "bytedance",
+      "method": "repo_override"
+    },
+    "9393822c356b": {
+      "title": "Ferret: Refer and Ground Anything Anywhere at Any Granularity",
+      "family": "ferret",
+      "name": "Ferret",
+      "organization": "apple",
+      "method": "repo_override"
+    },
+    "cc862c751f87": {
+      "title": "CogVLM: Visual Expert For Large Language Models",
+      "family": "cogvlm",
+      "name": "CogVLM / CogAgent",
+      "organization": "zhipu_glm",
+      "method": "repo_override"
+    },
+    "ffb5962a4615": {
+      "title": "Improved Baselines with Visual Instruction Tuning",
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava",
+      "method": "exact_title_override"
+    },
+    "5cee12bded74": {
+      "title": "LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment",
+      "family": "languagebind",
+      "name": "LanguageBind",
+      "organization": "pku_yuan",
+      "method": "repo_override"
+    },
+    "19a8600ee878": {
+      "title": "Reformulating Vision-Language Foundation Models and Datasets Towards Universal Multimodal Assistants",
+      "family": "muffin",
+      "name": "Muffin",
+      "organization": "repo:thunlp",
+      "method": "exact_title_override"
+    },
+    "b0dd57197992": {
+      "title": "AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model",
+      "family": "anymal",
+      "name": "AnyMAL",
+      "organization": "meta",
+      "method": "exact_title_override"
+    },
+    "d40d5f0effb8": {
+      "title": "InternLM-XComposer: A Vision-Language Large Model for Advanced Text-image Comprehension and Composition",
+      "family": "internlm-xcomposer",
+      "name": "InternLM-XComposer",
+      "organization": "internlm",
+      "method": "repo_override",
+      "notes": "ShareGPT4V 另设 exact_title_override；共享仓库星数不等于 ShareGPT4V 独立星数。"
+    },
+    "659a6bf04fbf": {
+      "title": "DreamLLM: Synergistic Multimodal Comprehension and Creation",
+      "family": "dreamllm",
+      "name": "DreamLLM",
+      "organization": "repo:RunpeiDong",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "805afa2bda72": {
+      "title": "An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models",
+      "family": "an-empirical-study-of-scaling-instruction-tuned-large-m-805afa2bda72",
+      "name": "An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "f812c4b50665": {
+      "title": "TextBind: Multi-turn Interleaved Multimodal Instruction-following",
+      "family": "textbind",
+      "name": "TextBind",
+      "organization": "repo:SihengLi99",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "1e9b1698c00f": {
+      "title": "NExT-GPT: Any-to-Any Multimodal LLM",
+      "family": "next-gpt",
+      "name": "NExT-GPT",
+      "organization": "repo:NExT-GPT",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "a24bc2ad13ca": {
+      "title": "Sight Beyond Text: Multi-Modal Training Enhances LLMs in Truthfulness and Ethics",
+      "family": "sight-beyond-text",
+      "name": "Sight Beyond Text",
+      "organization": "repo:UCSC-VLAA",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "d90de9cbd1b4": {
+      "title": "ImageBind-LLM: Multi-modality Instruction Tuning",
+      "family": "imagebind-llm",
+      "name": "ImageBind-LLM",
+      "organization": "opengvlab",
+      "method": "exact_title_override",
+      "notes": "与 LLaMA-Adapter 共用仓库，但模型名称/实验独立。"
+    },
+    "3be706b07979": {
+      "title": "Scaling Autoregressive Multi-Modal Models: Pretraining and Instruction Tuning",
+      "family": "cm3leon",
+      "name": "CM3Leon",
+      "organization": "meta",
+      "method": "exact_title_override",
+      "notes": "CM3Leon 与 2024 Chameleon 不是同一报告或版本编号，分别建家族。",
+      "evidence": [
+        "https://arxiv.org/abs/2309.02591"
+      ]
+    },
+    "6ac4bd0f10cf": {
+      "title": "PointLLM: Empowering Large Language Models to Understand Point Clouds",
+      "family": "pointllm",
+      "name": "PointLLM",
+      "organization": "repo:OpenRobotLab",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "88b968b6c45b": {
+      "title": "✨Sparkles: Unlocking Chats Across Multiple Images for Multimodal Instruction-Following Models",
+      "family": "sparkles",
+      "name": "Sparkles",
+      "organization": "repo:HYPJUDY",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "073620cdccd8": {
+      "title": "MLLM-DataEngine: An Iterative Refinement Approach for MLLM",
+      "family": "mllm-dataengine",
+      "name": "MLLM-DataEngine",
+      "organization": "repo:opendatalab",
+      "method": "exact_title_override",
+      "item_kind": "data_pipeline"
+    },
+    "2aae68a193ec": {
+      "title": "Position-Enhanced Visual Instruction Tuning for Multimodal Large Language Models",
+      "family": "pvit",
+      "name": "PVIT",
+      "organization": "repo:PVIT-official",
+      "method": "exact_title_override"
+    },
+    "1b338ecffdda": {
+      "title": "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities",
+      "family": "qwen",
+      "name": "Qwen",
+      "organization": "alibaba_cloud",
+      "method": "repo_override"
+    },
+    "d08b52bb40c6": {
+      "title": "Large Multilingual Models Pivot Zero-Shot Multimodal Learning across Languages",
+      "family": "viscpm",
+      "name": "VisCPM",
+      "organization": "openbmb",
+      "method": "exact_title_override"
+    },
+    "8236b4158781": {
+      "title": "StableLLaVA: Enhanced Visual Instruction Tuning with Synthesized Image-Dialogue Data",
+      "family": "stablellava",
+      "name": "StableLLaVA",
+      "organization": "repo:icoz69",
+      "method": "repo_override"
+    },
+    "2ec13c8f3442": {
+      "title": "BLIVA: A Simple Multimodal LLM for Better Handling of Text-rich Visual Questions",
+      "family": "bliva",
+      "name": "BLIVA",
+      "organization": "repo:mlpc-ucsd",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "5bbb66493e7a": {
+      "title": "Fine-tuning Multimodal LLMs to Follow Zero-shot Demonstrative Instructions",
+      "family": "cheetah",
+      "name": "Cheetah",
+      "organization": "repo:DCDmllm",
+      "method": "exact_title_override"
+    },
+    "393a3fae7620": {
+      "title": "The All-Seeing Project: Towards Panoptic Visual Recognition and Understanding of the Open World",
+      "family": "all-seeing",
+      "name": "All-Seeing",
+      "organization": "opengvlab",
+      "method": "repo_override"
+    },
+    "ad7c3ef3316b": {
+      "title": "LISA: Reasoning Segmentation via Large Language Model",
+      "family": "lisa",
+      "name": "LISA",
+      "organization": "dvlab",
+      "method": "repo_override"
+    },
+    "31d1dbadfc98": {
+      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding",
+      "family": "moviechat",
+      "name": "MovieChat",
+      "organization": "repo:rese1f",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "0809c95bdef1": {
+      "title": "3D-LLM: Injecting the 3D World into Large Language Models",
+      "family": "3d-llm",
+      "name": "3D-LLM",
+      "organization": "repo:UMass-Foundation-Model",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "53e291db1fda": {
+      "title": "ChatSpot: Bootstrapping Multimodal LLMs via Precise Referring Instruction Tuning",
+      "family": "chatspot",
+      "name": "ChatSpot",
+      "organization": "authors",
+      "method": "title_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "a564ecbb9adf": {
+      "title": "BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs",
+      "family": "bubogpt",
+      "name": "BuboGPT",
+      "organization": "repo:magic-research",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "6ad14948aa28": {
+      "title": "SVIT: Scaling up Visual Instruction Tuning",
+      "family": "svit",
+      "name": "SVIT",
+      "organization": "baai",
+      "method": "exact_title_override",
+      "item_kind": "dataset"
+    },
+    "9df910b0d239": {
+      "title": "GPT4RoI: Instruction Tuning Large Language Model on Region-of-Interest",
+      "family": "gpt4roi",
+      "name": "GPT4RoI",
+      "organization": "repo:jshilong",
+      "method": "repo_override",
+      "notes": "独立区域指令微调模型；名称含 GPT4 不表示 OpenAI 产品。"
+    },
+    "13c77d6bc5ad": {
+      "title": "What Matters in Training a GPT4-Style Language Model with Multimodal Inputs?",
+      "family": "lynx",
+      "name": "Lynx",
+      "organization": "bytedance",
+      "method": "exact_title_override"
+    },
+    "8423dfa0647c": {
+      "title": "mPLUG-DocOwl: Modularized Multimodal Large Language Model for Document Understanding",
+      "family": "mplug",
+      "name": "mPLUG",
+      "organization": "alibaba_mplug",
+      "method": "repo_override"
+    },
+    "543736d26ba4": {
+      "title": "Visual Instruction Tuning with Polite Flamingo",
+      "family": "polite-flamingo",
+      "name": "Polite Flamingo",
+      "organization": "repo:ChenDelong1999",
+      "method": "exact_title_override"
+    },
+    "ea413a33ed50": {
+      "title": "LLaVAR: Enhanced Visual Instruction Tuning for Text-Rich Image Understanding",
+      "family": "llavar",
+      "name": "LLaVAR",
+      "organization": "repo:SALT-NLP",
+      "method": "repo_override"
+    },
+    "261e4c6f7250": {
+      "title": "Shikra: Unleashing Multimodal LLM's Referential Dialogue Magic",
+      "family": "shikra",
+      "name": "Shikra",
+      "organization": "repo:shikras",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "288029b84990": {
+      "title": "MotionGPT: Human Motion as a Foreign Language",
+      "family": "motiongpt",
+      "name": "MotionGPT",
+      "organization": "repo:OpenMotionLab",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "9a512bd249d3": {
+      "title": "Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration",
+      "family": "macaw-llm",
+      "name": "Macaw-LLM",
+      "organization": "repo:lyuchenyang",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "538999c03fea": {
+      "title": "LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark",
+      "family": "lamm",
+      "name": "LAMM",
+      "organization": "repo:OpenLAMM",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "aa49a3ceebeb": {
+      "title": "Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models",
+      "family": "video-chatgpt",
+      "name": "Video-ChatGPT",
+      "organization": "mbzuai",
+      "method": "repo_override"
+    },
+    "0c4a9f5a9115": {
+      "title": "MIMIC-IT: Multi-Modal In-Context Instruction Tuning",
+      "family": "otter",
+      "name": "Otter / MIMIC-IT",
+      "organization": "repo:Luodian",
+      "method": "exact_title_override",
+      "item_kind": "dataset_and_model"
+    },
+    "e0eb180c5217": {
+      "title": "M3IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning",
+      "family": "m3it",
+      "name": "M3IT",
+      "organization": "authors",
+      "method": "exact_title_override",
+      "item_kind": "dataset"
+    },
+    "cabdd815635d": {
+      "title": "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding",
+      "family": "videollama",
+      "name": "VideoLLaMA",
+      "organization": "alibaba_mplug",
+      "method": "repo_override"
+    },
+    "fcd07866797c": {
+      "title": "LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day",
+      "family": "llava-med",
+      "name": "LLaVA-Med",
+      "organization": "microsoft",
+      "method": "repo_override",
+      "notes": "Microsoft 的医疗领域研究项目，单独家族，不能等同于 LLaVA 官方版本。"
+    },
+    "a98a5134828c": {
+      "title": "GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction",
+      "family": "gpt4tools",
+      "name": "GPT4Tools",
+      "organization": "repo:StevenGrove",
+      "method": "repo_override",
+      "notes": "独立工具调用模型；名称含 GPT4 不表示 OpenAI 产品。"
+    },
+    "bc184d59768a": {
+      "title": "PandaGPT: One Model To Instruction-Follow Them All",
+      "family": "pandagpt",
+      "name": "PandaGPT",
+      "organization": "repo:yxuansu",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "6f32c3749c2e": {
+      "title": "ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst",
+      "family": "chatbridge",
+      "name": "ChatBridge",
+      "organization": "repo:joez17",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "93a3f7533997": {
+      "title": "Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models",
+      "family": "lavin",
+      "name": "LaVIN",
+      "organization": "repo:luogen1996",
+      "method": "exact_title_override"
+    },
+    "c37f94b70941": {
+      "title": "DetGPT: Detect What You Need via Reasoning",
+      "family": "detgpt",
+      "name": "DetGPT",
+      "organization": "repo:OptimalScale",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "1a7d73a43be0": {
+      "title": "Pengi: An Audio Language Model for Audio Tasks",
+      "family": "pengi",
+      "name": "Pengi",
+      "organization": "microsoft",
+      "method": "repo_override"
+    },
+    "417d4df3d8fa": {
+      "title": "VisionLLM: Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks",
+      "family": "visionllm",
+      "name": "VisionLLM",
+      "organization": "opengvlab",
+      "method": "repo_override"
+    },
+    "e41bd5d121cd": {
+      "title": "Listen, Think, and Understand",
+      "family": "ltu",
+      "name": "LTU",
+      "organization": "repo:YuanGongND",
+      "method": "exact_title_override"
+    },
+    "4d81507404ce": {
+      "title": "VisualGLM-6B",
+      "family": "glm",
+      "name": "GLM / VisualGLM",
+      "organization": "zhipu_glm",
+      "method": "repo_override"
+    },
+    "6d5e22b45d00": {
+      "title": "PMC-VQA: Visual Instruction Tuning for Medical Visual Question Answering",
+      "family": "pmc-vqa",
+      "name": "PMC-VQA",
+      "organization": "repo:xiaoman-zhang",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "b8ba588e2b2c": {
+      "title": "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning",
+      "family": "blip",
+      "name": "BLIP / xGen-MM",
+      "organization": "salesforce",
+      "method": "repo_override",
+      "notes": "LAVIS 是共享库；不能用该库判断每篇 BLIP / InstructBLIP / xGen-MM 的独立关注度。"
+    },
+    "f018d0129ec4": {
+      "title": "VideoChat: Chat-Centric Video Understanding",
+      "family": "videochat",
+      "name": "VideoChat",
+      "organization": "opengvlab",
+      "method": "repo_override",
+      "notes": "VideoChat3 的直接仓库 owner 为 MCG-NJU；family 归并仅表示 VideoChat 模型谱系，不表示机构完全相同。"
+    },
+    "9119ddd424b5": {
+      "title": "MultiModal-GPT: A Vision and Language Model for Dialogue with Humans",
+      "family": "multimodal-gpt",
+      "name": "MultiModal-GPT",
+      "organization": "repo:open-mmlab",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "31a81e153f28": {
+      "title": "X-LLM: Bootstrapping Advanced Large Language Models by Treating Multi-Modalities as Foreign Languages",
+      "family": "x-llm",
+      "name": "X-LLM",
+      "organization": "repo:phellonchen",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "bb9ffa575c58": {
+      "title": "LMEye: An Interactive Perception Network for Large Language Models",
+      "family": "lmeye",
+      "name": "LMEye",
+      "organization": "repo:YunxinLi",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "c33a09b8e12e": {
+      "title": "LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model",
+      "family": "llama-adapter",
+      "name": "LLaMA-Adapter",
+      "organization": "opengvlab",
+      "method": "repo_override",
+      "notes": "ImageBind-LLM 独立家族，见 exact_title_overrides；它共用 LLaMA-Adapter 仓库。"
+    },
+    "f63e44cf9cfe": {
+      "title": "mPLUG-Owl: Modularization Empowers Large Language Models with Multimodality",
+      "family": "mplug",
+      "name": "mPLUG",
+      "organization": "alibaba_mplug",
+      "method": "repo_override"
+    },
+    "42a19fa4924f": {
+      "title": "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models",
+      "family": "minigpt",
+      "name": "MiniGPT",
+      "organization": "vision_cair",
+      "method": "repo_override"
+    },
+    "17c587e141d0": {
+      "title": "Visual Instruction Tuning",
+      "family": "llava",
+      "name": "LLaVA（官方研究谱系）",
+      "organization": "llava",
+      "method": "exact_title_override"
+    },
+    "605e0eb44c0c": {
+      "title": "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention",
+      "family": "llama-adapter",
+      "name": "LLaMA-Adapter",
+      "organization": "opengvlab",
+      "method": "repo_override",
+      "notes": "ImageBind-LLM 独立家族，见 exact_title_overrides；它共用 LLaMA-Adapter 仓库。"
+    },
+    "ce68e6c9946a": {
+      "title": "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning",
+      "family": "multiinstruct",
+      "name": "MultiInstruct",
+      "organization": "repo:VT-NLP",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "68c32964bf01": {
+      "title": "VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding",
+      "family": "videollama",
+      "name": "VideoLLaMA",
+      "organization": "alibaba_mplug",
+      "method": "repo_override"
+    },
+    "017aa9c6b44d": {
+      "title": "Emu3: Next-Token Prediction is All You Need",
+      "family": "emu",
+      "name": "Emu",
+      "organization": "baai",
+      "method": "repo_override"
+    },
+    "0c6cca94a384": {
+      "title": "Llama 3.2: Revolutionizing edge AI and vision with open, customizable models",
+      "family": "llama",
+      "name": "Llama",
+      "organization": "meta",
+      "method": "title_rule"
+    },
+    "3ebe839c6607": {
+      "title": "Pixtral-12B",
+      "family": "mistral-pixtral",
+      "name": "Mistral / Pixtral",
+      "organization": "mistral",
+      "method": "title_rule"
+    },
+    "1999df957779": {
+      "title": "xGen-MM (BLIP-3): A Family of Open Large Multimodal Models",
+      "family": "blip",
+      "name": "BLIP / xGen-MM",
+      "organization": "salesforce",
+      "method": "repo_override",
+      "notes": "LAVIS 是共享库；不能用该库判断每篇 BLIP / InstructBLIP / xGen-MM 的独立关注度。"
+    },
+    "de3cebb4c28b": {
+      "title": "The Llama 3 Herd of Models",
+      "family": "llama",
+      "name": "Llama",
+      "organization": "meta",
+      "method": "title_rule"
+    },
+    "3041e8771957": {
+      "title": "Chameleon: Mixed-Modal Early-Fusion Foundation Models",
+      "family": "chameleon",
+      "name": "Chameleon",
+      "organization": "meta",
+      "method": "exact_title_override"
+    },
+    "9ee9863086d5": {
+      "title": "Hello GPT-4o",
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai",
+      "method": "title_rule"
+    },
+    "d746d75f8685": {
+      "title": "The Claude 3 Model Family: Opus, Sonnet, Haiku",
+      "family": "claude",
+      "name": "Claude",
+      "organization": "anthropic",
+      "method": "title_rule"
+    },
+    "1855460a9712": {
+      "title": "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context",
+      "family": "gemini",
+      "name": "Gemini",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "87ff293e66f7": {
+      "title": "Fuyu-8B: A Multimodal Architecture for AI Agents",
+      "family": "fuyu",
+      "name": "Fuyu",
+      "organization": "adept",
+      "method": "title_rule"
+    },
+    "4af858ff9dbc": {
+      "title": "Unified Model for Image, Video, Audio and Language Tasks",
+      "family": "unival",
+      "name": "UnIVAL",
+      "organization": "repo:mshukor",
+      "method": "exact_title_override"
+    },
+    "bf191b32aa7d": {
+      "title": "PaLI-3 Vision Language Models: Smaller, Faster, Stronger",
+      "family": "pali",
+      "name": "PaLI",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "5cd14e1ea9af": {
+      "title": "GPT-4V(ision) System Card",
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai",
+      "method": "title_rule"
+    },
+    "2cec8f84c6fc": {
+      "title": "Unified Language-Vision Pretraining in LLM with Dynamic Discrete Visual Tokenization",
+      "family": "lavit",
+      "name": "LaVIT",
+      "organization": "repo:jy0205",
+      "method": "exact_title_override"
+    },
+    "c5605af838a0": {
+      "title": "Multimodal Foundation Models: From Specialists to General-Purpose Assistants",
+      "family": "multimodal-foundation-survey",
+      "name": "Multimodal Foundation Models Survey",
+      "organization": "authors",
+      "method": "exact_title_override",
+      "item_kind": "survey",
+      "evidence": [
+        "https://arxiv.org/abs/2309.10020"
+      ]
+    },
+    "6e5d07737b1a": {
+      "title": "Bootstrapping Vision-Language Learning with Decoupled Language Pre-training",
+      "family": "blitext",
+      "name": "BLIText",
+      "organization": "repo:yiren-jian",
+      "method": "exact_title_override"
+    },
+    "b9dea683bda2": {
+      "title": "Generative Pretraining in Multimodality",
+      "family": "emu",
+      "name": "Emu",
+      "organization": "baai",
+      "method": "exact_title_override"
+    },
+    "53cf10e9418a": {
+      "title": "Kosmos-2: Grounding Multimodal Large Language Models to the World",
+      "family": "kosmos",
+      "name": "Kosmos",
+      "organization": "microsoft",
+      "method": "exact_title_override"
+    },
+    "0d9927d7fce6": {
+      "title": "Transfer Visual Prompt Generator across LLMs",
+      "family": "vpgtrans",
+      "name": "VPGTrans",
+      "organization": "repo:VPGTrans",
+      "method": "exact_title_override"
+    },
+    "c14c2ea07b95": {
+      "title": "GPT-4 Technical Report",
+      "family": "gpt",
+      "name": "GPT",
+      "organization": "openai",
+      "method": "title_rule"
+    },
+    "bb0333d38954": {
+      "title": "PaLM-E: An Embodied Multimodal Language Model",
+      "family": "palm-e",
+      "name": "PaLM-E",
+      "organization": "google",
+      "method": "title_rule"
+    },
+    "46e51c664c9f": {
+      "title": "Prismer: A Vision-Language Model with An Ensemble of Experts",
+      "family": "prismer",
+      "name": "Prismer",
+      "organization": "nvidia",
+      "method": "repo_override"
+    },
+    "fc11ce0896e9": {
+      "title": "Language Is Not All You Need: Aligning Perception with Language Models",
+      "family": "kosmos",
+      "name": "Kosmos",
+      "organization": "microsoft",
+      "method": "exact_title_override"
+    },
+    "bfa86ff73462": {
+      "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+      "family": "blip",
+      "name": "BLIP / xGen-MM",
+      "organization": "salesforce",
+      "method": "repo_override",
+      "notes": "LAVIS 是共享库；不能用该库判断每篇 BLIP / InstructBLIP / xGen-MM 的独立关注度。"
+    },
+    "0c005b277aba": {
+      "title": "VIMA: General Robot Manipulation with Multimodal Prompts",
+      "family": "vima",
+      "name": "VIMA",
+      "organization": "repo:vimalabs",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "7b59a50595cb": {
+      "title": "MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge",
+      "family": "minedojo",
+      "name": "MineDojo",
+      "organization": "repo:MineDojo",
+      "method": "repository_singleton",
+      "notes": "独立家族；如果 organization 是 repo:owner，只表示 GitHub 维护方，不表示已核验法律实体或全部作者机构。"
+    },
+    "1bdfa14aa38e": {
+      "title": "Write and Paint: Generative Vision-Language Models are Unified Modal Learners",
+      "family": "davinci",
+      "name": "DaVinci",
+      "organization": "repo:shizhediao",
+      "method": "exact_title_override"
+    },
+    "0d9a53261f0c": {
+      "title": "Language Models are General-Purpose Interfaces",
+      "family": "metalm",
+      "name": "MetaLM",
+      "organization": "microsoft",
+      "method": "exact_title_override",
+      "notes": "Microsoft MetaLM；不能因名称含 Meta 归到 Meta 厂商，也不是 Kosmos-2 的版本。",
+      "evidence": [
+        "https://arxiv.org/abs/2206.06336"
+      ]
+    },
+    "4eb0c6c91d73": {
+      "title": "BRAVE: Broadening the visual encoding of vision-language models",
+      "family": "brave",
+      "name": "BRAVE",
+      "organization": "google_epfl",
+      "method": "exact_title_override",
+      "evidence": [
+        "https://arxiv.org/html/2404.07204v1"
+      ],
+      "notes": "论文首页列 Google 与 EPFL，独立家族。"
+    },
+    "fa8d772918c0": {
+      "title": "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
+      "family": "spatialvlm",
+      "name": "SpatialVLM",
+      "organization": "google",
+      "method": "exact_title_override",
+      "evidence": [
+        "https://arxiv.org/html/2401.12168v1"
+      ],
+      "notes": "论文首页列 Google DeepMind / Google Research。"
+    },
+    "bdbff4edfa9b": {
+      "title": "Apollo: An Exploration of Video Understanding in Large Multimodal Models",
+      "family": "apollo",
+      "name": "Apollo",
+      "organization": "meta_stanford",
+      "method": "exact_title_override",
+      "evidence": [
+        "https://arxiv.org/html/2412.10360v1"
+      ],
+      "notes": "论文首页列 Meta GenAI 与 Stanford；独立于 Llama / Chameleon 家族。"
+    }
+  },
+  "coverage": {
+    "entry_count": 301,
+    "mapped_count": 301,
+    "method_counts": {
+      "title_singleton": 19,
+      "exact_title_override": 52,
+      "title_rule": 44,
+      "repository_singleton": 62,
+      "repo_override": 124
+    }
+  }
+}

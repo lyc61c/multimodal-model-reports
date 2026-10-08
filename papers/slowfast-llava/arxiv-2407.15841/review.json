@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读 v1 第1–11页正文；本工作只改变推理表示与提示，没有额外模型训练。",
+    "核对336x336原始尺寸、24x24编码网格、10x12x24 Slow与50x4x4 Fast、3680视觉token和RoPE scaling2/8192。",
+    "核对两个分支均来自投影后的逐帧特征，无分支特殊token或额外运动编码器。",
+    "核对GPT3.5Turbo0125评审、开放式多数验证集与三类八数据集。",
+    "指出IntentQA7B低于IG-VLM、VCGBench7B均值低于LLaVANeXTImage，未照搬全基准最佳概述。",
+    "核对近似token预算消融、各消融表默认行差异与最终任务提示的选择。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "d51ccfa6840d419eb7e6dd5f9eb8c9721d3e8df51114184441d2ea6e16512954",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

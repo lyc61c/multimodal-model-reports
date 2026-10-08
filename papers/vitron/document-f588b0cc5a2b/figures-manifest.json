@@ -1,0 +1,147 @@
+{
+  "paper_id": "f588b0cc5a2b",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_pdf_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2 — 编码器、LLM 与专家后端",
+      "pdf_page": 3,
+      "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf#page=3",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+      "asset_sha256": "f3bdf3796ad5dde82f62c0e9360ac25b96af8223054b0f17c434748f55b7e29a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          108,
+          69,
+          512,
+          330
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/synergy.png",
+      "original_label": "Figure 3 — 对抗协同模块",
+      "pdf_page": 6,
+      "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf#page=6",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+      "asset_sha256": "48e1d0026e1d317e1b784f9f19b830fd9b8620b1fdea00b04d87c0b63a449dd2",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          320,
+          560,
+          512,
+          698
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/specialists.png",
+      "original_label": "Table 13 — 后端专家模型",
+      "pdf_page": 19,
+      "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf#page=19",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+      "asset_sha256": "910443919125cafa93f1e1dac8a569577c4706444dd9a2b973c9fef2ec64177a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          108,
+          203,
+          512,
+          314
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/invocation-data.png",
+      "original_label": "Table 14 — 调用指令数据组成",
+      "pdf_page": 20,
+      "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf#page=20",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+      "asset_sha256": "244c1733fc89ad76a5690884b13398a226b24eacfccb97bf58724fc00ffbf8c4",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          108,
+          166,
+          512,
+          400
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/segmentation.png",
+      "original_label": "Table 2 — 指代图像分割",
+      "pdf_page": 7,
+      "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf#page=7",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+      "asset_sha256": "dfbea880277b169e1a7c9ab3d9dd31e4175d23afa9408f53fe5442ef345106ff",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          108,
+          301,
+          512,
+          399
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/generation-results.png",
+      "original_label": "Tables 8—10 — 图像与视频生成",
+      "pdf_page": 8,
+      "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf#page=8",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+      "asset_sha256": "9d18a6d9ec48868584dfa9a85ae0adecc30718df4823bddd99f8e094ee2ab1c4",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          108,
+          433,
+          512,
+          555
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/invocation-ablation.png",
+      "original_label": "Figure 4 — 文本与连续特征调用消融",
+      "pdf_page": 9,
+      "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf#page=9",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+      "asset_sha256": "fa6b441cd0222fe8a6220bf2758ac8f6ec8230c6def9ae68b6e93411ea692493",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          108,
+          442,
+          512,
+          600
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

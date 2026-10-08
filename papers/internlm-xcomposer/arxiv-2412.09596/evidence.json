@@ -1,0 +1,62 @@
+{
+  "source_version": "2412.09596v1",
+  "claims": [
+    {
+      "claim": "Separate audio/video models; joint modality training future work",
+      "pdf_pages": [
+        3
+      ]
+    },
+    {
+      "claim": "Whisper and Qwen2 method1.8B vs ASR table1.5B",
+      "pdf_pages": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "claim": "Short/global/long memory formulas and retrieval last-token feature",
+      "pdf_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "1FPS;4096-bit buffer;VAD interrupts and memory snapshot; external TTS",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "475 silence examples; CommonVoice English/Chinese; hidden-semantic/reference QA",
+      "pdf_pages": [
+        3,
+        5
+      ]
+    },
+    {
+      "claim": "No LR,batch,steps,freezing,hardware or latency disclosed",
+      "pdf_pages": [
+        3,
+        4,
+        5,
+        6,
+        9
+      ]
+    },
+    {
+      "claim": "64 sampled frames; WER9.0/9.2; MLVU66.2; VideoMME60.6",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "StreamingBench73.79 only real-time visual part; MMBenchVideo1.42 below Qwen2VL1.44",
+      "pdf_pages": [
+        8,
+        9
+      ]
+    }
+  ]
+}

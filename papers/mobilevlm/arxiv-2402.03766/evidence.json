@@ -1,0 +1,42 @@
+{
+  "source_version": "2402.03766v1",
+  "claims": [
+    {
+      "claim": "CLIP ViT-L/14 frozen; 576 to 144; LDPv2 PW-AvgPool-DW residual",
+      "pdf_pages": [
+        3,
+        4,
+        8
+      ]
+    },
+    {
+      "claim": "1.2M PT plus 2.4M multitask; 3.6M total; TextVQA prompt has OCR reference",
+      "pdf_pages": [
+        4,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "claim": "Both stages optimize LLM/projector; Table3 hyperparameters",
+      "pdf_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "Table4 benchmark scores including POPE regressions and pooling removal",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "Orin 4-bit llama.cpp Table5 and A100 PyTorch Figure3 are separate setups",
+      "pdf_pages": [
+        5,
+        7
+      ]
+    }
+  ]
+}

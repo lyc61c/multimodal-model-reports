@@ -1,0 +1,16 @@
+{
+  "paper_id": "0b8790d1de58",
+  "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+  "verification_notes": [
+    "Read complete 13-page official 2025-03-25 system-card addendum; verified focus is safety rather than full generation training recipe.",
+    "Visually inspected original PDF pages3,5,8; Tables1/2,4,6-9 fully preserved and headers/columns checked.",
+    "Verified native autoregressive description without inferring visual tokenizer/decoder or layer details; three safety stack stages distinguished from model architecture.",
+    "Verified overall system mitigation and added chat refusal metrics across all three sources, preserving safety versus overrefusal tradeoff.",
+    "Verified classifier precision/recall and per-category sample counts; conservative child labeling and absent full dataset disclosure retained.",
+    "Verified per-prompt20-resampling diversity protocol, entropy versus aggregate attribute shares and contextual matching score; no invented normalized entropy computation or generation-quality benchmark.",
+    "Verified Table13/14 risk-specific metrics, small25-example set, C2PA limits and launch-snapshot scope; no model reproduction claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

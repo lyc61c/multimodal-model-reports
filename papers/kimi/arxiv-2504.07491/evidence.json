@@ -1,0 +1,17 @@
+{
+  "paper_id": "b4ed240e59d1",
+  "source_url": "https://arxiv.org/pdf/2504.07491v1",
+  "source_version": "2504.07491v1",
+  "source_sha256": "842c364bf976186e60bfa1e98b8687d771594b4bc1a45e73645fb2f468274f6d",
+  "verification_notes": [
+    "阅读全文正文1–18与附录22–23评测及身份；图示案例全部阅读不视为独立真值",
+    "实际查看原PDF3/4/10/17，Figure3/4/13及Table3/4全部列和脚注完整",
+    "核对2.8B语言激活+0.4B视觉、16B量级总参数及Moonlight5.2T起点",
+    "核对4.4T包含ViT2.1T和联合2.3T、长短25/75、SFTtoken1:1与两阶段LR",
+    "数学目标CoCa系数2和在线mirrordescent正KL条件分布，未误写GRPO或过程奖励",
+    "Table3InfoVQA附录ANLS/OCR1000分；文表ScreenSpot92.0/92.8和长文34.7/35.1冲突注明",
+    "标准/Thinking及无有字幕和full/mini/val分开；长区NIAH87/91.7及MathVista预算非单调",
+    "OSWorld多步8.22区别单步92.8，无假设帧预算、无独立组件消融、未运行模型"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

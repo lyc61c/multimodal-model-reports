@@ -1,0 +1,32 @@
+{
+  "paper_id": "b2f9a2e04391",
+  "source_version": "2505.15809v1",
+  "source_sha256": "86727233fe096ba4db0579447d66f52d7015c0af76f8321be0fb54410bae883c",
+  "read_scope": "正文 PDF 1–17 页，附录 A–D 24–37 页；参考文献核对数据来源，不将参考文献计作技术正文",
+  "claims": [
+    {
+      "claim": "统一离散扩散、条件微调",
+      "locations": "§2.1–2.2 Eq.1–2 PDF4–5"
+    },
+    {
+      "claim": "UniGRPO局部log-prob近似和符号不一致",
+      "locations": "§2.3 Eq.3–5 Algorithm1 AppendixB PDF6–7,26–27"
+    },
+    {
+      "claim": "数据、600K+50K+50K与硬件",
+      "locations": "§4.1 PDF9–10"
+    },
+    {
+      "claim": "主结果、消融、采样",
+      "locations": "Tables2–6 PDF9–10,12,15–16"
+    }
+  ],
+  "source_inconsistencies": [
+    "Eq.3–4定义log分数但其商称概率比；仅说明标准概率比而不声称实现已修正",
+    "§3最低置信度unmask与low-confidence remask方向有歧义",
+    "§5.3 Stage2 120K–200K步数和§4.1累计600K预训练未解释对应",
+    "Table4 MATH与Table5 MATH500标签不同",
+    "附录边/圆弧几何推理不严格"
+  ],
+  "model_run": false
+}

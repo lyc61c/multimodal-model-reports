@@ -1,0 +1,26 @@
+{
+  "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "8329cfe99b9d0c0db041aacab6ec422f5fb489cf5bb4876fadecfd8727fc19a2",
+  "read_scope": "完整官方正文、Thinking完整基准表、pretrain compute/parallel latency/safety原图",
+  "claims": [
+    {
+      "location": "Capabilities/Contemplating",
+      "claim": "Thinking与多agent高算力配置分开；58HLE38FrontierScience属后者"
+    },
+    {
+      "location": "Scaling Axes与图4/6",
+      "claim": "10.3x在heldout代码BPB匹配目标，非生产训练全成本；并行比较latency未绝对秒数"
+    },
+    {
+      "location": "图2全表",
+      "claim": "保留所有工具/pass5/public/Elo口径及各项未领先结果"
+    },
+    {
+      "location": "Safety/图7",
+      "claim": "BioTIERrefuse98%特定评测；Apollo意识不证明直接行为改变"
+    }
+  ],
+  "source_inconsistencies": [],
+  "model_execution": "not_run"
+}

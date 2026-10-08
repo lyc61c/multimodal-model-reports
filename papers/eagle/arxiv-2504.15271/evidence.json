@@ -1,0 +1,15 @@
+{
+  "paper_id": "9f31ab035853",
+  "source_url": "https://arxiv.org/pdf/2504.15271v1",
+  "source_version": "2504.15271v1",
+  "source_sha256": "281119e779a37087fec3ab830d19876d9c9a20b03d6ad9169ee396d7cc6e6401",
+  "verification_notes": [
+    "Read main pages1-11 and appendices12-17 for training/data/prompts",
+    "Viewed all four original page images; verified formula and table/chart legends",
+    "Verified 512frames VideoMME,2fps,8min and PerceptionTest tiling exception; subtitle results separated",
+    "Verified image main test/val headers and ablation distinct splits; source Qwen8B name retained",
+    "Verified Table8 trainable modules and reusedStage1.5; area60percent is score preference; no semantic optimality claim",
+    "Verified weaker results CGClue/MMMU/MathVista and progressive ablations; no model run"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

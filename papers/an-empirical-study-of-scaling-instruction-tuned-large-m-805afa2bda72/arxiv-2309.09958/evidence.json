@@ -1,0 +1,45 @@
+{
+  "source_version": "2309.09958v1",
+  "claims": [
+    {
+      "claim": "33B/65B线性视觉映射维度1024至6656/8192；558K对齐、80K指令与159M/370M语言调优token",
+      "pdf_pages": [
+        2
+      ]
+    },
+    {
+      "claim": "2048上下文，batch512/64，学习率与alpha，节点设备和ZeRO配置",
+      "pdf_pages": [
+        2
+      ]
+    },
+    {
+      "claim": "224/336、数据混合与rank对照；时间为总GPU小时除8",
+      "pdf_pages": [
+        5
+      ],
+      "tables": [
+        "Table 3",
+        "Table 4"
+      ]
+    },
+    {
+      "claim": "24图60题LLaVA-Bench与200图218题MM-Vet评测方法",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "MM-Vet36.4及纯语言不单调；MMLU表63.1/65.1差2.0，正文2.4不符",
+      "pdf_pages": [
+        3,
+        6
+      ],
+      "tables": [
+        "Table 2",
+        "Table 5"
+      ]
+    }
+  ]
+}

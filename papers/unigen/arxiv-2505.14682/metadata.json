@@ -1,0 +1,19 @@
+{
+  "paper_id": "cfb536a3a112",
+  "catalogue_entry_id": "cfb536a3a112",
+  "family_slug": "unigen",
+  "title": "UniGen: Enhanced Training & Test-Time Strategies for Unified Multimodal Understanding and Generation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2505.14682v1",
+  "source_url": "https://arxiv.org/pdf/2505.14682v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "UniGen：统一图像理解、生成与自验证",
+  "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1737,
+  "figures_manifest": "figures-manifest.json"
+}

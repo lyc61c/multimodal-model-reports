@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 method pp3-6, experiments pp7-9 and appendix pp12-16; verified own Qwen2.5 backbone versus predecessor configuration.",
+    "Checked identical teacher/student robot data, shared future queries, 200x200 dual images, state encoding and feature-MSE versus MAE+BCE objectives.",
+    "Separated first-task and five-task CALVIN rates; Seer better Avg.Len and five-task success; LIBERO comparison gains expressed as percentage points.",
+    "Preserved 500-episode versus 20-rollout protocol difference, Table7/main-table discrepancies, PiPer versus ALOHA naming and decoder-freezing wording conflicts.",
+    "Confirmed real-world 500 demonstrations and 200 evaluations, 82 versus65 success and 0.15 versus0.05 second inference; no universal VLM preservation or cost assertion.",
+    "Visually inspected original source pages and all final crops; no reproduced experiments or independent peer review claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 6
+  },
+  "article_sha256": "64ae1bd483676492ed0b5e230c2e7d9e6b3e490e94494b67ca94e4ff3f044f29",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

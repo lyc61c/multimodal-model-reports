@@ -1,0 +1,14 @@
+{
+  "paper_id": "e94f5590857f",
+  "catalogue_entry_id": "e94f5590857f",
+  "family_slug": "enhancing-multimodal-large-language-models-with-vision-e94f5590857f",
+  "title": "Enhancing Multimodal Large Language Models with Vision Detection Models: An Empirical Study",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2401.17981v1",
+  "source_url": "https://arxiv.org/pdf/2401.17981v1",
+  "document_kind": "analysis_paper",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "检测与 OCR 增强多模态模型：三种融合策略的实证比较"
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "043e8b783fad",
+  "source_url": "https://arxiv.org/pdf/2311.16500v1",
+  "source_version": "2311.16500v1",
+  "source_sha256": "5ec97b5bf39f4c30fba2c659bc37924c7bfb0249cd019aa7e30f4e7eebb6c7c3",
+  "verification_notes": [
+    "Read original v1 main pages 1-8 and supplementary pages 12-21; verified title, authors and source version.",
+    "Visually inspected original PDF pages 4, 5, 7 and 8; full figures, captions and table headers retained.",
+    "Checked Table 1 SD vs SD-ft and 7B vs 13B columns; plain long prompts worsen FID on untuned SD.",
+    "Checked Table 2 four separate mask/task blocks and noted missing -ft label on last 13B row.",
+    "Checked Table 3 reference and color-degradation ablations and Table 4 10%-data reductions.",
+    "Checked CLIP-I image-image metric, subset size non-disclosure, SDXL versus main SD1.5 conditions.",
+    "Checked CLIP/VAE wording conflict, generation token naming differences and frozen stage2 components.",
+    "No model execution or independent experimental reproduction claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

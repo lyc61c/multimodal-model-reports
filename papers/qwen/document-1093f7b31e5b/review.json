@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read complete main text PDF pages 1–13 and checked source identity and original figure/table numbers.",
+    "TMRoPE temporal unit is 40ms, audio-video ordering uses two-second chunks; not confused with Qwen2.5-VL Figure1 time-ID example.",
+    "Speech DiT has four blocks including two lookback, current and one lookahead; not described as fully causal zero-lookahead decoding.",
+    "800B image/video, 300B audio and 100B video-with-audio token amounts refer to additional stage-two data, not total training volume.",
+    "DPO transcribed from original Equation1 with winning and losing speech sequence variables and reference probabilities.",
+    "Table7 distinguishes Video-MME subtitles, Table8 OmniBench average, and Table9 WER decrease versus speaker similarity increase.",
+    "Original Figure2/3/4 and Table7/8/9/10 pages visually checked; no model execution or deployment latency measurement performed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "6ea98c27584f41ccd628d5995ff4b8f9e153445488d574653b156ef14367e74e",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

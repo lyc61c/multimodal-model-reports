@@ -1,0 +1,45 @@
+{
+  "source_url": "https://arxiv.org/pdf/2304.14178v1",
+  "source_version": "2304.14178v1",
+  "source_sha256": "1da35eb64f4acba137f9c3161da5523e698a3bd99eabe780e15b8a08a1feadd9",
+  "read_scope": "正文1–14、附录18–21完整阅读；参考文献用于确认组件和数据来源。",
+  "claims": [
+    {
+      "pages": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "claim": "CLIPL14/24/1024训练stage1、rawLLaMA7B冻结、visualabstractor查询未披露具体数；stage2LLMLoRA；abstractor冻结图文冲突。"
+    },
+    {
+      "pages": [
+        5,
+        18
+      ],
+      "claim": "四类caption来源没有实际有效规模；242K文字/150K图文；50Ksteps tokenbatch2.1M不是2.1Mimage；stage1正文附录超参冲突；2Ksteps mix128+128。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        18,
+        19,
+        20,
+        21
+      ],
+      "claim": "OwlEval50image82QA A/B/C/D51/15/16/0；IU不要求答对；single50multi52重叠；GPT评分ratio非winrate；定性数字/文档/多图失败保留。"
+    }
+  ],
+  "source_inconsistencies": [
+    "stage2abstractor摘要引言更新 vs Figure2冻结/正文冻结整模型",
+    "stage1正文LR1e-4 wd.1 warm2000 vs appendix2e-4 wd.01 warm375",
+    "Table3w/o multimodal标r4与Table2r4多模态、r3纯文本不同"
+  ],
+  "model_execution": "not_run"
+}

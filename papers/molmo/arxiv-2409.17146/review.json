@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "figures_visually_checked": [
+    2,
+    3,
+    6,
+    7
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "首发v1不含完整LR/batch/context/GPU等配方",
+    "不用闭源VLM蒸馏不等于不用语言LLM或合成数据",
+    "开放性按视觉编码器/语言底座/最终VLM区分，CLIP数据闭源",
+    "点坐标规范和损失未披露，不从Figure1补造",
+    "平均分和Elo不代表每项领先；MMMU数学落后",
+    "Android高层69.0低于对照70.8，不写全面提升",
+    "发布时间的资源计划与已开放状态分开"
+  ]
+}

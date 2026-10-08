@@ -1,0 +1,46 @@
+{
+  "checked_file": "papers\\internlm-xcomposer\\arxiv-2309.15112\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "versions and authors",
+    "VL versus composition models",
+    "Tables1-7 numeric results and named splits",
+    "frozen modules by training stage"
+  ],
+  "math_checked": [
+    "cross-attention and LoRA explicitly standard explanatory formulas",
+    "CLIP recall and selection are formalizations not original numbered equations",
+    "125.6B training token calculation distinguished from unique pool"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-003-01.png",
+      "original_label": "Figure2",
+      "pdf_page": 3,
+      "inspection": "Viewed original page; full diagram/table headings, rows, and captions retained"
+    },
+    {
+      "file": "figures/original-page-005-02.png",
+      "original_label": "Tables1-2",
+      "pdf_page": 5,
+      "inspection": "Viewed original page; full diagram/table headings, rows, and captions retained"
+    },
+    {
+      "file": "figures/original-page-006-03.png",
+      "original_label": "Figure3",
+      "pdf_page": 6,
+      "inspection": "Viewed original page; full diagram/table headings, rows, and captions retained"
+    },
+    {
+      "file": "figures/original-page-008-04.png",
+      "original_label": "Tables5-6",
+      "pdf_page": 8,
+      "inspection": "Viewed original page; full diagram/table headings, rows, and captions retained"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "Composition demonstrations lack quantitative quality protocol",
+    "Some data and optimization details undisclosed"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "source_url": "https://arxiv.org/pdf/2305.10790v1",
+  "source_version": "2305.10790v1",
+  "source_sha256": "2f35ba5ba4fffaa06d9caf0189258017efb4611825cbaf2436abb2b0da60fba6",
+  "read_scope": "PDF正文1–10完整阅读，后页参考文献无额外附录。",
+  "claims": [
+    {
+      "pages": [
+        2,
+        3
+      ],
+      "claim": "AST CAVMAE/AudioSet预训练，1024x128/16x16=64x8/512，再频率mean+2xtime→32，768→4096；VicunaLLaMA7B，Q/KLoRAr8alpha16=4.2M只LoRA。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "claim": "845Kuniqueaudio/1.918Mclosed+3.764Mopen=5.682M；GPT3.5只看文字元信息，AST接真实音频；类名声学描述非逐clip测量；6.5%不可回答合成问题。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "claim": "四阶段只proj→AST/proj/LoRA，LLM一直冻结；Table3课程参数；统一采样；分类文本embedding映射；95.9/96.9是回应问题非事实正确率；有限ASR。"
+    }
+  ],
+  "source_inconsistencies": [
+    "正文64x16与512token不符，Figure1/算术为64x8",
+    "正文3.6M/Table3总5.6M与Table1详细5.682M统计有近似差异",
+    "CLAPVGG结果缺失，“全部8项超越”不能作完整配对比较，AVG计算未说明"
+  ],
+  "model_execution": "not_run"
+}

@@ -1,0 +1,19 @@
+{
+  "paper_id": "13c77d6bc5ad",
+  "catalogue_entry_id": "13c77d6bc5ad",
+  "family_slug": "lynx",
+  "title": "What Matters in Training a GPT4-Style Language Model with Multimodal Inputs?",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2307.02469v1",
+  "source_url": "https://arxiv.org/pdf/2307.02469v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Lynx：多模态输入语言模型的结构、数据与指令训练研究",
+  "source_sha256": "d65173b52d428e4ab6e7b9bb691c3685e0ab7354d363258ea5b938e10d2967d1",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2038,
+  "figures_manifest": "figures-manifest.json"
+}

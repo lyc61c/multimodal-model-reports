@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 complete methodology, training and experiments pages1–10; Figures3/4 and Tables1–3 rendered and visually inspected.",
+    "Alpaca7B, ResNet50/InternImageH, BERTBase and pretrained DeformableDETR distinguished; 60.2 AP requires H visual backbone.",
+    "Parallel output-format queries distinguished from ordinary autoregressive caption decoding; no FPS speed-up invented.",
+    "Coordinates are discrete offsets relative to image-token location; range512 gives1025 signed bins, classification mapping is prompt-dependent rather than fixed COCO token semantics.",
+    "Instance segmentation polygon limits and lower AP75 preserved; pose is possible formulation, not quantitatively evaluated in paper.",
+    "VQA qualitative-only, caption COCO Karpathy and RefCOCO validation protocols retained; each-task separate models not conflated with shared model.",
+    "Table2 restricted class AP not claimed comparable with all80-class AP; 50epochs default not asserted as each-stage schedule; LoRA rank and exact task ratios not invented."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "3a98aa58ec5ef90f21e94524977a1facbe5a155fc0b435e586294b2274e4975d",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 main methodology, data, implementation and experiments pages1–8; original Figure3/4 and Tables1–4 rendered and inspected.",
+    "Timestamp separators are ordinary textual Second{t} representation, not newly pretrained timestamp embedding table; absolute numeric conditioning not guarantee measurement precision.",
+    "AnyLength piecewise frame sampling and spatial average-pooling derived correctly; visual budget calculation labeled explanatory with576patch assumptions, timestamps excluded.",
+    "PT1 60M image-only description versus 16-frame-video implementation phrase preserved without fabricated video mixture.",
+    "5M video training pairs contextualized with85M image and12M multi-image records; PT2+SFT45M not standalone video count; exceptionally rare >30min training retained.",
+    "CharadesSTA zero-shot restricted to its grounding annotations; ActivityNet uses training annotations; pretrained asset costs and recipe missing fields not invented.",
+    "Regressions versus Qwen2VL7B VideoMME/TempCompass and supervised Charades highIoU retained; differentframe protocols and score scales disclosed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 6
+  },
+  "article_sha256": "fda9d6f98bf7336c6a0db7a2055dee573b4bc4b0b1a9bce16b991a5eb494ac69",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "paper_id": "89f6c4738085",
+  "source_url": "https://arxiv.org/pdf/2311.07575v1",
+  "source_version": "2311.07575v1",
+  "source_sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926",
+  "verification_notes": [
+    "Read v1 main methodology/training/results pages 1–15; actual Figures3/4 and Tables2/4 rendered and inspected.",
+    "1k/2k denote variants with 1445/2890 tokens rather than 1K/2K pixel resolution; source 762-square inconsistency retained without inventing resize recipe.",
+    "Frozen vision versus full LLM training distinguished; beta and synthetic-domain schedule not invented.",
+    "Higher-resolution regressions, OCR-reference prompt and grounding specialist comparisons retained.",
+    "SAM/LaMa/StableDiffusion extensions and qualitative pose/anomaly examples not claimed as native generation or fully quantified abilities.",
+    "ImageNet 1-epoch transfer not compared as random-initialization pretraining speed-up."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,15 @@
+{
+  "paper_id": "54010b187750",
+  "source_url": "https://qwen.ai/api/v2/article/?language=en-US&path=qwen3.5-omni&type=qwen_ai",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "b46f812b180720787429a4ac6d70b88aee7ad835263d70d67db9352ddd9082d7",
+  "verification_notes": [
+    "Read official introduction/performance/architecture/comparison and API details plus representative documentary/structuredprompt/voice/codingdemos; rawofficialAPI snapshot retained.",
+    "Downloaded and visually inspected4actualofficialimageassets architecture/AV/audio/visual; no logo substitute.",
+    "DateconflictJanuary7header vsMarch2026citation/catalogue explicitly recorded.",
+    "FLEURSoriginalchart1-WER93.5 vsraw6.55WER/CER; UROchartaggregate differs tabledimensions; visualfigureGemini3Pro vsAV3.1Pro noted.",
+    "VideoMMEwithaudio83.7 distinctvisualwosub81.9; no blanketSOTA; trainingrecipe andARIAformula nondisclosure explicit.",
+    "No API invocation, model execution or independent reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

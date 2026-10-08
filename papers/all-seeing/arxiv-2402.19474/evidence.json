@@ -1,0 +1,15 @@
+{
+  "paper_id": "60c8f90edfca",
+  "source_url": "https://arxiv.org/pdf/2402.19474v1",
+  "source_version": "2402.19474v1",
+  "source_sha256": "037cd68ba0ec73617b05448b2ed0c2e430f5ac2ffb3f9c1e8c8c464f77657192",
+  "verification_notes": [
+    "Title identity verified from PDF page 1",
+    "All four selected original pages visually inspected with view_image",
+    "CRPE all five columns verified",
+    "Stage 2 learning rate verified from original page 28",
+    "No model execution claimed",
+    "Original formulas absent; explanatory structures labelled"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

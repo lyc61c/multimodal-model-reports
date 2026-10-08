@@ -1,0 +1,19 @@
+{
+  "paper_id": "b2ee855497bf",
+  "catalogue_entry_id": "b2ee855497bf",
+  "family_slug": "chartassistant",
+  "title": "ChartAssisstant: A Universal Chart Multimodal Language Model via Chart-to-Table Pre-training and Multitask Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2401.02384v1",
+  "source_url": "https://arxiv.org/pdf/2401.02384v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "ChartAssistant：先学图表到表格，再统一图表问答与推理",
+  "source_sha256": "8bfce7b9e808ce7c5f97da99a454a2c7bc35cc426ad355b6cf7e44f3862d0965",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 3595,
+  "figures_manifest": "figures-manifest.json"
+}

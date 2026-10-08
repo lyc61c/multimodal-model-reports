@@ -1,0 +1,127 @@
+{
+  "paper_id": "fba7c87c09df",
+  "source_version": "2604.05015v1",
+  "source_pdf_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+  "assets": [
+    {
+      "asset_path": "figures/hierarchy.png",
+      "original_label": "Figure 1：任务层级与模型分数",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2604.05015v1#page=3",
+      "source_version": "2604.05015v1",
+      "source_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+      "asset_sha256": "435729291490294fdeeb48fc1864ee2e85b7b332227d8d17678c4f480e8621db",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          73,
+          527,
+          379
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/data-statistics.png",
+      "original_label": "Figures 2–5：视频分布与数据统计",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2604.05015v1#page=6",
+      "source_version": "2604.05015v1",
+      "source_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+      "asset_sha256": "4b23121ce8a2353d79dfc3e5b7ef23f082b996bb6d66d14c889d288db7a0e48d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          70,
+          527,
+          398
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/question-group.png",
+      "original_label": "Figure 11：实体持续追踪问题组",
+      "pdf_page": 20,
+      "source_url": "https://arxiv.org/pdf/2604.05015v1#page=20",
+      "source_version": "2604.05015v1",
+      "source_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+      "asset_sha256": "d28d430049bf835802922fccd50e8952501a2045e87bc495146dc9ee8a1bd067",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          70,
+          527,
+          405
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/leaderboard.png",
+      "original_label": "Table 1：完整评测结果",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2604.05015v1#page=8",
+      "source_version": "2604.05015v1",
+      "source_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+      "asset_sha256": "1e4fddcd371ceff22a0eca68f6ba2d705742ad6c041a55cfc49e771ae9593003",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          84,
+          527,
+          753
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/score-comparison.png",
+      "original_label": "Table 2：逐题准确率与组评分",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2604.05015v1#page=9",
+      "source_version": "2604.05015v1",
+      "source_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+      "asset_sha256": "f4043d24449b3291c31db076db3b7ec34dd9f4dbb85589eeb5fd377fc884349d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          575,
+          527,
+          708
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/thinking-effects.png",
+      "original_label": "Figure 7：思考模式影响",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2604.05015v1#page=11",
+      "source_version": "2604.05015v1",
+      "source_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+      "asset_sha256": "398cc8f629e6272d7b500175367416240d0e16c685df7fd1234e65d3ee30f469",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          70,
+          527,
+          263
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "paper_id": "9ee9863086d5",
+  "source_version": "official-system-card-2024-08-08",
+  "source_pdf_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-007-01.png",
+      "original_label": "PDF page 7",
+      "pdf_page": 7,
+      "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=7",
+      "source_version": "official-system-card-2024-08-08",
+      "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+      "asset_sha256": "5f06ac32040c5bd8f16c392795c67fa4598c0b1c1f10be3000004647931778dc",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 135,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-009-02.png",
+      "original_label": "PDF page 9",
+      "pdf_page": 9,
+      "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=9",
+      "source_version": "official-system-card-2024-08-08",
+      "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+      "asset_sha256": "c3670c1b6acbad2a23b5c65ea67906964fa3a7c1f250c6efb1767c2cc90d0f71",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 135,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-021-03.png",
+      "original_label": "PDF page 21",
+      "pdf_page": 21,
+      "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=21",
+      "source_version": "official-system-card-2024-08-08",
+      "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+      "asset_sha256": "4b74d1a51a11be85347536e0dfd7e9ddc07512a70e1fdf20cc535d26fa597978",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 135,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-024-04.png",
+      "original_label": "PDF page 24",
+      "pdf_page": 24,
+      "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=24",
+      "source_version": "official-system-card-2024-08-08",
+      "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+      "asset_sha256": "10d35d97e89eed3219a60aea6ecf2795c4c247751637baaf2c0f1e1a2fc42923",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 135,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

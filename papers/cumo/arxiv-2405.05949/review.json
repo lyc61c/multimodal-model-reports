@@ -1,0 +1,1 @@
+{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"核对v1标题机构日期14页","facts":"Tables1–10与Figures2–7核对，明确两种LLM骨干和参数口径","math":"式3未静默修正为常见实现；辅助损失未伪造未披露定义；相同专家初始化为明确解释","images":"view_image逐张核验PDF2/5/13完整图表，表头单位与参数行完整","inconsistencies":"保留1.65M/1.85M和最终LR2e-6/4e-6差异"},"model_execution":"not_run"}

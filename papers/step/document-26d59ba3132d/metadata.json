@@ -1,0 +1,19 @@
+{
+  "paper_id": "26d59ba3132d",
+  "catalogue_entry_id": "26d59ba3132d",
+  "family_slug": "step",
+  "title": "Step3: Cost-Effective Multimodal Intelligence",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2507.19427v1",
+  "source_url": "https://arxiv.org/pdf/2507.19427v1",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Step3：通过模型与系统协同设计降低解码成本",
+  "source_sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2028,
+  "figures_manifest": "figures-manifest.json"
+}

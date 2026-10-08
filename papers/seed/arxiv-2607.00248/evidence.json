@@ -1,0 +1,21 @@
+{
+  "paper_id": "188b7c797733",
+  "source_url": "https://arxiv.org/pdf/2607.00248v1",
+  "source_version": "2607.00248v1",
+  "source_sha256": "1449a46c4ebcdf4c6e00c863d15cdf6418ee75cfa8d1de91453cbf62d1f4a441",
+  "verification_notes": [
+    "Read fixed 2607.00248v1 model card main evaluation and case studies through page 48; examined appendices A pages 66–70, repository/test traces, and full advanced proof appendix E pages 82–87. True title is Model Card, homepage date June 30, 2026, not an invented July publication date.",
+    "Visually inspected original pages 13/14/15/66 and final crops: complete Tables 8/9/10 and all nine Figure 19 milestones with caption. Initial Table 10 crop cut ZeroVideo; corrected bottom to 212pt and re-inspected full third row and bottom rule.",
+    "Internal architecture, parameter counts, MoE, encoders, token/frame limits, pretraining/SFT/RL recipe, optimizer and loss not disclosed. No Seed1.5-VL training details copied forward. Figure 19 clearly identified as GUI workflow rather than network architecture.",
+    "DynaMath worst-case equation and FreeCAD volume/surface calculations explicitly explanatory, not original training equations. Geometric results 231061.93mm3 and 23306.19mm2 match report under stated attachment assumptions.",
+    "Table 8 original columns checked: MMMU Mini/Lite/Pro79.7/83.7/85.4 versus Gemini87.0; MathVista85.5/89.0/89.8; OCRBenchv2 58.5/62.4/62.5 versus63.3, averaged English/Chinese, not legacy OCRBench totals. OmniDocBench NED and FSC MAE lower is better.",
+    "LogicVista original Table 8 81.9 differs from prose81.4; use table. CharXiv DQ/RQ separate in Table 8 despite prose averaging statement. No unreported MMBench/DocVQA/ChartQA numbers inserted.",
+    "Table 9 Video-MME includes subtitles (double-dagger), Pro89.5; never compared as pure visual gain over Seed1.5-VL without subtitles77.9. Morse5FPS and motion2FPS, no undisclosed 640-frame cap transferred. Thinking with Tracking distinct inference prompt59.9->65.3.",
+    "Table 10 VideoCut comparison CGBench65.0->66.8, LVBench76.4->80.0, ZeroVideo14.5->27.9; extra tool budget not disclosed, no all-results-tool-free assumption or Video-MME VideoCut number invented.",
+    "Dataset sections distinguish customer authorized usage, benchmark design, filtered evaluation cases from undisclosed model training data. TerminalBench three removals and internal harness adaptation affect comparability.",
+    "Training section accurately limited to disclosed diagnostic development loop, not hallucinated PPO/GRPO/SFT. Diagnostic analysis cost, inference solve-verify-refine and Pass@8 are not training recipe or Pass@1.",
+    "Reported weaknesses retained: SimpleQA36.0 versus72.1, FactScore71.2 versus92.6, SWE-Evo8.5 versus27.1, NL2Repo-Bench27.9 versus49.3 and single-pass3.0. Table11/13 Scicode48.5/52.1 and Table3/13 FrontierSci25.0/23.3 not collapsed.",
+    "Scientific output failure cases retained; author claims of expert proof checking and Seed-Prover formalization not presented as independently verified novelty. No model/API invocation or reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

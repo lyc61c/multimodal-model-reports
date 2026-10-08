@@ -1,0 +1,43 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "训练outline来自GT，给定纲与自主分析分开",
+    "主结果是任务微调vszero shot基线",
+    "每taskpaper无重叠非已审计跨task互斥",
+    "citation/equation任务没训练",
+    "GPT评测不看图、不是RL奖励",
+    "GPUdays单位和基础历史成本分开",
+    "原文未知optimizer/精度/LoRAalpha不填"
+  ],
+  "math_checks": [
+    "224/14=16/256patch；4*64=256；16*64=1024压缩tokens",
+    "standardCE/attention/LoRA解释非原编号公式",
+    "语义P/R/F1不擅自引入一对一matching",
+    "均值乘积与逐样本积均值分开不更正源表",
+    "CIDErGPT不是正确率"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-004-01.png",
+      "checked": "已view_image；Figure2/6完整输入与冻结标记，Tables3–6所有结果行和条件完整；Fig7红数值错误已核对"
+    },
+    {
+      "file": "figures/original-page-006-02.png",
+      "checked": "已view_image；Figure2/6完整输入与冻结标记，Tables3–6所有结果行和条件完整；Fig7红数值错误已核对"
+    },
+    {
+      "file": "figures/original-page-007-03.png",
+      "checked": "已view_image；Figure2/6完整输入与冻结标记，Tables3–6所有结果行和条件完整；Fig7红数值错误已核对"
+    },
+    {
+      "file": "figures/original-page-008-04.png",
+      "checked": "已view_image；Figure2/6完整输入与冻结标记，Tables3–6所有结果行和条件完整；Fig7红数值错误已核对"
+    }
+  ],
+  "limitations": [
+    "作者Outline控制自带结论方向不能声称无目标信息泄漏",
+    "模型可能只改写提纲且具体数值错",
+    "原评估缺匹配/聚合完整细节，未复测"
+  ],
+  "model_execution": "not_run"
+}

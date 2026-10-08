@@ -1,0 +1,19 @@
+{
+  "paper_id": "6527e8551a9d",
+  "catalogue_entry_id": "6527e8551a9d",
+  "family_slug": "videochat",
+  "title": "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2607.14935v1",
+  "source_url": "https://arxiv.org/pdf/2607.14935v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VideoChat3",
+  "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2117,
+  "figures_manifest": "figures-manifest.json"
+}

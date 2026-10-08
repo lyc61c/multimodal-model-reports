@@ -1,0 +1,10 @@
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "source_identity": "Title/IDEA authors/version2411.18363v1 verified page1",
+  "facts_checked": ["UPN vs LLM responsibilities", "Actual high-resolution input768 vs pretraining model label320", "Indices do not generate new coordinates", "GT training boxes vs inference proposals", "Stage updates/hyperparameters", "Different recall thresholds and semantic metrics", "Numerical counterexamples retained"],
+  "math_checked": "Prompt/query matrix shapes and RoI+PE checked; gate addition dimensions described; recall ceiling requires fixed proposal-only selection; no fabricated loss coefficients.",
+  "images_checked": ["Viewed page7 Figure5 complete architecture/legend", "Viewed page9 Figure6 full automated pipeline", "Viewed page11 Tables1–2 complete headers", "Viewed page13 Tables5–6 complete captions/metrics"],
+  "model_execution": "not_run",
+  "remaining_limitations": ["Automated text consistency checking is not independent visual truth validation", "No model benchmark reproduction", "Training schedule details partly absent"]
+}

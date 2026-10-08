@@ -1,0 +1,19 @@
+{
+  "paper_id": "3ebe839c6607",
+  "catalogue_entry_id": "3ebe839c6607",
+  "family_slug": "mistral-pixtral",
+  "title": "Pixtral-12B",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://mistral.ai/news/pixtral-12b/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Pixtral 12B：可变分辨率视觉编码与交错图文指令遵循",
+  "source_sha256": "bca3e11c3e9ce80ebee25d0e65b72f08df8f55cd4ae6630103093b93d4f73256",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 3051,
+  "figures_manifest": "figures-manifest.json"
+}

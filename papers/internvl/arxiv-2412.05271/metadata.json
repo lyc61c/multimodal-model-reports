@@ -1,0 +1,14 @@
+{
+  "paper_id": "c698100db08f",
+  "catalogue_entry_id": "c698100db08f",
+  "family_slug": "internvl",
+  "title": "Expanding Performance Boundaries of Open-Source Multimodal Models with Model, Data, and Test-Time Scaling",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2412.05271v1",
+  "source_url": "https://arxiv.org/pdf/2412.05271v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "InternVL 2.5：复用视觉主干、清理训练数据与扩展测试时推理"
+}

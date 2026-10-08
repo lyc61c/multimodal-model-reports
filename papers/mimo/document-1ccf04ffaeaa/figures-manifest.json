@@ -1,0 +1,15 @@
+{
+  "paper_id": "1ccf04ffaeaa",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [],
+  "missing_original_assets": {
+    "reason": "Official charts are inline JavaScript/CSS-generated HTML; no standalone publisher image exists in this snapshot and browser routing unavailable.",
+    "original_chart_source": "https://mimo.xiaomi.com/mimo-v2-omni",
+    "cache_file": "source/papers/1ccf04ffaeaa/source.html",
+    "chart_ids": [
+      "perception-grid",
+      "agentic-grid",
+      "code-grid"
+    ]
+  }
+}

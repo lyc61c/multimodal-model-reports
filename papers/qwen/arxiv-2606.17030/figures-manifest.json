@@ -1,0 +1,167 @@
+{
+  "paper_id": "6f94cf51e082",
+  "source_version": "2606.17030v1",
+  "source_pdf_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+  "assets": [
+    {
+      "asset_path": "figures/data-coverage.png",
+      "original_label": "Figure 1 — EWK 数据覆盖",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2606.17030v1#page=4",
+      "source_version": "2606.17030v1",
+      "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+      "asset_sha256": "5a748813582190654bb6b5cdcc5bbda5f3d00a100108d134122c9b4b1ef71b5f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          75,
+          532,
+          422
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/data-pipeline.png",
+      "original_label": "Figure 2 — 数据处理与标注反馈",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2606.17030v1#page=8",
+      "source_version": "2606.17030v1",
+      "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+      "asset_sha256": "6ecf49c21164d0e6a216985aef8e9e45cc50a567553e6251c605af11dd13e0f6",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          67,
+          532,
+          278
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3 — 双流 MMDiT 架构",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2606.17030v1#page=10",
+      "source_version": "2606.17030v1",
+      "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+      "asset_sha256": "48b18cc07c84252c76d458acfd04da526c78de4a6ab3c275f79b4d4fe8079268",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          378,
+          532,
+          742
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/scene2robot.png",
+      "original_label": "Figure 4 — Scene2Robot 三段条件",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2606.17030v1#page=11",
+      "source_version": "2606.17030v1",
+      "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+      "asset_sha256": "f9dbcbe22bc2920452c4377cec0a51ec23812bb9645bddc55ecaea934c6a894a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          67,
+          532,
+          449
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/ewm-results.png",
+      "original_label": "Table 2 — EWMBench 结果",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2606.17030v1#page=14",
+      "source_version": "2606.17030v1",
+      "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+      "asset_sha256": "7bfbe19a48d014b1793ce1742ae6a84fb8b27bc61e19a83cb090aa98b5f14e49",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          133,
+          532,
+          306
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/pbench-results.png",
+      "original_label": "Table 4 — PBench 结果",
+      "pdf_page": 15,
+      "source_url": "https://arxiv.org/pdf/2606.17030v1#page=15",
+      "source_version": "2606.17030v1",
+      "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+      "asset_sha256": "557008ddcf5c4129f091d5497bcf7bad7b4b15c65364aa3861b6c987c56ca044",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          67,
+          532,
+          222
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/world-results.png",
+      "original_label": "Table 5 — WorldModelBench 结果",
+      "pdf_page": 15,
+      "source_url": "https://arxiv.org/pdf/2606.17030v1#page=15",
+      "source_version": "2606.17030v1",
+      "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+      "asset_sha256": "babb73c28393f9dae23803a336670d856e9e6953a928279dbd4fd1cd1057007c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          339,
+          532,
+          502
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/multi-view.png",
+      "original_label": "Figure 6 — 跨形态、任务及视角案例",
+      "pdf_page": 17,
+      "source_url": "https://arxiv.org/pdf/2606.17030v1#page=17",
+      "source_version": "2606.17030v1",
+      "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+      "asset_sha256": "f88504b9b40b167e5c15c12bd9129ad0f438e34efac8fceb9bf5e0eec979e5aa",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          75,
+          532,
+          367
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

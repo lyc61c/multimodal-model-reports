@@ -1,0 +1,107 @@
+{
+  "paper_id": "118dd38c7a7a",
+  "source_version": "2408.05211v1",
+  "source_pdf_sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2 — VITA architecture and duplex deployment",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2408.05211v1#page=3",
+      "source_version": "2408.05211v1",
+      "source_sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675",
+      "asset_sha256": "bf06ac9882a7ebc1da89e3e098e404ab7b185c26c202812c51d4bca4ba837f49",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          402
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-stages.png",
+      "original_label": "Figure 3 — Three-stage training",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2408.05211v1#page=4",
+      "source_version": "2408.05211v1",
+      "source_sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675",
+      "asset_sha256": "e3cc01f72e493e116566d3a13efbf59431ab38c2de9818e59ae75721abc11a1b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          333
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/instruction-data.png",
+      "original_label": "Table 1 — Instruction tuning data",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2408.05211v1#page=5",
+      "source_version": "2408.05211v1",
+      "source_sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675",
+      "asset_sha256": "81b12a843cc45ced2d4b91707dd4a66d0fe52172192e123410bbc50ecc6860bc",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          100,
+          65,
+          515,
+          277
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/language-asr-results.png",
+      "original_label": "Tables 3–4 — Language and ASR evaluation",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2408.05211v1#page=8",
+      "source_version": "2408.05211v1",
+      "source_sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675",
+      "asset_sha256": "9d8f24bbf8eaeb30e6f20f207732fa9e5468ccafbe51251002fb11a87c733205",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          242
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/vision-results.png",
+      "original_label": "Figure 5 — Image and video understanding",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2408.05211v1#page=9",
+      "source_version": "2408.05211v1",
+      "source_sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675",
+      "asset_sha256": "25539839e50267a3e41bfd0c14509d96d8c10a0a175db09724fda1b8d4c2cc14",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          237
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

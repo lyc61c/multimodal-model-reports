@@ -1,0 +1,15 @@
+{
+  "paper_id": "1a7d73a43be0",
+  "source_url": "https://arxiv.org/pdf/2305.11834v1",
+  "source_version": "2305.11834v1",
+  "source_sha256": "c221125c001301b5a94e0c6485a0cbd26b8490eda97adacca625b6b79e88ccff",
+  "verification_notes": [
+    "Read technical body and appendices in 2305.11834v1; verified GPT-2 base 124M frozen, CLIP frozen and HTSAT trainable; audio does not include image input.",
+    "Viewed all four original full PDF pages 3,5,8,17: Figure2,Table1/Figure3,Tables7/8,Tables11-13; all are complete and no table columns dropped.",
+    "Verified 3.4M train pairs and inclusion of AudioCaps/Clotho/ClothoAQA/FSD50K training; separated pure zero-shot datasets and supervised linear probes.",
+    "Checked exact Table3/5/6/7/8/11/12/13 values and differing metrics; US8K underperforms CLAP; caption metrics not uniformly better.",
+    "Recorded hop/window unit typo, differing AudioCaps BLEU values and appendix emotion-row inconsistency rather than invent corrections.",
+    "No model execution or independent reproduction performed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

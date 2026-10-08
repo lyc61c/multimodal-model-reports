@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "review_type": "self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "figures_visually_checked": [
+    "original-page-003-01.png",
+    "original-page-005-02.png",
+    "original-page-010-03.png",
+    "original-page-012-04.png"
+  ],
+  "model_executed": false,
+  "checks": [
+    "正确4.5官方报告未混入后续版本",
+    "七节和原图齐全",
+    "未虚构主干初始化/训练GPU/全量数据规模",
+    "原文公式与解释性公式区分"
+  ],
+  "limitations": [
+    "原文Table5字幕表头关系与主表不同，保留原表不擅改",
+    "Table2叙述73.6与表格73.5不一致，采用表格",
+    "正文未充分披露SFT和RL冻结配置",
+    "未执行模型和独立复现"
+  ]
+}

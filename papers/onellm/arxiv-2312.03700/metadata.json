@@ -1,0 +1,19 @@
+{
+  "paper_id": "c5d0078138d7",
+  "catalogue_entry_id": "c5d0078138d7",
+  "family_slug": "onellm",
+  "title": "OneLLM: One Framework to Align All Modalities with Language",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2312.03700v1",
+  "source_url": "https://arxiv.org/pdf/2312.03700v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "OneLLM：共享编码器与投影专家对齐八类输入",
+  "source_sha256": "94d971aeb9f8d4a6432ecc721ffd382459767f4bc9f831d86495b4271ecb4d35",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2213,
+  "figures_manifest": "figures-manifest.json"
+}

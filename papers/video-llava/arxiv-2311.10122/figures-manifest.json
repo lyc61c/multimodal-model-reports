@@ -1,0 +1,87 @@
+{
+  "paper_id": "64c86d5eafd7",
+  "source_version": "2311.10122v1",
+  "source_pdf_sha256": "01393283c0f6922c86ac7d17f108dd40d89cec185568d8bb2af282cc1ce84f22",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2：共享投影框架与性能",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2311.10122v1#page=3",
+      "source_version": "2311.10122v1",
+      "source_sha256": "01393283c0f6922c86ac7d17f108dd40d89cec185568d8bb2af282cc1ce84f22",
+      "asset_sha256": "1de5391505209c3b0700a4c6f00f955344043604aed3df113eaeb8833db3129a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          33,
+          36,
+          585,
+          370
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/data.png",
+      "original_label": "Figure 3：训练数据组成",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2311.10122v1#page=4",
+      "source_version": "2311.10122v1",
+      "source_sha256": "01393283c0f6922c86ac7d17f108dd40d89cec185568d8bb2af282cc1ce84f22",
+      "asset_sha256": "5348911abb28057a1bcbff1018f7ebf0eb5bc2c085f2ec9a15a2a8cc7bb9e34e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          305,
+          36,
+          585,
+          233
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/videoqa-results.png",
+      "original_label": "Table 3：视频问答结果",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2311.10122v1#page=6",
+      "source_version": "2311.10122v1",
+      "source_sha256": "01393283c0f6922c86ac7d17f108dd40d89cec185568d8bb2af282cc1ce84f22",
+      "asset_sha256": "5d692700f4ef6baab988e92e37a57306b49251cc518bb5f07338e01c834839ac",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          32,
+          63,
+          585,
+          230
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/joint-training.png",
+      "original_label": "Table 5：图像视频联合训练消融",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2311.10122v1#page=8",
+      "source_version": "2311.10122v1",
+      "source_sha256": "01393283c0f6922c86ac7d17f108dd40d89cec185568d8bb2af282cc1ce84f22",
+      "asset_sha256": "22769b49a01c4af038a09295fdcb68027269992df79207b8a517428668d54c2c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          310,
+          36,
+          585,
+          193
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

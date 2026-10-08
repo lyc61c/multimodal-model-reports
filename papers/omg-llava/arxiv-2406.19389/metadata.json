@@ -1,0 +1,19 @@
+{
+  "paper_id": "3be9597e0637",
+  "catalogue_entry_id": "3be9597e0637",
+  "family_slug": "omg-llava",
+  "title": "OMG-LLaVA: Bridging Image-level, Object-level, Pixel-level Reasoning and Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2406.19389v1",
+  "source_url": "https://arxiv.org/pdf/2406.19389v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "OMG-LLaVA：用统一分割模型连接图像、对象与像素推理",
+  "source_sha256": "45942c3da5dc7770d98083f752bb3542e359b93aa2c3579772193bfe0e905b51",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2180,
+  "figures_manifest": "figures-manifest.json"
+}

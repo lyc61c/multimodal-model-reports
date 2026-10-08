@@ -1,0 +1,49 @@
+{
+  "source_version": "2311.12871v1",
+  "claims": [
+    {
+      "claim": "7B模型142M可训练、冻结PointNet和LLM、CLIP融合及自身token",
+      "pdf_pages": [
+        3,
+        4,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "claim": "516分量码含320x160y36角度；导航4码",
+      "pdf_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "claim": "LEO-align/instruct规模、OCoT思想清洗移除、计数改善为教师统计",
+      "pdf_pages": [
+        4,
+        5,
+        6,
+        19,
+        20
+      ]
+    },
+    {
+      "claim": "两阶段训练4A100AdamWbatch80十epoch与LoRA16",
+      "pdf_pages": [
+        27,
+        28
+      ]
+    },
+    {
+      "claim": "主表理解/动作与修改EM、模拟评测和非递归局限",
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        29,
+        30
+      ]
+    }
+  ]
+}

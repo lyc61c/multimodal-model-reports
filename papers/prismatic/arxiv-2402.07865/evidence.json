@@ -1,0 +1,15 @@
+{
+  "paper_id": "82948b475ada",
+  "source_url": "https://arxiv.org/pdf/2402.07865v1",
+  "source_version": "2402.07865v1",
+  "source_sha256": "7027cf1a9560a0643686546f0a6de8b6aeaf017d67410c0d6dafb99126eb57f0",
+  "verification_notes": [
+    "Read body1-10, appendix16-22, exact Tables1-4; checked architecture and source identity.",
+    "Viewed pages2/9/20/21 fully; original Figure2/9 and Tables2/3 intact.",
+    "Table2 separates TextVQA OCR/noOCR, Controlled/full and notes full7B VizWiz decline52.82 vs54.24.",
+    "Figure9 radar includes mixed Controlled/full labels; article uses appendix exact rows.",
+    "p<.01 stated threshold; .0148resize/.0138data not claimed significant; fusion adds visual backbone costs.",
+    "No model execution or independent reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "dd2d1990e567",
+  "catalogue_entry_id": "dd2d1990e567",
+  "family_slug": "cosmos",
+  "title": "Cosmos 3: Omnimodal World Models for Physical AI",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2606.02800v1",
+  "source_url": "https://arxiv.org/pdf/2606.02800v1",
+  "document_kind": "world_model_report",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "Cosmos 3：以双路径 Transformer 统一理解、世界生成与动作预测"
+}

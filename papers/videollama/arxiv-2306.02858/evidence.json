@@ -1,0 +1,14 @@
+{
+  "paper_id": "cabdd815635d",
+  "source_url": "https://arxiv.org/pdf/2306.02858v1",
+  "source_version": "2306.02858v1",
+  "source_sha256": "9ab4f06ce8f41ac4956496283b6894d609421d0250d7d86be8722edbd234768f",
+  "verification_notes": [
+    "Read v1 PDF pages 1–9 and checked later page list; main evidence is qualitative examples, with no benchmark score or hyperparameter table.",
+    "Inspected original Figure 1 and Figures 2–5 page renders; image branch includes frozen BLIP2 Q-Former plus a separate trainable Video Q-Former.",
+    "Audio segmentation is 2 seconds with 128 mel bins; no unsupported query counts, GPU recipe or ASR capability claims.",
+    "Section 2.2.2 explicitly uses visual-text for the audio interface, despite inconsistent introductory audio-caption wording; preserved the distinction from pretrained ImageBind audio learning.",
+    "Explanatory formulas marked as such, frozen parameters distinguished from gradient flow, and sample-based findings not presented as quantitative superiority."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

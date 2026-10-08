@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文正文1–19页及身份与引用页；公式1–4逐项核对",
+    "实际查看PDF5、7、10、11页原图，Figure2/4和Table1–4完整，未裁缺列",
+    "核对Table1/2基础与-D列及DocVQA指标top1；MME感知认知分列，拒绝全面超越说法",
+    "核对940M数据、32/8A100阶段超参、LoRA16及额外3.5K步骤",
+    "标明1M/3M缓存口径差异、缓存无softmax、原文无组件定量消融",
+    "音频点云迁移与外接生成/检测/API区别；未运行模型，仅作者来源核验"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "395e01ac9a7ea7bc2e8f1c69dfca77ed7742b24a92b90fa7a740353722b5223e",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

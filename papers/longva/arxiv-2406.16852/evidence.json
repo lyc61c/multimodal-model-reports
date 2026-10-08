@@ -1,0 +1,43 @@
+{
+  "source_version": "2406.16852v1",
+  "claims": [
+    {
+      "claim": "Qwen27B224K;900M;1Mbatch1000steps;RoPE1B;8A1003.5days",
+      "pdf_pages": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "UniRes no base;within-grid flatten;pool2x2;144N;49grids",
+      "pdf_pages": [
+        4,
+        8,
+        17
+      ]
+    },
+    {
+      "claim": "V-NIAH5needles1FPS;teacherforcedlogitcheck not freegeneration",
+      "pdf_pages": [
+        5,
+        6,
+        15,
+        16
+      ]
+    },
+    {
+      "claim": "VideoMME128best52.6;38451.8;long2000retrieval not realbenchmarkframecount",
+      "pdf_pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "DPOusesLLaVAHoundvideo prefs;image tradeoffs Table7",
+      "pdf_pages": [
+        8
+      ]
+    }
+  ]
+}

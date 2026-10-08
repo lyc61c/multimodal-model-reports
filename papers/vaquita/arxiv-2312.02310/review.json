@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读 v1 主文第 1–8 页，确认其余 9–11 为参考文献、没有所引用的补充实验。",
+    "核验 CLIP 相关性采样仅用于训练，测试默认均匀采样；768 维抽帧特征与 1024 维 patch 分开。",
+    "核验 VQ-Former 式 2–5 及 Figure 4：视频 Q、文本 K/V，与前一段文字相反；多头输出宽度记法不完整。",
+    "核验冻结骨干、VideoInstruct-100K、3 epoch、2e-5、batch32、8A10080GB；未补造 label smoothing 系数。",
+    "核验 Table 1、2 的 GPT 评审协议与提示收益范围，Figure 6 50.8 消融不是主表 48.8 同一初始化。",
+    "原图已渲染和查看，修复架构图与主表图注边界；压缩 ratio 不等同实际加速。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "0a40131fc271229f982dc1f4f45dd5a08cd55b7ca8bdddf3e5bcdee641eedf4e",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

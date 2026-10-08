@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 methodology, experiments and implementation appendix 18–23; Figures2/6 and Tables1/2/4 original crops visually inspected.",
+    "Training-time geometry experts distinguished from RGB-only direct VLM inference and external LLM coordinated multistep inference.",
+    "PaLM2-S actual parameter count and ViT variant not invented; project link marks third-party code rather than official original release.",
+    "2B generated pairs not all consumed; 5% spatial token share versus appendix 174:2.5 example sampling not equated.",
+    "99% numeric output versus 37.2% half-to-twice range and 8.4% within 10% clearly differentiated; small human-estimated benchmark and 2023 GPT4V snapshot disclosed.",
+    "Qualitative gains, OKVQA decline and robot-domain noisy-data limitations retained; MSE(m) unit in paper flagged dimensionally.",
+    "Coordinator text-davinci-003 versus GPT4 wording conflict and Figure4 triangle naming conflict not used as exact reproducible setup; no actual RL policy success rate claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "6a696fdffdace906f4dacf9709574c8242ad5ee51cae8c8533a76aec4f123073",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "a98a5134828c",
+  "catalogue_entry_id": "a98a5134828c",
+  "family_slug": "gpt4tools",
+  "title": "GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2305.18752v1",
+  "source_url": "https://arxiv.org/pdf/2305.18752v1",
+  "document_kind": "tool_use_method",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "GPT4Tools：通过自指令数据教开源语言模型调用视觉工具"
+}

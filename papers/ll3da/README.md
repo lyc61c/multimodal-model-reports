@@ -1,0 +1,23 @@
+# LL3DA
+
+项目主体 / 机构：repo:Open3DA。快照：2026-10-08。
+
+本页有 1 篇模型文献；同家族其他资料与排除项一并列出便于审计。版本按日期列出。
+
+## 模型论文 / 技术报告 / 模型卡
+
+| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
+|---|---|---|---:|---|---|---|
+| LL3DA | [LL3DA: Visual Interactive Instruction Tuning for Omni-3D Understanding, Reasoning, and Planning](https://arxiv.org/pdf/2311.18651.pdf) | 2023-11-30 | [320](https://github.com/Open3DA/LL3DA) | [Open3DA/LL3DA](https://github.com/Open3DA/LL3DA) | Star 达标 | model_paper / 模型文献 |
+
+## 已完成的逐篇介绍
+
+| 逐篇介绍 | 原文版本 |
+|---|---|
+| [LL3DA：接受点击与框提示的三维语言助手](arxiv-2311.18651/README.md) | 2311.18651v1 |
+
+## 判定依据与数据提示
+
+- **LL3DA: Visual Interactive Instruction Tuning for Omni-3D Understanding, Reasoning, and Planning**：模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。
+
+[返回项目索引](../../README.md)

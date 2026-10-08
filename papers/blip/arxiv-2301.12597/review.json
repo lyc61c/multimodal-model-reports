@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Title identity verified",
+    "All four selected original pages visually inspected",
+    "Zero-shot and downstream finetuning separated",
+    "Trainable vs total parameter counts differentiated",
+    "Frozen LLM performance degradation not misdescribed as weight updates",
+    "Math expressions marked explanatory",
+    "No model execution claimed"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "47a233aaecf1f39492b71292801e7ee89b9966b87925307d61036969ad68885a",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

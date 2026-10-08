@@ -1,0 +1,16 @@
+{
+  "paper_id": "bfa86ff73462",
+  "source_url": "https://arxiv.org/pdf/2301.12597v1",
+  "source_version": "2301.12597v1",
+  "source_sha256": "0a4b93c402a6b8b0d2c5f438bbae31d447b17324b71c3e4fb6dab53e0e389bc5",
+  "verification_notes": [
+    "Title identity verified",
+    "All four selected original pages visually inspected",
+    "Zero-shot and downstream finetuning separated",
+    "Trainable vs total parameter counts differentiated",
+    "Frozen LLM performance degradation not misdescribed as weight updates",
+    "Math expressions marked explanatory",
+    "No model execution claimed"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "64f6e640117f",
+  "catalogue_entry_id": "64f6e640117f",
+  "family_slug": "mobilevlm",
+  "title": "MobileVLM : A Fast, Reproducible and Strong Vision Language Assistant for Mobile Devices",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2312.16886v1",
+  "source_url": "https://arxiv.org/pdf/2312.16886v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MobileVLM：面向移动设备的视觉语言助手"
+}

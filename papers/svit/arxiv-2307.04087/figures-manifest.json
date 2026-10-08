@@ -1,0 +1,87 @@
+{
+  "paper_id": "6ad14948aa28",
+  "source_version": "2307.04087v1",
+  "source_pdf_sha256": "8865ad6b7cc6f61322c4e11d131e3a46437018a66742c1b121d0ea41655c7501",
+  "assets": [
+    {
+      "asset_path": "figures/generation-example.png",
+      "original_label": "Figure 1：语言教师输入和三类生成数据",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2307.04087v1#page=4",
+      "source_version": "2307.04087v1",
+      "source_sha256": "8865ad6b7cc6f61322c4e11d131e3a46437018a66742c1b121d0ea41655c7501",
+      "asset_sha256": "99a1063293791f316326e787c62881b260a6ca84adb4deac58f0dad039cd889d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          100,
+          110,
+          515,
+          685
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/question-distribution.png",
+      "original_label": "Figure 2：问题类型分布",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2307.04087v1#page=5",
+      "source_version": "2307.04087v1",
+      "source_sha256": "8865ad6b7cc6f61322c4e11d131e3a46437018a66742c1b121d0ea41655c7501",
+      "asset_sha256": "f3055d4945eca65069a46efcc76ad760a6c40889d7f7fc2f80a108118f671617",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          100,
+          65,
+          515,
+          290
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/quality-errors.png",
+      "original_label": "Figure 3：源标注与生成答案错误",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2307.04087v1#page=6",
+      "source_version": "2307.04087v1",
+      "source_sha256": "8865ad6b7cc6f61322c4e11d131e3a46437018a66742c1b121d0ea41655c7501",
+      "asset_sha256": "d13e8f009e6d73309ebc86250f5b18e6f75d4be2ffcc7828796bca4072cb7e7a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          370
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/description-results.png",
+      "original_label": "Figure 5：LLaVA 图像描述对照案例",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2307.04087v1#page=8",
+      "source_version": "2307.04087v1",
+      "source_sha256": "8865ad6b7cc6f61322c4e11d131e3a46437018a66742c1b121d0ea41655c7501",
+      "asset_sha256": "ec62e8383ca17ddf97c56b0c251257ffd339eedf442516274ab29bb1cc88e79e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          100,
+          80,
+          515,
+          725
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

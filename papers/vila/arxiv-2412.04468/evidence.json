@@ -1,0 +1,16 @@
+{
+  "paper_id": "1773ce2a23e8",
+  "source_url": "https://arxiv.org/pdf/2412.04468v1",
+  "source_version": "2412.04468v1",
+  "source_sha256": "66fa0a0ec59c291e5f8205d30d02741d759428bc95ccb46450251d6bdedf76ff",
+  "verification_notes": [
+    "Read PDF pages 1 and 3–12 plus appendix Table A1 on page 20; confirmed SigLIP, two-layer MLP and Qwen2 backbones.",
+    "Visually inspected all five original crops; corrected incomplete architecture and table crops before writing.",
+    "Table 1 uses 256 to 121 tokens per tile, not a literal ninefold reduction; preserve distinct temporal ablation and final Video-MME results.",
+    "Separated full training greater-than-100M, SFT candidate 10M and selected 5M counts; DeltaLoss is data selection rather than KL distillation.",
+    "Separated 128-H100 recipe, 64-H100 FP8 throughput study, A100 fine-tuning study and RTX4090 deployment study.",
+    "Preserved MMMU val/test/pro and subtitles/frame protocols; recorded Figure 6 7B versus main 8B wording discrepancy.",
+    "Efficiency arithmetic checked from displayed component latencies and throughput; no reproduction or current-SOTA claim."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

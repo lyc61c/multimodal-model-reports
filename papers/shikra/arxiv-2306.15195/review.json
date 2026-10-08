@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读主文 1–9 页和附录 12–13 页；核验数字坐标、256 patch、线性连接、视觉冻结与 LLM 全量更新。",
+    "核验 Table 8 全部数据源，GPT4 教师只读五条 caption 与框，生成 6400 QA；不能称图像教师。",
+    "核验 CLEVR 与位置词表消融均为独立训练的受控模型，不是完整模型零样本提示效果。",
+    "核验训练100000步/约1.5epoch、AdamW2e-5 batch64八A100，第二阶段50%描述不扩展未知逐数据配比。",
+    "核验主模型训练含 REC、PointQA、VQA；无需额外微调不等于零样本；专项定位和部分 POPE/VQA 对照更强。",
+    "原文 Figure 2 与 Table 1–8 已渲染并查看；数字 AR 公式明确为既有机制解释。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "62cc8c4b7c3a5be1e7998900c9af24a5f5c874fddab4c88ec9b3e78d084b2dcb",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

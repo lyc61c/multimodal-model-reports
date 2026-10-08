@@ -1,0 +1,32 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "复核全部引用表值与脚注，旧基线Max/Plus分开",
+    "图1按训练环境轴、综合index、非单调解读",
+    "多模态记忆插件非主干无限窗口，反馈决策非权重更新"
+  ],
+  "math_checks": [
+    "采样目标为解释而非实际RL算法",
+    "参数3.96%仅比例；2.71pp不当2.71相对百分比；面积平方计算对应81%",
+    "CI是code interpreter不是置信区间，pass/partial/Elo不混合"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/official-1.png",
+      "checked": "view_image original核验所有标题、数字、模型图例、坐标与完整结果"
+    },
+    {
+      "file": "figures/official-2.png",
+      "checked": "view_image original核验所有标题、数字、模型图例、坐标与完整结果"
+    },
+    {
+      "file": "figures/official-3.png",
+      "checked": "view_image original核验所有标题、数字、模型图例、坐标与完整结果"
+    }
+  ],
+  "limitations": [
+    "训练细节与统计区间未公开；内部基准和单次展示限制",
+    "未运行模型"
+  ],
+  "model_execution": "not_run"
+}

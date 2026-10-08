@@ -1,0 +1,14 @@
+{
+  "paper_id": "e217a2f7dee4",
+  "catalogue_entry_id": "e217a2f7dee4",
+  "family_slug": "ma-lmm",
+  "title": "MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2404.05726v1",
+  "source_url": "https://arxiv.org/pdf/2404.05726v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MA-LMM：双记忆库与相邻特征压缩的长视频理解"
+}

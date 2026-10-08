@@ -1,0 +1,15 @@
+{
+  "paper_id": "0aebb3826b29",
+  "source_url": "https://raw.githubusercontent.com/QwenLM/Qwen-MM-Plugins/main/README.md",
+  "source_version": "official-readme-2026-10-08",
+  "source_sha256": "0c02bc9996efc709d71d92925068dba5ba9b931ab5a6ca2634040d8ad5cdc759",
+  "verification_notes": [
+    "Read entire official Qwen-MM-Plugins English README snapshot; verified project is Skill/tool integration rather than a model training technical report.",
+    "Downloaded original architecture.svg and visually inspected faithful PNG rendering; labels and full canvas intact, original SVG linked and retained with original hash.",
+    "Only one substantive technical figure exists in the README; community badges were intentionally not misrepresented as paper figures.",
+    "Checked Skill plus optional MCP design, native core versus API routes, current audio API limitation, independent tags, uvx dependencies and NIfTI defaults.",
+    "No model training recipe, mathematical derivation, numeric benchmark or 100-hour validated limit is invented; cookbook and illustrative functionality are distinguished from measured results.",
+    "No installation, model inference, application operation or hardware execution was performed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

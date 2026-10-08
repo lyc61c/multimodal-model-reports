@@ -1,0 +1,22 @@
+{
+  "source_url": "https://api-docs.deepseek.com/news/news260821/",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "56babe7f597f37b31c4440174272d4090f32056902c76e3984be3d54d5864de8",
+  "read_scope": "官方发布正文全文及基准PNG完整表和脚注；静态案例PNG原分辨率检视。",
+  "claims": [
+    {
+      "location": "release / Multimodal API support / Files API",
+      "claim": "发布2026-08-21，experimental调用名，图文/API/file引用入口，每图最多384计费token。"
+    },
+    {
+      "location": "v4_260821_benchmark_en.png all rows and footnotes",
+      "claim": "7文字任务4多模态任务；对照Flash0731，文字模型忽略多模态，DeepSeek文字Harness Minimal采样口径。"
+    },
+    {
+      "location": "v4_260821_case1.png",
+      "claim": "成品网页示例不含完整输入/工具执行/成功日志，仅说明展示内容。"
+    }
+  ],
+  "source_inconsistencies": [],
+  "model_execution": "not_run"
+}

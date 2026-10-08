@@ -1,0 +1,19 @@
+{
+  "paper_id": "694e2e46c3f0",
+  "catalogue_entry_id": "694e2e46c3f0",
+  "family_slug": "minicpm",
+  "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2408.01800v1",
+  "source_url": "https://arxiv.org/pdf/2408.01800v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MiniCPM-V：面向端侧的高分辨率视觉语言模型",
+  "source_sha256": "5e12b613e832101c217d4990828b8cc584175026eac30d35f799afef79da4e1f",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1907,
+  "figures_manifest": "figures-manifest.json"
+}

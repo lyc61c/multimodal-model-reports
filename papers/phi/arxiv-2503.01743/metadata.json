@@ -1,0 +1,14 @@
+{
+  "paper_id": "14ecd062f291",
+  "catalogue_entry_id": "14ecd062f291",
+  "family_slug": "phi",
+  "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2503.01743v1",
+  "source_url": "https://arxiv.org/pdf/2503.01743v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Phi-4-Mini 与 Phi-4-Multimodal：用模态 LoRA 保留语言骨干"
+}

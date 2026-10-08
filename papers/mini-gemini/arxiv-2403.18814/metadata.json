@@ -1,0 +1,14 @@
+{
+  "paper_id": "73a7060a7335",
+  "catalogue_entry_id": "73a7060a7335",
+  "family_slug": "mini-gemini",
+  "title": "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2403.18814v1",
+  "source_url": "https://arxiv.org/pdf/2403.18814v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Mini-Gemini：双视觉编码器、局部信息挖掘与语言驱动生图"
+}

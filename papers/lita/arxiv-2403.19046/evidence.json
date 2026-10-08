@@ -1,0 +1,17 @@
+{
+  "paper_id": "010869b30cc2",
+  "source_url": "https://arxiv.org/pdf/2403.19046v1",
+  "source_version": "2403.19046v1",
+  "source_sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca",
+  "verification_notes": [
+    "阅读全文1–10，原身份NVIDIA/v1与CLIP+Vicuna核对",
+    "实际检视原PDF3/6/7/8，Figure2/4/5与Table1/2/3完整",
+    "时间round公式T-1分母核对；误差与长度比例标为公式推导非实测速度",
+    "100帧100快token+4x64慢token=356，SlowFast指池化非新增卷积骨干",
+    "10,009视频33,557训练问答；229问答160视频人工评测；GPT仅读带时间文字描述",
+    "五任务有放回100K各；8A100 9/13小时与GPU小时区别；原文未给优化器mask等不补",
+    "Table1同任务逐步消融和三次平均；缺时间基线为缺失不是0",
+    "Score相对GPT解释评分非正确率；Table2相对增长与绝对准确率区分；评价偏差原文限制"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,107 @@
+{
+  "paper_id": "261e4c6f7250",
+  "source_version": "2306.15195v1",
+  "source_pdf_sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4",
+  "assets": [
+    {
+      "asset_path": "figures/referential-dialogue.png",
+      "original_label": "Figure 2：真实用户指代表达对话",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2306.15195v1#page=3",
+      "source_version": "2306.15195v1",
+      "source_sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4",
+      "asset_sha256": "9dfda03f7593cbf17eb0c1378cb4259da17af488c71b087a244140d8c154de69",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          65,
+          535,
+          600
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/coordinate-ablations.png",
+      "original_label": "Table 1、2：坐标推理与位置表示消融",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2306.15195v1#page=6",
+      "source_version": "2306.15195v1",
+      "source_sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4",
+      "asset_sha256": "b68a7ee7880aaa791916acd89d0eb5b7474b743b0946819d5016d8a81732cd62",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          65,
+          295,
+          465
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/grounding-results.png",
+      "original_label": "Table 3–5：指代定位和 PointQA",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2306.15195v1#page=7",
+      "source_version": "2306.15195v1",
+      "source_sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4",
+      "asset_sha256": "d42d20c53956389fe3f3d25b07cbf8b0c1b0ef163e571ee8c5219d37c24476b9",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          65,
+          535,
+          515
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/vqa-hallucination.png",
+      "original_label": "Table 6、7：VQA、描述和幻觉评估",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2306.15195v1#page=8",
+      "source_version": "2306.15195v1",
+      "source_sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4",
+      "asset_sha256": "b0d1967bc11c8596b0311e27d4949597d5043b48f587af79569b11c0d4451b7a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          65,
+          535,
+          525
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-data.png",
+      "original_label": "Table 8：训练数据",
+      "pdf_page": 12,
+      "source_url": "https://arxiv.org/pdf/2306.15195v1#page=12",
+      "source_version": "2306.15195v1",
+      "source_sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4",
+      "asset_sha256": "2d981c7773cd5913b575ce0e557dbfd77dc9a3a9441b3a2122f05f67a03bee88",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          105,
+          535,
+          337
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

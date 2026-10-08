@@ -1,0 +1,107 @@
+{
+  "paper_id": "d08b52bb40c6",
+  "source_version": "2308.12038v1",
+  "source_pdf_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 1：跨语言迁移和双分支架构",
+      "pdf_page": 2,
+      "source_url": "https://arxiv.org/pdf/2308.12038v1#page=2",
+      "source_version": "2308.12038v1",
+      "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
+      "asset_sha256": "1cc2964b8d6e4ef0246e546091948239ac9f80c30256f6bdd4ff46c7f0a1b759",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          205
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/chat-results.png",
+      "original_label": "Table 1：英中文图像对话评估",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2308.12038v1#page=7",
+      "source_version": "2308.12038v1",
+      "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
+      "asset_sha256": "df2e6e17e99fbdcb93feace0070f1bc93123165009e22aea97b799cadce3987a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          248
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/generation-examples.png",
+      "original_label": "Figure 5：原文生成图像样例",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2308.12038v1#page=9",
+      "source_version": "2308.12038v1",
+      "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
+      "asset_sha256": "174f8ce77354931530df06e4e857848776746617ac7f8162889b1f4316422f5a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          110,
+          440,
+          505,
+          719
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/generation-results.png",
+      "original_label": "Table 2、Figure 6：FID 与 CLIP 评估",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2308.12038v1#page=10",
+      "source_version": "2308.12038v1",
+      "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
+      "asset_sha256": "05e1d98450056ea5a3f4c679ccd771cce26c98b75b152f08ce4b391a536c07ff",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          288
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/language-ablations.png",
+      "original_label": "Table 3：中文数据消融",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2308.12038v1#page=11",
+      "source_version": "2308.12038v1",
+      "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
+      "asset_sha256": "ad8921846cc19949429d8a71f6a08ebafa1c9c807183a50b13e96498eb25fc9f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          260
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

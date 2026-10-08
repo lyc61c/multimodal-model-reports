@@ -1,0 +1,87 @@
+{
+  "paper_id": "1acc7b9da68d",
+  "source_version": "2312.07533v1",
+  "source_pdf_sha256": "f5e8cc885acc841369923d4d9dee3297fad155e9137643ef20e391431b10d32c",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-alignment.png",
+      "original_label": "Figure 2–3：整体架构、训练阶段与深层表示对齐",
+      "pdf_page": 2,
+      "source_url": "https://arxiv.org/pdf/2312.07533v1#page=2",
+      "source_version": "2312.07533v1",
+      "source_sha256": "f5e8cc885acc841369923d4d9dee3297fad155e9137643ef20e391431b10d32c",
+      "asset_sha256": "9a3439cea348cba82e21249be5a24003fdc528e75e08471acef3bc6ccd2f7ae1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          40,
+          65,
+          563,
+          253
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/pretraining-ablations.png",
+      "original_label": "Table 1：预训练与SFT是否解冻语言模型的消融",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2312.07533v1#page=3",
+      "source_version": "2312.07533v1",
+      "source_sha256": "f5e8cc885acc841369923d4d9dee3297fad155e9137643ef20e391431b10d32c",
+      "asset_sha256": "c491d0c3ffc78ad99ab48edccfd7c183cde38b4c87a41682aa748d0e4f099a34",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          42,
+          68,
+          560,
+          225
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/interleaved-data.png",
+      "original_label": "Figure 4：MMC4交错图文样本",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2312.07533v1#page=4",
+      "source_version": "2312.07533v1",
+      "source_sha256": "f5e8cc885acc841369923d4d9dee3297fad155e9137643ef20e391431b10d32c",
+      "asset_sha256": "652d0a545c258a4ff0b4ace145ddd13a3acc194950b1a5c7e786b95c90668ad4",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          40,
+          66,
+          562,
+          158
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/main-results.png",
+      "original_label": "Table 5：多模态基准主要结果",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2312.07533v1#page=6",
+      "source_version": "2312.07533v1",
+      "source_sha256": "f5e8cc885acc841369923d4d9dee3297fad155e9137643ef20e391431b10d32c",
+      "asset_sha256": "76163c91820af3e475100cccca6cfdec2c4b6832b83b7f398ee950a0affa5cb7",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          40,
+          67,
+          564,
+          309
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

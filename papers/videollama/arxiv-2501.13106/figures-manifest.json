@@ -1,0 +1,107 @@
+{
+  "paper_id": "68c32964bf01",
+  "source_version": "2501.13106v1",
+  "source_pdf_sha256": "47f698ffaf94fe77b1b1c833dc286cefd26be0d4188f2aa7ab9613fc09cadafa",
+  "assets": [
+    {
+      "asset_path": "figures/training-data.png",
+      "original_label": "Figure 2：四阶段训练与数据构成",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2501.13106v1#page=3",
+      "source_version": "2501.13106v1",
+      "source_sha256": "47f698ffaf94fe77b1b1c833dc286cefd26be0d4188f2aa7ab9613fc09cadafa",
+      "asset_sha256": "38e888e1e9b2d3378df306f4d09e3e7f2bf538cf841fb75fe83ee96f0be7eb22",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          275
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3：AVT 与 DiffFP 架构",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2501.13106v1#page=4",
+      "source_version": "2501.13106v1",
+      "source_sha256": "47f698ffaf94fe77b1b1c833dc286cefd26be0d4188f2aa7ab9613fc09cadafa",
+      "asset_sha256": "d8843b21b8c3236d8caeb304365350b9835922006109884a78f8e716750cc43d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          422
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/pruning.png",
+      "original_label": "Figure 4：基于像素变化的 patch 剪枝",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2501.13106v1#page=5",
+      "source_version": "2501.13106v1",
+      "source_sha256": "47f698ffaf94fe77b1b1c833dc286cefd26be0d4188f2aa7ab9613fc09cadafa",
+      "asset_sha256": "b5f8c4008a3970c10453311a71cd09ebcc005a0ba1bc3ad393fa01e8805599a5",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          266
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/image-results.png",
+      "original_label": "Table 6：7B 图像基准结果",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2501.13106v1#page=13",
+      "source_version": "2501.13106v1",
+      "source_sha256": "47f698ffaf94fe77b1b1c833dc286cefd26be0d4188f2aa7ab9613fc09cadafa",
+      "asset_sha256": "2bfeb2ad67c8adeaa528a7a61dc4d73cc76c6e9c0a21de5c3e681cdda80ccd99",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          440
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/video-results.png",
+      "original_label": "Table 8：7B 视频基准结果",
+      "pdf_page": 15,
+      "source_url": "https://arxiv.org/pdf/2501.13106v1#page=15",
+      "source_version": "2501.13106v1",
+      "source_sha256": "47f698ffaf94fe77b1b1c833dc286cefd26be0d4188f2aa7ab9613fc09cadafa",
+      "asset_sha256": "bb5c8a99b9212549430d649f068bee0f8ab687f8fc6244d81e40fd895039474a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          440
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

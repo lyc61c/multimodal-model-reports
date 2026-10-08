@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "review_type": "self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "figures_visually_checked": [
+    "original-page-003-01.png",
+    "original-page-006-02.png",
+    "original-page-011-03.png",
+    "original-page-015-04.png"
+  ],
+  "model_executed": false,
+  "checks": [
+    "七节原图齐全",
+    "模型版本与各尺度配置正确",
+    "直接回答CoT多数投票与视频最高设置分清",
+    "未把未来偏好训练计划写为已实施",
+    "未把120B视作全部上游从零预算"
+  ],
+  "limitations": [
+    "Figure7右图纵轴T与训练表B口径不同，采用Table3",
+    "大模型继承视觉与LLM训练成本",
+    "本文未运行或复现模型"
+  ]
+}

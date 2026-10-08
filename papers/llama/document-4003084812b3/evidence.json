@@ -1,0 +1,28 @@
+{
+  "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "5368287f254b14d7dd624e6b0f9ec35afe42e459464d940fb6714d50706794ec",
+  "read_scope": "完整官方正文（预训练、两个模型后训练、Behemoth、保护、评测）及原始结构、Maverick表、NiH与代码NLL图",
+  "claims": [
+    {
+      "location": "Pre-training 与MoE结构图",
+      "claim": "Maverick128 routed+shared、top1；图示16专家；17B激活400B总量；早期融合与视觉单独适配"
+    },
+    {
+      "location": "Post-training 与 Behemoth",
+      "claim": "轻SFT→onlineRL→轻DPO，50%以上easy过滤；Behemoth95%SFT裁剪和异步RL"
+    },
+    {
+      "location": "Maverick表底部脚注",
+      "claim": "Llama0shottemp0、非Llama自报；LCB日期差异，MMMU73.4、MathVista73.7、Chart90、Doc94.4"
+    },
+    {
+      "location": "NiH/NLL原图",
+      "claim": "Scout256K训练泛化到10M，检索非全部任务；NLL累积平均非逐token正确率"
+    }
+  ],
+  "source_inconsistencies": [
+    "页面保留2025-04-05日期，但缓存表格和正文已出现DeepSeek v3.1；本文明示快照版本，未当作首发原表"
+  ],
+  "model_execution": "not_run"
+}

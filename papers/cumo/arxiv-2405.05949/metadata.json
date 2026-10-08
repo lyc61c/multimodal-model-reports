@@ -1,0 +1,14 @@
+{
+  "paper_id": "3aceb543bb4d",
+  "catalogue_entry_id": "3aceb543bb4d",
+  "family_slug": "cumo",
+  "title": "CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2405.05949v1",
+  "source_url": "https://arxiv.org/pdf/2405.05949v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "CuMo：从稠密检查点扩展视觉编码器和连接器专家"
+}

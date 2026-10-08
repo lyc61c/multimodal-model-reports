@@ -1,0 +1,87 @@
+{
+  "paper_id": "31a81e153f28",
+  "source_version": "2305.04160v1",
+  "source_pdf_sha256": "9e82c2b236b4d1ffd297f896e2c8bc0d99f83073e603141d6bfb66c5c8b1b27d",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 1：X2L 多模态接口",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2305.04160v1#page=3",
+      "source_version": "2305.04160v1",
+      "source_sha256": "9e82c2b236b4d1ffd297f896e2c8bc0d99f83073e603141d6bfb66c5c8b1b27d",
+      "asset_sha256": "ade5197418cda5221105f07c42a2a83a6a62ad85fe3fbe3483fa7465b8c063d8",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          275
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/visual-evaluation.png",
+      "original_label": "Table 1：GPT 文本参考的相对评分",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2305.04160v1#page=7",
+      "source_version": "2305.04160v1",
+      "source_sha256": "9e82c2b236b4d1ffd297f896e2c8bc0d99f83073e603141d6bfb66c5c8b1b27d",
+      "asset_sha256": "e2f447260b74cf4baf4772a702a56636eb568902f3c19b338da1ae59b04ebc87",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          220
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/speech-results.png",
+      "original_label": "Table 4：语音识别结果",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2305.04160v1#page=9",
+      "source_version": "2305.04160v1",
+      "source_sha256": "9e82c2b236b4d1ffd297f896e2c8bc0d99f83073e603141d6bfb66c5c8b1b27d",
+      "asset_sha256": "67f6398c2d17d353fcbcb39b4949f3d9c978f6065c85867426e23e7568087054",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          500,
+          515,
+          600
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training.png",
+      "original_label": "Table 7：三阶段训练配置",
+      "pdf_page": 16,
+      "source_url": "https://arxiv.org/pdf/2305.04160v1#page=16",
+      "source_version": "2305.04160v1",
+      "source_sha256": "9e82c2b236b4d1ffd297f896e2c8bc0d99f83073e603141d6bfb66c5c8b1b27d",
+      "asset_sha256": "03b60be669161774d3c42041f662bc0eb7c2f58cbe6d4ff21eeea79bc2b9337a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          515,
+          515,
+          640
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

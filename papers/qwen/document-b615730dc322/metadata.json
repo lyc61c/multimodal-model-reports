@@ -1,0 +1,19 @@
+{
+  "paper_id": "b615730dc322",
+  "catalogue_entry_id": "b615730dc322",
+  "family_slug": "qwen",
+  "title": "QVQ: To See the World with Wisdom",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "QVQ-72B-Preview：以长程推理增强视觉解题",
+  "source_sha256": "ba18d03f42cf988dad6116cee36c4d640fac0e481e9906011ec7536b8b51990c",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1824,
+  "figures_manifest": "figures-manifest.json"
+}

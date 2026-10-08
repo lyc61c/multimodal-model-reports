@@ -1,0 +1,14 @@
+{
+  "paper_id": "0c4a9f5a9115",
+  "catalogue_entry_id": "0c4a9f5a9115",
+  "family_slug": "otter-398569",
+  "title": "MIMIC-IT: Multi-Modal In-Context Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2306.05425v1",
+  "source_url": "https://arxiv.org/pdf/2306.05425v1",
+  "document_kind": "dataset_or_benchmark",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "MIMIC-IT：多模态上下文指令调优与 Otter"
+}

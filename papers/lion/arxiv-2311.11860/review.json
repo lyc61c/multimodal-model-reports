@@ -1,0 +1,51 @@
+{
+  "checked_file": "papers\\lion\\arxiv-2311.11860\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "actuallanguageencoderdecoder",
+    "freezes/modulesnotLoRA",
+    "routertaskvectorsnotMoEtopk",
+    "dataunitsandstagecounts",
+    "metricsCIDErMRRaccuracyseparate",
+    "zero-shot/FTandPOPEweaknesses"
+  ],
+  "math_checked": [
+    "adapterEqs1-3faithful",
+    "aggregationEqs4-5faithful",
+    "conditionalNTPstandardnotEq",
+    "pointdeltasverified"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-003-01.png",
+      "original_label": "Figures2-3",
+      "pdf_page": 3,
+      "inspection": "Viewed full original page;complete diagramlabels/tableheaders/allrows/plotaxes/legend/captions"
+    },
+    {
+      "file": "figures/original-page-006-02.png",
+      "original_label": "Tables2-3",
+      "pdf_page": 6,
+      "inspection": "Viewed full original page;complete diagramlabels/tableheaders/allrows/plotaxes/legend/captions"
+    },
+    {
+      "file": "figures/original-page-007-03.png",
+      "original_label": "Tables4-5/Figure5",
+      "pdf_page": 7,
+      "inspection": "Viewed full original page;complete diagramlabels/tableheaders/allrows/plotaxes/legend/captions"
+    },
+    {
+      "file": "figures/original-page-012-04.png",
+      "original_label": "Tables7-8",
+      "pdf_page": 12,
+      "inspection": "Viewed full original page;complete diagramlabels/tableheaders/allrows/plotaxes/legend/captions"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "resolution/tokencount/hardwaremissing",
+    "softpromptstage/mixweightnotfullyspecified",
+    "epoch-stepcountsamplingunclear",
+    "crossmodeldifferentbones/data"
+  ]
+}

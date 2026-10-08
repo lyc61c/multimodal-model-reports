@@ -1,0 +1,107 @@
+{
+  "paper_id": "0d9927d7fce6",
+  "source_version": "2305.01278v1",
+  "source_pdf_sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065",
+  "assets": [
+    {
+      "asset_path": "figures/transfer-architecture.png",
+      "original_label": "Figure 1：跨 LLM 迁移架构",
+      "pdf_page": 1,
+      "source_url": "https://arxiv.org/pdf/2305.01278v1#page=1",
+      "source_version": "2305.01278v1",
+      "source_sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065",
+      "asset_sha256": "d8bc661715160807d53554de573b6781fded0521a1d793bad3f18c9b88c3e08b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          520,
+          515,
+          695
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/two-stage-transfer.png",
+      "original_label": "Figure 6：两阶段迁移",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2305.01278v1#page=7",
+      "source_version": "2305.01278v1",
+      "source_sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065",
+      "asset_sha256": "abb59dbd34f0269f8f523fb2d601fa0301de54e519cc7d2347912b006c78154d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          260
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/convergence-results.png",
+      "original_label": "Table 3：收敛 epoch 加速比",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2305.01278v1#page=8",
+      "source_version": "2305.01278v1",
+      "source_sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065",
+      "asset_sha256": "86c25f9dc1ff51554db2569c6cfca95872e41f5254974c7c201ef9c547981d0c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          253
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/scaled-results.png",
+      "original_label": "Table 4：大型模型耗时与数据",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2305.01278v1#page=10",
+      "source_version": "2305.01278v1",
+      "source_sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065",
+      "asset_sha256": "fc5d8f4cc6c05c98811efecaa069b9f1daa70a1aa0a708a1c4410d852673b4f5",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          175
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/customized-model-results.png",
+      "original_label": "Table 5：VL-LLaMA 与 VL-Vicuna",
+      "pdf_page": 12,
+      "source_url": "https://arxiv.org/pdf/2305.01278v1#page=12",
+      "source_version": "2305.01278v1",
+      "source_sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065",
+      "asset_sha256": "fc982d242fad1929514ddb603ce7bc031f566b132fed4fe4901835cf23733216",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          160,
+          65,
+          450,
+          195
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

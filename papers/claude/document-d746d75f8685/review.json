@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read PDF pages 1–21 for model positioning, data, training and core evaluation, with the 42-page official model card identity checked.",
+    "Table 3 values taken from page 8; noted that the AI2D numbers in prose on page 7 differ from the table. Article uses table values consistently.",
+    "Separated DocVQA ANLS, ChartQA relaxed accuracy, MMMU validation and MathVista testmini; no pooled overall score.",
+    "Separated 200k production context at release from one-million-token research loss plot and 200k retrieval experiment.",
+    "Did not invent parameter counts, ViT/merger configuration, dataset size, learning rates or detailed RL recipe.",
+    "Original figure/table pages rendered and visually checked, retaining captions and table footnotes.",
+    "Equation 5.1 explained as evaluation win-rate conversion, not as a disclosed model architecture or training loss."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "23e2bf44c6b7704ad9f97cc1fcee3b41d193fb4d2459868202bf93a1aac1c5ba",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

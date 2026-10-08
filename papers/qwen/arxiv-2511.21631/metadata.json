@@ -1,0 +1,19 @@
+{
+  "paper_id": "f0c46ccf05fd",
+  "catalogue_entry_id": "f0c46ccf05fd",
+  "family_slug": "qwen",
+  "title": "Qwen3-VL Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2511.21631v1",
+  "source_url": "https://arxiv.org/pdf/2511.21631v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Qwen3-VL：DeepStack、文字时间戳与 256K 多模态上下文",
+  "source_sha256": "bc09ce99cface4dae5deaeb5327b936195d162f4df719ab2e86ee3807a0db865",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2195,
+  "figures_manifest": "figures-manifest.json"
+}

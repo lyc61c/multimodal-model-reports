@@ -1,0 +1,15 @@
+{
+  "paper_id": "bf191b32aa7d",
+  "source_url": "https://arxiv.org/pdf/2310.09199v1",
+  "source_version": "2310.09199v1",
+  "source_sha256": "89131a46ce355e030da7dae2e344e7dc5e8dfa4428d8dece3536e1d2b8e99b01",
+  "verification_notes": [
+    "阅读v1第1–9页技术正文、15–16页视频子集与多语言检索附录，16页身份已核验。",
+    "视觉检视Figure1及Table1/2/4/5/6四页，SigLIP行是差值，OCR分组与split列核对。",
+    "核验2BViTG14+3BUL2、1536维、pooling前token、encoder-decoder、128码本16masktoken64×64、冻结顺序。",
+    "数学明确标准解释，未填不存在损失温度或精确recipe；分类vsSigLIP还改变数据来源，不能孤立归因。",
+    "核验WebLI过滤40%只Stage0、100+语言PDF、各任务微调与视频无预训练但有微调、测试失效链接子集。",
+    "逐项核验Table2/3/4/5/6，正文增益与caption平均概括不符表处以原表为准，不称全任务零样本/全面领先，未运行模型。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

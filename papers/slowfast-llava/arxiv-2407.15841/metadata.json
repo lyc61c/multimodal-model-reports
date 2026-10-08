@@ -1,0 +1,19 @@
+{
+  "paper_id": "8d5b451aee7d",
+  "catalogue_entry_id": "8d5b451aee7d",
+  "family_slug": "slowfast-llava",
+  "title": "SlowFast-LLaVA: A Strong Training-Free Baseline for Video Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2407.15841v1",
+  "source_url": "https://arxiv.org/pdf/2407.15841v1",
+  "document_kind": "inference_method",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "SlowFast-LLaVA：在固定 token 预算内兼顾空间细节和时间覆盖",
+  "source_sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1703,
+  "figures_manifest": "figures-manifest.json"
+}

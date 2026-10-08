@@ -1,0 +1,14 @@
+{
+  "paper_id": "5cee12bded74",
+  "catalogue_entry_id": "5cee12bded74",
+  "family_slug": "languagebind",
+  "title": "LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2310.01852v1",
+  "source_url": "https://arxiv.org/pdf/2310.01852v1",
+  "document_kind": "multimodal_encoder",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "LanguageBind：以固定语言空间连接视频、音频、深度与红外"
+}

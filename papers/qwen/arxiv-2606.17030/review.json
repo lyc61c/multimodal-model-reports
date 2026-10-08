@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "核对arXiv2606.17030v1第1与21页：团队、作者、提交日06-15与PDF06-16分别说明；25页版本固定。",
+    "核对第10—13页：冻结Qwen2.5VL7B、VAE127M与MMDiT20B分开、60blocks/24heads/128dim/3072/2x2/48360tokens；架构图冻结VAE符号、三段Scene2Robot且仅目标段loss。",
+    "核对flow matching描述与3DRoPE16/56/56：公式明确解释性展开，不虚构具体noise scheduling、权重和优化器配置；条件无loss不等于无参数梯度贡献。",
+    "核对第3—10页：8.6M/6M/4.3M/1.6M/200K、原驾驶clips与最终200K及200M预训练samples与EWKframes不同；AI排除仅通用语料；五层caption及50/50采样。",
+    "核对Table2—5：21样本EWM、GR1三个子集非三形态、Total相加、Dyn/美学/穿透非全面最好、physics四项满分并非五项；RoboTwinIF当前v1无数值表不冒充量化。",
+    "最终检视8张原图表与图注，标明Figure2图中五阶段与图注四阶段分法不同；无重绘原图和独立复现实验声称。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 8
+  },
+  "article_sha256": "7bc00bbd3c61aa350f152755fa81377f9572291dcf1146d148ff3dadc1d0c81b",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

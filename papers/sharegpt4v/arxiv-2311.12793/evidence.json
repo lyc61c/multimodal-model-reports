@@ -1,0 +1,16 @@
+{
+  "paper_id": "7d194d7a209f",
+  "source_url": "https://arxiv.org/pdf/2311.12793v1",
+  "source_version": "2311.12793v1",
+  "source_sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef",
+  "verification_notes": [
+    "阅读 v1 正文 1–9 页；该 11 页 PDF 不含文中引用的详细补充材料，未编造描述器完整配方。",
+    "核验 100K GPT4-Vision 种子、Table 1 的 1246K 扩展描述、最终 SFT 替换 23K/665K；平均长度单位为字符。",
+    "核验视觉 576 token、CLIP 后半 block 预训练更新、SFT 视觉冻结及学习率/batch/步数。",
+    "Table 5 图片与文本生成源固定控制：表中 1539.8 与正文 1549.8 冲突，采用与差值一致的表格。",
+    "Table 3 为 9/11 全表最佳，ScienceQA 与中文 MMBench 不最高；人工偏好不是事实准确率。",
+    "核验 Qwen 对照为最终 checkpoint 再训练，Figure 2 与最终 SFT 不同选图设置，规模曲线非严格单调。",
+    "原图与表格渲染已视觉查看；解释性 AR 公式明确不是新损失，44 A100 GPU days 是生成成本。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

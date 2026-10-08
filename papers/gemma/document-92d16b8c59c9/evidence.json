@@ -1,0 +1,33 @@
+{
+  "source_url": "https://deepmind.google/models/gemma/gemma-4/",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "d31baf890b317b2565e0913f67cd490f9ba4ab90a1da5a6db334201af724b000",
+  "additional_sources": [
+    {
+      "source_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "final_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "sha256": "019b1c7438162c716596d6f81f0c1dbc7fdd16f56a51afdf6933354c96a8978d",
+      "bytes": 167937
+    }
+  ],
+  "read_scope": "完整官网正文与完整模型卡技术正文/结构参数表/基准表/处理与限制，检视官方静态Elo原SVG",
+  "claims": [
+    {
+      "location": "Model card Models Overview",
+      "claim": "PLE有效/物理参数、12B无独立编码器、26B top8+shared；hybrid含global非全线性"
+    },
+    {
+      "location": "Model card Best Practices/Data",
+      "claim": "预算70至1120、30秒音频60秒1FPS视频；Jan2025数据截止；sampling为推荐"
+    },
+    {
+      "location": "Model card Benchmark Results",
+      "claim": "完整六档位结果、音频12B排除中文；Tau2平均非官网Retail"
+    }
+  ],
+  "source_inconsistencies": [
+    "官网MMMLU行85.2等与模型卡MMLU Pro同值，模型卡另列MMMLU88.4等；正文明确采用模型卡命名",
+    "官网Elo1452/1441与静态图约1451/1442小差异，保留二者版本"
+  ],
+  "model_execution": "not_run"
+}

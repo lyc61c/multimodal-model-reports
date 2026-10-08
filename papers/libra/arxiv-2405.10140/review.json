@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文1–9、14–18及身份引用；限定2405.10140v1",
+    "实际检视原PDF3/7/8/15完整Figure1/3/4与Table2/3/4",
+    "核对11.3B含7B底座4B专家0.3BCLIP；桥接秩8与视觉投影D/4非同一秩",
+    "连续及离散输入通道拼接；2个2^9码本及2^18组合；生成连续分量置零",
+    "桥接只作用跨模态K/V；图像先文本后因果性使文本到图像方向预训练无效",
+    "核对50M/500K/665K与tokenizer10M、生成另10M/7B token区分",
+    "核对40K/7K步、资源GPU小时、pretrain freeze和SFT解冻LLM",
+    "主表逐列数值与见过图像星号；不同指标和任务训练条件说明；消融与注意力推断范围区分"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "46735e519851b186a292906b0dc079bf777f902c851f7e47b685d85e4e775a41",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

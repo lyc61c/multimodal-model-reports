@@ -1,0 +1,10 @@
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "source_identity": "Title/authors/2311.16483v1 matched page 1; 19 pages including supplement",
+  "facts_checked": ["Pipeline stages distinct from training stages", "Code generation distinct from pixel generation", "Foundation training data vs new chart data separated", "BLEU finetuning protocol", "Executable filtering limitations", "Tables 2–6 and multilingual OCR limitation"],
+  "math_checked": "No fabricated paper Eq.; LoRA dimensions correct; Figure 6 mean checked and rounding discrepancy explicitly explained.",
+  "images_checked": ["Viewed page 4 Figure 3 full pipeline", "Viewed page 7 Tables 2–4 full headers", "Viewed page 8 Figures 4–5 with axes/data", "Viewed page 11 Figure 6 and Tables 5–6 complete"],
+  "model_execution": "not_run",
+  "remaining_limitations": ["Final training hyperparameters incomplete in fixed original", "GPT rubric details vary between main text and appendix", "No independent benchmark run"]
+}

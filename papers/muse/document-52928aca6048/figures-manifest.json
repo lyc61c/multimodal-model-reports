@@ -1,0 +1,70 @@
+{
+  "paper_id": "52928aca6048",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-2.png",
+      "original_label": "官方MuseSpark Thinking全基准表",
+      "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "image_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t39.2365-6/665924660_1383428270484689_5397336232917598143_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=YbTKuTGhKp0Q7kNvwFLE7PM&_nc_oc=AdoAsGcnFVHTfEV_R9UONXzusita08BKy0ls6bzt_pC4TA0vqYEeHY5NeN0jLeVnpao&_nc_zt=14&_nc_ht=scontent-sin11-1.xx&_nc_gid=jaKTJvF3UnFp9b0_G6lznQ&_nc_ss=7b20f&oh=00_AQPFkVqHbmgiaWmKN3jBXFPyU0NmWEuRRMDon4QHv1xPhA&oe=6AE16B57",
+      "image_final_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t39.2365-6/665924660_1383428270484689_5397336232917598143_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=YbTKuTGhKp0Q7kNvwFLE7PM&_nc_oc=AdoAsGcnFVHTfEV_R9UONXzusita08BKy0ls6bzt_pC4TA0vqYEeHY5NeN0jLeVnpao&_nc_zt=14&_nc_ht=scontent-sin11-1.xx&_nc_gid=jaKTJvF3UnFp9b0_G6lznQ&_nc_ss=7b20f&oh=00_AQPFkVqHbmgiaWmKN3jBXFPyU0NmWEuRRMDon4QHv1xPhA&oe=6AE16B57",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8329cfe99b9d0c0db041aacab6ec422f5fb489cf5bb4876fadecfd8727fc19a2",
+      "asset_sha256": "5fb56dcf27325ec49257c3a7f2b7310190a264f77db58d49e7aaf885ea96fd7d",
+      "width": 2880,
+      "height": 3600,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-4.png",
+      "original_label": "官方代码BPB与预训练计算扩展图",
+      "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "image_url": "https://scontent-sin11-2.xx.fbcdn.net/v/t39.2365-6/667580961_1557898095990047_8798526624523628592_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e280be&_nc_ohc=OfdgZeJoVRYQ7kNvwEEz_wI&_nc_oc=AdplyIjOYU7LoamCN6FuOX39lizVlO9f8-0z4iaLsOdsbqJEPpoDESViMIcyPiUt1ho&_nc_zt=14&_nc_ht=scontent-sin11-2.xx&_nc_gid=jaKTJvF3UnFp9b0_G6lznQ&_nc_ss=7b20f&oh=00_AQOcH6rNmZn-IdkA8QdV9MCZpRwJ9_iMXhCBgiNam-0yug&oe=6AE17923",
+      "image_final_url": "https://scontent-sin11-2.xx.fbcdn.net/v/t39.2365-6/667580961_1557898095990047_8798526624523628592_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e280be&_nc_ohc=OfdgZeJoVRYQ7kNvwEEz_wI&_nc_oc=AdplyIjOYU7LoamCN6FuOX39lizVlO9f8-0z4iaLsOdsbqJEPpoDESViMIcyPiUt1ho&_nc_zt=14&_nc_ht=scontent-sin11-2.xx&_nc_gid=jaKTJvF3UnFp9b0_G6lznQ&_nc_ss=7b20f&oh=00_AQOcH6rNmZn-IdkA8QdV9MCZpRwJ9_iMXhCBgiNam-0yug&oe=6AE17923",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8329cfe99b9d0c0db041aacab6ec422f5fb489cf5bb4876fadecfd8727fc19a2",
+      "asset_sha256": "1f15dc324b3ea44dad916cff86a4a5111471b44afaf77c986e910fe683b82869",
+      "width": 2253,
+      "height": 2253,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-6.png",
+      "original_label": "官方HLE工具配置并行Agent/延迟曲线",
+      "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "image_url": "https://scontent-sin11-2.xx.fbcdn.net/v/t39.2365-6/667837349_1919822211984844_4474929222253615790_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e280be&_nc_ohc=7eIhpU-6NyEQ7kNvwGeELoV&_nc_oc=Adq8SbXwF8SvcdPjpREKtdEak_mFw_rRAd07nkM6yH9teY6BV16wBvX3iWgv8q2-BSc&_nc_zt=14&_nc_ht=scontent-sin11-2.xx&_nc_gid=jaKTJvF3UnFp9b0_G6lznQ&_nc_ss=7b20f&oh=00_AQMasafAihd4mweGx4V5FeFb8hS48w3GD14d76Mf2XbD4A&oe=6AE16DB9",
+      "image_final_url": "https://scontent-sin11-2.xx.fbcdn.net/v/t39.2365-6/667837349_1919822211984844_4474929222253615790_n.png?_nc_cat=108&ccb=1-7&_nc_sid=e280be&_nc_ohc=7eIhpU-6NyEQ7kNvwGeELoV&_nc_oc=Adq8SbXwF8SvcdPjpREKtdEak_mFw_rRAd07nkM6yH9teY6BV16wBvX3iWgv8q2-BSc&_nc_zt=14&_nc_ht=scontent-sin11-2.xx&_nc_gid=jaKTJvF3UnFp9b0_G6lznQ&_nc_ss=7b20f&oh=00_AQMasafAihd4mweGx4V5FeFb8hS48w3GD14d76Mf2XbD4A&oe=6AE16DB9",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8329cfe99b9d0c0db041aacab6ec422f5fb489cf5bb4876fadecfd8727fc19a2",
+      "asset_sha256": "0c12b9511600ce1ffe8ae4db561493f69ccac10adc34fefebf94dedcd8797895",
+      "width": 2253,
+      "height": 2253,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-7.png",
+      "original_label": "官方BioTIER-refuse拒答结果",
+      "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "image_url": "https://scontent-sin6-1.xx.fbcdn.net/v/t39.2365-6/667304585_1167135775430406_946568904100877038_n.png?_nc_cat=111&ccb=1-7&_nc_sid=e280be&_nc_ohc=i0_q5lpfHYkQ7kNvwH7SLb3&_nc_oc=AdpdIcLWR1UF_Hord6jshsQS0vvWZhydl8sqpGg58Ce22QV233EEKEAnxQZe1-qMX8U&_nc_zt=14&_nc_ht=scontent-sin6-1.xx&_nc_gid=jaKTJvF3UnFp9b0_G6lznQ&_nc_ss=7b20f&oh=00_AQPnlWriBlrUGYDa9lwVYE3eVGocEb8PdUS1TyHq_EZqGA&oe=6AE163C2",
+      "image_final_url": "https://scontent-sin6-1.xx.fbcdn.net/v/t39.2365-6/667304585_1167135775430406_946568904100877038_n.png?_nc_cat=111&ccb=1-7&_nc_sid=e280be&_nc_ohc=i0_q5lpfHYkQ7kNvwH7SLb3&_nc_oc=AdpdIcLWR1UF_Hord6jshsQS0vvWZhydl8sqpGg58Ce22QV233EEKEAnxQZe1-qMX8U&_nc_zt=14&_nc_ht=scontent-sin6-1.xx&_nc_gid=jaKTJvF3UnFp9b0_G6lznQ&_nc_ss=7b20f&oh=00_AQPnlWriBlrUGYDa9lwVYE3eVGocEb8PdUS1TyHq_EZqGA&oe=6AE163C2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8329cfe99b9d0c0db041aacab6ec422f5fb489cf5bb4876fadecfd8727fc19a2",
+      "asset_sha256": "affd01456121f225dbdfc5c7305a729f46d80e0a43c35c7bc3fe2bcedd176b6e",
+      "width": 2253,
+      "height": 2253,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

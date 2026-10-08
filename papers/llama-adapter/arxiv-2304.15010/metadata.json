@@ -1,0 +1,14 @@
+{
+  "paper_id": "c33a09b8e12e",
+  "catalogue_entry_id": "c33a09b8e12e",
+  "family_slug": "llama-adapter",
+  "title": "LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2304.15010v1",
+  "source_url": "https://arxiv.org/pdf/2304.15010v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LLaMA-Adapter V2：分离视觉对齐与语言指令的参数高效调优"
+}

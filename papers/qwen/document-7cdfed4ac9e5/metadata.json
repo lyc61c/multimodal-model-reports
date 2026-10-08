@@ -1,0 +1,14 @@
+{
+  "paper_id": "7cdfed4ac9e5",
+  "catalogue_entry_id": "7cdfed4ac9e5",
+  "family_slug": "qwen",
+  "title": "Qwen3.5: Towards Native Multimodal Agents",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/README.md",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Qwen3.5：原生多模态、线性注意力与稀疏专家"
+}

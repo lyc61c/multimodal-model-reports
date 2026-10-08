@@ -1,0 +1,19 @@
+{
+  "paper_id": "d08b52bb40c6",
+  "catalogue_entry_id": "d08b52bb40c6",
+  "family_slug": "viscpm",
+  "title": "Large Multilingual Models Pivot Zero-Shot Multimodal Learning across Languages",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2308.12038v1",
+  "source_url": "https://arxiv.org/pdf/2308.12038v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VisCPM：多语言骨干驱动的视觉能力迁移",
+  "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1703,
+  "figures_manifest": "figures-manifest.json"
+}

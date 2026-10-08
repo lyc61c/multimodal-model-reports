@@ -1,0 +1,19 @@
+{
+  "paper_id": "cfe0bfb02a66",
+  "catalogue_entry_id": "cfe0bfb02a66",
+  "family_slug": "mimo",
+  "title": "MiMo-VL Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2506.03569v1",
+  "source_url": "https://arxiv.org/pdf/2506.03569v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MiMo-VL：长推理预训练与混合在线强化学习",
+  "source_sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2162,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "a0d99f32668c",
+  "source_url": "https://arxiv.org/pdf/2312.00784v1",
+  "source_version": "2312.00784v1",
+  "source_sha256": "0e4c5476abb36bdcfe02bcb1693e66338f20c10857f500507f2b4099596c23e4",
+  "verification_notes": [
+    "Read main pages 1–8 and supplementary 12–15; original Figures 2,3,6–8 and Table5 rendered and inspected.",
+    "Training includes Visual7W and PointQA train splits despite generalist wording; VCR and region-captioning additional fine-tuning explicit.",
+    "Visual7W main-vs-appendix discrepancy retained; GPT4V instruction gains include PointQA regression and 13B not universally better than 7B.",
+    "ViPBench judge scores not accuracy; 3520-example arrow test distinct from arbitrary prompt reliability.",
+    "Mask annotations used to render prompts not claimed as predicted segmentation; unspecified training hyperparameters not filled by assumption."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

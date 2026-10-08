@@ -1,0 +1,19 @@
+{
+  "paper_id": "3409e698d392",
+  "catalogue_entry_id": "3409e698d392",
+  "family_slug": "timechat",
+  "title": "TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2312.02051v1",
+  "source_url": "https://arxiv.org/pdf/2312.02051v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "TimeChat：让视频内容与时间戳在视觉编码阶段结合",
+  "source_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1863,
+  "figures_manifest": "figures-manifest.json"
+}

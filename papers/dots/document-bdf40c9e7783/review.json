@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_sections_read": [
+    "README Introduction",
+    "README Performance",
+    "README Usage",
+    "Blog Introduction",
+    "Blog Performance",
+    "Blog Methods",
+    "Blog Future Work"
+  ],
+  "figures_visually_checked": [
+    "chart-reasoning-original.png",
+    "ticket-reasoning-original.png",
+    "physics-reasoning-original.png"
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_source_tables": true
+  },
+  "limitations": [
+    "博客未披露训练token规模和完整超参，1M/10M是像素数",
+    "只有SFT，未来RL不写为已完成",
+    "64K为评测/部署长度，不反推各阶段训练长度",
+    "NPG未公开扩散完整公式与权重，未自行补造",
+    "评分模型和ChartQA子集口径明确，OCRBench并非全面领先",
+    "正文不从有矛盾的README TP每节点说明推算训练GPU数",
+    "原图为案例，无架构原图时不伪造原Figure"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "paper_id": "69f7e479479c",
+  "source_url": "https://arxiv.org/pdf/2505.03739v1",
+  "source_version": "2505.03739v1",
+  "source_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+  "verification_notes": [
+    "Read v1 sections1/3/4 pages1–14, Figures1–4 and Tables2–9 inspected; Audio vs Plus input encoder replacement clearly separated.",
+    "MCTP cascaded conditioned hiddenstates precedingoutputs, not independentparallelheads or exactdistribution-preserving speculative verification.",
+    "Zeroaudio tokensteps not0ms, Balance requires2passes; modeSpeed/Boostnaming and Figure4textaudio typo not silently collapsed.",
+    "Figure3 freezesLLMstage2/3, audioencoderdecoder frozen;Stage4jointLLMMCTP, exactlearningrates and batch256 retained.",
+    "1.4M SQA and~100KhourASR/TTS each differentunit;8Kpackedmaskreset independent;sampling2.0 not200percenttotaldata.",
+    "SQAPlus ST55.5<Minmo60.7 SS50.8>47.2; GLMMean not simple componentaverage; TTSWER notMOS and difficulttest10.08worseCosyvoice2 6.83.",
+    "ASRTurbo6.29/12.86 muchworseVanilla2.98/8.07 and Plus2/4.6 stillbelowQwen2Audio1.74/4.04; erroneousVITA1.5 Wenetnumbers noted.",
+    "ThroughputTable8 randominitializedBF164096tokens excludescodec,7BTurbo4.72 Boost2.64; separateTable9 endtoend243vs426ms1.75x includes39msenc151msdec atflow1step, notzero or4.72endtoend."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

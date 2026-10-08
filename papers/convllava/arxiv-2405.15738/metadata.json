@@ -1,0 +1,14 @@
+{
+  "paper_id": "ad0e7c1e8b23",
+  "catalogue_entry_id": "ad0e7c1e8b23",
+  "family_slug": "convllava",
+  "title": "ConvLLaVA: Hierarchical Backbones as Visual Encoder for Large Multimodal Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2405.15738v1",
+  "source_url": "https://arxiv.org/pdf/2405.15738v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "ConvLLaVA：用分层卷积压缩高分辨率视觉输入"
+}

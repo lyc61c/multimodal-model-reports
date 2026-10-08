@@ -1,0 +1,19 @@
+{
+  "paper_id": "f1c390102dd0",
+  "catalogue_entry_id": "f1c390102dd0",
+  "family_slug": "videollama",
+  "title": "VideoLLaMA 2: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMs",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2406.07476v1",
+  "source_url": "https://arxiv.org/pdf/2406.07476v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VideoLLaMA 2：用时空卷积连接器与联合训练改善视频和声音理解",
+  "source_sha256": "87ce24e74652c7c242fa1bdb6160fe158eb2e738e5eb6a46ea13c70a0521000a",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1840,
+  "figures_manifest": "figures-manifest.json"
+}

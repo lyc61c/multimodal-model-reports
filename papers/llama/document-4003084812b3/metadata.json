@@ -1,0 +1,14 @@
+{
+  "paper_id": "4003084812b3",
+  "catalogue_entry_id": "4003084812b3",
+  "family_slug": "llama",
+  "title": "The Llama 4 herd: The beginning of a new era of natively multimodal AI innovation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Llama 4：原生多模态 MoE、长上下文与在线强化学习"
+}

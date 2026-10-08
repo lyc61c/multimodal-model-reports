@@ -1,0 +1,15 @@
+{
+  "paper_id": "8d5b451aee7d",
+  "source_url": "https://arxiv.org/pdf/2407.15841v1",
+  "source_version": "2407.15841v1",
+  "source_sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b",
+  "verification_notes": [
+    "阅读 v1 第1–11页正文；本工作只改变推理表示与提示，没有额外模型训练。",
+    "核对336x336原始尺寸、24x24编码网格、10x12x24 Slow与50x4x4 Fast、3680视觉token和RoPE scaling2/8192。",
+    "核对两个分支均来自投影后的逐帧特征，无分支特殊token或额外运动编码器。",
+    "核对GPT3.5Turbo0125评审、开放式多数验证集与三类八数据集。",
+    "指出IntentQA7B低于IG-VLM、VCGBench7B均值低于LLaVANeXTImage，未照搬全基准最佳概述。",
+    "核对近似token预算消融、各消融表默认行差异与最终任务提示的选择。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

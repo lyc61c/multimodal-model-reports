@@ -1,0 +1,70 @@
+{
+  "paper_id": "28acd80eab47",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/wam-design-space.webp",
+      "original_label": "Figure 8：WAM 三个设计轴",
+      "source_url": "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/",
+      "image_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/The-WAM-design-space-at-a-glance.webp",
+      "image_final_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/The-WAM-design-space-at-a-glance.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "21ed0ba3ae028d9a289056fa6ffb39fc01c96c8b04476bbb80b31ac909e1ff35",
+      "asset_sha256": "e00e9809c0ee7ce7e04563bc10e36eb0fbcd609f1334658fedaf03c87d0b131b",
+      "width": 3052,
+      "height": 1231,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/dreamzero-architecture.webp",
+      "original_label": "Figure 15：DreamZero 联合预测架构",
+      "source_url": "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/",
+      "image_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/DreamZero-architecture.webp",
+      "image_final_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/DreamZero-architecture.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "21ed0ba3ae028d9a289056fa6ffb39fc01c96c8b04476bbb80b31ac909e1ff35",
+      "asset_sha256": "3af4e11b561a7400056a2d344110ccddd19fa9b47ab4d394ae4da73347a92ffd",
+      "width": 1951,
+      "height": 1091,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/roboarena-april-2026.webp",
+      "original_label": "Figure 16：2026 年 4 月 RoboArena 排名快照",
+      "source_url": "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/",
+      "image_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/April-2026-RoboArena-leaderboard-snapshot.webp",
+      "image_final_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/April-2026-RoboArena-leaderboard-snapshot.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "21ed0ba3ae028d9a289056fa6ffb39fc01c96c8b04476bbb80b31ac909e1ff35",
+      "asset_sha256": "f4af270dff7afd696e1da418976b0d276d5b5c8d71678dc7965c543b0e0b7caa",
+      "width": 1739,
+      "height": 1473,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/normalized-compute.webp",
+      "original_label": "正文 Figure 24：归一化密集核心训练算力，HTML alt 图号不同",
+      "source_url": "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/",
+      "image_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/normalized_dense_core_training_compute_zflops.webp",
+      "image_final_url": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/normalized_dense_core_training_compute_zflops.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "21ed0ba3ae028d9a289056fa6ffb39fc01c96c8b04476bbb80b31ac909e1ff35",
+      "asset_sha256": "b04437cadd36c3bb8f8dffa61019e1637b5824efe4024c9b865a1908092644bc",
+      "width": 3200,
+      "height": 1760,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

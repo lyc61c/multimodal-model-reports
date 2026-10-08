@@ -1,0 +1,48 @@
+{
+  "source_version": "2509.17765v1",
+  "claims": [
+    {
+      "claim": "Thinker30B-A3B,Talker3B-A0.3B,AuT650M,vision540M,MTP80M,Code2Wav200M",
+      "pdf_pages": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "TM-RoPE24/20/20,80ms;theoretical latency234/547ms rises with concurrency",
+      "pdf_pages": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "AuT20M hours80/10/10;S2 approximately2T but listed2.26T;8192to32768",
+      "pdf_pages": [
+        4,
+        7
+      ]
+    },
+    {
+      "claim": "SFT/off-on policy KL/GSPO;Talker4 stages DPO",
+      "pdf_pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "WER lower better;Thinking can hurt ASR;nondegradation has individual negative differences",
+      "pdf_pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_type": "official release blog via public API",
+  "figures_visually_checked": [
+    "production-overview.png",
+    "performance-overview.png",
+    "live-harness.png"
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Snapshot has draft marker",
+    "No parameter sizes or training recipe disclosed",
+    "Figure AliMeeting score is transformed DER/cpWER metric",
+    "Current pricing not asserted",
+    "System workflows and model capabilities distinguished"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "claims": [
+    {
+      "claim": "ChatGLM6.2B，整体7.8B，BLIP2Qformer桥接",
+      "source_sections": [
+        "介绍"
+      ]
+    },
+    {
+      "claim": "30M中文+300M英文，中英文权重相同，长视觉问答微调",
+      "source_sections": [
+        "介绍",
+        "引用与致谢"
+      ]
+    },
+    {
+      "claim": "224x224，无中文OCR，长描述幻觉和属性错配",
+      "source_sections": [
+        "局限性"
+      ]
+    },
+    {
+      "claim": "20图适配，LoRA第0和14层rank10，QLoRA9.8GB及不同推理显存口径",
+      "source_sections": [
+        "模型微调",
+        "模型量化",
+        "介绍"
+      ]
+    }
+  ]
+}

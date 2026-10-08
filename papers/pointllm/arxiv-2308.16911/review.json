@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "figures_visually_checked": [
+    4,
+    7,
+    14,
+    16
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "7Band13Bwidth both5120 in report not resolved as implementationfact",
+    "Briefcaptionmodelgenerated main vs human appendix contradiction disclosed",
+    "GPT classscore ignoresattributeerrors;referencecoverage notfullhallucinationaudit",
+    "Artificialcompleteobjectpointcloud vs singleviewbaseline not equalinputcontrol",
+    "Humanwin on200objects2judgesnotuniversalhuman superiority",
+    "No impliedpointcloudgeneration or roboticscontrol"
+  ]
+}

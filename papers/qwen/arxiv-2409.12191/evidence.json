@@ -1,0 +1,15 @@
+{
+  "paper_id": "32bc63503a35",
+  "source_url": "https://arxiv.org/pdf/2409.12191v1",
+  "source_version": "2409.12191v1",
+  "source_sha256": "df31f2fb46b6237ec6f26c418dcc34e59816102f5d1618d564b258ce437fd543",
+  "verification_notes": [
+    "Read main1-16 and representative appendix27/28/40/42/49-51; confirmed2B/7B/72B naming vs rounded total8B.",
+    "Viewed original pages5/9/10/15 intact: Figure3 Tables2-5/8 Figure5.",
+    "Verified VideoMME71.2/77.8 wo/wsubtitle and max768frames; 80K extension only72B mediumvideo experiment.",
+    "M-RoPE ablation uses Qwen2-1.5B+ViT-L pretrained; not72B; RWQ/InfoVQA decreases retained.",
+    "1.4T includesvisual+text withtextonlysupervision; token formula64+2 derived clearly, not paper equation.",
+    "No model execution or independent reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

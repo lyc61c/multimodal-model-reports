@@ -1,0 +1,85 @@
+{
+  "source_version": "2603.09877v1",
+  "claims": [
+    {
+      "claim": "Unified context with decoupled ViT and VAE, dual-stream MMDiT, separate stream projections and gated attention",
+      "pdf_pages": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "claim": "NTP plus linear-path flow matching velocity objective and modality loss weights",
+      "pdf_pages": [
+        11,
+        12,
+        25
+      ]
+    },
+    {
+      "claim": "Three stages freeze the MLLM in stages 1/2 then jointly train in stage 3; exact steps, LR, batch size, resolution, ratio and loss weights",
+      "pdf_pages": [
+        12,
+        25
+      ]
+    },
+    {
+      "claim": "Text, science, spatial, humor and reasoning synthesis; 600000 cleaned chemistry pairs",
+      "pdf_pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        60,
+        61
+      ]
+    },
+    {
+      "claim": "CFG dropout and 20-step Flow-DPM-Solver settings",
+      "pdf_pages": [
+        25,
+        26
+      ]
+    },
+    {
+      "claim": "MMMU and several understanding benchmarks decline relative to initialization; generation results separate CoT and scoring protocols",
+      "pdf_pages": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ]
+    },
+    {
+      "claim": "TextEdit full set 2148 with 18 classes; background OCR F1 differs from target accuracy; MiniSet-500 distinct",
+      "pdf_pages": [
+        36,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        59
+      ]
+    }
+  ]
+}

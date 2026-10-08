@@ -1,0 +1,67 @@
+{
+  "paper_id": "3b84e8a511a7",
+  "source_version": "2404.05719v1",
+  "source_pdf_sha256": "b203b48b05ef3bbfd4dabeed01f1658b37d3abfcbd39567a73452ccf614bac5a",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-005-01.png",
+      "original_label": "Figure 2 architecture and anyres",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2404.05719v1#page=5",
+      "source_version": "2404.05719v1",
+      "source_sha256": "b203b48b05ef3bbfd4dabeed01f1658b37d3abfcbd39567a73452ccf614bac5a",
+      "asset_sha256": "a0f66a7c268a7f09ee54a82d0ece3f4b6f602300ec20a62e1aa7cc9255cfa86d",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 140,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-008-02.png",
+      "original_label": "Figure 3 elementary task examples",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2404.05719v1#page=8",
+      "source_version": "2404.05719v1",
+      "source_sha256": "b203b48b05ef3bbfd4dabeed01f1658b37d3abfcbd39567a73452ccf614bac5a",
+      "asset_sha256": "7db140cf9fd3b38caf79ffa16d44c8b0a36927680a35617a50c8b63ca3fbaf95",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 140,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-010-03.png",
+      "original_label": "Table 2 summary of task results",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2404.05719v1#page=10",
+      "source_version": "2404.05719v1",
+      "source_sha256": "b203b48b05ef3bbfd4dabeed01f1658b37d3abfcbd39567a73452ccf614bac5a",
+      "asset_sha256": "54cf883afd5c0f12c28cf233de97cf426ca6fef7af8cf78b7fb38a3962bdd18a",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 140,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-011-04.png",
+      "original_label": "Figure 5 and Table 3 elementary and advanced results",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2404.05719v1#page=11",
+      "source_version": "2404.05719v1",
+      "source_sha256": "b203b48b05ef3bbfd4dabeed01f1658b37d3abfcbd39567a73452ccf614bac5a",
+      "asset_sha256": "808176bda4f569da813fbfd6e893d47aed06a3934cfff1337aaf02e3de9e3a4e",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 140,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

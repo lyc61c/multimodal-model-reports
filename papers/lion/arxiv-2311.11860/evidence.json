@@ -1,0 +1,28 @@
+{
+  "source_id": "538866b2b3e5",
+  "source_version": "2311.11860v1",
+  "read_scope": "Full technical body1-9 and AppendixA11-12;referencesstructurallychecked",
+  "claims": [
+    {
+      "topic": "architecture_math",
+      "source": "Section3 Eqs1-5 AppendixA",
+      "checks": "FlanT5encoderdecoder notLLaMA;EVAGlastremovedfrozen;twoBERTaggregator;MLPGeLU;adapter64nonlinearnotLoRA;GtaskvectorDnotinputtopk;RAMsoftpromptnotexplicitconfidencefilter"
+    },
+    {
+      "topic": "data_train",
+      "source": "Figure3 Tables7-8 AppendixA",
+      "checks": "stage64/256/64 batch30K/60K/60K10epoch;LR1e-5/5e-4/1e-5 VAfixed1e-5;beta.9.999wd.05warm1K1e-8;REC/REG3.6Meachnotdistinct;LLaVA150Kname361Kcount"
+    },
+    {
+      "topic": "results",
+      "source": "Tables1-6 Figure5",
+      "checks": "VSR+5.31pointsTextCaps+3.32CIDEr;OK/GQAnotbest;RECzero/FTseparate;routerheldindecline;tagsVSRRECdecline;aggregatorRefgvaldecline;POPErandomF1notbest recalltradeoff"
+    }
+  ],
+  "source_inconsistencies": [
+    "epoch/steps/samplecounts cannotreconstructwithoutsampling",
+    "4BTable2REC54.98 vsTable4tags54.92",
+    "promisedappendixtemplatesnotfullypresent"
+  ],
+  "model_execution": "not_run"
+}

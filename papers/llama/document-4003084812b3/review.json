@@ -1,0 +1,36 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "核对激活/总参数、Int4单GPU与Maverick单主机区别",
+    "保留冻结Llama仅视觉适配阶段条件",
+    "复核全部引用原表结果及脚注和NiH失败格"
+  ],
+  "math_checks": [
+    "MoE门控、标准RoPE/温度、蒸馏加权及NLL均标为标准解释，不伪造原文公式",
+    "4.25%仅激活/存储参数比例非成本比例",
+    "不假定onlineRL为PPO或GRPO"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/official-2.png",
+      "checked": "view_image original检视完整标题、图例、坐标、所有结果列行与脚注；无裁切"
+    },
+    {
+      "file": "figures/official-3.png",
+      "checked": "view_image original检视完整标题、图例、坐标、所有结果列行与脚注；无裁切"
+    },
+    {
+      "file": "figures/official-4.png",
+      "checked": "view_image original检视完整标题、图例、坐标、所有结果列行与脚注；无裁切"
+    },
+    {
+      "file": "figures/official-5.png",
+      "checked": "view_image original检视完整标题、图例、坐标、所有结果列行与脚注；无裁切"
+    }
+  ],
+  "limitations": [
+    "官方博客未公开完整配方和评测运行记录",
+    "网页可能修订，按缓存版本解读"
+  ],
+  "model_execution": "not_run"
+}

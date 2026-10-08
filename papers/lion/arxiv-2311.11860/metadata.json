@@ -1,0 +1,14 @@
+{
+  "paper_id": "538866b2b3e5",
+  "catalogue_entry_id": "538866b2b3e5",
+  "family_slug": "lion",
+  "title": "LION : Empowering Multimodal Large Language Model with Dual-Level Visual Knowledge",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.11860v1",
+  "source_url": "https://arxiv.org/pdf/2311.11860v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LION：用区域训练与图像标签补足双层视觉知识"
+}

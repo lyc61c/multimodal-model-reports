@@ -1,0 +1,14 @@
+{
+  "paper_id": "49419f245339",
+  "source_url": "https://arxiv.org/pdf/2505.09568v1",
+  "source_version": "2505.09568v1",
+  "source_sha256": "346042cac296293b696b2709e7831b0b430793ca22d24d506fb9b068464a0935",
+  "verification_notes": [
+    "Read main source sections and checked exact title",
+    "Viewed all four included original page images; tables complete and columns checked",
+    "Viewed PDF page 7 to confirm equation typo",
+    "Seven sections; statements distinguish disclosure, explanatory math, and limitations",
+    "No claim of model execution; no independent review claim"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

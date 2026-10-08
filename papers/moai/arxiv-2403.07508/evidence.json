@@ -1,0 +1,14 @@
+{
+  "paper_id": "ce90899e45f9",
+  "source_url": "https://arxiv.org/pdf/2403.07508v1",
+  "source_version": "2403.07508v1",
+  "source_sha256": "7b83e7184f81195ce750677b2e7c78bd8a3c5aa0ddf326d2ca4c07f416418cd1",
+  "verification_notes": [
+    "阅读PDF1–14及附录21–29，核对CLIP/InternLM、4个CV模型、语言化和panoptic map额外空间分支。",
+    "检查Figure3冻结标记、Figure4四类信息、Table1全列以及Table2/3组件消融，四张原页均完整。",
+    "Equation1/3/5、64辅助token、W而非DeltaW低秩，正文每层示意与实际7/15/23/31四层配置区别均核验。",
+    "核对两阶段各1epoch、AdamW余弦学习率、冻结与可训练模块；batch/硬件/分辨率未披露不补写；4bit范围不推定。",
+    "Table1 MoAI所有9列与CogVLM MMVet54.5弱项、PS+OWOD联合移除和门控消融数字核验；未运行模型或独立复现。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

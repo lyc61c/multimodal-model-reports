@@ -1,0 +1,16 @@
+{
+  "paper_id": "26d59ba3132d",
+  "source_url": "https://arxiv.org/pdf/2507.19427v1",
+  "source_version": "2507.19427v1",
+  "source_sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb",
+  "verification_notes": [
+    "Original Step3 blog redirects to generic Step5 platform; inspected official Step3 repo and its explicit arxiv2507.19427 system-report link, preserving scope distinction.",
+    "Read system report main pages1–10 and12–15; checked model card, roofline equations, batch/sparsity derivation, StepMesh workflow and measured setups.",
+    "Visually inspected Table1, Figure5, Figure7, Table8–9 and original official benchmarkJPEG; additional README cached and its hash recorded.",
+    "Training dataset, vision encoder architecture and complete training recipe explicitly undisclosed; did not invent from other models.",
+    "Separated theoretical cost assumptions/cloud-price snapshot from real bills and decode TGS from single-request rate.",
+    "4039 is peak minute,3910 long-term average,FP8/noMTP/4K/32 newerHopper with20token/sSLA; baseline source/software not a same-stack replication.",
+    "Preserved missing A800 MLA, uncertain benchmark splits, external-results stars and estimated scaling/MTP gains."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

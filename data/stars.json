@@ -1,0 +1,1972 @@
+{
+  "BAAI-DCAI/Visual-Instruction-Tuning": {
+    "requested_repo": "BAAI-DCAI/Visual-Instruction-Tuning",
+    "source_url": "https://github.com/BAAI-DCAI/Visual-Instruction-Tuning",
+    "observed_at_utc": "2026-10-08T04:58:27.754981+00:00",
+    "stars": 168,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/BAAI-DCAI/Visual-Instruction-Tuning",
+    "evidence": "\"stargazerCount\":168"
+  },
+  "baaivision/Emu": {
+    "requested_repo": "baaivision/Emu",
+    "source_url": "https://github.com/baaivision/Emu",
+    "observed_at_utc": "2026-10-08T04:58:27.755327+00:00",
+    "stars": 1777,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/baaivision/Emu",
+    "evidence": "\"stargazerCount\":1777"
+  },
+  "Alpha-VLLM/LLaMA2-Accessory": {
+    "requested_repo": "Alpha-VLLM/LLaMA2-Accessory",
+    "source_url": "https://github.com/Alpha-VLLM/LLaMA2-Accessory",
+    "observed_at_utc": "2026-10-08T04:58:27.754261+00:00",
+    "stars": 2796,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Alpha-VLLM/LLaMA2-Accessory",
+    "evidence": "\"stargazerCount\":2796"
+  },
+  "alibaba/conv-llava": {
+    "requested_repo": "alibaba/conv-llava",
+    "source_url": "https://github.com/alibaba/conv-llava",
+    "observed_at_utc": "2026-10-08T04:58:27.753861+00:00",
+    "stars": 129,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/alibaba/conv-llava",
+    "evidence": "\"stargazerCount\":129"
+  },
+  "01-ai/Yi": {
+    "requested_repo": "01-ai/Yi",
+    "source_url": "https://github.com/01-ai/Yi",
+    "observed_at_utc": "2026-10-08T04:58:27.751580+00:00",
+    "stars": 7834,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/01-ai/Yi",
+    "evidence": "\"stargazerCount\":7834"
+  },
+  "apple/ml-ferret": {
+    "requested_repo": "apple/ml-ferret",
+    "source_url": "https://github.com/apple/ml-ferret",
+    "observed_at_utc": "2026-10-08T04:58:27.754646+00:00",
+    "stars": 8655,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/apple-aiml-research/ml-ferret",
+    "evidence": "\"stargazerCount\":8655"
+  },
+  "AIDC-AI/Ovis": {
+    "requested_repo": "AIDC-AI/Ovis",
+    "source_url": "https://github.com/AIDC-AI/Ovis",
+    "observed_at_utc": "2026-10-08T04:58:27.752786+00:00",
+    "stars": 1528,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ATH-MaaS/Ovis",
+    "evidence": "\"stargazerCount\":1528"
+  },
+  "AIDC-AI/Parrot": {
+    "requested_repo": "AIDC-AI/Parrot",
+    "source_url": "https://github.com/AIDC-AI/Parrot",
+    "observed_at_utc": "2026-10-08T04:58:27.753295+00:00",
+    "stars": 77,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ATH-MaaS/Parrot",
+    "evidence": "\"stargazerCount\":77"
+  },
+  "baaivision/Emu3": {
+    "requested_repo": "baaivision/Emu3",
+    "source_url": "https://github.com/baaivision/Emu3",
+    "observed_at_utc": "2026-10-08T04:58:29.454118+00:00",
+    "stars": 2449,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/baaivision/Emu3",
+    "evidence": "\"stargazerCount\":2449"
+  },
+  "baaivision/Emu3.5": {
+    "requested_repo": "baaivision/Emu3.5",
+    "source_url": "https://github.com/baaivision/Emu3.5",
+    "observed_at_utc": "2026-10-08T04:58:29.501151+00:00",
+    "stars": 1561,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/baaivision/Emu3.5",
+    "evidence": "\"stargazerCount\":1561"
+  },
+  "baaivision/EVE": {
+    "requested_repo": "baaivision/EVE",
+    "source_url": "https://github.com/baaivision/EVE",
+    "observed_at_utc": "2026-10-08T04:58:29.628156+00:00",
+    "stars": 376,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/baaivision/EVE",
+    "evidence": "\"stargazerCount\":376"
+  },
+  "baichuan-inc/Baichuan-Omni-1.5": {
+    "requested_repo": "baichuan-inc/Baichuan-Omni-1.5",
+    "source_url": "https://github.com/baichuan-inc/Baichuan-Omni-1.5",
+    "observed_at_utc": "2026-10-08T04:58:29.718063+00:00",
+    "stars": 196,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/baichuan-inc/Baichuan-Omni-1.5",
+    "evidence": "\"stargazerCount\":196"
+  },
+  "boheumd/MA-LMM": {
+    "requested_repo": "boheumd/MA-LMM",
+    "source_url": "https://github.com/boheumd/MA-LMM",
+    "observed_at_utc": "2026-10-08T04:58:29.860789+00:00",
+    "stars": 353,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/boheumd/MA-LMM",
+    "evidence": "\"stargazerCount\":353"
+  },
+  "bytedance/lynx-llm": {
+    "requested_repo": "bytedance/lynx-llm",
+    "source_url": "https://github.com/bytedance/lynx-llm",
+    "observed_at_utc": "2026-10-08T04:58:30.238808+00:00",
+    "stars": 270,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/bytedance/lynx-llm",
+    "evidence": "\"stargazerCount\":270"
+  },
+  "bytedance/SALMONN": {
+    "requested_repo": "bytedance/SALMONN",
+    "source_url": "https://github.com/bytedance/SALMONN",
+    "observed_at_utc": "2026-10-08T04:58:30.437140+00:00",
+    "stars": 1539,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/bytedance/SALMONN",
+    "evidence": "\"stargazerCount\":1539"
+  },
+  "bytedance-seed/BAGEL": {
+    "requested_repo": "bytedance-seed/BAGEL",
+    "source_url": "https://github.com/bytedance-seed/BAGEL",
+    "observed_at_utc": "2026-10-08T04:58:30.217617+00:00",
+    "stars": 6190,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/bytedance-seed/BAGEL",
+    "evidence": "\"stargazerCount\":6190"
+  },
+  "ByungKwanLee/Meteor": {
+    "requested_repo": "ByungKwanLee/Meteor",
+    "source_url": "https://github.com/ByungKwanLee/Meteor",
+    "observed_at_utc": "2026-10-08T04:58:30.896689+00:00",
+    "stars": 117,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ByungKwanLee/Meteor",
+    "evidence": "\"stargazerCount\":117"
+  },
+  "ByungKwanLee/TroL": {
+    "requested_repo": "ByungKwanLee/TroL",
+    "source_url": "https://github.com/ByungKwanLee/TroL",
+    "observed_at_utc": "2026-10-08T04:58:31.192874+00:00",
+    "stars": 99,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ByungKwanLee/TroL",
+    "evidence": "\"stargazerCount\":99"
+  },
+  "ByungKwanLee/MoAI": {
+    "requested_repo": "ByungKwanLee/MoAI",
+    "source_url": "https://github.com/ByungKwanLee/MoAI",
+    "observed_at_utc": "2026-10-08T04:58:30.909059+00:00",
+    "stars": 329,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ByungKwanLee/MoAI",
+    "evidence": "\"stargazerCount\":329"
+  },
+  "cambrian-mllm/cambrian": {
+    "requested_repo": "cambrian-mllm/cambrian",
+    "source_url": "https://github.com/cambrian-mllm/cambrian",
+    "observed_at_utc": "2026-10-08T04:58:31.330048+00:00",
+    "stars": 2011,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/cambrian-mllm/cambrian",
+    "evidence": "\"stargazerCount\":2011"
+  },
+  "CircleRadon/Osprey": {
+    "requested_repo": "CircleRadon/Osprey",
+    "source_url": "https://github.com/CircleRadon/Osprey",
+    "observed_at_utc": "2026-10-08T04:58:31.618908+00:00",
+    "stars": 843,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/CircleRadon/Osprey",
+    "evidence": "\"stargazerCount\":843"
+  },
+  "csuhan/OneLLM": {
+    "requested_repo": "csuhan/OneLLM",
+    "source_url": "https://github.com/csuhan/OneLLM",
+    "observed_at_utc": "2026-10-08T04:58:31.662263+00:00",
+    "stars": 667,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/csuhan/OneLLM",
+    "evidence": "\"stargazerCount\":667"
+  },
+  "DAMO-NLP-SG/VideoLLaMA2": {
+    "requested_repo": "DAMO-NLP-SG/VideoLLaMA2",
+    "source_url": "https://github.com/DAMO-NLP-SG/VideoLLaMA2",
+    "observed_at_utc": "2026-10-08T04:58:32.342238+00:00",
+    "stars": 1306,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/DAMO-NLP-SG/VideoLLaMA2",
+    "evidence": "\"stargazerCount\":1306"
+  },
+  "DAMO-NLP-SG/Video-LLaMA": {
+    "requested_repo": "DAMO-NLP-SG/Video-LLaMA",
+    "source_url": "https://github.com/DAMO-NLP-SG/Video-LLaMA",
+    "observed_at_utc": "2026-10-08T04:58:32.271153+00:00",
+    "stars": 3139,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/DAMO-NLP-SG/Video-LLaMA",
+    "evidence": "\"stargazerCount\":3139"
+  },
+  "DAMO-NLP-SG/VideoLLaMA3": {
+    "requested_repo": "DAMO-NLP-SG/VideoLLaMA3",
+    "source_url": "https://github.com/DAMO-NLP-SG/VideoLLaMA3",
+    "observed_at_utc": "2026-10-08T04:58:32.483165+00:00",
+    "stars": 1185,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/DAMO-NLP-SG/VideoLLaMA3",
+    "evidence": "\"stargazerCount\":1185"
+  },
+  "ChenDelong1999/polite_flamingo": {
+    "requested_repo": "ChenDelong1999/polite_flamingo",
+    "source_url": "https://github.com/ChenDelong1999/polite_flamingo",
+    "observed_at_utc": "2026-10-08T04:58:31.615908+00:00",
+    "stars": 65,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ChenDelong1999/polite-flamingo",
+    "evidence": "\"stargazerCount\":65"
+  },
+  "deepseek-ai/deepseek-harness": {
+    "requested_repo": "deepseek-ai/deepseek-harness",
+    "source_url": "https://github.com/deepseek-ai/deepseek-harness",
+    "observed_at_utc": "2026-10-08T04:58:33.012748+00:00",
+    "stars": 245369,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/deepseek-ai/deepseek-harness",
+    "evidence": "\"stargazerCount\":245369"
+  },
+  "ByungKwanLee/CoLLaVO-Crayon-Large-Language-and-Vision-mOdel": {
+    "requested_repo": "ByungKwanLee/CoLLaVO-Crayon-Large-Language-and-Vision-mOdel",
+    "source_url": "https://github.com/ByungKwanLee/CoLLaVO-Crayon-Large-Language-and-Vision-mOdel",
+    "observed_at_utc": "2026-10-08T04:58:30.680503+00:00",
+    "stars": 98,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ByungKwanLee/CoLLaVO",
+    "evidence": "\"stargazerCount\":98"
+  },
+  "deepseek-ai/DeepSeek-OCR": {
+    "requested_repo": "deepseek-ai/DeepSeek-OCR",
+    "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR",
+    "observed_at_utc": "2026-10-08T04:58:33.606566+00:00",
+    "stars": 23926,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/deepseek-ai/DeepSeek-OCR",
+    "evidence": "\"stargazerCount\":23926"
+  },
+  "deepseek-ai/DeepSeek-VL": {
+    "requested_repo": "deepseek-ai/DeepSeek-VL",
+    "source_url": "https://github.com/deepseek-ai/DeepSeek-VL",
+    "observed_at_utc": "2026-10-08T04:58:33.678549+00:00",
+    "stars": 4182,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/deepseek-ai/DeepSeek-VL",
+    "evidence": "\"stargazerCount\":4182"
+  },
+  "deepseek-ai/DeepSeek-VL2": {
+    "requested_repo": "deepseek-ai/DeepSeek-VL2",
+    "source_url": "https://github.com/deepseek-ai/DeepSeek-VL2",
+    "observed_at_utc": "2026-10-08T04:58:33.719093+00:00",
+    "stars": 5375,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/deepseek-ai/DeepSeek-VL2",
+    "evidence": "\"stargazerCount\":5375"
+  },
+  "DCDmllm/Momentor": {
+    "requested_repo": "DCDmllm/Momentor",
+    "source_url": "https://github.com/DCDmllm/Momentor",
+    "observed_at_utc": "2026-10-08T04:58:33.010349+00:00",
+    "stars": 81,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ZJU4EmbodiedAI/Momentor",
+    "evidence": "\"stargazerCount\":81"
+  },
+  "DCDmllm/Cheetah": {
+    "requested_repo": "DCDmllm/Cheetah",
+    "source_url": "https://github.com/DCDmllm/Cheetah",
+    "observed_at_utc": "2026-10-08T04:58:32.760712+00:00",
+    "stars": 353,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ZJU4EmbodiedAI/Cheetah",
+    "evidence": "\"stargazerCount\":353"
+  },
+  "embodied-generalist/embodied-generalist": {
+    "requested_repo": "embodied-generalist/embodied-generalist",
+    "source_url": "https://github.com/embodied-generalist/embodied-generalist",
+    "observed_at_utc": "2026-10-08T04:58:35.189996+00:00",
+    "stars": 489,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/embodied-generalist/embodied-generalist",
+    "evidence": "\"stargazerCount\":489"
+  },
+  "deepseek-ai/DeepSeek-OCR-2": {
+    "requested_repo": "deepseek-ai/DeepSeek-OCR-2",
+    "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2",
+    "observed_at_utc": "2026-10-08T04:58:33.640614+00:00",
+    "stars": 3455,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2",
+    "evidence": "\"stargazerCount\":3455"
+  },
+  "emova-ollm/EMOVA": {
+    "requested_repo": "emova-ollm/EMOVA",
+    "source_url": "https://github.com/emova-ollm/EMOVA",
+    "observed_at_utc": "2026-10-08T04:58:35.887616+00:00",
+    "stars": 81,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/emova-ollm/EMOVA",
+    "evidence": "\"stargazerCount\":81"
+  },
+  "dvlab-research/LISA": {
+    "requested_repo": "dvlab-research/LISA",
+    "source_url": "https://github.com/dvlab-research/LISA",
+    "observed_at_utc": "2026-10-08T04:58:34.395636+00:00",
+    "stars": 2684,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/JIA-Lab-research/LISA",
+    "evidence": "\"stargazerCount\":2684"
+  },
+  "egolife-ai/Ego-R1": {
+    "requested_repo": "egolife-ai/Ego-R1",
+    "source_url": "https://github.com/egolife-ai/Ego-R1",
+    "observed_at_utc": "2026-10-08T04:58:34.988681+00:00",
+    "stars": 169,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/egolife-ai/Ego-R1",
+    "evidence": "\"stargazerCount\":169"
+  },
+  "EvolvingLMMs-Lab/LongVA": {
+    "requested_repo": "EvolvingLMMs-Lab/LongVA",
+    "source_url": "https://github.com/EvolvingLMMs-Lab/LongVA",
+    "observed_at_utc": "2026-10-08T04:58:37.211746+00:00",
+    "stars": 413,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/EvolvingLMMs-Lab/LongVA",
+    "evidence": "\"stargazerCount\":413"
+  },
+  "EvolvingLMMs-Lab/LLaVA-OneVision-1.5": {
+    "requested_repo": "EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
+    "source_url": "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
+    "observed_at_utc": "2026-10-08T04:58:36.408196+00:00",
+    "stars": 1216,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2",
+    "evidence": "\"stargazerCount\":1216"
+  },
+  "EvolvingLMMs-Lab/multimodal-search-r1": {
+    "requested_repo": "EvolvingLMMs-Lab/multimodal-search-r1",
+    "source_url": "https://github.com/EvolvingLMMs-Lab/multimodal-search-r1",
+    "observed_at_utc": "2026-10-08T04:58:37.232300+00:00",
+    "stars": 488,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/EvolvingLMMs-Lab/multimodal-search-r1",
+    "evidence": "\"stargazerCount\":488"
+  },
+  "FreedomIntelligence/LongLLaVA": {
+    "requested_repo": "FreedomIntelligence/LongLLaVA",
+    "source_url": "https://github.com/FreedomIntelligence/LongLLaVA",
+    "observed_at_utc": "2026-10-08T04:58:37.934614+00:00",
+    "stars": 211,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/FreedomIntelligence/LongLLaVA",
+    "evidence": "\"stargazerCount\":211"
+  },
+  "dvlab-research/LLaMA-VID": {
+    "requested_repo": "dvlab-research/LLaMA-VID",
+    "source_url": "https://github.com/dvlab-research/LLaMA-VID",
+    "observed_at_utc": "2026-10-08T04:58:34.417710+00:00",
+    "stars": 862,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/JIA-Lab-research/LLaMA-VID",
+    "evidence": "\"stargazerCount\":862"
+  },
+  "dvlab-research/LLMGA": {
+    "requested_repo": "dvlab-research/LLMGA",
+    "source_url": "https://github.com/dvlab-research/LLMGA",
+    "observed_at_utc": "2026-10-08T04:58:34.754415+00:00",
+    "stars": 395,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/JIA-Lab-research/LLMGA",
+    "evidence": "\"stargazerCount\":395"
+  },
+  "Gen-Verse/MMaDA": {
+    "requested_repo": "Gen-Verse/MMaDA",
+    "source_url": "https://github.com/Gen-Verse/MMaDA",
+    "observed_at_utc": "2026-10-08T04:58:38.469740+00:00",
+    "stars": 1674,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Gen-Verse/MMaDA",
+    "evidence": "\"stargazerCount\":1674"
+  },
+  "FreedomIntelligence/ALLaVA": {
+    "requested_repo": "FreedomIntelligence/ALLaVA",
+    "source_url": "https://github.com/FreedomIntelligence/ALLaVA",
+    "observed_at_utc": "2026-10-08T04:58:37.509226+00:00",
+    "stars": 282,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/FreedomIntelligence/ALLaVA",
+    "evidence": "\"stargazerCount\":282"
+  },
+  "dvlab-research/MiniGemini": {
+    "requested_repo": "dvlab-research/MiniGemini",
+    "source_url": "https://github.com/dvlab-research/MiniGemini",
+    "observed_at_utc": "2026-10-08T04:58:34.915926+00:00",
+    "stars": 3323,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/JIA-Lab-research/MGM",
+    "evidence": "\"stargazerCount\":3323"
+  },
+  "graphic-design-ai/graphist": {
+    "requested_repo": "graphic-design-ai/graphist",
+    "source_url": "https://github.com/graphic-design-ai/graphist",
+    "observed_at_utc": "2026-10-08T04:58:39.256569+00:00",
+    "stars": 133,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/graphic-design-ai/graphist",
+    "evidence": "\"stargazerCount\":133"
+  },
+  "gordonhu608/MQT-LLaVA": {
+    "requested_repo": "gordonhu608/MQT-LLaVA",
+    "source_url": "https://github.com/gordonhu608/MQT-LLaVA",
+    "observed_at_utc": "2026-10-08T04:58:38.565298+00:00",
+    "stars": 131,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/gordonhu608/MQT-LLaVA",
+    "evidence": "\"stargazerCount\":131"
+  },
+  "gls0425/LinVT": {
+    "requested_repo": "gls0425/LinVT",
+    "source_url": "https://github.com/gls0425/LinVT",
+    "observed_at_utc": "2026-10-08T04:58:38.548678+00:00",
+    "stars": 84,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/gls0425/LinVT",
+    "evidence": "\"stargazerCount\":84"
+  },
+  "huangb23/VTimeLLM": {
+    "requested_repo": "huangb23/VTimeLLM",
+    "source_url": "https://github.com/huangb23/VTimeLLM",
+    "observed_at_utc": "2026-10-08T04:58:39.699017+00:00",
+    "stars": 295,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/huangb23/VTimeLLM",
+    "evidence": "\"stargazerCount\":295"
+  },
+  "HYPJUDY/Sparkles": {
+    "requested_repo": "HYPJUDY/Sparkles",
+    "source_url": "https://github.com/HYPJUDY/Sparkles",
+    "observed_at_utc": "2026-10-08T04:58:39.740660+00:00",
+    "stars": 45,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/HYPJUDY/Sparkles",
+    "evidence": "\"stargazerCount\":45"
+  },
+  "HITsz-TMG/Awesome-Large-Multimodal-Reasoning-Models": {
+    "requested_repo": "HITsz-TMG/Awesome-Large-Multimodal-Reasoning-Models",
+    "source_url": "https://github.com/HITsz-TMG/Awesome-Large-Multimodal-Reasoning-Models",
+    "observed_at_utc": "2026-10-08T04:58:39.558444+00:00",
+    "stars": 617,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/HITsz-TMG/Awesome-Large-Multimodal-Reasoning-Models",
+    "evidence": "\"stargazerCount\":617"
+  },
+  "icoz69/StableLLAVA": {
+    "requested_repo": "icoz69/StableLLAVA",
+    "source_url": "https://github.com/icoz69/StableLLAVA",
+    "observed_at_utc": "2026-10-08T04:58:39.831073+00:00",
+    "stars": 94,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/icoz69/StableLLAVA",
+    "evidence": "\"stargazerCount\":94"
+  },
+  "haotian-liu/LLaVA": {
+    "requested_repo": "haotian-liu/LLaVA",
+    "source_url": "https://github.com/haotian-liu/LLaVA",
+    "observed_at_utc": "2026-10-08T04:58:39.477289+00:00",
+    "stars": 25058,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/haotian-liu/LLaVA",
+    "evidence": "\"stargazerCount\":25058"
+  },
+  "IDEA-Research/ChatRex": {
+    "requested_repo": "IDEA-Research/ChatRex",
+    "source_url": "https://github.com/IDEA-Research/ChatRex",
+    "observed_at_utc": "2026-10-08T04:58:40.808556+00:00",
+    "stars": 216,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/IDEA-Research/ChatRex",
+    "evidence": "\"stargazerCount\":216"
+  },
+  "inst-it/inst-it": {
+    "requested_repo": "inst-it/inst-it",
+    "source_url": "https://github.com/inst-it/inst-it",
+    "observed_at_utc": "2026-10-08T04:58:40.880656+00:00",
+    "stars": 40,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/inst-it/inst-it",
+    "evidence": "\"stargazerCount\":40"
+  },
+  "JiuhaiChen/BLIP3o": {
+    "requested_repo": "JiuhaiChen/BLIP3o",
+    "source_url": "https://github.com/JiuhaiChen/BLIP3o",
+    "observed_at_utc": "2026-10-08T04:58:41.049307+00:00",
+    "stars": 1667,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/JiuhaiChen/BLIP3o",
+    "evidence": "\"stargazerCount\":1667"
+  },
+  "InternLM/InternLM-XComposer": {
+    "requested_repo": "InternLM/InternLM-XComposer",
+    "source_url": "https://github.com/InternLM/InternLM-XComposer",
+    "observed_at_utc": "2026-10-08T04:58:41.009835+00:00",
+    "stars": 2928,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/InternLM/InternLM-XComposer",
+    "evidence": "\"stargazerCount\":2928"
+  },
+  "jiyt17/IDA-VLM": {
+    "requested_repo": "jiyt17/IDA-VLM",
+    "source_url": "https://github.com/jiyt17/IDA-VLM",
+    "observed_at_utc": "2026-10-08T04:58:41.151629+00:00",
+    "stars": 37,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/jiyt17/IDA-VLM",
+    "evidence": "\"stargazerCount\":37"
+  },
+  "jshilong/GPT4RoI": {
+    "requested_repo": "jshilong/GPT4RoI",
+    "source_url": "https://github.com/jshilong/GPT4RoI",
+    "observed_at_utc": "2026-10-08T04:58:41.274867+00:00",
+    "stars": 555,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/jshilong/GPT4RoI",
+    "evidence": "\"stargazerCount\":555"
+  },
+  "IDEA-FinAI/ChartMoE": {
+    "requested_repo": "IDEA-FinAI/ChartMoE",
+    "source_url": "https://github.com/IDEA-FinAI/ChartMoE",
+    "observed_at_utc": "2026-10-08T04:58:40.516911+00:00",
+    "stars": 100,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/DataArcTech/ChartMoE",
+    "evidence": "\"stargazerCount\":100"
+  },
+  "joez17/ChatBridge": {
+    "requested_repo": "joez17/ChatBridge",
+    "source_url": "https://github.com/joez17/ChatBridge",
+    "observed_at_utc": "2026-10-08T04:58:41.171396+00:00",
+    "stars": 55,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/CASIA-IVA-Lab/ChatBridge",
+    "evidence": "\"stargazerCount\":55"
+  },
+  "jy0205/LaVIT": {
+    "requested_repo": "jy0205/LaVIT",
+    "source_url": "https://github.com/jy0205/LaVIT",
+    "observed_at_utc": "2026-10-08T04:58:42.076196+00:00",
+    "stars": 606,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/jy0205/LaVIT",
+    "evidence": "\"stargazerCount\":606"
+  },
+  "LLaVA-VL/LLaVA-NeXT": {
+    "requested_repo": "LLaVA-VL/LLaVA-NeXT",
+    "source_url": "https://github.com/LLaVA-VL/LLaVA-NeXT",
+    "observed_at_utc": "2026-10-08T04:58:42.330954+00:00",
+    "stars": 4730,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/LLaVA-VL/LLaVA-NeXT",
+    "evidence": "\"stargazerCount\":4730"
+  },
+  "luogen1996/LaVIN": {
+    "requested_repo": "luogen1996/LaVIN",
+    "source_url": "https://github.com/luogen1996/LaVIN",
+    "observed_at_utc": "2026-10-08T04:58:42.614060+00:00",
+    "stars": 524,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/luogen1996/LaVIN",
+    "evidence": "\"stargazerCount\":524"
+  },
+  "LLaVA-VL/LLaVA-Plus-Codebase": {
+    "requested_repo": "LLaVA-VL/LLaVA-Plus-Codebase",
+    "source_url": "https://github.com/LLaVA-VL/LLaVA-Plus-Codebase",
+    "observed_at_utc": "2026-10-08T04:58:42.350363+00:00",
+    "stars": 771,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/LLaVA-VL/LLaVA-Plus-Codebase",
+    "evidence": "\"stargazerCount\":771"
+  },
+  "lxtGH/DenseWorld-1M": {
+    "requested_repo": "lxtGH/DenseWorld-1M",
+    "source_url": "https://github.com/lxtGH/DenseWorld-1M",
+    "observed_at_utc": "2026-10-08T04:58:42.830907+00:00",
+    "stars": 129,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/lxtGH/DenseWorld-1M",
+    "evidence": "\"stargazerCount\":129"
+  },
+  "kakaobrain/honeybee": {
+    "requested_repo": "kakaobrain/honeybee",
+    "source_url": "https://github.com/kakaobrain/honeybee",
+    "observed_at_utc": "2026-10-08T04:58:42.126625+00:00",
+    "stars": 473,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/khanrc/honeybee",
+    "evidence": "\"stargazerCount\":473"
+  },
+  "magic-research/bubogpt": {
+    "requested_repo": "magic-research/bubogpt",
+    "source_url": "https://github.com/magic-research/bubogpt",
+    "observed_at_utc": "2026-10-08T04:58:43.685685+00:00",
+    "stars": 510,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/magic-research/bubogpt",
+    "evidence": "\"stargazerCount\":510"
+  },
+  "mbzuai-oryx/groundingLMM": {
+    "requested_repo": "mbzuai-oryx/groundingLMM",
+    "source_url": "https://github.com/mbzuai-oryx/groundingLMM",
+    "observed_at_utc": "2026-10-08T04:58:43.957593+00:00",
+    "stars": 969,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/mbzuai-oryx/groundingLMM",
+    "evidence": "\"stargazerCount\":969"
+  },
+  "mbzuai-oryx/Video-ChatGPT": {
+    "requested_repo": "mbzuai-oryx/Video-ChatGPT",
+    "source_url": "https://github.com/mbzuai-oryx/Video-ChatGPT",
+    "observed_at_utc": "2026-10-08T04:58:44.183053+00:00",
+    "stars": 1513,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/mbzuai-oryx/Video-ChatGPT",
+    "evidence": "\"stargazerCount\":1513"
+  },
+  "MCG-NJU/VideoChat3": {
+    "requested_repo": "MCG-NJU/VideoChat3",
+    "source_url": "https://github.com/MCG-NJU/VideoChat3",
+    "observed_at_utc": "2026-10-08T04:58:44.373317+00:00",
+    "stars": 349,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/MCG-NJU/VideoChat3",
+    "evidence": "\"stargazerCount\":349"
+  },
+  "lxtGH/OMG-Seg": {
+    "requested_repo": "lxtGH/OMG-Seg",
+    "source_url": "https://github.com/lxtGH/OMG-Seg",
+    "observed_at_utc": "2026-10-08T04:58:43.236430+00:00",
+    "stars": 1354,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/lxtGH/OMG-Seg",
+    "evidence": "\"stargazerCount\":1354"
+  },
+  "lyuchenyang/Macaw-LLM": {
+    "requested_repo": "lyuchenyang/Macaw-LLM",
+    "source_url": "https://github.com/lyuchenyang/Macaw-LLM",
+    "observed_at_utc": "2026-10-08T04:58:43.266595+00:00",
+    "stars": 1591,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/lyuchenyang/Macaw-LLM",
+    "evidence": "\"stargazerCount\":1591"
+  },
+  "Luodian/Otter": {
+    "requested_repo": "Luodian/Otter",
+    "source_url": "https://github.com/Luodian/Otter",
+    "observed_at_utc": "2026-10-08T04:58:42.407382+00:00",
+    "stars": 3444,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/EvolvingLMMs-Lab/Otter",
+    "evidence": "\"stargazerCount\":3444"
+  },
+  "Meituan-AutoML/MobileVLM": {
+    "requested_repo": "Meituan-AutoML/MobileVLM",
+    "source_url": "https://github.com/Meituan-AutoML/MobileVLM",
+    "observed_at_utc": "2026-10-08T04:58:45.168072+00:00",
+    "stars": 1370,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Meituan-AutoML/MobileVLM",
+    "evidence": "\"stargazerCount\":1370"
+  },
+  "Meituan-AutoML/Lenna": {
+    "requested_repo": "Meituan-AutoML/Lenna",
+    "source_url": "https://github.com/Meituan-AutoML/Lenna",
+    "observed_at_utc": "2026-10-08T04:58:45.132733+00:00",
+    "stars": 87,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Meituan-AutoML/Lenna",
+    "evidence": "\"stargazerCount\":87"
+  },
+  "microsoft/LLaVA-Med": {
+    "requested_repo": "microsoft/LLaVA-Med",
+    "source_url": "https://github.com/microsoft/LLaVA-Med",
+    "observed_at_utc": "2026-10-08T04:58:45.452393+00:00",
+    "stars": 2233,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/microsoft/LLaVA-Med",
+    "evidence": "\"stargazerCount\":2233"
+  },
+  "microsoft/unilm": {
+    "requested_repo": "microsoft/unilm",
+    "source_url": "https://github.com/microsoft/unilm",
+    "observed_at_utc": "2026-10-08T04:58:45.647623+00:00",
+    "stars": 22228,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/microsoft/unilm",
+    "evidence": "\"stargazerCount\":22228"
+  },
+  "MineDojo/MineDojo": {
+    "requested_repo": "MineDojo/MineDojo",
+    "source_url": "https://github.com/MineDojo/MineDojo",
+    "observed_at_utc": "2026-10-08T04:58:45.805073+00:00",
+    "stars": 2266,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/MineDojo/MineDojo",
+    "evidence": "\"stargazerCount\":2266"
+  },
+  "MiG-NJU/OmniVideo-100K": {
+    "requested_repo": "MiG-NJU/OmniVideo-100K",
+    "source_url": "https://github.com/MiG-NJU/OmniVideo-100K",
+    "observed_at_utc": "2026-10-08T04:58:45.761679+00:00",
+    "stars": 64,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/MiG-NJU/OmniVideo-100K",
+    "evidence": "\"stargazerCount\":64"
+  },
+  "MME-Benchmarks/Video-MME-v2": {
+    "requested_repo": "MME-Benchmarks/Video-MME-v2",
+    "source_url": "https://github.com/MME-Benchmarks/Video-MME-v2",
+    "observed_at_utc": "2026-10-08T04:58:46.513932+00:00",
+    "stars": 363,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/MME-Benchmarks/Video-MME-v2",
+    "evidence": "\"stargazerCount\":363"
+  },
+  "mlpc-ucsd/BLIVA": {
+    "requested_repo": "mlpc-ucsd/BLIVA",
+    "source_url": "https://github.com/mlpc-ucsd/BLIVA",
+    "observed_at_utc": "2026-10-08T04:58:46.494787+00:00",
+    "stars": 260,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/mlpc-ucsd/BLIVA",
+    "evidence": "\"stargazerCount\":260"
+  },
+  "MoonshotAI/Kimi-K2.5": {
+    "requested_repo": "MoonshotAI/Kimi-K2.5",
+    "source_url": "https://github.com/MoonshotAI/Kimi-K2.5",
+    "observed_at_utc": "2026-10-08T04:58:46.744984+00:00",
+    "stars": 2313,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/MoonshotAI/Kimi-K2.5",
+    "evidence": "\"stargazerCount\":2313"
+  },
+  "microsoft/Pengi": {
+    "requested_repo": "microsoft/Pengi",
+    "source_url": "https://github.com/microsoft/Pengi",
+    "observed_at_utc": "2026-10-08T04:58:45.580475+00:00",
+    "stars": 322,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/microsoft/Pengi",
+    "evidence": "\"stargazerCount\":322"
+  },
+  "MoonshotAI/Kimi-VL": {
+    "requested_repo": "MoonshotAI/Kimi-VL",
+    "source_url": "https://github.com/MoonshotAI/Kimi-VL",
+    "observed_at_utc": "2026-10-08T04:58:46.976423+00:00",
+    "stars": 1226,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/MoonshotAI/Kimi-VL",
+    "evidence": "\"stargazerCount\":1226"
+  },
+  "MoonshotAI/Kimi-K3": {
+    "requested_repo": "MoonshotAI/Kimi-K3",
+    "source_url": "https://github.com/MoonshotAI/Kimi-K3",
+    "observed_at_utc": "2026-10-08T04:58:46.965502+00:00",
+    "stars": 8902,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/MoonshotAI/Kimi-K3",
+    "evidence": "\"stargazerCount\":8902"
+  },
+  "mshukor/UnIVAL": {
+    "requested_repo": "mshukor/UnIVAL",
+    "source_url": "https://github.com/mshukor/UnIVAL",
+    "observed_at_utc": "2026-10-08T04:58:47.082509+00:00",
+    "stars": 235,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/mshukor/UnIVAL",
+    "evidence": "\"stargazerCount\":235"
+  },
+  "mbzuai-oryx/LlamaV-o1": {
+    "requested_repo": "mbzuai-oryx/LlamaV-o1",
+    "source_url": "https://github.com/mbzuai-oryx/LlamaV-o1",
+    "observed_at_utc": "2026-10-08T04:58:44.146515+00:00",
+    "stars": 307,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/mbzuai-oryx/LlamaV-o1",
+    "evidence": "\"stargazerCount\":307"
+  },
+  "nvidia/cosmos": {
+    "requested_repo": "nvidia/cosmos",
+    "source_url": "https://github.com/nvidia/cosmos",
+    "observed_at_utc": "2026-10-08T04:58:48.108557+00:00",
+    "stars": 11988,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/nvidia/cosmos",
+    "evidence": "\"stargazerCount\":11988"
+  },
+  "NExT-ChatV/NExT-Chat": {
+    "requested_repo": "NExT-ChatV/NExT-Chat",
+    "source_url": "https://github.com/NExT-ChatV/NExT-Chat",
+    "observed_at_utc": "2026-10-08T04:58:48.020720+00:00",
+    "stars": 252,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/NExT-ChatV/NExT-Chat",
+    "evidence": "\"stargazerCount\":252"
+  },
+  "NVlabs/LITA": {
+    "requested_repo": "NVlabs/LITA",
+    "source_url": "https://github.com/NVlabs/LITA",
+    "observed_at_utc": "2026-10-08T04:58:48.396509+00:00",
+    "stars": 195,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/NVlabs/LITA",
+    "evidence": "\"stargazerCount\":195"
+  },
+  "NVlabs/OmniVinci": {
+    "requested_repo": "NVlabs/OmniVinci",
+    "source_url": "https://github.com/NVlabs/OmniVinci",
+    "observed_at_utc": "2026-10-08T04:58:48.583552+00:00",
+    "stars": 683,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/NVlabs/OmniVinci",
+    "evidence": "\"stargazerCount\":683"
+  },
+  "NVlabs/Eagle": {
+    "requested_repo": "NVlabs/Eagle",
+    "source_url": "https://github.com/NVlabs/Eagle",
+    "observed_at_utc": "2026-10-08T04:58:48.329352+00:00",
+    "stars": 3687,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/NVlabs/Eagle",
+    "evidence": "\"stargazerCount\":3687"
+  },
+  "NVlabs/EAGLE": {
+    "requested_repo": "NVlabs/EAGLE",
+    "source_url": "https://github.com/NVlabs/EAGLE",
+    "observed_at_utc": "2026-10-08T04:58:48.327010+00:00",
+    "stars": 3687,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/NVlabs/EAGLE",
+    "evidence": "\"stargazerCount\":3687"
+  },
+  "NVlabs/prismer": {
+    "requested_repo": "NVlabs/prismer",
+    "source_url": "https://github.com/NVlabs/prismer",
+    "observed_at_utc": "2026-10-08T04:58:49.623379+00:00",
+    "stars": 1308,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/NVlabs/prismer",
+    "evidence": "\"stargazerCount\":1308"
+  },
+  "NVlabs/VILA": {
+    "requested_repo": "NVlabs/VILA",
+    "source_url": "https://github.com/NVlabs/VILA",
+    "observed_at_utc": "2026-10-08T04:58:49.728768+00:00",
+    "stars": 3864,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/NVlabs/VILA",
+    "evidence": "\"stargazerCount\":3864"
+  },
+  "mu-cai/vip-llava": {
+    "requested_repo": "mu-cai/vip-llava",
+    "source_url": "https://github.com/mu-cai/vip-llava",
+    "observed_at_utc": "2026-10-08T04:58:47.712078+00:00",
+    "stars": 338,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/WisconsinAIVision/ViP-LLaVA",
+    "evidence": "\"stargazerCount\":338"
+  },
+  "NExT-GPT/NExT-GPT": {
+    "requested_repo": "NExT-GPT/NExT-GPT",
+    "source_url": "https://github.com/NExT-GPT/NExT-GPT",
+    "observed_at_utc": "2026-10-08T04:58:48.098655+00:00",
+    "stars": 3635,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/NExT-GPT/NExT-GPT",
+    "evidence": "\"stargazerCount\":3635"
+  },
+  "open-mmlab/Multimodal-GPT": {
+    "requested_repo": "open-mmlab/Multimodal-GPT",
+    "source_url": "https://github.com/open-mmlab/Multimodal-GPT",
+    "observed_at_utc": "2026-10-08T04:58:49.816014+00:00",
+    "stars": 1512,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/open-mmlab/Multimodal-GPT",
+    "evidence": "\"stargazerCount\":1512"
+  },
+  "Open3DA/LL3DA": {
+    "requested_repo": "Open3DA/LL3DA",
+    "source_url": "https://github.com/Open3DA/LL3DA",
+    "observed_at_utc": "2026-10-08T04:58:50.003762+00:00",
+    "stars": 320,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Open3DA/LL3DA",
+    "evidence": "\"stargazerCount\":320"
+  },
+  "OpenBMB/VisCPM": {
+    "requested_repo": "OpenBMB/VisCPM",
+    "source_url": "https://github.com/OpenBMB/VisCPM",
+    "observed_at_utc": "2026-10-08T04:58:50.954838+00:00",
+    "stars": 1061,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenBMB/VisCPM",
+    "evidence": "\"stargazerCount\":1061"
+  },
+  "OpenGVLab/all-seeing": {
+    "requested_repo": "OpenGVLab/all-seeing",
+    "source_url": "https://github.com/OpenGVLab/all-seeing",
+    "observed_at_utc": "2026-10-08T04:58:51.378962+00:00",
+    "stars": 507,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/all-seeing",
+    "evidence": "\"stargazerCount\":507"
+  },
+  "opendatalab/MLLM-DataEngine": {
+    "requested_repo": "opendatalab/MLLM-DataEngine",
+    "source_url": "https://github.com/opendatalab/MLLM-DataEngine",
+    "observed_at_utc": "2026-10-08T04:58:51.140199+00:00",
+    "stars": 50,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/opendatalab/MLLM-DataEngine",
+    "evidence": "\"stargazerCount\":50"
+  },
+  "OpenGVLab/All-Seeing": {
+    "requested_repo": "OpenGVLab/All-Seeing",
+    "source_url": "https://github.com/OpenGVLab/All-Seeing",
+    "observed_at_utc": "2026-10-08T04:58:51.215752+00:00",
+    "stars": 507,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/All-Seeing",
+    "evidence": "\"stargazerCount\":507"
+  },
+  "OpenBMB/MiniCPM-V": {
+    "requested_repo": "OpenBMB/MiniCPM-V",
+    "source_url": "https://github.com/OpenBMB/MiniCPM-V",
+    "observed_at_utc": "2026-10-08T04:58:50.807087+00:00",
+    "stars": 26504,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenBMB/MiniCPM-V",
+    "evidence": "\"stargazerCount\":26504"
+  },
+  "OpenGVLab/InternVL": {
+    "requested_repo": "OpenGVLab/InternVL",
+    "source_url": "https://github.com/OpenGVLab/InternVL",
+    "observed_at_utc": "2026-10-08T04:58:52.434362+00:00",
+    "stars": 10166,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/InternVL",
+    "evidence": "\"stargazerCount\":10166"
+  },
+  "OpenGVLab/InternVL-U": {
+    "requested_repo": "OpenGVLab/InternVL-U",
+    "source_url": "https://github.com/OpenGVLab/InternVL-U",
+    "observed_at_utc": "2026-10-08T04:58:52.855594+00:00",
+    "stars": 297,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/InternVL-U",
+    "evidence": "\"stargazerCount\":297"
+  },
+  "OpenGVLab/ChartAst": {
+    "requested_repo": "OpenGVLab/ChartAst",
+    "source_url": "https://github.com/OpenGVLab/ChartAst",
+    "observed_at_utc": "2026-10-08T04:58:52.243984+00:00",
+    "stars": 136,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/ChartAst",
+    "evidence": "\"stargazerCount\":136"
+  },
+  "OpenGVLab/Ask-Anything": {
+    "requested_repo": "OpenGVLab/Ask-Anything",
+    "source_url": "https://github.com/OpenGVLab/Ask-Anything",
+    "observed_at_utc": "2026-10-08T04:58:51.843693+00:00",
+    "stars": 3355,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/Ask-Anything",
+    "evidence": "\"stargazerCount\":3355"
+  },
+  "OpenGVLab/LLaMA-Adapter": {
+    "requested_repo": "OpenGVLab/LLaMA-Adapter",
+    "source_url": "https://github.com/OpenGVLab/LLaMA-Adapter",
+    "observed_at_utc": "2026-10-08T04:58:53.511330+00:00",
+    "stars": 5911,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/LLaMA-Adapter",
+    "evidence": "\"stargazerCount\":5911"
+  },
+  "OpenGVLab/VisionLLM": {
+    "requested_repo": "OpenGVLab/VisionLLM",
+    "source_url": "https://github.com/OpenGVLab/VisionLLM",
+    "observed_at_utc": "2026-10-08T04:58:53.584021+00:00",
+    "stars": 1154,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/VisionLLM",
+    "evidence": "\"stargazerCount\":1154"
+  },
+  "OpenMOSS/AnyGPT": {
+    "requested_repo": "OpenMOSS/AnyGPT",
+    "source_url": "https://github.com/OpenMOSS/AnyGPT",
+    "observed_at_utc": "2026-10-08T04:58:54.302058+00:00",
+    "stars": 884,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenMOSS/AnyGPT",
+    "evidence": "\"stargazerCount\":884"
+  },
+  "OpenBMB/MiniCPM-o": {
+    "requested_repo": "OpenBMB/MiniCPM-o",
+    "source_url": "https://github.com/OpenBMB/MiniCPM-o",
+    "observed_at_utc": "2026-10-08T04:58:50.687134+00:00",
+    "stars": 26504,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenBMB/MiniCPM-V",
+    "evidence": "\"stargazerCount\":26504"
+  },
+  "phellonchen/X-LLM": {
+    "requested_repo": "phellonchen/X-LLM",
+    "source_url": "https://github.com/phellonchen/X-LLM",
+    "observed_at_utc": "2026-10-08T04:58:54.903873+00:00",
+    "stars": 316,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/phellonchen/X-LLM",
+    "evidence": "\"stargazerCount\":316"
+  },
+  "OpenLAMM/LAMM": {
+    "requested_repo": "OpenLAMM/LAMM",
+    "source_url": "https://github.com/OpenLAMM/LAMM",
+    "observed_at_utc": "2026-10-08T04:58:54.172384+00:00",
+    "stars": 318,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenGVLab/LAMM",
+    "evidence": "\"stargazerCount\":318"
+  },
+  "PKU-YuanGroup/Chat-UniVi": {
+    "requested_repo": "PKU-YuanGroup/Chat-UniVi",
+    "source_url": "https://github.com/PKU-YuanGroup/Chat-UniVi",
+    "observed_at_utc": "2026-10-08T04:58:54.932894+00:00",
+    "stars": 943,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/PKU-YuanGroup/Chat-UniVi",
+    "evidence": "\"stargazerCount\":943"
+  },
+  "OpenMotionLab/MotionGPT": {
+    "requested_repo": "OpenMotionLab/MotionGPT",
+    "source_url": "https://github.com/OpenMotionLab/MotionGPT",
+    "observed_at_utc": "2026-10-08T04:58:54.452353+00:00",
+    "stars": 1976,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OpenMotionLab/MotionGPT",
+    "evidence": "\"stargazerCount\":1976"
+  },
+  "OptimalScale/DetGPT": {
+    "requested_repo": "OptimalScale/DetGPT",
+    "source_url": "https://github.com/OptimalScale/DetGPT",
+    "observed_at_utc": "2026-10-08T04:58:54.730396+00:00",
+    "stars": 785,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/OptimalScale/DetGPT",
+    "evidence": "\"stargazerCount\":785"
+  },
+  "OpenRobotLab/PointLLM": {
+    "requested_repo": "OpenRobotLab/PointLLM",
+    "source_url": "https://github.com/OpenRobotLab/PointLLM",
+    "observed_at_utc": "2026-10-08T04:58:54.653876+00:00",
+    "stars": 1055,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/InternRobotics/PointLLM",
+    "evidence": "\"stargazerCount\":1055"
+  },
+  "PKU-YuanGroup/LanguageBind": {
+    "requested_repo": "PKU-YuanGroup/LanguageBind",
+    "source_url": "https://github.com/PKU-YuanGroup/LanguageBind",
+    "observed_at_utc": "2026-10-08T04:58:55.669689+00:00",
+    "stars": 888,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/PKU-YuanGroup/LanguageBind",
+    "evidence": "\"stargazerCount\":888"
+  },
+  "PKU-YuanGroup/MoE-LLaVA": {
+    "requested_repo": "PKU-YuanGroup/MoE-LLaVA",
+    "source_url": "https://github.com/PKU-YuanGroup/MoE-LLaVA",
+    "observed_at_utc": "2026-10-08T04:58:55.747937+00:00",
+    "stars": 2322,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/PKU-YuanGroup/MoE-LLaVA",
+    "evidence": "\"stargazerCount\":2322"
+  },
+  "PVIT-official/PVIT": {
+    "requested_repo": "PVIT-official/PVIT",
+    "source_url": "https://github.com/PVIT-official/PVIT",
+    "observed_at_utc": "2026-10-08T04:58:56.360548+00:00",
+    "stars": 36,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/PVIT-official/PVIT",
+    "evidence": "\"stargazerCount\":36"
+  },
+  "quicksviewer/quicksviewer": {
+    "requested_repo": "quicksviewer/quicksviewer",
+    "source_url": "https://github.com/quicksviewer/quicksviewer",
+    "observed_at_utc": "2026-10-08T04:58:56.587205+00:00",
+    "stars": 19,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/quicksviewer/quicksviewer",
+    "evidence": "\"stargazerCount\":19"
+  },
+  "PKU-YuanGroup/Video-LLaVA": {
+    "requested_repo": "PKU-YuanGroup/Video-LLaVA",
+    "source_url": "https://github.com/PKU-YuanGroup/Video-LLaVA",
+    "observed_at_utc": "2026-10-08T04:58:56.340195+00:00",
+    "stars": 3505,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/PKU-YuanGroup/Video-LLaVA",
+    "evidence": "\"stargazerCount\":3505"
+  },
+  "QwenLM/Qwen-MM-Plugins": {
+    "requested_repo": "QwenLM/Qwen-MM-Plugins",
+    "source_url": "https://github.com/QwenLM/Qwen-MM-Plugins",
+    "observed_at_utc": "2026-10-08T04:58:56.953495+00:00",
+    "stars": 3119,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/QwenLM/Qwen-MM-Plugins",
+    "evidence": "\"stargazerCount\":3119"
+  },
+  "QwenLM/Qwen-VL": {
+    "requested_repo": "QwenLM/Qwen-VL",
+    "source_url": "https://github.com/QwenLM/Qwen-VL",
+    "observed_at_utc": "2026-10-08T04:58:56.962828+00:00",
+    "stars": 6726,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/QwenLM/Qwen-VL",
+    "evidence": "\"stargazerCount\":6726"
+  },
+  "QwenLM/Qwen2.5-Omni": {
+    "requested_repo": "QwenLM/Qwen2.5-Omni",
+    "source_url": "https://github.com/QwenLM/Qwen2.5-Omni",
+    "observed_at_utc": "2026-10-08T04:58:57.285061+00:00",
+    "stars": 4078,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/QwenLM/Qwen2.5-Omni",
+    "evidence": "\"stargazerCount\":4078"
+  },
+  "QwenLM/Qwen3-Omni": {
+    "requested_repo": "QwenLM/Qwen3-Omni",
+    "source_url": "https://github.com/QwenLM/Qwen3-Omni",
+    "observed_at_utc": "2026-10-08T04:58:57.677172+00:00",
+    "stars": 4042,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/QwenLM/Qwen3-Omni",
+    "evidence": "\"stargazerCount\":4042"
+  },
+  "QwenLM/Qwen2-VL": {
+    "requested_repo": "QwenLM/Qwen2-VL",
+    "source_url": "https://github.com/QwenLM/Qwen2-VL",
+    "observed_at_utc": "2026-10-08T04:58:57.043743+00:00",
+    "stars": 20043,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/QwenLM/Qwen3-VL",
+    "evidence": "\"stargazerCount\":20043"
+  },
+  "QwenLM/Qwen3-VL": {
+    "requested_repo": "QwenLM/Qwen3-VL",
+    "source_url": "https://github.com/QwenLM/Qwen3-VL",
+    "observed_at_utc": "2026-10-08T04:58:57.881358+00:00",
+    "stars": 20043,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/QwenLM/Qwen3-VL",
+    "evidence": "\"stargazerCount\":20043"
+  },
+  "QwenLM/Qwen2.5-VL": {
+    "requested_repo": "QwenLM/Qwen2.5-VL",
+    "source_url": "https://github.com/QwenLM/Qwen2.5-VL",
+    "observed_at_utc": "2026-10-08T04:58:57.479830+00:00",
+    "stars": 20043,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/QwenLM/Qwen3-VL",
+    "evidence": "\"stargazerCount\":20043"
+  },
+  "QwenLM/Qwen3.5": {
+    "requested_repo": "QwenLM/Qwen3.5",
+    "source_url": "https://github.com/QwenLM/Qwen3.5",
+    "observed_at_utc": "2026-10-08T04:58:58.064507+00:00",
+    "stars": 4241,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/QwenLM/Qwen3.8",
+    "evidence": "\"stargazerCount\":4241"
+  },
+  "RenShuhuai-Andy/TimeChat": {
+    "requested_repo": "RenShuhuai-Andy/TimeChat",
+    "source_url": "https://github.com/RenShuhuai-Andy/TimeChat",
+    "observed_at_utc": "2026-10-08T04:58:58.723066+00:00",
+    "stars": 428,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/RenShuhuai-Andy/TimeChat",
+    "evidence": "\"stargazerCount\":428"
+  },
+  "rednote-hilab/dots.vlm1": {
+    "requested_repo": "rednote-hilab/dots.vlm1",
+    "source_url": "https://github.com/rednote-hilab/dots.vlm1",
+    "observed_at_utc": "2026-10-08T04:58:58.389206+00:00",
+    "stars": 293,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/studio-dots-ai/dots.vlm1",
+    "evidence": "\"stargazerCount\":293"
+  },
+  "RUCAIBox/ComVint": {
+    "requested_repo": "RUCAIBox/ComVint",
+    "source_url": "https://github.com/RUCAIBox/ComVint",
+    "observed_at_utc": "2026-10-08T04:58:59.228319+00:00",
+    "stars": 18,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/RUCAIBox/ComVint",
+    "evidence": "\"stargazerCount\":18"
+  },
+  "RunpeiDong/DreamLLM": {
+    "requested_repo": "RunpeiDong/DreamLLM",
+    "source_url": "https://github.com/RunpeiDong/DreamLLM",
+    "observed_at_utc": "2026-10-08T04:58:59.231682+00:00",
+    "stars": 462,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/RunpeiDong/DreamLLM",
+    "evidence": "\"stargazerCount\":462"
+  },
+  "rese1f/aurora": {
+    "requested_repo": "rese1f/aurora",
+    "source_url": "https://github.com/rese1f/aurora",
+    "observed_at_utc": "2026-10-08T04:58:58.792594+00:00",
+    "stars": 149,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/wenhaochai/aurora",
+    "evidence": "\"stargazerCount\":149"
+  },
+  "rese1f/MovieChat": {
+    "requested_repo": "rese1f/MovieChat",
+    "source_url": "https://github.com/rese1f/MovieChat",
+    "observed_at_utc": "2026-10-08T04:58:59.038934+00:00",
+    "stars": 706,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/wenhaochai/MovieChat",
+    "evidence": "\"stargazerCount\":706"
+  },
+  "rshaojimmy/JiuTian": {
+    "requested_repo": "rshaojimmy/JiuTian",
+    "source_url": "https://github.com/rshaojimmy/JiuTian",
+    "observed_at_utc": "2026-10-08T04:58:59.225124+00:00",
+    "stars": 154,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/JiuTian-VL/JiuTian-LION",
+    "evidence": "\"stargazerCount\":154"
+  },
+  "salesforce/LAVIS": {
+    "requested_repo": "salesforce/LAVIS",
+    "source_url": "https://github.com/salesforce/LAVIS",
+    "observed_at_utc": "2026-10-08T04:59:00.054506+00:00",
+    "stars": 11260,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/salesforce/LAVIS",
+    "evidence": "\"stargazerCount\":11260"
+  },
+  "SALT-NLP/LLaVAR": {
+    "requested_repo": "SALT-NLP/LLaVAR",
+    "source_url": "https://github.com/SALT-NLP/LLaVAR",
+    "observed_at_utc": "2026-10-08T04:59:00.322190+00:00",
+    "stars": 268,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/SALT-NLP/LLaVAR",
+    "evidence": "\"stargazerCount\":268"
+  },
+  "SenseTime-FVG/InteractiveOmni": {
+    "requested_repo": "SenseTime-FVG/InteractiveOmni",
+    "source_url": "https://github.com/SenseTime-FVG/InteractiveOmni",
+    "observed_at_utc": "2026-10-08T04:59:00.420615+00:00",
+    "stars": 26,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/SenseTime-FVG/InteractiveOmni",
+    "evidence": "\"stargazerCount\":26"
+  },
+  "SHI-Labs/CuMo": {
+    "requested_repo": "SHI-Labs/CuMo",
+    "source_url": "https://github.com/SHI-Labs/CuMo",
+    "observed_at_utc": "2026-10-08T04:59:00.641848+00:00",
+    "stars": 164,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/SHI-Labs/CuMo",
+    "evidence": "\"stargazerCount\":164"
+  },
+  "shikras/shikra": {
+    "requested_repo": "shikras/shikra",
+    "source_url": "https://github.com/shikras/shikra",
+    "observed_at_utc": "2026-10-08T04:59:00.970157+00:00",
+    "stars": 815,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/shikras/shikra",
+    "evidence": "\"stargazerCount\":815"
+  },
+  "shizhediao/DaVinci": {
+    "requested_repo": "shizhediao/DaVinci",
+    "source_url": "https://github.com/shizhediao/DaVinci",
+    "observed_at_utc": "2026-10-08T04:59:01.184206+00:00",
+    "stars": 45,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/shizhediao/DaVinci",
+    "evidence": "\"stargazerCount\":45"
+  },
+  "showlab/Show-o": {
+    "requested_repo": "showlab/Show-o",
+    "source_url": "https://github.com/showlab/Show-o",
+    "observed_at_utc": "2026-10-08T04:59:01.270496+00:00",
+    "stars": 1979,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/showlab/Show-o",
+    "evidence": "\"stargazerCount\":1979"
+  },
+  "showlab/VideoLLM-online": {
+    "requested_repo": "showlab/VideoLLM-online",
+    "source_url": "https://github.com/showlab/VideoLLM-online",
+    "observed_at_utc": "2026-10-08T04:59:01.460672+00:00",
+    "stars": 683,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/showlab/VideoLLM-online",
+    "evidence": "\"stargazerCount\":683"
+  },
+  "shikiw/Modality-Integration-Rate": {
+    "requested_repo": "shikiw/Modality-Integration-Rate",
+    "source_url": "https://github.com/shikiw/Modality-Integration-Rate",
+    "observed_at_utc": "2026-10-08T04:59:00.678361+00:00",
+    "stars": 114,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/shikiw/Modality-Integration-Rate",
+    "evidence": "\"stargazerCount\":114"
+  },
+  "shufangxun/LLaVA-MoD": {
+    "requested_repo": "shufangxun/LLaVA-MoD",
+    "source_url": "https://github.com/shufangxun/LLaVA-MoD",
+    "observed_at_utc": "2026-10-08T04:59:01.586045+00:00",
+    "stars": 228,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/shufangxun/LLaVA-MoD",
+    "evidence": "\"stargazerCount\":228"
+  },
+  "SihengLi99/TextBind": {
+    "requested_repo": "SihengLi99/TextBind",
+    "source_url": "https://github.com/SihengLi99/TextBind",
+    "observed_at_utc": "2026-10-08T04:59:01.777747+00:00",
+    "stars": 47,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/SihengLi99/TextBind",
+    "evidence": "\"stargazerCount\":47"
+  },
+  "SkyworkAI/Skywork-R1V": {
+    "requested_repo": "SkyworkAI/Skywork-R1V",
+    "source_url": "https://github.com/SkyworkAI/Skywork-R1V",
+    "observed_at_utc": "2026-10-08T04:59:02.086021+00:00",
+    "stars": 3173,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/SkyworkAI/Skywork-R1V",
+    "evidence": "\"stargazerCount\":3173"
+  },
+  "stepfun-ai/Step3": {
+    "requested_repo": "stepfun-ai/Step3",
+    "source_url": "https://github.com/stepfun-ai/Step3",
+    "observed_at_utc": "2026-10-08T04:59:02.443121+00:00",
+    "stars": 455,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/stepfun-ai/Step3",
+    "evidence": "\"stargazerCount\":455"
+  },
+  "SkyworkAI/Vitron": {
+    "requested_repo": "SkyworkAI/Vitron",
+    "source_url": "https://github.com/SkyworkAI/Vitron",
+    "observed_at_utc": "2026-10-08T04:59:02.406817+00:00",
+    "stars": 578,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/SkyworkAI/Vitron",
+    "evidence": "\"stargazerCount\":578"
+  },
+  "Tencent/VITA": {
+    "requested_repo": "Tencent/VITA",
+    "source_url": "https://github.com/Tencent/VITA",
+    "observed_at_utc": "2026-10-08T04:59:02.809492+00:00",
+    "stars": 165,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Tencent/VITA",
+    "evidence": "\"stargazerCount\":165"
+  },
+  "StevenGrove/GPT4Tools": {
+    "requested_repo": "StevenGrove/GPT4Tools",
+    "source_url": "https://github.com/StevenGrove/GPT4Tools",
+    "observed_at_utc": "2026-10-08T04:59:02.553205+00:00",
+    "stars": 772,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/AILab-CVC/GPT4Tools",
+    "evidence": "\"stargazerCount\":772"
+  },
+  "TimeMarker-LLM/TimeMarker": {
+    "requested_repo": "TimeMarker-LLM/TimeMarker",
+    "source_url": "https://github.com/TimeMarker-LLM/TimeMarker",
+    "observed_at_utc": "2026-10-08T04:59:03.786242+00:00",
+    "stars": 109,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/TimeMarker-LLM/TimeMarker",
+    "evidence": "\"stargazerCount\":109"
+  },
+  "THUDM/CogCoM": {
+    "requested_repo": "THUDM/CogCoM",
+    "source_url": "https://github.com/THUDM/CogCoM",
+    "observed_at_utc": "2026-10-08T04:59:02.921166+00:00",
+    "stars": 223,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/zai-org/CogCoM",
+    "evidence": "\"stargazerCount\":223"
+  },
+  "THUDM/GLM-4.1V-Thinking": {
+    "requested_repo": "THUDM/GLM-4.1V-Thinking",
+    "source_url": "https://github.com/THUDM/GLM-4.1V-Thinking",
+    "observed_at_utc": "2026-10-08T04:59:03.316884+00:00",
+    "stars": 2395,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/zai-org/GLM-V",
+    "evidence": "\"stargazerCount\":2395"
+  },
+  "THUDM/CogVLM": {
+    "requested_repo": "THUDM/CogVLM",
+    "source_url": "https://github.com/THUDM/CogVLM",
+    "observed_at_utc": "2026-10-08T04:59:02.965301+00:00",
+    "stars": 6743,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/zai-org/CogVLM",
+    "evidence": "\"stargazerCount\":6743"
+  },
+  "tingxueronghua/ChartLlama-code": {
+    "requested_repo": "tingxueronghua/ChartLlama-code",
+    "source_url": "https://github.com/tingxueronghua/ChartLlama-code",
+    "observed_at_utc": "2026-10-08T04:59:04.183060+00:00",
+    "stars": 256,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/tingxueronghua/ChartLlama-code",
+    "evidence": "\"stargazerCount\":256"
+  },
+  "thunlp/Muffin": {
+    "requested_repo": "thunlp/Muffin",
+    "source_url": "https://github.com/thunlp/Muffin",
+    "observed_at_utc": "2026-10-08T04:59:03.659252+00:00",
+    "stars": 66,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/thunlp/Muffin",
+    "evidence": "\"stargazerCount\":66"
+  },
+  "THUDM/VisualGLM-6B": {
+    "requested_repo": "THUDM/VisualGLM-6B",
+    "source_url": "https://github.com/THUDM/VisualGLM-6B",
+    "observed_at_utc": "2026-10-08T04:59:03.449673+00:00",
+    "stars": 4153,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/zai-org/VisualGLM-6B",
+    "evidence": "\"stargazerCount\":4153"
+  },
+  "TRI-ML/prismatic-vlms": {
+    "requested_repo": "TRI-ML/prismatic-vlms",
+    "source_url": "https://github.com/TRI-ML/prismatic-vlms",
+    "observed_at_utc": "2026-10-08T04:59:04.687667+00:00",
+    "stars": 1020,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/TRI-ML/prismatic-vlms",
+    "evidence": "\"stargazerCount\":1020"
+  },
+  "Ucas-HaoranWei/Vary": {
+    "requested_repo": "Ucas-HaoranWei/Vary",
+    "source_url": "https://github.com/Ucas-HaoranWei/Vary",
+    "observed_at_utc": "2026-10-08T04:59:05.044405+00:00",
+    "stars": 1887,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Ucas-HaoranWei/Vary",
+    "evidence": "\"stargazerCount\":1887"
+  },
+  "vimalabs/VIMA": {
+    "requested_repo": "vimalabs/VIMA",
+    "source_url": "https://github.com/vimalabs/VIMA",
+    "observed_at_utc": "2026-10-08T04:59:05.267868+00:00",
+    "stars": 859,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/vimalabs/VIMA",
+    "evidence": "\"stargazerCount\":859"
+  },
+  "UCSC-VLAA/Sight-Beyond-Text": {
+    "requested_repo": "UCSC-VLAA/Sight-Beyond-Text",
+    "source_url": "https://github.com/UCSC-VLAA/Sight-Beyond-Text",
+    "observed_at_utc": "2026-10-08T04:59:05.096152+00:00",
+    "stars": 20,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/UCSC-VLAA/Sight-Beyond-Text",
+    "evidence": "\"stargazerCount\":20"
+  },
+  "Vision-CAIR/LongVU": {
+    "requested_repo": "Vision-CAIR/LongVU",
+    "source_url": "https://github.com/Vision-CAIR/LongVU",
+    "observed_at_utc": "2026-10-08T04:59:05.572992+00:00",
+    "stars": 435,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Vision-CAIR/LongVU",
+    "evidence": "\"stargazerCount\":435"
+  },
+  "Vision-CAIR/MiniGPT-4": {
+    "requested_repo": "Vision-CAIR/MiniGPT-4",
+    "source_url": "https://github.com/Vision-CAIR/MiniGPT-4",
+    "observed_at_utc": "2026-10-08T04:59:05.742205+00:00",
+    "stars": 25600,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Vision-CAIR/MiniGPT-4",
+    "evidence": "\"stargazerCount\":25600"
+  },
+  "VITA-MLLM/Omni-Diffusion": {
+    "requested_repo": "VITA-MLLM/Omni-Diffusion",
+    "source_url": "https://github.com/VITA-MLLM/Omni-Diffusion",
+    "observed_at_utc": "2026-10-08T04:59:05.854790+00:00",
+    "stars": 156,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/VITA-MLLM/Omni-Diffusion",
+    "evidence": "\"stargazerCount\":156"
+  },
+  "VITA-MLLM/Long-VITA": {
+    "requested_repo": "VITA-MLLM/Long-VITA",
+    "source_url": "https://github.com/VITA-MLLM/Long-VITA",
+    "observed_at_utc": "2026-10-08T04:59:05.760580+00:00",
+    "stars": 312,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/VITA-MLLM/Long-VITA",
+    "evidence": "\"stargazerCount\":312"
+  },
+  "UMass-Foundation-Model/3D-LLM": {
+    "requested_repo": "UMass-Foundation-Model/3D-LLM",
+    "source_url": "https://github.com/UMass-Foundation-Model/3D-LLM",
+    "observed_at_utc": "2026-10-08T04:59:05.214443+00:00",
+    "stars": 1214,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/UMass-Embodied-AGI/3D-LLM",
+    "evidence": "\"stargazerCount\":1214"
+  },
+  "VITA-MLLM/Sparrow": {
+    "requested_repo": "VITA-MLLM/Sparrow",
+    "source_url": "https://github.com/VITA-MLLM/Sparrow",
+    "observed_at_utc": "2026-10-08T04:59:06.306110+00:00",
+    "stars": 32,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/VITA-MLLM/Sparrow",
+    "evidence": "\"stargazerCount\":32"
+  },
+  "VITA-MLLM/VITA": {
+    "requested_repo": "VITA-MLLM/VITA",
+    "source_url": "https://github.com/VITA-MLLM/VITA",
+    "observed_at_utc": "2026-10-08T04:59:06.473900+00:00",
+    "stars": 2536,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/VITA-MLLM/VITA",
+    "evidence": "\"stargazerCount\":2536"
+  },
+  "VITA-MLLM/VITA-Audio": {
+    "requested_repo": "VITA-MLLM/VITA-Audio",
+    "source_url": "https://github.com/VITA-MLLM/VITA-Audio",
+    "observed_at_utc": "2026-10-08T04:59:06.504620+00:00",
+    "stars": 692,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/VITA-MLLM/VITA-Audio",
+    "evidence": "\"stargazerCount\":692"
+  },
+  "VPGTrans/VPGTrans": {
+    "requested_repo": "VPGTrans/VPGTrans",
+    "source_url": "https://github.com/VPGTrans/VPGTrans",
+    "observed_at_utc": "2026-10-08T04:59:07.002279+00:00",
+    "stars": 268,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/VPGTrans/VPGTrans",
+    "evidence": "\"stargazerCount\":268"
+  },
+  "VITA-MLLM/VITA-QinYu": {
+    "requested_repo": "VITA-MLLM/VITA-QinYu",
+    "source_url": "https://github.com/VITA-MLLM/VITA-QinYu",
+    "observed_at_utc": "2026-10-08T04:59:06.937962+00:00",
+    "stars": 123,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/VITA-MLLM/VITA-QinYu",
+    "evidence": "\"stargazerCount\":123"
+  },
+  "WEIYanbin1999/GITA": {
+    "requested_repo": "WEIYanbin1999/GITA",
+    "source_url": "https://github.com/WEIYanbin1999/GITA",
+    "observed_at_utc": "2026-10-08T04:59:07.333889+00:00",
+    "stars": 55,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/WEIYanbin1999/GITA",
+    "evidence": "\"stargazerCount\":55"
+  },
+  "wentaoyuan/RoboPoint": {
+    "requested_repo": "wentaoyuan/RoboPoint",
+    "source_url": "https://github.com/wentaoyuan/RoboPoint",
+    "observed_at_utc": "2026-10-08T04:59:07.463037+00:00",
+    "stars": 230,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/wentaoyuan/RoboPoint",
+    "evidence": "\"stargazerCount\":230"
+  },
+  "X-PLUG/mPLUG-DocOwl": {
+    "requested_repo": "X-PLUG/mPLUG-DocOwl",
+    "source_url": "https://github.com/X-PLUG/mPLUG-DocOwl",
+    "observed_at_utc": "2026-10-08T04:59:07.833476+00:00",
+    "stars": 2410,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/X-PLUG/mPLUG-DocOwl",
+    "evidence": "\"stargazerCount\":2410"
+  },
+  "wusize/OpenUni": {
+    "requested_repo": "wusize/OpenUni",
+    "source_url": "https://github.com/wusize/OpenUni",
+    "observed_at_utc": "2026-10-08T04:59:07.814816+00:00",
+    "stars": 189,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/wusize/OpenUni",
+    "evidence": "\"stargazerCount\":189"
+  },
+  "vlm-driver/Dolphins": {
+    "requested_repo": "vlm-driver/Dolphins",
+    "source_url": "https://github.com/vlm-driver/Dolphins",
+    "observed_at_utc": "2026-10-08T04:59:06.986749+00:00",
+    "stars": 88,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/SaFo-Lab/Dolphins",
+    "evidence": "\"stargazerCount\":88"
+  },
+  "X-PLUG/mPLUG-Owl": {
+    "requested_repo": "X-PLUG/mPLUG-Owl",
+    "source_url": "https://github.com/X-PLUG/mPLUG-Owl",
+    "observed_at_utc": "2026-10-08T04:59:08.263627+00:00",
+    "stars": 2539,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/X-PLUG/mPLUG-Owl",
+    "evidence": "\"stargazerCount\":2539"
+  },
+  "X2FD/LVIS-INSTRUCT4V": {
+    "requested_repo": "X2FD/LVIS-INSTRUCT4V",
+    "source_url": "https://github.com/X2FD/LVIS-INSTRUCT4V",
+    "observed_at_utc": "2026-10-08T04:59:08.318592+00:00",
+    "stars": 134,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/X2FD/LVIS-INSTRUCT4V",
+    "evidence": "\"stargazerCount\":134"
+  },
+  "VT-NLP/MultiInstruct": {
+    "requested_repo": "VT-NLP/MultiInstruct",
+    "source_url": "https://github.com/VT-NLP/MultiInstruct",
+    "observed_at_utc": "2026-10-08T04:59:07.152113+00:00",
+    "stars": 135,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/PLUM-Lab/MultiInstruct",
+    "evidence": "\"stargazerCount\":135"
+  },
+  "xiaoman-zhang/PMC-VQA": {
+    "requested_repo": "xiaoman-zhang/PMC-VQA",
+    "source_url": "https://github.com/xiaoman-zhang/PMC-VQA",
+    "observed_at_utc": "2026-10-08T04:59:08.841014+00:00",
+    "stars": 238,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/xiaoman-zhang/PMC-VQA",
+    "evidence": "\"stargazerCount\":238"
+  },
+  "XiaomiMiMo/MiMo-VL": {
+    "requested_repo": "XiaomiMiMo/MiMo-VL",
+    "source_url": "https://github.com/XiaomiMiMo/MiMo-VL",
+    "observed_at_utc": "2026-10-08T04:59:08.842731+00:00",
+    "stars": 645,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/XiaomiMiMo/MiMo-VL",
+    "evidence": "\"stargazerCount\":645"
+  },
+  "yfzhang114/SliME": {
+    "requested_repo": "yfzhang114/SliME",
+    "source_url": "https://github.com/yfzhang114/SliME",
+    "observed_at_utc": "2026-10-08T04:59:09.093700+00:00",
+    "stars": 161,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/yfzhang114/SliME",
+    "evidence": "\"stargazerCount\":161"
+  },
+  "yfzhang114/Thyme": {
+    "requested_repo": "yfzhang114/Thyme",
+    "source_url": "https://github.com/yfzhang114/Thyme",
+    "observed_at_utc": "2026-10-08T04:59:09.221900+00:00",
+    "stars": 583,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/yfzhang114/Thyme",
+    "evidence": "\"stargazerCount\":583"
+  },
+  "YifanXu74/Libra": {
+    "requested_repo": "YifanXu74/Libra",
+    "source_url": "https://github.com/YifanXu74/Libra",
+    "observed_at_utc": "2026-10-08T04:59:09.319678+00:00",
+    "stars": 144,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/YifanXu74/Libra",
+    "evidence": "\"stargazerCount\":144"
+  },
+  "yiren-jian/BLIText": {
+    "requested_repo": "yiren-jian/BLIText",
+    "source_url": "https://github.com/yiren-jian/BLIText",
+    "observed_at_utc": "2026-10-08T04:59:09.454322+00:00",
+    "stars": 26,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/yiren-jian/BLIText",
+    "evidence": "\"stargazerCount\":26"
+  },
+  "Yuliang-Liu/Monkey": {
+    "requested_repo": "Yuliang-Liu/Monkey",
+    "source_url": "https://github.com/Yuliang-Liu/Monkey",
+    "observed_at_utc": "2026-10-08T04:59:09.789118+00:00",
+    "stars": 1955,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/Yuliang-Liu/Monkey",
+    "evidence": "\"stargazerCount\":1955"
+  },
+  "YuanGongND/ltu": {
+    "requested_repo": "YuanGongND/ltu",
+    "source_url": "https://github.com/YuanGongND/ltu",
+    "observed_at_utc": "2026-10-08T04:59:09.782732+00:00",
+    "stars": 479,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/YuanGongND/ltu",
+    "evidence": "\"stargazerCount\":479"
+  },
+  "YunxinLi/LingCloud": {
+    "requested_repo": "YunxinLi/LingCloud",
+    "source_url": "https://github.com/YunxinLi/LingCloud",
+    "observed_at_utc": "2026-10-08T04:59:10.076992+00:00",
+    "stars": 49,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/YunxinLi/LingCloud",
+    "evidence": "\"stargazerCount\":49"
+  },
+  "yxuansu/PandaGPT": {
+    "requested_repo": "yxuansu/PandaGPT",
+    "source_url": "https://github.com/yxuansu/PandaGPT",
+    "observed_at_utc": "2026-10-08T04:59:10.185658+00:00",
+    "stars": 866,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/yxuansu/PandaGPT",
+    "evidence": "\"stargazerCount\":866"
+  },
+  "ZZZHANG-jx/DocKylin": {
+    "requested_repo": "ZZZHANG-jx/DocKylin",
+    "source_url": "https://github.com/ZZZHANG-jx/DocKylin",
+    "observed_at_utc": "2026-10-08T04:59:10.411034+00:00",
+    "stars": 36,
+    "status": "verified",
+    "method": "github_html_exact",
+    "final_url": "https://github.com/ZZZHANG-jx/DocKylin",
+    "evidence": "\"stargazerCount\":36"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "source_version": "2507.01006v1",
+  "claims": [
+    {
+      "claim": "AIMv2HugeGLM2x temporal;2DRoPE+absolute interpolationEq1/2;language3DRoPE;timestampstrings",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "10Bpair initialpool not final;CLIP.3;100Mbooks initial;220MOCR;40Mgrounding;140MGUIQA;50Minstructions",
+      "pdf_pages": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "120Ksteps8192batch1536TP2;10Ksteps32768CP4;SFTfull32768batch32",
+      "pdf_pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "Domain rewardTable1 OCR editdistance,groundingIoU;bad verifiercollapseFig5",
+      "pdf_pages": [
+        10,
+        11
+      ]
+    },
+    {
+      "claim": "RLCSofflineonline tiers;ratio1/(1-invalidrate) EMA;noKLentropy;top-p1;per-sampleloss;forceanswer",
+      "pdf_pages": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "claim": "Eval8192output6144image30000video;GPT4o20241120;95percentrequestminimum and exclude failed",
+      "pdf_pages": [
+        14
+      ]
+    },
+    {
+      "claim": "Table2 MMBEN85.8<72B88 conflictingintro;OCR84.2<7B84.5LV45.1<45.3",
+      "pdf_pages": [
+        2,
+        15
+      ]
+    },
+    {
+      "claim": "MixedRL+6.6/5.2/30.1/6.0/3.4;groundingonly30.4GUIonly9.2;negativecrossdomains",
+      "pdf_pages": [
+        17
+      ]
+    },
+    {
+      "claim": "Outcome correctness can coexist incorrect reasoning;hyperparameter/fullhardware missing",
+      "pdf_pages": [
+        18
+      ]
+    }
+  ]
+}

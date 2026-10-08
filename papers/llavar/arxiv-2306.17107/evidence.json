@@ -1,0 +1,53 @@
+{
+  "source_version": "2306.17107v1",
+  "claims": [
+    {
+      "claim": "CLIP-L14 224/336, Vicuna13B, linear projector, frozen vision in both stages",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "422K OCR and 16K GPT4 conversation datasets; clustering selection and OCR at384 short edge",
+      "pdf_pages": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "Text-only GPT4 gets two OCR outputs and caption after masking/inpainting",
+      "pdf_pages": [
+        2,
+        5,
+        15,
+        16
+      ]
+    },
+    {
+      "claim": "Nominal 595K+422K pretrain and158K+16K finetune;1024 pretrain context;A10080GB without cardcount",
+      "pdf_pages": [
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "Answer-substring metrics, ablation OCR-VQA regressions;ScienceQA separately trained",
+      "pdf_pages": [
+        5,
+        6,
+        9
+      ]
+    },
+    {
+      "claim": "Figure6 wrong director answer and single-poster font-size limits",
+      "pdf_pages": [
+        9,
+        10
+      ]
+    }
+  ]
+}

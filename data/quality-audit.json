@@ -1,0 +1,573 @@
+{
+  "observed_at_utc": "2026-10-08T05:07:59.738913+00:00",
+  "catalogue_sha256": "c2cf22f234773ffdb42dd4795bee708d1a346deb5f823523c4d986c3c619a69b",
+  "checks": [
+    {
+      "name": "entry_count",
+      "passed": true,
+      "detail": 301
+    },
+    {
+      "name": "unique_ids",
+      "passed": true,
+      "detail": 301
+    },
+    {
+      "name": "star_statistics",
+      "passed": true,
+      "detail": {
+        "not_assessable": 73,
+        "passes_star": 199,
+        "excluded_low_star": 29
+      }
+    },
+    {
+      "name": "group_statistics",
+      "passed": true,
+      "detail": {
+        "supporting_materials": 57,
+        "scope_review": 16,
+        "model_catalogue": 199,
+        "excluded_low_star": 29
+      }
+    },
+    {
+      "name": "main_entries",
+      "passed": true,
+      "detail": 199
+    },
+    {
+      "name": "main_families",
+      "passed": true,
+      "detail": 145
+    },
+    {
+      "name": "all_stars_below_100_excluded",
+      "passed": true,
+      "detail": {
+        "count": 29,
+        "failures": []
+      }
+    },
+    {
+      "name": "no_github_is_na_not_zero",
+      "passed": true,
+      "detail": {
+        "count": 73,
+        "failures": []
+      }
+    },
+    {
+      "name": "100_inclusive",
+      "passed": true,
+      "detail": [
+        "ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding"
+      ]
+    },
+    {
+      "name": "repository_identifier_count",
+      "passed": true,
+      "detail": {
+        "count": 197,
+        "expected": 197
+      }
+    },
+    {
+      "name": "all_github_verified",
+      "passed": true,
+      "detail": {
+        "verified": 228
+      }
+    },
+    {
+      "name": "readme_local_links",
+      "passed": true,
+      "detail": {
+        "links": 153,
+        "missing": []
+      }
+    },
+    {
+      "name": "readme_family_counts",
+      "passed": true,
+      "detail": {
+        "rows": 145,
+        "families": 145,
+        "sum_entries": 199,
+        "failures": []
+      }
+    },
+    {
+      "name": "source_counts",
+      "passed": true,
+      "detail": {
+        "Multimodal Instruction Tuning (& Latest Works)": 272,
+        "Foundation Models": 31
+      }
+    },
+    {
+      "name": "canonical_repository_count",
+      "passed": true,
+      "detail": 192
+    },
+    {
+      "name": "canonical_stars_consistent",
+      "passed": true,
+      "detail": 192
+    },
+    {
+      "name": "redirects_have_explicit_warning",
+      "passed": true,
+      "detail": {
+        "redirected_entries": 39,
+        "failures": []
+      }
+    },
+    {
+      "name": "shared_redirect_stars_have_warning",
+      "passed": true,
+      "detail": {
+        "shared_canonical_groups": 2,
+        "failures": []
+      }
+    },
+    {
+      "name": "no_third_party_in_openai_gpt_family",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "issues": [],
+  "summary": {
+    "passed_checks": 19,
+    "failed_checks": 0,
+    "issue_count": 0,
+    "blocking_issues": 0,
+    "resolved_issues": 2
+  },
+  "redirects": [
+    {
+      "title": "Qwen3.5: Towards Native Multimodal Agents",
+      "repo": "QwenLM/Qwen3.5",
+      "final_url": "https://github.com/QwenLM/Qwen3.8",
+      "stars": 4241,
+      "warnings": [
+        "Code repository redirects to QwenLM/Qwen3.8; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MiniCPM-o 4.5",
+      "repo": "OpenBMB/MiniCPM-o",
+      "final_url": "https://github.com/OpenBMB/MiniCPM-V",
+      "stars": 26504,
+      "warnings": [
+        "Code repository redirects to OpenBMB/MiniCPM-V; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share OpenBMB/MiniCPM-V; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "LLaVA-OneVision-1.5: Fully Open Framework for Democratized Multimodal Training",
+      "repo": "EvolvingLMMs-Lab/LLaVA-OneVision-1.5",
+      "final_url": "https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2",
+      "stars": 1216,
+      "warnings": [
+        "Code repository redirects to EvolvingLMMs-Lab/LLaVA-OneVision-2; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MiniCPM-V 4.5: A GPT-4o Level MLLM for Single Image, Multi Image and Video Understanding on Your Phone",
+      "repo": "OpenBMB/MiniCPM-o",
+      "final_url": "https://github.com/OpenBMB/MiniCPM-V",
+      "stars": 26504,
+      "warnings": [
+        "Code repository redirects to OpenBMB/MiniCPM-V; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share OpenBMB/MiniCPM-V; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "dots.vlm1",
+      "repo": "rednote-hilab/dots.vlm1",
+      "final_url": "https://github.com/studio-dots-ai/dots.vlm1",
+      "stars": 293,
+      "warnings": [
+        "Code repository redirects to studio-dots-ai/dots.vlm1; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning",
+      "repo": "THUDM/GLM-4.1V-Thinking",
+      "final_url": "https://github.com/zai-org/GLM-V",
+      "stars": 2395,
+      "warnings": [
+        "Code repository redirects to zai-org/GLM-V; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Qwen2.5-VL Technical Report",
+      "repo": "QwenLM/Qwen2.5-VL",
+      "final_url": "https://github.com/QwenLM/Qwen3-VL",
+      "stars": 20043,
+      "warnings": [
+        "Code repository redirects to QwenLM/Qwen3-VL; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share QwenLM/Qwen3-VL; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "QVQ: To See the World with Wisdom",
+      "repo": "QwenLM/Qwen2-VL",
+      "final_url": "https://github.com/QwenLM/Qwen3-VL",
+      "stars": 20043,
+      "warnings": [
+        "Code repository redirects to QwenLM/Qwen3-VL; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share QwenLM/Qwen3-VL; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "repo": "rese1f/aurora",
+      "final_url": "https://github.com/wenhaochai/aurora",
+      "stars": 149,
+      "warnings": [
+        "Code repository redirects to wenhaochai/aurora; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+      "repo": "QwenLM/Qwen2-VL",
+      "final_url": "https://github.com/QwenLM/Qwen3-VL",
+      "stars": 20043,
+      "warnings": [
+        "Code repository redirects to QwenLM/Qwen3-VL; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share QwenLM/Qwen3-VL; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding",
+      "repo": "IDEA-FinAI/ChartMoE",
+      "final_url": "https://github.com/DataArcTech/ChartMoE",
+      "stars": 100,
+      "warnings": [
+        "Code repository redirects to DataArcTech/ChartMoE; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Parrot: Multilingual Visual Instruction Tuning",
+      "repo": "AIDC-AI/Parrot",
+      "final_url": "https://github.com/ATH-MaaS/Parrot",
+      "stars": 77,
+      "warnings": [
+        "Code repository redirects to ATH-MaaS/Parrot; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Ovis: Structural Embedding Alignment for Multimodal Large Language Model",
+      "repo": "AIDC-AI/Ovis",
+      "final_url": "https://github.com/ATH-MaaS/Ovis",
+      "stars": 1528,
+      "warnings": [
+        "Code repository redirects to ATH-MaaS/Ovis; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models",
+      "repo": "dvlab-research/MiniGemini",
+      "final_url": "https://github.com/JIA-Lab-research/MGM",
+      "stars": 3323,
+      "warnings": [
+        "Code repository redirects to JIA-Lab-research/MGM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Momentor: Advancing Video Large Language Model with Fine-Grained Temporal Reasoning",
+      "repo": "DCDmllm/Momentor",
+      "final_url": "https://github.com/ZJU4EmbodiedAI/Momentor",
+      "stars": 81,
+      "warnings": [
+        "Code repository redirects to ZJU4EmbodiedAI/Momentor; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "CoLLaVO: Crayon Large Language and Vision mOdel",
+      "repo": "ByungKwanLee/CoLLaVO-Crayon-Large-Language-and-Vision-mOdel",
+      "final_url": "https://github.com/ByungKwanLee/CoLLaVO",
+      "stars": 98,
+      "warnings": [
+        "Code repository redirects to ByungKwanLee/CoLLaVO; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "CogCoM: Train Large Vision-Language Models Diving into Details through Chain of Manipulations",
+      "repo": "THUDM/CogCoM",
+      "final_url": "https://github.com/zai-org/CogCoM",
+      "stars": 223,
+      "warnings": [
+        "Code repository redirects to zai-org/CogCoM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "CogAgent: A Visual Language Model for GUI Agents",
+      "repo": "THUDM/CogVLM",
+      "final_url": "https://github.com/zai-org/CogVLM",
+      "stars": 6743,
+      "warnings": [
+        "Code repository redirects to zai-org/CogVLM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Honeybee: Locality-enhanced Projector for Multimodal LLM",
+      "repo": "kakaobrain/honeybee",
+      "final_url": "https://github.com/khanrc/honeybee",
+      "stars": 473,
+      "warnings": [
+        "Code repository redirects to khanrc/honeybee; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Making Large Multimodal Models Understand Arbitrary Visual Prompts",
+      "repo": "mu-cai/vip-llava",
+      "final_url": "https://github.com/WisconsinAIVision/ViP-LLaVA",
+      "stars": 338,
+      "warnings": [
+        "Code repository redirects to WisconsinAIVision/ViP-LLaVA; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Dolphins: Multimodal Language Model for Driving",
+      "repo": "vlm-driver/Dolphins",
+      "final_url": "https://github.com/SaFo-Lab/Dolphins",
+      "stars": 88,
+      "warnings": [
+        "Code repository redirects to SaFo-Lab/Dolphins; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
+      "repo": "dvlab-research/LLaMA-VID",
+      "final_url": "https://github.com/JIA-Lab-research/LLaMA-VID",
+      "stars": 862,
+      "warnings": [
+        "Code repository redirects to JIA-Lab-research/LLaMA-VID; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "LLMGA: Multimodal Large Language Model based Generation Assistant",
+      "repo": "dvlab-research/LLMGA",
+      "final_url": "https://github.com/JIA-Lab-research/LLMGA",
+      "stars": 395,
+      "warnings": [
+        "Code repository redirects to JIA-Lab-research/LLMGA; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "LION : Empowering Multimodal Large Language Model with Dual-Level Visual Knowledge",
+      "repo": "rshaojimmy/JiuTian",
+      "final_url": "https://github.com/JiuTian-VL/JiuTian-LION",
+      "stars": 154,
+      "warnings": [
+        "Code repository redirects to JiuTian-VL/JiuTian-LION; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "OtterHD: A High-Resolution Multi-modality Model",
+      "repo": "Luodian/Otter",
+      "final_url": "https://github.com/EvolvingLMMs-Lab/Otter",
+      "stars": 3444,
+      "warnings": [
+        "Code repository redirects to EvolvingLMMs-Lab/Otter; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Ferret: Refer and Ground Anything Anywhere at Any Granularity",
+      "repo": "apple/ml-ferret",
+      "final_url": "https://github.com/apple-aiml-research/ml-ferret",
+      "stars": 8655,
+      "warnings": [
+        "Code repository redirects to apple-aiml-research/ml-ferret; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "CogVLM: Visual Expert For Large Language Models",
+      "repo": "THUDM/CogVLM",
+      "final_url": "https://github.com/zai-org/CogVLM",
+      "stars": 6743,
+      "warnings": [
+        "Code repository redirects to zai-org/CogVLM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "PointLLM: Empowering Large Language Models to Understand Point Clouds",
+      "repo": "OpenRobotLab/PointLLM",
+      "final_url": "https://github.com/InternRobotics/PointLLM",
+      "stars": 1055,
+      "warnings": [
+        "Code repository redirects to InternRobotics/PointLLM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Fine-tuning Multimodal LLMs to Follow Zero-shot Demonstrative Instructions",
+      "repo": "DCDmllm/Cheetah",
+      "final_url": "https://github.com/ZJU4EmbodiedAI/Cheetah",
+      "stars": 353,
+      "warnings": [
+        "Code repository redirects to ZJU4EmbodiedAI/Cheetah; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "LISA: Reasoning Segmentation via Large Language Model",
+      "repo": "dvlab-research/LISA",
+      "final_url": "https://github.com/JIA-Lab-research/LISA",
+      "stars": 2684,
+      "warnings": [
+        "Code repository redirects to JIA-Lab-research/LISA; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding",
+      "repo": "rese1f/MovieChat",
+      "final_url": "https://github.com/wenhaochai/MovieChat",
+      "stars": 706,
+      "warnings": [
+        "Code repository redirects to wenhaochai/MovieChat; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "3D-LLM: Injecting the 3D World into Large Language Models",
+      "repo": "UMass-Foundation-Model/3D-LLM",
+      "final_url": "https://github.com/UMass-Embodied-AGI/3D-LLM",
+      "stars": 1214,
+      "warnings": [
+        "Code repository redirects to UMass-Embodied-AGI/3D-LLM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Visual Instruction Tuning with Polite Flamingo",
+      "repo": "ChenDelong1999/polite_flamingo",
+      "final_url": "https://github.com/ChenDelong1999/polite-flamingo",
+      "stars": 65,
+      "warnings": [
+        "Code repository redirects to ChenDelong1999/polite-flamingo; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark",
+      "repo": "OpenLAMM/LAMM",
+      "final_url": "https://github.com/OpenGVLab/LAMM",
+      "stars": 318,
+      "warnings": [
+        "Code repository redirects to OpenGVLab/LAMM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MIMIC-IT: Multi-Modal In-Context Instruction Tuning",
+      "repo": "Luodian/Otter",
+      "final_url": "https://github.com/EvolvingLMMs-Lab/Otter",
+      "stars": 3444,
+      "warnings": [
+        "Code repository redirects to EvolvingLMMs-Lab/Otter; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction",
+      "repo": "StevenGrove/GPT4Tools",
+      "final_url": "https://github.com/AILab-CVC/GPT4Tools",
+      "stars": 772,
+      "warnings": [
+        "Code repository redirects to AILab-CVC/GPT4Tools; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst",
+      "repo": "joez17/ChatBridge",
+      "final_url": "https://github.com/CASIA-IVA-Lab/ChatBridge",
+      "stars": 55,
+      "warnings": [
+        "Code repository redirects to CASIA-IVA-Lab/ChatBridge; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "VisualGLM-6B",
+      "repo": "THUDM/VisualGLM-6B",
+      "final_url": "https://github.com/zai-org/VisualGLM-6B",
+      "stars": 4153,
+      "warnings": [
+        "Code repository redirects to zai-org/VisualGLM-6B; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning",
+      "repo": "VT-NLP/MultiInstruct",
+      "final_url": "https://github.com/PLUM-Lab/MultiInstruct",
+      "stars": 135,
+      "warnings": [
+        "Code repository redirects to PLUM-Lab/MultiInstruct; stars are the current destination repository's stars"
+      ]
+    }
+  ],
+  "shared_redirect_repository_groups": [
+    [
+      {
+        "title": "MiniCPM-o 4.5",
+        "repo": "OpenBMB/MiniCPM-o",
+        "stars": 26504,
+        "final_url": "https://github.com/OpenBMB/MiniCPM-V"
+      },
+      {
+        "title": "MiniCPM-V 4.5: A GPT-4o Level MLLM for Single Image, Multi Image and Video Understanding on Your Phone",
+        "repo": "OpenBMB/MiniCPM-o",
+        "stars": 26504,
+        "final_url": "https://github.com/OpenBMB/MiniCPM-V"
+      },
+      {
+        "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+        "repo": "OpenBMB/MiniCPM-V",
+        "stars": 26504,
+        "final_url": "https://github.com/OpenBMB/MiniCPM-V"
+      }
+    ],
+    [
+      {
+        "title": "Qwen3-VL Technical Report",
+        "repo": "QwenLM/Qwen3-VL",
+        "stars": 20043,
+        "final_url": "https://github.com/QwenLM/Qwen3-VL"
+      },
+      {
+        "title": "Qwen2.5-VL Technical Report",
+        "repo": "QwenLM/Qwen2.5-VL",
+        "stars": 20043,
+        "final_url": "https://github.com/QwenLM/Qwen3-VL"
+      },
+      {
+        "title": "QVQ: To See the World with Wisdom",
+        "repo": "QwenLM/Qwen2-VL",
+        "stars": 20043,
+        "final_url": "https://github.com/QwenLM/Qwen3-VL"
+      },
+      {
+        "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+        "repo": "QwenLM/Qwen2-VL",
+        "stars": 20043,
+        "final_url": "https://github.com/QwenLM/Qwen3-VL"
+      }
+    ]
+  ],
+  "resolved_issues": [
+    {
+      "code": "videochat3_organization_inherited",
+      "resolution": "VideoChat3 organization now explicitly identifies MCG-NJU / VideoChat3 research team.",
+      "verified_value": "MCG-NJU / VideoChat3 研究团队"
+    },
+    {
+      "code": "legacy_repository_name_as_family",
+      "resolution": "LION family now shows explicit model name together with legacy JiuTian identity.",
+      "verified_value": "LION (JiuTian)"
+    }
+  ],
+  "final_recheck": {
+    "main_entries": 199,
+    "main_families": 145,
+    "paper_directories": 145,
+    "directory_slugs_match_main_families": true,
+    "unresolved_issues": 0
+  }
+}

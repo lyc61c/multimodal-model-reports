@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "review_type": "self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "figures_visually_checked": [
+    "original-page-002-01.png",
+    "original-page-006-02.png",
+    "original-page-007-03.png",
+    "original-page-010-04.png"
+  ],
+  "model_executed": false,
+  "checks": [
+    "真实PDF与模型身份一致",
+    "七节和4页原图",
+    "未把外接TTS和额外ASR成绩描述为原生主模型",
+    "未忽略OmniBench和图片成绩回退"
+  ],
+  "limitations": [
+    "C4绝对类别计数存在speech-text重复，采用Figure5比例",
+    "Table18音频Emb/min与正文每秒口径不一致，正文仅解释减半",
+    "部分应用叙述与表格存在差异，采用表格",
+    "训练初始化成本不含于200B联合阶段统计",
+    "未执行模型或独立复现"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "28cff82a03c5",
+  "catalogue_entry_id": "28cff82a03c5",
+  "family_slug": "llava-mod",
+  "title": "LLaVA-MoD: Making LLaVA Tiny via MoE Knowledge Distillation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2408.15881v1",
+  "source_url": "https://arxiv.org/pdf/2408.15881v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LLaVA-MoD：通过稀疏专家与渐进蒸馏训练小型视觉语言模型"
+}

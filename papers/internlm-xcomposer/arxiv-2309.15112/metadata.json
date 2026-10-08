@@ -1,0 +1,14 @@
+{
+  "paper_id": "d40d5f0effb8",
+  "catalogue_entry_id": "d40d5f0effb8",
+  "family_slug": "internlm-xcomposer",
+  "title": "InternLM-XComposer: A Vision-Language Large Model for Advanced Text-image Comprehension and Composition",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2309.15112v1",
+  "source_url": "https://arxiv.org/pdf/2309.15112v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "InternLM-XComposer：双语视觉理解与检索式图文文章编排"
+}

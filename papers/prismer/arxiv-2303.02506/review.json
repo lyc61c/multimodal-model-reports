@@ -1,0 +1,36 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "专家网络及来源/参数、主干尺寸、总参包含654M专家、实际图文数据量核对。",
+    "预训冻结与下游冻结范围区分；图文预训不包括所有专家原训成本；少样本是梯度更新。",
+    "主表和消融预算分开；专家增益5.9/.9按表差值，非全面SOTA。"
+  ],
+  "math_checks": [
+    "自回归损失来自原文无编号式；Resampler/Adaptor数学为标准解释。",
+    "固定下游长度不等于总成本与专家数无关；计算包含M(N+M)且RGB P随分辨率增长。",
+    "128实例最大数量不误写嵌入维度；瓶颈表相对1说明；未补LoRA或无依据优化器参数。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-005-01.png",
+      "checked": "已view_image检查原文Figure2/完整Table3/5/6/7，雪花及原RGB路径、全部表头行、附录表注完整；README逐页解释。"
+    },
+    {
+      "file": "figures/original-page-011-02.png",
+      "checked": "已view_image检查原文Figure2/完整Table3/5/6/7，雪花及原RGB路径、全部表头行、附录表注完整；README逐页解释。"
+    },
+    {
+      "file": "figures/original-page-015-03.png",
+      "checked": "已view_image检查原文Figure2/完整Table3/5/6/7，雪花及原RGB路径、全部表头行、附录表注完整；README逐页解释。"
+    },
+    {
+      "file": "figures/original-page-025-04.png",
+      "checked": "已view_image检查原文Figure2/完整Table3/5/6/7，雪花及原RGB路径、全部表头行、附录表注完整；README逐页解释。"
+    }
+  ],
+  "limitations": [
+    "未运行模型、辅助专家或吞吐测量；成本是报告/估算不包含基础专家原预训练。",
+    "专家噪声鲁棒无方差，不能宣称部署任意热插拔；COCO属于预训，零样本非图像未见。"
+  ],
+  "model_execution": "not_run"
+}

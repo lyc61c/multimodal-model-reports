@@ -1,0 +1,29 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "claims": [
+    {
+      "claim": "Official snapshot date2026-09-14 contains draft marker;1M context",
+      "source_section": "Header / Introduction"
+    },
+    {
+      "claim": "Static63.4/145736 vs agent67.8/79117;~45.7% token reduction",
+      "source_section": "Agentic Long-Form Audio-Visual Understanding"
+    },
+    {
+      "claim": "No complete architecture/training specification;modules in Figure2",
+      "source_section": "Full article / Qwen-Live Harness"
+    },
+    {
+      "claim": "Benchmark harnesses,DER/cpWER,CI and revised labels qualifiers",
+      "source_section": "Benchmark Results / figure footnotes"
+    },
+    {
+      "claim": "3413 examples and25.79to15.30CER are small-model case not main-model training",
+      "source_section": "From Using Models to Optimizing Models"
+    },
+    {
+      "claim": "Production realtime591.26/978.36 audio6s;981.01/1350.49 AV20s",
+      "source_section": "Throughput & Latency"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "paper_id": "1dfedbb1e043",
+  "source_version": "2603.06577v1",
+  "source_sha256": "e83ae29013a764e818c9a7884948c4b71eb4f4dd63482bea354c4e23fa3aa535",
+  "read_scope": "PDF1–8正文及12–13附录完整读取；9–11参考文献核对引用身份",
+  "claims": [
+    {
+      "claim": "Dream7B与图像/语音编解码细节",
+      "locations": "§3.1–3.2 PDF3–4 AppendixA PDF12"
+    },
+    {
+      "claim": "SDVI处理、tail pad、负熵及位置策略",
+      "locations": "§3.3–3.4 PDF4–6"
+    },
+    {
+      "claim": "数据、优化器与超参",
+      "locations": "Table4 AppendixA PDF12"
+    },
+    {
+      "claim": "WER、CLIP、步数和图像案例",
+      "locations": "Tables1–3 Figures4–7 PDF6–8"
+    }
+  ],
+  "source_inconsistencies": [
+    "Table4 JourneyDB4M两行重复，未擅自当8M",
+    "语音输入SenseVoice连续特征与统一离散token符号的层次区分",
+    "Table1文字声称专用模型优势但CosyVoiceWER2.89低于3.07",
+    "正文阶段概括与Table4细项加入阶段不同；完整N_t日程未披露"
+  ],
+  "model_run": false
+}

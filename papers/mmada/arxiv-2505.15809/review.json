@@ -1,0 +1,41 @@
+{
+  "paper_id": "b2f9a2e04391",
+  "status": "complete_self_review",
+  "fact_checks": [
+    "身份与v1 PDF相符",
+    "全部关键分数逐表核对；保留弱项及评测子集",
+    "tokenizer仍存在，未将统一解释为无外部编解码"
+  ],
+  "math_checks": [
+    "Eq1/2保留1/t权重和masked-only loss",
+    "GRPO组优势与标准exp(logdiff)明确区分原文记号问题",
+    "未宣称精确序列likelihood、无偏估计或线性注意力"
+  ],
+  "image_checks": [
+    {
+      "file": "original-page-004-01.png",
+      "viewed": true,
+      "content": "完整PDF页，Figure/Table表头、全部结果行、图例和图注均保留"
+    },
+    {
+      "file": "original-page-009-02.png",
+      "viewed": true,
+      "content": "完整PDF页，Figure/Table表头、全部结果行、图例和图注均保留"
+    },
+    {
+      "file": "original-page-010-03.png",
+      "viewed": true,
+      "content": "完整PDF页，Figure/Table表头、全部结果行、图例和图注均保留"
+    },
+    {
+      "file": "original-page-015-04.png",
+      "viewed": true,
+      "content": "完整PDF页，Figure/Table表头、全部结果行、图例和图注均保留"
+    }
+  ],
+  "limitations": [
+    "无训练或推理复现",
+    "仅作者报告结果",
+    "训练步数与采样描述原文存在歧义"
+  ]
+}

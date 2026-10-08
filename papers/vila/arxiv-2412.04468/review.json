@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read PDF pages 1 and 3–12 plus appendix Table A1 on page 20; confirmed SigLIP, two-layer MLP and Qwen2 backbones.",
+    "Visually inspected all five original crops; corrected incomplete architecture and table crops before writing.",
+    "Table 1 uses 256 to 121 tokens per tile, not a literal ninefold reduction; preserve distinct temporal ablation and final Video-MME results.",
+    "Separated full training greater-than-100M, SFT candidate 10M and selected 5M counts; DeltaLoss is data selection rather than KL distillation.",
+    "Separated 128-H100 recipe, 64-H100 FP8 throughput study, A100 fine-tuning study and RTX4090 deployment study.",
+    "Preserved MMMU val/test/pro and subtitles/frame protocols; recorded Figure 6 7B versus main 8B wording discrepancy.",
+    "Efficiency arithmetic checked from displayed component latencies and throughput; no reproduction or current-SOTA claim."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "4bbce9d2f471647b8ce4694d60da7403aeb7d5b01125d2879b23e11e36f981c5",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

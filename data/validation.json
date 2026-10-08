@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "snapshot_date": "2026-10-08",
+  "checks": {
+    "complete_source_coverage": true,
+    "unique_document_ids": true,
+    "exact_star_decisions_and_no_zero_for_missing": true,
+    "statistics_match_entries": true,
+    "third_party_gpt_names_separate": true,
+    "repository_redirects_labelled": true,
+    "all_local_markdown_links_resolve": true,
+    "independent_foundation_repositories_matched": 13
+  },
+  "entries": 301,
+  "main_model_entries": 199,
+  "model_families": 145
+}

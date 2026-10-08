@@ -1,0 +1,25 @@
+{
+  "source_url": "https://mimo.xiaomi.com/mimo-v2-5",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "b470a6bf40358a35bd927c87361597e22c51a5ff7fb677660e166e6a45961f06",
+  "read_scope": "完整发布正文及JavaScript multimodalModels/Data codingModels/Data；官方架构SVG",
+  "claims": [
+    {
+      "location": "Introducing/Training/OpenSource",
+      "claim": "310B/15B，48T，五阶段，Base256K/IT1M，FP8表口径"
+    },
+    {
+      "location": "architecture.svg",
+      "claim": "AudioTokenizer/LocalTransformer/projector、ViT/projector、Hybrid-SWA、LMhead/MTP"
+    },
+    {
+      "location": "source.html L154–230 arrays",
+      "claim": "完整多模态和四项编码结果；模型名称映射与非零柱图基线"
+    }
+  ],
+  "source_inconsistencies": [
+    "正文内部编码比较提MiMo-V2.5-Pro，但codingModels pro标为MiMo-V2-Pro，本文未等同",
+    "正文general subset62.3，数组标Claw-Eval Text；保留命名不同"
+  ],
+  "model_execution": "not_run"
+}

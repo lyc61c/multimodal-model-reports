@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_sections_read": [
+    "介绍",
+    "样例",
+    "使用",
+    "模型微调",
+    "部署工具",
+    "模型量化",
+    "局限性",
+    "引用与致谢"
+  ],
+  "figures_visually_checked": [
+    "dialog-titanic-original.png",
+    "dialog-taxi-original.png"
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "absence_of_benchmark_table_checked": true
+  },
+  "limitations": [
+    "发布README无标准评测表、全量超参数、查询数或冻结关系",
+    "符合偏好不等于RLHF，未报告强化学习",
+    "英文10倍存量不等于10倍训练权重",
+    "量化语言模块与视觉模块区分，6.3/7/9.8/15GB为不同配置",
+    "样例非准确率测量，不把CogVLM成绩归到VisualGLM",
+    "数学式均为通用解释而非原文公式"
+  ]
+}

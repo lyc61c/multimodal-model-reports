@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "reference_pages_skipped": [
+    18,
+    19,
+    20,
+    21
+  ],
+  "figures_visually_checked": [
+    3,
+    5,
+    7,
+    17
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Self-review only, no independent reviewer/model execution",
+    "LLM sees textual visual representations and calls external tools",
+    "SR checks invocation reference matching, not tool output visualquality",
+    "Unseen tool test supplies definitions and is singleturn",
+    "OPT LR and final dataset proportion inconsistencies preserved",
+    "GPU/time/precision not disclosed"
+  ]
+}

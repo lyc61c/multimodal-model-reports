@@ -1,0 +1,17 @@
+{
+  "paper_id": "1acc7b9da68d",
+  "source_url": "https://arxiv.org/pdf/2312.07533v1",
+  "source_version": "2312.07533v1",
+  "source_sha256": "f5e8cc885acc841369923d4d9dee3297fad155e9137643ef20e391431b10d32c",
+  "verification_notes": [
+    "Read v1 PDF pages 1–8 and appendix A–C on page 12; checked architecture, corpus comparisons, training cost and principal tables.",
+    "Visually inspected all four original page renders before selecting figure/table regions; preserve complete labels and captions.",
+    "Table 1 mixes VQA accuracy and CIDEr. Do not present its mixed raw average as a unified task accuracy.",
+    "Table 7 uses a separate evaluation protocol. Main Table 5 has no token compression; 144-token setting is an ablation.",
+    "Table 5 detailed VILA-13B LLaVA-Bench value 73.0 differs from Figure 1 overview 72.8; used detailed table and explicitly recorded difference.",
+    "Appendix B says 128 eight-GPU nodes, not 128 GPUs. Reported about 41k GPU hours; prospective optimizations are not measured speedups.",
+    "Generic projector, cosine and NLL notation explicitly identified as explanatory; Chamfer implementation and undisclosed learning rates not invented.",
+    "Preserved POPE regression and slight 7B text capability gap; distinguish extra ShareGPT4V variant and training-image-visible benchmarks."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

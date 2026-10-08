@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "figures_visually_checked": [
+    "original-page-004-01.png",
+    "original-page-005-02.png",
+    "original-page-007-03.png",
+    "original-page-008-04.png"
+  ],
+  "model_executed": false,
+  "checks": [
+    "Seven requested sections",
+    "Source title/version verified",
+    "Original figure/table headers checked",
+    "GT-mask and text-metric conditions preserved"
+  ],
+  "limitations": [
+    "No independent reproduction",
+    "Batch per-device/global unspecified",
+    "Approximate rounded data counts",
+    "Auto-generated data no global human verification rate",
+    "Not an end-to-end mask generator"
+  ]
+}

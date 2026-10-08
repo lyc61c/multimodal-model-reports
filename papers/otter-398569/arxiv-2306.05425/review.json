@@ -1,0 +1,37 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "按论文已披露配置写OpenFlamingo+LLaMA7B，未借其他版本补视觉配置、冻结超参。",
+    "RGBD来源不等于模型直接读深度；视频不等于处理音轨；文字规划无闭环动作实验。",
+    "8语言数据覆盖未当作8语言能力评测，图4下采样未当训练配比。",
+    "图6颜色图例和数值逐项核对，平均领先并非全分项领先。"
+  ],
+  "math_checks": [
+    "Eq1实例符号与上下文含回答解释一致。",
+    "标准NLL明确为解释，实际lossmask未披露。",
+    "视频百分点及COCO4种shot差值核算；Elo非成功率。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-004-01.png",
+      "checked": "已view_image核验Figure2/3/6完整图例、坐标和图注，Table1/2完整表头及全部行列。"
+    },
+    {
+      "file": "figures/original-page-005-02.png",
+      "checked": "已view_image核验Figure2/3/6完整图例、坐标和图注，Table1/2完整表头及全部行列。"
+    },
+    {
+      "file": "figures/original-page-009-03.png",
+      "checked": "已view_image核验Figure2/3/6完整图例、坐标和图注，Table1/2完整表头及全部行列。"
+    },
+    {
+      "file": "figures/original-page-010-04.png",
+      "checked": "已view_image核验Figure2/3/6完整图例、坐标和图注，Table1/2完整表头及全部行列。"
+    }
+  ],
+  "limitations": [
+    "未运行模型；自身逐源核验不是独立复现。",
+    "生成错误和来源交叉、训练细节与评价投票规模缺项明确说明。"
+  ],
+  "model_execution": "not_run"
+}

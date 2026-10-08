@@ -1,0 +1,19 @@
+{
+  "paper_id": "49419f245339",
+  "catalogue_entry_id": "49419f245339",
+  "family_slug": "blip3-o",
+  "title": "BLIP3-o: A Family of Fully Open Unified Multimodal Models-Architecture, Training and Dataset",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2505.09568v1",
+  "source_url": "https://arxiv.org/pdf/2505.09568v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "BLIP3-o：以连续 CLIP 特征与 Flow Matching 统一图像理解和生成",
+  "source_sha256": "346042cac296293b696b2709e7831b0b430793ca22d24d506fb9b068464a0935",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 3799,
+  "figures_manifest": "figures-manifest.json"
+}

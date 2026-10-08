@@ -1,0 +1,107 @@
+{
+  "paper_id": "1773ce2a23e8",
+  "source_version": "2412.04468v1",
+  "source_pdf_sha256": "66fa0a0ec59c291e5f8205d30d02741d759428bc95ccb46450251d6bdedf76ff",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 4：NVILA scale-then-compress 架构",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2412.04468v1#page=4",
+      "source_version": "2412.04468v1",
+      "source_sha256": "66fa0a0ec59c291e5f8205d30d02741d759428bc95ccb46450251d6bdedf76ff",
+      "asset_sha256": "5834af92498d76b3da73943c61a831ff3887290f10b982cf0f76d286e2772848",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          35,
+          65,
+          300,
+          407
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/compression.png",
+      "original_label": "Table 1–2：空间与时间压缩消融",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2412.04468v1#page=5",
+      "source_version": "2412.04468v1",
+      "source_sha256": "66fa0a0ec59c291e5f8205d30d02741d759428bc95ccb46450251d6bdedf76ff",
+      "asset_sha256": "221f17b9fa510ce19b8f3385c7301788f756afbcd4a74c4841b9d63aec71e177",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          35,
+          65,
+          565,
+          462
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training.png",
+      "original_label": "Table 7：五阶段训练配方",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2412.04468v1#page=8",
+      "source_version": "2412.04468v1",
+      "source_sha256": "66fa0a0ec59c291e5f8205d30d02741d759428bc95ccb46450251d6bdedf76ff",
+      "asset_sha256": "563937e66e4637b6b10e5ebdc487e423102eb8b049187601be3359f5c023a182",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          305,
+          65,
+          565,
+          289
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/image-results.png",
+      "original_label": "Table 8：图像基准结果",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2412.04468v1#page=9",
+      "source_version": "2412.04468v1",
+      "source_sha256": "66fa0a0ec59c291e5f8205d30d02741d759428bc95ccb46450251d6bdedf76ff",
+      "asset_sha256": "c9bccccc3ae1451ca08f64c4f12ce1d10a76845be744297d80602d8aaae8eb83",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          35,
+          65,
+          565,
+          428
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/inference.png",
+      "original_label": "Figure 6：推理效率与量化消融",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2412.04468v1#page=11",
+      "source_version": "2412.04468v1",
+      "source_sha256": "66fa0a0ec59c291e5f8205d30d02741d759428bc95ccb46450251d6bdedf76ff",
+      "asset_sha256": "fe63b94b3d96ea9d4387d1bab499b91eccd4c648f37a20c3de4ac010ec5986f5",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          35,
+          65,
+          565,
+          355
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

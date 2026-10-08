@@ -1,0 +1,43 @@
+{
+  "source_url": "https://arxiv.org/pdf/2312.16886v1",
+  "source_version": "2312.16886v1",
+  "source_sha256": "7c9accc83bec0f756c8acbdd48af35d0965afdb2c0ac4fb72f21b642d3cbbeb8",
+  "read_scope": "PDF正文1–11、附录18–23完整阅读，参考文献段用于来源辨认。",
+  "claims": [
+    {
+      "pages": [
+        4,
+        5
+      ],
+      "claim": "CLIP L14@336/576→LDP144；PW通道映射DW空间交互；MobileLLaMA1.4B/2.7B vs VLM1.7B/3B；语言从头视觉复用。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        18
+      ],
+      "claim": "RedPajama1.3T；text SFT→proj only→proj/LLM；图文配方规模与表冲突；LoRA128/256；VLM5/8h不含语言预训练。"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "claim": "量化和输出长度条件下21.54/65.27；Sample非解码速度；LDP各任务有得失；Total存在51/256输出差异；RIR同144token对照。"
+    }
+  ],
+  "source_inconsistencies": [
+    "正文CC595K/Instruct158K vs Table4 558K/665K",
+    "Figure1输出Dv vs 正文Dt",
+    "第5.2节feature/token交互措辞与PW/DW实际运算不一致",
+    "正文所有输出256 vs Table6 Vicuna7B仅51",
+    "预训练global batch5,242,880单位未明示"
+  ],
+  "model_execution": "not_run"
+}

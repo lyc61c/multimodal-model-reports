@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读PDF1–9及13–18附录；四张原页Figure2、Tables1/2、Figure3和Tables5–7、Tables14/15完整检视。",
+    "核验MAM模态专属Norm/K/V而共享Q和FFN、Abstractor Eq1/2六层64queries与patch256/1024。",
+    "核对400M池与348M消耗、SFT1.23M及ShareGPT正文80K/表40K，图文合并/选项打乱。",
+    "核对两阶段冻结、AdamW、step/batch/lr/bf16/并行；正文layerwise0.9与表15为0差异保留。",
+    "结果按split和OCR条件区分，video exact/GPT双口径，MSRVTT低于VideoChatGPT、MME/SEED与GQA弱项、queries128非全优、Figure5彩虹漏red含white不直接采信；未运行模型。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "55436001ab20265105c9b13d4f823107a38011f0d2aeafb9264c80994d67742f",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

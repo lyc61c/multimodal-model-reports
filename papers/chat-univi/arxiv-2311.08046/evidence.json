@@ -1,0 +1,14 @@
+{
+  "paper_id": "e3d9f4f47a74",
+  "source_url": "https://arxiv.org/pdf/2311.08046v1",
+  "source_version": "2311.08046v1",
+  "source_sha256": "9dcafd3f63cbb903f2c622f85e0ee972ff8257667340af8fba844ee1beabc7ed",
+  "verification_notes": [
+    "ReadfulltechnicalmainandAppendixA–C",
+    "Viewedfourselectedpages equationstableheaderscomplete",
+    "Checkedmetricnormalizationandzeroshotvsfinetuningscope",
+    "Explicitnotallcolumnswins and limitations",
+    "Sevensections"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,46 @@
+{
+  "source_version": "2503.01879v1",
+  "claims": [
+    {
+      "claim": "Whisper, five features, six-layer decoder eight codebooks",
+      "pdf_pages": [
+        5
+      ]
+    },
+    {
+      "claim": "stage1 approx8M vs table8.19M,stage3 40M synthesis",
+      "pdf_pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "stage1 frozen config from Figure4,stage2 frozen encoders,stage3decoderonly",
+      "pdf_pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "ASR11.82/12.32 and BLEU23.17/40.21",
+      "pdf_pages": [
+        10
+      ]
+    },
+    {
+      "claim": "TTS,trimodal,multiturn and streaming not evaluated",
+      "pdf_pages": [
+        13,
+        20
+      ]
+    },
+    {
+      "claim": "alignment kernels and partial contrary CKA",
+      "pdf_pages": [
+        11,
+        12,
+        22
+      ]
+    }
+  ]
+}

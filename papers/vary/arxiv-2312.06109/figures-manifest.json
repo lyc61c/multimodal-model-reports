@@ -1,0 +1,107 @@
+{
+  "paper_id": "e7d5fa625fde",
+  "source_version": "2312.06109v1",
+  "source_pdf_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2：Vary-tiny 与 Vary-base",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2312.06109v1#page=4",
+      "source_version": "2312.06109v1",
+      "source_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
+      "asset_sha256": "640c5d65589213248026dbc2bf53ac11444b7ff1276964dbf0e03fd85e1a52a5",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          397
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/synthetic-data.png",
+      "original_label": "Figure 4：合成文档与图表",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2312.06109v1#page=6",
+      "source_version": "2312.06109v1",
+      "source_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
+      "asset_sha256": "89d48afa13c0f0443ace65a52fd52cab9b7456e932b66c8d2a93a5bef02d6379",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          270
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/ocr-results.png",
+      "original_label": "Table 1：文档 OCR 与格式转换",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2312.06109v1#page=7",
+      "source_version": "2312.06109v1",
+      "source_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
+      "asset_sha256": "13ff159bce9f4e592ca780a6417bb56a0f15266eb682bd15600fd71d9acef8aa",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          280,
+          510,
+          500
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/vqa-results.png",
+      "original_label": "Tables 2–3：DocVQA、ChartQA 与 MMVet",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2312.06109v1#page=8",
+      "source_version": "2312.06109v1",
+      "source_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
+      "asset_sha256": "d9c8a70f901352db07ab679a066977e7bcfb6761a43bb89a499db3377d5b1bfa",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          435
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/format-example.png",
+      "original_label": "Figure 5：同一文档按提示输出 OCR 或 Markdown",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2312.06109v1#page=9",
+      "source_version": "2312.06109v1",
+      "source_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
+      "asset_sha256": "d936455e059d79415e38f854a8505d7f826fd8a0763902f5235dc9d3dc602d7e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          135,
+          510,
+          685
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

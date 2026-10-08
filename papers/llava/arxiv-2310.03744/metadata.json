@@ -1,0 +1,14 @@
+{
+  "paper_id": "ffb5962a4615",
+  "catalogue_entry_id": "ffb5962a4615",
+  "family_slug": "llava",
+  "title": "Improved Baselines with Visual Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2310.03744v1",
+  "source_url": "https://arxiv.org/pdf/2310.03744v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LLaVA-1.5：用简单连接器与可复核数据建立强基线"
+}

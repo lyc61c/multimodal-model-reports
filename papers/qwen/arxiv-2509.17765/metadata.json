@@ -1,0 +1,14 @@
+{
+  "paper_id": "3b40d0cc757b",
+  "catalogue_entry_id": "3b40d0cc757b",
+  "family_slug": "qwen",
+  "title": "Qwen3-Omni Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2509.17765v1",
+  "source_url": "https://arxiv.org/pdf/2509.17765v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Qwen3-Omni：双MoE、时间对齐与逐帧流式语音"
+}

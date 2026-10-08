@@ -1,0 +1,54 @@
+{
+  "paper_id": "86e88fe4b1ec",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/anyres-original.png",
+      "original_label": "官方发布文章 Dynamic High Resolution 架构图",
+      "source_url": "https://llava-vl.github.io/blog/2024-01-30-llava-next/",
+      "image_url": "https://llava-vl.github.io/blog/assets/images/llava-1-6/high_res_arch_v2.png",
+      "image_final_url": "https://llava-vl.github.io/blog/assets/images/llava-1-6/high_res_arch_v2.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "23029ba42dcf6bba3b006770a839f44e76b52763b600d8780ab2d9712d7c886e",
+      "asset_sha256": "7f8ed15e0ef0d16843297e1deb4a5d7ac2f386e681e44690d939b543b6d1f848",
+      "width": 1421,
+      "height": 378,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/flight-original.png",
+      "original_label": "官方发布文章 Qualitative Results 航班截图",
+      "source_url": "https://llava-vl.github.io/blog/2024-01-30-llava-next/",
+      "image_url": "https://llava-vl.github.io/blog/assets/images/llava-1-6/ewr_sfo_flight.png",
+      "image_final_url": "https://llava-vl.github.io/blog/assets/images/llava-1-6/ewr_sfo_flight.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "23029ba42dcf6bba3b006770a839f44e76b52763b600d8780ab2d9712d7c886e",
+      "asset_sha256": "919281c3f5b8553848cb855e9ab5b57239f230c6cd8fcf5cf86c3cc6d23653f6",
+      "width": 758,
+      "height": 370,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/ocr-original.jpg",
+      "original_label": "官方发布文章 Qualitative Results 社交媒体截图",
+      "source_url": "https://llava-vl.github.io/blog/2024-01-30-llava-next/",
+      "image_url": "https://llava-vl.github.io/blog/assets/images/llava-1-6/zuck_llama3.jpg",
+      "image_final_url": "https://llava-vl.github.io/blog/assets/images/llava-1-6/zuck_llama3.jpg",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "23029ba42dcf6bba3b006770a839f44e76b52763b600d8780ab2d9712d7c886e",
+      "asset_sha256": "0003635e1050e1986446796abe0a99a1084fddc8919ad3f9ff764ef50b3068c8",
+      "width": 1830,
+      "height": 1506,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

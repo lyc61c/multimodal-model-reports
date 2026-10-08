@@ -1,0 +1,14 @@
+{
+  "paper_id": "783b062a88f0",
+  "catalogue_entry_id": "783b062a88f0",
+  "family_slug": "kimi",
+  "title": "Kimi K2.5: Visual Agentic Intelligence",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2602.02276v1",
+  "source_url": "https://arxiv.org/pdf/2602.02276v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Kimi K2.5：视觉文本联合训练与并行智能体编排"
+}

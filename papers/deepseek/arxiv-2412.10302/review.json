@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read all20 non-reference PDF pages",
+    "Viewed Figure3/Table1 and Tables3/4/5 complete pages",
+    "Verified Tiny MLA exception and activation size scopes",
+    "Verified all extracted benchmark rows/column headers and InfoVQA budget",
+    "Preserved weaker results and no component causal claims"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "27981f00a6edc2cb9e5e49501d454b189642d322e63e73c72f9af2e0151cf311",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

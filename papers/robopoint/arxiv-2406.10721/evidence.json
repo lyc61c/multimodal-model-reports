@@ -1,0 +1,45 @@
+{
+  "source_version": "2406.10721v1",
+  "claims": [
+    {
+      "claim": "Vicuna13B CLIPL14336;MLP2;visual/tokenizerfreeze;LLM+MLPtrain;40h16A100perGPU16LR4e-5",
+      "pdf_pages": [
+        3,
+        13
+      ]
+    },
+    {
+      "claim": "Synthetic347K320K+VQA665K+LVIS100K;freeareaobjectremoval;10Kscenes;1-50points",
+      "pdf_pages": [
+        4,
+        5,
+        13
+      ]
+    },
+    {
+      "claim": "Where2Place100with30unseen;RoboRefIt750;point-in-maskmetric",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "Table2/3/4scores;TextVQA/VQAv2declines",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "Figure5counts41/70vs13/70=40points;prose39.5inconsistent",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "Navigation CoppeliaSim;lasttwo1/5;ARqualitative;no confidence/pointcountcontrol",
+      "pdf_pages": [
+        8
+      ]
+    }
+  ]
+}

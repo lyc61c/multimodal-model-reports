@@ -1,0 +1,46 @@
+{
+  "checked_file": "papers\\internlm-xcomposer\\arxiv-2407.03320\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "rank512 webpage versus256 article",
+    "separate task adapters",
+    "Tables1-5 including footnotes",
+    "stage-specific frozen/update policies"
+  ],
+  "math_checked": [
+    "original Eqs1-3 constraints with no invented scale",
+    "DPOEq4 logistic reference-normalized sequence probability",
+    "standard CE explicitly explanatory; no invented beta"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-006-01.png",
+      "original_label": "Figure5",
+      "pdf_page": 6,
+      "inspection": "Viewed full original page: complete labels, all rows and captions"
+    },
+    {
+      "file": "figures/original-page-008-02.png",
+      "original_label": "Tables1-2",
+      "pdf_page": 8,
+      "inspection": "Viewed full original page: complete labels, all rows and captions"
+    },
+    {
+      "file": "figures/original-page-009-03.png",
+      "original_label": "Tables3-4/Eq4",
+      "pdf_page": 9,
+      "inspection": "Viewed full original page: complete labels, all rows and captions"
+    },
+    {
+      "file": "figures/original-page-010-04.png",
+      "original_label": "Table5",
+      "pdf_page": 10,
+      "inspection": "Viewed full original page: complete labels, all rows and captions"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "No quantitative article/DPO ablation",
+    "No independent96K reliability plot"
+  ]
+}

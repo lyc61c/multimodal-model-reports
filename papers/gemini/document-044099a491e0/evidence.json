@@ -1,0 +1,18 @@
+{
+  "paper_id": "044099a491e0",
+  "source_url": "https://arxiv.org/pdf/2312.11805v1",
+  "source_version": "2312.11805v1",
+  "source_sha256": "f3c5b175d26159b92891b32380515ec1036f4ffe2862e19d7277fd165e0d9663",
+  "verification_notes": [
+    "Read original cached Gemini 2312.11805v1 main report pages 1-23 and benchmarking/CoT appendix pages 46-48; inspected qualitative examples 49,51,59,61,62. Fixed version and 62-page title checked; catalogue release date distinguished from arXiv v1 date.",
+    "Read visual Figure 2 original page 4; four modalities are inputs, text/image outputs only. Ultra/Pro size, detailed vision/audio tokenizers and optimization recipe are not disclosed. Nano1 1.8B and Nano2 3.25B are distinct.",
+    "Read original Figure 7 page 46 visually: Gemini Score Eval83.96,CoT32=84.99,routed90.04; GPT4=84.21/87.29/87.29. Route abstraction labelled explanatory and validation threshold preserved. Standard Table2 5-shot83.7 not conflated with Figure7 Score Eval.",
+    "Read Table7 page12 and Table8 page13; MMMU pass1=59.4 and Maj1@32=62.4, Pro47.9,GPT4V56.8. All image metrics, benchmark splits and column identities checked. Prior task-tuned AI2D81.4/VQAv286.1 outperform Ultra79.5/77.8; Science/Business limitations retained.",
+    "Read Table10 page15:16 uniform video frames, NextQA WUPS29.9/28.0, ActivityNet52.2/49.8 Accuracy,Perception54.7/51.1 Accuracy,YouCook2 CIDEr135.4/123.2 four-shot. No VideoMME results in this report.",
+    "Read Table11 page17 visually: audio tested Pro/Nano1 only, Ultra not yet evaluated. FLEURS62lang7.6/14.2 used train dataset; Pro15.8 without it; CJK/Thai CER distinguished; CoVoST21langBLEU40.1/35.4 not WER or voice generation.",
+    "Read sections4/6.4: data counts, ratios, optimizer/batch/freezing/learning rates not disclosed. Instruction SFT+RLHF with multihead helpfulness/factuality/safety reward described but no invented exact objective. Table14 factuality challenge-set before/after7.9->3.4,40.2->59.7,0->69.30 checked; no retrieval introduced.",
+    "Infrastructure goodput85->97 is useful new-step training time, not MFU;4096 is one SuperPod, not Ultra total; TPUv4 cross datacenter and Nano4bitdeployment scope retained. Native image generation is qualitative;AlphaCode2 is specialized system not bare Pro.",
+    "Rendered and visually inspected all four final180dpi crops: Figure2p4,Table7p12,Table11p17,Figure7p46. Captions, full model columns, axes and last rows complete. Original PDF and assets hash recorded; no model inference/reproduction claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

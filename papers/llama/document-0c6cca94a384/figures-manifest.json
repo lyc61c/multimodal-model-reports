@@ -1,0 +1,70 @@
+{
+  "paper_id": "0c6cca94a384",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-figure-2.png",
+      "original_label": "Official vision instruction-tuned benchmarks",
+      "source_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+      "image_url": "https://scontent-sin2-2.xx.fbcdn.net/v/t39.2365-6/461288018_1255239495501495_271827633811450582_n.png?_nc_cat=102&ccb=1-7&_nc_sid=e280be&_nc_ohc=k5CtbR7NexwQ7kNvwHPLwRH&_nc_oc=AdruSOLnixgFq-O_QzQbaqc4vZy7S6nNV-KANJoKTqXylsFF97dApvgBwiXCM8N5rKo&_nc_zt=14&_nc_ht=scontent-sin2-2.xx&_nc_gid=fVUSP9lN-T1Bqfmag1JFcA&_nc_ss=7b20f&oh=00_AQOFXMckxWuFP-BbJ4tkFUAwWYsXuIJf-9Etut6pNFSNFw&oe=6AE18DED",
+      "image_final_url": "https://scontent-sin2-2.xx.fbcdn.net/v/t39.2365-6/461288018_1255239495501495_271827633811450582_n.png?_nc_cat=102&ccb=1-7&_nc_sid=e280be&_nc_ohc=k5CtbR7NexwQ7kNvwHPLwRH&_nc_oc=AdruSOLnixgFq-O_QzQbaqc4vZy7S6nNV-KANJoKTqXylsFF97dApvgBwiXCM8N5rKo&_nc_zt=14&_nc_ht=scontent-sin2-2.xx&_nc_gid=fVUSP9lN-T1Bqfmag1JFcA&_nc_ss=7b20f&oh=00_AQOFXMckxWuFP-BbJ4tkFUAwWYsXuIJf-9Etut6pNFSNFw&oe=6AE18DED",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e546c91ada37d80195ede500d527799409ef96d552d7412761f2f58a44865c81",
+      "asset_sha256": "49c786e321391862bedaa85b2240066b9c88646e770369715d2dbe9d03e250b2",
+      "width": 3840,
+      "height": 3050,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-figure-3.png",
+      "original_label": "Official lightweight instruction-tuned benchmarks",
+      "source_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t39.2365-6/461157789_931406385491961_1692349435372036848_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=GZiX0k-VebcQ7kNvwGnFg_s&_nc_oc=Adr95PIidTSyHSwTR-yc31s66MEyukXiSpV6eoL2SzQUbNAkuwFHVpRBZH42QhL1M1U&_nc_zt=14&_nc_ht=scontent-sin2-1.xx&_nc_gid=fVUSP9lN-T1Bqfmag1JFcA&_nc_ss=7b20f&oh=00_AQMM0ctjSI2JHlvMx2Er8y2WbNGB3mZZdKkYUJgvg6wTUQ&oe=6AE16D18",
+      "image_final_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t39.2365-6/461157789_931406385491961_1692349435372036848_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=GZiX0k-VebcQ7kNvwGnFg_s&_nc_oc=Adr95PIidTSyHSwTR-yc31s66MEyukXiSpV6eoL2SzQUbNAkuwFHVpRBZH42QhL1M1U&_nc_zt=14&_nc_ht=scontent-sin2-1.xx&_nc_gid=fVUSP9lN-T1Bqfmag1JFcA&_nc_ss=7b20f&oh=00_AQMM0ctjSI2JHlvMx2Er8y2WbNGB3mZZdKkYUJgvg6wTUQ&oe=6AE16D18",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e546c91ada37d80195ede500d527799409ef96d552d7412761f2f58a44865c81",
+      "asset_sha256": "7328a03f3a0bf58e98a8e4d1044bb7a455b0b03c0d267f1a556cc228480787d3",
+      "width": 3840,
+      "height": 3676,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-figure-4.png",
+      "original_label": "Official1B/3B pruning and distillation diagram",
+      "source_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+      "image_url": "https://scontent-sin11-2.xx.fbcdn.net/v/t39.2365-6/461209081_511117684875670_45564063096782202_n.png?_nc_cat=101&ccb=1-7&_nc_sid=e280be&_nc_ohc=pSmh_-qUq-kQ7kNvwG41LDR&_nc_oc=AdpT7SBobmrxmN2ZM1M72UJnfnvSfv3Z7lN4iYjJwMpssRVDKh3kqM3cYJQRNgMVHfo&_nc_zt=14&_nc_ht=scontent-sin11-2.xx&_nc_gid=fVUSP9lN-T1Bqfmag1JFcA&_nc_ss=7b20f&oh=00_AQN69x_7gGgLFSTe5LDGa2Enm-lMGAQOut5EY499BmMUmA&oe=6AE18D5E",
+      "image_final_url": "https://scontent-sin11-2.xx.fbcdn.net/v/t39.2365-6/461209081_511117684875670_45564063096782202_n.png?_nc_cat=101&ccb=1-7&_nc_sid=e280be&_nc_ohc=pSmh_-qUq-kQ7kNvwG41LDR&_nc_oc=AdpT7SBobmrxmN2ZM1M72UJnfnvSfv3Z7lN4iYjJwMpssRVDKh3kqM3cYJQRNgMVHfo&_nc_zt=14&_nc_ht=scontent-sin11-2.xx&_nc_gid=fVUSP9lN-T1Bqfmag1JFcA&_nc_ss=7b20f&oh=00_AQN69x_7gGgLFSTe5LDGa2Enm-lMGAQOut5EY499BmMUmA&oe=6AE18D5E",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e546c91ada37d80195ede500d527799409ef96d552d7412761f2f58a44865c81",
+      "asset_sha256": "069eb1708a6ce2fed7c3997e563c587a8e6064fe18374066b4160f0a077c064b",
+      "width": 3840,
+      "height": 2029,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-figure-5.png",
+      "original_label": "Official Llama Stack APIs diagram",
+      "source_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+      "image_url": "https://scontent-sin6-2.xx.fbcdn.net/v/t39.2365-6/460924239_3402957093334534_4357083070437107157_n.png?_nc_cat=109&ccb=1-7&_nc_sid=e280be&_nc_ohc=xf4zvDGCfRwQ7kNvwHA0TFw&_nc_oc=AdpQ5aP02E4dKusvgHKNeZLoFql0j0FtHhVE38esTP8e-SNAlkaMhYtzzxVNGA1l4Wk&_nc_zt=14&_nc_ht=scontent-sin6-2.xx&_nc_gid=fVUSP9lN-T1Bqfmag1JFcA&_nc_ss=7b20f&oh=00_AQPWY8dTD6iCmk7XeaBu3Gafag2KUwTBCre1rDSCIBuXqA&oe=6AE16FA0",
+      "image_final_url": "https://scontent-sin6-2.xx.fbcdn.net/v/t39.2365-6/460924239_3402957093334534_4357083070437107157_n.png?_nc_cat=109&ccb=1-7&_nc_sid=e280be&_nc_ohc=xf4zvDGCfRwQ7kNvwHA0TFw&_nc_oc=AdpQ5aP02E4dKusvgHKNeZLoFql0j0FtHhVE38esTP8e-SNAlkaMhYtzzxVNGA1l4Wk&_nc_zt=14&_nc_ht=scontent-sin6-2.xx&_nc_gid=fVUSP9lN-T1Bqfmag1JFcA&_nc_ss=7b20f&oh=00_AQPWY8dTD6iCmk7XeaBu3Gafag2KUwTBCre1rDSCIBuXqA&oe=6AE16FA0",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e546c91ada37d80195ede500d527799409ef96d552d7412761f2f58a44865c81",
+      "asset_sha256": "901b5dbb2c663315ea6c6933304db95cd47edc7acf0777ed56fc1facdf2c81aa",
+      "width": 3840,
+      "height": 4150,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

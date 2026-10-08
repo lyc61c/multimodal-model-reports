@@ -1,0 +1,127 @@
+{
+  "paper_id": "3409e698d392",
+  "source_version": "2312.02051v1",
+  "source_pdf_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2：时间感知编码器与滑窗Q-Former",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2312.02051v1#page=3",
+      "source_version": "2312.02051v1",
+      "source_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+      "asset_sha256": "3a816f408cecb134881c32361debd6e3a5123c993f61ff31ae407d45094a66e2",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          40,
+          569,
+          360
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/tasks-and-datasets.png",
+      "original_label": "Figure 3：TimeIT任务与held-out数据",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2312.02051v1#page=5",
+      "source_version": "2312.02051v1",
+      "source_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+      "asset_sha256": "0cc1d55ae52dcb95b2d1e09d5356c3c12cfbbc3a83c7632aeb6d4ad3dc27424b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          42,
+          298,
+          234
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/zero-shot-results.png",
+      "original_label": "Table 2：三个任务的零样本结果",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2312.02051v1#page=6",
+      "source_version": "2312.02051v1",
+      "source_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+      "asset_sha256": "f2c33628b42dc2c75508eafe3a9f7e5a8395fa673e962834c643d5f0f795d11f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          48,
+          570,
+          279
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/ablation.png",
+      "original_label": "Table 3与4：消融和同数据训练比较",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2312.02051v1#page=6",
+      "source_version": "2312.02051v1",
+      "source_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+      "asset_sha256": "54de99b0b2031d0f4ace316ff814db213953526f3abfd174999ff6291d5da67f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          286,
+          570,
+          382
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/supervised-results.png",
+      "original_label": "Table 5：下游监督微调结果",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2312.02051v1#page=8",
+      "source_version": "2312.02051v1",
+      "source_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+      "asset_sha256": "9f624dbb568fe81aca3f0a06b7081c7ba89ae193d1df082c05ae9794b809b1b1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          48,
+          570,
+          228
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-settings.png",
+      "original_label": "Table 7：训练超参数",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2312.02051v1#page=14",
+      "source_version": "2312.02051v1",
+      "source_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+      "asset_sha256": "69d9aa96dbb14f67fc1a77780c1ccdc64cc1690327dc4afe0dc6c09acebdbb68",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          429,
+          298,
+          696
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

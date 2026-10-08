@@ -1,0 +1,14 @@
+{
+  "paper_id": "08e2182e1746",
+  "catalogue_entry_id": "08e2182e1746",
+  "family_slug": "bagel",
+  "title": "Emerging Properties in Unified Multimodal Pretraining",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "title_zh": "BAGEL：以共享注意力连接多模态理解与连续视觉生成",
+  "source_version": "2505.14683v1",
+  "source_url": "https://arxiv.org/pdf/2505.14683v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1"
+}

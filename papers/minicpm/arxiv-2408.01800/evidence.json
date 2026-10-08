@@ -1,0 +1,18 @@
+{
+  "paper_id": "694e2e46c3f0",
+  "source_url": "https://arxiv.org/pdf/2408.01800v1",
+  "source_version": "2408.01800v1",
+  "source_sha256": "5e12b613e832101c217d4990828b8cc584175026eac30d35f799afef79da4e1f",
+  "verification_notes": [
+    "Read original v1 main pages1-17 plus qualitative appendices24-26; checked 1.0/2.0/2.5 model scope excluding later audio/video generations.",
+    "Visually inspected original full pages5,9,11,13 including Figure3/4/6 and Tables3/4; full labels/headers intact.",
+    "Checked adaptive slicing score, candidate N+-1, N<10, global slice, 64 versus96 compression tokens and 96-960 range.",
+    "Checked pretrain stages: compression only, visual encoder only, visual+compression; SFT all parameters; unsupported optimizer details omitted.",
+    "Recorded Table3 2.0 RLHF versus body RLAIF scoring variant, feedback6K pairs3K images and multilingual90K36languages.",
+    "Checked table4 GPT4V1106 comparison and MMMU/LlavaBench deficits, table5 OCRBench raw725 versus percentages.",
+    "Checked Table6 complementary ObjectHalBench orientation, MME/MMMU regressions and translated GPT4Turbo multilingual evaluation.",
+    "Checked phone Figure6 image stage versus prefilling9.4s and decoding8.2token/s, loading included and initial64.2/64.6 difference.",
+    "No model, phone benchmark or independent reproduction claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

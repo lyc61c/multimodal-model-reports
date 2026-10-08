@@ -1,0 +1,19 @@
+{
+  "paper_id": "165201d8355a",
+  "catalogue_entry_id": "165201d8355a",
+  "family_slug": "baichuan",
+  "title": "Baichuan-Omni-1.5 Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Baichuan-Omni-1.5：语义声学双目标与全模态交互",
+  "source_sha256": "491a6fd21597b73c1a806e5d49f40167501a262f67ce20f49d8c2aab25edb203",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2815,
+  "figures_manifest": "figures-manifest.json"
+}

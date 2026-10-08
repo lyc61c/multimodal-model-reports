@@ -1,0 +1,15 @@
+{
+  "paper_id": "017aa9c6b44d",
+  "source_url": "https://arxiv.org/pdf/2409.18869v1",
+  "source_version": "2409.18869v1",
+  "source_sha256": "a70a5cebb7aeb2cfc8a210149dc4bae7f10fd08337c16fcb4b10d3b2a55d4983",
+  "verification_notes": [
+    "Read mainpages1-12 and Appendix20-21; verified title/BAAI identity",
+    "Viewed all four original pages and table headers, visible star/rewriter qualifiers",
+    "Verified tokenizer32k/4x8x8 and 8B architecture; encoder-free not absence of tokenizer encoder",
+    "Verified base vsDPO vsunderstanding checkpoint scopes; visionlossweight0.5",
+    "Verified GenEval0.54/0.66 and DPO0.52/0.64; worseFID and resolution differences",
+    "Verified video evaluated after stabilization/superresolution; training-image seen stars retained; no model reproduction"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

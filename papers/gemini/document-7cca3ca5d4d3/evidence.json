@@ -1,0 +1,22 @@
+{
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "842fc7adc3b7911e5e00f7611a176324b16ea5f90d7f12b64184a999d3150024",
+  "read_scope": "完整官方发布正文、四组应用演示描述和官方基准图，排除菜单、AI摘要与其他版本推荐链接",
+  "claims": [
+    {
+      "location": "发布正文与日期",
+      "claim": "2026-02-19 发布预览；不得与 Deep Think 产品推理配置等同"
+    },
+    {
+      "location": "官方基准原图全表",
+      "claim": "ARC 77.1/31.1；MMMU Pro 80.5/81.0；各工具条件、Elo 和长上下文点位分别解读"
+    },
+    {
+      "location": "四组演示说明",
+      "claim": "SVG、手追踪与配乐均为代码应用展示，不证明原生视频/音频输出"
+    }
+  ],
+  "source_inconsistencies": [],
+  "model_execution": "not_run"
+}

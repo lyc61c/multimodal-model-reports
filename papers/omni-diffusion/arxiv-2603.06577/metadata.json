@@ -1,0 +1,14 @@
+{
+  "paper_id": "1dfedbb1e043",
+  "catalogue_entry_id": "1dfedbb1e043",
+  "family_slug": "omni-diffusion",
+  "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2603.06577v1",
+  "source_url": "https://arxiv.org/pdf/2603.06577v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Omni-Diffusion：以掩码离散扩散统一图像、文字与语音"
+}

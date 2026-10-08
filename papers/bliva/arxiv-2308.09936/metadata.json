@@ -1,0 +1,14 @@
+{
+  "paper_id": "2ec13c8f3442",
+  "catalogue_entry_id": "2ec13c8f3442",
+  "family_slug": "bliva",
+  "title": "BLIVA: A Simple Multimodal LLM for Better Handling of Text-rich Visual Questions",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2308.09936v1",
+  "source_url": "https://arxiv.org/pdf/2308.09936v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "BLIVA：用查询特征与完整 patch 特征共同回答含文字图像的问题"
+}

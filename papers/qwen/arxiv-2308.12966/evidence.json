@@ -1,0 +1,49 @@
+{
+  "source_version": "2308.12966v1",
+  "claims": [
+    {
+      "claim": "ViT-bigG,256position-aware queries,Qwen7B total9.6B parameters",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "1.4B cleaned,English77.3Chinese22.7;multitask data and350K SFT",
+      "pdf_pages": [
+        4,
+        5,
+        6,
+        16,
+        17
+      ]
+    },
+    {
+      "claim": "Coordinate text range0to1000,OCRquadrilaterals,PDF/HTMLrendering data",
+      "pdf_pages": [
+        4,
+        16,
+        17,
+        18,
+        20
+      ]
+    },
+    {
+      "claim": "Three stage full hyperparameters and freezes,1.5B samples500B multimodal tokens",
+      "pdf_pages": [
+        5,
+        6,
+        19
+      ]
+    },
+    {
+      "claim": "Base versuschat benchmark regressions,metric definitions andTouchStone limited comparison",
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ]
+}

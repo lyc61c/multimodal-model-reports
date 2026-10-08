@@ -1,0 +1,65 @@
+{
+  "source_version": "2405.09818v1",
+  "claims": [
+    {
+      "claim": "512图像1024token、8192codebook、65536词表，7B/34B4096上下文",
+      "pdf_pages": [
+        4,
+        8
+      ]
+    },
+    {
+      "claim": "QKnorm、残差输出norm重排、zloss1e-5 logZ平方、7Bdropout.1/34B0",
+      "pdf_pages": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "4.4T资料与9.2T累计、2.1epochs；分项正文约4.8T口径不全一致",
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "SFT六类统计、padding vs centercrop、lossmask、cosine1e-5 batch128 dropout.05",
+      "pdf_pages": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "claim": "资源1024/3072 A10080G，GPUhrs856481/4282407",
+      "pdf_pages": [
+        8
+      ]
+    },
+    {
+      "claim": "Table7不同shot与微调，VQA非全部SOTA",
+      "pdf_pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "claim": "Gemini+总体58.8、主文60.4实际混合输入子集；GPT4V+51.6包含半分ties",
+      "pdf_pages": [
+        12,
+        13,
+        26
+      ]
+    },
+    {
+      "claim": "安全正文30B与Table5 34B差异；非RLHF已执行",
+      "pdf_pages": [
+        14,
+        15
+      ]
+    }
+  ]
+}

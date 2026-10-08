@@ -1,0 +1,14 @@
+{
+  "paper_id": "0809c95bdef1",
+  "catalogue_entry_id": "0809c95bdef1",
+  "family_slug": "3d-llm",
+  "title": "3D-LLM: Injecting the 3D World into Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "title_zh": "3D-LLM：把多视角视觉知识映射到三维场景，再交给语言模型",
+  "source_version": "2307.12981v1",
+  "source_url": "https://arxiv.org/pdf/2307.12981v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1"
+}

@@ -1,0 +1,70 @@
+{
+  "paper_id": "4003084812b3",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-2.png",
+      "original_label": "官方MoE与共享专家结构示意（图示16路由专家）",
+      "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "image_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t39.2365-6/488655517_650996354186993_1043942188415715102_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=_bLIHdBJaxsQ7kNvwHrbrer&_nc_oc=Adon4TbiHcxkayOhzjM0lmejjLPEtl2ht64BxkJjeRSIdJ6r6gaMB6Y0Gzq8_V9OiGE&_nc_zt=14&_nc_ht=scontent-sin11-1.xx&_nc_gid=CjrKO0iLeXC1JyB99-wejQ&_nc_ss=7b20f&oh=00_AQPRqb43qUf5nqFN2XoTV2OL7yNu7dk80pNxMPnc19Dhhg&oe=6AE19880",
+      "image_final_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t39.2365-6/488655517_650996354186993_1043942188415715102_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=_bLIHdBJaxsQ7kNvwHrbrer&_nc_oc=Adon4TbiHcxkayOhzjM0lmejjLPEtl2ht64BxkJjeRSIdJ6r6gaMB6Y0Gzq8_V9OiGE&_nc_zt=14&_nc_ht=scontent-sin11-1.xx&_nc_gid=CjrKO0iLeXC1JyB99-wejQ&_nc_ss=7b20f&oh=00_AQPRqb43qUf5nqFN2XoTV2OL7yNu7dk80pNxMPnc19Dhhg&oe=6AE19880",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "5368287f254b14d7dd624e6b0f9ec35afe42e459464d940fb6714d50706794ec",
+      "asset_sha256": "931dd453c1aafd99bd901143e1d4c0b2b825f516471981c124b373eb4f205abc",
+      "width": 1920,
+      "height": 1308,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-3.png",
+      "original_label": "官方Maverick指令微调基准表（含完整脚注）",
+      "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "image_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t39.2365-6/488688605_1406312723692874_1536535503366996614_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=fM-MN-V8waAQ7kNvwF3-4Iy&_nc_oc=Ador96azv1E1tZZqvkAWAu7N9QK47BDpvsdaGtOg47jP10HxrxCAjqhl2yTTGD2FaoU&_nc_zt=14&_nc_ht=scontent-sin11-1.xx&_nc_gid=CjrKO0iLeXC1JyB99-wejQ&_nc_ss=7b20f&oh=00_AQOgndm39emVxwf8UP7amvUs_JB0gyim635k39T5lQCQ3A&oe=6AE1948F",
+      "image_final_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t39.2365-6/488688605_1406312723692874_1536535503366996614_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=fM-MN-V8waAQ7kNvwF3-4Iy&_nc_oc=Ador96azv1E1tZZqvkAWAu7N9QK47BDpvsdaGtOg47jP10HxrxCAjqhl2yTTGD2FaoU&_nc_zt=14&_nc_ht=scontent-sin11-1.xx&_nc_gid=CjrKO0iLeXC1JyB99-wejQ&_nc_ss=7b20f&oh=00_AQOgndm39emVxwf8UP7amvUs_JB0gyim635k39T5lQCQ3A&oe=6AE1948F",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "5368287f254b14d7dd624e6b0f9ec35afe42e459464d940fb6714d50706794ec",
+      "asset_sha256": "d5c84c16784d57283fba6c79609cd49ad5d44f119b3a2c4d0a2b70e996c762c5",
+      "width": 1920,
+      "height": 1638,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-4.png",
+      "original_label": "官方文本与视频Needle-in-a-Haystack结果",
+      "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "image_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t39.2365-6/488955260_630849766606664_4970227915274398227_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=fLJUNORl8q8Q7kNvwE2G7hy&_nc_oc=AdrX4Mjc4UMKHBINbLRVDNz8hHrA7fapR0fX5h5HSBV7GaIM35wud8w4-dnq2rUmAkA&_nc_zt=14&_nc_ht=scontent-sin2-1.xx&_nc_gid=CjrKO0iLeXC1JyB99-wejQ&_nc_ss=7b20f&oh=00_AQNdu71rgyW80P-2UWkoVsQIVZCXXyR89f1F3p0B8okLcQ&oe=6AE17A20",
+      "image_final_url": "https://scontent-sin2-1.xx.fbcdn.net/v/t39.2365-6/488955260_630849766606664_4970227915274398227_n.png?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=fLJUNORl8q8Q7kNvwE2G7hy&_nc_oc=AdrX4Mjc4UMKHBINbLRVDNz8hHrA7fapR0fX5h5HSBV7GaIM35wud8w4-dnq2rUmAkA&_nc_zt=14&_nc_ht=scontent-sin2-1.xx&_nc_gid=CjrKO0iLeXC1JyB99-wejQ&_nc_ss=7b20f&oh=00_AQNdu71rgyW80P-2UWkoVsQIVZCXXyR89f1F3p0B8okLcQ&oe=6AE17A20",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "5368287f254b14d7dd624e6b0f9ec35afe42e459464d940fb6714d50706794ec",
+      "asset_sha256": "cd7c470104fb6e069ab124e681842392afb12e398d15717f167aceba5bd14739",
+      "width": 2096,
+      "height": 929,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-5.png",
+      "original_label": "官方代码累积平均NLL曲线",
+      "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "image_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t39.2365-6/488641575_1306808653730812_1227810128658266115_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=46Jh7fRZtPgQ7kNvwHxqRDc&_nc_oc=AdrWhISkobVCp0WJ88heYocUlyjdNMymeQsQxutSocUaZ9R1ICzVxKeL8DNLK1pcTeg&_nc_zt=14&_nc_ht=scontent-sin11-1.xx&_nc_gid=CjrKO0iLeXC1JyB99-wejQ&_nc_ss=7b20f&oh=00_AQP2GAvBe6UpdifXCdn30zYjdmGO7qVpB5Nm9s2gATqgfw&oe=6AE19231",
+      "image_final_url": "https://scontent-sin11-1.xx.fbcdn.net/v/t39.2365-6/488641575_1306808653730812_1227810128658266115_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e280be&_nc_ohc=46Jh7fRZtPgQ7kNvwHxqRDc&_nc_oc=AdrWhISkobVCp0WJ88heYocUlyjdNMymeQsQxutSocUaZ9R1ICzVxKeL8DNLK1pcTeg&_nc_zt=14&_nc_ht=scontent-sin11-1.xx&_nc_gid=CjrKO0iLeXC1JyB99-wejQ&_nc_ss=7b20f&oh=00_AQP2GAvBe6UpdifXCdn30zYjdmGO7qVpB5Nm9s2gATqgfw&oe=6AE19231",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "5368287f254b14d7dd624e6b0f9ec35afe42e459464d940fb6714d50706794ec",
+      "asset_sha256": "75dc2c69b9e3c6153378f0383c1b27377bd7c4725e15f3faa9f63a1beef57540",
+      "width": 1920,
+      "height": 1137,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

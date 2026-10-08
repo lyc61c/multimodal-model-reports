@@ -1,0 +1,19 @@
+{
+  "paper_id": "1e9b1698c00f",
+  "catalogue_entry_id": "1e9b1698c00f",
+  "family_slug": "next-gpt",
+  "title": "NExT-GPT: Any-to-Any Multimodal LLM",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2309.05519v1",
+  "source_url": "https://arxiv.org/pdf/2309.05519v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "NExT-GPT：以语言模型连接四种模态的理解与生成",
+  "source_sha256": "6cc77240128d6b426042f7cc75e3654dae6409c82d95e1e32ca6964d075d8fa5",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2238,
+  "figures_manifest": "figures-manifest.json"
+}

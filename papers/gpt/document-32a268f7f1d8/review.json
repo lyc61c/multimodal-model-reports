@@ -1,0 +1,33 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "正文与附录逐项核对，修正了Aider diff与whole混用及nano IFEval数字",
+    "网页缓存版本与发布日期区分",
+    "长视频72.0限定30–60分钟无字幕",
+    "参数与训练信息未公开，不作推断"
+  ],
+  "math_checks": [
+    "BFS公式为标准任务定义，明确不是网络机制",
+    "SWE分母修正54.6%*477/500约52.1%",
+    "百分点与相对提升区分"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/official-1-preview.png",
+      "checked": "已view_image；完整标题轴与模型标签，无刻度不读秒数"
+    },
+    {
+      "file": "figures/official-2-preview.png",
+      "checked": "已view_image；完整深度/长度网格及图例，不声称三张独立热图"
+    },
+    {
+      "file": "figures/official-3-preview.png",
+      "checked": "已view_image；完整曲线、轴与所有图例；使用附录数值而非像素读值"
+    }
+  ],
+  "limitations": [
+    "官方发布说明无可复现网络/训练配方",
+    "官方成绩未独立复测"
+  ],
+  "model_execution": "not_run"
+}

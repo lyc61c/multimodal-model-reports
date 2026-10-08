@@ -1,0 +1,1 @@
+{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"核对v1标题机构日期与17页","facts":"核对Figures1–3及Tables1–15；保留59/65的输入协议差异和非单调结果","math":"空间步长和token计数核对，标准损失明确标注；未将编码器复杂度推广到LM","images":"逐张view_image检查PDF3/8/17架构、结果与训练表，表头未截断","training":"正文最后三个视觉阶段与概括图标区分；指令阶段视觉冻结"},"model_execution":"not_run"}

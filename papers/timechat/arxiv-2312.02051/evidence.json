@@ -1,0 +1,16 @@
+{
+  "paper_id": "3409e698d392",
+  "source_url": "https://arxiv.org/pdf/2312.02051v1",
+  "source_version": "2312.02051v1",
+  "source_sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61",
+  "verification_notes": [
+    "读取 v1 第1–9页正文与第12–17页附录，检视六张完整原图/表。",
+    "核对帧时间文本进入imageQFormer、滑窗NV32/LW32/S32/T96及默认96个最终视频token。",
+    "说明压缩率推导的分组假设，默认固定96帧不等于按视频秒数自动增加token。",
+    "核对TimeIT held-in/held-out划分、125K与190.8秒及31.6K YTTemporal、GPT4只扩展指令。",
+    "核对LLM基础参数冻结但LoRA rank32更新，两个QFormer与线性层训练及附录超参数。",
+    "核对主评价不使用转写，三任务指标不同、启发式解析及高光结果低于管线。",
+    "核对Table3第三行增量相对上一行的矛盾，Table5监督结果与零样本/同数据实验分开。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

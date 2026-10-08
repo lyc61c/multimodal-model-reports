@@ -1,0 +1,52 @@
+{
+  "source_version": "2305.18752v1",
+  "claims": [
+    {
+      "claim": "Text tool-controller with gpt3.5turbo teacher versus textdavinci003 baseline",
+      "pdf_pages": [
+        3,
+        6,
+        7,
+        11,
+        14
+      ]
+    },
+    {
+      "claim": "71.4K final instruction responses,35.7K tool items,1170 validation652 unseen tests;Figure7 proportion discrepancy",
+      "pdf_pages": [
+        5,
+        7,
+        11
+      ]
+    },
+    {
+      "claim": "Symmetric tool decision/action/args evaluation based paths/BLEU not full outputquality",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "LoRA rank16alpha16 QKVO,OPT LR1.2e-4 differs main prose;3epochbatch512",
+      "pdf_pages": [
+        7,
+        17
+      ]
+    },
+    {
+      "claim": "94.1 seen90.6 unseen versusGPT3.5 84.8/91.5;ablation36.9/81.6/91.6/94.1",
+      "pdf_pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "External tools provide generation, fixed verbose prompt limitation",
+      "pdf_pages": [
+        9,
+        10,
+        11,
+        14
+      ]
+    }
+  ]
+}

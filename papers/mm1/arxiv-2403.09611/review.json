@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读PDF1–16及附录25–32、33–39定性案例；核对最终ViT-H/378/144与基础消融ViT-L/336/1.2B设置。",
+    "检查4张原页：Figure3、Figure5、Table4、Figure7完整；表4MMMU为val/test，SEED为全/图像，MathVista39.4脚注8shot44.4。",
+    "核验Equation1非embedding参数、正文拟合与附录取整学习率差异，MoE路由/负载系数，未把MoE名称当总参数。",
+    "核验数据池600M与内部500M、SFT正文约1M而Table5总1.45M、预训练100B计数范围，未自行修正原文口径。",
+    "核验zero/fewshot不同提示、CIDEr与准确率、3B-MoE MMVet退步和30B未超过LLaVA-NeXT部分任务；记录无模型运行。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "8c2eb79d1982f897a74e5ae10d95d71e2615300df336aee5b7cd4173c2f14560",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

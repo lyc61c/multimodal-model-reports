@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "figures_visually_checked": [
+    "original-page-003-01.png",
+    "original-page-004-02.png",
+    "original-page-006-03.png",
+    "original-page-007-04.png"
+  ],
+  "model_executed": false,
+  "checks": [
+    "Seven sections",
+    "Source identity distinct from Google Gemini",
+    "Figure and table headers checked",
+    "Fixed-token vsHD expansion and benchmark conditions explicit"
+  ],
+  "limitations": [
+    "No independent reproduction",
+    "Generation qualitative only",
+    "Incomplete batch/context/weights disclosure",
+    "Original broad superiority claims narrowed to table results"
+  ]
+}

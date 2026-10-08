@@ -1,0 +1,71 @@
+{
+  "source_version": "official-system-card-2024-08-08; release-2024-05-13",
+  "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf",
+  "claims": [
+    {
+      "claim": "端到端同一神经网络与232/320ms官方响应延迟；具体结构未披露",
+      "pdf_pages": [
+        1
+      ],
+      "secondary_source": "https://openai.com/index/hello-gpt-4o/"
+    },
+    {
+      "claim": "预训练来源及截至2023年10月知识；处理类别而非配方",
+      "pdf_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "claim": "超过100红队者45语言29国家，阶段人数重叠",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "TTS评测及转写评分局限",
+      "pdf_pages": [
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "claim": "Table2英文0.96/1.0非英文0.95/1.0；Table3拒绝0.83→0.98服从0.70→0.83",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "Table4 0.60→0.84；Table5 0.95/0.93及0.81/0.82，与附录Table11不混合",
+      "pdf_pages": [
+        10,
+        11,
+        32
+      ]
+    },
+    {
+      "claim": "ARA0%100试验；SWE477题19%pass@1；风险总体Medium来自文本说服",
+      "pdf_pages": [
+        13,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "claim": "医学22设置21项更优，USMLE78.2→89.4为正文精细值",
+      "pdf_pages": [
+        21
+      ]
+    },
+    {
+      "claim": "Table8Hausa正文与列值混写；Table9Yoruba28.3→51.1，英文81.4；UhuraHausa32.3→59.4",
+      "pdf_pages": [
+        24,
+        25
+      ]
+    }
+  ]
+}

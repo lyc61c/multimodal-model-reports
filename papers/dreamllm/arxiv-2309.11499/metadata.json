@@ -1,0 +1,14 @@
+{
+  "paper_id": "659a6bf04fbf",
+  "catalogue_entry_id": "659a6bf04fbf",
+  "family_slug": "dreamllm",
+  "title": "DreamLLM: Synergistic Multimodal Comprehension and Creation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2309.11499v1",
+  "source_url": "https://arxiv.org/pdf/2309.11499v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "DreamLLM：联合学习图像理解、图像生成与交错图文创作"
+}

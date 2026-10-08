@@ -1,0 +1,14 @@
+{
+  "paper_id": "3ebe839c6607",
+  "source_url": "https://mistral.ai/news/pixtral-12b/",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "bca3e11c3e9ce80ebee25d0e65b72f08df8f55cd4ae6630103093b93d4f73256",
+  "verification_notes": [
+    "阅读全文的 Architecture、Performance、Evaluation protocol、Instruction following；区分技术博客与完整训练报告。",
+    "逐张视觉查看 4 个原始 webp，标签与数据可读，原始字节和来源哈希已记录。",
+    "主比较表 DocVQA 90.7 与架构宣传图 92.3 不同，正文明确采用主表且保留差异。",
+    "所有数学式标为目标重述或解释性计数，不冒充原文未披露公式。",
+    "未编造数据量、训练超参数、冻结阶段或偏好优化方法；20% 相对提高与百分点区分。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

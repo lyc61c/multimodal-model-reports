@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "figures_visually_checked": [
+    4,
+    7,
+    8,
+    13
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Headline best results belong 13B576 expansion not default7B",
+    "s/step is training time not inference speed",
+    "ScienceQA is in mixture; not zero-shot",
+    "Tiny D table6/table14 score discrepancy retained with fixed Table6 convention",
+    "D-Abstractor1e-4 table footnote not expanded to unsupported all-stage replacement",
+    "No full source-dataset dedup or absolute no-leakage assertion"
+  ]
+}

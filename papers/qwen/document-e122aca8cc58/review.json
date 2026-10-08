@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_sections_read": [
+    "Introduction",
+    "Performance",
+    "Language",
+    "Vision Language",
+    "Build with Qwen3.6-27B",
+    "API Usage",
+    "Coding & Agents",
+    "Summary"
+  ],
+  "figures_visually_checked": [
+    "official-banner.png",
+    "official-performance.png"
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "originalfigurebytespreserved": true,
+    "scores_checked_against_originalfigureandtables": true
+  },
+  "limitations": [
+    "Releaseblog notfulltechnicalreport",
+    "No trainingrecipe orarchitecture details",
+    "ModifiedSWEPro and Skills78subset",
+    "InternalElo benchmark notpercentage",
+    "Nativecontext max notestablished byexampleconfig"
+  ]
+}

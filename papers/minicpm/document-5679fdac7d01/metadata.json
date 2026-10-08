@@ -1,0 +1,14 @@
+{
+  "paper_id": "5679fdac7d01",
+  "catalogue_entry_id": "5679fdac7d01",
+  "family_slug": "minicpm",
+  "title": "MiniCPM-V 4.5: A GPT-4o Level MLLM for Single Image, Multi Image and Video Understanding on Your Phone",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2509.18154v1",
+  "source_url": "https://arxiv.org/pdf/2509.18154v1",
+  "document_kind": "model_release",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "MiniCPM-V 4.5：视频压缩、文档恢复与长短推理联合学习"
+}

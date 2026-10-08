@@ -1,0 +1,22 @@
+{
+  "paper_id": "e213666dcb0d",
+  "source_version": "official-model-card-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-benchmark.png",
+      "original_label": "Official GLM-5.3-Flash model-card benchmark comparison (unnumbered)",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md",
+      "image_url": "https://raw.githubusercontent.com/zai-org/GLM-5/refs/heads/main/resources/bench_53.png",
+      "image_final_url": "https://raw.githubusercontent.com/zai-org/GLM-5/refs/heads/main/resources/bench_53.png",
+      "source_version": "official-model-card-2026-10-08",
+      "source_sha256": "e6c5d41400e28f5a89418a0d15b09b9c113314a7553d40d7d4a8a72fcdb87d02",
+      "asset_sha256": "ea9de7784afc1e3ce4d72fac927e683043823307042aa2f4ae616357074b372a",
+      "width": 4239,
+      "height": 2643,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

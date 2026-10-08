@@ -1,0 +1,19 @@
+{
+  "paper_id": "ce90899e45f9",
+  "catalogue_entry_id": "ce90899e45f9",
+  "family_slug": "moai",
+  "title": "MoAI: Mixture of All Intelligence for Large Language and Vision Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2403.07508v1",
+  "source_url": "https://arxiv.org/pdf/2403.07508v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MoAI：融合外部视觉专家的场景理解模型",
+  "source_sha256": "7b83e7184f81195ce750677b2e7c78bd8a3c5aa0ddf326d2ca4c07f416418cd1",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2096,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "a9bd8a70a04d",
+  "catalogue_entry_id": "a9bd8a70a04d",
+  "family_slug": "meteor",
+  "title": "Meteor: Mamba-based Traversal of Rationale for Large Language and Vision Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2405.15574v1",
+  "source_url": "https://arxiv.org/pdf/2405.15574v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Meteor：用Mamba与遍历标记压缩多方面推理依据"
+}

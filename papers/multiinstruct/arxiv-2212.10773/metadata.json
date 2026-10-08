@@ -1,0 +1,14 @@
+{
+  "paper_id": "ce68e6c9946a",
+  "catalogue_entry_id": "ce68e6c9946a",
+  "family_slug": "multiinstruct",
+  "title": "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2212.10773v1",
+  "source_url": "https://arxiv.org/pdf/2212.10773v1",
+  "document_kind": "dataset_and_method",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "MultiInstruct：以多任务指令微调改善多模态零样本泛化"
+}

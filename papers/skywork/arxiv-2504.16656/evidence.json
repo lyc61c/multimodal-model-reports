@@ -1,0 +1,18 @@
+{
+  "paper_id": "d9cbc42c82ec",
+  "source_url": "https://arxiv.org/pdf/2504.16656v1",
+  "source_version": "2504.16656v1",
+  "source_sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5",
+  "verification_notes": [
+    "Read v1 methodology and experimental sections pages1–11, checked original Figures1–4 and Tables1–4; frozen source snapshot distinguished from latest v4.",
+    "Architecture InternViT6B plus MLP and QwQ32B reasoning LLM based on section3.1; adapter-only superior Table4 retained without pretending complete training configuration published.",
+    "GRPO advantage equation explicitly explanatory, not claimed verbatim implementation; missing SSB stale-policy handling and MPO mixture objective disclosed.",
+    "SFT omission versus Figure1 SFT label and DPO-based fine-tuning prose conflicts retained; no invented staged recipe or training dataset counts.",
+    "IFEval and BFCL corrected against their primary papers and official Berkeley source; related-work unsupported model training claims not repeated.",
+    "Main MMMU73.6 and AIME78.9 taken from Figure/Table1, versus v1 abstract74.0/79.0 and Table3AIME79.2 conflicts noted.",
+    "SSB Table2 MathVista74.0 both rows versus prose73.8 contradiction retained; effective sample proportions not treated as end-to-end wallclock improvement.",
+    "MPO hallucination8.7 vs MPO+GRPO9.1 retained, contradicting full-model prose8.7; undefined hallucination evaluation dataset and no universal guarantee.",
+    "Threshold comparison15 at420 steps vs7 at2420 steps not misrepresented as controlled single-variable experiment; five-run averagepass1 distinguished from pass5."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

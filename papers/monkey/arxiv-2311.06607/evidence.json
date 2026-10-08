@@ -1,0 +1,14 @@
+{
+  "paper_id": "694f3d557578",
+  "source_url": "https://arxiv.org/pdf/2311.06607v1",
+  "source_version": "2311.06607v1",
+  "source_sha256": "f497200597d66e0dd46a20a79f69aa53686160b90ed42441ec9fe39f4d199f7b",
+  "verification_notes": [
+    "阅读PDF1–11及15–18附录；确认来源QwenVL、总9.8B、冻结原ViT/局部LoRA/共享resampler/LLM结构。",
+    "检查Figure3、Tables2–4、Tables5/6、Figure5原页均完整；四LoRA标准896方图与896x1344扩展不凭空补窗口和token数。",
+    "核验Lora rank16/32、256queries、2048seq、AdamW beta/lr/warmup/batch/wd；epoch硬件未披露。",
+    "核验400K多层描述与1.45M指令集、生成工具在数据侧而非推理在线依赖；ChatGPT API文字不当作已训练其权重。",
+    "核验ChartQA和GQA弱项、DocVQA一LoRA略高、最大分辨率限定；Table6是LLaVA13B标签替换消融非Monkey预训练；未运行模型。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

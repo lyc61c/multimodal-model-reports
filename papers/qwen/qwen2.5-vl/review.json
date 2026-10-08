@@ -1,0 +1,82 @@
+{
+  "paper_id": "qwen2.5-vl",
+  "article_sha256": "9f350ce4c5eff3cf09c91d5d02b9a0ebb29ee0597d1e133e9905dbc8666da61e",
+  "source_version": "2502.13923v1",
+  "review_date": "2026-10-08",
+  "status": "passed",
+  "independent_checks": [
+    {
+      "checked_file": "D:/CodeSpace/技术报告/papers/qwen/qwen2.5-vl/README.md",
+      "verdict": "pass",
+      "findings": [],
+      "source_version": "arXiv:2502.13923v1",
+      "review_scope": [
+        "第 1–4 节模型定位、架构配置、原图匹配及数学解释",
+        "第 6 节训练冻结配置与 SFT/DPO 标准公式符号"
+      ],
+      "verified_points": [
+        "3B/7B/72B 作为型号档位，未误写完整系统精确参数量",
+        "14×14 patch 与空间 2×2 merger，处理后分辨率对齐 28 的倍数，静态图像 token 数及三个 Figure 1 数值示例正确",
+        "392×644 视频的每个两帧组 322 token，原图所示不同 FPS 下的 644/1288/2576 token 正确",
+        "32 层 ViT 中 28 层窗口注意力及 4 层全局注意力，最大窗口 112×112 像素/64 patch，复杂度仅限 attention 交互项且未误称整个 ViT 严格线性",
+        "MRoPE 与 ViT 2D RoPE 的应用阶段区分正确，旋转矩阵及相对位置恒等式正确，绝对时间映射未硬设为秒数",
+        "四个 1280 维 patch feature 拼接为 5120 维，经 MLP 映射到语言 embedding 维度，公式明确为解读表达",
+        "原图区域与 PDF 第 3 页视觉核对一致，无正文裁图导致的实质图内信息遗漏",
+        "SFT 的负对数概率目标正确且注明非原文训练配方；DPO 的偏好正负项顺序、参考概率比、beta 及 sigmoid 符号正确",
+        "后训练 SFT 与 DPO 均冻结 ViT，与原文 §2.3.4 一致"
+      ]
+    },
+    {
+      "checked_file": "D:/CodeSpace/技术报告/papers/qwen/qwen2.5-vl/README.md",
+      "verdict": "pass",
+      "findings": []
+    }
+  ],
+  "data_training_review": {
+    "status": "passed",
+    "findings": [],
+    "note": "Final sections 5-6 independently checked against source; entry/token ratio, filtering input count and freeze configuration verified"
+  },
+  "artifact_checks": {
+    "exactly_seven_sections": true,
+    "local_links_resolve": true,
+    "all_seven_assets_match_manifest_hashes": true,
+    "source_pdf_matches_manifest_hash": true,
+    "chinese_characters": 5563,
+    "png_dimensions": {
+      "figures/fig-01-architecture.png": [
+        1892,
+        1267
+      ],
+      "figures/fig-01-window-attention-detail.png": [
+        522,
+        883
+      ],
+      "figures/fig-01-time-encoding-detail.png": [
+        811,
+        261
+      ],
+      "figures/table-02-training.png": [
+        1712,
+        500
+      ],
+      "figures/table-03-main-results.png": [
+        1858,
+        833
+      ],
+      "figures/table-05-document-results.png": [
+        1863,
+        800
+      ],
+      "figures/table-08-video-results.png": [
+        1850,
+        858
+      ]
+    }
+  },
+  "limitations": [
+    "Author-reported results, no model execution/reproduction",
+    "No current leaderboard claim",
+    "Visual QA of original figure and table crops; no PDF output authored"
+  ]
+}

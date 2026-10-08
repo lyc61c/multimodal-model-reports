@@ -1,0 +1,19 @@
+{
+  "paper_id": "a7e45338d121",
+  "catalogue_entry_id": "a7e45338d121",
+  "family_slug": "libra",
+  "title": "Libra: Building Decoupled Vision System on Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2405.10140v1",
+  "source_url": "https://arxiv.org/pdf/2405.10140v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Libra：在语言模型上构建解耦的视觉系统",
+  "source_sha256": "3b2a8c4b302d03c7b8e16f7fd0ec237614607c7479719fdfcb1ae551c6c56db6",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2157,
+  "figures_manifest": "figures-manifest.json"
+}

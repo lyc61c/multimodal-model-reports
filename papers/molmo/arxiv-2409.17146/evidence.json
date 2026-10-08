@@ -1,0 +1,49 @@
+{
+  "source_version": "2409.17146v1",
+  "claims": [
+    {
+      "claim": "CLIPViTL14 336，MLP后池化、多尺度裁块；OLMoE/OLMo/Qwen2底座",
+      "pdf_pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "claim": "两阶段均更新全部参数，不用RLHF；712K图约1.3M描述，人工口述60/90秒",
+      "pdf_pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "claim": "PixMo各数据量和生成来源，纯语言LLM参与而非外部VLM直接图像蒸馏",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "Table1学术成绩与MMMU/MathVista弱项，11项混合来源非统一重评",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "15K请求870标注员325K偏好，Elo1076.42vs1078.88；Android低层提高高层下降",
+      "pdf_pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "固定v1阶段资源部分是未来发布，视觉CLIP训练数据闭源",
+      "pdf_pages": [
+        3,
+        5,
+        7
+      ]
+    }
+  ]
+}

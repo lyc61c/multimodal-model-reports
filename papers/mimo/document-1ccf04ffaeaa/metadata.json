@@ -1,0 +1,21 @@
+{
+  "paper_id": "1ccf04ffaeaa",
+  "catalogue_entry_id": "1ccf04ffaeaa",
+  "family_slug": "mimo",
+  "title": "Xiaomi MiMo-V2-Omni",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://mimo.xiaomi.com/mimo-v2-omni",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "MiMo-V2-Omni：统一感知与代理行动的全模态模型",
+  "source_sha256": "a949d4080c2aee458de5ca93d186de888f2779533a3211614c3cafeed878449f",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2267,
+  "figures_manifest": "figures-manifest.json",
+  "figure_status": "original_dynamic_chart_not_captured",
+  "figure_limitation": "Official inline HTML charts linked; standalone original image absent and browser routing unavailable."
+}

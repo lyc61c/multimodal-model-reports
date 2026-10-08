@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Title identity verified from PDF page 1",
+    "All four selected original pages visually inspected with view_image",
+    "CRPE all five columns verified",
+    "Stage 2 learning rate verified from original page 28",
+    "No model execution claimed",
+    "Original formulas absent; explanatory structures labelled"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "8fd2e98d59ef50ae08a21432d76dd9927613aca991db50ebcc63cb088c6a462b",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

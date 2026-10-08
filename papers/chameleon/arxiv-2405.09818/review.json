@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    24,
+    25,
+    26,
+    27
+  ],
+  "figures_visually_checked": [
+    2,
+    7,
+    12,
+    17
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_verified": true,
+    "numeric_results_checked": true,
+    "win_rate_calculation_checked": true,
+    "pretrain_sft_schedules_distinguished": true,
+    "norm_equations_checked": true
+  },
+  "limitations": [
+    "Gemini+总体58.8和正文60.4冲突，后者对应mixed输入",
+    "数据各分项粗略总量与Table1存在口径差异",
+    "安全正文30B与表34B，保留表述区别",
+    "原文未披露SFT全部冻结/步数和统一图像生成评分",
+    "报告完整系统不等同后续公开checkpoint功能"
+  ]
+}

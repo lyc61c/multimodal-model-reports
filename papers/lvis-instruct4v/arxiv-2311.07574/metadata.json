@@ -1,0 +1,14 @@
+{
+  "paper_id": "d361fe1e8636",
+  "catalogue_entry_id": "d361fe1e8636",
+  "family_slug": "lvis-instruct4v",
+  "title": "To See is to Believe: Prompting GPT-4V for Better Visual Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.07574v1",
+  "source_url": "https://arxiv.org/pdf/2311.07574v1",
+  "document_kind": "dataset_and_method",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "LVIS-Instruct4V：让数据生成模型真正看图，改善细粒度视觉指令监督"
+}

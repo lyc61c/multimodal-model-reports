@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文正文1–9页、15–16附录案例及身份引用；公式1向上取整原图核验",
+    "实际查看PDF5/7/8/9完整原页，Figure4/5及Table3–9未漏列",
+    "区分7B语言基座与Table5全模型8B，4KHD3840x1600沿原文口径",
+    "核对HD9/16/25/55预算、576→144压缩、换行/全局/分隔和两阶段参数超参",
+    "主表test与消融val/SEED2K分开；MMMU39.7取Table3不取Figure1的39.9",
+    "核对所有主要数字与涨跌，保留MME舍入口径及InfoVQA50.5→60.8为10.3pp",
+    "未补造损失或PartialLoRA内部细节，未运行模型，作者原文核验"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "25d30d50f4dac236a84825604b69c265a0e355ffecc8e0611300f59e810df144",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

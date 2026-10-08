@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read mainpages1-12 and Appendix20-21; verified title/BAAI identity",
+    "Viewed all four original pages and table headers, visible star/rewriter qualifiers",
+    "Verified tokenizer32k/4x8x8 and 8B architecture; encoder-free not absence of tokenizer encoder",
+    "Verified base vsDPO vsunderstanding checkpoint scopes; visionlossweight0.5",
+    "Verified GenEval0.54/0.66 and DPO0.52/0.64; worseFID and resolution differences",
+    "Verified video evaluated after stabilization/superresolution; training-image seen stars retained; no model reproduction"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "ad0c434b0bfdc7d71e7ba3a521f02cece0609c4593646b781e0fc37de811b95a",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

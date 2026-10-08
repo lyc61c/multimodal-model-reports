@@ -1,0 +1,17 @@
+{
+  "paper_id": "9a512bd249d3",
+  "source_url": "https://arxiv.org/pdf/2306.09093v1",
+  "source_version": "2306.09093v1",
+  "source_sha256": "4b35322fb44d042fb6eba7b2b9c5e76b9ef7f18f84885c2c53c5034c0a6c7836",
+  "verification_notes": [
+    "Read original v1 technical body pages 1-12; verified work-in-progress status, title and author institutions.",
+    "Visually inspected full original pages 3,6,8,11; Figures 1,2,8,9 and Table1 intact with captions.",
+    "Checked attention query hprime versus key/value vocabulary E, continuous soft-token interpretation and single-stage full-parameter statement.",
+    "Checked exact dataset counts 69314/50656 versus 10K/9848 media and 150K final balanced training samples.",
+    "Explicitly recorded GPT3.5Turbo正文 versus GPT4 figure labels and abstract multi-turn versus body single-turn discrepancy.",
+    "Checked 8 A100, batch4 accumulation3,5epochs lr3e-5 FP16 sequence512; optimizer/kernel/frame budgets unreported.",
+    "No benchmark scores or component ablations exist in this v1; demonstration evidence not generalized to quantitative claims.",
+    "No original audio replay, model run or independent reproduction claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

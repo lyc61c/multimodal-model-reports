@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read entire official Gemini 4 Argon release body, excluding navigation/AI summary; verified 2026-09-30 publication and Google DeepMind authorship.",
+    "Copied and visually inspected complete original benchmark GIF, vulnerability discovery and Gray Swan IPI images; all columns, axis directions and methodology captions visible.",
+    "Verified 1M is maximum OUTPUT token limit, not input context; 64K predecessor limit retained.",
+    "Verified numeric columns and lower-scoring FrontierSWE/Terminal/OSWorld/PostTrainBench exceptions, CWE tie, GraphWalks BFS F1 and OSWorld offline subset partial-score caveats.",
+    "Verified IPI 0.7 is attack success at k=15, vulnerability metrics pass@1 and internal/black-box protocols differ.",
+    "Separated actual 300TiB freed from projected savings, Rust-port-relative 2.7x and migrations pending audits; no hidden architecture/training recipe/ablation invented."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 3
+  },
+  "article_sha256": "81c7a9fe2b84139790c7b8e19b0b70ba4b6d2d97468fa2cf78dcbf7f373a79fc",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

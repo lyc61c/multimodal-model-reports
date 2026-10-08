@@ -1,0 +1,23 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "bda4b24e975f65ac677985306ddbad33362e65064637660654c8bb7dea7edf50",
+  "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/README.md",
+  "claims": [
+    {
+      "claim": "397B total,17B activated,60 layers,15 blocks of 3 DeltaNet+1 attention,512 experts 10 routed+1 shared",
+      "source_section": "Model Overview / Architecture"
+    },
+    {
+      "claim": "Native context262144 extended1010000;MTP training mentioned but coefficients undisclosed",
+      "source_section": "Model Overview / Best Practices"
+    },
+    {
+      "claim": "Selected benchmark scores and CI/context strategy qualifiers",
+      "source_section": "Evaluation / footnotes"
+    },
+    {
+      "claim": "Card does not disclose training corpus volumes,freeze,optimizer,LR,GPU",
+      "source_section": "Full model card reviewed"
+    }
+  ]
+}

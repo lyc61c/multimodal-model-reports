@@ -1,0 +1,35 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "逐源核对身份、40/7任务划分、5专家模板、894英语任务、Adapter参数范围与训练配置。",
+    "表3–5平均数与提示模板方差核对；综合指标异质，未声称统一准确率；没有将任务隔离写成图像去重。"
+  ],
+  "math_checks": [
+    "自回归NLL为标准解释，不是原文编号公式。",
+    "已view_image确认μ/σ打印，说明与低值稳定相反及零分母问题，未自行改写为已验证σ/μ实现。",
+    "Adapter瓶颈MLP不是LoRA；输入图像与目标VQGAN编码区分。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-002-01.png",
+      "checked": "已view_image检查原文完整页面、图注、全部坐标/表头/结果行；README说明Figure/Table与PDF页。"
+    },
+    {
+      "file": "figures/original-page-006-02.png",
+      "checked": "已view_image检查原文完整页面、图注、全部坐标/表头/结果行；README说明Figure/Table与PDF页。"
+    },
+    {
+      "file": "figures/original-page-008-03.png",
+      "checked": "已view_image检查原文完整页面、图注、全部坐标/表头/结果行；README说明Figure/Table与PDF页。"
+    },
+    {
+      "file": "figures/original-page-009-04.png",
+      "checked": "已view_image检查原文完整页面、图注、全部坐标/表头/结果行；README说明Figure/Table与PDF页。"
+    }
+  ],
+  "limitations": [
+    "未运行模型或作者实现；未补入优化器、有效全局批量、图像预处理尺寸等未披露配置。",
+    "敏感度数学定义存在原文矛盾，报告数值按作者口径保留。"
+  ],
+  "model_execution": "not_run"
+}

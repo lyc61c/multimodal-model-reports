@@ -1,0 +1,67 @@
+{
+  "paper_id": "cabdd815635d",
+  "source_version": "2306.02858v1",
+  "source_pdf_sha256": "9ab4f06ce8f41ac4956496283b6894d609421d0250d7d86be8722edbd234768f",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 1：音视频双分支架构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2306.02858v1#page=3",
+      "source_version": "2306.02858v1",
+      "source_sha256": "9ab4f06ce8f41ac4956496283b6894d609421d0250d7d86be8722edbd234768f",
+      "asset_sha256": "a6dd3c10435f1af287c8abcddf7e1de931976bec4b60b24f4ce651faa211c962",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          65,
+          510,
+          505
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/av-example.png",
+      "original_label": "Figure 2–3：音视频联合理解案例",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2306.02858v1#page=7",
+      "source_version": "2306.02858v1",
+      "source_sha256": "9ab4f06ce8f41ac4956496283b6894d609421d0250d7d86be8722edbd234768f",
+      "asset_sha256": "564a2cfb72755b6cf7436ea3f90208a79181ecda301a2bcb6b84ab7da5b84126",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          80,
+          510,
+          690
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/image-example.png",
+      "original_label": "Figure 4–5：静态图像理解案例",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2306.02858v1#page=8",
+      "source_version": "2306.02858v1",
+      "source_sha256": "9ab4f06ce8f41ac4956496283b6894d609421d0250d7d86be8722edbd234768f",
+      "asset_sha256": "d1cddd1e1d4cd8a428c6f82c58b6f620b19f7c245072e2fbbe44e6b5d3572ab9",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          80,
+          510,
+          705
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

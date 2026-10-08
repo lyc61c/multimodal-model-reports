@@ -1,0 +1,54 @@
+{
+  "source_version": "2312.10032v1",
+  "claims": [
+    {
+      "claim": "724K approximate; object197K part306K; language-only GPT4 with descriptions/boxes, not visual images",
+      "pdf_pages": [
+        3,
+        4,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "claim": "Mask pooling Eq1; four-scale fusion Eq2 sigma is MLP; mask resize224; image512",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "Three-stage freezing; batch128/4/4 LR1e-3/2e-5/1e-5 epoch1/2/2;4A10080GB2048seq7/15/48hours",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "Table2 GT mask/box semantic recognition; ADE AP31.72 below CLIP39.38",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "LVIS1000images4004objects PACO1000images4263;semanticIoU text metric",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "80image GPT4 relative rating77.54 not accuracy;caption further RefCOCOg fine-tuning16.6/108.3",
+      "pdf_pages": [
+        8
+      ]
+    },
+    {
+      "claim": "ConvNeXt512 vs ViT224 confounds;800tokens2500 speed1.9pairs/sec singleA100 vs5121024speed3.5",
+      "pdf_pages": [
+        9,
+        10
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "source_version": "2311.07574v1",
+  "claims": [
+    {
+      "claim": "110K LVIS图来自COCO，220K两类视觉指令，教师直接看图+框",
+      "pdf_pages": [
+        1,
+        3,
+        10
+      ]
+    },
+    {
+      "claim": "框0到1坐标、多轮可确定性要求、failed提示，但过滤率未披露",
+      "pdf_pages": [
+        10
+      ]
+    },
+    {
+      "claim": "Figure4词汇出现次数按指令数归一，不是准确率",
+      "pdf_pages": [
+        4,
+        11
+      ]
+    },
+    {
+      "claim": "默认与学术数据混合，沿用基线，1epoch/2epoch消融",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "Table1实际成绩和下降，混合MMVet37.4比35.4是2.0而非正文3.6%",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    }
+  ]
+}

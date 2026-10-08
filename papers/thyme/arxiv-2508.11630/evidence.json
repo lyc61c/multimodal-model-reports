@@ -1,0 +1,15 @@
+{
+  "paper_id": "534b58b82f31",
+  "source_url": "https://arxiv.org/pdf/2508.11630v1",
+  "source_version": "2508.11630v1",
+  "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+  "verification_notes": [
+    "Read v1 pp3-15, failures pp22-24 and annotation appendix p28; own Qwen2.5-VL7B tool system identified.",
+    "Checked code versus environment token masking, last-round exception for mathematics, greedy-code versus temperature1 text, and reward gates.",
+    "Flagged published GRPO objective's omitted policy-probability term rather than silently presenting standard clipped GRPO as this paper's exact formula.",
+    "Preserved declared500K versus explicitly itemized217K+unsized multi-round data, collected30K versus introduction10K and training/evaluation split ambiguity.",
+    "Preserved H800224-hour total versus RL1200-hour conflict, OCR GPT4o scale mismatch, Figure5 quantity answer mismatch and code-reward positive aggregate versus prose claim.",
+    "Source pages and final crops visually inspected; results author-reported, no execution/reproduction or complete sandbox isolation proof claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

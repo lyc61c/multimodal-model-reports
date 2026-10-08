@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 main pages 1–14 and architecture/training/evaluation appendices 19–23; original figures and tables inspected.",
+    "Audio and image-generation adaptation separated from image/video pretraining; task-specific fine-tuned checkpoints not described as one universal chat model.",
+    "Dataset task examples versus images/videos and inconsistent totals not conflated; constrained decoding and 24-way CLIP selection disclosed.",
+    "Seen-task no-finetuning evaluation distinguished from unseen-dataset zero-shot; ActivityNet ground-truth proposals retained.",
+    "Main table counterexamples to universal superiority, curriculum task regressions and extra training for ratatouille explicitly stated."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "1ff1e674a9e4a74d46b8796904ca522023a06eb6753d6fdd2001b58273fadc88",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

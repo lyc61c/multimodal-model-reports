@@ -1,0 +1,16 @@
+{
+  "paper_id": "7c5f11db06d6",
+  "source_url": "https://arxiv.org/pdf/2410.03051v1",
+  "source_version": "2410.03051v1",
+  "source_sha256": "4c2bc6f27411ad8854e4d375653eb980808b15b401b3a58e1e6a3627647ff55e",
+  "verification_notes": [
+    "Title identity verified",
+    "All four selected pages visually inspected",
+    "VDCScore and VDD columns separated",
+    "Figure6 reversed retention axis verified",
+    "TableE6 trainable modules and hyperparameters verified",
+    "Equation1 +log s faithfully explained",
+    "No model execution claimed"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

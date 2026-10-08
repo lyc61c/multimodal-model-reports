@@ -1,0 +1,23 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "逐项核对结构参数及所有引用基准值",
+    "明确支持音频子集与统一12B结构，不向所有档位套编码器",
+    "两源表头与指标口径差异已记录"
+  ],
+  "math_checks": [
+    "窗口复杂度保留全局二次项",
+    "PLE/MoE/原始投影标准表达标示解读，不捏造pRoPE或训练公式"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/official-elo-size.svg",
+      "checked": "保留原始SVG字节；view_image检视忠实PNG，标题、全部模型点标签及坐标完整"
+    }
+  ],
+  "limitations": [
+    "官方基准HTML表无静态原图，摘录忠实Markdown并保留来源；没有伪造截图",
+    "训练细节未披露，未运行权重"
+  ],
+  "model_execution": "not_run"
+}

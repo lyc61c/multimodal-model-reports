@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读PDF1–14及附录21–29，核对CLIP/InternLM、4个CV模型、语言化和panoptic map额外空间分支。",
+    "检查Figure3冻结标记、Figure4四类信息、Table1全列以及Table2/3组件消融，四张原页均完整。",
+    "Equation1/3/5、64辅助token、W而非DeltaW低秩，正文每层示意与实际7/15/23/31四层配置区别均核验。",
+    "核对两阶段各1epoch、AdamW余弦学习率、冻结与可训练模块；batch/硬件/分辨率未披露不补写；4bit范围不推定。",
+    "Table1 MoAI所有9列与CogVLM MMVet54.5弱项、PS+OWOD联合移除和门控消融数字核验；未运行模型或独立复现。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "37f029338450e4c2f64d529e6ba1ae00e1e11f96b715549489e8bc4e714acef4",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

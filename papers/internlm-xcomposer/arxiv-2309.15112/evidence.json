@@ -1,0 +1,32 @@
+{
+  "source_id": "d40d5f0effb8",
+  "source_version": "2309.15112v1",
+  "read_scope": "19-page report: full technical body, Tables1-7, qualitative Figures4-9; references inspected",
+  "claims": [
+    {
+      "topic": "architecture",
+      "source": "3.1 Figure2",
+      "checks": "EVA224 stride14 257-to64 sampler; PT full LLM versus SFT LoRA rank/alpha256; 7B evaluated version"
+    },
+    {
+      "topic": "composition",
+      "source": "3.3 Figure3",
+      "checks": "retrieval not pixel generation; paragraph indices; CLIP top-m then context image selection; m not fixed"
+    },
+    {
+      "topic": "data_training",
+      "source": "3.2 Tables1-2",
+      "checks": "1.1B images67.7B tokens plus10B pure text; LAION400M row509M retained; 8000 PT/10000 SFT/1000 instruction steps"
+    },
+    {
+      "topic": "results",
+      "source": "4.1 Tables3-7",
+      "checks": "VL model; MME1919.5 is score not accuracy; SEED image subset; task weaknesses; no quantitative composition quality evaluation"
+    }
+  ],
+  "source_inconsistencies": [
+    "MME Avg137.11 percent in prose versus score Table3",
+    "LAION-400M named row lists509M images"
+  ],
+  "model_execution": "not_run"
+}

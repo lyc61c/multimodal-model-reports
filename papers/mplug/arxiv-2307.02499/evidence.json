@@ -1,0 +1,45 @@
+{
+  "source_version": "2307.02499v1",
+  "claims": [
+    {
+      "claim": "视觉基础模块、learnable tokens abstractor、语言模型及LoRA，未单列全部组件精确配置",
+      "pdf_pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "claim": "阶段1文档10epoch训练abstractor与LoRA；阶段2冻abstractor只LoRA，3epoch新增语言通用6x",
+      "pdf_pages": [
+        4
+      ]
+    },
+    {
+      "claim": "任务改写VQA/IE/NLI/caption和训练集来源，LLMDoc五场景20各100样本",
+      "pdf_pages": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "各基准实际分数、DocVQA/DeepForm不领先，TextCaps111.9/VisualMRC188.8非百分比",
+      "pdf_pages": [
+        5
+      ]
+    },
+    {
+      "claim": "Figure3评分37/11/33/19，对照15/18/41/26与6/12/45/37",
+      "pdf_pages": [
+        5
+      ]
+    },
+    {
+      "claim": "Figure4美国幻觉，Figure5JSON漏行且可见格式不合法",
+      "pdf_pages": [
+        6,
+        7
+      ]
+    }
+  ]
+}

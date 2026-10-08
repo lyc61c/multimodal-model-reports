@@ -1,0 +1,10 @@
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "source_identity": "Title/NYU authors/2406.16860v1 verified on page 1",
+  "facts_checked": ["Research recipe vs final models separated", "Vision freeze/unfreeze studies distinguished", "576 tokens vs appendix spatial typo", "SVA groups/depth/internal strides", "Dataset pool vs evaluation dataset", "Main table values and metric normalization"],
+  "math_checked": "Spatial region shapes, sum of local patch counts, Eq. 1 softmax axes and sqrt(C) checked against rendered page; complexity interpretation does not imply end-to-end speed ratio.",
+  "images_checked": ["Viewed page 13 Figure 8/Eq.1 complete", "Viewed page 15 Figure 9 complete source legend", "Viewed page 19 Table 8/Figure 13 complete headers and axes", "Viewed page 42 Tables 18–20 complete"],
+  "model_execution": "not_run",
+  "remaining_limitations": ["Original appendix inconsistencies acknowledged; no independent model run; some schedule details unavailable in fixed report"]
+}

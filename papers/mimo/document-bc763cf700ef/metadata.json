@@ -1,0 +1,14 @@
+{
+  "paper_id": "bc763cf700ef",
+  "catalogue_entry_id": "bc763cf700ef",
+  "family_slug": "mimo",
+  "title": "Xiaomi MiMo-V2.5",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://mimo.xiaomi.com/mimo-v2-5",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Xiaomi MiMo-V2.5：视觉音频理解与长上下文 Agent 模型"
+}

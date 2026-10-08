@@ -1,0 +1,28 @@
+{
+  "source_id": "c33a09b8e12e",
+  "source_version": "2304.15010v1",
+  "read_scope": "Full technicalbody1-11;chatfigurecaptions12-13 andreference-onlyremainder",
+  "claims": [
+    {
+      "topic": "architecture_math",
+      "source": "Sections3-4 Eqs1-2 Figures2-4",
+      "checks": "zerogatepromptsnotLoRAdefault;s(Wx+b)b0s1normunlock;7B32layersfirstvislast31staticprompt20;tasksdisjointupdate;experttextoptional"
+    },
+    {
+      "topic": "data_training",
+      "source": "Table1 Section5.1",
+      "checks": "52Ksingle567Kcaption80Kseparatechat;noMMchatSFT;PT0additionalnotpretrainedcost0;LRbatchepochmissing;14Mall vs5Mbias04percentincompleteparambreakdown"
+    },
+    {
+      "topic": "results",
+      "source": "Figure5 Table3 Figures6-9 Section6",
+      "checks": "65B80questionsGPTjudge681:669102notaccuracy50/7/23;caption36.2/122.2belowBLIP2;Table3V2vsproseV1mismatch;OCRcorrectpricebutmirrorattributeconfusion;OODfailure;noVQAquantablation"
+    }
+  ],
+  "source_inconsistencies": [
+    "14Mvs5M/0.04percentmodelscopeincomplete",
+    "Table3V2labelversusproseAdapterV1",
+    "Figure9 narrativeclaimsaccurate but mirror/glassesattributesmixed"
+  ],
+  "model_execution": "not_run"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "e8057196e511",
+  "catalogue_entry_id": "e8057196e511",
+  "family_slug": "openuni",
+  "title": "OpenUni: A Simple Baseline for Unified Multimodal Understanding and Generation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2505.23661v1",
+  "source_url": "https://arxiv.org/pdf/2505.23661v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "OpenUni：轻量查询连接理解与图像生成"
+}

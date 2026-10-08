@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Title identity verified",
+    "All four selected pages visually inspected",
+    "VDCScore and VDD columns separated",
+    "Figure6 reversed retention axis verified",
+    "TableE6 trainable modules and hyperparameters verified",
+    "Equation1 +log s faithfully explained",
+    "No model execution claimed"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "9c37de43108ccfce735388ab74211ed4aa57333cc45544273039c8baa5f1eb1b",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

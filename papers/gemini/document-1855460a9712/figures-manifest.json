@@ -1,0 +1,67 @@
+{
+  "paper_id": "1855460a9712",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_pdf_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-010-01.png",
+      "original_label": "PDF page 10",
+      "pdf_page": 10,
+      "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=10",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
+      "asset_sha256": "ac7fba262ffb09ae85e5cab578f88ee1971c57f80d8506f00987cb776868915a",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 150,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-015-02.png",
+      "original_label": "PDF page 15",
+      "pdf_page": 15,
+      "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=15",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
+      "asset_sha256": "5cdd6187aaff8ae53ec87a8101620ce9e7874c8fccdf24701bcea96cf4f26b84",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 150,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-025-03.png",
+      "original_label": "PDF page 25",
+      "pdf_page": 25,
+      "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=25",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
+      "asset_sha256": "853319aa0b25041e60142d26360ceb21ca344b5194bb85d793aeeef3e26e712f",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 150,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-039-04.png",
+      "original_label": "PDF page 39",
+      "pdf_page": 39,
+      "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=39",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
+      "asset_sha256": "c96a70793f60cac34e43a05d0ea92cc29d3d09725b9d032f4399a7b6c2ac295c",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 150,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

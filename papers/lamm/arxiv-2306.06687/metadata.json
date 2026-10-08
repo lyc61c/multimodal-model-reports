@@ -1,0 +1,14 @@
+{
+  "paper_id": "538999c03fea",
+  "catalogue_entry_id": "538999c03fea",
+  "family_slug": "lamm",
+  "title": "LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2306.06687v1",
+  "source_url": "https://arxiv.org/pdf/2306.06687v1",
+  "document_kind": "dataset_framework_and_model",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "LAMM：把图像、点云与传统视觉任务接入指令语言模型"
+}

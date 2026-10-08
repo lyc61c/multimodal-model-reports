@@ -1,0 +1,19 @@
+{
+  "paper_id": "e3d9f4f47a74",
+  "catalogue_entry_id": "e3d9f4f47a74",
+  "family_slug": "chat-univi",
+  "title": "Chat-UniVi: Unified Visual Representation Empowers Large Language Models with Image and Video Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.08046v1",
+  "source_url": "https://arxiv.org/pdf/2311.08046v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Chat-UniVi：用多尺度动态视觉 Token 统一图像与视频理解",
+  "source_sha256": "9dcafd3f63cbb903f2c622f85e0ee972ff8257667340af8fba844ee1beabc7ed",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 3324,
+  "figures_manifest": "figures-manifest.json"
+}

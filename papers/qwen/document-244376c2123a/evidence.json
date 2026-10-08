@@ -1,0 +1,26 @@
+{
+  "source_url": "https://qwenlm.github.io/blog/qwen-vlo/",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "da266385996395d713db6db9949603707e345304e21393cc683bc13a96226b45",
+  "read_scope": "完整博客技术正文和案例描述（含未正式上线多图/极端比例、动态分辨率与限制）及case1实际1/2/3/9原图",
+  "claims": [
+    {
+      "location": "Introduction/HowToUse",
+      "claim": "progressive左右/上下、dynamicresolution；未公开tokenization或loss"
+    },
+    {
+      "location": "Multiple input/extreme ratio段",
+      "claim": "发布时多图与4:1/1:3尚未上线"
+    },
+    {
+      "location": "case1与原图",
+      "claim": "图1→2背景变，主体细节漂移；图3文字配饰；图9大范围框手笔与粉色mask非紧致GT"
+    },
+    {
+      "location": "NextSteps/Limitations",
+      "claim": "generation verification是未来方向；已有不准确/不遵循/漂移限制"
+    }
+  ],
+  "source_inconsistencies": [],
+  "model_execution": "not_run"
+}

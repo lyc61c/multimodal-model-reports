@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Original Step3 blog redirects to generic Step5 platform; inspected official Step3 repo and its explicit arxiv2507.19427 system-report link, preserving scope distinction.",
+    "Read system report main pages1–10 and12–15; checked model card, roofline equations, batch/sparsity derivation, StepMesh workflow and measured setups.",
+    "Visually inspected Table1, Figure5, Figure7, Table8–9 and original official benchmarkJPEG; additional README cached and its hash recorded.",
+    "Training dataset, vision encoder architecture and complete training recipe explicitly undisclosed; did not invent from other models.",
+    "Separated theoretical cost assumptions/cloud-price snapshot from real bills and decode TGS from single-request rate.",
+    "4039 is peak minute,3910 long-term average,FP8/noMTP/4K/32 newerHopper with20token/sSLA; baseline source/software not a same-stack replication.",
+    "Preserved missing A800 MLA, uncertain benchmark splits, external-results stars and estimated scaling/MTP gains."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "f95bf154f31ac48a5a8c0c083e86a1a415afb9056a89c46ee7009f19da47080f",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

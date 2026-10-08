@@ -1,0 +1,19 @@
+{
+  "paper_id": "0c005b277aba",
+  "catalogue_entry_id": "0c005b277aba",
+  "family_slug": "vima",
+  "title": "VIMA: General Robot Manipulation with Multimodal Prompts",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2210.03094v1",
+  "source_url": "https://arxiv.org/pdf/2210.03094v1",
+  "document_kind": "embodied_model_report",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "VIMA：用图文交错提示统一机器人操作任务",
+  "source_sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2106,
+  "figures_manifest": "figures-manifest.json"
+}

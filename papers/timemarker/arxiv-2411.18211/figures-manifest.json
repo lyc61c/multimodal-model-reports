@@ -1,0 +1,127 @@
+{
+  "paper_id": "474539d7100c",
+  "source_version": "2411.18211v1",
+  "source_pdf_sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3：时间分隔与自适应视频表示",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2411.18211v1#page=3",
+      "source_version": "2411.18211v1",
+      "source_sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d",
+      "asset_sha256": "4df57911617373c8753123d19dabe3e3ce51d14d7b2a85cea286e677f007c2ea",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          70,
+          565,
+          377
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-data.png",
+      "original_label": "Figure 4：PT2 与 SFT 数据分布",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2411.18211v1#page=5",
+      "source_version": "2411.18211v1",
+      "source_sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d",
+      "asset_sha256": "a301fad28b177cc421e3849ddaec6cb2ca7e4bd61834dbc296a47d62e6b453ff",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          70,
+          565,
+          309
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/general-results.png",
+      "original_label": "Table 1：短视频和综合理解",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2411.18211v1#page=6",
+      "source_version": "2411.18211v1",
+      "source_sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d",
+      "asset_sha256": "297762bfe586f92bff738487d2eb28f999cd91f539f27d5b31b8d415991b38ab",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          90,
+          70,
+          505,
+          382
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/long-results.png",
+      "original_label": "Table 2：长视频理解",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2411.18211v1#page=6",
+      "source_version": "2411.18211v1",
+      "source_sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d",
+      "asset_sha256": "f19b7373647474a18232f1083d9fc83269446ac64ad0c2612065c309c7dbbc88",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          395,
+          290,
+          640
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/grounding-results.png",
+      "original_label": "Table 3：时间区间定位",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2411.18211v1#page=7",
+      "source_version": "2411.18211v1",
+      "source_sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d",
+      "asset_sha256": "d7c766ad5159778c0a70faae95550967c4a61c8b4da23f61052f7263ef999aeb",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          70,
+          565,
+          199
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/separator-ablation.png",
+      "original_label": "Table 4：时间分隔文本消融",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2411.18211v1#page=7",
+      "source_version": "2411.18211v1",
+      "source_sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d",
+      "asset_sha256": "cc60140962c388504a2b7ff8760d5a72006a592dc80bcaa0910a1084aa0311ef",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          217,
+          290,
+          288
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

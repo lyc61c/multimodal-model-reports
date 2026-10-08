@@ -1,0 +1,36 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "纯文本1.3B+366M与图文353M+192M是不同实验，非同模型/精确总参；GPT2配置不推定已载权重。",
+    "MNLI冻结decoder、语言预训冻编码器前22层、图文不冻，范围分开；音频/多语为愿景。",
+    "预训COCO与零样本任务定义明确；ICL无梯度，主结果指标/划分/消融预算核对。"
+  ],
+  "math_checks": [
+    "半因果式为Eq1概念解释不逐符号复刻；监督位置排除双向span内部防止泄露，边界nexttoken可预测。",
+    "25%span非图像token比例；224/16=196空间patch不把236全称patch。",
+    "读表差值使用百分点；模板std与MNLI种子运行区别。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-005-01.png",
+      "checked": "已view_image逐幅检查Figure2/3、Table9/10/29/30/31全部图注/表头/结果行及因果连接，原页面截图完整。"
+    },
+    {
+      "file": "figures/original-page-006-02.png",
+      "checked": "已view_image逐幅检查Figure2/3、Table9/10/29/30/31全部图注/表头/结果行及因果连接，原页面截图完整。"
+    },
+    {
+      "file": "figures/original-page-017-03.png",
+      "checked": "已view_image逐幅检查Figure2/3、Table9/10/29/30/31全部图注/表头/结果行及因果连接，原页面截图完整。"
+    },
+    {
+      "file": "figures/original-page-032-04.png",
+      "checked": "已view_image逐幅检查Figure2/3、Table9/10/29/30/31全部图注/表头/结果行及因果连接，原页面截图完整。"
+    }
+  ],
+  "limitations": [
+    "未运行模型；预训练数据采样比例/总硬件时长未披露。",
+    "GPT基线额外预训模块预算并非完全匹配；batch/dropout源文差异明确。"
+  ],
+  "model_execution": "not_run"
+}

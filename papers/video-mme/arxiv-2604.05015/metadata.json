@@ -1,0 +1,19 @@
+{
+  "paper_id": "fba7c87c09df",
+  "catalogue_entry_id": "fba7c87c09df",
+  "family_slug": "video-mme",
+  "title": "Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2604.05015v1",
+  "source_url": "https://arxiv.org/pdf/2604.05015v1",
+  "document_kind": "dataset_or_benchmark",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Video-MME-v2：一致性与连贯性的视频评测",
+  "source_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1952,
+  "figures_manifest": "figures-manifest.json"
+}

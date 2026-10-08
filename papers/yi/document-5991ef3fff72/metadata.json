@@ -1,0 +1,19 @@
+{
+  "paper_id": "5991ef3fff72",
+  "catalogue_entry_id": "5991ef3fff72",
+  "family_slug": "yi",
+  "title": "Yi-VL",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2403.04652v1",
+  "source_url": "https://arxiv.org/pdf/2403.04652v1",
+  "document_kind": "model_release",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Yi-VL：以可训练视觉编码器和分辨率递进构建中英双语视觉助手",
+  "source_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2304,
+  "figures_manifest": "figures-manifest.json"
+}

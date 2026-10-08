@@ -1,0 +1,36 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "additional_source": {
+    "url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/blog.md",
+    "sha256": "b113f8c5f230618c9eea95029e1283da2a9cf5af7f23aba5387a519d98c25386",
+    "bytes": 35578
+  },
+  "claims": [
+    {
+      "claim": "1.2B42层NaViT+MLP+DeepSeekV3，224到1M/10M像素，NTP与扩散NPG",
+      "source_sections": [
+        "Methods 3.1",
+        "Methods 3.2"
+      ]
+    },
+    {
+      "claim": "翻译/融合数据，网页VLM清理，dots.ocr解析PDF与遮挡恢复",
+      "source_sections": [
+        "Methods 3.3"
+      ]
+    },
+    {
+      "claim": "三阶段，后训练仅SFT，未报告RL",
+      "source_sections": [
+        "Methods 3.1",
+        "Future Work"
+      ]
+    },
+    {
+      "claim": "重评对比模型，xVerify9BC，ChartQA human_test，64K评测和实际单项分数",
+      "source_sections": [
+        "Performance 2.1"
+      ]
+    }
+  ]
+}

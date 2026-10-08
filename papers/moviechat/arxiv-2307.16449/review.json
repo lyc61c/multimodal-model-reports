@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读PDF1–6及12–13，确认v1视觉组件与记忆机制，语言主干/训练数据/recipe未充分披露，不沿用后续版本。",
+    "检查Figure2、Figures3/4、Table1与附录Table2四张完整原页；帧位置为时刻，8frame32token与10framewindow不同配置。",
+    "核验Equation3平均余弦、Algorithm1相邻最相似合并、weighted sum无补固定权重；Equation1索引次序疑点与n→n²绝对位置扩展如实记录。",
+    "核验MSVD/MSRVTT/ActivityNet各Accuracy和0–5Score列、基线VideoChatGPT来源、gpt3.5turbo提示整数与例4.8不一致。",
+    "显存21.3KB/frame为增量、10000倍率不对所有基线、24GB/224视觉无抽样限定；64token非无限视频恒定总记忆；未运行模型。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "e6e577cd9398993056b756021c50bc0701c61f327d7871249da960a3623418be",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

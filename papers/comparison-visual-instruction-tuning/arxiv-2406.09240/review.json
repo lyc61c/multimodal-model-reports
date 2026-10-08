@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "figures_visually_checked": [
+    2,
+    6,
+    9,
+    15
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "tables_and_figures_checked": true
+  },
+  "limitations": [
+    "Closedended scores use small subsets",
+    "Firstphase captions proxy forimages",
+    "Automatic reference and judge both Mixtral",
+    "Only two-imagecomparison validated"
+  ]
+}

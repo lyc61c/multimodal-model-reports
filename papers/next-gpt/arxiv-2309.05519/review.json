@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读 v1 技术正文第 1–10 页、限制第 11 页与第 11–16 页演示图注，核对 22 页身份与版本。",
+    "逐张视觉检查 Figure 1/3/4 与 Table 3–11 全页，九张表的表头、数值、指标方向均可见。",
+    "核验 Vicuna7B v0、ImageBind1.2B、SD1.5/AudioLDM/Zeroscope 版本及参数；131M 包含33M LoRA，1%为可训练参数占比。",
+    "核验 5/9/25 模态信号数、对齐目标为caption生成与欧氏条件距离，未虚构损失平方、权重或扩散骨干更新。",
+    "核验 T2M14.7K、MosIT5K平均4.8轮3–7轮、三模态约4K；记录第9页low quality与其他叙述矛盾。",
+    "核验九表结果及不足，单轮定量与多模态人工评分区别；没有组件消融或完整训练recipe，未运行模型。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "a991afacb39ba50668b5953e9b1cef8994a3150f6338118b3c30e7a10e641f84",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "288029b84990",
+  "catalogue_entry_id": "288029b84990",
+  "family_slug": "motiongpt",
+  "title": "MotionGPT: Human Motion as a Foreign Language",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2306.14795v1",
+  "source_url": "https://arxiv.org/pdf/2306.14795v1",
+  "document_kind": "application_model_paper",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "MotionGPT：动作词表与统一动作语言生成"
+}

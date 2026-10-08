@@ -1,0 +1,14 @@
+{
+  "paper_id": "3b9bfda2a47f",
+  "source_url": "https://arxiv.org/pdf/2506.15564v1",
+  "source_version": "2506.15564v1",
+  "source_sha256": "12ac0764723ecde3e80007c8c696dfaffc613fdb807ddd06895324ebeb57a434",
+  "verification_notes": [
+    "Read v1 pages 1–10 and supplementary evaluation pages 12–13; original architecture, benchmark tables and examples visually inspected.",
+    "7B excludes video/interleaved training; 1.5B/7B base-LLM parameters distinguished from 2B total video-generation parameters.",
+    "GenEval dense rewritten prompts retained; non-leading metrics and video dynamic-degree weakness explicitly reported.",
+    "16M generated subset not added as independent 66M expansion; small ablation distinguished from final models.",
+    "Negative-cosine log ambiguity in equation 2 disclosed; flow velocity derivation labeled explanatory rather than a new reported equation."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

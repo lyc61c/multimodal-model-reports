@@ -1,0 +1,49 @@
+{
+  "checked_file": "papers\\internvl\\arxiv-2508.18265\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "all major model sizes",
+    "RL versusSFT attribution",
+    "GUIandembodiedtasktypes",
+    "video max4frameconfig protocol",
+    "Table18 hardwarelimits and throughputunits"
+  ],
+  "math_checked": [
+    "originalEqs1-9 consistent direction/sign",
+    "squareaveragingweightedtoken aggregate not sampleequal",
+    "GSPO sequencegeomean nottokenclip",
+    "teacherKL fixedhigh256 tostudentvariable64/256",
+    "routerlossratio anddynamiclabels"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-003-01.png",
+      "original_label": "Figure2",
+      "pdf_page": 3,
+      "inspection": "Viewed full original page; complete diagrams, table headers, all results rows and captions"
+    },
+    {
+      "file": "figures/original-page-009-02.png",
+      "original_label": "Table2",
+      "pdf_page": 9,
+      "inspection": "Viewed full original page; complete diagrams, table headers, all results rows and captions"
+    },
+    {
+      "file": "figures/original-page-023-03.png",
+      "original_label": "Tables15-16",
+      "pdf_page": 23,
+      "inspection": "Viewed full original page; complete diagrams, table headers, all results rows and captions"
+    },
+    {
+      "file": "figures/original-page-024-04.png",
+      "original_label": "Tables17-18",
+      "pdf_page": 24,
+      "inspection": "Viewed full original page; complete diagrams, table headers, all results rows and captions"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "Missing fulloptimizerreward/routinghyperparameters",
+    "Deployment totalvisualhardware notspecified; no perrequestlatencyclaim"
+  ]
+}

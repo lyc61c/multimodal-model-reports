@@ -1,0 +1,15 @@
+{
+  "paper_id": "3a7f77dffb3b",
+  "source_url": "https://arxiv.org/pdf/2605.06765v1",
+  "source_version": "2605.06765v1",
+  "source_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
+  "verification_notes": [
+    "阅读完整正文方法、数据、实验以及附录 B–G，逐项核验训练设置和分语言结果。",
+    "用 view_image 查看 5 张原始页，Figure 1、Figure 3 和 Table 2–5 标题与数字可读。",
+    "Equation 2 原文称 NLL 但缺负号，正文明确给出通常最小化定义的符号修正。",
+    "八个 12.5Hz 码本与总 100 token/s 区分；15.8K SFT 小时与更大预训练规模区分。",
+    "角色比较注明基线缺少动态音色控制；C3 英文与中文分别报告，歌唱未宣称全面优于 MIDI 条件 SVS。",
+    "论文端到端生成与外部 VAD/ASR/TEN/TTT demo 系统分开；未把仓库审核中的歌唱权重当成已全部开放。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

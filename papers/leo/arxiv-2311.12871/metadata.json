@@ -1,0 +1,14 @@
+{
+  "paper_id": "f5075f04641a",
+  "catalogue_entry_id": "f5075f04641a",
+  "family_slug": "leo",
+  "title": "An Embodied Generalist Agent in 3D World",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.12871v1",
+  "source_url": "https://arxiv.org/pdf/2311.12871v1",
+  "document_kind": "embodied_model_report",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "LEO：以对象为中心连接三维理解、语言与具身动作"
+}

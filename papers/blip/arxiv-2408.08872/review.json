@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "figures_visually_checked": [
+    3,
+    5,
+    9,
+    12
+  ],
+  "model_executed": false,
+  "checks": {
+    "title_matches": true,
+    "seven_sections": true,
+    "original_asset_pixels_inspected": true,
+    "score_columns_and_units_checked": true,
+    "sft_ablation_not_mixed_with_main_results": true,
+    "hypotheses_labelled": true
+  },
+  "limitations": [
+    "No full optimizer/GPU/context recipe",
+    "OCR bounding boxes exist in dataset but not used in model training",
+    "Caption corpus and training token counts distinguished"
+  ]
+}

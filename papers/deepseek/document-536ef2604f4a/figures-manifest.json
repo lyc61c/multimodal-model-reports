@@ -1,0 +1,67 @@
+{
+  "paper_id": "536ef2604f4a",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_pdf_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
+  "assets": [
+    {
+      "asset_path": "figures/figure-03-architecture.png",
+      "original_label": "Figure 3：DeepSeek-OCR 2 整体架构",
+      "pdf_page": 5,
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=5",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
+      "asset_sha256": "7e089fda4635889272616b8729d91d99ee4027aa3da5d6076108bc32d23ee494",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/figure-05-mask-equations.png",
+      "original_label": "Figure 5：混合注意力 mask；Equation 1–2",
+      "pdf_page": 7,
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=7",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
+      "asset_sha256": "ea70b0d6253af37eca47726b06c1a8cff303fb987aba40f3d116ef520b761ea0",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/table-01-main-results.png",
+      "original_label": "Table 1：OmniDocBench v1.5 主结果",
+      "pdf_page": 9,
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=9",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
+      "asset_sha256": "ec2fa3e34981438f00e0b9f911be26067c4bd4d9effd971b994b97a794e38524",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/table-02-03-detail-results.png",
+      "original_label": "Table 2–3：整体编辑距离与分文档类型结果",
+      "pdf_page": 10,
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=10",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
+      "asset_sha256": "733ed10b7f26dfec1145e28522b2311a9af47436fa2ab2ab64826e14ab37ec1e",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

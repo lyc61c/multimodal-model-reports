@@ -1,0 +1,14 @@
+{
+  "paper_id": "28acd80eab47",
+  "catalogue_entry_id": "28acd80eab47",
+  "family_slug": "pretrained-to-imagine-fine-tuned-to-act-the-rise-of-wor-28acd80eab47",
+  "title": "Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/",
+  "document_kind": "release_blog",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "世界动作模型：从视频预训练到机器人控制的设计空间"
+}

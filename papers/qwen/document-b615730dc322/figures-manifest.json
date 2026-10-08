@@ -1,0 +1,70 @@
+{
+  "paper_id": "b615730dc322",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-benchmarks.jpg",
+      "original_label": "Official QVQ performance comparison (unnumbered)",
+      "source_url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/QVQ/QVQ.jpg#center",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/QVQ/QVQ.jpg#center",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "ba18d03f42cf988dad6116cee36c4d640fac0e481e9906011ec7536b8b51990c",
+      "asset_sha256": "b63f9261c4cc123e53f390e1dbc39e44f54f977ed495a7409b3492e9f7d7d8a7",
+      "width": 2993,
+      "height": 1165,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-product-rule.jpg",
+      "original_label": "Official product-rule demo input (unnumbered)",
+      "source_url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/QVQ/Math.jpg",
+      "image_final_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/QVQ/Math.jpg",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "ba18d03f42cf988dad6116cee36c4d640fac0e481e9906011ec7536b8b51990c",
+      "asset_sha256": "3e0d0168847ad3ef1ce2c9f2e991c8bbc28205b947116235dc7b627f2b3f4d68",
+      "width": 684,
+      "height": 221,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-sofa.jpg",
+      "original_label": "Official sofa-volume demo input (unnumbered)",
+      "source_url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/QVQ/Life.jpg",
+      "image_final_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/QVQ/Life.jpg",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "ba18d03f42cf988dad6116cee36c4d640fac0e481e9906011ec7536b8b51990c",
+      "asset_sha256": "3d1c0316f7aef389a0be52ee2811612694c2d44a9237895fa01ed958967de87c",
+      "width": 760,
+      "height": 760,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-geometry.png",
+      "original_label": "Official rectangle geometry demo input (unnumbered)",
+      "source_url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/QVQ/Geometry.png",
+      "image_final_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/QVQ/Geometry.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "ba18d03f42cf988dad6116cee36c4d640fac0e481e9906011ec7536b8b51990c",
+      "asset_sha256": "29b446123e0ce5039d8dc7ab6c1d3094b29767fb0dd14088d8ad218d2cb4b631",
+      "width": 423,
+      "height": 225,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

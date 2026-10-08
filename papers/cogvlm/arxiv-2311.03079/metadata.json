@@ -1,0 +1,19 @@
+{
+  "paper_id": "cc862c751f87",
+  "catalogue_entry_id": "cc862c751f87",
+  "family_slug": "cogvlm",
+  "title": "CogVLM: Visual Expert For Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.03079v1",
+  "source_url": "https://arxiv.org/pdf/2311.03079v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "CogVLM：在语言模型每一层加入视觉专家，实现深层图文融合",
+  "source_sha256": "9c4fc9011590e02354b1aadb97145ae17775b848a1eb4fdb390b0201c40cc17e",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 3025,
+  "figures_manifest": "figures-manifest.json"
+}

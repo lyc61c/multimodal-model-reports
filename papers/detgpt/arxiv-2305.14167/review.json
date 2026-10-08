@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read PDF main pages1-12 and appendix13-14; verified title/date/architecture",
+    "Viewed Figure2,Figure3,Figure5 full pages; original figure labels and no clipping",
+    "Verified 5000images/around30000pairs and both training stages projection-only",
+    "Verified Equation1 and labeled explanatory pipeline notation",
+    "No quantitative benchmarks/hyperparameters reported; demonstration and failures kept separate; no model execution"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 3
+  },
+  "article_sha256": "7a2e62bae1c6d9b16c60cd6a3494b135e322f19c328f2b2d71c68938dbf2fd7f",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

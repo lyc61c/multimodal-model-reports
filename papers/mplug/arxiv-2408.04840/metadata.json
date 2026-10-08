@@ -1,0 +1,14 @@
+{
+  "paper_id": "7d81a24fd25c",
+  "catalogue_entry_id": "7d81a24fd25c",
+  "family_slug": "mplug",
+  "title": "mPLUG-Owl3: Towards Long Image-Sequence Understanding in Multi-Modal Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2408.04840v1",
+  "source_url": "https://arxiv.org/pdf/2408.04840v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "mPLUG-Owl3：用稀疏 Hyper Attention 读取长图像序列"
+}

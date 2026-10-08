@@ -1,0 +1,21 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "claims": [
+    {
+      "claim": "综述博客非单独模型报告；三个设计轴与概念区别",
+      "source_section": "Three design axes; Table 4"
+    },
+    {
+      "claim": "DreamZero 1750、Pi0.5 1622、PiFAST1592、Pi0 1475为2026年4月快照",
+      "source_section": "Figure 16; modern VLA baseline"
+    },
+    {
+      "claim": "6NT、51ZF代理、9ZF DreamZero动作适配、6.9Foundry完整小模型配方",
+      "source_section": "Practical considerations; Figure 24; Footnote 1"
+    },
+    {
+      "claim": "Veo3.1单次定性生成不是机器人执行实验",
+      "source_section": "Veo3.1 experiment"
+    }
+  ]
+}

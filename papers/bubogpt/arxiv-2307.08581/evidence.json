@@ -1,0 +1,14 @@
+{
+  "paper_id": "a564ecbb9adf",
+  "source_url": "https://arxiv.org/pdf/2307.08581v1",
+  "source_version": "2307.08581v1",
+  "source_sha256": "c63bb2b4dbd7a228604df22d993389893098dd4c050bb0f17582efee7c8ee23c",
+  "verification_notes": [
+    "Read all technical正文 andselectedcases",
+    "Viewed four selected originalimages and captions",
+    "Explanatory interfaceformula explicitlynotoriginal",
+    "No fabricated benchmark,hparams,or module freezing",
+    "Sevensectioncheck"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

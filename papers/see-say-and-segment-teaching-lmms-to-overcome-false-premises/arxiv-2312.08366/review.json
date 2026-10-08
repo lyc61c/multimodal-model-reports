@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 main pages 1–8 and reasoning extension/prompt appendix 13–18; original Figure2/3/6 and Tables2–4 crops visually inspected.",
+    "Cascaded LLaVA plus LISA and jointly trained LLaVA-v1.5 plus SAM clearly distinguished; no invented new backbone.",
+    "CLAIR 0.67 is GPT-4 similarity score, not human helpfulness success rate; 55.45/31.65 percentages are relative improvements, not percentage-point gains.",
+    "Dataset roughly balanced positive/negative differs from 9:1 true/false training sampling; cross-dataset image split exclusion described.",
+    "Main GPT-3.5-turbo generation versus Appendix Table7 GPT4 caption inconsistency preserved.",
+    "Loss components reported; weights, LoRA rank and complete freezing schedule not invented; DGX GPU-count wording ambiguity preserved.",
+    "Positive-only cIoU decreases versus LISA and non-perfect FP recall retained; appendix reasoning model additional datasets not conflated with main model."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "fc0e7abaa59a4dcf818d85b4b76239102e5f82c881ae392100f04db4294cbd58",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

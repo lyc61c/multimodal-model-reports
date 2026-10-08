@@ -1,0 +1,14 @@
+{
+  "paper_id": "92d16b8c59c9",
+  "catalogue_entry_id": "92d16b8c59c9",
+  "family_slug": "gemma",
+  "title": "Gemma 4: Byte for byte, the most capable open models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://deepmind.google/models/gemma/gemma-4/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Gemma 4：端侧多模态、统一解码器与稀疏专家模型"
+}

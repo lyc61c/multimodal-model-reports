@@ -1,0 +1,52 @@
+{
+  "paper_id": "0b8790d1de58",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_pdf_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-003-01.png",
+      "original_label": "Tables 1 and 2 manual/automated red teaming",
+      "pdf_page": 3,
+      "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=3",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+      "asset_sha256": "198a7efe4dd90c2e4c93a92ab454ce1e7fb917d044b97097bceac211af98c2c9",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-005-02.png",
+      "original_label": "Table 4 photorealistic-person classifier",
+      "pdf_page": 5,
+      "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=5",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+      "asset_sha256": "06570b357c1f79d569183bddac7ae999bb1d9cf1da7ea4249f86dc47286e6bd3",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-008-03.png",
+      "original_label": "Tables 6-9 gender/race diversity and skin-tone distribution",
+      "pdf_page": 8,
+      "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=8",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+      "asset_sha256": "74388383fbe33657c39ff8efca798e8fabc6a6ca5b7f2cab28b33866a44b6b61",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

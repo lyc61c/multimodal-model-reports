@@ -1,0 +1,14 @@
+{
+  "paper_id": "b9dea683bda2",
+  "catalogue_entry_id": "b9dea683bda2",
+  "family_slug": "emu",
+  "title": "Generative Pretraining in Multimodality",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2307.05222v1",
+  "source_url": "https://arxiv.org/pdf/2307.05222v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Emu：交错多模态序列的生成预训练"
+}

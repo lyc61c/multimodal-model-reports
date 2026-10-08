@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "figures_visually_checked": [
+    4,
+    5,
+    6,
+    10
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "220K非全部训练样本，默认含学术数据且星号图片接触口径明确",
+    "未报告教师调用成本和全面人工审核/过滤率",
+    "词频不是正确率，长回答影响词频",
+    "新增混合数据不单调提高开放问答，7B部分指标下降",
+    "MMVet正文3.6%与表不一致，按表2.0分记录",
+    "未在本报告列出的LR/GPU/context等不从基线记忆补造"
+  ]
+}

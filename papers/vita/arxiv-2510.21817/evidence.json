@@ -1,0 +1,15 @@
+{
+  "paper_id": "00501b0da246",
+  "source_url": "https://arxiv.org/pdf/2510.21817v1",
+  "source_version": "2510.21817v1",
+  "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+  "verification_notes": [
+    "Read v1 pp1-10 and implementation/prompt appendix pp13-16; separated dual-level architecture from Active/Standby model instances.",
+    "Verified RES/ACT/INST/HALT/END table and ANS figure discrepancy; high-level structured policy and low-level action interface retained, CE formula labeled explanatory.",
+    "Checked synthetic control samples versus600 real-robot demonstrations, 20Hz data collection versus response latency, Table5 7/26 dimensions and16-step horizon.",
+    "Preserved simulation diffusion+projector training versus real projector-only, frozen action-stageLLM versus first-stage VLM SFT; generic training table not invented per-stage recipe.",
+    "Verified Figure5 LONG64 versus91 and Figure6 real83.3/76.7; separated30-trial success, ten-test2.26sec speech response and no quantitative emergency-stop latency.",
+    "Original source pages and final crops visually checked; no independent reproduction, unconditional instant stop or arbitrary contact-safe retraction claim."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

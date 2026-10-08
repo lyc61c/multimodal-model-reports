@@ -1,0 +1,54 @@
+{
+  "paper_id": "a07676c13763",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-benchmark-table.gif",
+      "original_label": "Official benchmark comparison table (unnumbered)",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini-4-argon_table_blog.gif",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini-4-argon_table_blog.gif",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "cf2ecb2c2a5b8aca96928e2af37db3f25e24695d59406fbd51942a43c5c1864d",
+      "asset_sha256": "481de187c66d4b4d2848046f57206ce3bf6bfb1883d01f8100236a21e4f8b392",
+      "width": 3936,
+      "height": 3948,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-security-discovery.webp",
+      "original_label": "Official internal vulnerability discovery chart (unnumbered)",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_cyber_evals_security_vu.width-1200.format-webp.webp",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_cyber_evals_security_vu.width-1200.format-webp.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "cf2ecb2c2a5b8aca96928e2af37db3f25e24695d59406fbd51942a43c5c1864d",
+      "asset_sha256": "f49a76ef73f4ab267cf852bb118bee2cb349fb22465abd9862dbbc4fdd40efd1",
+      "width": 1200,
+      "height": 675,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-prompt-injection.webp",
+      "original_label": "Official Gray Swan IPI chart (unnumbered)",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_cyber_evals_gray_swan_i.width-1200.format-webp.webp",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_cyber_evals_gray_swan_i.width-1200.format-webp.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "cf2ecb2c2a5b8aca96928e2af37db3f25e24695d59406fbd51942a43c5c1864d",
+      "asset_sha256": "dceda0b6bc88fd02804795f85d12dc726c179cab59784357e591911eed233111",
+      "width": 1200,
+      "height": 675,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "paper_id": "d8431f38c1b7",
+  "source_url": "https://arxiv.org/pdf/2402.12226v1",
+  "source_version": "2402.12226v1",
+  "source_sha256": "c1ba08b255aff58e993db469c46a0419befa9fd89ea6856d0c15a05b3aedfedf",
+  "verification_notes": [
+    "Title verified from page1",
+    "All four selected pages visually inspected",
+    "Table4/5/6 columns verified",
+    "Table8 training hyperparameters visually verified",
+    "Source inconsistencies explicitly recorded",
+    "No benchmark/model execution claimed"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,82 @@
+{
+  "paper_id": "3a7f77dffb3b",
+  "source_version": "2605.06765v1",
+  "source_pdf_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
+  "assets": [
+    {
+      "asset_path": "figures/figure-01-hybrid-architecture.png",
+      "original_label": "Figure 1：混合语音文本架构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2605.06765v1#page=3",
+      "source_version": "2605.06765v1",
+      "source_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
+      "asset_sha256": "b330833c6b7baf712bfd53a7568e0d358a38079b088e12fdeb992056fe2b3fa8",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/figure-03-data-pipelines.png",
+      "original_label": "Figure 3：对话、角色扮演和歌唱数据管线",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2605.06765v1#page=6",
+      "source_version": "2605.06765v1",
+      "source_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
+      "asset_sha256": "2e7467ef81c1de4515a01fc217352710b1feccc0d46591dbecccd8e8cc0475b1",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/table-02-role-playing.png",
+      "original_label": "Table 2：角色扮演结果",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2605.06765v1#page=7",
+      "source_version": "2605.06765v1",
+      "source_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
+      "asset_sha256": "31c7439bdb82ffdeed95683de2b35740ac0933fdb7a1894cb7f51b65fde95255",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/table-03-04-singing-conversation.png",
+      "original_label": "Table 3–4：歌唱与 C3 对话评测",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2605.06765v1#page=9",
+      "source_version": "2605.06765v1",
+      "source_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
+      "asset_sha256": "d05b4adc7deffb9bec56e25eaf99492fbaede27ce7b5d6359e548fc56d463f94",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/table-05-uro.png",
+      "original_label": "Table 5：URO 对话评测",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2605.06765v1#page=10",
+      "source_version": "2605.06765v1",
+      "source_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
+      "asset_sha256": "17f7c4d42c05e6baecddfe0ce1103f129dc908a0a0eeecfdeac679e00aa73a9c",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

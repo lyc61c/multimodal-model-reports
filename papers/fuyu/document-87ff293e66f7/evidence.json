@@ -1,0 +1,14 @@
+{
+  "paper_id": "87ff293e66f7",
+  "source_url": "https://huggingface.co/adept/fuyu-8b/raw/main/README.md",
+  "source_version": "official-model-card-2026-10-08",
+  "source_sha256": "8f8beb8b0174e9b661ef5bc795e0342747d0069a590b41167e636172c177c6ff",
+  "verification_notes": [
+    "Read the entire official Adept Hugging Face model card; source snapshot is a model card rather than a full paper and missing training disclosures are explicit.",
+    "Downloaded and visually inspected original architecture.png and chart.png; full diagrams and chart labels remain visible, both are unnumbered website assets.",
+    "Verified direct patch linear projection, absent image encoder/image-specific position embeddings, raster scan and image-newline semantics; mathematical notation is marked explanatory.",
+    "Checked all four official evaluation rows and model columns, including Fuyu-Medium COCO 138 below 8B 141; unspecified caption metric is not invented.",
+    "Latency below 100ms is qualified as official claim without reproducible hardware/protocol; no screen-agent success or component ablations are invented."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

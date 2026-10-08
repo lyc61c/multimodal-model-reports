@@ -1,0 +1,19 @@
+{
+  "paper_id": "ced90da09c5d",
+  "catalogue_entry_id": "ced90da09c5d",
+  "family_slug": "mqt-llava",
+  "title": "Matryoshka Query Transformer for Large Vision-Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2405.19315v1",
+  "source_url": "https://arxiv.org/pdf/2405.19315v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MQT-LLaVA：用嵌套查询实现可调视觉 token 预算",
+  "source_sha256": "f6cfd4391d34605a24a0ffb5a629847a4c245b4e0cfce28f76f78e81fa6065a8",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2203,
+  "figures_manifest": "figures-manifest.json"
+}

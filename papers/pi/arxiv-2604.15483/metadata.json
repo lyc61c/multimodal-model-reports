@@ -1,0 +1,14 @@
+{
+  "paper_id": "1a94548cd5cc",
+  "catalogue_entry_id": "1a94548cd5cc",
+  "family_slug": "pi",
+  "title": "π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2604.15483v1",
+  "source_url": "https://arxiv.org/pdf/2604.15483v1",
+  "document_kind": "embodied_model_report",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "π0.7：用多模态上下文引导通用机器人策略"
+}

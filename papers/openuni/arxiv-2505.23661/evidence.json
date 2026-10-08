@@ -1,0 +1,39 @@
+{
+  "source_url": "https://arxiv.org/pdf/2505.23661v1",
+  "source_version": "2505.23661v1",
+  "source_sha256": "86269da652b35f74abb45ae2c16c60653885fb3d281a5d7bd02807f83bb67e52",
+  "read_scope": "PDF 1–8全部报告正文、架构训练表、实验表和图；9–12参考文献。",
+  "claims": [
+    {
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "claim": "256查询、六层54M/225M连接器；InternVL3与SANA分模块；阶段1双骨干冻结，阶段2生成解冻理解冻结。"
+    },
+    {
+      "pages": [
+        3,
+        4
+      ],
+      "claim": "23M公开来源重描述、60K合成高质量精调；Table2AdamW两阶段超参和10%空caption。"
+    },
+    {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "claim": "GenEval .84/.85/.86，DPG80.29/81.54/83.08，WISE.43/.52/.52；理解继承与文字渲染/编辑局限。"
+    }
+  ],
+  "source_inconsistencies": [
+    "L-512正文写SANA0.6B，Table1写1.6B；本文依Table1并明确未知实际实现。",
+    "BLIP3-o额外数据量Table1和表注描述不完全一致，未作为精确公平成本对照。",
+    "正文把普通BLIP3-o8BGenEval称.84而Table3普通.83、星号.84；本文按Table3。"
+  ],
+  "model_execution": "not_run"
+}

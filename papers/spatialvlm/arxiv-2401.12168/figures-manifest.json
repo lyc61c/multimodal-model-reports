@@ -1,0 +1,107 @@
+{
+  "paper_id": "fa8d772918c0",
+  "source_version": "2401.12168v1",
+  "source_pdf_sha256": "c10f059f0db1b55265873c889f1ceca0e1f82c538127a5ae86163185ebee15e2",
+  "assets": [
+    {
+      "asset_path": "figures/data-pipeline.png",
+      "original_label": "Figure 2：空间问答合成流程",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2401.12168v1#page=4",
+      "source_version": "2401.12168v1",
+      "source_sha256": "c10f059f0db1b55265873c889f1ceca0e1f82c538127a5ae86163185ebee15e2",
+      "asset_sha256": "75bd8745f1dfefd86077df5b05f4ad5385bf04c2aeb4d7fa6c72092a1d4ed4ea",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          60,
+          83,
+          535,
+          400
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/qualitative-results.png",
+      "original_label": "Table 1：定性空间问答",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2401.12168v1#page=8",
+      "source_version": "2401.12168v1",
+      "source_sha256": "c10f059f0db1b55265873c889f1ceca0e1f82c538127a5ae86163185ebee15e2",
+      "asset_sha256": "5c9312f3cab3f60d4aa108ea6302921f31b67c0ad39c84ce89b9eae36c4eba70",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          60,
+          82,
+          535,
+          168
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/quantitative-results.png",
+      "original_label": "Table 2：定量空间问答",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2401.12168v1#page=9",
+      "source_version": "2401.12168v1",
+      "source_sha256": "c10f059f0db1b55265873c889f1ceca0e1f82c538127a5ae86163185ebee15e2",
+      "asset_sha256": "5420cc3e5a8b57b83abba27c6ec2d58f941e6d784c4f43eb61ae0abe50fa419c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          60,
+          82,
+          535,
+          195
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/vision-ablation.png",
+      "original_label": "Table 4：视觉编码器冻结消融",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2401.12168v1#page=10",
+      "source_version": "2401.12168v1",
+      "source_sha256": "c10f059f0db1b55265873c889f1ceca0e1f82c538127a5ae86163185ebee15e2",
+      "asset_sha256": "2640f950c76e404859ebbff38c487b4bfe3e2e4eb13de2207810519184c71c86",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          60,
+          298,
+          535,
+          380
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/robot-cost.png",
+      "original_label": "Figure 6：机器人任务距离代价图",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2401.12168v1#page=11",
+      "source_version": "2401.12168v1",
+      "source_sha256": "c10f059f0db1b55265873c889f1ceca0e1f82c538127a5ae86163185ebee15e2",
+      "asset_sha256": "d321bda861578b4f04f09cf66cd361730c7e7cc07c395f09b9275536059eb601",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          60,
+          180,
+          535,
+          363
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

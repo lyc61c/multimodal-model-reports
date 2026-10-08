@@ -1,0 +1,30 @@
+{
+  "source_url": "https://raw.githubusercontent.com/BradyFU/Awesome-Multimodal-Large-Language-Models/main/README.md",
+  "upstream_repository": "https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models",
+  "source_sha256": "32cfabee6d340767d60cec10f3f9a9d105b60744d2c89b892ebad65fc30e4e1b",
+  "snapshot_date": "2026-10-08",
+  "threshold": 100,
+  "raw_rows": 303,
+  "unique_entries": 301,
+  "unique_repositories": 197,
+  "section_rows": {
+    "Multimodal Instruction Tuning (& Latest Works)": 272,
+    "Foundation Models": 31
+  },
+  "duplicates": [
+    {
+      "title": "Introducing GPT-5",
+      "source_lines": [
+        138,
+        502
+      ]
+    },
+    {
+      "title": "Gemini: A Family of Highly Capable Multimodal Models",
+      "source_lines": [
+        264,
+        513
+      ]
+    }
+  ]
+}

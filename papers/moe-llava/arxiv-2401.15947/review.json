@@ -1,0 +1,43 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "总参数为语言统计，不含视觉/MLP",
+    "Top2不是整请求仅加载两专家",
+    "先稠密stageII再复制与冲突保留",
+    "第三阶段冻结范围不当作精确参数名单",
+    "星号训练重叠不能严格零样本",
+    "POPEF1百分点非accuracy",
+    "没有补optimizer/warmup或推理吞吐"
+  ],
+  "math_checks": [
+    "线性router维度/TopK集合索引整理",
+    "选中再归一化未披露不添加",
+    "负载均衡Top1形式与Top2实现歧义保留",
+    "NLL输出长度用M避免原文K=P+D错误",
+    "参数存储和激活不等同延迟内存"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-004-01.png",
+      "checked": "已view_image；图表所有行表头图例脚注齐全；图3 MLP可训练、Table6c88.7、Table7重复数值已核对"
+    },
+    {
+      "file": "figures/original-page-006-02.png",
+      "checked": "已view_image；图表所有行表头图例脚注齐全；图3 MLP可训练、Table6c88.7、Table7重复数值已核对"
+    },
+    {
+      "file": "figures/original-page-008-03.png",
+      "checked": "已view_image；图表所有行表头图例脚注齐全；图3 MLP可训练、Table6c88.7、Table7重复数值已核对"
+    },
+    {
+      "file": "figures/original-page-015-04.png",
+      "checked": "已view_image；图表所有行表头图例脚注齐全；图3 MLP可训练、Table6c88.7、Table7重复数值已核对"
+    }
+  ],
+  "limitations": [
+    "原文多处公式和数值冲突，保留记录",
+    "路由图仅模式描述非可解释任务证明",
+    "模型未运行，没有真实速度/显存复测"
+  ],
+  "model_execution": "not_run"
+}

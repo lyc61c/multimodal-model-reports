@@ -1,0 +1,14 @@
+{
+  "paper_id": "3d5274c82d6d",
+  "catalogue_entry_id": "3d5274c82d6d",
+  "family_slug": "internvl",
+  "title": "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2508.18265v1",
+  "source_url": "https://arxiv.org/pdf/2508.18265v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "InternVL 3.5：级联强化学习、自适应视觉压缩与分离部署"
+}

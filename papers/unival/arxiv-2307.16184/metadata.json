@@ -1,0 +1,19 @@
+{
+  "paper_id": "4af858ff9dbc",
+  "catalogue_entry_id": "4af858ff9dbc",
+  "family_slug": "unival",
+  "title": "Unified Model for Image, Video, Audio and Language Tasks",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2307.16184v1",
+  "source_url": "https://arxiv.org/pdf/2307.16184v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "UnIVAL：统一多模态序列模型",
+  "source_sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1681,
+  "figures_manifest": "figures-manifest.json"
+}

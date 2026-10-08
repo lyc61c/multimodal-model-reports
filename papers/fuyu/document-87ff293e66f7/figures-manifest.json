@@ -1,0 +1,38 @@
+{
+  "paper_id": "87ff293e66f7",
+  "source_version": "official-model-card-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-architecture.png",
+      "original_label": "Official model-card architecture diagram (unnumbered)",
+      "source_url": "https://huggingface.co/adept/fuyu-8b/raw/main/README.md",
+      "image_url": "https://huggingface.co/adept/fuyu-8b/resolve/main/architecture.png",
+      "image_final_url": "https://huggingface.co/api/resolve-cache/models/adept/fuyu-8b/f41defefdb89be0d28cac19d94ce216e37cb6be5/architecture.png?%2Fadept%2Ffuyu-8b%2Fresolve%2Fmain%2Farchitecture.png=&etag=%22a4116ea443757871223befa3d048a73d5bcbfeb0%22",
+      "source_version": "official-model-card-2026-10-08",
+      "source_sha256": "8f8beb8b0174e9b661ef5bc795e0342747d0069a590b41167e636172c177c6ff",
+      "asset_sha256": "63ba47d277dc53d75b8e0cd773b0498442cd634b1a8c1b76a2a49e27d0fb1bbf",
+      "width": 1812,
+      "height": 663,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-chart-example.png",
+      "original_label": "Official model-card chart question example (unnumbered)",
+      "source_url": "https://huggingface.co/adept/fuyu-8b/raw/main/README.md",
+      "image_url": "https://huggingface.co/adept/fuyu-8b/resolve/main/chart.png",
+      "image_final_url": "https://huggingface.co/api/resolve-cache/models/adept/fuyu-8b/f41defefdb89be0d28cac19d94ce216e37cb6be5/chart.png?%2Fadept%2Ffuyu-8b%2Fresolve%2Fmain%2Fchart.png=&etag=%22332b68df5c2f6d002a11cb4b7d004ea467b2fb13%22",
+      "source_version": "official-model-card-2026-10-08",
+      "source_sha256": "8f8beb8b0174e9b661ef5bc795e0342747d0069a590b41167e636172c177c6ff",
+      "asset_sha256": "c1745c25597f0b4337c0c7a8a6e72aab861727f97feab14d80b5abf5428c539d",
+      "width": 800,
+      "height": 557,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

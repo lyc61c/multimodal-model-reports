@@ -1,0 +1,26 @@
+{
+  "source_id": "2e176468b484",
+  "source_version": "2311.18651v1",
+  "read_scope": "Full maintechnical1-8 and AppendicesA-E12-20;reference-only9-11structurallychecked",
+  "claims": [
+    {
+      "topic": "architecture_math",
+      "source": "Sections3-4 Eqs1-6 AppendixE",
+      "checks": "OPT1.3Bfrozen111Mtrainable;40K->2048->1024x256scene;6layers768up12heads32queries8tokensperprompt;BERTembeddingsonly;FourierlearnableB;boxcenter+sizes0-255notcorners;click0-1different"
+    },
+    {
+      "topic": "data_training",
+      "source": "Sections4,5.1 AppendicesB,D,E",
+      "checks": "ScanReferNr3DQAactualcounts;3DLLMcustomsceneid<600train;decompositionnturns;100Kmulti30KFT;AdamWwd.1LR1e-4->1e-6batch16FP16max8RTX3090<day;beam4versusk50p.95long4gram"
+    },
+    {
+      "topic": "results",
+      "source": "Tables1-13 Eq7",
+      "checks": "maincaptionexternalVote2CapboxesnotLLM;CIDErnotaccuracy%;generalistNr3D23.94vsFT51.18;testclickCimproveB4decline;languagebox51.12vs65.19detector;ScanNet200mAP5.20;planningtextmetricsnotexecution"
+    }
+  ],
+  "source_inconsistencies": [
+    "AppendixC prose referencesTable13foropenvocab actuallyTable11"
+  ],
+  "model_execution": "not_run"
+}

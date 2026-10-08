@@ -1,0 +1,14 @@
+{
+  "paper_id": "a0635d8ae9e6",
+  "catalogue_entry_id": "a0635d8ae9e6",
+  "family_slug": "next-omni",
+  "title": "NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2510.13721v1",
+  "source_url": "https://arxiv.org/pdf/2510.13721v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "NExT-OMNI：用离散流统一全模态理解、生成与检索"
+}

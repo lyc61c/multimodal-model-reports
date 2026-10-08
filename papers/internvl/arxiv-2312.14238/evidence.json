@@ -1,0 +1,16 @@
+{
+  "paper_id": "4c5b6e3fdc3c",
+  "source_url": "https://arxiv.org/pdf/2312.14238v1",
+  "source_version": "2312.14238v1",
+  "source_sha256": "9c1b09946f5e357f77f5ba2d5395a6d5e53d6f95eecec93b03fbd3205c136768",
+  "verification_notes": [
+    "阅读全文1–18页方法实验附录数据及身份；原v1不混后代训练",
+    "实际查看PDF4/7/8/12整页，Figure3/Table1/6–10/20–22完整无截列",
+    "确认随机初始化ViT5.903B、48层3200宽25头与96queries和QLLaMA8B",
+    "核对数据4.98B/1.03B不同于28.7B/1.6B曝光；SFT各任务量、清洗因素、TextCapsOCR辅助",
+    "确认224冻结解码器64M/90M和336全微调7B/13B不同，避免全程冻结错误",
+    "逐列核对R@1方向/1K5K/八帧mean top1top5，caption zero-shot与seen SFT区别",
+    "Table12为简设置非最高1586.4配置；未运行模型，公式仅对原文目标归纳"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

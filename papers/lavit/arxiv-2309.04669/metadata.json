@@ -1,0 +1,14 @@
+{
+  "paper_id": "2cec8f84c6fc",
+  "catalogue_entry_id": "2cec8f84c6fc",
+  "family_slug": "lavit",
+  "title": "Unified Language-Vision Pretraining in LLM with Dynamic Discrete Visual Tokenization",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2309.04669v1",
+  "source_url": "https://arxiv.org/pdf/2309.04669v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LaVIT：动态视觉 token 与统一图文下一 token 预测"
+}

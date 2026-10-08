@@ -1,0 +1,19 @@
+{
+  "paper_id": "043e8b783fad",
+  "catalogue_entry_id": "043e8b783fad",
+  "family_slug": "llmga",
+  "title": "LLMGA: Multimodal Large Language Model based Generation Assistant",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.16500v1",
+  "source_url": "https://arxiv.org/pdf/2311.16500v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LLMGA：用多模态语言模型组织生成提示与图像编辑",
+  "source_sha256": "5ec97b5bf39f4c30fba2c659bc37924c7bfb0249cd019aa7e30f4e7eebb6c7c3",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2041,
+  "figures_manifest": "figures-manifest.json"
+}

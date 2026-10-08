@@ -1,0 +1,14 @@
+{
+  "paper_id": "8423dfa0647c",
+  "catalogue_entry_id": "8423dfa0647c",
+  "family_slug": "mplug",
+  "title": "mPLUG-DocOwl: Modularized Multimodal Large Language Model for Document Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2307.02499v1",
+  "source_url": "https://arxiv.org/pdf/2307.02499v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "mPLUG-DocOwl：以统一指令微调实现无需外部OCR的文档理解"
+}

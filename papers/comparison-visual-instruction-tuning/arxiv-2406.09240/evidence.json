@@ -1,0 +1,42 @@
+{
+  "source_version": "2406.09240v1",
+  "claims": [
+    {
+      "claim": "278K+71K comparisons; mix665K; captions average36.5words",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "projector+LoRA updates, 1epoch batch128 rank128 alpha256 LR1e-4/2e-5 4A10080G",
+      "pdf_pages": [
+        5,
+        15
+      ]
+    },
+    {
+      "claim": "7520CaDQA, 2916singleimagequestions, Mixtralscore0to5",
+      "pdf_pages": [
+        6,
+        17
+      ]
+    },
+    {
+      "claim": "Benchmark subsets BISON150 SVO1500 EQBEN120 COLA210 NLVR2150",
+      "pdf_pages": [
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "claim": "13B closedaccuracy96.67/93/69.33/42.5/43.33; CaDQA3.34 SEED69.11",
+      "pdf_pages": [
+        6,
+        7
+      ]
+    }
+  ]
+}

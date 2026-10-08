@@ -1,0 +1,14 @@
+{
+  "paper_id": "9ee9863086d5",
+  "catalogue_entry_id": "9ee9863086d5",
+  "family_slug": "gpt",
+  "title": "Hello GPT-4o",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-system-card-2024-08-08; release-2024-05-13",
+  "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "GPT-4o：端到端多模态交互与语音系统评估"
+}

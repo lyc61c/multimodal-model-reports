@@ -1,0 +1,16 @@
+{
+  "paper_id": "b3fa7d6669df",
+  "source_url": "https://arxiv.org/pdf/2404.06512v1",
+  "source_version": "2404.06512v1",
+  "source_sha256": "9a68a227b1a619f7c43b725dc00056456fc3df77966ec8d7a3226c8e21067219",
+  "verification_notes": [
+    "阅读全文正文1–9页、15–16附录案例及身份引用；公式1向上取整原图核验",
+    "实际查看PDF5/7/8/9完整原页，Figure4/5及Table3–9未漏列",
+    "区分7B语言基座与Table5全模型8B，4KHD3840x1600沿原文口径",
+    "核对HD9/16/25/55预算、576→144压缩、换行/全局/分隔和两阶段参数超参",
+    "主表test与消融val/SEED2K分开；MMMU39.7取Table3不取Figure1的39.9",
+    "核对所有主要数字与涨跌，保留MME舍入口径及InfoVQA50.5→60.8为10.3pp",
+    "未补造损失或PartialLoRA内部细节，未运行模型，作者原文核验"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

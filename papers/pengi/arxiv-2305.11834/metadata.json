@@ -1,0 +1,19 @@
+{
+  "paper_id": "1a7d73a43be0",
+  "catalogue_entry_id": "1a7d73a43be0",
+  "family_slug": "pengi",
+  "title": "Pengi: An Audio Language Model for Audio Tasks",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2305.11834v1",
+  "source_url": "https://arxiv.org/pdf/2305.11834v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Pengi：用条件文本生成统一音频任务",
+  "source_sha256": "c221125c001301b5a94e0c6485a0cbd26b8490eda97adacca625b6b79e88ccff",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2061,
+  "figures_manifest": "figures-manifest.json"
+}

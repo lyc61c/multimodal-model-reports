@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read mainpages1-9 and appendix15-16; title verified",
+    "Viewed all four figures/table pages and verified labels/content",
+    "Verified PEL/PAL token flows, teacher onlytraining, Vicuna freeze_stage1/full_stage2-3",
+    "Verified realTable8 hyperparameters; SFT1.8M vsappendix1.35M inconsistency disclosed",
+    "Verified all extracted main/ablation rows; interval4 not all metricsbest and HD alone MMB worsens",
+    "Verified Table6 vision component vsLLMlatency; not10xendtoend; no model execution"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "1a56afb552b99680c20a64c01100df2a0486642c71c6f32d06632183394e8863",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

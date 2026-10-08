@@ -1,0 +1,10 @@
+{
+  "verdict": "complete_self_review",
+  "source_identity_verified": true,
+  "source_version": "2307.12981v1",
+  "fact_check": "Checked architecture, dataset units, frozen/trainable modules, appendix training recipe and Table 1–3 values against original PDF text.",
+  "math_check": "Explanatory formulas distinguished from source equations; concatenation, coordinate count and held-out finetuning conditions preserved.",
+  "image_check": "Manually inspected original pages 4,5,8 using view_image; Figure 2/3 and Tables 1–3 are complete with headings and captions.",
+  "model_execution": "not_run",
+  "limitations": ["Self-review, not an independent second-model review", "All benchmark values are authors' reported results"]
+}

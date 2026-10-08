@@ -1,0 +1,70 @@
+{
+  "paper_id": "3ebe839c6607",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/variable-resolution.webp",
+      "original_label": "官方发布页：可变分辨率视觉编码器，无编号",
+      "source_url": "https://mistral.ai/news/pixtral-12b/",
+      "image_url": "https://mistral.ai/_astro/14c41c1b-f155-4d35-8427-759a6ca5692c_Z1yOwVe.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "image_final_url": "https://mistral.ai/_astro/14c41c1b-f155-4d35-8427-759a6ca5692c_Z1yOwVe.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bca3e11c3e9ce80ebee25d0e65b72f08df8f55cd4ae6630103093b93d4f73256",
+      "asset_sha256": "96d6dc2f4feb532e899354c4eee81a9f8c3da5fc813d2d720f9d24990ce654c9",
+      "width": 2738,
+      "height": 1432,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/architecture.webp",
+      "original_label": "官方发布页：Pixtral 整体架构，无编号",
+      "source_url": "https://mistral.ai/news/pixtral-12b/",
+      "image_url": "https://mistral.ai/_astro/8ae163bf-f96b-4ed8-b8de-06a82d95f54b_ZE0EzY.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "image_final_url": "https://mistral.ai/_astro/8ae163bf-f96b-4ed8-b8de-06a82d95f54b_ZE0EzY.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bca3e11c3e9ce80ebee25d0e65b72f08df8f55cd4ae6630103093b93d4f73256",
+      "asset_sha256": "dd45405c6070bcde04aee369f0c8e42299bd02c988f5eda0c1636cbb16029e01",
+      "width": 2138,
+      "height": 1173,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/benchmarks.webp",
+      "original_label": "官方发布页：多模态评测表，无编号",
+      "source_url": "https://mistral.ai/news/pixtral-12b/",
+      "image_url": "https://mistral.ai/_astro/5c571e09-ffe4-47fe-a276-c1bddcab1225_qJwPF.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "image_final_url": "https://mistral.ai/_astro/5c571e09-ffe4-47fe-a276-c1bddcab1225_qJwPF.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bca3e11c3e9ce80ebee25d0e65b72f08df8f55cd4ae6630103093b93d4f73256",
+      "asset_sha256": "64552e44c2b369fc57a055a61ea72aaba6d2a2cec970e91df6cd0410b906e250",
+      "width": 3242,
+      "height": 3294,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/instruction-following.webp",
+      "original_label": "官方发布页：指令遵循评测表，无编号",
+      "source_url": "https://mistral.ai/news/pixtral-12b/",
+      "image_url": "https://mistral.ai/_astro/7911f914-cb1f-454b-a402-0babfee58c45_Z22xksx.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "image_final_url": "https://mistral.ai/_astro/7911f914-cb1f-454b-a402-0babfee58c45_Z22xksx.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bca3e11c3e9ce80ebee25d0e65b72f08df8f55cd4ae6630103093b93d4f73256",
+      "asset_sha256": "f27a594a217f305a9db0bf68ccd0ef9fc2f1694aac9bdea8d3c4f9fc015b42cf",
+      "width": 2497,
+      "height": 673,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "paper_id": "694f3d557578",
+  "catalogue_entry_id": "694f3d557578",
+  "family_slug": "monkey",
+  "title": "Monkey: Image Resolution and Text Label Are Important Things for Large Multi-modal Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.06607v1",
+  "source_url": "https://arxiv.org/pdf/2311.06607v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Monkey：让高分辨率图像与细粒度描述共同发挥作用",
+  "source_sha256": "f497200597d66e0dd46a20a79f69aa53686160b90ed42441ec9fe39f4d199f7b",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2220,
+  "figures_manifest": "figures-manifest.json"
+}

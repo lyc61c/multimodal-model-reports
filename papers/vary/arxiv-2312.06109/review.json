@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 architecture, data engine, training and results pages1–8; Figures2/4/5 and Tables1–3 rendered and visually inspected.",
+    "Vision vocabulary refers to learned continuous features, not discrete VQ codebook or enlarged text tokenizer; two256token branches concatenate channels, not sequence length.",
+    "SAM initialization distinguished from frozen pretrained SAM segmentation; Varytiny trainable whole model versus Varybase frozen two vision encoders and updated LLM retained.",
+    "Negative natural images are autoregressive generic-caption supervision, not contrastive negatives; synthetic per-language chart count wording retained without assumed doubled totals.",
+    "DocVQA val78.2/test76.3 table versus reversed prose explicitly disclosed; ChartQA SFT uses train split, not zero-shot claim.",
+    "OCR English F1 lower than Nougat despite lower edit distance and markdown mean limited to formula/table retained; different LLM/data variants not directly causal comparison.",
+    "No causal isolation of vocabulary versus data/resolution or total GPU speed-up claimed; no training hardware invented."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "ed48be8f5e1cbee74cc39967b5ed3aa59668782f67d6d2126249ac379c33c11c",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "source_version": "2307.05222v1",
+  "claims": [
+    {
+      "claim": "14B EVA1B,LLaMA13B,12block causal transformer;classification plusL2 visual loss",
+      "pdf_pages": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "18M videos1.8B storyboard images;MMC4CLIP.32;SFTfilter130K",
+      "pdf_pages": [
+        5,
+        6,
+        15,
+        17
+      ]
+    },
+    {
+      "claim": "Pretraining128A10080G10K82M150B;visionLR5e-5body4e-5appendix",
+      "pdf_pages": [
+        6,
+        16
+      ]
+    },
+    {
+      "claim": "Diffusion32A10040Gbatch1600,15Kepsilonprediction,7:2;SFTLoRA16/16",
+      "pdf_pages": [
+        6,
+        7,
+        16,
+        17
+      ]
+    },
+    {
+      "claim": "Star means2text-onlyexamples;RICES5000;FID11.66vs9.93SD;negativeSFTdeltas",
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        18,
+        19
+      ]
+    }
+  ]
+}

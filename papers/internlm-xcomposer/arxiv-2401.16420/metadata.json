@@ -1,0 +1,14 @@
+{
+  "paper_id": "4fac110a8bc0",
+  "catalogue_entry_id": "4fac110a8bc0",
+  "family_slug": "internlm-xcomposer",
+  "title": "InternLM-XComposer2: Mastering Free-form Text-Image Composition and Comprehension in Vision-Language Large Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2401.16420v1",
+  "source_url": "https://arxiv.org/pdf/2401.16420v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "InternLM-XComposer2：用 Partial LoRA 连接视觉理解与自由图文创作"
+}

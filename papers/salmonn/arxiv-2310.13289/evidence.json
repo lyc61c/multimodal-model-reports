@@ -1,0 +1,15 @@
+{
+  "paper_id": "162553e9a74f",
+  "source_url": "https://arxiv.org/pdf/2310.13289v1",
+  "source_version": "2310.13289v1",
+  "source_sha256": "eb8cb0f2594d83a30b9f0b6776135ff27f905b4235177916c13147f4dd979a8f",
+  "verification_notes": [
+    "Read main1-10 and appendices16-21, Table6 judging/prompt details; checkedv1 identity.",
+    "Viewed originals4/6/8/9 complete Figure1/2/3 Tables1/3/4/5.",
+    "Table3 shows AACSPIDEr47.6to40.3/GigaWER9.1to10.0; FR distinctaccuracy and Storydistinctwordscount.",
+    "Figure3 errors increase asLoRAscalingdiscounted; body dropsPER typo not propagated.",
+    "Activation12stories12steps distinctfulltraining;50Hzfeatureframe notwaveformsamplerate;30s88tokens asreported.",
+    "No model execution or independent reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

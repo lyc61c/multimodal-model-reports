@@ -1,0 +1,19 @@
+{
+  "paper_id": "417d4df3d8fa",
+  "catalogue_entry_id": "417d4df3d8fa",
+  "family_slug": "visionllm",
+  "title": "VisionLLM: Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2305.11175v1",
+  "source_url": "https://arxiv.org/pdf/2305.11175v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VisionLLM：语言指令驱动的通用视觉任务解码",
+  "source_sha256": "e54d0b3c5e32c73b924d71ee8ac41351c0933a20f7b1be44aa092e17f622fca6",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1811,
+  "figures_manifest": "figures-manifest.json"
+}

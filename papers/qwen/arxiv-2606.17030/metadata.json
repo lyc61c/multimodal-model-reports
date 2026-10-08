@@ -1,0 +1,19 @@
+{
+  "paper_id": "6f94cf51e082",
+  "catalogue_entry_id": "6f94cf51e082",
+  "family_slug": "qwen",
+  "title": "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2606.17030v1",
+  "source_url": "https://arxiv.org/pdf/2606.17030v1",
+  "document_kind": "world_model_report",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "Qwen-RobotWorld",
+  "source_sha256": "c3fdb9581dc685aa5aad38c2fa373f8a11a4f0bbc3159c3c52da137d66eb7a0b",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2294,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,54 @@
+{
+  "paper_id": "2ea7273632dc",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/production-overview.png",
+      "original_label": "Figure 1: production applications",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3.8-Omni-Flash/production-overview-v2.png",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3.8-Omni-Flash/production-overview-v2.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "22dc43a511a68cda2f22b57d3e8fb4e9ad42257e5fcbd0bf6ba8dc7fb357530c",
+      "asset_sha256": "b66c71214fbafe795474b786607e6bdf97aeb4df27609f290fec4a328b3db21b",
+      "width": 9230,
+      "height": 2888,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/performance-overview.png",
+      "original_label": "Unnumbered pricing and representative benchmark comparison",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3.8-Omni-Flash/performance-overview-v3.en.png",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3.8-Omni-Flash/performance-overview-v3.en.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "22dc43a511a68cda2f22b57d3e8fb4e9ad42257e5fcbd0bf6ba8dc7fb357530c",
+      "asset_sha256": "2dbf6951a31f6d4560204f0174ad01c471523d980a571e72c7d946f1822d4572",
+      "width": 4400,
+      "height": 4060,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/live-harness.png",
+      "original_label": "Figure 2: Qwen-Live Harness interaction framework",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3.8-Omni-Flash/fig3.png?v=20260916-2053",
+      "image_final_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3.8-Omni-Flash/fig3.png?v=20260916-2053",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "22dc43a511a68cda2f22b57d3e8fb4e9ad42257e5fcbd0bf6ba8dc7fb357530c",
+      "asset_sha256": "c28f95ab035c140cef4ac043ddb6ecfd81cba798fb7eefe4b345fbd18fadfcc7",
+      "width": 5822,
+      "height": 2523,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

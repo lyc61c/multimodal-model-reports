@@ -1,0 +1,50 @@
+{
+  "source_version": "2510.15870v1",
+  "claims": [
+    {
+      "claim": "Qwen2.5-7B起点、9B总模型、外接TTS",
+      "pdf_pages": [
+        5,
+        10,
+        35,
+        36
+      ]
+    },
+    {
+      "claim": "OmniAlignNet对比、TEG窗口、CRTE时间旋转",
+      "pdf_pages": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "24M混合对话与Figure5配比；C4类别名称有重复不擅修",
+      "pdf_pages": [
+        6,
+        7,
+        30
+      ]
+    },
+    {
+      "claim": "NVILA五阶段、50K音频对齐、9.6M音频SFT、200B联合编码器冻结",
+      "pdf_pages": [
+        29,
+        30
+      ]
+    },
+    {
+      "claim": "主表得分和GRPO独立分数、部署量化和应用范围",
+      "pdf_pages": [
+        8,
+        9,
+        10,
+        11,
+        22,
+        25,
+        26,
+        32
+      ]
+    }
+  ]
+}

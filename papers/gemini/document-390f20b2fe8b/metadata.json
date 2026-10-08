@@ -1,0 +1,14 @@
+{
+  "paper_id": "390f20b2fe8b",
+  "catalogue_entry_id": "390f20b2fe8b",
+  "family_slug": "gemini",
+  "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Gemini3.8Flash与FlashCyber：长程agent能力及安全专项评测"
+}

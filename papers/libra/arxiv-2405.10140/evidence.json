@@ -1,0 +1,17 @@
+{
+  "paper_id": "a7e45338d121",
+  "source_url": "https://arxiv.org/pdf/2405.10140v1",
+  "source_version": "2405.10140v1",
+  "source_sha256": "3b2a8c4b302d03c7b8e16f7fd0ec237614607c7479719fdfcb1ae551c6c56db6",
+  "verification_notes": [
+    "阅读全文1–9、14–18及身份引用；限定2405.10140v1",
+    "实际检视原PDF3/7/8/15完整Figure1/3/4与Table2/3/4",
+    "核对11.3B含7B底座4B专家0.3BCLIP；桥接秩8与视觉投影D/4非同一秩",
+    "连续及离散输入通道拼接；2个2^9码本及2^18组合；生成连续分量置零",
+    "桥接只作用跨模态K/V；图像先文本后因果性使文本到图像方向预训练无效",
+    "核对50M/500K/665K与tokenizer10M、生成另10M/7B token区分",
+    "核对40K/7K步、资源GPU小时、pretrain freeze和SFT解冻LLM",
+    "主表逐列数值与见过图像星号；不同指标和任务训练条件说明；消融与注意力推断范围区分"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

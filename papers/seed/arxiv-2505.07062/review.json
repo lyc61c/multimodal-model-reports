@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read PDF main pages 1–32, appendix B pages 67–77 and failure cases 63–66; fixed 2505.07062v1 cover date June 13 differs from version date May 11, recorded.",
+    "Visually inspected four complete original PDF screenshots: Figure 1 on page 5, Figure 4 on page 15, Table 6 on page 24, Tables 7 and 8 on page 26; all labels, headers and rows visible.",
+    "Confirmed 532M SeedViT, approximately 20B active MoE LLM parameters, 2x2 average pooling and two-layer MLP; no total parameter count or audio input inferred from ViT audio pretraining.",
+    "Separated ViT pretraining samples (2.2B, 4.8B, 65M) from VLM Stage 0/1/2 budgets (16B, 3T, 240B) and accurately recorded frozen/trainable modules and optimizer.",
+    "Original scaling equations marked as original/local pretraining fits; reward branching equation explicitly explanatory, not a complete paper PPO objective. No chain-of-thought step correctness inferred from final reward.",
+    "Read SFT construction, 16-answer STEM filtering, hybrid PPO final-answer rewards, distinct KL coefficients, context versus output budgets, four iterations, H800-normalized compute.",
+    "All Table 6 metrics checked by mode: DocVQA 96.9 thinking and 96.7 non-thinking despite contradictory prose; VisualWebBench 88.0 non-thinking, not prose 87.8. OCRBench raw 861/881, Qwen 885.",
+    "Video-MME without subtitles 77.9/77.6 versus Gemini 87.0; video evaluation at most 640 frames, 128K, dataset-specific FPS. Streaming proactive 68.0/82.8, temporal grounding uses mIoU.",
+    "GUI comparisons preserve losses versus CUA/UI-TARS; internal weighted 59.3 below Gemini 61.6. Local sampling/scaling not treated as full-component causal ablation; no model reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "6e15aad01046c1ab690581659bd374c01e2585ee72ff40ac6f0612d7c702b691",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "80ba1aca81a3",
+  "catalogue_entry_id": "80ba1aca81a3",
+  "family_slug": "longva",
+  "title": "Long Context Transfer from Language to Vision",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2406.16852v1",
+  "source_url": "https://arxiv.org/pdf/2406.16852v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LongVA：长语言上下文向视觉的迁移"
+}

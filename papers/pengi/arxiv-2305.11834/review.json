@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read technical body and appendices in 2305.11834v1; verified GPT-2 base 124M frozen, CLIP frozen and HTSAT trainable; audio does not include image input.",
+    "Viewed all four original full PDF pages 3,5,8,17: Figure2,Table1/Figure3,Tables7/8,Tables11-13; all are complete and no table columns dropped.",
+    "Verified 3.4M train pairs and inclusion of AudioCaps/Clotho/ClothoAQA/FSD50K training; separated pure zero-shot datasets and supervised linear probes.",
+    "Checked exact Table3/5/6/7/8/11/12/13 values and differing metrics; US8K underperforms CLAP; caption metrics not uniformly better.",
+    "Recorded hop/window unit typo, differing AudioCaps BLEU values and appendix emotion-row inconsistency rather than invent corrections.",
+    "No model execution or independent reproduction performed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "d69636bbdb3b17436f4faace35cea819889bd598e03c930cda23a163bd247fe4",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

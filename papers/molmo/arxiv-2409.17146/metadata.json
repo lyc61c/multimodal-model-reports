@@ -1,0 +1,14 @@
+{
+  "paper_id": "16bdceae9f46",
+  "catalogue_entry_id": "16bdceae9f46",
+  "family_slug": "molmo",
+  "title": "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2409.17146v1",
+  "source_url": "https://arxiv.org/pdf/2409.17146v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Molmo与PixMo：以人工密集描述和二维指点建设开放多模态模型"
+}

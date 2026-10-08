@@ -1,0 +1,44 @@
+{
+  "paper_id": "7cca3ca5d4d3",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-benchmarks.gif",
+      "original_label": "官方发布页基准对比原图",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-1-pro__benchmarks.gif",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-1-pro__benchmarks.gif",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "842fc7adc3b7911e5e00f7611a176324b16ea5f90d7f12b64184a999d3150024",
+      "asset_sha256": "6b612deebae923833d917e863b80b7fa24a7dd33a092382e6c74ef03ad796feb",
+      "width": 3000,
+      "height": 2568,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-reasoning-detail.png",
+      "original_label": "官方基准表推理部分局部，表头及 HLE/ARC-AGI-2/GPQA 行",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-1-pro__benchmarks.gif",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/gemini_3-1-pro__benchmarks.gif",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "842fc7adc3b7911e5e00f7611a176324b16ea5f90d7f12b64184a999d3150024",
+      "asset_sha256": "30edf74a41b97c8c7764e6b1d4ff554d7ee644770e6432e52799508ff5592077",
+      "width": 3000,
+      "height": 620,
+      "processing": {
+        "method": "lossless_original_image_crop",
+        "bbox_pixels": [
+          0,
+          0,
+          3000,
+          620
+        ],
+        "note": "Original table crop; full table is retained alongside; no redraw"
+      }
+    }
+  ]
+}

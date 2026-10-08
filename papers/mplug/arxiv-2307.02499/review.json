@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "figures_visually_checked": [
+    3,
+    5,
+    6,
+    7
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "原文未独立披露参数/分辨率/query数/GPU/LR等，未从其他版本填入",
+    "OCR-free只指无外部OCR推理，学术任务训练集参与不是严格零样本",
+    "TextCaps/VisualMRC评分超100不写为准确率，指标未披露完整公式",
+    "LLMDoc100人工样本，A+B48不是通用准确率",
+    "Figure5原文称JSON但原图形式存在重复键未引用值，未声称合法可解析",
+    "颜色证据框为作者标注不是模型attention或定位输出"
+  ]
+}

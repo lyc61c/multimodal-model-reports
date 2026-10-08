@@ -1,0 +1,14 @@
+{
+  "paper_id": "04898d842f0c",
+  "source_url": "https://arxiv.org/pdf/2410.07167v1",
+  "source_version": "2410.07167v1",
+  "source_sha256": "c6e10749efa002a543b49cf7b2ff5cc7bbbcf2d2e339c92fb12a28fa91278363",
+  "verification_notes": [
+    "阅读PDF1–10与附录15–18；确认MIR是诊断指标非独立基础模型，MoCa为视觉逐通道仿射模块。",
+    "视查Equation2–4原页，确认均值差平方、同alpha缩放、Equation4文本协方差下标笔误；MIR越低越好不作训练loss。",
+    "四张原页Figure6、Tables2/3、Tables4/5完整，核对7项与更多项平均的任务集合，不混用不同表Average。",
+    "核对默认100随机样本、至少20稳定经验、1.8M/1.9M近似规模、caption截断和共享665K SFT。",
+    "核对QFormer未BLIP2预对齐、MiniGemini因链接缺失用复现版、MoCa LLaVA MME退步及绝对1.5/0.9分；未运行模型。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read original v1 main pages 1-8 and supplementary pages 12-21; verified title, authors and source version.",
+    "Visually inspected original PDF pages 4, 5, 7 and 8; full figures, captions and table headers retained.",
+    "Checked Table 1 SD vs SD-ft and 7B vs 13B columns; plain long prompts worsen FID on untuned SD.",
+    "Checked Table 2 four separate mask/task blocks and noted missing -ft label on last 13B row.",
+    "Checked Table 3 reference and color-degradation ablations and Table 4 10%-data reductions.",
+    "Checked CLIP-I image-image metric, subset size non-disclosure, SDXL versus main SD1.5 conditions.",
+    "Checked CLIP/VAE wording conflict, generation token naming differences and frozen stage2 components.",
+    "No model execution or independent experimental reproduction claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "0aa7f4bc0417a6302572ee2689169e2405d27222b7ca13c0e3aae0253a6d3cec",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "paper_id": "fc3fb82e955e",
+  "catalogue_entry_id": "fc3fb82e955e",
+  "family_slug": "otter",
+  "title": "OtterHD: A High-Resolution Multi-modality Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.04219v1",
+  "source_url": "https://arxiv.org/pdf/2311.04219v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "OtterHD：从 Fuyu 出发研究高分辨率与动态图像输入",
+  "source_sha256": "df2c31ae09ffe763d5a1f5bd7d474787261500dc639c313c70a172d55cfe3b23",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1899,
+  "figures_manifest": "figures-manifest.json"
+}

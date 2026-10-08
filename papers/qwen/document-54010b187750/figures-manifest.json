@@ -1,0 +1,70 @@
+{
+  "paper_id": "54010b187750",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/original-architecture.jpg",
+      "original_label": "Official Architecture diagram (unnumbered)",
+      "source_url": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "image_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3.5-Omni/model.jpg",
+      "image_final_url": "https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/Qwen3.5-Omni/model.jpg",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "b46f812b180720787429a4ac6d70b88aee7ad835263d70d67db9352ddd9082d7",
+      "asset_sha256": "f93982441d01de982a0a040324c0aba54bc948eaa70636e944bbda0c553c2fc5",
+      "width": 3238,
+      "height": 2403,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/original-audio-visual.png",
+      "original_label": "Official Audio-Visual results (unnumbered)",
+      "source_url": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "image_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5-Omni/table/va.png",
+      "image_final_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5-Omni/table/va.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "b46f812b180720787429a4ac6d70b88aee7ad835263d70d67db9352ddd9082d7",
+      "asset_sha256": "3f5d8eea803e7d53a3bc8083a3f1d052a05c61788765d56eb98a3d488d1d5f1c",
+      "width": 7487,
+      "height": 1357,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/original-audio.png",
+      "original_label": "Official Audio results (unnumbered)",
+      "source_url": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "image_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5-Omni/table/audio.png",
+      "image_final_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5-Omni/table/audio.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "b46f812b180720787429a4ac6d70b88aee7ad835263d70d67db9352ddd9082d7",
+      "asset_sha256": "3c28ad9e9a519b4ad4dcca6f6842168c2ede7c843dc89013329bf28dfbb842be",
+      "width": 7471,
+      "height": 1357,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/original-visual.png",
+      "original_label": "Official Visual results (unnumbered)",
+      "source_url": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "image_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5-Omni/table/vl.png",
+      "image_final_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5-Omni/table/vl.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "b46f812b180720787429a4ac6d70b88aee7ad835263d70d67db9352ddd9082d7",
+      "asset_sha256": "e3c6468ffb9e5fb99c8855a2a4ecf40c4034422c7100ce33672d8ebb30c327e4",
+      "width": 7471,
+      "height": 1357,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

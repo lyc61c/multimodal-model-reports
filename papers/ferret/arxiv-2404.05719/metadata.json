@@ -1,0 +1,19 @@
+{
+  "paper_id": "3b84e8a511a7",
+  "catalogue_entry_id": "3b84e8a511a7",
+  "family_slug": "ferret",
+  "title": "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2404.05719v1",
+  "source_url": "https://arxiv.org/pdf/2404.05719v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Ferret-UI：面向移动界面的区域理解与定位",
+  "source_sha256": "b203b48b05ef3bbfd4dabeed01f1658b37d3abfcbd39567a73452ccf614bac5a",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2499,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,43 @@
+{
+  "source_version": "2405.20797v1",
+  "claims": [
+    {
+      "claim": "Independent visual embedding table, K=131072, softmax weighted expectation rather than hard sampled token",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "Three-stage freeze configuration and caption-description-instruction datasets",
+      "pdf_pages": [
+        6,
+        7,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "claim": "128 H100 hyperparameters and training hours",
+      "pdf_pages": [
+        18
+      ]
+    },
+    {
+      "claim": "Main benchmark numbers and 8.8 percent relative ablation gain; baseline training differs",
+      "pdf_pages": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "claim": "Thresholded distribution sparsity does not demonstrate sparse-compute speedup",
+      "pdf_pages": [
+        21
+      ]
+    }
+  ]
+}

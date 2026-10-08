@@ -1,0 +1,14 @@
+{
+  "paper_id": "eedfaab008bf",
+  "catalogue_entry_id": "eedfaab008bf",
+  "family_slug": "llama-vid",
+  "title": "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.17043v1",
+  "source_url": "https://arxiv.org/pdf/2311.17043v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LLaMA-VID：以问题相关 token 和内容 token 压缩视频帧"
+}

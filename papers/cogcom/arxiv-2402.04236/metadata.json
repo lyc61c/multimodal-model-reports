@@ -1,0 +1,14 @@
+{
+  "paper_id": "3c88228a1567",
+  "catalogue_entry_id": "3c88228a1567",
+  "family_slug": "cogcom",
+  "title": "CogCoM: Train Large Vision-Language Models Diving into Details through Chain of Manipulations",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2402.04236v1",
+  "source_url": "https://arxiv.org/pdf/2402.04236v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "CogCoM：通过定位、裁剪与放大建立可追踪的视觉操作链"
+}

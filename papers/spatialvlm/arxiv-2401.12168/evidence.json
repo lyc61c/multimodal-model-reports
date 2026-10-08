@@ -1,0 +1,16 @@
+{
+  "paper_id": "fa8d772918c0",
+  "source_url": "https://arxiv.org/pdf/2401.12168v1",
+  "source_version": "2401.12168v1",
+  "source_sha256": "c10f059f0db1b55265873c889f1ceca0e1f82c538127a5ae86163185ebee15e2",
+  "verification_notes": [
+    "Read v1 methodology, experiments and implementation appendix 18–23; Figures2/6 and Tables1/2/4 original crops visually inspected.",
+    "Training-time geometry experts distinguished from RGB-only direct VLM inference and external LLM coordinated multistep inference.",
+    "PaLM2-S actual parameter count and ViT variant not invented; project link marks third-party code rather than official original release.",
+    "2B generated pairs not all consumed; 5% spatial token share versus appendix 174:2.5 example sampling not equated.",
+    "99% numeric output versus 37.2% half-to-twice range and 8.4% within 10% clearly differentiated; small human-estimated benchmark and 2023 GPT4V snapshot disclosed.",
+    "Qualitative gains, OKVQA decline and robot-domain noisy-data limitations retained; MSE(m) unit in paper flagged dimensionally.",
+    "Coordinator text-davinci-003 versus GPT4 wording conflict and Figure4 triangle naming conflict not used as exact reproducible setup; no actual RL policy success rate claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

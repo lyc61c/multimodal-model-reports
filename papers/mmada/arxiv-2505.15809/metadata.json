@@ -1,0 +1,14 @@
+{
+  "paper_id": "b2f9a2e04391",
+  "catalogue_entry_id": "b2f9a2e04391",
+  "family_slug": "mmada",
+  "title": "MMaDA: Multimodal Large Diffusion Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2505.15809v1",
+  "source_url": "https://arxiv.org/pdf/2505.15809v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MMaDA：用统一离散扩散完成语言推理、视觉理解与图像生成"
+}

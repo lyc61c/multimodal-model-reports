@@ -1,0 +1,14 @@
+{
+  "paper_id": "271326464386",
+  "catalogue_entry_id": "271326464386",
+  "family_slug": "groundhog",
+  "title": "GROUNDHOG: Grounding Large Language Models to Holistic Segmentation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2402.16846v1",
+  "source_url": "https://arxiv.org/pdf/2402.16846v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "GROUNDHOG：从候选实体掩码中检索并合并语言所指区域"
+}

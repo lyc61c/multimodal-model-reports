@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 main pages 1–11 and appendix pages 17–19, including architecture and stage details.",
+    "Visually checked Figure 1, Figure 3, Figure 5 and Table 4–6 original page renders; crop only surrounding prose and retain full captions.",
+    "Appendix A.4.1 explicitly says 51M images and unfreezes all parameters at stage 3; do not reuse the original VILA frozen-ViT description.",
+    "Main 6M MMC4 sampled entries must not be added to 25M COYO as if both were independent image counts. Appendix gives 25M MMC4 images.",
+    "40B recipe differs between main 3.75M recaptions plus 200K and appendix 7.5M split. Record unresolved detail rather than invent reconciliation.",
+    "Table 4 MME columns 1518.2 to 1656.2 imply +138.0, while printed annotation says +142; used actual column values and exposed discrepancy.",
+    "MMMU main comparison is test, not val; self-augmentation is not monotonic on every metric, and POPE slightly regresses with all specialists.",
+    "Distinguish final VILA-squared family name from self-augmentation loop indices; 40B combines Yi34B and InternViT6B.",
+    "Synthetic labels are text supervision, not teacher-logit KL or RLAIF; commercial models are judges and some public GPT-generated datasets remain in the recipe."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "80a8002bba2ca42cdf1b2031ae279e298d9c626946dcd10f8a32a0eff5587e55",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

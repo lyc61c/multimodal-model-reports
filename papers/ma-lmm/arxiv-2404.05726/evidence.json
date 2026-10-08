@@ -1,0 +1,47 @@
+{
+  "source_version": "2404.05726v1",
+  "claims": [
+    {
+      "claim": "EVA-G14 frozen;InstructBLIPQFormertrainable;Vicuna7Bfrozen;32finaltokens",
+      "pdf_pages": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "Visual shared memory;per-layer querymemory;tokenleveladjacentcosineaveraging",
+      "pdf_pages": [
+        4,
+        12
+      ]
+    },
+    {
+      "claim": "Dataset-specific supervised protocols,notunifiedzero-shot;Tables11-13",
+      "pdf_pages": [
+        5,
+        12,
+        13
+      ]
+    },
+    {
+      "claim": "LVU63withrelation/genrebelowS5;ActivityNet49.8below56.1;verbrecalldecline",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "Memoryandcompressionablations;Concat60framesvsMBC100;19.1vs49.2",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "Timecostlinearandnotrealtime;memorycompressionnotlossless",
+      "pdf_pages": [
+        4,
+        12
+      ]
+    }
+  ]
+}

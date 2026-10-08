@@ -1,0 +1,28 @@
+{
+  "source_url": "https://qwen.ai/blog?id=qwen3.6",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "e8c7a1293a2c5dd5f7eec579c665225a8e13e625c06365140b2a31f6bcf49edb",
+  "read_scope": "技术正文、完整语言/视觉基准表和脚注、API选项、代表grounding演示原图/响应与结论；不把大量演示思考中的自述视作独立事实",
+  "claims": [
+    {
+      "location": "intro/API",
+      "claim": "Plus参数未披露；默认1M；preserve_thinking默认false，和enable分开"
+    },
+    {
+      "location": "完整Language/VL表与脚注",
+      "claim": "200K/256K eval budgets,修正SWE/异质SkillsBench，CI顺序with/without"
+    },
+    {
+      "location": "原图qwen3.6_plus_score.png",
+      "claim": "12项选出指标，不覆盖所有退步；完整原图尺寸17457x10428"
+    },
+    {
+      "location": "定位示例",
+      "claim": "JSON坐标尺度未明示，绘制框不能硬等同于原像素，非IoU基准"
+    }
+  ],
+  "source_inconsistencies": [
+    "grounding JSON框底边与原图可见叠加框可能使用不同尺度/渲染，未当作同一已验证像素框"
+  ],
+  "model_execution": "not_run"
+}

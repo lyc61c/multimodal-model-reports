@@ -1,0 +1,14 @@
+{
+  "paper_id": "b50cc85db3e1",
+  "catalogue_entry_id": "b50cc85db3e1",
+  "family_slug": "internlm-xcomposer",
+  "title": "InternLM-XComposer2.5-OmniLive: A Comprehensive Multimodal System for Long-term Streaming Video and Audio Interactions",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2412.09596v1",
+  "source_url": "https://arxiv.org/pdf/2412.09596v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "InternLM-XComposer2.5-OmniLive：把流式感知、长记忆与推理解耦"
+}

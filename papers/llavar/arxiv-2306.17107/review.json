@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "reference_pages_skipped": [
+    12,
+    13
+  ],
+  "figures_visually_checked": [
+    2,
+    4,
+    5,
+    9
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "No independent external review or model execution",
+    "Answer-substring metric can favor long responses",
+    "ScienceQA result is task-specific finetuning",
+    "No exact GPU count/lr/batch/epochs in article",
+    "GPT4 teacher is text-only and synthetic labels may contain hallucinations"
+  ]
+}

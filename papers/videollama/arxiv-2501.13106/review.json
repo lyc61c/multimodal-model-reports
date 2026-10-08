@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 PDF pages 1 and 3–16, including detailed data tables and implementation settings; source has 38 pages.",
+    "Inspected five original Figure2/3/4 and Table6/8 crops; used text-line coordinates to repair clipped captions before registration.",
+    "AVT is SigLIP 2D-RoPE adaptation, DiffFP uses pixel-space neighboring patch L1 differences rather than hidden features; no audio branch imported from predecessor.",
+    "Figure2 second-stage text1M/total21.97M conflicts with Table2 text6.25M/summed27.22M; reported unresolved discrepancy.",
+    "Separately reported 68K video count and242K synthetic QA count; no independent total from summing overlapping stages.",
+    "Training visual budget10240 versus video evaluation16K, 1fps then at most180 frames, image downsampling only final stage preserved.",
+    "Table7 2B MMVU39.9 conflicts with prose37.6; image table calls Qwen2VL8B whereas video table7B; no invented reconciliation.",
+    "Separated percentages, MME/OCRBench scores and temporal mIoU; no claim of controlled causality or measured universal speedup."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "66b2d802d7da9fc191cb80e88fc78e7a19f9ac4241c2d1037fdb6f90da7722f7",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

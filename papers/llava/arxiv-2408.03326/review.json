@@ -1,0 +1,41 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "完整原文身份、模型总参数与LLM档位区分",
+    "四子阶段更新范围和学习率由Table1核对",
+    "混合阶段数据冲突明确标记，不统一猜算",
+    "SI/OV、单图/多图拆分与字幕条件核对",
+    "不把图到视频文字指令称为视频生成",
+    "不将历史NeXTVideoDPO迁移到本报告主训练"
+  ],
+  "math_checks": [
+    "Eq1自回归分解和标准NLL转换标记",
+    "Eq2预算分式与整数网格区别",
+    "27x27到14x14=196，不精确729/4",
+    "视频6272对附录笔误核验"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-003-01.png",
+      "checked": "已view_image；原完整PDF页；图注、所有轴/表头/模型行完整"
+    },
+    {
+      "file": "figures/original-page-004-02.png",
+      "checked": "已view_image；原完整PDF页；图注、所有轴/表头/模型行完整"
+    },
+    {
+      "file": "figures/original-page-007-03.png",
+      "checked": "已view_image；原完整PDF页；图注、所有轴/表头/模型行完整"
+    },
+    {
+      "file": "figures/original-page-012-04.png",
+      "checked": "已view_image；原完整PDF页；图注、所有轴/表头/模型行完整"
+    }
+  ],
+  "limitations": [
+    "v1数据与数值存在多处来源冲突，文中保留",
+    "优化器和硬件配方未披露",
+    "定性迁移例未独立复测"
+  ],
+  "model_execution": "not_run"
+}

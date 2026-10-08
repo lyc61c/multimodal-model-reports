@@ -1,0 +1,14 @@
+{
+  "paper_id": "5bbb66493e7a",
+  "source_url": "https://arxiv.org/pdf/2308.04152v1",
+  "source_version": "2308.04152v1",
+  "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
+  "verification_notes": [
+    "Readfulltechnicalmainandalltaskresultappendices",
+    "Viewedfourselectedoriginalpagestablescomplete",
+    "CheckedmainTable2againstAppendix7/8 identifiedcolumninconsistency",
+    "Separatedtrainingcostandalignmentdata",
+    "Sevensections;notmodelexecution"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

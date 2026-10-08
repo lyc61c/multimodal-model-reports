@@ -1,0 +1,61 @@
+{
+  "source_version": "2408.04840v1",
+  "claims": [
+    {
+      "claim": "SigLIP400m/Qwen2 vs ablationQwen1.5; sparse layersbody0,9,17,25 vsTable9first1",
+      "pdf_pages": [
+        3,
+        10,
+        11
+      ]
+    },
+    {
+      "claim": "SharedLayerNorm visualKV textQuery parallelattention;MIropeimageplaceholderposition andcausalmask;gateEq1/2",
+      "pdf_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "41Mpretrain;samplingproportion;3-6interleaved4selective8video;croppingtext100normal20multi0;table6cropcountambiguous",
+      "pdf_pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "3stages LRmax1e-3/2e-5/2e-5 globalbatch2048/1024/1024 steps20K/3K/11K seq768/4096/4096 warm.03TP1/4/4Zero1",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "MMVet40.1 below LLaVANeXT43.9 despite prose claim;VideoMME53.5 no subtitles",
+      "pdf_pages": [
+        9
+      ]
+    },
+    {
+      "claim": "BLINK50.3 below52.6Qbench74below74.2;ablationdifferentLLM",
+      "pdf_pages": [
+        10,
+        11
+      ]
+    },
+    {
+      "claim": "CircularEval DistractorResistance50image43.09/400image28.58;not ordinaryMMBench",
+      "pdf_pages": [
+        12,
+        13
+      ]
+    },
+    {
+      "claim": "QualitativeV10032G128framesvs8;actualcount and temporalhallucination cases",
+      "pdf_pages": [
+        13,
+        14,
+        17
+      ]
+    }
+  ]
+}

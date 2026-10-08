@@ -1,0 +1,14 @@
+{
+  "paper_id": "f3ccc8a656c8",
+  "catalogue_entry_id": "f3ccc8a656c8",
+  "family_slug": "comparison-visual-instruction-tuning",
+  "title": "Comparison Visual Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2406.09240v1",
+  "source_url": "https://arxiv.org/pdf/2406.09240v1",
+  "document_kind": "dataset_and_method",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Comparison Visual Instruction Tuning：同时学习图像的共同点与差异"
+}

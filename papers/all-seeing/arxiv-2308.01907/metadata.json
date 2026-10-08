@@ -1,0 +1,14 @@
+{
+  "paper_id": "393a3fae7620",
+  "catalogue_entry_id": "393a3fae7620",
+  "family_slug": "all-seeing",
+  "title": "The All-Seeing Project: Towards Panoptic Visual Recognition and Understanding of the Open World",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2308.01907v1",
+  "source_url": "https://arxiv.org/pdf/2308.01907v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "All-Seeing：用区域数据引擎统一视觉识别与语言生成"
+}

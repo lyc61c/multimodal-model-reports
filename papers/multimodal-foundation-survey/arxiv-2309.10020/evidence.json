@@ -1,0 +1,157 @@
+{
+  "source_version": "2309.10020v1",
+  "source_url": "https://arxiv.org/pdf/2309.10020v1",
+  "source_sha256": "b02c45e2cc34a15bdc3e05c958e2871440ba24da895b3a184a1ce573a4c11bbd",
+  "claims": [
+    {
+      "claim": "119页2023综述；并未发布新的同名模型",
+      "pdf_pages": [
+        1,
+        5,
+        9,
+        11,
+        89
+      ]
+    },
+    {
+      "claim": "两类五主题分类与原文Figure1.3",
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        10,
+        89
+      ]
+    },
+    {
+      "claim": "全局图文表示与区域像素定位需要区别",
+      "pdf_pages": [
+        23,
+        25,
+        26,
+        44,
+        45
+      ]
+    },
+    {
+      "claim": "I/O统一与功能统一及序列目标(4.3)",
+      "pdf_pages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        55
+      ]
+    },
+    {
+      "claim": "MIM目标多样，MAE75%与视频90%是具体案例",
+      "pdf_pages": [
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "claim": "扩散交叉注意力、ControlNet、推理操控及奖励微调区别",
+      "pdf_pages": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ]
+    },
+    {
+      "claim": "Textual Inversion冻结嵌入与DreamBooth先验保持",
+      "pdf_pages": [
+        38,
+        39
+      ]
+    },
+    {
+      "claim": "LLaVA语言版GPT4符号数据158K，更新连接和LLM而非所有模块",
+      "pdf_pages": [
+        68,
+        69
+      ]
+    },
+    {
+      "claim": "SVIT3.2M，InstructionGPT4选200/3500，InstructBLIP13/13留出",
+      "pdf_pages": [
+        72,
+        73
+      ]
+    },
+    {
+      "claim": "InstructPix2Pix超过450K编辑图像对",
+      "pdf_pages": [
+        35
+      ]
+    },
+    {
+      "claim": "BLIP2与Flamingo冻结策略及交错网页数据",
+      "pdf_pages": [
+        62,
+        63
+      ]
+    },
+    {
+      "claim": "MMReAct系统规划执行文本观察，不训练权重的新接口",
+      "pdf_pages": [
+        77,
+        79,
+        80,
+        81,
+        82,
+        85,
+        86
+      ]
+    },
+    {
+      "claim": "LLaVA相对分数85.1/73.5非准确率，ScienceQA90.92与组合92.53区别",
+      "pdf_pages": [
+        68,
+        69,
+        70
+      ]
+    },
+    {
+      "claim": "Bard及BingChat快照日期与分数",
+      "pdf_pages": [
+        69
+      ]
+    },
+    {
+      "claim": "OCR正文24数据集21优于MiniGPT4，与表23任务单位不同",
+      "pdf_pages": [
+        74,
+        75
+      ]
+    },
+    {
+      "claim": "工具调用准确率与最终能力评估分别检验",
+      "pdf_pages": [
+        85,
+        86,
+        87,
+        88
+      ]
+    },
+    {
+      "claim": "研究路线定性比较与视觉长尾/成本局限",
+      "pdf_pages": [
+        59,
+        60,
+        89,
+        90,
+        91
+      ]
+    }
+  ]
+}

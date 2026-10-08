@@ -1,0 +1,19 @@
+{
+  "paper_id": "9faa140a0b57",
+  "catalogue_entry_id": "9faa140a0b57",
+  "family_slug": "vita",
+  "title": "VITA-VLA: Efficiently Teaching Vision-Language Models to Act via Action Expert Distillation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2510.09607v1",
+  "source_url": "https://arxiv.org/pdf/2510.09607v1",
+  "document_kind": "embodied_model_report",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "VITA-VLA",
+  "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1982,
+  "figures_manifest": "figures-manifest.json"
+}

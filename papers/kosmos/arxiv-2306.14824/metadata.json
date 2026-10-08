@@ -1,0 +1,19 @@
+{
+  "paper_id": "53cf10e9418a",
+  "catalogue_entry_id": "53cf10e9418a",
+  "family_slug": "kosmos",
+  "title": "Kosmos-2: Grounding Multimodal Large Language Models to the World",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2306.14824v1",
+  "source_url": "https://arxiv.org/pdf/2306.14824v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "KOSMOS-2：把文字指代表达连接到图像区域",
+  "source_sha256": "0f0430dc38b8662bb1fb9f2f52134b4b3f9f17ceb811c9261f381ce3b18dc5b2",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1789,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,63 @@
+{
+  "paper_id": "32a268f7f1d8",
+  "source_version": "official-release-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-1.svg",
+      "original_label": "GPT-4.1 family intelligence by latency（官方原图，无编号）",
+      "source_url": "https://openai.com/index/gpt-4-1/",
+      "image_url": "https://images.ctfassets.net/kftzwdyauwt9/1QIXpeDCuUBwiGQ6xxkIeg/75a11a9c0e222c9b93896fab30304d66/GPT-4.1_Family_Intelligence_by_Latency_lightMode.svg?w=3840&q=90",
+      "image_final_url": "https://images.ctfassets.net/kftzwdyauwt9/1QIXpeDCuUBwiGQ6xxkIeg/75a11a9c0e222c9b93896fab30304d66/GPT-4.1_Family_Intelligence_by_Latency_lightMode.svg?w=3840&q=90",
+      "source_version": "official-release-2026-10-08",
+      "source_sha256": "c6bccc9b75b39a44b72fa4e51420db79a6e850c107d4929e2d77b5144778dbe4",
+      "asset_sha256": "49b3da198fb840e1444d09b8637a87a733225cf3a94547a950ebe56ae396092d",
+      "width": 644.0,
+      "height": 474.0,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "preview_path": "figures/official-1-preview.png",
+      "preview_sha256": "0421a6701c63fc3b72358d1e38c89d9c4bc3e572b499e7120b411721f760bd88",
+      "preview_note": "Faithful raster rendering on a white page for visual inspection; original SVG retained without edits."
+    },
+    {
+      "asset_path": "figures/official-2.svg",
+      "original_label": "GPT-4.1 Needle in a Haystack accuracy graph（官方原图，无编号）",
+      "source_url": "https://openai.com/index/gpt-4-1/",
+      "image_url": "https://images.ctfassets.net/kftzwdyauwt9/5N4CGIc8M9XNVP4UxyrFNd/2918a7016861e8ceac30d06da80f6326/GPT-4.1__GPT-4.1_mini__and_GPT-4.1_nano_Needle_in_a_Haystack_Accuracy_LightMode.svg?w=3840&q=90",
+      "image_final_url": "https://images.ctfassets.net/kftzwdyauwt9/5N4CGIc8M9XNVP4UxyrFNd/2918a7016861e8ceac30d06da80f6326/GPT-4.1__GPT-4.1_mini__and_GPT-4.1_nano_Needle_in_a_Haystack_Accuracy_LightMode.svg?w=3840&q=90",
+      "source_version": "official-release-2026-10-08",
+      "source_sha256": "c6bccc9b75b39a44b72fa4e51420db79a6e850c107d4929e2d77b5144778dbe4",
+      "asset_sha256": "3b67fae2347eee33f571adc8b6ace1c4efe2e796ce3d982f708499b399a093cc",
+      "width": 642.0,
+      "height": 523.0,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "preview_path": "figures/official-2-preview.png",
+      "preview_sha256": "486400d35b2d14059212c159e1762ad3999499cfdf9dfe125df894cfe594ca08",
+      "preview_note": "Faithful raster rendering on a white page for visual inspection; original SVG retained without edits."
+    },
+    {
+      "asset_path": "figures/official-3.svg",
+      "original_label": "OpenAI MRCR accuracy, 2 needle（官方原图，无编号）",
+      "source_url": "https://openai.com/index/gpt-4-1/",
+      "image_url": "https://images.ctfassets.net/kftzwdyauwt9/2oTJ2p3iGsEPnBrYeNhxbb/9d14d937dc6004da8a49561af01b6781/OpenAI-MRCR_accuracy_2needle_Lightmode.svg?w=3840&q=90",
+      "image_final_url": "https://images.ctfassets.net/kftzwdyauwt9/2oTJ2p3iGsEPnBrYeNhxbb/9d14d937dc6004da8a49561af01b6781/OpenAI-MRCR_accuracy_2needle_Lightmode.svg?w=3840&q=90",
+      "source_version": "official-release-2026-10-08",
+      "source_sha256": "c6bccc9b75b39a44b72fa4e51420db79a6e850c107d4929e2d77b5144778dbe4",
+      "asset_sha256": "009dc0f1bad42b5c544f33d42eb92f825edbb9e2b390de6e8534566b339bbf27",
+      "width": 810.0,
+      "height": 790.0,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "preview_path": "figures/official-3-preview.png",
+      "preview_sha256": "16ef837dc3c73831103c7ad07acd39d8d86f80521e4016a59930bc46dd6f86d3",
+      "preview_note": "Faithful raster rendering on a white page for visual inspection; original SVG retained without edits."
+    }
+  ]
+}

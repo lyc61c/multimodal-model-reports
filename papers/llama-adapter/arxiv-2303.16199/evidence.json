@@ -1,0 +1,17 @@
+{
+  "paper_id": "605e0eb44c0c",
+  "source_url": "https://arxiv.org/pdf/2303.16199v1",
+  "source_version": "2303.16199v1",
+  "source_sha256": "6503685b2597c620a7dffd64a82857779873da79950353f2a698ee480b20fcbd",
+  "verification_notes": [
+    "阅读全文正文1–9与附录12–18；限定v1而非V2；原作者仓库和catalogue仓库分别列明",
+    "实际检视原PDF3/4/7/8，Figure2–5与Table2–5完整",
+    "两个独立softmax乘门控，g0保留原文字归一化；不假设门控概率或所有提示零初始化",
+    "视觉多尺度全局通道concat后Repeat+Add，不捏造patch或尺度数量",
+    "1.2M文本与0.6M投影合1.8M；储存4.7M表对正文4.9M差异保留",
+    "5epoch文本与15/30/60epoch多模态实验差异记录；未假定main全部超参一致",
+    "Table2逐列核对测试85.19/IMG80.32，与MMCoT各列有得失",
+    "Table4正文10到30增17.41误算纠正为表差27.90；84.04/83.85分别保留；作者定性文本案例不装统计结论"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

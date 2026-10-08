@@ -1,0 +1,19 @@
+{
+  "paper_id": "3a7f77dffb3b",
+  "catalogue_entry_id": "3a7f77dffb3b",
+  "family_slug": "vita",
+  "title": "VITA-QinYu: Expressive Spoken Language Model for Role-Playing and Singing",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2605.06765v1",
+  "source_url": "https://arxiv.org/pdf/2605.06765v1",
+  "document_kind": "model_release",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "VITA-QinYu：在统一语音模型中学习角色扮演与歌唱表达",
+  "source_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2653,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,19 @@
+{
+  "paper_id": "605e0eb44c0c",
+  "catalogue_entry_id": "605e0eb44c0c",
+  "family_slug": "llama-adapter",
+  "title": "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2303.16199v1",
+  "source_url": "https://arxiv.org/pdf/2303.16199v1",
+  "document_kind": "training_method",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "LLaMA-Adapter：用零初始化注意力高效微调语言模型",
+  "source_sha256": "6503685b2597c620a7dffd64a82857779873da79950353f2a698ee480b20fcbd",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2032,
+  "figures_manifest": "figures-manifest.json"
+}

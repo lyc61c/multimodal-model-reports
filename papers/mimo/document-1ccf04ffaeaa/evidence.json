@@ -1,0 +1,17 @@
+{
+  "paper_id": "1ccf04ffaeaa",
+  "source_url": "https://mimo.xiaomi.com/mimo-v2-omni",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "a949d4080c2aee458de5ca93d186de888f2779533a3211614c3cafeed878449f",
+  "verification_notes": [
+    "Read entire official2026-03-18 MiMo-V2-Omni release page including all5 demos and future roadmap; unified encoders/backbone versus external OpenClaw action execution distinguished.",
+    "Read cached original inline JavaScript benchModels/perceptionData/agenticData/codeData arrays; all12 task values and model key mappings verified directly, GDPVal Elo preserved.",
+    "Original graphs are dynamic HTML/CSS with no standalone publisher images. Tabbit stable launcher diagnose exited1 without output; root confirmed repeated routing failure and authorized original-page/HTML links instead. Static source graphics remain unavailable, no visual screenshot inspection claimed.",
+    "Source page assets and image inventory checked: only logos, no original chart raster/SVG/PDF link in this snapshot. No logo or redraw misrepresented as original technical figure.",
+    "Explicitly reported MMMU/CharXiv/VideoMME and OmniGAIA weaknesses, SWE below all displayed peers, task-specific wins and undisclosed video subtitles/frame budget.",
+    "7-hour single-pass audio and over10-hour statements are official claims without independent listening or degradation curve; driving text not evidence of executed vehicle control; video creation code is not native media-token output.",
+    "No undisclosed parameter count, architecture internals, training recipe or no-modality-tax causal ablation invented; no model/application run performed.",
+    "Pre-publication link check: removed three links to ignored local HTML caches; retained corresponding official chart anchors. No numerical, mathematical, or model-description claims changed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

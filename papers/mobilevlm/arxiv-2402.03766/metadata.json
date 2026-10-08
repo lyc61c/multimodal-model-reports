@@ -1,0 +1,14 @@
+{
+  "paper_id": "e221f65190af",
+  "catalogue_entry_id": "e221f65190af",
+  "family_slug": "mobilevlm",
+  "title": "MobileVLM V2: Faster and Stronger Baseline for Vision Language Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2402.03766v1",
+  "source_url": "https://arxiv.org/pdf/2402.03766v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MobileVLM V2：轻量投影、数据扩充与移动端联合训练"
+}

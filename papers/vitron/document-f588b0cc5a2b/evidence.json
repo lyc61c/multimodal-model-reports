@@ -1,0 +1,15 @@
+{
+  "paper_id": "f588b0cc5a2b",
+  "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+  "verification_notes": [
+    "核对作者官方33页NeurIPS2024 PDF第1、3、5页：作者机构、Vicuna7Bv1.5、CLIP336逐帧平均、区域mask编码，未误写原生视频编码或7B总系统。",
+    "核对Appendix A/B1/B2 Table13/14：真实专家名单、55,028调用数据与全部数据不同、GPT4增强、归一化坐标；框示例顺序问题和AudioCaps非音频能力已注明。",
+    "核对Appendix B3 Eq1—4：原对抗损失预测乘log真标签存在可执行性问题，正文标准CE示意明确为解释而非论文原式，未虚构lambda和实现。",
+    "核对Appendix B4/C：三阶段细步、batch128/90/128、LR3e-4/1e-5/1e-5、40/35/10h；主文10张vs附录10—16张GPU，后端实验前针对性预训练未省略。",
+    "核对Tables2—12/15—18与Fig4：RefCOCO表文矛盾、IS非所有指标最佳、CLIPSIM消融负值疑点、五人编辑评分协议边界；不冒充独立复现。",
+    "检查7个原PDF图表最终裁图，保留图注与各项结果，无重绘或合成图。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "e41bd5d121cd",
+  "catalogue_entry_id": "e41bd5d121cd",
+  "family_slug": "ltu",
+  "title": "Listen, Think, and Understand",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2305.10790v1",
+  "source_url": "https://arxiv.org/pdf/2305.10790v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LTU：让语言模型从识别声音走向开放音频问答"
+}

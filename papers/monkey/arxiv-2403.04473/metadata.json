@@ -1,0 +1,14 @@
+{
+  "paper_id": "4aebd8866807",
+  "catalogue_entry_id": "4aebd8866807",
+  "family_slug": "monkey",
+  "title": "TextMonkey: An OCR-Free Large Multimodal Model for Understanding Document",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2403.04473v1",
+  "source_url": "https://arxiv.org/pdf/2403.04473v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "TextMonkey：高分辨率文档理解、视觉token压缩与文字定位"
+}

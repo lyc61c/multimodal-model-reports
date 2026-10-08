@@ -1,0 +1,14 @@
+{
+  "paper_id": "3982811bbd36",
+  "catalogue_entry_id": "3982811bbd36",
+  "family_slug": "llava",
+  "title": "LLaVA-OneVision: Easy Visual Task Transfer",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2408.03326v1",
+  "source_url": "https://arxiv.org/pdf/2408.03326v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LLaVA-OneVision：用统一视觉表示连接单图、多图与视频任务"
+}

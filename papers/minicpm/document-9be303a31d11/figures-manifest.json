@@ -1,0 +1,54 @@
+{
+  "paper_id": "9be303a31d11",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-architecture.png",
+      "original_label": "官方模型卡 Model Architecture 原架构图（无图号）",
+      "source_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5",
+      "image_url": "https://raw.githubusercontent.com/OpenBMB/MiniCPM-o/main/assets/minicpm-o-45-framework.png",
+      "image_final_url": "https://raw.githubusercontent.com/OpenBMB/MiniCPM-o/main/assets/minicpm-o-45-framework.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bd8bbd77551b2c762746089bb39c8605fd67b5e00e5337e441d52fafe1304be8",
+      "asset_sha256": "c82dcbdfc57318a05935bdce5a4c9077fbe50edb4a70174648a760fe06852a98",
+      "width": 2430,
+      "height": 1114,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-main-results.png",
+      "original_label": "官方模型卡 Performance 原评测汇总图（无图号）",
+      "source_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5",
+      "image_url": "https://raw.githubusercontent.com/openbmb/MiniCPM-o/main/assets/minicpm_o_45_main_exp_table.png",
+      "image_final_url": "https://raw.githubusercontent.com/openbmb/MiniCPM-o/main/assets/minicpm_o_45_main_exp_table.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bd8bbd77551b2c762746089bb39c8605fd67b5e00e5337e441d52fafe1304be8",
+      "asset_sha256": "5e2ca38c41d4e4ccd569a3e8f13a622403b7334d95c3a03cf49f07a8892c4f06",
+      "width": 1174,
+      "height": 1544,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-document-example.png",
+      "original_label": "官方模型卡 Document Parsing 原示例（无图号）",
+      "source_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5",
+      "image_url": "https://raw.githubusercontent.com/openbmb/MiniCPM-o/main/assets/minicpmo4_5/en_doc.png",
+      "image_final_url": "https://raw.githubusercontent.com/openbmb/MiniCPM-o/main/assets/minicpmo4_5/en_doc.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bd8bbd77551b2c762746089bb39c8605fd67b5e00e5337e441d52fafe1304be8",
+      "asset_sha256": "1efe4ccf5d6081d694c8e6eda34ca7a9ad708c7eea47977327b5eabb18048e4a",
+      "width": 3946,
+      "height": 4038,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

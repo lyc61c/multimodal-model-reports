@@ -1,0 +1,14 @@
+{
+  "paper_id": "4eb0c6c91d73",
+  "catalogue_entry_id": "4eb0c6c91d73",
+  "family_slug": "brave",
+  "title": "BRAVE: Broadening the visual encoding of vision-language models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2404.07204v1",
+  "source_url": "https://arxiv.org/pdf/2404.07204v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "BRAVE：以多编码器查询Transformer拓宽视觉表示"
+}

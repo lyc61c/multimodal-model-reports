@@ -1,0 +1,15 @@
+{
+  "paper_id": "e364433c1393",
+  "source_url": "https://arxiv.org/pdf/2311.18445v1",
+  "source_version": "2311.18445v1",
+  "source_sha256": "8c514f296bca5cb2a6f092ba958a9ad3d4a7ab811448c762b43b23169e18f016",
+  "verification_notes": [
+    "阅读v1第1–8页正文及第11–14页附录，核对100帧CLS而非patch输入，无新视频时间编码器。",
+    "核对00–99位置与首图30对应4.8秒，明确不是直接秒数及未充分披露边界取整映射。",
+    "核对558K图像、134K自动多事件、约16K生成对话+20KVideoInstruct，总36K；阶段3文本教师为Vicuna7Bv1.5。",
+    "核对阶段1线性层、阶段2LoRA冻结投影、阶段3合并旧LoRA新建适配器，rank64/alpha128，1/2/2epochs。",
+    "核对ActivityNet参与训练而Charades未参与、13B部分指标下降和Table2Addition非逐项最佳。",
+    "核对无阶段1整段区间偏置，附录提示差异和无法解析输出排除，未将GPT评分写成准确率。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

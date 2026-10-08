@@ -1,0 +1,49 @@
+{
+  "source_url": "https://arxiv.org/pdf/2401.15947v1",
+  "source_version": "2401.15947v1",
+  "source_sha256": "c6367e72a2ab791899e5e0ebf3085ab50f1fcbd11580401ecc16234a6fae1bbb",
+  "read_scope": "正文1–9、附录15–16方法与结果完整阅读；17–22为重复路由图，读取图注和相关说明，未逐点测量图曲线。",
+  "claims": [
+    {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        15
+      ],
+      "claim": "三阶段；CLIPL336/-2/576；两层MLP；4expertTop2隔层；语言激活/总参数2/2.9,2.2/3.1,3.6/5.3B。"
+    },
+    {
+      "pages": [
+        4,
+        5,
+        15
+      ],
+      "claim": "学习softrouter但TopK离散；Eq9均衡α.01；Eq10索引缺陷Top1/Top2实现未明示；答案CE。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        15,
+        16
+      ],
+      "claim": "558+964+665K按组不是unique；各1epochLR/BS；三阶段优于直接稀疏；POPE分F1/Acc；OpenChat扩大退化。"
+    }
+  ],
+  "source_inconsistencies": [
+    "图3captiontwo-stage实际3",
+    "3.2复制stage1与3.3/图stage2不同",
+    "III仅MoE/所有FFN/MLP火焰冻结范围不完全一致",
+    "Eq8输出长度隐藏维度混用、Eq10求和专家/token下标错误",
+    "Table4 Phi3.5B vs Table1/3/8 3.6B",
+    "Table6c POPE88.7 vs 主表87.0",
+    "Table7/10PhiTextVQA重复SQAI与主表50.2不同",
+    "QwenTable7/10部分结果出入",
+    "Table9GPU A800、说明A100、消融V100并列不混为同一时间"
+  ],
+  "model_execution": "not_run"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文的 Architecture、Performance、Evaluation protocol、Instruction following；区分技术博客与完整训练报告。",
+    "逐张视觉查看 4 个原始 webp，标签与数据可读，原始字节和来源哈希已记录。",
+    "主比较表 DocVQA 90.7 与架构宣传图 92.3 不同，正文明确采用主表且保留差异。",
+    "所有数学式标为目标重述或解释性计数，不冒充原文未披露公式。",
+    "未编造数据量、训练超参数、冻结阶段或偏好优化方法；20% 相对提高与百分点区分。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "8e87b525fb009e897366b46bde05e01e53bda2a5f82bb1f28eecfe38bd15535f",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "4213cab70d10",
+  "catalogue_entry_id": "4213cab70d10",
+  "family_slug": "internvl",
+  "title": "InternVL-U: Democratizing Unified Multimodal Models for Understanding, Reasoning, Generation and Editing",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2603.09877v1",
+  "source_url": "https://arxiv.org/pdf/2603.09877v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "InternVL-U：共享语义上下文与双流图像生成的统一模型"
+}

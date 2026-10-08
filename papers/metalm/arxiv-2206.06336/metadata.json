@@ -1,0 +1,14 @@
+{
+  "paper_id": "0d9a53261f0c",
+  "catalogue_entry_id": "0d9a53261f0c",
+  "family_slug": "metalm",
+  "title": "Language Models are General-Purpose Interfaces",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2206.06336v1",
+  "source_url": "https://arxiv.org/pdf/2206.06336v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MetaLM：以半因果语言模型连接双向感知编码器"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "bc184d59768a",
+  "catalogue_entry_id": "bc184d59768a",
+  "family_slug": "pandagpt",
+  "title": "PandaGPT: One Model To Instruction-Follow Them All",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2305.16355v1",
+  "source_url": "https://arxiv.org/pdf/2305.16355v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "PandaGPT：通过共享嵌入空间迁移图文指令跟随能力"
+}

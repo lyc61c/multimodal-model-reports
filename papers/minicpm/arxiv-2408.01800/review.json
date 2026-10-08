@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read original v1 main pages1-17 plus qualitative appendices24-26; checked 1.0/2.0/2.5 model scope excluding later audio/video generations.",
+    "Visually inspected original full pages5,9,11,13 including Figure3/4/6 and Tables3/4; full labels/headers intact.",
+    "Checked adaptive slicing score, candidate N+-1, N<10, global slice, 64 versus96 compression tokens and 96-960 range.",
+    "Checked pretrain stages: compression only, visual encoder only, visual+compression; SFT all parameters; unsupported optimizer details omitted.",
+    "Recorded Table3 2.0 RLHF versus body RLAIF scoring variant, feedback6K pairs3K images and multilingual90K36languages.",
+    "Checked table4 GPT4V1106 comparison and MMMU/LlavaBench deficits, table5 OCRBench raw725 versus percentages.",
+    "Checked Table6 complementary ObjectHalBench orientation, MME/MMMU regressions and translated GPT4Turbo multilingual evaluation.",
+    "Checked phone Figure6 image stage versus prefilling9.4s and decoding8.2token/s, loading included and initial64.2/64.6 difference.",
+    "No model, phone benchmark or independent reproduction claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "4c3c9a4550430518c8ab7ddfc48aea0e641b3bbb43be7850241570d939949553",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "515954506dd5",
+  "catalogue_entry_id": "515954506dd5",
+  "family_slug": "ovis",
+  "title": "Ovis: Structural Embedding Alignment for Multimodal Large Language Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2405.20797v1",
+  "source_url": "https://arxiv.org/pdf/2405.20797v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Ovis：用概率视觉词表对齐图像与语言的嵌入结构"
+}

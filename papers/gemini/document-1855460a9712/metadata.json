@@ -1,0 +1,14 @@
+{
+  "paper_id": "1855460a9712",
+  "catalogue_entry_id": "1855460a9712",
+  "family_slug": "gemini",
+  "title": "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Gemini 1.5：百万级混合上下文、稀疏专家模型与高效蒸馏"
+}

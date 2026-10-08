@@ -1,0 +1,15 @@
+{
+  "paper_id": "d730f529319b",
+  "catalogue_entry_id": "d730f529319b",
+  "family_slug": "tomgpt",
+  "title": "TOMGPT: Reliable Text-Only Training Approach for Cost-Effective Multi-modal Large Language Model",
+  "article_file": "README.md",
+  "article_status": "source_unavailable",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://dl.acm.org/doi/pdf/10.1145/3654674",
+  "document_kind": "training_method",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "blocker": "Publisher PDF returns HTTP 403; download variants rejected by automatic approval review for possible access-control bypass; no full public author manuscript obtained.",
+  "needs": "A complete publicly accessible author manuscript or user-provided PDF."
+}

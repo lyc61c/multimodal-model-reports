@@ -1,0 +1,107 @@
+{
+  "paper_id": "cecc6a20b4b8",
+  "source_version": "2406.11816v1",
+  "source_pdf_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
+  "assets": [
+    {
+      "asset_path": "figures/training-framework.png",
+      "original_label": "Figure 4：LIVE 模型与两类损失",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2406.11816v1#page=6",
+      "source_version": "2406.11816v1",
+      "source_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
+      "asset_sha256": "741faa1a52ae26ade4e0d0ecf6cdab8c7fd50a79aa0b8a7138122220941b79a1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          50,
+          570,
+          415
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/dialogue-data.png",
+      "original_label": "Figure 3：时间线转流式对话数据",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2406.11816v1#page=5",
+      "source_version": "2406.11816v1",
+      "source_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
+      "asset_sha256": "957ca3abad356b9d127a25ba8922a82e1496d2e104650166f46da74963b81cdf",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          305,
+          55,
+          571,
+          421
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/inference.png",
+      "original_label": "Figure 5：缓存和并行推理",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2406.11816v1#page=7",
+      "source_version": "2406.11816v1",
+      "source_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
+      "asset_sha256": "db7a72e892a8fd5a10080744384f88bf9397d5cf05b778bf9f7db1f2d2ace093",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          55,
+          300,
+          272
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/streaming-results.png",
+      "original_label": "Table 1：流式损失和速度消融",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2406.11816v1#page=9",
+      "source_version": "2406.11816v1",
+      "source_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
+      "asset_sha256": "bdaede5b085e3238b5a4f59dfe39911fac235eb5d31f28e3a383585c73bee0fb",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          47,
+          570,
+          331
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/offline-results.png",
+      "original_label": "Table 2：COIN 与 Ego4D LTA",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2406.11816v1#page=9",
+      "source_version": "2406.11816v1",
+      "source_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
+      "asset_sha256": "bf72e39aac0ef09cb01079374bdeaf62c559685c61d469f7b5de5d8a26e28492",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          337,
+          570,
+          507
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

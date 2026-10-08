@@ -1,0 +1,23 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "逐项核对JS数值和model id映射",
+    "不把Base上下文写为1M，不把输入理解写成音视频原生输出",
+    "未编编码器参数、冻结、采帧或MOPD算法"
+  ],
+  "math_checks": [
+    "跨模态投影与窗口复杂度标为标准解释",
+    "4.84%是激活参数比例，非延迟/显存比"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/official-architecture.svg",
+      "checked": "view_image检视忠实白底PNG；模态路径、token图例、主干和LM/MTP头完整，保留原SVG"
+    }
+  ],
+  "limitations": [
+    "动态评测图无直接静态原图，采用真实JS结果表，不伪造截图",
+    "无完整harness、音频专项实验或训练复现信息"
+  ],
+  "model_execution": "not_run"
+}

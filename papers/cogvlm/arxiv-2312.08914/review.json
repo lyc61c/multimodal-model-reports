@@ -1,0 +1,1 @@
+{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"核对标题、作者机构、v1日期与27页PDF","facts":"核对图2、Tables1–9，保留专用/统一模型及top10/top50协议区分","math":"原式1–4和13与维度核对；复杂度不推广成全模型运行时间；监督损失标注标准解释","images":"逐张view_image核验PDF4/8/11完整页面，架构、曲线、表头与结果未截断","limitations":"原文近似推导和图3起始横轴差异未掩盖；人工复核比例未转换成新测试分数"},"model_execution":"not_run"}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读主文 1–13 页、附录 19–22 页；区分 Chat/Paint 与各自 + 版本。",
+    "核验 Chat 与六语言模型 SFT 含翻译目标语言数据，只有预训练英文或基础 Paint 图文英文的特定阶段零样本。",
+    "核验原文式 1–4；跨语言表示近似为机制假设，并无新增距离损失；Paint 实际只更新跨注意力与 transblock。",
+    "核验前200K步分辨率正文384、附录256冲突；Table6/正文/附录D数据量和表注CFG2.5/正文八值搜索分别保留。",
+    "核验中文详细描述87.4低于VisualGLM87.8，英文FID不最高，聊天中文原生数据87.8低于88.0，不泛称全部领先。",
+    "核验中文Drawbench 174提示5评审，每模型四图以中文CLIP选一，偏好不是随机一次成功率。",
+    "原文架构、生成样例与表格已渲染查看；不以自绘或新生成图代替原论文素材。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "c3b9b2bc542fd9da3d773f37d349082848a69317c281605f3b3956ee10f24125",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

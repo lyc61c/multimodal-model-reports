@@ -1,0 +1,87 @@
+{
+  "paper_id": "d3f532e98132",
+  "source_version": "2505.04921v1",
+  "source_pdf_sha256": "3dcb5ea38b2b18ee8af8554ab3b812aac14b1f12e538474d11f5e548693ad629",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-003-01.png",
+      "original_label": "Figure 2: three historical stages and the prospective native reasoning stage",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2505.04921v1#page=3",
+      "source_version": "2505.04921v1",
+      "source_sha256": "3dcb5ea38b2b18ee8af8554ab3b812aac14b1f12e538474d11f5e548693ad629",
+      "asset_sha256": "4789a671777d9349babc1a7139efb64ca24ddd94047866f86e79cb12d47e3465",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 210,
+        "crop_bbox": [
+          87,
+          243,
+          525,
+          510
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-016-02.png",
+      "original_label": "Figure 5: O1/R1 timeline and training/reward components",
+      "pdf_page": 16,
+      "source_url": "https://arxiv.org/pdf/2505.04921v1#page=16",
+      "source_version": "2505.04921v1",
+      "source_sha256": "3dcb5ea38b2b18ee8af8554ab3b812aac14b1f12e538474d11f5e548693ad629",
+      "asset_sha256": "b0d958d5478272c048e8cb0c3f6d7e5e25863651c095c22e1a19a7dfdfed4c3f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 210,
+        "crop_bbox": [
+          87,
+          95,
+          525,
+          393
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-025-03.png",
+      "original_label": "Figure 9: prospective native multimodal reasoning and environment feedback",
+      "pdf_page": 25,
+      "source_url": "https://arxiv.org/pdf/2505.04921v1#page=25",
+      "source_version": "2505.04921v1",
+      "source_sha256": "3dcb5ea38b2b18ee8af8554ab3b812aac14b1f12e538474d11f5e548693ad629",
+      "asset_sha256": "ee860bed1242e36f59fdec9b954e1c92403e1f8360eed6bf30534da20322e4b3",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 210,
+        "crop_bbox": [
+          87,
+          70,
+          525,
+          443
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-028-04.png",
+      "original_label": "Figure 10: understanding generation reasoning and planning data taxonomy",
+      "pdf_page": 28,
+      "source_url": "https://arxiv.org/pdf/2505.04921v1#page=28",
+      "source_version": "2505.04921v1",
+      "source_sha256": "3dcb5ea38b2b18ee8af8554ab3b812aac14b1f12e538474d11f5e548693ad629",
+      "asset_sha256": "184ed82e0780bb3427418efaf9718732a80517842fb381a85a6f9f8c6207857a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 210,
+        "crop_bbox": [
+          87,
+          69,
+          525,
+          393
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "source_url": "https://arxiv.org/pdf/2311.18248v1",
+  "source_version": "2311.18248v1",
+  "source_sha256": "58f209815a53cc375005a6a494dfcc750ff7332159bdedb781bfd23554272921",
+  "read_scope": "正文1–9和补充11–20完整阅读，10页参考文献确认来源。",
+  "claims": [
+    {
+      "pages": [
+        3,
+        4,
+        5,
+        11,
+        12,
+        17,
+        18,
+        19
+      ],
+      "claim": "48688CSarxivpapers；latex/XML/ref/label；单表单页Canny去caption；cite替换长公式40chars滤；GPT3.5outline来自GT；各taskpaper拆分；3task数量。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "claim": "DocOwl基础448→4*224；ViTL14/24/16/1024；Abstractor6/8/1024/64queries Q KV[V:Q]；最多16crop1024tokens；vision/baseLLM冻结abstractorLoRAr8更新；10epochs1e-4BS25664A100days。"
+    },
+    {
+      "pages": [
+        4,
+        7,
+        8,
+        11,
+        12,
+        15,
+        16,
+        20
+      ],
+      "claim": "CIDErGPT语义要点匹配乘CIDEr不验证原图事实；GPToutline和autooutline巨大差异；完整主表指标；数值错误Fig7及只改纲失败；LaTex标题更好但分析参考分不稳定。"
+    }
+  ],
+  "source_inconsistencies": [
+    "汇总CIDErGPT不等于汇总CIDEr乘平均F1，原文未完全披露聚合细节，保留报告值",
+    "三task train总692966 vs 最终765293含额外无纲变体未逐项拆分"
+  ],
+  "model_execution": "not_run"
+}

@@ -1,0 +1,60 @@
+{
+  "source_version": "2412.05271v1",
+  "claims": [
+    {
+      "claim": "系列主干/实际总参数及6B实际5.5B45层",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "动态切片与256token、multi-image Eq4、video一帧一块",
+      "pdf_pages": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "平方平均重权与JPEG75-100、packing隔离",
+      "pdf_pages": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "claim": "16.3M样本token比例、过滤文本/多模态区别",
+      "pdf_pages": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "claim": "Table3冻结配置与120B继承成本口径",
+      "pdf_pages": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "MMMU70.1是CoT、视频best帧数、其他任务差距",
+      "pdf_pages": [
+        14,
+        15,
+        16,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    }
+  ]
+}

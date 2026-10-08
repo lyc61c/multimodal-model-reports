@@ -1,0 +1,14 @@
+{
+  "paper_id": "61fb40e0922c",
+  "catalogue_entry_id": "61fb40e0922c",
+  "family_slug": "llava",
+  "title": "LLaVA-OneVision-1.5: Fully Open Framework for Democratized Multimodal Training",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2509.23661v1",
+  "source_url": "https://arxiv.org/pdf/2509.23661v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "LLaVA-OneVision-1.5：概念均衡数据与高效中期训练"
+}

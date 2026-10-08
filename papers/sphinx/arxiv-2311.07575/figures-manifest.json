@@ -1,0 +1,87 @@
+{
+  "paper_id": "89f6c4738085",
+  "source_version": "2311.07575v1",
+  "source_pdf_sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3：权重、任务与视觉表示混合",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2311.07575v1#page=6",
+      "source_version": "2311.07575v1",
+      "source_sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926",
+      "asset_sha256": "7967103a11889bb4ed4f42f6116c1711b48f413a860be3b8e0f56d0e5d4405bf",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          280
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/high-resolution.png",
+      "original_label": "Figure 4：高分辨率分块输入",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2311.07575v1#page=7",
+      "source_version": "2311.07575v1",
+      "source_sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926",
+      "asset_sha256": "deda7fa497e58b62f0fa2f9ca190dec2671f98447988541cc5bceceb9cadeb4f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          350
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/multimodal-results.png",
+      "original_label": "Table 2：综合多模态基准",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2311.07575v1#page=11",
+      "source_version": "2311.07575v1",
+      "source_sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926",
+      "asset_sha256": "2c8f87e67cb9c2e031f905df306062dec6d7ee2e3c917b2472019d774646d147",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          380,
+          510,
+          500
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/grounding-results.png",
+      "original_label": "Table 4：指代表达定位",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2311.07575v1#page=13",
+      "source_version": "2311.07575v1",
+      "source_sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926",
+      "asset_sha256": "10d3e902b5e8890b8c01c3c992424312a2d56012e1a63ba62e07a59358823124",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          300
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

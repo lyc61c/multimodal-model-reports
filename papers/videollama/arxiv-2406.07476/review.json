@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 PDF pages 1 and 3–14 plus appendix page 24; checked visual, audio and joint training freezing separately.",
+    "Visually checked Figure 1–2 and Tables 1–3,5,7–8 original images and captions; no substitute plots.",
+    "Table 2 displayed used components sum 10.8528M, not printed 12.2M total; recorded unresolved discrepancy without inventing data.",
+    "Preserved Table 5 7B/8/16-frame versus 8x7B correspondence despite main-text 53.9 mixup.",
+    "Separated MC accuracy, GPT-assisted open QA scores and caption evaluation; subtitles unavailable, no explicit EgoSchema CoT, MSVC temperature0.2.",
+    "Audio BEATs tuned only in audio multitask stage, LLM frozen there; joint stage encoders frozen and LLM unfrozen.",
+    "AVSD/AVSSD evaluate one-eighth subsets; non-leading TUT2017,AVSD,ActivityNet values and DPO appendix comparison noted."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "65e6a36605f61840b98f325811bdabdf03325c83d342a2a9ebfa4fd852f5072d",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "paper_id": "e2a1f413a7a5",
+  "source_version": "official-release-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-example-1.webp",
+      "original_label": "Official GPT-5.1 motherboard component example (unnumbered)",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+      "image_url": "https://images.ctfassets.net/kftzwdyauwt9/51xJiVwWvTU8UHt9qzZFx3/1b5ffabafebff7e89333e2fd50293d41/image_5__1_.png?w=3840&q=90&fm=webp",
+      "image_final_url": "https://images.ctfassets.net/kftzwdyauwt9/51xJiVwWvTU8UHt9qzZFx3/1b5ffabafebff7e89333e2fd50293d41/image_5__1_.png?w=3840&q=90&fm=webp",
+      "source_version": "official-release-2026-10-08",
+      "source_sha256": "00878d3f62ec28f0b1c045fa5b449ca1efd918b85a02eb097ae71f87f842a091",
+      "asset_sha256": "94fb5fbd4bfda16dba3cdddc5b7e8c3d79fd6819c246777bd51720bf69e9a9a4",
+      "width": 867,
+      "height": 863,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-example-2.webp",
+      "original_label": "Official GPT-5.2 motherboard component example (unnumbered)",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+      "image_url": "https://images.ctfassets.net/kftzwdyauwt9/6lyujQxhZDnOMruN3ft1oP/2ee4e2a98c4725fab4e9eada8d38b6ad/image_8.png?w=3840&q=90&fm=webp",
+      "image_final_url": "https://images.ctfassets.net/kftzwdyauwt9/6lyujQxhZDnOMruN3ft1oP/2ee4e2a98c4725fab4e9eada8d38b6ad/image_8.png?w=3840&q=90&fm=webp",
+      "source_version": "official-release-2026-10-08",
+      "source_sha256": "00878d3f62ec28f0b1c045fa5b449ca1efd918b85a02eb097ae71f87f842a091",
+      "asset_sha256": "e5220369e49391999bedf38afdfb42a11a0e4fbc600b885b66b5c9cf0f19ec51",
+      "width": 874,
+      "height": 866,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-example-3.webp",
+      "original_label": "Official GPT-5.1 tool-calling example (unnumbered)",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+      "image_url": "https://images.ctfassets.net/kftzwdyauwt9/6vKh0RYKx7VZ2HtWjmO5oV/7afbc74900324baabdc1ae181026b9dc/Group_2__2_.png?w=3840&q=90&fm=webp",
+      "image_final_url": "https://images.ctfassets.net/kftzwdyauwt9/6vKh0RYKx7VZ2HtWjmO5oV/7afbc74900324baabdc1ae181026b9dc/Group_2__2_.png?w=3840&q=90&fm=webp",
+      "source_version": "official-release-2026-10-08",
+      "source_sha256": "00878d3f62ec28f0b1c045fa5b449ca1efd918b85a02eb097ae71f87f842a091",
+      "asset_sha256": "0c8ec9e708210e089be3580ec119278db308ed59933eeb3fd88a220406dd10e7",
+      "width": 1576,
+      "height": 884,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-example-4.webp",
+      "original_label": "Official GPT-5.2 tool-calling example (unnumbered)",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+      "image_url": "https://images.ctfassets.net/kftzwdyauwt9/4jMkP16tsWODuRgLcRS6Hr/8b7e6887b554042aba8e986fc462bb62/Group_1__2_.png?w=3840&q=90&fm=webp",
+      "image_final_url": "https://images.ctfassets.net/kftzwdyauwt9/4jMkP16tsWODuRgLcRS6Hr/8b7e6887b554042aba8e986fc462bb62/Group_1__2_.png?w=3840&q=90&fm=webp",
+      "source_version": "official-release-2026-10-08",
+      "source_sha256": "00878d3f62ec28f0b1c045fa5b449ca1efd918b85a02eb097ae71f87f842a091",
+      "asset_sha256": "20c3e2e29205f982785915f8a9951d0ed6fa8dd4583cbe81d24a6eb27c7b8b0c",
+      "width": 1588,
+      "height": 1826,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

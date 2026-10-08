@@ -1,0 +1,43 @@
+{
+  "source_url": "https://arxiv.org/pdf/2303.02506v1",
+  "source_version": "2303.02506v1",
+  "source_sha256": "e306de8afb3c781405afdf04434bd45bf76fe8a3b9e229579223bed1abf1dd23",
+  "read_scope": "全文正文PDF1–16及附录A/B PDF25；参考17–24只用于专家与方法来源识别。",
+  "claims": [
+    {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "claim": "独立输出专家非稀疏MoE；6专家654M；CLIPViT+RoBERTa改因果；原RGB路径，专家Resampler4层64latents，KV包括latents；Adaptor平方ReLU。"
+    },
+    {
+      "pages": [
+        9,
+        10,
+        25
+      ],
+      "claim": "12.7M图文对11M图像；160/360M可训、980M/1.6B全部含专家；预训练冻结双骨干、微调冻结视觉；表6超参数表7估算成本。"
+    },
+    {
+      "pages": [
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "claim": "主表微调/零样本/少样本协议区分；少样本更新梯度；3M224消融及缺专家/换专家限制；全部数字核验。"
+    }
+  ],
+  "source_inconsistencies": [
+    "正文瓶颈较小维度与Table5默认相对维度1口径不完全一致，不写默认四倍压缩。",
+    "SimVLM少数据倍数正文140与图注160不一致，实际1.8B/12.7M约142。",
+    "不同架构的Resampler宽度按Table2采用768/1024，未将正文约50M同设计理解为参数严格相同。"
+  ],
+  "model_execution": "not_run"
+}

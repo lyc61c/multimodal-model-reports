@@ -1,0 +1,57 @@
+{
+  "paper_id": "7cdfed4ac9e5",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-benchmark.png",
+      "original_label": "Official model card Benchmark Results chart",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/raw/main/README.md",
+      "image_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5/Figures/qwen3.5_397b_a17b_score.png",
+      "image_final_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5/Figures/qwen3.5_397b_a17b_score.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bda4b24e975f65ac677985306ddbad33362e65064637660654c8bb7dea7edf50",
+      "asset_sha256": "0a32d5b80d4b158daa13fb6b7a80b91916ab3c423c00749929cb3883d2507f67",
+      "width": 17277,
+      "height": 11171,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "preview_path": "figures/official-benchmark-preview.png",
+      "preview_sha256": "171380a05d451f9bf018e5fe155c75ef09a7f5776e2551bcf41b6e7490698276",
+      "preview_note": "Resized original chart for visual inspection only; original bytes retained."
+    },
+    {
+      "asset_path": "figures/official-math-input.jpg",
+      "original_label": "Official model card Image Input example; input only",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/raw/main/README.md",
+      "image_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5/demo/CI_Demo/mathv-1327.jpg",
+      "image_final_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5/demo/CI_Demo/mathv-1327.jpg",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bda4b24e975f65ac677985306ddbad33362e65064637660654c8bb7dea7edf50",
+      "asset_sha256": "5ea9aa9d9b93023628bf7fdae067f5025577e5e6da9e8c052415c9b101f5ccf8",
+      "width": 401,
+      "height": 393,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-realworld-input.png",
+      "original_label": "Official model card non-thinking example; input only",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/raw/main/README.md",
+      "image_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5/demo/RealWorld/RealWorld-04.png",
+      "image_final_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.5/demo/RealWorld/RealWorld-04.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "bda4b24e975f65ac677985306ddbad33362e65064637660654c8bb7dea7edf50",
+      "asset_sha256": "eba5d9b6124fbd3b2a809e1c664886c29d842406134bb4c1b281414d0c7101b9",
+      "width": 1372,
+      "height": 1818,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

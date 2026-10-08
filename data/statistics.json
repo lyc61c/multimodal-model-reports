@@ -1,0 +1,376 @@
+{
+  "snapshot_date": "2026-10-08",
+  "raw_rows": 303,
+  "unique_entries": 301,
+  "unique_code_repository_identifiers": 197,
+  "canonical_repositories": 192,
+  "star_decisions": {
+    "not_assessable": 73,
+    "passes_star": 199,
+    "excluded_low_star": 29
+  },
+  "scope_decisions": {
+    "supplementary": 55,
+    "needs_scope_review": 17,
+    "exclude_non_model": 10,
+    "include_candidate": 219
+  },
+  "catalogue_groups": {
+    "supporting_materials": 57,
+    "scope_review": 16,
+    "model_catalogue": 199,
+    "excluded_low_star": 29
+  },
+  "main_model_entries": 199,
+  "main_families": 145,
+  "total_families_in_audit": 212,
+  "warnings": [
+    {
+      "title": "Qwen3.5: Towards Native Multimodal Agents",
+      "warnings": [
+        "Code repository redirects to QwenLM/Qwen3.8; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MiniCPM-o 4.5",
+      "warnings": [
+        "Code repository redirects to OpenBMB/MiniCPM-V; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share OpenBMB/MiniCPM-V; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "Qwen3-VL Technical Report",
+      "warnings": [
+        "Several upstream Code repository identifiers share QwenLM/Qwen3-VL; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking, and Acting",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "VITA-VLA: Efficiently Teaching Vision-Language Models to Act via Action Expert Distillation",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "LLaVA-OneVision-1.5: Fully Open Framework for Democratized Multimodal Training",
+      "warnings": [
+        "Code repository redirects to EvolvingLMMs-Lab/LLaVA-OneVision-2; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MiniCPM-V 4.5: A GPT-4o Level MLLM for Single Image, Multi Image and Video Understanding on Your Phone",
+      "warnings": [
+        "Code repository redirects to OpenBMB/MiniCPM-V; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share OpenBMB/MiniCPM-V; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "dots.vlm1",
+      "warnings": [
+        "Code repository redirects to studio-dots-ai/dots.vlm1; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Step3: Cost-Effective Multimodal Intelligence",
+      "warnings": [
+        "Upstream star badge points to THUDM/GLM-4.1V-Thinking; Code column points to stepfun-ai/Step3"
+      ]
+    },
+    {
+      "title": "GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning",
+      "warnings": [
+        "Code repository redirects to zai-org/GLM-V; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models",
+      "warnings": [
+        "Several upstream Code repository identifiers share NVlabs/EAGLE; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "Qwen2.5-VL Technical Report",
+      "warnings": [
+        "Code repository redirects to QwenLM/Qwen3-VL; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share QwenLM/Qwen3-VL; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "QVQ: To See the World with Wisdom",
+      "warnings": [
+        "Code repository redirects to QwenLM/Qwen3-VL; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share QwenLM/Qwen3-VL; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "InternLM-XComposer2.5-OmniLive: A Comprehensive Multimodal System for Long-term Streaming Video and Audio Interactions",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "warnings": [
+        "Code repository redirects to wenhaochai/aurora; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+      "warnings": [
+        "Code repository redirects to QwenLM/Qwen3-VL; stars are the current destination repository's stars",
+        "Several upstream Code repository identifiers share QwenLM/Qwen3-VL; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding",
+      "warnings": [
+        "Code repository redirects to DataArcTech/ChartMoE; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "EAGLE: Exploring The Design Space for Multimodal LLMs with Mixture of Encoders",
+      "warnings": [
+        "Several upstream Code repository identifiers share NVlabs/Eagle; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+      "warnings": [
+        "Several upstream Code repository identifiers share OpenBMB/MiniCPM-V; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "Parrot: Multilingual Visual Instruction Tuning",
+      "warnings": [
+        "Code repository redirects to ATH-MaaS/Parrot; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Ovis: Structural Embedding Alignment for Multimodal Large Language Model",
+      "warnings": [
+        "Code repository redirects to ATH-MaaS/Ovis; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models",
+      "warnings": [
+        "Code repository redirects to JIA-Lab-research/MGM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "The All-Seeing Project V2: Towards General Relation Comprehension of the Open World",
+      "warnings": [
+        "Several upstream Code repository identifiers share OpenGVLab/all-seeing; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "Momentor: Advancing Video Large Language Model with Fine-Grained Temporal Reasoning",
+      "warnings": [
+        "Code repository redirects to ZJU4EmbodiedAI/Momentor; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "CoLLaVO: Crayon Large Language and Vision mOdel",
+      "warnings": [
+        "Code repository redirects to ByungKwanLee/CoLLaVO; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "CogCoM: Train Large Vision-Language Models Diving into Details through Chain of Manipulations",
+      "warnings": [
+        "Code repository redirects to zai-org/CogCoM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Yi-VL",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "CogAgent: A Visual Language Model for GUI Agents",
+      "warnings": [
+        "Code repository redirects to zai-org/CogVLM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Honeybee: Locality-enhanced Projector for Multimodal LLM",
+      "warnings": [
+        "Code repository redirects to khanrc/honeybee; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Making Large Multimodal Models Understand Arbitrary Visual Prompts",
+      "warnings": [
+        "Code repository redirects to WisconsinAIVision/ViP-LLaVA; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Dolphins: Multimodal Language Model for Driving",
+      "warnings": [
+        "Code repository redirects to SaFo-Lab/Dolphins; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "mPLUG-PaperOwl: Scientific Diagram Analysis with the Multimodal Large Language Model",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
+      "warnings": [
+        "Code repository redirects to JIA-Lab-research/LLaMA-VID; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "LLMGA: Multimodal Large Language Model based Generation Assistant",
+      "warnings": [
+        "Code repository redirects to JIA-Lab-research/LLMGA; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "ShareGPT4V: Improving Large Multi-Modal Models with Better Captions",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "LION : Empowering Multimodal Large Language Model with Dual-Level Visual Knowledge",
+      "warnings": [
+        "Code repository redirects to JiuTian-VL/JiuTian-LION; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "mPLUG-Owl2: Revolutionizing Multi-modal Large Language Model with Modality Collaboration",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "OtterHD: A High-Resolution Multi-modality Model",
+      "warnings": [
+        "Code repository redirects to EvolvingLMMs-Lab/Otter; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Ferret: Refer and Ground Anything Anywhere at Any Granularity",
+      "warnings": [
+        "Code repository redirects to apple-aiml-research/ml-ferret; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "CogVLM: Visual Expert For Large Language Models",
+      "warnings": [
+        "Code repository redirects to zai-org/CogVLM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "PointLLM: Empowering Large Language Models to Understand Point Clouds",
+      "warnings": [
+        "Code repository redirects to InternRobotics/PointLLM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Fine-tuning Multimodal LLMs to Follow Zero-shot Demonstrative Instructions",
+      "warnings": [
+        "Code repository redirects to ZJU4EmbodiedAI/Cheetah; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "The All-Seeing Project: Towards Panoptic Visual Recognition and Understanding of the Open World",
+      "warnings": [
+        "Several upstream Code repository identifiers share OpenGVLab/All-Seeing; no independent version-level star count"
+      ]
+    },
+    {
+      "title": "LISA: Reasoning Segmentation via Large Language Model",
+      "warnings": [
+        "Code repository redirects to JIA-Lab-research/LISA; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding",
+      "warnings": [
+        "Code repository redirects to wenhaochai/MovieChat; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "3D-LLM: Injecting the 3D World into Large Language Models",
+      "warnings": [
+        "Code repository redirects to UMass-Embodied-AGI/3D-LLM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "Visual Instruction Tuning with Polite Flamingo",
+      "warnings": [
+        "Code repository redirects to ChenDelong1999/polite-flamingo; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark",
+      "warnings": [
+        "Code repository redirects to OpenGVLab/LAMM; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "MIMIC-IT: Multi-Modal In-Context Instruction Tuning",
+      "warnings": [
+        "Code repository redirects to EvolvingLMMs-Lab/Otter; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction",
+      "warnings": [
+        "Code repository redirects to AILab-CVC/GPT4Tools; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst",
+      "warnings": [
+        "Code repository redirects to CASIA-IVA-Lab/ChatBridge; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "VisualGLM-6B",
+      "warnings": [
+        "Code repository redirects to zai-org/VisualGLM-6B; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning",
+      "warnings": [
+        "Code repository redirects to PLUM-Lab/MultiInstruct; stars are the current destination repository's stars"
+      ]
+    },
+    {
+      "title": "xGen-MM (BLIP-3): A Family of Open Large Multimodal Models",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "Kosmos-2: Grounding Multimodal Large Language Models to the World",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    },
+    {
+      "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+      "warnings": [
+        "Stars belong to the parent repository, not this model's branch/subdirectory"
+      ]
+    }
+  ]
+}

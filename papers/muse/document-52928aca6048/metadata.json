@@ -1,0 +1,14 @@
+{
+  "paper_id": "52928aca6048",
+  "catalogue_entry_id": "52928aca6048",
+  "family_slug": "muse",
+  "title": "Introducing Muse Spark: Scaling Towards Personal Superintelligence",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Muse Spark：多模态推理、强化学习与并行 Agent 扩展"
+}

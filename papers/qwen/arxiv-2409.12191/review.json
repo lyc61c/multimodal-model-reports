@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read main1-16 and representative appendix27/28/40/42/49-51; confirmed2B/7B/72B naming vs rounded total8B.",
+    "Viewed original pages5/9/10/15 intact: Figure3 Tables2-5/8 Figure5.",
+    "Verified VideoMME71.2/77.8 wo/wsubtitle and max768frames; 80K extension only72B mediumvideo experiment.",
+    "M-RoPE ablation uses Qwen2-1.5B+ViT-L pretrained; not72B; RWQ/InfoVQA decreases retained.",
+    "1.4T includesvisual+text withtextonlysupervision; token formula64+2 derived clearly, not paper equation.",
+    "No model execution or independent reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "16b30286edb07820528d7699b4dbd5934e3b01eb3acfb0c94aaab437e6868467",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

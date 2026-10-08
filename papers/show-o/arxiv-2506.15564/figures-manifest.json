@@ -1,0 +1,87 @@
+{
+  "paper_id": "3b9bfda2a47f",
+  "source_version": "2506.15564v1",
+  "source_pdf_sha256": "12ac0764723ecde3e80007c8c696dfaffc613fdb807ddd06895324ebeb57a434",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 1：双路融合与两种输出头",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2506.15564v1#page=4",
+      "source_version": "2506.15564v1",
+      "source_sha256": "12ac0764723ecde3e80007c8c696dfaffc613fdb807ddd06895324ebeb57a434",
+      "asset_sha256": "442e9fe457b357a4db2a9a8b3197972182e688b2536077aacf980813ca8f8154",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          55,
+          570,
+          460
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/understanding.png",
+      "original_label": "Table 3：理解评测",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2506.15564v1#page=6",
+      "source_version": "2506.15564v1",
+      "source_sha256": "12ac0764723ecde3e80007c8c696dfaffc613fdb807ddd06895324ebeb57a434",
+      "asset_sha256": "a00f1c26dec9d10282b4f77ed12f88537f505907fc839f370f0745cdd4bd636c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          55,
+          570,
+          300
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/image-generation.png",
+      "original_label": "Tables 4–5：图像生成评测",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2506.15564v1#page=7",
+      "source_version": "2506.15564v1",
+      "source_sha256": "12ac0764723ecde3e80007c8c696dfaffc613fdb807ddd06895324ebeb57a434",
+      "asset_sha256": "a230003beae961d538e447cd3acb653c8430f7ba97eba783e6fa9b311376eedb",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          55,
+          570,
+          400
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/examples.png",
+      "original_label": "Figure 2：理解、图像与视频生成示例",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2506.15564v1#page=8",
+      "source_version": "2506.15564v1",
+      "source_sha256": "12ac0764723ecde3e80007c8c696dfaffc613fdb807ddd06895324ebeb57a434",
+      "asset_sha256": "7f66647b0e851529289bca172d6877e5e6f0df3f5f7b0607ca89769e34cdabc1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          55,
+          570,
+          750
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

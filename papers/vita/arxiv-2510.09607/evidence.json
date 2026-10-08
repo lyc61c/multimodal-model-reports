@@ -1,0 +1,15 @@
+{
+  "paper_id": "9faa140a0b57",
+  "source_url": "https://arxiv.org/pdf/2510.09607v1",
+  "source_version": "2510.09607v1",
+  "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+  "verification_notes": [
+    "Read v1 method pp3-6, experiments pp7-9 and appendix pp12-16; verified own Qwen2.5 backbone versus predecessor configuration.",
+    "Checked identical teacher/student robot data, shared future queries, 200x200 dual images, state encoding and feature-MSE versus MAE+BCE objectives.",
+    "Separated first-task and five-task CALVIN rates; Seer better Avg.Len and five-task success; LIBERO comparison gains expressed as percentage points.",
+    "Preserved 500-episode versus 20-rollout protocol difference, Table7/main-table discrepancies, PiPer versus ALOHA naming and decoder-freezing wording conflicts.",
+    "Confirmed real-world 500 demonstrations and 200 evaluations, 82 versus65 success and 0.15 versus0.05 second inference; no universal VLM preservation or cost assertion.",
+    "Visually inspected original source pages and all final crops; no reproduced experiments or independent peer review claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

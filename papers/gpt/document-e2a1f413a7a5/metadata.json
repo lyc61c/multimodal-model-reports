@@ -1,0 +1,19 @@
+{
+  "paper_id": "e2a1f413a7a5",
+  "catalogue_entry_id": "e2a1f413a7a5",
+  "family_slug": "gpt",
+  "title": "Introducing GPT-5.2",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-release-2026-10-08",
+  "source_url": "https://openai.com/index/introducing-gpt-5-2/?output=1",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "GPT-5.2：视觉理解、长上下文与工具工作流的升级",
+  "source_sha256": "00878d3f62ec28f0b1c045fa5b449ca1efd918b85a02eb097ae71f87f842a091",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2231,
+  "figures_manifest": "figures-manifest.json"
+}

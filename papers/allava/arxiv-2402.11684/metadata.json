@@ -1,0 +1,14 @@
+{
+  "paper_id": "ee804bbbd9e2",
+  "catalogue_entry_id": "ee804bbbd9e2",
+  "family_slug": "allava",
+  "title": "ALLaVA: Harnessing GPT4V-synthesized Data for A Lite Vision-Language Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "title_zh": "ALLaVA：用细粒度描述与复杂问答补偿小模型容量",
+  "source_version": "2402.11684v1",
+  "source_url": "https://arxiv.org/pdf/2402.11684v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1"
+}

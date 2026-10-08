@@ -1,0 +1,15 @@
+{
+  "paper_id": "ced90da09c5d",
+  "source_url": "https://arxiv.org/pdf/2405.19315v1",
+  "source_version": "2405.19315v1",
+  "source_sha256": "f6cfd4391d34605a24a0ffb5a629847a4c245b4e0cfce28f76f78e81fa6065a8",
+  "verification_notes": [
+    "阅读 v1 第 1–9 页与附录第 13–14 页，核对身份、结构、训练、全部结果与限制。",
+    "逐张检视四张原 PDF 整页图，确认 Figure 2、Figure 4、Table 1/2 表头与行列完整。",
+    "核验 CLIP L/14 336、576 网格、Vicuna v1.5 7B、单层注意力后投影；前缀在交叉注意力前选择。",
+    "核验每步均匀抽一个偶数长度，仅第二阶段弹性训练；未虚构优化器和连接器子模块冻结。",
+    "核验 Table 1/2/3 精确分数、星号训练图像可见、11 项归一化平均、77-token 未见配置、TFLOPs 与实测速度区别。",
+    "原图 Figure 4 针对随机单 token，未称为平均或确定物体定位；未进行模型训练或推理复现。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

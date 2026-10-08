@@ -1,0 +1,15 @@
+{
+  "paper_id": "c93332aa16ea",
+  "source_url": "https://arxiv.org/pdf/2504.10479v1",
+  "source_version": "2504.10479v1",
+  "source_sha256": "71fb503c0f9140aec1d554c7fca16747bd7614e645c057a32829ddbea2f3363b",
+  "verification_notes": [
+    "Read methods pages3-7, evaluations/ablations pages8-19; title/source matched v1.",
+    "Viewed full original pages4,9,10,18 Table1/V2PE,Table2,Table3,Figure3/Table13.",
+    "Verified initialized pretrained ViT and base Qwen/InternLM not from scratch, joint all-parameter pretraining200B50/150,21.7M SFT300K MPO.",
+    "Checked square weighting, MPO DPO/BCO/gen and V2PE fixeddelta1 outside Table12; no unsupported exact optimizer.",
+    "Separated Figure1/table discrepant metrics, standard vsBo8, video maximum across16/32/48/64 frames and subtitles.",
+    "Recorded doc/Info/math/code and video losses; GUI prose81.4 vs90.3 error not propagated; no model reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

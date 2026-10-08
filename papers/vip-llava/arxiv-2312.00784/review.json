@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read main pages 1–8 and supplementary 12–15; original Figures 2,3,6–8 and Table5 rendered and inspected.",
+    "Training includes Visual7W and PointQA train splits despite generalist wording; VCR and region-captioning additional fine-tuning explicit.",
+    "Visual7W main-vs-appendix discrepancy retained; GPT4V instruction gains include PointQA regression and 13B not universally better than 7B.",
+    "ViPBench judge scores not accuracy; 3520-example arrow test distinct from arbitrary prompt reliability.",
+    "Mask annotations used to render prompts not claimed as predicted segmentation; unspecified training hyperparameters not filled by assumption."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "c3b7c6fe7d3351e4f6e2fd815c1ea537e48a70452a4f55064d7795f95f6f294e",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

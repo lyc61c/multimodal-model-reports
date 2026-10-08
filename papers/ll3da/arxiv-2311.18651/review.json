@@ -1,0 +1,53 @@
+{
+  "checked_file": "papers\\ll3da\\arxiv-2311.18651\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "specificfrozenLLM/sceneenc",
+    "QFormerembonly",
+    "inputcoordinate/boxtype",
+    "detectorvsLLMlocalization",
+    "generalistvsFTweights",
+    "customtrain-scenevalpretrainedsceneexposure",
+    "planningnotrobotrun"
+  ],
+  "math_checked": [
+    "FourierEq2faithful",
+    "CEEq6faithful",
+    "quantizationexplanatoryroundingnotcodeclaim",
+    "Eq7indexedinstancemeaning",
+    "CIDErpointnotaccuracy"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-003-01.png",
+      "original_label": "Figure2",
+      "pdf_page": 3,
+      "inspection": "Viewed full original page;complete diagram labels/table headings and all rows/formula/figure captions"
+    },
+    {
+      "file": "figures/original-page-006-02.png",
+      "original_label": "Tables1-4/Figure3",
+      "pdf_page": 6,
+      "inspection": "Viewed full original page;complete diagram labels/table headings and all rows/formula/figure captions"
+    },
+    {
+      "file": "figures/original-page-015-03.png",
+      "original_label": "Figures8-9/Table9",
+      "pdf_page": 15,
+      "inspection": "Viewed full original page;complete diagram labels/table headings and all rows/formula/figure captions"
+    },
+    {
+      "file": "figures/original-page-017-04.png",
+      "original_label": "Tables11-13/Eq7",
+      "pdf_page": 17,
+      "inspection": "Viewed full original page;complete diagram labels/table headings and all rows/formula/figure captions"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "exactmixture/warmup/memorythroughputmissing",
+    "planningonlytextsimilarity",
+    "pointinvarianceexplanationnotformalproof",
+    "multipleexperimentalsettingspreserved"
+  ]
+}

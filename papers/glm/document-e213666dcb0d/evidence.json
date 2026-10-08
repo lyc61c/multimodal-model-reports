@@ -1,0 +1,14 @@
+{
+  "paper_id": "e213666dcb0d",
+  "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md",
+  "source_version": "official-model-card-2026-10-08",
+  "source_sha256": "e6c5d41400e28f5a89418a0d15b09b9c113314a7553d40d7d4a8a72fcdb87d02",
+  "verification_notes": [
+    "Read entire official GLM-5.3-Flash model card snapshot; distinguished new Flash model from cited prior GLM-5 technical report.",
+    "Downloaded and visually inspected complete original bench_53.png, verified legend, six task names, model columns and exact values.",
+    "Verified 320B total/18B active parameters, hybrid sparse/linear attention, mHC,30T multimodal corpus; no undisclosed layers, routing or loss mathematics invented.",
+    "Verified thinking effort default max, chat-template note, task-specific evaluation budgets, harness versions and BabyVision input preprocessing.",
+    "Preserved missing Agents Last Exam protocol and absence of numeric BabyVision/Toolathlon scores or component ablations; benchmark wins/losses and price-claim limits explicit."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

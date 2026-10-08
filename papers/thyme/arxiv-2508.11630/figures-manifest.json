@@ -1,0 +1,127 @@
+{
+  "paper_id": "534b58b82f31",
+  "source_version": "2508.11630v1",
+  "source_pdf_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+  "assets": [
+    {
+      "asset_path": "figures/pipeline.png",
+      "original_label": "Figure 2：模型与沙箱交互",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2508.11630v1#page=3",
+      "source_version": "2508.11630v1",
+      "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+      "asset_sha256": "8f8581936a8e9315d2a0481f86c8d5805e4c629dfac4d86de6859cd811bae4ba",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          76,
+          526,
+          304
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/sft-data.png",
+      "original_label": "Figure 3：监督数据筛选流程",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2508.11630v1#page=5",
+      "source_version": "2508.11630v1",
+      "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+      "asset_sha256": "d6ce00713de44bea38d2c10b8b0510acc757504ed04a6bceada80369749d2687",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          70,
+          526,
+          227
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/rl-data.png",
+      "original_label": "Figure 5：高分辨率 RL 数据实例",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2508.11630v1#page=9",
+      "source_version": "2508.11630v1",
+      "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+      "asset_sha256": "0c06c93add034e6f3f54d807fa8a3578cfa10b7ba69b8cbb2472100e5e12c583",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          70,
+          526,
+          235
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/adaptive-sampling.png",
+      "original_label": "Figure 6：文本与代码温度切换",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2508.11630v1#page=10",
+      "source_version": "2508.11630v1",
+      "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+      "asset_sha256": "db1472236bc3a980ad5c2f858c1dd6093828225272c5451928778c5888db2c8d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          340,
+          430,
+          526,
+          662
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/benchmark-results.png",
+      "original_label": "Table 3：主实验结果",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2508.11630v1#page=13",
+      "source_version": "2508.11630v1",
+      "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+      "asset_sha256": "e3211da54d1a636616a204970b2a64926a94c207993e3389c0c860f4b61d6f62",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          138,
+          526,
+          705
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/reward-ablation.png",
+      "original_label": "Table 6：奖励设计消融",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2508.11630v1#page=14",
+      "source_version": "2508.11630v1",
+      "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+      "asset_sha256": "c180c2dacc3f88902e9e3a847691097ce3e34c7db40ef82915ada6bd1bb94836",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          590,
+          526,
+          771
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

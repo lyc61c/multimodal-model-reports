@@ -1,0 +1,19 @@
+{
+  "paper_id": "118dd38c7a7a",
+  "catalogue_entry_id": "118dd38c7a7a",
+  "family_slug": "vita",
+  "title": "VITA: Towards Open-Source Interactive Omni Multimodal LLM",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2408.05211v1",
+  "source_url": "https://arxiv.org/pdf/2408.05211v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VITA：结合多模态理解与可打断语音交互",
+  "source_sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2139,
+  "figures_manifest": "figures-manifest.json"
+}

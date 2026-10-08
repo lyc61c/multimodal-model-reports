@@ -1,0 +1,60 @@
+{
+  "source_version": "2308.01907v1",
+  "title_verified": true,
+  "claims": [
+    {
+      "claim": "AS-1B规模及文本token统计",
+      "pdf_pages": [
+        4,
+        12,
+        13,
+        14
+      ],
+      "section": "3,5; Table1/4"
+    },
+    {
+      "claim": "位置感知查询/共享语言解码器/损失",
+      "pdf_pages": [
+        10,
+        11,
+        12
+      ],
+      "section": "4;Figure4;Eq1"
+    },
+    {
+      "claim": "标注流程与人类验证",
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        14
+      ],
+      "section": "3;Figure3;Table5"
+    },
+    {
+      "claim": "主训练与ASM-FT配置",
+      "pdf_pages": [
+        15
+      ],
+      "section": "6.1"
+    },
+    {
+      "claim": "描述与区域识别分数，真实框条件",
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "section": "6.2/6.3;Tables6-8"
+    },
+    {
+      "claim": "R-CLIP数据处理消融与人工校正",
+      "pdf_pages": [
+        19,
+        20
+      ],
+      "section": "6.4;Tables9-11"
+    }
+  ]
+}

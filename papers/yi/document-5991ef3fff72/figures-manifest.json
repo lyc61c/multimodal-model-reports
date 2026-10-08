@@ -1,0 +1,52 @@
+{
+  "paper_id": "5991ef3fff72",
+  "source_version": "2403.04652v1",
+  "source_pdf_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
+  "assets": [
+    {
+      "asset_path": "figures/figure-01-language-data.png",
+      "original_label": "Figure 1：Yi 语言主干预训练数据清洗流程",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2403.04652v1#page=4",
+      "source_version": "2403.04652v1",
+      "source_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
+      "asset_sha256": "efc7148cf2c946839e05c7f09af61d765c918dbdfecc82c3f7db6949106a44ea",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/figure-07-architecture-training.png",
+      "original_label": "Figure 7：Yi-VL 三模块与三阶段训练",
+      "pdf_page": 16,
+      "source_url": "https://arxiv.org/pdf/2403.04652v1#page=16",
+      "source_version": "2403.04652v1",
+      "source_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
+      "asset_sha256": "fa63ce4fe9004e50a705d2d27931f7f3630bbc02eb88b6c98c29105ce01f4ecd",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/table-07-mmmu.png",
+      "original_label": "Table 7：Yi-VL 发布时的 MMMU test 成绩",
+      "pdf_page": 17,
+      "source_url": "https://arxiv.org/pdf/2403.04652v1#page=17",
+      "source_version": "2403.04652v1",
+      "source_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
+      "asset_sha256": "641ad9a620d4a7c546213100ea3ab8f7410cb17f2f596bdb64215ce87b7987d3",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

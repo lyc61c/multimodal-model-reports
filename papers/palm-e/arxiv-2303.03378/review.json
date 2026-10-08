@@ -1,0 +1,43 @@
+{
+  "paper_id": "bb0333d38954",
+  "status": "complete_self_review",
+  "fact_checks": [
+    "真实v1与题名核对",
+    "高层文字技能和底层策略区分，562B不冒领所有机器人结果",
+    "Table1冻结与Figure4全量对照独立",
+    "配比非样本数，机器人8.9%"
+  ],
+  "math_checks": [
+    "连续phi输入与文字gamma embedding维度对齐",
+    "条件自回归链与target-onlyCE明确",
+    "冻结仍保留向encoder梯度；标准链式法则注明解释",
+    "相对遗忘百分比非百分点，F1非控制成功率"
+  ],
+  "image_checks": [
+    {
+      "file": "original-page-001-01.png",
+      "viewed": true,
+      "content": "完整PDF页，图注/表头/脚注/全部结果行保留"
+    },
+    {
+      "file": "original-page-008-02.png",
+      "viewed": true,
+      "content": "完整PDF页，图注/表头/脚注/全部结果行保留"
+    },
+    {
+      "file": "original-page-009-03.png",
+      "viewed": true,
+      "content": "完整PDF页，图注/表头/脚注/全部结果行保留"
+    },
+    {
+      "file": "original-page-015-04.png",
+      "viewed": true,
+      "content": "完整PDF页，图注/表头/脚注/全部结果行保留"
+    }
+  ],
+  "limitations": [
+    "无模型或机器人复现",
+    "完整预训练超参未披露",
+    "真机长任务主要定性，不将仿真成功率冒写真机"
+  ]
+}

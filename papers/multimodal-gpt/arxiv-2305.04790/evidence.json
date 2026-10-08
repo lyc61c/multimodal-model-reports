@@ -1,0 +1,15 @@
+{
+  "paper_id": "9119ddd424b5",
+  "source_url": "https://arxiv.org/pdf/2305.04790v1",
+  "source_version": "2305.04790v1",
+  "source_sha256": "24caf214308bd65c6c36b3f219a024b33a005082a6ca598cb9b9eaf48eb8bea8",
+  "verification_notes": [
+    "阅读全文 11 页，技术正文第 1–5 页、全部演示第 6–10 页；未发现定量基准或消融表。",
+    "检视 Figure 1、Table 2/3、Figure 6 原页，确认全部图文完整，示例内容与文字对应。",
+    "核验 OpenFlamingo/CLIP/LLaMA 与全部原模块冻结，LoRA 添加自注意力、交叉注意力与 FFN；模型规模和 rank 未披露。",
+    "核验五种视觉来源和抽样 5000/512/512、两种文本来源、COCO GPT-4 指令生成、被排除短答案来源。",
+    "核验 8 A100、1 epoch、每 GPU 每模态 batch 1、累积16、总 batch256、lr1e-5 cosine，监督仅回答和EOS。",
+    "所列公式为明确标注的标准机制解释；没有原文不存在的成绩、训练成本或独立模型验证。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

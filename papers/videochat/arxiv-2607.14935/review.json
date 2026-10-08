@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "核对 arXiv 2607.14935v1 第1、3—6页：机构、4B定位、块内3D注意力、默认T=4，Figure2实际示意T=2；16倍是相对未压缩patch而非端到端提速。",
+    "核对第7—15页：三类数据原始实例数与Stage2/3有效样本及QA轮次分开；同一Qwen模型增强和一致性判断、长视频分段与线索裁剪验证如实表述。",
+    "核对第11—15页与Table1：Stage0临时Qwen3-4B丢弃解码器，四阶段更新模块、学习率、batch、packing长度与epoch；未虚构最终初始化细节或RL目标。",
+    "核对第14页状态mask公式、第6页预算控制器：下一窗口而非当前窗口，2:2:1为典型循环，训练真实状态与推理预测状态区别明确。",
+    "核对Table2/3/4/6/7及附录Table10—12：开放问答、TVBench、ProactiveVQA例外、256帧反向延迟、2048帧2.18倍；像素预算不等于运行时间，非统一等预算评测。",
+    "检查8张原图裁剪，保留图注和全部表格行；未使用合成图片或声称独立实验复现。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 8
+  },
+  "article_sha256": "b02df61b0293d436a2d655902fd9a6c9962e6a86ff9a095ced57eeeb7d826af2",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

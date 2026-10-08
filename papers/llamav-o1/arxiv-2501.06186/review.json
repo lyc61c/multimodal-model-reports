@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文1–15及附录21–27，真实底座11B全参数SFT；不是新视觉骨干",
+    "实际检视PDF5/11/13/15，Figure3/4、Table2–5完整",
+    "PixMo18K+Geo57K与阶段299K来源核对，训练与4,173步骤基准区别",
+    "正文承诺附录超参但附录只有评测代码，明确不补epoch/lr/batch/optimizer",
+    "GPT4o正文对附录GPT4o-mini身份冲突；答案也用mini语义裁判",
+    "Table2数值优于CoT但未超过强闭源；Figure3 baseline步骤与Table2差异按表",
+    "六基准逐列核对MathVista54.40<54.80、AI2D81.24<85.70；Table4 66.04对prose66.08记录",
+    "O(n)/O(1)复杂度冲突和GPU耗时随beam增加；Table5 54.1/6.1对图注46.1正文4.2差异，不复述固定5倍",
+    "Table4课程MMVet61.88与Table5单beam63.63差异不强行合并；无模型复现"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "e7996d43cd65ab164b0e0a3ed21e5422ea7473e371df8f8f6e859aa2fd23f4ca",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

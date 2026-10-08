@@ -1,0 +1,87 @@
+{
+  "paper_id": "0e50bfd7b81c",
+  "source_version": "2406.08487v1",
+  "source_pdf_sha256": "69526d66cffc4ef04c5a78aa62fa97980cb8bb2c0b2d3073fbc8fa18c306bde1",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2：自适应切片与三阶段训练",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2406.08487v1#page=5",
+      "source_version": "2406.08487v1",
+      "source_sha256": "69526d66cffc4ef04c5a78aa62fa97980cb8bb2c0b2d3073fbc8fa18c306bde1",
+      "asset_sha256": "6dd72305962b48ea78bb0acebd16993799fd627c85c5166ae5e94dd27a7dc0d8",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          335
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/smr-data.png",
+      "original_label": "Figure 3：科学与数学推理训练任务",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2406.08487v1#page=6",
+      "source_version": "2406.08487v1",
+      "source_sha256": "69526d66cffc4ef04c5a78aa62fa97980cb8bb2c0b2d3073fbc8fa18c306bde1",
+      "asset_sha256": "8200d02a9238fa4bed71adcbf6c61eab3c0be98e078556840846430798d867b9",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          510,
+          238
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/general-results.png",
+      "original_label": "Table 1：通用视觉问答与指令基准",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2406.08487v1#page=7",
+      "source_version": "2406.08487v1",
+      "source_sha256": "69526d66cffc4ef04c5a78aa62fa97980cb8bb2c0b2d3073fbc8fa18c306bde1",
+      "asset_sha256": "d21a17819982225097075764b6923adae86d03fbe8638a3c03e94a50c9078c4f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          205,
+          510,
+          446
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/reasoning-ablations.png",
+      "original_label": "Tables 2–4：推理、幻觉及组件消融",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2406.08487v1#page=8",
+      "source_version": "2406.08487v1",
+      "source_sha256": "69526d66cffc4ef04c5a78aa62fa97980cb8bb2c0b2d3073fbc8fa18c306bde1",
+      "asset_sha256": "b61c28317f76452fd3f0066cea79889c3a3be1f7a1406c313c80c423dd6b165d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          510,
+          455
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

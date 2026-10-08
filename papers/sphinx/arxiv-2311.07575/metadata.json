@@ -1,0 +1,19 @@
+{
+  "paper_id": "89f6c4738085",
+  "catalogue_entry_id": "89f6c4738085",
+  "family_slug": "sphinx",
+  "title": "SPHINX: The Joint Mixing of Weights, Tasks, and Visual Embeddings for Multi-modal Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.07575v1",
+  "source_url": "https://arxiv.org/pdf/2311.07575v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "SPHINX：权重、任务与视觉表示混合",
+  "source_sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1562,
+  "figures_manifest": "figures-manifest.json"
+}

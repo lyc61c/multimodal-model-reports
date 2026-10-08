@@ -1,0 +1,19 @@
+{
+  "paper_id": "261e4c6f7250",
+  "catalogue_entry_id": "261e4c6f7250",
+  "family_slug": "shikra",
+  "title": "Shikra: Unleashing Multimodal LLM's Referential Dialogue Magic",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2306.15195v1",
+  "source_url": "https://arxiv.org/pdf/2306.15195v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Shikra：普通数字表示的视觉指代对话",
+  "source_sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1686,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,107 @@
+{
+  "paper_id": "7d194d7a209f",
+  "source_version": "2311.12793v1",
+  "source_pdf_sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef",
+  "assets": [
+    {
+      "asset_path": "figures/data-pipeline.png",
+      "original_label": "Figure 3：教师描述与扩展生成流程",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2311.12793v1#page=4",
+      "source_version": "2311.12793v1",
+      "source_sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef",
+      "asset_sha256": "186d74db2bf2393ff5dd7eda7a142f1b6fab59caf930e4d85b85c5efac912118",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          390
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/caption-quality.png",
+      "original_label": "Figure 4：描述质量示例",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2311.12793v1#page=5",
+      "source_version": "2311.12793v1",
+      "source_sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef",
+      "asset_sha256": "9fe0596b415f3194aca1516e3338302840ea0738b81a780d8065107fc01f7e78",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          385
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/human-preference.png",
+      "original_label": "Table 2：人工偏好",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2311.12793v1#page=5",
+      "source_version": "2311.12793v1",
+      "source_sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef",
+      "asset_sha256": "05a9b85e0d4176ea60297e239b23e97f9e640998218eff56b39e66c4b3c183e8",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          305,
+          390,
+          570,
+          457
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/benchmark-results.png",
+      "original_label": "Table 3：十一项基准结果",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2311.12793v1#page=6",
+      "source_version": "2311.12793v1",
+      "source_sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef",
+      "asset_sha256": "d85c838eb65d8db6d31e5ffc4d423c842fa62a797dacdd0cfced6f1d26f4dd49",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          265
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/data-ablations.png",
+      "original_label": "Table 4–6、Figure 6：数据和训练消融",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2311.12793v1#page=8",
+      "source_version": "2311.12793v1",
+      "source_sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef",
+      "asset_sha256": "297ec611208b3fd463ca1005812c0ea2819fd9b31d16d48f427b44a9c09737e1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          60,
+          570,
+          725
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

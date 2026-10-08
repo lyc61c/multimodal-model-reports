@@ -1,0 +1,31 @@
+{
+  "source_id": "4ce7489403d3",
+  "source_version": "2407.03320v1",
+  "read_scope": "All technical body pages1-10 Figures1-5 Tables1-5 Eqs1-4; remainder references",
+  "claims": [
+    {
+      "topic": "architecture_math",
+      "source": "3.1-3.2 Figure5 Eqs1-3",
+      "checks": "560square400mergedtokens not rawpatch count; H12/24; video compositeframes with visibleindices; RoPE96K extrapolation without recipe"
+    },
+    {
+      "topic": "training",
+      "source": "3.3-3.6",
+      "checks": "PT frozenLLM PLoRA256 versus SFT allcomponents; separatewebLoRA512 articleLoRA256; DPOEq4 sequenceprob/refs; RM used data labeling"
+    },
+    {
+      "topic": "data",
+      "source": "Tables1-2 Sections3.5-3.6",
+      "checks": "Stack250K18Kwebinstructions2Kresume; writing5K->80Kresponses2Klabeled30Kpairs; full understanding pool not quantified"
+    },
+    {
+      "topic": "results",
+      "source": "Tables3-5",
+      "checks": "28 benchmark columns; MMBVideo scaled0-3 to100; Temp deterministicsubset; MMEscore versus acc; MMMU/Hallusion weakness; no quantifiedarticleDPO or96Kcurve"
+    }
+  ],
+  "source_inconsistencies": [
+    "15 matching/exceeding benchmarks Figure1 caption versus16 abstract/body"
+  ],
+  "model_execution": "not_run"
+}

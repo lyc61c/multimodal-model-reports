@@ -1,0 +1,27 @@
+{
+  "source_id": "17c587e141d0",
+  "source_version": "2304.08485v1",
+  "read_scope": "Full technicalbody1-9 andAppendicesA-B14-17,qualitative18-19;references10-13structurallychecked",
+  "claims": [
+    {
+      "topic": "architecture_math",
+      "source": "Sections4.1-4.2 Eqs1-3 Table2",
+      "checks": "singlelinearCLIPL14notlaterMLP;v1LLaMAname notinventVicuna;HvcorrectsneighborHqtypo;onlyanswerstoploss;Stage1onlyWStage2WLLMvisionfrozen;noresolution/tokencountrecipe"
+    },
+    {
+      "topic": "data",
+      "source": "Section3 AppendixA-B",
+      "checks": "158K=58+23+77~80Kuniqueimages;GPTtextcaptionboxesnotpixels;CC595Knounfreq<3excluded>100max100;108182->31423phrases;seedonlyhuman"
+    },
+    {
+      "topic": "results",
+      "source": "Tables3,6,7",
+      "checks": "85.1GPTrelativeproxy90questions30COCOvalnotaccuracyorvisionGPT4;13Bsingle90.92combojudge92.53complement90.97;7B89.84;last89.96before90.92;answerfirstlast89.77confounded;teacher/judgepipelinecorrelated"
+    }
+  ],
+  "source_inconsistencies": [
+    "Section4.1 neighboringproseHqversusEq1Hv",
+    "reason-first6epoch89.77plateau narrativeconditionincompleteversusbest90.92"
+  ],
+  "model_execution": "not_run"
+}

@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "figures_visually_checked": [
+    "original-page-004-01.png",
+    "original-page-005-02.png",
+    "original-page-006-03.png",
+    "original-page-011-04.png"
+  ],
+  "model_executed": false,
+  "checks": [
+    "Seven sections",
+    "Original source/version checked",
+    "Visual figure/table inspection",
+    "Main vs ablationLLM and evaluation conditions distinguished"
+  ],
+  "limitations": [
+    "No independent reproduction",
+    "Layer-index and crop-count ambiguity preserved",
+    "MMVet broad prose contradicted by table",
+    "Not lossless long-memory or native audio model"
+  ]
+}

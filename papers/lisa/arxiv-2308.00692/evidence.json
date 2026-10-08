@@ -1,0 +1,57 @@
+{
+  "source_version": "2308.00692v1",
+  "title_verified": true,
+  "claims": [
+    {
+      "claim": "推理分割定义与ReasonSeg1218及239/200/779",
+      "pdf_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source": "Sections1,3"
+    },
+    {
+      "claim": "SEG隐藏状态到mask的连续接口与联合损失",
+      "pdf_pages": [
+        4,
+        5
+      ],
+      "source": "Section4.1;Equations1-4;Figure3"
+    },
+    {
+      "claim": "三类训练数据、去除重叠与冻结配置",
+      "pdf_pages": [
+        5,
+        6,
+        7
+      ],
+      "source": "Section4.2,5.1;Figure4"
+    },
+    {
+      "claim": "8x3090/1e4步/AdamW3e-4/batch2/gradacc10/权重",
+      "pdf_pages": [
+        4,
+        6
+      ],
+      "source": "Sections4.1,5.1"
+    },
+    {
+      "claim": "ReasonSeg和ref分割结果",
+      "pdf_pages": [
+        7,
+        8
+      ],
+      "source": "Tables1,2"
+    },
+    {
+      "claim": "骨干、数据和改写消融及正文编号冲突",
+      "pdf_pages": [
+        8,
+        9
+      ],
+      "source": "Tables3-5;Section5.4"
+    }
+  ]
+}

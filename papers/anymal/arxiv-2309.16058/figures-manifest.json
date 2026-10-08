@@ -1,0 +1,52 @@
+{
+  "paper_id": "b0dd57197992",
+  "source_version": "2309.16058v1",
+  "source_pdf_sha256": "2a5bc91b4f027d320b79936fec26812b039849120277170bbeb011f2968ad9cd",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-003-01.png",
+      "original_label": "PDF page 3",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2309.16058v1#page=3",
+      "source_version": "2309.16058v1",
+      "source_sha256": "2a5bc91b4f027d320b79936fec26812b039849120277170bbeb011f2968ad9cd",
+      "asset_sha256": "20d22da47ecf6394ae08f9b9f745483c6ac225d41099cd4f15c512d63046b7a8",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 160,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-007-02.png",
+      "original_label": "PDF page 7",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2309.16058v1#page=7",
+      "source_version": "2309.16058v1",
+      "source_sha256": "2a5bc91b4f027d320b79936fec26812b039849120277170bbeb011f2968ad9cd",
+      "asset_sha256": "939ab0954bc04a652e7e235ac737fd12dd09be383edc38678c138334184a1164",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 160,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-008-03.png",
+      "original_label": "PDF page 8",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2309.16058v1#page=8",
+      "source_version": "2309.16058v1",
+      "source_sha256": "2a5bc91b4f027d320b79936fec26812b039849120277170bbeb011f2968ad9cd",
+      "asset_sha256": "b32558f3cd62ece8cbe342c3b180dee00a4c2ee7d3d22c6153d1a6315de3a02e",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 160,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

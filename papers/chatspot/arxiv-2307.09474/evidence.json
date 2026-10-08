@@ -1,0 +1,57 @@
+{
+  "source_version": "2307.09474v1",
+  "title_verified": true,
+  "claims": [
+    {
+      "claim": "模型定位、实际点框形式与未支持输出框",
+      "pdf_pages": [
+        1,
+        2,
+        3,
+        10
+      ],
+      "source": "Sections1,3,5.3"
+    },
+    {
+      "claim": "架构、归一化与实际线性投影",
+      "pdf_pages": [
+        3,
+        4,
+        6
+      ],
+      "source": "Figure2;Eq1;Sections3.1,4.1"
+    },
+    {
+      "claim": "MGVLID约1.2M图3M问答/108k对话",
+      "pdf_pages": [
+        2,
+        5,
+        6
+      ],
+      "source": "Sections1,3.3;Figure3"
+    },
+    {
+      "claim": "训练阶段、3轮、batch128、LR、2048",
+      "pdf_pages": [
+        6
+      ],
+      "source": "Section4.1"
+    },
+    {
+      "claim": "真实框与DINO框/CLIP文字映射/含标准答案协议",
+      "pdf_pages": [
+        6,
+        7
+      ],
+      "source": "Section4.2;Tables1,2"
+    },
+    {
+      "claim": "扰动与窄定义指代幻觉",
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "source": "Section5.1,5.2;Table3"
+    }
+  ]
+}

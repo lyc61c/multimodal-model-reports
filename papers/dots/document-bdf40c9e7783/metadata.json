@@ -1,0 +1,14 @@
+{
+  "paper_id": "bdf40c9e7783",
+  "catalogue_entry_id": "bdf40c9e7783",
+  "family_slug": "dots",
+  "title": "dots.vlm1",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://github.com/rednote-hilab/dots.vlm1",
+  "document_kind": "model_release",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "dots.vlm1：从原生分辨率视觉预训练到DeepSeek-V3多模态适配"
+}

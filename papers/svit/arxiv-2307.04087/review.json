@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读 v1 主文 1–11 页及附录 13–15 页；该版本只有定性模型结果，没有标准基准性能表。",
+    "核验 108077 张图片与三子集精确数量，3228994 为问答对与描述记录总和，不是完整会话或图片数。",
+    "核验语言教师不接收图像，区域描述不含框，过滤再生成并不验证全部视觉事实。",
+    "核验质量观察只抽取 20 张图片，5% 可改善不能转述为大规模准确率 95%。",
+    "核验 MiniGPT-4 仅训练详细描述、Vicuna v0 13B；LLaVA 7B；未编造未披露的超参数和实际训练子集规模。",
+    "原文 Figure 1、2、3、5 渲染并查看；解释性生成分布与标准 AR 目标明确不是新损失。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "f91aae1af2f16595c08f5ba6497cabfc785b96700f77a7a17541cf11b6c4cfec",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

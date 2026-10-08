@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read entire official2024-12-25 QVQ release page, all six demo traces and stated limitations; verified Qwen2-VL72B base and Preview experimental status.",
+    "Copied and visually inspected complete benchmark, product-rule table, sofa dimensions and rectangle diagram originals; asset labels are unnumbered official website inputs.",
+    "Checked all4 benchmark rows, model dates, val/test-mini/full splits and missing o1/Claude values; superiority statements qualified.",
+    "Independently verified product-rule -29 and rectangle area ratio1/5, while separating task mathematics from model-training objectives.",
+    "Sofa3159000 depends on solid equal-height L-prism approximation; model repetition/intermediate errors and original hallucination warnings preserved.",
+    "No invented RL/SFT recipe, hidden architecture changes, corpus counts, tools, generation budgets or universal multimodal capabilities; no model execution claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "52565f3083413a2e4531b80fcee48161a8620b6a4ad300b590e2e84ea9357a51",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

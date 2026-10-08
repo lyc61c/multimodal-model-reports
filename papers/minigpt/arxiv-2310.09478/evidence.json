@@ -1,0 +1,46 @@
+{
+  "source_version": "2310.09478v1",
+  "claims": [
+    {
+      "claim": "EVA frozen;448;4 neighbors concat;LLaMA2-chat7B;LoRAWqWv64",
+      "pdf_pages": [
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "claim": "Six identifiers and normalized0-100 text boxes",
+      "pdf_pages": [
+        4
+      ]
+    },
+    {
+      "claim": "Three data stages; Flickr minimum5grounded phrases2.5K; parsing2.5K/3K",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "400K/50K/35K steps;GPU8/4/4;batch96/64/24",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "Table3VQA;zero-shot onlylast4columns;Table4IoU>.5;chat grounding regression",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "Taskidentifier49.8vs48.6;CHAIRlengthconfound;knownqualitativehallucinations",
+      "pdf_pages": [
+        8,
+        9,
+        14
+      ]
+    }
+  ]
+}

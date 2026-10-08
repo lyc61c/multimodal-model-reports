@@ -1,0 +1,19 @@
+{
+  "paper_id": "45ba78abafbb",
+  "catalogue_entry_id": "45ba78abafbb",
+  "family_slug": "seed",
+  "title": "Seed1.5-VL Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2505.07062v1",
+  "source_url": "https://arxiv.org/pdf/2505.07062v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Seed1.5-VL：原生分辨率视觉与混合强化学习",
+  "source_sha256": "31f4a473f3653102aa2db5c13c9cfad6e667fe0a5440d2916a02e086b9f1d5e4",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 3092,
+  "figures_manifest": "figures-manifest.json"
+}

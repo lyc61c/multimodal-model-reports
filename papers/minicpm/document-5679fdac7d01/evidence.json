@@ -1,0 +1,44 @@
+{
+  "source_version": "2509.18154v1",
+  "claims": [
+    {
+      "claim": "正式技术报告题名、v1日期及8B级/8.7B效率表口径",
+      "pdf_pages": [
+        1,
+        11
+      ]
+    },
+    {
+      "claim": "3D压缩6帧64token、12帧128token、1080帧最高10fps",
+      "pdf_pages": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "三阶段预训练冻结配置及SFT升级",
+      "pdf_pages": [
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "GRPO移除KL熵、奖励Eq1、50%长推理rollout、DPO400步",
+      "pdf_pages": [
+        8,
+        9,
+        20
+      ]
+    },
+    {
+      "claim": "Table1主分、Table2 A100效率、消融不同数值口径与字幕表头异常",
+      "pdf_pages": [
+        10,
+        11,
+        12
+      ]
+    }
+  ]
+}

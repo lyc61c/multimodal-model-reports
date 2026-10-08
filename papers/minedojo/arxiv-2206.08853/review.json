@@ -1,0 +1,37 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "区分框架3130任务与实测12任务/3策略。",
+    "Wiki/Reddit不是已用MineCLIP预训练数据；YouTube无真实动作标签。",
+    "程序化训练含二元成功奖励，创造性才完全依靠MineCLIP。",
+    "训练和评价来源同类模型；评价F1不是准确率；观测不只RGB。"
+  ],
+  "math_checks": [
+    "InfoNCE明确为标准解释，未冒称原文编号公式/给出未披露温度。",
+    "DIRECT减1/NT截断，DELTA差分，不声称势塑形策略不变性。",
+    "PPO最大化与SI最大化方向、概率比和优势符号核对；73%相对和35.2百分点区分。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-002-01.png",
+      "checked": "已view_image核验Figure1/3完整图注及Table1/A1完整表头和所有行。"
+    },
+    {
+      "file": "figures/original-page-006-02.png",
+      "checked": "已view_image核验Figure1/3完整图注及Table1/A1完整表头和所有行。"
+    },
+    {
+      "file": "figures/original-page-007-03.png",
+      "checked": "已view_image核验Figure1/3完整图注及Table1/A1完整表头和所有行。"
+    },
+    {
+      "file": "figures/original-page-028-04.png",
+      "checked": "已view_image核验Figure1/3完整图注及Table1/A1完整表头和所有行。"
+    }
+  ],
+  "limitations": [
+    "未运行仿真、模型；自身逐源核验，不是独立复现。",
+    "没有在全部开放任务或机器人上验证；没有独立校准集披露。"
+  ],
+  "model_execution": "not_run"
+}

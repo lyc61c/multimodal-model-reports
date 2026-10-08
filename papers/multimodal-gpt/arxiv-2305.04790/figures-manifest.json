@@ -1,0 +1,52 @@
+{
+  "paper_id": "9119ddd424b5",
+  "source_version": "2305.04790v1",
+  "source_pdf_sha256": "24caf214308bd65c6c36b3f219a024b33a005082a6ca598cb9b9eaf48eb8bea8",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-003-01.png",
+      "original_label": "Table 2 and Table 3",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2305.04790v1#page=3",
+      "source_version": "2305.04790v1",
+      "source_sha256": "24caf214308bd65c6c36b3f219a024b33a005082a6ca598cb9b9eaf48eb8bea8",
+      "asset_sha256": "e00b3afa2c584a6613f02e022014aaabb1f394ab0a45faea1913cc1290aab5c6",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-004-02.png",
+      "original_label": "Figure 1",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2305.04790v1#page=4",
+      "source_version": "2305.04790v1",
+      "source_sha256": "24caf214308bd65c6c36b3f219a024b33a005082a6ca598cb9b9eaf48eb8bea8",
+      "asset_sha256": "93a4e9f4d1b3143dfb2239922cad19cecf712e633d800cacdaa5c1d068650c05",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-008-03.png",
+      "original_label": "Figure 6",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2305.04790v1#page=8",
+      "source_version": "2305.04790v1",
+      "source_sha256": "24caf214308bd65c6c36b3f219a024b33a005082a6ca598cb9b9eaf48eb8bea8",
+      "asset_sha256": "dd11cd530f6df452f9034d15fd571ba55f679ec95d2e9a78ffa80d019f724876",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

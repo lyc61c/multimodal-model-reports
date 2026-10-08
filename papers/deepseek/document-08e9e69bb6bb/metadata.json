@@ -1,0 +1,14 @@
+{
+  "paper_id": "08e9e69bb6bb",
+  "catalogue_entry_id": "08e9e69bb6bb",
+  "family_slug": "deepseek",
+  "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2606.19348v1",
+  "source_url": "https://arxiv.org/pdf/2606.19348v1",
+  "document_kind": "language_model_report",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "DeepSeek-V4：压缩混合注意力与百万 token 推理"
+}

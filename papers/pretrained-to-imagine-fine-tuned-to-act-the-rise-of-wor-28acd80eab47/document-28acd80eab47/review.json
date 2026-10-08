@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_type": "self-review",
+  "source_read": true,
+  "source_sections_read": "Complete main blog and compute footnotes; references checked for scope",
+  "figures_visually_checked": [
+    "wam-design-space.webp",
+    "dreamzero-architecture.webp",
+    "roboarena-april-2026.webp",
+    "normalized-compute.webp"
+  ],
+  "model_executed": false,
+  "checks": [
+    "七节齐全",
+    "模型结果、作者假说、博客估算明确区分",
+    "图号按正文 caption 而非不一致 alt",
+    "无虚构统一训练配方"
+  ],
+  "limitations": [
+    "未执行模型或复现评测",
+    "跨论文榜单和算力口径不构成严格受控比较",
+    "网页原文部分alt图号与正文不一致"
+  ]
+}

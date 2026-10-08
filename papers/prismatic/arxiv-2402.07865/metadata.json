@@ -1,0 +1,19 @@
+{
+  "paper_id": "82948b475ada",
+  "catalogue_entry_id": "82948b475ada",
+  "family_slug": "prismatic",
+  "title": "Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2402.07865v1",
+  "source_url": "https://arxiv.org/pdf/2402.07865v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Prismatic：视觉语言模型设计空间的控制实验与 PRISM 配方",
+  "source_sha256": "7027cf1a9560a0643686546f0a6de8b6aeaf017d67410c0d6dafb99126eb57f0",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1763,
+  "figures_manifest": "figures-manifest.json"
+}

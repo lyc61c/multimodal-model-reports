@@ -1,0 +1,14 @@
+{
+  "paper_id": "c37f94b70941",
+  "source_url": "https://arxiv.org/pdf/2305.14167v1",
+  "source_version": "2305.14167v1",
+  "source_sha256": "9df341ec2daad13d7c70dedc3efa111a894946f5ff1f2015764994cbacb21d7d",
+  "verification_notes": [
+    "Read PDF main pages1-12 and appendix13-14; verified title/date/architecture",
+    "Viewed Figure2,Figure3,Figure5 full pages; original figure labels and no clipping",
+    "Verified 5000images/around30000pairs and both training stages projection-only",
+    "Verified Equation1 and labeled explanatory pipeline notation",
+    "No quantitative benchmarks/hyperparameters reported; demonstration and failures kept separate; no model execution"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

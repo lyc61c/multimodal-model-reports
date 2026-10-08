@@ -1,0 +1,15 @@
+{
+  "paper_id": "704f6450d39f",
+  "source_url": "https://arxiv.org/pdf/2312.09237v1",
+  "source_version": "2312.09237v1",
+  "source_sha256": "c35af2f89bb19bf4757b6c7c896df91984396b1820f51613b0a8cc4ba959b1a1",
+  "verification_notes": [
+    "Read PDF pages 1-8 and appendix 11-13; confirmed PixelLLM identity and T5-XL encoder-decoder architecture.",
+    "Viewed four original pages 3/5/7/8 in full; figures 2/3/4 and Tables 1-5 intact.",
+    "Checked Table 1 exceptions: RefCOCO+ testA 87.0 below 87.4; mask RefCOCO testA 78.5 below LISA79.1.",
+    "Corrected introductory metric typo using Table3: VG19.9 METEOR and148.9CIDEr.",
+    "Training states distinguish frozen base weights and trainable LoRA; downstream finetuning and conditional ground-truth box evaluations explicit.",
+    "No model execution or independent reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

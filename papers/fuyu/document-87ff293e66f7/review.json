@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read the entire official Adept Hugging Face model card; source snapshot is a model card rather than a full paper and missing training disclosures are explicit.",
+    "Downloaded and visually inspected original architecture.png and chart.png; full diagrams and chart labels remain visible, both are unnumbered website assets.",
+    "Verified direct patch linear projection, absent image encoder/image-specific position embeddings, raster scan and image-newline semantics; mathematical notation is marked explanatory.",
+    "Checked all four official evaluation rows and model columns, including Fuyu-Medium COCO 138 below 8B 141; unspecified caption metric is not invented.",
+    "Latency below 100ms is qualified as official claim without reproducible hardware/protocol; no screen-agent success or component ablations are invented."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 2
+  },
+  "article_sha256": "8c6bd44cc26ab91ddce5e10de6eaf3663e0773548fcbacf2b95e5bf4e536f1ed",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

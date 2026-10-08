@@ -1,0 +1,688 @@
+{
+  "paper_id": "qwen2.5-vl",
+  "source_version": "2502.13923v1",
+  "data_training": {
+    "paper": "Qwen2.5-VL Technical Report",
+    "arxiv_version": "2502.13923v1",
+    "source": "https://arxiv.org/pdf/2502.13923v1",
+    "claims": [
+      {
+        "claim": "预训练扩展自前作1.2T；本作精确训练量4.1T",
+        "value": "4.1T tokens",
+        "pdf_pages": [
+          2,
+          4,
+          5,
+          8
+        ],
+        "sections": [
+          "1",
+          "2.1 Table 1",
+          "2.2.1",
+          "2.2.2 Table 2"
+        ],
+        "note": "2.2.1将本作近似称约4T；精确4.1T来自Table 1/2，不能当独立样本数"
+      },
+      {
+        "claim": "交错图文先常规清洗再按文本质量、图文相关、互补和密度平衡评分",
+        "pdf_pages": [
+          5,
+          6
+        ],
+        "sections": [
+          "2.2.1 Interleaved Image-Text Data"
+        ]
+      },
+      {
+        "claim": "grounding使用输入图像实际尺寸对应的坐标",
+        "pdf_pages": [
+          6
+        ],
+        "sections": [
+          "2.2.1 Grounding Data with Absolute Position Coordinates"
+        ]
+      },
+      {
+        "claim": "grounding结合公开、自有数据与copy-paste、Grounding DINO和SAM合成，覆盖XML、JSON和自定义格式",
+        "pdf_pages": [
+          6
+        ],
+        "sections": [
+          "2.2.1 Grounding Data with Absolute Position Coordinates"
+        ]
+      },
+      {
+        "claim": "开放词汇检测覆盖超过10000对象类别",
+        "value": ">10000 categories",
+        "pdf_pages": [
+          6
+        ],
+        "sections": [
+          "2.2.1 Grounding Data with Absolute Position Coordinates"
+        ],
+        "note": "类别数不是图像数"
+      },
+      {
+        "claim": "构建不存在类别查询、多实例图像，并结合PixMo及检测分割数据进行指点和计数训练",
+        "pdf_pages": [
+          6
+        ],
+        "sections": [
+          "2.2.1 Grounding Data with Absolute Position Coordinates"
+        ]
+      },
+      {
+        "claim": "合成文档统一用HTML表达内容、布局区域坐标与阅读顺序",
+        "pdf_pages": [
+          6,
+          7
+        ],
+        "sections": [
+          "2.2.1 Document Omni-Parsing Data"
+        ]
+      },
+      {
+        "claim": "OCR混合合成、公开、自采数据并扩展多语言",
+        "pdf_pages": [
+          7
+        ],
+        "sections": [
+          "2.2.1 OCR Data"
+        ]
+      },
+      {
+        "claim": "matplotlib/seaborn/plotly合成100万图表样本",
+        "value": "1 million samples",
+        "pdf_pages": [
+          7
+        ],
+        "sections": [
+          "2.2.1 OCR Data"
+        ]
+      },
+      {
+        "claim": "600万真实表格经离线识别后过滤低置信、重叠和低单元格密度",
+        "value": "6 million samples processed",
+        "pdf_pages": [
+          7
+        ],
+        "sections": [
+          "2.2.1 OCR Data"
+        ],
+        "note": "过滤后数量未披露"
+      },
+      {
+        "claim": "视频训练动态采样FPS，超过半小时视频合成长描述，grounding时间采用秒制和hmsf",
+        "pdf_pages": [
+          7
+        ],
+        "sections": [
+          "2.2.1 Video Data"
+        ]
+      },
+      {
+        "claim": "跨手机网页桌面截图与多步轨迹；动作统一函数调用；已知正确动作、前后截图和全局任务辅助生成步骤推理并模型过滤",
+        "pdf_pages": [
+          7,
+          8
+        ],
+        "sections": [
+          "2.2.1 Agent Data"
+        ],
+        "note": "监督推理文本不等于执行时真实内部推理"
+      },
+      {
+        "claim": "ViT从头初始化使用DataComp与内部数据；LLM初始化使用预训练Qwen2.5",
+        "pdf_pages": [
+          4,
+          8
+        ],
+        "sections": [
+          "2.1.1",
+          "2.2.2"
+        ],
+        "note": "初始化/CLIP训练与Table2 token分配关系未逐一披露"
+      },
+      {
+        "claim": "第一预训练阶段1.5T tokens，8192序列长度，仅ViT训练",
+        "value": {
+          "tokens": "1.5T",
+          "sequence_length": 8192,
+          "training": "ViT"
+        },
+        "pdf_pages": [
+          8
+        ],
+        "sections": [
+          "2.2.2 Table 2"
+        ],
+        "note": "Merger未单列；勿声称仅连接层训练或ViT+Merger"
+      },
+      {
+        "claim": "第二阶段2T tokens，8192序列长度，全部参数解冻",
+        "value": {
+          "tokens": "2T",
+          "sequence_length": 8192,
+          "training": "all parameters unfrozen"
+        },
+        "pdf_pages": [
+          8
+        ],
+        "sections": [
+          "2.2.2 Table 2 and prose"
+        ]
+      },
+      {
+        "claim": "第三阶段0.6T tokens，32768序列长度，ViT及LLM更新；加长视频、长Agent、长文档",
+        "value": {
+          "tokens": "0.6T",
+          "sequence_length": 32768,
+          "training": "ViT & LLM"
+        },
+        "pdf_pages": [
+          8
+        ],
+        "sections": [
+          "2.2.2 Table 2"
+        ]
+      },
+      {
+        "claim": "依据LLM输入长度动态打包，前两阶段8192，第三32768，用于平衡GPU语言端工作负载",
+        "pdf_pages": [
+          8
+        ],
+        "sections": [
+          "2.2.2"
+        ]
+      },
+      {
+        "claim": "SFT约200万entries，纯文本和多模态各50%，多模态消耗更多tokens和计算，主要中英",
+        "value": {
+          "entries": "approximately 2 million",
+          "text_entries_fraction": 0.5,
+          "multimodal_entries_fraction": 0.5
+        },
+        "pdf_pages": [
+          9
+        ],
+        "sections": [
+          "2.3.1"
+        ],
+        "note": "比例不是token或计算配比"
+      },
+      {
+        "claim": "SFT使用ChatML对话格式",
+        "pdf_pages": [
+          9
+        ],
+        "sections": [
+          "2.3"
+        ]
+      },
+      {
+        "claim": "Qwen2-VL-Instag来自Qwen2-VL-72B，分类8主域30子类，再规则+奖励模型过滤",
+        "value": {
+          "primary_domains": 8,
+          "subcategories": 30
+        },
+        "pdf_pages": [
+          9,
+          10
+        ],
+        "sections": [
+          "2.3.2"
+        ]
+      },
+      {
+        "claim": "拒绝采样由中间版本模型生成，保留与标准答案一致样本，再过滤语言混杂/过长/重复并验证视觉推理",
+        "pdf_pages": [
+          10
+        ],
+        "sections": [
+          "2.3.3"
+        ],
+        "note": "原文承认中间推理模态对齐仍有挑战"
+      },
+      {
+        "claim": "SFT和DPO均冻结ViT",
+        "pdf_pages": [
+          10
+        ],
+        "sections": [
+          "2.3.4"
+        ],
+        "note": "不宜未经证据断言Merger冻结状态或参数高效具体技术"
+      },
+      {
+        "claim": "DPO仅图文和纯文本偏好数据，每个样本处理一次",
+        "pdf_pages": [
+          10
+        ],
+        "sections": [
+          "2.3.4"
+        ],
+        "note": "不是整个后训练数据仅一次；SFT轮数未披露"
+      },
+      {
+        "claim": "GPU配置、学习率、batch、step、成本、完整数据配比、DPO beta/参考模型/规模、后训练上下文长度未披露",
+        "pdf_pages": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "sections": [
+          "2.2",
+          "2.3"
+        ],
+        "note": "缺省记录；标准SFT/DPO公式仅阅读辅助，原文无具体损失公式和mask配置"
+      }
+    ]
+  },
+  "experiments": {
+    "source": "https://arxiv.org/pdf/2502.13923v1",
+    "verification": "Tables 3, 5 and 8 visually checked against extracted original table PNGs; Table 9 visually checked against PDF page-15 PNG.",
+    "model_versions": {
+      "table_3_gpt": "GPT-4o-0513",
+      "table_3_claude": "Claude-3.5-Sonnet-0620",
+      "table_5_gpt": "GPT-4o; snapshot not stated in table",
+      "table_8_gpt": "GPT-4o; snapshot not stated in table",
+      "table_9_gpt": "GPT-4o; snapshot not stated in table"
+    },
+    "table_3": {
+      "pdf_page": 11,
+      "columns": [
+        "previous_open_source_sota",
+        "Claude-3.5-Sonnet-0620",
+        "GPT-4o-0513",
+        "InternVL2.5-78B",
+        "Qwen2-VL-72B",
+        "Qwen2.5-VL-72B",
+        "Qwen2.5-VL-7B",
+        "Qwen2.5-VL-3B"
+      ],
+      "rows": {
+        "MMMU_val": [
+          70.1,
+          68.3,
+          69.1,
+          70.1,
+          64.5,
+          70.2,
+          58.6,
+          53.1
+        ],
+        "MMMU-Pro_overall": [
+          48.6,
+          51.5,
+          51.9,
+          48.6,
+          46.2,
+          51.1,
+          38.3,
+          31.56
+        ],
+        "MathVista_mini": [
+          72.3,
+          67.7,
+          63.8,
+          72.3,
+          70.5,
+          74.8,
+          68.2,
+          62.3
+        ],
+        "MMBench-EN_test": [
+          88.3,
+          82.6,
+          83.4,
+          88.3,
+          86.9,
+          88.6,
+          83.5,
+          79.1
+        ],
+        "MMBench-CN_test": [
+          88.5,
+          83.5,
+          82.1,
+          88.5,
+          86.7,
+          87.9,
+          83.4,
+          78.1
+        ],
+        "MMBench-V1.1-EN_test": [
+          87.4,
+          80.9,
+          83.1,
+          87.4,
+          86.1,
+          88.4,
+          82.6,
+          77.4
+        ],
+        "MME_sum": [
+          2494,
+          1920,
+          2328,
+          2494,
+          2483,
+          2448,
+          2347,
+          2157
+        ],
+        "HallBench_avg": [
+          58.1,
+          55.5,
+          55.0,
+          57.4,
+          58.1,
+          55.2,
+          52.9,
+          46.3
+        ],
+        "RealWorldQA_avg": [
+          78.7,
+          60.1,
+          75.4,
+          78.7,
+          77.8,
+          75.7,
+          68.5,
+          65.4
+        ]
+      }
+    },
+    "table_5": {
+      "pdf_page": 13,
+      "columns": [
+        "Claude-3.5-Sonnet",
+        "Gemini-1.5-Pro",
+        "GPT-4o",
+        "InternVL2.5-78B",
+        "Qwen2.5-VL-72B",
+        "Qwen2.5-VL-7B",
+        "Qwen2.5-VL-3B"
+      ],
+      "rows": {
+        "TextVQA_val": [
+          76.5,
+          78.8,
+          77.4,
+          83.4,
+          83.5,
+          84.9,
+          79.3
+        ],
+        "DocVQA_test": [
+          95.2,
+          93.1,
+          91.1,
+          95.1,
+          96.4,
+          95.7,
+          93.9
+        ],
+        "ChartQA_test_Avg": [
+          90.8,
+          87.2,
+          86.7,
+          88.3,
+          89.5,
+          87.3,
+          84.0
+        ],
+        "OCRBench": [
+          788,
+          754,
+          736,
+          854,
+          885,
+          864,
+          797
+        ],
+        "OmniDocBench_edit_en_lower_is_better": [
+          0.33,
+          0.23,
+          0.265,
+          0.275,
+          0.226,
+          0.308,
+          0.409
+        ],
+        "OmniDocBench_edit_zh_lower_is_better": [
+          0.381,
+          0.281,
+          0.435,
+          0.324,
+          0.324,
+          0.398,
+          0.543
+        ]
+      },
+      "notes": [
+        "No Qwen2-VL predecessor column in Table 5.",
+        "OCRBench score must not be presented as a percentage.",
+        "ChartQA is test Avg., and 72B is below Claude's 90.8."
+      ]
+    },
+    "table_8": {
+      "pdf_page": 14,
+      "columns": [
+        "Gemini-1.5-Pro",
+        "GPT-4o",
+        "Qwen2.5-VL-72B",
+        "Qwen2.5-VL-7B",
+        "Qwen2.5-VL-3B"
+      ],
+      "rows": {
+        "Video-MME_without_subtitles": [
+          75.0,
+          71.9,
+          73.3,
+          65.1,
+          61.5
+        ],
+        "Video-MME_with_subtitles": [
+          81.3,
+          77.2,
+          79.1,
+          71.6,
+          67.6
+        ],
+        "Video-MMMU": [
+          53.9,
+          61.2,
+          60.2,
+          47.4,
+          null
+        ],
+        "MMVU_val": [
+          65.4,
+          67.4,
+          62.9,
+          50.1,
+          null
+        ],
+        "MVBench": [
+          60.5,
+          64.6,
+          70.4,
+          69.6,
+          67.0
+        ],
+        "MMBench-Video": [
+          1.3,
+          1.63,
+          2.02,
+          1.79,
+          1.63
+        ],
+        "LongVideoBench_val": [
+          64.0,
+          66.7,
+          60.7,
+          56.0,
+          54.2
+        ],
+        "LVBench": [
+          33.1,
+          30.8,
+          47.3,
+          45.3,
+          43.3
+        ],
+        "MLVU_M-Avg": [
+          null,
+          64.6,
+          74.6,
+          70.2,
+          68.2
+        ],
+        "Charades-STA_mIoU": [
+          null,
+          35.7,
+          50.9,
+          43.6,
+          38.8
+        ]
+      },
+      "qwen_video_eval_cap": {
+        "frames_per_video": 768,
+        "video_tokens": 24576
+      },
+      "notes": [
+        "No Qwen2-VL predecessor column in Table 8.",
+        "Separate subtitle/no-subtitle settings.",
+        "MMBench-Video has a different score scale; do not pool it with accuracy-like scores."
+      ]
+    },
+    "table_9": {
+      "pdf_page": 15,
+      "columns": [
+        "GPT-4o",
+        "Gemini-2.0",
+        "Claude",
+        "Aguvis-72B",
+        "Qwen2-VL-72B",
+        "Qwen2.5-VL-72B"
+      ],
+      "rows": {
+        "ScreenSpot": [
+          18.1,
+          84.0,
+          83.0,
+          89.2,
+          null,
+          87.1
+        ],
+        "ScreenSpot-Pro": [
+          null,
+          null,
+          17.1,
+          23.6,
+          1.6,
+          43.6
+        ],
+        "Android-Control-High_EM": [
+          20.8,
+          28.5,
+          12.5,
+          66.4,
+          59.1,
+          67.36
+        ],
+        "Android-Control-Low_EM": [
+          19.4,
+          60.2,
+          19.4,
+          84.4,
+          59.2,
+          93.7
+        ],
+        "AndroidWorld_SR_percent": [
+          34.5,
+          26,
+          27.9,
+          26.1,
+          6,
+          35
+        ],
+        "MobileMiniWob++_SR_percent": [
+          61,
+          42,
+          61,
+          66,
+          50,
+          68
+        ],
+        "OSWorld": [
+          5.03,
+          4.7,
+          14.9,
+          10.26,
+          2.42,
+          8.83
+        ]
+      },
+      "SoM_inputs": {
+        "AndroidWorld": [
+          "GPT-4o",
+          "Gemini-2.0",
+          "Qwen2-VL-72B"
+        ],
+        "MobileMiniWob++": [
+          "Gemini-2.0",
+          "Claude",
+          "Qwen2-VL-72B"
+        ]
+      },
+      "notes": [
+        "Table 9 contains only 72B Qwen2.5-VL model, no 3B/7B.",
+        "Online comparisons are not identical inputs: some baselines use Set-of-Mark."
+      ]
+    },
+    "dedicated_component_ablation": "No dedicated component-removal ablation for window attention, absolute-time MRoPE, or dynamic FPS reported in report v1. Final model comparisons cannot isolate causal contribution of a single module."
+  },
+  "architecture_checks": {
+    "sources": {
+      "figure": "Figure 1, PDF page 3",
+      "config": "Table 1, PDF page 4",
+      "time_encoding": "Section 2.1.2-2.1.3, PDF page 5"
+    },
+    "vision_layers": 32,
+    "window_attention_layers": 28,
+    "global_attention_layers": 4,
+    "global_layer_zero_based_indices": [
+      7,
+      15,
+      23,
+      31
+    ],
+    "patch_size": 14,
+    "max_window_side_pixels": 112,
+    "max_spatial_tokens_per_window": 64,
+    "vision_hidden_size": 1280,
+    "merger_concat_dimension": 5120,
+    "llm_hidden_sizes": {
+      "3B": 2048,
+      "7B": 3584,
+      "72B": 8192
+    },
+    "figure_image_token_counts": {
+      "8204x1092": 11427,
+      "28x224": 8,
+      "700x1260": 1125
+    },
+    "figure_video_token_counts": {
+      "0.5FPS_8seconds": 644,
+      "1FPS_8seconds": 1288,
+      "2FPS_8seconds": 2576
+    },
+    "time_id_note": "Figure 1 shows two temporal IDs per second; do not equate all temporal IDs to seconds",
+    "equations": "Standard/explanatory, not numbered original-paper equations"
+  }
+}

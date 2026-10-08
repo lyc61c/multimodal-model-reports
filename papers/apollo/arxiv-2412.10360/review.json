@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "figures_visually_checked": [
+    11,
+    13,
+    21,
+    26
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_verified": true,
+    "numeric_results_checked": true,
+    "freeze_states_checked_from_pixels": true,
+    "formula_origin_distinguished": true
+  },
+  "limitations": [
+    "正文32tpf与附录16tpf冲突，逐来源保留",
+    "正文Perceiver所有指标领先与表Reasoning不符",
+    "7B无字幕Video-MME正文61.2、表61.3",
+    "模型配置仅支持本实验结论，不能声称全部7B每项都胜出",
+    "未披露完整最终训练时长、GPU小时及峰值显存"
+  ]
+}

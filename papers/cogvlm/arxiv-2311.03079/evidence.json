@@ -1,0 +1,14 @@
+{
+  "paper_id": "cc862c751f87",
+  "source_url": "https://arxiv.org/pdf/2311.03079v1",
+  "source_version": "2311.03079v1",
+  "source_sha256": "9c4fc9011590e02354b1aadb97145ae17775b848a1eb4fdb390b0201c40cc17e",
+  "verification_notes": [
+    "Readtechnicalmainandtrainingevaluationappendices",
+    "Viewedfouroriginalpagestablescompleteandmetriccolumnschecked",
+    "SeparatedfrozenpretrainandLLMunfrozenSFT",
+    "Separatedgeneralist/specialist/chatandshortablation",
+    "Sevensections;notmodelexecution"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

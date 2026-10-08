@@ -1,0 +1,34 @@
+{
+  "source_version": "2305.16355v1",
+  "claims": [
+    {
+      "claim": "ImageBind与Vicuna13Bv0冻结，仅线性桥接与注意力LoRA，约0.4%可训练",
+      "pdf_pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "claim": "160K LLaVA/MiniGPT4图文，2epoch LR5e-4线性衰减，seq400，8A10040GB约7小时",
+      "pdf_pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "claim": "单向量非文本接口、多模态算术相加、仅文本输出、无量化标准评测",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "Figure7狗叫与Figure9/11融合案例和细节限制",
+      "pdf_pages": [
+        9,
+        11,
+        13
+      ]
+    }
+  ]
+}

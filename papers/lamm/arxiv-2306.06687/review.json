@@ -1,0 +1,49 @@
+{
+  "checked_file": "papers\\lamm\\arxiv-2306.06687\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "datasetandbenchmarkunits",
+    "actualfreeze/rank/modules",
+    "zero-shotvsadditionaltaskFT",
+    "SOTAcolumnincomparabletraining",
+    "ScanQAremappedMCnotoriginal"
+  ],
+  "math_checked": [
+    "LoRAstandardshapes32 andunknownscale",
+    "NTPmaskexplanatorynotclaimedrecipe",
+    "BinLocindicatorfaithful",
+    "percentagepointarithmetic"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-004-01.png",
+      "original_label": "Figure1",
+      "pdf_page": 4,
+      "inspection": "Viewed complete original page;all diagram labels/table headers, all result rows, and captions visible"
+    },
+    {
+      "file": "figures/original-page-005-02.png",
+      "original_label": "Figure2",
+      "pdf_page": 5,
+      "inspection": "Viewed complete original page;all diagram labels/table headers, all result rows, and captions visible"
+    },
+    {
+      "file": "figures/original-page-006-03.png",
+      "original_label": "Figure3/Table1",
+      "pdf_page": 6,
+      "inspection": "Viewed complete original page;all diagram labels/table headers, all result rows, and captions visible"
+    },
+    {
+      "file": "figures/original-page-007-04.png",
+      "original_label": "Tables2-4",
+      "pdf_page": 7,
+      "inspection": "Viewed complete original page;all diagram labels/table headers, all result rows, and captions visible"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "optimizer/batch/epochs/maskingnotpublished",
+    "GPTmetricrankingaggregationnotdefined",
+    "pointcloudcoordinatespromptinconsistent"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "paper_id": "0d9109ba3678",
+  "catalogue_entry_id": "0d9109ba3678",
+  "family_slug": "gpt",
+  "title": "GPT-6 Astra: A new generation of intelligence",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://openai.com/index/gpt-6-astra/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "GPT-6 Astra：面向视觉交互与长期任务的通用模型",
+  "source_sha256": "5ff36e32c873bf12c606024ab750e9a9e7ca1b21c0b00a7479f876303226584a",
+  "supplemental_sources": [
+    {
+      "kind": "system_card",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/gpt-6-astra.pdf",
+      "source_version": "official-system-card-2026-09-03",
+      "version_note": "Cover date 2026-09-03; cached file includes changelog through 2026-09-29",
+      "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
+      "pdf_pages": 175
+    }
+  ]
+}

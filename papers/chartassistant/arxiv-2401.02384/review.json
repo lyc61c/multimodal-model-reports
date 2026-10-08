@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Readmainmethoddataexperiments andAppendixB/C",
+    "Viewedfourselectedoriginalpages tablescomplete",
+    "Verifiedformulaequation1/2 andmetriccolumns",
+    "Differentiated toolassistedmath,benchmarkscopes,andunreportedsettings",
+    "Sevensections"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "e16b7682851ecd4e77ef97dfa8da528d2c7466b208e38388947e6a99f1c0dc2c",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

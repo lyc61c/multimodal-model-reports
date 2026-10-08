@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read full official2024-09-25 Llama3.2 release text;11B/90B vision versus1B/3B text-only distinguished.",
+    "Downloaded and visually inspected four original vision/lightweight benchmark and pruning/Stack diagrams; verified full table headers, splits and metric labels.",
+    "Verified frozen language parameters during adapter training only, image-encoder updates, two vision data phases and SFT/RS/DPO; post-training freeze scope not invented.",
+    "Verified text pruning from8B,8B/70B logits and405B Instruct synthesis figure; not transferred into vision recipe.",
+    "Checked eight vision rows including MMMU-Pro Vision and11B DocVQA exceptions, ANLS/relaxed accuracy/CoT labels and unexplained original stars.",
+    "Checked lightweight IFEval/BFCL/summary scores, Phi stronger MMLU/GSM8K and1B-to3B regressions;128K does not imply perfect long-context performance.",
+    "BF16 released weights distinguished from unreleased quantized demos and Guard1B file-size reduction; no model inference, undisclosed hyperparameters or ablations claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "cb5f66a89f60d1a90be5425d836e8e6200d655f40978de6c88093d8b6fc47e3a",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "9e3cb917f6e0",
+  "catalogue_entry_id": "9e3cb917f6e0",
+  "family_slug": "ego-r1",
+  "title": "Ego-R1: Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2506.13654v1",
+  "source_url": "https://arxiv.org/pdf/2506.13654v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Ego-R1：通过工具链推理检索跨日第一视角视频"
+}

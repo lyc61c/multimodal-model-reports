@@ -1,0 +1,107 @@
+{
+  "paper_id": "aa49a3ceebeb",
+  "source_version": "2306.05424v1",
+  "source_pdf_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 1：时空池化与投影架构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2306.05424v1#page=3",
+      "source_version": "2306.05424v1",
+      "source_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
+      "asset_sha256": "f3ff48c322e87e26c2d32431a38df2f5b4a3b46ec12437e598acb814380880ae",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          55,
+          565,
+          325
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/human-annotation.png",
+      "original_label": "Figure 2：人工丰富视频描述",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2306.05424v1#page=5",
+      "source_version": "2306.05424v1",
+      "source_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
+      "asset_sha256": "9dba670233705b997f54e9539e854254783adbe16d5fb4b2168df2d237ad44f1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          55,
+          565,
+          407
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/semi-automatic-annotation.png",
+      "original_label": "Figure 3：半自动描述构建",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2306.05424v1#page=6",
+      "source_version": "2306.05424v1",
+      "source_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
+      "asset_sha256": "d5c0c889f3a2f17ceff89ee1147950cdec85d5043f3854877723a12438d536c3",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          55,
+          565,
+          463
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/generation-results.png",
+      "original_label": "Table 1：GPT 评价五方面结果",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2306.05424v1#page=7",
+      "source_version": "2306.05424v1",
+      "source_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
+      "asset_sha256": "231418e97b3793831dc5fd0e4c527962a64272327556061d23faf9e4410bf999",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          267,
+          565,
+          404
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/videoqa-results.png",
+      "original_label": "Table 2：零样本 VideoQA 结果",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2306.05424v1#page=8",
+      "source_version": "2306.05424v1",
+      "source_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
+      "asset_sha256": "f27b11f11e1f21b827fa7a8fdb490f09cf41872f4599863a7266be695fb04685",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          48,
+          565,
+          160
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

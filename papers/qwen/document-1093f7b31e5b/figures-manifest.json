@@ -1,0 +1,82 @@
+{
+  "paper_id": "1093f7b31e5b",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_pdf_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
+  "assets": [
+    {
+      "asset_path": "figures/figure-02-thinker-talker.png",
+      "original_label": "Figure 2：Thinker-Talker总览",
+      "pdf_page": 3,
+      "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=3",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
+      "asset_sha256": "e68c75fd592e376cc775f884dd55b2177a4cfa5054b9ab0c6cddfb4af824b892",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/figure-03-tmrope.png",
+      "original_label": "Figure 3：TMRoPE时间对齐",
+      "pdf_page": 4,
+      "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=4",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
+      "asset_sha256": "244c4dad515d5b6b048539c80dbf443dda85e673d4b4a8f13fbf144b2609619d",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/figure-04-streaming-dit.png",
+      "original_label": "Figure 4：滑动窗口DiT",
+      "pdf_page": 5,
+      "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=5",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
+      "asset_sha256": "b39bd42272dd9ed186b987d86aa1fc27db5147c39f6d2f02de6866f5173c3f0c",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/table-07-08-video-omni.png",
+      "original_label": "Table 7、8：视频与联合多模态理解",
+      "pdf_page": 12,
+      "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=12",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
+      "asset_sha256": "5046e0da6df33670d797c91d94b4ecdda7e598dcc0e5d21041e649394c0fe90f",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/table-09-10-speech.png",
+      "original_label": "Table 9、10：语音生成",
+      "pdf_page": 13,
+      "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=13",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
+      "asset_sha256": "abbc8fe94355e07018ec946080ecf4c245baa201363128275d604800ab02389d",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 180,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

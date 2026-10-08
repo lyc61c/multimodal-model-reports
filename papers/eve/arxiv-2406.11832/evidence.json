@@ -1,0 +1,15 @@
+{
+  "paper_id": "85842e4c40d6",
+  "source_url": "https://arxiv.org/pdf/2406.11832v1",
+  "source_version": "2406.11832v1",
+  "source_sha256": "8c33cd6479f33e0b8e13596fd3da02d9a7c21ce0eb3054cea6db5434fe84c765",
+  "verification_notes": [
+    "Read mainpages1-9 and appendix15-16; title verified",
+    "Viewed all four figures/table pages and verified labels/content",
+    "Verified PEL/PAL token flows, teacher onlytraining, Vicuna freeze_stage1/full_stage2-3",
+    "Verified realTable8 hyperparameters; SFT1.8M vsappendix1.35M inconsistency disclosed",
+    "Verified all extracted main/ablation rows; interval4 not all metricsbest and HD alone MMB worsens",
+    "Verified Table6 vision component vsLLMlatency; not10xendtoend; no model execution"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

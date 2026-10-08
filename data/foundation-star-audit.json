@@ -1,0 +1,132 @@
+{
+  "DAMO-NLP-SG/VideoLLaMA3": {
+    "repo": "DAMO-NLP-SG/VideoLLaMA3",
+    "exact_stars": 1185,
+    "final_repo_url": "https://github.com/DAMO-NLP-SG/VideoLLaMA3",
+    "source_url": "https://github.com/DAMO-NLP-SG/VideoLLaMA3",
+    "observed_at": "2026-10-08T04:58:37.7103654Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":1185"
+  },
+  "baaivision/Emu3": {
+    "repo": "baaivision/Emu3",
+    "exact_stars": 2449,
+    "final_repo_url": "https://github.com/baaivision/Emu3",
+    "source_url": "https://github.com/baaivision/Emu3",
+    "observed_at": "2026-10-08T04:58:39.8473106Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":2449"
+  },
+  "salesforce/LAVIS": {
+    "repo": "salesforce/LAVIS",
+    "exact_stars": 11260,
+    "final_repo_url": "https://github.com/salesforce/LAVIS",
+    "source_url": "https://github.com/salesforce/LAVIS",
+    "observed_at": "2026-10-08T04:58:41.0692585Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":11260"
+  },
+  "mshukor/UnIVAL": {
+    "repo": "mshukor/UnIVAL",
+    "exact_stars": 235,
+    "final_repo_url": "https://github.com/mshukor/UnIVAL",
+    "source_url": "https://github.com/mshukor/UnIVAL",
+    "observed_at": "2026-10-08T04:58:42.3476745Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":235"
+  },
+  "jy0205/LaVIT": {
+    "repo": "jy0205/LaVIT",
+    "exact_stars": 606,
+    "final_repo_url": "https://github.com/jy0205/LaVIT",
+    "source_url": "https://github.com/jy0205/LaVIT",
+    "observed_at": "2026-10-08T04:59:07.9616439Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":606"
+  },
+  "yiren-jian/BLIText": {
+    "repo": "yiren-jian/BLIText",
+    "exact_stars": 26,
+    "final_repo_url": "https://github.com/yiren-jian/BLIText",
+    "source_url": "https://github.com/yiren-jian/BLIText",
+    "observed_at": "2026-10-08T04:58:43.7028148Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":26"
+  },
+  "baaivision/Emu": {
+    "repo": "baaivision/Emu",
+    "exact_stars": 1777,
+    "final_repo_url": "https://github.com/baaivision/Emu",
+    "source_url": "https://github.com/baaivision/Emu",
+    "observed_at": "2026-10-08T04:58:44.7540276Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":1777"
+  },
+  "microsoft/unilm": {
+    "repo": "microsoft/unilm",
+    "exact_stars": 22228,
+    "final_repo_url": "https://github.com/microsoft/unilm",
+    "source_url": "https://github.com/microsoft/unilm",
+    "observed_at": "2026-10-08T04:58:47.3506647Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":22228"
+  },
+  "VPGTrans/VPGTrans": {
+    "repo": "VPGTrans/VPGTrans",
+    "exact_stars": 268,
+    "final_repo_url": "https://github.com/VPGTrans/VPGTrans",
+    "source_url": "https://github.com/VPGTrans/VPGTrans",
+    "observed_at": "2026-10-08T04:58:48.8100182Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":268"
+  },
+  "NVlabs/prismer": {
+    "repo": "NVlabs/prismer",
+    "exact_stars": 1308,
+    "final_repo_url": "https://github.com/NVlabs/prismer",
+    "source_url": "https://github.com/NVlabs/prismer",
+    "observed_at": "2026-10-08T04:58:50.0158806Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":1308"
+  },
+  "vimalabs/VIMA": {
+    "repo": "vimalabs/VIMA",
+    "exact_stars": 859,
+    "final_repo_url": "https://github.com/vimalabs/VIMA",
+    "source_url": "https://github.com/vimalabs/VIMA",
+    "observed_at": "2026-10-08T04:58:51.51472Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":859"
+  },
+  "MineDojo/MineDojo": {
+    "repo": "MineDojo/MineDojo",
+    "exact_stars": 2266,
+    "final_repo_url": "https://github.com/MineDojo/MineDojo",
+    "source_url": "https://github.com/MineDojo/MineDojo",
+    "observed_at": "2026-10-08T04:58:52.6169888Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":2266"
+  },
+  "shizhediao/DaVinci": {
+    "repo": "shizhediao/DaVinci",
+    "exact_stars": 45,
+    "final_repo_url": "https://github.com/shizhediao/DaVinci",
+    "source_url": "https://github.com/shizhediao/DaVinci",
+    "observed_at": "2026-10-08T04:58:53.8314299Z",
+    "source_type": "GitHub repository HTML embedded JSON stargazerCount",
+    "redirect_detected": false,
+    "evidence": "\"stargazerCount\":45"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "6d5e22b45d00",
+  "catalogue_entry_id": "6d5e22b45d00",
+  "family_slug": "pmc-vqa",
+  "title": "PMC-VQA: Visual Instruction Tuning for Medical Visual Question Answering",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2305.10415v1",
+  "source_url": "https://arxiv.org/pdf/2305.10415v1",
+  "document_kind": "dataset_and_model",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "PMC-VQA：医学视觉问答数据构建与 MedVInT"
+}

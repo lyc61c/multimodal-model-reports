@@ -1,0 +1,14 @@
+{
+  "paper_id": "e122aca8cc58",
+  "catalogue_entry_id": "e122aca8cc58",
+  "family_slug": "qwen",
+  "title": "Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://qwen.ai/blog?id=qwen3.6-27b",
+  "document_kind": "release_blog",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "Qwen3.6-27B：面向代码智能体的27B稠密多模态模型"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read architecture/data/infrastructure/post-training/thinking/capability sections, evaluation methodology/main tables, safety training and Appendix Table11 pages63-66.",
+    "Viewed all four original pages6,13,15,66, Figure4,Table3,Tables5/6,Table11 continued; columns and subset qualifications intact.",
+    "Verified no parameter count/router/vision connector/full optimizer disclosed; k-sparse distillation not fabricated as exact loss.",
+    "VideoMME audio+visual Long subset vs subtitles full test, 1024 vs GPT4.1 500 frame budget; no direct subtitle-gain attribution.",
+    "Checked MRCR-V2 1M Flash21 Pro16.4 and non-global leadership; single/multiple SWE scaffold differences preserved.",
+    "Audio Preview output variants and 2.0 image generation separated from base2.5; no reproduction claim."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "ff8009114c302bf787e84a26c59f8c01676ae7708f6d1f466318385f18776d13",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

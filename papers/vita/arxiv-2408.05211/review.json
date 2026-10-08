@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read original v1 sections3–5 pages4–9; Figures2/3/5 and Tables1/3/4 rendered and inspected.",
+    "VITAinitial understanding plus external TTS, not later VITA1.5 or native audio generation; duplex two modelinstances role swapping stated.",
+    "State2 noisytraining uses LLMgenerated target to avoid degradation, while inference terminatesstate2; no simplistic EOSonlytraining claim.",
+    "Visual448256tokens; audio2seconds25tokens,341Mencoder24Transformerlayers; original video4–16 sampling and no perframe dynamic tiling retained.",
+    "Table1 original4.9603M packed2.7499M records vs5.1094Maudio5.8577Mtextquestions distinct, not uniqueimages;474Kresponse-derivednoise caveat.",
+    "Alignmentvisual connectoronly versus audioencoderandconnector; instruction encodersfrozenLLMconnectorslearned; no fabricated optimizationhyperparameters.",
+    "LanguageTable3 separately tests trainedMixtral; ASRCER/WERlowerbetter and no comparativeASRranking; Figure5 rawmetrics distinctfromnormalizedbars.",
+    "Video57.6 not aheadLlavaNextVideo63; no full interactive latency/errorrates provided; Silero unsupported6000languagesstatement not repeated."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "f8c44941805b6fb2560295f299d55b1e7309aec146d7d25a3a1d1165a098bfd9",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

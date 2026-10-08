@@ -1,0 +1,37 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "核对图注生成不直接读图、筛选规模、clean含义及选项多数类基线。",
+    "核对Table2下游与Table3新基准分别报告，TE/TD和骨干列匹配。",
+    "冻结表、查询数、训练步数等缺失明确标注。"
+  ],
+  "math_checks": [
+    "原文Eq1概念重写，Eq2符号澄清，未将TE掩码预测写成相同因果实现。",
+    "标准掩码损失与查询注意力明确为机制解释，不冒称原文编号式。",
+    "百分点增幅与多数类30.87%核算。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-003-01.png",
+      "checked": "已view_image检视完整页面；Figure2/3/5图注、Table2/3表头、全部行列保留。"
+    },
+    {
+      "file": "figures/original-page-005-02.png",
+      "checked": "已view_image检视完整页面；Figure2/3/5图注、Table2/3表头、全部行列保留。"
+    },
+    {
+      "file": "figures/original-page-008-03.png",
+      "checked": "已view_image检视完整页面；Figure2/3/5图注、Table2/3表头、全部行列保留。"
+    },
+    {
+      "file": "figures/original-page-013-04.png",
+      "checked": "已view_image检视完整页面；Figure2/3/5图注、Table2/3表头、全部行列保留。"
+    }
+  ],
+  "limitations": [
+    "未运行模型；不是独立审稿。",
+    "测试集划分按图像问题对，未披露图像/论文来源严格隔离。",
+    "生成答案ACC字符串匹配并非逐答案专家临床评价。"
+  ],
+  "model_execution": "not_run"
+}

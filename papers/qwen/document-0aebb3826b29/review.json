@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read entire official Qwen-MM-Plugins English README snapshot; verified project is Skill/tool integration rather than a model training technical report.",
+    "Downloaded original architecture.svg and visually inspected faithful PNG rendering; labels and full canvas intact, original SVG linked and retained with original hash.",
+    "Only one substantive technical figure exists in the README; community badges were intentionally not misrepresented as paper figures.",
+    "Checked Skill plus optional MCP design, native core versus API routes, current audio API limitation, independent tags, uvx dependencies and NIfTI defaults.",
+    "No model training recipe, mathematical derivation, numeric benchmark or 100-hour validated limit is invented; cookbook and illustrative functionality are distinguished from measured results.",
+    "No installation, model inference, application operation or hardware execution was performed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 1
+  },
+  "article_sha256": "c155186dfae73cb8ad317661813a699e4df10146bb31c1e519fd037693d2e03c",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

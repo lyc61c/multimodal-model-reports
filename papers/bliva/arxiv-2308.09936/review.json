@@ -1,0 +1,10 @@
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "source_identity": "Title/authors/arXiv version matched PDF page 1",
+  "facts_checked": ["Dual visual paths and frozen modules", "Training appendix hyperparameters", "Table 1 vs Table 2 OCR protocol", "Table 4 baseline counterexample", "All reported metric values and evaluation split limitations"],
+  "math_checked": "Equations labelled explanatory, not fabricated original Eq.; gradients can traverse frozen LLM; added patch tokens do not imply lower total attention cost.",
+  "images_checked": ["Manually viewed page 3 Figure 2, complete architecture", "Manually viewed page 5 Figure 4 and Table 1, complete captions/headers", "Manually viewed page 7 Tables 3–6, complete headers/values"],
+  "model_execution": "not_run",
+  "remaining_limitations": ["Original v1 inconsistencies are retained and explained; no independent benchmark reproduction"]
+}

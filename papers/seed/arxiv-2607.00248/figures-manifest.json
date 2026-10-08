@@ -1,0 +1,87 @@
+{
+  "paper_id": "188b7c797733",
+  "source_version": "2607.00248v1",
+  "source_pdf_sha256": "1449a46c4ebcdf4c6e00c863d15cdf6418ee75cfa8d1de91453cbf62d1f4a441",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-013-01.png",
+      "original_label": "Table 8: complete visual-language results, PDF page 13",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2607.00248v1#page=13",
+      "source_version": "2607.00248v1",
+      "source_sha256": "1449a46c4ebcdf4c6e00c863d15cdf6418ee75cfa8d1de91453cbf62d1f4a441",
+      "asset_sha256": "73a7dd719029d20e974d860426e0520b2f3cbd9b0baaae32505b07e2815bda61",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 190,
+        "crop_bbox": [
+          68,
+          100,
+          548,
+          705
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-014-02.png",
+      "original_label": "Table 9: complete video results and subtitle footnote, PDF page 14",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2607.00248v1#page=14",
+      "source_version": "2607.00248v1",
+      "source_sha256": "1449a46c4ebcdf4c6e00c863d15cdf6418ee75cfa8d1de91453cbf62d1f4a441",
+      "asset_sha256": "eba938570222e5a94f58bbaec1f617e23222e5043ea7fffcb2e8a0357b3f7aa3",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 190,
+        "crop_bbox": [
+          68,
+          73,
+          548,
+          475
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-015-03.png",
+      "original_label": "Table 10: complete VideoCut comparison, PDF page 15",
+      "pdf_page": 15,
+      "source_url": "https://arxiv.org/pdf/2607.00248v1#page=15",
+      "source_version": "2607.00248v1",
+      "source_sha256": "1449a46c4ebcdf4c6e00c863d15cdf6418ee75cfa8d1de91453cbf62d1f4a441",
+      "asset_sha256": "890d177c3932fe13fe9ce96d2e29d8d828867bfa3eb2be9c97f07d91a0a5d643",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 190,
+        "crop_bbox": [
+          68,
+          70,
+          548,
+          212
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-066-04.png",
+      "original_label": "Figure 19: all nine FreeCAD milestones and full caption, PDF page 66",
+      "pdf_page": 66,
+      "source_url": "https://arxiv.org/pdf/2607.00248v1#page=66",
+      "source_version": "2607.00248v1",
+      "source_sha256": "1449a46c4ebcdf4c6e00c863d15cdf6418ee75cfa8d1de91453cbf62d1f4a441",
+      "asset_sha256": "11ecf7a81f09d33c23eeab5397cf637872d3640c60f6588433e69b1434ec4772",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 190,
+        "crop_bbox": [
+          68,
+          280,
+          548,
+          565
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

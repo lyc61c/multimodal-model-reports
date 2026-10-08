@@ -1,0 +1,26 @@
+{
+  "source_id": "538999c03fea",
+  "source_version": "2306.06687v1",
+  "read_scope": "Full technical body pages1-9, reference-onlypages10-12",
+  "claims": [
+    {
+      "topic": "architecture",
+      "source": "Section5.1 Figure3",
+      "checks": "Vicuna13B frozen original;separate projectors/LoRA32 attention projections;CLIP224256patch;pointnet256->CLIPViTnotrenderedimages;4A100one-stage"
+    },
+    {
+      "topic": "data",
+      "source": "Section3 Figure1",
+      "checks": "186098/10262pairs;8image4pointcloudsources;GPTtextannotations forC1-3;20-styletemplatesforC4 plusGT"
+    },
+    {
+      "topic": "math_eval",
+      "source": "Section4 Figure2 Tables1-4",
+      "checks": "LoRA/NTP explanatorynotnumbered;BinLocpointinsideGTbox notIoU;GPTranking89not89accuracy;ScanQAmultiplechoiceoverfitwarning"
+    }
+  ],
+  "source_inconsistencies": [
+    "Figure2 3D box output exceeds prompt0-1;normalizationprotocol notspecified"
+  ],
+  "model_execution": "not_run"
+}

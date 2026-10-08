@@ -1,0 +1,14 @@
+{
+  "paper_id": "0d9927d7fce6",
+  "source_url": "https://arxiv.org/pdf/2305.01278v1",
+  "source_version": "2305.01278v1",
+  "source_sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065",
+  "verification_notes": [
+    "Read v1 main text and relevant supplementary figures; original figures/tables cropped and visually inspected.",
+    "Equation 2 composition direction is dimensionally inconsistent with defined maps; README explicitly labels the corrected column-vector composition as an interpretation.",
+    "Table 3 epoch speed-up is separated from Table 4 GPU-hour cost and inference speed; inherited pretraining cost is not treated as zero.",
+    "COCO Caption is not claimed as dataset-zero-shot; converter-only memory/time and VL-Vicuna qualitative evidence are scoped correctly.",
+    "Per-task regressions in scaled experiments and differing warm-up accounting are retained."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

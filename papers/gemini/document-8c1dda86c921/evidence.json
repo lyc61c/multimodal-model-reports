@@ -1,0 +1,15 @@
+{
+  "paper_id": "8c1dda86c921",
+  "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "d10cf3e99841b6411901de4a1fb8538a3cd9aab3cc84880941811d8dd7e86a1a",
+  "verification_notes": [
+    "Read architecture/data/infrastructure/post-training/thinking/capability sections, evaluation methodology/main tables, safety training and Appendix Table11 pages63-66.",
+    "Viewed all four original pages6,13,15,66, Figure4,Table3,Tables5/6,Table11 continued; columns and subset qualifications intact.",
+    "Verified no parameter count/router/vision connector/full optimizer disclosed; k-sparse distillation not fabricated as exact loss.",
+    "VideoMME audio+visual Long subset vs subtitles full test, 1024 vs GPT4.1 500 frame budget; no direct subtitle-gain attribution.",
+    "Checked MRCR-V2 1M Flash21 Pro16.4 and non-global leadership; single/multiple SWE scaffold differences preserved.",
+    "Audio Preview output variants and 2.0 image generation separated from base2.5; no reproduction claim."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

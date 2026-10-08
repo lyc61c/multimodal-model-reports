@@ -1,0 +1,31 @@
+{
+  "paper_id": "a0635d8ae9e6",
+  "source_version": "2510.13721v1",
+  "source_sha256": "3ef1c8aafa2ef30245532f08a4084879e791489c67ccb2cc78d5b8d5af6c47cc",
+  "read_scope": "PDF1–10正文；20–36附录A–J方法、编码器、数据、配方、结果与示例逐页读取；参考文献只核对引用身份",
+  "claims": [
+    {
+      "claim": "DFM概率路径、速度为离散转移率",
+      "locations": "AppendixA Eq4–6 PDF20"
+    },
+    {
+      "claim": "MCQ码本及实际局部AR预测head",
+      "locations": "AppendixE PDF22–25"
+    },
+    {
+      "claim": "数据与三阶段配方",
+      "locations": "§3.1 AppendixF/G Tables8/9 PDF6–7,24–27"
+    },
+    {
+      "claim": "全模态、交互、检索、消融与附加结果",
+      "locations": "Tables1–5,10–15 Figure12 PDF7–10,28–32"
+    }
+  ],
+  "source_inconsistencies": [
+    "正文SFT部分把PixMo/OneVision用途写作image generation，Table8为I→T",
+    "消融GenEval62.6与主表0.85训练/评测对应未解释",
+    "Table13 AudioCaps列未充分标量纲，未擅自命名指标",
+    "2T token限制声明、Table7短训练消融与Table9完整迭代不混用"
+  ],
+  "model_run": false
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "44d7362792f1",
+  "catalogue_entry_id": "44d7362792f1",
+  "family_slug": "chartmoe",
+  "title": "ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2409.03277v1",
+  "source_url": "https://arxiv.org/pdf/2409.03277v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "ChartMoE：用表格、JSON与代码对齐初始化图表专家连接器"
+}

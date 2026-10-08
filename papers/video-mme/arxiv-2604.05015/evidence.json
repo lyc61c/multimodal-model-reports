@@ -1,0 +1,24 @@
+{
+  "paper_id": "fba7c87c09df",
+  "source_url": "https://arxiv.org/pdf/2604.05015v1",
+  "source_version": "2604.05015v1",
+  "source_sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1",
+  "verification_notes": [
+    "Read v1 pp1-12, task definitions p16 and grouped examples pp19-20; benchmark explicitly separated from trained model.",
+    "Verified800 videos3200 questions,12 annotators50reviewers3300hours,10.4minute average and recency-based filtering; no guaranteed contamination-free claim.",
+    "Checked consistency(N/4)^2 and paper first-error truncation; supplemental official evaluation snapshot has serial and parallel structure score maps, labeled later-code evidence.",
+    "Preserved paper eight-choice general description versus Figure11 three-choiceQ1 exception, and no proof of internal reasoning faithfulness.",
+    "Verified human90.7/94.9, Gemini49.4/66.1, per-model input modality/frame differences,122B/35B more-frame regressions and thinking regressions.",
+    "Original pages and final crops visually inspected; no benchmark model training or evaluation reproduction claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "supplemental_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/MME-Benchmarks/Video-MME-v2/main/evaluation/test_video_mme_v2.py",
+      "observed_at": "2026-10-08",
+      "sha256": "f27a00bca743adcdc55c22e65deeff4416305d41f15197de3d2cad086cf6674b",
+      "locations": "lines289-315,365-384,394-414",
+      "scope": "Later official code snapshot; not treated as v1 paper implementation"
+    }
+  ]
+}

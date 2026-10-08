@@ -1,0 +1,43 @@
+{
+  "paper_id": "1dfedbb1e043",
+  "status": "complete_self_review",
+  "fact_checks": [
+    "与真实v1 PDF身份相符",
+    "WER越低越好，专家弱项保留",
+    "CLIP-T/I定义、数据子集和基线版本核对",
+    "Dream词表扩展与SenseVoice输入路径区别"
+  ],
+  "math_checks": [
+    "Eq1无1/t；masked-onlyCE非连续MSE",
+    "负熵排序方向与概率采样区分",
+    "缩放logits熵导数作为标准解释推导，非原文编号公式",
+    "PAD掩码频率衰减非损失置零，步数非真实倍速"
+  ],
+  "image_checks": [
+    {
+      "file": "original-page-003-01.png",
+      "viewed": true,
+      "content": "完整PDF页，完整表头、结果、提示标签及图注"
+    },
+    {
+      "file": "original-page-007-02.png",
+      "viewed": true,
+      "content": "完整PDF页，完整表头、结果、提示标签及图注"
+    },
+    {
+      "file": "original-page-008-03.png",
+      "viewed": true,
+      "content": "完整PDF页，完整表头、结果、提示标签及图注"
+    },
+    {
+      "file": "original-page-012-04.png",
+      "viewed": true,
+      "content": "完整PDF页，完整表头、结果、提示标签及图注"
+    }
+  ],
+  "limitations": [
+    "未运行模型",
+    "无逐策略独立消融和完整计时",
+    "原文重复行及部分配方不完整"
+  ]
+}

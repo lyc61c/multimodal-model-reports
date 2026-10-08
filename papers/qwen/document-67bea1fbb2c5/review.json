@@ -1,0 +1,36 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "完整两表逐项核对，保留多个下降结果及脚注",
+    "Plus未继承对照397B参数",
+    "服务窗口、eval预算、API保留历史分别解释"
+  ],
+  "math_checks": [
+    "Agent历史/BT概率为标准解释，非训练配方",
+    "CI斜杠不作置信区间，Pass^3未擅自更换定义",
+    "Elo不当百分数/柱高不当倍数"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/official-2.png",
+      "checked": "原官方大图字节保留，view_image检视等比例预览含全部12标题/数字/图例"
+    },
+    {
+      "file": "figures/official-3.png",
+      "checked": "view_image场景完整"
+    },
+    {
+      "file": "figures/official-4.png",
+      "checked": "view_image参考图完整"
+    },
+    {
+      "file": "figures/official-5.png",
+      "checked": "view_image结果覆盖图完整，目标与绿色框解释，不评真实身份"
+    }
+  ],
+  "limitations": [
+    "博客未公开训练内部；演示不是统一基准",
+    "未运行模型"
+  ],
+  "model_execution": "not_run"
+}

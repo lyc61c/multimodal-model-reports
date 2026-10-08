@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read body1-10, appendix16-22, exact Tables1-4; checked architecture and source identity.",
+    "Viewed pages2/9/20/21 fully; original Figure2/9 and Tables2/3 intact.",
+    "Table2 separates TextVQA OCR/noOCR, Controlled/full and notes full7B VizWiz decline52.82 vs54.24.",
+    "Figure9 radar includes mixed Controlled/full labels; article uses appendix exact rows.",
+    "p<.01 stated threshold; .0148resize/.0138data not claimed significant; fusion adds visual backbone costs.",
+    "No model execution or independent reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "d3719787b67276aafc292071e402e9e86059fdb284ae0651e3c274d689784946",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "paper_id": "84a7abb884a3",
+  "source_url": "https://arxiv.org/pdf/2311.05437v1",
+  "source_version": "2311.05437v1",
+  "source_sha256": "c9586e6cc381ba58bd4a8206ebff32995d89d82588f527674570693c497ed85f",
+  "verification_notes": [
+    "阅读全文正文1–10及附录14–25，外部工具智能体而非原生图像mask生成",
+    "实际检视PDF3/5/8/9，Figure2与Table2/4/5/6/7完整",
+    "助手调用和回答token计损失；工具返回作条件，不声称梯度共同训练外部专家",
+    "语言版GPT4读caption框类别来构造数据，不写成逐张视觉标注；81K定量与完整demo区分",
+    "未给lr/epoch/freeze/optimizer等不套LLaVA通用超参；80GB服务仅7B声明",
+    "Table4 Fly COCO80.4低于81.2；工具仅测试SEED51.54高于44.45，避免全面优越口号",
+    "专项44题相对评分非调用成功率，OCR48.8<MMREACT77.3；MMVet7Bmath略降",
+    "VisIT截至2023-09-27且胜率对人工reference非对LLaVA；模型配对次数不同",
+    "附录CIDEr31<123.5与CLIP得分分开；假阳性90/20实例和41/12图像是100图实验计数"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

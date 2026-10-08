@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "reference_pages_skipped": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "figures_visually_checked": [
+    4,
+    7,
+    9,
+    18
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Self-review, not independent external review",
+    "No model execution",
+    "Connector ablation changes training paradigm as well as architecture",
+    "No high-resolution, multi-image or video specialization in v1",
+    "Dataset totals rounded; unreleased-data statement describes v1 publication state"
+  ]
+}

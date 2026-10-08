@@ -1,0 +1,15 @@
+{
+  "paper_id": "31a81e153f28",
+  "source_url": "https://arxiv.org/pdf/2305.04160v1",
+  "source_version": "2305.04160v1",
+  "source_sha256": "9e82c2b236b4d1ffd297f896e2c8bc0d99f83073e603141d6bfb66c5c8b1b27d",
+  "verification_notes": [
+    "Read v1 main 1–10 and appendices 15–17; architecture and actual Tables 1,4,7 extracted and visually inspected.",
+    "ChatGLM 6B distinguished from 7.6B total; pretrained CIF-ASR training separated from subsequent frozen encoders/CIF/LLM.",
+    "Third-stage Adapter-only update taken from Tables 5/7; no invented full-LLM SFT.",
+    "84.5 relative score scoped to translated 90-question evaluation, text-only GPT-4 reference and different judges for LLaVA.",
+    "CER regression with image input retained; 14M Chinese training and synthetic speech mean neither Chinese nor audio abilities are zero-shot training claims.",
+    "CIF and language-loss mathematical expressions labeled explanatory; dataset source selection counts not invented into exact final expansion recipe."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

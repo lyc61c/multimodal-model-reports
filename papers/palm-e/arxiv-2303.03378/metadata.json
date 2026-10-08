@@ -1,0 +1,14 @@
+{
+  "paper_id": "bb0333d38954",
+  "catalogue_entry_id": "bb0333d38954",
+  "family_slug": "palm-e",
+  "title": "PaLM-E: An Embodied Multimodal Language Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2303.03378v1",
+  "source_url": "https://arxiv.org/pdf/2303.03378v1",
+  "document_kind": "embodied_model_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "PaLM-E：把连续感知与机器人状态嵌入语言模型"
+}

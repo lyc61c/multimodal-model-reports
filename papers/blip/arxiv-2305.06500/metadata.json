@@ -1,0 +1,14 @@
+{
+  "paper_id": "b8ba588e2b2c",
+  "catalogue_entry_id": "b8ba588e2b2c",
+  "family_slug": "blip",
+  "title": "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "title_zh": "InstructBLIP：让视觉查询先理解指令，再读取图像",
+  "source_version": "2305.06500v1",
+  "source_url": "https://arxiv.org/pdf/2305.06500v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1"
+}

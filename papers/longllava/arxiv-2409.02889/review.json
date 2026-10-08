@@ -1,0 +1,42 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "总53B/active13B区分",
+    "933默认图像上限与强池化千图分开",
+    "未来140K训练不写成已训练",
+    "28K纯文实际278K、750K混合逐项算术核对",
+    "VideoMME128均匀帧无字幕、VN平均54帧1FPS不同",
+    "显存79.4→79.1仅0.3GB不夸大",
+    "首次800/A100记载与Figure7A800差别按具体实验引用"
+  ],
+  "math_checks": [
+    "状态空间递推为标准定义，不称报告公式",
+    "混合复杂度含注意力二次项",
+    "576/144/36网格和1000*36算术核对",
+    "throughput(1000-1)/(t1000-t1)准确",
+    "SFT负似然为解释且标签mask未公开"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-004-01.png",
+      "checked": "已view_image；完整原PDF页，表头全部行图注完整；Figure7所有格逐读"
+    },
+    {
+      "file": "figures/original-page-005-02.png",
+      "checked": "已view_image；完整原PDF页，表头全部行图注完整；Figure7所有格逐读"
+    },
+    {
+      "file": "figures/original-page-008-03.png",
+      "checked": "已view_image；完整原PDF页，表头全部行图注完整；Figure7所有格逐读"
+    },
+    {
+      "file": "figures/original-page-010-04.png",
+      "checked": "已view_image；完整原PDF页，表头全部行图注完整；Figure7所有格逐读"
+    }
+  ],
+  "limitations": [
+    "原文检索性能、编码器脚注与方法措辞冲突明确记录",
+    "未执行模型或验证原始脚本"
+  ],
+  "model_execution": "not_run"
+}

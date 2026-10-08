@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_sections_read": [
+    "Introduction",
+    "Results",
+    "Qualitative Results",
+    "Detailed Technical Improvement",
+    "Model Card"
+  ],
+  "figures_visually_checked": [
+    "anyres-original.png",
+    "flight-original.png",
+    "ocr-original.jpg"
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_source_tables": true
+  },
+  "limitations": [
+    "发布博客非独立完整技术报告，未披露LR/batch/epoch/context等",
+    "Full model保持原表述，不从他版代码反推视觉冻结关系",
+    "34B比13B同时改变规模/数据/分辨率，不能独立归因",
+    "约一天的精确模型卡数为32GPUx30小时",
+    "旧TextVQA星号训练图像接触口径与新版本不同",
+    "示例交通时间源自常识而非实时调用"
+  ]
+}

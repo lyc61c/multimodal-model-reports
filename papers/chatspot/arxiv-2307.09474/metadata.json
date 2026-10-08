@@ -1,0 +1,14 @@
+{
+  "paper_id": "53e291db1fda",
+  "catalogue_entry_id": "53e291db1fda",
+  "family_slug": "chatspot",
+  "title": "ChatSpot: Bootstrapping Multimodal LLMs via Precise Referring Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2307.09474v1",
+  "source_url": "https://arxiv.org/pdf/2307.09474v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "ChatSpot：把点击和框选转换成精确区域指令"
+}

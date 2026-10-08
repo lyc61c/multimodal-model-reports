@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 sections1/3/4 pages1–14, Figures1–4 and Tables2–9 inspected; Audio vs Plus input encoder replacement clearly separated.",
+    "MCTP cascaded conditioned hiddenstates precedingoutputs, not independentparallelheads or exactdistribution-preserving speculative verification.",
+    "Zeroaudio tokensteps not0ms, Balance requires2passes; modeSpeed/Boostnaming and Figure4textaudio typo not silently collapsed.",
+    "Figure3 freezesLLMstage2/3, audioencoderdecoder frozen;Stage4jointLLMMCTP, exactlearningrates and batch256 retained.",
+    "1.4M SQA and~100KhourASR/TTS each differentunit;8Kpackedmaskreset independent;sampling2.0 not200percenttotaldata.",
+    "SQAPlus ST55.5<Minmo60.7 SS50.8>47.2; GLMMean not simple componentaverage; TTSWER notMOS and difficulttest10.08worseCosyvoice2 6.83.",
+    "ASRTurbo6.29/12.86 muchworseVanilla2.98/8.07 and Plus2/4.6 stillbelowQwen2Audio1.74/4.04; erroneousVITA1.5 Wenetnumbers noted.",
+    "ThroughputTable8 randominitializedBF164096tokens excludescodec,7BTurbo4.72 Boost2.64; separateTable9 endtoend243vs426ms1.75x includes39msenc151msdec atflow1step, notzero or4.72endtoend."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 6
+  },
+  "article_sha256": "5b3e7d749ab144b5ba283a1503a664db715b94b14adc87cb1a147b8f060ccd6f",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

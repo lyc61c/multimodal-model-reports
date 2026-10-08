@@ -1,0 +1,20 @@
+{
+  "paper_id": "165201d8355a",
+  "source_url": "https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "491a6fd21597b73c1a806e5d49f40167501a262f67ce20f49d8c2aab25edb203",
+  "verification_notes": [
+    "Read all technical main text pages1–17 of official 27-page PDF; source version fixed official snapshot/hash, catalogue date not passed off as independently dated PDF.",
+    "Inspected whole original pages2/8/13/16 then final crops: Figure2, Figure5 with all snowflake/fire symbols, complete Table8 and Tables12/13 with source footnotes and all columns.",
+    "LLM7B distinguished from total model parameters. Qwen2-VL dynamic visual branch, 2x2 two-layer projector, Whisper Large, RVQ8 at12.5Hz, 3-layer depth head8classifiers, flow-matching 24kHz Mel/HiFiGAN read; no parameter count or latency invented.",
+    "RVQ and continuous flow formulas explicitly explanatory; report does not disclose codebook cardinalities, loss weights, training path or solver. Radar normalization original Figure1 not an objective universal ability score.",
+    "Data units preserved: abstract500B and stage text300billion samples do not establish unique image count or precise tokens; Table1 totals309.5M include150.7M pure text. Audio887Khours task totals can overlap; cross-modal100Btokens not added uncritically.",
+    "Read SFT17M table and exact image task proportions, 44 pretrain voices versus10000 SFT tones, ASR roundtrip filtering/recycling. No training optimizer/steps or RL phase fabricated.",
+    "Stage3 prose says all parameters whereas Figure5 snowflakes freeze visual/audio encoders and RVQ; contradiction explicitly recorded, not asserted as fully unfrozen. Stage4.1/4.2 module states visually verified.",
+    "Image metrics checked tables7/8; OCRBench84.0 percentage-style versus legacy840 not conflated, no unreported DocVQA. Language0-shot, VLMEvalKit, reported/leaderboard/reproduced markers preserved.",
+    "Video-MME without subtitles60.1,1FPSmax32 versus MiniCPM64,Qwen2FPSmax768; official/self-reproduced dual Qwen cells not cherry-picked. ActivityNet62.0 does not beat GPTmini62.1 or MiniCPM63.0 despite prose claim, quality differences retained.",
+    "Audio table11 modes separated50.0/40.9 etc; speech-to-speech content judged from output text, not independent waveform MOS/latency evidence. Web/Trivia1000 and Alpaca199 subset settings read.",
+    "OmniBench42.9/37.7/47.9/46.9 exact column order; GPTmini transcription pipeline not direct audio baseline. Medical49.9 below Qwen72B50.7 despite proseallbest;83.8 selected VQA not clinical validity. No model reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

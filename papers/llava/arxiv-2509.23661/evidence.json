@@ -1,0 +1,41 @@
+{
+  "source_version": "2509.23661v1",
+  "claims": [
+    {
+      "claim": "RICE pretrained and Qwen3 backbone, four patch merge",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "85M =65M English +20M Chinese;22M instruct merged46M",
+      "pdf_pages": [
+        4,
+        5,
+        11
+      ]
+    },
+    {
+      "claim": "128 A800 3.7 days8K context midtraining; budget not upstream fullcost",
+      "pdf_pages": [
+        1,
+        7
+      ]
+    },
+    {
+      "claim": "18/27 and27/27; same backbone17/27",
+      "pdf_pages": [
+        6,
+        16
+      ]
+    },
+    {
+      "claim": "Merge46M batch doubled; non-universal gains",
+      "pdf_pages": [
+        10,
+        11
+      ]
+    }
+  ]
+}

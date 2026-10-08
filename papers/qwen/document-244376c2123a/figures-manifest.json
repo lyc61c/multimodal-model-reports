@@ -1,0 +1,70 @@
+{
+  "paper_id": "244376c2123a",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-2.png",
+      "original_label": "官方case1图1：初始柴犬",
+      "source_url": "https://qwenlm.github.io/blog/qwen-vlo/",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VLo/case1/1.png",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VLo/case1/1.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "da266385996395d713db6db9949603707e345304e21393cc683bc13a96226b45",
+      "asset_sha256": "5b98d7f16d7750d2d17742128c3b48a55eb594e44b18106493eab8a2630d0f93",
+      "width": 1024,
+      "height": 1024,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-3.png",
+      "original_label": "官方case1图2：草地背景编辑",
+      "source_url": "https://qwenlm.github.io/blog/qwen-vlo/",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VLo/case1/2.png",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VLo/case1/2.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "da266385996395d713db6db9949603707e345304e21393cc683bc13a96226b45",
+      "asset_sha256": "13f7eb4b3ee5e17fcc433742f37f99a0e1d6989043135fa43e7cb3983864b0a2",
+      "width": 1024,
+      "height": 1024,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-4.png",
+      "original_label": "官方case1图3：帽子墨镜文字组合编辑",
+      "source_url": "https://qwenlm.github.io/blog/qwen-vlo/",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VLo/case1/3.png",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VLo/case1/3.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "da266385996395d713db6db9949603707e345304e21393cc683bc13a96226b45",
+      "asset_sha256": "8dfcc67eb78df7912f9225483c836494785b88ec780bb47e04130f9c8a4b9f57",
+      "width": 1024,
+      "height": 1024,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-10.png",
+      "original_label": "官方case1图9：多轮编辑后的检测框与蒙版",
+      "source_url": "https://qwenlm.github.io/blog/qwen-vlo/",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VLo/case1/9.png",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VLo/case1/9.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "da266385996395d713db6db9949603707e345304e21393cc683bc13a96226b45",
+      "asset_sha256": "7322f05579cfdd189118d34f6ff5f9f24ac7ca8a68baa60f1b30cc7aa9121b31",
+      "width": 1024,
+      "height": 1024,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "checked_file": "papers\\llava\\arxiv-2304.08485\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "v1architecture/version",
+    "GPTtextonlyteacher",
+    "counts/CCnounfilter",
+    "freeze/datafork",
+    "relativeGPTscore protocol",
+    "singlevscombinedScienceQA",
+    "CoTlayerconfound"
+  ],
+  "math_checked": [
+    "linearEq1faithful",
+    "Eq3prob factorizationclarifiespredictionpositions",
+    "negativeCEinterpretation",
+    "pointdeltasnotrelativepercent"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-003-01.png",
+      "original_label": "Table1",
+      "pdf_page": 3,
+      "inspection": "Viewed full original page;complete architecture/tableheaders/allrows/captions/colorlossmarkers"
+    },
+    {
+      "file": "figures/original-page-004-02.png",
+      "original_label": "Figure1/Eq1",
+      "pdf_page": 4,
+      "inspection": "Viewed full original page;complete architecture/tableheaders/allrows/captions/colorlossmarkers"
+    },
+    {
+      "file": "figures/original-page-005-03.png",
+      "original_label": "Table2/Eqs2-3",
+      "pdf_page": 5,
+      "inspection": "Viewed full original page;complete architecture/tableheaders/allrows/captions/colorlossmarkers"
+    },
+    {
+      "file": "figures/original-page-009-04.png",
+      "original_label": "Table6",
+      "pdf_page": 9,
+      "inspection": "Viewed full original page;complete architecture/tableheaders/allrows/captions/colorlossmarkers"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "v1LRbatchoptimizerresolutionmissing",
+    "smallteacher-dependentchatproxy",
+    "noequalpixelGPTcomparison",
+    "CoTlearningcurveconditionambiguous"
+  ]
+}

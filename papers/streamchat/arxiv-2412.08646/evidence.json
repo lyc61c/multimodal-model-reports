@@ -1,0 +1,15 @@
+{
+  "paper_id": "f074a90123d2",
+  "source_url": "https://arxiv.org/pdf/2412.08646v1",
+  "source_version": "2412.08646v1",
+  "source_sha256": "e3533fffe48330b32a302f36c170433ad737ad87052280b74e896228d062b034",
+  "verification_notes": [
+    "阅读 v1 第1–9页方法、数据、训练、流式评价、离线基准和限制，检视五张原图。",
+    "核对Qwen2.5 7/14B、SigLIP/PaliGemma、交叉注意力和VFFN参数复用、线性门控。",
+    "核对并行3DRoPE图实际坐标(t,t,t)/(t,t+h,t+w)及文字时间参考不直接输入。",
+    "核对51K密集指令、5.1M预训练与2.9M SFT、各自40/32帧处理和三阶段优化参数。",
+    "核对流式5FPS/32vs16帧，100例及Gemini1.5Pro评审；37/32/31与41/24/35不是准确率。",
+    "核对主表指标和消融胜平负方向，75%是最终方案胜加平而非严格胜率，未编造端到端FPS。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

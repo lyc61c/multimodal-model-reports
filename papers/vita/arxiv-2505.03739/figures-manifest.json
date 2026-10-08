@@ -1,0 +1,127 @@
+{
+  "paper_id": "69f7e479479c",
+  "source_version": "2505.03739v1",
+  "source_pdf_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2 — VITAAudio and MCTP architecture",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2505.03739v1#page=5",
+      "source_version": "2505.03739v1",
+      "source_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+      "asset_sha256": "19f3a0ceda17a0e7c287b9a4f8c427121c21ff25dd765ae2ca102ae3366d2e85",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          443
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-stages.png",
+      "original_label": "Figure 3 — Progressive MCTP training",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2505.03739v1#page=7",
+      "source_version": "2505.03739v1",
+      "source_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+      "asset_sha256": "53bc70b1c8a7b2d8c51d29901638510844907020183dc5169b13c3e80ba4640b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          366
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/sqa-tts-results.png",
+      "original_label": "Tables 4–5 — Spoken QA and TTS",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2505.03739v1#page=10",
+      "source_version": "2505.03739v1",
+      "source_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+      "asset_sha256": "2ff92441f7604401797013c59394114e208a56f6db9ad5d67d01be3c2349f906",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          440
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/asr-results.png",
+      "original_label": "Table 6 — ASR evaluation",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2505.03739v1#page=11",
+      "source_version": "2505.03739v1",
+      "source_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+      "asset_sha256": "c72f13027d8e7352bc09303d143bf14636e8d4e4c2fa2588c5dceed4790b7fbf",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          331
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/throughput-results.png",
+      "original_label": "Table 8 — Token generation throughput",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2505.03739v1#page=13",
+      "source_version": "2505.03739v1",
+      "source_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+      "asset_sha256": "b22346bd8311a6ef86422c0fe34088a93cd9610eb1e0884b2f95d19564468d63",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          260
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/first-audio-latency.png",
+      "original_label": "Table 9 — First audio latency components",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2505.03739v1#page=14",
+      "source_version": "2505.03739v1",
+      "source_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+      "asset_sha256": "b3f1cd612711ab1a6f29cffa9af306106b2836a86ec81c8ff2da212937d0162e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          176
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

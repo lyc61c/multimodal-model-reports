@@ -1,0 +1,49 @@
+{
+  "source_version": "2310.07704v1",
+  "claims": [
+    {
+      "claim": "Hybrid numeric coordinates1000bins +SPEcontinuous;512points r4k24two blocks32;linear sigma",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "GRIT678K+177K+34KGPT+LLaVA158K+95Kbalanced robustness;SAM/GLIP pseudo",
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "claim": "FreezeCLIP others trainable,Vicuna,LLaVAprojection,3epochs2e-5batch128,8A1005/2.5days",
+      "pdf_pages": [
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "claim": "LVIS2667binary-choice;IoU.5;FerretBench3x40judge score ratio not accuracy",
+      "pdf_pages": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "claim": "Negative POPEandRefCOCO+exceptions;output masks future not current",
+      "pdf_pages": [
+        10,
+        13,
+        14
+      ]
+    }
+  ]
+}

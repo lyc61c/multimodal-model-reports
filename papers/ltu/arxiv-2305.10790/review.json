@@ -1,0 +1,41 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "音频理解非语音转写或音频生成",
+    "AST冻结阶段范围与4.2MLoRA不等于全部更新参数",
+    "GPT教师元信息与LTU音频输入分开",
+    "不同分类指标/ZS与ZS-条件核对",
+    "GPT4judge不听音频且只判断是否回答",
+    "三天4RTXA6000不是训练7Bfromscratch成本"
+  ],
+  "math_checks": [
+    "1024/16=64,128/16=8,512正确",
+    "rank8alpha16LoRA公式标准解释标记",
+    "Eq1标准NLL转换但mask未披露",
+    "23.1为相对avg增益非百分点"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-002-01.png",
+      "checked": "已view_image；完整原PDF页，表头所有数据行与脚注图注完整；Figure1 grid8频率核对"
+    },
+    {
+      "file": "figures/original-page-003-02.png",
+      "checked": "已view_image；完整原PDF页，表头所有数据行与脚注图注完整；Figure1 grid8频率核对"
+    },
+    {
+      "file": "figures/original-page-006-03.png",
+      "checked": "已view_image；完整原PDF页，表头所有数据行与脚注图注完整；Figure1 grid8频率核对"
+    },
+    {
+      "file": "figures/original-page-007-04.png",
+      "checked": "已view_image；完整原PDF页，表头所有数据行与脚注图注完整；Figure1 grid8频率核对"
+    }
+  ],
+  "limitations": [
+    "原始数值仅原文报告，未听示例音频或复测",
+    "开放回答遵循与正确性分开",
+    "patchgrid/CLAP汇总记载缺陷保留"
+  ],
+  "model_execution": "not_run"
+}

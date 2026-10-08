@@ -1,0 +1,19 @@
+{
+  "paper_id": "bf191b32aa7d",
+  "catalogue_entry_id": "bf191b32aa7d",
+  "family_slug": "pali",
+  "title": "PaLI-3 Vision Language Models: Smaller, Faster, Stronger",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2310.09199v1",
+  "source_url": "https://arxiv.org/pdf/2310.09199v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "PaLI-3：以 SigLIP 视觉预训练增强 5B 视觉语言模型",
+  "source_sha256": "89131a46ce355e030da7dae2e344e7dc5e8dfa4428d8dece3536e1d2b8e99b01",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2114,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "读取 Yi 技术报告 v1 的语言数据和架构背景及 §7.2 完整视觉方法、训练与 Table 7。",
+    "视觉查看 3 张原始 PDF 页面，Figure 7 的 ViT/投影火焰与语言侧前两阶段雪花核验。",
+    "明确 3.1T 语言 tokens、少于 10K 语言 Chat 指令与各阶段视觉图文对为不同范围。",
+    "训练设置逐项从第 16 页转录；MMMU test 与 validation 口径区分。",
+    "数学式标为架构与生成监督的解释性重述；未臆造 LayerNorm 排列、损失 mask 或视觉 RL。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 3
+  },
+  "article_sha256": "083c43e89de0c8f9321299ffa5cab340d30639ce96da489ecc83a876af5d6f6d",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

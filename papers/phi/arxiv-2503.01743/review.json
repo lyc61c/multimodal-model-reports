@@ -1,0 +1,36 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "逐源区分三检查点/预览数据；Visionrank和merging倍率未披露不补；音频rank320。",
+    "100M加权样本不是唯一，0.5T含视觉文字且只文字loss；2.8h理论未训。",
+    "主表具体版本/时间/ASR多语CER、不同提示/预算、16帧视频与裁判限制核对，所有能力非全胜。"
+  ],
+  "math_checks": [
+    "LoRA分支式和NLL是标准概念解释，不虚构路由softmax或topK算法、原编号Eq。",
+    "GQA1/3限KV缓存，不等于总时延；动态crop是原文关系；音频时长及相对WER按式核验。",
+    "未把previewDPO或GPT裁判扩展成正式多模态RL奖励。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-004-01.png",
+      "checked": "已view_image核验Figure1及完整Table1/2/3/9的所有列标题、行、数值/脚注，原页面无裁断；读图含具体页码与结果口径。"
+    },
+    {
+      "file": "figures/original-page-010-02.png",
+      "checked": "已view_image核验Figure1及完整Table1/2/3/9的所有列标题、行、数值/脚注，原页面无裁断；读图含具体页码与结果口径。"
+    },
+    {
+      "file": "figures/original-page-012-03.png",
+      "checked": "已view_image核验Figure1及完整Table1/2/3/9的所有列标题、行、数值/脚注，原页面无裁断；读图含具体页码与结果口径。"
+    },
+    {
+      "file": "figures/original-page-020-04.png",
+      "checked": "已view_image核验Figure1及完整Table1/2/3/9的所有列标题、行、数值/脚注，原页面无裁断；读图含具体页码与结果口径。"
+    }
+  ],
+  "limitations": [
+    "未执行模型或复现榜单；原文不披露完整视觉/语言batch步数优化器等配方。",
+    "榜首固定2025-01-14；闭源prompt/输出解析影响成绩；音频摘要容量对比不匹配。"
+  ],
+  "model_execution": "not_run"
+}

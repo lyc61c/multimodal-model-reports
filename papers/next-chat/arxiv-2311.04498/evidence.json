@@ -1,0 +1,41 @@
+{
+  "source_version": "2311.04498v1",
+  "claims": [
+    {
+      "claim": "CLIPViTL14 224与16x16patch，LLaMA2Chat7/13B，2层框MLP及SAM线性prompt",
+      "pdf_pages": [
+        3,
+        7
+      ]
+    },
+    {
+      "claim": "两tokens位置表示，det L1+0.4GIoU，双循环L1/L2，segIoU+Dice+20Focal",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "Stage1 batch128LR2e-5 50K 8A10080约90h；Stage2 batch64LR2e-6少于20h；Stage3仅投影SAMdecoder4A100约4h",
+      "pdf_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "RefCOCO/+/g定位控制表与Visual7W72.4，非全系统排行榜",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "POPE popular79.8低于Shikra83.97与InstructBLIP82.77，正文第二名不一致；分割无量化结果",
+      "pdf_pages": [
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

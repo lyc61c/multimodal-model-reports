@@ -1,0 +1,32 @@
+{
+  "source_version": "2409.03277v1",
+  "claims": [
+    {
+      "claim": "four MLP experts Top-2, 490 resolution 1225 vision tokens, no post-Top renormalization specified",
+      "pdf_pages": [
+        4,
+        13
+      ]
+    },
+    {
+      "claim": "938.9K quadruples; alignment uses 500K/200K/100K; MMC 410K; final table total inconsistency retained",
+      "pdf_pages": [
+        5
+      ]
+    },
+    {
+      "claim": "AdamW beta .9/.95 eps1e-8, global batch64/32/32, LR5e-5/1e-5/5e-5, GPUhours240/138/76",
+      "pdf_pages": [
+        13
+      ]
+    },
+    {
+      "claim": "ChartQA modified relaxedaccuracy .05 81.20/84.64 PoT; ChartBench51.67",
+      "pdf_pages": [
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

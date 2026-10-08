@@ -1,0 +1,15 @@
+{
+  "paper_id": "64c86d5eafd7",
+  "source_url": "https://arxiv.org/pdf/2311.10122v1",
+  "source_version": "2311.10122v1",
+  "source_sha256": "01393283c0f6922c86ac7d17f108dd40d89cec185568d8bb2af282cc1ce84f22",
+  "verification_notes": [
+    "读取 v1 第1–9页全部正文，核对 LanguageBind 预对齐、两层共享投影及 Vicuna7Bv1.5。",
+    "核对图像224和视频8帧、第一阶段558K+702K及第二阶段665K+100K数据。",
+    "核对冻结与解冻范围，保留正文两阶段lr1e-3并明确v1未附完整超参数表。",
+    "核对Table3原始值：MSVD提升5.8pp、MSRVTT9.9pp、TGIF18.6pp、ActivityNet10.1pp；指出正文顺序及绿色增量冲突。",
+    "核对Table2部分训练重叠，POPE及VizWiz不是表内最高，不照搬8/9最佳概述。",
+    "核对Table5联合训练收益及MAE替换消融的混杂因素；检视全部原文图注和表头。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

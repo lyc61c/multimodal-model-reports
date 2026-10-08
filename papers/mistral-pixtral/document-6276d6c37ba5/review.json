@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读完整官方发布页并视觉查看 3 张原始评测图；数字从图逐项转录。",
+    "675B 总参数与 41B 激活参数、Large 3 base/instruct 与未来 reasoning 发布计划分开。",
+    "GPQA 5-shot no-CoT、MMLU 八语言平均与第三方人工 Win/Lose 条件保留。",
+    "MoE 公式、低精度权重容量和延迟公式明确标为解释性概念，不作为官方内部配置。",
+    "不将纯文本成绩称为视觉成绩，不补造数据量、视觉编码器配置与训练损失。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 3
+  },
+  "article_sha256": "8222c815ed87f010e4830c07e4a684cdef708b53cb36b99cfce4d294560d128b",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

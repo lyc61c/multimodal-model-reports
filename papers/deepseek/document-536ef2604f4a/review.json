@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "读取完整 15 页官方 PDF，重点逐项核对方法、三阶段训练及 Table 1–4。",
+    "用 view_image 视觉查看 4 张原页，Equation 1–2、图注、表格与箭头均可读。",
+    "保留 mask 的含对角线下三角；说明 0/1 可见性需转成加性屏蔽，查询不等于显式排列或逐查询采样。",
+    "3.73 写成百分点；Table 1 阅读顺序 Edit Distance 的上箭头错误、正文约 500M 与图中 A570M 差异均说明。",
+    "记录 Book/Newspaper 文字识别退化、PaddleOCR-VL 总分更高，以及生产重复率没有 ground truth。",
+    "未把更少 decoder 视觉 token 等同于编码计算量不变，也未把未来统一模态设想写成已实现能力。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "e3300fb3c5161615b1d4138c76f0afef29857432c9e1ee22d248796e235af353",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

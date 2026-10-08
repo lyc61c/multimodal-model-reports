@@ -1,0 +1,14 @@
+{
+  "paper_id": "243076aca63f",
+  "catalogue_entry_id": "243076aca63f",
+  "family_slug": "chartllama",
+  "title": "ChartLlama: A Multimodal LLM for Chart Understanding and Generation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.16483v1",
+  "source_url": "https://arxiv.org/pdf/2311.16483v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "ChartLlama：从表格与绘图代码合成监督，学习图表理解和编辑"
+}

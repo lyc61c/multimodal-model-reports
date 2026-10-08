@@ -1,0 +1,30 @@
+{
+  "paper_id": "qwen2.5-vl",
+  "family_slug": "qwen",
+  "title": "Qwen2.5-VL Technical Report",
+  "title_zh": "Qwen2.5-VL：动态分辨率、窗口注意力与绝对时间编码",
+  "organization": "Qwen Team, Alibaba Group",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "sample": true,
+  "article_language": "zh-CN",
+  "article_template_version": "1.1",
+  "source_version": "2502.13923v1",
+  "source_url": "https://arxiv.org/pdf/2502.13923v1",
+  "source_first_submission": "2025-02-19",
+  "source_pdf_header_date": "2025-03-05",
+  "source_pdf_sha256": "399a28f6ed79f4ece29cca93993fceb56fc304b1d779e49392aec05aff45aba5",
+  "authored_at": "2026-10-08",
+  "figures_manifest": "figures-manifest.json",
+  "scope": "One detailed example; paper facts fixed to v1; no model reproduction or current leaderboard claims",
+  "equation_policy": "Standard definitions and explanatory derivations; no fabricated original equation numbers",
+  "sections": [
+    "1. 论文信息与模型定位",
+    "2. 快速概览",
+    "3. 整体架构",
+    "4. 核心创新与数学原理",
+    "5. 数据构建与处理",
+    "6. 训练流程与目标",
+    "7. 实验设置与主要结果"
+  ]
+}

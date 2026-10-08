@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read PDF pages 1-8 and appendix 11-13; confirmed PixelLLM identity and T5-XL encoder-decoder architecture.",
+    "Viewed four original pages 3/5/7/8 in full; figures 2/3/4 and Tables 1-5 intact.",
+    "Checked Table 1 exceptions: RefCOCO+ testA 87.0 below 87.4; mask RefCOCO testA 78.5 below LISA79.1.",
+    "Corrected introductory metric typo using Table3: VG19.9 METEOR and148.9CIDEr.",
+    "Training states distinguish frozen base weights and trainable LoRA; downstream finetuning and conditional ground-truth box evaluations explicit.",
+    "No model execution or independent reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "341abf9092408958cfc7f356927a864a0e2292b9bf670c1e29cd7cb820d9e9ba",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read methods pages3-7, evaluations/ablations pages8-19; title/source matched v1.",
+    "Viewed full original pages4,9,10,18 Table1/V2PE,Table2,Table3,Figure3/Table13.",
+    "Verified initialized pretrained ViT and base Qwen/InternLM not from scratch, joint all-parameter pretraining200B50/150,21.7M SFT300K MPO.",
+    "Checked square weighting, MPO DPO/BCO/gen and V2PE fixeddelta1 outside Table12; no unsupported exact optimizer.",
+    "Separated Figure1/table discrepant metrics, standard vsBo8, video maximum across16/32/48/64 frames and subtitles.",
+    "Recorded doc/Info/math/code and video losses; GUI prose81.4 vs90.3 error not propagated; no model reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "a51c44fd8dd662ffc65b7b4c1f46bfd2eb10a325bd0a8e488485a12391b707b1",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

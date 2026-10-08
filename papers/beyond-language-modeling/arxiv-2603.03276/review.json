@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "figures_visually_checked": [
+    4,
+    10,
+    16,
+    17
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_verified": true,
+    "numeric_results_checked": true,
+    "formula_and_time_direction_checked": true,
+    "pretraining_and_vqa_finetuning_distinguished": true,
+    "Figure21_scores_checked_from_pixels": true
+  },
+  "limitations": [
+    "骨干从零训练，但视觉encoder与decoder预训练",
+    "主文统一224而VAE附录为256，按详细表记录",
+    "一般数据实验总token不同，不能泛称全部等算力",
+    "外推大规模数据需求未实际测量",
+    "原始视频ATE最好，文字动作RPE更低",
+    "实际硬件通信储存不因固定激活FLOPs而消失"
+  ]
+}

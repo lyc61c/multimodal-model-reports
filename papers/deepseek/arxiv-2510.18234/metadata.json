@@ -1,0 +1,14 @@
+{
+  "paper_id": "c352e12407c2",
+  "catalogue_entry_id": "c352e12407c2",
+  "family_slug": "deepseek",
+  "title": "DeepSeek-OCR: Contexts Optical Compression",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2510.18234v1",
+  "source_url": "https://arxiv.org/pdf/2510.18234v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "DeepSeek-OCR：用少量视觉token读取文档与探索光学上下文压缩"
+}

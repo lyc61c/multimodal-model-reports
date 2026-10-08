@@ -1,0 +1,14 @@
+{
+  "paper_id": "e0eb180c5217",
+  "catalogue_entry_id": "e0eb180c5217",
+  "family_slug": "m3it",
+  "title": "M3IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2306.04387v1",
+  "source_url": "https://arxiv.org/pdf/2306.04387v1",
+  "document_kind": "dataset_or_benchmark",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "M3IT 与 Ying-VLM：多任务、多语言的视觉指令数据"
+}

@@ -1,0 +1,15 @@
+{
+  "paper_id": "aa49a3ceebeb",
+  "source_url": "https://arxiv.org/pdf/2306.05424v1",
+  "source_version": "2306.05424v1",
+  "source_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
+  "verification_notes": [
+    "读取 v1 第 1–8 页全部方法、数据和定量实验，检视原始架构、人工/半自动例子和两张结果表。",
+    "核对 CLIP-L14、Vicuna-v1.1 7B 与 LLaVA 初始化，明确只训练线性层，不误称全量微调。",
+    "核对时空池化方向和 N/T 张量形状；解释跨时间平均不能保留完整物体运动轨迹。",
+    "核对 100K 总数据规模及教师文字输入，未捏造人工/半自动比例。",
+    "核对训练 3 epochs、学习率 2e-5、batch32、8 A10040GB 约3h。",
+    "核对 Table1五分量和Table2四个QA成绩；明确GPT评价、零样本和无模块消融的含义。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

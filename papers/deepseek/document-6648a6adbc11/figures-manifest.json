@@ -1,0 +1,38 @@
+{
+  "paper_id": "6648a6adbc11",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-benchmarks.png",
+      "original_label": "Official release benchmark chart",
+      "source_url": "https://api-docs.deepseek.com/news/news260821/",
+      "image_url": "https://api-docs.deepseek.com/img/v4_260821_benchmark_en.png",
+      "image_final_url": "https://api-docs.deepseek.com/img/v4_260821_benchmark_en.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "56babe7f597f37b31c4440174272d4090f32056902c76e3984be3d54d5864de8",
+      "asset_sha256": "4b3cca9a4075fb05ad51cdc819e106d9baea19ac5f1ab38aa38a370c02bf26f3",
+      "width": 2025,
+      "height": 1652,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-agent-cases.png",
+      "original_label": "Official multimodal agent workflow examples",
+      "source_url": "https://api-docs.deepseek.com/news/news260821/",
+      "image_url": "https://api-docs.deepseek.com/img/v4_260821_case1.png",
+      "image_final_url": "https://api-docs.deepseek.com/img/v4_260821_case1.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "56babe7f597f37b31c4440174272d4090f32056902c76e3984be3d54d5864de8",
+      "asset_sha256": "a7b9d3900264109c0ebfdf004e60f3a7538071c831d98fb04f52bedbc2775ea4",
+      "width": 960,
+      "height": 6480,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

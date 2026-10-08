@@ -1,0 +1,107 @@
+{
+  "paper_id": "0c005b277aba",
+  "source_version": "2210.03094v1",
+  "source_pdf_sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c",
+  "assets": [
+    {
+      "asset_path": "figures/multimodal-prompts.png",
+      "original_label": "Figure 1 — Multimodal prompts",
+      "pdf_page": 2,
+      "source_url": "https://arxiv.org/pdf/2210.03094v1#page=2",
+      "source_version": "2210.03094v1",
+      "source_sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c",
+      "asset_sha256": "e8ce3cc681004a9d54f112b1d8bc0e36ec0eea4bd932ca55a9ed65707cabb1b6",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          75,
+          80,
+          550,
+          386
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/generalization-protocol.png",
+      "original_label": "Figure 2 — Four generalization levels",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2210.03094v1#page=3",
+      "source_version": "2210.03094v1",
+      "source_sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c",
+      "asset_sha256": "66b7221c01894a22b06df6e8bbd6469eac2143afb5c2f9a9ff26a976ca781512",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          90,
+          75,
+          520,
+          245
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3 — VIMA architecture",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2210.03094v1#page=5",
+      "source_version": "2210.03094v1",
+      "source_sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c",
+      "asset_sha256": "c659149c0d4d936ec976ad5cea5ff5213f4ee38c3060c992b67535be6fd4a633",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          95,
+          75,
+          515,
+          439
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/scaling-results.png",
+      "original_label": "Figure 4 — Model and data scaling",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2210.03094v1#page=6",
+      "source_version": "2210.03094v1",
+      "source_sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c",
+      "asset_sha256": "a650d92a4e98b4e149644bb86843204682b63ce3a4ed98821724347b74b41401",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          515,
+          348
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/tokenizer-ablation.png",
+      "original_label": "Figure 5 — Tokenizer ablation",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2210.03094v1#page=7",
+      "source_version": "2210.03094v1",
+      "source_sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c",
+      "asset_sha256": "921e84cb794bffd69d3846ee1c52cd03702ac82bcd862a3ec34d594450aac336",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          383
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

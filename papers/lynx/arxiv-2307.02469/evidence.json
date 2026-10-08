@@ -1,0 +1,17 @@
+{
+  "paper_id": "13c77d6bc5ad",
+  "source_url": "https://arxiv.org/pdf/2307.02469v1",
+  "source_version": "2307.02469v1",
+  "source_sha256": "d65173b52d428e4ab6e7b9bb691c3685e0ab7354d363258ea5b938e10d2967d1",
+  "verification_notes": [
+    "Read original main pages 1-13, experimental appendices 22-23 and data/prompts/case sections 24-32; checked actual paper identity.",
+    "Visually inspected PDF pages 4,6,9,28; complete Figure 2, Figure 3/Table 1, Table 3/Figure 7, Figure 12.",
+    "Verified frozen LLM adapter architecture 4096-2048-4096, EVA/resampler 32 tokens and stage2 vision freeze statement.",
+    "Checked Table 5 optimization and device settings; batch/training time/frame sampling not fabricated.",
+    "Checked Table 9 available dataset sizes versus names and sampling weights; GPT4 prompt paraphrase role.",
+    "Distinguished 450 total Open-VQA, 302 image/148 video denominators, Table4 109 versus Table2 108 discrepancy.",
+    "Checked InstructBLIP superior OCR/color/action and MME normalized scores/weak cognition; description-first exceptions noted.",
+    "GPT4-human consistency limited to 100 samples; no model reproduction or broad architecture theorem claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

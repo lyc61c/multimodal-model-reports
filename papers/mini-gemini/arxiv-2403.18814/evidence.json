@@ -1,0 +1,51 @@
+{
+  "source_version": "2403.18814v1",
+  "claims": [
+    {
+      "claim": "Local cross attention Eq1;fixed576 normal vs5N2880 HD;LR336HR768/HD6721536",
+      "pdf_pages": [
+        4,
+        7
+      ]
+    },
+    {
+      "claim": "SDXL external text bridge;13K8K+5K;generation dataset not diffusion training",
+      "pdf_pages": [
+        3,
+        5,
+        11
+      ]
+    },
+    {
+      "claim": "558K+695K alignment;understanding1.5M;remove21KTextCaps;28KOCRdata",
+      "pdf_pages": [
+        5
+      ]
+    },
+    {
+      "claim": "PaddleOCR training-only, no detector testing;80dollar generationdataAPI cost",
+      "pdf_pages": [
+        11,
+        12
+      ]
+    },
+    {
+      "claim": "Both vision encoders fixed;LLM only SFT;AdamWcosine1epoch;LR1e-3/2e-5 large1e-5;8A8004machines2daysHD4",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "Table1 HD34B80.6MMB;44.9MMMUtest belowGPT4V55.7;Vicuna13MMB68.5 belowLLaVA69.2",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "Star includes trainimages;TextCapsremoval63.2to59;generationdataMMVet+3.3 MME-2.3",
+      "pdf_pages": [
+        7
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "paper_id": "ca69d196c301",
+  "source_version": "2406.15704v1",
+  "source_pdf_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 1 — 视听与语音联合架构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2406.15704v1#page=3",
+      "source_version": "2406.15704v1",
+      "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+      "asset_sha256": "572ca27ece096511bc296c29c7b38893b519330e03357876f2839a13a46dda3c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          52,
+          68,
+          544,
+          351
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/multi-resolution.png",
+      "original_label": "Figure 2 — 多分辨率 Q-Former",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2406.15704v1#page=4",
+      "source_version": "2406.15704v1",
+      "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+      "asset_sha256": "b829ed7e8ed64aa153a01a5d51e14be0ae25c377cba84645685db3630c6f4a75",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          52,
+          68,
+          292,
+          213
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/causal-mask.png",
+      "original_label": "Figure 3 — 块状因果注意力",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2406.15704v1#page=4",
+      "source_version": "2406.15704v1",
+      "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+      "asset_sha256": "de18496a5e5e775b1f42d6367eae6628c6fe8ac6282a2ab8dfad5f3712dcf0c9",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          305,
+          68,
+          544,
+          187
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/presentation-data.png",
+      "original_label": "Figure 6 — Presentation-QA 构造示例",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2406.15704v1#page=13",
+      "source_version": "2406.15704v1",
+      "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+      "asset_sha256": "e2e0ac66d07d8db3a0b42242994ed01fed6598d0d5e7ade0f16904577cd1440c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          70,
+          432,
+          528,
+          718
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/single-results.png",
+      "original_label": "Table 2 — 单模态任务结果",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2406.15704v1#page=6",
+      "source_version": "2406.15704v1",
+      "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+      "asset_sha256": "aa8d2f4cf4c426a0b7502c611ab58c87c8ec6e98da333c9bb50479dcf2b5f9c7",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          52,
+          263,
+          544,
+          402
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/av-results.png",
+      "original_label": "Table 3 — 视听任务结果",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2406.15704v1#page=7",
+      "source_version": "2406.15704v1",
+      "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+      "asset_sha256": "b153aadbfeee2940302d7fa0c5377c9b35f0beefd8b4f499d52a069a026504c1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          52,
+          73,
+          544,
+          212
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/ablation.png",
+      "original_label": "Table 4 — 核心组件消融",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2406.15704v1#page=7",
+      "source_version": "2406.15704v1",
+      "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+      "asset_sha256": "3f2a2632e5d306c842a584957f557183b05e8b1cbffef8dc8b495e31135d2342",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          52,
+          220,
+          544,
+          365
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

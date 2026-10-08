@@ -1,0 +1,57 @@
+{
+  "source_version": "2404.07204v1",
+  "claims": [
+    {
+      "claim": "五视觉encoder、FlanT5XL、12层160查询、1408通道、116M预训练/3B VQA训练",
+      "pdf_pages": [
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "claim": "沿序列拼接非通道拼接；encoder20%dropout",
+      "pdf_pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "WebLI100M英文过滤去重与17M问答混合",
+      "pdf_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "caption冻结LM；VQA解冻LM且高分辨率阶段和GQA额外条件",
+      "pdf_pages": [
+        9,
+        10
+      ]
+    },
+    {
+      "claim": "主成绩和MMVP两图分别输入且两问全对；POPE为accuracy",
+      "pdf_pages": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "claim": "各项消融存在tradeoff，独立QFormer ensemble对照",
+      "pdf_pages": [
+        13,
+        14
+      ]
+    },
+    {
+      "claim": "v1无supplementary完整超参，64TPUv5 batch1024",
+      "pdf_pages": [
+        8,
+        16
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 main pages 1-11 and technical appendices 15-17; verified title and organizations.",
+    "Visually inspected full original PDF pages 4,6,9,17 including Figure 2 and Tables 1,3-5,10/Figure 7.",
+    "Checked 8K/16K context and dynamic versus fixed frames, high/low token grids, STC threshold/window.",
+    "Explicitly distinguished default no-FPE setting and unreported module freezing details.",
+    "Checked Table 1 scores versus Table 5/7 differing VideoMME overall values; subtitle condition not disclosed.",
+    "Checked Query/STC subtask regressions, separate compression-statistic scopes and all four image capability drops.",
+    "Read Table 6 dataset counts; 553K sum is sample categories, not unique videos.",
+    "No independent reproduction or model execution claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "261854b598e58c6eee6ba8c7d60142c0ee0fce005e5f2937bba9c6bca14da5c9",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

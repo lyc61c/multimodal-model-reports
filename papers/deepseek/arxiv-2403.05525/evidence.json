@@ -1,0 +1,49 @@
+{
+  "source_version": "2403.05525v1",
+  "claims": [
+    {
+      "claim": "7B SigLIP384+SAM1024,576tokens;1.3BonlySigLIP",
+      "pdf_pages": [
+        10,
+        16
+      ]
+    },
+    {
+      "claim": "final language70 multimodal30; Fig4captionreversed",
+      "pdf_pages": [
+        7,
+        13,
+        14,
+        20
+      ]
+    },
+    {
+      "claim": "stage1onlyadapter;stage2adapter+LLM;stage3SigLIPunfrozen,SAMfrozen",
+      "pdf_pages": [
+        12,
+        13,
+        15
+      ]
+    },
+    {
+      "claim": "training LR/step/batch/context table4;64processingunits8cardseach5days",
+      "pdf_pages": [
+        15,
+        16
+      ]
+    },
+    {
+      "claim": "dev scores73.2/72.8 OCR456 Math36.1;languageGSM63to55",
+      "pdf_pages": [
+        17,
+        18
+      ]
+    },
+    {
+      "claim": "SFT categoryfractions10.5/35.5/4.1/2/47.9",
+      "pdf_pages": [
+        8
+      ]
+    }
+  ]
+}

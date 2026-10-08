@@ -1,0 +1,14 @@
+{
+  "paper_id": "67bea1fbb2c5",
+  "catalogue_entry_id": "67bea1fbb2c5",
+  "family_slug": "qwen",
+  "title": "Qwen3.6-Plus: Towards Real World Agents",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://qwen.ai/blog?id=qwen3.6",
+  "document_kind": "release_blog",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "Qwen3.6-Plus：面向真实工作流的多模态 Agent 升级"
+}

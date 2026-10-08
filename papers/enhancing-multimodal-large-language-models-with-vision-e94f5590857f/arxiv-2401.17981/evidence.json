@@ -1,0 +1,48 @@
+{
+  "source_version": "2401.17981v1",
+  "claims": [
+    {
+      "claim": "DINO and OCR text embedding concatenation to LLaVA visual features",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "TFI/LAR/LAF differs initialization and module updates;rank128 alpha256",
+      "pdf_pages": [
+        4,
+        5,
+        15
+      ]
+    },
+    {
+      "claim": "Detection information token statistics and excluding info above1024",
+      "pdf_pages": [
+        12
+      ]
+    },
+    {
+      "claim": "Main scores, normalized score dependent baseline range, 7B MME-perception decline",
+      "pdf_pages": [
+        5,
+        7,
+        15
+      ]
+    },
+    {
+      "claim": "Inference removal versus training without information controls have exceptions and TextVQA reprint inconsistency",
+      "pdf_pages": [
+        15,
+        16
+      ]
+    },
+    {
+      "claim": "GroundingDINO replacement qualitative not full quantitative evaluation",
+      "pdf_pages": [
+        7,
+        8
+      ]
+    }
+  ]
+}

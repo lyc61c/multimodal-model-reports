@@ -1,0 +1,70 @@
+{
+  "paper_id": "390f20b2fe8b",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/benchmark-table-original.webp",
+      "original_label": "官方文章综合评测原表",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3.8-flash__evals__table_l.width-1200.format-webp_2pLdBp5.webp",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3.8-flash__evals__table_l.width-1200.format-webp_2pLdBp5.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "285ee76eb4106edf513f0cae3ff5c9888c32ffd279e356cc4f60f2d617e57fd3",
+      "asset_sha256": "3343387ccc4ea5219f6ef38f568b18d78e8488459309de6572e30c83e81bfd3a",
+      "width": 1200,
+      "height": 1470,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/deepswe-original.webp",
+      "original_label": "官方文章DeepSWE长程软件工程图",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8-flash__evals__deepswe.width-1200.format-webp.webp",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8-flash__evals__deepswe.width-1200.format-webp.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "285ee76eb4106edf513f0cae3ff5c9888c32ffd279e356cc4f60f2d617e57fd3",
+      "asset_sha256": "01cb317de3000b72179842766fe941768cb0bec67ffddbc863ee69c5531db262",
+      "width": 1200,
+      "height": 675,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/cybergym-original.webp",
+      "original_label": "官方文章CyberGym漏洞发现图",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3.8-cyber__evals__cybergy.width-1200.format-webp.webp",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3.8-cyber__evals__cybergy.width-1200.format-webp.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "285ee76eb4106edf513f0cae3ff5c9888c32ffd279e356cc4f60f2d617e57fd3",
+      "asset_sha256": "23cf4a917d04ff91e6567872d2fb0820ba4db7110515db18dcf2915e5637daa7",
+      "width": 1200,
+      "height": 675,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/patching-original.webp",
+      "original_label": "官方文章CWE-Bench补丁准确率与成本图",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8-cyber__evals__cwe-ben.width-1200.format-webp.webp",
+      "image_final_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8-cyber__evals__cwe-ben.width-1200.format-webp.webp",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "285ee76eb4106edf513f0cae3ff5c9888c32ffd279e356cc4f60f2d617e57fd3",
+      "asset_sha256": "6179440c1c80329548f863448fbbd891150c55d2995d80f5644efe78d05a2330",
+      "width": 1200,
+      "height": 675,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

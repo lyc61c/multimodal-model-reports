@@ -1,0 +1,127 @@
+{
+  "paper_id": "cfb536a3a112",
+  "source_version": "2505.14682v1",
+  "source_pdf_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2：双视觉编码器统一模型",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2505.14682v1#page=3",
+      "source_version": "2505.14682v1",
+      "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+      "asset_sha256": "4cf3cad7bfcb77ad2471f3e24b7939eb9b9394013eb76fcc40b9ba32e936842a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          280,
+          95,
+          510,
+          276
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/cot-verification.png",
+      "original_label": "Figure 3：CoT-V 候选筛选",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2505.14682v1#page=4",
+      "source_version": "2505.14682v1",
+      "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+      "asset_sha256": "cc8e1e734f2337992871c5e3e9399f5de1b42d5d6ff2596c0d8608642bb8fc58",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          336
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/preference-data.png",
+      "original_label": "Figure 6：DPO 偏好数据",
+      "pdf_page": 15,
+      "source_url": "https://arxiv.org/pdf/2505.14682v1#page=15",
+      "source_version": "2505.14682v1",
+      "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+      "asset_sha256": "27491027b454fb4373cc5d07b202eeb15a07065fc9965ac9d5ae3829cbff3a8e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          338
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-configuration.png",
+      "original_label": "Table 13：训练参数",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2505.14682v1#page=13",
+      "source_version": "2505.14682v1",
+      "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+      "asset_sha256": "ad5154a6e03b5fc9698cb62120b5c7cf81d3af2692b21f4b8d265ac1beb1ec6d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          174,
+          510,
+          348
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/understanding-results.png",
+      "original_label": "Table 1：理解任务结果",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2505.14682v1#page=7",
+      "source_version": "2505.14682v1",
+      "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+      "asset_sha256": "aaacde81b19786e589ef67d34efbd084094700b6be1b1c65ba0d728952674025",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          237
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/generation-results.png",
+      "original_label": "Tables 2–3：生成与阶段消融",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2505.14682v1#page=8",
+      "source_version": "2505.14682v1",
+      "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+      "asset_sha256": "b185a29a1159716fe65c90831a455f88f0f019ead8307a566bf7ee54a7df8d15",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          375
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

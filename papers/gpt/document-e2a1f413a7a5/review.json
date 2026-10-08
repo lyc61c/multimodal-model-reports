@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read complete official Introducing GPT-5.2 release text including detailed benchmarks and evaluation caveats; release date 2025-12-11 distinguished from retrieval date.",
+    "Copied and visually inspected four original official motherboard and tool-trajectory images; predictions/simulated demos are explicitly not ground truth or architecture diagrams.",
+    "Verified six vision rows, no-tools versus Python conditions, GPT-5.2 Thinking versus Pro and GPT-5.1 columns; Screenspot no-tool numeric value absent and not invented.",
+    "Verified GDPval first baseline is GPT-5, wins or ties versus clear wins, professional heavy versus API xhigh, and Pro ARC-AGI-2 high exception.",
+    "Verified MRCRv2 4-needle claim versus 8-needle 77.0 long interval, mean match ratio and binned length definitions.",
+    "Recomputed relative error reductions and clarified internal spreadsheet 9.3 percentage-point improvement; factuality judge limitations and Tau2 domain instruction/exclusion retained.",
+    "No undisclosed architecture, training corpus counts, hyperparameters or component ablations invented; no model inference performed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "7f11bc55878f78869b21b17175227b4fb3b5da5b8f574faa43c6071080e4fbea",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

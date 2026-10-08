@@ -1,0 +1,19 @@
+{
+  "paper_id": "6a394cea1d1e",
+  "catalogue_entry_id": "6a394cea1d1e",
+  "family_slug": "compcap",
+  "title": "CompCap: Improving Multimodal Large Language Models with Composite Captions",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2412.05243v1",
+  "source_url": "https://arxiv.org/pdf/2412.05243v1",
+  "document_kind": "training_method",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "CompCap：用可控合成图像与复合描述增强多模态理解",
+  "source_sha256": "f4f4ff2d7973ca799f0eda4755892cc1cff4143f09ea3c0649e396afe0db5ae5",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2828,
+  "figures_manifest": "figures-manifest.json"
+}

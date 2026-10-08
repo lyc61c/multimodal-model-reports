@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "读取 v1 第1–9页正文与第12–17页附录，检视六张完整原图/表。",
+    "核对帧时间文本进入imageQFormer、滑窗NV32/LW32/S32/T96及默认96个最终视频token。",
+    "说明压缩率推导的分组假设，默认固定96帧不等于按视频秒数自动增加token。",
+    "核对TimeIT held-in/held-out划分、125K与190.8秒及31.6K YTTemporal、GPT4只扩展指令。",
+    "核对LLM基础参数冻结但LoRA rank32更新，两个QFormer与线性层训练及附录超参数。",
+    "核对主评价不使用转写，三任务指标不同、启发式解析及高光结果低于管线。",
+    "核对Table3第三行增量相对上一行的矛盾，Table5监督结果与零样本/同数据实验分开。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 6
+  },
+  "article_sha256": "d2fdd0d915412e0aa59e9a57d9899de0b396605d8c93d355d6d07daad330b933",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

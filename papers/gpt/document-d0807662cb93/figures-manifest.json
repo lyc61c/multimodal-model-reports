@@ -1,0 +1,67 @@
+{
+  "paper_id": "d0807662cb93",
+  "source_version": "official-system-card-2025-08-07",
+  "source_pdf_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-005-01.png",
+      "original_label": "PDF page 5",
+      "pdf_page": 5,
+      "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=5",
+      "source_version": "official-system-card-2025-08-07",
+      "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
+      "asset_sha256": "d5b10792226e32c54764fdbb722a84fb3b9691c3aa26dafe5de2111696d38197",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 135,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-013-02.png",
+      "original_label": "PDF page 13",
+      "pdf_page": 13,
+      "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=13",
+      "source_version": "official-system-card-2025-08-07",
+      "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
+      "asset_sha256": "07d78315aa474c1b8bc9592c1646e63f834fdc49c6c6079a52f64943c80efdc7",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 135,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-017-03.png",
+      "original_label": "PDF page 17",
+      "pdf_page": 17,
+      "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=17",
+      "source_version": "official-system-card-2025-08-07",
+      "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
+      "asset_sha256": "d180502824f78623dd9a8533f5651ad126a0e6bafd6214049e439233b13236bc",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 135,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-037-04.png",
+      "original_label": "PDF page 37",
+      "pdf_page": 37,
+      "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=37",
+      "source_version": "official-system-card-2025-08-07",
+      "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
+      "asset_sha256": "1ab2e38678bd613d4544c142b9f3a438789b377319a95d4b533b56b0d678cd27",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 135,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

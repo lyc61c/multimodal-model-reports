@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 pp1-10 and implementation/prompt appendix pp13-16; separated dual-level architecture from Active/Standby model instances.",
+    "Verified RES/ACT/INST/HALT/END table and ANS figure discrepancy; high-level structured policy and low-level action interface retained, CE formula labeled explanatory.",
+    "Checked synthetic control samples versus600 real-robot demonstrations, 20Hz data collection versus response latency, Table5 7/26 dimensions and16-step horizon.",
+    "Preserved simulation diffusion+projector training versus real projector-only, frozen action-stageLLM versus first-stage VLM SFT; generic training table not invented per-stage recipe.",
+    "Verified Figure5 LONG64 versus91 and Figure6 real83.3/76.7; separated30-trial success, ten-test2.26sec speech response and no quantitative emergency-stop latency.",
+    "Original source pages and final crops visually checked; no independent reproduction, unconditional instant stop or arbitrary contact-safe retraction claim."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 7
+  },
+  "article_sha256": "74c60b565cca83a9f1e52da6a04bebdbbc950b03864d940c46371f28daeae98a",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

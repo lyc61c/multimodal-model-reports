@@ -1,0 +1,14 @@
+{
+  "paper_id": "9393822c356b",
+  "catalogue_entry_id": "9393822c356b",
+  "family_slug": "ferret",
+  "title": "Ferret: Refer and Ground Anything Anywhere at Any Granularity",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2310.07704v1",
+  "source_url": "https://arxiv.org/pdf/2310.07704v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Ferret：任意形状区域的指代理解与文本定位"
+}

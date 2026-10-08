@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read entire official GLM-5.3-Flash model card snapshot; distinguished new Flash model from cited prior GLM-5 technical report.",
+    "Downloaded and visually inspected complete original bench_53.png, verified legend, six task names, model columns and exact values.",
+    "Verified 320B total/18B active parameters, hybrid sparse/linear attention, mHC,30T multimodal corpus; no undisclosed layers, routing or loss mathematics invented.",
+    "Verified thinking effort default max, chat-template note, task-specific evaluation budgets, harness versions and BabyVision input preprocessing.",
+    "Preserved missing Agents Last Exam protocol and absence of numeric BabyVision/Toolathlon scores or component ablations; benchmark wins/losses and price-claim limits explicit."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 1
+  },
+  "article_sha256": "7af8b079a14fb96c7ca732327b755d20e7f59dc584d4f3678d7b949363bda117",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

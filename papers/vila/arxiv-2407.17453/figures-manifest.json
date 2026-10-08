@@ -1,0 +1,107 @@
+{
+  "paper_id": "1d245a12f207",
+  "source_version": "2407.17453v1",
+  "source_pdf_sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b",
+  "assets": [
+    {
+      "asset_path": "figures/augmentation-loop.png",
+      "original_label": "Figure 1：自增强与专家增强整体流程",
+      "pdf_page": 2,
+      "source_url": "https://arxiv.org/pdf/2407.17453v1#page=2",
+      "source_version": "2407.17453v1",
+      "source_sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b",
+      "asset_sha256": "0c1c504850dfbab02fa5262c85270cc5343f578b9baf20656342c13662fe5c27",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          100,
+          65,
+          510,
+          227
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/specialists.png",
+      "original_label": "Figure 3：空间、定位和OCR专家增强",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2407.17453v1#page=5",
+      "source_version": "2407.17453v1",
+      "source_sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b",
+      "asset_sha256": "d93be4861f4f98442503f2480f0f97a2dc947c9e0b61ffc8a81081144693933c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          100,
+          65,
+          510,
+          281
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/specialist-data.png",
+      "original_label": "Figure 5：专家数据与训练获取流程",
+      "pdf_page": 17,
+      "source_url": "https://arxiv.org/pdf/2407.17453v1#page=17",
+      "source_version": "2407.17453v1",
+      "source_sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b",
+      "asset_sha256": "bddc7226d54cdfc2ba6dd9dd566b7180e934f59edbe390fd5db9d0c242fa0b9b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          100,
+          300,
+          510,
+          486
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/results-8b.png",
+      "original_label": "Table 4–5：专家增强消融与8B主要实验",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2407.17453v1#page=9",
+      "source_version": "2407.17453v1",
+      "source_sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b",
+      "asset_sha256": "c76a53ac08ee698a0b19a5cf4b0c00930d1fe4b0b1f1340b9f5aabf75910fe38",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          100,
+          65,
+          515,
+          407
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/results-mmmu.png",
+      "original_label": "Table 6：MMMU test结果",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2407.17453v1#page=10",
+      "source_version": "2407.17453v1",
+      "source_sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b",
+      "asset_sha256": "d885319b985e95cee7d3f353ddbc8696abb3206433a4fa9d74ff1a4d1486d3cc",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          100,
+          65,
+          510,
+          289
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

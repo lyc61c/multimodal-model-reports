@@ -1,0 +1,15 @@
+{
+  "paper_id": "d90de9cbd1b4",
+  "source_url": "https://arxiv.org/pdf/2309.03905v1",
+  "source_version": "2309.03905v1",
+  "source_sha256": "5bd45edeaa2441f751a78f8c964caa4cdbccced4dbaab0a00e762f2237b1b1a1",
+  "verification_notes": [
+    "阅读全文正文1–19页及身份与引用页；公式1–4逐项核对",
+    "实际查看PDF5、7、10、11页原图，Figure2/4和Table1–4完整，未裁缺列",
+    "核对Table1/2基础与-D列及DocVQA指标top1；MME感知认知分列，拒绝全面超越说法",
+    "核对940M数据、32/8A100阶段超参、LoRA16及额外3.5K步骤",
+    "标明1M/3M缓存口径差异、缓存无softmax、原文无组件定量消融",
+    "音频点云迁移与外接生成/检测/API区别；未运行模型，仅作者来源核验"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

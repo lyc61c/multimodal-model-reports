@@ -1,0 +1,44 @@
+{
+  "source_url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "f5a5a731482b3029e6a998377f7fc693f309c211a0672617c44bec5a076dcf5d",
+  "read_scope": "官方PDF 1–14正文、17–18附录图说明；15–17参考文献。原文日期2023-09-25，采集快照2026-10-08。",
+  "claims": [
+    {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "claim": "2022训练完成、2023年3月早访、图文预训练+RLHF概述及早期用户反馈。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        13,
+        14
+      ],
+      "claim": "安全评测、OCR系统缓解、图文替换增强人工复核；模型与RefusalSystem分开解释。"
+    },
+    {
+      "pages": [
+        4,
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        17,
+        18
+      ],
+      "claim": "97.2/100拒答、>98身份拒答、风格44.4→72.2和7.5→50；科学标签与顺序反例；附录误差为组间min/max。"
+    }
+  ],
+  "source_inconsistencies": [],
+  "model_execution": "not_run"
+}

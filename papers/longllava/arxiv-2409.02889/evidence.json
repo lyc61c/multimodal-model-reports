@@ -1,0 +1,40 @@
+{
+  "source_url": "https://arxiv.org/pdf/2409.02889v1",
+  "source_version": "2409.02889v1",
+  "source_sha256": "c89fd8195c25d4003df392c751c488828d2edf5938e2996e5d78aba8863b8f4d",
+  "read_scope": "正文PDF1–10页、附录18–19页完整阅读。",
+  "claims": [
+    {
+      "pages": [
+        4,
+        5,
+        6
+      ],
+      "claim": "混合主干53B总13B激活，图示7Mamba/1Attention；16expertstop2；CLIP576→144，3阶段+纯文本278K；750K多图混合组成；40960packing24A800ZeRO3LR1e-5。"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        18,
+        19
+      ],
+      "claim": "Mile57.4VideoMME128帧无字幕51.6MV54.6；100K37.6t/s25.5s79.1GB；多图SFT单图退化。"
+    },
+    {
+      "pages": [
+        9,
+        10
+      ],
+      "claim": "千图强池化144→36；Figure7实读100–900全1.00，1000全0.25；与近100%叙述冲突。"
+    }
+  ],
+  "source_inconsistencies": [
+    "Figure7千图0.25与正文接近100%不一致",
+    "CLIPfootnotebasepatch32与336/576网格处理不一致",
+    "正文7:1顺序措辞与图示七Mamba一Transformer易误读",
+    "QuasiLinear并非保留attention时的严格渐近线性",
+    "Table1MambaICL叉号与Table5非零ICL不应作绝对命题"
+  ],
+  "model_execution": "not_run"
+}

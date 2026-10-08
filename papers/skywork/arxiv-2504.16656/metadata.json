@@ -1,0 +1,19 @@
+{
+  "paper_id": "d9cbc42c82ec",
+  "catalogue_entry_id": "d9cbc42c82ec",
+  "family_slug": "skywork",
+  "title": "Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2504.16656v1",
+  "source_url": "https://arxiv.org/pdf/2504.16656v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Skywork R1V2：用混合强化学习迁移多模态推理能力",
+  "source_sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2318,
+  "figures_manifest": "figures-manifest.json"
+}

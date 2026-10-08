@@ -1,0 +1,14 @@
+{
+  "paper_id": "ea869973b3f4",
+  "catalogue_entry_id": "ea869973b3f4",
+  "family_slug": "honeybee",
+  "title": "Honeybee: Locality-enhanced Projector for Multimodal LLM",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2312.06742v1",
+  "source_url": "https://arxiv.org/pdf/2312.06742v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Honeybee：局部视觉投影器与指令数据配方"
+}

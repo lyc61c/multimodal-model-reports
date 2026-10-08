@@ -1,0 +1,16 @@
+{
+  "paper_id": "417d4df3d8fa",
+  "source_url": "https://arxiv.org/pdf/2305.11175v1",
+  "source_version": "2305.11175v1",
+  "source_sha256": "e54d0b3c5e32c73b924d71ee8ac41351c0933a20f7b1be44aa092e17f622fca6",
+  "verification_notes": [
+    "Read v1 complete methodology, training and experiments pages1–10; Figures3/4 and Tables1–3 rendered and visually inspected.",
+    "Alpaca7B, ResNet50/InternImageH, BERTBase and pretrained DeformableDETR distinguished; 60.2 AP requires H visual backbone.",
+    "Parallel output-format queries distinguished from ordinary autoregressive caption decoding; no FPS speed-up invented.",
+    "Coordinates are discrete offsets relative to image-token location; range512 gives1025 signed bins, classification mapping is prompt-dependent rather than fixed COCO token semantics.",
+    "Instance segmentation polygon limits and lower AP75 preserved; pose is possible formulation, not quantitatively evaluated in paper.",
+    "VQA qualitative-only, caption COCO Karpathy and RefCOCO validation protocols retained; each-task separate models not conflated with shared model.",
+    "Table2 restricted class AP not claimed comparable with all80-class AP; 50epochs default not asserted as each-stage schedule; LoRA rank and exact task ratios not invented."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

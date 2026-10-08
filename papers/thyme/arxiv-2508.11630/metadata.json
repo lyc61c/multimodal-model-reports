@@ -1,0 +1,19 @@
+{
+  "paper_id": "534b58b82f31",
+  "catalogue_entry_id": "534b58b82f31",
+  "family_slug": "thyme",
+  "title": "Thyme: Think Beyond Images",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2508.11630v1",
+  "source_url": "https://arxiv.org/pdf/2508.11630v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Thyme：代码驱动图像操作与多模态推理",
+  "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1988,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,15 @@
+{
+  "paper_id": "b615730dc322",
+  "source_url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "ba18d03f42cf988dad6116cee36c4d640fac0e481e9906011ec7536b8b51990c",
+  "verification_notes": [
+    "Read entire official2024-12-25 QVQ release page, all six demo traces and stated limitations; verified Qwen2-VL72B base and Preview experimental status.",
+    "Copied and visually inspected complete benchmark, product-rule table, sofa dimensions and rectangle diagram originals; asset labels are unnumbered official website inputs.",
+    "Checked all4 benchmark rows, model dates, val/test-mini/full splits and missing o1/Claude values; superiority statements qualified.",
+    "Independently verified product-rule -29 and rectangle area ratio1/5, while separating task mathematics from model-training objectives.",
+    "Sofa3159000 depends on solid equal-height L-prism approximation; model repetition/intermediate errors and original hallucination warnings preserved.",
+    "No invented RL/SFT recipe, hidden architecture changes, corpus counts, tools, generation budgets or universal multimodal capabilities; no model execution claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

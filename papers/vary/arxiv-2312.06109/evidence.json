@@ -1,0 +1,16 @@
+{
+  "paper_id": "e7d5fa625fde",
+  "source_url": "https://arxiv.org/pdf/2312.06109v1",
+  "source_version": "2312.06109v1",
+  "source_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
+  "verification_notes": [
+    "Read v1 architecture, data engine, training and results pages1–8; Figures2/4/5 and Tables1–3 rendered and visually inspected.",
+    "Vision vocabulary refers to learned continuous features, not discrete VQ codebook or enlarged text tokenizer; two256token branches concatenate channels, not sequence length.",
+    "SAM initialization distinguished from frozen pretrained SAM segmentation; Varytiny trainable whole model versus Varybase frozen two vision encoders and updated LLM retained.",
+    "Negative natural images are autoregressive generic-caption supervision, not contrastive negatives; synthetic per-language chart count wording retained without assumed doubled totals.",
+    "DocVQA val78.2/test76.3 table versus reversed prose explicitly disclosed; ChartQA SFT uses train split, not zero-shot claim.",
+    "OCR English F1 lower than Nougat despite lower edit distance and markdown mean limited to formula/table retained; different LLM/data variants not directly causal comparison.",
+    "No causal isolation of vocabulary versus data/resolution or total GPU speed-up claimed; no training hardware invented."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,54 @@
+{
+  "paper_id": "bdf40c9e7783",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/chart-reasoning-original.png",
+      "original_label": "官方技术博客Demo Highlights：出口商品图表",
+      "source_url": "https://github.com/rednote-hilab/dots.vlm1",
+      "image_url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/cases/1040025031km07evmi00ddb8r1c.png",
+      "image_final_url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/cases/1040025031km07evmi00ddb8r1c.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "18d4a276c152e12bcad64abf407fa8e1cbc967f0c27581437c85fb7e78e36528",
+      "asset_sha256": "b4ff3ec3fa97033c8cd6eecd30ecc5ec4fd2f7035254be459a2ed7bed677e25d",
+      "width": 1024,
+      "height": 753,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/ticket-reasoning-original.png",
+      "original_label": "官方技术博客Demo Highlights：景区票价文档",
+      "source_url": "https://github.com/rednote-hilab/dots.vlm1",
+      "image_url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/cases/1040025031km08ed5200979plfk.png",
+      "image_final_url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/cases/1040025031km08ed5200979plfk.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "18d4a276c152e12bcad64abf407fa8e1cbc967f0c27581437c85fb7e78e36528",
+      "asset_sha256": "637cbfa870237241edcd93a5b662ae6d9db569bfab4c10adcea0c987b3b68192",
+      "width": 1024,
+      "height": 768,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/physics-reasoning-original.png",
+      "original_label": "官方技术博客Demo Highlights：加速度曲线问题",
+      "source_url": "https://github.com/rednote-hilab/dots.vlm1",
+      "image_url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/cases/1040025031km1dqmm2005ou9re0.png",
+      "image_final_url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/cases/1040025031km1dqmm2005ou9re0.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "18d4a276c152e12bcad64abf407fa8e1cbc967f0c27581437c85fb7e78e36528",
+      "asset_sha256": "80a4ccb6dc034ab932c684f1ec182818858593333b29e274c7365977214b8d36",
+      "width": 1630,
+      "height": 524,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

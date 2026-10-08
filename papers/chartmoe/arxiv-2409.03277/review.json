@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "figures_visually_checked": [
+    4,
+    5,
+    6,
+    9
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_checked_against_original_tables": true,
+    "figures_from_original_pdf": true
+  },
+  "limitations": [
+    "Modified ChartQA metric differs from standard leaderboard",
+    "Final-stage total220.8K differs from rounded components219.8K",
+    "GPUhours do not imply trainingcardcount",
+    "Gate renormalization and auxiliaryloss notdisclosed"
+  ]
+}

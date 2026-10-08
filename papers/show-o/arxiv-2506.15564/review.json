@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 pages 1–10 and supplementary evaluation pages 12–13; original architecture, benchmark tables and examples visually inspected.",
+    "7B excludes video/interleaved training; 1.5B/7B base-LLM parameters distinguished from 2B total video-generation parameters.",
+    "GenEval dense rewritten prompts retained; non-leading metrics and video dynamic-degree weakness explicitly reported.",
+    "16M generated subset not added as independent 66M expansion; small ablation distinguished from final models.",
+    "Negative-cosine log ambiguity in equation 2 disclosed; flow velocity derivation labeled explanatory rather than a new reported equation."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "dc0c3e63ef1dbcb65e7964cf5bb8daa9a260b87ebc7560fb86ff4d48caa422a4",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

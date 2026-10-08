@@ -1,0 +1,19 @@
+{
+  "paper_id": "ca69d196c301",
+  "catalogue_entry_id": "ca69d196c301",
+  "family_slug": "salmonn",
+  "title": "video-SALMONN: Speech-Enhanced Audio-Visual Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2406.15704v1",
+  "source_url": "https://arxiv.org/pdf/2406.15704v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "video-SALMONN",
+  "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2087,
+  "figures_manifest": "figures-manifest.json"
+}

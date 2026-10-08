@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "reference_pages_skipped": [
+    9,
+    10,
+    11
+  ],
+  "figures_visually_checked": [
+    4,
+    7,
+    15,
+    16
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Self-review, no independent reviewer/model execution",
+    "Inference includes detector/OCR tools",
+    "GQA and 7B MME-perception decline despite aggregate improvement",
+    "Tables/prose contain repeated-score and universal-superiority inconsistencies",
+    "No quantitative open-set replacement full benchmarks or runtime costs"
+  ]
+}

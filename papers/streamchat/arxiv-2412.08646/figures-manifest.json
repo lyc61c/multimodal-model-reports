@@ -1,0 +1,107 @@
+{
+  "paper_id": "f074a90123d2",
+  "source_version": "2412.08646v1",
+  "source_pdf_sha256": "e3533fffe48330b32a302f36c170433ad737ad87052280b74e896228d062b034",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3：动态交叉注意力架构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2412.08646v1#page=3",
+      "source_version": "2412.08646v1",
+      "source_sha256": "e3533fffe48330b32a302f36c170433ad737ad87052280b74e896228d062b034",
+      "asset_sha256": "0188dd3406a0fa2e3a9007a81f68f827992f182683d99aa77c7d7849862a34d6",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          54,
+          47,
+          306,
+          367
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/parallel-rope.png",
+      "original_label": "Figure 4：并行3D-RoPE",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2412.08646v1#page=3",
+      "source_version": "2412.08646v1",
+      "source_sha256": "e3533fffe48330b32a302f36c170433ad737ad87052280b74e896228d062b034",
+      "asset_sha256": "88da568c1792a3a7ada81cd9585b4c3e2e9d9bbfd0aeb07f495d1722bbc8296a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          312,
+          43,
+          568,
+          188
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/streaming-results.png",
+      "original_label": "Figure 5：流式问答胜平负比例",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2412.08646v1#page=5",
+      "source_version": "2412.08646v1",
+      "source_sha256": "e3533fffe48330b32a302f36c170433ad737ad87052280b74e896228d062b034",
+      "asset_sha256": "f3951ead885f410ad5a3b9189db5f7d21501424c6473d98ad415180776415f5e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          54,
+          47,
+          568,
+          311
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/offline-video-results.png",
+      "original_label": "Table 2：离线视频基准",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2412.08646v1#page=7",
+      "source_version": "2412.08646v1",
+      "source_sha256": "e3533fffe48330b32a302f36c170433ad737ad87052280b74e896228d062b034",
+      "asset_sha256": "74ac1c7e6084c35e2f106bfffad05d95dc7d37ff5499d26cd86cb12609fa54d3",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          54,
+          44,
+          568,
+          405
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/ablation.png",
+      "original_label": "Table 3：结构和密集指令消融",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2412.08646v1#page=8",
+      "source_version": "2412.08646v1",
+      "source_sha256": "e3533fffe48330b32a302f36c170433ad737ad87052280b74e896228d062b034",
+      "asset_sha256": "8791678fcc002fa35806a34cfde6594cab75922ee36a5580cf1b38ca77ee5692",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          54,
+          47,
+          568,
+          238
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

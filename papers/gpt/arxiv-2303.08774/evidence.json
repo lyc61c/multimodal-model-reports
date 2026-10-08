@@ -1,0 +1,15 @@
+{
+  "paper_id": "c14c2ea07b95",
+  "source_url": "https://arxiv.org/pdf/2303.08774v1",
+  "source_version": "2303.08774v1",
+  "source_sha256": "053056a10114d22e4c47b6b5be25e54c320b5f1beeae7466e8638dac0f5f5f66",
+  "verification_notes": [
+    "Read main technical report pages1-14, appendix B-F pages27-32 and system-card SFT/RM/PPO details pages60-61.",
+    "Viewed original pages3,7,9,12,Figures1/2,Table2,Table3,Figure8 complete.",
+    "Checked scope intentionally withholds architecture size, vision encoder, hardware/full recipe; no speculative MoE or encoder claims.",
+    "Verified scaling laws and restricted HumanEval subset, base NLP vs RLHF exam distinction and no-vision scores.",
+    "Checked contamination methodology, math train inclusion, HumanEval25 percent and65.58 unpolluted; no blanket clean-data claim.",
+    "Calibration ECE0.007 to0.074 and remaining failures included; no independent model execution."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

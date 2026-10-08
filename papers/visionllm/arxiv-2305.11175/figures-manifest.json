@@ -1,0 +1,87 @@
+{
+  "paper_id": "417d4df3d8fa",
+  "source_version": "2305.11175v1",
+  "source_pdf_sha256": "e54d0b3c5e32c73b924d71ee8ac41351c0933a20f7b1be44aa092e17f622fca6",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3：VisionLLM 总体架构",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2305.11175v1#page=5",
+      "source_version": "2305.11175v1",
+      "source_sha256": "e54d0b3c5e32c73b924d71ee8ac41351c0933a20f7b1be44aa092e17f622fca6",
+      "asset_sha256": "91a38d289fa6df242654f34bae56d06eeae9fc9f0ea4dfdb6aa95b9a45bbc4f9",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          275
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/format-query.png",
+      "original_label": "Figure 4：输出格式作为查询",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2305.11175v1#page=7",
+      "source_version": "2305.11175v1",
+      "source_sha256": "e54d0b3c5e32c73b924d71ee8ac41351c0933a20f7b1be44aa092e17f622fca6",
+      "asset_sha256": "d8e1fccb8be6a387fd4bede120340274b259acd7aab5617396a5a4324d749e68",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          305,
+          70,
+          510,
+          235
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/main-results.png",
+      "original_label": "Table 1：检测、分割、定位和描述结果",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2305.11175v1#page=8",
+      "source_version": "2305.11175v1",
+      "source_sha256": "e54d0b3c5e32c73b924d71ee8ac41351c0933a20f7b1be44aa092e17f622fca6",
+      "asset_sha256": "d012707236d1aaa2881d18e0f8af651f5d70b594e585f20138fc43a5cde7d62c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          320
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/customization-ablations.png",
+      "original_label": "Tables 2–3：任务定制和组件消融",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2305.11175v1#page=9",
+      "source_version": "2305.11175v1",
+      "source_sha256": "e54d0b3c5e32c73b924d71ee8ac41351c0933a20f7b1be44aa092e17f622fca6",
+      "asset_sha256": "e6c8c1b279cf8506f1697b55dc71522c104c30588910bdd4ec068ae8874b22c6",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          325
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "figures_visually_checked": [
+    3,
+    7,
+    8,
+    9
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Figure3 dated political statements retained only as historical model output",
+    "VQA prose differences inconsistent; article anchors explicitTable3",
+    "LoRA not full language model finetune",
+    "Objectparsing not generic exhaustive objectdetector",
+    "CHAIR compared with different answerlength",
+    "No loss numbering invented; equations labeled mechanism explanation",
+    "Appendix14-21 read text captions; only selectedFigure3 image visuallychecked"
+  ]
+}

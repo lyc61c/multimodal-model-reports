@@ -1,0 +1,33 @@
+{
+  "source_id": "783b062a88f0",
+  "source_version": "2602.02276v1",
+  "read_scope": "Full body1-15 and appendicesB-F21-30; contributor/reference pages inspected structurally",
+  "claims": [
+    {
+      "topic": "architecture",
+      "source": "2,3,4.1-4.2 Figure3",
+      "checks": "K2foundation1.04T32B384experts8active;MoonViT400Minit andsharedspacetimeattention before4framepool;zerovision onlySFT;PARLorchestratoronlyfixedsubagents"
+    },
+    {
+      "topic": "math",
+      "source": "3,4.4.2 Eqs1-2",
+      "checks": "PARL auxiliaryanneal0;criticalstepsmaxparallelbranchesnottotalwork;Togglecorrectanswerpercentilefixedstart;K2ThinkingexperimentnotK2.5;RLClip ambiguousratio/log and objective direction notinventedcode"
+    },
+    {
+      "topic": "data_training",
+      "source": "Table3 Sections4.3-4.5 AppendicesB-D",
+      "checks": "1Tvision15Tjoint500B200Blongcontextapproxnotexact15Tall;4096->32768->262144YaRN;captionCEnocontrastive;DEP recomputevision;H80016PP16EPZeRO1;nounknownLR/batch"
+    },
+    {
+      "topic": "results",
+      "source": "Tables1-6 Figures2,5,8 AppendicesE-F",
+      "checks": "Avg64math8GPQA3vision5coding4WideSearch;nonthinkingSWE/Terminal;2048frames448longvideo字幕;GUI100stepssingle;GPTvision10%API failures;Swarm78.4vs60.6or74.9ctx;72.7formalvs72.8prose;24hcase distributednotoneforward"
+    }
+  ],
+  "source_inconsistencies": [
+    "15Tapproxheadline versus separatelylisted1T15T500B200B",
+    "RL Eq1 ratio/logratio Clip and optimizer direction notfullyaligned",
+    "WideSearch single72.8 earlierprose versus72.7formalTables4/6"
+  ],
+  "model_execution": "not_run"
+}

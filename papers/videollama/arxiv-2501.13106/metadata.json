@@ -1,0 +1,19 @@
+{
+  "paper_id": "68c32964bf01",
+  "catalogue_entry_id": "68c32964bf01",
+  "family_slug": "videollama",
+  "title": "VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2501.13106v1",
+  "source_url": "https://arxiv.org/pdf/2501.13106v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VideoLLaMA 3：以图像能力为基础的视频理解模型",
+  "source_sha256": "47f698ffaf94fe77b1b1c833dc286cefd26be0d4188f2aa7ab9613fc09cadafa",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2167,
+  "figures_manifest": "figures-manifest.json"
+}

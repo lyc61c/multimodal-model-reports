@@ -1,0 +1,14 @@
+{
+  "paper_id": "4af858ff9dbc",
+  "source_url": "https://arxiv.org/pdf/2307.16184v1",
+  "source_version": "2307.16184v1",
+  "source_sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01",
+  "verification_notes": [
+    "Read v1 main pages 1–14 and architecture/training/evaluation appendices 19–23; original figures and tables inspected.",
+    "Audio and image-generation adaptation separated from image/video pretraining; task-specific fine-tuned checkpoints not described as one universal chat model.",
+    "Dataset task examples versus images/videos and inconsistent totals not conflated; constrained decoding and 24-way CLIP selection disclosed.",
+    "Seen-task no-finetuning evaluation distinguished from unseen-dataset zero-shot; ActivityNet ground-truth proposals retained.",
+    "Main table counterexamples to universal superiority, curriculum task regressions and extra training for ratatouille explicitly stated."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

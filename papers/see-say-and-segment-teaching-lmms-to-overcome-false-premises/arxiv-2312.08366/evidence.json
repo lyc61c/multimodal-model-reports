@@ -1,0 +1,16 @@
+{
+  "paper_id": "b46cedd95a4b",
+  "source_url": "https://arxiv.org/pdf/2312.08366v1",
+  "source_version": "2312.08366v1",
+  "source_sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f",
+  "verification_notes": [
+    "Read v1 main pages 1–8 and reasoning extension/prompt appendix 13–18; original Figure2/3/6 and Tables2–4 crops visually inspected.",
+    "Cascaded LLaVA plus LISA and jointly trained LLaVA-v1.5 plus SAM clearly distinguished; no invented new backbone.",
+    "CLAIR 0.67 is GPT-4 similarity score, not human helpfulness success rate; 55.45/31.65 percentages are relative improvements, not percentage-point gains.",
+    "Dataset roughly balanced positive/negative differs from 9:1 true/false training sampling; cross-dataset image split exclusion described.",
+    "Main GPT-3.5-turbo generation versus Appendix Table7 GPT4 caption inconsistency preserved.",
+    "Loss components reported; weights, LoRA rank and complete freezing schedule not invented; DGX GPU-count wording ambiguity preserved.",
+    "Positive-only cIoU decreases versus LISA and non-perfect FP recall retained; appendix reasoning model additional datasets not conflated with main model."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

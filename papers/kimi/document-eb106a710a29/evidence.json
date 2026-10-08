@@ -1,0 +1,76 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "claims": [
+    {
+      "claim": "2.78T total and 104.2B activated, 93 layers, KDA/MLA 3:1 with final MLA layer",
+      "pdf_pages": [
+        3,
+        11
+      ]
+    },
+    {
+      "claim": "KDA bounded decay and mixed global attention, not whole-model constant-cache guarantee",
+      "pdf_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "AttnRes, SiTU and quantile-based balancing address depth, activations and distributed routing",
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        9,
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "claim": "401M vision encoder jointly trained from scratch, spatial-temporal factorization and 2x2 merge",
+      "pdf_pages": [
+        10,
+        11
+      ]
+    },
+    {
+      "claim": "Joint autoregressive pretraining, extended context and teacher-domain/budget RL with MOPD",
+      "pdf_pages": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "claim": "MXFP4 expert weights, MXFP8 activations and frozen-target MTP draft training",
+      "pdf_pages": [
+        14
+      ]
+    },
+    {
+      "claim": "51,219,741 sandboxes total training and evaluation instances, not distinct tasks or GPU count",
+      "pdf_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "claim": "Evaluation protocols and Table 2 distinguish tools, pass@5, subtitle use, harness and maximum budgets",
+      "pdf_pages": [
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "claim": "XTML serialization separates think, response and tools and preserves thinking histories",
+      "pdf_pages": [
+        46,
+        47
+      ]
+    }
+  ]
+}

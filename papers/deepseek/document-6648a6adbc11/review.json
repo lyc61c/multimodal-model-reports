@@ -1,0 +1,28 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "短发布说明而非完整配方，视觉结构/训练数据/冻结缺项不套V4文本报告。",
+    "图中Flash0731版本、缺失项非零、文本部分Cybergym下降核对。",
+    "384为billing上限非内部patch/token；file引用复用非免费推理/视觉cache证据。"
+  ],
+  "math_checks": [
+    "一般条件策略为解释非原文训练式。",
+    "计费上限384m算术且仅图像部分；Pass5不能倒推Pass1。",
+    "多模态分数点增量36.5-26.2=10.3，27.3-25.2=2.1；与Opus两赢两低。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/official-benchmarks.png",
+      "checked": "已view_image检视完整11行、模型头、两段脚注。"
+    },
+    {
+      "file": "figures/official-agent-cases.png",
+      "checked": "已view_image原分辨率检视完整960×6480长图，未裁断路线/页尾；不将案例数字当技术结果。"
+    }
+  ],
+  "limitations": [
+    "未调用API或运行评测；自身逐源核验。",
+    "全文技术披露有限，模型厂商结果无误差条或独立复现；不添加未披露配方。"
+  ],
+  "model_execution": "not_run"
+}

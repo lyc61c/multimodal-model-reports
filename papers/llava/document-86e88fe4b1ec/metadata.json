@@ -1,0 +1,14 @@
+{
+  "paper_id": "86e88fe4b1ec",
+  "catalogue_entry_id": "86e88fe4b1ec",
+  "family_slug": "llava",
+  "title": "LLaVA-NeXT: Improved reasoning, OCR, and world knowledge",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://llava-vl.github.io/blog/2024-01-30-llava-next/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "LLaVA-NeXT：用动态高分辨率与数据配方改善OCR和视觉推理"
+}

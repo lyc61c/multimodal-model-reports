@@ -1,0 +1,54 @@
+{
+  "paper_id": "6276d6c37ba5",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/base-evaluation.webp",
+      "original_label": "官方发布页：基础模型评测，无编号",
+      "source_url": "https://mistral.ai/news/mistral-3",
+      "image_url": "https://mistral.ai/_astro/98aeee04-e1c3-43b7-b90e-c51da84d5e56_ZdKC34.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "image_final_url": "https://mistral.ai/_astro/98aeee04-e1c3-43b7-b90e-c51da84d5e56_ZdKC34.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "7a896d60ba5a28372a56dca006fb53cc88f762ec29217956fd69d7d9fc7befb5",
+      "asset_sha256": "abbbd77658acbd3cfb94cb098b36e8e0a08132884ac057ada6b8a87d9a19afb9",
+      "width": 1905,
+      "height": 1242,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/instruct-evaluation.webp",
+      "original_label": "官方发布页：指令模型评测，无编号",
+      "source_url": "https://mistral.ai/news/mistral-3",
+      "image_url": "https://mistral.ai/_astro/bdf27a12-76fd-4e62-be9b-938f14288a9a_ZqfLXe.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "image_final_url": "https://mistral.ai/_astro/bdf27a12-76fd-4e62-be9b-938f14288a9a_ZqfLXe.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "7a896d60ba5a28372a56dca006fb53cc88f762ec29217956fd69d7d9fc7befb5",
+      "asset_sha256": "4068a1bc024fd84adbc5220e92ea3902f3cec044c9349e81c0308f72bbcc53a8",
+      "width": 1346,
+      "height": 1115,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/gpqa-token-efficiency.webp",
+      "original_label": "官方发布页：GPQA Diamond 准确率与生成长度，无编号",
+      "source_url": "https://mistral.ai/news/mistral-3",
+      "image_url": "https://mistral.ai/_astro/ea1fcc83-5bad-400e-b63a-35c8a8c0bf9c_ZEaRWe.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "image_final_url": "https://mistral.ai/_astro/ea1fcc83-5bad-400e-b63a-35c8a8c0bf9c_ZEaRWe.webp?dpl=6ac6a8353c2a68969e300fd2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "7a896d60ba5a28372a56dca006fb53cc88f762ec29217956fd69d7d9fc7befb5",
+      "asset_sha256": "a533ecf6c6057637b11a658bc5aea8b5f639e04c13cac8a5d10cd3631bd2b95a",
+      "width": 1726,
+      "height": 1062,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

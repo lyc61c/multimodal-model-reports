@@ -1,0 +1,32 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "claims": [
+    {
+      "claim": "AnyRes网格、局部和全局图结构及分辨率",
+      "source_sections": [
+        "Dynamic High Resolution",
+        "Model Card"
+      ]
+    },
+    {
+      "claim": "558K+760K=1318K，用户15K，移除TextCaps引入DocVQA和SynthDoG",
+      "source_sections": [
+        "Data Mixture",
+        "Model Card"
+      ]
+    },
+    {
+      "claim": "GPU小时8x20/16x24/32x30及Stage2表述Full model",
+      "source_sections": [
+        "Model Card"
+      ]
+    },
+    {
+      "claim": "各模型Results数字及MMMUval/test区分",
+      "source_sections": [
+        "Results",
+        "Expanded tables"
+      ]
+    }
+  ]
+}

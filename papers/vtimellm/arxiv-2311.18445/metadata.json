@@ -1,0 +1,19 @@
+{
+  "paper_id": "e364433c1393",
+  "catalogue_entry_id": "e364433c1393",
+  "family_slug": "vtimellm",
+  "title": "VTimeLLM: Empower LLM to Grasp Video Moments",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.18445v1",
+  "source_url": "https://arxiv.org/pdf/2311.18445v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VTimeLLM：以三阶段训练学习视频事件和时间边界",
+  "source_sha256": "8c514f296bca5cb2a6f092ba958a9ad3d4a7ab811448c762b43b23169e18f016",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1870,
+  "figures_manifest": "figures-manifest.json"
+}

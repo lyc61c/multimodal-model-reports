@@ -1,0 +1,50 @@
+{
+  "checked_file": "papers\\lavit\\arxiv-2309.04669\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "continuousinputdiscretetarget",
+    "stagefreezesandtrainableparamnotoverall",
+    "datacountnotrawsum",
+    "generationfuturework",
+    "fewshotnotallbest"
+  ],
+  "math_checked": [
+    "Eq1faithful",
+    "Eq2 strictmask explanatoryrewrite clearlymarked",
+    "Eq3 ambiguitynotinventedcode",
+    "Eq4faithful",
+    "Eq5negativeloglikelihooddirectionfixed"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-004-01.png",
+      "original_label": "Figure2",
+      "pdf_page": 4,
+      "inspection": "Viewed full original page;complete diagram labels, formula blocks, all table headings/rows, figure captions"
+    },
+    {
+      "file": "figures/original-page-005-02.png",
+      "original_label": "Eqs2-5",
+      "pdf_page": 5,
+      "inspection": "Viewed full original page;complete diagram labels, formula blocks, all table headings/rows, figure captions"
+    },
+    {
+      "file": "figures/original-page-007-03.png",
+      "original_label": "Tables1-2",
+      "pdf_page": 7,
+      "inspection": "Viewed full original page;complete diagram labels, formula blocks, all table headings/rows, figure captions"
+    },
+    {
+      "file": "figures/original-page-008-04.png",
+      "original_label": "Figure3/Table3",
+      "pdf_page": 8,
+      "inspection": "Viewed full original page;complete diagram labels, formula blocks, all table headings/rows, figure captions"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "tokenizersteps/codebookupdates/mix/beamwidthnotdisclosed",
+    "no v1 imagegeneration evaluation",
+    "noend-to-endthroughputorselectorcontrolledablation"
+  ]
+}

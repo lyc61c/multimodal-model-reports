@@ -1,0 +1,127 @@
+{
+  "paper_id": "33ab7b32ee03",
+  "source_version": "2501.01957v1",
+  "source_pdf_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2 — VITA1.5 architecture",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2501.01957v1#page=3",
+      "source_version": "2501.01957v1",
+      "source_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
+      "asset_sha256": "783a7019a5c9c08d9dc40cd910e870b0a9a28994b90d4f4b0c5ebeb6d8a4c91c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          343,
+          220,
+          510,
+          506
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-data.png",
+      "original_label": "Table 1 — Training question sources",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2501.01957v1#page=5",
+      "source_version": "2501.01957v1",
+      "source_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
+      "asset_sha256": "d276c33433221127685d51095b241248da95ebb90fab633c7e601352da47cf6e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          405
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-stages.png",
+      "original_label": "Figure 3 — Progressive multimodal training",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2501.01957v1#page=6",
+      "source_version": "2501.01957v1",
+      "source_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
+      "asset_sha256": "9fce6f7a4557867db2f3faf819af626dfa5270c2c7e8354c24e400c04f2d064b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          515,
+          522
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/image-results.png",
+      "original_label": "Table 2 — Image evaluation",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2501.01957v1#page=7",
+      "source_version": "2501.01957v1",
+      "source_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
+      "asset_sha256": "71cc40643890b27986b0b636abec991d291f65053e089a500e6d81862dd2683f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          285
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/video-results.png",
+      "original_label": "Table 3 — Video evaluation",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2501.01957v1#page=8",
+      "source_version": "2501.01957v1",
+      "source_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
+      "asset_sha256": "2043985de1579d7c11f499de54dd85f562a81fda06036afff328132c10b28864",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          65,
+          515,
+          270
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/asr-results.png",
+      "original_label": "Table 4 — ASR evaluation",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2501.01957v1#page=8",
+      "source_version": "2501.01957v1",
+      "source_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
+      "asset_sha256": "47d885c2c4a553546b830177fe2b85fdf50d55a94227ae08ca6037af8145a9d5",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          282,
+          515,
+          418
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

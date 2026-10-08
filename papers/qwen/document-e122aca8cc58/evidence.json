@@ -1,0 +1,37 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "claims": [
+    {
+      "claim": "27Bdense multimodal textimagevideo thinking/nonthinking unifiedcheckpoint",
+      "source_sections": [
+        "Introduction",
+        "Vision Language"
+      ]
+    },
+    {
+      "claim": "Verified77.2 Pro53.5 Terminal59.3 Skills48.2; official harness details",
+      "source_sections": [
+        "Language"
+      ]
+    },
+    {
+      "claim": "MMMU82.9 RealWorldQA84.1 VideoMMEwsub87.7 RefCOCO92.5 AndroidWorld70.3",
+      "source_sections": [
+        "Vision Language"
+      ]
+    },
+    {
+      "claim": "No architecturetrainingdataorlossdetails disclosed",
+      "source_sections": [
+        "Full official release article"
+      ]
+    },
+    {
+      "claim": "200K/256K evaluationcontext vs131072exampleconfig distinguished",
+      "source_sections": [
+        "Language footnotes",
+        "OpenClaw"
+      ]
+    }
+  ]
+}

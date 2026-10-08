@@ -1,0 +1,47 @@
+{
+  "checked_file": "papers\\internvl\\arxiv-2404.16821\\README.md",
+  "verdict": "complete_self_review",
+  "facts_checked": [
+    "differentdatasetsplits",
+    "ChatLLM20B and predecessor40B",
+    "taskfractionssum100",
+    "Tables1-3 and Figure6 weak tasks"
+  ],
+  "math_checked": [
+    "grid selection explicitly explanatory nooriginalEq",
+    "pixelshuffle32x32xC->16x16x4C standardderive",
+    "256(n+1) for multitle separate single256",
+    "attentionO(L²) not measuredthroughput"
+  ],
+  "images_checked": [
+    {
+      "file": "figures/original-page-003-01.png",
+      "original_label": "Figure3",
+      "pdf_page": 3,
+      "inspection": "Viewed full original page; complete diagram, all rows, axes, and captions"
+    },
+    {
+      "file": "figures/original-page-004-02.png",
+      "original_label": "Figure4",
+      "pdf_page": 4,
+      "inspection": "Viewed full original page; complete diagram, all rows, axes, and captions"
+    },
+    {
+      "file": "figures/original-page-006-03.png",
+      "original_label": "Table2",
+      "pdf_page": 6,
+      "inspection": "Viewed full original page; complete diagram, all rows, axes, and captions"
+    },
+    {
+      "file": "figures/original-page-008-04.png",
+      "original_label": "Figure6",
+      "pdf_page": 8,
+      "inspection": "Viewed full original page; complete diagram, all rows, axes, and captions"
+    }
+  ],
+  "limitations": [
+    "No model execution",
+    "Training hyperparameters incompletely disclosed",
+    "Vision-scale comparison is not controlled experiment"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "paper_id": "b23f276af3c7",
+  "source_url": "https://arxiv.org/pdf/2404.14368v1",
+  "source_version": "2404.14368v1",
+  "source_sha256": "3ea94b407b400cebcfda7ccba32f78b576be2bcc2a999538afa462b99391b73a",
+  "verification_notes": [
+    "阅读全文1–16页与身份引用页；核对HLG/GLG及0.5B/7B版本",
+    "逐一查看原PDF3、10、12、15页，Figure2/5和Table2/3/6/7无截缺",
+    "核对RGBA四通道、5视觉token、三阶段可训参数步数及0.75打乱",
+    "明确IOPR定义/表趋势矛盾，不将0.97修正为准确率；表2任务标签歧义保留",
+    "Table3Rcom12.150并非最低，与RADM10.260对照；Graphist*内部数据版本分开",
+    "242交集与GPT4V120/Gemini240成功子集限制；未虚构人工表、超参、损失或运行模型"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "244376c2123a",
+  "catalogue_entry_id": "244376c2123a",
+  "family_slug": "qwen",
+  "title": "Qwen VLo: From \"Understanding\" the World to \"Depicting\" It",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://qwenlm.github.io/blog/qwen-vlo/",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Qwen VLo：统一视觉理解、图像生成与指令编辑"
+}

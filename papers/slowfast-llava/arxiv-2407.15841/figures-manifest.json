@@ -1,0 +1,107 @@
+{
+  "paper_id": "8d5b451aee7d",
+  "source_version": "2407.15841v1",
+  "source_pdf_sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2：SlowFast 双路输入",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2407.15841v1#page=4",
+      "source_version": "2407.15841v1",
+      "source_sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b",
+      "asset_sha256": "24708b0daa4a56e13e14c499905987f6ab3e7c1386acaa4f8979160bbf9b9a0b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          50,
+          50,
+          566,
+          269
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/open-ended-results.png",
+      "original_label": "Table 1：开放式视频问答",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2407.15841v1#page=6",
+      "source_version": "2407.15841v1",
+      "source_sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b",
+      "asset_sha256": "71ccc79708e846252365ebfa2330734ba724fabeadbcdba535725e9a6f0e150c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          50,
+          47,
+          566,
+          439
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/multiple-choice-results.png",
+      "original_label": "Table 2：选择式视频问答",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2407.15841v1#page=7",
+      "source_version": "2407.15841v1",
+      "source_sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b",
+      "asset_sha256": "4c7d52fe06ad5bd7f1f4d2d68108d283e79ffe14680bc9a96ea02a3bf443b826",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          50,
+          48,
+          566,
+          314
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/slow-ablation.png",
+      "original_label": "Figure 3 与 Table 4：Slow 分支与 token 预算消融",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2407.15841v1#page=8",
+      "source_version": "2407.15841v1",
+      "source_sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b",
+      "asset_sha256": "e1add663a4bcf6d5cd89519af1e3b8aa50970b8dfb9a8458f3497eab8b30e50c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          50,
+          49,
+          566,
+          307
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/prompt-ablation.png",
+      "original_label": "Table 7：提示设计消融",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2407.15841v1#page=10",
+      "source_version": "2407.15841v1",
+      "source_sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b",
+      "asset_sha256": "b91f6de69ff6ff70ed62736798bc7731fa6bb51b89a8672440bd16a9a025b15e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          50,
+          188,
+          566,
+          296
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

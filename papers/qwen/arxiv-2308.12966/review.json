@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "reference_pages_skipped": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "figures_visually_checked": [
+    4,
+    9,
+    19,
+    20
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Self-review, no external reviewer/model execution",
+    "No GPU hardware/count/time disclosed",
+    "Fixed resolution and compressed token budget",
+    "Chat scores lower on several traditional benchmarks",
+    "No comprehensive mechanism/data ablations or contamination audit"
+  ]
+}

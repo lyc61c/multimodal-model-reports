@@ -1,0 +1,14 @@
+{
+  "paper_id": "42a19fa4924f",
+  "catalogue_entry_id": "42a19fa4924f",
+  "family_slug": "minigpt",
+  "title": "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2304.10592v1",
+  "source_url": "https://arxiv.org/pdf/2304.10592v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MiniGPT-4：冻结视觉与语言组件，以线性接口和高质量描述实现视觉对话"
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "6aa52f4e3f6d",
+  "catalogue_entry_id": "6aa52f4e3f6d",
+  "family_slug": "chatrex",
+  "title": "ChatRex: Taming Multimodal LLM for Joint Perception and Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2411.18363v1",
+  "source_url": "https://arxiv.org/pdf/2411.18363v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "ChatRex：先产生候选框，再让语言模型选择对象并解释场景"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    12,
+    13
+  ],
+  "figures_visually_checked": [
+    3,
+    6,
+    7,
+    12
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Tokenlevelcompressiondifferenttimepairsperspatiallocation notglobalframe",
+    "Fixedmemorynotlosslesshistoricalreconstruction",
+    "Datasettrainedresultsdistinctfromofftheshelfno-training",
+    "GPUcomparison60vs100frames disclosed",
+    "Onlineprocessing not real-time latency; Figure6 seconds noted",
+    "Table11-13trainingreadtextnotselectedimage;noGPUtimeinferred"
+  ]
+}

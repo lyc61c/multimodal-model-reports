@@ -1,0 +1,87 @@
+{
+  "paper_id": "9700d0fb0a43",
+  "source_version": "2312.02310v1",
+  "source_pdf_sha256": "fda9f2d3d31a8f10e0749244fb3438eccd128f8bafc156b1bef4f7c768ef4079",
+  "assets": [
+    {
+      "asset_path": "figures/framework.png",
+      "original_label": "Figure 2：VaQuitA 总体架构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2312.02310v1#page=3",
+      "source_version": "2312.02310v1",
+      "source_sha256": "fda9f2d3d31a8f10e0749244fb3438eccd128f8bafc156b1bef4f7c768ef4079",
+      "asset_sha256": "df407aa6f96a2519b6a940436426417792598d75a4642690993364658472cf75",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          435
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/alignment.png",
+      "original_label": "Figure 3、4：问题相关采样与特征融合",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2312.02310v1#page=4",
+      "source_version": "2312.02310v1",
+      "source_sha256": "fda9f2d3d31a8f10e0749244fb3438eccd128f8bafc156b1bef4f7c768ef4079",
+      "asset_sha256": "28d70f7c0e8283cd71af206fd4279e87ad9caad0da73993069639ef378b15f54",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          375
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/qa-results.png",
+      "original_label": "Table 1：视频问答结果",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2312.02310v1#page=6",
+      "source_version": "2312.02310v1",
+      "source_sha256": "fda9f2d3d31a8f10e0749244fb3438eccd128f8bafc156b1bef4f7c768ef4079",
+      "asset_sha256": "e822b9570410cb5450f6d62aa99961544052b902b7948c06d82bfaf63d932338",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          250
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/ablations.png",
+      "original_label": "Table 2、Figure 6、7：模块和提示消融",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2312.02310v1#page=8",
+      "source_version": "2312.02310v1",
+      "source_sha256": "fda9f2d3d31a8f10e0749244fb3438eccd128f8bafc156b1bef4f7c768ef4079",
+      "asset_sha256": "c47c2ac9fba19bdc94d6a6a53c66096df4acce4c5a45c0a44bc74058ff366463",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          725
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "paper_id": "cecc6a20b4b8",
+  "source_url": "https://arxiv.org/pdf/2406.11816v1",
+  "source_version": "2406.11816v1",
+  "source_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
+  "verification_notes": [
+    "阅读主文第 1–10 页及补充第 15–19 页；区分 7B 实验、8B 升级和演示配置。",
+    "核验原文式 5；EOS 是帧末预测标签，不追加进上下文；低于阈值时排除 EOS。",
+    "核验 Figure 3–5 及 Table 1–3；Table 1 的 2.32 秒与 Table 3 的 2.25 秒分别保留。",
+    "核验数据教师只读标注时间线、主要 narration 实验不使用演示版改写、COIN 离线结果不是零样本。",
+    "核验单 A100 的吞吐实验条件和 LTA 中 AntGPT 更优，未把端到端最佳描述成全表最佳。",
+    "原文图表裁剪已视觉查看，图注与数据完整；结构检查不代表训练复现。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

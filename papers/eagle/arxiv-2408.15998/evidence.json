@@ -1,0 +1,42 @@
+{
+  "source_version": "2408.15998v1",
+  "claims": [
+    {
+      "claim": "通道拼接1024个视觉token，X4和X5编码器组合与候选DINOv2",
+      "pdf_pages": [
+        3,
+        4,
+        8
+      ]
+    },
+    {
+      "claim": "基础595K描述、934K指令及最终1.809M；OpenHermes行和总量不一致",
+      "pdf_pages": [
+        4,
+        8,
+        9
+      ]
+    },
+    {
+      "claim": "Pre-Alignment三阶段冻结配置及基础训练1epoch/batch256/128/LR1e-3/2e-5",
+      "pdf_pages": [
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "Table8单项成绩与PreAlignment非单调提升",
+      "pdf_pages": [
+        9
+      ]
+    },
+    {
+      "claim": "Table9 2.5M/7M控制配方及Llama3分数，OCR尺度与Table8不同",
+      "pdf_pages": [
+        10,
+        11
+      ]
+    }
+  ]
+}

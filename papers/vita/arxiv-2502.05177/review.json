@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 sections3–5 pages3–9, original Tables1–6 inspected; support1Mcontext distinguished from accuracy at1M.",
+    "Pixelshufflequartertokens retained despite prosewithouttokencompression; no unqualified uncompressedvisual claim.",
+    "Logits400GB→0.0004GB only wordheadmatrix, not totalGPUmemory or all attention; training selects all supervisedoutputpositions not just one.",
+    "Ringattention distributed fullcontext still quadratic arithmetic and finitehardware, infiniteinput rhetorical not literalcapacity.",
+    "Stage32K→16K→128K→1M with stage1modulefreezing and lateralltrain,4stagecounts/tokenbudgets exact; noLoRA orinterpolationtraining claim.",
+    "17Mabstract versus Table1atlas17.8Msourcepool mapping unresolved; nofiltering and public sources not proven contaminationfree.",
+    "Image1MregressionsMathVista50.3vs65.5 and MMVetexception57.4 retained; VideoMME128K256frames66.4 vs1M4096frames55.8.",
+    "20Btable includesPLlava34B; inconsistentLongVILAinternaldataflagsTables5/6 retained; baselineframehardwaredifferences and noalltaskSOTA conclusion."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "0f8cf70094a66f6eb503bbabe9f565b45e149c86e996bc0ac60c9d7ded9ef009",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

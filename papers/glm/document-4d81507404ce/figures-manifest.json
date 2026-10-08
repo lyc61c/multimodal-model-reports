@@ -1,0 +1,38 @@
+{
+  "paper_id": "4d81507404ce",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/dialog-titanic-original.png",
+      "original_label": "官方README样例：泰坦尼克号问答",
+      "source_url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/README.md",
+      "image_url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/examples/chat_example1.png",
+      "image_final_url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/examples/chat_example1.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "cfd9fa322e5a3fd92eb4331a7cda00c5d8e58236de6123a1026706429606fed6",
+      "asset_sha256": "e1497bb177a3ed1e2e88ded4995f71921da182365c6675185d81c8df5d8abe3a",
+      "width": 1476,
+      "height": 1545,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/dialog-taxi-original.png",
+      "original_label": "官方README样例：出租车熨衣服问答",
+      "source_url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/README.md",
+      "image_url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/examples/chat_example2.png",
+      "image_final_url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/examples/chat_example2.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "cfd9fa322e5a3fd92eb4331a7cda00c5d8e58236de6123a1026706429606fed6",
+      "asset_sha256": "944b06e91d2da150fb7ee5c1ed6a25384718cd03a828c2522844895b31d4398f",
+      "width": 1593,
+      "height": 1064,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

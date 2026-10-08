@@ -1,0 +1,15 @@
+{
+  "paper_id": "ca69d196c301",
+  "source_url": "https://arxiv.org/pdf/2406.15704v1",
+  "source_version": "2406.15704v1",
+  "source_sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a",
+  "verification_notes": [
+    "核对arXiv2406.15704v1第1—5页：清华+字节、ICML2024、Vicuna7B/13B默认13B、InstructBLIP/Whisperlargev2/BEATs冻结，2Hz视觉与50Hz音频，实际默认两级窗口区别结构三尺度泛述。",
+    "核对Eq2—7：C长度相等、查询按尺度专属其他共享、投影行向量方向整理、低分辨率cos双向对求和与总CE损失；不把因果特征mask冒充全系统在线流式。",
+    "核对4.3/AppendixA—D：1M且视频<300K、100+360h/600h/300h、附录MSVDQA、NExTQA训练但测试形式未见zero-shot；GPT题生成与答案字符串/ChatGPT判分协议。",
+    "核对Table2—5/9/13：49.6-24.7=24.9pp、两AVQA+31.6/+49.2pp、7B ASR与AVSSD反例、分支置零vs重训不同、spotlight独立变体与LRS2不是无声唇读。",
+    "核对rank32更新QKV+FFN/0.4%；未编造优化器LRbatch或默认lambda；基线160query与25秒默认简单150query差异说明，不冒充严格等token预算。",
+    "7张原PDF图表最终视觉检查，保留图注、所有表行和数据示例；没有重绘图或独立实验复现声称。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

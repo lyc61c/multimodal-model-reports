@@ -1,0 +1,14 @@
+{
+  "paper_id": "6ac4bd0f10cf",
+  "catalogue_entry_id": "6ac4bd0f10cf",
+  "family_slug": "pointllm",
+  "title": "PointLLM: Empowering Large Language Models to Understand Point Clouds",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2308.16911v1",
+  "source_url": "https://arxiv.org/pdf/2308.16911v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "PointLLM：三维点云与语言模型的对齐及评价"
+}

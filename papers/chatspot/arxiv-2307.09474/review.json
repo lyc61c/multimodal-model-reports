@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "figures_visually_checked": [
+    4,
+    5,
+    7,
+    10
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "real_source_title": true,
+    "table_columns_checked": true,
+    "original_eq1_separated_from_explanations": true,
+    "experimental_protocol_preserved": true
+  },
+  "limitations": [
+    "First-stage only-projector/freeze-most wording ambiguity preserved",
+    "64.5 in Table1 vs64.7 in Table3 preserved",
+    "Polygon/mask future support not mislabelled",
+    "No source code URL supplied in upstream"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 pp3-15, failures pp22-24 and annotation appendix p28; own Qwen2.5-VL7B tool system identified.",
+    "Checked code versus environment token masking, last-round exception for mathematics, greedy-code versus temperature1 text, and reward gates.",
+    "Flagged published GRPO objective's omitted policy-probability term rather than silently presenting standard clipped GRPO as this paper's exact formula.",
+    "Preserved declared500K versus explicitly itemized217K+unsized multi-round data, collected30K versus introduction10K and training/evaluation split ambiguity.",
+    "Preserved H800224-hour total versus RL1200-hour conflict, OCR GPT4o scale mismatch, Figure5 quantity answer mismatch and code-reward positive aggregate versus prose claim.",
+    "Source pages and final crops visually inspected; results author-reported, no execution/reproduction or complete sandbox isolation proof claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 6
+  },
+  "article_sha256": "aff9dd3710dac74166b5814a576435c2f4ec00a111428bc479520fc771e3c935",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

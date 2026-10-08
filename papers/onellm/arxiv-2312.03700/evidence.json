@@ -1,0 +1,15 @@
+{
+  "paper_id": "c5d0078138d7",
+  "source_url": "https://arxiv.org/pdf/2312.03700v1",
+  "source_version": "2312.03700v1",
+  "source_sha256": "94d971aeb9f8d4a6432ecc721ffd382459767f4bc9f831d86495b4271ecb4d35",
+  "verification_notes": [
+    "阅读v1第1–11页全部技术与附录、12–14页演示文本，核对八模态理解而非生成。",
+    "四张原页视觉核验Figure2、Table1–7、Table9–11图表完整。",
+    "核验CLIP冻结/LLaMA2-7B、三专家每八层88M、30×1024查询、软融合与仅保留查询、视频token平均。",
+    "附录point/IMU/fMRI形状存在不能直接复算处，未虚构可运行形状；损失仅作明确机制解释。",
+    "核验2006K数据、subj01 fMRI和合成深度/法线、分阶段recipe与全参LLM SFT，记录96K/1epoch口径不一致。",
+    "以表为准修正正文全超ChatBridge和全超CLIP概括；分清监督/零样本、消融/主表、分类GPT4判别，未执行模型。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

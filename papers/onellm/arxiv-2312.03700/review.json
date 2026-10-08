@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读v1第1–11页全部技术与附录、12–14页演示文本，核对八模态理解而非生成。",
+    "四张原页视觉核验Figure2、Table1–7、Table9–11图表完整。",
+    "核验CLIP冻结/LLaMA2-7B、三专家每八层88M、30×1024查询、软融合与仅保留查询、视频token平均。",
+    "附录point/IMU/fMRI形状存在不能直接复算处，未虚构可运行形状；损失仅作明确机制解释。",
+    "核验2006K数据、subj01 fMRI和合成深度/法线、分阶段recipe与全参LLM SFT，记录96K/1epoch口径不一致。",
+    "以表为准修正正文全超ChatBridge和全超CLIP概括；分清监督/零样本、消融/主表、分类GPT4判别，未执行模型。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "258df8f4e06449a32f2d8d6d5508f230617288d5c363d1f40de672e4a161d91a",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

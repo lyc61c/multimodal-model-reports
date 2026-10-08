@@ -1,0 +1,19 @@
+{
+  "paper_id": "cabdd815635d",
+  "catalogue_entry_id": "cabdd815635d",
+  "family_slug": "videollama",
+  "title": "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2306.02858v1",
+  "source_url": "https://arxiv.org/pdf/2306.02858v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Video-LLaMA：用双分支适配器连接视频、音频与语言模型",
+  "source_sha256": "9ab4f06ce8f41ac4956496283b6894d609421d0250d7d86be8722edbd234768f",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1982,
+  "figures_manifest": "figures-manifest.json"
+}

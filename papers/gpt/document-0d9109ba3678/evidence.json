@@ -1,0 +1,59 @@
+{
+  "paper_id": "0d9109ba3678",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://openai.com/index/gpt-6-astra/",
+  "source_sha256": "5ff36e32c873bf12c606024ab750e9a9e7ca1b21c0b00a7479f876303226584a",
+  "read_scope": "Primary release capability sections, benchmark table and footnotes read. Supplementary system-card PDF pages 1–10, 15–34, 36–40, 48–59, 109–114, 120 and relevant updated comparison material 132–136 checked; not a claim of reading all 175 pages.",
+  "supplemental_source": {
+    "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/gpt-6-astra.pdf",
+    "source_version": "official-system-card-2026-09-03",
+    "version_note": "Cover date 2026-09-03, changelog includes updates through 2026-09-29",
+    "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895"
+  },
+  "claims": [
+    {
+      "claim": "Visual grounding, computer use, CAD, OMR and long-context benchmark results",
+      "locations": "Primary release Computer Use, Professional, Long Context sections and full benchmark table with footnotes 3,5,7,17"
+    },
+    {
+      "claim": "Asynchronous clarification and cross-window notes plus historical search are runtime behavior, not a disclosed neural architecture",
+      "locations": "Primary release collaboration, career-website original image and long-context paragraphs"
+    },
+    {
+      "claim": "Limited data disclosure, RL-based reasoning and separately trained safety mechanisms",
+      "locations": "System card §2 PDF9; §10.2 PDF109–114"
+    },
+    {
+      "claim": "Image-input safe-completion numbers and Gray Swan attacks-at-k results",
+      "locations": "System card Table4 PDF16; Figure5 PDF20"
+    },
+    {
+      "claim": "CoT/full-context/action monitoring differs across conditions; gmean² is a detector metric",
+      "locations": "System card monitoring methods PDF48–59, Figure22 PDF52"
+    },
+    {
+      "claim": "HealthBench length correction and updated Astra score",
+      "locations": "System card §6.1/Table6 PDF21–22; changelog PDF5; primary release benchmark table"
+    },
+    {
+      "claim": "54,218 matched internal task continuations and severity-3+ event counts 34 versus73",
+      "locations": "System card internal deployment simulations PDF36–40"
+    },
+    {
+      "claim": "Monitoring intervention coverage differs by Chat Completions and stateless Responses interfaces",
+      "locations": "System card §10.2.3.1 PDF112–113"
+    }
+  ],
+  "source_inconsistencies": [
+    "Primary release HealthBench Professional length-adjusted Astra score63.4 versus updated supplementary system-card64.7; both source-specific values retained",
+    "Alignment tables in primary release and updated card use different configurations and comparisons; their numerical values were not merged",
+    "System-card cache version identifies the cover date; article explicitly discloses later changelog updates"
+  ],
+  "math_origin": [
+    "History-conditioned policy expression is a generic explanatory notation, not a source architecture or training formula",
+    "gmean²=TPR*TNR is the standard geometric-mean interpretation of the evaluation metric",
+    "HealthBench linear adjustment equation transcribes the card's stated coefficient and2,000-character reference",
+    "Independent-attempt probability expression is explicitly rejected as a direct derivation of correlated empirical Gray Swan results"
+  ],
+  "model_run": false
+}

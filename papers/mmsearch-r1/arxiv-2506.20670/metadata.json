@@ -1,0 +1,14 @@
+{
+  "paper_id": "314d5fc9e979",
+  "catalogue_entry_id": "314d5fc9e979",
+  "family_slug": "mmsearch-r1",
+  "title": "MMSearch-R1: Incentivizing LMMs to Search",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2506.20670v1",
+  "source_url": "https://arxiv.org/pdf/2506.20670v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "MMSearch-R1：让视觉语言模型学习何时搜索、搜索什么"
+}

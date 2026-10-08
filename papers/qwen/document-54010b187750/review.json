@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read official introduction/performance/architecture/comparison and API details plus representative documentary/structuredprompt/voice/codingdemos; rawofficialAPI snapshot retained.",
+    "Downloaded and visually inspected4actualofficialimageassets architecture/AV/audio/visual; no logo substitute.",
+    "DateconflictJanuary7header vsMarch2026citation/catalogue explicitly recorded.",
+    "FLEURSoriginalchart1-WER93.5 vsraw6.55WER/CER; UROchartaggregate differs tabledimensions; visualfigureGemini3Pro vsAV3.1Pro noted.",
+    "VideoMMEwithaudio83.7 distinctvisualwosub81.9; no blanketSOTA; trainingrecipe andARIAformula nondisclosure explicit.",
+    "No API invocation, model execution or independent reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "931aa8ebadbbb642d9c79cddb76a1ca868de57282ae5e37507813599277fc045",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

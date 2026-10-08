@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "figures_visually_checked": [
+    7,
+    10,
+    11,
+    13
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_verified": true,
+    "numeric_results_checked": true,
+    "pretrain_vs_vqa_freeze_checked": true,
+    "metric_pair_accuracy_checked": true,
+    "sequence_concat_checked": true
+  },
+  "limitations": [
+    "116M只描述冻结预训练，最终VQA语言训练约3B",
+    "原PDF未含其多处指向的补充超参",
+    "encoder仍需全部前向，不能称完整推理低成本",
+    "无视频/音频已验证能力"
+  ]
+}

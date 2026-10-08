@@ -1,0 +1,19 @@
+{
+  "paper_id": "aa49a3ceebeb",
+  "catalogue_entry_id": "aa49a3ceebeb",
+  "family_slug": "video-chatgpt",
+  "title": "Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2306.05424v1",
+  "source_url": "https://arxiv.org/pdf/2306.05424v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Video-ChatGPT：时空池化、视频指令数据与对话评价",
+  "source_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1696,
+  "figures_manifest": "figures-manifest.json"
+}

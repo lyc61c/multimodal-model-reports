@@ -1,0 +1,16 @@
+{
+  "paper_id": "d08b52bb40c6",
+  "source_url": "https://arxiv.org/pdf/2308.12038v1",
+  "source_version": "2308.12038v1",
+  "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
+  "verification_notes": [
+    "阅读主文 1–13 页、附录 19–22 页；区分 Chat/Paint 与各自 + 版本。",
+    "核验 Chat 与六语言模型 SFT 含翻译目标语言数据，只有预训练英文或基础 Paint 图文英文的特定阶段零样本。",
+    "核验原文式 1–4；跨语言表示近似为机制假设，并无新增距离损失；Paint 实际只更新跨注意力与 transblock。",
+    "核验前200K步分辨率正文384、附录256冲突；Table6/正文/附录D数据量和表注CFG2.5/正文八值搜索分别保留。",
+    "核验中文详细描述87.4低于VisualGLM87.8，英文FID不最高，聊天中文原生数据87.8低于88.0，不泛称全部领先。",
+    "核验中文Drawbench 174提示5评审，每模型四图以中文CLIP选一，偏好不是随机一次成功率。",
+    "原文架构、生成样例与表格已渲染查看；不以自绘或新生成图代替原论文素材。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

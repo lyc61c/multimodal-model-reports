@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 PDF pages 1–8 and appendix A–C on page 12; checked architecture, corpus comparisons, training cost and principal tables.",
+    "Visually inspected all four original page renders before selecting figure/table regions; preserve complete labels and captions.",
+    "Table 1 mixes VQA accuracy and CIDEr. Do not present its mixed raw average as a unified task accuracy.",
+    "Table 7 uses a separate evaluation protocol. Main Table 5 has no token compression; 144-token setting is an ablation.",
+    "Table 5 detailed VILA-13B LLaVA-Bench value 73.0 differs from Figure 1 overview 72.8; used detailed table and explicitly recorded difference.",
+    "Appendix B says 128 eight-GPU nodes, not 128 GPUs. Reported about 41k GPU hours; prospective optimizations are not measured speedups.",
+    "Generic projector, cosine and NLL notation explicitly identified as explanatory; Chamfer implementation and undisclosed learning rates not invented.",
+    "Preserved POPE regression and slight 7B text capability gap; distinguish extra ShareGPT4V variant and training-image-visible benchmarks."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "9c28d1242e216a88b6bea698f8617d281b166e652cde43ca5b13207687d538d0",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

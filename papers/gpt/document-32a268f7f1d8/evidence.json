@@ -1,0 +1,34 @@
+{
+  "source_url": "https://openai.com/index/gpt-4-1/",
+  "source_version": "official-release-2026-10-08",
+  "source_sha256": "c6bccc9b75b39a44b72fa4e51420db79a6e850c107d4929e2d77b5144778dbe4",
+  "read_scope": "完整官方发布正文、附录各评测表及脚注；网页导航与页脚不作为2025年模型事实。",
+  "claims": [
+    {
+      "location": "Long Context及附录",
+      "claim": "1M上下文；MRCR 2needle 128K 57.2/47.2/36.6、1M 46.3/33.3/12.0；Graphwalks bfs >128K 19/15/2.9。"
+    },
+    {
+      "location": "Vision及附录",
+      "claim": "MMMU74.8/72.7/55.4；MathVista72.2/73.1/56.2；长视频无字幕72.0。"
+    },
+    {
+      "location": "Coding及附录",
+      "claim": "SWE54.6，23/500排除后保守52.1；Aider diff52.9/31.6/6.2，whole51.6/34.7/9.8，不混用。"
+    },
+    {
+      "location": "Instruction及脚注3",
+      "claim": "IFEval87.4/84.1/74.5；MultiChallenge38.3与o3-mini裁判46.2属评分协议变化。"
+    }
+  ],
+  "source_inconsistencies": [
+    "正文SWE相对GPT4.5提升26.6，与附录GPT4.5=38.0不一致，正文明确保留冲突。"
+  ],
+  "undisclosed": [
+    "模型参数/结构",
+    "视觉token与视频编码",
+    "训练数据量与分布",
+    "优化与后训练配方"
+  ],
+  "model_execution": "not_run"
+}

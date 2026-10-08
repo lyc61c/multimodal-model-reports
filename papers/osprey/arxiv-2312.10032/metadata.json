@@ -1,0 +1,14 @@
+{
+  "paper_id": "7dd657f0b348",
+  "catalogue_entry_id": "7dd657f0b348",
+  "family_slug": "osprey",
+  "title": "Osprey: Pixel Understanding with Visual Instruction Tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2312.10032v1",
+  "source_url": "https://arxiv.org/pdf/2312.10032v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Osprey：用掩码区域与多尺度视觉特征实现像素级语义理解"
+}

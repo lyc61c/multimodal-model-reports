@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read entire official2026-03-18 MiMo-V2-Omni release page including all5 demos and future roadmap; unified encoders/backbone versus external OpenClaw action execution distinguished.",
+    "Read cached original inline JavaScript benchModels/perceptionData/agenticData/codeData arrays; all12 task values and model key mappings verified directly, GDPVal Elo preserved.",
+    "Original graphs are dynamic HTML/CSS with no standalone publisher images. Tabbit stable launcher diagnose exited1 without output; root confirmed repeated routing failure and authorized original-page/HTML links instead. Static source graphics remain unavailable, no visual screenshot inspection claimed.",
+    "Source page assets and image inventory checked: only logos, no original chart raster/SVG/PDF link in this snapshot. No logo or redraw misrepresented as original technical figure.",
+    "Explicitly reported MMMU/CharXiv/VideoMME and OmniGAIA weaknesses, SWE below all displayed peers, task-specific wins and undisclosed video subtitles/frame budget.",
+    "7-hour single-pass audio and over10-hour statements are official claims without independent listening or degradation curve; driving text not evidence of executed vehicle control; video creation code is not native media-token output.",
+    "No undisclosed parameter count, architecture internals, training recipe or no-modality-tax causal ablation invented; no model/application run performed.",
+    "Pre-publication link check: removed three links to ignored local HTML caches; retained corresponding official chart anchors. No numerical, mathematical, or model-description claims changed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 0
+  },
+  "article_sha256": "037900fcc089598e788ef4c804c7a07ddf545f18ae34082d431e95751de6dda3",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

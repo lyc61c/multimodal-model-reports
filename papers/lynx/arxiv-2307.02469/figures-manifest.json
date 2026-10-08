@@ -1,0 +1,67 @@
+{
+  "paper_id": "13c77d6bc5ad",
+  "source_version": "2307.02469v1",
+  "source_pdf_sha256": "d65173b52d428e4ab6e7b9bb691c3685e0ab7354d363258ea5b938e10d2967d1",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-004-01.png",
+      "original_label": "Figure 2 (PDF p.4)",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2307.02469v1#page=4",
+      "source_version": "2307.02469v1",
+      "source_sha256": "d65173b52d428e4ab6e7b9bb691c3685e0ab7354d363258ea5b938e10d2967d1",
+      "asset_sha256": "b381e72a2bb788f8173a4d93900810d87fd6ac4cb0a26c69b4b45218086814c5",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-006-02.png",
+      "original_label": "Figure 3 and Table 1 (PDF p.6)",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2307.02469v1#page=6",
+      "source_version": "2307.02469v1",
+      "source_sha256": "d65173b52d428e4ab6e7b9bb691c3685e0ab7354d363258ea5b938e10d2967d1",
+      "asset_sha256": "23d6a7a3c629ffbce934abd3ea39378d7ae39e264d7f2ab723b534388bbfefd7",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-009-03.png",
+      "original_label": "Table 3 and Figure 7 (PDF p.9)",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2307.02469v1#page=9",
+      "source_version": "2307.02469v1",
+      "source_sha256": "d65173b52d428e4ab6e7b9bb691c3685e0ab7354d363258ea5b938e10d2967d1",
+      "asset_sha256": "15f9e8fb930098e95706c0a72c1839178bf7d70ff9625b95d056cca6c9a42aee",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-028-04.png",
+      "original_label": "Figure 12 (PDF p.28)",
+      "pdf_page": 28,
+      "source_url": "https://arxiv.org/pdf/2307.02469v1#page=28",
+      "source_version": "2307.02469v1",
+      "source_sha256": "d65173b52d428e4ab6e7b9bb691c3685e0ab7354d363258ea5b938e10d2967d1",
+      "asset_sha256": "568e4538c1a6c143e01319937d97647e256b37fbab1a4e9a74ab9064789fab74",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 145,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

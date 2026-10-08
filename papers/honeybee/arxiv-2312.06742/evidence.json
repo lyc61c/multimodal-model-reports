@@ -1,0 +1,45 @@
+{
+  "source_version": "2312.06742v1",
+  "claims": [
+    {
+      "claim": "C six ResNet blocks/pool; D deformable eq2 with visual pooled Q and uniform reference init",
+      "pdf_pages": [
+        4,
+        12,
+        13
+      ]
+    },
+    {
+      "claim": "200M caption source pool not unique SFT count; Table12 sampling and Table13 templates",
+      "pdf_pages": [
+        5,
+        13,
+        14,
+        16
+      ]
+    },
+    {
+      "claim": "Two-stage freeze/full-LLM; Table11 hyperparameters; eight A100 except multi-node long PT",
+      "pdf_pages": [
+        4,
+        6,
+        13
+      ]
+    },
+    {
+      "claim": "Tables4/5 ablations and Table6/7 benchmark/time values",
+      "pdf_pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "ScienceQA trained in mixture; generalist not zero-shot; minor Table6 vs14 differences",
+      "pdf_pages": [
+        5,
+        16,
+        17
+      ]
+    }
+  ]
+}

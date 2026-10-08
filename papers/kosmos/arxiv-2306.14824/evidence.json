@@ -1,0 +1,15 @@
+{
+  "paper_id": "53cf10e9418a",
+  "source_url": "https://arxiv.org/pdf/2306.14824v1",
+  "source_version": "2306.14824v1",
+  "source_sha256": "0f0430dc38b8662bb1fb9f2f52134b4b3f9f17ceb811c9261f381ce3b18dc5b2",
+  "verification_notes": [
+    "Read all methods/evaluations pages1-11 and appendix hyperparameters/templates page14 plus examples15-20.",
+    "Viewed full original pages4,7,8,9 Figure3/Table1,Figure4,Tables2/3,Figure5/Table4.",
+    "Checked GRIT automatic spaCy/GLIP confidence0.65 and exact image/span/box counts, location32x32 two-corner tokens,64 embeddings.",
+    "Verified all parameters updated,1.6B trainable,60K25Btoken419K batch256V100 vs10K instruction LR1e-5.",
+    "Grounding recall vs expression accuracy and supervised vs zero-shot baselines separated; VQA/CB declines and SLR rerank higher included.",
+    "Formula is explanatory rendering of stated next-token objective; no invented box/mask loss or component ablation; no model reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

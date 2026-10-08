@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文正文1–10页及身份引用；七节限定v1",
+    "实际查看原PDF4/6/7/8，Figure2–5/Table1–4完整无截缺",
+    "Eq1–3软路由基于模态类别而非语义MoE；共享降维和6层CLS核对",
+    "指出Eq4/5最小化与正log符号不一致，Eq6维度下标排版错，不照搬错误公式",
+    "核对20/40/15epoch、AdamW9e-3、tau10/5、瓶颈8/128；未补warmup",
+    "主表7B89.41与Table390.50差异记录；消融累积与单步增益区分",
+    "1.4h是8A100，33.9对36.8约7.9%非40%，13B55.9更高；checkpoint不等完整模型",
+    "人工静态检查Figure5(d)从1循环会把1打印为素数；仅作者来源和代码逻辑核验，未运行模型"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "add98301b49e4e4e4367967707b8779553de7c3ed2fce44fda778de67e2e300a",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

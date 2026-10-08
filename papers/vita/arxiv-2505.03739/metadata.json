@@ -1,0 +1,19 @@
+{
+  "paper_id": "69f7e479479c",
+  "catalogue_entry_id": "69f7e479479c",
+  "family_slug": "vita",
+  "title": "VITA-Audio: Fast Interleaved Cross-Modal Token Generation for Efficient Large Speech-Language Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2505.03739v1",
+  "source_url": "https://arxiv.org/pdf/2505.03739v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VITA-Audio：用跨模态多 token 预测加速流式语音",
+  "source_sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1918,
+  "figures_manifest": "figures-manifest.json"
+}

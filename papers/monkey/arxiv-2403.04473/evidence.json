@@ -1,0 +1,42 @@
+{
+  "source_url": "https://arxiv.org/pdf/2403.04473v1",
+  "source_version": "2403.04473v1",
+  "source_sha256": "00950dba0cc29e79e8b07b7659a7a06ab32727a8a6f3269baf5b031c2124d1d6",
+  "read_scope": "PDF正文1–9完整阅读，10–11参考文献确认数据与模型来源。",
+  "claims": [
+    {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "claim": "QwenVLBigG/LLM；448window/14patch1024；SWA冻结原层；image256queries；tokenr512/1024为数量；GaussianA zeroB；独特性最大cos排除自身排序再以全部KV重采样。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        8,
+        9
+      ],
+      "claim": "409.1K对话/2.1MQA；结构化续训10%旧+未知数量新增；Rico15K独立点击续训；AdamW超参12A800days；NLL解释无boxloss。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "claim": "Table3包含式准确率与Table4ANLS/F1/relaxed不同；OCRBench561/558；定位不保证正确；带位置部分退化；SWA/resampler/排序消融。"
+    }
+  ],
+  "source_inconsistencies": [
+    "正文1344误1334、59.5显示与1373/2304约59.6",
+    "r称ratio实际remainingnumber",
+    "坐标x/Hr宽高符号歧义",
+    "Eq2当前token输入符号不清楚，按standard y<t解释",
+    "摘要KIE平均2.8与比较来源未明确，正文不用不可核对汇总"
+  ],
+  "model_execution": "not_run"
+}

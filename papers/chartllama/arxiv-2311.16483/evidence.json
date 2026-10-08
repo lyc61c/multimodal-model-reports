@@ -1,0 +1,15 @@
+{
+  "source_version": "2311.16483v1",
+  "source_url": "https://arxiv.org/pdf/2311.16483v1",
+  "read_scope": "Full 19-page PDF, main text and Appendices A–H",
+  "facts": [
+    {"claim": "11K figures/160K instructions/10 chart types/7 tasks", "location": "Table 1, PDF page 3"},
+    {"claim": "Three-stage GPT-4 tabular/code/instruction synthesis", "location": "Section 3, Figure 3, PDF pages 4–5"},
+    {"claim": "LLaVA-1.5 architecture and LoRA, no precise final hyperparameter table", "location": "Section 4.1, Appendix A–B, PDF pages 6,11–12"},
+    {"claim": "Basic filtering checks formatting and executable plotting scripts", "location": "Appendix E, PDF pages 12–13"},
+    {"claim": "Chart-to-text BLEU model uses downstream train split, unlike claimed ChartQA zero-shot", "location": "Section 4.2–4.3, PDF pages 6–7"},
+    {"claim": "Figure 6 29/19/17 mean is 21.666, standard rounding 21.7 vs displayed 21.6", "location": "Figure 6, PDF page 11"},
+    {"claim": "Traditional/new task results and prompt ablation", "location": "Tables 2–4 page 7; Table 6 page 11"}
+  ],
+  "math": "No original new numbered formulas; conditional generation, renderer inverse-task relation, CE and LoRA standard definitions marked explanatory."
+}

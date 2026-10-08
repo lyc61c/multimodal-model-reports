@@ -1,0 +1,14 @@
+{
+  "paper_id": "2ea7273632dc",
+  "catalogue_entry_id": "2ea7273632dc",
+  "family_slug": "qwen",
+  "title": "Qwen3.8-Omni-Flash: Omni Senses. Agentic Delivery.",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Qwen3.8-Omni-Flash：从视听理解到工具执行与实时交互"
+}

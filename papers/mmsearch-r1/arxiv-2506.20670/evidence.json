@@ -1,0 +1,54 @@
+{
+  "source_version": "2506.20670v1",
+  "claims": [
+    {
+      "claim": "GRPO multi-turn tools and reward definition",
+      "pdf_pages": [
+        3,
+        4,
+        17
+      ]
+    },
+    {
+      "claim": "5000 RL samples with 3400 required and 1600 free",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "main 54.6 Acc / 67.1 SR, caption SR call normalization",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "policy 32 H100 vs summarizer 64 H100, learning rate 2e-6",
+      "pdf_pages": [
+        6,
+        22
+      ]
+    },
+    {
+      "claim": "main max2 searches versus appendix max3 inconsistent",
+      "pdf_pages": [
+        6,
+        22
+      ]
+    },
+    {
+      "claim": "reward ablation subset and general visual ability",
+      "pdf_pages": [
+        23,
+        24
+      ]
+    },
+    {
+      "claim": "tool failure rates and reward limitations",
+      "pdf_pages": [
+        24,
+        25
+      ]
+    }
+  ]
+}

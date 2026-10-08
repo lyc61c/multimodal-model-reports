@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read original main pages 1-13, experimental appendices 22-23 and data/prompts/case sections 24-32; checked actual paper identity.",
+    "Visually inspected PDF pages 4,6,9,28; complete Figure 2, Figure 3/Table 1, Table 3/Figure 7, Figure 12.",
+    "Verified frozen LLM adapter architecture 4096-2048-4096, EVA/resampler 32 tokens and stage2 vision freeze statement.",
+    "Checked Table 5 optimization and device settings; batch/training time/frame sampling not fabricated.",
+    "Checked Table 9 available dataset sizes versus names and sampling weights; GPT4 prompt paraphrase role.",
+    "Distinguished 450 total Open-VQA, 302 image/148 video denominators, Table4 109 versus Table2 108 discrepancy.",
+    "Checked InstructBLIP superior OCR/color/action and MME normalized scores/weak cognition; description-first exceptions noted.",
+    "GPT4-human consistency limited to 100 samples; no model reproduction or broad architecture theorem claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "1bf2b37eb29d4cf8ea40ca37bf873bd956b49392e78ff929e2e570584c13e2eb",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

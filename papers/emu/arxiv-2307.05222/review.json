@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "figures_visually_checked": [
+    4,
+    6,
+    7,
+    8
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Vision LR discrepancy retained",
+    "N visual tokens not invented",
+    "Starred zero-shot includes text-only demonstrations",
+    "FID inferior to SDv1.5",
+    "Source SFT sample pool and actual sampled amounts distinguished"
+  ]
+}

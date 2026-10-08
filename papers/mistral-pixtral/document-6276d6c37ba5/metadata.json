@@ -1,0 +1,19 @@
+{
+  "paper_id": "6276d6c37ba5",
+  "catalogue_entry_id": "6276d6c37ba5",
+  "family_slug": "mistral-pixtral",
+  "title": "Introducing Mistral 3",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://mistral.ai/news/mistral-3",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Mistral 3：稀疏大模型与端侧多模态模型的联合发布",
+  "source_sha256": "7a896d60ba5a28372a56dca006fb53cc88f762ec29217956fd69d7d9fc7befb5",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2430,
+  "figures_manifest": "figures-manifest.json"
+}

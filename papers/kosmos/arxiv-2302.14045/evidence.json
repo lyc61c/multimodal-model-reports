@@ -1,0 +1,44 @@
+{
+  "source_version": "2302.14045v1",
+  "claims": [
+    {
+      "claim": "1.6B total1.3Blanguage,24layers2048/8192/32heads,64softtokens,2048context",
+      "pdf_pages": [
+        7,
+        23
+      ]
+    },
+    {
+      "claim": "CLIPfreezeexceptlast;360B300K1.2Mbatch;AdamWbodyAdamtable",
+      "pdf_pages": [
+        7,
+        23
+      ]
+    },
+    {
+      "claim": "71Minterleavedfrom2B,5images,filter64pixels;languageinstruction68478+54K",
+      "pdf_pages": [
+        7,
+        24
+      ]
+    },
+    {
+      "claim": "Raven50sixchoices22%vs26%;SSTaccuracyHatefulAUC;WebSRCimagesplus extractedtext",
+      "pdf_pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "claim": "SFTtransfersbutCOCOdrops87.6to84.7;languageavgs;visioncommonsense textonly",
+      "pdf_pages": [
+        16,
+        17
+      ]
+    }
+  ]
+}

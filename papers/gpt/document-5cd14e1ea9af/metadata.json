@@ -1,0 +1,14 @@
+{
+  "paper_id": "5cd14e1ea9af",
+  "catalogue_entry_id": "5cd14e1ea9af",
+  "family_slug": "gpt",
+  "title": "GPT-4V(ision) System Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "GPT-4V 系统卡：图像能力与部署安全评估"
+}

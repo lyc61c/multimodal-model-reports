@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文正文1–10及附录14–25，外部工具智能体而非原生图像mask生成",
+    "实际检视PDF3/5/8/9，Figure2与Table2/4/5/6/7完整",
+    "助手调用和回答token计损失；工具返回作条件，不声称梯度共同训练外部专家",
+    "语言版GPT4读caption框类别来构造数据，不写成逐张视觉标注；81K定量与完整demo区分",
+    "未给lr/epoch/freeze/optimizer等不套LLaVA通用超参；80GB服务仅7B声明",
+    "Table4 Fly COCO80.4低于81.2；工具仅测试SEED51.54高于44.45，避免全面优越口号",
+    "专项44题相对评分非调用成功率，OCR48.8<MMREACT77.3；MMVet7Bmath略降",
+    "VisIT截至2023-09-27且胜率对人工reference非对LLaVA；模型配对次数不同",
+    "附录CIDEr31<123.5与CLIP得分分开；假阳性90/20实例和41/12图像是100图实验计数"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "513ec41bef7765df64e168fab0149754dc998ffb90a5caa2048230d66b76d12a",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

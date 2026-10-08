@@ -1,0 +1,16 @@
+{
+  "paper_id": "0e50bfd7b81c",
+  "source_url": "https://arxiv.org/pdf/2406.08487v1",
+  "source_version": "2406.08487v1",
+  "source_sha256": "69526d66cffc4ef04c5a78aa62fa97980cb8bb2c0b2d3073fbc8fa18c306bde1",
+  "verification_notes": [
+    "Read v1 methodology, data, experiments and training appendix; rendered and inspected Figure 2/3 and Tables 1–4 crops.",
+    "Global adapter MoE distinguished from sparse LLM MoE; qformer is generic learned-query transformer, not BLIP-2 Q-Former initialization.",
+    "Cosine naming versus unnormalized dot-product equation disclosed; selection threshold is cumulative probability rather than fixed top-k or token fraction.",
+    "Bilinear model is illustrative; power-method convergence needs nonzero leading component and spectral separation; no universal neural-network convergence claimed.",
+    "SMR figure and appendix DVQA/ChartQA counts differ; dataset source sizes not asserted as exact realized mixture; MATH-Vision training/evaluation leakage assertion attributed to authors.",
+    "Table 3 final POPE 84.9 conflicts with Table 2 86.0; results labeled by table, no silent reconciliation.",
+    "Science/math gains and regressions versus closed models preserved; LLaVA Bench ratio and POPE F1 not called accuracy; three-stage added training cost acknowledged."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

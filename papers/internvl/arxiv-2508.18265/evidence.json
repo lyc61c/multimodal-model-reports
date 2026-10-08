@@ -1,0 +1,33 @@
+{
+  "source_id": "3d5274c82d6d",
+  "source_version": "2508.18265v1",
+  "read_scope": "Full technical pages1-24 architecture, Eqs1-9, Tables1-18; remaining10 pages references",
+  "claims": [
+    {
+      "topic": "architecture",
+      "source": "2.1 Table1 Figure2",
+      "checks": "Qwen3/GPTOSS initializations exacttabletotals;MoE Aactive notstorage;patch means448tile;Flash256/64 doesnotreduceViT1024input"
+    },
+    {
+      "topic": "math",
+      "source": "2.2-2.3 Eqs1-9",
+      "checks": "textresponsemaskedNTP/square averaging;MPOsumcoeffundisclosed;GSPO positive surrogate maximize geometricmeanratios no referenceKL;ViCO teacherKL direction andsameimagecompression;routerhistoricalpercentilebalancednotconstant"
+    },
+    {
+      "topic": "data_training",
+      "source": "2.2-2.5 Figure3",
+      "checks": "116M250B/56M130B/PT/SFT32K;MMPR200Kpairs70Kquestions;PTallparams,ViCOallstudent/routeronly;no LR/batchinvented;TTSBoNnondefault"
+    },
+    {
+      "topic": "results",
+      "source": "Tables2-18 Figure1",
+      "checks": "Table2general74.1 versus overallFigure172.6;Table3sevenoverall66.9vsTable2eight67.1;GSPOepisodes/GPUhours;GUIgroundingnotonlineOSWorld;embodiedQA notrobotcontrol;Table18throughputnotlatency4.05fixed89638B;Flashnotexactlossless"
+    }
+  ],
+  "source_inconsistencies": [
+    "GPT5 MMMU84.2 Table2 versus81.8 Table3",
+    "largeMoE called235B inTable17 versus total240.7B Table1",
+    "GSPO Eq5 named loss but sign is maximization objective"
+  ],
+  "model_execution": "not_run"
+}

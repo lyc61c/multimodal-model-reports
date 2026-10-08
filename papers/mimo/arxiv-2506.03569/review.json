@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read original main technical body pages 4-20 and appendices 27-32; verified v1 and Xiaomi collective authorship.",
+    "Visually inspected full original pages 6,11,13,14 with Figures 2-4 and Tables 2-3; headers and bottom rows intact.",
+    "Checked architecture Table4, 36-layer MiMo versus Qwen backbone and four-stage trainable components/token budgets.",
+    "Recorded formula1 missing explicit policy-likelihood terms; policy-gradient explanation is editorial clarification rather than claimed source equation/code.",
+    "Checked verifiable reward types, model-ranked RLHF preferences, reward normalization and unreported GRPO batch/group hyperparameters.",
+    "Checked no-subtitle VideoMME2fps/256frames/16384 budget and image cap4096*28*28/32768 output.",
+    "Checked SFT-to-RL regressions in VideoMMMU, OCRBench, ChartQA, MathVista and DynaMath and larger proprietary model advantages.",
+    "Distinguished OSWorldG no_refusal grounding from full agent task completion; intro54.7/table56.1 and Figure4 WebSRC95.4/table95.3 conflicts retained.",
+    "Elo is GPT4o-judged internal preference; Figure7 pure-text Avg@32 only; no model run or independent reproduction claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "3fdf0663cd22983ba87bb0f9d8659c431e4b9f05bbf075e6e164fd8d7b7a65db",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

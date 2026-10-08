@@ -1,0 +1,87 @@
+{
+  "paper_id": "a0d99f32668c",
+  "source_version": "2312.00784v1",
+  "source_pdf_sha256": "0e4c5476abb36bdcfe02bcb1693e66338f20c10857f500507f2b4099596c23e4",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2：多层 CLIP 特征架构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2312.00784v1#page=3",
+      "source_version": "2312.00784v1",
+      "source_sha256": "0e4c5476abb36bdcfe02bcb1693e66338f20c10857f500507f2b4099596c23e4",
+      "asset_sha256": "0ff213d47557299863824fe48b8c57ad0a836223f26ba0e9b71584632826de35",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          295,
+          260
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/visual-prompts.png",
+      "original_label": "Figure 3：八种视觉提示",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2312.00784v1#page=4",
+      "source_version": "2312.00784v1",
+      "source_sha256": "0e4c5476abb36bdcfe02bcb1693e66338f20c10857f500507f2b4099596c23e4",
+      "asset_sha256": "3e67efc8af52ac0b4d200edb03f3a096456f83cf020979b789a73e8b91389869",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          295,
+          215
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/prompt-examples.png",
+      "original_label": "Figures 6–8 与 Table 4：提示理解示例及特征消融",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2312.00784v1#page=7",
+      "source_version": "2312.00784v1",
+      "source_sha256": "0e4c5476abb36bdcfe02bcb1693e66338f20c10857f500507f2b4099596c23e4",
+      "asset_sha256": "25ae0e39aa895fe8e3bf61bb9a6a4d56fe1147ce34998dc5b0dadf2a4da981f3",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          565,
+          438
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/vipbench-results.png",
+      "original_label": "Table 5：ViP-Bench",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2312.00784v1#page=8",
+      "source_version": "2312.00784v1",
+      "source_sha256": "0e4c5476abb36bdcfe02bcb1693e66338f20c10857f500507f2b4099596c23e4",
+      "asset_sha256": "d81e36abd12d923f13ee94c8ee3b54634ff1369d22374410c63129a524687502",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          565,
+          335
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

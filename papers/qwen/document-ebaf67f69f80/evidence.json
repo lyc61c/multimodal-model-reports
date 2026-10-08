@@ -1,0 +1,28 @@
+{
+  "source_url": "https://qwen.ai/blog?id=qwen3.8",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "52991dde8e6dae7867c89656d4b31728a7d1342c34a6343c5521d01e238946c9",
+  "read_scope": "完整发布技术/应用/长任务/多模态/两张完整基准表和全部脚注/API默认与结论，三真实原图",
+  "claims": [
+    {
+      "location": "Introduction/Work",
+      "claim": "2.4T95B，环境/奖励/在线balancer，参数与计算口径分开"
+    },
+    {
+      "location": "图1 score vs env",
+      "claim": "4000env0.725最佳、后点0.719/0.689，横轴env非steps不单调"
+    },
+    {
+      "location": "两基准表与脚注",
+      "claim": "CI无/有顺序，pass3/均值、binary/partial、memory/search配置、异质harness"
+    },
+    {
+      "location": "长任务case",
+      "claim": "单次研究AIME49.58→52.29提高2.71pp；chip是仿真布局非流片；余额非净利"
+    }
+  ],
+  "source_inconsistencies": [
+    "图1 caption与正文概述steady consistent gains，但真实曲线含多个下降点；正文按图披露，不称严格单调"
+  ],
+  "model_execution": "not_run"
+}

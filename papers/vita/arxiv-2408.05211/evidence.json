@@ -1,0 +1,17 @@
+{
+  "paper_id": "118dd38c7a7a",
+  "source_url": "https://arxiv.org/pdf/2408.05211v1",
+  "source_version": "2408.05211v1",
+  "source_sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675",
+  "verification_notes": [
+    "Read original v1 sections3–5 pages4–9; Figures2/3/5 and Tables1/3/4 rendered and inspected.",
+    "VITAinitial understanding plus external TTS, not later VITA1.5 or native audio generation; duplex two modelinstances role swapping stated.",
+    "State2 noisytraining uses LLMgenerated target to avoid degradation, while inference terminatesstate2; no simplistic EOSonlytraining claim.",
+    "Visual448256tokens; audio2seconds25tokens,341Mencoder24Transformerlayers; original video4–16 sampling and no perframe dynamic tiling retained.",
+    "Table1 original4.9603M packed2.7499M records vs5.1094Maudio5.8577Mtextquestions distinct, not uniqueimages;474Kresponse-derivednoise caveat.",
+    "Alignmentvisual connectoronly versus audioencoderandconnector; instruction encodersfrozenLLMconnectorslearned; no fabricated optimizationhyperparameters.",
+    "LanguageTable3 separately tests trainedMixtral; ASRCER/WERlowerbetter and no comparativeASRranking; Figure5 rawmetrics distinctfromnormalizedbars.",
+    "Video57.6 not aheadLlavaNextVideo63; no full interactive latency/errorrates provided; Silero unsupported6000languagesstatement not repeated."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,87 @@
+{
+  "paper_id": "044099a491e0",
+  "source_version": "2312.11805v1",
+  "source_pdf_sha256": "f3c5b175d26159b92891b32380515ec1036f4ffe2862e19d7277fd165e0d9663",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-004-01.png",
+      "original_label": "Figure 2: native interleaved multimodal input and text/image output",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2312.11805v1#page=4",
+      "source_version": "2312.11805v1",
+      "source_sha256": "f3c5b175d26159b92891b32380515ec1036f4ffe2862e19d7277fd165e0d9663",
+      "asset_sha256": "99df36bfbefc91e3833a158f4067fcfb04d4e97497fe860105da331b0bd1cbfb",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          60,
+          82,
+          538,
+          324
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-012-02.png",
+      "original_label": "Table 7: image understanding including pass@1 and Maj1@32 MMMU",
+      "pdf_page": 12,
+      "source_url": "https://arxiv.org/pdf/2312.11805v1#page=12",
+      "source_version": "2312.11805v1",
+      "source_sha256": "f3c5b175d26159b92891b32380515ec1036f4ffe2862e19d7277fd165e0d9663",
+      "asset_sha256": "7d4c483bdf4770d8ede1dba0c879b8a2e482ebb9d8ea81aad33d26398fe86a8a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          60,
+          390,
+          538,
+          744
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-017-03.png",
+      "original_label": "Table 11: Pro and Nano-1 speech recognition and translation",
+      "pdf_page": 17,
+      "source_url": "https://arxiv.org/pdf/2312.11805v1#page=17",
+      "source_version": "2312.11805v1",
+      "source_sha256": "f3c5b175d26159b92891b32380515ec1036f4ffe2862e19d7277fd165e0d9663",
+      "asset_sha256": "3f16d4b00427671898e3a8d47831eab66232b55bcd81d614523c7dac6ebbef83",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          60,
+          365,
+          538,
+          587
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-046-04.png",
+      "original_label": "Figure 7: uncertainty-routed CoT versus ordinary CoT on MMLU",
+      "pdf_page": 46,
+      "source_url": "https://arxiv.org/pdf/2312.11805v1#page=46",
+      "source_version": "2312.11805v1",
+      "source_sha256": "f3c5b175d26159b92891b32380515ec1036f4ffe2862e19d7277fd165e0d9663",
+      "asset_sha256": "53268d30be3eaba329ae887af6a67ba2d6ac7bb854bab5c0c7d90fc8884102b4",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          60,
+          430,
+          538,
+          710
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

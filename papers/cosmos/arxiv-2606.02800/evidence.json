@@ -1,0 +1,146 @@
+{
+  "source_version": "2606.02800v1",
+  "source_url": "https://arxiv.org/pdf/2606.02800v1",
+  "source_sha256": "710be95169d6cdbb463936a0d200b2ea4130d127e2ca34abc0ce45e2b1e9c737",
+  "claims": [
+    {
+      "claim": "Publication version/date, variants and release boundary",
+      "pdf_pages": [
+        1,
+        5,
+        6,
+        14
+      ]
+    },
+    {
+      "claim": "ViT and frozen VAEs, compression and dense twin-tower MoT rather than sparse MoE",
+      "pdf_pages": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        14
+      ]
+    },
+    {
+      "claim": "Non-symmetric AR/DM attention, flow velocity sign and masking, action loss scale",
+      "pdf_pages": [
+        11,
+        12,
+        27,
+        30
+      ]
+    },
+    {
+      "claim": "TPS absolute alignment, 15000 position gap, domain action projections and pseudo-actions",
+      "pdf_pages": [
+        8,
+        9,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "claim": "Reasoner 22.0M/2.2M data, semantic deduplication and 2/5 judge thresholds",
+      "pdf_pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        27
+      ]
+    },
+    {
+      "claim": "Generator 767M images/347.7M clips, JSON captions, synchronized audio curation and 61.3K action hours",
+      "pdf_pages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "claim": "Reasoner joint training and exact optimizer, Generator frozen reasoner pretraining, tokens and GB200 configs",
+      "pdf_pages": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "claim": "Separate T2I/I2V/Policy posttraining and fresh absolute-joint DROID interface",
+      "pdf_pages": [
+        30,
+        31,
+        32,
+        73
+      ]
+    },
+    {
+      "claim": "Core Reasoner benchmarks and image generation with prompt rewriting, versioned table discrepancies",
+      "pdf_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "claim": "PAIBench-G/RBench judge, seed/resolution/frame configs, direct/BoN Physics-IQ and HUE",
+      "pdf_pages": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        109,
+        110,
+        111
+      ]
+    },
+    {
+      "claim": "Audiovisual AVQ and lower-level audio fidelity boundary",
+      "pdf_pages": [
+        61,
+        62
+      ]
+    },
+    {
+      "claim": "MT/PT comparisons, PSNR versus success, RoboLab table exceptions and dated RoboArena",
+      "pdf_pages": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ]
+    },
+    {
+      "claim": "SDG and mode synergies have negative transfer and forward-dynamics tradeoff",
+      "pdf_pages": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108
+      ]
+    }
+  ]
+}

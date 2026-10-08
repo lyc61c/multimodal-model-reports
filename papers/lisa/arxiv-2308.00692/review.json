@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "figures_visually_checked": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "title_matches": true,
+    "numbered_equations_checked": true,
+    "gIoU_definition_correct": true,
+    "zero_shot_ft_conditions_preserved": true,
+    "checkmarks_inspected": true
+  },
+  "limitations": [
+    "Section5.4 data-ablation Exp4/5 numbering conflict corrected by table",
+    "Not uniformly SOTA across RefCOCO+ splits",
+    "Projection channel order not inferred from list"
+  ]
+}

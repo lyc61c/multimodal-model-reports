@@ -1,0 +1,14 @@
+{
+  "paper_id": "d0807662cb93",
+  "catalogue_entry_id": "d0807662cb93",
+  "family_slug": "gpt",
+  "title": "Introducing GPT-5",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-system-card-2025-08-13; release-2025-08-07",
+  "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+  "document_kind": "release_blog",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "GPT-5：模型路由、强化学习推理与输出导向训练"
+}

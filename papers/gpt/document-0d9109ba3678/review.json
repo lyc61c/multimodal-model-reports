@@ -1,0 +1,47 @@
+{
+  "paper_id": "0d9109ba3678",
+  "status": "complete_self_review",
+  "fact_checks": [
+    "Primary catalogue release identity preserved; system card explicitly supplementary",
+    "No invented parameter count, visual encoder, patch size, MoE claim, audio/video support, training stage hyperparameters or RL algorithm",
+    "OSWorld partial score, ScreenSpot no-tools grounding, CAD geometric overlap and OMR metric explained separately",
+    "Highest-configuration comparisons, differing tool harnesses and relevant footnotes acknowledged",
+    "HealthBench63.4/64.7 update mismatch preserved; model generations and deployment simulator rates not merged",
+    "Figure22 CoT/full-context regression and action-only improvement reported without inferring intent",
+    "Chat Completions and stateless Responses monitoring limits checked"
+  ],
+  "math_checks": [
+    "Generic policy/history notation explicitly explanatory, not an original model equation",
+    "gmean² product uses standard TPR and TNR interpretation; not task accuracy",
+    "HealthBench adjustment68.2-(1.47/500)*(3185-2000)=64.7161 rounds to64.7",
+    "Gray Swan k1/k10/k15 are cumulative success probabilities, not additive categories and not assumed independent"
+  ],
+  "image_checks": [
+    {
+      "file": "official-career-website.png",
+      "viewed": true,
+      "content": "Original release PNG with both full model panels; left completed artifact and right clarification stage explicitly distinguished; no false13min/20sec completion-speed conclusion"
+    },
+    {
+      "file": "original-page-016-01.png",
+      "viewed": true,
+      "content": "Full PDF16 Table4 with all headers, model columns, categories and explanatory text retained"
+    },
+    {
+      "file": "original-page-020-02.png",
+      "viewed": true,
+      "content": "Full PDF20 Figure5 including all model names, axes, k-attempt legend, cumulative bars, caption and footnote"
+    },
+    {
+      "file": "original-page-052-03.png",
+      "viewed": true,
+      "content": "Full PDF52 Figure22 including all three panels, axes, error bars, legend and caption"
+    }
+  ],
+  "limitations": [
+    "Official closed-model release does not disclose a reproducible network or full training recipe",
+    "Read relevant system-card technical sections rather than all175pages",
+    "No model execution or independent benchmark reproduction",
+    "Figures retain original pixels, including full-page surrounding text; no recreated HTML table represented as an original image"
+  ]
+}

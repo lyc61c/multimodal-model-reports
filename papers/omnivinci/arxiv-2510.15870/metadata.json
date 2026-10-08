@@ -1,0 +1,14 @@
+{
+  "paper_id": "e625e0db2452",
+  "catalogue_entry_id": "e625e0db2452",
+  "family_slug": "omnivinci",
+  "title": "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2510.15870v1",
+  "source_url": "https://arxiv.org/pdf/2510.15870v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "OmniVinci：让视觉、声音与时间在共享空间中对齐"
+}

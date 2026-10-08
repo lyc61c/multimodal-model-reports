@@ -1,0 +1,48 @@
+{
+  "source_version": "2306.14795v1",
+  "claims": [
+    {
+      "claim": "VQ-VAE 512x512, temporal downsample4; unified T5 vocabulary and autoregressive NLL",
+      "pdf_pages": [
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "claim": "HumanML3D14616/44970; KIT3911/6353; 15 vs14 core tasks inconsistent",
+      "pdf_pages": [
+        6,
+        7,
+        19,
+        20
+      ]
+    },
+    {
+      "claim": "Base150K tokenizer; 300K PT/IT; GPU8 vs64 inconsistent",
+      "pdf_pages": [
+        7,
+        21
+      ]
+    },
+    {
+      "claim": "Text-to-motion Table3 separate from further fine-tuning; caption metrics not all improved",
+      "pdf_pages": [
+        8,
+        17
+      ]
+    },
+    {
+      "claim": "Completion Table5 results and instruction Table6 tradeoffs",
+      "pdf_pages": [
+        9
+      ]
+    },
+    {
+      "claim": "FPS8 vs1 V100 inconsistent",
+      "pdf_pages": [
+        18
+      ]
+    }
+  ]
+}

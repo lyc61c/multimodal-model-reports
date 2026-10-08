@@ -1,0 +1,14 @@
+{
+  "paper_id": "9f624d5a9663",
+  "catalogue_entry_id": "9f624d5a9663",
+  "family_slug": "next-chat",
+  "title": "NExT-Chat: An LMM for Chat, Detection and Segmentation",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.04498v1",
+  "source_url": "https://arxiv.org/pdf/2311.04498v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "NExT-Chat：以位置嵌入统一对话、框定位与分割"
+}

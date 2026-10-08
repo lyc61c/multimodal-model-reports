@@ -1,0 +1,14 @@
+{
+  "paper_id": "b0dd57197992",
+  "catalogue_entry_id": "b0dd57197992",
+  "family_slug": "anymal",
+  "title": "AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "title_zh": "AnyMAL：让图像、音频、视频与运动传感器共享语言模型入口",
+  "source_version": "2309.16058v1",
+  "source_url": "https://arxiv.org/pdf/2309.16058v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1"
+}

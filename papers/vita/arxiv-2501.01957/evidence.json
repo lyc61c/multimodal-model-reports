@@ -1,0 +1,17 @@
+{
+  "paper_id": "33ab7b32ee03",
+  "source_url": "https://arxiv.org/pdf/2501.01957v1",
+  "source_version": "2501.01957v1",
+  "source_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
+  "verification_notes": [
+    "Read v1 technical and experimental sections3–4 pages3–9, original Figures2/3 and Tables1–4 rendered and inspected.",
+    "Qwen2-7B based on experimental tables not initialMixtral; output internal textconditioningNARARcodec not unconditional directwaveform or originalexternalTTS.",
+    "110000hour internalASR pool section3.2 versus11000hour stage2.1/Figure3 conflict retained without silentcorrection;3000hour TTS outputdata distinct.",
+    "CTCpathsum equation explanatorystandard; exactcodecNARloss and streamingchunkdetails not fabricated; 40Hzcodetokens distinguished24kHzaudio.",
+    "Stage2.2 allvisualaudioandLLMtrainable;Stage3LLMfrozen doesnot imply no earlierregression; inputclassificationhead speechtext distinctinitialthree state tokens.",
+    "Stage1 vs Stage3 MMMU53.1→52.1 OCR752→732 etc regressions retained; Table2Avgundefinednormalization not unifiedaccuracy.",
+    "TitleGPT4olevelnot allbenchmarkclaim;MathVista66.2>GPT4o56.5 butMMMU52.1<62.8; VideoMMEwithsubtitle differentiated.",
+    "v1 no speechMOS speaker similarity latency/RTF interruptiontable;ASRperformance alone not quantitative realtimeinteraction or synthesisquality evidence."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 methodology, data, experiments and training appendix; rendered and inspected Figure 2/3 and Tables 1–4 crops.",
+    "Global adapter MoE distinguished from sparse LLM MoE; qformer is generic learned-query transformer, not BLIP-2 Q-Former initialization.",
+    "Cosine naming versus unnormalized dot-product equation disclosed; selection threshold is cumulative probability rather than fixed top-k or token fraction.",
+    "Bilinear model is illustrative; power-method convergence needs nonzero leading component and spectral separation; no universal neural-network convergence claimed.",
+    "SMR figure and appendix DVQA/ChartQA counts differ; dataset source sizes not asserted as exact realized mixture; MATH-Vision training/evaluation leakage assertion attributed to authors.",
+    "Table 3 final POPE 84.9 conflicts with Table 2 86.0; results labeled by table, no silent reconciliation.",
+    "Science/math gains and regressions versus closed models preserved; LLaVA Bench ratio and POPE F1 not called accuracy; three-stage added training cost acknowledged."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "90b72b56c916a58980b3a82e86347f2f9eb8fec202989d645c8baea5c0986ec5",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

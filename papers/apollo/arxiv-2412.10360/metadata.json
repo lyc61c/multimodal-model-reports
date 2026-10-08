@@ -1,0 +1,14 @@
+{
+  "paper_id": "bdbff4edfa9b",
+  "catalogue_entry_id": "bdbff4edfa9b",
+  "family_slug": "apollo",
+  "title": "Apollo: An Exploration of Video Understanding in Large Multimodal Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2412.10360v1",
+  "source_url": "https://arxiv.org/pdf/2412.10360v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Apollo：用视频设计实验建立高效长视频理解模型"
+}

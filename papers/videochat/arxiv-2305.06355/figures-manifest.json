@@ -1,0 +1,87 @@
+{
+  "paper_id": "f018d0129ec4",
+  "source_version": "2305.06355v1",
+  "source_pdf_sha256": "adc35c44a4703211edb1fa41f1d66a41b914b6e5f549efc523f716cde246acbe",
+  "assets": [
+    {
+      "asset_path": "figures/framework.png",
+      "original_label": "Figure 1：两条 VideoChat 路径",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2305.06355v1#page=3",
+      "source_version": "2305.06355v1",
+      "source_sha256": "adc35c44a4703211edb1fa41f1d66a41b914b6e5f549efc523f716cde246acbe",
+      "asset_sha256": "26208383b5583dcf4c82333b16f340adcf9e857bdde823421d5410c501cbf1dd",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          183,
+          565,
+          412
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/architecture-and-data.png",
+      "original_label": "Figure 2：VideoChat-Embed 架构与数据",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2305.06355v1#page=6",
+      "source_version": "2305.06355v1",
+      "source_sha256": "adc35c44a4703211edb1fa41f1d66a41b914b6e5f549efc523f716cde246acbe",
+      "asset_sha256": "73a111d593c223a500349baa57fcdf6daf0af34375fae10e87f38d00b5c9d817",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          52,
+          565,
+          281
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/conversation-prompt.png",
+      "original_label": "Table 6：视频对话生成提示",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2305.06355v1#page=8",
+      "source_version": "2305.06355v1",
+      "source_sha256": "adc35c44a4703211edb1fa41f1d66a41b914b6e5f549efc523f716cde246acbe",
+      "asset_sha256": "a41dd493f15d8f7546c4fc41582aad2ba7c059060c80ff64716a9331b1abbe88",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          45,
+          565,
+          480
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/tvqa-case.png",
+      "original_label": "Figure 3：TVQA 单个样例的对比",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2305.06355v1#page=10",
+      "source_version": "2305.06355v1",
+      "source_sha256": "adc35c44a4703211edb1fa41f1d66a41b914b6e5f549efc523f716cde246acbe",
+      "asset_sha256": "a5ddeb83d3e86adf21ed2d7b6ded4e3fff33e0e15d36242c0ebbb3b87d14e748",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          48,
+          48,
+          565,
+          431
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

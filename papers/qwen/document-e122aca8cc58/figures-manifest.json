@@ -1,0 +1,38 @@
+{
+  "paper_id": "e122aca8cc58",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-banner.png",
+      "original_label": "Official release banner",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "image_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/Figures/3.6_27b_banner.png",
+      "image_final_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/Figures/3.6_27b_banner.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "dd0e62f5254a31df0bdbe09952bda8e4eab3d6efcb800104546d36191605a163",
+      "asset_sha256": "5e6d509c3a840af36df14b151d80a70ed95af31a48719ee78caab3c676d42662",
+      "width": 1920,
+      "height": 1080,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-performance.png",
+      "original_label": "Official performance comparison figure",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3.6/Figures/qwen3.6_27b_score.png",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3.6/Figures/qwen3.6_27b_score.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "dd0e62f5254a31df0bdbe09952bda8e4eab3d6efcb800104546d36191605a163",
+      "asset_sha256": "cf9689466d8d00d0825e0dc9645887de2e7e2ab0f97de21515005b54fbf5f593",
+      "width": 4784,
+      "height": 2580,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

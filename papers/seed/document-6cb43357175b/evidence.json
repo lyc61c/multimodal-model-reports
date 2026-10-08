@@ -1,0 +1,165 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf",
+  "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
+  "claims": [
+    {
+      "claim": "ByteDance Seed官方模型卡，首页2025年12月17日，固定快照非发布日期",
+      "pdf_pages": [
+        1
+      ]
+    },
+    {
+      "claim": "不披露参数、网络及训练数据配方，不能从其他版本补填",
+      "pdf_pages": [
+        1,
+        2,
+        21
+      ]
+    },
+    {
+      "claim": "四种思考档位，常规表格think-high",
+      "pdf_pages": [
+        2,
+        10
+      ]
+    },
+    {
+      "claim": "VideoCut起止时间及1-5FPS，输入再观察与直接模型能力区分",
+      "pdf_pages": [
+        8,
+        9,
+        18,
+        19
+      ]
+    },
+    {
+      "claim": "流式1FPS，回应、静默、主动，中断再评估",
+      "pdf_pages": [
+        16,
+        17,
+        20
+      ]
+    },
+    {
+      "claim": "MMBrowseComp224、WideSearch200中英各100",
+      "pdf_pages": [
+        29
+      ]
+    },
+    {
+      "claim": "科学仓库历史快照容器fail-to-pass，MultiSWE1632/68专家/2456候选",
+      "pdf_pages": [
+        29,
+        30
+      ]
+    },
+    {
+      "claim": "UArtifacts199/13主题；BIOBench150/80%视觉20%纯文",
+      "pdf_pages": [
+        30,
+        31
+      ]
+    },
+    {
+      "claim": "XpertBench200+专家140+任务类型；WorldTravel150任务10至20+约束",
+      "pdf_pages": [
+        39
+      ]
+    },
+    {
+      "claim": "训练与评测数据区分，各内部基准未充分披露总规模",
+      "pdf_pages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "claim": "OmniDocNED.106、crop-box64.3/73.1、MMMU83.4与Pro73.2",
+      "pdf_pages": [
+        4
+      ]
+    },
+    {
+      "claim": "VideoMME含字幕87.8，视频知识仍低于Gemini",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "VideoToolCG62.4->65.9 LV73->78.9 Zero6.9->18.8；101题",
+      "pdf_pages": [
+        9
+      ]
+    },
+    {
+      "claim": "最大视频token81920，预算32K->80K并非推理或全服务上下文上限",
+      "pdf_pages": [
+        6,
+        10
+      ]
+    },
+    {
+      "claim": "Table7无工具，Avg10/8与Pass1及并行未公开聚合规则",
+      "pdf_pages": [
+        10,
+        11
+      ]
+    },
+    {
+      "claim": "GAIA87.4vs正文93.2，BrowseCompzh81.3vs78.5",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "FinSearch62.8T2T3vs正文56.2，TOMATO60.8vs60.6",
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "OSWorld61.9低于Claude62.9，GUI正文全最优不能照抄",
+      "pdf_pages": [
+        8
+      ]
+    },
+    {
+      "claim": "LCBv6名称LeetCodeBench/LiveCodeBench与79.4/79.5差异",
+      "pdf_pages": [
+        3,
+        11
+      ]
+    },
+    {
+      "claim": "安全AIRBenchXSTest图无精确柱值不估数字",
+      "pdf_pages": [
+        17,
+        20,
+        21
+      ]
+    },
+    {
+      "claim": "专业案例Table11完整构建环境缺失，部分编译文件检查非已跑通",
+      "pdf_pages": [
+        16,
+        47,
+        48
+      ]
+    }
+  ]
+}

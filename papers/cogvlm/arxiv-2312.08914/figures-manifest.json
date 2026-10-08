@@ -1,0 +1,52 @@
+{
+  "paper_id": "98206802ffba",
+  "source_version": "2312.08914v1",
+  "source_pdf_sha256": "979c3d916ad7d502b1eeea5553c15fb78543681e14b0178e833035ddef76c97b",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-004-01.png",
+      "original_label": "PDF page 4",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2312.08914v1#page=4",
+      "source_version": "2312.08914v1",
+      "source_sha256": "979c3d916ad7d502b1eeea5553c15fb78543681e14b0178e833035ddef76c97b",
+      "asset_sha256": "eb10de419478e533abea826db87ab931bd35dac7de48dc20d99f81fae4d734bd",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 160,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-008-02.png",
+      "original_label": "PDF page 8",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2312.08914v1#page=8",
+      "source_version": "2312.08914v1",
+      "source_sha256": "979c3d916ad7d502b1eeea5553c15fb78543681e14b0178e833035ddef76c97b",
+      "asset_sha256": "a2eb5b74d8bbbf7eb911ae9a3855a20fd4b48fdc8cc20b889efd64b305ee61b3",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 160,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-011-03.png",
+      "original_label": "PDF page 11",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2312.08914v1#page=11",
+      "source_version": "2312.08914v1",
+      "source_sha256": "979c3d916ad7d502b1eeea5553c15fb78543681e14b0178e833035ddef76c97b",
+      "asset_sha256": "34c924d196533ca8280e98671d53a69745eae2c635bbd33e41e18c1d5734aeda",
+      "processing": {
+        "method": "full_pdf_page_render",
+        "dpi": 160,
+        "crop_bbox": null,
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

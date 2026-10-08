@@ -1,0 +1,15 @@
+{
+  "paper_id": "3b84e8a511a7",
+  "source_url": "https://arxiv.org/pdf/2404.05719v1",
+  "source_version": "2404.05719v1",
+  "source_sha256": "b203b48b05ef3bbfd4dabeed01f1658b37d3abfcbd39567a73452ccf614bac5a",
+  "verification_notes": [
+    "Read original main text and relevant appendix dataset/training/evaluation sections; verified Apple authorship, title, v1 and mobile-UI positioning.",
+    "Visually inspected original PDF pages 5,8,10,11; Figure 2, Figure 3, Table 2, Figure 5 and Table 3 are fully captured with headings and columns.",
+    "Verified 250K training mixture, frozen visual encoder, decoder/projection updates and 8 A100 duration; no unspecified learning rates or exact Vicuna size were invented.",
+    "Verified GPT-4 advanced annotations are text-only; iPhone-only advanced training and small Android advanced test are distinguished.",
+    "Table 2 Android anyres advanced mean 71.7 conflicts with Table 3 70.1 and component arithmetic 71.05; discrepancy explicitly retained.",
+    "GPT-4V subset/Set-of-Mark protocol, GPT relative scores above 100, iPhone Find Text exception, task regressions and absence of closed-loop success measurement are explicitly recorded."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

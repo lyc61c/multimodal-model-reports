@@ -1,0 +1,17 @@
+{
+  "paper_id": "14aa0b2943d0",
+  "source_url": "https://arxiv.org/pdf/2502.05177v1",
+  "source_version": "2502.05177v1",
+  "source_sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866",
+  "verification_notes": [
+    "Read v1 sections3–5 pages3–9, original Tables1–6 inspected; support1Mcontext distinguished from accuracy at1M.",
+    "Pixelshufflequartertokens retained despite prosewithouttokencompression; no unqualified uncompressedvisual claim.",
+    "Logits400GB→0.0004GB only wordheadmatrix, not totalGPUmemory or all attention; training selects all supervisedoutputpositions not just one.",
+    "Ringattention distributed fullcontext still quadratic arithmetic and finitehardware, infiniteinput rhetorical not literalcapacity.",
+    "Stage32K→16K→128K→1M with stage1modulefreezing and lateralltrain,4stagecounts/tokenbudgets exact; noLoRA orinterpolationtraining claim.",
+    "17Mabstract versus Table1atlas17.8Msourcepool mapping unresolved; nofiltering and public sources not proven contaminationfree.",
+    "Image1MregressionsMathVista50.3vs65.5 and MMVetexception57.4 retained; VideoMME128K256frames66.4 vs1M4096frames55.8.",
+    "20Btable includesPLlava34B; inconsistentLongVILAinternaldataflagsTables5/6 retained; baselineframehardwaredifferences and noalltaskSOTA conclusion."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

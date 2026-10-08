@@ -1,0 +1,36 @@
+{
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "全划分数据量与实际UsedYes英文训练分开，翻译数据train=0；OKVQA/AOKVQA已训练，ViQuAE未训练。",
+    "架构来源OPT组件不写成实际语言骨干；Ziya已双语，未声称80语能力；视频只有8帧前缀。",
+    "表4–6数字、指标、GPT裁判计数核验；MSRVTT14.2低于14.3不写全胜。"
+  ],
+  "math_checks": [
+    "NLL/ROUGEL为标准解释，没有虚构原文Eq；β实现未披露。",
+    "样本呈现/训练表行相加为明确推导；不等于唯一图像。",
+    "LoRA启发q/v更新不补rank或alpha、低秩分解细节。"
+  ],
+  "image_checks": [
+    {
+      "file": "figures/original-page-004-01.png",
+      "checked": "已view_image核验原图图注/全部图例/坐标及表头结果行，页面无裁断；逐幅解释图意。"
+    },
+    {
+      "file": "figures/original-page-005-02.png",
+      "checked": "已view_image核验原图图注/全部图例/坐标及表头结果行，页面无裁断；逐幅解释图意。"
+    },
+    {
+      "file": "figures/original-page-007-03.png",
+      "checked": "已view_image核验原图图注/全部图例/坐标及表头结果行，页面无裁断；逐幅解释图意。"
+    },
+    {
+      "file": "figures/original-page-008-04.png",
+      "checked": "已view_image核验原图图注/全部图例/坐标及表头结果行，页面无裁断；逐幅解释图意。"
+    }
+  ],
+  "limitations": [
+    "未执行模型；语言骨干、回答风格、训练不同导致非单因素公平比较。",
+    "翻译筛选非逐句母语校验；GPT4不看图；三处源文数字/描述口径差异记录。"
+  ],
+  "model_execution": "not_run"
+}

@@ -1,0 +1,46 @@
+{
+  "source_version": "2405.15574v1",
+  "claims": [
+    {
+      "claim": "Mamba130M/24/768;InternLM2/32/4096;CLIP490",
+      "pdf_pages": [
+        4,
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "2.1M to1.1M Haiku,GPT4V score5,human yesno",
+      "pdf_pages": [
+        5
+      ]
+    },
+    {
+      "claim": "10tor,stage1 rationale stage2 answer no explicit rationale",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "QLoRA64/64,NF4,bf16 Mamba fp32,8A6000,LR1e-4to1e-6,batch192/576",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "mainbenchmarks and ablations",
+      "pdf_pages": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "cosine analysis10samples not full correctness guarantee",
+      "pdf_pages": [
+        9
+      ]
+    }
+  ]
+}

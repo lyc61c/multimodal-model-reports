@@ -1,0 +1,14 @@
+{
+  "paper_id": "59ef5f35121a",
+  "catalogue_entry_id": "59ef5f35121a",
+  "family_slug": "cambrian-1",
+  "title": "Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2406.16860v1",
+  "source_url": "https://arxiv.org/pdf/2406.16860v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Cambrian-1：用空间视觉聚合器连接多种视觉表征与语言模型"
+}

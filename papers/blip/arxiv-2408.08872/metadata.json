@@ -1,0 +1,14 @@
+{
+  "paper_id": "1999df957779",
+  "catalogue_entry_id": "1999df957779",
+  "family_slug": "blip",
+  "title": "xGen-MM (BLIP-3): A Family of Open Large Multimodal Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2408.08872v1",
+  "source_url": "https://arxiv.org/pdf/2408.08872v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "xGen-MM（BLIP-3）：交错图文预训练与逐块视觉采样"
+}

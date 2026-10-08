@@ -1,0 +1,68 @@
+{
+  "source_version": "2603.03276v1",
+  "claims": [
+    {
+      "claim": "共享骨干、模态FFN、冻结视觉、256tokens与VAE附录256分辨率",
+      "pdf_pages": [
+        4,
+        5,
+        30,
+        31,
+        34,
+        35
+      ]
+    },
+    {
+      "claim": "公式1至4 CE、flow、默认1/3权重与粒度；后续x-pred",
+      "pdf_pages": [
+        4,
+        12
+      ]
+    },
+    {
+      "claim": "520B文字+520B多模态；12M动作caption、重描述采样和embedding距离",
+      "pdf_pages": [
+        7,
+        8,
+        38,
+        39
+      ]
+    },
+    {
+      "claim": "MoE32至1008专家，激活1.50至1.53B，H200与16层超参",
+      "pdf_pages": [
+        12,
+        13,
+        35,
+        36
+      ]
+    },
+    {
+      "claim": "IsoFLOP dense .47/.53与.37/.63，MoE .41/.59与.36/.64",
+      "pdf_pages": [
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "claim": "VQA另微调一轮、纯文字基线先adapter；导航200B与CEM",
+      "pdf_pages": [
+        35,
+        37
+      ]
+    },
+    {
+      "claim": "ATE/RPE原视频与文字动作各有最佳；1%导航配比",
+      "pdf_pages": [
+        10
+      ]
+    },
+    {
+      "claim": "Figure21最后x-pred PPL12.69/DPG.65，非所有指标均提高",
+      "pdf_pages": [
+        16
+      ]
+    }
+  ]
+}

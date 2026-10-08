@@ -1,0 +1,25 @@
+{
+  "paper_id": "bc763cf700ef",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-architecture.svg",
+      "original_label": "官方MiMo-V2.5模型架构原图",
+      "source_url": "https://mimo.xiaomi.com/mimo-v2-5",
+      "image_url": "https://mimo.xiaomi.com/mimo-v2-5/assets/architecture.svg",
+      "image_final_url": "https://mimo.xiaomi.com/mimo-v2-5/assets/architecture.svg",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "b470a6bf40358a35bd927c87361597e22c51a5ff7fb677660e166e6a45961f06",
+      "asset_sha256": "2db5d33dbbcdb5b7c08b526f316832e9a60fb8dcd8eba7a086d83fd0284e4da5",
+      "width": 5436.0,
+      "height": 3282.0,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "preview_path": "figures/official-architecture-preview.png",
+      "preview_sha256": "f2a0d0126478a30081bcd18c63adbc695d03d9a353757ea7c55de19fa251e997",
+      "preview_note": "Faithful raster rendering on a white page for visual inspection; original SVG retained without edits."
+    }
+  ]
+}

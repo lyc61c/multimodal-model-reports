@@ -1,0 +1,14 @@
+{
+  "paper_id": "bf65e963e9a4",
+  "source_url": "https://arxiv.org/pdf/2403.09611v1",
+  "source_version": "2403.09611v1",
+  "source_sha256": "e166a7d7245be1cc71b394f0e5e669cd63f627d5b5f69a481d5c986f045f7a77",
+  "verification_notes": [
+    "阅读PDF1–16及附录25–32、33–39定性案例；核对最终ViT-H/378/144与基础消融ViT-L/336/1.2B设置。",
+    "检查4张原页：Figure3、Figure5、Table4、Figure7完整；表4MMMU为val/test，SEED为全/图像，MathVista39.4脚注8shot44.4。",
+    "核验Equation1非embedding参数、正文拟合与附录取整学习率差异，MoE路由/负载系数，未把MoE名称当总参数。",
+    "核验数据池600M与内部500M、SFT正文约1M而Table5总1.45M、预训练100B计数范围，未自行修正原文口径。",
+    "核验zero/fewshot不同提示、CIDEr与准确率、3B-MoE MMVet退步和30B未超过LLaVA-NeXT部分任务；记录无模型运行。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

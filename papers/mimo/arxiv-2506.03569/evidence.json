@@ -1,0 +1,18 @@
+{
+  "paper_id": "cfe0bfb02a66",
+  "source_url": "https://arxiv.org/pdf/2506.03569v1",
+  "source_version": "2506.03569v1",
+  "source_sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18",
+  "verification_notes": [
+    "Read original main technical body pages 4-20 and appendices 27-32; verified v1 and Xiaomi collective authorship.",
+    "Visually inspected full original pages 6,11,13,14 with Figures 2-4 and Tables 2-3; headers and bottom rows intact.",
+    "Checked architecture Table4, 36-layer MiMo versus Qwen backbone and four-stage trainable components/token budgets.",
+    "Recorded formula1 missing explicit policy-likelihood terms; policy-gradient explanation is editorial clarification rather than claimed source equation/code.",
+    "Checked verifiable reward types, model-ranked RLHF preferences, reward normalization and unreported GRPO batch/group hyperparameters.",
+    "Checked no-subtitle VideoMME2fps/256frames/16384 budget and image cap4096*28*28/32768 output.",
+    "Checked SFT-to-RL regressions in VideoMMMU, OCRBench, ChartQA, MathVista and DynaMath and larger proprietary model advantages.",
+    "Distinguished OSWorldG no_refusal grounding from full agent task completion; intro54.7/table56.1 and Figure4 WebSRC95.4/table95.3 conflicts retained.",
+    "Elo is GPT4o-judged internal preference; Figure7 pure-text Avg@32 only; no model run or independent reproduction claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,40 @@
+{
+  "source_version": "2402.04236v1",
+  "claims": [
+    {
+      "claim": "EVA2CLIP4B+Vicuna7B+visualexperts6.5B; memoryattention",
+      "pdf_pages": [
+        4
+      ]
+    },
+    {
+      "claim": "1.5B/40M/570K; iterations120000/60000/14000; AdamW LR1e-4/1e-5/1e-5",
+      "pdf_pages": [
+        4,
+        5,
+        15
+      ]
+    },
+    {
+      "claim": "70Kapprox and Table4chaincounts; AutoCoM885 vs8612 mismatch",
+      "pdf_pages": [
+        4,
+        6,
+        14
+      ]
+    },
+    {
+      "claim": "VQA and grounding tables; POPEadversarialF1 87.8",
+      "pdf_pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "Processdistance metric direction unclear, Fig3peak6K vs8Kprose",
+      "pdf_pages": [
+        6
+      ]
+    }
+  ]
+}

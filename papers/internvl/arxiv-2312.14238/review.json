@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文1–18页方法实验附录数据及身份；原v1不混后代训练",
+    "实际查看PDF4/7/8/12整页，Figure3/Table1/6–10/20–22完整无截列",
+    "确认随机初始化ViT5.903B、48层3200宽25头与96queries和QLLaMA8B",
+    "核对数据4.98B/1.03B不同于28.7B/1.6B曝光；SFT各任务量、清洗因素、TextCapsOCR辅助",
+    "确认224冻结解码器64M/90M和336全微调7B/13B不同，避免全程冻结错误",
+    "逐列核对R@1方向/1K5K/八帧mean top1top5，caption zero-shot与seen SFT区别",
+    "Table12为简设置非最高1586.4配置；未运行模型，公式仅对原文目标归纳"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "e7337045baaef8c1f0959f59e07f3f1b6be7d3db6b26690acab10410310147df",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

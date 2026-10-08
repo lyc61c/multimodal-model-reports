@@ -1,0 +1,79 @@
+{
+  "source_version": "official-system-card-2025-08-13; release-2025-08-07",
+  "claims": [
+    {
+      "claim": "系统由main、thinking及实时router组成；Pro并行测试时计算；参数/视觉编码器未公开",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "RL推理、safe-completions、迎合奖励、不可完成与工具失败样本",
+      "pdf_pages": [
+        6,
+        8,
+        9,
+        14,
+        15
+      ]
+    },
+    {
+      "claim": "生产事实性4.5/12.7和4.8/22.0为不同评分单位；评分器人工一致率75%",
+      "pdf_pages": [
+        12,
+        13
+      ]
+    },
+    {
+      "claim": "无图CharXiv欺骗0.09 vs0.87，不是正常图像理解正确率",
+      "pdf_pages": [
+        15
+      ]
+    },
+    {
+      "claim": "Table10图像行为测not_unsafe，MMMU84.2来自发布页",
+      "pdf_pages": [
+        17
+      ],
+      "secondary_source": "https://openai.com/index/introducing-gpt-5/"
+    },
+    {
+      "claim": "HealthHard46.2/40.3/25.5，ConsensusMini96.5>95.7",
+      "pdf_pages": [
+        18,
+        19
+      ]
+    },
+    {
+      "claim": "多语言数量正文13与实际表不完全对应；中文0.902/0.867/0.893",
+      "pdf_pages": [
+        19,
+        20
+      ]
+    },
+    {
+      "claim": "SWE477题平均四次估pass@1，PDF74%非发布74.9%不同verbosity",
+      "pdf_pages": [
+        36,
+        37
+      ]
+    },
+    {
+      "claim": "METR2h15估计任务人类时间非自主运行时长；OPQA2%",
+      "pdf_pages": [
+        40,
+        42,
+        43
+      ]
+    },
+    {
+      "claim": "two-tier主题分类器/推理监测非主模型内部网络",
+      "pdf_pages": [
+        47,
+        48,
+        50
+      ]
+    }
+  ]
+}

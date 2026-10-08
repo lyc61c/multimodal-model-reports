@@ -1,0 +1,167 @@
+{
+  "paper_id": "6527e8551a9d",
+  "source_version": "2607.14935v1",
+  "source_pdf_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2 — I3D-ViT 与整体架构",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2607.14935v1#page=4",
+      "source_version": "2607.14935v1",
+      "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+      "asset_sha256": "73f4387a18d1de4aeee80a0203e86486a301bd099f2b2d28540fe2c80f940a4e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          68,
+          548,
+          400
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/adaptive-stream.png",
+      "original_label": "Figure 3 — 自适应流式感知",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2607.14935v1#page=5",
+      "source_version": "2607.14935v1",
+      "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+      "asset_sha256": "858c00cb41249d5873821ecab5bc20ef337c5efa297278f92891427554c2f44e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          70,
+          548,
+          303
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/long-data.png",
+      "original_label": "Figure 7 — 长视频数据流水线",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2607.14935v1#page=9",
+      "source_version": "2607.14935v1",
+      "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+      "asset_sha256": "c016501543d28793e0a073f2e3260ae10c0148ca61cb5cf931612d7c8c288233",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          266,
+          548,
+          452
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training.png",
+      "original_label": "Table 1 — 四阶段训练配置",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2607.14935v1#page=11",
+      "source_version": "2607.14935v1",
+      "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+      "asset_sha256": "79f2cc43f42309e366975df122047423eac5fd696af8de01d6b3fc2e784a574b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          60,
+          548,
+          240
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/state-mask.png",
+      "original_label": "Figure 9 — 状态转换监督掩码",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2607.14935v1#page=14",
+      "source_version": "2607.14935v1",
+      "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+      "asset_sha256": "5829d6fc8504405a63a7e104369b71e8d7623fb5998041053f8f72ba36609b5d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          59,
+          548,
+          182
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/offline-results.png",
+      "original_label": "Table 2 — 离线基准结果",
+      "pdf_page": 16,
+      "source_url": "https://arxiv.org/pdf/2607.14935v1#page=16",
+      "source_version": "2607.14935v1",
+      "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+      "asset_sha256": "005af2af3fcfdd136a3309b7e55039c1c6b3fa466b15a6fb8286ec0d7b44f034",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          58,
+          548,
+          438
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/inference-cost.png",
+      "original_label": "Table 4 — H200 推理成本",
+      "pdf_page": 18,
+      "source_url": "https://arxiv.org/pdf/2607.14935v1#page=18",
+      "source_version": "2607.14935v1",
+      "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+      "asset_sha256": "a7bcca13ac257a93b3cfb5ed529962b343f7f9d5116078760ccdd6e571fc36bc",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          60,
+          548,
+          246
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/stream-ablation.png",
+      "original_label": "Table 6 — 流式分辨率与状态监督消融",
+      "pdf_page": 19,
+      "source_url": "https://arxiv.org/pdf/2607.14935v1#page=19",
+      "source_version": "2607.14935v1",
+      "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
+      "asset_sha256": "adcb0de54a7f92dbaf288d381dcde460756fd880d75da65c1a875d967143fdf1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          68,
+          182,
+          548,
+          315
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

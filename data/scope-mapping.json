@@ -1,0 +1,3642 @@
+{
+  "Gemini 4 Argon: our next era of frontier intelligence": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    ],
+    "source_issues": []
+  },
+  "Qwen3.8-Omni-Flash: Omni Senses. Agentic Delivery.": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+    ],
+    "source_issues": []
+  },
+  "GPT-6 Astra: A new generation of intelligence": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-6-astra/"
+    ],
+    "source_issues": []
+  },
+  "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    ],
+    "source_issues": []
+  },
+  "GLM-5.3-Flash: Frontier Intelligence, Flash Cost": {
+    "kind": "release_blog",
+    "recommend_scope": "needs_scope_review",
+    "note": "源链接为产品发布博文/HF 模型页；未直接提供多模态技术报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://z.ai/blog/glm-5.3-flash"
+    ],
+    "source_issues": []
+  },
+  "DeepSeek-V4-Flash-Vision-Exp": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://api-docs.deepseek.com/news/news260821/"
+    ],
+    "source_issues": []
+  },
+  "Qwen3.8-Max: A New Bar for Coding and Cowork": {
+    "kind": "release_blog",
+    "recommend_scope": "needs_scope_review",
+    "note": "源链接为 coding/cowork 发布博文；是否多模态及独立技术报告均需核验。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://qwen.ai/blog?id=qwen3.8"
+    ],
+    "source_issues": []
+  },
+  "DeepSeek Harness": {
+    "kind": "tool_or_platform",
+    "recommend_scope": "exclude_non_model",
+    "note": "Harness/代理工具项目，并非多模态基础模型报告；题名 PDF 来自 cordiverse/paper，链接对应关系待核实。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/cordiverse/paper/blob/main/paper.pdf"
+    ],
+    "source_issues": []
+  },
+  "Qwen-MM-Plugins": {
+    "kind": "tool_or_platform",
+    "recommend_scope": "exclude_non_model",
+    "note": "多模态插件/cookbooks，属于工具和示例集合；不能以厂商名当作模型版本技术报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/QwenLM/Qwen-MM-Plugins/tree/main/cookbooks"
+    ],
+    "source_issues": []
+  },
+  "Kimi K3: Open Frontier Intelligence": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf"
+    ],
+    "source_issues": []
+  },
+  "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2607.14935"
+    ],
+    "source_issues": []
+  },
+  "Seed2.0 Model Card: Towards Intelligence Frontier for Real-World Complexity": {
+    "kind": "model_card",
+    "recommend_scope": "include_candidate",
+    "note": "模型卡，作为模型报告类候选；不可因没有代码仓库将 stars 视为 0。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2607.00248"
+    ],
+    "source_issues": []
+  },
+  "Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models": {
+    "kind": "release_blog",
+    "recommend_scope": "needs_scope_review",
+    "note": "世界/行动模型发布博文，属于具身扩展范围，且不是直接论文链接。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/"
+    ],
+    "source_issues": []
+  },
+  "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation": {
+    "kind": "world_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "语言条件视频生成/具身世界建模技术报告；属于扩展的多模态世界模型范围。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2606.17030"
+    ],
+    "source_issues": []
+  },
+  "OmniVideo-100K: A Dataset for Audio-Visual Reasoning through Structured Scripts and Evidence Chains": {
+    "kind": "dataset_or_benchmark",
+    "recommend_scope": "exclude_non_model",
+    "note": "题名明确为数据集，属于数据建设工作。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2606.14702"
+    ],
+    "source_issues": []
+  },
+  "Cosmos 3: Omnimodal World Models for Physical AI": {
+    "kind": "world_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "物理 AI 的世界模型技术报告；与对话式 MLLM 区分，建议单列世界模型。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2606.02800"
+    ],
+    "source_issues": []
+  },
+  "π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities": {
+    "kind": "embodied_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "机器人基础/行动模型报告；若项目覆盖 VLA/具身模型，应收录为独立系列。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2604.15483"
+    ],
+    "source_issues": []
+  },
+  "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence": {
+    "kind": "language_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "源列表所列 V4 主报告未在题名注明视觉；需核验多模态能力，不能因 DeepSeek 品牌直接归为 VL 系列。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf"
+    ],
+    "source_issues": []
+  },
+  "Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model": {
+    "kind": "release_blog",
+    "recommend_scope": "needs_scope_review",
+    "note": "源链接为 coding 模型发布博文；是否多模态需另核验，不能直接作为 VL/Omni 系列报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://qwen.ai/blog?id=qwen3.6-27b"
+    ],
+    "source_issues": []
+  },
+  "Xiaomi MiMo-V2.5": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://mimo.xiaomi.com/mimo-v2-5"
+    ],
+    "source_issues": []
+  },
+  "Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding": {
+    "kind": "dataset_or_benchmark",
+    "recommend_scope": "exclude_non_model",
+    "note": "视频理解评测基准，非模型技术报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2604.05015"
+    ],
+    "source_issues": []
+  },
+  "Introducing Muse Spark: Scaling Towards Personal Superintelligence": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://ai.meta.com/blog/introducing-muse-spark-msl/"
+    ],
+    "source_issues": []
+  },
+  "VITA-QinYu: Expressive Spoken Language Model for Role-Playing and Singing": {
+    "kind": "model_release",
+    "recommend_scope": "supplementary",
+    "note": "上游 venue 标 arXiv 但题名链接为 GitHub 仓库，缺少具体论文链接。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/VITA-MLLM/VITA-QinYu"
+    ],
+    "source_issues": []
+  },
+  "Gemma 4: Byte for byte, the most capable open models": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://deepmind.google/models/gemma/gemma-4/"
+    ],
+    "source_issues": []
+  },
+  "Qwen3.6-Plus: Towards Real World Agents": {
+    "kind": "release_blog",
+    "recommend_scope": "needs_scope_review",
+    "note": "源链接为 agent 模型发布博文；是否多模态及技术报告均需核验。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://qwen.ai/blog?id=qwen3.6"
+    ],
+    "source_issues": []
+  },
+  "Qwen3.5-Omni: Scaling Up, Toward Native Omni-Modal AGI": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://qwen.ai/blog?id=qwen3.5-omni"
+    ],
+    "source_issues": []
+  },
+  "Xiaomi MiMo-V2-Omni": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://mimo.xiaomi.com/mimo-v2-omni"
+    ],
+    "source_issues": []
+  },
+  "InternVL-U: Democratizing Unified Multimodal Models for Understanding, Reasoning, Generation and Editing": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2603.09877"
+    ],
+    "source_issues": []
+  },
+  "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2603.06577"
+    ],
+    "source_issues": []
+  },
+  "Beyond Language Modeling: An Exploration of Multimodal Pretraining": {
+    "kind": "analysis_paper",
+    "recommend_scope": "supplementary",
+    "note": "摘要为从零多模态预训练的控制实验、表示/架构与 scaling laws 研究；不宜直接命名为厂商模型系列版本。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2603.03276"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2603.03276"
+  },
+  "Gemini 3.1 Pro: A smarter model for your most complex tasks": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/"
+    ],
+    "source_issues": []
+  },
+  "Qwen3.5: Towards Native Multimodal Agents": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://qwen.ai/blog?id=qwen3.5"
+    ],
+    "source_issues": []
+  },
+  "MiniCPM-o 4.5": {
+    "kind": "model_release",
+    "recommend_scope": "supplementary",
+    "note": "上游为 Hugging Face 模型页和系列仓库，未直接提供论文。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://huggingface.co/openbmb/MiniCPM-o-4_5"
+    ],
+    "source_issues": []
+  },
+  "Kimi K2.5: Visual Agentic Intelligence": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2602.02276"
+    ],
+    "source_issues": []
+  },
+  "DeepSeek-OCR 2: Visual Causal Flow": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf"
+    ],
+    "source_issues": []
+  },
+  "Seed1.8 Model Card: Towards Generalized Real-World Agency": {
+    "kind": "model_card",
+    "recommend_scope": "include_candidate",
+    "note": "模型卡，作为模型报告类候选；不可因没有代码仓库将 stars 视为 0。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf"
+    ],
+    "source_issues": []
+  },
+  "Introducing GPT-5.2": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5-2/"
+    ],
+    "source_issues": []
+  },
+  "Introducing Mistral 3": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://mistral.ai/news/mistral-3"
+    ],
+    "source_issues": []
+  },
+  "Qwen3-VL Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2511.21631"
+    ],
+    "source_issues": []
+  },
+  "Emu3.5: Native Multimodal Models are World Learners": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2510.26583"
+    ],
+    "source_issues": []
+  },
+  "VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking, and Acting": {
+    "kind": "embodied_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "VITA 具身交互分支，可作为 VITA 系列扩展，但需要具身收录口径。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2510.21817.pdf"
+    ],
+    "source_issues": []
+  },
+  "DeepSeek-OCR: Contexts Optical Compression": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2510.18234"
+    ],
+    "source_issues": []
+  },
+  "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2510.15870"
+    ],
+    "source_issues": []
+  },
+  "NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2510.13721"
+    ],
+    "source_issues": []
+  },
+  "InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2510.13747"
+    ],
+    "source_issues": []
+  },
+  "VITA-VLA: Efficiently Teaching Vision-Language Models to Act via Action Expert Distillation": {
+    "kind": "embodied_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "VITA 视觉语言行动分支；模型能力覆盖行动，建议具身子类。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2510.09607"
+    ],
+    "source_issues": []
+  },
+  "LLaVA-OneVision-1.5: Fully Open Framework for Democratized Multimodal Training": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2509.23661"
+    ],
+    "source_issues": []
+  },
+  "Qwen3-Omni Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2509.17765"
+    ],
+    "source_issues": []
+  },
+  "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2508.18265"
+    ],
+    "source_issues": []
+  },
+  "MiniCPM-V 4.5: A GPT-4o Level MLLM for Single Image, Multi Image and Video Understanding on Your Phone": {
+    "kind": "model_release",
+    "recommend_scope": "supplementary",
+    "note": "上游题名无超链接，只有 MiniCPM-o 仓库与演示；需补充报告后才作为技术报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      ""
+    ],
+    "source_issues": [
+      "missing_title_link"
+    ]
+  },
+  "Thyme: Think Beyond Images": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2508.11630"
+    ],
+    "source_issues": []
+  },
+  "Introducing GPT-5": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)",
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://openai.com/index/introducing-gpt-5/",
+      "https://openai.com/index/introducing-gpt-5/"
+    ],
+    "source_issues": [
+      "cross_section_duplicate"
+    ]
+  },
+  "dots.vlm1": {
+    "kind": "model_release",
+    "recommend_scope": "supplementary",
+    "note": "上游标题直接链接模型仓库；可保留发布记录，但应另外查找正式技术报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/rednote-hilab/dots.vlm1"
+    ],
+    "source_issues": []
+  },
+  "Step3: Cost-Effective Multimodal Intelligence": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游题名指向官方研究页面；stars 徽章错误指向 GLM-4.1V-Thinking，应使用 stepfun-ai/Step3 实际仓库。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://stepfun.ai/research/step3"
+    ],
+    "source_issues": [
+      "star_badge_repo_mismatch"
+    ]
+  },
+  "GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2507.01006"
+    ],
+    "source_issues": []
+  },
+  "DenseWorld-1M: Towards Detailed Dense Grounded Caption in the Real World": {
+    "kind": "dataset_or_benchmark",
+    "recommend_scope": "exclude_non_model",
+    "note": "以大规模稠密 grounded caption 数据为主要成果，建议放数据附录。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2506.24102"
+    ],
+    "source_issues": []
+  },
+  "Qwen VLo: From \"Understanding\" the World to \"Depicting\" It": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://qwenlm.github.io/blog/qwen-vlo/"
+    ],
+    "source_issues": []
+  },
+  "MMSearch-R1: Incentivizing LMMs to Search": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2506.20670"
+    ],
+    "source_issues": []
+  },
+  "Show-o2: Improved Native Unified Multimodal Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2506.15564"
+    ],
+    "source_issues": []
+  },
+  "Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "源链接为 Google 官方模型技术报告 PDF；无 GitHub 仓库不代表 0 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf"
+    ],
+    "source_issues": []
+  },
+  "Ego-R1: Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2506.13654"
+    ],
+    "source_issues": []
+  },
+  "MiMo-VL Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2506.03569"
+    ],
+    "source_issues": []
+  },
+  "OpenUni: A Simple Baseline for Unified Multimodal Understanding and Generation": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2505.23661"
+    ],
+    "source_issues": []
+  },
+  "Emerging Properties in Unified Multimodal Pretraining": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "上游官方代码仓库为 BAGEL；虽题名未命名模型，属于 BAGEL 模型报告候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2505.14683"
+    ],
+    "source_issues": []
+  },
+  "MMaDA: Multimodal Large Diffusion Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2505.15809"
+    ],
+    "source_issues": []
+  },
+  "UniGen: Enhanced Training & Test-Time Strategies for Unified Multimodal Understanding and Generation": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2505.14682"
+    ],
+    "source_issues": []
+  },
+  "BLIP3-o: A Family of Fully Open Unified Multimodal Models-Architecture, Training and Dataset": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2505.09568"
+    ],
+    "source_issues": []
+  },
+  "Seed1.5-VL Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2505.07062"
+    ],
+    "source_issues": []
+  },
+  "Perception, Reason, Think, and Plan: A Survey on Large Multimodal Reasoning Models": {
+    "kind": "survey",
+    "recommend_scope": "exclude_non_model",
+    "note": "题名明确为综述，非单个模型技术报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2505.04921"
+    ],
+    "source_issues": []
+  },
+  "VITA-Audio: Fast Interleaved Cross-Modal Token Generation for Efficient Large Speech-Language Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2505.03739"
+    ],
+    "source_issues": []
+  },
+  "Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2504.16656"
+    ],
+    "source_issues": []
+  },
+  "Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2504.15271"
+    ],
+    "source_issues": []
+  },
+  "An LMM for Efficient Video Understanding via Reinforced Compression of Video Cubes": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2504.15270"
+    ],
+    "source_issues": []
+  },
+  "InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2504.10479"
+    ],
+    "source_issues": []
+  },
+  "Introducing GPT-4.1 in the API": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://openai.com/index/gpt-4-1/"
+    ],
+    "source_issues": []
+  },
+  "Kimi-VL Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2504.07491"
+    ],
+    "source_issues": []
+  },
+  "The Llama 4 herd: The beginning of a new era of natively multimodal AI innovation": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+    ],
+    "source_issues": []
+  },
+  "Qwen2.5-Omni Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf"
+    ],
+    "source_issues": []
+  },
+  "Addendum to GPT-4o System Card: Native image generation": {
+    "kind": "system_card",
+    "recommend_scope": "include_candidate",
+    "note": "系统/安全卡，建议注明文档类型，与架构训练技术报告区别展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf"
+    ],
+    "source_issues": []
+  },
+  "Sparrow: Data-Efficient Video-LLM with Text-to-Image Augmentation": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2411.19951"
+    ],
+    "source_issues": []
+  },
+  "Nexus-O: An Omni-Perceptive And -Interactive Model for Language, Audio, And Vision": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2503.01879"
+    ],
+    "source_issues": []
+  },
+  "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2503.01743"
+    ],
+    "source_issues": []
+  },
+  "Long-VITA: Scaling Large Multi-modal Models to 1 Million Tokens with Leading Short-Context Accuray": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2502.05177"
+    ],
+    "source_issues": []
+  },
+  "Qwen2.5-VL Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2502.13923"
+    ],
+    "source_issues": []
+  },
+  "Baichuan-Omni-1.5 Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/baichuan-inc/Baichuan-Omni-1.5/blob/main/baichuan_omni_1_5.pdf"
+    ],
+    "source_issues": []
+  },
+  "LlamaV-o1: Rethinking Step-by-step Visual Reasoning in LLMs": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2501.06186"
+    ],
+    "source_issues": []
+  },
+  "VITA-1.5: Towards GPT-4o Level Real-Time Vision and Speech Interaction": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2501.01957"
+    ],
+    "source_issues": []
+  },
+  "QVQ: To See the World with Wisdom": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://qwenlm.github.io/blog/qvq-72b-preview/"
+    ],
+    "source_issues": []
+  },
+  "DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for Advanced Multimodal Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.10302"
+    ],
+    "source_issues": []
+  },
+  "Apollo: An Exploration of Video Understanding in Large Multimodal Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.10360"
+    ],
+    "source_issues": []
+  },
+  "InternLM-XComposer2.5-OmniLive: A Comprehensive Multimodal System for Long-term Streaming Video and Audio Interactions": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.09596"
+    ],
+    "source_issues": []
+  },
+  "StreamChat: Chatting with Streaming Video": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.08646"
+    ],
+    "source_issues": []
+  },
+  "CompCap: Improving Multimodal Large Language Models with Composite Captions": {
+    "kind": "training_method",
+    "recommend_scope": "supplementary",
+    "note": "复合 caption 数据/训练改进方法，建议作为模型训练资源附录。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.05243"
+    ],
+    "source_issues": []
+  },
+  "LinVT: Empower Your Image-level Large Language Model to Understand Videos": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.05185"
+    ],
+    "source_issues": []
+  },
+  "Expanding Performance Boundaries of Open-Source Multimodal Models with Model, Data, and Test-Time Scaling": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "InternVL 系列 scaling/模型工作；不要仅因通用题名归为方法并排除。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.05271"
+    ],
+    "source_issues": []
+  },
+  "NVILA: Efficient Frontier Visual Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.04468"
+    ],
+    "source_issues": []
+  },
+  "Inst-IT: Boosting Multimodal Instance Understanding via Explicit Visual Prompt Instruction Tuning": {
+    "kind": "dataset_and_method",
+    "recommend_scope": "supplementary",
+    "note": "显式视觉提示指令数据/训练及 Inst-IT Bench；主线不是模型系列版本发布。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2412.03565"
+    ],
+    "source_issues": []
+  },
+  "TimeMarker: A Versatile Video-LLM for Long and Short Video Understanding with Superior Temporal Localization Ability": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2411.18211"
+    ],
+    "source_issues": []
+  },
+  "ChatRex: Taming Multimodal LLM for Joint Perception and Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2411.18363"
+    ],
+    "source_issues": []
+  },
+  "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2410.17434"
+    ],
+    "source_issues": []
+  },
+  "Deciphering Cross-Modal Alignment in Large Vision-Language Models with Modality Integration Rate": {
+    "kind": "analysis_paper",
+    "recommend_scope": "supplementary",
+    "note": "跨模态对齐诊断/度量分析，非独立模型版本报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2410.07167"
+    ],
+    "source_issues": []
+  },
+  "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2410.03051"
+    ],
+    "source_issues": []
+  },
+  "EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2409.18042"
+    ],
+    "source_issues": []
+  },
+  "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2409.17146"
+    ],
+    "source_issues": []
+  },
+  "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2409.12191"
+    ],
+    "source_issues": []
+  },
+  "ChartMoE: Mixture of Expert Connector for Advanced Chart Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2409.03277"
+    ],
+    "source_issues": []
+  },
+  "LongLLaVA: Scaling Multi-modal LLMs to 1000 Images Efficiently via Hybrid Architecture": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2409.02889"
+    ],
+    "source_issues": []
+  },
+  "EAGLE: Exploring The Design Space for Multimodal LLMs with Mixture of Encoders": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2408.15998"
+    ],
+    "source_issues": []
+  },
+  "LLaVA-MoD: Making LLaVA Tiny via MoE Knowledge Distillation": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2408.15881"
+    ],
+    "source_issues": []
+  },
+  "mPLUG-Owl3: Towards Long Image-Sequence Understanding in Multi-Modal Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://www.arxiv.org/pdf/2408.04840"
+    ],
+    "source_issues": []
+  },
+  "VITA: Towards Open-Source Interactive Omni Multimodal LLM": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2408.05211"
+    ],
+    "source_issues": []
+  },
+  "LLaVA-OneVision: Easy Visual Task Transfer": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2408.03326"
+    ],
+    "source_issues": []
+  },
+  "MiniCPM-V: A GPT-4V Level MLLM on Your Phone": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2408.01800"
+    ],
+    "source_issues": []
+  },
+  "VILA^2: VILA Augmented VILA": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2407.17453"
+    ],
+    "source_issues": []
+  },
+  "SlowFast-LLaVA: A Strong Training-Free Baseline for Video Large Language Models": {
+    "kind": "inference_method",
+    "recommend_scope": "supplementary",
+    "note": "题名明确为无需训练的视频推理 baseline；不能视为新模型训练技术报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2407.15841"
+    ],
+    "source_issues": []
+  },
+  "EVLM: An Efficient Vision-Language Model for Visual Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2407.14177"
+    ],
+    "source_issues": []
+  },
+  "IDA-VLM: Towards Movie Understanding via ID-Aware Large Vision-Language Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2407.07577"
+    ],
+    "source_issues": []
+  },
+  "InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2407.03320"
+    ],
+    "source_issues": []
+  },
+  "OMG-LLaVA: Bridging Image-level, Object-level, Pixel-level Reasoning and Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.19389"
+    ],
+    "source_issues": []
+  },
+  "DocKylin: A Large Multimodal Model for Visual Document Understanding with Efficient Visual Slimming": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.19101"
+    ],
+    "source_issues": []
+  },
+  "Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.16860"
+    ],
+    "source_issues": []
+  },
+  "Long Context Transfer from Language to Vision": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "LongVA 长上下文视觉模型工作；模型论文候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.16852"
+    ],
+    "source_issues": []
+  },
+  "video-SALMONN: Speech-Enhanced Audio-Visual Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.15704"
+    ],
+    "source_issues": []
+  },
+  "TroL: Traversal of Layers for Large Language and Vision Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.12246"
+    ],
+    "source_issues": []
+  },
+  "Unveiling Encoder-Free Vision-Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "EVE encoder-free 模型工作；模型论文候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.11832"
+    ],
+    "source_issues": []
+  },
+  "VideoLLM-online: Online Video Large Language Model for Streaming Video": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.11816"
+    ],
+    "source_issues": []
+  },
+  "RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for Robotics": {
+    "kind": "embodied_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "机器人空间 affordance 模型；若收录领域/具身模型，应保留。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.10721"
+    ],
+    "source_issues": []
+  },
+  "Comparison Visual Instruction Tuning": {
+    "kind": "dataset_and_method",
+    "recommend_scope": "supplementary",
+    "note": "CaD-VI 对比视觉指令数据/训练方法；上游 Github 列实际为项目页面。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2406.09240"
+    ],
+    "source_issues": []
+  },
+  "Beyond LLaVA-HD: Diving into High-Resolution Large Multimodal Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.08487"
+    ],
+    "source_issues": []
+  },
+  "VideoLLaMA 2: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMs": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.07476"
+    ],
+    "source_issues": []
+  },
+  "Parrot: Multilingual Visual Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2406.02539"
+    ],
+    "source_issues": []
+  },
+  "Ovis: Structural Embedding Alignment for Multimodal Large Language Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2405.20797"
+    ],
+    "source_issues": []
+  },
+  "Matryoshka Query Transformer for Large Vision-Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "MQT-LLaVA 结构/模型论文，含发布模型；可作为研究模型候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2405.19315"
+    ],
+    "source_issues": []
+  },
+  "ConvLLaVA: Hierarchical Backbones as Visual Encoder for Large Multimodal Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2405.15738"
+    ],
+    "source_issues": []
+  },
+  "Meteor: Mamba-based Traversal of Rationale for Large Language and Vision Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2405.15574"
+    ],
+    "source_issues": []
+  },
+  "Libra: Building Decoupled Vision System on Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2405.10140"
+    ],
+    "source_issues": []
+  },
+  "CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2405.05949"
+    ],
+    "source_issues": []
+  },
+  "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "InternVL 系列模型/训练套件报告候选；保留至 stars 判定。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2404.16821"
+    ],
+    "source_issues": []
+  },
+  "Graphic Design with Large Multimodal Model": {
+    "kind": "application_model_paper",
+    "recommend_scope": "needs_scope_review",
+    "note": "图形设计领域模型/任务工作；保留候选，需按通用/领域模型收录口径判断。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2404.14368"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2404.14368"
+  },
+  "BRAVE: Broadening the visual encoding of vision-language models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2404.07204"
+    ],
+    "source_issues": []
+  },
+  "InternLM-XComposer2-4KHD: A Pioneering Large Vision-Language Model Handling Resolutions from 336 Pixels to 4K HD": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2404.06512.pdf"
+    ],
+    "source_issues": []
+  },
+  "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2404.05719.pdf"
+    ],
+    "source_issues": []
+  },
+  "MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2404.05726.pdf"
+    ],
+    "source_issues": []
+  },
+  "VITRON: A Unified Pixel-level Vision LLM for Understanding, Generating, Segmenting, Editing": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf"
+    ],
+    "source_issues": []
+  },
+  "TOMGPT: Reliable Text-Only Training Approach for Cost-Effective Multi-modal Large Language Model": {
+    "kind": "training_method",
+    "recommend_scope": "supplementary",
+    "note": "仅文本训练策略/方法研究，建议方法附录。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3654674"
+    ],
+    "source_issues": []
+  },
+  "LITA: Language Instructed Temporal-Localization Assistant": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2403.19046"
+    ],
+    "source_issues": []
+  },
+  "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2403.18814.pdf"
+    ],
+    "source_issues": []
+  },
+  "MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "MM1 模型及预训练报告；标题强调方法分析但包含模型家族。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2403.09611.pdf"
+    ],
+    "source_issues": []
+  },
+  "MoAI: Mixture of All Intelligence for Large Language and Vision Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2403.07508.pdf"
+    ],
+    "source_issues": []
+  },
+  "DeepSeek-VL: Towards Real-World Vision-Language Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2403.05525"
+    ],
+    "source_issues": []
+  },
+  "TextMonkey: An OCR-Free Large Multimodal Model for Understanding Document": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2403.04473.pdf"
+    ],
+    "source_issues": []
+  },
+  "The All-Seeing Project V2: Towards General Relation Comprehension of the Open World": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.19474.pdf"
+    ],
+    "source_issues": []
+  },
+  "GROUNDHOG: Grounding Large Language Models to Holistic Segmentation": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.16846.pdf"
+    ],
+    "source_issues": []
+  },
+  "AnyGPT: Unified Multimodal LLM with Discrete Sequence Modeling": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.12226.pdf"
+    ],
+    "source_issues": []
+  },
+  "Momentor: Advancing Video Large Language Model with Fine-Grained Temporal Reasoning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.11435.pdf"
+    ],
+    "source_issues": []
+  },
+  "ALLaVA: Harnessing GPT4V-synthesized Data for A Lite Vision-Language Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.11684.pdf"
+    ],
+    "source_issues": []
+  },
+  "CoLLaVO: Crayon Large Language and Vision mOdel": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.11248.pdf"
+    ],
+    "source_issues": []
+  },
+  "Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "Prismatic VLM 模型系列及设计空间研究，候选模型报告；不能仅因含 analysis 含义排除。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.07865"
+    ],
+    "source_issues": []
+  },
+  "CogCoM: Train Large Vision-Language Models Diving into Details through Chain of Manipulations": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.04236.pdf"
+    ],
+    "source_issues": []
+  },
+  "MobileVLM V2: Faster and Stronger Baseline for Vision Language Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.03766.pdf"
+    ],
+    "source_issues": []
+  },
+  "GITA: Graph to Visual and Textual Integration for Vision-Language Graph Reasoning": {
+    "kind": "application_model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "图结构视觉-文本集成框架及 GVLQA，摘要包含视觉图预训练；作为领域模型/框架候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2402.02130"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2402.02130"
+  },
+  "Enhancing Multimodal Large Language Models with Vision Detection Models: An Empirical Study": {
+    "kind": "analysis_paper",
+    "recommend_scope": "supplementary",
+    "note": "题名明确为视觉检测增强的实证研究；建议方法附录。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2401.17981.pdf"
+    ],
+    "source_issues": []
+  },
+  "LLaVA-NeXT: Improved reasoning, OCR, and world knowledge": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://llava-vl.github.io/blog/2024-01-30-llava-next/"
+    ],
+    "source_issues": []
+  },
+  "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2401.15947.pdf"
+    ],
+    "source_issues": []
+  },
+  "InternLM-XComposer2: Mastering Free-form Text-Image Composition and Comprehension in Vision-Language Large Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2401.16420.pdf"
+    ],
+    "source_issues": []
+  },
+  "Yi-VL": {
+    "kind": "model_release",
+    "recommend_scope": "supplementary",
+    "note": "上游为模型仓库发布记录；建议补充区展示，缺少独立报告链接。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://github.com/01-ai/Yi/tree/main/VL"
+    ],
+    "source_issues": []
+  },
+  "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2401.12168.pdf"
+    ],
+    "source_issues": []
+  },
+  "ChartAssisstant: A Universal Chart Multimodal Language Model via Chart-to-Table Pre-training and Multitask Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2401.02384"
+    ],
+    "source_issues": []
+  },
+  "MobileVLM : A Fast, Reproducible and Strong Vision Language Assistant for Mobile Devices": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.16886.pdf"
+    ],
+    "source_issues": []
+  },
+  "InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.14238.pdf"
+    ],
+    "source_issues": []
+  },
+  "Osprey: Pixel Understanding with Visual Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.10032.pdf"
+    ],
+    "source_issues": []
+  },
+  "CogAgent: A Visual Language Model for GUI Agents": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.08914.pdf"
+    ],
+    "source_issues": []
+  },
+  "Pixel Aligned Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.09237.pdf"
+    ],
+    "source_issues": []
+  },
+  "VILA: On Pre-training for Visual Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.07533"
+    ],
+    "source_issues": []
+  },
+  "See, Say, and Segment: Teaching LMMs to Overcome False Premises": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "联合训练的多模态分割/反馈模型，亦提供 false-premise benchmark；属于模型论文候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.08366.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2312.08366"
+  },
+  "Vary: Scaling up the Vision Vocabulary for Large Vision-Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.06109.pdf"
+    ],
+    "source_issues": []
+  },
+  "Honeybee: Locality-enhanced Projector for Multimodal LLM": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.06742.pdf"
+    ],
+    "source_issues": []
+  },
+  "Gemini: A Family of Highly Capable Multimodal Models": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "Gemini 技术报告，跨章节重复且 arXiv/PDF 链接不同，合并为一条。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)",
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf",
+      "https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf"
+    ],
+    "source_issues": [
+      "cross_section_duplicate"
+    ]
+  },
+  "OneLLM: One Framework to Align All Modalities with Language": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.03700.pdf"
+    ],
+    "source_issues": []
+  },
+  "Lenna: Language Enhanced Reasoning Detection Assistant": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.02433.pdf"
+    ],
+    "source_issues": []
+  },
+  "VaQuitA: Enhancing Alignment in LLM-Assisted Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.02310.pdf"
+    ],
+    "source_issues": []
+  },
+  "TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.02051.pdf"
+    ],
+    "source_issues": []
+  },
+  "Making Large Multimodal Models Understand Arbitrary Visual Prompts": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.00784.pdf"
+    ],
+    "source_issues": []
+  },
+  "Dolphins: Multimodal Language Model for Driving": {
+    "kind": "application_model_paper",
+    "recommend_scope": "needs_scope_review",
+    "note": "自动驾驶领域多模态模型，可单列领域模型；不凭领域特定而删除。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2312.00438.pdf"
+    ],
+    "source_issues": []
+  },
+  "LL3DA: Visual Interactive Instruction Tuning for Omni-3D Understanding, Reasoning, and Planning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.18651.pdf"
+    ],
+    "source_issues": []
+  },
+  "VTimeLLM: Empower LLM to Grasp Video Moments": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.18445.pdf"
+    ],
+    "source_issues": []
+  },
+  "mPLUG-PaperOwl: Scientific Diagram Analysis with the Multimodal Large Language Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.18248.pdf"
+    ],
+    "source_issues": []
+  },
+  "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.17043.pdf"
+    ],
+    "source_issues": []
+  },
+  "LLMGA: Multimodal Large Language Model based Generation Assistant": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.16500.pdf"
+    ],
+    "source_issues": []
+  },
+  "ChartLlama: A Multimodal LLM for Chart Understanding and Generation": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.16483.pdf"
+    ],
+    "source_issues": []
+  },
+  "ShareGPT4V: Improving Large Multi-Modal Models with Better Captions": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.12793.pdf"
+    ],
+    "source_issues": []
+  },
+  "LION : Empowering Multimodal Large Language Model with Dual-Level Visual Knowledge": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.11860.pdf"
+    ],
+    "source_issues": []
+  },
+  "An Embodied Generalist Agent in 3D World": {
+    "kind": "embodied_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "3D 世界具身通用 agent 模型报告；需具身收录口径。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.12871.pdf"
+    ],
+    "source_issues": []
+  },
+  "Video-LLaVA: Learning United Visual Representation by Alignment Before Projection": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.10122.pdf"
+    ],
+    "source_issues": []
+  },
+  "Chat-UniVi: Unified Visual Representation Empowers Large Language Models with Image and Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.08046"
+    ],
+    "source_issues": []
+  },
+  "To See is to Believe: Prompting GPT-4V for Better Visual Instruction Tuning": {
+    "kind": "dataset_and_method",
+    "recommend_scope": "supplementary",
+    "note": "借助 GPT-4V 构造视觉指令的训练数据方法，非 GPT-4V 的模型报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.07574.pdf"
+    ],
+    "source_issues": []
+  },
+  "SPHINX: The Joint Mixing of Weights, Tasks, and Visual Embeddings for Multi-modal Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.07575.pdf"
+    ],
+    "source_issues": []
+  },
+  "Monkey: Image Resolution and Text Label Are Important Things for Large Multi-modal Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.06607.pdf"
+    ],
+    "source_issues": []
+  },
+  "LLaVA-Plus: Learning to Use Tools for Creating Multimodal Agents": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.05437.pdf"
+    ],
+    "source_issues": []
+  },
+  "NExT-Chat: An LMM for Chat, Detection and Segmentation": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.04498.pdf"
+    ],
+    "source_issues": []
+  },
+  "mPLUG-Owl2: Revolutionizing Multi-modal Large Language Model with Modality Collaboration": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.04257.pdf"
+    ],
+    "source_issues": []
+  },
+  "OtterHD: A High-Resolution Multi-modality Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.04219.pdf"
+    ],
+    "source_issues": []
+  },
+  "CoVLM: Composing Visual Entities and Relationships in Large Language Models Via Communicative Decoding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.03354.pdf"
+    ],
+    "source_issues": []
+  },
+  "GLaMM: Pixel Grounding Large Multimodal Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.03356.pdf"
+    ],
+    "source_issues": []
+  },
+  "What Makes for Good Visual Instructions? Synthesizing Complex Visual Reasoning Instructions for Visual Instruction Tuning": {
+    "kind": "dataset_and_method",
+    "recommend_scope": "supplementary",
+    "note": "视觉推理指令合成/质量研究；方法及数据工作。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.01487.pdf"
+    ],
+    "source_issues": []
+  },
+  "MiniGPT-v2: large language model as a unified interface for vision-language multi-task learning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2310.09478.pdf"
+    ],
+    "source_issues": []
+  },
+  "SALMONN: Towards Generic Hearing Abilities for Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2310.13289"
+    ],
+    "source_issues": []
+  },
+  "Ferret: Refer and Ground Anything Anywhere at Any Granularity": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2310.07704.pdf"
+    ],
+    "source_issues": []
+  },
+  "CogVLM: Visual Expert For Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2311.03079.pdf"
+    ],
+    "source_issues": []
+  },
+  "Improved Baselines with Visual Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "LLaVA-1.5 模型报告；不要因通用题名归为纯方法。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2310.03744.pdf"
+    ],
+    "source_issues": []
+  },
+  "LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment": {
+    "kind": "multimodal_encoder",
+    "recommend_scope": "supplementary",
+    "note": "摘要为冻结语言 encoder、对比学习各模态 encoder，并提供 VIDAL-10M；属于多模态表示模型而非生成式 LLM。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2310.01852.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2310.01852"
+  },
+  "Reformulating Vision-Language Foundation Models and Datasets Towards Universal Multimodal Assistants": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "Muffin 模型与数据联合工作，有模型发布；可作为模型报告候选并注明混合贡献。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2310.00653.pdf"
+    ],
+    "source_issues": []
+  },
+  "AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.16058.pdf"
+    ],
+    "source_issues": []
+  },
+  "InternLM-XComposer: A Vision-Language Large Model for Advanced Text-image Comprehension and Composition": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.15112.pdf"
+    ],
+    "source_issues": []
+  },
+  "DreamLLM: Synergistic Multimodal Comprehension and Creation": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.11499.pdf"
+    ],
+    "source_issues": []
+  },
+  "An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models": {
+    "kind": "analysis_with_model_release",
+    "recommend_scope": "include_candidate",
+    "note": "研究 LLaVA 33B/65B/70B 的 scaling，摘要明确发布 LLaVA Model Zoo 权重；可作为 LLaVA 系列补充报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.09958.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2309.09958"
+  },
+  "TextBind: Multi-turn Interleaved Multimodal Instruction-following": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.08637.pdf"
+    ],
+    "source_issues": []
+  },
+  "NExT-GPT: Any-to-Any Multimodal LLM": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.05519.pdf"
+    ],
+    "source_issues": []
+  },
+  "Sight Beyond Text: Multi-Modal Training Enhances LLMs in Truthfulness and Ethics": {
+    "kind": "analysis_paper",
+    "recommend_scope": "supplementary",
+    "note": "多模态训练对真实性/伦理的效果分析，非厂商模型版本报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.07120.pdf"
+    ],
+    "source_issues": []
+  },
+  "ImageBind-LLM: Multi-modality Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.03905.pdf"
+    ],
+    "source_issues": []
+  },
+  "Scaling Autoregressive Multi-Modal Models: Pretraining and Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "CM3Leon 模型预训练与指令训练工作；模型论文候选，不因无仓库删去。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.02591.pdf"
+    ],
+    "source_issues": []
+  },
+  "PointLLM: Empowering Large Language Models to Understand Point Clouds": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.16911.pdf"
+    ],
+    "source_issues": []
+  },
+  "✨Sparkles: Unlocking Chats Across Multiple Images for Multimodal Instruction-Following Models": {
+    "kind": "dataset_and_model",
+    "recommend_scope": "include_candidate",
+    "note": "SparklesDialogue 数据、SparklesEval 评测和 SparklesChat 模型联合成果；不是纯数据集，应保留模型候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.16463.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2308.16463"
+  },
+  "MLLM-DataEngine: An Iterative Refinement Approach for MLLM": {
+    "kind": "dataset_and_method",
+    "recommend_scope": "supplementary",
+    "note": "迭代数据精炼引擎；数据生产方法，不直接等价于独立模型系列报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.13566.pdf"
+    ],
+    "source_issues": []
+  },
+  "Position-Enhanced Visual Instruction Tuning for Multimodal Large Language Models": {
+    "kind": "training_method",
+    "recommend_scope": "supplementary",
+    "note": "位置增强指令微调方法；建议方法附录。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.13437.pdf"
+    ],
+    "source_issues": []
+  },
+  "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.12966.pdf"
+    ],
+    "source_issues": []
+  },
+  "Large Multilingual Models Pivot Zero-Shot Multimodal Learning across Languages": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.12038.pdf"
+    ],
+    "source_issues": []
+  },
+  "StableLLaVA: Enhanced Visual Instruction Tuning with Synthesized Image-Dialogue Data": {
+    "kind": "dataset_and_method",
+    "recommend_scope": "supplementary",
+    "note": "合成图像-对话数据与训练改进，建议区分于 LLaVA 官方系列报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.10253.pdf"
+    ],
+    "source_issues": []
+  },
+  "BLIVA: A Simple Multimodal LLM for Better Handling of Text-rich Visual Questions": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.09936.pdf"
+    ],
+    "source_issues": []
+  },
+  "Fine-tuning Multimodal LLMs to Follow Zero-shot Demonstrative Instructions": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "Cheetah 指令跟随模型工作，有对应模型仓库；保留候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.04152.pdf"
+    ],
+    "source_issues": []
+  },
+  "The All-Seeing Project: Towards Panoptic Visual Recognition and Understanding of the Open World": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.01907.pdf"
+    ],
+    "source_issues": []
+  },
+  "LISA: Reasoning Segmentation via Large Language Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2308.00692.pdf"
+    ],
+    "source_issues": []
+  },
+  "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.16449.pdf"
+    ],
+    "source_issues": []
+  },
+  "3D-LLM: Injecting the 3D World into Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.12981.pdf"
+    ],
+    "source_issues": []
+  },
+  "ChatSpot: Bootstrapping Multimodal LLMs via Precise Referring Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.09474.pdf"
+    ],
+    "source_issues": []
+  },
+  "BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.08581.pdf"
+    ],
+    "source_issues": []
+  },
+  "SVIT: Scaling up Visual Instruction Tuning": {
+    "kind": "dataset_or_benchmark",
+    "recommend_scope": "exclude_non_model",
+    "note": "SVIT 指令数据集与数据构造工作；不等价于独立基础模型版本报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.04087.pdf"
+    ],
+    "source_issues": []
+  },
+  "GPT4RoI: Instruction Tuning Large Language Model on Region-of-Interest": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.03601.pdf"
+    ],
+    "source_issues": []
+  },
+  "What Matters in Training a GPT4-Style Language Model with Multimodal Inputs?": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "Lynx 模型及训练研究，有对应发布仓库；模型论文候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.02469.pdf"
+    ],
+    "source_issues": []
+  },
+  "mPLUG-DocOwl: Modularized Multimodal Large Language Model for Document Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.02499.pdf"
+    ],
+    "source_issues": []
+  },
+  "Visual Instruction Tuning with Polite Flamingo": {
+    "kind": "dataset_and_model",
+    "recommend_scope": "include_candidate",
+    "note": "论文同时提出 Polite Flamingo 多模态 response rewriter、PF-1M 数据及 Clever Flamingo 模型；包含模型报告内容，应保留候选。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.01003.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2307.01003"
+  },
+  "LLaVAR: Enhanced Visual Instruction Tuning for Text-Rich Image Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.17107.pdf"
+    ],
+    "source_issues": []
+  },
+  "Shikra: Unleashing Multimodal LLM's Referential Dialogue Magic": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.15195.pdf"
+    ],
+    "source_issues": []
+  },
+  "MotionGPT: Human Motion as a Foreign Language": {
+    "kind": "application_model_paper",
+    "recommend_scope": "needs_scope_review",
+    "note": "人体动作与语言的生成模型，属于多模态动作领域；可单列领域模型。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.14795.pdf"
+    ],
+    "source_issues": []
+  },
+  "Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.09093.pdf"
+    ],
+    "source_issues": []
+  },
+  "LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark": {
+    "kind": "dataset_framework_and_model",
+    "recommend_scope": "supplementary",
+    "note": "主要贡献为数据集、框架和评测，同时提供 baseline 模型；不武断删除，但与模型技术报告分开。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.06687.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2306.06687"
+  },
+  "Video-ChatGPT: Towards Detailed Video Understanding via Large Vision and Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.05424.pdf"
+    ],
+    "source_issues": []
+  },
+  "MIMIC-IT: Multi-Modal In-Context Instruction Tuning": {
+    "kind": "dataset_or_benchmark",
+    "recommend_scope": "exclude_non_model",
+    "note": "MIMIC-IT 指令数据集；模型 Otter 应以对应模型工作独立处理。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.05425.pdf"
+    ],
+    "source_issues": []
+  },
+  "M3IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning": {
+    "kind": "dataset_or_benchmark",
+    "recommend_scope": "exclude_non_model",
+    "note": "题名明确为多模态多语言指令数据集。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.04387.pdf"
+    ],
+    "source_issues": []
+  },
+  "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.02858.pdf"
+    ],
+    "source_issues": []
+  },
+  "LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.00890.pdf"
+    ],
+    "source_issues": []
+  },
+  "GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction": {
+    "kind": "tool_use_method",
+    "recommend_scope": "supplementary",
+    "note": "摘要为训练文本 LLM 调用多模态工具，包含数据与工具使用评测；属于工具调用方法而非原生多模态模型报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.18752.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2305.18752"
+  },
+  "PandaGPT: One Model To Instruction-Follow Them All": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.16355.pdf"
+    ],
+    "source_issues": []
+  },
+  "ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.16103.pdf"
+    ],
+    "source_issues": []
+  },
+  "Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models": {
+    "kind": "training_method",
+    "recommend_scope": "supplementary",
+    "note": "高效视觉语言指令调优方法；与完整模型预训练/版本报告区分。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.15023.pdf"
+    ],
+    "source_issues": []
+  },
+  "DetGPT: Detect What You Need via Reasoning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.14167.pdf"
+    ],
+    "source_issues": []
+  },
+  "Pengi: An Audio Language Model for Audio Tasks": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.11834.pdf"
+    ],
+    "source_issues": []
+  },
+  "VisionLLM: Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.11175.pdf"
+    ],
+    "source_issues": []
+  },
+  "Listen, Think, and Understand": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "LTU 音频语言模型工作；题名未包含模型名，但具有模型发布。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.10790.pdf"
+    ],
+    "source_issues": []
+  },
+  "VisualGLM-6B": {
+    "kind": "model_release",
+    "recommend_scope": "supplementary",
+    "note": "上游直接链接模型发布仓库，未提供论文/技术报告链接。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      ""
+    ],
+    "source_issues": [
+      "missing_title_link"
+    ]
+  },
+  "PMC-VQA: Visual Instruction Tuning for Medical Visual Question Answering": {
+    "kind": "dataset_and_model",
+    "recommend_scope": "supplementary",
+    "note": "医学视觉问答数据集与模型基线，属于领域资源工作；不自动视为通用模型技术报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.10415.pdf"
+    ],
+    "source_issues": []
+  },
+  "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.06500.pdf"
+    ],
+    "source_issues": []
+  },
+  "VideoChat: Chat-Centric Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.06355.pdf"
+    ],
+    "source_issues": []
+  },
+  "MultiModal-GPT: A Vision and Language Model for Dialogue with Humans": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.04790.pdf"
+    ],
+    "source_issues": []
+  },
+  "X-LLM: Bootstrapping Advanced Large Language Models by Treating Multi-Modalities as Foreign Languages": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.04160.pdf"
+    ],
+    "source_issues": []
+  },
+  "LMEye: An Interactive Perception Network for Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.03701.pdf"
+    ],
+    "source_issues": []
+  },
+  "LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2304.15010.pdf"
+    ],
+    "source_issues": []
+  },
+  "mPLUG-Owl: Modularization Empowers Large Language Models with Multimodality": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2304.14178.pdf"
+    ],
+    "source_issues": []
+  },
+  "MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2304.10592.pdf"
+    ],
+    "source_issues": []
+  },
+  "Visual Instruction Tuning": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "LLaVA 初代模型论文；虽然题名是训练方法，亦为系列起始模型报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2304.08485.pdf"
+    ],
+    "source_issues": []
+  },
+  "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention": {
+    "kind": "training_method",
+    "recommend_scope": "supplementary",
+    "note": "通用参数高效适配方法，视觉扩展属于能力应用；不是完整多模态基础模型版本报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2303.16199.pdf"
+    ],
+    "source_issues": []
+  },
+  "MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning": {
+    "kind": "dataset_and_method",
+    "recommend_scope": "supplementary",
+    "note": "多任务多模态指令数据集和训练方法；建议方法/数据附录，非厂商系列报告。",
+    "sections": [
+      "Multimodal Instruction Tuning (& Latest Works)"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2212.10773.pdf"
+    ],
+    "source_issues": []
+  },
+  "VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2501.13106"
+    ],
+    "source_issues": []
+  },
+  "Emu3: Next-Token Prediction is All You Need": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2409.18869"
+    ],
+    "source_issues": []
+  },
+  "Llama 3.2: Revolutionizing edge AI and vision with open, customizable models": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/"
+    ],
+    "source_issues": []
+  },
+  "Pixtral-12B": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://mistral.ai/news/pixtral-12b/"
+    ],
+    "source_issues": []
+  },
+  "xGen-MM (BLIP-3): A Family of Open Large Multimodal Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2408.08872"
+    ],
+    "source_issues": []
+  },
+  "The Llama 3 Herd of Models": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "Llama 3 家族技术报告，含多模态部分；可纳入 Llama 系列并标记版本覆盖范围。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2407.21783"
+    ],
+    "source_issues": []
+  },
+  "Chameleon: Mixed-Modal Early-Fusion Foundation Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2405.09818"
+    ],
+    "source_issues": []
+  },
+  "Hello GPT-4o": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://openai.com/index/hello-gpt-4o/"
+    ],
+    "source_issues": []
+  },
+  "The Claude 3 Model Family: Opus, Sonnet, Haiku": {
+    "kind": "model_card",
+    "recommend_scope": "include_candidate",
+    "note": "源链接是 Claude 3 Model Card PDF；建议作为报告类文档并明确模型卡类型。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf"
+    ],
+    "source_issues": []
+  },
+  "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "源链接为 Google 官方模型技术报告 PDF；无 GitHub 仓库不代表 0 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"
+    ],
+    "source_issues": []
+  },
+  "Fuyu-8B: A Multimodal Architecture for AI Agents": {
+    "kind": "release_blog",
+    "recommend_scope": "supplementary",
+    "note": "上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://www.adept.ai/blog/fuyu-8b"
+    ],
+    "source_issues": []
+  },
+  "Unified Model for Image, Video, Audio and Language Tasks": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.16184.pdf"
+    ],
+    "source_issues": []
+  },
+  "PaLI-3 Vision Language Models: Smaller, Faster, Stronger": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2310.09199.pdf"
+    ],
+    "source_issues": []
+  },
+  "GPT-4V(ision) System Card": {
+    "kind": "system_card",
+    "recommend_scope": "include_candidate",
+    "note": "系统/安全卡，建议注明文档类型，与架构训练技术报告区别展示。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://cdn.openai.com/papers/GPTV_System_Card.pdf"
+    ],
+    "source_issues": []
+  },
+  "Unified Language-Vision Pretraining in LLM with Dynamic Discrete Visual Tokenization": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2309.04669.pdf"
+    ],
+    "source_issues": []
+  },
+  "Multimodal Foundation Models: From Specialists to General-Purpose Assistants": {
+    "kind": "survey",
+    "recommend_scope": "exclude_non_model",
+    "note": "arXiv 摘要明确为综合综述/教程，不能作为厂商模型系列的版本报告。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://browse.arxiv.org/pdf/2309.10020.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2309.10020"
+  },
+  "Bootstrapping Vision-Language Learning with Decoupled Language Pre-training": {
+    "kind": "training_method",
+    "recommend_scope": "supplementary",
+    "note": "BLIText/P-Former 解耦语言预训练方法，摘要为改进 BLIP-2 的训练方案。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.07063.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2307.07063"
+  },
+  "Generative Pretraining in Multimodality": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2307.05222.pdf"
+    ],
+    "source_issues": []
+  },
+  "Kosmos-2: Grounding Multimodal Large Language Models to the World": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2306.14824.pdf"
+    ],
+    "source_issues": []
+  },
+  "Transfer Visual Prompt Generator across LLMs": {
+    "kind": "training_method",
+    "recommend_scope": "supplementary",
+    "note": "VPGTrans 为跨 LLM 的视觉提示生成器迁移方法，虽构造 VL-LLaMA/VL-Vicuna，不宜直接作基础模型技术报告。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2305.01278.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2305.01278"
+  },
+  "GPT-4 Technical Report": {
+    "kind": "technical_report",
+    "recommend_scope": "include_candidate",
+    "note": "题名明确为模型技术报告；最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2303.08774.pdf"
+    ],
+    "source_issues": []
+  },
+  "PaLM-E: An Embodied Multimodal Language Model": {
+    "kind": "embodied_model_report",
+    "recommend_scope": "include_candidate",
+    "note": "明确为 embodied multimodal language model，是模型论文；可单列具身类别。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2303.03378.pdf"
+    ],
+    "source_issues": []
+  },
+  "Prismer: A Vision-Language Model with An Ensemble of Experts": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2303.02506.pdf"
+    ],
+    "source_issues": []
+  },
+  "Language Is Not All You Need: Aligning Perception with Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2302.14045.pdf"
+    ],
+    "source_issues": []
+  },
+  "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2301.12597.pdf"
+    ],
+    "source_issues": []
+  },
+  "VIMA: General Robot Manipulation with Multimodal Prompts": {
+    "kind": "embodied_model_report",
+    "recommend_scope": "needs_scope_review",
+    "note": "机器人动作预测/操控基础模型，属于具身多模态模型，非对话式 MLLM。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2210.03094.pdf"
+    ],
+    "source_issues": []
+  },
+  "MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge": {
+    "kind": "embodied_platform",
+    "recommend_scope": "supplementary",
+    "note": "模拟环境、知识库、算法与预训练模型组成的具身研究平台；属于基础资源/agent 工作。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2206.08853.pdf"
+    ],
+    "source_issues": [],
+    "evidence_url": "https://arxiv.org/abs/2206.08853"
+  },
+  "Write and Paint: Generative Vision-Language Models are Unified Modal Learners": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2206.07699.pdf"
+    ],
+    "source_issues": []
+  },
+  "Language Models are General-Purpose Interfaces": {
+    "kind": "model_paper",
+    "recommend_scope": "include_candidate",
+    "note": "模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。",
+    "sections": [
+      "Foundation Models"
+    ],
+    "source_urls": [
+      "https://arxiv.org/pdf/2206.06336.pdf"
+    ],
+    "source_issues": []
+  }
+}

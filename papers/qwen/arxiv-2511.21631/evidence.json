@@ -1,0 +1,16 @@
+{
+  "paper_id": "f0c46ccf05fd",
+  "source_url": "https://arxiv.org/pdf/2511.21631v1",
+  "source_version": "2511.21631v1",
+  "source_sha256": "bc09ce99cface4dae5deaeb5327b936195d162f4df719ab2e86ee3807a0db865",
+  "verification_notes": [
+    "Read body1-25, contributor26, benchmark/prompts33-41; verified42pagev1 and six variants.",
+    "Viewed pages3/15/18/24 full original assets; Table2/4 mode columns checked visually.",
+    "Video budgets2048frames224K vsGemini512 GPT256 Claude100; toolplus andThinking/Instruct distinction explicit.",
+    "HRBench usesTable2 85.4/82.4 instead inconsistentbody85.3/82.3; RealWorldQA32BTable78.4notbody79.4.",
+    "DeepStack internal15B-A2B200Bnopost and TextVQAdrop; missing square-rootformula not fabricated.",
+    "PuretextflagshipGPQA77.1<81.1LCB70.1<74.1;1Mneedleextrapolationnotnative.",
+    "No model execution or independent reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

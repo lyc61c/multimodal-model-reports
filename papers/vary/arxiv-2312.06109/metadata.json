@@ -1,0 +1,19 @@
+{
+  "paper_id": "e7d5fa625fde",
+  "catalogue_entry_id": "e7d5fa625fde",
+  "family_slug": "vary",
+  "title": "Vary: Scaling up the Vision Vocabulary for Large Vision-Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2312.06109v1",
+  "source_url": "https://arxiv.org/pdf/2312.06109v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Vary：扩展细粒度视觉表示的文档与图表模型",
+  "source_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1827,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 pp1-12, task definitions p16 and grouped examples pp19-20; benchmark explicitly separated from trained model.",
+    "Verified800 videos3200 questions,12 annotators50reviewers3300hours,10.4minute average and recency-based filtering; no guaranteed contamination-free claim.",
+    "Checked consistency(N/4)^2 and paper first-error truncation; supplemental official evaluation snapshot has serial and parallel structure score maps, labeled later-code evidence.",
+    "Preserved paper eight-choice general description versus Figure11 three-choiceQ1 exception, and no proof of internal reasoning faithfulness.",
+    "Verified human90.7/94.9, Gemini49.4/66.1, per-model input modality/frame differences,122B/35B more-frame regressions and thinking regressions.",
+    "Original pages and final crops visually inspected; no benchmark model training or evaluation reproduction claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 6
+  },
+  "article_sha256": "597e34bb7c2431f3cebb29e0cc40f02d22646f33b4d4ca468624c0331509bcb9",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "source_url": "https://arxiv.org/pdf/2306.04387v1",
+  "source_version": "2306.04387v1",
+  "source_sha256": "71a4172f1425e007e62024da99b0e22f89d358ecd234eadb411fa03094966303",
+  "read_scope": "正文PDF1–10；附录A–E PDF10–13全部阅读；参考14–18识别组件来源。",
+  "claims": [
+    {
+      "pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12
+      ],
+      "claim": "40任务400人工指令、2429264全划分实例、27英文实际训练；80语只评测；红框/base64/ChatGPT短答案改写；NLLB1.3B FLORES按语言BLEU>20过滤。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        11
+      ],
+      "claim": "BLIP2-OPT视觉组件+Ziya13B；Qformer/proj130M；300K步256，AdamW5e-5/2000warm/wd.05；SFT3ep1e-5/1000warm；q/v更新范围披露有限；视频8帧，中文提示。"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        9,
+        12,
+        13
+      ],
+      "claim": "表4–6 ROUGEL，不是VQA/分类准确率；300GPT4判断不看图、顺序交换每侧3次；任务/模板消融5K步64batch。"
+    }
+  ],
+  "derivations": [
+    {
+      "pages": [
+        6,
+        10
+      ],
+      "claim": "实际UsedYes27行train合计=1378186；300000×256=76800000样本呈现非唯一。"
+    },
+    {
+      "pages": [
+        7,
+        8
+      ],
+      "claim": "27.5-23.3=4.2；167/300≈55.7%，196/300≈65.3%。"
+    }
+  ],
+  "source_inconsistencies": [
+    "正文OKVQA提升3.2与表4差值4.2矛盾，采用表数。",
+    "Figure4注55.6/65.5与167/300及196/300计数略不一致，采用计数。",
+    "Figure6横轴包含6但正文称比较1,2,4,8，未据坐标补造6指令结果。"
+  ],
+  "model_execution": "not_run"
+}

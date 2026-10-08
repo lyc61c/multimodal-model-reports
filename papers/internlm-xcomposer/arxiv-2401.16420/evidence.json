@@ -1,0 +1,50 @@
+{
+  "source_version": "2401.16420v1",
+  "claims": [
+    {
+      "claim": "InternLM2-7B-Chat-SFT; CLIP; Partial LoRA visual tokens only and rank256",
+      "pdf_pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "claim": "Pretraining frozen LLM; resolution490; batch4906; 2epochs; maxLR2e-4; warm1percent; LLDR0.9",
+      "pdf_pages": [
+        4
+      ]
+    },
+    {
+      "claim": "SFT jointly train; batch2048; 3000steps; maxLR5e-5; LLMscale0.2; original language SFT10percent",
+      "pdf_pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "Composition resolution224; approximate four-way ratio1:1:1:1; retrieved or supplied images",
+      "pdf_pages": [
+        5
+      ]
+    },
+    {
+      "claim": "Table3 AI2D78.7/MMMU42.0 differs body78.9/43.0",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "POPE87.7 average F1; Hall60.3 skips nonvisual questions; MMVet51.2 below CogVLM54.5",
+      "pdf_pages": [
+        6
+      ]
+    },
+    {
+      "claim": "CreationBench6.24/5.90 with no-reference/reference vs GPT4 6.32/5.98",
+      "pdf_pages": [
+        6
+      ]
+    }
+  ]
+}

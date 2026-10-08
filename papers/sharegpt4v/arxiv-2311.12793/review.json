@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读 v1 正文 1–9 页；该 11 页 PDF 不含文中引用的详细补充材料，未编造描述器完整配方。",
+    "核验 100K GPT4-Vision 种子、Table 1 的 1246K 扩展描述、最终 SFT 替换 23K/665K；平均长度单位为字符。",
+    "核验视觉 576 token、CLIP 后半 block 预训练更新、SFT 视觉冻结及学习率/batch/步数。",
+    "Table 5 图片与文本生成源固定控制：表中 1539.8 与正文 1549.8 冲突，采用与差值一致的表格。",
+    "Table 3 为 9/11 全表最佳，ScienceQA 与中文 MMBench 不最高；人工偏好不是事实准确率。",
+    "核验 Qwen 对照为最终 checkpoint 再训练，Figure 2 与最终 SFT 不同选图设置，规模曲线非严格单调。",
+    "原图与表格渲染已视觉查看；解释性 AR 公式明确不是新损失，44 A100 GPU days 是生成成本。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 5
+  },
+  "article_sha256": "deef4cc4d75e5e1102e2b00695d5cf96ce3652343dbd8edd3d4a5c1102d4fa65",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

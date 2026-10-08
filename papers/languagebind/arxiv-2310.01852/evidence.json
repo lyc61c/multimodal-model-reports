@@ -1,0 +1,45 @@
+{
+  "source_version": "2310.01852v1",
+  "claims": [
+    {
+      "claim": "Representation model without autoregressive LLM; direct language-centered symmetric contrastive loss",
+      "pdf_pages": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "claim": "VIDAL 3M video/3M infrared/3M depth/1M audio pairs; depth and infrared generated",
+      "pdf_pages": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "Modality-specific hyperparameters and body-large versus appendix-Huge naming inconsistency",
+      "pdf_pages": [
+        4,
+        9,
+        17,
+        18
+      ]
+    },
+    {
+      "claim": "37.3 minus 32.0 is 5.3 points, differing from prose 5.0; vision encoder parameter comparison only",
+      "pdf_pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "LLVIP crop classification, NYU-D scene classification, task-dependent text source selection",
+      "pdf_pages": [
+        7,
+        8,
+        18
+      ]
+    }
+  ]
+}

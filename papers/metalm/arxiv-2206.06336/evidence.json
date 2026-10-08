@@ -1,0 +1,58 @@
+{
+  "source_url": "https://arxiv.org/pdf/2206.06336v1",
+  "source_version": "2206.06336v1",
+  "source_sha256": "4b3373b2316b9c8ddcdc9d5b533100e4b1b0dcaad3629c67851c3ba37d23a024",
+  "read_scope": "正文PDF1及4–21、附录29–32全部阅读；目录2–3、参考21–28仅来源识别。",
+  "claims": [
+    {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        32
+      ],
+      "claim": "非因果表示直接入因果序列无crossattention；原Eq1半因果目标；两个不同模型配置/参数；25%随机64–128span；视觉模型VLMo192M+353M、三层connector，两侧预训不冻。"
+    },
+    {
+      "pages": [
+        9,
+        10,
+        11,
+        12,
+        14,
+        17,
+        18,
+        29,
+        30,
+        32
+      ],
+      "claim": "Pile排除3来源19来源；4M图10M图文+OpenWebText；34任务模板与任务簇留出；预训/多任务/指令/MNLI/图文训练预算分开。"
+    },
+    {
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        16,
+        17,
+        18,
+        19,
+        20,
+        31,
+        32
+      ],
+      "claim": "多任务/指令与ICL均非全项改善；VQA41.1/11.4→45.3/16；微调74.5/46.5与COCO126.6/E-SNLI79.9等口径明确。"
+    }
+  ],
+  "source_inconsistencies": [
+    "纯文本预训练batch正文1024与Table17 512不一致，正文并列保留。",
+    "图文dropout正文.1与Table29因果侧.2不一致，并列。",
+    "NLVR/E-SNLI正文epoch与附录54Ksteps分别披露，不推定严格等价。"
+  ],
+  "model_execution": "not_run"
+}

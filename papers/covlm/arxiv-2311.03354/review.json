@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read all main pages and appendices",
+    "Viewed four complete original page assets",
+    "Verified VQA chart legend and result columns",
+    "Corrected overbroad RefCOCO+ claim from main prose using table values",
+    "Explanatory math labeled, unspecified detection loss not invented"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "b9a9adaaf40aebb2c5e361078f1c0d3d0ef80f334e92a6ccecdc1cc15eb495b0",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

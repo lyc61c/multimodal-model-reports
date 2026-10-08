@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "阅读全文1–10，原身份NVIDIA/v1与CLIP+Vicuna核对",
+    "实际检视原PDF3/6/7/8，Figure2/4/5与Table1/2/3完整",
+    "时间round公式T-1分母核对；误差与长度比例标为公式推导非实测速度",
+    "100帧100快token+4x64慢token=356，SlowFast指池化非新增卷积骨干",
+    "10,009视频33,557训练问答；229问答160视频人工评测；GPT仅读带时间文字描述",
+    "五任务有放回100K各；8A100 9/13小时与GPU小时区别；原文未给优化器mask等不补",
+    "Table1同任务逐步消融和三次平均；缺时间基线为缺失不是0",
+    "Score相对GPT解释评分非正确率；Table2相对增长与绝对准确率区分；评价偏差原文限制"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "10481ab09bc64e43d63e83059f2e63977168ef6cdeeca0da77e4159d06e8d2d3",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

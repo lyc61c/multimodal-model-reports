@@ -1,0 +1,105 @@
+{
+  "paper_id": "26d59ba3132d",
+  "source_version": "2507.19427v1",
+  "source_pdf_sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb",
+  "assets": [
+    {
+      "asset_path": "figures/configuration.png",
+      "original_label": "Table 1：Step3 模型配置",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2507.19427v1#page=3",
+      "source_version": "2507.19427v1",
+      "source_sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb",
+      "asset_sha256": "bb4fcff818ceef2cd6bb52a9f79684592feae91c6d78e6c5fc3b954332a4fe22",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          50,
+          152,
+          302,
+          378
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/roofline.png",
+      "original_label": "Figure 5：注意力计算与访存强度",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2507.19427v1#page=8",
+      "source_version": "2507.19427v1",
+      "source_sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb",
+      "asset_sha256": "eb527be466d133c1b43551a4fab984723d1f08682c7684eb54c7470c4fa79e52",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          315,
+          65,
+          564,
+          273
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/pipeline.png",
+      "original_label": "Figure 7：AFD 通信与多阶段流水线",
+      "pdf_page": 12,
+      "source_url": "https://arxiv.org/pdf/2507.19427v1#page=12",
+      "source_version": "2507.19427v1",
+      "source_sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb",
+      "asset_sha256": "734d79c1a565910bdddecd671ef30a2063dbb53827376ed8cdebe4c5415d28c6",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          50,
+          65,
+          302,
+          189
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/results.png",
+      "original_label": "Table 8–9：端到端解码和注意力算子测量",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2507.19427v1#page=14",
+      "source_version": "2507.19427v1",
+      "source_sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb",
+      "asset_sha256": "21a629a879bd63fa2ea496999df8cda7ff293e6c3dabaf48894990620d355d30",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          50,
+          65,
+          564,
+          307
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/official-benchmarks.jpeg",
+      "original_label": "官方 Step3 仓库能力评测表",
+      "source_url": "https://raw.githubusercontent.com/stepfun-ai/Step3/main/README.md",
+      "image_url": "https://raw.githubusercontent.com/stepfun-ai/Step3/main/figures/step3_bmk.jpeg",
+      "image_final_url": "https://raw.githubusercontent.com/stepfun-ai/Step3/main/figures/step3_bmk.jpeg",
+      "source_version": "official-repository-snapshot-2026-10-08",
+      "source_sha256": "a9bf77c130e804eb237ba0ec20f2f9d99ff31ccecd644447a7a0798080157f71",
+      "asset_sha256": "970c38dff15db682fd3c6bb80b1ba4d7cef39102a7cd411b0672c98f2f56c5da",
+      "width": 2350,
+      "height": 1285,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "additional_source_url": "https://raw.githubusercontent.com/stepfun-ai/Step3/main/README.md",
+      "additional_source_sha256": "a9bf77c130e804eb237ba0ec20f2f9d99ff31ccecd644447a7a0798080157f71"
+    }
+  ]
+}

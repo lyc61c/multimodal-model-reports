@@ -1,0 +1,14 @@
+{
+  "paper_id": "85233c027ab7",
+  "catalogue_entry_id": "85233c027ab7",
+  "family_slug": "internvl",
+  "title": "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2404.16821v1",
+  "source_url": "https://arxiv.org/pdf/2404.16821v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "InternVL 1.5：大视觉骨干、动态高分辨率与双语数据"
+}

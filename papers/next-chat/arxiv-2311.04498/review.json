@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "figures_visually_checked": [
+    3,
+    4,
+    5,
+    8
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "equations_and_grounding_scores_verified_in_images": true,
+    "pope_scores_verified_in_source_text": true
+  },
+  "limitations": [
+    "Stage2冻结表/step以及优化器context等未充分披露，不补造",
+    "输入各位置格式转框，不称完整mask输入保留不规则形状",
+    "popular第二名文字与Table4第三名冲突，按表",
+    "全系统分割仅定性演示，无mIoU表，不拿控制定位成绩作SOTA排名",
+    "原文contributions一处pixel2seq显为上下文笔误，沿方法定义pixel2emb",
+    "定位指标阈值未完整重述，不自行写IoU0.5",
+    "GIoU在公式按正文明确为损失而非最大化metric"
+  ]
+}

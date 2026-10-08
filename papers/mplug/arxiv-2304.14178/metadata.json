@@ -1,0 +1,14 @@
+{
+  "paper_id": "f63e44cf9cfe",
+  "catalogue_entry_id": "f63e44cf9cfe",
+  "family_slug": "mplug",
+  "title": "mPLUG-Owl: Modularization Empowers Large Language Models with Multimodality",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2304.14178v1",
+  "source_url": "https://arxiv.org/pdf/2304.14178v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "mPLUG-Owl：以视觉模块学习和图文联合指令训练连接LLaMA"
+}

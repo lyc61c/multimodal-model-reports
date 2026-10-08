@@ -1,0 +1,15 @@
+{
+  "paper_id": "ddf539694eca",
+  "source_url": "https://arxiv.org/pdf/2608.25512v1",
+  "source_version": "2608.25512v1",
+  "source_sha256": "390775dbc9debdcf2ed1b076eed013387ca057630be3cb594617b2b742e48cf0",
+  "verification_notes": [
+    "Verified actual 92-page arXiv 2608.25512v1 title and authors; original catalogue Harness label does not identify a model training paper.",
+    "Read context/effect/coeffect definitions, component lifecycle/calculus, core implementation algorithms, configuration/HMR, Koishi case and system-boundary limitations; not claiming independent formal proof verification.",
+    "Viewed original pages 34,58,69 covering Figure1,Table2,Algorithm10 with complete content.",
+    "Checked Equations4/6/22 and left inverse/observational equivalence interpretation, and unchecked component-author inverse obligation.",
+    "Verified Koishi 4000+ plugin observational case uses v3 while paper presents v4; no controlled quantitative model or overhead results.",
+    "No training recipe, dataset scale, neural architecture or benchmark invented."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

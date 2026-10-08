@@ -1,0 +1,19 @@
+{
+  "paper_id": "14aa0b2943d0",
+  "catalogue_entry_id": "14aa0b2943d0",
+  "family_slug": "vita",
+  "title": "Long-VITA: Scaling Large Multi-modal Models to 1 Million Tokens with Leading Short-Context Accuray",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2502.05177v1",
+  "source_url": "https://arxiv.org/pdf/2502.05177v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "Long-VITA：百万 token 的多模态上下文训练与分布式推理",
+  "source_sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1952,
+  "figures_manifest": "figures-manifest.json"
+}

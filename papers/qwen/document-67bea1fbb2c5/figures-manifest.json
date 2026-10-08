@@ -1,0 +1,77 @@
+{
+  "paper_id": "67bea1fbb2c5",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-2.png",
+      "original_label": "官方主要基准柱状图",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "image_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3.6/Figures/qwen3.6_plus_score.png",
+      "image_final_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3.6/Figures/qwen3.6_plus_score.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e8c7a1293a2c5dd5f7eec579c665225a8e13e625c06365140b2a31f6bcf49edb",
+      "asset_sha256": "7b323a7cd6612a06abc3edce011e76fa538421bf826810606b587d4011e8b1ac",
+      "width": 17457,
+      "height": 10428,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "preview": {
+        "asset_path": "figures/official-2-preview.png",
+        "width": 4000,
+        "height": 2389,
+        "sha256": "63a9ff0bc13951f05490b8bfd3142393a8dda145fb2d352b21cafe84fc4a95c5",
+        "processing": "Faithful aspect-preserving resize of original 17457x10428 PNG; no redraw"
+      }
+    },
+    {
+      "asset_path": "figures/official-3.png",
+      "original_label": "官方grounding示例场景输入",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "image_url": "http://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/demo/Visual_Reasoning/camera_2.png",
+      "image_final_url": "http://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/demo/Visual_Reasoning/camera_2.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e8c7a1293a2c5dd5f7eec579c665225a8e13e625c06365140b2a31f6bcf49edb",
+      "asset_sha256": "06d47771e1a1fde9fcf9a0481eb943fdc850dd0e7eedc8d460f977262029f897",
+      "width": 1280,
+      "height": 720,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-4.png",
+      "original_label": "官方grounding示例参考输入",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "image_url": "http://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/demo/Visual_Reasoning/reference.png",
+      "image_final_url": "http://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/demo/Visual_Reasoning/reference.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e8c7a1293a2c5dd5f7eec579c665225a8e13e625c06365140b2a31f6bcf49edb",
+      "asset_sha256": "c8ac9f8dbcdd7d40a1a34ec16ada83c69454c28f05fe4f8756255f871394809e",
+      "width": 186,
+      "height": 278,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    },
+    {
+      "asset_path": "figures/official-5.png",
+      "original_label": "官方grounding结果覆盖图",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "image_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/demo/Visual_Reasoning/det_result.png",
+      "image_final_url": "https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/demo/Visual_Reasoning/det_result.png",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e8c7a1293a2c5dd5f7eec579c665225a8e13e625c06365140b2a31f6bcf49edb",
+      "asset_sha256": "262ed07dd4e3ef5a8ff7c0085a3f0e8f977882e49b0b1484032cd160f2e28d01",
+      "width": 1280,
+      "height": 720,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "paper_id": "9be303a31d11",
+  "source_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "bd8bbd77551b2c762746089bb39c8605fd67b5e00e5337e441d52fafe1304be8",
+  "verification_notes": [
+    "逐项阅读官方4.5模型卡、流式及全双工API、各模式详细表；未将2024 MiniCPM-V报告当成本版训练报告。",
+    "检查三张官方原始图片完整显示；架构silent、25Hz speech token、时间轴和参考音频可读；汇总图无裁缺；文档案例为定性展示。",
+    "核验Instruct/Thinking视觉指标及Video-MME无字幕，注明OCRBench876与汇总图87.6的尺度差别、部分表间基线不一致。",
+    "核验语音CER/WER与SIM、中文LongTTS弱项、Omni八项均值、LiveSports相对胜率和BF16/int4效率；硬件预算未披露不推定。",
+    "TDM概念符号为编辑解释，未捏造完整公式、训练阶段、冻结参数、数据量及超参；未运行模型。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

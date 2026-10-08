@@ -1,0 +1,93 @@
+{
+  "source_version": "2606.19348v1",
+  "claims": [
+    {
+      "claim": "Pro1.6T/49B及Flash284B/13B；语言模型，多模态为未来方向",
+      "pdf_pages": [
+        1,
+        24,
+        25,
+        45
+      ]
+    },
+    {
+      "claim": "CSA m4重叠2m实际1/m；HCA128；MQA共享KV+窗口128",
+      "pdf_pages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        24,
+        25
+      ]
+    },
+    {
+      "claim": "mHC式1双随机矩阵式2，4路20Sinkhorn；仅残差路径非全网收缩",
+      "pdf_pages": [
+        7,
+        8,
+        24,
+        25
+      ]
+    },
+    {
+      "claim": "Muon10NewtonSchulz8+2系数，AdamW例外",
+      "pdf_pages": [
+        14
+      ]
+    },
+    {
+      "claim": "Flash32T Pro33T，LR2.7/2.0e-4→e-5，batch75.5/94.4M，4K16K64K1M",
+      "pdf_pages": [
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "claim": "Flash1T稠密，Pro仅更长未公布；MTP0.3→0.1；损失稳定处理",
+      "pdf_pages": [
+        25,
+        26
+      ]
+    },
+    {
+      "claim": "领域SFT/GRPO后超过10教师反向KL OPD，非MoE层专家",
+      "pdf_pages": [
+        28,
+        29,
+        32,
+        33
+      ]
+    },
+    {
+      "claim": "QAT用于MoE权重及索引QK，非全模型FP4；topk2x及99.7召回",
+      "pdf_pages": [
+        33,
+        34
+      ]
+    },
+    {
+      "claim": "正式成绩Table6/7；MRCR8needle1M0.59/0.49不能混汇总83.5/78.7",
+      "pdf_pages": [
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "claim": "中文白领win53tie10loss37、不败63；困难写作45.9vs52",
+      "pdf_pages": [
+        43,
+        58
+      ]
+    },
+    {
+      "claim": "AgentSearch61.7胜率869例，工具16.2及token，未算全部工具成本",
+      "pdf_pages": [
+        55
+      ]
+    }
+  ]
+}

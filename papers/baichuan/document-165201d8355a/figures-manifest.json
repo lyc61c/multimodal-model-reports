@@ -1,0 +1,87 @@
+{
+  "paper_id": "165201d8355a",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_pdf_sha256": "491a6fd21597b73c1a806e5d49f40167501a262f67ce20f49d8c2aab25edb203",
+  "assets": [
+    {
+      "asset_path": "figures/original-page-002-01.png",
+      "original_label": "Figure 2: full omni-modal architecture and caption, PDF page 2",
+      "pdf_page": 2,
+      "source_url": "https://github.com/baichuan-inc/Baichuan-Omni-1.5/blob/main/baichuan_omni_1_5.pdf#page=2",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "491a6fd21597b73c1a806e5d49f40167501a262f67ce20f49d8c2aab25edb203",
+      "asset_sha256": "3a80806a2f4b049f3038497f87b1d33bf84387185d36be57f9a8f7901c08b856",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          68,
+          240,
+          545,
+          570
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-008-02.png",
+      "original_label": "Figure 5: all training sub-stages, freeze symbols and caption, PDF page 8",
+      "pdf_page": 8,
+      "source_url": "https://github.com/baichuan-inc/Baichuan-Omni-1.5/blob/main/baichuan_omni_1_5.pdf#page=8",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "491a6fd21597b73c1a806e5d49f40167501a262f67ce20f49d8c2aab25edb203",
+      "asset_sha256": "5dd52c808aa7ebcf3d5b26e03215e744c0d4de57d60f28a1c81184057808eea4",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          68,
+          68,
+          545,
+          515
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-013-03.png",
+      "original_label": "Table 8: complete image VQA results and source footnotes, PDF page 13",
+      "pdf_page": 13,
+      "source_url": "https://github.com/baichuan-inc/Baichuan-Omni-1.5/blob/main/baichuan_omni_1_5.pdf#page=13",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "491a6fd21597b73c1a806e5d49f40167501a262f67ce20f49d8c2aab25edb203",
+      "asset_sha256": "6cf7cdf75df2af0f4abe183e90cecb6000f393f557f6ca12fa9c164cd3532771",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          68,
+          68,
+          545,
+          318
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/original-page-016-04.png",
+      "original_label": "Tables 12 and 13: full omni-understanding and medical results, PDF page 16",
+      "pdf_page": 16,
+      "source_url": "https://github.com/baichuan-inc/Baichuan-Omni-1.5/blob/main/baichuan_omni_1_5.pdf#page=16",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "491a6fd21597b73c1a806e5d49f40167501a262f67ce20f49d8c2aab25edb203",
+      "asset_sha256": "b2d12555aee6dcc8753bb0cf524668c826c2e78100d0aac44046bf755eb0945f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          68,
+          68,
+          545,
+          462
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

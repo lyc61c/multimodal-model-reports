@@ -1,0 +1,16 @@
+{
+  "paper_id": "d746d75f8685",
+  "source_url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
+  "verification_notes": [
+    "Read PDF pages 1–21 for model positioning, data, training and core evaluation, with the 42-page official model card identity checked.",
+    "Table 3 values taken from page 8; noted that the AI2D numbers in prose on page 7 differ from the table. Article uses table values consistently.",
+    "Separated DocVQA ANLS, ChartQA relaxed accuracy, MMMU validation and MathVista testmini; no pooled overall score.",
+    "Separated 200k production context at release from one-million-token research loss plot and 200k retrieval experiment.",
+    "Did not invent parameter counts, ViT/merger configuration, dataset size, learning rates or detailed RL recipe.",
+    "Original figure/table pages rendered and visually checked, retaining captions and table footnotes.",
+    "Equation 5.1 explained as evaluation win-rate conversion, not as a disclosed model architecture or training loss."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

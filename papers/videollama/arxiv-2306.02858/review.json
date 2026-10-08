@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 PDF pages 1–9 and checked later page list; main evidence is qualitative examples, with no benchmark score or hyperparameter table.",
+    "Inspected original Figure 1 and Figures 2–5 page renders; image branch includes frozen BLIP2 Q-Former plus a separate trainable Video Q-Former.",
+    "Audio segmentation is 2 seconds with 128 mel bins; no unsupported query counts, GPU recipe or ASR capability claims.",
+    "Section 2.2.2 explicitly uses visual-text for the audio interface, despite inconsistent introductory audio-caption wording; preserved the distinction from pretrained ImageBind audio learning.",
+    "Explanatory formulas marked as such, frozen parameters distinguished from gradient flow, and sample-based findings not presented as quantitative superiority."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 3
+  },
+  "article_sha256": "1946f9a9816be657a6a3ccfc4fc483b74dc934f3b322460b984eba3620524b41",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "paper_id": "e364433c1393",
+  "source_version": "2311.18445v1",
+  "source_pdf_sha256": "8c514f296bca5cb2a6f092ba958a9ad3d4a7ab811448c762b43b23169e18f016",
+  "assets": [
+    {
+      "asset_path": "figures/three-stage-training.png",
+      "original_label": "Figure 2：三阶段边界感知训练",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2311.18445v1#page=4",
+      "source_version": "2311.18445v1",
+      "source_sha256": "8c514f296bca5cb2a6f092ba958a9ad3d4a7ab811448c762b43b23169e18f016",
+      "asset_sha256": "5149a6e491885b64752cb4260fe6a26c88362e225fab89c2dbfc0fd6d891530c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          52,
+          570,
+          372
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/localization-results.png",
+      "original_label": "Table 1：时间定位与密集描述",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2311.18445v1#page=7",
+      "source_version": "2311.18445v1",
+      "source_sha256": "8c514f296bca5cb2a6f092ba958a9ad3d4a7ab811448c762b43b23169e18f016",
+      "asset_sha256": "dfdb6afd53d8ce642bb674cc86b83a03d0f7c715da1937a5dbb92aeb2496d8f3",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          188
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-ablation.png",
+      "original_label": "Table 2：三阶段训练消融",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2311.18445v1#page=7",
+      "source_version": "2311.18445v1",
+      "source_sha256": "8c514f296bca5cb2a6f092ba958a9ad3d4a7ab811448c762b43b23169e18f016",
+      "asset_sha256": "9b94f52a0e63098fb0fad2628bfd5cd2bef4f0db0313f59113afe0cbd1034039",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          190,
+          570,
+          443
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/dialogue-results.png",
+      "original_label": "Table 3：视频对话质量评价",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2311.18445v1#page=8",
+      "source_version": "2311.18445v1",
+      "source_sha256": "8c514f296bca5cb2a6f092ba958a9ad3d4a7ab811448c762b43b23169e18f016",
+      "asset_sha256": "72d759bb27c6a9d654a1d81bea99dec566731093773c3cb73354af474f0698e9",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          570,
+          219
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

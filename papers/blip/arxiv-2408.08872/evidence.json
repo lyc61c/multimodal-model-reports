@@ -1,0 +1,58 @@
+{
+  "source_version": "2408.08872v1",
+  "title_verified": true,
+  "claims": [
+    {
+      "claim": "冻结ViT与交错图文架构",
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "source": "Figure2;Section3"
+    },
+    {
+      "claim": "100B预训练/384分辨率/100万SFT/训练阶段",
+      "pdf_pages": [
+        4,
+        6,
+        7
+      ],
+      "source": "Sections4,5.2,5.3"
+    },
+    {
+      "claim": "预训练混合比例和OCR/grounding构建",
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "source": "Figure3;Sections5.1-5.2"
+    },
+    {
+      "claim": "VLFeedback62.6k与LoRA2.5%及安全7k",
+      "pdf_pages": [
+        6,
+        7
+      ],
+      "source": "Section5.3"
+    },
+    {
+      "claim": "主实验数字与few-shot、重测、快照条件",
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "source": "Tables1-4"
+    },
+    {
+      "claim": "采样、token数、纯文本、骨干及数据消融",
+      "pdf_pages": [
+        11,
+        12,
+        13
+      ],
+      "source": "Section7;Tables5-8;Figure8"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "paper_id": "00501b0da246",
+  "source_version": "2510.21817v1",
+  "source_pdf_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3：控制与动作状态",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2510.21817v1#page=5",
+      "source_version": "2510.21817v1",
+      "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+      "asset_sha256": "7fb290530d0b0e5b0aa6f64703a503b3c9f57de5d288e9746e715f83e2b34ba7",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          410
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/interaction-modes.png",
+      "original_label": "Figure 4：四种并发交互时序",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2510.21817v1#page=7",
+      "source_version": "2510.21817v1",
+      "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+      "asset_sha256": "cd86ff7fe6a2f4c86d898c737d8587cf7c67d988e3e578af77348cffea78f89f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          289
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/control-tokens.png",
+      "original_label": "Table 1：系统控制 token",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2510.21817v1#page=6",
+      "source_version": "2510.21817v1",
+      "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+      "asset_sha256": "b2706a464a0b150d33e3fc8e7f07569a7dec344a8b2da7db86676af182646792",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          140,
+          120,
+          475,
+          324
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/model-configuration.png",
+      "original_label": "Table 5：仿真与实机模块配置",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2510.21817v1#page=14",
+      "source_version": "2510.21817v1",
+      "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+      "asset_sha256": "0b689c2348c0361c189342bc084f84f450aee1264f56df9d9a6ba125b7f7bcac",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          190,
+          120,
+          415,
+          270
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/manipulation-results.png",
+      "original_label": "Figures 5–6：仿真与真实操作结果",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2510.21817v1#page=9",
+      "source_version": "2510.21817v1",
+      "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+      "asset_sha256": "d0ad8714ee50025c115909187cab8a4794a2bd3bb1fa7b887fbb8fb54e849050",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          510,
+          512
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/interaction-results.png",
+      "original_label": "Table 2：交互任务成功率",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2510.21817v1#page=10",
+      "source_version": "2510.21817v1",
+      "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+      "asset_sha256": "c8db7de5e2cfe83bce47b1bf009ab950d814c5efffbc9f0a83d1a44768dbdb37",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          160,
+          86,
+          452,
+          135
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/controller-ablation.png",
+      "original_label": "Table 3：控制 token 微调消融",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2510.21817v1#page=10",
+      "source_version": "2510.21817v1",
+      "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+      "asset_sha256": "652e77731be0bedafe6d0dba0a47721df9c154d1013e3f7803d60c81d795db2f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          310,
+          510,
+          389
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

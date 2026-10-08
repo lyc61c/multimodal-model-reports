@@ -1,0 +1,97 @@
+{
+  "source_version": "2407.21783v1",
+  "claims": [
+    {
+      "claim": "Reported results are Llama 3.1; multimodal models still under development and not broadly released",
+      "pdf_pages": [
+        1,
+        2,
+        4,
+        54,
+        70
+      ]
+    },
+    {
+      "claim": "Dense 8B/70B/405B GQA configuration, 15.6T tokens and compute budget",
+      "pdf_pages": [
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "Scaling-law N-star denotes tokens; rounded coefficients versus figure precise coefficients",
+      "pdf_pages": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "claim": "Initial AdamW, context extension 800B, final anneal reported as 40M in v1 (separate data test 40B)",
+      "pdf_pages": [
+        6,
+        14,
+        15
+      ]
+    },
+    {
+      "claim": "Six rounds RS/SFT/DPO; format masking, beta 0.1 and chosen NLL coefficient 0.2",
+      "pdf_pages": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "claim": "Vision encoder 630M becomes 850M; 405B image adapter adds about 100B; language model frozen",
+      "pdf_pages": [
+        57,
+        58,
+        59
+      ]
+    },
+    {
+      "claim": "6B image pairs and 500M annealing samples; image/video freezing and configuration",
+      "pdf_pages": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ]
+    },
+    {
+      "claim": "Speech 15M pretrain hours, 230K ASR, 90K AST; Conformer/adaptor training",
+      "pdf_pages": [
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    {
+      "claim": "Multimodal benchmarks separate splits, CoT, OCR, subtitles, WUPS, judged accuracy and error-rate language differences",
+      "pdf_pages": [
+        61,
+        62,
+        66,
+        67,
+        68,
+        69
+      ]
+    },
+    {
+      "claim": "Contamination, human preference and guard results have evaluation limits",
+      "pdf_pages": [
+        33,
+        34,
+        40,
+        44,
+        50,
+        51
+      ]
+    }
+  ]
+}

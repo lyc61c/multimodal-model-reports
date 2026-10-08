@@ -1,0 +1,14 @@
+{
+  "paper_id": "ba17caefc898",
+  "source_url": "https://arxiv.org/pdf/2311.03354v1",
+  "source_version": "2311.03354v1",
+  "source_sha256": "1c63b0ecbb2b0075df0248d842fa8dd624f77739944ccb1726223d77f361d7fe",
+  "verification_notes": [
+    "Read all main pages and appendices",
+    "Viewed four complete original page assets",
+    "Verified VQA chart legend and result columns",
+    "Corrected overbroad RefCOCO+ claim from main prose using table values",
+    "Explanatory math labeled, unspecified detection loss not invented"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

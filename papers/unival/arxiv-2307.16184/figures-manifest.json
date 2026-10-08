@@ -1,0 +1,87 @@
+{
+  "paper_id": "4af858ff9dbc",
+  "source_version": "2307.16184v1",
+  "source_pdf_sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01",
+  "assets": [
+    {
+      "asset_path": "figures/overview.png",
+      "original_label": "Figure 1：任务与模态统一",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2307.16184v1#page=3",
+      "source_version": "2307.16184v1",
+      "source_sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01",
+      "asset_sha256": "100248fb45ae2b791fb850de05ef012591d31b8ac53d44cd589ea02a766e21f6",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          265,
+          545,
+          540
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 5：编码器—解码器架构",
+      "pdf_page": 19,
+      "source_url": "https://arxiv.org/pdf/2307.16184v1#page=19",
+      "source_version": "2307.16184v1",
+      "source_sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01",
+      "asset_sha256": "1e97a5fb1507c1d9332be4dcacb05156bd6ba754bd39e3d75cf1b6ab02d75cd8",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          390,
+          545,
+          610
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/video-audio-results.png",
+      "original_label": "Tables 7–9：视频与音频微调结果",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2307.16184v1#page=10",
+      "source_version": "2307.16184v1",
+      "source_sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01",
+      "asset_sha256": "8d34e9727b492cfc9fa3c61eede3df623e84f683c6f399f8a3750fa80934fbac",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          75,
+          545,
+          730
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/weight-interpolation.png",
+      "original_label": "Figures 3–4：权重插值与域外泛化",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2307.16184v1#page=13",
+      "source_version": "2307.16184v1",
+      "source_sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01",
+      "asset_sha256": "5ce59af7fb1edd7ba9bc08a5a3b6855fc4549b196ae75c436f093c85d2ce0121",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          65,
+          75,
+          545,
+          540
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

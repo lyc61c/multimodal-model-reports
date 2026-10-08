@@ -1,0 +1,107 @@
+{
+  "paper_id": "f1c390102dd0",
+  "source_version": "2406.07476v1",
+  "source_pdf_sha256": "87ce24e74652c7c242fa1bdb6160fe158eb2e738e5eb6a46ea13c70a0521000a",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 1：VideoLLaMA 2 双分支架构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2406.07476v1#page=3",
+      "source_version": "2406.07476v1",
+      "source_sha256": "87ce24e74652c7c242fa1bdb6160fe158eb2e738e5eb6a46ea13c70a0521000a",
+      "asset_sha256": "eed89d6ef5396e1a3fc921535ae224d4ff3fc36bbd8ab80742f99f8a83a5d598",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          377
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/stc.png",
+      "original_label": "Figure 2 / Table 1：STC 架构及连接器消融",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2406.07476v1#page=4",
+      "source_version": "2406.07476v1",
+      "source_sha256": "87ce24e74652c7c242fa1bdb6160fe158eb2e738e5eb6a46ea13c70a0521000a",
+      "asset_sha256": "c44b00be9b62a601db5c920812726e892b95abf4195b487011b1552eb9b11077",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          480
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/data.png",
+      "original_label": "Table 2–3：视觉预训练及指令数据",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2406.07476v1#page=6",
+      "source_version": "2406.07476v1",
+      "source_sha256": "87ce24e74652c7c242fa1bdb6160fe158eb2e738e5eb6a46ea13c70a0521000a",
+      "asset_sha256": "ad1a1027b08760ecd5594181c4fcee527a303925b98ca52dfa0f8670d9d05bf1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          460
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/video-results.png",
+      "original_label": "Table 5：选择题和视频描述结果",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2406.07476v1#page=9",
+      "source_version": "2406.07476v1",
+      "source_sha256": "87ce24e74652c7c242fa1bdb6160fe158eb2e738e5eb6a46ea13c70a0521000a",
+      "asset_sha256": "3408924ce16ac5eb60001ded6e8398f7847314407a164d49fd7384a19d892fef",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          347
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/audio-results.png",
+      "original_label": "Table 7–8：声音和音视频问答结果",
+      "pdf_page": 12,
+      "source_url": "https://arxiv.org/pdf/2406.07476v1#page=12",
+      "source_version": "2406.07476v1",
+      "source_sha256": "87ce24e74652c7c242fa1bdb6160fe158eb2e738e5eb6a46ea13c70a0521000a",
+      "asset_sha256": "4842f583b39ab0192006a0a24565d77efbf33e26f69e8e1ca603e7ee2ebc3178",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 150,
+        "crop_bbox": [
+          100,
+          60,
+          515,
+          303
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

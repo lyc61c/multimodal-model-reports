@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "review_type": "self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "figures_visually_checked": [
+    "original-page-002-01.png",
+    "original-page-005-02.png",
+    "original-page-007-03.png",
+    "original-page-009-04.png"
+  ],
+  "model_executed": false,
+  "checks": [
+    "七节4页原图",
+    "动作分量码与完整姿态数量区别",
+    "OCoT用于教师生成而非学生显式思维链",
+    "修订EM和模拟环境范围明确",
+    "未掩盖专用策略优于LEO的结果"
+  ],
+  "limitations": [
+    "原文空间注意力重权公式按附录表达保留",
+    "主表与消融对象提案协议不同不可混比",
+    "未执行真实机器人或独立复现"
+  ]
+}

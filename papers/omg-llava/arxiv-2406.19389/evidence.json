@@ -1,0 +1,15 @@
+{
+  "paper_id": "3be9597e0637",
+  "source_url": "https://arxiv.org/pdf/2406.19389v1",
+  "source_version": "2406.19389v1",
+  "source_sha256": "45942c3da5dc7770d98083f752bb3542e359b93aa2c3579772193bfe0e905b51",
+  "verification_notes": [
+    "阅读 v1 第1–10页技术正文、第16–19页训练/消融/限制和20–24页示例；原PDF提取 surrogate 问题不影响真实来源身份。",
+    "检视四张原页 Figure3、Figure4/5、Table2–5、Table8/Figure7，核验图完整与全部表头行列。",
+    "核验 InternLM2-7B、ConvNeXt-L CLIP1024、pixel shuffle后256稠密token另加对象token、点框掩码注意力约束与共享MLP。",
+    "Eq2按逐像素对象softmax说明广播转置，Eq4/5未编造权重与聚合；训练冻结与ft解冻分别表述。",
+    "核验来源数据规模、1epoch/batch256/128/lr1e-3/2e-4/seq2048，记录正文4GPU与附录每GPUbatch乘积矛盾。",
+    "核验Table3各split及冻结/ft区别，GCG微调维度、先验消融、最后层选择、GLaMM数据条件；未捏造图像级和视频语言指标，未运行模型。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

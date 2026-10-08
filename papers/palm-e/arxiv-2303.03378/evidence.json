@@ -1,0 +1,30 @@
+{
+  "paper_id": "bb0333d38954",
+  "source_version": "2303.03378v1",
+  "source_sha256": "535cc3c7fe1ae7428b9ac7d6a3738a0529975aadc372b2229ea0cb2ce724576a",
+  "read_scope": "PDF1–10正文与14–18附录A–E完整读取；引用页只核对相关来源",
+  "claims": [
+    {
+      "claim": "连续embedding、多模态句子、自回归文字与低层控制",
+      "locations": "§3–4 Eq1–3 PDF4–5"
+    },
+    {
+      "claim": "冻结、模型组合、混合数据",
+      "locations": "§5 AppendixA Table6 PDF5–6,14–15"
+    },
+    {
+      "claim": "TAMP与LanguageTable数据、仿真/真机层次",
+      "locations": "§6.1–6.4 AppendixB PDF6–9,15–16"
+    },
+    {
+      "claim": "全实验与遗忘结果",
+      "locations": "Tables1–10 Figures4–6 PDF7–9,16–18"
+    }
+  ],
+  "source_inconsistencies": [
+    "Figure6 NLG末档相对下降3.9%而Table8为3.8%",
+    "正文真机1Hz/5Hz与附录采集10Hz、4秒块为不同设置；不混为统一控制频率",
+    "Table2 Task1为单步validationaccuracy，Task2/3为80rollouts而非同指标"
+  ],
+  "model_run": false
+}

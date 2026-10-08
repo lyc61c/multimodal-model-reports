@@ -1,0 +1,19 @@
+{
+  "paper_id": "00501b0da246",
+  "catalogue_entry_id": "00501b0da246",
+  "family_slug": "vita",
+  "title": "VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking, and Acting",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2510.21817v1",
+  "source_url": "https://arxiv.org/pdf/2510.21817v1",
+  "document_kind": "embodied_model_report",
+  "catalogue_group": "scope_review",
+  "article_template_version": "1.1",
+  "title_zh": "VITA-E：并发、可打断的具身交互",
+  "source_sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1933,
+  "figures_manifest": "figures-manifest.json"
+}

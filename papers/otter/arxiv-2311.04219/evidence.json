@@ -1,0 +1,15 @@
+{
+  "paper_id": "fc3fb82e955e",
+  "source_url": "https://arxiv.org/pdf/2311.04219v1",
+  "source_version": "2311.04219v1",
+  "source_sha256": "df2c31ae09ffe763d5a1f5bd7d474787261500dc639c313c70a172d55cfe3b23",
+  "verification_notes": [
+    "阅读v1第1–13页全部技术正文、演示与附录，不混同早期Otter/OpenFlamingo；版本17页。",
+    "检视Figure1/Table1、Figure2/3、Figure4/Table2、Figure9/Table5四页全部原图。",
+    "核验Fuyu30patch换行、Persimmon4096/64/36、8B命名与9.3B发布权重、动态448集合与418笔误。",
+    "核验371017问答与Mag283题166图构建，两评分协议，MMBench test，图中不同评测配置分清。",
+    "核验全参/LoRA表4 batch/epoch差异、r32alpha32、AdamW/cos/warmup/Zero2、吞吐不等于生成速度。",
+    "Table1全部配置精确数值；Figure4固定512大图失败、Figure9全参loss更低，未机械复述不符图文概括，无模型运行。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

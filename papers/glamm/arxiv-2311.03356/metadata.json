@@ -1,0 +1,14 @@
+{
+  "paper_id": "7fa226a145bd",
+  "catalogue_entry_id": "7fa226a145bd",
+  "family_slug": "glamm",
+  "title": "GLaMM: Pixel Grounding Large Multimodal Model",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.03356v1",
+  "source_url": "https://arxiv.org/pdf/2311.03356v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "GLaMM：让回答中的短语对应图像里的像素掩码"
+}

@@ -1,0 +1,52 @@
+{
+  "source_version": "2604.15483v1",
+  "claims": [
+    {
+      "claim": "5B VLA versus separate14B BAGEL and high-level policy",
+      "pdf_pages": [
+        3,
+        4,
+        22
+      ]
+    },
+    {
+      "claim": "KI,FAST CE,flow expert gradients do not reachVLM",
+      "pdf_pages": [
+        3
+      ]
+    },
+    {
+      "claim": "prompt dropout25/30/15/5 and quality1to5",
+      "pdf_pages": [
+        5
+      ]
+    },
+    {
+      "claim": "50actionchunk,5denoising,execute15or25,RTC0to12",
+      "pdf_pages": [
+        7
+      ]
+    },
+    {
+      "claim": "38ms minimal127msfull VLA;world4H1001.25s",
+      "pdf_pages": [
+        22,
+        23
+      ]
+    },
+    {
+      "claim": "human30trials90.9/80.6 versuspolicy85.6/80",
+      "pdf_pages": [
+        13,
+        23,
+        24
+      ]
+    },
+    {
+      "claim": "unseen60to80 vsseen90plus and ambiguity",
+      "pdf_pages": [
+        15
+      ]
+    }
+  ]
+}

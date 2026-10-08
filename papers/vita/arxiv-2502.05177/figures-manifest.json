@@ -1,0 +1,107 @@
+{
+  "paper_id": "14aa0b2943d0",
+  "source_version": "2502.05177v1",
+  "source_pdf_sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866",
+  "assets": [
+    {
+      "asset_path": "figures/training-data.png",
+      "original_label": "Table 1 — Dataset sources and stage sampling",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2502.05177v1#page=3",
+      "source_version": "2502.05177v1",
+      "source_sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866",
+      "asset_sha256": "9d8628604d206e646d72d4123e981e3d2e41c80d1d84e643db6da4461f24ea63",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          55,
+          70,
+          560,
+          532
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/training-config.png",
+      "original_label": "Table 2 — Training configurations",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2502.05177v1#page=4",
+      "source_version": "2502.05177v1",
+      "source_sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866",
+      "asset_sha256": "3fa5d0433f2c2ebae40e1dbed2443df0aed454e65b57d284c5f4a64936d43dd7",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          495
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/context-capacity.png",
+      "original_label": "Table 3 — Supported context by devices",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2502.05177v1#page=5",
+      "source_version": "2502.05177v1",
+      "source_sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866",
+      "asset_sha256": "3382a9fe2b0d41ea616b625938290c3b842ccca7f21a7cd6ae7bb5646e26c816",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          130,
+          70,
+          485,
+          186
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/image-results.png",
+      "original_label": "Table 4 — Image evaluation of checkpoints",
+      "pdf_page": 6,
+      "source_url": "https://arxiv.org/pdf/2502.05177v1#page=6",
+      "source_version": "2502.05177v1",
+      "source_sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866",
+      "asset_sha256": "1dd366b457481c764cc5b283fe1764eabf40d84f4babf1f9f6a0f30a43dc2552",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          55,
+          70,
+          560,
+          654
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/video-results.png",
+      "original_label": "Table 5 — VideoMME frame scaling",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2502.05177v1#page=7",
+      "source_version": "2502.05177v1",
+      "source_sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866",
+      "asset_sha256": "9219a56bc19f7933d1fd1e0a216d481bab648a4fe011ac5590773ab72eddc1c9",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          55,
+          70,
+          560,
+          452
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

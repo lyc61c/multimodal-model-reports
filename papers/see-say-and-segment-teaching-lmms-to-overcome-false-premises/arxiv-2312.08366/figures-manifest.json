@@ -1,0 +1,107 @@
+{
+  "paper_id": "b46cedd95a4b",
+  "source_version": "2312.08366v1",
+  "source_pdf_sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f",
+  "assets": [
+    {
+      "asset_path": "figures/see-say-segment.png",
+      "original_label": "Figure 2：See、Say、Segment 能力流程",
+      "pdf_page": 2,
+      "source_url": "https://arxiv.org/pdf/2312.08366v1#page=2",
+      "source_version": "2312.08366v1",
+      "source_sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f",
+      "asset_sha256": "ea1b4c042677edef0873094b494f45e3039e4427274bfaa34946692fd9d3d543",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          70,
+          565,
+          265
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/data-construction.png",
+      "original_label": "Figure 3：语境相关错误前提的数据构造",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2312.08366v1#page=3",
+      "source_version": "2312.08366v1",
+      "source_sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f",
+      "asset_sha256": "bf51323350c2ced77262a3367d073ca4c561624d9222e0e3a54d22da73e764b3",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          565,
+          358
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/main-results.png",
+      "original_label": "Tables 2–3：三类能力与负例比例评测",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2312.08366v1#page=5",
+      "source_version": "2312.08366v1",
+      "source_sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f",
+      "asset_sha256": "ab86d72db55fa55f25d4e5d15b0afd9af4e4dbf5db243536138349862a9152d2",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          565,
+          300
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/limits-ablations.png",
+      "original_label": "Figure 6：机械纠正造成的新幻觉",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2312.08366v1#page=8",
+      "source_version": "2312.08366v1",
+      "source_sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f",
+      "asset_sha256": "931eb8e91e94290a1537f1d081fbf5c0d58c6b052ef3a5e276688fe6bc5386e2",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          45,
+          65,
+          292,
+          288
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/positive-results.png",
+      "original_label": "Table 4：纯正例分割性能",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2312.08366v1#page=8",
+      "source_version": "2312.08366v1",
+      "source_sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f",
+      "asset_sha256": "bc753f6f05abbda67c78787eb73712709591e195204a1ee4a11a1b5ee747c57b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          306,
+          65,
+          565,
+          248
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

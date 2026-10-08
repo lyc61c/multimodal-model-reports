@@ -1,0 +1,19 @@
+{
+  "paper_id": "1acc7b9da68d",
+  "catalogue_entry_id": "1acc7b9da68d",
+  "family_slug": "vila",
+  "title": "VILA: On Pre-training for Visual Language Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2312.07533v1",
+  "source_url": "https://arxiv.org/pdf/2312.07533v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VILA：多模态预训练如何保留语言能力并获得上下文学习能力",
+  "source_sha256": "f5e8cc885acc841369923d4d9dee3297fad155e9137643ef20e391431b10d32c",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2777,
+  "figures_manifest": "figures-manifest.json"
+}

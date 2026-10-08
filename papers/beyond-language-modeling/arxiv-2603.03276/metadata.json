@@ -1,0 +1,14 @@
+{
+  "paper_id": "0343cb473d18",
+  "catalogue_entry_id": "0343cb473d18",
+  "family_slug": "beyond-language-modeling",
+  "title": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2603.03276v1",
+  "source_url": "https://arxiv.org/pdf/2603.03276v1",
+  "document_kind": "analysis_paper",
+  "catalogue_group": "supporting_materials",
+  "article_template_version": "1.1",
+  "title_zh": "Beyond Language Modeling：从零统一预训练中的视觉表示、MoE与缩放不对称"
+}

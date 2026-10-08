@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read all technical main text pages1–17 of official 27-page PDF; source version fixed official snapshot/hash, catalogue date not passed off as independently dated PDF.",
+    "Inspected whole original pages2/8/13/16 then final crops: Figure2, Figure5 with all snowflake/fire symbols, complete Table8 and Tables12/13 with source footnotes and all columns.",
+    "LLM7B distinguished from total model parameters. Qwen2-VL dynamic visual branch, 2x2 two-layer projector, Whisper Large, RVQ8 at12.5Hz, 3-layer depth head8classifiers, flow-matching 24kHz Mel/HiFiGAN read; no parameter count or latency invented.",
+    "RVQ and continuous flow formulas explicitly explanatory; report does not disclose codebook cardinalities, loss weights, training path or solver. Radar normalization original Figure1 not an objective universal ability score.",
+    "Data units preserved: abstract500B and stage text300billion samples do not establish unique image count or precise tokens; Table1 totals309.5M include150.7M pure text. Audio887Khours task totals can overlap; cross-modal100Btokens not added uncritically.",
+    "Read SFT17M table and exact image task proportions, 44 pretrain voices versus10000 SFT tones, ASR roundtrip filtering/recycling. No training optimizer/steps or RL phase fabricated.",
+    "Stage3 prose says all parameters whereas Figure5 snowflakes freeze visual/audio encoders and RVQ; contradiction explicitly recorded, not asserted as fully unfrozen. Stage4.1/4.2 module states visually verified.",
+    "Image metrics checked tables7/8; OCRBench84.0 percentage-style versus legacy840 not conflated, no unreported DocVQA. Language0-shot, VLMEvalKit, reported/leaderboard/reproduced markers preserved.",
+    "Video-MME without subtitles60.1,1FPSmax32 versus MiniCPM64,Qwen2FPSmax768; official/self-reproduced dual Qwen cells not cherry-picked. ActivityNet62.0 does not beat GPTmini62.1 or MiniCPM63.0 despite prose claim, quality differences retained.",
+    "Audio table11 modes separated50.0/40.9 etc; speech-to-speech content judged from output text, not independent waveform MOS/latency evidence. Web/Trivia1000 and Alpaca199 subset settings read.",
+    "OmniBench42.9/37.7/47.9/46.9 exact column order; GPTmini transcription pipeline not direct audio baseline. Medical49.9 below Qwen72B50.7 despite proseallbest;83.8 selected VQA not clinical validity. No model reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "5ca57ee615e41404eae8b775d6d5507dc6b70d453734c4758879fecbff347dab",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

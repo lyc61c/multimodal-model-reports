@@ -1,0 +1,19 @@
+{
+  "paper_id": "c93332aa16ea",
+  "catalogue_entry_id": "c93332aa16ea",
+  "family_slug": "internvl",
+  "title": "InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2504.10479v1",
+  "source_url": "https://arxiv.org/pdf/2504.10479v1",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "InternVL3：联合预训练、可变视觉位置与混合偏好优化",
+  "source_sha256": "71fb503c0f9140aec1d554c7fca16747bd7614e645c057a32829ddbea2f3363b",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 1578,
+  "figures_manifest": "figures-manifest.json"
+}

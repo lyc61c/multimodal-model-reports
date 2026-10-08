@@ -1,0 +1,14 @@
+{
+  "paper_id": "6276d6c37ba5",
+  "source_url": "https://mistral.ai/news/mistral-3",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_sha256": "7a896d60ba5a28372a56dca006fb53cc88f762ec29217956fd69d7d9fc7befb5",
+  "verification_notes": [
+    "阅读完整官方发布页并视觉查看 3 张原始评测图；数字从图逐项转录。",
+    "675B 总参数与 41B 激活参数、Large 3 base/instruct 与未来 reasoning 发布计划分开。",
+    "GPQA 5-shot no-CoT、MMLU 八语言平均与第三方人工 Win/Lose 条件保留。",
+    "MoE 公式、低精度权重容量和延迟公式明确标为解释性概念，不作为官方内部配置。",
+    "不将纯文本成绩称为视觉成绩，不补造数据量、视觉编码器配置与训练损失。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

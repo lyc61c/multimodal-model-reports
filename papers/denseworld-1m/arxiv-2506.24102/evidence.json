@@ -1,0 +1,45 @@
+{
+  "source_version": "2506.24102v1",
+  "claims": [
+    {
+      "claim": "1Mimages23.1Mobjectcaptions23.6Mmasks scene458.4words object111.4words",
+      "pdf_pages": [
+        11
+      ]
+    },
+    {
+      "claim": "three-stageRAMAPE SAM InternVL78B Qwen72B verification; 600K+400K",
+      "pdf_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "DRCIDembed into mask conv+visionpatch; SCMInternVL3-8B",
+      "pdf_pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "claim": "Qwen furtherSFT3M mix1:2MAmmoTH;LLaVAdynamicpatchbaseline",
+      "pdf_pages": [
+        13
+      ]
+    },
+    {
+      "claim": "MMEQwen2200to2175andLLaVA7B1943to1909 declines",
+      "pdf_pages": [
+        9,
+        12
+      ]
+    },
+    {
+      "claim": "regionCIDEr116.6METEOR16.9;speed3.2min1.1min2.6min31sec",
+      "pdf_pages": [
+        9,
+        10
+      ]
+    }
+  ]
+}

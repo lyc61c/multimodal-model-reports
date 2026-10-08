@@ -1,0 +1,1 @@
+{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"v1标题机构日期和22页确认","facts":"工具骨干、训练数据种子和结果口径逐项核验；保留正文与主表的开放基线说法差异","math":"原文GRPO命名不直接复制为新算法定义；组内优势及clip/KL解释无虚构超参","images":"view_image逐张核验PDF1/7/8/18，架构/训练/记忆图和表头完整","protocol":"原文帧数差异、清理后EgoLifeQA、ASR及API成本边界明确"},"model_execution":"not_run"}

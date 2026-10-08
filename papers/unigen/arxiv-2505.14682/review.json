@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 pp1-16 architecture, PT/SFT/DPO/CoT-V, benchmark details, ablations and implementation appendix.",
+    "Separated continuous SigLIP understanding from MAGVIT generation, and discrete understanding exception in PT; masked image iteration not AR pixel decoding.",
+    "Verified final N20/K4 inference versus Figure3 N6/K2 illustration, 50 iterations CFG5, and own verifier cost included in reported best scores.",
+    "Checked DPO18K auto-labeled preferences versus20K verifier samples, frozen modules, Table13 learning rates and DPO batch64/80 discrepancy.",
+    "Preserved DPO0.73/0.74 differences and CoT-V understanding regressions; no all-metric SOTA, single-sample0.78 or high-resolution quality claim.",
+    "Original source pages and final assets visually inspected; model results author-reported with no reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 6
+  },
+  "article_sha256": "ee2360ee0e9d41988262e2530e36dc18b4bab9604da952f83dcee587132a6b8d",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source_version": "official-source-snapshot-2026-10-08",
+  "claims": [
+    {
+      "claim": "2026-09-02发布，两版本共享基础智能但架构参数未公开",
+      "source_sections": [
+        "Introduction"
+      ]
+    },
+    {
+      "claim": "高effort额外推理和工具可能增加tokens，优惠截至2026-12-31",
+      "source_sections": [
+        "Flash built for long-horizon coding",
+        "Footnote1"
+      ]
+    },
+    {
+      "claim": "DeepSWE73.7vs65.3，CharXiv86.2，LVBench87.8agentic/87.1static，Elo/allpass/partial分开",
+      "source_sections": [
+        "Benchmark table image"
+      ]
+    },
+    {
+      "claim": "CyberGym86.2vs77.5/85.6，内部20语言超70，CWEBench47.2低于47.8成本前沿",
+      "source_sections": [
+        "Autonomous vulnerability discovery",
+        "Automated patching",
+        "CyberGym image",
+        "CWE-Bench image"
+      ]
+    }
+  ]
+}

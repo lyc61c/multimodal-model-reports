@@ -1,0 +1,127 @@
+{
+  "paper_id": "9faa140a0b57",
+  "source_version": "2510.09607v1",
+  "source_pdf_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2：视觉语言动作模型结构",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2510.09607v1#page=3",
+      "source_version": "2510.09607v1",
+      "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+      "asset_sha256": "ea8bd60c3331ccc73571f5761f5ae86534a69de38cc91b3bd1fb9a0ba2240d20",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          545,
+          335
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/two-stage-training.png",
+      "original_label": "Figure 3：表示对齐与动作微调",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2510.09607v1#page=5",
+      "source_version": "2510.09607v1",
+      "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+      "asset_sha256": "eb8ae174985c5d4d300526f9e4bff7243dbeb7f3397a500d788797c41523101c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          545,
+          266
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/calvin-results.png",
+      "original_label": "Table 1：CALVIN 连续任务结果",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2510.09607v1#page=7",
+      "source_version": "2510.09607v1",
+      "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+      "asset_sha256": "197c9bd8ee7a2282f0cfb3ee89f15d59d94a86de2a3a534477792f26feedacfb",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          110,
+          75,
+          540,
+          268
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/libero-results.png",
+      "original_label": "Tables 2–3：LIBERO 与 LONG 结果",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2510.09607v1#page=8",
+      "source_version": "2510.09607v1",
+      "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+      "asset_sha256": "76bafb417b29cad7409ed68cd1a321fc0f175fbbbfc6babd7deb436373b41f2b",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          545,
+          415
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/real-world-tasks.png",
+      "original_label": "Figure 4：五项真实机器人任务",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2510.09607v1#page=9",
+      "source_version": "2510.09607v1",
+      "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+      "asset_sha256": "99c7e4293db97daf2f5aaa677545c8043724cb10abaa6b2faaebcd393855e137",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          75,
+          550,
+          205
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/real-world-results.png",
+      "original_label": "Table 4：真实机器人成功率",
+      "pdf_page": 9,
+      "source_url": "https://arxiv.org/pdf/2510.09607v1#page=9",
+      "source_version": "2510.09607v1",
+      "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
+      "asset_sha256": "47b1e96a467d317b3d73126b486c12ca4daec00f8879133a05c3f5ec78fe10b0",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          430,
+          550,
+          535
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

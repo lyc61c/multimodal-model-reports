@@ -1,0 +1,16 @@
+{
+  "paper_id": "e2a1f413a7a5",
+  "source_url": "https://openai.com/index/introducing-gpt-5-2/?output=1",
+  "source_version": "official-release-2026-10-08",
+  "source_sha256": "00878d3f62ec28f0b1c045fa5b449ca1efd918b85a02eb097ae71f87f842a091",
+  "verification_notes": [
+    "Read complete official Introducing GPT-5.2 release text including detailed benchmarks and evaluation caveats; release date 2025-12-11 distinguished from retrieval date.",
+    "Copied and visually inspected four original official motherboard and tool-trajectory images; predictions/simulated demos are explicitly not ground truth or architecture diagrams.",
+    "Verified six vision rows, no-tools versus Python conditions, GPT-5.2 Thinking versus Pro and GPT-5.1 columns; Screenspot no-tool numeric value absent and not invented.",
+    "Verified GDPval first baseline is GPT-5, wins or ties versus clear wins, professional heavy versus API xhigh, and Pro ARC-AGI-2 high exception.",
+    "Verified MRCRv2 4-needle claim versus 8-needle 77.0 long interval, mean match ratio and binned length definitions.",
+    "Recomputed relative error reductions and clarified internal spreadsheet 9.3 percentage-point improvement; factuality judge limitations and Tau2 domain instruction/exclusion retained.",
+    "No undisclosed architecture, training corpus counts, hyperparameters or component ablations invented; no model inference performed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

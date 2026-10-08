@@ -1,0 +1,18 @@
+{
+  "paper_id": "d3f532e98132",
+  "source_url": "https://arxiv.org/pdf/2505.04921v1",
+  "source_version": "2505.04921v1",
+  "source_sha256": "3dcb5ea38b2b18ee8af8554ab3b812aac14b1f12e538474d11f5e548693ad629",
+  "verification_notes": [
+    "Read fixed 2505.04921v1 title/authors/date,75-page identity and all main sections pages1-36 including taxonomy, tables1-9 and cases6-8. Over540 publications and April2025 data scope checked. This is survey/supporting_materials, not a newly trained model.",
+    "Checked distinction between three historical stages and fourth prospective N-LMRM stage; Figure2p3/Figure9p25 are research route/conceptual architecture, not implemented model or reproducible training recipe. System1/System2 are conceptual organization, not verified human cognitive equivalence.",
+    "Checked representative modular NMN/SAN/MAC, prompt/structural/external categories, TextCoT steps and VisualSketchpad thought-action-observation. Crossmodal, o1-style supervised/search and R1-style preference/reward families separated; text-only DeepSeekR1 is method background not image-capable model.",
+    "Formulas explicitly labelled explanatory: joint rationale-answer factorization, generic DPO loss and GRPO group normalized advantage are not invented original survey equations; no beta/optimizer/KL/learning-rate claimed. FullGRPO requires additional update terms;reward length/format/IoU does not establish faithful reasoning.",
+    "Table6p18 conflicts with blanket GRPO description p19: originalMM-EUREKA row RLOO, LMM-R1 rowPPO retained; DPO preference optimization not equated to online verified rolloutRL. Dataset scales LLaVACT100K,Mulberry260K,MMPR3M,ShareGPT4o6.6K attributed to cited models not surveytraining.",
+    "Read Table9p27/Figure10p28 and all dataset/benchmark/evaluation textp28-35. Training and evaluation resources not assumed interchangeable; no unified synthesis pipeline/thresholds claimed; no inaccurate dataset-classification formulas copied from survey.",
+    "Originalp19-20 numbers are explicitly survey-reported priorbenchmark results:OmniMMIcommercial<20,WorldSenseClaude35/open25,BrowseCompGPT4o0.6/tool1.9/o1=9.9/DeepResearch51.5. Table7 is datasetinventory not numeric leaderboard; configurations not unified and notcurrentrankings.",
+    "Read casesp21-23: Figure6 singleexample8min13sec, no repeatedsample/significance/internalchainaudit. Sixfinger,PDFphone/projectmixing,redpanda/tool/networklimits and incorrectrationales reflect limitedsystemobservations; no claimintentionaldeception or universalability gain. No authortrainedmodel ablation,hardwareorfreezing schedule invented.",
+    "Rendered fourfinal210dpi crops and visually inspected fullFigures2p3,5p16,9p25,10p28 includingcaptions,axes/labels and outside rings. No missingmodel names or croppedformula. OriginalPDFsha256 andcropassetsha256 preserved; no modelruns/reproduction claimed."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

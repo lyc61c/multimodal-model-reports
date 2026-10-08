@@ -1,0 +1,25 @@
+{
+  "paper_id": "0aebb3826b29",
+  "source_version": "official-readme-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-architecture.svg",
+      "original_label": "Official README architecture diagram (unnumbered)",
+      "source_url": "https://raw.githubusercontent.com/QwenLM/Qwen-MM-Plugins/main/README.md",
+      "image_url": "https://raw.githubusercontent.com/QwenLM/Qwen-MM-Plugins/main/docs/assets/architecture.svg",
+      "image_final_url": "https://raw.githubusercontent.com/QwenLM/Qwen-MM-Plugins/main/docs/assets/architecture.svg",
+      "source_version": "official-readme-2026-10-08",
+      "source_sha256": "0c02bc9996efc709d71d92925068dba5ba9b931ab5a6ca2634040d8ad5cdc759",
+      "asset_sha256": "53cdc9b96f7329d05b2370933b3b9bc68fa9fc811d8db6502796ee40c033e330",
+      "width": 1200.0,
+      "height": 450.0,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "preview_path": "figures/official-architecture-preview.png",
+      "preview_sha256": "690f29942cfc69df32939169372f532a3271d56f725f778a7b7e2b5b32718007",
+      "preview_note": "Faithful raster rendering on a white page for visual inspection; original SVG retained without edits."
+    }
+  ]
+}

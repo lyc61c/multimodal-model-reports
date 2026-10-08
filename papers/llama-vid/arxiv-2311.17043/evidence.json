@@ -1,0 +1,54 @@
+{
+  "source_version": "2311.17043v1",
+  "claims": [
+    {
+      "claim": "Two tokens video configuration versus577 tokens image main results",
+      "pdf_pages": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "claim": "Context attention mean-query softmax-patch;Algorithm1 includes sqrtC absent from equation",
+      "pdf_pages": [
+        3
+      ]
+    },
+    {
+      "claim": "790K alignment,40K+625K+98K instruction,15K optional long set;script/synopsis teachers",
+      "pdf_pages": [
+        4,
+        5,
+        9,
+        11
+      ]
+    },
+    {
+      "claim": "Stage1/2/3 freeze,batch,lr,context and position interpolation settings",
+      "pdf_pages": [
+        5,
+        9
+      ]
+    },
+    {
+      "claim": "Benchmark scores,13B MMB/SQA regressions and compressed GQA/TextVQA losses",
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "claim": "Long movie examples use subtitles;selected examples not robust quantitative long benchmark",
+      "pdf_pages": [
+        5,
+        7,
+        10,
+        12,
+        13
+      ]
+    }
+  ]
+}

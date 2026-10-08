@@ -1,0 +1,25 @@
+{
+  "paper_id": "92d16b8c59c9",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "assets": [
+    {
+      "asset_path": "figures/official-elo-size.svg",
+      "original_label": "官方Gemma4 Elo与总模型大小比较图",
+      "source_url": "https://deepmind.google/models/gemma/gemma-4/",
+      "image_url": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/original_images/QInH6awnEGY0Anki/gemma__gemma-4__elo-size__light_lk35LoW.svg",
+      "image_final_url": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/original_images/QInH6awnEGY0Anki/gemma__gemma-4__elo-size__light_lk35LoW.svg",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "d31baf890b317b2565e0913f67cd490f9ba4ab90a1da5a6db334201af724b000",
+      "asset_sha256": "61df7c67c4f18590e2873de7fe85631bd63973cc70388de3aa2d528885091522",
+      "width": 1034.0,
+      "height": 582.0,
+      "processing": {
+        "method": "original_web_asset_copy",
+        "note": "Original bytes; no redraw or synthetic image"
+      },
+      "preview_path": "figures/official-elo-size-preview.png",
+      "preview_sha256": "da874961b6f9e58dc05ce13d609d3480a2b30e83b8bb5c7f6c9e8c3e5ed6ee34",
+      "preview_note": "Faithful raster rendering on a white page for visual inspection; original SVG retained without edits."
+    }
+  ]
+}

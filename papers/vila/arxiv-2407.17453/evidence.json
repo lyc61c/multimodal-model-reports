@@ -1,0 +1,18 @@
+{
+  "paper_id": "1d245a12f207",
+  "source_url": "https://arxiv.org/pdf/2407.17453v1",
+  "source_version": "2407.17453v1",
+  "source_sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b",
+  "verification_notes": [
+    "Read v1 main pages 1–11 and appendix pages 17–19, including architecture and stage details.",
+    "Visually checked Figure 1, Figure 3, Figure 5 and Table 4–6 original page renders; crop only surrounding prose and retain full captions.",
+    "Appendix A.4.1 explicitly says 51M images and unfreezes all parameters at stage 3; do not reuse the original VILA frozen-ViT description.",
+    "Main 6M MMC4 sampled entries must not be added to 25M COYO as if both were independent image counts. Appendix gives 25M MMC4 images.",
+    "40B recipe differs between main 3.75M recaptions plus 200K and appendix 7.5M split. Record unresolved detail rather than invent reconciliation.",
+    "Table 4 MME columns 1518.2 to 1656.2 imply +138.0, while printed annotation says +142; used actual column values and exposed discrepancy.",
+    "MMMU main comparison is test, not val; self-augmentation is not monotonic on every metric, and POPE slightly regresses with all specialists.",
+    "Distinguish final VILA-squared family name from self-augmentation loop indices; 40B combines Yi34B and InternViT6B.",
+    "Synthetic labels are text supervision, not teacher-logit KL or RLAIF; commercial models are judges and some public GPT-generated datasets remain in the recipe."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

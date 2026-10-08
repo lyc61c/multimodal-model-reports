@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "逐项阅读官方4.5模型卡、流式及全双工API、各模式详细表；未将2024 MiniCPM-V报告当成本版训练报告。",
+    "检查三张官方原始图片完整显示；架构silent、25Hz speech token、时间轴和参考音频可读；汇总图无裁缺；文档案例为定性展示。",
+    "核验Instruct/Thinking视觉指标及Video-MME无字幕，注明OCRBench876与汇总图87.6的尺度差别、部分表间基线不一致。",
+    "核验语音CER/WER与SIM、中文LongTTS弱项、Omni八项均值、LiveSports相对胜率和BF16/int4效率；硬件预算未披露不推定。",
+    "TDM概念符号为编辑解释，未捏造完整公式、训练阶段、冻结参数、数据量及超参；未运行模型。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 3
+  },
+  "article_sha256": "8bc5bdff32503d4ec4acd723c326da4468c5fc35c435726c99c860bf16875c06",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

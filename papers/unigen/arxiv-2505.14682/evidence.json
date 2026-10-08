@@ -1,0 +1,15 @@
+{
+  "paper_id": "cfb536a3a112",
+  "source_url": "https://arxiv.org/pdf/2505.14682v1",
+  "source_version": "2505.14682v1",
+  "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
+  "verification_notes": [
+    "Read v1 pp1-16 architecture, PT/SFT/DPO/CoT-V, benchmark details, ablations and implementation appendix.",
+    "Separated continuous SigLIP understanding from MAGVIT generation, and discrete understanding exception in PT; masked image iteration not AR pixel decoding.",
+    "Verified final N20/K4 inference versus Figure3 N6/K2 illustration, 50 iterations CFG5, and own verifier cost included in reported best scores.",
+    "Checked DPO18K auto-labeled preferences versus20K verifier samples, frozen modules, Table13 learning rates and DPO batch64/80 discrepancy.",
+    "Preserved DPO0.73/0.74 differences and CoT-V understanding regressions; no all-metric SOTA, single-sample0.78 or high-resolution quality claim.",
+    "Original source pages and final assets visually inspected; model results author-reported with no reproduction."
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

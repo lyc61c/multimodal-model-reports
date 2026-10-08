@@ -1,0 +1,1 @@
+{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"v1标题作者机构日期与34页核对","facts":"方法及Tables1–12核对，保持COCO排序、文档人工评价、语言退化边界","math":"扩散潜空间、冻结参数梯度通路、标准LM与原公式区分；CFG明确约定；未称所有图像统一离散CE","images":"view_image逐张检查PDF4/7/8/26，图文创作、架构和表头完整","claims":"协同改善量明确，CLIP对齐失败限于该配置，7B口径是语言骨干"},"model_execution":"not_run"}

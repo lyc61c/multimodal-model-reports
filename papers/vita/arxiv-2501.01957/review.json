@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 technical and experimental sections3–4 pages3–9, original Figures2/3 and Tables1–4 rendered and inspected.",
+    "Qwen2-7B based on experimental tables not initialMixtral; output internal textconditioningNARARcodec not unconditional directwaveform or originalexternalTTS.",
+    "110000hour internalASR pool section3.2 versus11000hour stage2.1/Figure3 conflict retained without silentcorrection;3000hour TTS outputdata distinct.",
+    "CTCpathsum equation explanatorystandard; exactcodecNARloss and streamingchunkdetails not fabricated; 40Hzcodetokens distinguished24kHzaudio.",
+    "Stage2.2 allvisualaudioandLLMtrainable;Stage3LLMfrozen doesnot imply no earlierregression; inputclassificationhead speechtext distinctinitialthree state tokens.",
+    "Stage1 vs Stage3 MMMU53.1→52.1 OCR752→732 etc regressions retained; Table2Avgundefinednormalization not unifiedaccuracy.",
+    "TitleGPT4olevelnot allbenchmarkclaim;MathVista66.2>GPT4o56.5 butMMMU52.1<62.8; VideoMMEwithsubtitle differentiated.",
+    "v1 no speechMOS speaker similarity latency/RTF interruptiontable;ASRperformance alone not quantitative realtimeinteraction or synthesisquality evidence."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 6
+  },
+  "article_sha256": "733dfff08f18f6bb08c8c7e059a5124bc20ba05aa7693f5a1e8c9e2b7dbed645",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

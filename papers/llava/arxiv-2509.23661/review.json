@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "figures_visually_checked": [
+    3,
+    5,
+    6,
+    10
+  ],
+  "model_executed": false,
+  "checks": [
+    "source title/version",
+    "pretrained assets distinguished from scratch claim",
+    "22M versus46M distinguished",
+    "losing benchmarks retained",
+    "missing learning rates not invented",
+    "formula interpretation explicitly labeled"
+  ],
+  "limitations": [
+    "no independent peer review or experiment reproduction",
+    "budget scope incompletely itemized in report",
+    "seven categories wording lists eight categories"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "paper_id": "fcd07866797c",
+  "source_url": "https://arxiv.org/pdf/2306.00890v1",
+  "source_version": "2306.00890v1",
+  "source_sha256": "d61d5da1f0ce27df663ded964fe6a793279a0b1e3d0e1d8fce4677239446655f",
+  "verification_notes": [
+    "阅读全文正文1–10及附录14–17，限定v1域适配；不混入新底座",
+    "实际检视原PDF4/5/9/10，Figure1–3与Table4–6完整",
+    "阶段1仅投影，阶段2投影与LM；CLIP冻结；IM仅数据生成上下文不是推理检索",
+    "语言版GPT4只读caption/citance未看图；600K与60K多轮图像会话不同于QA轮数",
+    "10K标题对正文10 samples笔误按表10K；未声称医生逐条人工核验",
+    "表5 6.8+8.0=14.8h在8A100；不含底座预训练或下游FT；lr/optimizer未披露",
+    "193题相对教师评分，50.2非医学正确率；gold文本教师与图像模型条件不同",
+    "Table4 Open召回率与Closed准确率，SLAKE英文，FT列为0才零样本；灰色注释与FT矛盾保留",
+    "13Bzero40.25低于7B41.22，FT9/15/18非单调；多个初始化最好指标不拼成单模型"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "reviewer": "writer_2 self-review",
+  "source_read": true,
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "reference_pages_skipped": [
+    11,
+    12,
+    13
+  ],
+  "figures_visually_checked": [
+    4,
+    6,
+    8,
+    17
+  ],
+  "model_executed": false,
+  "checks": {
+    "seven_sections": true,
+    "source_title_matches": true,
+    "scores_verified_in_images": true
+  },
+  "limitations": [
+    "Not independent external review",
+    "No model execution",
+    "Synthetic infrared and depth pretraining sources",
+    "Encoder naming inconsistent in v1",
+    "Main scores use task-specific text sources, not one universally best source",
+    "No GPU/time/precision disclosed"
+  ]
+}

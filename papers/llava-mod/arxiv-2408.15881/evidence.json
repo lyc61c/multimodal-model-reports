@@ -1,0 +1,44 @@
+{
+  "source_url": "https://arxiv.org/pdf/2408.15881v1",
+  "source_version": "2408.15881v1",
+  "source_sha256": "11e109efd02bbaaf52187c1f0affd8c29a884f023921c57d2765ac9b7a6ed827",
+  "read_scope": "PDF正文1–12与附录20完整阅读，参考文献不作实现证据。",
+  "claims": [
+    {
+      "pages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "claim": "CLIPL14 336/576，两层MLP，同词表Qwen7B教师；FFN稀疏upcycling；教师冻结，稠密更新LLM+proj，稀疏更新experts+proj；正向KL与teacher-referenceDPO。"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        20
+      ],
+      "claim": "约5M四阶段数据及来源表；正文与附录优化器/batch/preferenceLR冲突记录。"
+    },
+    {
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "claim": "Qwen2AVG61.6，教师64.5；ObjectHal11.2/5.9对教师29.7/23.4；偏好AVG60.2→59.9，幻觉39.1→11.4；E4T1 sparse59.2/dense57.1。"
+    }
+  ],
+  "source_inconsistencies": [
+    "Eq6/7负KL与最小化KL叙述矛盾",
+    "Eq5学生采样期望与caption监督CE叙述不符",
+    "DPO并不分别保证优选绝对概率大于教师与劣选小于教师",
+    "正文Adam/附录AdamW；batch512/256/256 vs256/128/128；偏好LR2e-6vs2e-5",
+    "总/激活/可训练参数在描述中混用",
+    "QwenVLChat AVG56.7与列出七项均值不一致"
+  ],
+  "model_execution": "not_run"
+}

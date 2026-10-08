@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read all technical正文 andselectedcases",
+    "Viewed four selected originalimages and captions",
+    "Explanatory interfaceformula explicitlynotoriginal",
+    "No fabricated benchmark,hparams,or module freezing",
+    "Sevensectioncheck"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "6e43d2a1b9eb60677acbfa48c9c7202ec950b4e811ea0b7becc0f51d253adff2",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

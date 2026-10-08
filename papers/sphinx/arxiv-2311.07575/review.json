@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "checks": [
+    "Read v1 main methodology/training/results pages 1–15; actual Figures3/4 and Tables2/4 rendered and inspected.",
+    "1k/2k denote variants with 1445/2890 tokens rather than 1K/2K pixel resolution; source 762-square inconsistency retained without inventing resize recipe.",
+    "Frozen vision versus full LLM training distinguished; beta and synthetic-domain schedule not invented.",
+    "Higher-resolution regressions, OCR-reference prompt and grounding specialist comparisons retained.",
+    "SAM/LaMa/StableDiffusion extensions and qualitative pose/anomaly examples not claimed as native generation or fully quantified abilities.",
+    "ImageNet 1-epoch transfer not compared as random-initialization pretraining speed-up."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "no_placeholders": true,
+    "local_links_resolve": true,
+    "asset_hashes_match": true,
+    "original_assets": 4
+  },
+  "article_sha256": "2259476bfecf20afc7bce90ecbf5058879ae8201da2957a6f73d7763d4be2a97",
+  "limitations": [
+    "Author-reported evidence; no model reproduction",
+    "Descriptions fixed to the cited source snapshot"
+  ]
+}

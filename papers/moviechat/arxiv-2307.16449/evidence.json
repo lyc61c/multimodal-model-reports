@@ -1,0 +1,14 @@
+{
+  "paper_id": "31d1dbadfc98",
+  "source_url": "https://arxiv.org/pdf/2307.16449v1",
+  "source_version": "2307.16449v1",
+  "source_sha256": "d60d57dab10fa960d89a4ab91aa23a9d7835ca8448bdfc2a7a9d2fba0b7b08f6",
+  "verification_notes": [
+    "阅读PDF1–6及12–13，确认v1视觉组件与记忆机制，语言主干/训练数据/recipe未充分披露，不沿用后续版本。",
+    "检查Figure2、Figures3/4、Table1与附录Table2四张完整原页；帧位置为时刻，8frame32token与10framewindow不同配置。",
+    "核验Equation3平均余弦、Algorithm1相邻最相似合并、weighted sum无补固定权重；Equation1索引次序疑点与n→n²绝对位置扩展如实记录。",
+    "核验MSVD/MSRVTT/ActivityNet各Accuracy和0–5Score列、基线VideoChatGPT来源、gpt3.5turbo提示整数与例4.8不一致。",
+    "显存21.3KB/frame为增量、10000倍率不对所有基线、24GB/224视觉无抽样限定；64token非无限视频恒定总记忆；未运行模型。"
+  ],
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+}

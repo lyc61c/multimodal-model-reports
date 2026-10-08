@@ -1,0 +1,107 @@
+{
+  "paper_id": "d9cbc42c82ec",
+  "source_version": "2504.16656v1",
+  "source_pdf_sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5",
+  "assets": [
+    {
+      "asset_path": "figures/ssb-training.png",
+      "original_label": "Figure 1 — SSB training signal flow",
+      "pdf_page": 4,
+      "source_url": "https://arxiv.org/pdf/2504.16656v1#page=4",
+      "source_version": "2504.16656v1",
+      "source_sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5",
+      "asset_sha256": "0decbad90eb398302ed2c1ac7ebe3dc998b429f5a3c56c48f8558ecd5d8c27b1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          215
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/text-results.png",
+      "original_label": "Figure 2 — Text reasoning benchmarks",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2504.16656v1#page=7",
+      "source_version": "2504.16656v1",
+      "source_sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5",
+      "asset_sha256": "dcc9ee6da64bc9976aecb2e054b1b23180b0ce393ad1cc097d50856b8e180de8",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          130,
+          70,
+          475,
+          280
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/multimodal-results.png",
+      "original_label": "Figure 3 — Multimodal reasoning benchmarks",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2504.16656v1#page=7",
+      "source_version": "2504.16656v1",
+      "source_sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5",
+      "asset_sha256": "2d462d1372f95cba338b9bc9454e2daa17e6b5ef8bbb9636963c319609c74111",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          295,
+          540,
+          500
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/ssb-mpo-ablation.png",
+      "original_label": "Tables 2 and 3 — SSB and MPO ablations",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2504.16656v1#page=11",
+      "source_version": "2504.16656v1",
+      "source_sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5",
+      "asset_sha256": "9f5872a575768fd0fd374155010166d8fae9e030dfe697915757659a83f67bd6",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          105,
+          70,
+          510,
+          220
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    },
+    {
+      "asset_path": "figures/trainable-components.png",
+      "original_label": "Table 4 — Trainable component configurations",
+      "pdf_page": 11,
+      "source_url": "https://arxiv.org/pdf/2504.16656v1#page=11",
+      "source_version": "2504.16656v1",
+      "source_sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5",
+      "asset_sha256": "6dbc9d6f100fdd84235d3eb17f29e5544e684fa01b2abdeb66549bf45d508d4a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 160,
+        "crop_bbox": [
+          150,
+          650,
+          455,
+          720
+        ],
+        "note": "Original pixels retained; full-page render includes surrounding text"
+      }
+    }
+  ]
+}

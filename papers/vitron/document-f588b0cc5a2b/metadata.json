@@ -1,0 +1,19 @@
+{
+  "paper_id": "f588b0cc5a2b",
+  "catalogue_entry_id": "f588b0cc5a2b",
+  "family_slug": "vitron",
+  "title": "VITRON: A Unified Pixel-level Vision LLM for Understanding, Generating, Segmenting, Editing",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-08",
+  "source_url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf",
+  "document_kind": "model_paper",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.1",
+  "title_zh": "VITRON",
+  "source_sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-08",
+  "chinese_characters": 2083,
+  "figures_manifest": "figures-manifest.json"
+}
