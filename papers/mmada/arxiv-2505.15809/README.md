@@ -29,7 +29,7 @@ MMaDA 的流程包含三个环节。首先，统一的 mask predictor 学习语�
 
 ## 3. 整体架构
 
-![Figure 2：三个训练阶段、UniGRPO 重掩码与三类任务输入输出，原文 PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 **读图：**Figure 2 上半部连接预训练、混合长 CoT 和强化学习；中间的重掩码图说明 RL 更新并非把扩散生成结果直接当作自回归序列；下半部显示文本 tokenizer、图像 tokenizer 和共享 MLLM。该图完整保留了图例和图注，也直接说明“统一”不等于没有模态编码组件。
 
@@ -93,17 +93,21 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![Table 2：视觉理解完整比较表，原文 PDF 第 9 页](figures/original-page-009-02.png)
+![原文 Table 2](figures/original-p009-table-2.png)
 
 **读表：**Table 2 区分 understanding-only 与理解生成统一模型，箭头均指较高更好，横线表示未报告。MMaDA 在 POPE 为 86.1，MMBench 68.5、SEED 64.2，超过表中 LLaVA-v1.5 的 85.9、64.3、58.6；但 MME 1,410.7、VQAv2 76.7、GQA 61.3、MMMU 30.2 仍低于 LLaVA 的 1,510.7、78.5、62.0、35.4。与 Show-o 相比则在已列各列更高。故“统一扩散具有有效理解能力”成立，“在视觉理解上全面胜出”不成立。带 CoT 的输出以最终答案计分。
 
-![Table 3：图像生成完整比较表，原文 PDF 第 10 页](figures/original-page-010-03.png)
+![原文 Table 3](figures/original-p010-table-3.png)
 
 **读表：**Table 3 中 MMaDA 的 WISE Cultural 为 0.67、ImageReward 1.15、CLIP 32.46、GenEval 0.63。对应 Show-o 为 0.28、0.92、28.94、0.53，SDXL 为 0.43、1.13、32.12、0.55。50K 测试 prompts 用于 CLIP 与 ImageReward；WISE 此表只有文化子集，不能外推整个世界知识评测。GenEval 分项也有弱点：MMaDA 位置关系 0.20、颜色属性 0.37，低于 Janus 的 0.46、0.42；总体优势主要来自单物体、双物体和计数等改善。
 
 语言结果在 Table 4：MMLU 68.4、ARC-C 57.4、GSM8K 73.4、MATH 36.0、GPQA 28.4；相对 LLaDA 的 65.9、47.9、70.7、27.3、26.1 有增长，但 TruthfulQA 从 46.4 降到 43.1。Qwen2-7B 的 GSM8K 80.2、MATH 43.5 仍更高，表中不同模型继承的数据与训练预算也并未统一。
 
-![Table 5 与 Figure 5–6：训练消融与联合训练趋势，原文 PDF 第 15 页](figures/original-page-015-04.png)
+![原文 Figure 5](figures/original-p015-figure-5.png)
+
+![原文 Table 5](figures/original-p015-table-5.png)
+
+![原文 Figure 6](figures/original-p015-figure-6.png)
 
 **读表和图：**Table 5 保留全部三行与六列，是判断后训练作用最直接的证据：GSM8K 17.4→65.2→73.4，MATH500 4.2→26.5→36.0，GeoQA 8.3→15.9→21.0，CLEVR 10.3→27.5→34.5，CLIP 23.1→29.4→32.5，ImageReward 0.69→0.84→1.15。Stage 2 的跃升较大，RL 进一步增益；不能把全部涨幅归给 UniGRPO。此处明确是 MATH500，Table 4 写 MATH，不能未经说明视为完全同一测试集。Figure 5 的温室图文例子展示质量变化，Figure 6 是归一化指标趋势，两者均不能替代独立控制变量的跨模态因果消融。
 

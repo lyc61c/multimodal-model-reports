@@ -4,63 +4,128 @@
   "source_pdf_sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18",
   "assets": [
     {
-      "asset_path": "figures/original-page-006-01.png",
-      "original_label": "Figure 2 (PDF p.6)",
+      "asset_path": "figures/original-p006-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 6,
       "source_url": "https://arxiv.org/pdf/2506.03569v1#page=6",
       "source_version": "2506.03569v1",
       "source_sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18",
-      "asset_sha256": "c8b545767eadc530c10e32cacfececc9f625a76e6fbf025690fd4fae5f7bd60c",
+      "asset_sha256": "e8787c7b6dfb07e5e23ef758671e0c1de0e2dd31950347246b96091db893939b",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          81,
+          85,
+          514,
+          406.53
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 121）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-011-02.png",
-      "original_label": "Figure 3 and Equations 1-2 (PDF p.11)",
+      "asset_path": "figures/original-p011-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 11,
       "source_url": "https://arxiv.org/pdf/2506.03569v1#page=11",
       "source_version": "2506.03569v1",
       "source_sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18",
-      "asset_sha256": "db943fbc851913aeb3323706a952d53b8c2db3fe9cb3b9ad1d94bbaf3dc4dfb6",
+      "asset_sha256": "197e0edff7eab44bd74aa5c2a79e7a9adf7dd02e9600f3b00fcd08ec598b2f58",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          77,
+          84,
+          518,
+          241.23
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 122）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-013-03.png",
-      "original_label": "Table 2 (PDF p.13)",
+      "asset_path": "figures/original-p013-table-2.png",
+      "original_label": "Table 2",
       "pdf_page": 13,
       "source_url": "https://arxiv.org/pdf/2506.03569v1#page=13",
       "source_version": "2506.03569v1",
       "source_sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18",
-      "asset_sha256": "b8b5d512210c8bd090f72e79cf926d42233081bd455e10c902caffc04300753a",
+      "asset_sha256": "0cbc6d4869e671efe514073d6808947641e867cd090798e66430e655bbfa8883",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.54,
+          151.36,
+          527.59,
+          688.92
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 123）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-014-04.png",
-      "original_label": "Table 3 and Figure 4 (PDF p.14)",
+      "asset_path": "figures/original-p014-table-3.png",
+      "original_label": "Table 3",
       "pdf_page": 14,
       "source_url": "https://arxiv.org/pdf/2506.03569v1#page=14",
       "source_version": "2506.03569v1",
       "source_sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18",
-      "asset_sha256": "321328d43f2e539deb2d7f4fc0329ccbb3dc33d958774b2590b76fcf247c9be7",
+      "asset_sha256": "a5765f3f331e2c10e12d15a0ccd58054fe24bae4c225cfc05a210e51af4513ee",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.44,
+          82.01,
+          527.42,
+          275.23
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p014-figure-4.png",
+      "original_label": "Figure 4",
+      "pdf_page": 14,
+      "source_url": "https://arxiv.org/pdf/2506.03569v1#page=14",
+      "source_version": "2506.03569v1",
+      "source_sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18",
+      "asset_sha256": "5de214b30580d8325b4637fe165ca250e78b17011ecdf50791873a050cc469e5",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.44,
+          282.79,
+          527.41,
+          455.03
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

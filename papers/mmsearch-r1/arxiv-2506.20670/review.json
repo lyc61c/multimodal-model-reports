@@ -45,11 +45,28 @@
     "SR definition not question ratio",
     "no claim of beating 32B average",
     "separate policy and summarizer GPU resources",
-    "SFT comparison not cold start"
+    "SFT comparison not cold start",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "main versus appendix tool-count discrepancy",
     "search penalty config mapping not explicitly specified",
     "no experiment reproduction or independent peer review"
-  ]
+  ],
+  "article_sha256": "71fc90a9162a861c96ffe2daebaaa43251c54bd310e9037bf0ca24972b33c6ff",
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and repaired crops: Figure 2 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crop: Figure 3 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Table 1 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Figure 5 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
 }

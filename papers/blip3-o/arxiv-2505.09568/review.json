@@ -6,18 +6,30 @@
     "Viewed all four included original page images; tables complete and columns checked",
     "Viewed PDF page 7 to confirm equation typo",
     "Seven sections; statements distinguish disclosure, explanatory math, and limitations",
-    "No claim of model execution; no independent review claim"
+    "No claim of model execution; no independent review claim",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 6,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "cb3a78b7961aa94c54dff4fa7afeb541295d1f360b55ebfaf2b0eab80fa6ec6f",
+  "article_sha256": "463ee374f831b0df073c28d61ccd8877149503033f7367442aa6c1a90229be55",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: BLIP3-o understanding/generation architecture, branch labels and Figure 1 caption retained.",
+      "Viewed source page and crop: three full generation-design branches, legends and Figure 3 caption retained.",
+      "Viewed repaired crop: all three Figure 4 panels (GenEval/DPG/FID), shared legend, axes and caption retained; earlier middle-panel-only crop corrected.",
+      "Viewed repaired separate crops: Table 1, Table 2 and Figure 6 each retain complete headers/rows/labels and their own captions; removed intervening Finding 3 prose and duplicate mixed-region extraction."
+    ]
+  }
 }

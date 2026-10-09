@@ -36,5 +36,10 @@
     "正文3.6M/Table3总5.6M与Table1详细5.682M统计有近似差异",
     "CLAPVGG结果缺失，“全部8项超越”不能作完整配对比较，AVG计算未说明"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

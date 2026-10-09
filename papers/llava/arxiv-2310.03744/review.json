@@ -23,12 +23,28 @@
     "source_title_verified": true,
     "numeric_results_checked": true,
     "figures_checked_against_pdf": true,
-    "mechanism_formulas_labelled_as_explanation": true
+    "mechanism_formulas_labelled_as_explanation": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "短报告未完整披露冻结清单、MLP细节或总体基础预训练成本",
     "MM-Vet表1为36.3，表2为35.4，分表保留",
     "正文中文分数增益减法有误，本文依据表中数值",
     "原图为整页截图，保留脚注和表头"
-  ]
+  ],
+  "article_sha256": "b6a0f6588718594b8aef9cb5078e59f30b714ade5b18891ceca9d9b277729322",
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

@@ -1,1 +1,33 @@
-{"verdict":"complete_self_review","source_identity_verified":true,"source_version":"2305.06500v1","fact_check":"Checkedtask split,datasetunits,OCRsupplement,4frame inference,training hyperparameters,Tables1–3 and Figure4.","math_check":"Dataset probability differs fromindividualsample probability;QFormer instruction interactions correct;standardformulas labelled.","image_check":"view_image inspectedpages3,4,6,7;Figures2–3,Tables1–2complete.","model_execution":"not_run","limitations":["Self-review","26/28 dataset wording inconsistent in original","Backbone pretraining contamination audit notfullydisclosed"]}
+{
+  "verdict": "complete_self_review",
+  "source_identity_verified": true,
+  "source_version": "2305.06500v1",
+  "fact_check": "Checkedtask split,datasetunits,OCRsupplement,4frame inference,training hyperparameters,Tables1–3 and Figure4.",
+  "math_check": "Dataset probability differs fromindividualsample probability;QFormer instruction interactions correct;standardformulas labelled.",
+  "image_check": "view_image inspectedpages3,4,6,7;Figures2–3,Tables1–2complete.",
+  "model_execution": "not_run",
+  "limitations": [
+    "Self-review",
+    "26/28 dataset wording inconsistent in original",
+    "Backbone pretraining contamination audit notfullydisclosed"
+  ],
+  "article_sha256": "3185332ee2498c82a6bb359c1881da345c83105b17b50b4b03232041cc00c514",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable."
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
+}

@@ -23,7 +23,7 @@ PaLI-X 达到约 55B，而 PaLI-3 将总规模降至约 5B，同时更换视觉�
 
 ## 3. 整体架构
 
-![原文 Figure 1：PaLI-3 总体结构，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
 **读图：**SigLIP 先独立编码图像；视觉 token 与问题 token 拼接进入 UL2 的 Transformer encoder，再由 decoder 生成答案。它是 encoder-decoder 架构，不是把图像放进一个 decoder-only 聊天模型。
 
@@ -43,7 +43,7 @@ $$
 
 $s_{ij}$ 是图像 $i$ 与文本 $j$ 的匹配分数，正负标签表示是否对应。它与 CLIP 在整个 batch 上做 softmax 的对比目标不同，逐对判断匹配。上式仅解释原理，具体温度、偏置、采样与归一化应按引用的 SigLIP recipe，本文没有补写 PaLI-3 未公布的数值。
 
-![原文 Table 1：分类与对比预训练控制实验，PDF 第 4 页](figures/original-page-004-02.png)
+![原文 Table 1](figures/original-p004-table-1.png)
 
 **读表：**Classif 行是原始分数，SigLIP 行列的是增减量，绿色“+18.7”不是最终 TextVQA 分数。G/14 的分类探针 88.1，SigLIP 低 2.5；但 TextVQA 从 31.9 提高 18.7 到 50.6，RefCOCO 三项提高 15.1/19.1/17.7。实验使用 224 分辨率与完整第一阶段的 20% 训练预算，不能拿它与高分辨率主结果直接比。
 
@@ -76,7 +76,7 @@ Stage 2 数据更侧重视觉文字和检测。迁移阶段使用各 benchmark �
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2：视觉文字理解，PDF 第 5 页](figures/original-page-005-03.png)
+![原文 Table 2](figures/original-p005-table-2.png)
 
 **读表：**上半部含外部 OCR pipeline 输入，下半部不含；不是同一模型简单开关。caption 用 CIDEr，TextVQA 用准确率，STVQA/InfoVQA/DocVQA 用 ANLS，OCRVQA/AI2D 用 exact match，ChartQA 用 relaxed accuracy。最后平均是论文对前八列的聚合，不能叫统一准确率。
 
@@ -95,7 +95,11 @@ Stage 2 数据更侧重视觉文字和检测。迁移阶段使用各 benchmark �
 
 指代分割 Table 3 的三个验证集 mIoU 为 77.33/73.53/72.72，比 PolyFormer 76.94/72.15/71.15 略高。这是组合训练集后任务微调的表现，不是零样本分割。
 
-![原文 Table 4–6：自然图像、视频与独立视觉编码器，PDF 第 7 页](figures/original-page-007-04.png)
+![原文 Table 4](figures/original-p007-table-4.png)
+
+![原文 Table 5](figures/original-p007-table-5.png)
+
+![原文 Table 6](figures/original-p007-table-6.png)
 
 **读表：**Table 4 是各任务迁移的图像结果，Table 5 是最多 16 帧的视频结果，Table 6 则评估视觉组件单独使用，不能把检索性能归到 UL2 对话输出。
 

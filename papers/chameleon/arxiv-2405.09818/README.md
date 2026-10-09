@@ -29,7 +29,7 @@
 
 ## 3. 整体架构
 
-![Figure 1：统一图像/文字token的预训练与混合生成](figures/original-page-002-01.png)
+![原文 Figure 1](figures/original-p002-figure-1.png)
 
 *来源：原文Figure1，PDF第2页，[原页](https://arxiv.org/pdf/2405.09818v1#page=2)。绿色为文字、蓝色为图像code，图像起止标记控制序列结构；右侧不是把图像URL插入文字，而是生成后再解码视觉token。*
 
@@ -51,7 +51,7 @@ $$\mathcal L_z=10^{-5}(\log Z)^2.$$
 
 这不是对每个类别logit平方直接惩罚，也不是强制文字/图像概率相等。报告将不同模态共同训练的norm竞争作为问题解释，以训练曲线与去掉图片生成对照佐证；不能由此推出所有多模态系统必定存在相同发散机制。
 
-![Figure 6：训练稳定性与norm重排的原式](figures/original-page-007-02.png)
+![原文 Figure 6](figures/original-p007-figure-6.png)
 
 *来源：原文Figure6与§2.3，PDF第7页，[原页](https://arxiv.org/pdf/2405.09818v1#page=7)。曲线横轴步数、纵轴训练loss；左图只显示前600K步，不是全部训练。右图同时说明dropout与norm重排的组合并不自动稳定。*
 
@@ -89,7 +89,7 @@ SFT使用cosine、初始 $10^{-5}$、weight decay0.1、batch128、序列4096，p
 
 ## 7. 实验设置与主要结果
 
-![Table 7：图片描述、视觉问答与不同微调/shot配置](figures/original-page-017-04.png)
+![原文 Table 7](figures/original-p017-table-7.png)
 
 *来源：原文Table7，PDF第17页，[原页](https://arxiv.org/pdf/2405.09818v1#page=17)。每格shot不同，COCO/Flickr为CIDEr、VQAv2为准确率；“—”是未报告，不是模型无法完成。*
 
@@ -101,7 +101,7 @@ SFT使用cosine、初始 $10^{-5}$、weight decay0.1、batch128、序列4096，p
 
 预训练34B用更少shot可接近较大Flamingo/IDEFICS；描述微调较好，但VQAv2 69.6低于GPT4V77.2、FlamingoFT82.0等。caption限制30token、不同模型prompt/生成长度可能不同，不能把描述任务总分当完整多模态排名。文字评测用未SFT模型：34B MMLU65.8、GSM8K maj1 61.4/maj32 77.0、MATH maj1 22.5/maj4 24.7，比较必须统一多数投票次数。更大量文字、代码和高质量后期训练均可能贡献，不证明视觉单独提高文字能力。
 
-![Figure 9：需要图文回答的人工任务评判与相对偏好](figures/original-page-012-03.png)
+![原文 Figure 9](figures/original-p012-figure-9.png)
 
 *来源：原文Figure9，PDF第12页，[原页](https://arxiv.org/pdf/2405.09818v1#page=12)。蓝色wins、橙色ties、绿色loses；“+”表示文本模型输出caption再由DALL-E3配图，并非原API原生混合生成。*
 

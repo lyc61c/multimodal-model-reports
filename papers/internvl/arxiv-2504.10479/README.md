@@ -16,7 +16,7 @@ InternVL3 是图像、视频与文本理解模型家族，覆盖约 1B–78B，�
 
 ## 3. 整体架构
 
-![原论文 Table 1 和 V2PE 定义](figures/original-page-004-01.png)
+![原文 Table 1](figures/original-p004-table-1.png)
 
 **读图：Table 1、Equations 1–5，PDF 第 4 页。** 表明确每个变体的视觉与语言初始化。1B/2B/8B/14B 对应 InternViT-300M 与 Qwen2.5-0.5B/1.5B/7B/14B；9B 使用 InternLM3-8B。38B/78B 使用 InternViT-6B 与 Qwen2.5-32B/72B。实际总量为 0.9/1.9/8.1/9.2/15.1/38.4/78.4B，名称不是精确参数数值。
 
@@ -58,7 +58,7 @@ SFT 增加长上下文、科学图、创意写作、多模态推理等，使用 
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 2：推理与 Best-of-8](figures/original-page-009-02.png)
+![原文 Table 2](figures/original-p009-table-2.png)
 
 **读图：Table 2，PDF 第 9 页。** 蓝色行加 VisualPRM Best-of-8。以此表为准，8B 的 MMMU/MathVista 是 **62.7/71.6**，加 Bo8 为 66.0/75.2；78B 是 **72.2/79.0**，Bo8 为 72.2/80.5。Figure 1 的摘要数字与此表个别值不同，例如 8B MMMU、78B MathVista；本文保留明确配置的表值，不拼接最高数值。
 
@@ -72,13 +72,15 @@ SFT 增加长上下文、科学图、创意写作、多模态推理等，使用 
 | OCRBench | 854 | 906 | Table 3，原分数尺度 |
 | MMBench EN/CN | 88.3/88.5 | 89.0/88.7 | Table 5 |
 
-![原论文 Table 3：OCR、图表与文档](figures/original-page-010-03.png)
+![原文 Table 3](figures/original-p010-table-3.png)
 
 **读图：Table 3，PDF 第 10 页。** AI2D 的两列设置、CharXiv 的 RQ/DQ、VCR 的 EM/Jaccard 都应分别看。78B 的 DocVQA 95.4、InfoVQA 86.5 仍低于 Qwen2.5-VL-72B 的 96.4/87.3；ChartQA 89.7 低于 Claude-3.5-Sonnet 90.8。它有广泛进步而非每项领先。
 
 Table 8 的视频评测对 Video-MME、MMBench-Video、MLVU、LongVideoBench **分别测试 16/32/48/64 帧并报告最高结果**，不能写成固定 64 帧全部成绩。MVBench 固定 16，CG-Bench 固定 32。78B Video-MME 无/有字幕为 72.7/75.7，低于 Qwen2.5-VL-72B 的 73.3/79.1；MVBench 为 78.7、MLVU 79.5、LongVideoBench 65.7。MMBench-Video 1.81 又低于前代 1.97。
 
-![原论文 Figure 3 与 Table 13：训练策略和 MPO 消融](figures/original-page-018-04.png)
+![原文 Figure 3](figures/original-p018-figure-3.png)
+
+![原文 Table 13](figures/original-p018-table-13.png)
 
 **读图：Figure 3、Table 13，PDF 第 18 页。** 前图在 InternVL2-8B 上替换预训练策略，固定架构、初始化和数据以检查策略贡献。后表 MPO 使 78B 七项平均从 50.5 到 54.6，MMMU 72.2 保持不变；8B 平均从 41.4 到 44.3。平均增加不代表每项增加，小尺度数学等仍有回退。
 

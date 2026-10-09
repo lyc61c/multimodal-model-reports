@@ -8,7 +8,7 @@
 
 ## 2. 快速概览
 
-![原文 Figure 1：多模态语言接口与能力示例](figures/original-page-001-01.png)
+![原文 Figure 1](figures/original-p001-figure-1.png)
 
 Figure 1 位于 PDF 第 1 页。中间的 embedding 层将感知输入接入语言模型，下方展示视觉对话、依据文字类别描述分类和图形规律补全。该图是总体概念与例子，没有给出音频模块训练配方；灰色 Audition 应与论文实际视觉实验分开。示例展示模型可能完成的交互，不是对任意输入的正确性保证。
 
@@ -47,7 +47,9 @@ Figure 1 位于 PDF 第 1 页。中间的 embedding 层将感知输入接入语�
 
 **候选概率式图形推理。** Raven 任务不是让模型随意生成一个图像，而是把每个候选分别加入前缀，计算 \(p_\theta(\text{Yes}\mid I_{1:n},I_j,q)\)，选择最高者。候选的 yes 概率不是自动校准的正确率，不同候选下还可能有提示偏差。
 
-![原文 Figure 4：Raven 测试的逐候选评分；上方 Table 5 为少样本 VQA](figures/original-page-010-02.png)
+![原文 Table 5](figures/original-p010-table-5.png)
+
+![原文 Figure 4](figures/original-p010-figure-4.png)
 
 PDF 第 10 页 Figure 4 上半是矩阵题，下半将矩阵展平，逐一接候选并问是否正确，最下面柱高对应 Yes 概率。图中每个候选下都写 Yes，意思是读取该 token 概率，不能误解为模型真的同时肯定所有候选。旁边 Table 5 也显示 VQAv2 2/4/8-shot 为 51.4/51.8/51.4，示例更多并不总提升。[PDF 第 6、10–13 页](https://arxiv.org/pdf/2302.14045v1#page=10)
 
@@ -63,7 +65,11 @@ PDF 第 10 页 Figure 4 上半是矩阵题，下半将矩阵展平，逐一接�
 
 ## 6. 训练流程与目标
 
-![原文 Table 17–19：主干、预训练与指令调优超参数](figures/original-page-023-04.png)
+![原文 Table 17](figures/original-p023-table-17.png)
+
+![原文 Table 18](figures/original-p023-table-18.png)
+
+![原文 Table 19](figures/original-p023-table-19.png)
 
 PDF 第 23 页分为三张原表。Table 17 是模型配置，Table 18 是预训练，Table 19 是继续调优；最大长度、token batch 与各来源样本 batch 不应混为同一列。
 
@@ -81,7 +87,11 @@ Raven 自建测试仅 **50 题**、每题六候选。随机基线表中四舍五
 
 Rendered SST-2 accuracy **67.1**，两步 CoT 后 **72.9**；HatefulMemes **63.9** 是 ROC AUC。Table 7 图注概括为 accuracy，但正文明确后一任务 AUC，本文采用正文的正确指标区分。WebSRC 在图像**加提取文字**条件下 EM/F1 为 15.8/31.3，仅图像为 3.8/10.6；不能将最好的 WebSRC 结果当成完全 OCR/文字提取自由。ImageNet 自由生成类别名 Top-1 为 **4.0**，用 1000 类名约束解码为 **38.1**，输出规范影响很大。
 
-![原文 Table 14–16：语言调优迁移与视觉知识转语言](figures/original-page-017-03.png)
+![原文 Table 14](figures/original-p017-table-14.png)
+
+![原文 Table 15](figures/original-p017-table-15.png)
+
+![原文 Table 16](figures/original-p017-table-16.png)
 
 PDF 第 17 页 Table 14：语言调优让 VQAv2 从 46.7 到 51.0、VizWiz 从 27.9 到 29.2、Flickr30k 从 65.2 到 67.1，却让 COCO 从 **87.6 降到 84.7**。Table 16 的视觉常识问答仅输入文字：RelativeSize 94.2 对纯语言 92.7，MemoryColor 76.1 对 61.4，ColorTerms 73.1 对 63.4。这支持多模态训练在所测对象属性上的迁移，但不表示每种语言能力更好：Table 13 八个文本任务平均，零样本 60.5 低于纯语言 61.1，4-shot 62.2 略高于 61.8。
 

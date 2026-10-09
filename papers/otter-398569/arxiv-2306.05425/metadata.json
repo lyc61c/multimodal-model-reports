@@ -10,5 +10,7 @@
   "document_kind": "dataset_or_benchmark",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "MIMIC-IT：多模态上下文指令调优与 Otter"
+  "title_zh": "MIMIC-IT：多模态上下文指令调优与 Otter",
+  "chinese_characters": 3064,
+  "figure_revision_date": "2026-10-09"
 }

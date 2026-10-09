@@ -38,7 +38,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Automatic verification nothumantruth",
@@ -47,5 +48,20 @@
     "MMEdeclines despiteconsistentimprovementprose",
     "Defaulttrainingparams referenced notfullyenumerated",
     "SCMuserstudy noquantitativevote table"
-  ]
+  ],
+  "article_sha256": "73b8dddd50de550ece9019d2881c2a66d8d506437fc184dd87209c287da013b9",
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

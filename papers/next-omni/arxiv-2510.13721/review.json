@@ -39,5 +39,23 @@
     "无模型复现",
     "私有数据非全部公开",
     "计时硬件与部分指标标识未充分披露"
-  ]
+  ],
+  "article_sha256": "6894633441a14a7c2909c979c512136d500a38bc6cc183d64ff174a62619079b",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

@@ -4,63 +4,128 @@
   "source_pdf_sha256": "bc09ce99cface4dae5deaeb5327b936195d162f4df719ab2e86ee3807a0db865",
   "assets": [
     {
-      "asset_path": "figures/original-page-003-01.png",
-      "original_label": "Figure1",
+      "asset_path": "figures/original-p003-figure-1.png",
+      "original_label": "Figure 1",
       "pdf_page": 3,
       "source_url": "https://arxiv.org/pdf/2511.21631v1#page=3",
       "source_version": "2511.21631v1",
       "source_sha256": "bc09ce99cface4dae5deaeb5327b936195d162f4df719ab2e86ee3807a0db865",
-      "asset_sha256": "86ecd77e418eb786f06b8ab9b7ba3b5a538fb1aebecca64e046e01d65a98a8e2",
+      "asset_sha256": "f4432f8edb092d1bf5d52e478f434f6272582226b2575203645a93a26b545966",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.56,
+          67.85,
+          529.16,
+          433.04
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Qwen3-VL Figure 1 complete token streams, DeepStack inset, image/video diagrams, dimensions and full multiline caption.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-015-02.png",
-      "original_label": "Table2",
+      "asset_path": "figures/original-p015-table-2.png",
+      "original_label": "Table 2",
       "pdf_page": 15,
       "source_url": "https://arxiv.org/pdf/2511.21631v1#page=15",
       "source_version": "2511.21631v1",
       "source_sha256": "bc09ce99cface4dae5deaeb5327b936195d162f4df719ab2e86ee3807a0db865",
-      "asset_sha256": "bc9f710a8277d7bcea4a8e090ac036295d2f89d358f179eea8ee2b22502a8990",
+      "asset_sha256": "e1c530e184c053918ef021c2d2576a4ea591b9e4635b1deda4dd36c9bf20bcd7",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.56,
+          68.37,
+          529.15,
+          791
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Qwen3-VL Table 2 repaired y1=791; final data text ends y786.79 and bottom rule y789.09, while page number starts y793.77. Re-rendered and viewed all final agent rows and bottom rule intact; page number removed.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-018-03.png",
-      "original_label": "Table4",
+      "asset_path": "figures/original-p018-table-4.png",
+      "original_label": "Table 4",
       "pdf_page": 18,
       "source_url": "https://arxiv.org/pdf/2511.21631v1#page=18",
       "source_version": "2511.21631v1",
       "source_sha256": "bc09ce99cface4dae5deaeb5327b936195d162f4df719ab2e86ee3807a0db865",
-      "asset_sha256": "4aab63b9eae00cf08380772d19bd50bf8ed7b1326674a1e3d5a4303cd8b8f160",
+      "asset_sha256": "3ba169329b1896604c38385fe22261bf2a9572d4efee5a9bb518f8eb5a2a6e24",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          68.95,
+          527.41,
+          773.37
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Qwen3-VL Table 4 complete caption, model headers, every category including final agent rows and bottom rule. Current y1=773.37 already excludes page number beginning y793.77; no change needed.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-024-04.png",
-      "original_label": "Tables10-12",
+      "asset_path": "figures/original-p024-table-11.png",
+      "original_label": "Table 11",
       "pdf_page": 24,
       "source_url": "https://arxiv.org/pdf/2511.21631v1#page=24",
       "source_version": "2511.21631v1",
       "source_sha256": "bc09ce99cface4dae5deaeb5327b936195d162f4df719ab2e86ee3807a0db865",
-      "asset_sha256": "5597e55d626ca510e54affc8eab4ddb38e51a24c61856b135830f00a9e1b0e48",
+      "asset_sha256": "3e35beda6d43294aa03571f008c48df00f76dbc63823f81642190c9fae2694b0",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.56,
+          483.81,
+          529.07,
+          570.96
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Qwen3-VL Tables 11 and 12: both separate ablation tables have complete captions, all headers and both result rows; paragraphs between excluded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p024-table-12.png",
+      "original_label": "Table 12",
+      "pdf_page": 24,
+      "source_url": "https://arxiv.org/pdf/2511.21631v1#page=24",
+      "source_version": "2511.21631v1",
+      "source_sha256": "bc09ce99cface4dae5deaeb5327b936195d162f4df719ab2e86ee3807a0db865",
+      "asset_sha256": "bf4f899c87e712d4e106a5219fc1cf0aa795461ef08043ff6c19219c0c1e477e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.48,
+          670.4,
+          529.07,
+          755.79
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Qwen3-VL Tables 11 and 12: both separate ablation tables have complete captions, all headers and both result rows; paragraphs between excluded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

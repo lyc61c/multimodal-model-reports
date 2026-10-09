@@ -10,5 +10,7 @@
   "document_kind": "embodied_model_report",
   "catalogue_group": "scope_review",
   "article_template_version": "1.1",
-  "title_zh": "π0.7：用多模态上下文引导通用机器人策略"
+  "title_zh": "π0.7：用多模态上下文引导通用机器人策略",
+  "chinese_characters": 2965,
+  "figure_revision_date": "2026-10-09"
 }

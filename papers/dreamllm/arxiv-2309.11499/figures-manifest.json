@@ -4,63 +4,153 @@
   "source_pdf_sha256": "78d7fd6da9924b6b3e7b9735cbbcfd165f8b15f946da3ad6cfc3f293aaa97102",
   "assets": [
     {
-      "asset_path": "figures/original-page-004-01.png",
-      "original_label": "PDF page 4",
+      "asset_path": "figures/original-p004-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 4,
       "source_url": "https://arxiv.org/pdf/2309.11499v1#page=4",
       "source_version": "2309.11499v1",
       "source_sha256": "78d7fd6da9924b6b3e7b9735cbbcfd165f8b15f946da3ad6cfc3f293aaa97102",
-      "asset_sha256": "ffb441c465dd410286308c62d7b7bafd6a55fdcb70e6d2d14d13c9f6d71e1586",
+      "asset_sha256": "e9e8d4d4e3659b972a73c372d0abf0dfc4d53a12e0899d2bcf3e4caaff569d09",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 160,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          104.69,
+          78.86,
+          508.75,
+          315.72
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: full DreamLLM interleaved-input causal model, dream queries, image decoding loop and Figure 2 caption retained.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-007-02.png",
-      "original_label": "PDF page 7",
+      "asset_path": "figures/original-p007-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 7,
       "source_url": "https://arxiv.org/pdf/2309.11499v1#page=7",
       "source_version": "2309.11499v1",
       "source_sha256": "78d7fd6da9924b6b3e7b9735cbbcfd165f8b15f946da3ad6cfc3f293aaa97102",
-      "asset_sha256": "d776569a4849d9429ecd48d49e1c0085c83d700f25b43c6c24a7e86ae222e528",
+      "asset_sha256": "3efbbc1ac5c119b44746569d6e1bab9cdb9968efe36dbc1adf7c5b11c054b37c",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 160,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          104.64,
+          78.86,
+          508.74,
+          473.38
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: entire labelled Figure 3 interleaved generation demonstration with its embedded example images, legend and caption retained; surrounding paper prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-008-03.png",
-      "original_label": "PDF page 8",
+      "asset_path": "figures/original-p008-table-3.png",
+      "original_label": "Table 3",
       "pdf_page": 8,
       "source_url": "https://arxiv.org/pdf/2309.11499v1#page=8",
       "source_version": "2309.11499v1",
       "source_sha256": "78d7fd6da9924b6b3e7b9735cbbcfd165f8b15f946da3ad6cfc3f293aaa97102",
-      "asset_sha256": "c8d9cd0ba262a146838cccc371c57a132c99be8963b88b899122e892e11783d9",
+      "asset_sha256": "1d21ef4f52dc1c0a84b6d601276aa79413c202da831de38180ce8daacf74b75a",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 160,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          279,
+          120,
+          509,
+          256
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Three isolated complete Figure 4/5 and Table 3 crops; adjacent left-column analysis removed.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-026-04.png",
-      "original_label": "PDF page 26",
+      "asset_path": "figures/original-p008-figure-4.png",
+      "original_label": "Figure 4",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2309.11499v1#page=8",
+      "source_version": "2309.11499v1",
+      "source_sha256": "78d7fd6da9924b6b3e7b9735cbbcfd165f8b15f946da3ad6cfc3f293aaa97102",
+      "asset_sha256": "1f51d48a83dc30fcb071e2191a5143ffa4d715b3910954d056e51ebce6ecb07e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          280,
+          362,
+          509,
+          488
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Three isolated complete Figure 4/5 and Table 3 crops; adjacent left-column analysis removed.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-figure-5.png",
+      "original_label": "Figure 5",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2309.11499v1#page=8",
+      "source_version": "2309.11499v1",
+      "source_sha256": "78d7fd6da9924b6b3e7b9735cbbcfd165f8b15f946da3ad6cfc3f293aaa97102",
+      "asset_sha256": "8dffe773ba136c8f4a246de7a8ada192e6939109ccc554bbbde1075345618b20",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105,
+          595.35,
+          507,
+          739.92
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Three isolated complete Figure 4/5 and Table 3 crops; adjacent left-column analysis removed.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p026-table-11.png",
+      "original_label": "Table 11",
       "pdf_page": 26,
       "source_url": "https://arxiv.org/pdf/2309.11499v1#page=26",
       "source_version": "2309.11499v1",
       "source_sha256": "78d7fd6da9924b6b3e7b9735cbbcfd165f8b15f946da3ad6cfc3f293aaa97102",
-      "asset_sha256": "6fe9acf3179cb0f19949098d2bfad04b0c25a316fb3887bc32046f7d4c3ded17",
+      "asset_sha256": "7b1a1d80fd437de81a5f31f5825a87fe7449de8590b3ec85570989e918c3ccf4",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 160,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          104,
+          78,
+          509,
+          351
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Full Table 11 training recipe restored through GPU/time rows.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

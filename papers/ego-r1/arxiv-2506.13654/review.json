@@ -1,1 +1,28 @@
-{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"v1标题机构日期和22页确认","facts":"工具骨干、训练数据种子和结果口径逐项核验；保留正文与主表的开放基线说法差异","math":"原文GRPO命名不直接复制为新算法定义；组内优势及clip/KL解释无虚构超参","images":"view_image逐张核验PDF1/7/8/18，架构/训练/记忆图和表头完整","protocol":"原文帧数差异、清理后EgoLifeQA、ASR及API成本边界明确"},"model_execution":"not_run"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "checks": {
+    "identity": "v1标题机构日期和22页确认",
+    "facts": "工具骨干、训练数据种子和结果口径逐项核验；保留正文与主表的开放基线说法差异",
+    "math": "原文GRPO命名不直接复制为新算法定义；组内优势及clip/KL解释无虚构超参",
+    "images": "view_image逐张核验PDF1/7/8/18，架构/训练/记忆图和表头完整",
+    "protocol": "原文帧数差异、清理后EgoLifeQA、ASR及API成本边界明确",
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  },
+  "model_execution": "not_run",
+  "article_sha256": "5c93e1355cbc294869d45ecc85bb92226bd17b7e6e526fd5d816061b14d113e4",
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 46）：Figure 1 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 47）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 48）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 49）：Figure 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
+}

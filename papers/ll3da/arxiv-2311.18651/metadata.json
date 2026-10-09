@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "LL3DA：接受点击与框提示的三维语言助手"
+  "title_zh": "LL3DA：接受点击与框提示的三维语言助手",
+  "chinese_characters": 2817,
+  "figure_revision_date": "2026-10-09"
 }

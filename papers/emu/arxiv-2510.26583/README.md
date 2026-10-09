@@ -31,9 +31,9 @@ Emu3.5 把图像编码为离散 token，与语言放进同一个 Transformer，�
 
 输入图像先由 455M 的 IBQ tokenizer 转成网格码，码向量维度 256。文本沿用 QwenTokenizer。序列含图像边界、尺寸等格式信息，主干用 RMSNorm、QK-Norm、SwiGLU 和 RoPE 处理交错 token，在同一词表预测下一项。模型从 Qwen3 初始化，报告没有把视觉输入与图像输出分成两套独立大型语义骨干。
 
-![原文 Figure 3：统一训练与混合推理](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
-*原文 Figure 3，PDF 第 5 页，完整页截图。左侧是所有模态的下一 token 训练；右侧一张图的视觉码一起初始化并多步更新。图中的并行是图像内部并行，不代表整段故事一次生成。*
+*原文 Figure 3，PDF 第 5 页，图表区域裁切。左侧是所有模态的下一 token 训练；右侧一张图的视觉码一起初始化并多步更新。图中的并行是图像内部并行，不代表整段故事一次生成。*
 
 视觉码可以由原始图像 decoder 重建，也可交给以 SD3.5-medium 初始化的扩散图像 decoder，输出每个方向两倍的像素分辨率，最高支持 2K。后者通过 LoRA 蒸馏把 50 步缩至 4 步。它和 DiDA 是两件事：DiDA 加速**视觉离散码预测**，扩散 decoder 改善**码到像素的还原**。
 
@@ -49,7 +49,9 @@ $$\mathcal L_{\mathrm{NTP}}=-\sum_i w_i\log p_\theta(s_i\mid s_{<i}),\qquad w_i=
 
 空间下采样的关系可直接推导为 $N_v=(H/16)(W/16)$，这里假定尺寸与网格对齐。1024² 图像产生 4,096 个码。AR 至少需要相应数量的顺序输出步骤，而离散扩散可在每个去噪步骤同时更新一批视觉位置；这减少串行深度，但没有消除图内注意力的计算开销。
 
-![原文 Figure 8 与 Figure 9：RL 曲线和 DiDA mask](figures/original-page-016-03.png)
+![原文 Figure 8](figures/original-p016-figure-8.png)
+
+![原文 Figure 9](figures/original-p016-figure-9.png)
 
 *原文 Figure 8、Figure 9，PDF 第 16 页。重点看下方右图：虚线表示带噪图像副本；它能看到同一张图的其他带噪位置，以及此前的干净上下文，不能偷看当前图的干净答案。上图奖励上升只说明所用奖励系统的优化情况。*
 
@@ -69,7 +71,9 @@ SFT 的六类数据在 Table 3 中总计约 **150.1B token**。第 2.1 节写“
 
 ## 6. 训练流程与目标
 
-![原文 Figure 4：训练链路及 Table 1](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
+
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 *原文 Figure 4 和 Table 1，PDF 第 6 页。从左到右分别为预训练、SFT、RL、DiDA；图中 RL 模型产生自蒸馏数据再用于适配，不能把并行推理能力描述成仅靠修改部署 mask 即可获得。*
 
@@ -102,7 +106,9 @@ Tokenizer 单独训练 500K iterations，batch256，Adam beta .5/.9，LR1e-4、w
 
 图像编辑评测约1024²，ImgEdit737样本、GEdit606、OmniContext400、ICE-Bench6,538。表中自动判分差距很小的结果应按其评估协议理解，报告没有为所有差异给置信区间。
 
-![原文 Figure 11 与 Table 16：重建与速度比较](figures/original-page-026-04.png)
+![原文 Figure 11](figures/original-p026-figure-11.png)
+
+![原文 Table 16](figures/original-p026-table-16.png)
 
 *原文 Figure 11、Table 16，PDF 第 26 页。上方按“原图、普通 decoder、扩散 decoder”排列，可以观察小字和脸部；下方列出了两种基础设施下的时间，不能只取最快数值与另一个实现的最慢数值拼成统一加速比。*
 

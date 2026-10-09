@@ -13,5 +13,10 @@
     "Checked InstructBLIP superior OCR/color/action and MME normalized scores/weak cognition; description-first exceptions noted.",
     "GPT4-human consistency limited to 100 samples; no model reproduction or broad architecture theorem claimed."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

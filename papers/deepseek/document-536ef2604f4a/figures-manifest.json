@@ -4,63 +4,128 @@
   "source_pdf_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
   "assets": [
     {
-      "asset_path": "figures/figure-03-architecture.png",
-      "original_label": "Figure 3：DeepSeek-OCR 2 整体架构",
+      "asset_path": "figures/original-p005-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 5,
       "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=5",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
-      "asset_sha256": "7e089fda4635889272616b8729d91d99ee4027aa3da5d6076108bc32d23ee494",
+      "asset_sha256": "7c6c93de3ef9ca7f6475421438ebf15589fad1d75d73bbb7195db555b154d872",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          67.87,
+          86.65,
+          529.32,
+          313.21
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: complete DeepSeek-OCR 2 compression/encoder/decoder architecture, input document and Figure 3 caption retained.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/figure-05-mask-equations.png",
-      "original_label": "Figure 5：混合注意力 mask；Equation 1–2",
+      "asset_path": "figures/original-p007-figure-5.png",
+      "original_label": "Figure 5",
       "pdf_page": 7,
       "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=7",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
-      "asset_sha256": "ea70b0d6253af37eca47726b06c1a8cff303fb987aba40f3d116ef520b761ea0",
+      "asset_sha256": "162e7e47c364fdb26fbccd1170393b2cf5e83288aba4c0c598b8570b2056664b",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          67.51,
+          80,
+          527.71,
+          277.51
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Attention mask Figure 5 complete including ViT/LM panels and legend.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/table-01-main-results.png",
-      "original_label": "Table 1：OmniDocBench v1.5 主结果",
+      "asset_path": "figures/original-p009-table-1.png",
+      "original_label": "Table 1",
       "pdf_page": 9,
       "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=9",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
-      "asset_sha256": "ec2fa3e34981438f00e0b9f911be26067c4bd4d9effd971b994b97a794e38524",
+      "asset_sha256": "d2294f264648f868266d7cfc71a1a98bccad0f3d12ff014ddcce1a806d17cefe",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          67,
+          80,
+          529,
+          506
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Manually restored full Table 1 caption and all OCR model results; Table 2/3 references belong to next page.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/table-02-03-detail-results.png",
-      "original_label": "Table 2–3：整体编辑距离与分文档类型结果",
+      "asset_path": "figures/original-p010-table-2.png",
+      "original_label": "Table 2",
       "pdf_page": 10,
       "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=10",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
-      "asset_sha256": "733ed10b7f26dfec1145e28522b2311a9af47436fa2ab2ab64826e14ab37ec1e",
+      "asset_sha256": "8800c16de9833e628946522f4a69a8dc80d78c3d8e0c498ba52bdefeb1e44436",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          67.47,
+          82.55,
+          529.31,
+          196.75
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed two separated source tables and crops: Table 2 and Table 3 retain all columns, document categories, numerical rows and full captions, with intervening prose excluded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p010-table-3.png",
+      "original_label": "Table 3",
+      "pdf_page": 10,
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2/blob/main/DeepSeek_OCR2_paper.pdf#page=10",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
+      "asset_sha256": "cecf8da2096756e6893194a4457a20e4488a32f311c3303b94f9d536d3a5c3c4",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.53,
+          455.62,
+          527.41,
+          587.09
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed two separated source tables and crops: Table 2 and Table 3 retain all columns, document categories, numerical rows and full captions, with intervening prose excluded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

@@ -29,7 +29,7 @@
 
 ## 3. 整体架构
 
-![Figure 1：LLaVA-1.5组件、样本规模与基准表现](figures/original-page-001-01.png)
+![原文 Figure 1](figures/original-p001-figure-1.png)
 
 *来源：原文 Figure 1，PDF 第 1 页；[原页](https://arxiv.org/pdf/2310.03744v1#page=1)。右下展示视觉骨干、MLP 与语言模型，上部雷达图的各轴指标尺度不同，不宜以面积当统一总分。*
 
@@ -53,7 +53,7 @@ $$\mathcal L=-\sum_t\log p_\theta(y_t\mid V,q,y_{<t}).$$
 
 $V$ 为视觉表示，$q$ 为指令，$y$ 为参考回答。论文没有给独立损失编号式或完整 masking 定义，式子只说明监督来自下一个回答 token。加入明确格式句使同一个问题可携带输出长度或选项格式约束，而不需要为简答/长对话另造分类头。
 
-![Table 1：数据、连接器、分辨率和语言模型递增实验](figures/original-page-002-02.png)
+![原文 Table 1](figures/original-p002-table-1.png)
 
 *来源：原文 Table 1，PDF 第 2 页；[原页](https://arxiv.org/pdf/2310.03744v1#page=2)。蓝色对应数据，粉色对应模型，黄色对应输入分辨率；每行是在前一组合上继续增加设置。*
 
@@ -82,7 +82,13 @@ ShareGPT 过滤无效对话，超过 2,048 token 的长对话被截断，而不�
 
 ## 6. 训练流程与目标
 
-![Tables 5–8：训练超参、数据混合和评测回答格式](figures/original-page-005-04.png)
+![原文 Table 5](figures/original-p005-table-5.png)
+
+![原文 Table 6](figures/original-p005-table-6.png)
+
+![原文 Table 7](figures/original-p005-table-7.png)
+
+![原文 Table 8](figures/original-p005-table-8.png)
 
 *来源：原文附录 Table 5–8，PDF 第 5 页；[原页](https://arxiv.org/pdf/2310.03744v1#page=5)。左下是训练表，右下两表分别是数据格式与评测格式，不能把评测提示当额外训练数据。*
 
@@ -102,7 +108,7 @@ ShareGPT 过滤无效对话，超过 2,048 token 的长对话被截断，而不�
 
 ## 7. 实验设置与主要结果
 
-![Table 2：7B/13B在十二项基准的结果与训练数据脚注](figures/original-page-003-03.png)
+![原文 Table 2](figures/original-p003-table-2.png)
 
 *来源：原文 Table 2，PDF 第 3 页；[原页](https://arxiv.org/pdf/2310.03744v1#page=3)。星号明确表示训练时见过该数据集训练图像，PT/IT表示额外对齐/指令样本。*
 

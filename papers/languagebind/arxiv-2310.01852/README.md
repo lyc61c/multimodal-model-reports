@@ -23,7 +23,7 @@ LanguageBind 是多模态编码器与对齐预训练方案，输出可比较的�
 
 ## 3. 整体架构
 
-![LanguageBind 原文 Figure 2：固定语言编码器与多模态对齐](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 **原图：Figure 2，PDF 第 4 页。** 从底部向上看，各模态先被转为可输入视觉 Transformer 的 patch 序列，灰块表示遮蔽的 token；中部锁形标记代表固定初始化参数，红色模块是 LoRA；顶端连线表示各模态直接与文字做对比学习。图是统一方法示意，具体视频实验不应机械套用右侧全部 LoRA 设置。
 
@@ -52,7 +52,7 @@ LanguageBind 是多模态编码器与对齐预训练方案，输出可比较的�
 
 ## 5. 数据构建与处理
 
-![LanguageBind 原文 Figure 4：多视角文字生成与增强](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 **原图：Figure 4，PDF 第 6 页。** 左边是视频、原始标题和 hashtags，OFA 为关键帧生成局部描述；中间的 mPLUG-owl 结合视频与标题/标签产生整体描述；右侧 ChatGPT 改写增强。红字是示例中的细节，不是人工核验后保证正确的事实。图下方解释各类文字监督补充空间与事件语义。
 
@@ -66,7 +66,7 @@ LanguageBind 是多模态编码器与对齐预训练方案，输出可比较的�
 
 ## 6. 训练流程与目标
 
-![LanguageBind 原文 Table 8：按模态区分的预训练配置](figures/original-page-017-04.png)
+![原文 Table 8](figures/original-p017-table-8.png)
 
 **原表：Table 8，PDF 第 17 页。** 列是四种训练分支，横跨各列的参数是表内共享设置；破折号不应自行解释成某个未经披露的数值。音频为 8 epoch、较高 LoRA rank，视频不沿用红外/深度的全部设置。
 
@@ -83,7 +83,9 @@ NYU-D 消融选定 batch 1024、rank 2、mask 0.5，温度从 0.07 初始化后�
 
 ## 7. 实验设置与主要结果
 
-![LanguageBind 原文 Table 3 与 Table 4：零样本检索及文字来源消融](figures/original-page-008-03.png)
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Table 4](figures/original-p008-table-4.png)
 
 **原表：Table 3、Table 4，PDF 第 8 页。** 上表 R@1/5/10 越高越好，MR 是正确结果排名中位数，越低越好；参数列特别说明只比较视觉编码器规模。下表横向比较不同文本来源，粗体的分布说明不存在所有任务通用的最佳描述器。
 

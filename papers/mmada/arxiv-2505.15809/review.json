@@ -37,5 +37,23 @@
     "无训练或推理复现",
     "仅作者报告结果",
     "训练步数与采样描述原文存在歧义"
-  ]
+  ],
+  "article_sha256": "4f000007215fbf725c174240a8b4e60d4cdceedbb4c4fb86f0978f8cc6bbc4d0",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
+    ]
+  }
 }

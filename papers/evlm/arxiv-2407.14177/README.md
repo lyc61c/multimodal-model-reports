@@ -29,9 +29,9 @@ EVLM 面向图像与视频理解，输出文本，重点是中英文细粒度识
 
 EVA2-CLIP-E-Plus 去掉最后 Transformer 后面的 norm 和 head，从最后 40 层取 8 级特征。这里“分层”是不同网络深度的语义表示，不是额外构造八种像素分辨率。Qwen-14B-Chat 1.0 的每个 Transformer 层之前都插一个 Gated Cross Attention Layer；不同深度语言层按顺序接收不同深度的视觉特征。
 
-![原文 Figure 2：EVLM 融合架构与 mask](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
-*原文 Figure 2，PDF 第 3 页，完整页截图。橙色融合层在绿色 LLM 层之前；右侧框给出交叉注意力、FFN 和 tanh 门控。右上 mask 约束每组 media token 仅访问所属图像。*
+*原文 Figure 2，PDF 第 3 页，图表区域裁切。橙色融合层在绿色 LLM 层之前；右侧框给出交叉注意力、FFN 和 tanh 门控。右上 mask 约束每组 media token 仅访问所属图像。*
 
 一张图对应 16 个可学习 token 替代 Flamingo 的单个 `<image>` 标记。它们可在多层交互中携带视觉信息，但不是先用 Q-Former 压成 16 个向量后彻底丢弃原始图像特征。交叉注意力的 Q 来自语言/media 隐状态，K、V 来自视觉特征。额外全零视觉向量用于处理并不对应图像的文本位置。普通图文序列中，每组可学习 token 访问自己的图，文本段访问前一张图。
 
@@ -53,7 +53,7 @@ $$F_{\rm cross}=4(6+r_{xc}+r_{xf})B(16+s_t)h^2+4B(16+s_t)^2h+4r_{xc}Bs_vd_vh+4r_
 
 门控可以用标准残差示意 $u'=u+\tanh(a)\operatorname{CrossAttn}(u,V)$ 来理解：标量或参数化门值限制新视觉更新，之后还有门控 FFN。这是 Figure 2 的解释式，并非论文新增编号公式；原文没明确所有门参数初始化，不能自动补成“全部初始化为零”。
 
-![原文 Figure 4：细粒度 MoE 融合模块](figures/original-page-007-02.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 *原文 Figure 4，PDF 第 7 页。路由发生在新增融合层的 FFN 内，绿色 LLM 层仍冻结；蓝色 world expert 不依赖路由挑选。不要把图解读为整个 Qwen 主干变成 MoE。*
 
@@ -73,7 +73,7 @@ SFT汇总称2.3M：ShareGPT4V665K、LLaVA-ZH150K，文档图表270K，以及Math
 
 训练目标是文本 token 的自回归交叉熵。用说明式写为 $\mathcal L=-\sum_{t\in\mathrm{text}}\log p_\theta(y_t\mid y_{<t},V)$；图像可学习标记用于输入，不是要生成像素的监督目标。此式根据第3节文字整理，不是报告原编号公式。
 
-![原文 Table 6：完整三阶段超参](figures/original-page-020-04.png)
+![原文 Table 6](figures/original-p020-table-6.png)
 
 *原文 Table 6，PDF 第 20 页。查看各列的分辨率、步数、batch 和学习率，可发现持续预训练与 SFT 并非相同数据、相同训练时长。*
 
@@ -92,7 +92,11 @@ SFT汇总称2.3M：ShareGPT4V665K、LLaVA-ZH150K，文档图表270K，以及Math
 
 ## 7. 实验设置与主要结果
 
-![原文 Figure 5、Table 3 和 Table 4](figures/original-page-008-03.png)
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Table 4](figures/original-p008-table-4.png)
 
 *原文 Figure 5及Tables3–4，PDF第8页。中部曲线区分预训练损失、ImageNet和细粒度识别；下方灰色三行是Base/Chat/MoE，应横向比较每种能力，而非只看一个最高分。*
 

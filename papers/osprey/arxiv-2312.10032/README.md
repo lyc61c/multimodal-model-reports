@@ -24,7 +24,7 @@ Osprey 是一个支持掩码区域引用的视觉语言模型。用户提供图�
 
 ## 3. 整体架构
 
-![原文 Figure 4：Osprey 整体架构及区域提取器；PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 4](figures/original-p005-figure-4.png)
 
 **读图方式**：左图的语言模型同时接收整图 token、文字和区域 token。右上是 ConvNeXt-L 的多层特征与整图 MLP；右下把同一个掩码用于多层特征池化，得到语义表示，另将掩码形状编码成位置表示。两个区域 token 的职责不同：一个提供区域是什么，另一个提供区域在哪里及其形状。
 
@@ -58,7 +58,9 @@ t_i=\sigma\left(\sum_{j=1}^{4}P_j(V_{ij})\right).
 
 ## 5. 数据构建与处理
 
-![原文 Table 1、Figure 3：Osprey-724K 组成；PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Table 1](figures/original-p004-table-1.png)
+
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **读表方式**：表按指令类型列数据来源与约数，勾号表示使用 GPT-4 构造。正负判断分别 64K，不能把 64K 当成二者合计。表中各类按千计的约数并不能严格重建标题的 724K 总量，本文沿用约 724K 的总体称呼，不编造精确样本清单。
 
@@ -88,7 +90,11 @@ GPT-4 是依据描述和坐标合成文字，因此生成数据也可能有区�
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2–4：给定区域的识别、分类与描述；PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 **读表方式**：Table 2 直接声明使用 ground-truth box/mask。它评区域的语义识别，不测试模型能否自行找到正确掩码。Table 3 的 Semantic IoU 是标签文字重叠相关指标，与像素掩码 IoU 不同。Table 4 的 77.54 来自相对 GPT-4 的评分比例，也不是二分类准确率。
 
@@ -98,7 +104,9 @@ Cityscapes 与 ADE20K-150 实验给定真实区域，模型生成短描述，再
 
 详细描述使用 RefCOCO 系列验证集随机 **80 图**。GPT-4 生成参考答案并按 1–10 分评估，结果为模型得分相对参考答案得分的百分比：Osprey **77.54**，LLaVA-1.5 **71.11**，GPT4RoI **49.97**。正文称 accuracy，但方法定义的是相对评分，因此本文采用后者解释。小规模与自动评审限制其泛化结论。
 
-![原文 Figure 5 与 Table 5：区域描述示例和 caption 结果；PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
 
 **读图方式**：示例用着色掩码指定人物、食物、标志或长凳，回答随指令输出详细或短文字。下表区域 caption 中 Osprey METEOR **16.6**、CIDEr **108.3**，GLaMM 为 16.2、105.0。CIDEr 108.3 是该指标的分数，不是超过 100% 的准确率。此实验**额外在 RefCOCOg 训练集微调**，应与通用模型直接评测区别。[原文 §5.2.3–5.2.4](https://arxiv.org/pdf/2312.10032v1#page=8)
 

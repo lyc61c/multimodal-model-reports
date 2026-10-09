@@ -10,5 +10,7 @@
   "document_kind": "dataset_or_benchmark",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "DenseWorld-1M：从像素掩码到对象细节与场景关系的密集描述"
+  "title_zh": "DenseWorld-1M：从像素掩码到对象细节与场景关系的密集描述",
+  "chinese_characters": 2185,
+  "figure_revision_date": "2026-10-09"
 }

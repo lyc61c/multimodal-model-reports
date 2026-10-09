@@ -20,9 +20,9 @@ CogAgent 在 CogVLM-17B 上增加高分辨率视觉分支，重点解决网页�
 
 ## 3. 整体架构
 
-![CogAgent 原文 Figure 2，PDF 第4页完整页面](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文 Figure 2，PDF 第 4 页；完整页面截图包含架构图及公式。右侧蓝色通路保留低分辨率 CogVLM，左侧橙色通路向每个解码层补充高分辨率信息。图中的冻结与训练标志对应分阶段训练中的设计，不能理解为所有阶段始终冻结右侧。*
+*原文 Figure 2，PDF 第 4 页；配图展示架构图；相关公式见本节说明。右侧蓝色通路保留低分辨率 CogVLM，左侧橙色通路向每个解码层补充高分辨率信息。图中的冻结与训练标志对应分阶段训练中的设计，不能理解为所有阶段始终冻结右侧。*
 
 同一截图缩放为两个尺寸，分别送入 EVA2-CLIP-E 和 EVA2-CLIP-L。前者约 4.4B 参数，用于低分辨率语义；后者约 0.30B 参数，用于高分辨率细节。两者 patch 均为 14×14。低分辨率特征经 MLP 映射到语言模型空间，和文字特征拼接，进入带视觉专家的 CogVLM 解码器。
 
@@ -76,7 +76,9 @@ $$
 
 ## 6. 训练流程与目标
 
-![CogAgent 原文 Tables 7–8，PDF 第11页完整页面](figures/original-page-011-03.png)
+![原文 Table 7](figures/original-p011-table-7.png)
+
+![原文 Table 8](figures/original-p011-table-8.png)
 
 *PDF 第 11 页的 Tables 7–8 列出优化和结构参数；表头、共享参数行及模型配置均保留。预训练与多任务微调采用不同步数和 batch size，共享表中列出的学习率与优化器设置。*
 
@@ -104,7 +106,11 @@ Table 1 将统一多任务模型与分别在数据集上训练的模型分列。
 
 Mind2Web 在训练集上继续微调后测试，要求候选目标元素和操作同时匹配。它使用外部候选生成模型，截图输入不等于完全无候选辅助。AITW 同时微调五个子集，GoogleApps 因数据过大下采样到 10%；总体提高，但 General 子集 65.38 低于 Auto-UI 的 68.24。作者对不匹配案例抽样人工复核，42% 被认为是另一种正确动作。这提示单步标注无法覆盖多条路径，但不能据此直接上调整个测试集分数。
 
-![CogAgent 原文 Figure 3 与 Tables 5–6，PDF 第8页完整页面](figures/original-page-008-02.png)
+![原文 Figure 3](figures/original-p008-figure-3.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
 
 *PDF 第 8 页保留 FLOPs 曲线、架构消融与数据消融。读图时应区分横轴图像尺寸、前向 FLOPs，以及表中另外测量的训练每步时间。*
 

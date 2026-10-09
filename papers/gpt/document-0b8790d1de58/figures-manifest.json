@@ -4,48 +4,178 @@
   "source_pdf_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
   "assets": [
     {
-      "asset_path": "figures/original-page-003-01.png",
-      "original_label": "Tables 1 and 2 manual/automated red teaming",
+      "asset_path": "figures/original-p003-table-1.png",
+      "original_label": "Table 1",
       "pdf_page": 3,
       "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=3",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
-      "asset_sha256": "198a7efe4dd90c2e4c93a92ab454ce1e7fb917d044b97097bceac211af98c2c9",
+      "asset_sha256": "baa6e1c96a1495e7c88d3ed62c0f771ffae6f6bcc0adcdc0eecec0c0f4431c9c",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          85.37,
+          402.29,
+          509.91,
+          508.35
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-005-02.png",
-      "original_label": "Table 4 photorealistic-person classifier",
+      "asset_path": "figures/original-p003-table-2.png",
+      "original_label": "Table 2",
+      "pdf_page": 3,
+      "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=3",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+      "asset_sha256": "a2260cb73839d136bfbd5db6cd14e964134164ec96d534e721a329340b06482e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          85.37,
+          667.88,
+          509.91,
+          773.94
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p005-table-4.png",
+      "original_label": "Table 4",
       "pdf_page": 5,
       "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=5",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
-      "asset_sha256": "06570b357c1f79d569183bddac7ae999bb1d9cf1da7ea4249f86dc47286e6bd3",
+      "asset_sha256": "4103ed7e3ed648e1dfe0e11cca5e6f3f98654a35790f351cfa7a62c3509186f9",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          165.41,
+          480.52,
+          429.87,
+          604.01
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-008-03.png",
-      "original_label": "Tables 6-9 gender/race diversity and skin-tone distribution",
+      "asset_path": "figures/original-p008-table-6.png",
+      "original_label": "Table 6",
       "pdf_page": 8,
       "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=8",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
-      "asset_sha256": "74388383fbe33657c39ff8efca798e8fabc6a6ca5b7f2cab28b33866a44b6b61",
+      "asset_sha256": "a9477093bce3740ca763b6c06eb7c50ff4984e3c7a708b97893f20788c0bceeb",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          68.62,
+          563.1,
+          174.68
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-table-7.png",
+      "original_label": "Table 7",
+      "pdf_page": 8,
+      "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=8",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+      "asset_sha256": "52bb39bf49255bde0dceb05c0970aaa189afe271155318c3d64061c0d4086b5e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          272.44,
+          527.42,
+          383.73
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-table-8.png",
+      "original_label": "Table 8",
+      "pdf_page": 8,
+      "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=8",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+      "asset_sha256": "614f855541fb92ce00e4c87192d8f20e6dd913691fa7ccbff4be53fb3621c484",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          443.51,
+          563.1,
+          549.57
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-table-9.png",
+      "original_label": "Table 9",
+      "pdf_page": 8,
+      "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf#page=8",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+      "asset_sha256": "38cc1fa532b740e7339b125c30577c756dd47bfc44310bc7d04a10255421e78c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          99.7,
+          658.76,
+          495.57,
+          764.82
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

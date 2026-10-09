@@ -1,1 +1,46 @@
-{"source_version":"2505.14683v1","identity_checked":"p1 title/authors/arxiv,date note preserved","facts":[{"claim":"MoT14B total7B active,hard routing,QKV and FFN separate/shared attention","location":"Sections1,2.4,p3,6"},{"claim":"SigLIP2,NaViT980 max,VAE8 downsample16 channels,2x2 latent patches","location":"Section2.2,p5"},{"claim":"PT2.5T CT2.6T SFT72.7B;per-rank lengths distinct from context","location":"Table3,p10"},{"claim":"Video45M/web20M;500K reasoning examples","location":"Sections3.3.3–4,p8–9"},{"claim":"GenEval0.82 raw/0.88rewriter;WISE0.52/0.70SelfCoT","location":"Tables5–6,p17"},{"claim":"MMMU55.3 versus Qwen7B58.6,MathVista73.1 vs68.2","location":"Table4,p16"},{"claim":"85%peak at0.18/0.68/2.64/3.61T,thinking disabled","location":"Figure7,p13"}],"images_viewed":[4,10,13,17],"math":"Rectified-flow path/velocity loss,conditional objective and VAE token count are explicitly explanatory,not invented paper equations."}
+{
+  "source_version": "2505.14683v1",
+  "identity_checked": "p1 title/authors/arxiv,date note preserved",
+  "facts": [
+    {
+      "claim": "MoT14B total7B active,hard routing,QKV and FFN separate/shared attention",
+      "location": "Sections1,2.4,p3,6"
+    },
+    {
+      "claim": "SigLIP2,NaViT980 max,VAE8 downsample16 channels,2x2 latent patches",
+      "location": "Section2.2,p5"
+    },
+    {
+      "claim": "PT2.5T CT2.6T SFT72.7B;per-rank lengths distinct from context",
+      "location": "Table3,p10"
+    },
+    {
+      "claim": "Video45M/web20M;500K reasoning examples",
+      "location": "Sections3.3.3–4,p8–9"
+    },
+    {
+      "claim": "GenEval0.82 raw/0.88rewriter;WISE0.52/0.70SelfCoT",
+      "location": "Tables5–6,p17"
+    },
+    {
+      "claim": "MMMU55.3 versus Qwen7B58.6,MathVista73.1 vs68.2",
+      "location": "Table4,p16"
+    },
+    {
+      "claim": "85%peak at0.18/0.68/2.64/3.61T,thinking disabled",
+      "location": "Figure7,p13"
+    }
+  ],
+  "images_viewed": [
+    4,
+    10,
+    13,
+    17
+  ],
+  "math": "Rectified-flow path/velocity loss,conditional objective and VAE token count are explicitly explanatory,not invented paper equations.",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
+}

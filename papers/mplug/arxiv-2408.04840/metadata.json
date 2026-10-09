@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "mPLUG-Owl3：用稀疏 Hyper Attention 读取长图像序列"
+  "title_zh": "mPLUG-Owl3：用稀疏 Hyper Attention 读取长图像序列",
+  "chinese_characters": 2424,
+  "figure_revision_date": "2026-10-09"
 }

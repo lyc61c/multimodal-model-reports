@@ -28,9 +28,9 @@ GLaMM 的重要变化是把“描述物体”和“指出物体的像素范围�
 
 ## 3. 整体架构
 
-![原文 Figure 2：从整图、区域到像素的五模块架构](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文Figure2，PDF第4页，完整页截图。左路CLIP/region encoder向LLM提供语义输入；上方另一路grounding image encoder向pixel decoder提供空间特征；右侧mask由两路信息共同决定。*
+*原文Figure2，PDF第4页，图表区域裁切。左路CLIP/region encoder向LLM提供语义输入；上方另一路grounding image encoder向pixel decoder提供空间特征；右侧mask由两路信息共同决定。*
 
 模型含五个核心模块。全局图像编码器按第3.1节记载为ViT-H/14 CLIP，输出256个图像token，用vision-to-language投影映射到Vicuna空间。区域编码器从CLIP四个选定层构建特征金字塔，对用户框做RoIAlign得到14×14区域特征，再组合成RoI表示，与全局特征共享V-L投影。文本中的`<bbox>`位置用该区域表示替换，而不是把一个坐标字符串当作完整视觉内容。
 
@@ -62,7 +62,7 @@ $$\operatorname{Recall}_{mask}=\frac{\sum_{(i,j)\in\mathcal A}\mathbf1[\operator
 
 ## 5. 数据构建与处理
 
-![原文 Figure 4：GranD四层自动注释](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 *原文Figure4，PDF第6页。上部把对象、属性、关系组织成scene graph，再合成dense caption；下部Level4的背景常识超出图像直接可见内容，读图时应与可验证视觉描述区别开。*
 
@@ -84,7 +84,11 @@ GLaMM需要两种监督：文字/结构标记要形成正确序列，分割decod
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables3–5：GCG、指代分割与区域caption](figures/original-page-009-03.png)
+![原文 Table 3](figures/original-p009-table-3.png)
+
+![原文 Table 4](figures/original-p009-table-4.png)
+
+![原文 Table 5](figures/original-p009-table-5.png)
 
 *原文Tables3–5，PDF第9页。上表是新任务GCG，中表同时列ZS和FT，右下是区域描述；同一模型在不同设置下差距明显，不应把FT数值标成零样本成绩。*
 

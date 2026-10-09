@@ -10,5 +10,7 @@
   "document_kind": "embodied_model_report",
   "catalogue_group": "scope_review",
   "article_template_version": "1.1",
-  "title_zh": "RoboPoint：合成空间标签与二维行动点预测"
+  "title_zh": "RoboPoint：合成空间标签与二维行动点预测",
+  "chinese_characters": 2429,
+  "figure_revision_date": "2026-10-09"
 }

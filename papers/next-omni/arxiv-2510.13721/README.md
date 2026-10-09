@@ -29,7 +29,7 @@ NExT-OMNI 的主要设计是“兼顾语义与重建的离散表示＋双向离�
 
 ## 3. 整体架构
 
-![Figure 2：编码、共享离散流与模态解码，原文 PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：**Figure 2 中红色、蓝色、青色分别表示视觉、文本、音频 token。底部先做模态编码，上方通过共享 self-attention 和 FFN 融合，最后经不同分类 heads 输出 token。图右侧同时列出任意模态生成与检索，左侧重建回路则说明细节约束持续参与训练。图中有独立视觉和音频编码器，“single encoder”的含义是每个模态不再为理解和生成分别配置编码器，不能读成所有模态共用同一前端。
 
@@ -104,15 +104,17 @@ Table 9 的优化器均为 AdamW、weight decay 0.05、余弦学习率；PT 的 
 
 Table 1 在三个全模态基准的多个输入组合上比较，NExT-OMNI 均值 39.7、OpenOmni 36.5，差 3.2 个绝对分数点。OpenING 的 GPT 与 IntJudge 多种平局计分组合均值为 55.0，超过 MMaDA 47.7、VILA-U 48.4、SEED-X 50.2；这是评判模型对多轮交错一致性的评分，不能作为真实用户满意度。Spoken QA 的 S→T 均值 62.0，高于 OpenOmni 59.6；S→S 47.4 则低于 OpenOmni 48.1，说明输出声音的答案内容仍有改进空间。
 
-![Table 4：检索指标和全部基线，原文 PDF 第 9 页](figures/original-page-009-02.png)
+![原文 Table 4](figures/original-p009-table-4.png)
 
 **读表：**检索报告 Top-5 命中，InfoSeek、OVEN 各区分文本候选和图文候选，FashionIQ、CIRR 为组合查询找图。NExT-OMNI 六列为 27.6/41.5/27.1/44.6/18.9/37.6，平均 32.9；MMaDA 平均 31.8，差 1.1 点。这支持统一双向表示在此微调设置中的价值，不能由跨模型表直接证明所有架构差异具有唯一因果。
 
-![Table 5：建模范式、统一表示、动态长度和重建的消融，原文 PDF 第 10 页](figures/original-page-010-03.png)
+![原文 Table 5](figures/original-p010-table-5.png)
 
 **读表：**AR 解耦基线均值 41.4，改 DFM 解耦为 42.6；但 VQAv2 55.2→52.3、AudioCaps 62.8→60.1 下降。进一步统一表示，生成/理解部分仍略降；加入动态长度后 VQAv2 51.7→54.3，加入重建后达到 56.2，最终均值 45.6。统一表示并非自动全面改善，需要动态生成和细节约束共同补偿。消融 GenEval 最终 62.6 与主实验 0.85 属不同评测/训练设置，论文未充分解释二者映射，不能只改百分制就认为数值一致。
 
-![Tables 10–11：视觉理解与 GenEval 完整结果，原文 PDF 第 28 页](figures/original-page-028-04.png)
+![原文 Table 10](figures/original-p028-table-10.png)
+
+![原文 Table 11](figures/original-p028-table-11.png)
 
 **读表：**视觉理解 MMMU 43.7、MMBench 78.9、SEED 76.3、GQA 62.7。POPE 87.4 仍低于 ILLUME 88.5，MM-Vet 40.1 低于 TokenFlow-XL 40.7；表中优势不能写成每项第一。GenEval 0.85 高于 FUDOKI 0.77、MMaDA 0.63，单物体 0.99、双物体 0.92、计数 0.79、位置 0.78、颜色属性 0.74，但位置略低于 Janus-Pro 0.79。DPG-Bench 总分 84.46，多个分项依然有其他模型更高。
 

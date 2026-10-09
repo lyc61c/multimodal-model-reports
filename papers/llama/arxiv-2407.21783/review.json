@@ -89,12 +89,28 @@
     "Language model release and experimental multimodal extension distinguished",
     "405B backbone and added adapter parameters distinguished",
     "Vision/video/voice freezing and stage-specific frame aggregation verified",
-    "40M annealing token figure retained as v1 rather than replaced with separate 40B experiment"
+    "40M annealing token figure retained as v1 rather than replaced with separate 40B experiment",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "Some v1 terminology differs internally: video text mentions 7B and illustration frequency differs from main implementation",
     "Complete multimodal training cost and all adapter hyperparameters are not disclosed",
     "Experimental visual/audio weights were not broadly released with this report",
     "Self-review only; no model or benchmark execution"
-  ]
+  ],
+  "article_sha256": "ab50d84d3102f3da3978d55a0ade17eb498b5cc54386fb68150d5214563a638d",
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
+    ]
+  }
 }

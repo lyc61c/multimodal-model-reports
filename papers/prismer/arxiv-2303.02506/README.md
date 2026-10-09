@@ -23,7 +23,7 @@ Prismer 将深度估计、法向、边缘、分割、物体检测和文字识别
 
 ## 3. 整体架构
 
-![原文 Figure 2：RGB 与专家输出的编码、语言解码结构，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 **读图：**RGB 图像有单独 patch 输入路径，深度、法向等辅助信号经过 Experts Resampler 后，与 RGB 特征共同进入视觉 Transformer。语言侧的自注意力是因果形式，通过新跨注意力读取视觉特征。雪花标记原来的冻结模块；绿色 Adaptor 及没有雪花的新连接组件参与训练。图中保留 RGB 路径很关键，模型不需要完全依赖可能错误的专家标签。
 
@@ -76,7 +76,7 @@ Query 来自 latent，key／value 来自**辅助特征与 latent 的拼接**，�
 
 预训练冻结视觉和语言原骨干，以及所有辅助专家；训练新增卷积输入、Resampler、Adaptor、跨注意力等适配连接。下游默认策略变为**冻结视觉骨干，允许语言侧适应任务**，同时保留新模块可训练，不能把“全部阶段永远冻结语言模型”作为本方法结论。
 
-![原文 Appendix A/B、Table 6/7：配置与成本，PDF 第 25 页](figures/original-page-025-04.png)
+![原文 Table 6](figures/original-p025-table-6.png)
 
 | 配置 | 图文预训练 | 描述微调 | VQAv2 微调 | ImageNet 少样本微调 |
 |---|---:|---:|---:|---:|
@@ -92,7 +92,7 @@ Query 来自 latent，key／value 来自**辅助特征与 latent 的拼接**，�
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 3：下游微调的完整结果，PDF 第 11 页](figures/original-page-011-02.png)
+![原文 Table 3](figures/original-p011-table-3.png)
 
 | 模型 | COCO CIDEr | NoCaps 整体 CIDEr | NoCaps 域外 CIDEr | VQAv2 test-dev |
 |---|---:|---:|---:|---:|
@@ -105,7 +105,7 @@ Query 来自 latent，key／value 来自**辅助特征与 latent 的拼接**，�
 
 直接使用图文预训练模型，Figure 4 报告 BASE／LARGE 在 COCO 的零样本 CIDEr 为 **122.6／129.7**，NoCaps 为 **87.5／107.9**。这里零样本表示不做对应下游微调，COCO 本身却属于图文预训练来源，因此不意味着 COCO 图像完全没见过。与 SimVLM 的少数据倍数在正文和图注分别写约 140 与 160；按表内 1.8B／12.7M 约为 142，本文只使用实际规模，不混用倍数宣传。
 
-![原文 Table 5：结构、冻结与重采样消融，PDF 第 15 页](figures/original-page-015-03.png)
+![原文 Table 5](figures/original-p015-table-5.png)
 
 **读表：**这些实验在 BASE、约 3M 的 Conceptual Captions+SBU、224 分辨率下进行，主要结构消融仅用深度、法向、分割三个专家，默认 VQAv2 为 **72.79**，不是主实验的 76.8。将包括 RGB 的全部输入都经过 Full Perceiver 降到 **65.05**，说明保存原 RGB 通路有实质作用。latent 从 64 增到 128／256，反而降到 **70.28／68.07**；更多压缩 token 不自动带来更强性能。四层 Resampler 为 72.79，六层为 72.78，收益并不继续增长。
 

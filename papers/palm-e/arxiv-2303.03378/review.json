@@ -39,5 +39,23 @@
     "无模型或机器人复现",
     "完整预训练超参未披露",
     "真机长任务主要定性，不将仿真成功率冒写真机"
-  ]
+  ],
+  "article_sha256": "15a10baa9dd47e50beb76d1cc7eccb34dcb7edc4b1071a0d2ccbc13178c53464",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 10,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

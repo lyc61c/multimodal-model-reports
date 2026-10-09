@@ -23,7 +23,7 @@ Thinking 不保证每个任务更准确。复杂数学推理常受益于更长�
 
 ## 3. 整体架构
 
-![原文 Figure 1：Qwen3-VL 框架，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
 **读图：**不同图像产生不同长度视觉序列，视频帧组前插入文字时间戳；右侧 DeepStack 在前几个语言层添加额外视觉特征，未把三组中间特征都扩成新的上下文位置。
 
@@ -78,7 +78,7 @@ STEM 视觉数据包括 1M 点定位、2M 细节问答、6M 图表描述；推�
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2：旗舰 Thinking/Instruct 与闭源基线，PDF 第 15 页](figures/original-page-015-02.png)
+![原文 Table 2](figures/original-p015-table-2.png)
 
 **读表：**每个模型有不同思考预算列；星号来自相应技术报告，＋表示工具增强。OmniDocBench 为误差指标、越低越好，OCRBench 为原始分数。以下只取相同旗舰的两个明确配置。
 
@@ -97,11 +97,13 @@ Thinking 的 MathVision 高于表内 Gemini-2.5-Pro Thinking 73.3 和 GPT-5 high
 
 视频统一设最多 2,048 帧、总视觉 token 不超过 224K；VideoMMMU/MMVU 每帧最多 768 token，其余 640；Charades-STA 4fps，其余 2fps。资源限制使 Gemini-2.5-Pro/GPT-5/Claude-Opus-4.1 分别最多 512/256/100 帧，作者明确承认不能保证完全公平。VideoMMMU 使用模型评判，不是全部规则匹配。
 
-![原文 Table 4：小模型结果，PDF 第 18 页](figures/original-page-018-03.png)
+![原文 Table 4](figures/original-p018-table-4.png)
 
 2B/4B/8B Thinking 的 MMMU 为 61.4/70.8/74.1，MathVista 为 73.6/79.5/81.4；Instruct OCRBench 为 858/881/896。8B 并非小模型每项最强：4B Thinking 的 DynaMath 74.4 高于 8B 73.2。旗舰文字能力也未全面保持：Table 6 的 GPQA 77.1、LiveCodeBench v6 70.1，低于对应 Qwen3 文本 Thinking 的 81.1/74.1。
 
-![原文 Tables 11–12：视觉编码器与 DeepStack 消融，PDF 第 24 页](figures/original-page-024-04.png)
+![原文 Table 11](figures/original-p024-table-11.png)
+
+![原文 Table 12](figures/original-p024-table-12.png)
 
 **读表：**DeepStack 使用内部 15B-A2B、200B token 预训练、无后训练，并非旗舰消融。平均分 74.7→76.0，InfoVQA 71.9→74.2、DocVQA 89.5→91.1，但 TextVQA 80.6→80.5。Table 11 的视觉端比较使用相同 1.7B Qwen3、1.5T token，不能拿它的数字代替最终 2B。
 

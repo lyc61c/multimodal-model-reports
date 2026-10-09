@@ -4,78 +4,178 @@
   "source_pdf_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
   "assets": [
     {
-      "asset_path": "figures/figure-02-thinker-talker.png",
-      "original_label": "Figure 2：Thinker-Talker总览",
+      "asset_path": "figures/original-p003-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 3,
       "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=3",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
-      "asset_sha256": "e68c75fd592e376cc775f884dd55b2177a4cfa5054b9ab0c6cddfb4af824b892",
+      "asset_sha256": "568ec2ea1dbddeff3dde4b7ab115a1eb033b7146f5607cfcbe9837f4005680c5",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          67.56,
+          188.62,
+          529.16,
+          575.78
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crops: Figure 2 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/figure-03-tmrope.png",
-      "original_label": "Figure 3：TMRoPE时间对齐",
+      "asset_path": "figures/original-p004-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 4,
       "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=4",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
-      "asset_sha256": "244c4dad515d5b6b048539c80dbf443dda85e673d4b4a8f13fbf144b2609619d",
+      "asset_sha256": "358cef455ed9dd785a48459ae7f55de6cea5e9f520eb7f1e302555f7c74300f3",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          67.87,
+          93,
+          527.39,
+          239.17
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed fresh repaired source/crop contact: Figure 3 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/figure-04-streaming-dit.png",
-      "original_label": "Figure 4：滑动窗口DiT",
+      "asset_path": "figures/original-p005-figure-4.png",
+      "original_label": "Figure 4",
       "pdf_page": 5,
       "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=5",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
-      "asset_sha256": "b39bd42272dd9ed186b987d86aa1fc27db5147c39f6d2f02de6866f5173c3f0c",
+      "asset_sha256": "994768b990db53e1b4ba4d68e56d8c68fe6e107d9bae85867d67e51c17f0cc3d",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          67.87,
+          528,
+          527.41,
+          700.39
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed fresh repaired source/crop contact: Figure 4 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/table-07-08-video-omni.png",
-      "original_label": "Table 7、8：视频与联合多模态理解",
+      "asset_path": "figures/original-p012-table-7.png",
+      "original_label": "Table 7",
       "pdf_page": 12,
       "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=12",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
-      "asset_sha256": "5046e0da6df33670d797c91d94b4ecdda7e598dcc0e5d21041e649394c0fe90f",
+      "asset_sha256": "77f4bc867c1eb398f7cbbbc5ef0b803198eb1236c26fe3691e511b332cf6d834",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          102.35,
+          67.29,
+          492.93,
+          170.62
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crops: Table 7, Table 8 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/table-09-10-speech.png",
-      "original_label": "Table 9、10：语音生成",
+      "asset_path": "figures/original-p012-table-8.png",
+      "original_label": "Table 8",
+      "pdf_page": 12,
+      "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=12",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
+      "asset_sha256": "25af9acdef6cdfd337a828cafed62595d03d0aa1421a4dfab4439dbed174603a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70.22,
+          175.42,
+          527.43,
+          326.1
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crops: Table 7, Table 8 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p013-table-9.png",
+      "original_label": "Table 9",
       "pdf_page": 13,
       "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=13",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
-      "asset_sha256": "abbc8fe94355e07018ec946080ecf4c245baa201363128275d604800ab02389d",
+      "asset_sha256": "fc8d5f41a37681d2ea9f430fe9ffdda332cce2be993b4b19cfcfc3550ebb518c",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          123.76,
+          68.39,
+          469.03,
+          350.98
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crops: Table 9, Table 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p013-table-10.png",
+      "original_label": "Table 10",
+      "pdf_page": 13,
+      "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf#page=13",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
+      "asset_sha256": "3fa8a58ba24843f96cb7cf49065eec102e59f73eb92eeb1ffc48d9d79dfff037",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          161.48,
+          357.51,
+          431.3,
+          570.58
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crops: Table 9, Table 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

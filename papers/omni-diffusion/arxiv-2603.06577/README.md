@@ -30,7 +30,7 @@ Omni-Diffusion 把多模态输出直接组织成共享序列中的离散 token�
 
 ## 3. 整体架构
 
-![Figure 2：共享序列、模态边界 token 与全注意力，原文 PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：**Figure 2 的文本、图像、语音片段由各自的开始/结束标记包围，随机替换部分内容为 MASK，网络用 full attention 恢复不同颜色的 token。图中没有语言自回归路径与独立图像扩散路径的分叉；同时，图下的 tokenizer 和图上的 detokenizer 仍不可缺少，“统一 backbone”不能说成无需模态编码解码。
 
@@ -64,7 +64,7 @@ $$c_t^i=-H(p_t^i)=\sum_{v=1}^{V}p_t^{i,v}\log p_t^{i,v},\qquad p_t^i=\mathrm{sof
 
 ## 5. 数据构建与处理
 
-![Table 4 与附录 A：各数据源、数量、阶段及配置，原文 PDF 第 12 页](figures/original-page-012-04.png)
+![原文 Table 4](figures/original-p012-table-4.png)
 
 **读表：**Table 4 中语音规模以小时表示，文字和图像以样本数表示，不能直接相加成统一“样本总量”。Tulu 3 SFT mixture 670K 跨三阶段维持纯文本能力；LAION-2B 选出 10M caption，视觉 QA 包含 LLaVA-OneVision 820K 和内部 2M。表中 JourneyDB 4M 写了两次，报告没有说明是重复排版还是两个数据版本，本文不把它们擅自相加成 8M 唯一样本。
 
@@ -92,7 +92,11 @@ speech-to-image 则以 Blip3o-Pretrain-JourneyDB 的流畅描述和图像构建�
 
 语音评测 Table 1 的 LibriSpeech ASR WER 为 Omni-Diffusion 7.05、AnyGPT 8.50、GLM-4-Voice 2.82，越低越好：它改善了 AnyGPT，但仍明显落后于语音专用 LLM。LibriTTS TTS WER 为 3.07，对比 CosyVoice 2.89、GLM-4-Voice 5.64。TTS WER 由 Whisper-Large-v3 转写合成声音后计算，评价内容可识别性，不能独自涵盖自然度、说话人相似度和情感控制。表注声称优于专用 TTS，数值实际仍略差于 CosyVoice，本文按数值描述。
 
-![Tables 2–3 与 Figure 4：视觉结果、去噪步数和看图语音对话，原文 PDF 第 7 页](figures/original-page-007-02.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Figure 4](figures/original-p007-figure-4.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
 
 **读表：**Table 2 的星号表示作者用公开代码/权重复测，双匕首表示使用外部预训练扩散模型，不能忽略基线实现差异。Omni-Diffusion POPE 76.6、MME-P 1,216.7、Seed-2-Plus 34.5；POPE 低于 InstructBLIP 78.9，但 MME-P 略高于其 1,212.8。本文的 LLaVA 行是早期 76.3/809.6/30.1，不能冒称 LLaVA-v1.5 或当前最佳。Seed-2-Plus 与常用 SEED-Bench 也不是同一个指标。
 
@@ -106,7 +110,11 @@ speech-to-image 则以 Blip3o-Pretrain-JourneyDB 的流畅描述和图像构建�
 
 语音生图输入用 CosyVoice2 把同一 COCO captions 合成为语音。文本与语音条件的分数接近但未完全相等，语音结果也不单调随步数改善；说明跨模态对齐有可行性，不能断言没有误差。TTS 从 3.07 到 4.83 的错误率变化则明确显示少步生成的质量成本。Table 3 没有置信区间，细小差异不宜写成统计显著结论。
 
-![Figures 5–7：文本/语音生图、局部编辑与不同步数，原文 PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Figure 6](figures/original-p008-figure-6.png)
+
+![原文 Figure 7](figures/original-p008-figure-7.png)
 
 **读图：**Figure 5 上下行对应同内容的文字和语音提示，语义近似而构图并不相同；Figure 6 在保留背景的条件下替换中心对象；Figure 7 的 10/50/128/256 步例子仍呈现不同细节。图中全部提示、行标签和图注保留。局部补全利用掩码目标，作者称无需额外 inpainting 微调，但只给定性例子，未提供大规模编辑一致性或局部保真度评测。
 

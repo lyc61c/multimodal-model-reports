@@ -4,63 +4,103 @@
   "source_pdf_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
   "assets": [
     {
-      "asset_path": "figures/original-page-010-01.png",
-      "original_label": "PDF page 10",
+      "asset_path": "figures/original-p010-figure-7.png",
+      "original_label": "Figure 7",
       "pdf_page": 10,
       "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=10",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
-      "asset_sha256": "ac7fba262ffb09ae85e5cab578f88ee1971c57f80d8506f00987cb776868915a",
+      "asset_sha256": "d5067a4b73ef91edee1ce123ff0e2099a6d38b0b00241f5c47aacb373b99bcc6",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          59.36,
+          79.47,
+          536.23,
+          313.0
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: both long-document/code negative-log-likelihood plots, full legends, axes and complete Figure 7 caption retained.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-015-02.png",
-      "original_label": "PDF page 15",
+      "asset_path": "figures/original-p015-figure-11.png",
+      "original_label": "Figure 11",
       "pdf_page": 15,
       "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=15",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
-      "asset_sha256": "5cdd6187aaff8ae53ec87a8101620ce9e7874c8fccdf24701bcea96cf4f26b84",
+      "asset_sha256": "0fc2f37094f8e3911444b670be06840ae78eb7c81d149b5f96566efbb9b36849",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          58.46,
+          82.04,
+          535.91,
+          305.93
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: entire retrieval scatter plot, both model legend entries, 128K marker, axes and Figure 11 caption retained.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-025-03.png",
-      "original_label": "PDF page 25",
+      "asset_path": "figures/original-p025-table-9.png",
+      "original_label": "Table 9",
       "pdf_page": 25,
       "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=25",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
-      "asset_sha256": "853319aa0b25041e60142d26360ceb21ca344b5194bb85d793aeeef3e26e712f",
+      "asset_sha256": "d81b6e1ebbf94b375c246fe9a16569e53aa5c6742ab1badc4ddd7f30e2346672",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          59.03,
+          82.12,
+          535.92,
+          219.73
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Table 9 fully preserved, unrelated Table 47 belongs to another page.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-039-04.png",
-      "original_label": "PDF page 39",
+      "asset_path": "figures/original-p039-table-18.png",
+      "original_label": "Table 18",
       "pdf_page": 39,
       "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=39",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
-      "asset_sha256": "c96a70793f60cac34e43a05d0ea92cc29d3d09725b9d032f4399a7b6c2ac295c",
+      "asset_sha256": "d85cfa4a64cf5030aaac1f57522b674152fba4ed84b499b8cdd3dbd95fb91f23",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          58.46,
+          82.09,
+          537.65,
+          778
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Table 18 includes complete two-block caption through final ChartQA note.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

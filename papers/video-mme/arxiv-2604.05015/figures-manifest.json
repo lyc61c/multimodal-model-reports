@@ -20,7 +20,11 @@
           527,
           379
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -40,7 +44,11 @@
           527,
           398
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -60,7 +68,11 @@
           527,
           405
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -80,7 +92,11 @@
           527,
           753
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -100,7 +116,11 @@
           527,
           708
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -120,7 +140,11 @@
           527,
           263
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

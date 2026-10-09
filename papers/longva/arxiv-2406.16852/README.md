@@ -21,7 +21,7 @@ LongVA 的问题是：视觉 token 很长时，瓶颈是否也来自语言骨干
 
 ## 3. 整体架构
 
-![原文 Figure 2：UniRes 编码图像和视频，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 Figure 2 上半是图像：拆成 336×336 网格，每格编码为 576 个特征，池化到 144 个，再送给语言模型。下半是视频：把每帧当作一个网格，采用同样处理。图像对齐中见过的“多个网格”形式因此可延伸到“多个视频帧”，核心不是增加一个单独的时序视频编码器。
 
@@ -66,11 +66,13 @@ V-NIAH 使用五个针帧：便签大学名、婚礼气球颜色、瓶上剂量�
 
 ## 7. 实验设置与主要结果
 
-![原文 Figures 3–4：针帧构造和检索热图，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
+
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 Figure 4 横轴为总帧数，纵轴是针帧的相对位置，绿色较高、红色较低，虚线对应语言骨干训练长度。基础 LongVA 在约 2000 帧以内多数位置接近完美检索；更长区间变黄、橙，不能说 3000 帧所有位置均为 100%。AnyRes 版本较弱，32K 视频基线和仅改 RoPE 的基线更早失效。图支持语言长度及统一表示共同影响视觉读取。
 
-![原文 Table 4：Video-MME 无字幕结果，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 4](figures/original-p007-table-4.png)
 
 | LongVA 采样帧数 | 短视频 | 中视频 | 长视频 | 总体 |
 | --- | ---: | ---: | ---: | ---: |
@@ -82,7 +84,11 @@ Figure 4 横轴为总帧数，纵轴是针帧的相对位置，绿色较高、�
 
 相同 32 帧下 LLaVA-NeXT-Qwen2 总体为 49.5，LongVA 为 51.8。128 帧达到表内最好总体 52.6，384 帧反而降到 51.8；长视频子集也不是随采样帧数严格单调。与 34B VILA 的 59.0 比，仍有差距。作者的同期领先主张限定于小规模模型与这套无字幕评测，而非所有时间、所有模型的最新排名。
 
-![原文 Tables 6–7 与 Figure 5：短视频、图像表现及分辨率分布，PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Table 6](figures/original-p008-table-6.png)
+
+![原文 Table 7](figures/original-p008-table-7.png)
+
+![原文 Figure 5](figures/original-p008-figure-5.png)
 
 短视频 NeXTQA 的多选分从 8 帧 50.78 增到 64 帧 68.27，但 ActivityNetQA 从 32 帧 2.80 到 64 帧 2.84 的增益较小，开放描述指标不稳定。LongVA-DPO 在 32 帧下 Video-DD 为 3.58，基础模型为 3.19；这是带额外偏好训练的结果。报告认为回答形式会影响 GPT 判分，这是作者解释，不是已经单独证实模型推理完全不变。
 

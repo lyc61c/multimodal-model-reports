@@ -1,1 +1,45 @@
-{"checked_file":"README.md","verdict":"complete_self_review","fact_checks":["read actual report architecture, data, recipes and numerical tables","kept model components and token/sample counts separate","identified report unit and headline inconsistencies","distinguished automated world-generation judging from physical execution"],"math_checks":["weighted autoregressive crossentropy matches prose and has no false Eq label","16fold per-axis grid gives4096tokens at1024","DiDA noisy tokens cannot attend current clean image answer","no fabricated noise law or GRPO hyperparameters"],"image_checks":{"viewed":["figures/original-page-005-01.png","figures/original-page-006-02.png","figures/original-page-016-03.png","figures/original-page-026-04.png"],"result":"Original figures, labels, diagrams, axes and Table16 headers are complete and readable; full-page context disclosed"},"model_execution":"not_run","limitations":"No independent benchmark reproduction or external cross-model review claimed"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "read actual report architecture, data, recipes and numerical tables",
+    "kept model components and token/sample counts separate",
+    "identified report unit and headline inconsistencies",
+    "distinguished automated world-generation judging from physical execution"
+  ],
+  "math_checks": [
+    "weighted autoregressive crossentropy matches prose and has no false Eq label",
+    "16fold per-axis grid gives4096tokens at1024",
+    "DiDA noisy tokens cannot attend current clean image answer",
+    "no fabricated noise law or GRPO hyperparameters"
+  ],
+  "image_checks": {
+    "viewed": [
+      "figures/original-page-005-01.png",
+      "figures/original-page-006-02.png",
+      "figures/original-page-016-03.png",
+      "figures/original-page-026-04.png"
+    ],
+    "result": "Original figures, labels, diagrams, axes and Table16 headers are complete and readable; full-page context disclosed"
+  },
+  "model_execution": "not_run",
+  "limitations": "No independent benchmark reproduction or external cross-model review claimed",
+  "article_sha256": "e6314ef759587df92d4f1ea49e4a9207046fad1e185e97943c65fc4bcf15173e",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
+}

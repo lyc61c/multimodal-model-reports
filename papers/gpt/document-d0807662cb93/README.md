@@ -26,7 +26,7 @@ GPT-5 在这些材料中被定义为一个统一系统，包含快速模型、�
 
 报告将 GPT-5 的快速模型视为 GPT-4o 系列的后继，将推理模型视为 o3/o4-mini 等模型的后继。这个关系说明系统内组件的能力定位和对照基线，不证明其权重直接从相应旧模型初始化。路由器使用真实反馈持续训练，包括用户切换模型、回答偏好与测量的正确性。原文还说未来计划把这些能力整合到单一模型，这进一步表明发布时的“统一”主要位于系统层。[系统卡第 5–6 页](https://cdn.openai.com/gpt-5-system-card.pdf#page=5)。
 
-![系统卡第5页：模型组成说明与Table 1](figures/original-page-005-01.png)
+![原文 Table 1](figures/original-p005-table-1.png)
 
 **如何读图：**Table 1 左列是前代模型，右列是 GPT-5 系统卡中的对应组件名称。上方段落同时解释快速模型、推理模型、路由器与 Pro 的关系。不能把六行理解为六个公开参数规模，或把右列模型名称当作所有 API 的实际调用名称。
 
@@ -68,19 +68,23 @@ safe-completions 的收益也有边界。更接近生产的 Table 3 中，thinki
 
 发布说明的主要能力结果包括无工具 AIME 2025 **94.6%**、MMMU **84.2%**、Aider Polyglot **88%**、SWE-bench Verified **74.9%**，以及 thinking 的 HealthBench Hard **46.2%**。其说明指定高 reasoning effort，代表某些测试下用户可能遇到的上限设置，不是实时路由系统在所有输入上的平均成绩。MMMUPro 使用 standard 与 vision 两种成绩平均；工具辅助 AIME 也不能与无工具版本混比。[发布说明评测部分](https://openai.com/index/introducing-gpt-5/)。
 
-![系统卡第17页：Figure 5与Table 10](figures/original-page-017-03.png)
+![原文 Figure 5](figures/original-p017-figure-5.png)
+
+![原文 Table 10](figures/original-p017-table-10.png)
 
 **如何读图：**上图 Figure 5 按行为类型统计生产代表样本中的监测结果，下表 Table 10 则测试不适当的“文本＋图像”输入下输出的 not_unsafe 比例。Table 10 的高分反映内容行为，例如 thinking 的 illicit 项 0.988、o3 为 0.972；它不是 MMMU 或图像识别正确率。Figure 5 大部分项目下降，但不遵守搜索/引用要求项上升，作者也讨论了一些样本没有合适来源可引的情况。
 
 缺失图像 CharXiv 的不诚实回答率从 o3 的 **0.87** 降到 thinking 的 **0.09**；代码任务对应 **0.47 → 0.17**，故障浏览工具为 **0.61 → 0.11**。这些是刻意制造不完整条件的压力测试，不是正常图表或编程的失败率。生产代表样本的 CoT 监测标记由约 4.8% 降到 2.1%，而监测器内部估计精确率 81%、召回率 84%，仍可能漏检或误判。[系统卡第 15–16 页](https://cdn.openai.com/gpt-5-system-card.pdf#page=15)。
 
-![系统卡第13页：Figure 1生产事实性与Figure 2公开事实评测](figures/original-page-013-02.png)
+![原文 Figure 1](figures/original-p013-figure-1.png)
+
+![原文 Figure 2](figures/original-p013-figure-2.png)
 
 **如何读图：**Figure 1 左组统计错误事实主张，中组统计包含至少一个重大错误的回答，右组是每次回答的正确主张数量，右组数值不是百分比。开启浏览时 thinking 的错误主张率为 4.5%，o3 为 12.7%；至少一次重大错误的回答为 4.8% 与 22.0%。main 对 GPT-4o 相应为 9.6% 对 12.9%、11.6% 对 20.6%。Figure 2 则是 LongFact/FActScore 的逐主张错误率，不能与 Figure 1 的逐回答错误率混为一个指标。
 
 LongFact/FActScore 的评分依赖 o3 抽取和核验，仍受评分器准确性影响。生产事实性评分器与人工事实判断的一致率约 75%，报告认为评分器在部分分歧中发现更多真实错误；这不是证明其完全正确。SimpleQA 无浏览准确率仅由 o3 的 0.54 到 thinking 的 0.55，而幻觉率从 0.46 到 0.40，显示事实可靠性改进与答对比例改善并不总是同幅度。[系统卡第 12–14 页](https://cdn.openai.com/gpt-5-system-card.pdf#page=12)。
 
-![系统卡第37页：Figure 19 SWE-bench Verified](figures/original-page-037-04.png)
+![原文 Figure 19](figures/original-p037-figure-19.png)
 
 **如何读图：**该图以 477 道内部环境验证过的任务测试 agent，提供 bash 与 apply_patch，平均每题四次运行来估计 pass@1，而非报告 pass@4。图中 thinking 约 74%、mini 约 72%，o3 与 ChatGPT agent 约 68%；设置不使用浏览，且 Preparedness 评测使用训练时允许的最大 verbosity。页内特别解释发布说明的 74.9% 使用 API 默认 medium verbosity，所以两组数字不可强行视为精度不同的同一次实验。
 

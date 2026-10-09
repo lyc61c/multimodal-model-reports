@@ -29,7 +29,7 @@
 
 ## 3. 整体架构
 
-![Figure 2：图像编码与坐标文字指令汇入同一个语言模型](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 *来源：原文 Figure 2 与公式 (1)，PDF 第 4 页；[原页](https://arxiv.org/pdf/2307.09474v1#page=4)。图片红框是用户选区，红色指令路径传入坐标，蓝色路径传入完整视觉特征。*
 
@@ -61,7 +61,7 @@ $$\widehat x_k=x_k/W,\qquad \widehat y_k=y_k/H.$$
 
 ## 5. 数据构建与处理
 
-![Figure 3：多粒度数据来源与GPT-4区域对话合成](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 *来源：原文 Figure 3，PDF 第 5 页；[原页](https://arxiv.org/pdf/2307.09474v1#page=5)。左边的 GPT-4 接收区域标注与种子样例；右边紫色为整图、蓝色为区域资料。*
 
@@ -94,7 +94,9 @@ $$\mathcal L_{\mathrm{AR}}=-\sum_t\log p_\theta(y_t\mid V,\Phi(R_t),X_{\mathrm{i
 
 ## 7. 实验设置与主要结果
 
-![Tables 1/2：真实框、检测器框与OCR/指点问答成绩](figures/original-page-007-03.png)
+![原文 Table 1](figures/original-p007-table-1.png)
+
+![原文 Table 2](figures/original-p007-table-2.png)
 
 *来源：原文 Table 1、2，PDF 第 7 页；[原页](https://arxiv.org/pdf/2307.09474v1#page=7)。Table 1 区分 GT boxes 与 DINO boxes，Table 2 的 B/P 为框/点，不能把它们当不同参数规模。*
 
@@ -112,7 +114,7 @@ COCO 只从验证集随机抽取 1,000 张，准确率以真实框区域为单�
 
 OCR 和 VQA 的“回答中包含 GT 答案”比严格字符串完全匹配宽松，也不同于某些官方 VQA 评分器。一个长回答包含正确词汇即可能被判对，协议本身未充分检查所有附加句子是否正确。因此 63.0/68.2 等分数只能在本文协议下解释，不能直接与采用其它判断方式的模型排行榜相减。
 
-![Table 3：区域框噪声与指代幻觉统计](figures/original-page-010-04.png)
+![原文 Table 3](figures/original-p010-table-3.png)
 
 *来源：原文 Table 3，PDF 第 10 页；[原页](https://arxiv.org/pdf/2307.09474v1#page=10)。此表 No noise 的准确率为 64.7，与 Table 1 的 64.5 分别记录，不人为统一。*
 

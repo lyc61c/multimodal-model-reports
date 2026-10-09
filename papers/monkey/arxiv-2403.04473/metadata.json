@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "TextMonkey：高分辨率文档理解、视觉token压缩与文字定位"
+  "title_zh": "TextMonkey：高分辨率文档理解、视觉token压缩与文字定位",
+  "chinese_characters": 2685,
+  "figure_revision_date": "2026-10-09"
 }

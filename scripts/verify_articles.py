@@ -36,6 +36,21 @@ for entry in read(PLAN)['entries']:
                 manifest=read(manifest_path)
                 row['assets']=len(manifest.get('assets',[]))
                 for asset in manifest.get('assets',[]):
+                    processing=asset.get('processing',{})
+                    if processing.get('method')=='full_pdf_page_render':
+                        row['issues'].append('Full-page screenshot must be replaced by a figure/table crop: '+asset['asset_path'])
+                    if processing.get('method')=='pdf_region_render':
+                        box=processing.get('crop_bbox')
+                        size=processing.get('page_size')
+                        if not box or not size:
+                            row['issues'].append('PDF region lacks explicit crop coordinates or page dimensions: '+asset['asset_path'])
+                        else:
+                            x0,top,x1,bottom=box
+                            width,height=size
+                            if not (0 <= x0 < x1 <= width+0.01 and 0 <= top < bottom <= height+0.01):
+                                row['issues'].append('PDF region lies outside source page: '+asset['asset_path'])
+                            if (x1-x0)/width>=0.98 and (bottom-top)/height>=0.98:
+                                row['issues'].append('Near-full-page screenshot must be replaced: '+asset['asset_path'])
                     file=folder/asset['asset_path']
                     if not file.exists():
                         row['issues'].append('Missing original asset: '+asset['asset_path'])

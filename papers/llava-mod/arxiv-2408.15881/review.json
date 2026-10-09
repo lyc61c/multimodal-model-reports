@@ -37,5 +37,24 @@
     "v1公式/超参数/平均分存在冲突，保留来源事实",
     "未运行教师或学生，未验证训练源码"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "949d20e504125f7158c4186d125605c6f98f6b3269fc5dc96a1bc4e5f910b88e",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and crop after manual repair: Figure 2 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop after manual repair: Figure 3 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Table 3 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Table 10, Table 11 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
 }

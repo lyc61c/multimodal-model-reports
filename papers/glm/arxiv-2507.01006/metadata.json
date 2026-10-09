@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "GLM-4.1V-Thinking：原生分辨率视觉基础与跨领域课程强化学习"
+  "title_zh": "GLM-4.1V-Thinking：原生分辨率视觉基础与跨领域课程强化学习",
+  "chinese_characters": 3145,
+  "figure_revision_date": "2026-10-09"
 }

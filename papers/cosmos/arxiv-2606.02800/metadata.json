@@ -10,5 +10,7 @@
   "document_kind": "world_model_report",
   "catalogue_group": "scope_review",
   "article_template_version": "1.1",
-  "title_zh": "Cosmos 3：以双路径 Transformer 统一理解、世界生成与动作预测"
+  "title_zh": "Cosmos 3：以双路径 Transformer 统一理解、世界生成与动作预测",
+  "chinese_characters": 4156,
+  "figure_revision_date": "2026-10-09"
 }

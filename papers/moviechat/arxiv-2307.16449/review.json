@@ -6,18 +6,30 @@
     "检查Figure2、Figures3/4、Table1与附录Table2四张完整原页；帧位置为时刻，8frame32token与10framewindow不同配置。",
     "核验Equation3平均余弦、Algorithm1相邻最相似合并、weighted sum无补固定权重；Equation1索引次序疑点与n→n²绝对位置扩展如实记录。",
     "核验MSVD/MSRVTT/ActivityNet各Accuracy和0–5Score列、基线VideoChatGPT来源、gpt3.5turbo提示整数与例4.8不一致。",
-    "显存21.3KB/frame为增量、10000倍率不对所有基线、24GB/224视觉无抽样限定；64token非无限视频恒定总记忆；未运行模型。"
+    "显存21.3KB/frame为增量、10000倍率不对所有基线、24GB/224视觉无抽样限定；64token非无限视频恒定总记忆；未运行模型。",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "e6e577cd9398993056b756021c50bc0701c61f327d7871249da960a3623418be",
+  "article_sha256": "2560e1cad47e532e82c060fa12b8348507eb0580e4a92c9aaf01f4204021c830",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

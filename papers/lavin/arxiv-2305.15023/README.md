@@ -23,7 +23,9 @@
 
 ## 3. 整体架构
 
-![Figure 2、Figure 3，MMA 与双适配器，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
+
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **读图：Figure 2/Figure 3，PDF 第4页。** 左边 ViT 的主体与右边语言注意力/FFN 均标冻结，火焰集中在新增适配器。下方两类指令共同采样，上方绿色模态 token 提示当前是纯文本还是图文。Figure 3 中两个分支共享降维矩阵，各有升维映射，降低额外参数数目。
 
@@ -44,7 +46,9 @@ $s$ 是适配输出缩放，$\tau$ 是路由温度；$W_m\in\mathbb R^{c\times2}
 
 这是**由输入模态类别驱动的软加权**。公式并非逐token按语义负载选择海量专家，也没有声明 top-k 硬路由或负载均衡损失。模态token的种类由输入格式给出，不能把路由解释成模型先自动判断图片是否存在。学习到的权重可接近0或1，但数学表达仍为两分支加权和。
 
-![Figure 4、Figure 5，路由及指令案例，PDF 第8页](figures/original-page-008-04.png)
+![原文 Figure 4](figures/original-p008-figure-4.png)
+
+![原文 Figure 5](figures/original-p008-figure-5.png)
 
 **读图：Figure 4，PDF 第8页。** 展示7B模型最后10层纯文本/图文的路由权重，红色突出占优分支，路径随层与模态变化。它说明两类输入的适配倾向不同，不是两套完全独立的语言模型。下方Figure 5是案例，不能用少数展示替代整体准确率。
 
@@ -68,7 +72,7 @@ ScienceQA 使用 AdamW，batch **32**、学习率 **$9\times10^{-3}$**、weight 
 
 ## 7. 实验设置与主要结果
 
-![Table 1，ScienceQA 主结果，PDF 第6页](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 **读图：Table 1，PDF 第6页。** #T-Param是可训练参数；Average为完整测试集平均。IMG是有图像上下文子集，不能只引用Average作为纯图像题准确率。GPT系列放在零/少样本组，LaVIN则为监督训练，比较条件不同。
 
@@ -83,7 +87,11 @@ ScienceQA 使用 AdamW，batch **32**、学习率 **$9\times10^{-3}$**、weight 
 
 主结果接近LLaVA且训练参数大幅减少，但Average仍低于LLaVA/MM-CoT Large；更长训练也没有提升所有子集。不能概括成全面领先。
 
-![Table 2、Table 3、Table 4，消融与训练成本，PDF 第7页](figures/original-page-007-03.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 **读图：Table 2–4，PDF 第7页。** 左侧是逐步添加能力的累积消融；右侧分别是不进行额外VL预训练的比较和8张A100训练成本。它们不是同一组所有控制变量完全相同的测量。
 

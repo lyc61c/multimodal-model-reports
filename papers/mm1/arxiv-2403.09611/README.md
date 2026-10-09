@@ -21,7 +21,7 @@ MM1 的贡献是公开“如何选出配方”的实验过程。它先用小规�
 
 ## 3. 整体架构
 
-![Figure 3：架构与数据消融框架，PDF第5页](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **Figure 3，PDF 第 5 页。** 左图是视觉编码器 → VL Connector → decoder-only LLM：图像 patch 特征被压缩并映射到语言模型的输入空间，与文字 embedding 共同进入自回归解码器。右图展示数据来源和比例，这是与架构同样重要的另一组变量。原页包含研究流程示意，不表示每个图上标出的组件都在最终模型中使用。
 
@@ -69,7 +69,7 @@ SFT 正文概括为约 1M 样本，**Table 5 更精确地列出总计 1.45M**。
 
 ## 7. 实验设置与主要结果
 
-![Figure 5：数据混合消融，PDF第9页](figures/original-page-009-02.png)
+![原文 Figure 5](figures/original-p009-figure-5.png)
 
 **Figure 5，PDF 第 9 页。** (a) 对比 caption / interleaved 比例，caption-only 零样本均值 39.3，而 50 / 50 为 33.4；8-shot 则由 45.0 上升到 62.2。单一数据源改善一个评价口径，可能损害另一口径。(b)(c) 纯文本对 TextCore 与 few-shot 的影响也依赖其原有组合。(d) 加入 VeCap，4-shot / 8-shot 从 55.9 / 58.7 到 58.3 / 62.7，但零样本由 35.4 降到 32.1，不是全部指标同时提高。
 
@@ -77,7 +77,7 @@ SFT 正文概括为约 1M 样本，**Table 5 更精确地列出总计 1.45M**。
 
 预训练 Table 3 的字幕生成使用 CIDEr，VQA 使用准确率，输出为 greedy decoding；不同 shot 数应逐行比较。MM1-30B 的 0 / 8 / 16-shot VQAv2 为 **48.9 / 70.9 / 71.9**，COCO CIDEr 为 **70.3 / 123.1 / 125.3**。16-shot TextVQA 50.6、VizWiz 57.9、OKVQA 59.3。部分基线“0-shot”仍有两条纯文本 demonstration，而 MM1 没有；IDEFICS 含 COCO 相关训练数据，原表脚注必须保留。
 
-![Table 4：SFT主结果，PDF第14页](figures/original-page-014-03.png)
+![原文 Table 4](figures/original-p014-table-4.png)
 
 **Table 4，PDF 第 14 页。** MMMU 两列为 val / test；SEED 两列为全 benchmark / 图像子集。以下是 dense Chat 的关键数字：
 
@@ -90,7 +90,7 @@ SFT 正文概括为约 1M 样本，**Table 5 更精确地列出总计 1.45M**。
 
 30B 在 TextVQA、MMBench 较强，但 MMMU、MathVista 与 MM-Vet 未超过该表 LLaVA-NeXT-34B；GPT-4V 的 MMMU 56.8 / 55.7 和 MM-Vet 67.6 也明显更高。7B-MoE 的 MMMU 40.6 / 37.7、MathVista 39.1、MM-Vet 47.0 优于同系 dense；3B-MoE 的 MM-Vet 42.2 却低于 dense 43.7，因此 MoE 不是每项都改善。
 
-![Figure 7：高分辨率与预训练量消融，PDF第15页](figures/original-page-015-04.png)
+![原文 Figure 7](figures/original-p015-figure-7.png)
 
 **Figure 7，PDF 第 15 页。** 左侧是全局与四个局部视图，中央显示分辨率提升至 1344 像素后再加大并未继续改善；右侧随预训练步数增加，SFT 综合指标上升。其综合量是各任务除以基线后取平均，不能当作原始准确率。正文给出 336→1344 约 15% 相对提升。
 

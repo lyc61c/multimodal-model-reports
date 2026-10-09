@@ -23,7 +23,7 @@
 
 ## 3. 整体架构
 
-![Figure 4，高分辨率输入流程，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 4](figures/original-p005-figure-4.png)
 
 **读图：Figure 4，PDF 第 5 页。** 上路把整图缩到固定尺寸，提供版面和场景总体信息；下路保留比例、缩放与补边后分块，各块经过同一 ViT。局部特征重新拼成大二维特征图，再合并 token 和逐行展开。右侧红色换行标记提供二维边界，灰色分隔标记区分全局和局部视图。
 
@@ -65,7 +65,9 @@ InfoVQA 有一半图像长边超过 2000 像素，说明简单缩图容易损失
 
 ## 7. 实验设置与主要结果
 
-![Table 3、Table 4，主评测，PDF 第 7 页](figures/original-page-007-02.png)
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 **读图：Table 3/Table 4，PDF 第 7 页。** 共 16 个基准，主要使用 OpenCompass VLMEvalKit。每个“Previous SOTA”来自不同模型及尺度，不能把这行理解为单一对手。Table 4 将 MME 感知与认知分开；这些分数不是百分比准确率。
 
@@ -83,13 +85,21 @@ InfoVQA 有一半图像长边超过 2000 像素，说明简单缩图容易损失
 
 OCRBench 这里沿用原表的 67.5 数值口径，不写成 1000 分量表的原始计分。Table 3 中 MME 总分为 **2204.9**；Table 4 分项为 **1655.9/548.9**，小数加总存在舍入差异，本文分别引用，不重新校正。原文称超过或匹敌两款闭源 API 的若干基准，实际表中也有明显落后项，因此不是全部能力提升。
 
-![Figure 5 与 Table 5、Table 6，分辨率研究，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
 
 **读图：Figure 5/Table 5/Table 6，PDF 第 8 页。** 主表的 DocVQA、InfoVQA 为 test；分辨率研究使用 DocVQA/InfoVQA/TextVQA 的 **val**、ChartQA/AI2D 的 test、MMBench EN-test 和 SEED 的 **2K 子集**。例如主表 DocVQA 90.0 与消融 89.0 不能视为矛盾或随意拼接。
 
 训练分辨率从 HD-9 升至 HD-16，InfoVQA val **50.5→60.8**，增 **10.3 个百分点**；论文行文写约 +10.2，与表值舍入略有出入。固定 HD-9 训练，仅推理换 HD-16，InfoVQA **50.5→58.6**；但 ChartQA **78.2→75.8**。HD-25 训练后推理换 HD-30，DocVQA **87.0→87.4**、InfoVQA **63.6→64.6**，ChartQA 却 **80.3→79.4**。这些结果说明清晰文字可受益，图表结构和其他任务并不必然受益。
 
-![Table 7、Table 8、Table 9，结构与压缩消融，PDF 第 9 页](figures/original-page-009-04.png)
+![原文 Table 7](figures/original-p009-table-7.png)
+
+![原文 Table 8](figures/original-p009-table-8.png)
+
+![原文 Table 9](figures/original-p009-table-9.png)
 
 **读图：Table 7–9，PDF 第 9 页。** HD-9 去掉全局视图，MMBench **79.5→75.1**、MME **2201→2019**；说明局部块难独自提供稳定全局理解。4KHD 加换行标记后 DocVQA val **88.1→89.0**、InfoVQA val **67.4→69.3**、TextVQA **75.9→77.2**，但 MME **2232→2205**，并非全指标变好。相同压缩率下 Concat 与 C-Abstractor 接近：InfoVQA **69.3 对 69.5**；Re-Sampler 为 **67.1**。简单拼接是一种有效选择，表格不支持它全面优于所有连接器。
 

@@ -36,11 +36,27 @@
     "coaching versus highleveltraining separate",
     "latency module configurations separate",
     "plot values not fabricated",
-    "training hyperparams absent not inferred"
+    "training hyperparams absent not inferred",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "no robot deployment/reproduction/independent peer review",
     "dataset size and learningrecipe incompletely disclosed",
     "unseen tasks may share related skill fragments"
-  ]
+  ],
+  "article_sha256": "7b41f98068c13b9883a72554d5480d0d109d688898ad6ddc6460c3bb6e8cb31c",
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

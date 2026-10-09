@@ -24,7 +24,7 @@
 
 ## 3. 整体架构
 
-![Figure 2：整体架构与两阶段训练，PDF第4页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 **Figure 2，PDF 第 4 页。** 左侧图像经过 ViT、Visual Abstractor 后与文字 embedding 合并，进入由 MAM 和共享 FFN 构成的解码器。中间图明确 K、V 由两模态不同矩阵产生，Q 是共有矩阵；右侧火焰 / 雪花展示第一阶段训练视觉和新参数，第二阶段全模型训练。这里的“协作”来自专属映射后的共同注意力和 FFN，不是对两个模型回答投票。
 
@@ -65,7 +65,9 @@ Abstractor 将语言解码器注意力长度从 $P+L$ 变成 $K+L$，其平方�
 
 预训练从 CC3M/CC12M、COCO、Laion-en、COYO、DataComp 等公共图文数据随机选取约 **400M 对**。实际 42500 steps×8192 batch 约为 348M 对，两者分别是候选集合和训练消耗；不混写成 400M 全部训练一次。图像用随机 resized crop、0.5 概率水平翻转。
 
-![Tables 14、15：指令数据与超参，PDF第17页](figures/original-page-017-04.png)
+![原文 Table 14](figures/original-p017-table-14.png)
+
+![原文 Table 15](figures/original-p017-table-15.png)
 
 **Table 14、15，PDF 第 17 页。** 上表分文本、对话、caption、VQA 和区域 VQA，总计 **1.23M**。ShareGPT 为 40K、SlimOrca 518K、LLaVA 158K，COCO / TextCaps 82K / 22K；VQAv2 83K、GQA 72K、OKVQA 9K、OCRVQA 80K、A-OKVQA 50K；RefCOCO 30K、VisualGenome 86K。正文提到 ShareGPT-80K，但最终表列 40K，本介绍按表记录最终混合量，不自行解释删减过程。
 
@@ -83,7 +85,9 @@ VQAv2 选最高置信答案，把同图问答组合；GQA、OKVQA、OCRVQA 也�
 
 ## 7. 实验设置与主要结果
 
-![Tables 1、2：图像任务主结果，PDF第5页](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
+
+![原文 Table 2](figures/original-p005-table-2.png)
 
 **Table 1、2，PDF 第 5 页。** Caption 报告 CIDEr，VQA 是各数据集得分；灰字 specialist 单独针对任务调优，不能与统一模型直接作同训练条件比较。Table 1 的 Owl2：COCO / Flickr30K 为 **137.3 / 85.1**，VQAv2 79.4、OKVQA 57.7、GQA 56.1、VizWiz 54.5、ScienceQA-IMG 68.7。TextVQA 无 OCR 为 **54.3**，加 OCR 为 **58.2**。前者高于 LLaVA-1.5 无 OCR 的 46.1，但 GQA 低于其 62.0，也低于 Qwen-VL-Chat 的 57.5。
 
@@ -91,7 +95,13 @@ Table 2 使用 MMBench 和 Q-Bench test：MME **1450.19**、MMBench **64.5**、M
 
 纯文本 Table 3 采用 MMLU 5-shot，BBH、AGIEval、ARC 为 0-shot。Owl2 的 **MMLU 53.4、BBH 45.0、AGIEval 32.7、ARC-c 65.8、ARC-e 79.9**，同表 Vicuna-v1.5 为 51.1 / 41.2 / 21.2 / 56.6 / 72.8。它说明最终模型保留且改善部分文字任务，但模型间指令数据并未完全统一。
 
-![Figure 3、Tables 5—7：协作与训练消融，PDF第7页](figures/original-page-007-03.png)
+![原文 Figure 3](figures/original-p007-figure-3.png)
+
+![原文 Table 5](figures/original-p007-table-5.png)
+
+![原文 Table 6](figures/original-p007-table-6.png)
+
+![原文 Table 7](figures/original-p007-table-7.png)
 
 **Figure 3、Table 5—7，PDF 第 7 页。** Table 5 在混合指令数据下加入 MAM，使 VQAv2 **76.2→76.8**、MMLU **51.6→52.8**、BBH **43.2→45.0**，但这组 MMLU 52.8 与主表 53.4 不同，应逐表报告。只有视觉指令、无 MAM 时 MMLU / BBH 为 45.4 / 25.7，说明语言能力下降不能只靠图像任务平均掩盖。
 

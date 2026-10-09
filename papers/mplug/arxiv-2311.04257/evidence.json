@@ -10,5 +10,10 @@
     "核对两阶段冻结、AdamW、step/batch/lr/bf16/并行；正文layerwise0.9与表15为0差异保留。",
     "结果按split和OCR条件区分，video exact/GPT双口径，MSRVTT低于VideoChatGPT、MME/SEED与GQA弱项、queries128非全优、Figure5彩虹漏red含white不直接采信；未运行模型。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

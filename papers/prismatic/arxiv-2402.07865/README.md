@@ -20,7 +20,7 @@ Prismatic 主要回答“哪些设计选择真正影响 VLM 表现”，而非�
 
 ## 3. 整体架构
 
-![原文 Figure 2：架构与四个设计轴，PDF 第 2 页](figures/original-page-002-01.png)
+![原文 Figure 2](figures/original-p002-figure-2.png)
 
 **读图：**图像经过视觉表示和投影后作为语言模型的输入前缀。四个彩色区域对应优化流程、视觉输入、语言骨干和训练规模；右侧代码示例强调组件可以替换。
 
@@ -64,13 +64,13 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![原文 Figure 9：PRISM 最终比较，PDF 第 9 页](figures/original-page-009-02.png)
+![原文 Figure 9](figures/original-p009-figure-9.png)
 
 **读图：**虚线 Controlled 和完整 PRISM 不能混作同一配置。Figure 9 的 7B 雷达图一些标签来自 Controlled、一些来自完整模型；精确数值以下以附录对应模型行为准。
 
 评测使用贪心解码和各模型适配的触发提示。VQA 使用官方准确率；RefCOCO/+/g 用框 IoU≥0.5，OCID-Ref 用 IoU≥0.25。POPE 在本文为选择题准确率，不是其他论文常见的 F1。主体 TextVQA 不输入外部 OCR，附录额外列出 TextVQA+OCR。
 
-![原文 Table 2：完整 VQA 结果，PDF 第 20 页](figures/original-page-020-03.png)
+![原文 Table 2](figures/original-p020-table-2.png)
 
 | 指标 | LLaVA-1.5 7B | PRISM-DINOSigLIP 7B Controlled | 完整 7B | 完整 13B |
 |---|---:|---:|---:|---:|
@@ -82,7 +82,7 @@ $$
 
 完整 7B 在 VizWiz 低于 LLaVA-1.5 7B；完整版本也低于 Controlled。视觉融合并非每列都提升：DINOv2＋CLIP 的 TextVQA 无 OCR 仅 15.67，低于对应单 CLIP 的 49.66。
 
-![原文 Table 3：完整定位结果，PDF 第 21 页](figures/original-page-021-04.png)
+![原文 Table 3](figures/original-p021-table-3.png)
 
 PRISM-DINOSigLIP 完整 7B 的 RefCOCO/+/g/OCID-Ref 为 **77.78/73.08/71.04/54.12**，Controlled 7B 为 **73.62/67.85/66.34/50.56**；LLaVA-1.5 7B 为 **55.12/49.47/50.92/35.07**。附录 Table 4 中完整 13B 的 VSR/POPE/TallyQA 为 **72.18/88.07/70.41**，LLaVA-1.5 13B 为 **69.07/87.10/64.83**。
 

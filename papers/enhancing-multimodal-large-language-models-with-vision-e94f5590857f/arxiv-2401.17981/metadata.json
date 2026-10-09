@@ -10,5 +10,7 @@
   "document_kind": "analysis_paper",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "检测与 OCR 增强多模态模型：三种融合策略的实证比较"
+  "title_zh": "检测与 OCR 增强多模态模型：三种融合策略的实证比较",
+  "chinese_characters": 2506,
+  "figure_revision_date": "2026-10-09"
 }

@@ -24,7 +24,7 @@
 
 ## 3. 整体架构
 
-![Figure 2：MovieChat记忆链路，PDF第3页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **Figure 2，PDF 第 3 页。** 从左下的视频开始看：滑动窗口逐批提取视觉 token，进入固定长度 Short-Term Memory；旧表示推出时进入 Memory Consolidation，合并相似相邻内容并写到 Long-Term Memory。右侧长期记忆及当前记忆按模式组成表示，经位置编码扩展和投影供 LLM 回答。
 
@@ -62,7 +62,7 @@ $N$ 为每帧 token 数，$j$ 为对应 token 位置。Algorithm 1 重复寻找�
 
 MovieChat v1 的公开技术主体是记忆推理机制，没有完整的新增训练 recipe：未给出训练集构建、冻结参数表、投影层训练步数、学习率、batch、优化器或训练损失。视觉编码器和 Q-Former 使用预训练组件，可以确认；是否重新调优各模块和怎样对齐语言主干则未充分说明。
 
-![Table 2：默认推理参数，PDF第12页](figures/original-page-012-04.png)
+![原文 Table 2](figures/original-p012-table-2.png)
 
 **Table 2，PDF 第 12 页。** 三行仅给窗口、短期容量和压缩容量，属于推理配置；上半页说明问答评估，不是训练目标。不能把 cosine similarity 合并写成需要反向传播优化的损失，Algorithm 1 是按相似度选择合并的程序。
 
@@ -70,7 +70,7 @@ MovieChat v1 的公开技术主体是记忆推理机制，没有完整的新增�
 
 ## 7. 实验设置与主要结果
 
-![Table 1：短视频问答量化结果，PDF第6页](figures/original-page-006-03.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 **Table 1，PDF 第 6 页。** 每个数据集有 Accuracy 与 Score 两列；后一列为 0—5 的回答相似评分，不能混为百分制正确率。
 
@@ -87,7 +87,9 @@ MovieChat 相对 Video-ChatGPT 在 ActivityNet-QA 增加 16.3 个百分点，但
 
 Figure 1 报告视觉推理显存随帧数增长：MovieChat 平均增量约 **21.3KB/frame**，Video-ChatGPT 为 25.6MB/frame，Video-LLaMA 187MB/frame，VideoChat 227MB/frame。图中“约 10000×”主要对应约 200MB 的比较对象，而非对所有模型相同倍率，也不是整个模型总显存减少 10000 倍。24GB 显卡处理超过 10K 帧说明资源可扩展，不提供实际扫描速度、完整问答时延或长片正确率。
 
-![Figures 3、4：局部与全局长视频案例，PDF第5页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
+
+![原文 Figure 4](figures/original-p005-figure-4.png)
 
 **Figure 3、4，PDF 第 5 页。** 紫色位置标记对应 Breakpoint 问题，下面的第三问要求整体概述。输出能提到人物和场景，也有宽泛、重复及未经独立标注验证的细节。两组案例展示交互形式，不能作为标准长视频 benchmark。
 

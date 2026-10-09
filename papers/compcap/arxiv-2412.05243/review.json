@@ -6,18 +6,31 @@
     "Viewed four full original pages and verified labels/content",
     "Verified all selected Table 2 model columns",
     "Disclosed baseline/data inconsistency and limited claims",
-    "Seven section structure; no model execution claimed"
+    "Seven section structure; no model execution claimed",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 6,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "18baf0262f03982b1af8a063857a6dc77f39c7e1a554d493874d6a88a6eb6210",
+  "article_sha256": "b6f79e6affbc80d50819abf58bcf8ed96c2af500d2d5360eae2dae8f659bbfd6",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 32）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 33）：Figure 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 34）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 35）：Figure 6, Figure 5, Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
 }

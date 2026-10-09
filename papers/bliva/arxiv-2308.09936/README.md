@@ -31,9 +31,9 @@ BLIVA 的问题意识很具体：一个语言模型可能知道路牌、广告�
 
 ## 3. 整体架构
 
-![原文 Figure 2：BLIVA 双视觉通路，PDF 第 3 页完整截图](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
-*原文 Figure 2，PDF 第 3 页，完整页面截图。右边的视觉编码器输出一份 patch 特征：一份直接上行到 Projection，另一份送入 Q-Former；左边放大图表示指令与 queries 先在自注意力中交互，再由 queries 通过交叉注意力读取视觉特征。两条上行路径最后进入同一个 LLM。*
+*原文 Figure 2，PDF 第 3 页，图表区域裁切。右边的视觉编码器输出一份 patch 特征：一份直接上行到 Projection，另一份送入 Q-Former；左边放大图表示指令与 queries 先在自注意力中交互，再由 queries 通过交叉注意力读取视觉特征。两条上行路径最后进入同一个 LLM。*
 
 图像首先交给 EVA-CLIP 的 ViT-G/14。作者不使用最后一层视觉输出，而选择倒数第二层特征，理由是实验中略好；视觉编码器从预训练权重初始化并全程冻结。第一条分支沿用 InstructBLIP：用户问题作为 Q-Former 的文本输入，与可学习 queries 交互；queries 再读取 patch 序列，输出与指令相关的视觉表示，经投影匹配语言模型维度。问“路牌写了什么”与问“附近有什么建筑”，应引导同一幅图像产生不同关注点。
 
@@ -79,7 +79,9 @@ X_{\mathrm{LLM}}=[\operatorname{Embed}(s);Z_q;Z_p].
 
 附录展示了真实图像处理代码。训练时 RandomResizedCrop 输出 224×224，裁剪比例为 0.5–1.0，使用 bicubic 插值并随机水平翻转，然后转张量和归一化；评测时直接 bicubic resize 至 224×224。归一化均值为 (0.48145466, 0.4578275, 0.40821073)，标准差为 (0.26862954, 0.26130258, 0.27577711)。这不是任意高分辨率 OCR 系统，文本过小、裁剪遗漏或变形都可能限制可读性，作者也以缩小后的字符难以辨认解释 DocVQA 的弱结果。[来源：原文 Datasets、Appendix Data Pre-processing，PDF 第 4、10 页。](https://arxiv.org/pdf/2308.09936v1)
 
-![原文 Figure 4 与 Table 1：缩略图场景和 OCR-free 结果，PDF 第 5 页完整截图](figures/original-page-005-02.png)
+![原文 Figure 4](figures/original-p005-figure-4.png)
+
+![原文 Table 1](figures/original-p005-table-1.png)
 
 *原文 Figure 4 与 Table 1，PDF 第 5 页。上半部分是 YTTB-VQA 缩略图的长描述、短描述和问答示例；下半部分是不用 OCR tokens 的四个文本图像基准。示例中的正确回答不能替代下方的定量实验。*
 
@@ -110,7 +112,13 @@ YTTB-VQA 是另行构建的**评测集**：100 组 YouTube 缩略图问答，覆
 
 主要收益集中在 OCR-VQA，而不是所有文本图像任务都有类似幅度。ST-VQA 的 LLaVAR 为 30.2，仍高于 BLIVA 29.08；DocVQA 的绝对分数很低。对于一般任务，Table 2 的本地 baseline 与 BLIVA 比较为：VSR 58.67→62.2，IconQA 44.34→44.88，含 OCR tokens 的 TextVQA 37.58→57.96，Visual Dialog MRR 40.58→45.63，Flickr30K CIDEr 84.61→87.1，Hateful Memes AUC 50.6→55.6，MSRVTT 20.97→23.81；VizWiz 则 44.10→42.9，下降。FlanT5-XXL 的结果也有明显反例：Visual Dialog 48.5→36.18、Hateful Memes 53.6→50.0，因此不能将 Vicuna 的整体趋势直接推广到另一个骨干。
 
-![原文 Table 3–6：另一个语言骨干、消融与缩略图评测，PDF 第 7 页完整截图](figures/original-page-007-03.png)
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
+
+![原文 Table 5](figures/original-p007-table-5.png)
+
+![原文 Table 6](figures/original-p007-table-6.png)
 
 *PDF 第 7 页完整截图，包含 Table 3–6。Table 4–5 的勾选是逐步增加 patch 分支、预训练和 LLM LoRA；每一行的参照应是同一表中的相邻配置，而不是直接套用 Table 1 的公开模型分数。*
 

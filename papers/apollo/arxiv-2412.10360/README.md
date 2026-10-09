@@ -28,7 +28,7 @@ Apollo 不只是公布一个视频助手，而是先做系列受控实验，再�
 
 ## 3. 整体架构
 
-![Figure 8：Apollo共享图片与视频的双编码器架构](figures/original-page-021-03.png)
+![原文 Figure 8](figures/original-p021-figure-8.png)
 
 *来源：原文 Figure 8，PDF第21页，[原页](https://arxiv.org/pdf/2412.10360v1#page=21)。从底部沿箭头读：clip→两种编码器→空间插值与通道拼接→Perceiver→语言模型；右侧单图复制为clip。*
 
@@ -66,7 +66,9 @@ Scaling Consistency通过不同配置的成绩相关性来判断设计可迁移�
 
 对齐阶段198K，为图片/视频描述50:50；视觉预训练396K，全部视频描述；SFT共3.2M，多模态指令混合。最终Figure 7的模态比例为图片33.0%、多图16.6%、文字14.4%、视频36.0%。它是样本构成，不等于各模态token数或训练算力份额。视频annotation包含对话、推理、时间感知、第一视角和OCR，长短视频分布也不均匀，不能由“支持小时视频”推断训练主要是小时片段。[原文 §6、C.3](https://arxiv.org/pdf/2412.10360v1#page=26)
 
-![Table 3/Figure 6：冻结策略和文字/图片/多图/视频配比实验](figures/original-page-011-01.png)
+![原文 Table 3](figures/original-p011-table-3.png)
+
+![原文 Figure 6](figures/original-p011-figure-6.png)
 
 *来源：原文Table 3、Figure 6，PDF第11页，[原页](https://arxiv.org/pdf/2412.10360v1#page=11)。雪花代表冻结、火焰代表训练；下图各饼图是不同数据混合，纵轴是平均成绩，不是样本规模。*
 
@@ -76,7 +78,7 @@ ApolloBench不是新增训练指令。它从现有选择题集合出发，分别
 
 ## 6. 训练流程与目标
 
-![Table 7：Apollo三阶段的真实训练超参与冻结配置](figures/original-page-026-04.png)
+![原文 Table 7](figures/original-p026-table-7.png)
 
 *来源：原文Table 7，PDF第26页，[原页](https://arxiv.org/pdf/2412.10360v1#page=26)。三大列对应对齐、视觉预训练、SFT，每一大列再分模型大小；“—”表示该模块此阶段不训练。*
 
@@ -94,7 +96,7 @@ ApolloBench不是新增训练指令。它从现有选择题集合出发，分别
 
 ## 7. 实验设置与主要结果
 
-![Table 4：Apollo模型族在常见视频基准和ApolloBench的结果](figures/original-page-013-02.png)
+![原文 Table 4](figures/original-p013-table-4.png)
 
 *来源：原文Table 4，PDF第13页，[原页](https://arxiv.org/pdf/2412.10360v1#page=13)。Video-MME两数依次无/有字幕；所有“—”是未报告，不能当零。模型组划分反映作者当时的资源分类。*
 

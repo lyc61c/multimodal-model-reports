@@ -1,1 +1,46 @@
-{"catalogue_entry_id":"9e3cb917f6e0","source_version":"2506.13654v1","read_scope":"22页全文及附录A–D、完整生成与训练提示","facts":[{"claim":"3B代理+H-RAG/Video-LLM/VLM及外部模型","location":"§3、§6.1、附录A/B"},{"claim":"25K轨迹、4.4KQA、2.9K种子与300QA基准","location":"§4.2、§6.1"},{"claim":"SFT+多轮RL机制及原文GRPO命名问题","location":"§5、Figure3、原RL公式"},{"claim":"主结果及训练/工具消融","location":"Tables2–4"}],"math":[{"type":"original_mechanism","content":"CoTT式1与组内奖励优势、裁剪、KL机制；未添加梯度方差项"},{"type":"standard_explanation","content":"政策-工具观察形式与SFT语言损失，明确非完整masking配置"}],"boundaries":["3B仅调度模型，不包含闭源工具/summary model","一周日历跨度vs44.3h均值","预算与本地GPU数不包含API及建库成本","GRPO原文误展开但按公式说明","VideoMME无字幕仍有ASR日志","25K轨迹不是独立QA数"]}
+{
+  "catalogue_entry_id": "9e3cb917f6e0",
+  "source_version": "2506.13654v1",
+  "read_scope": "22页全文及附录A–D、完整生成与训练提示",
+  "facts": [
+    {
+      "claim": "3B代理+H-RAG/Video-LLM/VLM及外部模型",
+      "location": "§3、§6.1、附录A/B"
+    },
+    {
+      "claim": "25K轨迹、4.4KQA、2.9K种子与300QA基准",
+      "location": "§4.2、§6.1"
+    },
+    {
+      "claim": "SFT+多轮RL机制及原文GRPO命名问题",
+      "location": "§5、Figure3、原RL公式"
+    },
+    {
+      "claim": "主结果及训练/工具消融",
+      "location": "Tables2–4"
+    }
+  ],
+  "math": [
+    {
+      "type": "original_mechanism",
+      "content": "CoTT式1与组内奖励优势、裁剪、KL机制；未添加梯度方差项"
+    },
+    {
+      "type": "standard_explanation",
+      "content": "政策-工具观察形式与SFT语言损失，明确非完整masking配置"
+    }
+  ],
+  "boundaries": [
+    "3B仅调度模型，不包含闭源工具/summary model",
+    "一周日历跨度vs44.3h均值",
+    "预算与本地GPU数不包含API及建库成本",
+    "GRPO原文误展开但按公式说明",
+    "VideoMME无字幕仍有ASR日志",
+    "25K轨迹不是独立QA数"
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
+}

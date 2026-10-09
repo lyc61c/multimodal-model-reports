@@ -38,5 +38,10 @@
     "Eq2当前token输入符号不清楚，按standard y<t解释",
     "摘要KIE平均2.8与比较来源未明确，正文不用不可核对汇总"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

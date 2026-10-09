@@ -23,7 +23,7 @@ Flash 的九项指标平均分例如 8B 为 79.8，对应非压缩模型 80.2。
 
 ## 3. 整体架构
 
-![Figure 2：动态分块、ViT—MLP—LLM，以及 Flash 的分辨率路由](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 *原文 Figure 2，PDF 第 3 页，完整原页。左边依宽高比切分 448×448 子图，右边比较固定压缩与根据语义选择压缩率的 connector。*
 
@@ -118,7 +118,7 @@ ViCO 一致性阶段复用 SFT 类型数据，路由训练采用富含 OCR/VQA �
 
 ## 7. 实验设置与主要结果
 
-![Table 2：旗舰模型在一般、推理、文本和 agentic 任务上的对照](figures/original-page-009-02.png)
+![原文 Table 2](figures/original-p009-table-2.png)
 
 *原文 Table 2，PDF 第 9 页，完整原页。星号表示作者通过 VLMEvalKit 复测，其他符号标记外部报告或 OpenCompass 来源；不同大类 Overall 的组成不同。*
 
@@ -136,7 +136,9 @@ ViCO 一致性阶段复用 SFT 类型数据，路由训练采用富含 OCR/VQA �
 
 Figure 1 的跨领域集合平均为旗舰 72.6、GPT-5 76.5；它不同于表 2 的一般大类 74.1/74.0。Table 3 的七项推理均分为旗舰 66.9，加入 Parallel Thinking 后 68.7；不能与包含八项的 Table 2 推理均分 67.1 混用。GPT-5 在 Table 3 的 MMMU 为 81.8，而表 2 为 84.2，原文未完全统一两处来源口径，本介绍按所在表引用。
 
-![Tables 15、16：逐阶段推理成绩与 GPU 小时对照](figures/original-page-023-03.png)
+![原文 Table 15](figures/original-p023-table-15.png)
+
+![原文 Table 16](figures/original-p023-table-16.png)
 
 *原文 Tables 15、16，PDF 第 23 页，完整原页。上表包含每个阶段的全部结果，下表区分一轮、两轮 GSPO；累计训练成本需要与对应成绩一起读取。*
 
@@ -144,7 +146,9 @@ Figure 1 的跨领域集合平均为旗舰 72.6、GPT-5 76.5；它不同于表 2
 
 感知与代理能力仍有实质限制。Table 4 的 8B OCR/文档类平均由前代 81.3 变为 80.9；Table 9 的 38B 视频均分由 71.7 变为 71.0。视频测试除 MVBench 固定 16 帧外，其他基准分别试 16/32/48/64 帧并报告最高结果。GUI 中 OSWorld-G 是 grounding 评测，53.2 不能当成完整 OSWorld 在线任务成功率；WindowsAgentArena 18.0、WebArena-Lite-v2 11.7 才属于表 10 的在线代理结果。具身四项主要检验空间理解和问题回答，没有真实机器人操作成功率可引用。
 
-![Tables 17、18：Flash 保真与不同分辨率的部署吞吐](figures/original-page-024-04.png)
+![原文 Table 17](figures/original-p024-table-17.png)
+
+![原文 Table 18](figures/original-p024-table-18.png)
 
 *原文 Tables 17、18，PDF 第 24 页，完整原页。表 17 有小幅精度下降，表 18 单位为 requests/s；图注只明确语言侧均在 8 张 A100 上部署。*
 

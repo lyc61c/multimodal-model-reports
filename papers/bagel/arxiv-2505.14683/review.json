@@ -1,1 +1,33 @@
-{"verdict":"complete_self_review","source_identity_verified":true,"source_version":"2505.14683v1","fact_check":"Checked architecture,data protocol,Table3 stages/units,Table4–7 values and Figure7 conditions.","math_check":"Distinguished MoT from FFN-only MoE;flow endpoint orientation is self-consistent and marked explanatory;hard routing and causal-mask exceptions retained.","image_check":"view_image inspected original pages4,10,13,17 with fullFigure2/Table3/Figure7/Tables5–6.","model_execution":"not_run","limitations":["Self-review","Emergence curves not isolated causal proof","LLM judges and prompt-rewriting conditions retained"]}
+{
+  "verdict": "complete_self_review",
+  "source_identity_verified": true,
+  "source_version": "2505.14683v1",
+  "fact_check": "Checked architecture,data protocol,Table3 stages/units,Table4–7 values and Figure7 conditions.",
+  "math_check": "Distinguished MoT from FFN-only MoE;flow endpoint orientation is self-consistent and marked explanatory;hard routing and causal-mask exceptions retained.",
+  "image_check": "view_image inspected original pages4,10,13,17 with fullFigure2/Table3/Figure7/Tables5–6.",
+  "model_execution": "not_run",
+  "limitations": [
+    "Self-review",
+    "Emergence curves not isolated causal proof",
+    "LLM judges and prompt-rewriting conditions retained"
+  ],
+  "article_sha256": "9b3ed60c36acdedfa3da2fc214237ce59607a1958ea3ffea43cb5427edb7c22f",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 8）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 9）：Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 10）：Figure 7 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 11）：Table 5, Table 6 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
+}

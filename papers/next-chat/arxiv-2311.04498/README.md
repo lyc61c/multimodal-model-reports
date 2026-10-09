@@ -18,7 +18,7 @@
 
 ## 3. 整体架构
 
-![原文 PDF 第 3 页：Figure 2，NExT-Chat 框架及框解码](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **Figure 2，PDF 第 3 页** 左边图像由 image encoder 编码，输入区域由 box encoder 编码；语言模型根据图片、区域和问题生成文字。当它输出 `<trigger>`，该位置的隐藏状态送入 box decoder 与 mask decoder。读图时应区分蓝色的区域接口和红色视觉/语言主干，位置不是由输出文本中的数字再用正则表达式解析。
 
@@ -54,7 +54,9 @@ b=F(t),\qquad b=[x_0,y_0,x_1,y_1]\in\mathbb R^4.
 
 第一项检查“框→嵌入→框”，第二项检查“嵌入→框→嵌入”。两条路径把编码和解码绑定起来，减少两种接口各自漂移。它是位置表示的循环约束，不是图像重建，也不能证明所有语言语义经四维框都可无损保留。
 
-![原文 PDF 第 4 页：Table 1，位置表示成本；Figure 3，循环损失](figures/original-page-004-02.png)
+![原文 Table 1](figures/original-p004-table-1.png)
+
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **Figure 3，PDF 第 4 页** 的上下两条闭环分别对应上述两项。**Table 1，同页** 区分新增词表规模和每个框占用 token：四坐标离散方案为 6 token/224 新词，两个点离散方案为 4 token/1024 新词，三位小数文本方案约 26 token/0 新词，pixel2emb 为 **2 token/2 新词**。这描述作者的表示设置，不代表所有 tokenizer 的数字坐标都固定占 26 token；新增词少也不等于整体模型没有额外参数。
 
@@ -89,7 +91,9 @@ IoU/Dice 约束掩码重叠，Focal 调整像素分类贡献。这里使用原�
 
 ## 7. 实验设置与主要结果
 
-![原文 PDF 第 5 页：Table 2–3，受控定位输出与输入比较](figures/original-page-005-03.png)
+![原文 Table 2](figures/original-p005-table-2.png)
+
+![原文 Table 3](figures/original-p005-table-3.png)
 
 **Table 2–3，PDF 第 5 页** 在架构、数据、batch、学习率、训练计划等保持一致的前提下比较表征。定位输出中，pixel2emb 在 RefCOCO **val/testA/testB 为 79.4/84.3/73.8**，RefCOCO+ 为 **69.5/76.9/58.8**，RefCOCOg 为 **val/test 69.7/70.9**，均高于这组离散/数字文本基线。
 
@@ -97,7 +101,9 @@ RefCOCO val 的数字文本方案为 **71.4**，因此差 **8.0 分**；Visual7W
 
 POPE 在 PDF 第 6 页 Table 4 中，NExT-Chat 的 random/popular/adversarial accuracy 为 **82.34/79.80/79.43**，F1 为 **80.80/78.19/78.27**。它低于 Shikra 的对应 accuracy **86.90/83.97/83.10**；popular 还低于 InstructBLIP **82.77**。因此正文“popular 与 adversarial 都第二”的叙述与表格不完全一致：popular 按该表是第三，adversarial 才是第二。较低的 yes 比例也不能单独作为更好指标，因为减少误报可能同时漏掉真实物体。
 
-![原文 PDF 第 8 页：Figure 4–5，指代分割和复杂定位](figures/original-page-008-04.png)
+![原文 Figure 4](figures/original-p008-figure-4.png)
+
+![原文 Figure 5](figures/original-p008-figure-5.png)
 
 **Figure 4，PDF 第 8 页** 用不同描述选择四只熊中的不同目标，并展示框与掩码；还包括滑板和天空。**Figure 5，同页** 根据用途定位球拍/遥控器，或根据已给船只的位置找另一只船。这些案例直观显示框输入、语言推理与多格式输出结合，但报告没有提供标准分割 mIoU 表，不能据图宣称分割质量超越 SAM/LISA 全部基准。
 

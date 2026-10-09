@@ -28,6 +28,11 @@
         "dpi": 300,
         "changes": [
           "Crop Figure/Table region; partial Figure 1 views explicitly labelled"
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
         ]
       },
       "used_in_sections": [
@@ -59,6 +64,11 @@
         "dpi": 400,
         "changes": [
           "Crop Figure/Table region; partial Figure 1 views explicitly labelled"
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
         ]
       },
       "used_in_sections": [
@@ -90,6 +100,11 @@
         "dpi": 400,
         "changes": [
           "Crop Figure/Table region; partial Figure 1 views explicitly labelled"
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
         ]
       },
       "used_in_sections": [
@@ -121,6 +136,11 @@
         "dpi": 300,
         "changes": [
           "Crop Figure/Table region; partial Figure 1 views explicitly labelled"
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
         ]
       },
       "used_in_sections": [
@@ -152,6 +172,11 @@
         "dpi": 300,
         "changes": [
           "Crop Figure/Table region; partial Figure 1 views explicitly labelled"
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
         ]
       },
       "used_in_sections": [
@@ -183,6 +208,11 @@
         "dpi": 300,
         "changes": [
           "Crop Figure/Table region; partial Figure 1 views explicitly labelled"
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
         ]
       },
       "used_in_sections": [
@@ -214,6 +244,11 @@
         "dpi": 300,
         "changes": [
           "Crop Figure/Table region; partial Figure 1 views explicitly labelled"
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
         ]
       },
       "used_in_sections": [

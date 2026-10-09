@@ -15,7 +15,7 @@
 
 ## 3. 整体架构
 
-![Figure 2：LLMGA 的训练与推理架构，原文 PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 原文 Figure 2 将过程分为语言助手训练与扩散模型适配。用户文本以及可选参考图进入 LLaVA；CLIP 视觉编码器提取图像特征，投影层将其映射到语言模型的输入空间。输出同时包含普通回答和供生成器使用的提示，后者由专门的起止标记包围。正文与图例对标记的拼写存在差异，因此这里以其功能说明接口，不把某一种拼写当作全文统一规范。
 
@@ -66,7 +66,9 @@ DiffRIR 使用 DIV2K 与 Flickr2K，沿用 DiffIR 退化，加入上述颜色变
 
 ## 7. 实验设置与主要结果
 
-![Figure 3 和 Table 1：文生图示例与结果，原文 PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
+
+![原文 Table 1](figures/original-p005-table-1.png)
 
 Table 1 在 COCO 子集比较 FID、IS 和 CLIP-I。FID 越低越好，后两者越高越好；这里的 CLIP-I 衡量生成图与参考图的图像内容相似度，并非提示文本匹配分数。原文没有给出子集样本数。
 
@@ -81,13 +83,19 @@ Table 1 在 COCO 子集比较 FID、IS 和 CLIP-I。FID 越低越好，后两者
 
 只把 7B 助手的长提示交给原始 SD，CLIP-I 提升，但 FID 从 142.86 变为 147.13，反而下降。适配扩散模型后才同时改善这些指标。Figure 3 给出视觉例子，可用于理解细节表达，不是大规模用户偏好实验。
 
-![Table 2、Figure 5 与 Table 3：图像编辑和修复结果，原文 PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Figure 5](figures/original-p007-figure-5.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 2](figures/original-p007-table-2.png)
 
 Table 2 将 Places 编辑分为扩图/重绘以及窄/宽掩码，不能跨列比较。7B 微调配置的扩图窄掩码 FID/LPIPS/CLIP-I 为 **50.96/0.3059/89.72**，原始 SD 为 **55.34/0.3146/87.39**；宽掩码对应 **70.93/0.4307/44.23**，对照 **79.59/0.4460/42.96**。重绘窄掩码为 **12.63/0.0453/98.87**，宽掩码为 **32.53/0.1245/96.30**。Table 2 最后一条 13B 行标签未写“-ft”，与周围配置表达不完全一致；这里用清楚标出的 7B 微调行作为主要比较。
 
 Table 3 在窄掩码扩图上逐步增加修复：不修复 FID/LPIPS **50.96/0.3059**；DiffIR **46.10/0.2247**；加入参考区域的 DiffRIR **44.87/0.2217**；再加入颜色退化 **43.90/0.2209**。这支持两个修复设计的作用。Figure 5 的接缝与纹理例子解释了改进方向，但不能证明修复总能保持所有原始内容。
 
-![Table 4 与 Figure 6：数据消融和多轮生成，原文 PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Table 4](figures/original-p008-table-4.png)
+
+![原文 Figure 6](figures/original-p008-figure-6.png)
 
 Table 4 是将某一类数据降到 **10%**，不是完全移除。完整数据的文生图 CLIP-I 为 72.26；降低提示优化数据后为 70.86，降低问答数据后为 71.88。降低编辑数据使宽掩码扩图 CLIP-I 从 44.23 降至 43.95。各类数据的作用不同，且一些差值较小，原文未给出重复运行方差。
 

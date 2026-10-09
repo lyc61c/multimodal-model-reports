@@ -32,7 +32,7 @@ CogVLM 希望解决输入端对齐的局限：仅把图像特征投影到词嵌�
 
 ## 3. 整体架构
 
-![原文 Figure 3，PDF 第 4 页：输入适配与每层视觉专家](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **读图：**左图视觉特征经MLP与文字嵌入拼接，图像特征共享同一个语言位置ID；右图紫色QKV和FFN属于可训练视觉专家，白色分支为原语言模型参数。注意力操作仍将两类特征放在同一序列，专家不是各自孤立的两个解码器。
 
@@ -86,7 +86,9 @@ Grounding版本继续使用Flickr30K Entities、RefCOCO系列、Visual7W、Visua
 
 ## 6. 训练流程与目标
 
-![原文 Tables 7–8，PDF 第 15 页：预训练与多任务微调参数](figures/original-page-015-04.png)
+![原文 Table 7](figures/original-p015-table-7.png)
+
+![原文 Table 8](figures/original-p015-table-8.png)
 
 **读图：**Table7是两阶段预训练，Table8是多任务微调，不能把后者的10K步当成Chat SFT的8K步。分辨率由224平方提高至490平方，patch14使视觉序列显著变长，这也增加实际计算。
 
@@ -100,7 +102,9 @@ CogVLM-Chat SFT采用8K步、batch640、主学习率$10^{-5}$、warmup50；ViT�
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 1–2，PDF 第 7 页：图像描述与视觉问答](figures/original-page-007-02.png)
+![原文 Table 1](figures/original-p007-table-1.png)
+
+![原文 Table 2](figures/original-p007-table-2.png)
 
 **读图：**描述表统一CIDEr，但NoCaps分val/test、域外/overall；VQA表分开放生成与闭集分类，星号标少样本或零样本对照。CogVLM多项VQA已使用任务训练集，不能把与带星号方法的差值当成同配置零样本优势。
 
@@ -116,7 +120,11 @@ NoCaps val overall为128.3、test overall126.4，Flickr Karpathy94.9；原文将
 
 GQA test-balanced65.2，ScienceQA的IMG子集92.7。后者不是全部ScienceQA平均，也不是本文无微调零样本成绩。统一多任务检查点Table3的VQAv2为83.4、OKVQA58.9、NoCaps126.2，低于对应单任务84.7、64.7、128.3；尤其OKVQA下降5.8，说明多任务共享仍有折中。TextCaps val从149.8到151.3则提升，不应把单任务和多任务成绩混为一行。
 
-![原文 Tables 4–6，PDF 第 9 页：定位、聊天评价与缩短训练消融](figures/original-page-009-03.png)
+![原文 Table 4](figures/original-p009-table-4.png)
+
+![原文 Table 5](figures/original-p009-table-5.png)
+
+![原文 Table 6](figures/original-p009-table-6.png)
 
 **读图：**Table4明确分Generalist与Specialist，Table5为Chat的TouchStone评分，Table6是6K步消融。下表数值明显低于主实验，并非另一个正式发布模型的完整最终成绩。
 

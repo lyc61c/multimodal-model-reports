@@ -26,7 +26,7 @@ Qwen2-VL 的两个关键变化是 **Naive Dynamic Resolution** 与 **M-RoPE**。
 
 对于视频，按每秒两帧采样，以时间深度为 2 的 3D 卷积处理相邻帧的 tube。静态图像复制为两张相同帧，从而共用视频输入结构。训练动态调整帧分辨率，使单个视频最多使用 16,384 个视觉 token；这是预算约束，长视频可能以较低空间细节换取更多时间覆盖。
 
-![原文 Figure 3：M-RoPE 示意，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读图：**视频 token 的位置由时间、高、宽三元组描述。文字的三项位置 ID 相同，静态图像的时间 ID 不变、空间 ID 随 patch 改变；视频时间 ID 随帧递增。后续模态的位置从前一段最大 ID 加一开始。
 
@@ -74,7 +74,9 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 2–3：综合视觉与内部多语言 OCR，PDF 第 9 页](figures/original-page-009-02.png)
+![原文 Table 2](figures/original-p009-table-2.png)
+
+![原文 Table 3](figures/original-p009-table-3.png)
 
 **读表：**Table 2 的模型列依次包括闭源基线和 Qwen2-VL-72B/7B/2B。不同基准的满分不同，OCRBench 原始分数不能当作百分比；MME sum 也不是单一准确率。
 
@@ -90,13 +92,17 @@ $$
 
 72B 在文档/OCR 上突出，但 MMMU 低于 GPT-4o；MathVision 25.9 低于 GPT-4o 30.4；ChartQA 88.3 低于 Claude-3.5 Sonnet 90.8。Table 3 的内部多语言 OCR 也有例外：阿拉伯语 70.7 低于 GPT-4o 75.9，其余列的优势不能外推为所有语言表现。
 
-![原文 Tables 4–5：视频与智能体，PDF 第 10 页](figures/original-page-010-03.png)
+![原文 Table 4](figures/original-p010-table-4.png)
+
+![原文 Table 5](figures/original-p010-table-5.png)
 
 视频 72B 的 MVBench 为 73.6、PerceptionTest test 为 68.0、EgoSchema test 为 77.9。Video-MME **无字幕/带字幕**为 71.2/77.8，7B 为 63.3/69.0，2B 为 55.6/60.4；评测最多提取 **768 帧**。72B 无字幕略低于 GPT-4o 71.9，两种设置均低于 Gemini-1.5-Pro 的 75.0/81.3。帧预算和字幕条件不能省略。
 
 智能体结果依赖框架和动作接口。AITZ 的类型匹配/精确匹配为 89.6/72.1；ALFRED valid-unseen 成功率 67.8 是仿真环境结果。R2R/REVERIE 成功率为 51.7/31.0，低于表中专门导航模型的 79.0/61.0，REVERIE 也略低于 GPT-4o 31.6。Point24 成功率仅 4.5，两个简单游戏达到 100 不代表普遍规划能力。
 
-![原文 Table 8 与 Figure 5：M-RoPE 消融和长度外推，PDF 第 15 页](figures/original-page-015-04.png)
+![原文 Table 8](figures/original-p015-table-8.png)
+
+![原文 Figure 5](figures/original-p015-figure-5.png)
 
 **读图表：**Table 8 使用 Qwen2-1.5B＋ViT-L 的预训练模型，不是 72B 指令版。M-RoPE 让 NextQA 43.9→46.0、STAR 55.5→57.9，但 RealWorldQA 54.5→53.7、InfoVQA 50.8→50.3，不能写成每项提升。Figure 5 的 72B 中等时长 Video-MME 外推至 80K，71.1 分；它不等于所有任务正式支持 80K，上下文历史交互部分另述 32K。
 

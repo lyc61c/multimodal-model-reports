@@ -24,7 +24,7 @@ LLaMA-VID 针对图像、短视频和长电影输入的文本问答。核心问�
 
 ## 3. 整体架构
 
-![LLaMA-VID 原文 Figure 2 与 Algorithm 1：双路径视觉 token 生成](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **原图：Figure 2、Algorithm 1，PDF 第 3 页。** 从左边帧进入视觉编码器后，特征分两路：上路与用户指令生成的 Text Query 做 Context Attention；下路经过 Pool。两个 Projector 把输出送入 LLM，虚线 content 区域表示可伸缩数量。图中“Text Decoder”是用于跨模态查询的模块，不是最后生成回答的 Vicuna。
 
@@ -55,7 +55,9 @@ Content 路径可概括为 \(E_t^V=P_V(\operatorname{Pool}_n(X_t))\)，context �
 
 ## 5. 数据构建与处理
 
-![LLaMA-VID 原文 Figure 3 与 Figure 4：分阶段数据与电影指令构造](figures/original-page-004-02.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
+
+![原文 Figure 4](figures/original-p004-figure-4.png)
 
 **原图：Figure 3、Figure 4，PDF 第 4 页。** 左侧三层分别是对齐、普通指令、可选长视频阶段，图片/视频/文字各有输入格式。右图顶部明确写着视频帧只用于展示，不用于生成指令；教师真正读取的是 synopsis 和 script。这决定了电影监督的信息来源。
 
@@ -65,7 +67,7 @@ Content 路径可概括为 \(E_t^V=P_V(\operatorname{Pool}_n(X_t))\)，context �
 
 可选第三阶段为 **15K Long-VideoQA**：9K 电影对话与 6K LongAlpaca 长上下文数据。作者从 MovieNet 取超过 400 部电影及对应故事梗概、剧本。GPT-4 根据梗概生成约 1K 简短/详细摘要、4K 剧情与人物问答；Claude-2 根据长剧本生成约 4K 推理和细节问答。
 
-![LLaMA-VID 原文 Figure 7：电影数据生成的详细提示](figures/original-page-011-04.png)
+![原文 Figure 7](figures/original-p011-figure-7.png)
 
 **原图：Figure 7，PDF 第 11 页。** 四个区域依次给出摘要、剧情、推理、细节生成指令。提示要求以正在观看电影的语气回答，但教师输入是文字表示；底部要求“需要视觉信息”的问题也不能证明教师实际读取了视觉内容。数据可能继承剧本与最终画面的差异、教师幻觉或电影常识。
 
@@ -100,7 +102,9 @@ Content 路径可概括为 \(E_t^V=P_V(\operatorname{Pool}_n(X_t))\)，context �
 
 7B 准确率增量为 2.2、0.7、1.7 个百分点，分数有两项持平；不能说所有指标都严格提高。不同基线的骨干、预训练数据不完全一致，该表是系统比较。论文沿用 Video-ChatGPT 的开放式评估协议，未在本篇提供完整评委版本和重复采样不确定性。[原文 Table 1，PDF 第 5 页](https://arxiv.org/pdf/2311.17043v1#page=5)
 
-![LLaMA-VID 原文 Table 2 与 Table 3：视频回答质量与图像基准](figures/original-page-006-03.png)
+![原文 Table 2](figures/original-p006-table-2.png)
+
+![原文 Table 3](figures/original-p006-table-3.png)
 
 **原表：Table 2、Table 3，PDF 第 6 页。** 上表是视频回答质量的五个维度；下表是图像模型，caption 明确使用 1 context + 576 content，并排除普通视频训练数据以与 LLaVA-1.5 对齐。带星号的任务把对应训练划分加入了训练，不能都称为跨数据集零样本测试。
 

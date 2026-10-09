@@ -20,7 +20,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：动作分词器与 T5 模型，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 Figure 2 左边是动作编码器和解码器，中间黄色条目表示动作码本，蓝色条目表示文本词表，右边是 T5 编码器—解码器。文字请求经过文本分词；已有动作经过一维时间卷积编码、量化，变成动作索引。两类 token 组成输入，由同一个模型预测输出 token。若输出是动作索引，动作解码器将其还原为连续三维运动；若输出是文字，则按正常文本解码。
 
@@ -58,7 +58,7 @@ $$\mathcal L_{LM}=-\sum_i\log p_\theta(x_t^i\mid x_t^{<i},x_s).$$
 
 ## 6. 训练流程与目标
 
-![原文 Figure 3：三阶段训练，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 Figure 3 按左到右分为动作分词器、混合动作语言预训练、指令微调。第一阶段让连续动作得到可重建的离散表示；第二阶段让原本只接触文字的 T5 学习动作 token；第三阶段把不同需求映射为带提示的输入输出。完成第一阶段后，动作分词器在后续流程中保持不变。
 
@@ -76,7 +76,9 @@ Figure 3 按左到右分为动作分词器、混合动作语言预训练、指�
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 3–4：文字生成动作与动作描述，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Table 4](figures/original-p008-table-4.png)
 
 Table 3 的 R-Precision 衡量文字与生成动作的检索匹配，越高越好；FID 衡量特征分布距离，越低越好；Diversity 应接近真实数据，不能一味追求更高；MModality 衡量相同描述下生成多种动作的变化。text-to-motion 比较做 20 次重复运行并报告 95% 置信区间，多数基线数值来自其论文或已有评测。
 
@@ -90,7 +92,9 @@ Table 3 的 R-Precision 衡量文字与生成动作的检索匹配，越高越�
 
 动作描述的 Table 4 使用未去除时态和复数的真实文本进行语言指标计算。MotionGPT 的 BLEU-4 为 12.47，TM2T 为 7.00；CIDEr 为 29.2 对 16.8。但 BLEU-1 为 48.2 对 48.9，ROUGE 为 37.4 对 38.1，部分指标仍稍低。
 
-![原文 Tables 5–6：补全任务及指令微调消融，PDF 第 9 页](figures/original-page-009-04.png)
+![原文 Table 5](figures/original-p009-table-5.png)
+
+![原文 Table 6](figures/original-p009-table-6.png)
 
 Table 5 的动作预测 FID 是 0.905，对照 MDM 为 6.031；ADE 是 4.745 对 5.446，FDE 是 6.040 对 8.561。中间补全 FID 为 0.214 对 2.698，ADE 为 3.762 对 3.787。ADE/FDE 是关节位置误差，分别汇总整个序列及末帧；本文不为表中未明确标注单位的这两项添加毫米等单位。
 

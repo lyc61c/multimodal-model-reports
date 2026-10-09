@@ -37,5 +37,23 @@
     "优化器和硬件配方未披露",
     "定性迁移例未独立复测"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "d8b024a761efd8593922c85890cdd3dffbdf0dd8cb57fd81123e868734e0d152",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Figure 1 complete OneVision architecture and caption.",
+      "Figures 2 and 3 complete visual representation/token budget diagrams.",
+      "Both dataset distribution Figures 4/5 complete legends and captions.",
+      "Tables 4 and 5 complete all headers, rows and captions."
+    ]
+  }
 }

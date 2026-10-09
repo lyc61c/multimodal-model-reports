@@ -10,5 +10,10 @@
     "核验数据池600M与内部500M、SFT正文约1M而Table5总1.45M、预训练100B计数范围，未自行修正原文口径。",
     "核验zero/fewshot不同提示、CIDEr与准确率、3B-MoE MMVet退步和30B未超过LLaVA-NeXT部分任务；记录无模型运行。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

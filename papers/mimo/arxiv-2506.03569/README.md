@@ -15,7 +15,7 @@
 
 ## 3. 整体架构
 
-![Figure 2：MiMo-VL 架构，原文 PDF 第 6 页](figures/original-page-006-01.png)
+![原文 Figure 2](figures/original-p006-figure-2.png)
 
 Figure 2 展示原生分辨率 ViT、随机初始化 MLP projector 与 MiMo-7B。视觉编码器采用 Qwen2.5-ViT，图像或视频的视觉 token 经 MLP 进入语言模型空间；模型生成思考段与回答。报告没有提出一套新的视觉 patch 自适应压缩算法，其重点在数据与训练。
 
@@ -25,7 +25,7 @@ GUI 输出统一成 click、scroll、input、drag、open、press 等结构，附
 
 ## 4. 核心创新与数学原理
 
-![Figure 3：MORL 的任务路由与奖励服务，原文 PDF 第 11 页](figures/original-page-011-02.png)
+![原文 Figure 3](figures/original-p011-figure-3.png)
 
 MORL 用任务类型决定奖励。数值/符号推理由 Math-Verify 检查最终答案；框定位用 GIoU，点定位检查点是否落在目标框；计数检查数量；时间定位用预测与真实区间的 IoU。偏好任务分别使用纯文本与多模态奖励模型，以 Bradley-Terry 目标训练。其标准形式可解释为 $p(y^+\succ y^-\mid q)=\sigma(r(q,y^+)-r(q,y^-))$；该表达用于解释报告提及的目标，并非论文另编号的新公式。
 
@@ -70,7 +70,7 @@ RL 视觉推理集为 **80K** 题：删除证明题，将合适选择题改为�
 
 ## 7. 实验设置与主要结果
 
-![Table 2：通用、文档、GUI、视频与文本结果，原文 PDF 第 13 页](figures/original-page-013-03.png)
+![原文 Table 2](figures/original-p013-table-2.png)
 
 Table 2 星号表示使用作者评测框架重测，剑号表示 GPT-4o 参与评测；其余结果不全来自同一协议。表内指标类型包括准确率、GPT 分数、F1 与 mIoU，不能直接求一个总能力均分。以下保留主要条件和原表尺度：
 
@@ -88,7 +88,9 @@ Table 2 星号表示使用作者评测框架重测，剑号表示 GPT-4o 参与�
 
 RL 提高 MMMU、时间定位，但 Video-MMMU 从 **53.1 降至 43.3**，OCRBench 与 ChartQA 也下降。因此“40 项中 35 项胜过 Qwen”不等于 RL 在全部任务优于自身 SFT。MMMU 的 RL **66.7** 仍低于表内 GPT-4o **70.7** 与 Claude 3.7 **69.8**。
 
-![Table 3 与 Figure 4：推理以及 GUI 专用模型对照，原文 PDF 第 14 页](figures/original-page-014-04.png)
+![原文 Table 3](figures/original-p014-table-3.png)
+
+![原文 Figure 4](figures/original-p014-figure-4.png)
 
 Table 3 的 OlympiadBench 为 SFT/RL **59.4/59.4**，高于 Qwen2.5-VL-72B **37.2**，低于 Gemini-2.5-Pro **69.8**；MathVision **57.9→60.4**，MathVerse vision-only **67.1→71.5**。MathVista mini 却为 **81.8→81.5**，DynaMath worst-case **46.9→45.9**。文本 MATH500/AIME24/AIME25 的 RL 为 **95.4/67.5/52.5**，其中 AIME 两项仍明显低于 Gemini 的 **92.0/86.7**。这些是报告时期的指定模型与条件，不能解释成与所有后续模型比较的结论。
 

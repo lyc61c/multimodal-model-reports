@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "OmniVinci：让视觉、声音与时间在共享空间中对齐"
+  "title_zh": "OmniVinci：让视觉、声音与时间在共享空间中对齐",
+  "chinese_characters": 2874,
+  "figure_revision_date": "2026-10-09"
 }

@@ -25,7 +25,7 @@ Mini-Gemini 是研究团队提出的视觉语言框架，与 Google Gemini 系�
 
 ## 3. 整体架构
 
-![原文 Figure 2：双编码器与图文输出流程；PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图方式**：绿色路径读取高分辨率图像，蓝色路径读取下采样图像；局部交叉注意力把两者合成 mined tokens，再与文字一起输入 LLM。最右侧 SDXL 是可选外部组件，输入由 LLM 产生的文字提示，不是 LLM 输出的像素或图像离散 token。
 
@@ -35,7 +35,7 @@ Mini-Gemini 是研究团队提出的视觉语言框架，与 Google Gemini 系�
 
 ## 4. 核心创新与数学原理
 
-![原文 Figure 3：patch 信息挖掘与 token 扩展；PDF 第 4 页](figures/original-page-004-02.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **读图方式**：左图每个低分辨率查询只读取相应窗口里的 \(M^2\) 个高分辨率候选，输出仍为 \(N\) 个 token；右图把放大的图像切成四块，并保留原整图，低分辨率编码器由此处理五张图，输出扩展为 \(5N\)。右图不是左图“固定 token”条件下的同一配置。
 
@@ -75,7 +75,7 @@ OCR 相关数据先由 PaddleOCR 提取图中文字，按参考 OCR token 格式
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 1：多底座、普通/HD 分辨率及闭源对照；PDF 第 6 页](figures/original-page-006-03.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 **读表方式**：MMMU 的 v、t 分别为验证、测试，不能混读；MME 用感知/认知并列，斜杠不是单一百分比。星号表示包含训练子集图像，匕首表示数据未公开。表中的 Res. 主要表示 LR 配置，不能当作模型从未读取 HR 图像。
 
@@ -93,7 +93,9 @@ OCR 相关数据先由 PaddleOCR 提取图中文字，按参考 OCR token 格式
 
 7B 普通配置的 TextVQA/MM-Vet 为 **65.2/40.8**，相较表中 LLaVA-1.5 **58.2/31.1** 提高。Vicuna-13B 的 MMBench 却为 68.5，低于 LLaVA-1.5 的 69.2，因此“相同语言底座全部基准都超过”也不完全符合表格。
 
-![原文 Table 2–3：信息挖掘与数据消融；PDF 第 7 页](figures/original-page-007-04.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
 
 **读表方式**：各行多为逐项添加数据或改变配置的累计实验，星号标记含训练图像；蓝色负值说明某些指标下降。Table 3 最后一行 token 从 576 到 2880，不能把末行全部提升归给固定 token 的信息挖掘。
 

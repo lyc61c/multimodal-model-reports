@@ -23,7 +23,7 @@ Emu 是以 LLaMA-13B 为语言主干、EVA-CLIP 为视觉编码器的约 14B 多
 
 ## 3. 整体架构
 
-![原文 Figure 2：统一序列、文字分类与视觉回归](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 Figure 2 在 PDF 第 4 页。上方图像经过 EVA-CLIP 和 Causal Transformer，蓝色块为连续视觉 embedding，文字和特殊标记夹在它们之间；下方 LLaMA 的两个输出头分别做文字分类和视觉回归。右下角扩散解码器把生成的视觉向量转成图像。沿图阅读可以发现，“统一”发生在多模态自回归主干与目标组织上，不意味着编码器、输出头和像素解码器完全相同。
 
@@ -62,7 +62,7 @@ z_{1:N}=\operatorname{CausalTransformer}(g(I),e_{1:N}).
 
 MMC4 提供约 7500 万交错文档、4 亿图像和 380 亿文本 token。若图像对文档所有文本的 CLIP 相似度均低于 0.32，则丢弃。其采样一类取长度 1024 的子序列与最多前 5 张图，一类取 5 张图及对应句子组成长度 512 的序列。WebVid-10M 的描述含分辨率、摄像参数等无关元信息，作者先以词表和规则识别约百万条需清理内容，再由 Vicuna-13B 改写以提高流畅性。
 
-![原文 Figure 3：storyboard 缩略图与字幕按时间交错](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 Figure 3 位于 PDF 第 6 页。上方展示帧时间与字幕区间，下方是排序后的图像—句子交错序列。YT-Storyboard-1B 使用 YT-Temporal-1B 的 video ID，收集约 **1800 万视频对应的 18 亿 storyboard 缩略图及字幕**，不是完整视频的 18 亿连续原帧。缩略图采样间隔已知，字幕含起止时间，据此排序并合并相邻字幕。作者称可避免视频解码并降低约 20 倍存储成本，但这种缩略图表示也限制细节与运动信息保真度。
 
@@ -78,7 +78,7 @@ Figure 3 位于 PDF 第 6 页。上方展示帧时间与字幕区间，下方是
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 1：零样本提示与指令版本对照](figures/original-page-007-03.png)
+![原文 Table 1](figures/original-p007-table-1.png)
 
 PDF 第 7 页 Table 1 的星号 `*` 很关键：包含两个任务的**纯文字示例，图片被移除**，所以是论文定义的视觉零样本设置，并非完全没有任务示例。基础 Emu 另采用先生成描述、再结合问题回答的测试时 multimodal CoT。指标不相同：COCO 用 CIDEr，VQA 用匹配分数，VisDial 用 NDCG，NExTQA 用 WUPS，不能把整行都写成 accuracy。
 
@@ -93,6 +93,6 @@ PDF 第 7 页 Table 1 的星号 `*` 很关键：包含两个任务的**纯文字
 
 少样本使用 RICES，从各任务随机 5000 训练样本中以 EVA 特征余弦相似度检索示例；视频比较平均帧特征，测试视频 8 帧、支持视频 2 帧以控制上下文。Emu 2/4/8-shot VQAv2 为 56.4/58.4/59.0，VizWiz 为 37.8/41.3/43.9。MSVDQA 8-shot 为 39.8，低于 Flamingo-9B 的 40.8，因此正文“几乎所有情形”仍有例外。这里只增添上下文，没有更新模型权重。
 
-![原文 Table 2：文本生成图像 FID](figures/original-page-008-04.png)
+![原文 Table 2](figures/original-p008-table-2.png)
 
 PDF 第 8 页 Table 2 从 COCO 验证集随机取 30K 提示计算 FID，数值越低越好。Emu 为 **11.66**，优于 GILL 12.20，却不及 SD v1.5 的 9.93、Imagen 7.27 和 Parti 7.23。Emu 与 SD 使用 PNDM 50 步及不同最佳 guidance。作者推测条件空间从文本变为视觉 embedding、解码微调仅 15K 步可能造成差距，这属于解释假设，报告未提供足够消融证明。附录的融合图像、知识识别和多轮对话是定性展示，并无全面幻觉率或公平盲测。本文未执行模型，分数与资源均来自固定首版报告。

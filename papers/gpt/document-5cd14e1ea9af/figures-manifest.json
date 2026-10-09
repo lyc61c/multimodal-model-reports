@@ -20,52 +20,86 @@
           555,
           650
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-006-02.png",
-      "original_label": "Figure 3: image jailbreak refusal evaluation",
+      "asset_path": "figures/original-p006-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 6,
       "source_url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf#page=6",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "f5a5a731482b3029e6a998377f7fc693f309c211a0672617c44bec5a076dcf5d",
-      "asset_sha256": "0bee44e50509d65c43b0bd9a461d2562a59741c65d6bbe3ff28d5e424fa4ee86",
+      "asset_sha256": "b7705ed4fb4868e83061c319468e0138d5181678c8d0b177b7def9a108675739",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 200,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          67.87,
+          544.18,
+          308.94
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 62）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-007-03.png",
-      "original_label": "Figure 4: complex figure interpretation error",
+      "asset_path": "figures/original-p007-figure-4.png",
+      "original_label": "Figure 4",
       "pdf_page": 7,
       "source_url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf#page=7",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "f5a5a731482b3029e6a998377f7fc693f309c211a0672617c44bec5a076dcf5d",
-      "asset_sha256": "add3b2eb31af7c78a21ca47d0af57df6a9a33d1356d1236b5714c70157eb0e3b",
+      "asset_sha256": "57911f306c02711d62b034192cf3c9249dd1514bd43951b30293b72e9b5d9e87",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 200,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          72.46,
+          67.86,
+          539.39,
+          348
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 63）：Figure 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-012-04.png",
-      "original_label": "Figure 11: visual order vulnerability",
+      "asset_path": "figures/original-p012-figure-11.png",
+      "original_label": "Figure 11",
       "pdf_page": 12,
       "source_url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf#page=12",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "f5a5a731482b3029e6a998377f7fc693f309c211a0672617c44bec5a076dcf5d",
-      "asset_sha256": "dd193384949d5c6167d59993daa5b0f3a9e6ae5ebb7ec6df3ca19be0dd3f5942",
+      "asset_sha256": "e2d2e0c88564c67fff9cc968d1225a2d0953cdb6fb1d2cb4d3fdd1f06e698145",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 200,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          69.15,
+          67.86,
+          542.68,
+          335
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 64）：Figure 11 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

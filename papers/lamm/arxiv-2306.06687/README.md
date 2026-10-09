@@ -26,7 +26,9 @@ LAMM 是早期多模态指令调优的基础设施论文。它希望语言模型
 
 ## 3. 整体架构
 
-![LAMM 原文架构与二维结果表](figures/original-page-006-03.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
+
+![原文 Table 1](figures/original-p006-table-1.png)
 
 > 来源：原文 Figure 3、Table 1，2306.06687v1，PDF 第 6 页。保留完整原页，图注、表头及所有结果行可见。
 
@@ -56,9 +58,9 @@ B_m\in\mathbb R^{d_{out}\times32}.
 
 **把传统视觉任务翻译成可监督的语言输出。** 与只生成开放式图像描述不同，检测可以被表达成“类别 + 坐标”，计数要求明确整数，OCR 要求可匹配的词。任务含义、输出结构、实际问题共同构成推理指令。随后使用 NLTK 和正则抽取回答实体。这一步会把语言格式错误也计入系统能力：模型可能大致理解场景，却因没有给出可解析数字而无法通过评测。
 
-![LAMM 评测协议原图](figures/original-page-005-02.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
-> 来源：原文 Figure 2，PDF 第 5 页；保留整页。图中 3D 输出示例与提示的归一化范围存在不一致，不能据此补写统一的点云坐标预处理。
+> 来源：原文 Figure 2，PDF 第 5 页；保留所引用的图表区域。图中 3D 输出示例与提示的归一化范围存在不一致，不能据此补写统一的点云坐标预处理。
 
 **读图**：左侧四组任务指令送入 MLLM，中间抽取实体，右侧三类评测分别检查任务数值、粗略位置和回答相关性。Binary-Loc 只要求输出一个近似位置点，落在真实框内即成功。其二维定义可用以下解读公式表示：
 
@@ -72,9 +74,9 @@ B_m\in\mathbb R^{d_{out}\times32}.
 
 ## 5. 数据构建与处理
 
-![LAMM 数据构建流程与四种指令实例](figures/original-page-004-01.png)
+![原文 Figure 1](figures/original-p004-figure-1.png)
 
-> 来源：原文 Figure 1，PDF 第 4 页；整页包含各数据来源、四类示例和完整图注。
+> 来源：原文 Figure 1，PDF 第 4 页；裁图展示各数据来源与四类示例。
 
 **读图**：上部将 system message、人工少样本示例和查询输入 GPT API。前三类数据通过文字标注提供视觉背景，第四类只生成模板池，再插入实际监督标签。下部例子展示日常描述、知识拓展、长描述以及检测/OCR 等任务的区别。
 
@@ -120,7 +122,11 @@ LAMM-Benchmark-2D 使用 62,439 个样本，3D 使用 12,788 个样本。任务�
 
 以上据原文 Table 1 整理。所有模型在 LSP 人体关键点检测上均报告 Failed；CelebA 头发分类 LAMM 为 30.48，低于 LLaVA 的 46.42。这些结果限制了“覆盖传统视觉任务”可以支持的能力结论。
 
-![LAMM 任务微调、三维任务及辅助指标结果](figures/original-page-007-04.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 > 来源：原文 Tables 2–4，PDF 第 7 页；所有表头、指标说明、结果行与下方解释完整保留。
 

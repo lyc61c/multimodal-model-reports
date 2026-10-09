@@ -24,9 +24,9 @@ ChartMoE 是基于 InternLM-XComposer2 的图表理解模型。它保留视觉�
 
 ## 3. 整体架构
 
-![原论文 Figure 2 与连接器公式，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文整页截图。Figure 2 左侧展示三种独立对齐任务，右侧把这些连接器装配为 MoE；雪花与火焰区分冻结和更新的模块。图中的专家位于视觉编码器与 LLM 之间，不是替换 LLM 内部的全部前馈层。*
+*原文图表区域裁切。Figure 2 左侧展示三种独立对齐任务，右侧把这些连接器装配为 MoE；雪花与火焰区分冻结和更新的模块。图中的专家位于视觉编码器与 LLM 之间，不是替换 LLM 内部的全部前馈层。*
 
 视觉编码器先输出网格特征。普通模型对每个视觉 token 使用同一个 MLP；ChartMoE 对同一 token 计算路由分数，选择两个专家，再把输出加权相加。得到的视觉序列与文本指令拼接，交给语言模型生成回复。整个过程保留 1,225 个视觉位置，没有通过 MoE 把序列长度压缩为更少 token。
 
@@ -45,7 +45,11 @@ $$
 
 关键创新是**在装配 MoE 前建立不同的结构化先验**。随机初始化四个专家，可能让它们重复学习类似映射；从同一连接器复制参数的 Co-Upcycle 也可能缺少差异。独立的表格、JSON 和代码对齐先把映射任务分开，再在后续问答训练中学习协作。Table 5 的同条件实验中，四专家 Top-2 的随机初始化、Co-Upcycle 和本文初始化分别得到 73.20、77.48 和 78.76。增加到八专家未进一步提高最佳分数，说明专家数量不能替代有效初始化。（PDF 第 8 页）
 
-![原论文 Figure 6 与 Table 7–8，PDF 第 9 页](figures/original-page-009-04.png)
+![原文 Table 7](figures/original-p009-table-7.png)
+
+![原文 Table 8](figures/original-p009-table-8.png)
+
+![原文 Figure 6](figures/original-p009-figure-6.png)
 
 *Figure 6 用颜色标出主要专家选择：紫色对应原始专家，红色对应表格，蓝色对应 JSON，绿色对应代码。观察背景、文字和数据边缘的颜色分布，可以理解不同初始化形成的偏好；这类可视化是局部案例，不是“某专家永久只负责一种元素”的证明。*
 
@@ -53,7 +57,9 @@ $$
 
 ## 5. 数据构建与处理
 
-![原论文 Figure 3、Table 1 与训练说明，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
+
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 *Figure 3 从数据表、图表属性到代码模板，再到编译渲染，展示四元组的构造。Table 1 应分开读取“候选四元组规模”与“各训练阶段使用量”：同一四元组可以衍生三个目标格式，不能把任务样本数当成独立图像数。*
 
@@ -81,7 +87,7 @@ Table 1 分列 ChartQA 18.3K、PlotQA 157K 和 ChartY 763.6K，合计约 938.9K 
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 2，PDF 第 6 页](figures/original-page-006-03.png)
+![原文 Table 2](figures/original-p006-table-2.png)
 
 *Table 2 同时列出人工问题、增强问题，以及 5%、10%、20% 三档数值容差。先看同一容差下的三列，再比较是否接入 PoT。放宽容差本身会提高分数，不能把它解释成训练后的能力提升。*
 

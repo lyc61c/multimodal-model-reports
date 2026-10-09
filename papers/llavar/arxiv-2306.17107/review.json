@@ -37,7 +37,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "No independent external review or model execution",
@@ -45,5 +46,20 @@
     "ScienceQA result is task-specific finetuning",
     "No exact GPU count/lr/batch/epochs in article",
     "GPT4 teacher is text-only and synthetic labels may contain hallucinations"
-  ]
+  ],
+  "article_sha256": "468749e2f2a0a70b0d485e2dab662154004348b90cdf072d32db9e62280d8c6f",
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

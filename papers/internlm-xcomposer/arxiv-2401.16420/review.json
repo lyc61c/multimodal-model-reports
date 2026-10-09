@@ -38,12 +38,28 @@
     "Seven requested sections",
     "Original PDF and actual model identity verified",
     "Original figure/table labels and numerical metrics checked",
-    "Reported inconsistencies and missing disclosure preserved"
+    "Reported inconsistencies and missing disclosure preserved",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "No independent peer review or reproduction",
     "No dedicated Partial LoRA ablation in this version",
     "Text/table mismatch AI2D and MMMU",
     "Exact training dataset totals and hardware not disclosed"
-  ]
+  ],
+  "article_sha256": "934254032fc8892df45cfb554654b8f842ae2128627870b44d57e4ee4a5d137c",
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
+    ]
+  }
 }

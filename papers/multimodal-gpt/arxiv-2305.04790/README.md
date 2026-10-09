@@ -22,7 +22,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 1：模型与可训练 LoRA，PDF 第 4 页](figures/original-page-004-02.png)
+![原文 Figure 1](figures/original-p004-figure-1.png)
 
 **读图：**蓝色为冻结的原模块，橙色为添加的可训练 LoRA。图像由视觉编码器处理，再由 Perceiver Resampler 整理视觉空间特征；文字进入语言解码器，在 gated cross-attention 模块中读取视觉表示，然后继续经过原语言块生成文本。右侧将交叉注意力、前馈、自注意力及其 LoRA 展开。
 
@@ -50,7 +50,9 @@ $$
 
 ## 5. 数据构建与处理
 
-![原文 Table 2/3：图文训练模板与 caption 指令，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Table 2](figures/original-p003-table-2.png)
+
+![原文 Table 3](figures/original-p003-table-3.png)
 
 **读表：**Table 2 用图像标记声明图像输入，多轮数据继续追加问题与回答；红色回答及 EOS 才进入损失。Table 3 展示将 caption 转成指令任务的不同提问方式。它是模板示例，不能把十种措辞视为十个独立新增数据集。
 
@@ -76,7 +78,7 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![原文 Figure 6：图中文字、人物计数与知识追问，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Figure 6](figures/original-p008-figure-6.png)
 
 **读图：**输入为 Harry Potter 影片封面；模型依次回答标题、图中文字、人物数量和原著作者。这里先读取视觉线索，再结合常识回答后续问题，展示了连续追问接口与视觉知识联合使用。截图中出现的三个主要人物与模型回答一致；它没有测量任意复杂场景的计数可靠性，也不能仅靠封面标题证明具备稳定的通用 OCR 能力。
 

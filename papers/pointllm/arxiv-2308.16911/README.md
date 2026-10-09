@@ -21,7 +21,7 @@ PointLLM 输入一个三维物体的带颜色点云及文字指令，生成类�
 
 ## 3. 整体架构
 
-![原文 Figure 2：点云与文字的输入序列及损失位置，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 Figure 2 蓝色路径从点云编码器进入 projector，绿色路径是文字 token。`<p_start>`、`<p_end>` 标记点云嵌入区域，后接用户问题；语言模型预测回答。上方灰色位置代表不计入损失的 token，只有回答与结束标记接受监督。因此它不是要求模型重建全部点坐标，而是学习根据点云与对话上下文预测文字。
 
@@ -47,7 +47,7 @@ $$\mathcal L=-\sum_{t\in\mathcal R}\log p_\theta(w_t\mid P,\text{instruction},w_
 
 简短描述使用 Cap3D 的模型生成 caption 分支，约 660K 个 Objaverse 物体，每个搭配 30 种简短请求中随机一种。Cap3D 另有约 40K 人工描述物体，复杂指令从其中选择 15K 个、caption 超过五个词的物体。正文明确简短描述主要用模型生成分支，附录 Table 6 表注却写 human-written caption，存在口径差异；这里采用方法正文的说明，避免把 660K 全部称为人工标注。
 
-![原文 Table 8：由人工简短 caption 扩展复杂指令，PDF 第 14 页](figures/original-page-014-03.png)
+![原文 Table 8](figures/original-p014-table-8.png)
 
 Table 8 中间是 GPT-4 的生成要求，下方对比简短输入与扩展输出。输入只描述娃娃的头发和靴子，输出补充用途、受众等信息。生成器获得的是已有文字 caption，并没有在这个步骤直接读取点云；用途类回答因而来自文字推断与常识，不能都看作可见几何的准确标注。
 
@@ -70,7 +70,11 @@ Table 8 中间是 GPT-4 的生成要求，下方对比简短输入与扩展输�
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 2–3 与 Figure 3：分类、描述和人工偏好，PDF 第 7 页](figures/original-page-007-02.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Figure 3](figures/original-p007-figure-3.png)
 
 Table 2 分为 ModelNet40 与 Objaverse，每项又区分 instruction 型问题和 completion 型前缀。PointLLM 使用点云，InstructBLIP 使用单张渲染图，输入信息覆盖不同，不能将其视为同一视觉输入下仅换语言模型的受控实验。
 
@@ -83,7 +87,7 @@ Table 2 分为 ModelNet40 与 Objaverse，每项又区分 instruction 型问题�
 
 ModelNet40 是未见该数据集的闭集零样本识别，但语言回答先由 ChatGPT 映射到 40 类。若返回无法推断，附录规定随机选一类；候选列表不是主比较中直接交给模型的输入。Objaverse 则由 GPT-4 判断回答与人工 caption 的对象类别是否一致。
 
-![原文 Table 10：开放词表类别判定规则，PDF 第 16 页](figures/original-page-016-04.png)
+![原文 Table 10](figures/original-p016-table-10.png)
 
 Table 10 明确关注对象类型，忽略颜色、大小、形状等属性。第二个示例的颜色和花纹与参考不同，仍因都称“鱼”判为正确。该分类分数不能证明所有描述细节正确。第一作者人工检查 50 个分类判断，与 GPT-4 达到一致；这是小样本检查，并非所有复杂描述评判的独立盲审。
 

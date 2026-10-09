@@ -25,7 +25,7 @@ Kimi K3 是原生视觉 MoE 模型，文本、图像和视频进入共享主干�
 
 ## 3. 整体架构
 
-![Figure 2：Kimi K3主干、LatentMoE与视觉路径，PDF第3页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **如何读图：**右下图像经 MoonViT-V2 和 MLP 投影，进入与文本共享的 Embedding 空间；右侧主干每组三个 KDA 配一个 Gated MLA，二者后接 Stable LatentMoE。红色跨层连线是 AttnRes 对更早表示的选择，不是跨模态 cross-attention。左上专家分支中，两个共享专家保留全宽，路由分支先降维、聚合后归一化并升维。
 
@@ -53,7 +53,7 @@ g_t^h=-5\,\operatorname{Sigmoid}(e^{A_h}z_t^h),\qquad
 
 16-token 子块的累计 log-decay 大于 -80，倒数缩放小于 $e^{80}$，仍在 BF16 动态范围内，避免对角子块因无限小衰减而必须逐位置对计算。这是数值参数化与 kernel 的共同设计，不是简单将 token 注意力裁成固定窗口。
 
-![Figure 3：log-decay下界与Tensor Core计算，PDF第5页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **如何读图：**左侧灰线是此前无下界的负 Softplus，红线被限制在 -5 到 0；右侧橙色对角块原本走特殊 position-pair 路径，K3 可将因果对角和非对角块都变为蓝色的 Tensor Core 路径。改善的是块计算的数值范围与执行方式，没有保证每个实际输入都同样快。
 
@@ -98,7 +98,7 @@ SFT 轨迹由此前 Kimi 的领域专长模型生成，经过多阶段验证及�
 
 语言与视觉从开始共同参与 next-token prediction，没有先冻结语言模型做后置视觉对齐。这里的 next-token 目标指共享序列建模监督，不代表 MoonViT 独立预测原始像素。主干另保留一层 MTP。预训练使用 Per-Head Muon，把 Q/K/V 动量矩阵按头分块正交化，避免不同头在整体矩阵中因尺度差异而互相主导；还采用 weight clipping、QB、余弦学习率、1% 线性 warmup、权重衰减 0.1。峰值学习率、全局 batch、训练步数与总算力未公布。[PDF 第 10–12 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=10)。
 
-![Figure 6：视觉编码器初始化消融，PDF第9页](figures/original-page-009-03.png)
+![原文 Figure 6](figures/original-p009-figure-6.png)
 
 **如何读图：**横轴为训练步，纵轴为视觉塔梯度范数，红线是从头训练的 MoonViT-V2，蓝线是 SigLIP 初始化基线；右图放大 14K–16K 区域。作者观察红线梯度更低、尖峰更少，同时视觉测试可匹配基线。它支持此配方下的稳定性选择，不证明所有规模与资料条件下对比预训练都没有价值。
 
@@ -116,7 +116,7 @@ SFT 起即采用 QAT：路由专家权重 MXFP4、相关激活 MXFP8，而共享
 
 K3 主成绩使用 max effort、温度 1.0；单步推理/无工具视觉 top-p 0.95，agent top-p 1.0。大部分视觉结果平均三次运行，ZeroBench 按官方设置五次。WorldVQA 通过提示强制回答，Video-MME 的表内数值含字幕；因此必须保留输入、工具与聚合条件。[PDF 第 26–27 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=26)。
 
-![Table 2：主评测对照与无工具/有工具条件，PDF第27页](figures/original-page-027-04.png)
+![原文 Table 2](figures/original-p027-table-2.png)
 
 **如何读图：**一行双分数先是无工具、后是有工具；HLE 用一般工具，视觉任务用 Python。粗体与下划线标出该表最佳及次佳，空白是未报告。部分 Fable 5 对照含 fallback，GPT-5.6 Sol 含潜在 cyberguards；工具框架也不全部相同，不能视作只替换模型权重的严格受控比较。
 

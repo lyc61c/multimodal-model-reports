@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "BLIVA：用查询特征与完整 patch 特征共同回答含文字图像的问题"
+  "title_zh": "BLIVA：用查询特征与完整 patch 特征共同回答含文字图像的问题",
+  "chinese_characters": 3259,
+  "figure_revision_date": "2026-10-09"
 }

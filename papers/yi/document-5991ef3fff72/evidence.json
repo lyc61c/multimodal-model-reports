@@ -10,5 +10,10 @@
     "训练设置逐项从第 16 页转录；MMMU test 与 validation 口径区分。",
     "数学式标为架构与生成监督的解释性重述；未臆造 LayerNorm 排列、损失 mask 或视觉 RL。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

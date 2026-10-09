@@ -31,7 +31,7 @@ Yi-VL 是 Yi 语言模型的视觉扩展分支。技术报告还包含语言预�
 
 ## 3. 整体架构
 
-![Yi-VL 原文 Figure 7 与训练说明](figures/figure-07-architecture-training.png)
+![原文 Figure 7](figures/original-p016-figure-7.png)
 
 *原文 Figure 7，PDF 第 16 页原页。图中红色火焰表示更新，蓝色雪花表示冻结；视觉和投影模块三个阶段均训练，语言模型前两阶段冻结、第三阶段更新。*
 
@@ -68,7 +68,7 @@ Yi 主干使用 GQA，让多组 query head 共享较少的 key/value head，降�
 
 ## 5. 数据构建与处理
 
-![Yi 原文语言预训练清洗流程](figures/figure-01-language-data.png)
+![原文 Figure 1](figures/original-p004-figure-1.png)
 
 *原文 Figure 1，PDF 第 4 页原页。这是 Yi 语言主干的数据清洗流程，帮助理解 Yi-VL 的语言基础；不是视觉图文数据的完整处理流程。*
 
@@ -102,7 +102,9 @@ Yi-VL 的数据按阶段组织：
 
 ## 7. 实验设置与主要结果
 
-![Yi-VL 原文 Table 7](figures/table-07-mmmu.png)
+![原文 Table 7](figures/original-p017-table-7.png)
+
+![原文 Figure 8](figures/original-p017-figure-8.png)
 
 *原文 Table 7，PDF 第 17 页原页。表题明确为 Yi-VL 发布时的 MMMU test 结果；同页下方 Figure 8 属于 Yi 的深度扩展研究，不作为 Yi-VL 实验证据。*
 

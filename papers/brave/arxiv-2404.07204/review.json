@@ -33,12 +33,28 @@
     "numeric_results_checked": true,
     "pretrain_vs_vqa_freeze_checked": true,
     "metric_pair_accuracy_checked": true,
-    "sequence_concat_checked": true
+    "sequence_concat_checked": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "116M只描述冻结预训练，最终VQA语言训练约3B",
     "原PDF未含其多处指向的补充超参",
     "encoder仍需全部前向，不能称完整推理低成本",
     "无视频/音频已验证能力"
-  ]
+  ],
+  "article_sha256": "3d25892029ffc75a3afd37ac2385e06dc328d26f0c4a1c9fe379aad98bdec644",
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

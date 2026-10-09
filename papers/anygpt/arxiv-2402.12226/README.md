@@ -2,7 +2,7 @@
 
 # AnyGPT：用离散序列统一图像、语音、音乐与文字
 
-> 采用 [arXiv:2402.12226v1](https://arxiv.org/pdf/2402.12226v1)。配图为原文整页截图；本文说明原报告中的个别统计不一致，不自行修订数值。
+> 采用 [arXiv:2402.12226v1](https://arxiv.org/pdf/2402.12226v1)。配图为原文图表区域裁切；本文说明原报告中的个别统计不一致，不自行修订数值。
 
 ## 1. 论文信息与模型定位
 
@@ -29,9 +29,9 @@
 
 ## 3. 整体架构
 
-![原文 Figure 1 所在第 2 页：统一模态离散化与生成框架](figures/original-page-002-01.png)
+![原文 Figure 1](figures/original-p002-figure-1.png)
 
-> 来源：Figure 1，v1 PDF 第 2 页，整页截图。[来源](https://arxiv.org/pdf/2402.12226v1#page=2)。从底部的各模态 tokenizer 向上读，经共享 AnyGPT，再看顶部 de-tokenizer 恢复内容。
+> 来源：Figure 1，v1 PDF 第 2 页，图表区域裁切。[来源](https://arxiv.org/pdf/2402.12226v1#page=2)。从底部的各模态 tokenizer 向上读，经共享 AnyGPT，再看顶部 de-tokenizer 恢复内容。
 
 框架包括多模态 tokenizer、语言骨干、de-tokenizer 三部分。每种非文本模态有起止标记，图中 `<soi>/<eoi>` 对应图像，`<sos>/<eos>` 对应语音，`<som>/<eom>` 对应音乐。标记使语言模型知道正在接收或输出何种代码序列；代码的整数值对应相应模态词表项，不与文本单词简单混用。
 
@@ -76,9 +76,9 @@ $$
 | 音乐文字 | 从网络收集超过一百万音乐视频；获取标题、描述、关键词等元信息 | 用 Spotify API 匹配歌曲，用 GPT-4 将噪声元信息整理为描述 |
 | 多模态指令 | AnyInstruct-108k，108K 多轮对话；约 205K 图像、503K 声音记录、113K 音乐片段 | 先生成文字场景与描述，再转换成真实模态内容 |
 
-![原文 Figure 3 所在第 6 页：AnyInstruct 合成流程](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
-> 来源：Figure 3，v1 PDF 第 6 页，整页截图。[来源](https://arxiv.org/pdf/2402.12226v1#page=6)。左侧主题和情境进入中央对话，右侧把图像、声音和音乐描述替换为实际内容。
+> 来源：Figure 3，v1 PDF 第 6 页，图表区域裁切。[来源](https://arxiv.org/pdf/2402.12226v1#page=6)。左侧主题和情境进入中央对话，右侧把图像、声音和音乐描述替换为实际内容。
 
 指令合成先从 100 个总主题扩展出 20,000 个具体主题，再由 GPT-4 写场景、多轮对话，并用示例引导模态组合。对话中的非文本内容先以详细描述出现，随后由 DALL-E 3 生成图像、MusicGen 生成音乐、Azure TTS 生成讲话。过滤后得到 108K 对话；作者还从适合朗读的纯文字指令集补出 100K 声音对话。108K 是对话条目，图像与音频统计是其中的内容数量，不能相加成单一数据规模。[原文 §4.2，第 6–7 页](https://arxiv.org/pdf/2402.12226v1#page=6)
 
@@ -90,9 +90,11 @@ $$
 
 非文字内容先离散化，加入模态起止标记，然后与文字组合成序列。图文、语音文字、音乐文字样本随机选择 X-to-text 或 text-to-X 方向，并加相应指令；交错文档按自然顺序替换图像。来自相同数据集的短样本连接到最大长度，预训练时各 Token 参与损失。这是统一目标的重要操作细节，不能默认所有训练只对回答部分计算损失。[原文 §4.1、Appendix A.2](https://arxiv.org/pdf/2402.12226v1#page=12)
 
-![原文 Tables 7、8 所在第 12 页：预训练数据与训练超参数](figures/original-page-012-04.png)
+![原文 Table 7](figures/original-p012-table-7.png)
 
-> 来源：Tables 7、8，v1 PDF 第 12 页，整页截图。[来源](https://arxiv.org/pdf/2402.12226v1#page=12)。Table 8 的左右列分别是预训练和微调，勿把 batch 或步数混用。
+![原文 Table 8](figures/original-p012-table-8.png)
+
+> 来源：Tables 7、8，v1 PDF 第 12 页，图表区域裁切。[来源](https://arxiv.org/pdf/2402.12226v1#page=12)。Table 8 的左右列分别是预训练和微调，勿把 batch 或步数混用。
 
 | 设置 | 预训练 | 微调 |
 |---|---:|---:|
@@ -113,9 +115,13 @@ $$
 
 定量结果主要评估预训练基础模型的 X-to-text 和 text-to-X 能力；指令微调后的复杂交错对话以案例展示为主。图像描述使用 COCO 2014 Karpathy 测试集 CIDEr；图像生成使用随机 30K COCO 验证图像对应描述的 CLIP 分数；语音识别在 LibriSpeech test-clean 上算 WER；语音合成在 VCTK 上用说话人相似度和 WER；音乐任务使用 MusicCaps 的 CLAP 分数。[原文 §5.1](https://arxiv.org/pdf/2402.12226v1#page=7)
 
-![原文 Tables 4–6 所在第 8 页：语音与音乐结果](figures/original-page-008-03.png)
+![原文 Table 4](figures/original-p008-table-4.png)
 
-> 来源：Tables 4–6，v1 PDF 第 8 页，整页截图。[来源](https://arxiv.org/pdf/2402.12226v1#page=8)。WER 越低越好，相似度与 CLAP 越高越好；TTS 和 ASR 各有 8.5，不能将两张表合并为一项结果。
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
+
+> 来源：Tables 4–6，v1 PDF 第 8 页，图表区域裁切。[来源](https://arxiv.org/pdf/2402.12226v1#page=8)。WER 越低越好，相似度与 CLAP 越高越好；TTS 和 ASR 各有 8.5，不能将两张表合并为一项结果。
 
 | 任务 | AnyGPT | 原文对照 | 结果解读 |
 |---|---:|---|---|

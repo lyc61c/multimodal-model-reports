@@ -1,1 +1,44 @@
-{"checked_file":"README.md","verdict":"complete_self_review","fact_checks":["actualmodelisVicuna notGPT4","trainingfreezeandRoI layers verified","no invented numerical results","datasettemplatesdifferentfromevaluationexamples","failuresandmissingrecipeinformation included"],"math_checks":["RoIAlignbilinear formulaidentifiedasstandarddefinition","Fuse/shuffle equationidentifiedasexplanationnotoriginalEq","lossmaskfaithfultoresponseplusstop","no196finaltokenassumptionfromintermediategrid"],"image_checks":{"viewed":["figures/original-page-005-01.png","figures/original-page-007-02.png","figures/original-page-011-03.png"],"result":"Originalarchitecture arrows, trainingexampleboxesandfailureimagesarecomplete;fullpagecaptureandfigure/table identitiesstated"},"model_execution":"not_run","limitations":"No numericalevaluationprovidedinv1;noindependentreproductionclaimed"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "actualmodelisVicuna notGPT4",
+    "trainingfreezeandRoI layers verified",
+    "no invented numerical results",
+    "datasettemplatesdifferentfromevaluationexamples",
+    "failuresandmissingrecipeinformation included"
+  ],
+  "math_checks": [
+    "RoIAlignbilinear formulaidentifiedasstandarddefinition",
+    "Fuse/shuffle equationidentifiedasexplanationnotoriginalEq",
+    "lossmaskfaithfultoresponseplusstop",
+    "no196finaltokenassumptionfromintermediategrid"
+  ],
+  "image_checks": {
+    "viewed": [
+      "figures/original-page-005-01.png",
+      "figures/original-page-007-02.png",
+      "figures/original-page-011-03.png"
+    ],
+    "result": "Originalarchitecture arrows, trainingexampleboxesandfailureimagesarecomplete;fullpagecaptureandfigure/table identitiesstated"
+  },
+  "model_execution": "not_run",
+  "limitations": "No numericalevaluationprovidedinv1;noindependentreproductionclaimed",
+  "article_sha256": "b9e249c267d0b5cff25c0b257bbe6765337fe80fe9d15de74c0782835a5bc860",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
+}

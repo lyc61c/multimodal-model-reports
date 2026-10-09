@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "LLaMA-VID：以问题相关 token 和内容 token 压缩视频帧"
+  "title_zh": "LLaMA-VID：以问题相关 token 和内容 token 压缩视频帧",
+  "chinese_characters": 2550,
+  "figure_revision_date": "2026-10-09"
 }

@@ -23,7 +23,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2，MedVInT 架构、图注生成问答流程及原文公式，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：** Figure 2 左侧将视觉编码、投影、文本编码和答案生成串联起来；右侧的 ChatGPT 接收的是图注文本。图中的问答生成流程不代表 ChatGPT 直接读取原始医学图像，图像与生成题目的对应关系来自原有图注配对。
 
@@ -79,7 +79,7 @@ PMC-OA 的完整资源有约 1.6M 图文对，来自 PMC 开放获取子集、�
 | 最终保留 | 226,946 对，对应 149,075 幅图像 |
 | 评测划分 | 随机选择 50,000 图像问题对作为 test；另提供 2,000 个人工核验 clean 样本 |
 
-![原文 Figure 3 与数据过滤说明，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读图：** 前几例需要辨识影像视角、成像方式和病变相关图像模式；后几例还需要读取颜色、区分子图和定位圈出的内容。这说明数据覆盖不只是“看图识别器官”。图中的答案是数据标签，不是本文重新作出的医学判断。
 
@@ -99,7 +99,9 @@ TD 先用 PMC-OA 图像描述进行跨模态对齐，正文称预训练整个网
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2 与 Table 3，完整模型行、骨干配置与评测列，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Table 2](figures/original-p008-table-2.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 **读表：** Table 2 是迁移到既有医学问答集的结果，Overall 为 open/close 问题的微平均准确率；Table 3 是 PMC-VQA 评测，斜杠前后分别为 test 与 test-clean。Table 2 的高分与 Table 3 的低分来自不同数据和协议，不能并成一个总分。
 
@@ -126,7 +128,7 @@ TE 在 VQA-RAD 的增幅为 10.8 个百分点，在 SLAKE 为 3.6；TD 的对应
 
 纯文本选择题成绩接近选项分布所产生的多数类水平。医学视觉骨干通常有帮助，例如 TD 的 PMC-LLaMA 配置从自然 CLIP 的 36.8/36.9 提升到 PMC-CLIP 的 39.4/40.3。但更大的语言骨干并非所有指标更好：TE 的最佳 BLEU-1 是 PubMedBERT 配置，而不是 PMC-LLaMA-ENC。这些指标反映答案匹配和词汇重合的不同方面。
 
-![原文 Figure 5，图注、复合图、生成问题和 TE/TD 输出，PDF 第 13 页](figures/original-page-013-04.png)
+![原文 Figure 5](figures/original-p013-figure-5.png)
 
 **读图：** 第三例 TE 输出可读性差，展示了字符串指标难以完整反映句子质量。最后一例中，原图注写的是 LCX/RCA，而生成题目的标签写成 LAD/RCA，说明仅靠自动流程仍可能出现图注与标注的文本不一致；本文保留原图，不将该例当作正确医学知识示范。模型流畅输出也不能解决错误标签和证据不足的问题。
 

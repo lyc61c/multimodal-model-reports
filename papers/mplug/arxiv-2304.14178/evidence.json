@@ -41,5 +41,10 @@
     "stage1正文LR1e-4 wd.1 warm2000 vs appendix2e-4 wd.01 warm375",
     "Table3w/o multimodal标r4与Table2r4多模态、r3纯文本不同"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

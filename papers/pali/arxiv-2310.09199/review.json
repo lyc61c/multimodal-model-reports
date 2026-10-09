@@ -7,18 +7,30 @@
     "核验2BViTG14+3BUL2、1536维、pooling前token、encoder-decoder、128码本16masktoken64×64、冻结顺序。",
     "数学明确标准解释，未填不存在损失温度或精确recipe；分类vsSigLIP还改变数据来源，不能孤立归因。",
     "核验WebLI过滤40%只Stage0、100+语言PDF、各任务微调与视频无预训练但有微调、测试失效链接子集。",
-    "逐项核验Table2/3/4/5/6，正文增益与caption平均概括不符表处以原表为准，不称全任务零样本/全面领先，未运行模型。"
+    "逐项核验Table2/3/4/5/6，正文增益与caption平均概括不符表处以原表为准，不称全任务零样本/全面领先，未运行模型。",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 6,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "c769f753e6fa3362cc3669f5f5f829e5eff271bdf84a5d4d2d4dc2a500786749",
+  "article_sha256": "d0fa22b6741d410a8ca0432232d623171fe97a5adccbfcd7157c7774b13fa73c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
+    ]
+  }
 }

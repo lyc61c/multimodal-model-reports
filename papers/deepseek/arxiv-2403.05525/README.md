@@ -24,7 +24,7 @@ DeepSeek-VL 面向图像与文字理解，提供 1.3B 和约 7B 语言骨干版�
 
 ## 3. 整体架构
 
-![原论文 Figure 3，PDF 第 12 页](figures/original-page-012-01.png)
+![原文 Figure 3](figures/original-p012-figure-3.png)
 
 *这张训练流程图也展示了基本架构：SAM-B 与 SigLIP-L 并行编码，再经 VL Adaptor 进入 LLM。蓝色表示冻结，橙色表示更新；第三阶段的视觉模块更新主要针对 SigLIP-L，SAM-B 仍冻结。*
 
@@ -42,7 +42,7 @@ SigLIP-L 提供与文本对齐的语义特征，输出 24 × 24 × 1,024。SAM-B
 
 另一项创新是把**保留语言能力当作多模态训练的显式约束**。若只用多模态数据，图文基准提高时，语言模型对原始文本分布的建模会恶化。最终方案不仅混入语言数据，还先用纯语言训练，再逐渐下降语言比例至目标值。原文没有给出 warmup 比例随步骤变化的精确函数，因此不补成线性公式。（PDF 第 13、20 页）
 
-![原论文 Figure 4，PDF 第 14 页](figures/original-page-014-02.png)
+![原文 Figure 4](figures/original-p014-figure-4.png)
 
 *上部是视觉选择任务，下部是语言任务。Pile-test 的 PPL 越低越好；观察 100% 多模态曲线，可以看到视觉提升与语言退化同时发生。图注把最终比例写成 multimodal:language=70%:30%，与正文及 Table 1 相反；本文依据后两处采用 language:multimodal=70%:30%。*
 
@@ -60,7 +60,7 @@ SFT 使用任务分类体系而不仅是学术问答混合。类别覆盖识别�
 
 第一阶段只训练连接器，视觉编码器和 LLM 冻结；使用 ShareGPT4V 的 1.25M 图文配对与 2.5M 文档 OCR 配对。第二阶段冻结视觉编码器，更新连接器及语言模型，联合学习纯文本与图文。第三阶段更新语言模型、连接器和 SigLIP-L，SAM-B 因显存限制继续冻结；只监督回答及特殊 token，屏蔽系统和用户提示。（PDF 第 12–15 页）
 
-![原论文 Table 4，PDF 第 16 页](figures/original-page-016-03.png)
+![原文 Table 4](figures/original-p016-table-4.png)
 
 *训练表左右分别是小模型与 7B。需要逐列对照 learning rate、steps、batch 和 sequence length；小模型联合预训练步数更长，并不意味着它比 7B 使用更多计算。*
 
@@ -79,7 +79,9 @@ SFT 使用任务分类体系而不仅是学术问答混合。类别覆盖识别�
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 5–6，PDF 第 17 页](figures/original-page-017-04.png)
+![原文 Table 5](figures/original-p017-table-5.png)
+
+![原文 Table 6](figures/original-p017-table-6.png)
 
 *MMB/MMC 使用 dev 切分，因为当时官方 test 下载不可用；OCRBench 是原始分数，不能与百分比列直接平均。上表 LLM 列表示语言骨干规模，部分对手含额外大型视觉组件。*
 

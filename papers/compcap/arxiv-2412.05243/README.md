@@ -16,9 +16,9 @@ CompCap 是一种数据构建与训练方法，没有另造一种图文融合网
 
 ## 3. 整体架构
 
-![原论文 Figure 3，数据生成框架，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
-*原论文 Figure 3，PDF 第 4 页；保留整页以便核对流程与周围解释。*
+*原论文 Figure 3，PDF 第 4 页；仅保留原文流程图区域。*
 
 Figure 3 应从中间的输入信息向图像与文字两条分支阅读。对于图表，原始数据和样式参数交给绘图库生成图像，数值、坐标轴、图例等交给语言模型形成描述；对于代码，源代码一侧渲染成截图，另一侧保留代码并生成解释。两个输出共享信息来源，而不是先生成图片后让另一个视觉模型重新猜测全部内容。
 
@@ -36,7 +36,7 @@ $$s(a,b)=\cos(v_a^{\mathrm{DINO}},v_b^{\mathrm{DINO}})+\cos(t_a^{\mathrm{CLIP}},
 
 这里第二项比较的是文字描述，不能误写成图文交叉相似度。系统先取前 20 个候选，再随机抽样，并结合宽高比过滤，使拼图既有关联，又不总重复同一组最相似图片。实体拼图还通过关键词检索让多个子图包含共同实体。
 
-![原论文 Figure 4，拼图构造与描述示例，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 4](figures/original-p005-figure-4.png)
 
 *Figure 4，PDF 第 5 页。左侧展示检索和布局，右侧展示坐标、原描述与输出描述。*
 
@@ -64,7 +64,7 @@ Table 8 给出三种模型均训练 1 个 epoch，AdamW、学习率 $2\times10^{
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 2，11 项基准，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 2](figures/original-p007-table-2.png)
 
 *Table 2，PDF 第 7 页。4B 星号行是作者重建基线；结果包含不同任务指标，平均分不等于统一准确率。*
 
@@ -81,7 +81,11 @@ Table 8 给出三种模型均训练 1 个 epoch，AdamW、学习率 $2\times10^{
 
 13B 的 ChartQA 从 68.5 提升到 73.9，WebSRC 从 75.3 到 79.3，说明该设置在图表及网页理解上具有收益。但 7B 的 SEED 从 71.2 降至 70.5，不能表述成全基准提高。原发布 xGen-MM 4B 的平均分为 60.2，高于 CompCap 4B 的 58.9；合理的受控结论是相对重建基线 57.2 提升，而不是超过原发布模型。同期其他模型也在部分任务或整体平均上更强。
 
-![原论文 Table 3、Figure 5 与 Figure 6，PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Figure 6](figures/original-p008-figure-6.png)
+
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 *第 8 页上部 Table 3 是逐次增加数据类型的消融，中部 Figure 5 是描述与指令比例实验，下部 Figure 6 是食物链描述案例。*
 

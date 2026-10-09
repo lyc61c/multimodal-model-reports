@@ -27,5 +27,10 @@
     "Table13 AudioCaps列未充分标量纲，未擅自命名指标",
     "2T token限制声明、Table7短训练消融与Table9完整迭代不混用"
   ],
-  "model_run": false
+  "model_run": false,
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

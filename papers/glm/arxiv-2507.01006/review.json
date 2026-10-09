@@ -50,7 +50,8 @@
     "Seven sections",
     "Original report title/version verified",
     "Figure axes,table headers and actual scores checked",
-    "Missing disclosures and cross-domain regressions retained"
+    "Missing disclosures and cross-domain regressions retained",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "No independent reproduction",
@@ -58,5 +59,20 @@
     "No full optimizer/LR/hardware/RL group schedule",
     "Failed requests excluded by source evaluation",
     "Incorrect intermediate reasoning acknowledged by source"
-  ]
+  ],
+  "article_sha256": "bd89f2f2bfdb178443c35b0b953388615f3dd45c927898ec992d668911c36ec7",
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 58）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 59）：Figure 5 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 60）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 61）：Figure 6 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
 }

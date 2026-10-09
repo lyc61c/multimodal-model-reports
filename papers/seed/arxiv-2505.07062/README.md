@@ -14,7 +14,7 @@
 
 ## 3. 整体架构
 
-![原文Figure 1：图像视频编码与语言模型接口，PDF第5页](figures/original-page-005-01.png)
+![原文 Figure 1](figures/original-p005-figure-1.png)
 
 读Figure 1时可从下向上看：图像或视频帧进入SeedViT，相邻2×2特征平均池化，将空间token数量压缩至约四分之一；两层MLP把它们映射到语言模型输入空间。图像token、视频帧token、时间戳和文本交错输入Seed1.5-LLM，输出回答及可选思维链。视频左侧的时间标签是显式文本时间戳，避免仅靠帧序号表达真实时间间隔。截图完整保留原图和图注。
 
@@ -70,7 +70,7 @@ ViT独立预训练的三个阶段分别使用2.2B无标注、4.8B图文、65M多
 
 三阶段使用AdamW，β=(0.9,0.95)，权重衰减0.1，bias与归一化参数不衰减。Stage 0批量8.4M token，后两段71M token；前两段余弦衰减，Stage 2继承优化器状态、没有warmup。Stage 1加入约5%的纯文本token维持语言能力；Stage 2重新平衡能力并加入视频、代码和3D。冻结LLM但同时训练ViT的初始对齐方案，以及跳过对齐阶段，作者报告都较差，但没有给出足以独立量化每项贡献的完整消融表。〔PDF第13页〕
 
-![原文Figure 4：后训练循环与最终答案奖励，PDF第15页](figures/original-page-015-02.png)
+![原文 Figure 4](figures/original-p015-figure-4.png)
 
 Figure 4左侧是“冷启动SFT→RL→正确回答回收”的循环，右侧画出最终答案接受奖励、思维链不直接受评判。初始人工指令约13K；社区1.5M条候选经聚类、拒绝采样、LLM和奖励模型筛选后保留约30K。最终约50K多模态SFT样本结合内部纯文本及LongCoT数据，训练2轮；ViT冻结，其他参数训练，序列131,072，批量为16个序列长度，学习率2e-5→2e-6，10% warmup。
 
@@ -80,7 +80,7 @@ Figure 4左侧是“冷启动SFT→RL→正确回答回收”的循环，右侧�
 
 公开基准使用0-shot instruction-tuned模型；Table 6主要报告Pass@1及greedy decoding，Claude 3.7按推荐默认采样。星号表示2025年4月通过API自行收集，其他值来自相应报告；Gemini采用Preview 03-25。不同闭源模型的输入预算、内部推理预算和API版本不能完全控制。Table 6与正文个别描述不一致，下面以原表数值和模式列为准。本文未运行或复现模型。〔PDF第23–24、71–77页〕
 
-![原文Table 6：视觉评测与两种推理模式，PDF第24页](figures/original-page-024-03.png)
+![原文 Table 6](figures/original-p024-table-6.png)
 
 |基准|Seed推理|Seed非推理|Gemini 2.5 Pro推理|Qwen2.5-VL-72B非推理|
 |---|---:|---:|---:|---:|
@@ -95,7 +95,9 @@ Figure 4左侧是“冷启动SFT→RL→正确回答回收”的循环，右侧�
 
 截图的左两列分别是thinking和non-thinking，不能按行挑最高值后合称同一个配置。尤其DocVQA 96.9在**推理列**，正文一处称非推理96.9，本文遵循Table 6；VisualWebBench非推理为88.0而非正文的87.8。Seed在MathVista、InfographicVQA和定位计数上突出，但MMMU低于Gemini，ChartQA和OCRBench低于Qwen。NYU-Depth V2表中的13.6/11.6对应AbsRel 0.136/0.116，越低越好；3D检测SUN-RGBD的AP@15由非推理33.5下降到推理32.0，也表明增加思考并不自动增强3D感知。〔PDF第23–25页〕
 
-![原文Table 7与Table 8：视频和GUI结果，PDF第26页](figures/original-page-026-04.png)
+![原文 Table 7](figures/original-p026-table-7.png)
+
+![原文 Table 8](figures/original-p026-table-8.png)
 
 视频评测采用128K上下文、最多640帧。MotionBench、MVBench、TOMATO、TVBench为2 FPS，Dream-1K为3 FPS，其余1 FPS；Table 7的Prior SOTA按每个任务选用公开或API取得的最佳对手，不是一个固定模型。**Video-MME无字幕**的推理/非推理为77.9/77.6，低于Gemini 2.5 Pro的87.0；LongVideoBench为74.0/74.4，超过所列GPT-4o 66.7。Video-MMMU从72.1增至81.4，但MMVU为70.1，低于Gemini 75.8。主动StreamingBench的非推理82.8明显高于推理68.0，符合及时回应任务可能不受益于更长思考的结果。Charades-STA mIoU为64.0/64.7，TACoS为49.6/47.8，不能把它们写成分类准确率。
 

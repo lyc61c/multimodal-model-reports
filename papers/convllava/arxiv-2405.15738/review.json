@@ -1,1 +1,27 @@
-{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"核对v1标题机构日期与17页","facts":"核对Figures1–3及Tables1–15；保留59/65的输入协议差异和非单调结果","math":"空间步长和token计数核对，标准损失明确标注；未将编码器复杂度推广到LM","images":"逐张view_image检查PDF3/8/17架构、结果与训练表，表头未截断","training":"正文最后三个视觉阶段与概括图标区分；指令阶段视觉冻结"},"model_execution":"not_run"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "checks": {
+    "identity": "核对v1标题机构日期与17页",
+    "facts": "核对Figures1–3及Tables1–15；保留59/65的输入协议差异和非单调结果",
+    "math": "空间步长和token计数核对，标准损失明确标注；未将编码器复杂度推广到LM",
+    "images": "逐张view_image检查PDF3/8/17架构、结果与训练表，表头未截断",
+    "training": "正文最后三个视觉阶段与概括图标区分；指令阶段视觉冻结",
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  },
+  "model_execution": "not_run",
+  "article_sha256": "4e807990d8f80361cf079d565fbbf19687dbd29a546c58a9f1fd2648a4a60528",
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: complete ConvLLaVA/ViT comparison and three-stage training grid plus Figure 1 caption retained.",
+      "Tables 5 and 6 complete, captions and all model rows visible.",
+      "Tables 14 and 15 complete with training data and optimizer rows."
+    ]
+  }
+}

@@ -26,7 +26,7 @@
 
 PDF第9页的例子采用多轮指令：先要求说明解题方法，再生成相关图像caption，再依据caption推理，最后只返回答案。§4.2.1还把任务理解列为前置步骤，因此“有五项描述”与“四类显式生成内容”是不同抽象层次，不应凭数量差异发明额外模块。论文同时称推理不要求LLaVA-CoT那样严格的结构化输出，这说明训练示范格式与推理输出约束也不能完全等同。
 
-![Figure 3：基准组成与答案/步骤评价，原PDF第5页](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读图：**左侧是VRC-Bench来源分布，并非模型架构；右侧将最终答案与步骤分开显示。MathVista、DynaMath、LogicVista等不同来源进入多类评测。基准及裁判是评测系统，不是语言模型推理时必须调用的外部工具。图中Llama-3.2步骤数值与表2略有不一致，本文使用表2的58.37作为基线步骤分。
 
@@ -62,13 +62,17 @@ VRC-Bench另从多个现有评测数据来源选题，经GPT-4o生成步骤，�
 
 ## 7. 实验设置与主要结果
 
-![Table 2与Figure 4：VRC-Bench结果，原PDF第11页](figures/original-page-011-02.png)
+![原文 Table 2](figures/original-p011-table-2.png)
+
+![原文 Figure 4](figures/original-p011-figure-4.png)
 
 VRC-Bench分别评最终答案与推理步骤。表2中LlamaV-o1为56.49/68.93，LLaVA-CoT54.09/66.21，Llama-3.2 Vision48.40/58.37。答案分别增加2.40、8.09个百分点，步骤分提升2.72、10.56分。但GPT-4o答案59.28、步骤76.68，Claude-3.5-Sonnet答案61.35，说明本文并未全面超过较强闭源模型。
 
 正文称GPT-4o担任裁判；附录A.4/A.5代码却明确调用 **gpt-4o-mini**，temperature0，步骤max_tokens500、答案max_tokens10。最终答案也是裁判按语义给0/1，并非所有题均做严格字符串或数学验证。正文与代码的裁判身份不一致，使复现需要进一步确认；本文如实记录，不自行假定其中一者才是实验实际配置。
 
-![Table 3–4：六基准主表及消融，原PDF第13页](figures/original-page-013-03.png)
+![原文 Table 3](figures/original-p013-table-3.png)
+
+![原文 Table 4](figures/original-p013-table-4.png)
 
 | 基准 | LlamaV-o1 | LLaVA-CoT | Llama3.2-11B基线 |
 |---|---:|---:|---:|
@@ -82,6 +86,6 @@ VRC-Bench分别评最终答案与推理步骤。表2中LlamaV-o1为56.49/68.93�
 
 六基准按VLMEvalKit评测。67.33比LLaVA-CoT高3.83平均分，比底座高10.43；MathVista和AI2D仍低于LLaVA-CoT，所以平均更高不等于逐项领先。课程+多步CoT的表4均值66.04，进一步搜索到67.33，增加1.29；正文另写66.08，本文按表4。不同基准评分口径不同，这个均值是作者的汇总办法，不能替代某个任务的准确率。
 
-![Table 5：推理扩展耗时，原PDF第15页](figures/original-page-015-04.png)
+![原文 Table 5](figures/original-p015-table-5.png)
 
 **读表：**单张A100-80GB测MMVet。本文1→4 beams评分63.63→65.40，时间2.7→6.1 GPU小时；LLaVA-CoT1→4 beams为60.3→62.9、3.8→54.1 GPU小时。四beam表值比约8.9倍，但图注把对手写46.1，正文又把本文写4.2小时，均与表格不同。摘要“5倍”也未明确对应哪一统一设置，不能作为所有请求的固定速度优势。可靠结论是该报告的表格显示搜索精度改善、成本也增长，并且本文在这些设置下比阶段级搜索更省时间；具体倍率和复杂度仍须结合实现重新确认。

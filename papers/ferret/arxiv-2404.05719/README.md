@@ -18,7 +18,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：Ferret-UI 架构与 anyres，PDF 第 5 页整页截图](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 **读图**：Figure 2 左侧保留 Ferret 的混合区域表示，右侧显示把竖屏或横屏拆成两个子图的 anyres。截图中正文也是原始论文的一部分。
 
@@ -46,7 +46,7 @@ $$
 
 ## 5. 数据构建与处理
 
-![原文 Figure 3：七类基础任务示例，PDF 第 8 页整页截图](figures/original-page-008-02.png)
+![原文 Figure 3](figures/original-p008-figure-3.png)
 
 **读图**：Figure 3 按区域理解和目标定位展示同一类截图怎样转成不同问题。图中目标框和文字是原始数据示例，读者应区分模型输入中的区域提示与训练回答中的目标坐标。
 
@@ -70,7 +70,7 @@ Android 截图来自 RICO/Spotlight，去重后的训练/测试截图为 **26,52
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2：各任务汇总，PDF 第 10 页整页截图](figures/original-page-010-03.png)
+![原文 Table 2](figures/original-p010-table-2.png)
 
 **读表**：前三列分别是 Screen2Words/Widget Captioning 的 CIDEr 和 Tappability 的 F1，后续才是区域任务和高级任务。不同列不能用同一“准确率”概括。
 
@@ -85,7 +85,9 @@ Android 截图来自 RICO/Spotlight，去重后的训练/测试截图为 **26,52
 
 GPT-4V 因费用限制，各任务随机评估约 100 条，而 Ferret-UI 使用完整测试集。GPT-4V 的定位采用 Set-of-Mark，把标号候选框画到截图上后让模型选编号；区域理解还提供标记和类别说明。这些输入及样本差异需要与数值一同阅读。
 
-![原文 Figure 5 与 Table 3：基础任务及高级任务，PDF 第 11 页整页截图](figures/original-page-011-04.png)
+![原文 Figure 5](figures/original-p011-figure-5.png)
+
+![原文 Table 3](figures/original-p011-table-3.png)
 
 **读图与表**：上方 Figure 5 展示各基础任务；下方 Table 3 的高级指标是 GPT-4 相对评分，出现 198.5 并非超过 100% 的成功率。
 

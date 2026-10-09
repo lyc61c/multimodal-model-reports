@@ -20,7 +20,7 @@ DreamLLM 研究理解任务与生成任务能否相互帮助。它让语言模�
 
 ## 3. 整体架构
 
-![DreamLLM 原文 Figure 2，PDF 第4页完整页面](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 *原文 Figure 2，PDF 第 4 页完整截图。蓝色语言模型接收文字、dream queries 和视觉嵌入；上方冻结的 U-Net 将条件转成图像，图像随后通过下方视觉编码器反馈。原图同时保留方法公式。*
 
@@ -60,7 +60,7 @@ $x_t$ 可代表文字或图像内容；实际训练文字采用交叉熵、图�
 
 第二阶段加入 2M MMC4-Core 交错文档，通过 CLIP 分数阈值 0.25 选择；另加入 2M 经 BLIP 描述的 LAION 图文对，改善噪声文本或低质量图像对生成的影响。第三阶段使用 80K LLaVA 视觉指令、20K InstructMMC4 文档生成指令和 20K Instruct-BLIP-LAION 图像生成指令。后两者通过 GPT-4 根据文档文字摘要或图片 caption 生成任务描述，并非在教师直接看图后产生全面图像真值。
 
-![DreamLLM 原文 Figure 3，PDF 第7页完整页面](figures/original-page-007-02.png)
+![原文 Figure 3](figures/original-p007-figure-3.png)
 
 *原文 Figure 3，PDF 第 7 页完整截图。蓝色 `<dream_1>` 等表示模型选择插图位置，右侧展示真实生成的图片；维也纳介绍和机器人取手机的文章是图文创作示例，不能当作真实机器人任务执行记录。*
 
@@ -68,7 +68,7 @@ $x_t$ 可代表文字或图像内容；实际训练文字采用交叉熵、图�
 
 ## 6. 训练流程与目标
 
-![DreamLLM 原文 Table 11，PDF 第26页完整页面](figures/original-page-026-04.png)
+![原文 Table 11](figures/original-p026-table-11.png)
 
 *原文 Table 11，PDF 第 26 页，保留优化、数据、硬件与时间表。下方正文明确指出 CLIP 与 SD 在全部阶段冻结，而语言模型从阶段 II 开始解冻。*
 
@@ -88,7 +88,11 @@ Table 1 的 DreamLLM 结果为 COCO caption CIDEr 115.4、Image2Paragraph 17.4�
 
 文生图主结果 COCO FID 8.46 采用每提示生成 8 张后按 CLIP 分数选图；LN-COCO FID 20.53 则每提示 1 张，不使用 CLIP 排序，因为描述太长。两者协议不同。COCO 的 SD 基线 12.43、对齐阶段后 8.76，说明语言条件学习已有明显收益；但专用 Parti FID 7.23 等仍更低，不能称其优于所有专用生成模型。
 
-![DreamLLM 原文 Table 3 与 Figures 4–5，PDF 第8页完整页面](figures/original-page-008-03.png)
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Figure 4](figures/original-p008-figure-4.png)
+
+![原文 Figure 5](figures/original-p008-figure-5.png)
 
 *PDF 第 8 页保留协同学习控制表，以及关系理解、上下文图像生成的定性案例。Table 3 的 ID 表示阶段 II 是否采用交错文档，需同时读训练目标与 ID 两列。*
 

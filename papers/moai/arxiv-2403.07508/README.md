@@ -23,7 +23,7 @@ MoAI 的动机是，通用视觉编码器可能漏读文字、对象位置和关
 
 ## 3. 整体架构
 
-![Figure 3：MoAI整体架构，PDF第6页](figures/original-page-006-01.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 **Figure 3，PDF 第 6 页。** 图左是原图经冻结 Vision 和两层 GELU MLP 进入 MLM；中间是四类 CV 输出经过 verbalization、冻结 word embedding 和可训练 Compressor；右边是语言指令。冰与火分别表示冻结和训练，新增辅助 token、Compressor、Mixer 是主要学习部分。辅助信息并不是简单附加一个长文字提示后交给 LLM，而是在中间层被专门注意力模块读取。
 
@@ -60,7 +60,7 @@ $$
 
 ## 5. 数据构建与处理
 
-![Figure 4：外部CV输出的语言化，PDF第7页](figures/original-page-007-02.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **Figure 4，PDF 第 7 页。** 由上到下看四组信息：分割、检测以名称和框坐标表示，SGG 用“主体—关系—客体”句子，OCR 用读出的文本。分割分支还把彩色 panoptic map 经视觉编码器与 MLP 转成具有空间结构的特征，与对象文字描述拼接。框坐标和语言语义共同提供位置依据，不能把它概括成只有 OCR 的辅助提示。
 
@@ -80,7 +80,7 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![Table 1：零样本评测，PDF第12页](figures/original-page-012-03.png)
+![原文 Table 1](figures/original-p012-table-1.png)
 
 **Table 1，PDF 第 12 页。** 行是各模型、列是不同任务，MME-P/C 是感知 / 认知分数；不是百分制准确率。MoAI 的九列结果为 Q-Bench 70.2、ScienceQA-IMG 83.5、TextVQA 67.8、POPE 87.1、MME-P 1714、MME-C 561、MMBench 79.3、中文 MMBench 76.5、MM-Vet 43.7。
 
@@ -94,7 +94,9 @@ $$
 
 MoAI 对所列 7B 模型在多项感知任务改善明显，但 MM-Vet 仍低于 CogVLM 的 54.5。所谓 zero-shot 指评测时没有上下文示例，并不表示模型未经指令微调。报告没有为所有第三方模型重新统一训练数据、输出方式和感知器预算，闭源雷达图也不支持全面领先的概括。
 
-![Table 2、3：组件与训练消融，PDF第13页](figures/original-page-013-04.png)
+![原文 Table 2](figures/original-p013-table-2.png)
+
+![原文 Table 3](figures/original-p013-table-3.png)
 
 **Table 2、3，PDF 第 13 页。** Table 2 的叉号表示移除对应组件，首列把 PS 和 OWOD 一起移除，因此不能分别估算二者独立贡献。完整配置 MME 存在性 / 位置 / OCR 为 200 / 165 / 148；无 PS+OWOD 为 187 / 154 / 145，无 SGG 为 198 / 145 / 147，无 OCR 为 199 / 163 / 120。MMBench OCR 完整为 93.5，无 OCR 降到 80.1；文字翻译 MME 从 153 降到 95。这支持模型通过辅助信息补足感知，而不是仅增加模块参数。
 

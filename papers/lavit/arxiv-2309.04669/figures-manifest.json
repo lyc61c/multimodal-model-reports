@@ -4,63 +4,128 @@
   "source_pdf_sha256": "1b02977920d6b43062a95df5365a2236cb9183f3625f4c963b424a3d7abc8f15",
   "assets": [
     {
-      "asset_path": "figures/original-page-004-01.png",
-      "original_label": "PDF page 4",
+      "asset_path": "figures/original-p004-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 4,
       "source_url": "https://arxiv.org/pdf/2309.04669v1#page=4",
       "source_version": "2309.04669v1",
       "source_sha256": "1b02977920d6b43062a95df5365a2236cb9183f3625f4c963b424a3d7abc8f15",
-      "asset_sha256": "cc3704ad7bee40ef8ad5927213894d88bdce30223af0dcacb9afc3e3ab94ae8f",
+      "asset_sha256": "018eb145668e1ab242d9d8cd7e89c21fd6474e9d9c9447ed8d697562a1f7a38c",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          62.76,
+          66.33,
+          507.0,
+          347.38
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 89）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-005-02.png",
-      "original_label": "PDF page 5",
-      "pdf_page": 5,
-      "source_url": "https://arxiv.org/pdf/2309.04669v1#page=5",
-      "source_version": "2309.04669v1",
-      "source_sha256": "1b02977920d6b43062a95df5365a2236cb9183f3625f4c963b424a3d7abc8f15",
-      "asset_sha256": "feefce07b872ded06290ad6a77f904ec12fa1c8f2487d45386e7271590a1d71c",
-      "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
-      }
-    },
-    {
-      "asset_path": "figures/original-page-007-03.png",
-      "original_label": "PDF page 7",
+      "asset_path": "figures/original-p007-table-1.png",
+      "original_label": "Table 1",
       "pdf_page": 7,
       "source_url": "https://arxiv.org/pdf/2309.04669v1#page=7",
       "source_version": "2309.04669v1",
       "source_sha256": "1b02977920d6b43062a95df5365a2236cb9183f3625f4c963b424a3d7abc8f15",
-      "asset_sha256": "2673af72d606d840ab915a41af95771a3e6cde206f63efd0d55264957547de58",
+      "asset_sha256": "be5526b6294501ee9692b156af043083bd180d9f82bac58f2e5a23611a619880",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105.0,
+          78.83,
+          507.0,
+          254.79
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 91）：Table 1, Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-008-04.png",
-      "original_label": "PDF page 8",
+      "asset_path": "figures/original-p007-table-2.png",
+      "original_label": "Table 2",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2309.04669v1#page=7",
+      "source_version": "2309.04669v1",
+      "source_sha256": "1b02977920d6b43062a95df5365a2236cb9183f3625f4c963b424a3d7abc8f15",
+      "asset_sha256": "0a6dc8b63207ca7147e0b215dde2eec6affd0fefdf872655830c51bb7cf8a7c7",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105,
+          480,
+          507,
+          614.79
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 91）：Table 1, Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 8,
       "source_url": "https://arxiv.org/pdf/2309.04669v1#page=8",
       "source_version": "2309.04669v1",
       "source_sha256": "1b02977920d6b43062a95df5365a2236cb9183f3625f4c963b424a3d7abc8f15",
-      "asset_sha256": "9b623c2ff317de30e2c152d7cc6de27b054829051cd5101523e32688e3ada4b0",
+      "asset_sha256": "ca6e3529f046d56fcaa01f4030b084b3e78df60ad5152a0d14a1a97e5dff1aea",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          97.07,
+          82.02,
+          515.03,
+          296.27
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 92）：Figure 3, Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-table-3.png",
+      "original_label": "Table 3",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2309.04669v1#page=8",
+      "source_version": "2309.04669v1",
+      "source_sha256": "1b02977920d6b43062a95df5365a2236cb9183f3625f4c963b424a3d7abc8f15",
+      "asset_sha256": "6d2d3537f9b709d8645aecb2c637afa27b3f4fe7810b1d848bf0ccf10e5ef0bf",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105.0,
+          385.56,
+          507.0,
+          475.89
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 92）：Figure 3, Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

@@ -32,7 +32,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Self-review, no independent reviewer/model execution",
@@ -40,5 +41,20 @@
     "GQA and 7B MME-perception decline despite aggregate improvement",
     "Tables/prose contain repeated-score and universal-superiority inconsistencies",
     "No quantitative open-set replacement full benchmarks or runtime costs"
-  ]
+  ],
+  "article_sha256": "970ad27abac9cabe48c00b1992575f8bd152a379731de26efa90251e456dc3af",
+  "artifact_checks": {
+    "original_assets": 10,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 50）：Figure 2, Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 51）：Table 4, Figure 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 52）：Table 6, Table 7, Table 8 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 53）：Table 9, Table 10, Table 11 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
 }

@@ -32,7 +32,7 @@
 
 语言模型延续 Llama 系列的稠密 Transformer。8B/70B/405B 分别为 32/80/126 层，隐藏维度 4096/8192/16384，FFN 维度 14336/28672/53248，查询头数 32/64/128，KV 头数均为 8。激活使用 SwiGLU，RoPE 基频为 500,000。训练序列中的不同文档通过注意力 mask 隔离，避免把拼接边界当成真正连续上下文。[PDF 第 6–7 页](https://arxiv.org/pdf/2407.21783v1#page=6)
 
-![原文 Figure 28：组合式多模态扩展，PDF 第 55 页](figures/original-page-055-02.png)
+![原文 Figure 28](figures/original-p055-figure-28.png)
 
 **图怎么读。** 左侧图像经 ViT 编码，视频再通过时间聚合器形成压缩表示；中间文字骨干周期性插入跨注意力，主动读取视觉信息。右侧语音经过 Conformer 和适配器后进入 token embedding 路径。图中颜色标示不同训练阶段，说明视觉与语音采用不同的接入方式。具体视频插入频率按正文第 57 页的实现说明解读，不能由示意图标签反推出另一套训练配置。
 
@@ -42,7 +42,7 @@
 
 视频输入最多 64 个均匀采样帧，每帧先用图像编码器处理，再用 Perceiver resampler 聚合。正文介绍每 32 帧聚成一个有效帧，视频跨注意力插在每四个图像跨注意力层之前。预训练实际使用 16 帧并按 16 聚合为一个有效帧，SFT 使用 64 帧、按 32 聚合为两个。原文第 57 页的一处“7B”命名与全报告 8B 模型不一致，本文沿正式模型命名，保留具体训练描述的阶段差别。
 
-![原文 Figure 29：语音输入与流式语音生成，PDF 第 63 页](figures/original-page-063-04.png)
+![原文 Figure 29](figures/original-p063-figure-29.png)
 
 **图怎么读。** 输入语音经编码器与适配器交给 Llama 3，系统提示选择识别、翻译或对话模式。输出文字及隐藏嵌入送入 text normalization、prosody model 与 synthesizer，再形成波形。这里存在明确的文字及专用 TTS 中间模块，不能据此称模型原生直接预测最终音频波形。
 
@@ -82,7 +82,7 @@
 
 训练最多使用 16,384 块 H100，而基础集群拥有约 24K，不是全部同时训练本模型。张量、上下文、流水线和 FSDP 构成四维并行，BF16 MFU 为 38–43%；梯度累积与部分梯度通信采用 FP32。报告统计的 54 天窗口用于运行可靠性分析，不能作为完整训练历时。[PDF 第 9–14 页](https://arxiv.org/pdf/2407.21783v1#page=9)
 
-![原文 Figure 7：六轮后训练的循环，PDF 第 15 页](figures/original-page-015-01.png)
+![原文 Figure 7](figures/original-p015-figure-7.png)
 
 **图怎么读。** 先采集 prompt，再用上一轮模型生成多个回答，奖励模型筛选后组成 SFT 数据。SFT 模型经偏好数据做 DPO，再成为下一轮候选生成器。蓝色是模型，灰色是数据；奖励模型主要负责筛选，报告最终对齐方法并不是直接把 RM 分数作为 PPO 优化目标。
 
@@ -104,7 +104,7 @@
 
 语言模型结果区分 base 与 instruct；代码评测采用 pass@1，HumanEval 405B 为 $89.0\pm4.8$，HumanEval+ 为 $82.3\pm5.8$。MMLU 5-shot 为 87.3，0-shot CoT 为 88.6，不能把两种设置合并。报告为部分简单均值指标提供 95% 置信区间，也承认这主要刻画有限样本误差，不能涵盖全部评测波动。[PDF 第 29、35–39 页](https://arxiv.org/pdf/2407.21783v1#page=29)
 
-![原文 Table 29：实验性视觉模块结果，PDF 第 61 页](figures/original-page-061-03.png)
+![原文 Table 29](figures/original-p061-table-29.png)
 
 **表怎么读。** 三个 Llama 3-V 列标注语言骨干规模，列间不是只有“总参数”这一变量。MMMU 与 ChartQA 明确有 CoT；DocVQA 中 Gemini 的三角标记代表外部 OCR。缺失结果用横线表示，不能当作零分。
 

@@ -1,1 +1,43 @@
-{"checked_file":"README.md","verdict":"complete_self_review","fact_checks":["five components andinputregion/outputmask rolesverified","GranD automaticvsGranDf repurposedandhumanannotations distinguished","trainingmissingdetails disclosed","task-specificFT clearlyseparatedfromZS"],"math_checks":["unnumberedmodulerelationshipsfaithful to3.1","SEGconditionnotpixelautoregression","maskrecall formulatedfromtwothreshold prose","no invented jointBCE/Diceloss coefficient orLoRArecipe"],"image_checks":{"viewed":["figures/original-page-004-01.png","figures/original-page-006-02.png","figures/original-page-009-03.png"],"result":"Original diagrams, masks, labels andmetric tablesheaders complete and legible;full-pagecapture acknowledged"},"model_execution":"not_run","limitations":"v1 lacks citedappendices;no modelreproductionorindependentreviewerclaimed"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "five components andinputregion/outputmask rolesverified",
+    "GranD automaticvsGranDf repurposedandhumanannotations distinguished",
+    "trainingmissingdetails disclosed",
+    "task-specificFT clearlyseparatedfromZS"
+  ],
+  "math_checks": [
+    "unnumberedmodulerelationshipsfaithful to3.1",
+    "SEGconditionnotpixelautoregression",
+    "maskrecall formulatedfromtwothreshold prose",
+    "no invented jointBCE/Diceloss coefficient orLoRArecipe"
+  ],
+  "image_checks": {
+    "viewed": [
+      "figures/original-page-004-01.png",
+      "figures/original-page-006-02.png",
+      "figures/original-page-009-03.png"
+    ],
+    "result": "Original diagrams, masks, labels andmetric tablesheaders complete and legible;full-pagecapture acknowledged"
+  },
+  "model_execution": "not_run",
+  "limitations": "v1 lacks citedappendices;no modelreproductionorindependentreviewerclaimed",
+  "article_sha256": "fe2fe0f34eb753b955b1d03de3694569f0185a3e01e3ecdcb13b3b9cbb000fd7",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
+}

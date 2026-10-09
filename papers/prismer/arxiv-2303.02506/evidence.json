@@ -39,5 +39,10 @@
     "SimVLM少数据倍数正文140与图注160不一致，实际1.8B/12.7M约142。",
     "不同架构的Resampler宽度按Table2采用768/1024，未将正文约50M同设计理解为参数严格相同。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

@@ -31,5 +31,23 @@
     "未运行模型或作者实现；未补入优化器、有效全局批量、图像预处理尺寸等未披露配置。",
     "敏感度数学定义存在原文矛盾，报告数值按作者口径保留。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "79117dc7c2bef69019e2d8ff78b72d9be892429bf56365312fe4744d0f62fee4",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually inspected the original PDF page: the full-page screenshot contains prose, equations or pseudocode, with no relevant referenced model diagram, result figure or table. Remove the screenshot and preserve the substantive README prose, using the reviewed wording edits.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
+    ]
+  }
 }

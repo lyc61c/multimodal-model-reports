@@ -28,7 +28,7 @@ MMVP以一对图的两问都答对计分，BRAVE42.0，对最佳单encoder27.3�
 
 ## 3. 整体架构
 
-![Figure 2：多种视觉特征序列合并与MEQ-Former](figures/original-page-007-01.png)
+![原文 Figure 2](figures/original-p007-figure-2.png)
 
 *来源：原文Figure2，PDF第7页，[原页](https://arxiv.org/pdf/2404.07204v1#page=7)。各encoder输出先过FC，再沿序列轴合并；右侧查询通过cross-attention读视觉key/value。雪花表示图示的预训练冻结配置。*
 
@@ -70,7 +70,7 @@ COCO描述用Karpathy训练划分，然后在NoCaps评估新类别。NoCaps“ze
 
 实现用FLAX/Scenic，预训练batch1024、64张TPUv5 chips。固定v1的23页包含主文与参考文献，多次指向supplementary，但当前PDF没有对应完整超参附录；学习率、optimizer、step、epoch、上下文长度和墙钟并未在这些页面完整披露，本文不从其它版本补齐或假装原文已有。
 
-![Table 5：语言微调、encoder dropout和高分辨率的消融](figures/original-page-013-04.png)
+![原文 Table 5](figures/original-p013-table-5.png)
 
 *来源：原文Table5，PDF第13页，[原页](https://arxiv.org/pdf/2404.07204v1#page=13)。每行是一项相对A0改动，N/A不是零；此处COCO/VQAv2为validation，与主test结果口径不同。*
 
@@ -78,13 +78,13 @@ COCO描述用Karpathy训练划分，然后在NoCaps评估新类别。NoCaps“ze
 
 ## 7. 实验设置与主要结果
 
-![Table 3：COCO微调与NoCaps转移结果](figures/original-page-010-02.png)
+![原文 Table 3](figures/original-p010-table-3.png)
 
 *来源：原文Table3，PDF第10页，[原页](https://arxiv.org/pdf/2404.07204v1#page=10)。统一为CIDEr，参数表分别列可训练/总量；比较训练效率不能只看116M而忽略10.3B总组件。*
 
 BRAVE COCO Karpathy test148.0，低于PaLI17B149.1；NoCaps validation域外/总体133.3/127.6，test127.1/125.6，在该表对照中较强。NoCaps新类别转移说明广泛视觉偏置有益，但不能当无限开放世界类别识别保证。CIDEr和VQA准确率不是同一尺度。
 
-![Table 4：VQA各任务的微调/转移条件与结果](figures/original-page-011-03.png)
+![原文 Table 4](figures/original-p011-table-4.png)
 
 *来源：原文Table4，PDF第11页，[原页](https://arxiv.org/pdf/2404.07204v1#page=11)。GQA分别有微调与zero-shot两列；MMVP为pair accuracy，不是单题accuracy。*
 

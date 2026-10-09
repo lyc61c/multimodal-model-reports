@@ -22,7 +22,7 @@ LEO 的优势在于三维对象结构与语言模型之间的接口简单：不�
 
 ## 3. 整体架构
 
-![原文 Figure 1，PDF 第 2 页：共享语言与动作输出的具身通用模型](figures/original-page-002-01.png)
+![原文 Figure 1](figures/original-p002-figure-1.png)
 
 **Figure 1 的读法。** 中央将系统提示、第一视角图片、三维场景和任务指令编码为连续序列，由 LLM 生成文本或特殊动作 token。旁边的描述、问答、对话、计划与操作展示不同任务共用同一框架。火焰与雪花区分可训练和冻结模块：语言主干由 LoRA 适配，不是完整更新全部 7B 参数。
 
@@ -60,7 +60,7 @@ $$\mathcal L=-\sum_{b,t}\log p_\theta
 
 ## 5. 数据构建与处理
 
-![原文 Figure 2，PDF 第 5 页：场景图提示、O-CoT 与修订](figures/original-page-005-02.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 **Figure 2 的读法。** 上方左侧把物体属性和关系作为结构化上下文交给 ChatGPT，上方右侧处理计数错误、未知回答与对象 ID 泄露；下方展示描述、问答、对话和计划。灰色 thought 是数据生成中的中间信息，最终训练响应中删除。图中计划只是语言步骤示例，不能据此认定全部步骤已经被机器人实际执行验证。
 
@@ -96,7 +96,11 @@ $$\mathcal L=-\sum_{b,t}\log p_\theta
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 2–4，PDF 第 7 页：三维理解、桌面操作与导航](figures/original-page-007-03.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 **结果页的读法。** 上表包含描述的 n-gram 指标、语义相似度与 QA 的 EM，不能相互当作统一成功率；Scan2Cap 指标还受 IoU@0.5 定位条件约束。左下操作表的 seen/unseen 指颜色或对象分布差异，右下导航把任务成功率 S 与路径效率 SPL 分开。HM3D 上的 † 表示没有使用该数据集场景训练。
 
@@ -104,7 +108,7 @@ LEO 在主表 Scan2Cap 的 CIDEr 为 68.4，对照 3D-VisTA 为 66.9；ScanQA CI
 
 CLIPort 中 separating-piles 的 seen/unseen 平均奖励为 98.8/75.2，packing-google-objects-seq 为 76.6/79.8，put-blocks-in-bowls 为 86.2/35.2。模型在部分未见对象任务较强，却在已见 packing 及 bowls 上低于专用 CLIPort。导航 MP3D 成功率 23.1、SPL 15.2，人类示范 Habitat-web 成功率更高至 35.4，但 SPL 为 10.2；HM3D 为 23.1/19.1，低于 VC-1 的 57.1/31.4。共享框架证明可行，尚不能写成全面替代任务专用策略。
 
-![原文 Figure 4，PDF 第 9 页：数据配置与规模分析](figures/original-page-009-04.png)
+![原文 Figure 4](figures/original-p009-figure-4.png)
 
 **Figure 4 的读法。** 左图逐任务对比不对齐、少量数据、仅 ScanNet、去动作与全任务模型；星号标记对齐阶段任务，不能把所有柱子都当独立新测试。右图横轴是训练 token 量，纵轴是测试损失，随数据增加整体下降。13B 未对齐曲线反而高于 7B 未对齐，说明本实验没有证明仅放大主干就能改善三维能力。
 

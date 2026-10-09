@@ -22,7 +22,7 @@ Table 1 中 256-token 模型的 11 项归一化平均分为 59.4，LLaVA-1.5 为
 
 ## 3. 整体架构
 
-![原文 Figure 2 与嵌套表示背景公式，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：**从下往上是图像、视觉编码器、网格特征、Query Transformer、预训练语言模型。右侧不同长度的彩色矩形共用左侧的前缀，表示一次训练的查询集合来自同一个有序序列，不是从图像网格中随机抽取若干 patch。
 
@@ -46,7 +46,7 @@ $$
 
 $q$ 为问题，$y$ 为答案。用期望 $\mathbb E_{m\sim p(m)}\mathcal L_m$ 理解整个训练过程，是对随机训练的解释；它不意味着论文每步同时计算全部长度。第二阶段从 $2,4,\ldots,256$ 中线性均匀抽样，保留**前缀**，不是随机删除任意查询。前部查询更频繁地参与梯度更新，因此要承担低预算下的基本信息表达；后部查询能补充细节。
 
-![原文 Figure 4：不同预算下的 Grad-CAM，PDF 第 6 页](figures/original-page-006-03.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 **读图：**每行是一个问题，从左至右为原图和 8、16、64、256 个 token 下的热图。桌面样例随预算增大呈现更多局部物体。需要注意，图注说明每幅热图针对一个随机选中的 token，并非所有 token 的平均注意力，也不是每个查询对应一个物体的标注证据。它说明表示关注范围可能变化，不能据此证明每个 token 都具有稳定、可解释的语义。
 
@@ -73,7 +73,9 @@ Table 1 的 VQAv2 与 GQA 分数带星号，图注明确相应数据集的训练
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 1 与 Figure 3，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
+
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读表：**同一个 MQT 模型按不同 token 数分行；横向为 11 个基准。MME 感知与认知是原始分数，其他指标也并非全都同一种评分；最后 Avg. 是归一化到 100 后的平均，不能把 MME 原始分直接与准确率相加。Figure 3 是与 InstructBLIP 在共同的八项任务上的平均比较，与 Table 1 的 11 项 Avg. 范围不同。
 
@@ -91,7 +93,7 @@ Table 1 的 VQAv2 与 GQA 分数带星号，图注明确相应数据集的训练
 
 计算量测算以 MMBench 为例，256、144、16 个 token 分别约为 LLaVA 的二分之一、三分之一、八分之一 TFLOPs。论文未给出对应完整的墙钟延迟、吞吐、KV 缓存和能耗测量，因此部署收益仍取决于硬件与实现。附录 Table 3 中未训练过的 77-token 配置 Avg. 58.3、MMBench 64.0，支持在最大 256 以内灵活选长度；没有证据支持直接外推到更多查询。
 
-![原文 Table 2：训练及结构消融，PDF 第 9 页](figures/original-page-009-04.png)
+![原文 Table 2](figures/original-p009-table-2.png)
 
 **读表：**所有消融都固定用 256 个视觉 token 评测。完整 MQT 的 Avg. 59.4；改成偏向小长度的对数采样为 57.3，先投影后注意力为 56.6，在第一阶段也实施弹性训练为 56.7。分别下降 2.1、2.8、2.7 个归一化分。最后一行名称容易与常规第一阶段 Query Transformer 训练混淆，应结合第 4.3 节理解为提前加入 Matryoshka 训练，而不是说主模型没有第一阶段对齐。
 

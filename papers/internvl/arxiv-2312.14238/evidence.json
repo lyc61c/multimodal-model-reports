@@ -12,5 +12,10 @@
     "逐列核对R@1方向/1K5K/八帧mean top1top5，caption zero-shot与seen SFT区别",
     "Table12为简设置非最高1586.4配置；未运行模型，公式仅对原文目标归纳"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

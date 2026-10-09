@@ -22,7 +22,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2，PDF 第 2 页：输入编码、跨模态对齐与输出管线](figures/original-page-002-01.png)
+![原文 Figure 2](figures/original-p002-figure-2.png)
 
 **Figure 2 的读法。** 上方是图像/视频、音频、文字或语音提示的输入路径；中间左侧 OmniAlignNet 提供对比学习，中间右侧对 token 做时间分组与旋转；下方 LLM 生成文本，最右侧 TTS 将文本渲染成声音。图中的训练符号描述总体框架，具体冻结范围仍应按训练阶段阅读，不能从总图推断联合阶段所有编码器都训练。
 
@@ -65,13 +65,15 @@ x\odot\cos\Omega_{:,j}
 
 ## 5. 数据构建与处理
 
-![原文 Figure 4，PDF 第 6 页：从两路描述合成联合描述](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 **Figure 4 的读法。** 顶部独立视觉描述和音频描述分别可能误解视频主题；中部按 20 秒切片生成两路文本，底部另一 LLM 综合这些描述形成联合 caption。例子中深海画面与解说共同解释潜水地点，单看图或单听音都容易遗漏线索。合成模型综合两路描述，这不等于获得完全正确的人工全模态标注。
 
 作者采用两类音视频数据。隐式数据保留已有视频 QA 的音轨，使模型回答原问题时可以利用声音；但标签未必必须同时依赖两路。显式数据通过数据引擎分别描述视觉与音频，再跨模态校正与汇总，主文提到形成每 2 分钟片段的联合描述，再用推理 LLM 从联合描述产生带推理轨迹的问答。20 秒底层切片与 2 分钟汇总属于不同层级，不应写成互相冲突的唯一片长。Magpie TTS 另把文字问题合成语音，形成语音提示与视觉内容配对的数据。[PDF 第 5–6 页](https://arxiv.org/pdf/2510.15870v1#page=5)
 
-![原文 Figure 5 与 Table 1，PDF 第 7 页：数据组成及对齐消融](figures/original-page-007-03.png)
+![原文 Figure 5](figures/original-p007-figure-5.png)
+
+![原文 Table 1](figures/original-p007-table-1.png)
 
 **Figure 5 的读法。** 内环为模态类别，外环为任务；图片 36%、非语音声音 21%、语音 17%、全模态 15%、视频 11%。全模态又包括约 12% QA 与 3% caption。图下的 Table 1 是对齐机制消融，不能将三项基准平均分解释为训练数据类别的准确率。
 
@@ -99,7 +101,9 @@ x\odot\cos\Omega_{:,j}
 | MMAU 完整 test 平均 | 71.60 | Qwen2.5-Omni 71.00；不能与 test-mini 混比。 |
 | LibriSpeech clean / other WER | 1.7 / 3.7 | 跨五项平均 WER 为 6.3，低于 Qwen2.5-Omni 表中 6.8，但高于 Phi-4-MM 5.2。 |
 
-![原文 Tables 7–8 与 GRPO 目标，PDF 第 10 页](figures/original-page-010-04.png)
+![原文 Table 7](figures/original-p010-table-7.png)
+
+![原文 Table 8](figures/original-p010-table-8.png)
 
 **实验页的读法。** 上表将视频 val/test 分开，Video-MME 为无字幕口径：OmniVinci 68.2，Qwen2.5-Omni 64.3、Qwen2.5-VL 65.1。下表同时展示图像成绩，例如 DocVQA 91.5 低于 NVILA 93.7，MathVista 63.5 低于 NVILA 65.4，TextVQA 83.9 高于 NVILA 80.1。全模态能力扩展仍有任务取舍，不能将总体增益写成所有基准领先。
 

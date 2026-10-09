@@ -46,5 +46,23 @@
     "Posttrainingfullhyperparameters notpublished",
     "Swarm latency doesnotestablishequalcompute",
     "Reference API failure affectsvisioncomparison"
-  ]
+  ],
+  "article_sha256": "bcc25c1d50da4820a7b34c0594c7aa41b2bf63e9bf4c831cb37d1691f540caa9",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Figure 3 complete agent-swarm orchestrator workflow.",
+      "Viewed source and crop after manual repair: Table 3 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop after manual repair: Table 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Figure 8 all axes, legend, timing markers and caption."
+    ]
+  }
 }

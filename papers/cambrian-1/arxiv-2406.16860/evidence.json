@@ -3,14 +3,43 @@
   "source_url": "https://arxiv.org/pdf/2406.16860v1",
   "read_scope": "Sections 1–7 and Appendices A–G, including tables 19–20",
   "facts": [
-    {"claim": "Final four encoders and 576 visual tokens", "location": "Section 6, Table 8, PDF pages 18–19"},
-    {"claim": "Spatial local cross-attention, query groups and repeated aggregation", "location": "Equation 1, Figure 8, Section 4, PDF pages 13–14"},
-    {"claim": "24x24 query grid and ConvNeXt 96x96 feature map; appendix 576x576 typo", "location": "Appendix F, PDF page 39"},
-    {"claim": "Cross-attention stride 3/4/9 for final 8B/13B/34B", "location": "Appendix F, PDF page 39"},
-    {"claim": "9784K original data pool and source/ratio balancing", "location": "Sections 5.1–5.2, PDF pages 15–17"},
-    {"claim": "2638 manually checked CV-Bench examples and equal 2D/3D average", "location": "Section 3.2/Table 1 and Appendix C.3, PDF pages 7–8,30–31"},
-    {"claim": "Final learning rates and batches, no final vision LR specified", "location": "Table 19, PDF page 42"},
-    {"claim": "Final results and grading effects", "location": "Table 8 page 19; Table 20 page 42"}
+    {
+      "claim": "Final four encoders and 576 visual tokens",
+      "location": "Section 6, Table 8, PDF pages 18–19"
+    },
+    {
+      "claim": "Spatial local cross-attention, query groups and repeated aggregation",
+      "location": "Equation 1, Figure 8, Section 4, PDF pages 13–14"
+    },
+    {
+      "claim": "24x24 query grid and ConvNeXt 96x96 feature map; appendix 576x576 typo",
+      "location": "Appendix F, PDF page 39"
+    },
+    {
+      "claim": "Cross-attention stride 3/4/9 for final 8B/13B/34B",
+      "location": "Appendix F, PDF page 39"
+    },
+    {
+      "claim": "9784K original data pool and source/ratio balancing",
+      "location": "Sections 5.1–5.2, PDF pages 15–17"
+    },
+    {
+      "claim": "2638 manually checked CV-Bench examples and equal 2D/3D average",
+      "location": "Section 3.2/Table 1 and Appendix C.3, PDF pages 7–8,30–31"
+    },
+    {
+      "claim": "Final learning rates and batches, no final vision LR specified",
+      "location": "Table 19, PDF page 42"
+    },
+    {
+      "claim": "Final results and grading effects",
+      "location": "Table 8 page 19; Table 20 page 42"
+    }
   ],
-  "math": "Eq. (1) equivalently restated; local/global attention pairing counts are marked derivations, CE is standard explanatory objective; CV-Bench averaging taken from original appendix."
+  "math": "Eq. (1) equivalently restated; local/global attention pairing counts are marked derivations, CE is standard explanatory objective; CV-Bench averaging taken from original appendix.",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

@@ -7,18 +7,30 @@
     "CRPE all five columns verified",
     "Stage 2 learning rate verified from original page 28",
     "No model execution claimed",
-    "Original formulas absent; explanatory structures labelled"
+    "Original formulas absent; explanatory structures labelled",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "8fd2e98d59ef50ae08a21432d76dd9927613aca991db50ebcc63cb088c6a462b",
+  "article_sha256": "6fbf9da920a6e8123b6a2b7100b1eb5850197e4ae7537bef08a2ac5d9e4a17ed",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and re-rendered crop: three comparison pipelines and their explanatory sublabels plus complete Figure 1 caption retained; following body excluded.",
+      "Viewed source page and re-rendered crop: bus image, relation-format arrows, ref/pred text and complete Figure 5 caption retained without following prose.",
+      "Viewed source page and re-rendered right-column crop: Table 6 title, all six columns and all three model rows retained; surrounding left-column prose excluded.",
+      "Viewed fresh exclusive-path render: Table 10 title, column headers and all seven task rows retained; following paragraph removed."
+    ]
+  }
 }

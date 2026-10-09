@@ -4,63 +4,128 @@
   "source_pdf_sha256": "9daea37a9e791b92d338b743a9ccad2dfa8b74e746b282be2667110c8cccacb9",
   "assets": [
     {
-      "asset_path": "figures/original-page-012-01.png",
-      "original_label": "PDF page 12",
+      "asset_path": "figures/original-p012-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 12,
       "source_url": "https://arxiv.org/pdf/2403.05525v1#page=12",
       "source_version": "2403.05525v1",
       "source_sha256": "9daea37a9e791b92d338b743a9ccad2dfa8b74e746b282be2667110c8cccacb9",
-      "asset_sha256": "b0d2963c9ef3b2728bbdfd5f1e8e5e20d53138ee8eb96aef7dd6b9b826a2351c",
+      "asset_sha256": "bb6eda8b4f857612eb452f132b6780fe3373698d349aa64ec7de1441f09c15f3",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 120,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          82.04,
+          529.32,
+          346.11
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: all three DeepSeek-VL training stages, train/freeze icons, data labels and Figure 3 caption retained.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-014-02.png",
-      "original_label": "PDF page 14",
+      "asset_path": "figures/original-p014-figure-4.png",
+      "original_label": "Figure 4",
       "pdf_page": 14,
       "source_url": "https://arxiv.org/pdf/2403.05525v1#page=14",
       "source_version": "2403.05525v1",
       "source_sha256": "9daea37a9e791b92d338b743a9ccad2dfa8b74e746b282be2667110c8cccacb9",
-      "asset_sha256": "9a78478bfcb7b52243dd08ca354aed73fbd1e8be60a2870abc9d035f9b3bbb55",
+      "asset_sha256": "22967ffd0d7fefc45ec8520f76b29ef2dffe973b4048961195674c76d4ed86c8",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 120,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          82.03,
+          529.23,
+          553.52
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: all six Figure 4 panels with legends/axes and caption retained. Table 1 mentioned in the following Chinese explanatory prose is on another PDF page and is not a missing same-page target.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-016-03.png",
-      "original_label": "PDF page 16",
+      "asset_path": "figures/original-p016-table-4.png",
+      "original_label": "Table 4",
       "pdf_page": 16,
       "source_url": "https://arxiv.org/pdf/2403.05525v1#page=16",
       "source_version": "2403.05525v1",
       "source_sha256": "9daea37a9e791b92d338b743a9ccad2dfa8b74e746b282be2667110c8cccacb9",
-      "asset_sha256": "95078c443376ba5742ffe7044964b410d8c776bade787a281c9424e06648b443",
+      "asset_sha256": "5e2fce2a524d296dc2236e9f6defcbf1b849b2128429b35d0fc4dc89d1483110",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 120,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.53,
+          82.47,
+          529,
+          312.29
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Table 4 includes both 1B and 7B models and caption.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-017-04.png",
-      "original_label": "PDF page 17",
+      "asset_path": "figures/original-p017-table-5.png",
+      "original_label": "Table 5",
       "pdf_page": 17,
       "source_url": "https://arxiv.org/pdf/2403.05525v1#page=17",
       "source_version": "2403.05525v1",
       "source_sha256": "9daea37a9e791b92d338b743a9ccad2dfa8b74e746b282be2667110c8cccacb9",
-      "asset_sha256": "7181a18c2d6780f7aad1d2055e14ff5858df35da10cebe43ab7a55c8b4b6d27a",
+      "asset_sha256": "ff00285641cf7caf0043bdb094c57d0fd9cd88c54ce9351b0a52c6ca9fc1905c",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 120,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.53,
+          82.12,
+          527.83,
+          376.24
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Both comparison Tables 5 and 6 complete.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p017-table-6.png",
+      "original_label": "Table 6",
+      "pdf_page": 17,
+      "source_url": "https://arxiv.org/pdf/2403.05525v1#page=17",
+      "source_version": "2403.05525v1",
+      "source_sha256": "9daea37a9e791b92d338b743a9ccad2dfa8b74e746b282be2667110c8cccacb9",
+      "asset_sha256": "f1df3ea90c704c62f01e8926ea58e76fb8ef92ce46a83cd54411a9f1bacfdc40",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.53,
+          383.26,
+          526.14,
+          534.53
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Both comparison Tables 5 and 6 complete.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

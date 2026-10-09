@@ -26,5 +26,10 @@
     "正文真机1Hz/5Hz与附录采集10Hz、4秒块为不同设置；不混为统一控制频率",
     "Table2 Task1为单步validationaccuracy，Task2/3为80rollouts而非同指标"
   ],
-  "model_run": false
+  "model_run": false,
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

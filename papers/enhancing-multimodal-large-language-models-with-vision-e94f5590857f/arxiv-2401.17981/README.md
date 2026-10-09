@@ -23,7 +23,9 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2 与 Figure 3：三种融合架构及检测信息表示](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
+
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **原图：Figure 2、Figure 3，PDF 第 4 页。** 上半页左、中、右是 TFI/LAR/LAF，橙色可训练、蓝色固定；LAR 的 MLP 重新初始化，LAF 保留既有 MLP。下半页显示将对象按类别合并，再把类别、数量与位置转成自然语言字符串。图中的 LoRA 标记说明训练路径，不是新增完整语言骨干。
 
@@ -64,7 +66,11 @@ s_{\rm norm}=\frac{s-s_{\min}}{s_{\max}-s_{\min}},
 
 ## 6. 训练流程与目标
 
-![原文 Table 6–8：训练配置、MME 拆分及额外微调对照](figures/original-page-015-03.png)
+![原文 Table 6](figures/original-p015-table-6.png)
+
+![原文 Table 7](figures/original-p015-table-7.png)
+
+![原文 Table 8](figures/original-p015-table-8.png)
 
 **原表：Table 6、7、8，PDF 第 15 页。** 左下是训练参数，LAF 的 MLP 学习率为破折号，因为它固定；右上 MME 拆成感知与认知，揭示总分掩盖的下降；右下比较“训练时不用工具”的额外微调基线，与“推理时拿掉工具”是不同实验。
 
@@ -81,7 +87,9 @@ LAR/LAF 指令阶段 LoRA rank 为 **128**、alpha **256**，optimizer AdamW，c
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 4 与 Figure 4：主结果及开放集检测例子](figures/original-page-007-02.png)
+![原文 Table 4](figures/original-p007-table-4.png)
+
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **原表/图：Table 4、Figure 4，PDF 第 7 页。** 上表将 MME 感知与认知相加展示，下方是 GroundingDINO 替换后的成功例，不能把这些例子等同于开放集替换全面优于 DINO 的统计证据。表右端是归一化平均值，并不是新的独立测试集。
 
@@ -101,7 +109,11 @@ LAR/LAF 指令阶段 LoRA rank 为 **128**、alpha **256**，optimizer AdamW，c
 
 无需训练的 TFI13B 在 VQAv2 从 80.0 降到 76.6、GQA 从 63.3 降到 60.2；即使 POPE 提升，也不足以证明直接拼工具总有益。LAR13B 的 GQA 为 59.0，推理拿掉检测信息后更低到 58.0。LAF13B 在同一移除条件下为 62.1，更接近原 63.3，支持 LAF 较好保留视觉能力，但并非所有成绩完全恢复。[原文 Table 1–3/9，PDF 第 5–6、16 页](https://arxiv.org/pdf/2401.17981v1#page=5)
 
-![原文 Table 9–11：移除检测信息及分组件测试](figures/original-page-016-04.png)
+![原文 Table 9](figures/original-p016-table-9.png)
+
+![原文 Table 10](figures/original-p016-table-10.png)
+
+![原文 Table 11](figures/original-p016-table-11.png)
 
 **原表：Table 9、10、11，PDF 第 16 页。** 左表是在已训练模型推理时移除工具；右表分别只加 OCR 或 DINO。要先识别这个差别，才能正确解释“额外微调本身”与“外部信息”的贡献。不同表存在个别重列值不一致，例如 LAF7B TextVQA 主表 60.1、Table 9 为 59.8，本文主结果采用 Table 4，不人为合并。
 

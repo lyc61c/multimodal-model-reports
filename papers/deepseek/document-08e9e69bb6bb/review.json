@@ -66,12 +66,28 @@
     "CSA重叠压缩比例与HCA稠密核验",
     "Muon例外及OPD反向KL方向核验",
     "MRCR端点与汇总、pass@8与前沿工具证明分开",
-    "不败率非胜率"
+    "不败率非胜率",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "未公开所有数据配比、GPU数量与完整训练成本",
     "长上下文有准确率衰减",
     "部分闭源对照API失败，空值非0",
     "内部评价非独立复现"
-  ]
+  ],
+  "article_sha256": "b685f2e29e1f5f185fdba93ac26d3848b993896466ea74a4b47d77b4baa93df2",
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 39）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 40）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "实际逐项核对原 PDF 页面及对应介绍上下文：该页为Algorithm 1 优化步骤，无需保留整页截图。删除图片，保留原文入口、算法或数学说明；已核对精确 body_edits。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 42）：Figure 8, Figure 9 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
 }

@@ -31,7 +31,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 8 与公式 1：SVA 架构，PDF 第 13 页完整截图](figures/original-page-013-01.png)
+![原文 Figure 8](figures/original-p013-figure-8.png)
 
 *原文 Figure 8，PDF 第 13 页。左图中同一个 query 只对应各视觉特征图的同一空间区域，红框的 patch 数随编码器分辨率变化；右图中 SVA 不只出现在 LLM 前，也在部分 Transformer 层之间再次读取视觉特征。下方保留原始公式，便于对应符号。*
 
@@ -77,7 +77,7 @@ A_{\mathrm{CV}}=\frac{A_{2D}+A_{3D}}2.
 
 ## 5. 数据构建与处理
 
-![原文 Figure 9：Cambrian 数据组成，PDF 第 15 页完整截图](figures/original-page-015-02.png)
+![原文 Figure 9](figures/original-p015-figure-9.png)
 
 *原文 Figure 9，PDF 第 15 页。左侧内外环比较 Cambrian-10M 与整理后的 Cambrian-7M，右侧列出数据源和被削减的来源。它展示的核心是平衡各类数据，而不是所有来源保持原始数量后直接拼接。*
 
@@ -95,7 +95,11 @@ CV-Bench 是单独的评测集。二维题来自 ADE20K 与 COCO：650 个空间
 
 应区分视觉表征研究与最终模型。多数第 3 节控制实验使用 Vicuna-1.5-7B，先用 1.2M ShareGPT4V adapter 数据训练连接器，再用标为 737K 的混合指令数据训练连接器与 LLM，冻结视觉编码器。作者另做解冻视觉端与扩展至 5M 指令数据的实验，观察 DINOv2 与语言监督模型的差距是否缩小。解冻实验有明确的视觉学习率；不能把它们自动套到所有最终 Cambrian-1 配置上。
 
-![原文 Table 18–20：混合数据控制实验、训练设置与评分方式，PDF 第 42 页完整截图](figures/original-page-042-04.png)
+![原文 Table 18](figures/original-p042-table-18.png)
+
+![原文 Table 19](figures/original-p042-table-19.png)
+
+![原文 Table 20](figures/original-p042-table-20.png)
 
 *PDF 第 42 页完整截图。中间 Table 19 是最终模型与各研究配置的超参数来源，特别注意 adapter 与 instruction tuning 两栏的学习率、batch 不同；下方 Table 20 表明更换答案判定方式也会改变成绩。*
 
@@ -112,7 +116,9 @@ CV-Bench 是单独的评测集。二维题来自 ADE20K 与 COCO：650 个空间
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 8 与 Figure 13：最终模型结果，PDF 第 19 页完整截图](figures/original-page-019-03.png)
+![原文 Table 8](figures/original-p019-table-8.png)
+
+![原文 Figure 13](figures/original-p019-figure-13.png)
 
 *原文 Table 8 与 Figure 13，PDF 第 19 页。模型按相同语言骨干分组，视觉 token 数单独列出；下方柱图是四类平均而不是单个基准准确率。红色 GPT-4V 参照线也不代表全部指标被 Cambrian 超过。*
 

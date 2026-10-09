@@ -7,18 +7,30 @@
     "Verified initialized pretrained ViT and base Qwen/InternLM not from scratch, joint all-parameter pretraining200B50/150,21.7M SFT300K MPO.",
     "Checked square weighting, MPO DPO/BCO/gen and V2PE fixeddelta1 outside Table12; no unsupported exact optimizer.",
     "Separated Figure1/table discrepant metrics, standard vsBo8, video maximum across16/32/48/64 frames and subtitles.",
-    "Recorded doc/Info/math/code and video losses; GUI prose81.4 vs90.3 error not propagated; no model reproduction."
+    "Recorded doc/Info/math/code and video losses; GUI prose81.4 vs90.3 error not propagated; no model reproduction.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "a51c44fd8dd662ffc65b7b4c1f46bfd2eb10a325bd0a8e488485a12391b707b1",
+  "article_sha256": "85feda0848891d9ac242ec07f278ebe076ee524f291637f38cfe0136c15aab3b",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Table 1 complete model series and caption.",
+      "Viewed source and crop after manual repair: Table 2 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop after manual repair: Table 3 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop after manual repair: Figure 3, Table 13 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ]
+  }
 }

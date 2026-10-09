@@ -20,7 +20,7 @@ Mistral 版本总参数约 8.26B、每 token 激活约 7.80B；Mixtral 版本总
 
 ## 3. 整体架构
 
-![CuMo 原文 Figure 2，PDF 第2页完整页面](figures/original-page-002-01.png)
+![原文 Figure 2](figures/original-p002-figure-2.png)
 
 *原文 Figure 2，PDF 第 2 页完整截图。视觉经过 CLIP-MoE 和 MLP-MoE，随后与文字嵌入进入语言模型。左侧示意每个 token 只调用部分专家，图为简化展示而省略残差。*
 
@@ -61,9 +61,13 @@ $\mathcal L_{ce}$ 是下一 token 的语言交叉熵；负载平衡项避免少�
 
 预训练仅使用 LCS-558K。稠密预热阶段使用 ALLaVA-Caption 708K。指令阶段汇合 LLaVA-665K、ShareGPT4V、LAION-GPT-V、DocVQA、SynDog-EN、ChartQA、DVQA、AI2D、InfoVQA、ALLaVA、LIMA 与 ALLaVA-Text，统一改成视觉指令格式。OCR、图表、文档与通用对话共同训练，LIMA 等文本资料用于保留指令交互能力。
 
-![CuMo 原文 Tables 8–10，PDF 第13页完整页面](figures/original-page-013-03.png)
+![原文 Table 8](figures/original-p013-table-8.png)
 
-*PDF 第 13 页的原始数据、优化与参数表。Table 8 列出各来源数量，Table 9 展示模块开放状态，Table 10 区分总参数与激活参数，完整页面保留各表标题和单位。*
+![原文 Table 9](figures/original-p013-table-9.png)
+
+![原文 Table 10](figures/original-p013-table-10.png)
+
+*PDF 第 13 页的原始数据、优化与参数表。Table 8 列出各来源数量，Table 9 展示模块开放状态，Table 10 区分总参数与激活参数，图表区域裁切保留各表标题和单位。*
 
 原文的指令样本总数存在差异：正文称约 1.65M；Table 8 逐项相加为约 1.85M，包括 143K ALLaVA-Text 和 50K DVQA。报告未解释差额是否来自去重或实际采样，本文不将其中一个数当作精确、无争议的训练记录。SynDog-EN 和 DVQA 各抽取 50K，作者称使用过多合成样本可能损害零样本表现。这里“训练数据公开”描述的是此轮多模态适配所用来源，不代表 CLIP、Mistral、Mixtral 的原始预训练语料全部公开。
 
@@ -81,7 +85,7 @@ $\mathcal L_{ce}$ 是下一 token 的语言交叉熵；负载平衡项避免少�
 
 ## 7. 实验设置与主要结果
 
-![CuMo 原文 Table 1，PDF 第5页完整页面](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
 
 *原文主结果 Table 1，PDF 第 5 页。Act. 列为激活参数；以语言骨干规模分组，不是所有模型具有相同总参数和训练量。带 † 项是三次 GPT API 相关评估的平均值。*
 

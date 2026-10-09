@@ -10,5 +10,7 @@
   "document_kind": "dataset_and_model",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "PMC-VQA：医学视觉问答数据构建与 MedVInT"
+  "title_zh": "PMC-VQA：医学视觉问答数据构建与 MedVInT",
+  "chinese_characters": 3148,
+  "figure_revision_date": "2026-10-09"
 }

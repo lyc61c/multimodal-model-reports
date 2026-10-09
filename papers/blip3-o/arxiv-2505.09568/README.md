@@ -31,7 +31,7 @@ BLIP3-o 不是把一切模态都改造成离散词表的方案。它保留自回
 
 ## 3. 整体架构
 
-![原文 Figure 1，PDF 第 3 页：BLIP3-o 总体架构](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
 **读图：**Figure 1 左侧展示理解路径，右侧展示生成路径。理解时，图像被编码为视觉特征并送入视觉语言模型，与文本共同产生回答。生成时，文字经过自回归模型形成连续条件，噪声与条件一起进入 Diffusion Transformer，得到 CLIP 图像表示，再由图像解码器输出像素。图中的两个扩散环节分别服务于特征生成与图像解码，不能合并成一次语言模型输出图像。
 
@@ -45,7 +45,7 @@ Figure 1 用 CLIP 表达统一语义空间的概念，而最终理解骨干是�
 
 ## 4. 核心创新与数学原理
 
-![原文 Figure 3，PDF 第 8 页：表示与目标的三种组合](figures/original-page-008-02.png)
+![原文 Figure 3](figures/original-p008-figure-3.png)
 
 **读图：**Figure 3 将生成策略分成 CLIP 特征加 MSE、CLIP 特征加 Flow Matching、VAE 特征加 Flow Matching。作者没有把 VAE 加 MSE 作为完整测试配置。图片显示的是机制差异，不能将图中不同路径直接当成最终 4B/8B 模型的同规模比较。
 
@@ -73,7 +73,7 @@ $$
 
 训练时 DiT 在随机时间和随机噪声下预测条件速度；推理时从新噪声出发，按照速度场更新特征，因此同一文字条件可以产生不同的特征样本。它改变的不是把“均方误差”完全废除，而是**把回归对象从单一图像特征换成多个噪声状态下的速度**，借助随机初始状态形成分布采样。最终解码得到像素的过程仍是另一个生成模块。
 
-![原文 Figure 4，PDF 第 9 页：表示和训练目标的设计实验](figures/original-page-009-03.png)
+![原文 Figure 4](figures/original-p009-figure-4.png)
 
 **读图：**Figure 4 的横轴是训练步数，比较三种方案的 GenEval、DPG-Bench、FID。前两个越高越好，FID 越低越好。CLIP 加 Flow Matching 在语义对齐指标上表现更好，但 VAE 加 Flow Matching 的 FID 更优。因此，这组证据支持“CLIP 语义表示更适合对齐提示”的选择，而不支持“CLIP 在所有生成指标都最优”。
 
@@ -101,7 +101,11 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 1–2 和 Figure 6，PDF 第 12 页：理解、生成和人工偏好](figures/original-page-012-04.png)
+![原文 Table 1](figures/original-p012-table-1.png)
+
+![原文 Table 2](figures/original-p012-table-2.png)
+
+![原文 Figure 6](figures/original-p012-figure-6.png)
 
 **读图：**Table 1 从 VQAv2 到 TextVQA 比较理解任务，MME 分为感知与认知两个不同分数；Table 2 比较 GenEval、DPG-Bench 与 WISE；Figure 6 展示 BLIP3-o-8B 与 Janus-Pro-7B 的人工二选一偏好。读者应先看任务和计分尺度，再看模型列，不能混合求一个“全能总分”。
 

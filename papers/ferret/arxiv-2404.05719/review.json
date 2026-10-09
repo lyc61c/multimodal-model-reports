@@ -7,18 +7,30 @@
     "Verified 250K training mixture, frozen visual encoder, decoder/projection updates and 8 A100 duration; no unspecified learning rates or exact Vicuna size were invented.",
     "Verified GPT-4 advanced annotations are text-only; iPhone-only advanced training and small Android advanced test are distinguished.",
     "Table 2 Android anyres advanced mean 71.7 conflicts with Table 3 70.1 and component arithmetic 71.05; discrepancy explicitly retained.",
-    "GPT-4V subset/Set-of-Mark protocol, GPT relative scores above 100, iPhone Find Text exception, task regressions and absence of closed-loop success measurement are explicitly recorded."
+    "GPT-4V subset/Set-of-Mark protocol, GPT relative scores above 100, iPhone Find Text exception, task regressions and absence of closed-loop success measurement are explicitly recorded.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "d2382b3dd63864ae05ca33e2ee7c0ca38dd0079ddead42687327f511411eda0b",
+  "article_sha256": "3563f9fcc291a99a89550884a97753bd005b355242fa1272ae3e9e47dc4b4663",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 54）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 55）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 56）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 57）：Figure 5, Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
 }

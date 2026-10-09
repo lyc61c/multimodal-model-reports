@@ -14,5 +14,10 @@
     "O(n)/O(1)复杂度冲突和GPU耗时随beam增加；Table5 54.1/6.1对图注46.1正文4.2差异，不复述固定5倍",
     "Table4课程MMVet61.88与Table5单beam63.63差异不强行合并；无模型复现"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

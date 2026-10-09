@@ -16,7 +16,7 @@ EAGLE 是图像输入、文本输出的多模态语言模型系列，也是一�
 
 ## 3. 整体架构
 
-![原文 PDF 第 3 页：Figure 2，模型流程与融合方法](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **Figure 2，PDF 第 3 页** 上部展示图像经多个视觉编码器、空间调整、融合和投影后送入语言模型的流程，下部对比序列拼接、通道拼接、跨注意力及特征注入等方案。读图时应关注融合发生的位置：EAGLE 的最终通道拼接在视觉前端完成，语言模型仍接收一条视觉 token 序列。
 
@@ -35,7 +35,9 @@ Z=P_\theta(F).
 
 这里拼接后的维度为 \(1024\times\sum_e d_e\)，投影器再输出语言模型需要的维度。**这是对原文结构的数学化解读，不是论文另行提出的损失函数。** 序列拼接则把编码器输出沿 token 方向相接，两个编码器会得到 2048 token、三个会得到 3072 token，注意力计算和推理吞吐因此受到影响。
 
-![原文 PDF 第 6 页：Table 4，融合消融；Figure 3，预对齐训练](figures/original-page-006-02.png)
+![原文 Table 4](figures/original-p006-table-4.png)
+
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 **Table 4，PDF 第 6 页** 给出融合控制实验。CLIP+ConvNeXt 的序列拼接和通道拼接分别使用 2048、1024 token，报告吞吐为 46.1、47.3 token/s，OCRBench 为 536、533；通道拼接在这一项并非更高。加入 SAM 后，序列拼接为 3072 token、40.3 token/s、OCR 504，通道拼接为 1024 token、46.3 token/s、OCR 558。这说明固定空间序列并保留每个位置的多源特征，能够兼顾效果与后端效率；吞吐是作者实现和实验环境的结果，不能外推到任意 GPU。
 
@@ -47,7 +49,9 @@ Z=P_\theta(F).
 
 基础设计实验使用作者所述的 **595K 图像描述样本**和 **934K 指令数据**。后者结合 LLaVA-1.5、LAION-GPT4V、ShareGPT4V，并加入 DocVQA、SynthDoG-EN、ChartQA、DVQA、AI2D 等数据，使文字读取、文档、图表和科学图示参与视觉前端选择。这里的 595K 按本论文披露记录，不用其他 LLaVA 版本的常见数字替换。
 
-![原文 PDF 第 8 页：Table 6，编码器组合；Table 7，数据组成](figures/original-page-008-03.png)
+![原文 Table 7](figures/original-p008-table-7.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
 
 **Table 6，PDF 第 8 页** 展示逐步增加编码器的结果，最后加入 DINOv2 的六编码器组合并不优于五编码器组合。**Table 7，同页** 给出增强数据来源：LVIS 220K、LRV 150K、Geo170 120K、LLaVAR 20K、Visual7W 70K，以及文本指令数据 OpenHermes 等。正文称最终增强指令集合为 **1.809M**。
 
@@ -75,7 +79,9 @@ Pre-Alignment 的三阶段冻结关系则明确为：第一阶段，各编码器
 
 在 1.809M 增强数据配方下，**EAGLE-X5+Pre-Alignment / Vicuna-7B** 的 Table 8 结果包括 MME **1579**、MMBench **68.8**、SEED **73.5**、MathVista **39.0**、MMMU **36.4**、OCRBench **554**、TextVQA **71.9**、ChartQA **67.0**。相较未预对齐的 X5，MME 1528、MathVista 37.0、OCR 529 有所改善，但 SEED 73.9→73.5、GQA 64.9→64.0、ChartQA 67.7→67.0 下降。这里应理解为跨任务折中，而非全面压倒。
 
-![原文 PDF 第 10 页：Table 9，与 Cambrian 的控制对照；Figure 4，定性例子](figures/original-page-010-04.png)
+![原文 Table 9](figures/original-p010-table-9.png)
+
+![原文 Figure 4](figures/original-p010-figure-4.png)
 
 **Table 9，PDF 第 10 页** 使用与 Cambrian 对应的 2.5M/7M 配方。Llama-3-8B 下 EAGLE / Cambrian 的 MathVista 为 **52.7 / 49.0**、MMMU 为 **43.8 / 42.7**、ChartQA 为 **80.1 / 73.3**、TextVQA 为 **77.1 / 71.7**、DocVQA 为 **86.6 / 77.8**；MMBench 则同为 **75.9**。EAGLE 在文档和图表上的提升比较突出，但 34B 对照也存在 MME、MMBench、GQA 等未领先的任务。Table 9 的 OCRBench 已采用另一尺度，不能与 Table 8 的 554 直接比较。
 

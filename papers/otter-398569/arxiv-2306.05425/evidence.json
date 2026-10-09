@@ -43,5 +43,10 @@
     "附录Table7人数比较回答Yes与左图多两人相矛盾。",
     "结束标记两处拼写不同；未推断为两个实际token。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

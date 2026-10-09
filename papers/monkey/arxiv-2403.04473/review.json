@@ -38,5 +38,23 @@
     "无JSON合规统计或多步点击成功率",
     "未运行模型、动作或JSON解析"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "0cc6baddb32f1bf468c08e2a8e80f13d19bf2899ba5b922390de41d9e3d480c9",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 10,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and repaired crops: Figure 2 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and repaired crops: Figure 3, Figure 4 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crop: Table 3, Table 4, Table 5 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and repaired crops: Table 9, Figure 6, Table 10, Figure 7 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
+    ]
+  }
 }

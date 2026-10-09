@@ -16,7 +16,7 @@ DetGPT 探索“基于推理的目标检测”：用户可以表达“我想喝�
 
 ## 3. 整体架构
 
-![原论文 Figure 2，DetGPT 框架，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 *Figure 2，PDF 第 5 页。雪花标记表示冻结模块，火焰只位于线性映射层。*
 
@@ -60,7 +60,7 @@ $$\mathcal L=-\sum_{t=1}^{L}\log p_\theta(y_t\mid I,q,y_{<t}),$$
 
 ## 7. 实验设置与主要结果
 
-![原论文 Figure 3，任务案例，PDF 第 10 页](figures/original-page-010-02.png)
+![原文 Figure 3](figures/original-p010-figure-3.png)
 
 *Figure 3，PDF 第 10 页，每行依次为输入图、用户需求/解释、检测框。*
 
@@ -68,7 +68,7 @@ $$\mathcal L=-\sum_{t=1}^{L}\log p_\theta(y_t\mid I,q,y_{<t}),$$
 
 Figure 4 进一步展示游戏截图、潜在危险等案例，作者将其视为超出 COCO 类别的泛化表现。不过没有独立统计样本数、总体错误率或与基线对照；这些图最多支持“在部分展示案例中能运行”，不能据此推断通用开放世界成功率。
 
-![原论文 Figure 5，失败案例，PDF 第 12 页](figures/original-page-012-03.png)
+![原文 Figure 5](figures/original-p012-figure-5.png)
 
 *Figure 5，PDF 第 12 页。上部定位错误来自检测阶段，下部描述错误来自多模态阶段。*
 

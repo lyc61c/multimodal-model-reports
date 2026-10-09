@@ -2,7 +2,7 @@
 
 # 大规模视觉指令微调：LLaVA 的 33B、65B 与参数高效训练研究
 
-> 对应 **An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models**，采用 [arXiv:2309.09958v1](https://arxiv.org/abs/2309.09958v1)。原文是短篇实证报告，没有独立架构图；本文使用原始实验与训练页面，不把后续 LLaVA-1.5 配方混入本篇。
+> 对应 **An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models**，采用 [arXiv:2309.09958v1](https://arxiv.org/abs/2309.09958v1)。原文是短篇实证报告，没有独立架构图；本文依据原文训练说明与实验表格介绍，不把后续 LLaVA-1.5 配方混入本篇。
 
 ## 1. 论文信息与模型定位
 
@@ -28,9 +28,9 @@
 
 ## 3. 整体架构
 
-![原文实验设置：视觉投影维度、两阶段训练与优化配置](figures/original-page-002-01.png)
 
-*来源：PDF 第 2 页 §2，[原页](https://arxiv.org/pdf/2309.09958v1#page=2)。原文没有结构图，此页列出真实组件连接与训练配置；中部的 1024→6656/8192 是投影维度，不能当模型参数总量。*
+
+*依据：PDF 第 2 页 §2，[原文实验设置](https://arxiv.org/pdf/2309.09958v1#page=2)。原文没有独立结构图；1024→6656/8192 表示视觉到语言的投影维度，不是模型参数总量。*
 
 系统沿用早期 LLaVA：预训练 CLIP ViT 提取倒数层视觉特征，线性投影把图像特征映射至语言模型词嵌入空间，再由因果语言模型生成回答。33B 映射 1024→6656，65B 映射 1024→8192。这里是线性连接器，没有本篇提出的两层 MLP、视觉 token 重采样器或分割解码器。
 
@@ -52,7 +52,9 @@ $$W'=W+\frac{\alpha}{r}BA,\qquad A\in\mathbb R^{r\times d_{in}},\ B\in\mathbb R^
 
 原文采用该已有方法，并未把此式作为新推导。rank $r$ 控制可训练增量容量，$\alpha/r$ 控制相对尺度；因此提高 rank 与提高更新强度是不同操作。本文实验设置 alpha=2r，配合 $10^{-4}$ 学习率。QLoRA 又让基础权重采用量化表示，在较低显存下训练增量；报告没有逐层列出量化精度和所有适配器挂载位置，不能从名称补造配置。
 
-![Tables 3–4：分辨率与数据混合，以及 rank、成本和表现](figures/original-page-005-03.png)
+![原文 Table 3](figures/original-p005-table-3.png)
+
+![原文 Table 4](figures/original-p005-table-4.png)
 
 *来源：原文 Table 3/4，PDF 第 5 页，[原页](https://arxiv.org/pdf/2309.09958v1#page=5)。上表需要横向固定设置看模型规模，纵向固定规模看输入/数据；下表时间单位是除以八卡后的 node-equivalent hours。*
 
@@ -88,7 +90,9 @@ Table 4 中 33B 的 rank8 为 70.3，rank64 为71.8，全量为72.0；65B rank64
 
 ## 7. 实验设置与主要结果
 
-![Tables 1–2：LLaVA-Bench与MM-Vet的原始结果](figures/original-page-003-02.png)
+![原文 Table 1](figures/original-p003-table-1.png)
+
+![原文 Table 2](figures/original-p003-table-2.png)
 
 *来源：原文 Table 1/2，PDF 第 3 页，[原页](https://arxiv.org/pdf/2309.09958v1#page=3)。Table 1列beam1/5，Table 2把作者自己的实验与引用结果分组；工具系统MM-ReAct作为参考，不是同类单模型。*
 
@@ -104,7 +108,7 @@ LLaVA-Bench In-the-Wild只有24张图、60道题，涵盖对话、细节和推�
 
 Table 1进一步看beam：13B为70.1/73.5，33B为73.9/74.8，65B为74.2/74.4，分别对应beam1/5。搜索改动对不同任务效果不一致，例如65B对话子项63.8→59.4而细节62.3→65.7。不能只引用总体增加就说每种输出都更好。原表Bard总体77.8仍高于33B/65B，并非所有商业系统都被超越。
 
-![Table 5：多模态提升与语言能力之间的关系](figures/original-page-006-04.png)
+![原文 Table 5](figures/original-p006-table-5.png)
 
 *来源：原文 Table 5，PDF 第 6 页，[原页](https://arxiv.org/pdf/2309.09958v1#page=6)。先比较相同语言初始化下是否视觉微调，再比较是否数据混合；跨模型行同时变化了基础checkpoint。*
 

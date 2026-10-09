@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "LISA：用分割token把语言推理连接到像素掩码"
+  "title_zh": "LISA：用分割token把语言推理连接到像素掩码",
+  "chinese_characters": 2938,
+  "figure_revision_date": "2026-10-09"
 }

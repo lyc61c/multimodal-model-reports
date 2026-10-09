@@ -14,6 +14,7 @@
   "source_sha256": "8c33cd6479f33e0b8e13596fd3da02d9a7c21ce0eb3054cea6db5434fe84c765",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2357,
-  "figures_manifest": "figures-manifest.json"
+  "chinese_characters": 2340,
+  "figures_manifest": "figures-manifest.json",
+  "figure_revision_date": "2026-10-09"
 }

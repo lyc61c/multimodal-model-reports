@@ -1,1 +1,27 @@
-{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"核对v1标题机构日期14页","facts":"Tables1–10与Figures2–7核对，明确两种LLM骨干和参数口径","math":"式3未静默修正为常见实现；辅助损失未伪造未披露定义；相同专家初始化为明确解释","images":"view_image逐张核验PDF2/5/13完整图表，表头单位与参数行完整","inconsistencies":"保留1.65M/1.85M和最终LR2e-6/4e-6差异"},"model_execution":"not_run"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "checks": {
+    "identity": "核对v1标题机构日期14页",
+    "facts": "Tables1–10与Figures2–7核对，明确两种LLM骨干和参数口径",
+    "math": "式3未静默修正为常见实现；辅助损失未伪造未披露定义；相同专家初始化为明确解释",
+    "images": "view_image逐张核验PDF2/5/13完整图表，表头单位与参数行完整",
+    "inconsistencies": "保留1.65M/1.85M和最终LR2e-6/4e-6差异",
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  },
+  "model_execution": "not_run",
+  "article_sha256": "38db0b27fe974b07a9cb433006250bad9a7ae6df9b99d63a76061c30d503c484",
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 36）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 37）：Table 1 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 38）：Table 8, Table 9, Table 10 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
+}

@@ -15,7 +15,7 @@ LongVU 是视频理解模型及其视觉 token 压缩方法。语言骨干分别
 
 ## 3. 整体架构
 
-![Figure 2：LongVU 的三级压缩架构，原文 PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 Figure 2 从下到上依次展示帧编码、时间去冗余、问题引导与空间压缩。DINOv2 先编码原始 1 fps 帧序列，对每个不重叠的 8 帧窗口计算帧间相似度，去除重复帧。只有保留下来的帧再由 SigLIP 编码，减少第二个视觉编码器的工作量。
 
@@ -65,7 +65,7 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![Table 1：综合视频理解结果，原文 PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 Table 1 的指标为各基准准确率，VideoMME 的 Long 子集为 30–60 分钟，MLVU 视频约 3–120 分钟。表列帧预算与上下文不同，横向结果不是同一输入成本下的严格比较。该版本未明确说明 VideoMME 是否使用字幕，因此这里保留“原表未注明”的限定。
 
@@ -77,13 +77,19 @@ Table 1 的指标为各基准准确率，VideoMME 的 Long 子集为 30–60 分
 
 LongVU 相对 OneVision 的 Long 提升 **12.8 个百分点**，总体提升 2.4 点；对 GPT-4o 只在这里的 MVBench 高 2.3 点，其他四项更低。小模型 Table 2 中，LongVU 3B 的 VideoMME 总体/Long 为 **51.5/47.2**，Phi-3.5-Vision 为 **50.8/43.8**。这些数据支持小骨干上的压缩效果，但并非所有基准都存在对应小模型对照。
 
-![Tables 3–5：压缩组件与锚帧消融，原文 PDF 第 9 页](figures/original-page-009-03.png)
+![原文 Table 3](figures/original-p009-table-3.png)
+
+![原文 Table 4](figures/original-p009-table-4.png)
+
+![原文 Table 5](figures/original-p009-table-5.png)
 
 Table 3 在 8K 下，DINO 时间压缩的 VideoMME/MLVU 为 **59.90/62.54**；加入 Query 为 **60.08/65.05**；再加 STC 为 **60.56/65.44**。完整 8K 配置的 VideoMME 仍低于 16K DINO 配置 **61.25**，不能把“接近更长上下文”写成在每项都超过它。Table 4 中 STC 将针帧检测从 78.87 降到 76.33、plotQA 从 72.35 降到 71.61，虽提升均值，也存在任务折损。
 
 Table 5 和附录 Table 7 的总体值为 **60.9**，与 Table 1 的 **60.6** 不完全一致；本文分别引用，不自行选择一个数字统一全文。压缩分析的抽样视频平均保留约 45.9% 帧，空间阶段平均减少约 40.4% token；Table 5 的 55.47% reduction 来自另一策略评测，不能混成统一总压缩率。
 
-![Figure 7 和 Table 10：长视频针帧测试及单图退化，原文 PDF 第 17 页](figures/original-page-017-04.png)
+![原文 Figure 7](figures/original-p017-figure-7.png)
+
+![原文 Table 10](figures/original-p017-table-10.png)
 
 Figure 7 的横轴为输入帧数、纵轴为插入深度，展示问题引导与 STC 对长视频检索的影响。实验在选取的一小时 MLVU 视频中插入 VQA 图像，并不等同于自然视频中所有短暂事件都能检索。
 

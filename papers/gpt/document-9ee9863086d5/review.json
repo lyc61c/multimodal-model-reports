@@ -43,12 +43,28 @@
     "区分5月发布与8月系统卡",
     "核对实际表头及数值",
     "公开目标与解释性自回归公式分开",
-    "未编参数、GPU、token或RL算法"
+    "未编参数、GPU、token或RL算法",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "系统卡披露侧重语音行为而非完整架构",
     "Table3正文点差与舍入表值略有不同",
     "Table8正文误写语言数值；沿实际表头核验",
     "官方评测并非本仓库复现"
-  ]
+  ],
+  "article_sha256": "ec529224db5918cef195ecdc5bcba06341dae099ae224f3fe6bfa7acd9d74760",
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Tables 2/3 complete with separate referenced note 5; unrelated note 4 excluded.",
+      "Viewed original chart and crop at individual size earlier, and current exclusive crop: all four voice-comparison panels, title, all row labels, axes and legend retained. Tables 4 and 5 are only mentioned by following Chinese prose and occur on other pages, not missing image targets.",
+      "Viewed source page and crop: complete GPT-4o medical/clinical Table 7, two model columns, zero/few-shot paired rows and caption retained.",
+      "Tables 8/9 complete, preceding analysis removed."
+    ]
+  }
 }

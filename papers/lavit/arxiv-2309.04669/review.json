@@ -46,5 +46,24 @@
     "tokenizersteps/codebookupdates/mix/beamwidthnotdisclosed",
     "no v1 imagegeneration evaluation",
     "noend-to-endthroughputorselectorcontrolledablation"
-  ]
+  ],
+  "article_sha256": "dc7ecd3bb5d4a18f20acaaaca54f5ca716fa058c23e10d5f9a83e918712690ca",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 89）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "实际逐项核对原 PDF 页面及对应介绍上下文：该页为Equations (2)–(5) 与 Sections 3.1–3.2 的公式正文，无需保留整页截图。删除图片，保留原文入口、算法或数学说明；已核对精确 body_edits。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 91）：Table 1, Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 92）：Figure 3, Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
 }

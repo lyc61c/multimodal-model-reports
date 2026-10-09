@@ -22,7 +22,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "首发v1不含完整LR/batch/context/GPU等配方",
@@ -32,5 +33,20 @@
     "平均分和Elo不代表每项领先；MMMU数学落后",
     "Android高层69.0低于对照70.8，不写全面提升",
     "发布时间的资源计划与已开放状态分开"
-  ]
+  ],
+  "article_sha256": "cd2c9343252b813c888e667a2bde0a0102f5cc8d2aad2d75b83b2cc1c34da75c",
+  "artifact_checks": {
+    "original_assets": 3,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

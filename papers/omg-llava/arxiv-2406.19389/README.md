@@ -23,7 +23,7 @@ OMG-LLaVA 把语言理解与统一视觉感知结合起来，用一个图像编�
 
 ## 3. 整体架构
 
-![原文 Figure 3：OMG-LLaVA 总体架构，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读图：**下方 OMG-Seg 同时产生像素和对象 token，视觉投影送入 LLM；用户的区域标记替换成对应对象 token。上方输出中的对象短语后跟 `[SEG]`，其状态经 text projector 回到 OMG 解码器，形成右侧彩色掩码。图中冻结说明针对常规联合训练配置，专门分割微调另有例外。
 
@@ -43,7 +43,9 @@ $$
 
 $T_t$ 为文本，$T_{pv}$ 为像素中心表示，$T_{ov}$ 为对象中心表示。caption 主要生成文本；区域描述额外读取用户区域；分割任务则生成可解码的对象表示。这里的对象输出实际通过 `[SEG]` 隐藏状态承载，不是让 LLM 直接逐像素生成二值掩码。
 
-![原文 Figure 4/5：视觉提示与感知先验嵌入，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
+
+![原文 Figure 5](figures/original-p006-figure-5.png)
 
 **读图：**Figure 4 右侧区分点、框、掩码的注意力区域；Figure 5 先将对象查询的分割掩码及置信度结合，再给每个空间位置求对象加权表示，与原图像特征相加。前景查询也单独接到视觉序列尾部。
 
@@ -85,7 +87,13 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2–5：主结果与先验消融，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Table 4](figures/original-p008-table-4.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 2](figures/original-p008-table-2.png)
 
 **读表：**Table 3 区分冻结解码器的 OMG-LLaVA 与解冻并任务微调的 ft 行；Table 4 的 ft 指是否在 GranDf 微调，是另一个维度。Table 2 摘要列用了部分 ft 结果，不能把它作为唯一主配置。cIoU 为累积交并比，GCG 同时评文字与掩码。
 
@@ -101,7 +109,9 @@ GCG 在 GranDf 微调后的测试 METEOR/CIDEr/AP50/mIoU 为 14.5/38.5/28.6/64.7
 
 Table 5 更直接验证设计。简单连接基线在 refCOCO/refCOCO+/refCOCOg cIoU 为 58.7/52.6/55.8；加先验嵌入后为 72.5/63.2/67.8；再输入对象查询为 74.4/64.4/68.5。GCG mIoU 从 51.0 到 62.1 再到 63.6。附录 Table 6 中加复杂 cross-attention 或拆开对象 MLP 都未胜过共享 MLP；这些是特定训练配置下的消融，不是所有连接器复杂度的普遍定律。
 
-![原文 Table 8 与 Figure 7：分割状态选择与定性比较，PDF 第 17 页](figures/original-page-017-04.png)
+![原文 Table 8](figures/original-p017-table-8.png)
+
+![原文 Figure 7](figures/original-p017-figure-7.png)
 
 **读图与表：**Figure 7 对照草地、沙地、沙发旁桌子和最小椅子的分割，红色或黄色区域是各模型预测；它是挑选样例。Table 8 显示采用最后层、所有层平均、所有层拼接的 refCOCOg cIoU 分别 70.0/68.7/62.3，支持使用最后层 `[SEG]`，并不支持“拼更多层一定更好”。
 

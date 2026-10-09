@@ -29,9 +29,9 @@ mPLUG-Owl 的定位是图像条件下的文字生成与多轮对话。它选择�
 
 ## 3. 整体架构
 
-![Figure 2 模块架构与训练阶段](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文 Figure 2，PDF 第 4 页完整页面；保留可学习 token、cross-attention 和两个阶段的冻结/训练图标。*
+*原文 Figure 2，PDF 第 4 页图表区域裁切；保留可学习 token、cross-attention 和两个阶段的冻结/训练图标。*
 
 视觉模块是 24 层 ViT-L/14，隐藏维度 1024，来自 CLIP 对比预训练权重。训练图像为 224×224，patch 网格为 16×16，即 256 个空间 patch。Visual Abstractor 用若干可学习 token 查询图像信息；图中将 patch 特征与查询表示接入 cross-attention，输出语义视觉表示，再与用户文字一起送入 LLaMA。
 
@@ -67,9 +67,13 @@ OwlEval 是独立的小型人工评测集：50 张图片来自 MiniGPT-4 21 张�
 
 ## 6. 训练流程与目标
 
-![Tables 4、5 训练超参与 Figure 15 工具方法对比](figures/original-page-018-04.png)
+![原文 Table 5](figures/original-p018-table-5.png)
 
-*原文 Table 4、Table 5、Figure 15，PDF 第 18 页完整页面；所有参数、分组图例和结果计数完整保留。*
+![原文 Figure 15](figures/original-p018-figure-15.png)
+
+![原文 Table 4](figures/original-p018-table-4.png)
+
+*原文 Table 4、Table 5、Figure 15，PDF 第 18 页图表区域裁切；所有参数、分组图例和结果计数完整保留。*
 
 | 设置 | 第一阶段：附录 Table 4 | 第二阶段：附录 Table 5 |
 |---|---|---|
@@ -92,9 +96,9 @@ OwlEval 是独立的小型人工评测集：50 张图片来自 MiniGPT-4 21 张�
 
 ## 7. 实验设置与主要结果
 
-![Figure 3 OwlEval 人工质量等级](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
-*原文 Figure 3，PDF 第 6 页完整页面；保留 A/B/C/D 图例、各柱计数和完整问题集说明。*
+*原文 Figure 3，PDF 第 6 页图表区域裁切；保留 A/B/C/D 图例、各柱计数和完整问题集说明。*
 
 | 模型 | A | B | C | D | A+B |
 |---|---:|---:|---:|---:|---:|
@@ -108,9 +112,11 @@ OwlEval 是独立的小型人工评测集：50 张图片来自 MiniGPT-4 21 张�
 
 单轮子集 50 个问题，多轮子集 52 个问题；它们由 82 个问题重新组织，不是两个互斥划分，不应相加为 102 个新增测试问题。附录对 MM-REACT 排除生成失败案例后，留下 68 个回答：MM-REACT 为 A/B/C/D=38/11/12/7，mPLUG-Owl=40/12/16/0。该协议是在成功返回条件下的比较，不能当成包含工具故障的总体成功率；多轮子图中 MM-REACT 的 A 计数还高于 mPLUG-Owl，优势并非每个等级都一致。
 
-![Tables 1、2 能力定义与课程消融](figures/original-page-008-03.png)
+![原文 Table 1](figures/original-p008-table-1.png)
 
-*原文 Table 1、Table 2，PDF 第 8 页完整页面；保留每项能力判定条件、训练勾选与所有结果。*
+![原文 Table 2](figures/original-p008-table-2.png)
+
+*原文 Table 1、Table 2，PDF 第 8 页图表区域裁切；保留每项能力判定条件、训练勾选与所有结果。*
 
 人工能力标注为指令理解 IU、视觉理解 VU、OCR、知识迁移 KTA、推理 RA、多轮 MDA。完整方法为 100.0/95.2/56.7/87.5/80.0/95.0。IU 不要求答案正确，只要求与指令相关；VU/OCR 的定义是反映超过 60% 相关信息。它们不能写成标准 OCR 字符准确率或所有问题事实正确率。
 

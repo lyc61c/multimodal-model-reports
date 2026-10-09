@@ -22,7 +22,9 @@
 
 ## 3. 整体架构
 
-![Figure 3 与 Table 1，渐进训练及视觉骨干，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
+
+![原文 Table 1](figures/original-p004-table-1.png)
 
 **读图：Figure 3/Table 1，PDF 第 4 页。** 左边对比训练同时更新 InternViT 与文本 LLaMA；右上冻结已有主体，仅训练新交叉注意力等接入参数；右下新增 MLP 与聊天解码器。图中解码器同时标有冻结和训练，表示不同 SFT 配置，而不是它在全部阶段都冻结。
 
@@ -58,7 +60,11 @@ TextCaps 训练使用 OCR token，说明本文不能概括成所有数据管线�
 
 ## 6. 训练流程与目标
 
-![Table 20–22，详细训练设置，PDF 第 12 页](figures/original-page-012-04.png)
+![原文 Table 20](figures/original-p012-table-20.png)
+
+![原文 Table 21](figures/original-p012-table-21.png)
+
+![原文 Table 22](figures/original-p012-table-22.png)
 
 **读图：Table 20，PDF 第 12 页。** 左表第一、二阶段列分别有训练参数与总参数、数据曝光、GPU 和优化器；右侧 retrieval fine-tuning 和 linear probing 是下游任务配置，不能混入基础模型预训练。
 
@@ -81,7 +87,11 @@ SFT 有不同设置：**224 分辨率的冻结解码器适配**只训练约 64M/
 
 ## 7. 实验设置与主要结果
 
-![Table 6、Table 7、Table 8，分类与检索，PDF 第 7 页](figures/original-page-007-02.png)
+![原文 Table 6](figures/original-p007-table-6.png)
+
+![原文 Table 7](figures/original-p007-table-7.png)
+
+![原文 Table 8](figures/original-p007-table-8.png)
 
 **读图：Table 6–8，PDF 第 7 页。** Table 6 是 top-1；Table 7 按 Image→Text/Text→Image 分 R@1/5/10；Table 8 的 avg 是 **top-1 与 top-5 平均**，不是同名数据集的 top-1。例如八帧 K400 top-1 **69.1**，avg **79.4**，不能引用后者作为分类准确率的 top-1。
 
@@ -97,7 +107,9 @@ InternVL-C 零样本 ImageNet-1K **83.2**，EVA-02-CLIP-E+ **82.0**；五种语�
 
 生成预训练后的 G 比 C 更强，但 BLIP-2 的 Flickr30k **97.6/89.7** 更高；原表注明其已在 COCO 微调，比较前应读脚注。视频检索八帧是各帧独立编码后平均嵌入，不含时序注意力，MSR-VTT 1K 上 G 的视频→文/文→视频 R@1 **42.4/46.3**。这些证据不能证明完整时序关系理解。
 
-![Table 9、Table 10，聊天与 caption 配置，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Table 9](figures/original-p008-table-9.png)
+
+![原文 Table 10](figures/original-p008-table-10.png)
 
 **读图：Table 9/Table 10，PDF 第 8 页。** 上表 224 与 336 分辨率、QLLaMA 与 MLP、训练数据和可训练参数各不相同；星号明确标出训练见过相应数据集训练标注。最高配置为 **336、QLLaMA、Vicuna-13B、约4M SFT**：COCO **146.2 CIDEr**、Flickr30k **92.2**、NoCaps **126.2**；VQAv2 **81.2**、GQA **66.6**、VizWiz **58.5**、TextVQA **61.5**、MME **1586.4**、POPE **87.6**。COCO/VQAv2/GQA 带 seen 标记，不能全称零样本。TextVQA 仍低于 Qwen-VL **63.8**。
 

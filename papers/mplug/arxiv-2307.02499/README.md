@@ -18,7 +18,7 @@ DocOwl 是基于 **mPLUG-Owl** 的文档理解模型，目标覆盖扫描文档�
 
 ## 3. 整体架构
 
-![原文 PDF 第 3 页：Figure 1，统一指令任务与模型适配](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
 **Figure 1，PDF 第 3 页** 中央展示由预训练 mPLUG-Owl 经统一指令训练得到 DocOwl；周围不同颜色的例子分别为图表、文档、自然图像、表格、网页和纯语言请求。这是任务与训练范式图，不是精确到层数的网络结构图。应关注多个任务共享同一回答接口，而不是每个领域各训练一个独立模型。
 
@@ -76,7 +76,11 @@ LLMDoc 是另建的**测试集**，从 TabFact、ChartQA、DocVQA、TextVQA、Vi
 
 ## 7. 实验设置与主要结果
 
-![原文 PDF 第 5 页：Table 1–2，公开基准；Figure 3，LLMDoc 人工评分](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
+
+![原文 Table 2](figures/original-p005-table-2.png)
+
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **Table 1–2，PDF 第 5 页** 对照 Dessurt、Donut 和 Pix2Struct-base 等 OCR-free 方法。DocOwl 在 DUE 中 DocVQA **62.2**、InfoVQA **38.2**、DeepForm **42.6**、KLC **30.3**、WTQ **26.9**、TabFact **60.2**。它并非每项最好：DocVQA 低于 Pix2Struct 的 **72.1**，DeepForm 低于 Donut 的 **61.6**；WTQ、TabFact 则高于 Donut 的 18.8、54.6。
 
@@ -86,11 +90,11 @@ LLMDoc 是另建的**测试集**，从 TabFact、ChartQA、DocVQA、TextVQA、Vi
 
 同页 **Figure 3** 用 A/B/C/D 评价：A 是正确且令人满意，B 有轻微问题但可接受，C 回应了请求却有明显错误，D 无关或无效。DocOwl 为 **37/11/33/19**，mPLUG-Owl 为 **15/18/41/26**，MiniGPT-4 为 **6/12/45/37**。DocOwl A+B 为 48/100，仍有过半请求为 C/D。这个小规模人工集可比较交互质量，但不能代表所有文档任务总体准确率。
 
-![原文 PDF 第 6 页：Figure 4，文档、图表和网页定性结果](figures/original-page-006-03.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 **Figure 4，PDF 第 6 页** 的颜色由作者标注，用来对应证据区域与答案，不是模型自动输出的注意力或定位框。网页抽取、手写表格与补集计算例子展示细节读取和简单计算；图表摘要中的红字“美国”则是图片未支持的幻觉。这说明读出一个百分数与准确限定其人群、地区背景是两种能力。
 
-![原文 PDF 第 7 页：Figure 5，表格转写与商店理解对照](figures/original-page-007-04.png)
+![原文 Figure 5](figures/original-p007-figure-5.png)
 
 **Figure 5，PDF 第 7 页** 上部要求把表格行转为 JSON。DocOwl 尝试输出字段，却漏掉最后一行；原图的字符串还存在重复键、未规范引用的时间/数字等形式问题，不能因为正文称“JSON 格式”就说已得到可直接解析的合法 JSON。下部则通过小招牌识别商店卖的是医护制服，比只看店名的泛化回答更具体。
 

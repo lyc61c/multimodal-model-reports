@@ -4,63 +4,103 @@
   "source_pdf_sha256": "e306de8afb3c781405afdf04434bd45bf76fe8a3b9e229579223bed1abf1dd23",
   "assets": [
     {
-      "asset_path": "figures/original-page-005-01.png",
-      "original_label": "PDF page 5",
+      "asset_path": "figures/original-p005-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 5,
       "source_url": "https://arxiv.org/pdf/2303.02506v1#page=5",
       "source_version": "2303.02506v1",
       "source_sha256": "e306de8afb3c781405afdf04434bd45bf76fe8a3b9e229579223bed1abf1dd23",
-      "asset_sha256": "ef3450cf6dd2f84c93b497c07dc5ba8ff6b05c44314dea889476a49d416aa9de",
+      "asset_sha256": "d1de3e4b9bbafd2d49bed795c606b2361c09fbde6c4f74c3bd2b76085e4ddc28",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          83.4,
+          82.32,
+          528.61,
+          504.09
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Prismer Figure 2: both complete encoder/decoder branches, visual patches, expert labels and full caption preserved.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-011-02.png",
-      "original_label": "PDF page 11",
+      "asset_path": "figures/original-p011-table-3.png",
+      "original_label": "Table 3",
       "pdf_page": 11,
       "source_url": "https://arxiv.org/pdf/2303.02506v1#page=11",
       "source_version": "2303.02506v1",
       "source_sha256": "e306de8afb3c781405afdf04434bd45bf76fe8a3b9e229579223bed1abf1dd23",
-      "asset_sha256": "5b29fed42df3c2f0a31be93d71d0e9716597ec2e659e3c148e9e339f32bf570f",
+      "asset_sha256": "8b557dec6e1f09e077fab154bc7f8d43d11dc5d6feb97e5b40173f646b3d290a",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          83.4,
+          83.49,
+          528.6,
+          415.36
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Prismer Table 3: all three size groups, headers, metrics and complete caption preserved.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-015-03.png",
-      "original_label": "PDF page 15",
+      "asset_path": "figures/original-p015-table-5.png",
+      "original_label": "Table 5",
       "pdf_page": 15,
       "source_url": "https://arxiv.org/pdf/2303.02506v1#page=15",
       "source_version": "2303.02506v1",
       "source_sha256": "e306de8afb3c781405afdf04434bd45bf76fe8a3b9e229579223bed1abf1dd23",
-      "asset_sha256": "d35fc1103641c15a85e54c2b7d32ca6cd80b48a3c4fdd7a4dbc2bdd58e105dee",
+      "asset_sha256": "822d02c6ba49ba6794e6c7656b65d2d9a0a04cf84f3ea573e70d33703029ee42",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          83.4,
+          83.49,
+          528.6,
+          450.82
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Prismer Table 5: all seven architecture/training ablation groups and complete caption preserved.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-025-04.png",
-      "original_label": "PDF page 25",
+      "asset_path": "figures/original-p025-table-6.png",
+      "original_label": "Table 6",
       "pdf_page": 25,
       "source_url": "https://arxiv.org/pdf/2303.02506v1#page=25",
       "source_version": "2303.02506v1",
       "source_sha256": "e306de8afb3c781405afdf04434bd45bf76fe8a3b9e229579223bed1abf1dd23",
-      "asset_sha256": "6cef3630fb12eded9be5afd671533c39bd33f4a0e208678c5bebcaf2e57a7cc1",
+      "asset_sha256": "f340a849f9beba0b9000ebe7ff2fd4934cebb130029f8552ffcdfde692c0a2c8",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          83.4,
+          202,
+          528.61,
+          368.29
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Prismer Table 6 repaired y0=202; preceding paragraph ends y192.10, top table rule is y205.04. Re-rendered and visually checked full header, nine parameter rows and full caption; no body prose.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

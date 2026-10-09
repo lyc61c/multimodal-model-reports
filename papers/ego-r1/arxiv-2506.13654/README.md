@@ -20,7 +20,7 @@ Ego-R1 是多模型工具系统。3B 指负责调度的语言模型，不包含 
 
 ## 3. 整体架构
 
-![Ego-R1 原文 Figure 1，PDF 第1页完整页面](figures/original-page-001-01.png)
+![原文 Figure 1](figures/original-p001-figure-1.png)
 
 *原文 Figure 1，PDF 第 1 页完整截图。上半部分把长视频组织成日志，右边是局部视觉工具；下半部分展示从跨日检索到单帧核对的调用链。截图中的对话为原文案例，不是本仓库新执行的工具记录。*
 
@@ -28,7 +28,7 @@ Ego-R1 是多模型工具系统。3B 指负责调度的语言模型，不包含 
 
 代理输出由 `<think>`、`<tool>`、`<answer>` 标记组织，外部服务器解析工具名和参数，验证时间范围与语法后执行，将观察反馈。系统还引入长上下文 summary model 汇总较长工具链，但报告没有明确其全部型号与成本。`terminate` 是数据生成时的辅助工具，不能当作三个感知工具以外的主要视觉模块。
 
-![Ego-R1 原文 Figure 4，PDF 第18页完整页面](figures/original-page-018-04.png)
+![原文 Figure 4](figures/original-p018-figure-4.png)
 
 *原文 Figure 4，PDF 第 18 页完整截图。记忆建库由 30 秒日志向上合并至日摘要；查询则从较粗层级往细层级搜索。两种方向和预处理/推理成本应区分。*
 
@@ -69,7 +69,7 @@ Ego-R1 Data 来源于六个第一视角、总计超过 500 小时的录像。4.4
 
 ## 6. 训练流程与目标
 
-![Ego-R1 原文 Figure 3 与 RL 公式，PDF 第7页完整页面](figures/original-page-007-02.png)
+![原文 Figure 3](figures/original-p007-figure-3.png)
 
 *原文 Figure 3，PDF 第 7 页。左侧是工具链 SFT，右侧每条 rollout 都实际执行外部工具，再以最终答案奖励训练代理；不是只在静态推理文本上打分。*
 
@@ -81,7 +81,7 @@ RL 从 SFT checkpoint 出发，每个问题采样多条链，调用外部工具�
 
 ## 7. 实验设置与主要结果
 
-![Ego-R1 原文 Table 2，PDF 第8页完整页面](figures/original-page-008-03.png)
+![原文 Table 2](figures/original-p008-table-2.png)
 
 *原文 Table 2，PDF 第 8 页完整截图。Size 是代理或基础模型口径；Frames 各方法不同，Ego-R1 并没有一个统一固定帧数，因此不能从“3B”一列推断整个系统资源更少。*
 

@@ -1,7 +1,7 @@
 """Prepare the retained article queue and cache authoritative source material.
 
 This script does not generate technical prose. Authors read the cached sources,
-write each introduction, and choose the original pages to illustrate it.
+write each introduction, and choose original figure/table regions to illustrate it.
 """
 from __future__ import annotations
 
@@ -210,22 +210,30 @@ def assets(args):
     target = ROOT / row["destination"]
     figures = target / "figures"
     figures.mkdir(parents=True, exist_ok=True)
-    # Explicit specs allow region crops. Otherwise faithfully render whole pages.
-    specs = read(args.specs) if args.specs else [{"page": int(p), "label": "PDF page " + p} for p in args.pages.split(",")]
+    # Publication assets must select a figure/table region explicitly.
+    # Whole pages belong in the ignored reading cache, not an introduction.
+    if not args.specs:
+        raise ValueError("Figure/table assets require --specs with explicit crop bbox coordinates; full-page publication screenshots are disabled")
+    specs = read(args.specs)
+    if not specs or any(not spec.get("bbox") for spec in specs):
+        raise ValueError("Every publication asset must provide an explicit figure/table crop bbox")
     records = []
     with pdfplumber.open(CACHE / row["id"] / "source.pdf") as pdf:
         for index, spec in enumerate(specs):
             page = pdf.pages[spec["page"] - 1]
-            rendered = page.crop(spec["bbox"]) if spec.get("bbox") else page
-            filename = spec.get("filename") or f"original-page-{spec['page']:03d}-{index + 1:02d}.png"
+            x0, top, x1, bottom = spec["bbox"]
+            if (x1-x0)/page.width >= 0.98 and (bottom-top)/page.height >= 0.98:
+                raise ValueError("Select only the required figure/table, not the whole PDF page")
+            rendered = page.crop(spec["bbox"])
+            filename = spec.get("filename") or f"original-p{spec['page']:03d}-region-{index + 1:02d}.png"
             file = figures / filename
             rendered.to_image(resolution=args.dpi, antialias=True).save(file, quantize=False)
             record = {"asset_path": "figures/" + filename, "original_label": spec["label"],
                       "pdf_page": spec["page"], "source_url": source["source_url"] + ("#page=" + str(spec["page"])),
                       "source_version": source["source_version"], "source_sha256": source["sha256"],
                       "asset_sha256": hashlib.sha256(file.read_bytes()).hexdigest(),
-                      "processing": {"method": "pdf_region_render" if spec.get("bbox") else "full_pdf_page_render", "dpi": args.dpi,
-                                     "crop_bbox": spec.get("bbox"), "note": "Original pixels retained; full-page render includes surrounding text"}}
+                      "processing": {"method": "pdf_region_render", "dpi": args.dpi,
+                                     "crop_bbox": spec["bbox"], "page_size": [page.width, page.height], "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"}}
             records.append(record)
             print(json.dumps({"asset": str(file.relative_to(ROOT)), "page": spec["page"], "label": spec["label"]}, ensure_ascii=True))
     dump(target / "figures-manifest.json", {"paper_id": row["id"], "source_version": source["source_version"], "source_pdf_sha256": source["sha256"], "assets": records})
@@ -245,8 +253,7 @@ def main():
     fetch_parser.add_argument("--version", help="Version of the selected alternate source")
     asset_parser = sub.add_parser("assets")
     asset_parser.add_argument("--id", required=True)
-    asset_parser.add_argument("--pages")
-    asset_parser.add_argument("--specs")
+    asset_parser.add_argument("--specs", required=True, help="JSON array of explicit page, label, bbox and optional filename for each figure/table")
     asset_parser.add_argument("--dpi", type=int, default=180)
     args = parser.parse_args()
     {"prepare": lambda: prepare(), "fetch": lambda: fetch_many(args), "assets": lambda: assets(args)}[args.command]()

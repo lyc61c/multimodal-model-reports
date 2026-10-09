@@ -22,7 +22,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：Thinker、Talker、MTP 与流式波形解码](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 Figure 2 位于 PDF 第 3 页。自下而上阅读：视觉编码器和 AuT 将帧与音频变为表征；Thinker 处理多模态序列并生成文本；Talker 使用文本 token 与来自 Thinker 的音视频高维特征形成语音；顶端 MTP 在同一帧内生成残余码本，再送入流式 codec 解码器。颜色区分文本 embedding、视觉/音频 hidden 和 codec hidden，而不是不同训练阶段。
 
@@ -48,7 +48,9 @@ Talker 主干预测第零码本，轻量 MTP 自回归生成其余码本；因�
 
 **异步预填充。** Thinker 完成当前输入块后，Talker 可立即预填充该块，同时 Thinker 处理下一块。首包路径仍有串行依赖，可写成组件延迟之和：预处理 + Thinker 首 token + Talker 首 token + MTP + codec。单并发音频为 \(72+88+57+14+3=234\) ms。它是报告表 2 的具体分解，不包含未公布的公网、客户端或整段输入等待条件。
 
-![原文 Table 1、2：模块参数、首包路径和并发影响](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
+
+![原文 Table 2](figures/original-p006-table-2.png)
 
 PDF 第 6 页原表中，斜线左/右分别为音频/视频。并发 1、4、6 时音频首包延迟为 234、728、1172 ms，视频为 547、1517、2284 ms。RTF 为 0.47、0.56、0.66，越低越快，且均小于 1。这也说明“并发时基本不受影响”的正文概括不能替代实际数值：延迟随并发确实上升。报告使用 vLLM，MTP 与 decoder 采用 `torch.compile`、CUDA Graph 优化，但没有公开足以复现的硬件型号和数量。[PDF 第 5–7 页](https://arxiv.org/pdf/2509.17765v1#page=5)
 
@@ -70,7 +72,11 @@ GSPO 奖励分可验证规则与模型判分两类。数学、代码、指令遵
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 4–6：文本对照与语音识别/翻译](figures/original-page-010-03.png)
+![原文 Table 4](figures/original-p010-table-4.png)
+
+![原文 Table 5](figures/original-p010-table-5.png)
+
+![原文 Table 6](figures/original-p010-table-6.png)
 
 PDF 第 10 页上方分别比较 Instruct 和 Thinking，下方 Table 6 比较 ASR 与语音翻译。WER 越低越好，BLEU 越高越好，不能按整页“加粗最高”统一判断。30B-A3B-Instruct 的 LibriSpeech clean/other WER 为 **1.22/2.48**，Qwen2.5-Omni 为 1.74/3.45；19 语言 Fleurs 平均为 **5.33**，GPT-4o-Transcribe 为 4.48，表明多语言识别并非全面最佳。Fleurs en2xx BLEU 为 37.50，低于 Gemini-2.5-Pro 的 39.25。表 17 中 Thinking 对应 LibriSpeech 为 2.22/4.38，作者认为感知任务思考未必有益，甚至可能增加幻觉。
 
@@ -78,6 +84,6 @@ PDF 第 10 页上方分别比较 Instruct 和 Thinking，下方 Table 6 比较 A
 
 语音生成主要用给定文本的 TTS 式测试：SEED 内容一致性 WER 中文/英文为 **1.07/1.39**，CosyVoice 3 为 0.71/1.45；中文不及对照、英文略优。多语言和跨语言实验还评估 speaker similarity，但相似度高不等于内容一定正确，TTS 基准也不能完全反映完整音视频对话中的情绪控制和出错恢复。[PDF 第 10–14、17 页](https://arxiv.org/pdf/2509.17765v1#page=10)
 
-![原文 Table 16：同规模基础模型的非退化对照](figures/original-page-015-04.png)
+![原文 Table 16](figures/original-p015-table-16.png)
 
 PDF 第 15 页 Table 16 是论文最关键的控制实验：同为 30B-A3B，同模态使用相同语料、对齐训练 schedule、batch、有效 epochs，表注称匹配 FLOPs；Omni 额外加入音频与视听数据。文本 MMLU 为 81.69，对照 81.24；视觉 MMMU 为 59.33，对照 57.22，InfoVQA 为 83.31，对照 81.17。但 MMLU-Pro 为 61.57，低于 61.81；RealWorldQA 为 71.89，低于 73.98；MVBench 为 69.50，低于 71.87。因而“非退化”应理解为多数能力总体接近或改善的实验结论，**不是每个指标均不下降的定理**。作者也没有进行所有尺度的完整扫描。报告未给出完整超参数、逐测试推理预算和置信区间，本文记录其结果及局限，没有运行模型或独立复现实验。

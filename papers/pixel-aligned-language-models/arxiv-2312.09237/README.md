@@ -22,7 +22,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：PixelLLM 架构，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：**左侧图像编码与框提示编码相遇于 Prompt Feature Extractor；中间语言模型的隐藏状态向上预测词，向下经 MLP 预测位置。上下两条输出共享语言特征，但坐标不作为下一步文本生成的输入。
 
@@ -30,7 +30,9 @@
 
 两层双向 Transformer 在图像特征和“位置提示＋32 个可学习 token”之间交替注意，输出位置条件视觉表示。它读取整张图像的特征，不等同于把框内图像裁出来。语言端采用指令微调的 T5-XL 编码器—解码器，通过 PrefixLM 方式将视觉表示和文本前缀放入编码器，由解码器生成后缀。T5 自注意力的 Q、V 投影加入 rank 32 的 LoRA；其余基础权重冻结。
 
-![原文 Figures 3–4：下游适配，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
+
+![原文 Figure 4](figures/original-p005-figure-4.png)
 
 **读图：**Figure 3 先输入完整指代句，再用末尾 EOS 隐藏状态回归目标框，无须重新生成这句话。Figure 4 的密集描述额外加入候选框头，再对每个候选框生成描述。候选检测并非基础模型自动具备的功能：作者加入 Simple Feature Pyramid 与 CenterNet，并联合微调检测和描述目标。分割则将预测框送入 SAM 掩码解码器，附加可学习嵌入作任务适配。
 
@@ -76,7 +78,9 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 1–2：定位、分割和密集描述，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 1](figures/original-p007-table-1.png)
+
+![原文 Table 2](figures/original-p007-table-2.png)
 
 **读表：**Table 1 上半部分是框 P@0.5，下半部分是掩码 cIoU；同一列不同指标不能混用。框定位以预测框 IoU 达到 0.5 为成功。各对比模型的骨干与预训练数据不同，属于系统比较。
 
@@ -90,7 +94,11 @@ $$
 
 因此 Table 1 图注“所有设置最优”的表述不能逐字照搬。LN 验证集的受控轨迹生成 LBM（越低越好）为 0.153，MITR 为 0.163；它衡量轨迹匹配，不是通用问答准确率或物体框 IoU。
 
-![原文 Tables 3–5：区域描述和消融，PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Table 4](figures/original-p008-table-4.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
 
 **读表：**Table 3 给定真实框生成描述。RefCOCOg 的 METEOR/CIDEr 为 **14.3/82.3**，Visual Genome 为 **19.9/148.9**。原文引言把 19.9 的指标名称写成 CIDEr，与原表冲突；本文依表记录为 METEOR。区域描述复用了任务微调模型，不能把与 KOSMOS-2 的比较说成相同的零样本设置。
 

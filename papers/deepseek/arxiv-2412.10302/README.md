@@ -26,7 +26,9 @@
 
 总体仍是 LLaVA 风格的视觉编码器—连接器—解码式语言模型。前代使用 SigLIP 与 SAM-B 的两种固定分辨率表示，VL2 改为一个 SigLIP 编码器共享处理全图及局部块。输入图片先等比例调整，再填充到候选网格；模型选择填充面积最小的候选。
 
-![原论文 Figure 3 与 Table 1，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
+
+![原文 Table 1](figures/original-p005-table-1.png)
 
 *Figure 3 位于上部，Table 1 位于中部。原页同时给出视觉序列构造和三种底座配置。*
 
@@ -79,7 +81,7 @@ HAI-LLM 训练系统按视觉层细分流水线，平衡不同数据并行 rank 
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 3，OCR 及文档任务，PDF 第 11 页](figures/original-page-011-02.png)
+![原文 Table 3](figures/original-p011-table-3.png)
 
 *Table 3，PDF 第 11 页。DocVQA、ChartQA、InfoVQA 为 test，TextVQA 为 val；OCRBench 为原始总分。*
 
@@ -93,7 +95,7 @@ HAI-LLM 训练系统按视觉层细分流水线，平衡不同数据并行 rank 
 
 标准版在 ChartQA 上高于所列 Qwen2-VL-7B，但 DocVQA、TextVQA 和 OCRBench 仍略低；InfoVQA 低于 GPT-4o 的 79.2。Tiny 的 DocVQA 也低于 Qwen2-VL-2B 的 90.1。InfoVQA 测试有专门预算：候选局部网格上限从 9 扩到 **18**，不能把该结果描述成所有任务固定 9 块条件下得到。
 
-![原论文 Table 4，一般问答与数学，PDF 第 12 页](figures/original-page-012-03.png)
+![原文 Table 4](figures/original-p012-table-4.png)
 
 *Table 4，PDF 第 12 页。MMBench、英文、中文与 v1.1 是不同列；MME 为总分。*
 
@@ -107,7 +109,7 @@ HAI-LLM 训练系统按视觉层细分流水线，平衡不同数据并行 rank 
 
 相对 DeepSeek-VL 7B，标准版 MMMU 从 36.6 到 51.1、英文 MMBench 从 73.2 到 83.1，使用更少激活参数而不是更少总权重。VL2 的 MathVista 高于该表 Qwen2-VL-7B，但 MMMU 低于它及 GPT-4o；Small 的 MMBench v1.1 79.3 略高于标准版 79.2，规模增大并非每列单调增长。表中部分其他模型用 CoT 或不同设置标注，比较时须保留这些配置差异。
 
-![原论文 Table 5，视觉定位，PDF 第 17 页](figures/original-page-017-04.png)
+![原文 Table 5](figures/original-p017-table-5.png)
 
 *Table 5，PDF 第 17 页。这里展示 RefCOCO、RefCOCO+、RefCOCOg 各分割；不与自然语言问答分数混用。*
 

@@ -7,18 +7,29 @@
     "Viewed original pages 34,58,69 covering Figure1,Table2,Algorithm10 with complete content.",
     "Checked Equations4/6/22 and left inverse/observational equivalence interpretation, and unchecked component-author inverse obligation.",
     "Verified Koishi 4000+ plugin observational case uses v3 while paper presents v4; no controlled quantitative model or overhead results.",
-    "No training recipe, dataset scale, neural architecture or benchmark invented."
+    "No training recipe, dataset scale, neural architecture or benchmark invented.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 3
+    "original_assets": 2,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "6c91d2cfc1be3552f1d93647b58f7563cb409e96160391d42355f36ab25cae15",
+  "article_sha256": "3a920dd7aa46c014ae396301ddc6c57d15b198f0d4a20381d5f2fbc692664b0c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually inspected the original PDF page: the full-page screenshot contains prose, equations or pseudocode, with no relevant referenced model diagram, result figure or table. Remove the screenshot and preserve the substantive README prose, using the reviewed wording edits."
+    ]
+  }
 }

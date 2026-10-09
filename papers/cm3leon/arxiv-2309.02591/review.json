@@ -2,9 +2,44 @@
   "checked_file": "README.md",
   "verdict": "complete_self_review",
   "source_identity": "Title/FAIR-YerevaNN authors/version2309.02591v1 verified page1",
-  "facts_checked": ["Discrete generation vs visual-input-only bridge", "Text corpus3B vs repeated mixed training2.4T", "Three training retrieved examples vs two inference documents", "Main FID8candidate condition", "Pretrain licensed source vs SFT public datasets", "Body/appendix data-count mismatch", "Text-task performance counterexamples"],
+  "facts_checked": [
+    "Discrete generation vs visual-input-only bridge",
+    "Text corpus3B vs repeated mixed training2.4T",
+    "Three training retrieved examples vs two inference documents",
+    "Main FID8candidate condition",
+    "Pretrain licensed source vs SFT public datasets",
+    "Body/appendix data-count mismatch",
+    "Text-task performance counterexamples"
+  ],
   "math_checked": "CFG extrapolation and probability ratio signs correct; CD-K threshold is kth probability times alpha, not topk-only; CE labelled standard expansion.",
-  "images_checked": ["Viewed page6 Figure4/Table1, complete axes/retrieval columns", "Viewed page7 Figure5–6 full task/qualitative panels", "Viewed page13 Figure8–9 and Table3 full", "Viewed page16 Table4 and hyperparameter paragraph complete"],
+  "images_checked": [
+    "Viewed page6 Figure4/Table1, complete axes/retrieval columns",
+    "Viewed page7 Figure5–6 full task/qualitative panels",
+    "Viewed page13 Figure8–9 and Table3 full",
+    "Viewed page16 Table4 and hyperparameter paragraph complete"
+  ],
   "model_execution": "not_run",
-  "remaining_limitations": ["No benchmark reproduction", "Main text/appendix sample counts inconsistent", "Some training optimizer/sampling details not disclosed"]
+  "remaining_limitations": [
+    "No benchmark reproduction",
+    "Main text/appendix sample counts inconsistent",
+    "Some training optimizer/sampling details not disclosed"
+  ],
+  "article_sha256": "4bd87ebb0230e4ef9fa5449f58b99adb24169d14ea20a05b761aeb174196a590",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 8,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

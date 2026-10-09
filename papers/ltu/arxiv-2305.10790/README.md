@@ -30,9 +30,9 @@ LTU 将 Audio Spectrogram Transformer（AST）的声音感知与 Vicuna 版本 L
 
 ## 3. 整体架构
 
-![Figure 1：LTU 网络与开放问答示例](figures/original-page-002-01.png)
+![原文 Figure 1](figures/original-p002-figure-1.png)
 
-*原文 Figure 1，PDF 第 2 页完整页面；保留架构、32 个音频嵌入与完整示例。*
+*原文 Figure 1，PDF 第 2 页图表区域裁切；保留架构、32 个音频嵌入与完整示例。*
 
 音频首先转换成 128 维 log-Mel filterbank，使用 25ms Hanning 窗和 10ms 步长，原文给出固定的 1024×128 时频输入。16×16 的不重叠块进入 AST；音频主干此前以 CAV-MAE 目标预训练并在 AudioSet-2M 微调。这个已有预训练不是本报告从零完成的所有计算。
 
@@ -72,9 +72,9 @@ W'=W+\frac{\alpha}{r}BA,\qquad r=8,\quad\alpha=16.
 
 ## 5. 数据构建与处理
 
-![Table 1：OpenAQA 组成](figures/original-page-003-02.png)
+![原文 Table 1](figures/original-p003-table-1.png)
 
-*原文 Table 1，PDF 第 3 页完整页面；保留全部数据源、闭合/开放任务字段和总计。*
+*原文 Table 1，PDF 第 3 页图表区域裁切；保留全部数据源、闭合/开放任务字段和总计。*
 
 OpenAQA 复用已有公共声音数据，不新录制音频。八行来源为 AudioSet-Strong、AudioSet、VGGSound、FSD50K、AudioCaps、FreeSound、Clotho、Sound Bible；只使用标为 train 与 validation 的样本，排除 test/evaluation。数据集之间有音频重叠，总计 845K 独立片段，不应把各行简单相加为去重数量。
 
@@ -90,9 +90,11 @@ Table 1 闭合问答为 1.918M，开放为 3.764M，总计 5.682M。正文有“
 
 ## 6. 训练流程与目标
 
-![Table 3、4：课程与闭合任务实验](figures/original-page-006-03.png)
+![原文 Table 3](figures/original-p006-table-3.png)
 
-*原文 Table 3、Table 4，PDF 第 6 页完整页面；保留阶段参数、指标类型、全部对照与消融行。*
+![原文 Table 4](figures/original-p006-table-4.png)
+
+*原文 Table 3、Table 4，PDF 第 6 页图表区域裁切；保留阶段参数、指标类型、全部对照与消融行。*
 
 | 阶段 | 更新参数 | 任务与样本 | 学习率 / 轮数 |
 |---|---|---|---|
@@ -126,9 +128,9 @@ LTU 的分类汇总为 50.1，CLAP 表中为 40.7，作者据此报告约 23.1% 
 
 消融中，移除开放训练使分类汇总 50.1→37.0，冻结音频分支为 33.7，去掉 LoRA 为 38.3；取消课程则降到 22.8，caption 汇总 14.5→11.2。无课程模型使用相同总迭代量，较能说明训练顺序的作用。开放训练并非每个单项都提高，例如 Clotho SPICE 12.2→11.9，但整体感知与自由回答受益。
 
-![Table 6：开放问题的指令遵循](figures/original-page-007-04.png)
+![原文 Table 6](figures/original-p007-table-6.png)
 
-*原文 Table 6，PDF 第 7 页完整页面，保留问答生成与判分方式。*
+*原文 Table 6，PDF 第 7 页图表区域裁切，保留问答生成与判分方式。*
 
 GPT-3.5-Turbo 和 GPT-4 分别基于未见 AudioSet-Strong evaluation 元信息生成 1000 个问题，LTU 用音频回答，再由 GPT-4 判断回答是否回应问题。结果为 95.9% 和 96.9%；仅闭合训练则为 26.9% 和 22.5%。裁判的输入是问题和回答，其任务是判断“有没有回答”，不是实际听音频逐项验证事实。所以这个高遵循率不能称为 96.9% 音频推理正确率。
 

@@ -34,7 +34,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Self-review, no external reviewer/model execution",
@@ -43,5 +44,20 @@
     "Long-movie teacher gets synopsis/script and model also gets subtitles",
     "No quantitative independent hour-long benchmark",
     "Main equation and pseudocode scaling differ"
-  ]
+  ],
+  "article_sha256": "5274a9802cc000885c7abb7fd9d8b657bf7ac89f90892ef10972b4182b8eabbe",
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Figure 2 complete dual-token architecture and legend.",
+      "Viewed source and crop after manual repair: Figure 3, Figure 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Both Tables 2 and 3 include complete headers/results/captions.",
+      "Figure 7 full movie instruction-construction diagram, caption included."
+    ]
+  }
 }

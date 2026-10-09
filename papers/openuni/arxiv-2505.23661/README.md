@@ -24,7 +24,9 @@ OpenUni 采用模块连接方案，把冻结的多模态语言模型知识送入
 
 ## 3. 整体架构
 
-![原文 Table 1 与 Table 2，模块配置及两阶段训练超参数，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Table 1](figures/original-p003-table-1.png)
+
+![原文 Table 2](figures/original-p003-table-2.png)
 
 **读表：** 三行 OpenUni 区分理解骨干、连接器与生成模型。54M/225M 是连接器参数，不能当作整个模型大小；512/1024 是生成图像分辨率，也不是语言上下文长度。下表中生成模块第一阶段冻结、第二阶段可训练，理解骨干在两阶段保持冻结。
 
@@ -72,7 +74,7 @@ H_Q=F_\phi(p,Q)\big|_Q,\qquad c=P_\psi(H_Q).
 
 生成提示采用“用户要求生成一张图像并给出 caption，随后 Assistant 开始输出”的对话形式。空 caption 的 10% 是训练条件丢弃策略，不是从数据集中永久删除 10% 图像。23M 和 60K 是语料规模，训练步数乘批大小所代表的样本呈现次数可能包含重复，二者不是同一统计口径。
 
-![原文 Figure 2，OpenUni-L-1024 的生成图像与对应提示，PDF 第 7 页](figures/original-page-007-04.png)
+![原文 Figure 2](figures/original-p007-figure-2.png)
 
 **读图：** 示例覆盖动物动作、风景、纸艺、科幻和长描述；左上猫持牌展示短文字渲染，不能证明任意长文本都能正确生成。下排提示中的“8-K”“16-K”等词描述风格或细节期望，实际模型配置为 1024 分辨率，不能把提示文字当作生成输出达到 16K 的技术指标。
 
@@ -94,7 +96,7 @@ H_Q=F_\phi(p,Q)\big|_Q,\qquad c=P_\psi(H_Q).
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 3，GenEval 完整方法与六类分项，PDF 第 4 页](figures/original-page-004-02.png)
+![原文 Table 3](figures/original-p004-table-3.png)
 
 **读表：** GenEval 测试物体、数量、颜色、位置与颜色属性绑定，Overall 是该基准的聚合分数。OpenUni 最大版本 Overall 领先于表内统一模型，但计数最高的是 L-512 的 0.77，1024 版本为 0.76；不能把分辨率提升说成每个分项都提高。
 
@@ -108,7 +110,9 @@ H_Q=F_\phi(p,Q)\big|_Q,\qquad c=P_\psi(H_Q).
 | BLIP3-o-8B | 0.83 | 80.73 | 0.52 |
 | BLIP3-o-8B*，额外私有数据版本 | 0.84 | 81.60 | **0.62** |
 
-![原文 Table 4 与 Table 5，DPG-Bench 和 WISE 的完整分项，PDF 第 5 页](figures/original-page-005-03.png)
+![原文 Table 4](figures/original-p005-table-4.png)
+
+![原文 Table 5](figures/original-p005-table-5.png)
 
 **读表：** DPG-Bench 用较长、密集提示考察语义对齐，WISE 用文化、时空和科学知识相关提示考察生成中的世界知识。星号版本另用了私有样本，训练来源不同；报告中部分相关数据规模描述也不完全一致，本文只注明其为额外私有数据版本，不作精确公平成本对照。
 

@@ -22,7 +22,7 @@ Monkey 是独立方法条目，虽继承 Qwen-VL 组件，原论文和新增设�
 
 ## 3. 整体架构
 
-![Figure 3：数据生成与模型架构，PDF第4页](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **Figure 3，PDF 第 4 页。** 左边是描述生成流程，右边是模型：局部图分别经冻结 ViT 与各自 LoRA，整图缩放后的全局图另经视觉编码；共享 resampler 将特征压缩，局部和全局 token 一起进入 LLM。火焰标出 LoRA、resampler 与语言模型训练，雪花标出原 ViT 冻结。局部并不是独立预训练四个 1.9B 视觉主干，而是在基础视觉能力之上学习不同适配。
 
@@ -62,7 +62,11 @@ Monkey 直接继承已训练 Qwen-VL，不重新进行从头预训练。指令�
 
 Table 1 比较 caption 和五类通用 VQA。TextCaps 的 Monkey / Qwen-VL 为 93.2 / 65.1，属于图像描述评价；VQAv2 为 80.3 / 79.5、OKVQA 61.3 / 58.6、GQA 60.7 / 59.3、ScienceQA 69.4 / 67.1、VizWiz 61.2 / 35.2。GQA 仍低于该表 LLaVA1.5 的 62.0。不同 caption 与问答指标不能混成一个准确率。
 
-![Tables 2—4：文字、文档及架构消融，PDF第7页](figures/original-page-007-02.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 **Table 2—4，PDF 第 7 页。** Table 2 的文字相关问答列和 Table 3 的文档问答列各有自己的指标口径；此处按原表分数比较：
 
@@ -83,11 +87,13 @@ DeepForm 的提升大，DocVQA 与 InfoVQA 较小，ChartQA 略有下降，反�
 
 Table 4 将方形输入从 672 / 784 / 896 增大，DeepForm **31.3→38.9→40.6**，TextVQA 67.3→67.5→67.6，显示文档收益更明显。固定 896 输入时，0 / 1 / 4 LoRA 的 STVQA 为 **65.1 / 67.0 / 67.7**，DeepForm 36.8 / 36.9 / 40.6；但 DocVQA 为 66.1 / 66.7 / 66.5，一 LoRA 反而略高，不能概括为增加适配器每项都更好。
 
-![Tables 5、6：更高分辨率与描述消融，PDF第8页](figures/original-page-008-03.png)
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
 
 **Table 5、6，PDF 第 8 页。** Table 5 的 896×896→896×1344 将 DeepForm 40.6→42.3、InfoVQA 36.1→39.6、WTQ 25.3→26.6；三个数字来自最大分辨率实验，不能替换全套默认结果为“统一最大配置”。Table 6 在 LLaVA1.5 上替换详细描述，使 GQA 63.4→63.7、VizWiz 56.9→57.7、TextVQA 59.8→60.4、POPE 85.9→86.2、MMBench 68.3→69.3、MM-Vet 33.5→36.1。它支持生成标签质量可迁移，但没有在此控制所有训练 token 总量。
 
-![Figure 5：文档问答原例，PDF第10页](figures/original-page-010-04.png)
+![原文 Figure 5](figures/original-p010-figure-5.png)
 
 **Figure 5，PDF 第 10 页。** 四组原图覆盖 infographic 定位、柱状图计算、Wiki 表格关系和密集发票字段。右上图 16% 与 13% 的差写成 0.03，体现不同数值表示；定性案例提供读图路径，不能证明对所有金额与单位都可靠。正文与附录还展示详细 caption，部分句子存在重复，报告没有系统测量冗余和幻觉率。
 

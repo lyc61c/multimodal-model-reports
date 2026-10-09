@@ -6,18 +6,30 @@
     "Viewedfourselectedoriginalpagestablescomplete",
     "CheckedmainTable2againstAppendix7/8 identifiedcolumninconsistency",
     "Separatedtrainingcostandalignmentdata",
-    "Sevensections;notmodelexecution"
+    "Sevensections;notmodelexecution",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 8,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "682477a252c14cc4d2e50b753f4a03e2b27532c370a6a1dfa237322778ee412a",
+  "article_sha256": "00a70f69a772b6c7a8c3ebd8d2235f9dd240cd2e60e5d215ac84cfa15f863cd2",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Complete three-step Cheetah architecture and caption after width repair.",
+      "Viewed source page and crop: complete counterfactual image-editing pipeline, all four example operations and Figure 3 caption retained.",
+      "Viewed two distant table crops against source page: both Table 2 and Table 3 titles, all models/categories and numerical results retained, intervening prose excluded.",
+      "All four Tables 9–12 present with headers and notes."
+    ]
+  }
 }

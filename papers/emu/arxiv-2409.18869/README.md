@@ -16,13 +16,17 @@ Emu3 的带提示重写 GenEval 为 0.66，原提示为 0.54；DPO 后带重写�
 
 ## 3. 整体架构
 
-![原论文 Figure 1，统一 token 架构，PDF 第 1 页](figures/original-page-001-01.png)
+![原文 Figure 1](figures/original-p001-figure-1.png)
 
 *Figure 1，PDF 第 1 页。下方将多模态输入转为 token，中间 Transformer 预测序列，上方解码回文字或视觉输出。*
 
 8B 主干采用类似 Llama 的 decoder-only 结构，但没有直接继承一个预训练语言模型。Table 3 给出 32 层、隐藏维度 4,096、FFN 中间维度 14,336、32 个注意力头、8 个 KV 头、词表 184,622、RoPE 基数 1,000,000、上下文 131,072。使用 RMSNorm、GQA、SwiGLU、无偏置的 QKV/投影层，dropout 为 0.1。文字切分使用 QwenTokenizer，不等于语言权重来自 Qwen。
 
-![原论文 Tables 1–3，tokenizer、重建与模型配置，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
+
+![原文 Table 2](figures/original-p005-table-2.png)
+
+![原文 Table 3](figures/original-p005-table-3.png)
 
 *PDF 第 5 页上部是视觉码本与重建指标，右下 Table 3 是 Transformer 配置；两者属于不同模块。*
 
@@ -64,7 +68,9 @@ DPO 将同一提示下高分和低分图像对应的 token 序列组成偏好对
 
 ## 7. 实验设置与主要结果
 
-![原论文 Tables 7、8 与视频后处理说明，PDF 第 21 页](figures/original-page-021-04.png)
+![原文 Table 7](figures/original-p021-table-7.png)
+
+![原文 Table 8](figures/original-p021-table-8.png)
 
 *页首 Table 7 对比原提示与重写提示，中部 Table 8 是 DPG-Bench，下方明确说明视频后处理与评测。*
 
@@ -80,7 +86,9 @@ DPO 将同一提示下高分和低分图像对应的 token 序列组成偏好对
 
 附录图像采样采用 Top-k 16,384、Top-p 1.0，并根据基准使用 CFG：MSCOCO 为 5.0，GenEval 为 5.5，每提示 4 图；T2I-CompBench 每提示 10 图，DPG 每提示 4 图，后二者 CFG 为 5.0。外部模型许多数据来自原报告，而非本研究在完全相同协议下重跑。人工评估仅 100 条用户提示，每条三名投票者；其偏好结论应保留有限样本范围。
 
-![原论文 Table 5 与 Table 6，视频生成及视觉理解，PDF 第 10 页](figures/original-page-010-03.png)
+![原文 Table 5](figures/original-p010-table-5.png)
+
+![原文 Table 6](figures/original-p010-table-6.png)
 
 *上部 Table 5 是 VBench，下部 Table 6 是理解。星号表示相关训练集图像在训练中被观察过。*
 

@@ -20,7 +20,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：两类记忆库和压缩步骤，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 Figure 2 左侧蓝色库保存视觉特征，绿色库保存查询；中间的 cross-attention 读取视觉历史，self-attention 读取查询历史。视觉编码器与语言模型用雪花标示冻结，Q-Former 与连接 FC 层用火焰标示可训练。右侧示例把相似度最高的相邻条目合并，并保持其在时间序列中的位置。
 
@@ -75,7 +75,15 @@ V 是视频，$w_i$ 为真实目标文字。视觉编码器与语言模型冻结
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 1–5：长视频、问答、描述与动作预测，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
+
+![原文 Table 2](figures/original-p006-table-2.png)
+
+![原文 Table 3](figures/original-p006-table-3.png)
+
+![原文 Table 4](figures/original-p006-table-4.png)
+
+![原文 Table 5](figures/original-p006-table-5.png)
 
 LVU 七项平均准确率为 63.0，S5 为 59.2，但关系任务为 58.2，低于 S5 的 67.1，类型为 61.0，低于 65.4。平均提高不等于每项领先。Breakfast 与 COIN 为 93.0、93.2，S5 为 90.7、90.8。
 
@@ -89,12 +97,22 @@ LVU 七项平均准确率为 63.0，S5 为 59.2，但关系任务为 58.2，低�
 
 描述任务中 MA-LMM 的 MSRVTT METEOR/CIDEr 为 33.4/74.6，MSVD 为 51.0/179.1，YouCook2 为 17.6/131.2。METEOR 和 CIDEr 衡量生成文本与参考的对应，不是百分比准确率；YouCook2 表现较强，但 MSRVTT 仍低于 mPLUG-2 的 34.9/80.3。动作预测 Top-5 动作准确率 32.7，高于 Video-LLaMA 29.7；动词 recall 却从 26.3 降到 25.9，不能称所有指标提高。
 
-![原文 Tables 6–9 与 Figure 3：记忆贡献、压缩和长度消融，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 8](figures/original-p007-table-8.png)
+
+![原文 Figure 3](figures/original-p007-figure-3.png)
+
+![原文 Table 6](figures/original-p007-table-6.png)
+
+![原文 Table 7](figures/original-p007-table-7.png)
+
+![原文 Table 9](figures/original-p007-table-9.png)
 
 无记忆时 LVU/Breakfast/COIN 为 48.3/74.6/72.3，视觉记忆为 61.5/91.8/92.4，查询记忆为 58.0/81.4/88.5，两者结合为 63.0/93.0/93.2。该消融支持互补性。Table 8 中 MBC 在 100 帧输入下只向语言模型送 32 个嵌入，GPU 用量列为 19.1；拼接基线使用 60 帧、1920 个 token，用量为 49.2。需保留帧数不同的条件，不把它包装成完全相同输入规模的显存比。
 
 FIFO 同样是 100 帧和 32 个嵌入，LVU 为 61.3，MBC 为 63.0；Breakfast 为 88.5 对 93.0。Figure 3 表明在这些 100 帧任务中记忆长度约 10–20 后收益趋于饱和，这不是任意复杂长视频只需 20 个记忆槽的保证。
 
-![原文 Table 10 与 Figure 6：压缩粒度和处理时间，PDF 第 12 页](figures/original-page-012-04.png)
+![原文 Table 10](figures/original-p012-table-10.png)
+
+![原文 Figure 6](figures/original-p012-figure-6.png)
 
 token 级相对整帧压缩的 Breakfast 准确率为 93.0 对 86.5，反映细粒度保留的价值。Figure 6 横轴为帧数、纵轴为秒，MA-LMM 随帧数仍大致线性变慢，100 帧时图中耗时接近千秒量级；它没有证明达到实时帧率。作者也明确指出极长视频的时间成本，并把分层处理和更强视频预训练列为后续方向。本文仅整理原文及检查所选原图，未运行模型。

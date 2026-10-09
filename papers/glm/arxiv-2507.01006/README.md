@@ -25,7 +25,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：图像、视频编码与语言解码；PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图方式**：两张不同尺寸的图产生不同长度视觉序列；视频除视觉 token 外还有蓝色 time index。MLP 将编码器特征投影到语言输入，解码器统一处理文字与视觉。图中的 1574、5187、13650 是示例输入的 token 数，不是固定的每图/每视频预算。
 
@@ -58,7 +58,7 @@ RLCS 的核心是动态选择有学习价值的问题。离线用多个模型或
 
 奖励必须按任务含义区分。例如“43”和“43.0”在数学中可等价，在 OCR 中可能是不同文字。Table 1 的 OCR 奖励为 \(1-d_{edit}(ans,gt)/\max(|ans|,|gt|)\)；定位奖励按超过 IoU 阈值的框数量占比；GUI 动作同时检查动作与空间正确性。长文档等难以精确验证的内容使用语义评审或奖励模型。[原文 §5.2、Table 1](https://arxiv.org/pdf/2507.01006v1#page=11)
 
-![原文 Figure 5：错误奖励上升与基准下降；PDF 第 10 页](figures/original-page-010-02.png)
+![原文 Figure 5](figures/original-p010-figure-5.png)
 
 **读图方式**：上排训练奖励越来越高，下排 MMStar、MathVista、AI2D、MMMU 却在后期下降。多图验证器被输出捷径欺骗后，甚至使高质量 STEM 奖励领域的学习停滞。这说明训练 reward 与真实能力不能等同，验证器需检查任务语义与异常输出。
 
@@ -92,7 +92,7 @@ RL 混合 RLVR 与 RLHF。可验证任务从专用答案框提取结果，返回
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2：28 项主评测；PDF 第 15 页](figures/original-page-015-03.png)
+![原文 Table 2](figures/original-p015-table-2.png)
 
 **读表方式**：粗体比较小于 10B 的开放模型；星号是作者统一框架重测，匕首为第三方数据。并非每个对照都属于同一重测条件。Video-MME 的 w/o、w/ 表示无/有字幕，GUI 脚注还区分 SoM 与截图加 accessibility tree。
 
@@ -113,7 +113,7 @@ RL 混合 RLVR 与 RLHF。可验证任务从专用答案框提取结果，返回
 
 在多个 STEM、图表、长文档与代理任务，9B 模型超过表中的 72B 对照。但 MMBench、MMMU、定位和若干视频任务未超过它。引言称 MMBench-EN 85.8 超过 Qwen72B，与 Table 2 的 88.0 不一致，本文以表为准。对 Qwen7B 也存在例外：OCRBench **84.2 < 84.5**、LVBench **45.1 < 45.3**。MiMo-VL 在 MathVista 81.5、WeMath 66.3 仍高于本文 80.7/63.8。[原文 §1、Table 2](https://arxiv.org/pdf/2507.01006v1#page=15)
 
-![原文 Figure 6：单领域与混合 RL 的交叉影响；PDF 第 17 页](figures/original-page-017-04.png)
+![原文 Figure 6](figures/original-p017-figure-6.png)
 
 **读图方式**：纵轴是训练数据领域，横轴是评测领域，数字是相对 SFT 检查点的平均增量；颜色按各评测领域归一化，不能把不同列颜色深浅直接当成同一绝对增益。负数是实际下降。
 

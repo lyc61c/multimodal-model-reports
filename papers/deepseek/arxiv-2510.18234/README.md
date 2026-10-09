@@ -21,7 +21,7 @@ Fox 的 100 页英文文档实验中，100 个视觉 token 对约 900–1000 文
 
 ## 3. 整体架构
 
-![DeepSeek-OCR 原文 Figure 3，PDF 第5页完整页面](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 *原文 Figure 3，PDF 第 5 页完整截图。读取方向为 SAM → 卷积压缩 → CLIP → MoE 解码器；图中的 16× 指视觉 token 数减少，而不是每个空间方向缩小 16 倍。*
 
@@ -65,7 +65,9 @@ $$
 
 精细文档标签把版面类别、归一化到 1000 bins 的框与段落文字交错起来；粗标注与细标注使用不同提示。多个监督版本可能来自同一文档页，表中规模不能相加为完全独立原始页面数。自动标签与模型 flywheel 提升生产规模，也可能继承教师的 OCR 和版面错误，报告没有给出所有样本的人工审核比例。
 
-![DeepSeek-OCR 原文 Figure 4 与 Table 1，PDF 第6页完整页面](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
+
+![原文 Table 1](figures/original-p006-table-1.png)
 
 *PDF 第 6 页展示直接缩放、保留比例 padding、局部块与全局视图组合。Table 1 的 token 数是模型选择输入模式后的预算，不是原始文件文本长度。*
 
@@ -87,13 +89,13 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![DeepSeek-OCR 原文 Table 2，PDF 第10页完整页面](figures/original-page-010-03.png)
+![原文 Table 2](figures/original-p010-table-2.png)
 
 *PDF 第 10 页包含 Fox 压缩实验的 token 区间、precision、压缩率和样本页数。最后一个高压缩区间只有 4 页，应保留样本量这一条件。*
 
 Fox 实验筛选 600–1300 文本 token 的 100 页英文文档，采用模型约 129K 词表的 tokenizer，提示为不含版面的 Free OCR。100 个视觉 token 在 600–700 区间为 98.5% precision、6.7× 压缩，在 900–1000 区间为 96.8%、9.7×，在 1200–1300 区间为 87.1%、12.6×；64 个视觉 token 对应最后区间为 59.1%、19.7×。报告没有在正文展开 precision 的全部计算公式，不能将它直接解释为“97% 页面逐字完全正确”或“97% 长上下文问答正确”。原文称格式差异会影响分数，这是解释性判断，没有另给经格式修正后的完整新分数。
 
-![DeepSeek-OCR 原文 Table 3，PDF 第11页完整页面](figures/original-page-011-04.png)
+![原文 Table 3](figures/original-p011-table-3.png)
 
 *PDF 第 11 页是 OmniDocBench 主表，所有指标为编辑距离，越低越好；括号为有效视觉 token 估计，†200dpi 表示另外的输入渲染条件。*
 

@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "LongVA：长语言上下文向视觉的迁移"
+  "title_zh": "LongVA：长语言上下文向视觉的迁移",
+  "chinese_characters": 2211,
+  "figure_revision_date": "2026-10-09"
 }

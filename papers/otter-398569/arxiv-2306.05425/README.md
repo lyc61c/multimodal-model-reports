@@ -23,7 +23,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2，单图文字上下文与多模态上下文数据格式，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 **读图：** 黄色区域是可参考示例，紫色区域是当前查询。中间两组把示例图像或视频与问答一起提供；下方则围绕相同视觉内容保留文字对话。区别不只是一次输入更多图片，还在于示例与查询之间具有可供模仿的回答方式或内容关系。
 
@@ -65,7 +65,9 @@ d_q=(I_q,R_q,X_q,C_\psi(I_q,X_q)),\qquad d_q\sim D_{\rm MIMIC\text{-}IT}.
 
 ## 5. 数据构建与处理
 
-![原文 Figure 3，Sythus 标注流程及 Table 1 数据组成，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
+
+![原文 Table 1](figures/original-p005-table-1.png)
 
 **读图表：** 冷启动阶段反复修订系统消息和种子示例，然后执行生成、过滤、翻译。表中 `#Instruct.` 与 `#Instance.` 不同，前者是唯一指令数，后者是组织后的实例数；`#Clips/Images` 也不能当作互不重复的原始图片数量，视频帧占据很大部分。
 
@@ -97,7 +99,7 @@ ScanNetv2 的来源包含深度信息，但本文提供给指令模型的是采�
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2，MMAGIBench 模型、语言骨干与全部五类分项，PDF 第 9 页](figures/original-page-009-03.png)
+![原文 Table 2](figures/original-p009-table-2.png)
 
 **读表：** Otter 的平均分最高，但细粒度感知、属性推理和关系推理均不是最高。表格要连同分项阅读，不能把平均领先改成每种视觉能力都领先。
 
@@ -110,7 +112,7 @@ ScanNetv2 的来源包含深度信息，但本文提供给指令模型的是采�
 
 MMAGIBench 感知材料来自 COCO 和社交网络图片，覆盖场景物体识别、OCR、名人和地点；推理分为属性、关系、未来预测。作者让 ChatGPT 比较模型输出与真值标签，判断是否一致后计算准确率。评判器并不是对全部视觉证据进行独立专家核验；COCO 同时也是训练来源，原文未披露完整的训练评测交叉去重方案。
 
-![原文 Figure 6，视频评测、人工 Elo 与 COCO 上下文学习曲线，PDF 第 10 页](figures/original-page-010-04.png)
+![原文 Figure 6](figures/original-p010-figure-6.png)
 
 **读图：** 左侧蓝色是 Otter、灰蓝色是 VideoChatGPT；中间是当时模型集合的人工偏好 Elo；右侧是不同示例数的 CIDEr。三者指标含义不同，不能合并成一个统一准确率。
 

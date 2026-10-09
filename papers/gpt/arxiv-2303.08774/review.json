@@ -7,18 +7,30 @@
     "Checked scope intentionally withholds architecture size, vision encoder, hardware/full recipe; no speculative MoE or encoder claims.",
     "Verified scaling laws and restricted HumanEval subset, base NLP vs RLHF exam distinction and no-vision scores.",
     "Checked contamination methodology, math train inclusion, HumanEval25 percent and65.58 unpolluted; no blanket clean-data claim.",
-    "Calibration ECE0.007 to0.074 and remaining failures included; no independent model execution."
+    "Calibration ECE0.007 to0.074 and remaining failures included; no independent model execution.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "28964dfcd2664ce209412d41555adc044bd6bcef80a448e335cc4f872a78b0f7",
+  "article_sha256": "d1df4ae713ca20f2d530e1b536bc75e069d77d1586d34325945a16f0bb1d4682",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Figures 1 and 2 complete including chart titles, legends and captions.",
+      "Viewed source page and crop: GPT-4 academic Table 2 all benchmarks, model-comparison columns, shot counts and full explanatory caption retained.",
+      "Full visual-input Table 3 restored, all image panels and response rows included.",
+      "Both calibration panels and x=1 endpoints fully restored."
+    ]
+  }
 }

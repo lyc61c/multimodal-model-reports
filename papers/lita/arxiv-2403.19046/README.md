@@ -20,7 +20,7 @@ LITA 在 LLaVA 风格的图像语言模型上增加视频时间表达，使用 C
 
 ## 3. 整体架构
 
-![Figure 2：LITA架构，原PDF第3页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：**输入帧先被视觉编码器转成patch特征，左侧快路径对每帧空间特征取均值，保留密集时间序列；慢路径只取少量帧，但留下更多空间位置。两组特征经线性投影后与问题文本一起输入语言模型。图顶端答案含专用时间token，推理结束后再转回真实时间。
 
@@ -57,13 +57,15 @@ ActivityNet-RTL建立在ActivityNet-Captions带人工起止时间的密集描述
 
 训练把视频/图像条件及指令映射到任务答案。定位、解释、描述都沿语言序列监督；原文没有列出完整损失mask公式、优化器、warmup、weight decay或调度器，本文不补写默认配置。任务均衡是按采样份额实现，不是公开的可学习loss权重。
 
-![Figure 5与Table 3：训练任务影响，原PDF第8页](figures/original-page-008-04.png)
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 **读图：**只学RTL时，非时间问题也容易输出带时间的固定格式；加入标准视频任务后可以回答一般问答，但常偏短；再加入图像自然语言问答后回答更完整。表3显示从RTL Only到完整模型，mIoU26.6→28.6、P@0.5 20.9→25.9、解释分43.5→46.3。这支持任务组合有收益，不能把自然语言质量变化全部解释为视觉架构单独带来的效果。
 
 ## 7. 实验设置与主要结果
 
-![Table 1：RTL指标与配置，原PDF第6页](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 RTL定位用预测段与标注段的IoU，mIoU和P@0.5先在每个视频内平均，再在160视频之间平均，避免问答多的视频被过度加权。P@0.5表示IoU超过0.5的比例。解释由GPT-4按帮助性、相关性、准确性、细节打1–10分，再相对标注解释的评分归一化；这一Score不能解释成46.3%的客观推理正确率。表1结果平均三次试验，未给出误差区间（§4.3、§5.2）。
 
@@ -78,7 +80,9 @@ RTL定位用预测段与标注段的IoU，mIoU和P@0.5先在每个视频内平�
 
 前三种13B配置使用相同五任务训练。慢路径基线没有快token，也没有时间token；SlowFast再加快token；完整LITA再加时间token。这使13B mIoU从14.6提高到28.6，约1.96倍。这里“近乎翻倍”是对该同训练任务基线，不能宣称把Video-ChatGPT的IoU翻倍：后者经常不输出时间，原表使用缺失符号，并未赋零。7B与13B差4.5个mIoU百分点，说明此设置下规模也影响时间推理。
 
-![Figure 4与Table 2：定性案例和视频生成评价，原PDF第7页](figures/original-page-007-03.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
+
+![原文 Table 2](figures/original-p007-table-2.png)
 
 **读图表：**Figure4展示第二次掰手腕、烤棉花糖及跌倒后恢复的时间和解释；这是案例证据而非全数据保证。表2为Video-based Text Generation Benchmarking的GPT评分：LITA正确性2.94、细节2.98、上下文3.43、时间理解2.68、一致性3.19，均值3.04；Video-ChatGPT均值2.38。正确性相对2.40提高22.5%，时间理解相对1.98提高35.4%，对应原文约22%与36%的表述，都是**相对评分变化而非百分点准确率**。
 

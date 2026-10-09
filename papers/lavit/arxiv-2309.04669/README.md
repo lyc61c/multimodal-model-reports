@@ -26,9 +26,9 @@
 
 ## 3. 整体架构
 
-![LaVIT 动态视觉 tokenizer 与 token merger 原图](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-> 来源：原文 Figure 2，2309.04669v1，PDF 第 4 页；整页保留图注、模块标记及下方选择器公式。
+> 来源：原文 Figure 2，2309.04669v1，PDF 第 4 页；裁图保留模块标记；选择器公式见同页原文与本节解读。
 
 **读图**：左侧图像经冻结视觉编码器产生 patch 特征，selector 选择部分位置，merger 将其余位置的信息汇入保留位置。近邻量化得到代码本索引，重建 decoder 检查语义是否保存。右侧是 merger 内部：保留 token 先做因果注意力，再作为 query 对未保留特征做 cross-attention，之后经过前馈层。重建 decoder 只用于 tokenizer 阶段，图中明确标记不用于后续语言预训练。
 
@@ -56,9 +56,9 @@
 
 设保留 T 个 patch 的特征为 \(X_r\)，未保留为 \(X_d\)。保留特征作 query，从被丢弃位置取信息。标准注意力复杂度的解读是：保留位置的 self-attention 约为 \(O(T^2D)\)，merger 的 cross-attention 约为 \(O(T(N-T)D)\)，另有前馈计算；LLM 的视觉段较短可以减轻其序列开销，但这不是整个模型的线性复杂度保证。
 
-![LaVIT 量化、重建目标与统一预训练的原文页](figures/original-page-005-02.png)
 
-> 来源：原文 Equations (2)–(5)、Sections 3.1–3.2，PDF 第 5 页；完整原页可直接核对符号。
+
+> 数学依据：[原文 Equations (2)–(5)、Sections 3.1–3.2，PDF 第 5 页](https://arxiv.org/pdf/2309.04669v1#page=5)。
 
 Equation (2) 用将注意力 logits 与 \(1-M\) 相乘的写法表示仅访问未保留位置。这里有一个数学简写问题：softmax 前乘零会令该位置获得 \(e^0\) 而非零概率。若严格实现“排除保留位置”，通常应只对 \(X_d\) 做注意力，或给禁止位置加负无穷掩码。以下是与正文语义一致的**解释性改写**，不是宣称原文或官方代码已采用该写法：
 
@@ -116,7 +116,9 @@ z_i=\arg\min_j\|l_2(\hat x_i)-l_2(c_j)\|.
 
 ## 7. 实验设置与主要结果
 
-![LaVIT 零样本与少样本结果原表](figures/original-page-007-03.png)
+![原文 Table 1](figures/original-p007-table-1.png)
+
+![原文 Table 2](figures/original-p007-table-2.png)
 
 > 来源：原文 Tables 1–2，PDF 第 7 页；所有模型行、任务列、k 值、表注完整可见。
 
@@ -134,7 +136,9 @@ z_i=\arg\min_j\|l_2(\hat x_i)-l_2(c_j)\|.
 
 LaVIT 在 Table 1 的已报告数值中领先，但跨模型整体差异不能单独归因于离散监督。少样本 k=2/4/8 时，VQAv2 为 64.9/65.2/66.0，OKVQA 为 53.8/54.2/54.5，VizWiz 为 41.3/42.3/43.0。虽然同一模型随示例数增加改善，8-shot VizWiz 的 Emu 为 43.9，仍高于 LaVIT 的 43.0；不能把“全部 few-shot 任务领先”写成结果。
 
-![LaVIT 动态 token 可视化与设计消融](figures/original-page-008-04.png)
+![原文 Figure 3](figures/original-p008-figure-3.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 > 来源：原文 Figure 3、Table 3，PDF 第 8 页；原图 token 数、代码编号、所有消融行完整保留。
 

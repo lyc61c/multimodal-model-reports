@@ -37,12 +37,28 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "tables_and_figures_checked": true
+    "tables_and_figures_checked": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Closedended scores use small subsets",
     "Firstphase captions proxy forimages",
     "Automatic reference and judge both Mixtral",
     "Only two-imagecomparison validated"
-  ]
+  ],
+  "article_sha256": "97bf4ba38ca6a413721628519946153fcad161f16325850c7c587140b734aa39",
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

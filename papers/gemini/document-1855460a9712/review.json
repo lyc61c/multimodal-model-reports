@@ -123,5 +123,23 @@
     "Distinguishes February Pro, updated Pro, preinstruction audio model, specialized math and Flash-8B.",
     "No independent reviewer or model reproduction is claimed."
   ],
-  "checked_at": "2026-10-08"
+  "checked_at": "2026-10-08",
+  "article_sha256": "5e54aa526f177e7562ea42c5c043ca7feecfaae8f0b26ff77b96294802606da3",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: both long-document/code negative-log-likelihood plots, full legends, axes and complete Figure 7 caption retained.",
+      "Viewed source page and crop: entire retrieval scatter plot, both model legend entries, 128K marker, axes and Figure 11 caption retained.",
+      "Table 9 fully preserved, unrelated Table 47 belongs to another page.",
+      "Table 18 includes complete two-block caption through final ChartQA note."
+    ]
+  }
 }

@@ -36,5 +36,10 @@
     "QuasiLinear并非保留attention时的严格渐近线性",
     "Table1MambaICL叉号与Table5非零ICL不应作绝对命题"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

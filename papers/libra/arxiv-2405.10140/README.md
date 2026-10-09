@@ -21,7 +21,7 @@
 
 ## 3. 整体架构
 
-![Figure 1：Libra 架构，原PDF第3页](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
 **读图：**左下方先由 CLIP 产生连续特征，再由 LFQ 量化器得到离散编号，编号查独立视觉词嵌入表。连续与离散向量合并成为同一位置的图像输入，并非把序列长度翻倍。右侧每层中橙色路径处理视觉、蓝色路径处理语言；对角注意力块对应模态内部，非对角块的 K/V 才经过桥接。图上雪花与火焰表示预训练冻结与训练组件。
 
@@ -58,7 +58,7 @@ $$
 
 ## 6. 训练流程与目标
 
-![Table 4：两阶段训练配置，原PDF第15页](figures/original-page-015-04.png)
+![原文 Table 4](figures/original-p015-table-4.png)
 
 **读表：**左列预训练40K步、batch1280、学习率1e-4、warmup2000步；右列SFT7000步、batch128、学习率2e-5、warmup300步。两阶段采用AdamW、余弦衰减、weight decay0.01、β=(0.9,0.99)、epsilon1e-8、gradient clipping1.0和bfloat16。训练资源分别8400与380个A100-40G GPU小时，属于总设备时间，不是单次墙钟用时。
 
@@ -81,11 +81,15 @@ $$
 | MMBench / 中文 | 65.2 / 58.8 | LLaVA1.5 64.3 / 58.3 | 均小幅提升 |
 | SEED / MM-Vet / MMVP | 62.7 / 31.8 / 30.0 | LLaVA1.5 58.6 / 30.5 / 24.7 | 不同评价口径不能平均替代总成绩 |
 
-![Table 2与Figure 3：理解基准及生成验证，原PDF第7页](figures/original-page-007-02.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Figure 3](figures/original-p007-figure-3.png)
 
 **读图表：**表2的Libra行与商用模型分隔；它的MMBench65.2低于GPT-4V77.0与Gemini-Pro73.6。Figure3左侧说明去掉桥接后生成和补全变差，中间展示基础颜色、形状概念，右侧复杂提示则出现失败。原文明确这不是追求生成SOTA，且没有用标准文生图大规模基准证明质量。
 
-![Table 3与Figure 4：组件消融与注意力分析，原PDF第8页](figures/original-page-008-03.png)
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Figure 4](figures/original-p008-figure-4.png)
 
 表3给出了真实组件证据：只监督文本时VizWiz从59.5降至52.9；用连续视觉预测替代离散监督为53.3；删除视觉专家为50.8，删除桥接为53.6；输入只保留离散分量为38.6。预训练数据缩到3M则VQAv2降至67.8、MME1189.8。因此结果支持数据规模、连续输入、离散监督与桥接共同起作用，不能把收益全部归给单一模块。
 

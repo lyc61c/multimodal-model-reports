@@ -45,5 +45,10 @@
     "QwenTable7/10部分结果出入",
     "Table9GPU A800、说明A100、消融V100并列不混为同一时间"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

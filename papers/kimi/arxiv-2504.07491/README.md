@@ -23,7 +23,7 @@
 
 ## 3. 整体架构
 
-![Figure 3，Kimi-VL 架构，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 3](figures/original-p003-figure-3.png)
 
 **读图：Figure 3，PDF 第 3 页。** 下方小图、长条文字、GUI、视频帧等经过同一 MoonViT，按不同长度产生视觉 token；中间 MLP 对齐；上方 MoE 的 router 为不同 token 选择非共享专家，并使用共享专家。Thinking 与标准版沿用这个骨架，差异主要来自后训练。
 
@@ -69,7 +69,7 @@ SFT 非推理任务先人工构造种子数据、训练 seed model，再为多�
 
 ## 6. 训练流程与目标
 
-![Figure 4，预训练阶段，PDF 第 4 页](figures/original-page-004-02.png)
+![原文 Figure 4](figures/original-p004-figure-4.png)
 
 **读图：Figure 4，PDF 第 4 页。** 左上5.2T是已有语言模型训练，左下视觉塔2T及0.1T接入；右侧才是继续更新语言模型的联合训练。图中的累计4.4T包括视觉塔训练与纯文本/多模态联合训练，不能称4.4T都为新多模态语料。
 
@@ -88,7 +88,7 @@ SFT 非推理任务先人工构造种子数据、训练 seed model，再为多�
 
 ## 7. 实验设置与主要结果
 
-![Table 3，标准版主评测，PDF 第 10 页](figures/original-page-010-03.png)
+![原文 Table 3](figures/original-p010-table-3.png)
 
 **读图：Table 3，PDF 第 10 页。** 末列标准Kimi-VL；GPT-4o灰列为参考，其他高亮主要围绕高效模型比较。多个指标虽栏写Acc，附录明确 InfoVQA 为 **test ANLS**，OCRBench 为 **1000分制**；因此 867不是867%准确率。
 
@@ -111,7 +111,9 @@ GUI单步：ScreenSpot-V2 **92.8**（正文另写92.0）、ScreenSpot-Pro **34.5
 
 128K needle-in-a-haystack 的 Table 2，在64K以下文本与视频均100%，**64K–128K区间文本87.0%、视频91.7%**。这既说明长上下文检索可用，也显示窗口长度不保证全位置无损；检索测试还不等于复杂长文档推理。
 
-![Table 4 与 Figure 13，Thinking 与推理预算，PDF 第 17 页](figures/original-page-017-04.png)
+![原文 Table 4](figures/original-p017-table-4.png)
+
+![原文 Figure 13](figures/original-p017-figure-13.png)
 
 **读图：Table 4/Figure 13，PDF 第 17 页。** Thinking在MathVision full **36.8**、MathVista mini **71.3**、MMMU val **61.7**；相对标准版分别增 **15.4/2.6/4.7个百分点**。MathVision高于QVQ-72B **35.9**，但低于Qwen2.5-VL-72B **38.1**；MMMU仍低于GPT-4o **69.1**、o1 **77.3**。不能宣称激活3B全面超过大型模型。
 

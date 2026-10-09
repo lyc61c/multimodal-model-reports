@@ -28,7 +28,7 @@
 
 Adapter 使用 **256 个可学习向量**作为查询，视觉特征作为 key/value，做一次 cross-attention，输出固定 256 项视觉序列。为保留细粒度位置，在 query/key 对中加入 **二维绝对位置编码**。它不属于用户问题引导的视觉查询，也不是 Ovis 的概率视觉词表；图像压缩查询本身是可学习参数。
 
-![Qwen-VL 原文 Figure 3：三阶段模块与分辨率变化](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **原图：Figure 3，PDF 第 4 页。** 三列分别对应两次预训练和监督微调，雪花表示冻结、火焰表示训练。第一列固定语言模型，第二列全部训练，第三列固定视觉编码器。每列的 CrossAttn 与 Learnable Query Embs 是同一类视觉输入接口，低分辨率切换为高分辨率并没有增加查询数量。
 
@@ -54,7 +54,7 @@ Adapter 使用 **256 个可学习向量**作为查询，视觉特征作为 key/v
 
 第二阶段七类任务规模分别为：caption **19.7M**、VQA **3.6M**、grounding **3.5M**、referring grounding **8.7M**、grounded caption **8.7M**、OCR **24.8M**、文字生成 **7.8M**。表列任务样本名义相加为 77.8M；这是按任务条目统计，不是去重后的独立图像数。Caption 不再用 LAION-COCO，VQA 来自 GQA、VGQA、VQAv2、DVQA、OCR-VQA、DocVQA 等，定位数据来自 GRIT、Visual Genome 与 RefCOCO 系列。
 
-![Qwen-VL 原文 Figure 4：grounding、合成 OCR 与文档位置标注](figures/original-page-020-04.png)
+![原文 Figure 4](figures/original-p020-figure-4.png)
 
 **原图：Figure 4，PDF 第 20 页。** 左列是带图像内容的训练样本，右列突出坐标与文字标注；第一行是短语与对象框，第二行是自然背景上的合成文字，第三行是文档页面。颜色区分标注区域，不代表模型推理置信度。图说明空间监督来源，不是最终模型输出案例。
 
@@ -64,7 +64,7 @@ Adapter 使用 **256 个可学习向量**作为查询，视觉特征作为 key/v
 
 ## 6. 训练流程与目标
 
-![Qwen-VL 原文 Table 10：三阶段详细训练参数](figures/original-page-019-03.png)
+![原文 Table 10](figures/original-p019-table-10.png)
 
 **原表：Table 10，PDF 第 19 页。** 三列对应图文预训练、多任务预训练和监督微调。ViT 序列长度随分辨率改变，但 learnable query number 始终 256；LLM sequence length 是语言侧总序列配置。表中 optimizer sharding 等勾号是实现设置，并不提供 GPU 总数。
 
@@ -88,7 +88,13 @@ Adapter 使用 **256 个可学习向量**作为查询，视觉特征作为 key/v
 
 ## 7. 实验设置与主要结果
 
-![Qwen-VL 原文 Table 5–8：图像、文字、定位与英文指令评测](figures/original-page-009-02.png)
+![原文 Table 5](figures/original-p009-table-5.png)
+
+![原文 Table 6](figures/original-p009-table-6.png)
+
+![原文 Table 7](figures/original-p009-table-7.png)
+
+![原文 Table 8](figures/original-p009-table-8.png)
 
 **原表：Table 5、6、7、8，PDF 第 9 页。** Caption 是 CIDEr，DocVQA 是 ANLS，ChartQA 是 relaxed EM，其余依 Table 4 使用 VQA score、EM 或准确率。不同列不可简单相加；下方 TouchStone 是 GPT-4 评分。灰色 specialist 行单列强专用模型，粗体也不意味着压过每个 specialist。
 

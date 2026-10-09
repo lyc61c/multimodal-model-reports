@@ -35,9 +35,9 @@
 
 ## 3. 整体架构
 
-![Figure 3 三阶段架构与训练范围](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
-*原文 Figure 3，PDF 第 4 页完整页面，保留复制权重路径、激活/未激活路径、冻结和训练图例。图注误写 “two-stage”，实际图和方法均为三阶段。*
+*原文 Figure 3，PDF 第 4 页图表区域裁切，保留复制权重路径、激活/未激活路径、冻结和训练图例。图注误写 “two-stage”，实际图和方法均为三阶段。*
 
 图像先被 CLIP 编为特征。336×336、patch 14 对应 24×24=576 个视觉 token；投影器将其通道宽度映射为语言隐藏维度。文字经词嵌入处理，两种 token 拼接后进入语言骨干。接口没有下采样到固定少量查询，也没有 OCR 引擎代替视觉编码器。
 
@@ -86,9 +86,11 @@ MoE-tuning 的新意主要在初始化和课程顺序，而不是发明 Top-k �
 
 ## 6. 训练流程与目标
 
-![Tables 8、9 更多结构与训练超参](figures/original-page-015-04.png)
+![原文 Table 8](figures/original-p015-table-8.png)
 
-*原文 Table 8、Table 9，PDF 第 15 页完整页面，保留全部结构变体、参数计数、三阶段超参和说明。*
+![原文 Table 9](figures/original-p015-table-9.png)
+
+*原文 Table 8、Table 9，PDF 第 15 页图表区域裁切，保留全部结构变体、参数计数、三阶段超参和说明。*
 
 | 阶段 | 主要更新范围 | LR/全局 batch/epoch |
 |---|---|---|
@@ -104,9 +106,11 @@ MoE-tuning 的新意主要在初始化和课程顺序，而不是发明 Top-k �
 
 ## 7. 实验设置与主要结果
 
-![Tables 3、4 视觉问答与对象幻觉结果](figures/original-page-006-02.png)
+![原文 Table 3](figures/original-p006-table-3.png)
 
-*原文 Table 3、Table 4，PDF 第 6 页完整页面；保留所有模型行、训练重叠星号、POPE 的 Acc/F1/Yes 列。*
+![原文 Table 4](figures/original-p006-table-4.png)
+
+*原文 Table 3、Table 4，PDF 第 6 页图表区域裁切；保留所有模型行、训练重叠星号、POPE 的 Acc/F1/Yes 列。*
 
 | 模型 | VQAv2 | GQA | ScienceQA-IMG | TextVQA | MMBench | MM-Vet |
 |---|---:|---:|---:|---:|---:|---:|
@@ -118,9 +122,11 @@ MoE-tuning 的新意主要在初始化和课程顺序，而不是发明 Top-k �
 
 对象幻觉评测询问图片中是否存在对象。Qwen 版本三个 POPE 子集 F1 为 85.4/87.7/87.9，对照 LLaVA-1.5 13B 的 84.4/86.2/87.1；对应提高 1.0/1.5/0.8 个百分点。它支持该二分类协议下的优势，不代表开放长描述没有幻觉。其三项 accuracy 为 86.1/88.6/88.6，不能将 F1 增益写成 accuracy 增益。
 
-![Tables 6、7 训练与结构消融](figures/original-page-008-03.png)
+![原文 Table 6](figures/original-p008-table-6.png)
 
-*原文 Table 6、Table 7，PDF 第 8 页完整页面，保留四组消融与全部数值。*
+![原文 Table 7](figures/original-p008-table-7.png)
+
+*原文 Table 6、Table 7，PDF 第 8 页图表区域裁切，保留四组消融与全部数值。*
 
 三阶段方法在 Table 5 的 GQA/ScienceQA/POPE 为 61.5/63.1/87.0，而直接稀疏化联合训练为 58.4/58.1/81.9，支持先稠密学习再专家化。FFN 子集训练与全参数训练分别需 20h/27h，前者 GQA 61.5 vs 61.3；此证据是特定 V100 训练实验，论文没有部署 tokens/s 对照。
 

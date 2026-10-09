@@ -24,9 +24,9 @@
 
 ## 3. 整体架构
 
-![原论文 Figure 2，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
-*从上往下分别是掩码、对象描述和场景描述。第二层同时使用裁剪图与原图中的视觉提示，右侧验证器丢弃不一致描述；第三层通过对象 ID 把文字重新绑定到区域。整页保留了原图说明与掩码处理条件。*
+*从上往下分别是掩码、对象描述和场景描述。第二层同时使用裁剪图与原图中的视觉提示，右侧验证器丢弃不一致描述；第三层通过对象 ID 把文字重新绑定到区域。裁图保留了原图说明与掩码处理条件。*
 
 像素层先由 RAM++ 产生类别标签，引导 APE 做开放词汇分割；SAM 的多粒度掩码补足遗漏。合并与面积优先的 NMS 抑制重复对象，再用当前掩码生成点提示，调用 SAM 精修。
 
@@ -36,7 +36,7 @@
 
 ## 4. 核心创新与数学原理
 
-![原论文 Figure 3，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 *DRC 上路是原图与对象裁剪图，下路把对象 ID 的文本嵌入填入掩码，经 ID Patch Embed 后，与视觉 patch 嵌入相加再进入 ViT。这里的绑定在特征编码早期发生，并非只在原图上写数字让模型自行辨认。*
 
@@ -70,13 +70,17 @@ Qwen2.5-VL 后训练将 DenseWorld 与 MAmmoTH-VL-Instruct-12M 的抽样数据�
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 2–3，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Table 2](figures/original-p008-table-2.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 *上表测试指代表达分割，下表把文字质量、定位与掩码质量分列。关注同一规模 Sa2VA 的前后变化，避免用 4B 与 8B 的差异混淆数据效果。*
 
 Sa2VA-8B 的 RefCOCO/+/g 验证集从 82.7/78.0/80.2 到 83.6/79.9/81.0。GCG 测试中 METEOR/CIDEr/AP50/mIoU/Recall 从 16.2/49.0/32.2/66.8/44.5 到 16.8/54.1/33.2/69.1/47.8。4B 验证集 CIDEr 却从 53.1 降至 51.5，说明较长描述未必同时改善每个基于文字重叠的指标。（PDF 第 8、12 页）
 
-![原论文 Figure 5 与 Table 4，PDF 第 9 页](figures/original-page-009-04.png)
+![原文 Figure 5](figures/original-p009-figure-5.png)
+
+![原文 Table 4](figures/original-p009-table-4.png)
 
 *Figure 5 将原图、训练后的掩码与原 Sa2VA 结果并列，下方文本用颜色关联对象。Table 4 才是跨样本量化结果；长篇描述案例不能替代这些指标。*
 

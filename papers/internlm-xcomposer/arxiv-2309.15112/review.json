@@ -42,5 +42,23 @@
     "No model execution",
     "Composition demonstrations lack quantitative quality protocol",
     "Some data and optimization details undisclosed"
-  ]
+  ],
+  "article_sha256": "f25856cb778da1eaf95a8ab60f2b6d206c7a2a12675565eafb8e780b0eddabc3",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: complete InternLM-XComposer Stage A/Stage B architecture, tuning/freeze legend and Figure 2 caption retained.",
+      "Dataset Tables 1 and 2 complete with captions.",
+      "Figure 3 full interleaved composition pipeline and caption.",
+      "Viewed source and crop after manual repair: Table 5, Table 6 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ]
+  }
 }

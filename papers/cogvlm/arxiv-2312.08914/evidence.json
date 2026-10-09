@@ -1,1 +1,49 @@
-{"catalogue_entry_id":"98206802ffba","source_version":"2312.08914v1","read_scope":"27页全文、附录训练与评估协议、复杂度推导、数据示例及定性结果","facts":[{"claim":"双分辨率架构、6400/256 patch、1024/4096隐藏维","location":"§2.1–2.2、Figure 2、Table 8"},{"claim":"注意力复杂度及实现参数比值","location":"原文式1–4、附录式13–14"},{"claim":"OCR/grounding/CCS400K和人工标注构建","location":"§2.3–2.4、附录§5–6"},{"claim":"阶段冻结策略与优化配置","location":"§2.3–2.4、Table 7"},{"claim":"主结果与协议、消融、42%人工复核","location":"Tables 1–6、附录§2、§4"}],"math":[{"type":"original_restatement","content":"式1–4及13以等价记号表达；复杂度只分析注意力交互项"},{"type":"standard_explanation","content":"自回归监督损失不是原文新增公式；残差维度需匹配"}],"boundaries":["Mind2Web有外部top-k候选且评估单步成功率","AITW匹配分数不等于任务完成率","附录通用近似式12没有作为本文推导依据","全模型并非严格线性计算","报告图3起始横轴256与正文224有差异，以Table5明确尺寸为准"]}
+{
+  "catalogue_entry_id": "98206802ffba",
+  "source_version": "2312.08914v1",
+  "read_scope": "27页全文、附录训练与评估协议、复杂度推导、数据示例及定性结果",
+  "facts": [
+    {
+      "claim": "双分辨率架构、6400/256 patch、1024/4096隐藏维",
+      "location": "§2.1–2.2、Figure 2、Table 8"
+    },
+    {
+      "claim": "注意力复杂度及实现参数比值",
+      "location": "原文式1–4、附录式13–14"
+    },
+    {
+      "claim": "OCR/grounding/CCS400K和人工标注构建",
+      "location": "§2.3–2.4、附录§5–6"
+    },
+    {
+      "claim": "阶段冻结策略与优化配置",
+      "location": "§2.3–2.4、Table 7"
+    },
+    {
+      "claim": "主结果与协议、消融、42%人工复核",
+      "location": "Tables 1–6、附录§2、§4"
+    }
+  ],
+  "math": [
+    {
+      "type": "original_restatement",
+      "content": "式1–4及13以等价记号表达；复杂度只分析注意力交互项"
+    },
+    {
+      "type": "standard_explanation",
+      "content": "自回归监督损失不是原文新增公式；残差维度需匹配"
+    }
+  ],
+  "boundaries": [
+    "Mind2Web有外部top-k候选且评估单步成功率",
+    "AITW匹配分数不等于任务完成率",
+    "附录通用近似式12没有作为本文推导依据",
+    "全模型并非严格线性计算",
+    "报告图3起始横轴256与正文224有差异，以Table5明确尺寸为准"
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
+}

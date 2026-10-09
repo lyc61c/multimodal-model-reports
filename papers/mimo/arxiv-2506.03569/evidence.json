@@ -14,5 +14,10 @@
     "Distinguished OSWorldG no_refusal grounding from full agent task completion; intro54.7/table56.1 and Figure4 WebSRC95.4/table95.3 conflicts retained.",
     "Elo is GPT4o-judged internal preference; Figure7 pure-text Avg@32 only; no model run or independent reproduction claimed."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

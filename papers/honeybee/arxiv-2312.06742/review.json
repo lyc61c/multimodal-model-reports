@@ -31,7 +31,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Headline best results belong 13B576 expansion not default7B",
@@ -40,5 +41,20 @@
     "Tiny D table6/table14 score discrepancy retained with fixed Table6 convention",
     "D-Abstractor1e-4 table footnote not expanded to unsupported all-stage replacement",
     "No full source-dataset dedup or absolute no-leakage assertion"
-  ]
+  ],
+  "article_sha256": "6807a9bcc25bb0add32154d7980d63d8041d3121febf6afccc3de57594f0f491",
+  "artifact_checks": {
+    "original_assets": 9,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

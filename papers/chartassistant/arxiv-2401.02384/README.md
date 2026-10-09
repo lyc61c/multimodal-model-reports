@@ -17,7 +17,7 @@
 
 ## 2. 快速概览
 
-![原文 Figure 2，PDF 第 3 页：五类图表任务](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：**图中从同一模型伸出五条任务路径。左上是恢复数据表，右上是对红框所指元素的问答，中上是数值问题和 JSON 函数步骤，下方是开放问答及摘要。数值问答示例有选择数据与调用最大值函数的步骤，提示该能力涉及后端计算。
 
@@ -33,7 +33,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 4 与训练公式，PDF 第 7 页：两种骨干](figures/original-page-007-02.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **读图：**ChartAst-D 左侧通过 Swin 编码图像，BART 解码器使用视觉特征和问题；ChartAst-S 右侧先对图像下采样及切分，以混合视觉编码器提取特征，再将视觉与文字 token 一起送入大语言模型。两者接受相同任务组织，连接方式却不同。
 
@@ -104,7 +104,11 @@ ChartSFT 的 Table 1 合计为 **39,388,322 条图表—文字标注**，这是�
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 4–6，PDF 第 8 页：基本图型、特殊图型与通用模型对比](figures/original-page-008-03.png)
+![原文 Table 4](figures/original-p008-table-4.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
 
 **读图：**Table 4 有八个不同指标列，ChartQA 拆 augmented/human，摘要拆 Pew/Statista；Table 5 是特殊图型的五类任务；Table 6 是另一个每任务 50 样本的小规模集合。它们不是同一测试集，不能跨表横向比较数值。原图完整保留表头，以避免把摘要 BLEU 读成问答准确率。
 
@@ -121,7 +125,11 @@ ChartAst-S 的 human 问答明显强于 D，但表格恢复略低于 D，说明�
 
 小规模通用模型对比每任务仅 50 个样本，既含真实图表表格对，也含表格经 API 渲染的图。S 的表格恢复 83.1、数值 QA 70.0、指代 QA 66.0，GPT-4V 分别为 21.6、34.0、30.0；然而摘要 BLEU 上 GPT-4V 的 27.6 高于 S 的 26.5 和 D 的 24.9。原文猜测摘要指标偏向流畅性，但未提供充分事实核验来证明较高摘要分一定掩盖更多事实错误。这里能够确认的是该小集合的指标差异，而不是现实世界所有图表上的全面超越。
 
-![原文 Table 7、Figure 5、Table 8，PDF 第 9 页：训练与推理监督消融](figures/original-page-009-04.png)
+![原文 Table 7](figures/original-p009-table-7.png)
+
+![原文 Figure 5](figures/original-p009-figure-5.png)
+
+![原文 Table 8](figures/original-p009-table-8.png)
 
 **读图：**Table 7 删除对齐阶段或指代任务，Figure 5 比较可执行 CoT 与直接答案，Table 8 分别去掉任务。原文此处有引用 Table 10 的笔误，实际对应 Table 7；本文按图片编号解释。
 

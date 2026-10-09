@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "PandaGPT：通过共享嵌入空间迁移图文指令跟随能力"
+  "title_zh": "PandaGPT：通过共享嵌入空间迁移图文指令跟随能力",
+  "chinese_characters": 2163,
+  "figure_revision_date": "2026-10-09"
 }

@@ -8,18 +8,31 @@
     "800B image/video, 300B audio and 100B video-with-audio token amounts refer to additional stage-two data, not total training volume.",
     "DPO transcribed from original Equation1 with winning and losing speech sequence variables and reference probabilities.",
     "Table7 distinguishes Video-MME subtitles, Table8 OmniBench average, and Table9 WER decrease versus speaker similarity increase.",
-    "Original Figure2/3/4 and Table7/8/9/10 pages visually checked; no model execution or deployment latency measurement performed."
+    "Original Figure2/3/4 and Table7/8/9/10 pages visually checked; no model execution or deployment latency measurement performed.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 7,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "6ea98c27584f41ccd628d5995ff4b8f9e153445488d574653b156ef14367e74e",
+  "article_sha256": "5db77cedb5590659455c9d7632b4ff53bcdde967661c21c9901b4cb29224dc48",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and crops: Figure 2 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed fresh repaired source/crop contact: Figure 3 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+      "Viewed fresh repaired source/crop contact: Figure 4 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+      "Viewed source and crops: Table 7, Table 8 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crops: Table 9, Table 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
+    ]
+  }
 }

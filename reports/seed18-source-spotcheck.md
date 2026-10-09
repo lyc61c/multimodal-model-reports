@@ -1,5 +1,7 @@
 # Seed1.8 独立来源抽查
 
+> 历史记录：以下结论、文章哈希与原页文件名对应 2026-10-08 的版本。2026-10-09 已将整页截图替换为单独图表，图片变更见[图表裁切记录](figure-crop-audit.md)，当前文件、坐标与哈希见文章的 [figures-manifest.json](../papers/seed/document-6cb43357175b/figures-manifest.json)。本次图片修订不代表重新完成下述技术事实抽查。
+
 - 抽查日期：2026-10-08。
 - 结论：**通过。本次重点抽查未发现需要修改介绍的实质事实错误。**
 - 被检查文章：[Seed1.8 介绍](../papers/seed/document-6cb43357175b/README.md)，条目 ID `6cb43357175b`。

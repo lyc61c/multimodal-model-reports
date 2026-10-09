@@ -7,18 +7,30 @@
     "Checked GRIT automatic spaCy/GLIP confidence0.65 and exact image/span/box counts, location32x32 two-corner tokens,64 embeddings.",
     "Verified all parameters updated,1.6B trainable,60K25Btoken419K batch256V100 vs10K instruction LR1e-5.",
     "Grounding recall vs expression accuracy and supervised vs zero-shot baselines separated; VQA/CB declines and SLR rerank higher included.",
-    "Formula is explanatory rendering of stated next-token objective; no invented box/mask loss or component ablation; no model reproduction."
+    "Formula is explanatory rendering of stated next-token objective; no invented box/mask loss or component ablation; no model reproduction.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 7,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "dcf275888562968ace3fa8507e7d0d2b1a8d9b1227c9dfc8954d578be80e3760",
+  "article_sha256": "c64dece209c9f39a2e8c47f76af70931ac0c8e15a1565fbbebf184202e320a92",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 85）：Figure 3, Table 1 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 86）：Figure 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 87）：Table 2, Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 88）：Figure 5, Table 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
 }

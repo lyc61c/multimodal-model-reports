@@ -7,18 +7,30 @@
     "Table2 separates TextVQA OCR/noOCR, Controlled/full and notes full7B VizWiz decline52.82 vs54.24.",
     "Figure9 radar includes mixed Controlled/full labels; article uses appendix exact rows.",
     "p<.01 stated threshold; .0148resize/.0138data not claimed significant; fusion adds visual backbone costs.",
-    "No model execution or independent reproduction."
+    "No model execution or independent reproduction.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "d3719787b67276aafc292071e402e9e86059fdb284ae0651e3c274d689784946",
+  "article_sha256": "bc91e92e7b50b1e165f6253d710b649f5c6d0575324b2b768eeeb40f8f731a33",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

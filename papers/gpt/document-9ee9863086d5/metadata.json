@@ -10,5 +10,7 @@
   "document_kind": "release_blog",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "GPT-4o：端到端多模态交互与语音系统评估"
+  "title_zh": "GPT-4o：端到端多模态交互与语音系统评估",
+  "chinese_characters": 3622,
+  "figure_revision_date": "2026-10-09"
 }

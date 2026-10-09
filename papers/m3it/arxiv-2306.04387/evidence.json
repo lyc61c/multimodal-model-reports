@@ -57,5 +57,10 @@
     "Figure4注55.6/65.5与167/300及196/300计数略不一致，采用计数。",
     "Figure6横轴包含6但正文称比较1,2,4,8，未据坐标补造6指令结果。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

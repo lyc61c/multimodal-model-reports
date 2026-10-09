@@ -2,7 +2,7 @@
 
 # InstructBLIP：让视觉查询先理解指令，再读取图像
 
-> 基于 [arXiv:2305.06500v1](https://arxiv.org/pdf/2305.06500v1)。图片是固定版本原文页面截图；原文采样公式忠实保留，其他公式为机制解读。未运行模型。
+> 基于 [arXiv:2305.06500v1](https://arxiv.org/pdf/2305.06500v1)。图片是固定版本原文图表裁图；原文采样公式忠实保留，其他公式为机制解读。未运行模型。
 
 ## 1. 论文信息与模型定位
 
@@ -28,7 +28,7 @@ InstructBLIP 主要研究参数受限的视觉指令学习及未见任务泛化�
 
 ## 3. 整体架构
 
-![InstructBLIP 原文 Figure 3：指令感知 Q-Former](figures/original-page-004-02.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 > Figure 3，v1 PDF第4页；[原页](https://arxiv.org/pdf/2305.06500v1#page=4)。上方完整架构展示冻结模块、查询和指令路径。
 
@@ -74,7 +74,7 @@ A是候选集合。这是§2.5的解读式，不能自行补出长度归一化�
 
 ## 5. 数据构建与处理
 
-![InstructBLIP 原文 Figure 2：held-in 与 held-out 任务](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 > Figure 2，PDF第3页；[原页](https://arxiv.org/pdf/2305.06500v1#page=3)。黄色是参与指令训练，白色是held-out；彩色外框仅表示任务类别。
 
@@ -116,7 +116,7 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![InstructBLIP 原文 Table 1：13个held-out基准](figures/original-page-006-03.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 > Table 1，PDF第6页；[原页](https://arxiv.org/pdf/2305.06500v1#page=6)。NoCaps/Flickr30K为CIDEr，Visual Dialog为MRR，HatefulMemes为AUC，其余多为准确率，不能全部称百分比。
 
@@ -130,7 +130,7 @@ $$
 
 视频任务未出现在指令训练中，四帧拼接仍取得较好表现，支持视觉指令能力迁移；不能由此断言无需时间建模就能解决所有视频推理。不同语言骨干也有明显差异：FlanT5-XXL的ScienceQA70.6高于Vicuna13B63.1，Vicuna13B的TextVQA50.7高于FlanT5-XXL46.6。语言骨干的原始指令任务分布影响后续结果，规模并非唯一原因。
 
-![InstructBLIP 原文 Table 2：指令感知与数据平衡消融](figures/original-page-007-04.png)
+![原文 Table 2](figures/original-p007-table-2.png)
 
 > Table 2，PDF第7页；[原页](https://arxiv.org/pdf/2305.06500v1#page=7)。每个移除项均与对应完整模型比较。
 

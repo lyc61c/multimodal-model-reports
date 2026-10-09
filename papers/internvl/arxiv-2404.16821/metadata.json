@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "InternVL 1.5：大视觉骨干、动态高分辨率与双语数据"
+  "title_zh": "InternVL 1.5：大视觉骨干、动态高分辨率与双语数据",
+  "chinese_characters": 2351,
+  "figure_revision_date": "2026-10-09"
 }

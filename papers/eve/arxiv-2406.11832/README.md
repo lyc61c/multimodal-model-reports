@@ -16,7 +16,9 @@ EVE 从 Vicuna-7B 演化出视觉语言理解模型，不在推理通路中串�
 
 ## 3. 整体架构
 
-![原论文 Figure 2 与 Figure 3，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
+
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 *Figure 2 为整体模型，Figure 3 左侧是 PEL，右侧是只用于训练监督的 PAL。*
 
@@ -26,7 +28,7 @@ PEL 先用卷积将图片转成二维 patch 特征，卷积步长为 14，再以
 
 PAL 从主干多个中间层取出视觉 token，移除 `<CLS>/<SPL>`，还原二维形状，通过自适应池化对齐教师 CLIP 的 patch 网格。CA3 用最后层特征作 Query、同位置其他层特征作 Key/Value，融合层次表示，再与教师同位置特征比较。教师侧去除 `<CLS>/<PAD>` 等非 patch 项；三类交叉注意力均为 8 个头。
 
-![原论文 Figure 4，三阶段训练与推理，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 4](figures/original-p005-figure-4.png)
 
 *Figure 4，PDF 第 5 页。冻结/训练标记需按阶段区分，右下推理图删除 PAL。*
 
@@ -66,7 +68,7 @@ Stage 1 使用上述 33M 中的 16M 子集，Stage 2 使用完整 33M。这里 1
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 3，主结果，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 3](figures/original-p007-table-3.png)
 
 *Table 3，PDF 第 7 页。标准与 HD 分辨率及 SFT 量不同，应按配置比较。*
 
@@ -80,7 +82,13 @@ Stage 1 使用上述 33M 中的 16M 子集，Stage 2 使用完整 33M。这里 1
 
 HD 比标准版在多列提升，相对 Fuyu 在所列可比较项也较强；但相对 LLaVA-1.5，只有部分任务接近或略高，指令格式相关和综合任务仍有差距。论文明确提到选择字母、二元回答等指令问题。主文 ScienceQA-Img 63.0/64.9 等结果也不足以证明原语言底座能力完全保留。
 
-![原论文 Tables 4、5 与 Figures 5、6，PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Table 4](figures/original-p008-table-4.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Figure 6](figures/original-p008-figure-6.png)
 
 *左上为模块消融，右上为训练流程消融，下方展示层次聚合与优化稳定性。*
 

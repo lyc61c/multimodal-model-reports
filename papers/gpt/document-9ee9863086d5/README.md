@@ -29,7 +29,11 @@ GPT-4o 将多模态输入和输出纳入一个端到端模型，减少上述串�
 
 模型之外还有实际部署系统。系统卡说明语音输出受系统消息中的预设声线样本引导，并由辅助声线分类器持续检查；偏离允许声线时，系统可停止会话输出。这是“模型生成能力 + 输出监测”的组合，分类器不等于模型内部的音频解码头，报告没有披露它的网络结构。[系统卡第 6–7 页](https://cdn.openai.com/gpt-4o-system-card.pdf#page=6)。
 
-![系统卡第7页：Table 2声线分类器与Table 3说话者识别行为](figures/original-page-007-01.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 2 note 5](figures/original-p007-table-2-note-5.png)
 
 **如何读图：**上方 Table 2 衡量输出声线分类器，而下方 Table 3 衡量模型是否正确处理说话者身份请求，二者不是同一个任务。前者英文精确率 0.96、召回率 1.0，非英文为 0.95、1.0；后者的 Should Refuse 从 0.83 到 0.98，Should Comply 从 0.70 到 0.83。公开评测中的高召回说明该测试集上偏离声线容易被发现，不代表任何未来音频都必然被检出。正文描述的提升点数与表格舍入值略有差别，这里保留表中原值。
 
@@ -73,7 +77,7 @@ GPT-4o 将多模态输入和输出纳入一个端到端模型，减少上述串�
 
 系统卡的结果主要是语音行为与系统评估。不同声线测试固定助手声音为 shimmer，用户输入使用三种官方声音及 27 个不同英文人声样本，能力测试包括 TriviaQA、选定 MMLU 子集、HellaSwag 与 Lambada。它们是固定随机抽样的子集，报告特别说明不能与这些基准的公开全量成绩直接比较。[系统卡第 8–9 页](https://cdn.openai.com/gpt-4o-system-card.pdf#page=8)。
 
-![系统卡第9页：输入声线对能力和行为的评测图](figures/original-page-009-02.png)
+![原文 Unnumbered figure: capability evaluations across system and human voices](figures/original-p009-unnumbered-figure-capability-evaluations-across-system-and-h.png)
 
 **如何读图：**图中的比较围绕相同模型、不同输入声线展开，观察知识任务和拒绝行为是否随声线变化。作者结论是多样的人声能力平均略低于官方声线，但四项任务差异未达到统计显著；不能把这个结论扩大为所有口音、语言和嘈杂环境都公平。报告仍记录语音噪声、回声、中断以及部分非英文口音表现问题。
 
@@ -87,11 +91,13 @@ GPT-4o 将多模态输入和输出纳入一个端到端模型，减少上述串�
 
 Table 5 与附录 Table 11 涉及不同的当前/新语音模型比较，后者列出较高的安全指标；本文保留各自表的语境，不将不同检查点拼为同一模型的一张成绩表。[系统卡第 11、32 页](https://cdn.openai.com/gpt-4o-system-card.pdf#page=11)。
 
-![系统卡第21页：Table 7医学知识评测](figures/original-page-021-03.png)
+![原文 Table 7](figures/original-p021-table-7.png)
 
 **如何读图：**每行同时规定数据集和 0-shot/5-shot 条件，两列比较 2024 年 5 月 GPT-4T 与 GPT-4o。正文给出 MedQA USMLE 四选一 0-shot 的更精细数值 78.2% → 89.4%，表中则舍入为 0.78 → 0.89。改进主要体现文本知识问答；页尾明确说尚需验证文本到语音的迁移，以及真实工作流效用，不能据此推断已经完成临床验证。
 
-![系统卡第24页：Table 8和Table 9多语言评测](figures/original-page-024-04.png)
+![原文 Table 8](figures/original-p024-table-8.png)
+
+![原文 Table 9](figures/original-p024-table-9.png)
 
 **如何读图：**表头给出语言与样本数，各行是模型，均为 0-shot。Table 9 的 Yoruba TruthfulQA 从 GPT-3.5 Turbo 的 28.3% 提升到 GPT-4o 的 51.1%；英文对应 81.4%，说明低资源语言虽有改善仍有差距。Table 8 的正文示例将 Hausa 与 Amharic 的数值混写，图表列明确区分二者，本文不沿用该有歧义的叙述。Uhura-Eval 则是与母语者新建的小规模阅读理解集，Hausa 为 32.3% → 59.4%，该成绩见下一页 Table 10。
 

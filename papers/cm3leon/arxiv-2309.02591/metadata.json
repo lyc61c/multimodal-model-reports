@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "CM3Leon：检索增强的自回归模型如何统一图像生成与视觉问答"
+  "title_zh": "CM3Leon：检索增强的自回归模型如何统一图像生成与视觉问答",
+  "chinese_characters": 3000,
+  "figure_revision_date": "2026-10-09"
 }

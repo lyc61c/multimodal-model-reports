@@ -6,18 +6,29 @@
     "Viewed Figure2,Figure3,Figure5 full pages; original figure labels and no clipping",
     "Verified 5000images/around30000pairs and both training stages projection-only",
     "Verified Equation1 and labeled explanatory pipeline notation",
-    "No quantitative benchmarks/hyperparameters reported; demonstration and failures kept separate; no model execution"
+    "No quantitative benchmarks/hyperparameters reported; demonstration and failures kept separate; no model execution",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 3
+    "original_assets": 3,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "7a2e62bae1c6d9b16c60cd6a3494b135e322f19c328f2b2d71c68938dbf2fd7f",
+  "article_sha256": "e7f811c0bcc6010f7dc89b99ed3ceac36381c000dd4b7b031be7a83655da0d56",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 43）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 44）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 45）：Figure 5 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
 }

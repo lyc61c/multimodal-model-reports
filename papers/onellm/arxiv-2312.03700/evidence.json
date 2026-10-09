@@ -11,5 +11,10 @@
     "核验2006K数据、subj01 fMRI和合成深度/法线、分阶段recipe与全参LLM SFT，记录96K/1epoch口径不一致。",
     "以表为准修正正文全超ChatBridge和全超CLIP概括；分清监督/零样本、消融/主表、分类GPT4判别，未执行模型。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

@@ -20,7 +20,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：合成数据、指令微调与执行流程，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 Figure 2 按上、中、下三层阅读。上层生成三维布局，渲染 RGB 并计算空间关系；移除物体后可生成空位参考。中层用图像、文字和坐标答案训练 Vicuna，视觉编码器和 tokenizer 冻结，MLP 与语言模型更新。下层将预测二维点通过深度映射到三维，再交给运动规划器执行。最终任务成功同时依赖感知、深度与控制链路。
 
@@ -65,7 +65,13 @@ WHERE2PLACE 收集 100 张真实家居及办公图像，一组人写空闲区域
 
 ## 7. 实验设置与主要结果
 
-![原文 Figure 3 与 Tables 2–4：空间预测、通用评测与数据消融，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
+
+![原文 Table 2](figures/original-p006-table-2.png)
+
+![原文 Table 3](figures/original-p006-table-3.png)
+
+![原文 Table 4](figures/original-p006-table-4.png)
 
 空间准确率是预测点落入真实目标掩码的比例，报告三次运行的平均与标准差。它不是“每张图成功一次”的二值任务率，也不是框 IoU。比较基线采用图像坐标轴提示，先输出框再在框中均匀取点，因而与直接点训练模型有输出形式和训练差异。
 
@@ -79,11 +85,15 @@ WHERE2PLACE 收集 100 张真实家居及办公图像，一组人写空闲区域
 
 空位数据消融最突出：移除 free-space 来源后 WHERE2PLACE 为 13.21，完整数据为 46.77；去掉 VQA 为 28.28，去掉 LVIS 为 34.27，只有 10% 数据为 15.71。多个来源和规模都重要，但这些消融不自动证明所有真实场景都能组合泛化。
 
-![原文 Figures 4–5：视角示例与真实机械臂试验，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
+
+![原文 Figure 5](figures/original-p007-figure-5.png)
 
 七个操作任务每项十次，成功要求无碰撞执行并把物体放在指令位置。Figure 5 的 RoboPoint 成功次数依次 6、7、5、8、5、4、6，合计 **41/70**；GPT-4V 为 4、1、1、4、2、1、0，合计 **13/70**。按图表直接计算相差 **40 个百分点**。正文与图注写 39.5%，摘要写不同下游提升值，报告未解释差异；本文以可复查逐项次数为准，不把百分比概括强行统一。该组机器人基线是 GPT-4V，与前面的静态空间预测 GPT-4o 不同。
 
-![原文 Figures 6–7：模拟导航与 AR 指向示例，PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Figure 6](figures/original-p008-figure-6.png)
+
+![原文 Figure 7](figures/original-p008-figure-7.png)
 
 导航在 CoppeliaSim 的三个房间场景和 YouBot 平台进行，不是全部真实移动机器人试验。七项各五次，RoboPoint 前五项均 5/5，最后两项仅 1/5，而 PIVOT 对应为 3/5、2/5。AR 例子展示棋盘和车道提示，是定性演示，不能据此推导正式自动驾驶能力或完整成功率。
 

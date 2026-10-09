@@ -4,51 +4,6 @@
   "source_pdf_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
   "assets": [
     {
-      "asset_path": "figures/original-page-016-01.png",
-      "original_label": "PDF page 16",
-      "pdf_page": 16,
-      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/gpt-6-astra.pdf#page=16",
-      "source_version": "official-system-card-2026-09-03",
-      "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
-      "asset_sha256": "a05d8de5f78fd98f93de9271fbc4945106317515d5700920f54577877fc3263f",
-      "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
-      }
-    },
-    {
-      "asset_path": "figures/original-page-020-02.png",
-      "original_label": "PDF page 20",
-      "pdf_page": 20,
-      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/gpt-6-astra.pdf#page=20",
-      "source_version": "official-system-card-2026-09-03",
-      "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
-      "asset_sha256": "dad5912f73774e52a09e3c613cb52848e61f2edd597fa9838213003c75d93d7b",
-      "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
-      }
-    },
-    {
-      "asset_path": "figures/original-page-052-03.png",
-      "original_label": "PDF page 52",
-      "pdf_page": 52,
-      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/gpt-6-astra.pdf#page=52",
-      "source_version": "official-system-card-2026-09-03",
-      "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
-      "asset_sha256": "c89ec4c0919a47136ef9e5aaea078a2a57bcab96679f6199f646d6eb0ca2188b",
-      "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
-      }
-    },
-    {
       "asset_path": "figures/official-career-website.png",
       "original_label": "Official release: career website comparison (GPT-5.6 Sol vs GPT-6 Astra)",
       "source_url": "https://openai.com/index/gpt-6-astra/",
@@ -62,6 +17,81 @@
       "processing": {
         "method": "original_web_asset_copy",
         "note": "Unmodified original static PNG, not HTML recreation"
+      }
+    },
+    {
+      "asset_path": "figures/original-p016-table-4.png",
+      "original_label": "Table 4",
+      "pdf_page": 16,
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/gpt-6-astra.pdf#page=16",
+      "source_version": "official-system-card-2026-09-03",
+      "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
+      "asset_sha256": "b5065edf4717edb1ea3a1c610ba39c97146cee62bb7ab724a7aa2d870f2cd359",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          65,
+          66,
+          547,
+          179
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p020-figure-5.png",
+      "original_label": "Figure 5",
+      "pdf_page": 20,
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/gpt-6-astra.pdf#page=20",
+      "source_version": "official-system-card-2026-09-03",
+      "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
+      "asset_sha256": "f5b8ea99318ece92bb1edf77bb155dd6aa62d26541b9388a8f9e1e5ab74ade38",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67,
+          67,
+          546,
+          372
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p052-figure-22.png",
+      "original_label": "Figure 22",
+      "pdf_page": 52,
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/gpt-6-astra.pdf#page=52",
+      "source_version": "official-system-card-2026-09-03",
+      "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
+      "asset_sha256": "0faf3376453c6a36d63412049ae23b95371d88e561438493f8f9a331aa6618e7",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67,
+          98,
+          546,
+          268
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ],

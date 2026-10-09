@@ -28,5 +28,10 @@
     "Table4 MATH与Table5 MATH500标签不同",
     "附录边/圆弧几何推理不严格"
   ],
-  "model_run": false
+  "model_run": false,
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

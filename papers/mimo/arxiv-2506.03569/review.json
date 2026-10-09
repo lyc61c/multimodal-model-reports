@@ -10,18 +10,30 @@
     "Checked no-subtitle VideoMME2fps/256frames/16384 budget and image cap4096*28*28/32768 output.",
     "Checked SFT-to-RL regressions in VideoMMMU, OCRBench, ChartQA, MathVista and DynaMath and larger proprietary model advantages.",
     "Distinguished OSWorldG no_refusal grounding from full agent task completion; intro54.7/table56.1 and Figure4 WebSRC95.4/table95.3 conflicts retained.",
-    "Elo is GPT4o-judged internal preference; Figure7 pure-text Avg@32 only; no model run or independent reproduction claimed."
+    "Elo is GPT4o-judged internal preference; Figure7 pure-text Avg@32 only; no model run or independent reproduction claimed.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "3fdf0663cd22983ba87bb0f9d8659c431e4b9f05bbf075e6e164fd8d7b7a65db",
+  "article_sha256": "2f1fa6d879e654ab9b5f4a55f0cd5d4758052c5f854a84bc61681ba4fddd3167",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 121）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 122）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 123）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
+    ]
+  }
 }

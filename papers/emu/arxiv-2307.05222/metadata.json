@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Emu：交错多模态序列的生成预训练"
+  "title_zh": "Emu：交错多模态序列的生成预训练",
+  "chinese_characters": 2412,
+  "figure_revision_date": "2026-10-09"
 }

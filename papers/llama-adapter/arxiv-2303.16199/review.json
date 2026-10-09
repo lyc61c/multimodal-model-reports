@@ -9,18 +9,30 @@
     "1.2M文本与0.6M投影合1.8M；储存4.7M表对正文4.9M差异保留",
     "5epoch文本与15/30/60epoch多模态实验差异记录；未假定main全部超参一致",
     "Table2逐列核对测试85.19/IMG80.32，与MMCoT各列有得失",
-    "Table4正文10到30增17.41误算纠正为表差27.90；84.04/83.85分别保留；作者定性文本案例不装统计结论"
+    "Table4正文10到30增17.41误算纠正为表差27.90；84.04/83.85分别保留；作者定性文本案例不装统计结论",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 8,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "058671a1cf4200cf35f745af71998f669835607e57cf315e44e7dbe10f291b56",
+  "article_sha256": "e8e99d8e843cce9aa2cce5b352de41790161850dfed8a685bfe7dcce6cc4b0f8",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

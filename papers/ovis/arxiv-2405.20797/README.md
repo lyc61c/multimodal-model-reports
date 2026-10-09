@@ -23,7 +23,7 @@ Ovis 是图像输入、文本输出的多模态大模型架构。它使用 CLIP 
 
 ## 3. 整体架构
 
-![Ovis 原文 Figure 3：总架构、视觉 tokenizer 与概率加权嵌入](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 **原图：Figure 3，PDF 第 4 页。** 左上图沿两条路径阅读：图像进入视觉 tokenizer，再进入独立视觉嵌入表；文字进入文字 tokenizer 和文字嵌入表，最后二者汇合到 LLM。右上图展开视觉 tokenizer，底部图说明一个 patch 不只查一个词，而是按 0.2、0.5、0.3 这样的概率组合多个嵌入。图中的三项仅为示意，真实词表有 131,072 项。
 
@@ -56,7 +56,9 @@ V_i=\sum_{k=1}^{K}v_{i,k}e_k
 
 ## 5. 数据构建与处理
 
-![Ovis 原文 Table 4 与 Table 5：训练参数及三类数据](figures/original-page-018-04.png)
+![原文 Table 4](figures/original-p018-table-4.png)
+
+![原文 Table 5](figures/original-p018-table-5.png)
 
 **原表：Table 4、Table 5，PDF 第 18 页。** 下半页按数据用途分组，左列是类别，中间是来源，右侧是样本数与类别总量；带星号的条目是内部构建数据。约 10M、2M、3M 是表中汇总值，不能把舍入后的条目数当作精确去重统计。
 
@@ -84,7 +86,7 @@ V_i=\sum_{k=1}^{K}v_{i,k}e_k
 
 ## 7. 实验设置与主要结果
 
-![Ovis 原文 Table 1：一般多模态基准比较](figures/original-page-007-02.png)
+![原文 Table 1](figures/original-p007-table-1.png)
 
 **原表：Table 1，PDF 第 7 页。** MMMU-V/T 分别是验证集与测试集，MMB-EN/CN 是 MMBench 的英文/中文版本。表按模型规模分组，高亮表示组内比较，不能直接读成超过全表所有模型。作者使用 VLMEvalKit，另在 Table 2 报告 MathVista-Mini、MME、HallusionBench 和 RealWorldQA。
 
@@ -98,7 +100,7 @@ V_i=\sum_{k=1}^{K}v_{i,k}e_k
 
 14B 在多项任务上超过表中的 Qwen-VL-Plus，但不是全面胜出：MMMU 测试为 40.7 对 40.8，MME 为 1961 对 2230，HallusionBench 同为 57.6。RealWorldQA 62.7 高于普通 GPT-4V 的 61.4，却低于 GPT-4V-HR 的 68.0；GPT-4V 的 MMMU 验证集 62.3 也明显高于 Ovis。按具体测试与输入模式比较，比把论文概括成“超过 GPT-4V”更有信息。[原文 Table 1–2，PDF 第 7–8 页](https://arxiv.org/pdf/2405.20797v1#page=7)
 
-![Ovis 原文 Table 3：与传统连接器的受控比较](figures/original-page-009-03.png)
+![原文 Table 3](figures/original-p009-table-3.png)
 
 **原表：Table 3，PDF 第 9 页。** 两行使用同一个 Qwen1.5-7B、CLIP ViT-L/14@336 和同一训练数据。连接器采用两层 GELU MLP，隐藏维度设置为 Ovis 视觉词表大小以匹配参数量。Ovis 将 MMStar 从 41.1 提升至 44.3，MMMU 验证从 34.8 提升至 39.7，MathVista 从 36.3 提升至 41.4，RealWorldQA 从 56.1 提升至 60.0。最后一行是相对提升，作者汇总的平均 8.8% 不是平均提高 8.8 个百分点。
 

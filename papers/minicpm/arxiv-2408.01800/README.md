@@ -15,7 +15,7 @@
 
 ## 3. 整体架构
 
-![Figure 3：自适应切片与共享压缩器，原文 PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 视觉编码器为 **SigLIP SoViT-400m/14**，压缩层为单层 cross-attention 的 Perceiver Resampler。图像切片独立编码，共享压缩器把各块特征变成少量视觉向量，再与文本进入语言模型。Figure 3 用 MiniCPM 语言骨干示意系列结构；2.5 的实际骨干是 **Llama3-Instruct-8B**，并非图中写出的 MiniCPM-2.4B。
 
@@ -33,7 +33,7 @@ $$
 
 式 2 选最高分的划分。为避免素数切片数量只能形成极端长条，候选包含乘积为 $N-1,N,N+1$ 的网格；实践中限制 $N<10$。切片按比例缩放到与预训练相近的面积，将位置嵌入从一维还原为二维并插值，避免直接拉伸到正方形。整体缩略图提供全局信息，局部块提供细节；`<slice>` 起止标记和换行 token 表达空间布局。
 
-![Figure 4：原子陈述反馈与 DPO，原文 PDF 第 9 页](figures/original-page-009-02.png)
+![原文 Figure 4](figures/original-p009-figure-4.png)
 
 RLAIF-V 对同一指令高温采样 **10** 个回答，用 Llama-3-8B 拆成原子陈述，再转换成 yes/no 问题交给视觉裁判。2.5 的裁判为 **LLaVA-NeXT-Yi-34B**；正文还提到为 2.0 使用 OmniLMM-12B。最终回答分数写为 $s_i=-n_{\rm rej}$，即不成立陈述越多分越低。图中概率示意和正文计数分数是不同呈现，不应把图中 0.8/0.6 当作全文唯一评分公式。
 
@@ -61,7 +61,9 @@ SFT 解锁全部模型参数，并先基础短答、后复杂长答。2.5 再做
 
 ## 7. 实验设置与主要结果
 
-![Tables 3–4：系列配置与通用结果，原文 PDF 第 13 页](figures/original-page-013-04.png)
+![原文 Table 3](figures/original-p013-table-3.png)
+
+![原文 Table 4](figures/original-p013-table-4.png)
 
 Table 4 的 OpenCompass 是 11 个多模态基准的综合指标；星号为作者用官方 checkpoint 重测。GPT-4V 对照明确为 **2023.11.06** 版本，不能与更新 GPT-4V/GPT-4o 混同。
 
@@ -78,7 +80,7 @@ Table 5 的 OCRBench/TextVQA val/DocVQA test：2.5 **725/76.6/84.8**，2.0 **605
 
 Table 6 的 RLAIF 消融 OpenCompass **64.5→65.1**，但 MME **2039.8→2024.6**、MMMU **46.2→45.8**。该表 Object HalBench 写 **86.9/93.6→89.7/95.0**，与 Table 4 幻觉率方向相反、数值互补；这里按无幻觉比例理解其对应的下降趋势，不把 89.7 写成幻觉率。多语 Table 7 中德语 **22.8→76.5**、日语 **13.8→88.0**；评测把 LLaVA Bench 参考回答翻译后由 GPT-4-Turbo 打分，既不是人工语言资格认证，也不证明所有领域的多语能力。
 
-![Figure 6：小米 14 Pro 上的部署消融，原文 PDF 第 11 页](figures/original-page-011-03.png)
+![原文 Figure 6](figures/original-p011-figure-6.png)
 
 Figure 6 的图像处理从 **45.2s** 经顺序加载变为 **31.5s**，编译后 **5.1s**，配置优化 **3.7s**，NPU **1.3s**；解码从 **1.3** 到 **3.2** 再到 **8.2 token/s**。最终还存在 LLM prefilling **9.4s**，所以 1.3s 仅是图像部分，不能当完整首 token 延迟。图注明这些延迟包含模型加载，与 Figure 5 仅编码的口径不同；初始正文 64.2s 与图中 45.2+19.4=64.6s 还有小差异。
 

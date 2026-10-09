@@ -22,7 +22,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2，PDF 第 3 页：动态分辨率与 ViT–MLP–LLM](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **Figure 2 的读法。** 左侧把 800×1300 示例匹配到 2:3 网格，再切为 448×448 局部块并添加缩略图；右侧视觉主干、pixel unshuffle 和 MLP 连接到语言模型。局部块保留小字和细节，全局缩略图提供布局参照。图的训练标记代表总体可学习体系，具体冻结范围由训练阶段决定。
 
@@ -66,7 +66,9 @@ token 平均使用权重 1，长回答包含更多 token，因此总贡献更大
 
 ## 5. 数据构建与处理
 
-![原文 Figures 7–8，PDF 第 11 页：数据规模与异常过滤](figures/original-page-011-03.png)
+![原文 Figure 7](figures/original-p011-figure-7.png)
+
+![原文 Figure 8](figures/original-p011-figure-8.png)
 
 **图页的读法。** Figure 7 左图是样本数，右图是序列 token 规模；Figure 8 区分领域评分、重复检测和启发式规则。纯文本使用全部三种，多模态数据主要使用后两种，不能写成所有图片都经过同样的 LLM 质量评分。右上 token 图的纵轴印为 T，但 Table 3 与正文以约 44B 表述一次微调混合 token，本篇采用训练表的 B 口径，不据图号将其扩大千倍。
 
@@ -80,7 +82,7 @@ token 平均使用权重 1，长回答包含更多 token，因此总贡献更大
 
 ## 6. 训练流程与目标
 
-![原文 Figure 4，PDF 第 6 页：三阶段接口及渐进扩展](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 **Figure 4 的读法。** Stage 1 仅 MLP 有火焰；可选 Stage 1.5 解冻 ViT 与 MLP，LLM 仍冻结；Stage 2 全部模块训练。红箭头把小 LLM 配方中学好的 ViT 送到较大 LLM，说明大版本可跳过 Stage 1.5。可选不是任意忽略视觉学习，而是已有合适视觉权重可复用。
 
@@ -98,7 +100,7 @@ token 平均使用权重 1，长回答包含更多 token，因此总贡献更大
 
 ## 7. 实验设置与主要结果
 
-![原文 Figure 9，PDF 第 15 页：CoT 提示与直接回答比较](figures/original-page-015-04.png)
+![原文 Figure 9](figures/original-p015-figure-9.png)
 
 **Figure 9 的读法。** 右图横轴是直接回答与 CoT 配置，同一个 78B 模型从 66.4 到 70.1，增加 3.7 个百分点；旧 26B 的 CoT 反而下降约 0.6，说明效果依赖模型与数据质量。左侧提示要求最后输出可提取答案，并提醒避免无限重复。70.1 是测试时设置结果，不是单次直接短答分数。
 

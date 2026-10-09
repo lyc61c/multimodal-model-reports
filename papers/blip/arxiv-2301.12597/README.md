@@ -2,7 +2,7 @@
 
 # BLIP-2：以 Q-Former 连接冻结视觉编码器和语言模型
 
-> 采用 [arXiv:2301.12597v1](https://arxiv.org/pdf/2301.12597v1)。本文区分预训练与下游微调的冻结设置，配图为原文整页截图。
+> 采用 [arXiv:2301.12597v1](https://arxiv.org/pdf/2301.12597v1)。本文区分预训练与下游微调的冻结设置，配图为原文图表区域裁切。
 
 ## 1. 论文信息与模型定位
 
@@ -30,9 +30,9 @@ BLIP-2 的核心不是重新训练视觉和语言基础模型，而是学会让�
 
 ## 3. 整体架构
 
-![原文 Figure 2 所在第 3 页：Q-Former 与三类表示学习目标](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
-> 来源：Figure 2，v1 PDF 第 3 页，整页截图。[来源](https://arxiv.org/pdf/2301.12597v1#page=3)。左图读视觉特征、查询、文本之间的连接；右图读各目标允许哪些位置互相注意。
+> 来源：Figure 2，v1 PDF 第 3 页，图表区域裁切。[来源](https://arxiv.org/pdf/2301.12597v1#page=3)。左图读视觉特征、查询、文本之间的连接；右图读各目标允许哪些位置互相注意。
 
 Q-Former 包含共享自注意力层的两条使用路径：图像侧查询通过交叉注意力读取冻结视觉特征，文字侧既能编码文字也能生成文字。查询彼此用自注意力交换信息，交叉注意力每隔一个 Transformer block 插入一次。主体用 BERT-base 初始化，新增交叉注意力随机初始化；查询本身也属于训练参数。
 
@@ -46,9 +46,9 @@ Q-Former 包含共享自注意力层的两条使用路径：图像侧查询通�
 
 原文举例 ViT-L 特征为 257×1024，而查询输出为 32×768。固定查询数意味着语言端前缀长度不随视觉 Patch 数直接增长；但信息瓶颈也可能漏掉细节，不能把压缩视为绝对无损。Q-Former 不是把图片离散成词表代码，而是输出连续向量，这与离散视觉 Token 自回归生成方法应区分。
 
-![原文 Figure 3 所在第 4 页：接入 OPT 与 FlanT5 的两种路径](figures/original-page-004-02.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
-> 来源：Figure 3，v1 PDF 第 4 页，整页截图。[来源](https://arxiv.org/pdf/2301.12597v1#page=4)。顶部为视觉前缀＋decoder-only LLM；底部把视觉前缀与文字前缀送入 encoder，再由 decoder 生成后缀。
+> 来源：Figure 3，v1 PDF 第 4 页，图表区域裁切。[来源](https://arxiv.org/pdf/2301.12597v1#page=4)。顶部为视觉前缀＋decoder-only LLM；底部把视觉前缀与文字前缀送入 encoder，再由 decoder 生成后缀。
 
 OPT 路径把 FC 后的查询特征拼到文字嵌入前，由 decoder 在其条件下生成整段文字；FlanT5 路径将训练文字分前缀和后缀，视觉特征与前缀交给 encoder，后缀作为 decoder 目标。因此二者并非只替换模型名称，训练输入和目标组织不同。[原文 §3.3](https://arxiv.org/pdf/2301.12597v1#page=4)
 
@@ -106,9 +106,11 @@ ITG 图像条件文字生成采用多模态因果掩码：查询能互看却不�
 
 零样本 VQA 不使用目标任务标注微调，OPT 的提示为 Question/Answer，FlanT5 为 Question/Short answer；beam size=5、length penalty=-1，以较短答案匹配标注。下游微调后的 VQA 和描述是另一个实验设置，不应混到同一零样本排名。
 
-![原文 Tables 1、2 所在第 6 页：零样本总体与各组件配置结果](figures/original-page-006-03.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
-> 来源：Tables 1、2，v1 PDF 第 6 页，整页截图。[来源](https://arxiv.org/pdf/2301.12597v1#page=6)。Table 2 同时列可训练和总参数，VQAv2 val/test-dev 两列不同。
+![原文 Table 2](figures/original-p006-table-2.png)
+
+> 来源：Tables 1、2，v1 PDF 第 6 页，图表区域裁切。[来源](https://arxiv.org/pdf/2301.12597v1#page=6)。Table 2 同时列可训练和总参数，VQAv2 val/test-dev 两列不同。
 
 | 配置 | VQAv2 test-dev | OK-VQA test | GQA test-dev |
 |---|---:|---:|---:|
@@ -119,9 +121,13 @@ ITG 图像条件文字生成采用多模态因果掩码：查询能互看却不�
 
 XXL 的 VQAv2 比 Flamingo80B 高 8.7 个百分点，OK-VQA 却低 4.7 个百分点。论文把后一差距解释为知识密集问题更依赖语言端知识，这是作者假设，不能只凭该表证明唯一因果。ViT-L 到 ViT-G、同语言家族扩规模通常改善结果，但 GQA 某些配置差异并不严格单调，应逐项读取。
 
-![原文 Figure 5、Tables 3、4 所在第 7 页：阶段消融与下游结果](figures/original-page-007-04.png)
+![原文 Table 3](figures/original-p007-table-3.png)
 
-> 来源：Figure 5、Tables 3、4，v1 PDF 第 7 页，整页截图。[来源](https://arxiv.org/pdf/2301.12597v1#page=7)。红线先做表示学习，蓝线省去该阶段；表中的 NoCaps 是 COCO 微调后的零样本迁移。
+![原文 Figure 5](figures/original-p007-figure-5.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
+
+> 来源：Figure 5、Tables 3、4，v1 PDF 第 7 页，图表区域裁切。[来源](https://arxiv.org/pdf/2301.12597v1#page=7)。红线先做表示学习，蓝线省去该阶段；表中的 NoCaps 是 COCO 微调后的零样本迁移。
 
 Figure 5 是核心阶段消融：省略第一阶段会使两类 LLM 的零样本 VQA 明显下降，OPT 随训练还继续退化。由于 LLM 权重冻结，这不能被解释为 LLM 权重被更新后遗忘；观察针对的是整套系统在桥接训练中的任务能力。结果支持表示学习先行有助于固定 LLM 读懂视觉前缀。
 

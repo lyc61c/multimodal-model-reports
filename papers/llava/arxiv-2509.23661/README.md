@@ -22,7 +22,7 @@
 
 ## 3. 整体架构
 
-![原论文Figure 2：不同尺寸图像的视觉序列与语言骨干，PDF第3页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **Figure 2怎么读。** 底部四张图具有不同宽高，形成不同数量的视觉token；蓝色框是RICE-ViT，自注意力的颜色和分隔展示不同图像各自的视觉序列；顶端再把视觉token与文字token送入语言模型。图中1378、570、38、945是示例图像的序列长度，不是整个模型固定视觉预算。它说明原生分辨率保留了宽高差异，不能把每张图片都当成固定正方形缩放。
 
@@ -48,7 +48,7 @@ s(i,v)=\frac{\Phi_v(i)^\top\Phi_t(v)}{\|\Phi_v(i)\|_2\|\Phi_t(v)\|_2}
 
 ## 5. 数据构建与处理
 
-![原论文Figure 3：概念频次、数据来源与指令组成，PDF第5页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **Figure 3怎么读。** 左图纵轴使用对数尺度，均衡后蓝色分布在长尾概念处保留更多样本；中间圆环是85M中期数据来源，Obelics占45.6%、COYO占18.5%，说明Web交错图文与图文对共同构成训练来源；右边是指令混合分布，其中纯文字28.0%、General VQA 24.7%、领域16.2%、OCR 11.1%。不要把右环理解成22M全部是图片问答。
 
@@ -74,7 +74,7 @@ s(i,v)=\frac{\Phi_v(i)^\top\Phi_t(v)}{\|\Phi_v(i)\|_2\|\Phi_t(v)\|_2}
 
 ## 7. 实验设置与主要结果
 
-![原论文Table 1：27项视觉语言基准，PDF第6页](figures/original-page-006-03.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 **Table 1怎么读。** 四类任务分别列出不同模型规模，Avg只在各组内平均，不能把它当作统一全能分数。8B与7B、4B与3B既有规模差异，也有Qwen3和Qwen2.5语言骨干差异。评测使用LMMs-Eval默认提示。原文报告8B赢18/27、4B赢27/27，后者并不证明视觉设计单一因素贡献了全部增益。
 
@@ -93,7 +93,7 @@ s(i,v)=\frac{\Phi_v(i)^\top\Phi_t(v)}{\|\Phi_v(i)\|_2\|\Phi_t(v)\|_2}
 
 视觉编码器消融统一采用Qwen2.5-7B、LLaVA-NeXT数据与训练流程，最多2×2加全图切块。336分辨率下RICE在InfoVQA上45.2，相比CLIP 38.9提高6.3个百分点；OCRBench57.5对52.5提高5.0。但不同分辨率、不同编码器参数量以及已经历不同多模态训练的视觉塔比较，仍不能全部视为单变量检验。
 
-![原论文Figure 6：三种SFT数据混合的训练过程，PDF第10页](figures/original-page-010-04.png)
+![原文 Figure 6](figures/original-p010-figure-6.png)
 
 **Figure 6怎么读。** 橙色是Merged46M、粉色是自建指令、绿色是FineVision，横轴为epoch百分比。多数任务橙线较好，说明扩展混合数据有用；但MME-RealWorld中文与VisualWebBench等曲线并非统一橙线领先，不应写“全部16项最好”。正文称2M概念均衡采样在27项中赢25项，Figure 4还显示0M、4M到85M中期规模扩大带来收益。这些结果支持数据规模和构成的重要性，而非“单靠更便宜训练即可无限提升”。
 

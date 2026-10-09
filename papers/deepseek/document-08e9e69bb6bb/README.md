@@ -28,7 +28,7 @@
 
 ## 3. 整体架构
 
-![Figure 2：DeepSeek-V4整体架构，PDF第6页](figures/original-page-006-01.png)
+![原文 Figure 2](figures/original-p006-figure-2.png)
 
 **如何读图：**输入从底部 Embedding 向上，经过多层 CSA/HCA 注意力与 DeepSeekMoE，再到预测头和 MTP 模块。每个主模块周围的 Pre-Block、Residual、Post-Block Mixing 是 mHC 对多路残差流的处理，不是额外的视觉分支。预测头的 LM Loss 与 MTP Loss 分别监督当前语言预测和额外未来 token 预测。
 
@@ -42,7 +42,7 @@ Flash 前两层使用纯滑动窗口注意力，之后交错 CSA 与 HCA；Pro �
 
 **CSA：先压缩，再挑选。**每 4 个 token 生成一个压缩 KV 条目，随后轻量 Lightning Indexer 计算相关性，选择 top-k 条目用于主要注意力。CSA 的两个投影分支覆盖当前块与前一块，压缩条目由相邻共 $2m$ 个 KV 加权形成，但相邻窗口重叠，所以最终序列长度是原来的 $1/m$，不是 $1/(2m)$。这有助于保留块边界信息。[原文第 9–10 页](https://arxiv.org/pdf/2606.19348v1#page=9)。
 
-![Figure 3：CSA压缩与稀疏选择，PDF第9页](figures/original-page-009-02.png)
+![原文 Figure 3](figures/original-p009-figure-3.png)
 
 **如何读图：**左下历史 token 经压缩器形成 KV；中间索引分支产生分数，Top-k Selector 保留候选；左侧另一路保留近期未压缩滑窗，最后与选中压缩 KV 合并。索引器只负责选择，最终表示由上方主注意力计算。它没有把全部历史改成一个固定向量。
 
@@ -65,9 +65,9 @@ $A_l$ 把多路状态混成层输入，$C_l$ 把层输出分回多路，$B_l$ �
 
 **Muon：以矩阵几何处理更新。**对梯度动量矩阵近似正交化，再缩放更新 RMS，区别于 AdamW 的逐元素自适应。若 $M=U\Sigma V^\top$，Newton–Schulz 迭代尝试将更新变为接近 $UV^\top$，控制不同奇异方向的尺度。这里没有把权重本身正交化，也没有声称所有参数用同一优化器。
 
-![Algorithm 1与Muon细节，PDF第14页](figures/original-page-014-03.png)
 
-**如何读图：**算法先积累动量，再用带 Nesterov 的混合 Newton–Schulz，缩放后执行权重衰减及更新。正交化共 10 次：前 8 次系数为 $(3.4445,-4.7750,2.0315)$，后 2 次为 $(2,-1.5,0.5)$。Embedding、预测头、RMSNorm 及 mHC 静态偏置/门控继续使用 AdamW。注意力已有 Q/KV 归一化，因此本报告未使用 QK-Clip。
+
+**Algorithm 1 的优化步骤：**算法先积累动量，再用带 Nesterov 的混合 Newton–Schulz，缩放后执行权重衰减及更新。正交化共 10 次：前 8 次系数为 $(3.4445,-4.7750,2.0315)$，后 2 次为 $(2,-1.5,0.5)$。Embedding、预测头、RMSNorm 及 mHC 静态偏置/门控继续使用 AdamW。注意力已有 Q/KV 归一化，因此本报告未使用 QK-Clip。 [原文](<https://arxiv.org/pdf/2606.19348v1#page=14>)。
 
 **多教师 OPD：学习学生实际走到的状态。**领域专长模型是独立训练的完整教师，和单个 MoE 层中的路由专家不同。原文式（29）为
 
@@ -125,7 +125,9 @@ Base 模型在统一内部评测下比较，Table 1 中 Flash 的 13B 激活参�
 
 知识与推理评测温度为 1.0，Non-think/High/Max 窗口分别为 8K/128K/384K；代码 agent 上限 500 步、512K 上下文。Codeforces 的 rating 基于 14 场比赛、114 道题，每题生成 32 个候选再抽取 10 次提交序列估计，不是普通单次 pass@1。部分对照 API 请求失败的单元格保留为空，不能填作 0。[原文第 36–39 页](https://arxiv.org/pdf/2606.19348v1#page=36)。
 
-![Figure 8形式化数学与Figure 9长上下文，PDF第40页](figures/original-page-040-04.png)
+![原文 Figure 8](figures/original-p040-figure-8.png)
+
+![原文 Figure 9](figures/original-p040-figure-9.png)
 
 **如何读图：**Figure 8 左侧是在轻量工具和有限采样下的 Putnam-200 pass@8，Flash-Max 为 81%；右侧是更大计算预算的非形式/形式混合证明，120/120 是该验证流程结果，不能写成无工具单次回答准确率。Figure 9 横轴为输入长度，纵轴为 MRCR **8-needle** 平均 MMR；Pro 从 128K 的 0.92 降至 1024K 的 0.59，Flash 为 0.87 → 0.49。这说明“支持百万 token”不等于百万长度保持短文准确率，也解释其端点不能直接替换 Table 7 的 MRCR 汇总值。
 

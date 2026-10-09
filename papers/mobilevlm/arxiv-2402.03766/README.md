@@ -20,7 +20,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：模型和 LDPv2 架构，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 Figure 2 从下向上展示两条输入路径。图像进入冻结的 CLIP ViT-L/14，指令经过分词与词嵌入；图像特征通过可训练的 LDPv2 变换，随后与文字 token 拼接，由语言模型自回归生成回答。雪花标记视觉编码器冻结，火焰标记投影器和语言模型更新。右侧局部图对应投影器内部的三步处理。
 
@@ -63,7 +63,9 @@ PW 是逐点卷积，改变通道维而不混合空间位置；平均池化完�
 
 ## 6. 训练流程与目标
 
-![原文 Table 3 与 Figure 3：训练参数和 A100 速度，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
+
+![原文 Table 3](figures/original-p005-table-3.png)
 
 Table 3 应按列阅读两个阶段；Figure 3 的横轴是 A100 上的 token/s，纵轴是六项平均分，两者不能混作移动端数据。训练配置如下。
 
@@ -85,7 +87,11 @@ Table 3 应按列阅读两个阶段；Figure 3 的横轴是 A100 上的 token/s�
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 4 与 Figures 4–5：六项评测和规模扩展，PDF 第 6 页](figures/original-page-006-03.png)
+![原文 Table 4](figures/original-p006-table-4.png)
+
+![原文 Figure 5](figures/original-p006-figure-5.png)
+
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 Table 4 使用 GQA、ScienceQA-IMG、TextVQA、POPE、MME Perception、MMBench-dev。平均分计算前将 MME 除以 2000，再与其他百分比统一尺度，不能直接平均表中的原始数字。绿色行是 V2，紧邻行便于比较相同规模的第一代。Figure 5 的雷达图呈现各任务相对表现，具体差异应回到表值判断。
 
@@ -100,7 +106,9 @@ Table 4 使用 GQA、ScienceQA-IMG、TextVQA、POPE、MME Perception、MMBench-d
 
 去掉池化后 TextVQA 提升 4.5 分，支持细粒度文字可能被空间压缩损失的解释。代价是恢复更多视觉 token，7B 的速度优势缩小到与 ShareGPT4V 接近；“压缩没有损失”并不成立。
 
-![原文 Tables 5–6：Jetson Orin 速度及训练消融，PDF 第 7 页](figures/original-page-007-04.png)
+![原文 Table 5](figures/original-p007-table-5.png)
+
+![原文 Table 6](figures/original-p007-table-6.png)
 
 Table 5 的语言模型以 llama.cpp 做 4-bit 量化，在 NVIDIA AGX Jetson Orin 生成 256 token。V2 1.7B 为 **51.63 token/s、总计 4.96 秒**，V2 3B 为 **30.80 token/s、总计 8.38 秒**；3B 与前代的 token/s 相同，主要获得准确率提升。7B 为 15.49 token/s，ShareGPT4V-7B 为 13.00 token/s。速度受该框架和实现约束，不能跨硬件外推。
 

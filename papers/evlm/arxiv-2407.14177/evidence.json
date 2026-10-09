@@ -1,1 +1,38 @@
-{"source_id":"c609f22c00f9","source_version":"2407.14177v1","read_scope":"Entire21-page PDF technical body sections1-6 and appendicesA-C; original screenshots inspected","claims":[{"topic":"architecture","source":"section2 Figures2-4,section4.4 Figure7","checks":"4.4B vision +14B language not complete14B;8depthfeatures;16tokens perimage;MoE insertedFFN notLLM;video mask differs"},{"topic":"math","source":"Eq1-2","checks":"single-layer FLOPs ratio not end-to-end speed;257/1025 actual vision lengths vs256/1024estimate;gated equation marked explanation no invented initialization"},{"topic":"data_and_recipes","source":"Tables1-3,6 appendixA-B","checks":"2.5B pairs packed60Mseq;stage1LR6.4e-4body vs6e-4appendix;SFTrow sum2.413Mvs2.3Msummary;poolsize notepoch claim"},{"topic":"results","source":"Tables4-5 Figure5 appendixC","checks":"nonuniform MoE gains;OCR gaps to high-resolution models;candidate-loss classification;video GPT4o smallscoregaps noCI"}],"source_inconsistencies":["stage1peakLR6.4e-4mainvs6e-4appendix","SFT2.3Mtotalvs2.413Mrows","videoeval claims5sources but names3"],"model_execution":"not_run"}
+{
+  "source_id": "c609f22c00f9",
+  "source_version": "2407.14177v1",
+  "read_scope": "Entire21-page PDF technical body sections1-6 and appendicesA-C; original screenshots inspected",
+  "claims": [
+    {
+      "topic": "architecture",
+      "source": "section2 Figures2-4,section4.4 Figure7",
+      "checks": "4.4B vision +14B language not complete14B;8depthfeatures;16tokens perimage;MoE insertedFFN notLLM;video mask differs"
+    },
+    {
+      "topic": "math",
+      "source": "Eq1-2",
+      "checks": "single-layer FLOPs ratio not end-to-end speed;257/1025 actual vision lengths vs256/1024estimate;gated equation marked explanation no invented initialization"
+    },
+    {
+      "topic": "data_and_recipes",
+      "source": "Tables1-3,6 appendixA-B",
+      "checks": "2.5B pairs packed60Mseq;stage1LR6.4e-4body vs6e-4appendix;SFTrow sum2.413Mvs2.3Msummary;poolsize notepoch claim"
+    },
+    {
+      "topic": "results",
+      "source": "Tables4-5 Figure5 appendixC",
+      "checks": "nonuniform MoE gains;OCR gaps to high-resolution models;candidate-loss classification;video GPT4o smallscoregaps noCI"
+    }
+  ],
+  "source_inconsistencies": [
+    "stage1peakLR6.4e-4mainvs6e-4appendix",
+    "SFT2.3Mtotalvs2.413Mrows",
+    "videoeval claims5sources but names3"
+  ],
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
+}

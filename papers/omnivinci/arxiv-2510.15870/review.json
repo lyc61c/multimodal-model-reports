@@ -43,7 +43,8 @@
     "真实PDF与模型身份一致",
     "七节和4页原图",
     "未把外接TTS和额外ASR成绩描述为原生主模型",
-    "未忽略OmniBench和图片成绩回退"
+    "未忽略OmniBench和图片成绩回退",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "C4绝对类别计数存在speech-text重复，采用Figure5比例",
@@ -51,5 +52,20 @@
     "部分应用叙述与表格存在差异，采用表格",
     "训练初始化成本不含于200B联合阶段统计",
     "未执行模型或独立复现"
-  ]
+  ],
+  "article_sha256": "c0dac78e4c3691a052250995b3ecad32e025d34e777b5be7bd1a986bacba55b2",
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

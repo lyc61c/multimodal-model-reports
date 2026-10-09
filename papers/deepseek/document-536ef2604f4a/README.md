@@ -31,9 +31,9 @@
 
 ## 3. 整体架构
 
-![DeepSeek-OCR 2 原文 Figure 3](figures/figure-03-architecture.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
-*原文 Figure 3，PDF 第 5 页原页渲染。读取顺序为图像 → SAM 与卷积压缩 → LM 风格视觉编码 → 只选取因果查询输出 → DeepSeek MoE 解码。保留图注及周围说明。*
+*原文 Figure 3，PDF 第 5 页原图区域裁切。读取顺序为图像 → SAM 与卷积压缩 → LM 风格视觉编码 → 只选取因果查询输出 → DeepSeek MoE 解码。保留图表区域及必要注释。*
 
 第一部分是视觉 tokenizer。它沿用约 80M 参数的 SAM-base 加两层卷积，将原始视觉 token 数压缩 16 倍；最后卷积输出维度由上一代的 1024 调为 896，以对接后续模块。这里主要减少 token 数与激活量，不是将图像先转成离散自然语言词汇。
 
@@ -47,7 +47,7 @@
 
 ### 4.1 一张图中的两种注意力规则
 
-![DeepEncoder V2 原文注意力 mask 与公式](figures/figure-05-mask-equations.png)
+![原文 Figure 5](figures/original-p007-figure-5.png)
 
 *原文 Figure 5、Equation 1–2，PDF 第 7 页原页。绿色表示可见，粉色表示不可见；右下角查询区域是含对角线的下三角。*
 
@@ -118,7 +118,7 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![DeepSeek-OCR 2 原文主结果表](figures/table-01-main-results.png)
+![原文 Table 1](figures/original-p009-table-1.png)
 
 *原文 Table 1，PDF 第 9 页原页。除两代 DeepSeek-OCR 外，其他模型成绩取自 OmniDocBench 仓库；不能假定全部由作者在同一硬件与提示下重新运行。*
 
@@ -135,7 +135,9 @@ OmniDocBench v1.5 包含 1355 页中英文文档、九类内容。Overall 越高
 
 这些指标共同支持在接近的视觉预算下，文本、公式、表格和阅读顺序有所改善。但主表中 PaddleOCR-VL 的 Overall 是 92.86，高于 91.09；因此不能宣称超过所有 OCR 管线。最大视觉 token 只是一项表示预算，也不等价于系统运行时间或总 FLOPs。
 
-![DeepSeek-OCR 2 原文细分结果](figures/table-02-03-detail-results.png)
+![原文 Table 2](figures/original-p010-table-2.png)
+
+![原文 Table 3](figures/original-p010-table-3.png)
 
 *原文 Table 2–3，PDF 第 10 页原页。Table 2 比较文档元素的编辑距离，Table 3 按文档种类拆开结果。*
 

@@ -4,48 +4,103 @@
   "source_pdf_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
   "assets": [
     {
-      "asset_path": "figures/figure-01-language-data.png",
-      "original_label": "Figure 1：Yi 语言主干预训练数据清洗流程",
+      "asset_path": "figures/original-p004-figure-1.png",
+      "original_label": "Figure 1",
       "pdf_page": 4,
       "source_url": "https://arxiv.org/pdf/2403.04652v1#page=4",
       "source_version": "2403.04652v1",
       "source_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
-      "asset_sha256": "efc7148cf2c946839e05c7f09af61d765c918dbdfecc82c3f7db6949106a44ea",
+      "asset_sha256": "b7f489af2f0f5272ebc419d5b0427799c5b38a8cc9f9feedec0447819f2e0d56",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          105.0,
+          68.99,
+          507.18,
+          254.19
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/figure-07-architecture-training.png",
-      "original_label": "Figure 7：Yi-VL 三模块与三阶段训练",
+      "asset_path": "figures/original-p016-figure-7.png",
+      "original_label": "Figure 7",
       "pdf_page": 16,
       "source_url": "https://arxiv.org/pdf/2403.04652v1#page=16",
       "source_version": "2403.04652v1",
       "source_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
-      "asset_sha256": "fa63ce4fe9004e50a705d2d27931f7f3630bbc02eb88b6c98c29105ce01f4ecd",
+      "asset_sha256": "4384f44f4448f7e39241301d3fb1f63214d4f0a174f920da4c805efbad2dd7c6",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          104,
+          69,
+          509,
+          252
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/table-07-mmmu.png",
-      "original_label": "Table 7：Yi-VL 发布时的 MMMU test 成绩",
+      "asset_path": "figures/original-p017-table-7.png",
+      "original_label": "Table 7",
       "pdf_page": 17,
       "source_url": "https://arxiv.org/pdf/2403.04652v1#page=17",
       "source_version": "2403.04652v1",
       "source_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
-      "asset_sha256": "641ad9a620d4a7c546213100ea3ab8f7410cb17f2f596bdb64215ce87b7987d3",
+      "asset_sha256": "8a2c48a4f3e2d32cf33e21ff234779292f67693142bcba7e294cff5a8dbe4259",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          105.0,
+          69.05,
+          520.02,
+          337.17
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p017-figure-8.png",
+      "original_label": "Figure 8",
+      "pdf_page": 17,
+      "source_url": "https://arxiv.org/pdf/2403.04652v1#page=17",
+      "source_version": "2403.04652v1",
+      "source_sha256": "1114d71a0d45f438df09302a492d559d0ae9fa0e8de9f55acdabd52e31ab7153",
+      "asset_sha256": "e5b79b8a8c9a60fa4f1510c5aa919c6ac77109c9fbf48892acd7674c390aafb5",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105.0,
+          354.66,
+          507.0,
+          584.17
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

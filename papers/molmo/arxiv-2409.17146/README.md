@@ -18,7 +18,7 @@ Molmo 的重点不是复杂新连接器，而是**高质量视觉监督和简单
 
 ## 3. 整体架构
 
-![原文 PDF 第 2 页：Figure 1，Molmo 架构及文本化点输出](figures/original-page-002-01.png)
+![原文 Figure 1](figures/original-p002-figure-1.png)
 
 **Figure 1，PDF 第 2 页** 展示多图块经 CLIP 与连接器进入语言模型，文字请求则经 tokenizer 输入。顶端的点输出把“指向山的位置”编码成含 x、y 和文本标签的标记。读图时应关注两个接口：图像以连续视觉特征输入，位置则以语言模型生成的结构化文本输出，并不是另接一个检测头完成所有定位。
 
@@ -42,9 +42,9 @@ MolmoE-1B 的语言底座是 OLMoE-1B-7B，名称体现高效激活规模，不�
 
 ## 5. 数据构建与处理
 
-![原文 PDF 第 3 页：PixMo-Cap、AskModelAnything 与 Points 的构建说明](figures/original-page-003-02.png)
 
-这一页是原文 **Section 3 的数据与训练正文**，没有独立 Figure 编号。左列描述口述数据采集，右列区分真实用户式问答和指点数据，适合核对各数据量的单位：图片数、描述数、问答数、问答—点对不是同一口径。
+
+[原文 Section 3，PDF 第 3 页](https://arxiv.org/pdf/2409.17146v1#page=3) 说明口述数据采集、真实用户式问答及指点数据的构建。核对各数据量时应区分单位：图片数、描述数、问答数、问答—点对不是同一口径。
 
 PixMo-Cap 按约 **70 个主题**搜集图片，早期每张由三名标注员各说至少 60 秒，后期改为一名标注员说至少 90 秒。录音转写后由纯语言模型整理；当有三份描述时，还可总结出第四份描述，形成自然的数据增强。**712K 图片、约 1.3M 描述**是实际训练数量，不能把每张都乘四。
 
@@ -79,7 +79,7 @@ AskModelAnything 的语言 LLM 没有直接看图，但作者自己的第一阶�
 
 ## 7. 实验设置与主要结果
 
-![原文 PDF 第 6 页：Table 1，11 个学术基准和行动结果](figures/original-page-006-03.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 **Table 1，PDF 第 6 页** 覆盖 AI2D test、ChartQA test、VQAv2 testdev、DocVQA test、InfographicVQA test、TextVQA val、RealWorldQA、MMMU val、MathVista testmini、CountBenchQA，以及新建的更难自然图像计数集 Flickr Count。
 
@@ -98,7 +98,7 @@ AskModelAnything 的语言 LLM 没有直接看图，但作者自己的第一阶�
 
 计数是显著强项，尤其 Flickr Count 相差 **25.6** 分；MMMU、MathVista 则落后。平均分提高不等于复杂学科知识和数学推理全面更强，也不能忽略学术训练数据在微调中的参与。MolmoE-1B 平均 **68.6**、7B-O **74.6**，说明语言底座选择同样影响结果。
 
-![原文 PDF 第 7 页：Figure 4，人类偏好 Elo 与首发计划](figures/original-page-007-04.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **Figure 4，PDF 第 7 页** 来自 **15K 图像—文本请求**、约 **870 名标注员**、超过 **325K 成对偏好判断**，覆盖 27 个模型。作者用 Bradley–Terry 方法估计 Elo。纵轴是相对偏好评分，不是正确率；应同时看误差范围和模型间距离。Molmo-72B 的 **1076.42** 紧邻 GPT-4o 的 **1078.88**，不能从这点差宣称稳定胜负，也不能把 Elo 直接换成任务准确率。
 

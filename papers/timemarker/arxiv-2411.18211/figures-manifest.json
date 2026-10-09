@@ -20,7 +20,11 @@
           565,
           377
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
@@ -40,7 +44,11 @@
           565,
           309
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
@@ -60,7 +68,11 @@
           505,
           382
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
@@ -80,7 +92,11 @@
           290,
           640
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
@@ -100,7 +116,11 @@
           565,
           199
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
@@ -120,7 +140,11 @@
           290,
           288
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

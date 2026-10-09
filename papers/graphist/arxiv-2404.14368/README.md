@@ -22,7 +22,7 @@ Graphist 是面向平面设计布局的多模态应用模型。它接收用户�
 
 ## 3. 整体架构
 
-![Figure 2，Graphist 流水线，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：Figure 2，PDF 第 3 页。** 左侧把图片和 alpha 透明通道共同送入编码器；Visual Shrinker 在不丢弃 CLS 的情况下压缩 patch 网格。下方交错出现指令与多个素材的视觉 token，上方输出 JSON，右侧依协议形成布局图及最终海报。
 
@@ -62,7 +62,7 @@ Crello 的旧版划分为 19,095/1,951/2,375 个训练、验证、测试样本�
 
 ## 7. 实验设置与主要结果
 
-![Table 2，Crello 评分与成对偏好，PDF 第 10 页](figures/original-page-010-02.png)
+![原文 Table 2](figures/original-p010-table-2.png)
 
 **读图：Table 2，PDF 第 10 页。** 左侧四项 GPT-4V 评分为布局 $S_{DL}$、图形协调 $S_{GI}$、创新 $S_{IO}$、文字可读性 $S_{TV}$；右侧为模型裁判成对投票。GLG 中公开版四项为 **5.60/6.64/4.84/4.86**，Flex-DM 为 **5.43/6.13/4.69/4.60**。加入内部数据的 Graphist* 为 **5.72/6.70/5.03/5.37**。HLG 公开版为 **5.66/6.60/5.02/4.93**，带星号版为 **5.85/6.90/5.10/5.24**。
 
@@ -70,11 +70,15 @@ Crello 的旧版划分为 19,095/1,951/2,375 个训练、验证、测试样本�
 
 商用模型每样本获得五次生成机会，并对常见格式做后处理；全部失败的样本跳过。最后 GPT-4V 只保留 **120** 个结果，Gemini 保留 **240** 个；其分数是不同成功子集的分数。因此数字不是同一完整测试集上的无条件公平成功率比较。摘要提到人工评分，但正文没有完整人工打分表、人数与统计协议；非专家网页试用主要为案例展示。
 
-![Figure 5 与 Table 3，真实素材案例及 CGL-V2，PDF 第 12 页](figures/original-page-012-03.png)
+![原文 Figure 5](figures/original-p012-figure-5.png)
+
+![原文 Table 3](figures/original-p012-table-3.png)
 
 **读图：Figure 5/Table 3，PDF 第 12 页。** 上方对比同一组真实素材的布局，下方 content-aware 表才提供定量证据。Graphist* 的 $R_{ali}=0.004$、$R_{ove}=0.002$、$R_{und}=0.996$ 在该表最佳，$R_{occ}=1.000$ 并列最佳；但越低越好的 **$R_{com}=12.150$ 落后于 RADM 的 10.260**。正文“lowest”的说法与表格冲突，应以原表数值为准。content-agnostic 的 Table 4 中，Graphist* 报告 $R_{com}=7.074$、$R_{ali}=0.0003$、$R_{ove}=0.001$、$R_{und}=1.000$，这些项目表现更强。
 
-![Table 6、Table 7，语言基座与 token 数消融，PDF 第 15 页](figures/original-page-015-04.png)
+![原文 Table 6](figures/original-p015-table-6.png)
+
+![原文 Table 7](figures/original-p015-table-7.png)
 
 **读图：Table 6/Table 7，PDF 第 15 页。** 同规模 Qwen1.5-7B 相对 InternLM2-7B 在 CGL-V2 部分指标更好。Tiny 从 5 增至 17 个视觉 token 后，Crello 的布局评分 5.44→5.47、可读性 4.60→4.67，但图形协调 6.35→6.28、创新 4.94→4.88，属于混合变化，不能宣称更多 token 必然更好。Table 8 比较 RGB-A 与 RGB，前者四项评分 5.44/6.35/4.94/4.60，后者 5.24/6.14/4.62/4.22，支持透明通道在本任务的作用。
 

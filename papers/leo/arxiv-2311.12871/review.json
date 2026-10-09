@@ -45,11 +45,27 @@
     "动作分量码与完整姿态数量区别",
     "OCoT用于教师生成而非学生显式思维链",
     "修订EM和模拟环境范围明确",
-    "未掩盖专用策略优于LEO的结果"
+    "未掩盖专用策略优于LEO的结果",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "原文空间注意力重权公式按附录表达保留",
     "主表与消融对象提案协议不同不可混比",
     "未执行真实机器人或独立复现"
-  ]
+  ],
+  "article_sha256": "86a67f25b938834c14681d072452680c055d0614b8dfebec9e54893df967923a",
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and crop after manual repair: Figure 1 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop after manual repair: Figure 2 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop after manual repair: Table 2, Table 3, Table 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop after manual repair: Figure 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ]
+  }
 }

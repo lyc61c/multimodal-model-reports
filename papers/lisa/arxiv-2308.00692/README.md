@@ -31,7 +31,7 @@ LISA 将这两类能力通过 `<SEG>` 连接。语言模型输出回答时生成
 
 ## 3. 整体架构
 
-![Figure 3：多模态LLM的SEG表示与分割decoder，原文第5页](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 *来源：原文 Figure 3 和公式 (2)–(4)，PDF 第 5 页；[原页](https://arxiv.org/pdf/2308.00692v1#page=5)。火焰为训练组件，雪花为冻结组件。*
 
@@ -68,7 +68,7 @@ LoRA 在大部分语言权重保持固定的基础上加入低秩增量，可用
 
 ## 5. 数据构建与处理
 
-![Figure 4：语义分割、指代分割和VQA统一为对话监督](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 *来源：原文 Figure 4，PDF 第 6 页；[原页](https://arxiv.org/pdf/2308.00692v1#page=6)。左、中两列有二值掩码，右列 VQA 没有 mask，这决定其监督目标不同。*
 
@@ -102,7 +102,7 @@ ReasonSeg 从 OpenImages 与 ScanNetv2 图像构建复杂隐含指令及高质�
 
 ## 7. 实验设置与主要结果
 
-![Table 1：ReasonSeg推理分割成绩与长短查询，原文第7页](figures/original-page-007-03.png)
+![原文 Table 1](figures/original-p007-table-1.png)
 
 *来源：原文 Table 1，PDF 第 7 页；[原页](https://arxiv.org/pdf/2308.00692v1#page=7)。左列为验证总体，右边为测试短、长查询和总体，ft代表使用239条任务样本。*
 
@@ -121,7 +121,13 @@ $$\mathrm{gIoU}=\frac1n\sum_i\frac{|P_i\cap G_i|}{|P_i\cup G_i|},\qquad
 
 13B 不含 ReasonSeg 训练时，测试长查询 gIoU 46.4 高于 7B 的 36.6，符合更强语言理解有帮助的解释，但这里只是系统规模对照，不是隔离全部其它因素的因果证明。7B 加 239 条样本后，test gIoU 从 36.8 到 47.3，增加 10.5 个分数点；使用任务数据后的增益必须与原先零样本结果区分。
 
-![Tables 2–5：显式指代分割及视觉骨干、数据、投影消融](figures/original-page-008-04.png)
+![原文 Table 2](figures/original-p008-table-2.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Table 4](figures/original-p008-table-4.png)
 
 *来源：原文 Table 2–5，PDF 第 8 页；[原页](https://arxiv.org/pdf/2308.00692v1#page=8)。勾选项用于判断只改变了哪项设置，正文解释与表格不完全一致处以表格为准。*
 

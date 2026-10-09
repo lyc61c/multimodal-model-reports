@@ -30,7 +30,7 @@ PaLM-E 的输入是“多模态句子”：普通文字之间可以穿插图像�
 
 ## 3. 整体架构
 
-![Figure 1：连续观测穿插文字并驱动语言回答或高层控制，原文 PDF 第 1 页](figures/original-page-001-01.png)
+![原文 Figure 1](figures/original-p001-figure-1.png)
 
 **读图：**Figure 1 中橙色为文字 embedding，绿色/蓝色为状态和图像编码，统一送入 PaLM；下方输出文字，并由 control 环节连接机器人。右侧 TAMP 与桌面操作、左侧厨房移动操作展示不同 embodiment。图中的控制模块是高层文字与低层技能之间的接口，不能理解为语言 head 直接输出关节力矩。
 
@@ -62,7 +62,9 @@ $$p(w_{n+1:L}\mid X_{1:n})=\prod_{l=n+1}^{L}p_{\mathrm{LM}}(w_l\mid X_{1:n},w_{n
 
 ## 5. 数据构建与处理
 
-![Table 6：混合采样配比与 Figure 8 的 TAMP 场景，原文 PDF 第 15 页](figures/original-page-015-04.png)
+![原文 Table 6](figures/original-p015-table-6.png)
+
+![原文 Figure 8](figures/original-p015-figure-8.png)
 
 **读表：**Table 6 的 sampling frequency 是相对抽样权重，百分比是混合训练出现频率，既不是原始数据样本数，也不是 token 数。WebLI 52.4%、VQ²A 13.1%、CC3M 13.1%、VQG 与 Object Aware 各 5.2%；OK-VQA、VQAv2、COCO、Wikipedia text 各约 0.5%。移动机器人 3.1%、Language-Table 4.2%、TAMP 1.6%，合计 8.9%。图文数据占大多数是论文观察迁移效果的关键条件。
 
@@ -90,13 +92,23 @@ Language-Table 的长任务由标注者每隔约 4 秒提供短语言子目标�
 
 ## 7. 实验设置与主要结果
 
-![Figure 5 与 Table 1：真机闭环展示及少数据 TAMP，原文 PDF 第 8 页](figures/original-page-008-02.png)
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Table 1](figures/original-p008-table-1.png)
 
 **读图与表：**Figure 5 上排展示被干扰后重取抽屉里的米片，下排展示 one-shot 与新乌龟物体的 zero-shot 任务。Table 1 则是另一套 TAMP 量化实验：ViT-4B 单机器人 p1/p2 为 30.6/32.9，full mixture 提高至 74.1/74.6；平均约 31.75→74.35，超过两倍。OSRT 达到 82.5/76.2，移除其 VQA 数据后为 71.9/75.1，说明结构和辅助任务都有作用。State 真值输入、实例真值掩码与无分割 OSRT 不具同样信息条件，不能只按分数认定一个编码器无条件更优。
 
 Figure 4 的 PaLM-E-12B 在 full mixture、全量训练下平均规划成功率 94.9，冻结 full mixture 74.3；单机器人全量 48.6、冻结 31.8。这支持跨任务训练的效果，也说明冻结是否划算依赖任务。附录 Table 7 的状态输入中，训练分布 3–5 个物体时从头模型能有 97.2/95.5 的规划分数，8 个物体时降至 24.6/6.7；预训练语言模型为 91.3/89.3。迁移收益在分布外更明显，且部分实验利用真值状态而非原始视觉。
 
-![Tables 2–5 与 Figure 6：仿真规划、移动感知、视觉语言与语言遗忘，原文 PDF 第 9 页](figures/original-page-009-03.png)
+![原文 Table 2](figures/original-p009-table-2.png)
+
+![原文 Table 3](figures/original-p009-table-3.png)
+
+![原文 Table 4](figures/original-p009-table-4.png)
+
+![原文 Table 5](figures/original-p009-table-5.png)
+
+![原文 Figure 6](figures/original-p009-figure-6.png)
 
 **读表：**Table 2 区分 demos 数和冻结/微调配置。12B full mixture 加任务微调、10 demos 时三任务为 70.0/31.3/57.5；从头单机器人为 20.0/2.5/11.3。未做专项微调的 12B 与 84B，对应可比较列为 Task1 80.0→90.0、Task2 57.5→53.8、Task3 50.0→64.4：扩大模型仅改善三项中的两项。Task1 是单步 validation accuracy，Task2/3 用每任务 80 rollouts 成功率，不应混称全部真机 rollout success。
 

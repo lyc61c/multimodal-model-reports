@@ -19,7 +19,9 @@ M3IT 首先是一项数据与方法研究，Ying-VLM 是验证它的模型。作
 
 两项数据处理直接影响模型接口：区域任务将红色矩形画在原图中，让视觉编码器看到目标区域；问答短标签用 ChatGPT 改写为完整句子，让监督目标更接近自然对话。模型先做视觉—文字对齐，再做指令微调，验证英文知识问答、中文跨语言迁移和从图像到视频的迁移。
 
-![原文 Figure 1 和 Table 2：任务覆盖与指令统计，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Table 2](figures/original-p004-table-2.png)
+
+![原文 Figure 1](figures/original-p004-figure-1.png)
 
 **读图：**虚线白框代表未用于模型训练的任务，右侧中文和视频任务全部属于这一范围；粗体任务被选作 80 语翻译资源。左侧 OK-VQA 和 A-OKVQA 是训练任务，只有 ViQuAE 被留出，所以三项知识问答结果不能全部称为未见任务零样本评测。Table 2 的 400 条指令是任务级模板数量，而不是 400 条训练样本。
 
@@ -54,7 +56,7 @@ Ying-VLM 使用 **BLIP2-OPT-2.7B 的视觉编码器及 Q-Former**提取图像特
 
 第二步统一图片及文字格式，图片转为 base64 字串便于加载；base64 是文件编码方式，不是输入语言模型的视觉 token。区域任务画红框；问答由 ChatGPT 改写短答案。第三步由另一位标注者检查**各任务各划分的 10 个实例**，修复格式问题。检查样本中少于 3% 的改写不够成功，作者用启发式过滤并改用基本句式模板。这是抽查观察，不能推断整个 240 万实例的错误率已逐条验证。
 
-![原文 Figure 2：红框视觉提示与回答改写，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 **读图：**左侧将坐标框画到图片，并输出被框对象的类别；右侧将已有正确短答案展开为自然句子。数据处理改变了输入可见内容和目标文本形式，模型表现的变化可能同时来自任务覆盖、视觉提示和回答风格。文章没有将三项因素全部分离，所以不能把提升完全归因于模板数量。
 
@@ -80,7 +82,11 @@ Ying-VLM 使用 **BLIP2-OPT-2.7B 的视觉编码器及 Q-Former**提取图像特
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 4–6：知识问答、中文与视频结果，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 4](figures/original-p007-table-4.png)
+
+![原文 Table 5](figures/original-p007-table-5.png)
+
+![原文 Table 6](figures/original-p007-table-6.png)
 
 知识问答三项均报告 **ROUGE-L**：
 
@@ -97,7 +103,11 @@ Ying-VLM 使用 **BLIP2-OPT-2.7B 的视觉编码器及 Q-Former**提取图像特
 
 视频评测使用前述八帧拼接，Ying-VLM 在 iVQA、ActivityNet-QA、MSRVTT-QA、MSVD-QA 的 ROUGE-L 分别为 **23.5、21.9、18.3、21.4**，高于表中两种 BLIP 基线。然而 MSRVTT 描述为 **14.2**，略低于 InstructBLIP 的 **14.3**，所以不能写成所有视频任务都最好。图像训练迁移到视频的结果有价值，但没有测定对帧顺序打乱、时间间隔或运动方向的鲁棒性。
 
-![原文 Figure 4–6：GPT-4 判断与任务、指令数量分析，PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Figure 6](figures/original-p008-figure-6.png)
+
+![原文 Figure 4](figures/original-p008-figure-4.png)
 
 **读图：**Figure 4 在随机选取的 300 个知识问答样本上，Ying-VLM 对 MiniGPT4 是 **167 胜／28 平／105 负**，对 InstructBLIP 是 **196 胜／9 平／95 负**。胜例占比分别约 55.7% 和 65.3%；图注写 55.6% 和 65.5%，与计数略有差异，本文以计数为准。GPT-4 只接收问题、参考答案和两种回答，**不接收原始图像**，所以这个裁判不能独立检验回答是否忠实于图片。附录协议交换回答顺序，每种顺序在 temperature=1 下取三次评分，合计六次取均值，再判断胜负；这减轻顺序偏差，但不消除裁判与参考答案偏差。
 

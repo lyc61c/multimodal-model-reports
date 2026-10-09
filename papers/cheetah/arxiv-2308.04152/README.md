@@ -32,7 +32,7 @@ Cheetah 的问题定位很具体：基于图片描述训练的视觉接口容易
 
 ## 3. 整体架构
 
-![原文 Figure 2，PDF 第 5 页：三段式推理与 CLORI](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 **读图：**左侧冻结视觉编码器和 Q-Former产生基本提示，进入语言模型前半层；中间从最后位置的隐状态得到条件，用新查询再调用同一 Q-Former；下方将新视觉信息投影并加回对应视觉位置；右侧语言模型后半层输出回答。火焰只标新增查询和投影，雪花标主要骨干冻结。
 
@@ -59,7 +59,7 @@ $j$ 指第 $j$ 张图，$E(I_j)$ 是视觉编码特征，$Q\in\mathbb R^{K\times
 
 CLORI 的两个线性投影采用零初始化。特别是输出投影初始为零时，补充分支不改变原来的中间层表示，早期系统接近原骨干行为，训练再逐渐学会增加信息。这解释了其稳定性动机，但报告没有给出零初始化与其他初始化完整的定量对照，不把动机写成已经测得的严格因果结论。
 
-![原文 Figure 3，PDF 第 6 页：根据忽略区域构造训练样本](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 **读图：**Q-Former 注意力图与 SAM 分割结果共同确定编辑目标，ChatGPT 生成合理编辑描述，Blended Diffusion 对局部进行删除、修改、添加或替换。产生的原图/编辑图用于差异描述监督，扩散模型在这里负责离线数据制作，不是 Cheetah 的输出解码器。
 
@@ -89,7 +89,9 @@ I4-Full覆盖31任务、20场景，约477.72K指令对、1.77M图像，平均每
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 2–3，PDF 第 8 页：I4 汇总与 MME](figures/original-page-008-03.png)
+![原文 Table 2](figures/original-p008-table-2.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 **读图：**Table2是七类任务汇总，生成类用ROUGE-L，选择类用Accuracy，因此各列不能简单当成同一种正确率。Table3分MME感知与认知；这两种分数也不能直接用百分数解读。
 
@@ -105,7 +107,13 @@ I4 每任务最多500例进行测试。生成类按ROUGE-L评价，选择类按�
 
 v1主表存在一个应保留的核对问题：**Table2中“Visual Relation Inference”与“Visual Storytelling”两列的数值对应附录任务均值时，显示出互换关系**。例如LLaMA2版本附录Table7四项关系分21.02、42.05、14.10、24.81，均值约25.50，主表却把25.50列在Storytelling；附录Table8五项故事分均值约24.76，对应主表Relation列。本文不将有歧义的两列再当成精确类别结果，下面改看原附录逐任务成绩。
 
-![原文 Tables 9–12，PDF 第 19 页：逐任务成绩与严格输出条件](figures/original-page-019-04.png)
+![原文 Table 9](figures/original-p019-table-9.png)
+
+![原文 Table 10](figures/original-p019-table-10.png)
+
+![原文 Table 11](figures/original-p019-table-11.png)
+
+![原文 Table 12](figures/original-p019-table-12.png)
 
 **读图：**四张表分别覆盖填空、知识QA、文本丰富图片QA和多图推理，图片选项任务有脚注。逐任务结果比“所有任务均领先”的总括更能说明能力边界。
 

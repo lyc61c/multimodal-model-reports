@@ -32,13 +32,15 @@ Seed1.8 的目标是从单次预测走向持续执行：它需要理解用户要
 
 **原文披露的是行为与系统接口，缺少底层网络图。** 可以按交互流程理解：用户输入及环境观察进入模型，模型决定回答还是采取行动，工具或 GUI 执行器返回结果，再进入下一轮。搜索提供新证据，代码工具提供可计算结果，视觉感知把截图、文档、图表和视频纳入决策。这里的流程是对模型卡所描述行为的归纳，不是原文公布的 Transformer 模块图。[PDF 第 1、6–8、16–17 页](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=16)
 
-![原文 Figure 6：跨购物应用的 GUI 操作示例，PDF 第 17 页](figures/original-page-017-03.png)
+![原文 Figure 6](figures/original-p017-figure-6.png)
 
 **读图方式。** Figure 6 从左到右列第 3、38、82 和 122 步，并非完整 122 步日志。点击和滑动的数字是界面动作参数；中间的澄清动作让用户确认规格选择；最后一列汇总多个平台的信息。图的意义在于观察、行动、信息保存和澄清需要连成一条任务轨迹。它是单个完成案例，不是 122 步平均成本、总体购物成功率或已经下单的证据。第 16 页称其为多平台比较任务，图中具体需求是为鱼缸选择过滤器、防跳网和加热棒。[PDF 第 16–17 页](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=17)
 
 视频有两种接口。**离线长视频**允许调用 **VideoCut**，指定片段起止时间和 1–5 FPS，由工具重新取帧，模型继续观察与推理。**流式视频**的示例以 1 FPS 持续输入，模型可以直接回答用户、保持安静观察，或由视觉事件触发主动回应。新帧可中断正在生成的内容，模型再判断是否继续。这两种时间调度机制不能合并成“全程高帧率实时处理”。[PDF 第 8–9、16–20 页](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=8)
 
-![原文 Figure 9、10：流式视频交互与安全评测，PDF 第 20 页](figures/original-page-020-04.png)
+![原文 Figure 9](figures/original-p020-figure-9.png)
+
+![原文 Figure 10](figures/original-p020-figure-10.png)
 
 Figure 9 上方时间轴标输入画面和用户发问，下方不同符号表示回答、静默思考和视觉触发回应，省略号表示被新输入打断后可能恢复。它展示的是带中断的交互案例，没有给出端到端延迟或吞吐统计。同页 Figure 10 是独立的安全结果，深浅蓝对应 Seed1.8 和 Seed1.6；柱高不能用于解释视频能力。图中未标精确柱值，本文不从像素估算成小数分数。[PDF 第 17、20 页](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=20)
 
@@ -57,7 +59,11 @@ $$
 
 **思考预算需要看任务收益。** 图中横轴是推理 token，纵轴是任务分数，不是 GPU FLOPs 或秒。不同模型 tokenizer、运行硬件和工具等待不同，因此同等 token 更高分说明该图协议下的 token 效率，不能直接断言同等货币成本或同等延迟。原文还采用并行推理路径及中间结果聚合，但没有公开路径数、选择器、聚合规则或停止准则，本文不将它补写为树搜索、投票或奖励模型筛选。[PDF 第 9–11 页](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=9)
 
-![原文 Table 6、Figure 1、2：视频工具收益与推理 token 曲线，PDF 第 9 页](figures/original-page-009-02.png)
+![原文 Table 6](figures/original-p009-table-6.png)
+
+![原文 Figure 1](figures/original-p009-figure-1.png)
+
+![原文 Figure 2](figures/original-p009-figure-2.png)
 
 上方表格直接比较是否启用视频工具；下方两个图分别是文本与多模态推理。颜色区分模型，点形区分思考档位。应先沿同一颜色比较预算变化，再比较不同模型。Seed1.8 通常比 Seed1.6 更有效利用预算，但图中 Gemini 3 Pro 在多个任务的分数仍更高，不能把“较前代改进”读成“所有点支配全部模型”。[PDF 第 9–10 页](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=9)
 
@@ -111,7 +117,7 @@ $$
 
 **比较协议需要逐表确认。** Table 1 通常不使用工具，但 IMO-AnswerBench 明确有代码工具；Table 2 的 **crop-box** 标记是额外视觉工具；Table 3 的字幕和主动评测有不同标注；Table 4 包含交互工具，WorldTravel 又是 best-of-5；Table 7 扩展思考结果明确全部无工具。带星号的其他模型分数摘自其报告，不能把这些表理解为所有模型共享同一套环境、延迟和动作预算。
 
-![原文 Table 2：图像、空间、文档与长上下文结果，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Table 2](figures/original-p004-table-2.png)
 
 **读表方式。** 最右列是 Seed1.8，加粗及下划线标表中第一、第二名；星号指报告引用值，空缺不是零分。FSC-147 的 MAE 和 OmniDocBench 的 NED 越低越好；ScreenSpot-Pro 的 64.3/73.1 分别是基础与裁剪工具设置。图中不同指标不能加总，也不能把 crop-box 的收益解释成无工具性能。
 

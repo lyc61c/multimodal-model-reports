@@ -36,5 +36,23 @@
     "示例代码未运行，模型未复测",
     "商品描述的图像不可验证信息已指出"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "b07650e2d9e52b10aa960ed4061bed4e1c7da883bea9f1c6acf48bc4fb8ba2e3",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and crop: Figure 1 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Figure 3 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Figure 5 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Figure 9, Figure 10 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ]
+  }
 }

@@ -24,7 +24,7 @@ Nexus-O继承Qwen2.5-VL-7B-Instruct已经具备的视觉语言能力，再加入
 
 ## 3. 整体架构
 
-![原论文Figure 2：三模态Transformer与音频生成链，PDF第5页](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 **Figure 2怎么读。** 左侧三路输入映射到同一Transformer，文字头输出文本，音频头输出离散语音码；右侧把预训练音频GAN和实际生成链分开，雪花代表固定的预训练组件。生成波形不是直接由语言词表解码，而是经过语音码本和音频生成器。
 
@@ -50,7 +50,9 @@ K^{v+a}_{ij}=\langle[f_v(x_i);f_a(x_i)],[f_v(x_j);f_a(x_j)]\rangle.
 
 ## 5. 数据构建与处理
 
-![原论文Figure 3与Table 1：语音合成、真实语音标注和阶段数据规模，PDF第6页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
+
+![原文 Table 1](figures/original-p006-table-1.png)
 
 **Figure 3怎么读。** 左上把公开文字和真实对话改写后转为语音，再检查是否能转录回原始文本；左下处理公开音频和真实场景音频，经STT、人工标注及检查得到文本。右侧示意ASR、AQA与AVQA，但图注明确目前自建testbed只支持ASR，后两项仍在开发。下方Table 1列的Num是样本数，不是音频小时数。
 
@@ -64,7 +66,7 @@ Table 1首阶段包括ASR 5.6M、语音翻译1.5M、语音到文本对话0.2M、
 
 ## 6. 训练流程与目标
 
-![原论文Figure 4：三阶段中冻结与训练模块，PDF第7页](figures/original-page-007-03.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **Figure 4怎么读。** 火焰为训练、雪花为冻结。第一阶段图示训练音频编码器与适配器，冻结三模态主干与文字头；第二阶段冻结视觉和音频编码器，训练两个适配器、主干与语言输出；第三阶段仅音频解码器有火焰。这里第一阶段冻结范围主要由图给出，正文没有详细列成超参数表。
 
@@ -78,7 +80,9 @@ Table 1首阶段包括ASR 5.6M、语音翻译1.5M、语音到文本对话0.2M、
 
 口语问答LLaMA Q.准确率67.33%，高于表中MiniCPM-o2.6的61.00与GLM-4-Voice的64.70。该结果衡量语音问题理解与回答，不能替代语音输出听感、实时交互或三模态联合任务评测。[§4.1、Table 2—3，PDF第8—9页](https://arxiv.org/pdf/2503.01879v1#page=9)。
 
-![原论文Table 4—5：ASR错误率与翻译BLEU，PDF第10页](figures/original-page-010-04.png)
+![原文 Table 4](figures/original-p010-table-4.png)
+
+![原文 Table 5](figures/original-p010-table-5.png)
 
 **Table 4—5怎么读。** ASR中文CER和英文WER越低越好，翻译BLEU越高越好，不能沿用一个统一方向。Nexus-O-audio中文11.82、英文12.32，优于MiniCPM-o2.6的12.00、18.00及Qwen2-Audio-Instruct的35.45、26.12。但LibriSpeech clean/other为3.50/5.29，弱于MiniCPM-o2.6的1.70/3.89；AIShell2的3.35也不优于Qwen2-Audio三平台的3.00/3.00/2.90。因此收益集中于自建真实场景，而非所有ASR数据集。
 

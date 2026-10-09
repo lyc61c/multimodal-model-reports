@@ -1,1 +1,31 @@
-{"verdict":"complete_self_review","source_identity_verified":true,"source_version":"2402.11684v1","fact_check":"Read Sections3–4 and appendixC; verified dataset units, trainability, main results and data ablation.","math_check":"Distinguished synthesis ordering from student architecture; no invented loss or original equation number.","image_check":"view_image inspected pages2,7,9; Figure1 and Tables1,2,4 complete, legible headings retained.","model_execution":"not_run","limitations":["Self-review","Table4/6/7 numerical inconsistencies explicitly noted"]}
+{
+  "verdict": "complete_self_review",
+  "source_identity_verified": true,
+  "source_version": "2402.11684v1",
+  "fact_check": "Read Sections3–4 and appendixC; verified dataset units, trainability, main results and data ablation.",
+  "math_check": "Distinguished synthesis ordering from student architecture; no invented loss or original equation number.",
+  "image_check": "view_image inspected pages2,7,9; Figure1 and Tables1,2,4 complete, legible headings retained.",
+  "model_execution": "not_run",
+  "limitations": [
+    "Self-review",
+    "Table4/6/7 numerical inconsistencies explicitly noted"
+  ],
+  "article_sha256": "a18fbecddd84ff4ad63a2942a2eea78de60136889cfb44056cabbff9c4a0c995",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
+}

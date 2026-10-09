@@ -2,7 +2,7 @@
 
 # BAGEL：以共享注意力连接多模态理解与连续视觉生成
 
-> 本文依据 [Emerging Properties in Unified Multimodal Pretraining，arXiv:2505.14683v1](https://arxiv.org/pdf/2505.14683v1)。原图表采用页面截图；公式为明确标注的解读表达；数值来自报告，未重新运行模型。
+> 本文依据 [Emerging Properties in Unified Multimodal Pretraining，arXiv:2505.14683v1](https://arxiv.org/pdf/2505.14683v1)。原图表采用局部裁切；公式为明确标注的解读表达；数值来自报告，未重新运行模型。
 
 ## 1. 论文信息与模型定位
 
@@ -28,7 +28,7 @@ BAGEL 不是让语言模型只吐出一小组条件向量，再交给完全独�
 
 ## 3. 整体架构
 
-![BAGEL 原文 Figure 2：双专家、双视觉编码器与共享注意力](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 > Figure 2，v1 PDF 第 4 页；[原页](https://arxiv.org/pdf/2505.14683v1#page=4)。截图保留完整架构及图注。
 
@@ -83,7 +83,7 @@ t∈[0,1]，c 是文字与既有图像条件，vθ 学习连续轨迹的速度�
 
 ## 6. 训练流程与目标
 
-![BAGEL 原文 Table 3：四阶段训练与采样配比](figures/original-page-010-02.png)
+![原文 Table 3](figures/original-p010-table-3.png)
 
 > Table 3，PDF 第 10 页；[原页](https://arxiv.org/pdf/2505.14683v1#page=10)。先读阶段列，再区分 seen tokens、per-rank packing 和单样本 context window。
 
@@ -104,7 +104,9 @@ Table 3 的 LR 分别为 10⁻³、10⁻⁴、10⁻⁴、2.5×10⁻⁵；仅对�
 
 Table 4 的 BAGEL7B 在 MMBench/MMMU/MM-Vet/MathVista 为85.0/55.3/67.2/73.1；Qwen2.5-VL7B 为83.5/58.6/67.1/68.2。因此它在视觉数学上提升明显，MMMU却落后3.3点；报告支持多数指标竞争力，并非全部理解任务最高。
 
-![BAGEL 原文 Table 5、6：生成与知识推理](figures/original-page-017-04.png)
+![原文 Table 5](figures/original-p017-table-5.png)
+
+![原文 Table 6](figures/original-p017-table-6.png)
 
 > Table 5、6，PDF 第 17 页；[原页](https://arxiv.org/pdf/2505.14683v1#page=17)。GenEval `†` 是 LLM rewriter；WISE Self-CoT 是模型先生成思考，两种条件不同。
 
@@ -119,7 +121,7 @@ Table 4 的 BAGEL7B 在 MMBench/MMMU/MM-Vet/MathVista 为85.0/55.3/67.2/73.1；Q
 
 GenEval中的位置条件无改写仅0.64，低于Janus-Pro0.79；总体分数不能替代每类能力。GEdit 的语义一致性、图像质量和总体评价也有不同排序，BAGEL的高语义分数并不保证最终Overall最高。[Table 5–7](https://arxiv.org/pdf/2505.14683v1#page=19)
 
-![BAGEL 原文 Figure 7：不同能力的训练进程](figures/original-page-013-03.png)
+![原文 Figure 7](figures/original-p013-figure-7.png)
 
 > Figure 7，PDF 第13页；[原页](https://arxiv.org/pdf/2505.14683v1#page=13)。横轴seen tokens，浅/深背景区分低分辨率PT与高分辨率CT；全图关闭thinking模式。
 

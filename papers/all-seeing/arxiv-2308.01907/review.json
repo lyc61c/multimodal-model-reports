@@ -36,11 +36,28 @@
     "scores_checked_against_table_pixels": true,
     "interpretation_formulas_labelled": true,
     "ground_truth_box_condition_preserved": true,
-    "baseline_separated_from_asm": true
+    "baseline_separated_from_asm": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "model_executed": false,
   "limitations": [
     "v1 Figure1 caption statistics conflict with detailed tables; use Tables1/4",
     "No complete module freeze/GPU/cost recipe disclosed"
-  ]
+  ],
+  "article_sha256": "38978dd91a541d2fbcdea99d962cf268c60105fecca9c7011b35ff6adf30c863",
+  "artifact_checks": {
+    "original_assets": 8,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 0）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 1）：Figure 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 2）：Table 6, Table 7 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 3）：Table 8, Table 10, Table 9, Table 11 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
 }

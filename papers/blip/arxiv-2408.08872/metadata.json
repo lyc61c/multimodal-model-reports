@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "xGen-MM（BLIP-3）：交错图文预训练与逐块视觉采样"
+  "title_zh": "xGen-MM（BLIP-3）：交错图文预训练与逐块视觉采样",
+  "chinese_characters": 3427,
+  "figure_revision_date": "2026-10-09"
 }

@@ -10,5 +10,7 @@
   "document_kind": "dataset_and_method",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "LVIS-Instruct4V：让数据生成模型真正看图，改善细粒度视觉指令监督"
+  "title_zh": "LVIS-Instruct4V：让数据生成模型真正看图，改善细粒度视觉指令监督",
+  "chinese_characters": 2165,
+  "figure_revision_date": "2026-10-09"
 }

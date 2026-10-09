@@ -26,7 +26,7 @@
 
 ## 3. 整体架构
 
-![初代 LLaVA 单层视觉投影架构原图](figures/original-page-004-02.png)
+![原文 Figure 1](figures/original-p004-figure-1.png)
 
 > 来源：原文 Figure 1、Equation (1)，2304.08485v1，PDF 第 4 页；完整架构、图注与线性映射式保留。
 
@@ -73,7 +73,7 @@ p(X_a\mid X_v,X_{instruct})=
 
 ## 5. 数据构建与处理
 
-![LLaVA 原文符号视觉背景与三类生成数据](figures/original-page-003-01.png)
+![原文 Table 1](figures/original-p003-table-1.png)
 
 > 来源：原文 Table 1，PDF 第 3 页；完整 captions、对象框、三种响应、图像参考及表注保留。
 
@@ -93,7 +93,7 @@ CC3M 过滤并非只按 caption 长度。附录用 spaCy 提取名词短语并�
 
 ## 6. 训练流程与目标
 
-![LLaVA 原文多轮序列、loss 位置及两阶段训练](figures/original-page-005-03.png)
+![原文 Table 2](figures/original-p005-table-2.png)
 
 > 来源：原文 Table 2、Equations (2)–(3)、Section 4.2，PDF 第 5 页；绿色目标位置、对话标记和完整训练段落均保留。
 
@@ -121,7 +121,7 @@ CC3M 过滤并非只按 caption 长度。附录用 spaCy 提取名词短语并�
 
 据原文 Table 3。85.1 是相对于文本 GPT-4 参考评分的数值，不是 85.1% 的问题答对，更不是“达到 GPT-4 所有能力的 85.1%”。完整数据比无指令调优提高 63.6 个相对评分点；少量描述/推理比仅对话提高 6.7 分，支持数据内容多样性。模型间没有统计置信区间，样本很少，教师符号背景和学生像素的信息条件也不同。
 
-![初代 LLaVA ScienceQA 全结果与模型规模说明](figures/original-page-009-04.png)
+![原文 Table 6](figures/original-p009-table-6.png)
 
 > 来源：原文 Table 6、Table 7 的续文，PDF 第 9 页；全部科目、模态、年级列和组合策略结果完整可见。
 

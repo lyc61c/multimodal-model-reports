@@ -7,18 +7,31 @@
     "保留 mask 的含对角线下三角；说明 0/1 可见性需转成加性屏蔽，查询不等于显式排列或逐查询采样。",
     "3.73 写成百分点；Table 1 阅读顺序 Edit Distance 的上箭头错误、正文约 500M 与图中 A570M 差异均说明。",
     "记录 Book/Newspaper 文字识别退化、PaddleOCR-VL 总分更高，以及生产重复率没有 ground truth。",
-    "未把更少 decoder 视觉 token 等同于编码计算量不变，也未把未来统一模态设想写成已实现能力。"
+    "未把更少 decoder 视觉 token 等同于编码计算量不变，也未把未来统一模态设想写成已实现能力。",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "e3300fb3c5161615b1d4138c76f0afef29857432c9e1ee22d248796e235af353",
+  "article_sha256": "21185b79fb390b86f2c70e303e198e74096a391586153f88a5875894c0d7a26e",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: complete DeepSeek-OCR 2 compression/encoder/decoder architecture, input document and Figure 3 caption retained.",
+      "Attention mask Figure 5 complete including ViT/LM panels and legend.",
+      "Manually restored full Table 1 caption and all OCR model results; Table 2/3 references belong to next page.",
+      "Viewed two separated source tables and crops: Table 2 and Table 3 retain all columns, document categories, numerical rows and full captions, with intervening prose excluded."
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
 }

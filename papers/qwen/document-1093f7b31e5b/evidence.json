@@ -12,5 +12,10 @@
     "Table7 distinguishes Video-MME subtitles, Table8 OmniBench average, and Table9 WER decrease versus speaker similarity increase.",
     "Original Figure2/3/4 and Table7/8/9/10 pages visually checked; no model execution or deployment latency measurement performed."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

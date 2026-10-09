@@ -23,7 +23,7 @@
 
 ## 3. 整体架构
 
-![Figure 2：预训练和监督微调的模块与冻结状态](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 *原文 Figure 2，PDF 第 3 页，完整原页。左图表示预训练阶段，右图表示 LoRA 微调阶段；雪花、火焰对应冻结和更新参数，不能将两个阶段的冻结策略混写。*
 
@@ -46,7 +46,7 @@ Z=\operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt d}\right)V,
 
 **插图位置与图注共同预测。** 文章被标记为 `[seg1]`、`[seg2]` 等段落，模型输出在哪些段落后插图，并为各位置写检索图注。这些标记是段落索引，跟图像分割中的 mask 或 `<SEG>` 无关。GPT-4 教师看到完整文章和原有插图位置，为该位置写与主题一致的描述；学生模型因此学习面向文章的图注，而不是机械概括上一句话。
 
-![Figure 3：正文生成、插图位置与图注、图片召回和选择](figures/original-page-006-03.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 *原文 Figure 3，PDF 第 6 页，完整原页。第三列先缩小候选库，再让模型选图片；这张图说明“生成图文文章”在本报告中的具体操作路径。*
 
@@ -64,7 +64,9 @@ k^*=\arg\max_k p_\theta(k\mid T_{\le j},I_{\rm previous},\mathcal C).
 
 ## 5. 数据构建与处理
 
-![Tables 1、2：预训练来源和监督任务组成](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
+
+![原文 Table 2](figures/original-p005-table-2.png)
 
 *原文 Tables 1、2，PDF 第 5 页，完整原页，保留来源列、图像数和 token 数。大规模图文对、网页交错数据、监督问答任务承担不同作用，应分别阅读。*
 
@@ -107,7 +109,9 @@ Table 1 汇总英文约 506 亿、中文约 171 亿文本 token，图像约 11 �
 | MMBench-CN test，总体，Table 6 | 72.4 | 56.3 | 中英文总体分数相差 2.0 个百分点 |
 | CCBench，总体，Table 7 | 47.6 | 39.3 | 中文文化知识与图像相关问题 |
 
-![Tables 5、6：SEED 图像任务和中文 MMBench](figures/original-page-008-04.png)
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
 
 *原文 Tables 5、6，PDF 第 8 页，完整原页。观察总体成绩之外，也要读 Text Recognition、计数及各推理子项，优势并非均匀分布。*
 

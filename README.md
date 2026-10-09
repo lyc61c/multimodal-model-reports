@@ -8,7 +8,9 @@
 
 GitHub Star 反映仓库关注度，用作本轮可复核的门槛，不直接衡量论文质量。数值来自 Code 栏对应仓库；共享仓库的 Star 不属于单篇论文。
 
-本轮全部 **272 条**保留资料，已完成 **271 篇**介绍。其余状态与阅读入口见[完整介绍索引](reports/article-index.md)。 已附 **1,092 个**原始图表资产，各文记录来源、版本和图表位置。 以下发布资料仅提供动态或 HTML 图表，静态原图缺项已在对应文档注明：[MiMo-V2-Omni：统一感知与代理行动的全模态模型](papers/mimo/document-1ccf04ffaeaa/README.md)。
+本轮全部 **272 条**保留资料，已完成 **271 篇**介绍。其余状态与阅读入口见[完整介绍索引](reports/article-index.md)。 已附 **1,516 个**原始图表资产，各文记录来源、版本和图表位置。 以下发布资料仅提供动态或 HTML 图表，静态原图缺项已在对应文档注明：[MiMo-V2-Omni：统一感知与代理行动的全模态模型](papers/mimo/document-1ccf04ffaeaa/README.md)。
+
+配图仅展示正文引用的原文图表区域，保留图例、表头与必要脚注，去掉周围正文及页眉页脚。
 
 ## 首轮筛选结果
 
@@ -188,7 +190,7 @@ GitHub Star 反映仓库关注度，用作本轮可复核的门槛，不直接�
 
 当前已完成 **271 篇**逐篇介绍，按已审核的七部分模板组织，并引用原文图表。
 
-本轮全部 **272 条**保留资料，已完成 **271 篇**介绍。其余状态与阅读入口见[完整介绍索引](reports/article-index.md)。 已附 **1,092 个**原始图表资产，各文记录来源、版本和图表位置。 以下发布资料仅提供动态或 HTML 图表，静态原图缺项已在对应文档注明：[MiMo-V2-Omni：统一感知与代理行动的全模态模型](papers/mimo/document-1ccf04ffaeaa/README.md)。
+本轮全部 **272 条**保留资料，已完成 **271 篇**介绍。其余状态与阅读入口见[完整介绍索引](reports/article-index.md)。 已附 **1,516 个**原始图表资产，各文记录来源、版本和图表位置。 以下发布资料仅提供动态或 HTML 图表，静态原图缺项已在对应文档注明：[MiMo-V2-Omni：统一感知与代理行动的全模态模型](papers/mimo/document-1ccf04ffaeaa/README.md)。
 
 | 模型家族 | 逐篇介绍 | 原文版本 |
 |---|---|---|
@@ -475,6 +477,7 @@ GitHub Star 反映仓库关注度，用作本轮可复核的门槛，不直接�
 - [数据完整性与链接验证](data/validation.json) · [独立复核](data/quality-audit.json)
 - [文章结构与原图来源检查](data/article-verification.json) · [四篇介绍的独立原文抽查](reports/final-source-spotcheck.md)
 - [Seed1.8 介绍的独立原文抽查](reports/seed18-source-spotcheck.md)
+- [整页截图替换与图表裁切记录](reports/figure-crop-audit.md) · [逐图坐标与来源](data/figure-crop-audit.json)
 
 各审计清单按不同维度切分，可能交叉，不应相加作为总数。原表 Step3 的徽章指向 GLM-4.1V-Thinking；本项目按实际 Code 仓库 stepfun-ai/Step3 计数。LAVIS、UniLM 等共享仓库的 Star 是母仓库指标，不能当作子模型单独的 Star。Qwen2-VL、Qwen2.5-VL 等旧地址重定向到新版本仓库，Star 按当前目标记录，逐篇标注重定向与共仓库关系。
 
@@ -501,6 +504,8 @@ scripts/                    数据采集、目录生成与可选 PDF 图表提�
 python scripts/catalog.py --refresh-stars --snapshot-date YYYY-MM-DD
 python scripts/build_reports.py
 ```
+
+PDF 配图必须显式指定裁切坐标；`scripts/paper_sources.py assets --specs ...` 用于提取图表，`scripts/crop_paper_figures.py render/apply` 用于复核后批量替换已有图片。每张配图的固定原文版本、PDF 页码、裁切范围与图片哈希均保存在对应 `figures-manifest.json`。整页渲染只可用于本地阅读。
 
 更新上游清单时加 `--refresh-source`；新题名须补充 scope-mapping，重建脚本会阻止未分类条目进入目录。现有家族分类优先读取 family-mapping 的 `by_entry_id`，调整归类时应同步该字段；新记录再按题名与仓库规则匹配。修改后先审阅 JSON 再重建报告，运行 `python scripts/verify_catalogue.py` 检查数据与内链。目录按当前输入生成；取消整个家族时应移走对应旧目录，避免遗留页面。
 

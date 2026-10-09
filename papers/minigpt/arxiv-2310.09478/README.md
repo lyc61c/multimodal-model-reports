@@ -21,7 +21,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：视觉拼接、线性投影与 LLaMA-2，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 Figure 2 下方的 EVA ViT 带雪花，表示整个训练期间冻结。绿色 concat 把四个相邻视觉嵌入合并，随后线性层投影到语言模型维度；右侧文字指定 `[refer]`，要求定位动物的左耳；上方生成四个文字坐标，绘制后形成示例中的红框。绘框是对输出坐标的展示，模型并没有在该路径输出分割掩码。
 
@@ -76,7 +76,9 @@ Flickr30k 的带框描述筛选至少五个已定位短语的 caption，约 2.5K
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 3–4：问答与指代表达定位，PDF 第 7 页](figures/original-page-007-02.png)
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 VQA 使用开放回答、贪心解码和与真实答案匹配的 Top-1 准确率；定位采用 `[refer]` 请求，预测框与真实框 IoU **大于 0.5** 算正确。Table 3 的 zero-shot 标注仅对应 VSR、IconVQA、VizWiz、HM 四列，不包含训练中使用的 OKVQA 和 GQA。
 
@@ -89,11 +91,13 @@ VQA 使用开放回答、贪心解码和与真实答案匹配的 Top-1 准确率
 
 定位八个划分平均为 84.29，chat 为 83.70，Shikra-13B 为 83.96，专用 UNINEXT 为 88.90。MiniGPT-v2 在 RefCOCO val/test-A/test-B 为 88.69/91.65/85.33，但 RefCOCO+ val/test-A 的 79.97/85.12 仍低于 Shikra-13B 的 82.89/87.79。平均优势较小，不能称每个划分都超过 Shikra，更不能称超过专用定位模型。
 
-![原文 Figure 3 与 Table 5：任务示例及标识消融，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Figure 3](figures/original-p008-figure-3.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
 
 Figure 3 的 a、d 分别展示区域描述和指代定位；b 把对象词组与框关联；g 根据输入句子解析并定位实体。彩色短语与框用于对应关系展示，并不能证明任意长描述都没有幻觉。图内人物身份与时任职位陈述是 2023 年模型示例输出，不应当作当前事实。Table 5 有标识的平均 49.8，无标识为 48.6，各列均有所提高；它是支持显式任务条件的受控实验。
 
-![原文 Table 6：不同描述长度下的对象幻觉，PDF 第 9 页](figures/original-page-009-04.png)
+![原文 Table 6](figures/original-p009-table-6.png)
 
 CHAIR_I 衡量被描述对象层面的幻觉，CHAIR_S 衡量句子层面的幻觉，越低越好。长描述为 8.7/25.3，grounded 为 7.6/12.5，short 为 4.4/7.1；平均长度同时从 56.5 降到 18.9、10.3。较短回答提供较少内容，也有较少产生额外对象的机会，不能只看最低 CHAIR 就认为信息量相同且整体最优。
 

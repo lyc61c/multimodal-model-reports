@@ -7,18 +7,30 @@
     "Verified 3.4M train pairs and inclusion of AudioCaps/Clotho/ClothoAQA/FSD50K training; separated pure zero-shot datasets and supervised linear probes.",
     "Checked exact Table3/5/6/7/8/11/12/13 values and differing metrics; US8K underperforms CLAP; caption metrics not uniformly better.",
     "Recorded hop/window unit typo, differing AudioCaps BLEU values and appendix emotion-row inconsistency rather than invent corrections.",
-    "No model execution or independent reproduction performed."
+    "No model execution or independent reproduction performed.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 8,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "d69636bbdb3b17436f4faace35cea819889bd598e03c930cda23a163bd247fe4",
+  "article_sha256": "5f97f09c891e06db5754cc74d53225f5051e49d6a783776dbd05b8a1aed97e19",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed fresh repaired source/crop contact: Figure 2 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+      "Viewed fresh repaired source/crop contact: Table 1, Figure 3 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+      "Viewed fresh repaired source/crop contact: Table 7, Table 8 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+      "Viewed source and crops: Table 11, Table 12, Table 13 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
+    ]
+  }
 }

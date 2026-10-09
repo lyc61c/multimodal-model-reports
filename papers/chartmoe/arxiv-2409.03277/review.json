@@ -32,12 +32,28 @@
     "seven_sections": true,
     "source_title_matches": true,
     "scores_checked_against_original_tables": true,
-    "figures_from_original_pdf": true
+    "figures_from_original_pdf": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Modified ChartQA metric differs from standard leaderboard",
     "Final-stage total220.8K differs from rounded components219.8K",
     "GPUhours do not imply trainingcardcount",
     "Gate renormalization and auxiliaryloss notdisclosed"
-  ]
+  ],
+  "article_sha256": "84024f9eb473c480afc98ec55b6173de61ac7a48d3612e3cbbb8b43d582329a4",
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Repaired architecture includes alignment instructions and all three stages.",
+      "Restored complete Figure 3 pipeline alongside full Table 1.",
+      "Viewed source page and crop: Table 2 ChartQA comparisons retain all metric-group headers, model rows and final highlighted results, including full caption.",
+      "Three separate full regions: Tables 7/8 and Figure 6; repaired Figure 6 no longer includes adjacent table rows."
+    ]
+  }
 }

@@ -2,7 +2,7 @@
 
 # ALLaVA：用细粒度描述与复杂问答补偿小模型容量
 
-> 解读固定采用 [arXiv:2402.11684v1](https://arxiv.org/pdf/2402.11684v1)。配图为原文页面截图，原表数字保留。本文没有运行模型；数学表达为原理解释，不是原论文编号公式。
+> 解读固定采用 [arXiv:2402.11684v1](https://arxiv.org/pdf/2402.11684v1)。配图为原文图表裁图，原表数字保留。本文没有运行模型；数学表达为原理解释，不是原论文编号公式。
 
 ## 1. 论文信息与模型定位
 
@@ -28,9 +28,11 @@ ALLaVA 的研究重心是训练数据。它沿用 LLaVA-v1.5 的视觉编码器�
 
 ## 3. 整体架构
 
-![ALLaVA 原文数据与组件表所在页面](figures/original-page-007-02.png)
+![原文 Table 1](figures/original-p007-table-1.png)
 
-> 原文 Table 1、Table 2，v1 PDF 第 7 页；[原页](https://arxiv.org/pdf/2402.11684v1#page=7)。本资产是完整页面；中部 Table 2 给出实际模块和可训练状态。
+![原文 Table 2](figures/original-p007-table-2.png)
+
+> 原文 Table 1、Table 2，v1 PDF 第 7 页；[原页](https://arxiv.org/pdf/2402.11684v1#page=7)。本资产是图表区域裁切；中部 Table 2 给出实际模块和可训练状态。
 
 模型的信息流为“图像 → CLIP 视觉特征 → Projector → 与文本共同输入 Phi-2 → 逐 token 回答”。Projector 从头初始化，用来把 CLIP 表示映射到语言模型的输入空间；语言模型读到视觉表示之后，根据问题决定描述、识别或推理的输出。报告明确架构与 LLaVA-v1.5 相同，并未提出另一个新视觉编码器。
 
@@ -66,7 +68,7 @@ E(I) 是经过投影的视觉表示，s 是任务指令；纯文本样本不含�
 
 ## 5. 数据构建与处理
 
-![ALLaVA 原文 Figure 1：LAION 与 Vision-FLAN 两条合成路径](figures/original-page-002-01.png)
+![原文 Figure 1](figures/original-p002-figure-1.png)
 
 > Figure 1，PDF 第 2 页；[原页](https://arxiv.org/pdf/2402.11684v1#page=2)。上部 LAION 路径合成描述、问题与答案，下部 Vision-FLAN 路径保留任务问题。
 
@@ -96,7 +98,7 @@ ShareGPT4V 原有 SAM 相关 20K 描述未使用，是作者下载图像遇到�
 
 ## 7. 实验设置与主要结果
 
-![ALLaVA 原文 Table 4：语言和多模态评测](figures/original-page-009-03.png)
+![原文 Table 4](figures/original-p009-table-4.png)
 
 > Table 4，PDF 第 9 页；[原页](https://arxiv.org/pdf/2402.11684v1#page=9)。粗体是约 3B 模型中的最佳值，下划线是表内所有规模最佳，二者含义不同。
 

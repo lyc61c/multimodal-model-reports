@@ -20,7 +20,7 @@
 
 格式为 `<p>描述</p><box>左上位置token 右下位置token</box>`，不同框可用 `<delim>` 分隔；`<grounding>` 提示本次需要把文字链接到视觉区域。所谓 Markdown “超链接”是接口类比，训练序列实际采用这些专用边界符。模型访问整张图和区域坐标，原文没有单独裁剪框区域再编码的专用分支。
 
-![原论文 Figure 4：短语定位与指代表达理解](figures/original-page-007-02.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **读图：Figure 4，PDF 第 7 页。** 左侧在原描述的上下文中标出“橙色安全背心”，输出背心框；右侧输入整段人物表达，输出人的框。两个任务的目标对象和语言上下文不同，不能把同一定位分数直接用于两种任务。
 
@@ -40,7 +40,9 @@ $$
 
 ## 5. 数据构建与处理
 
-![原论文 Figure 3 与 Table 1：GRIT 构建流程和规模](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
+
+![原文 Table 1](figures/original-p004-table-1.png)
 
 **读图：Figure 3、Table 1，PDF 第 4 页。** 图用“花田中的狗”展示先找名词短语，再扩展为较长表达；狗的框随扩展表达继承。表中的精确规模为 **90,614,680 图像、137,349,210 对象框、114,978,233 文本片段**，平均表达长度 4.7。各列不是同一计数，不能都称训练图片数。
 
@@ -60,7 +62,9 @@ GRIT 从 LAION-2B、COYO-700M 子集建立。spaCy 解析 caption 提取名词�
 
 定位把 token 解码为框，**IoU>0.5** 才判对，格式错误计负例。Flickr30k Entities 短语定位使用前文上下文减少歧义，以 ANY-BOX 协议报告前 1/5/10 框召回；RefCOCO 系列用单独的整段表达，只计第一个框的准确率。零样本指未在相应目标基准做专门微调，不是模型没有学习过 grounding。
 
-![原论文 Tables 2/3：短语与指代表达定位结果](figures/original-page-008-03.png)
+![原文 Table 2](figures/original-p008-table-2.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 **读图：Tables 2、3，PDF 第 8 页。** 上表区分 val/test 和召回，下表区分 RefCOCO、RefCOCO+、RefCOCOg 的多个划分及是否专门微调。不能仅选最高的一列作所有定位任务成绩。
 
@@ -73,7 +77,9 @@ GRIT 从 LAION-2B、COYO-700M 子集建立。spaCy 解析 caption 提取名词�
 
 R@5/10 接近 R@1 表示后续候选增加有限，不应只据此声称定位已充分覆盖所有对象。框越小，量化和视觉分辨率约束的影响也越值得关注。
 
-![原论文 Figure 5 与 Table 4：区域描述生成及少样本设置](figures/original-page-009-04.png)
+![原文 Figure 5](figures/original-p009-figure-5.png)
+
+![原文 Table 4](figures/original-p009-table-4.png)
 
 **读图：Figure 5、Table 4，PDF 第 9 页。** 图中的有色框用于可视化，模型实际输入是坐标 token。RefCOCOg 用 224×224、greedy 解码，零样本 METEOR/CIDEr **12.2/60.3**，2-shot 为 13.8/62.2，4-shot 为 14.1/62.3。CIDEr 超过 SLR 59.2，但未超过 SLR+rerank 66.2，METEOR 也低于两个微调基线。
 

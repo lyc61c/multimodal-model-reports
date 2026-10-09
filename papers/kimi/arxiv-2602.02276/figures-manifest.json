@@ -4,63 +4,103 @@
   "source_pdf_sha256": "06811e2d0e7a68cfc4e6b081963f4efcc84f5c05a376ed62b05440978db264e9",
   "assets": [
     {
-      "asset_path": "figures/original-page-005-01.png",
-      "original_label": "PDF page 5",
+      "asset_path": "figures/original-p005-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 5,
       "source_url": "https://arxiv.org/pdf/2602.02276v1#page=5",
       "source_version": "2602.02276v1",
       "source_sha256": "06811e2d0e7a68cfc4e6b081963f4efcc84f5c05a376ed62b05440978db264e9",
-      "asset_sha256": "271f3a18230f90cf2c7200f70206851ca346e4b6a187af2afeaae9d521bb576e",
+      "asset_sha256": "45bf38bd4c3ec5aa65ead537ff5f5cab842bb60ad899e34d33282eaa5c28970c",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          69.0,
+          54.59,
+          543.0,
+          316.45
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Figure 3 complete agent-swarm orchestrator workflow.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-007-02.png",
-      "original_label": "PDF page 7",
+      "asset_path": "figures/original-p007-table-3.png",
+      "original_label": "Table 3",
       "pdf_page": 7,
       "source_url": "https://arxiv.org/pdf/2602.02276v1#page=7",
       "source_version": "2602.02276v1",
       "source_sha256": "06811e2d0e7a68cfc4e6b081963f4efcc84f5c05a376ed62b05440978db264e9",
-      "asset_sha256": "087a21233fb641df687971df58e67b7fc3a2f06284582b1f877ca73fa5105b30",
+      "asset_sha256": "14704bd2b5224200a20da2a788d84e830baeb0d9244150ee657fbf3bc59b341e",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          69,
+          61,
+          543,
+          204
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crop after manual repair: Table 3 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-012-03.png",
-      "original_label": "PDF page 12",
+      "asset_path": "figures/original-p012-table-4.png",
+      "original_label": "Table 4",
       "pdf_page": 12,
       "source_url": "https://arxiv.org/pdf/2602.02276v1#page=12",
       "source_version": "2602.02276v1",
       "source_sha256": "06811e2d0e7a68cfc4e6b081963f4efcc84f5c05a376ed62b05440978db264e9",
-      "asset_sha256": "32c71c77f47a86dbc3517dab130960dab587661141f63cbdc6729fbd9dfdb6a0",
+      "asset_sha256": "9692f0aafc8b7a03600f560fbb9892f130d924ca08cf396076af25613bf411d6",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          69,
+          41.64,
+          547.64,
+          706
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crop after manual repair: Table 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-015-04.png",
-      "original_label": "PDF page 15",
+      "asset_path": "figures/original-p015-figure-8.png",
+      "original_label": "Figure 8",
       "pdf_page": 15,
       "source_url": "https://arxiv.org/pdf/2602.02276v1#page=15",
       "source_version": "2602.02276v1",
       "source_sha256": "06811e2d0e7a68cfc4e6b081963f4efcc84f5c05a376ed62b05440978db264e9",
-      "asset_sha256": "6d07bdbb7119d85d798b78ad07da2995083c0e5da0e6aa3689409ed0f89c1200",
+      "asset_sha256": "4732a51ab6f68f44940056215cd9f17888231d2b80e40dd1c6974fa8f0fa2efb",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          69.0,
+          54.6,
+          543.0,
+          255.47
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Figure 8 all axes, legend, timing markers and caption.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

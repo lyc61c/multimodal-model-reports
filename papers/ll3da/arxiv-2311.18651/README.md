@@ -26,7 +26,7 @@
 
 ## 3. 整体架构
 
-![LL3DA 架构、交互模块与提示编码原图](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 > 来源：原文 Figure 2，2311.18651v1，PDF 第 3 页；完整三部分模块、图注与坐标定义均保留。
 
@@ -96,7 +96,11 @@ m(c_i^{pred},c_i^{gt})\,
 
 任务转成统一 human/assistant 文本形式。Dense caption 随机用点击或框指向对象，并分别训练“描述”“定位并描述”；QA 可以“回答”“定位相关对象并回答”，训练中也会随机添加相关对象视觉提示。场景描述无需对象提示，多轮对话保留前文来源标识。这类辅助任务增加输出多样性，但没有新增环境状态转移或机器人控制监督。
 
-![LL3DA 对话与计划拆分流程及自建划分原表](figures/original-page-015-03.png)
+![原文 Figure 8](figures/original-p015-figure-8.png)
+
+![原文 Figure 9](figures/original-p015-figure-9.png)
+
+![原文 Table 9](figures/original-p015-table-9.png)
 
 > 来源：原文 Figures 8–9、Table 9，PDF 第 15 页；两种样本展开流程与全部划分统计完整保留。
 
@@ -125,7 +129,15 @@ AdamW weight decay=0.1，总 batch=16，学习率以 cosine 从 1e-4 降到 1e-6
 
 ## 7. 实验设置与主要结果
 
-![LL3DA Dense Caption、ScanQA 结果与早融合消融](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
+
+![原文 Table 2](figures/original-p006-table-2.png)
+
+![原文 Figure 3](figures/original-p006-figure-3.png)
+
+![原文 Table 3](figures/original-p006-table-3.png)
+
+![原文 Table 4](figures/original-p006-table-4.png)
 
 > 来源：原文 Tables 1–4、Figure 3，PDF 第 6 页；保留全部数据列、模型行、阈值、脚注与图注。
 
@@ -143,7 +155,11 @@ AdamW weight decay=0.1，总 batch=16，学习率以 cosine 从 1e-4 降到 1e-6
 
 通用模型在 Table 5 的 ScanRefer C@0.5=62.98、ScanQA CIDEr=75.67，但 Nr3D C@0.5 仅 23.94，远低于任务微调版 51.18。作者认为未区分 ScanRefer/Nr3D 的任务分布造成倾向性，不能把专用微调结果描述成同一通用 checkpoint 同时达到。Table 8 测试时增加相关点击后，ScanQA CIDEr 从 76.79→82.91，METEOR 15.88→16.74、Rouge-L 37.31→39.97，但 BLEU4 13.53→11.80；信息更多有帮助，指标并非全面提升。
 
-![LL3DA 自行生成三维框的检测与描述评测](figures/original-page-017-04.png)
+![原文 Table 11](figures/original-p017-table-11.png)
+
+![原文 Table 12](figures/original-p017-table-12.png)
+
+![原文 Table 13](figures/original-p017-table-13.png)
 
 > 来源：原文 Tables 11–13、Equation (7)，PDF 第 17 页；检测词表、IoU 阈值、逐类行与两种定位模式完整保留。
 

@@ -27,9 +27,11 @@ GROUNDHOG把分割落地拆成“先提出候选mask”和“结合图文理解�
 
 ## 3. 整体架构
 
-![原文 Figures2–3：实体特征、检索与指针输入](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
-*原文Figure2与Figure3，PDF第3页，完整页截图。左侧两路mask pooling后相加；右侧mask retrieval给候选评分。下方用户指针经SAM转为mask，用同一特征提取器替换PTR位置。颜色表示冻结、训练或无参数算子。*
+![原文 Figure 3](figures/original-p003-figure-3.png)
+
+*原文Figure2与Figure3，PDF第3页，图表区域裁切。左侧两路mask pooling后相加；右侧mask retrieval给候选评分。下方用户指针经SAM转为mask，用同一特征提取器替换PTR位置。颜色表示冻结、训练或无参数算子。*
 
 默认Mask2Former+根据图像提出候选。masked feature extractor将候选二值mask缩放到视觉特征网格，对CLIP@336与DINOv2-L/14-reg分别做卷积mask pooling，经各自MLP投影到LLM输入宽度，再**相加**成为visual entity token，不是拼接两路特征后增加一倍序列长度。提取器只需要图像和mask，不使用候选网络的特征，因而可以替换proposal模型或接收用户提供候选。
 
@@ -57,7 +59,9 @@ Dice的标准解释为$1-2\sum_i p_i g_i/(\sum_i p_i+\sum_i g_i)$，实际实现
 
 ## 5. 数据构建与处理
 
-![原文 Figure8、Table11：合并不同粒度的分割注释](figures/original-page-014-04.png)
+![原文 Table 11](figures/original-p014-table-11.png)
+
+![原文 Figure 8](figures/original-p014-figure-8.png)
 
 *原文Figure8与Table11，PDF第14页（附录印刷页1）。同一图像分别有COCO、LVIS、PACO注释，合并后覆盖更细部件。表中精确图像数为197,435，正文“over200K”是另一概述口径。*
 
@@ -79,7 +83,15 @@ AdamW初始LR2e-4、cosine，平衡M3G2训练2epochs，8张A100 40GB约2天。�
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables3–7：多个落地任务的定量结果](figures/original-page-006-02.png)
+![原文 Table 3](figures/original-p006-table-3.png)
+
+![原文 Table 4](figures/original-p006-table-4.png)
+
+![原文 Table 5](figures/original-p006-table-5.png)
+
+![原文 Table 6](figures/original-p006-table-6.png)
+
+![原文 Table 7](figures/original-p006-table-7.png)
 
 *原文Tables3–7，PDF第6页。RefCOCO系列报告cIoU，另外任务主要用mIoU、box recall或QA accuracy，不应跨列直接比较数值大小。模型行的小动物图标代表GROUNDHOG-7B。*
 
@@ -97,7 +109,11 @@ AdamW初始LR2e-4、cosine，平衡M3G2训练2epochs，8张A100 40GB约2天。�
 
 Flickr30K只有框注释时，模型把预测mask转成框，按merged-box/All-IoU协议算recall。这不能证明那些输出mask边界在Flickr上都已获像素真值验证。Table8 grounded caption CIDEr91.3/SPICE20.4/F1all32.1，对照Ferret13B76.1/18.3/15.1；语言与落地有提升，但F1绝对值仍显示不少遗漏/错配。
 
-![原文 Table9、Figure7、Table10：幻觉、可诊断失败与消融](figures/original-page-008-03.png)
+![原文 Table 9](figures/original-p008-table-9.png)
+
+![原文 Figure 7](figures/original-p008-figure-7.png)
+
+![原文 Table 10](figures/original-p008-table-10.png)
 
 *原文Table9、Figure7、Table10，PDF第8页。右上“KWIK E MART”有候选却未正确选完整文字，说明识别失败可以与proposal漏检区别开；右下表展示分辨率及两路视觉特征的影响。*
 

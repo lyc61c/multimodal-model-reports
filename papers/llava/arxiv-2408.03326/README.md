@@ -30,9 +30,9 @@ OneVision 的“统一”主要体现为三个场景共用视觉编码器、连�
 
 ## 3. 整体架构
 
-![Figure 1：LLaVA-OneVision 网络](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
-*原文 Figure 1，PDF 第 3 页完整页面，保留架构图、图注与 Eq. (1)。*
+*原文 Figure 1，PDF 第 3 页图表区域裁切，保留架构图、图注与 Eq. (1)。*
 
 图左侧给出实际组件，右侧说明数据流。视觉编码器 \(g_\psi\) 将图像、裁块或视频帧转成网格特征 \(Z_v\)，两层 MLP \(p_\theta\) 将它映射到语言词嵌入空间：\(H_v=p_\theta(g_\psi(X_v))\)。这些连续视觉 token 与文字指令一起交给 Qwen2，模型自回归生成回答。报告考虑视觉编码器最后一层之前与之后的网格特征，并未在正文给出每种模型使用哪一层的完整对照，不能统一写成确定的一层。
 
@@ -46,9 +46,11 @@ OneVision 的“统一”主要体现为三个场景共用视觉编码器、连�
 
 ### 高分辨率和长序列分开控制
 
-![Figure 2、3：Higher AnyRes 与三个场景的 token 分配](figures/original-page-004-02.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文 Figure 2、Figure 3，PDF 第 4 页完整页面；保留所有场景与 Eq. (2)。*
+![原文 Figure 3](figures/original-p004-figure-3.png)
+
+*原文 Figure 2、Figure 3，PDF 第 4 页图表区域裁切；保留所有场景与 Eq. (2)。*
 
 Figure 2 上部先将高分辨率图像切成较多局部裁块，再在编码后的特征网格上做双线性插值；下部是此前的 AnyRes。关键变化是避免先为了减少裁块而过度缩小原图，同时限制送入语言模型的特征数量。插值作用于视觉特征，不能等同于随机丢弃帧或仅缩小原始像素。
 
@@ -75,9 +77,11 @@ Figure 3 给出三个上限：单图 7290，多图 \(12\times729=8748\)，视频
 
 ## 5. 数据构建与处理
 
-![Figure 4、5：单图与 OneVision 数据组成](figures/original-page-007-03.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
-*原文 Figure 4、Figure 5，PDF 第 7 页完整页面；保留两个分布图、全部数据项和图注。*
+![原文 Figure 5](figures/original-p007-figure-5.png)
+
+*原文 Figure 4、Figure 5，PDF 第 7 页图表区域裁切；保留两个分布图、全部数据项和图注。*
 
 高质量知识数据包含重新描述的 COCO118K、BLIP558K、CC3M，使用早期 LLaVA-NeXT-34B 生成详细 caption，正文合计约 3.5M；文档/OCR 数据结合 UReader 的 100K 文本阅读样本与 SynDOG 英中数据，正文约 1.1M；另有 92K 中文详细描述和 143K Evo-Instruct 语言样本。作者称这一知识池约 99.8% 为合成数据。Table 1 的知识学习阶段却列为 4M，无法由上述近似数字直接求和还原；报告没有充分解释去重与筛选后的映射，本文保留两种统计口径。
 
@@ -114,9 +118,11 @@ Figure 3 给出三个上限：单图 7290，多图 \(12\times729=8748\)，视频
 
 使用 LMMs-Eval，默认 greedy decoding 与零样本；部分对比沿用其他论文公布的成绩，缺失时才以相同工具评测。Table 3 中 GPT-4V 的 ChartQA 是四样本例外。SI 表示完成单图指令训练，OV 表示再完成混合训练；两者的差异可观察混合阶段的收益与代价。
 
-![Table 4、5：多图和视频结果](figures/original-page-012-04.png)
+![原文 Table 4](figures/original-p012-table-4.png)
 
-*原文 Table 4、Table 5，PDF 第 12 页完整页面；保留所有列、模型行、字幕条件及图注。*
+![原文 Table 5](figures/original-p012-table-5.png)
+
+*原文 Table 4、Table 5，PDF 第 12 页图表区域裁切；保留所有列、模型行、字幕条件及图注。*
 
 | 任务 | 7B SI→OV | 72B SI→OV | 含义 |
 |---|---:|---:|---|

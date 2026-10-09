@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Omni-Diffusion：以掩码离散扩散统一图像、文字与语音"
+  "title_zh": "Omni-Diffusion：以掩码离散扩散统一图像、文字与语音",
+  "chinese_characters": 3016,
+  "figure_revision_date": "2026-10-09"
 }

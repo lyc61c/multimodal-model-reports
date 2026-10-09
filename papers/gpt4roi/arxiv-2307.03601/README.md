@@ -30,9 +30,9 @@
 
 模型有视觉编码器、整图projector、区域特征提取器与LLM。CLIP骨干四个抽取层是倒数第2、5、8、11层，在各层加入feature coordinates，再以轻量scale shuffle增强跨层信息。所有四层都参与RoIAlign，输出14×14区域特征，融合成空间指令的表示。14×14是中间RoI特征网格，不应直接写成每框固定占用196个LLM token；正文说融合成single embedding，并未详列最终所有张量变换。
 
-![原文 Figure 3：区域特征替换指令占位符](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
-*原文Figure3，PDF第5页，完整页截图。彩色框对应不同区域，彩色embedding插入语言序列。caption特意说明整图特征也参与输入，只是为了简洁没有画在图中。*
+*原文Figure3，PDF第5页，图表区域裁切。彩色框对应不同区域，彩色embedding插入语言序列。caption特意说明整图特征也参与输入，只是为了简洁没有画在图中。*
 
 每个问题都加包含`<image>`的前缀，转换embedding时用整图特征替换该位置；框对应的`<region>`则由局部视觉特征替换。局部属性依靠RoI，场景和对象关系还可从整图获得背景。用户可以手动框选，外部检测器也能提供框；模型本体不以预测新框为主要输出任务。
 
@@ -62,7 +62,7 @@ $$\mathcal L=-\sum_t m_t\log p_\theta(y_t\mid y_{<t},I,\{r_b\}),\qquad m_t=\math
 
 第二阶段，VisualGenome和RefCOCOg用于单区域caption，Flickr30K Entities转为多区域caption，生成的描述要覆盖被多个框强调的视觉元素。单框和多框caption各准备20种问法，训练时随机抽一种。数量指**问题模板**，不等于有20个独立人类标注版本。
 
-![原文 Table 3：第二阶段四类空间指令](figures/original-page-007-02.png)
+![原文 Table 3](figures/original-p007-table-3.png)
 
 *原文Table3，PDF第7页。上部为单/多区域描述，下部为单/多区域推理及追问；红色部分是监督目标。这里是训练样例，不能当成模型在未见样本上的准确率证据。*
 
@@ -85,7 +85,9 @@ warmup同时写“3000 iterations”和“ratio .003”，两项如何取舍未�
 
 第5节标题是Demonstrations，展示单区域与多区域图文问答。例子包括描述拿伞男孩的动作、比较跑步人物、辨认应呼叫的服务人员，以及解释区域之间的行为关系。它们说明新接口能生成相关回答，但原文**没有CIDEr、VQA准确率、VCR test准确率、对照消融或速度统计**。不能引用后续GLaMM报告中的GPT4RoI 145.2等分数冒充本篇自行报告的结果。
 
-![原文 Figures 7–8：指令混淆与局部误认](figures/original-page-011-03.png)
+![原文 Figure 7](figures/original-p011-figure-7.png)
+
+![原文 Figure 8](figures/original-p011-figure-8.png)
 
 *原文Figure7、Figure8，PDF第11页。上面“找全部打斗者”“分别描述多区域”的回答没有按要求完整处理；下面头盔颜色和女孩手持物识别错。图中不仅有成功示例，也明确呈现失败。*
 

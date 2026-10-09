@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "LLaMA-Adapter V2：分离视觉对齐与语言指令的参数高效调优"
+  "title_zh": "LLaMA-Adapter V2：分离视觉对齐与语言指令的参数高效调优",
+  "chinese_characters": 2757,
+  "figure_revision_date": "2026-10-09"
 }

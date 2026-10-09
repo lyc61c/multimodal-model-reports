@@ -42,5 +42,10 @@
         22
       ]
     }
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

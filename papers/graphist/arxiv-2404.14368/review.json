@@ -7,18 +7,30 @@
     "核对RGBA四通道、5视觉token、三阶段可训参数步数及0.75打乱",
     "明确IOPR定义/表趋势矛盾，不将0.97修正为准确率；表2任务标签歧义保留",
     "Table3Rcom12.150并非最低，与RADM10.260对照；Graphist*内部数据版本分开",
-    "242交集与GPT4V120/Gemini240成功子集限制；未虚构人工表、超参、损失或运行模型"
+    "242交集与GPT4V120/Gemini240成功子集限制；未虚构人工表、超参、损失或运行模型",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 6,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "ff7f44a995781607d7e42fcd378dcb9226c78dc30c47980265e70fe30aab1131",
+  "article_sha256": "61c14745aa8178cc045a885e0d06f2b6d2424980e9e78afe8bb354defd6bd442",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Figure 2 architecture and caption complete.",
+      "Viewed source page and crop: full Graphist Table 2 numeric comparison and four attached preference pie charts plus caption retained.",
+      "Figure 5 all eight examples and Table 3 complete after top-boundary repair.",
+      "Correct distinct Tables 6 and 7 complete after repair."
+    ]
+  }
 }

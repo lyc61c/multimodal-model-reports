@@ -4,63 +4,153 @@
   "source_pdf_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
   "assets": [
     {
-      "asset_path": "figures/figure-01-chart-reasoning-page.png",
-      "original_label": "Figure 1：图表理解与多步推理示例",
+      "asset_path": "figures/original-p009-figure-1.png",
+      "original_label": "Figure 1",
       "pdf_page": 9,
       "source_url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=9",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
-      "asset_sha256": "5c6af0f61378d8cca94e0956ba9eb00f9a294ab37edde64ba207a12b75b09696",
+      "asset_sha256": "af913608076b5439b8cc43df31580768baf42d7c47e511699734b4d0a7ba5e54",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          88,
+          199,
+          526,
+          576
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/figure-02-03-refusal-page.png",
-      "original_label": "Figure 2、3：有害/无害请求及过度拒绝评测",
+      "asset_path": "figures/original-p011-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 11,
       "source_url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=11",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
-      "asset_sha256": "2f884f70938235b9fd5ab7ce2c2ff55c0de1dfd6c51d0e9666c5a7cea2116631",
+      "asset_sha256": "eeb5d6c0dbb6cf8433f4b50349801af51eb3cea9d8ddb3b8f19d5de4a8760976",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          108,
+          22,
+          504,
+          432
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/table-03-vision-page.png",
-      "original_label": "Table 3：多模态评测",
+      "asset_path": "figures/original-p011-figure-3.png",
+      "original_label": "Figure 3",
+      "pdf_page": 11,
+      "source_url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=11",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
+      "asset_sha256": "03b432a7326ee9672f25c2c2a235337a6c16d23622a648e51301c17fc983b6d8",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          88,
+          485,
+          526,
+          702
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-table-3.png",
+      "original_label": "Table 3",
       "pdf_page": 8,
       "source_url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=8",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
-      "asset_sha256": "c9d03c468d10cc2eee043cc0e6f847553d0debde71489c290c9f86ba233081fd",
+      "asset_sha256": "4ce5bb324d4eec3aa541f904b236a8f10737fa65256b0380bf400ac848f3e1a4",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          66,
+          69,
+          545,
+          344
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/figure-14-table-06-long-context-page.png",
-      "original_label": "Figure 14、Table 6：长上下文损失与QuALITY",
+      "asset_path": "figures/original-p021-figure-14.png",
+      "original_label": "Figure 14",
       "pdf_page": 21,
       "source_url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=21",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
-      "asset_sha256": "2421e2d777f4383d50a8b14e344f8987ddcccfef9629b2a6b7539ab5d04ac215",
+      "asset_sha256": "575de17d28d0ca5744562024a9b13e886ac3008cdeda2db9388786921a2178ee",
       "processing": {
-        "method": "full_pdf_page_render",
+        "method": "pdf_region_render",
         "dpi": 180,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "crop_bbox": [
+          88,
+          69,
+          526,
+          319
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p021-table-6.png",
+      "original_label": "Table 6",
+      "pdf_page": 21,
+      "source_url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=21",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
+      "asset_sha256": "46e55bad654003fe88f8856e58c1f6413c2850ee3f8f1908ba571a7ed1937637",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          109,
+          368,
+          501,
+          451
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

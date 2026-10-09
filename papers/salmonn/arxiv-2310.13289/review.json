@@ -7,18 +7,30 @@
     "Table3 shows AACSPIDEr47.6to40.3/GigaWER9.1to10.0; FR distinctaccuracy and Storydistinctwordscount.",
     "Figure3 errors increase asLoRAscalingdiscounted; body dropsPER typo not propagated.",
     "Activation12stories12steps distinctfulltraining;50Hzfeatureframe notwaveformsamplerate;30s88tokens asreported.",
-    "No model execution or independent reproduction."
+    "No model execution or independent reproduction.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 7,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "2c7a306ff870311e3e058a54290a1c2085212cf9aa91f6b356ff4acfd8a86ffa",
+  "article_sha256": "8b4e7bef1ff23e12231ef729cc4afb171670971abdb9094df9531354b838c17a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

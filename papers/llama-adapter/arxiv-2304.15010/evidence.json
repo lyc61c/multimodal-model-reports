@@ -24,5 +24,10 @@
     "Table3V2labelversusproseAdapterV1",
     "Figure9 narrativeclaimsaccurate but mirror/glassesattributesmixed"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

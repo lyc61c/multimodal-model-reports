@@ -26,9 +26,11 @@
 
 ## 3. 整体架构
 
-![LLaMA-Adapter V2 视觉早融合与专家接入原图](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
-> 来源：原文 Figures 3–4，2304.15010v1，PDF 第 6 页；整页保留所有箭头、模块、可选路径及图注。
+![原文 Figure 3](figures/original-p006-figure-3.png)
+
+> 来源：原文 Figures 3–4，2304.15010v1，PDF 第 6 页；裁图保留所有箭头、模块及可选路径。
 
 **读图**：左侧底部在早期层引入由图像编码器和 projection 得到的视觉 prompts，上部后层引入静态 adaptation prompts。视觉提示不再逐层加到语言适配提示上。右侧图像仍走视觉编码器，另可由 caption expert 变成文字上下文，与问题一起输入已训练的 V2；专家文本是可选输入，不是模型新增的训练标签。
 
@@ -82,7 +84,7 @@ y=s\cdot(Wx+b),\qquad b\leftarrow0,\quad s\leftarrow1.
 
 ## 6. 训练流程与目标
 
-![LLaMA-Adapter V2 分组更新的联合训练原图](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 > 来源：原文 Figure 2 与 Equations (1)–(2)，PDF 第 5 页；完整 caption/指令分支、可选 LoRA 标记和推理部分可见。
 
@@ -106,7 +108,9 @@ y=s\cdot(Wx+b),\qquad b\leftarrow0,\quad s\leftarrow1.
 
 ## 7. 实验设置与主要结果
 
-![LLaMA-Adapter V2 GPT-4 裁判结果与 COCO Caption 表](figures/original-page-008-03.png)
+![原文 Figure 5](figures/original-p008-figure-5.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 > 来源：原文 Figure 5、Table 3，PDF 第 8 页；柱图百分比、分子分母、饼图图例、表头与模型规模说明完整保留。
 
@@ -123,7 +127,9 @@ y=s\cdot(Wx+b),\qquad b\leftarrow0,\quad s\leftarrow1.
 
 开放视觉指令主要是 Figure 6–9 案例，不是规模化问答榜单。Figure 6 特意展示卡通分布外失败，生成了并不存在的真人、钓鱼与狗等信息；较长文本并不等于更准确。Figure 7 的景点猜测和交通描述也只是特定演示，不能作为通用定位或自动驾驶能力验证。
 
-![LLaMA-Adapter V2 加 caption/OCR 专家的原文案例](figures/original-page-010-04.png)
+![原文 Figure 8](figures/original-p010-figure-8.png)
+
+![原文 Figure 9](figures/original-p010-figure-9.png)
 
 > 来源：原文 Figures 8–9，PDF 第 10 页；图像、完整上下文与有/无专家的回答均保留。
 

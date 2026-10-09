@@ -6,18 +6,30 @@
     "核验MAM模态专属Norm/K/V而共享Q和FFN、Abstractor Eq1/2六层64queries与patch256/1024。",
     "核对400M池与348M消耗、SFT1.23M及ShareGPT正文80K/表40K，图文合并/选项打乱。",
     "核对两阶段冻结、AdamW、step/batch/lr/bf16/并行；正文layerwise0.9与表15为0差异保留。",
-    "结果按split和OCR条件区分，video exact/GPT双口径，MSRVTT低于VideoChatGPT、MME/SEED与GQA弱项、queries128非全优、Figure5彩虹漏red含white不直接采信；未运行模型。"
+    "结果按split和OCR条件区分，video exact/GPT双口径，MSRVTT低于VideoChatGPT、MME/SEED与GQA弱项、queries128非全优、Figure5彩虹漏red含white不直接采信；未运行模型。",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 9,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "55436001ab20265105c9b13d4f823107a38011f0d2aeafb9264c80994d67742f",
+  "article_sha256": "3a51b1d16600fbf37819d0b894f48340d5c1c6da41cb928c482324d74e43d671",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
+    ]
+  }
 }

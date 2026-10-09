@@ -2,7 +2,7 @@
 
 # AnyMAL：让图像、音频、视频与运动传感器共享语言模型入口
 
-> 依据 [arXiv:2309.16058v1](https://arxiv.org/pdf/2309.16058v1)。配图使用原文页面截图；区分论文原公式与补充解读，实验数值为作者报告，本文未运行模型。
+> 依据 [arXiv:2309.16058v1](https://arxiv.org/pdf/2309.16058v1)。配图使用原文图表裁图；区分论文原公式与补充解读，实验数值为作者报告，本文未运行模型。
 
 ## 1. 论文信息与模型定位
 
@@ -28,9 +28,9 @@ AnyMAL 的“任意模态”指设计可通过编码器与投影模块扩展输�
 
 ## 3. 整体架构
 
-![AnyMAL 原文 Figure 2：模态对齐与指令微调](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
-> Figure 2，v1 PDF 第 3 页；[原页](https://arxiv.org/pdf/2309.16058v1#page=3)。整页截图同时保留原文 Eq. (1)、(2)。
+> Figure 2，v1 PDF 第 3 页；[原页](https://arxiv.org/pdf/2309.16058v1#page=3)。配图仅保留 Figure 2；原文 Eq. (1)、(2) 见同页文字。
 
 左图从底部 Modality Encoder 开始，将输入编码为特征，再经 Projection Layers 成为语言模型输入；目标是输出文字描述。右图加入指令与用户请求，并在语言主干中加入 LoRA。图例蓝色框表示无梯度参数，粉色表示可更新模块；黑色箭头是前向，红色是反向。冻结的 LLaMA-2 仍需计算及向输入传梯度，并不意味着省去了语言模型前向。
 
@@ -99,7 +99,9 @@ MM-IT 同时充当训练来源与评测来源，因此要保留训练/测试划�
 
 ## 7. 实验设置与主要结果
 
-![AnyMAL 原文 Table 3 与 Table 4：人工评测和图像问答](figures/original-page-007-02.png)
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 > Table 3、4，PDF 第 7 页；[原页](https://arxiv.org/pdf/2309.16058v1#page=7)。下表脚注 `†` 表示用过域内图像，`*` 表示额外 OCR 输入，比较必须保留。
 
@@ -114,7 +116,9 @@ MM-IT 同时充当训练来源与评测来源，因此要保留训练/测试划�
 
 图像描述 Table 2 中 13B 的 COCO CIDEr 为 99.5，高于 70B 的 95.9；作者认为后者更啰嗦，与 COCO 的短描述评测不匹配。较大语言骨干在推理上可能受益，描述相似度却未必单调提高。TextVQA 的 ViT-L 为 35.4，高于 ViT-G 的 32.9；作者联系到 336×336 与 224×224 分辨率差异，不能把所有变化归于参数量。
 
-![AnyMAL 原文 Table 5、6：音频描述与视频问答](figures/original-page-008-03.png)
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
 
 > Table 5、6，PDF 第 8 页；[原页](https://arxiv.org/pdf/2309.16058v1#page=8)。Table 6 括号内是视频帧数。
 

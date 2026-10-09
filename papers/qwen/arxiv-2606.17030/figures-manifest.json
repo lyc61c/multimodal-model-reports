@@ -20,7 +20,11 @@
           532,
           422
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -40,7 +44,11 @@
           532,
           278
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -60,7 +68,11 @@
           532,
           742
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -80,7 +92,11 @@
           532,
           449
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -100,7 +116,11 @@
           532,
           306
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -120,7 +140,11 @@
           532,
           222
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -140,7 +164,11 @@
           532,
           502
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
@@ -160,7 +188,11 @@
           532,
           367
         ],
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "note": "Original figure/table region rendered from the fixed PDF; explicit crop coordinates recorded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

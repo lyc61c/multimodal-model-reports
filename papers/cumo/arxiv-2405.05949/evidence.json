@@ -1,1 +1,48 @@
-{"catalogue_entry_id":"3aceb543bb4d","source_version":"2405.05949v1","read_scope":"14页全文、附录A–D","facts":[{"claim":"视觉侧协同upcycling、LLM直接使用Mistral/Mixtral","location":"§3.2–3.3、Figures2–4"},{"claim":"Top2-in4、复制初始化、辅助损失","location":"式2–5、Tables3–5"},{"claim":"总参数8.26B/47.71B与激活7.8B/13.45B","location":"Table10"},{"claim":"数据规模与优化配置有正文/附录差异","location":"§4.1、Tables8–9"},{"claim":"最终与消融、专家分布和幻觉","location":"Tables1–7、Figures5–7"}],"math":[{"type":"original_restatement","content":"路由与专家和、总损失，明确原式3双softmax表达与普通归一化不同"},{"type":"interpretation","content":"复制相同专家且权重和1时保持原输出；不是证明已形成语义分工"}],"boundaries":["Table8合计1.85M与正文1.65M不符","正文最终LR2e-6与附录4e-6不同","激活参数不等于内存/完整延迟","多尺度保持token数但增加视觉计算"]}
+{
+  "catalogue_entry_id": "3aceb543bb4d",
+  "source_version": "2405.05949v1",
+  "read_scope": "14页全文、附录A–D",
+  "facts": [
+    {
+      "claim": "视觉侧协同upcycling、LLM直接使用Mistral/Mixtral",
+      "location": "§3.2–3.3、Figures2–4"
+    },
+    {
+      "claim": "Top2-in4、复制初始化、辅助损失",
+      "location": "式2–5、Tables3–5"
+    },
+    {
+      "claim": "总参数8.26B/47.71B与激活7.8B/13.45B",
+      "location": "Table10"
+    },
+    {
+      "claim": "数据规模与优化配置有正文/附录差异",
+      "location": "§4.1、Tables8–9"
+    },
+    {
+      "claim": "最终与消融、专家分布和幻觉",
+      "location": "Tables1–7、Figures5–7"
+    }
+  ],
+  "math": [
+    {
+      "type": "original_restatement",
+      "content": "路由与专家和、总损失，明确原式3双softmax表达与普通归一化不同"
+    },
+    {
+      "type": "interpretation",
+      "content": "复制相同专家且权重和1时保持原输出；不是证明已形成语义分工"
+    }
+  ],
+  "boundaries": [
+    "Table8合计1.85M与正文1.65M不符",
+    "正文最终LR2e-6与附录4e-6不同",
+    "激活参数不等于内存/完整延迟",
+    "多尺度保持token数但增加视觉计算"
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
+}

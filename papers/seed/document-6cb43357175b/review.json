@@ -84,5 +84,23 @@
     "科学代码示例完整执行被构建环境阻碍，不夸大成已跑通测试",
     "token效率不自动推出FLOPs延迟或价格优势"
   ],
-  "checked_at": "2026-10-08"
+  "checked_at": "2026-10-08",
+  "article_sha256": "7d6195fd90743c7290e0bcc7ded7b1314725730d25433c8c6cdcaeed1cf5dfaf",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed fresh repaired source/crop contact: Table 2 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+      "Viewed fresh repaired source/crop contact: Table 6, Figure 1, Figure 2 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+      "Viewed source and crops: Figure 6 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crops: Figure 9, Figure 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
+    ]
+  }
 }

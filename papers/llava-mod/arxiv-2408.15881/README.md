@@ -30,9 +30,9 @@
 
 ## 3. 整体架构
 
-![Figure 3：稠密学生转为稀疏学生](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
-*原文 Figure 3，PDF 第 5 页完整页面，保留图注、路由公式与初始化说明。*
+*原文 Figure 3，PDF 第 5 页图表区域裁切，配图展示路由结构；路由公式与初始化见本节说明。*
 
 图文输入先经过 CLIP 与两层 MLP，再与文本 token 共同进入小型 Qwen。336/14=24，因此视觉网格为 24×24=576。学生不是减少视觉 token 的高分辨率压缩模型；主要节省来自小语言主干与稀疏激活。报告没有加入视频或音频分支。
 
@@ -58,9 +58,9 @@ z=\sum_{i=1}^{N}\tilde r_i E_i(h).
 
 ### 从概率模仿到偏好约束
 
-![Figure 2：两种蒸馏方式](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文 Figure 2，PDF 第 4 页完整页面；保留两支数据流与完整图注。*
+*原文 Figure 2，PDF 第 4 页图表区域裁切；保留两支数据流与完整图注。*
 
 左侧模仿蒸馏利用教师软分布，而不只是复制最终答案。相同上下文下，标准的正向 KL 定义为：
 
@@ -85,9 +85,11 @@ D_{\mathrm{KL}}(p_T\Vert p_S)
 
 ## 5. 数据构建与处理
 
-![Table 10、11：阶段数据与超参数](figures/original-page-020-04.png)
+![原文 Table 10](figures/original-p020-table-10.png)
 
-*原文 Table 10、Table 11，PDF 第 20 页完整页面；所有来源行、超参数行与表头完整。*
+![原文 Table 11](figures/original-p020-table-11.png)
+
+*原文 Table 10、Table 11，PDF 第 20 页图表区域裁切；所有来源行、超参数行与表头完整。*
 
 各阶段使用不同的数据组合。初始化为 LLaVA-1.5-Pretrain 约 0.6M caption；稠密模仿约 2.4M，包含 ALLaVA-Caption-4V、ShareGPT4V-PT 的描述，以及 MIMIC-IT、LVIS、LRV、SViT 的对话。稀疏模仿约 1.4M，增加 GQA、VQAv2、OKVQA、Visual Genome、RefCOCO、AI2D、ScienceQA、图表与文档问答、OCR 和知识题。
 
@@ -120,9 +122,9 @@ D_{\mathrm{KL}}(p_T\Vert p_S)
 
 Qwen2 档改善了多数学生结果，但仍低于其教师在 Table 1 的 AVG 64.5；“超过教师”不能用于全部理解任务。它也低于 MiniCPM-V-2 的 AVG 66.9。作者将相对 Qwen-VL-Chat 的改善汇总为 8.8%，这属于其报告口径，不是每一任务提升 8.8 个百分点；Table 2 的 Qwen-VL-Chat AVG 56.7 与同一行所列七项的简单平均并不吻合，因此不以该汇总数字替代逐项判断。
 
-![Table 3：幻觉评测](figures/original-page-009-03.png)
+![原文 Table 3](figures/original-p009-table-3.png)
 
-*原文 Table 3，PDF 第 9 页完整页面；保留全部教师、对照模型及指标方向。*
+*原文 Table 3，PDF 第 9 页图表区域裁切；保留全部教师、对照模型及指标方向。*
 
 Qwen2 学生的 Object HalBench 回答级/提及级幻觉率为 11.2/5.9，明显低于教师 29.7/23.4；POPE F1 为 87.2，高于教师 85.7；MMHal 幻觉率 13.8，低于教师 14.5。这些结果支持针对幻觉的偏好训练可以使学生在该类测量中超过教师，但它的 Object HalBench 幻觉率仍高于 RLAIF-V 的 8.5/4.3，MMHal 得分 2.91 也低于 MiniCPM-V-2 的 4.09。
 

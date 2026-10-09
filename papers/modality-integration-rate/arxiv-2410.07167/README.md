@@ -32,9 +32,9 @@ MIR 测量全局分布而非具体图文配对语义。输入文本与图像不�
 
 ## 4. 核心创新与数学原理
 
-![Equation 2—4：MIR定义原页，PDF第4页](figures/original-page-004-01.png)
 
-**原文 Equation 2—4，PDF 第 4 页。** 此页完整保留缩放、FID 聚合、均值协方差定义，读公式时注意距离越小越好，且两种 token 必须乘同一尺度。
+
+**[原文 Equation 2—4，PDF 第 4 页](https://arxiv.org/pdf/2410.07167v1#page=4)** 定义文本中心缩放、FID 聚合及均值协方差。理解这些公式时应注意距离越小越好，且两种 token 必须乘同一尺度。
 
 文本中心缩放因子为：
 
@@ -84,7 +84,7 @@ MoCa 随模型预训练和 SFT 一起学习，遵循 LLaVA、Mini-Gemini 的原�
 
 ## 7. 实验设置与主要结果
 
-![Figure 6：数据规模与MIR，PDF第7页](figures/original-page-007-02.png)
+![原文 Figure 6](figures/original-p007-figure-6.png)
 
 **Figure 6，PDF 第 7 页。** 上排仅训练 projector，MIR 与 SFT 表现到约 800K—1M 后趋于饱和；下排训练更多模块，MIR 继续下降，七基准平均由 59.6 增至 61.2。上下排同时改变可训练模块，不能把差异完全归为数据量。上排平均 100K 为 56.5，800K 为 60.0，1.8M 为 59.8，呈小幅波动，并非严格单调。
 
@@ -92,11 +92,15 @@ MoCa 随模型预训练和 SFT 一起学习，遵循 LLaVA、Mini-Gemini 的原�
 
 Table 1 的 caption 平均长度 15.2→181.2，使 MIR **3.588→3.218**，报告平均 **63.8→64.4**，TextVQA 57.7→59.7；中文 MMBench 却由 59.5→57.6。更低全局距离不保证每个专项都提升。
 
-![Table 2、3：训练配方与解冻策略，PDF第9页](figures/original-page-009-03.png)
+![原文 Table 2](figures/original-p009-table-2.png)
+
+![原文 Table 3](figures/original-p009-table-3.png)
 
 **Table 2、3，PDF 第 9 页。** Table 2 为七项平均，学习率 3e-3 的 MIR / 平均为 3.575 / 58.7，1e-3 为 3.182 / 59.5，3e-4 为 2.808 / 60.0。Table 3 包含更多任务列，其不解冻 LLM / 前半层 / 全部层的 MIR 为 3.001 / 2.705 / 2.656，平均为 64.0 / 65.9 / 65.9。前半层和全部层具有不同 MIR、相同平均，说明它不是精确到小数点的任务分预测器；不同表的 Average 也不能跨任务集合直接比较。
 
-![Table 4、5：连接器与MoCa，PDF第10页](figures/original-page-010-04.png)
+![原文 Table 4](figures/original-p010-table-4.png)
+
+![原文 Table 5](figures/original-p010-table-5.png)
 
 **Table 4、5，PDF 第 10 页。** 两层 MLP 的 MIR 3.182、平均 63.9；Q-Former 为 3.673 / 53.7，需保留其没有额外预对齐的条件。MoCa 的关键结果如下：
 

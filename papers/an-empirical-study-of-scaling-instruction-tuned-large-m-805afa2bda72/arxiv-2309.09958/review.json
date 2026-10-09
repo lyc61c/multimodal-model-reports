@@ -22,12 +22,28 @@
     "source_title_verified": true,
     "numeric_results_checked": true,
     "formula_origin_distinguished": true,
-    "cost_unit_checked": true
+    "cost_unit_checked": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "六页主要内容的短报告，无原始架构图，使用真实原文页",
     "模型语言调优语料不同，不能当严格仅参数规模控制实验",
     "MMLU正文增加2.4与表值增加2.0有冲突，按表保留",
     "第一阶段epoch和完整优化器等未披露"
-  ]
+  ],
+  "article_sha256": "357550e018c4ee58110034dc9d92a7a099b2a809d3c1836679d29dfa330f2eaa",
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

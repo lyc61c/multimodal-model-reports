@@ -23,7 +23,7 @@ InternVL 1.5 没有设计一个完全不同的生成架构，而是在 ViT—投
 
 ## 3. 整体架构
 
-![Figure 3：InternViT、像素重排、MLP 和聊天语言模型](figures/original-page-003-01.png)
+![原文 Figure 3](figures/original-p003-figure-3.png)
 
 *原文 Figure 3，PDF 第 3 页，完整原页。像素重排位于 ViT 之后、投影器之前；图中的模块训练符号需要结合两阶段训练解释。*
 
@@ -44,7 +44,7 @@ InternVL 1.5 没有设计一个完全不同的生成架构，而是在 ViT—投
 
 这是本介绍的流程形式化，原文没有编号公式。集合有 35 个整数网格组合；不同组合可能宽高比相同，例如 1×1 和 2×2，所以不能说存在 35 个互不相同的比例。比例并列时，原文依据面积选择以避免放大到输入面积的两倍以上，未在报告中给出完整程序级边界规则。图像缩放至 (448u^*\times448v^*) 后再切块。
 
-![Figure 4：800×1300 图像匹配到 2×3 网格，并保留全局缩略图](figures/original-page-004-02.png)
+![原文 Figure 4](figures/original-p004-figure-4.png)
 
 *原文 Figure 4，PDF 第 4 页，完整原页。示例变为 896×1344 后切成六个子图；缩略图展示完整布局，局部图提供更清楚的文字和细节。*
 
@@ -94,7 +94,7 @@ Table 1a 将预训练数据分为图像描述 53.9%、检测/定位 5.2%、大�
 
 报告使用 18 个基准，Table 2 为 16 个多模态基准，Table 3 另列 ConvBench 与 MMT-Bench；主要采用 VLMEvalKit。DocVQA、ChartQA、InfoVQA 用 test，TextVQA 用 val，MMMU 用 val，MMBench 中英文用 test，CCBench 用 dev，MathVista 用 testmini，SEED 仅图像子集。MME 为感知与认知分数之和，OCRBench 为累计分数。
 
-![Table 2：完整基准、模型规模和评测口径](figures/original-page-006-03.png)
+![原文 Table 2](figures/original-p006-table-2.png)
 
 *原文 Table 2，PDF 第 6 页，完整原页，保留表头、全部模型行与脚注。TextVQA 星号表示测试中额外使用 Rosetta OCR token；InternVL 1.5 的该项没有星号。*
 
@@ -113,7 +113,7 @@ Table 1a 将预训练数据分为图像描述 53.9%、检测/定位 5.2%、大�
 
 新版本减少语言骨干规模后，跨学科 MMMU 和 MMT-Bench 都下降：MMT 总体由 63.4 变为 59.0，排除视觉识别子任务后的指标由 58.2 变为 56.2。多轮 ConvBench 的 pairwise R1 为 17.65，而 GPT-4V 为 39.51；direct R1 为 5.60，而 GPT-4V 为 7.09。前者是与人类回答比较的胜率，后者是直接评分，二者不能当成同一种准确率。
 
-![Figure 6：各任务成绩随 tile 上限变化的曲线](figures/original-page-008-04.png)
+![原文 Figure 6](figures/original-p008-figure-6.png)
 
 *原文 Figure 6，PDF 第 8 页，完整原页。所有子图和坐标完整保留；MME、OCRBench 被归一化到满分 100，MMMU 因多图样本显存限制最多测到 18 tile，且不参与平均。*
 

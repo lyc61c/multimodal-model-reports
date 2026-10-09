@@ -21,7 +21,7 @@ Pengi 把声音描述、音频问答、声音事件分类、情绪和音乐属�
 
 ## 3. 整体架构
 
-![原论文 Figure 2：音频与提示到连续前缀，再到冻结语言模型](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：Figure 2，PDF 第 3 页。** 火焰表示更新音频编码器及两个映射网络，雪花表示冻结文本编码器和语言模型。左右两路分别回答“声音是什么”和“本次要求做什么”，最终在 GPT-2 输入空间结合。图下的海滩照片不是第三种输入模态。
 
@@ -48,7 +48,9 @@ $$
 
 这是对原文余弦匹配流程的表达，比较的是**两段文字**。检索同样先为音频库生成描述，再匹配查询文字与描述，不能将其成绩解释为直接音频文本对比检索。
 
-![原论文 Table 1 和 Figure 3：任务模板与闭集文本匹配](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
+
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读图：Table 1、Figure 3，PDF 第 5 页。** 表列出声音描述、问答、事件、场景、情绪、情感、音乐和音乐音符等主要模板，另列辅助 metadata 模板。下图展示“海浪”描述与候选类别的文本相似度。生成“动物”而标签要求“狗吠”，会形成语义层级不一致；自然语言合理与闭集得分正确并不等价。
 
@@ -70,7 +72,9 @@ Pengi 随后使用统一的答案交叉熵训练 60 个 epoch，batch 384，仍�
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 7/8：音频描述和声音事件评测](figures/original-page-008-03.png)
+![原文 Table 7](figures/original-p008-table-7.png)
+
+![原文 Table 8](figures/original-p008-table-8.png)
 
 **读图：Table 7、Table 8，PDF 第 8 页。** 描述比较的模型均使用相应训练集。下表的 FSD50K 虽放在“zero-shot”比较表内，正文明确它参与过训练；其 mAP 不能冒充纯零样本。ESC50、US8K 使用准确率，DCASE17 使用 F1，不应把异种指标直接平均为准确率。
 
@@ -86,7 +90,11 @@ Pengi 随后使用统一的答案交叉熵训练 60 个 epoch，batch 384，仍�
 
 Table 6 的 Clotho 文本到音频检索 R@1/5/10 为 9.4/26.1/36.7，比同样先生成描述的 Kim 等基线 7.6/19.6/28.8 高；作者明确这种方案仍落后于强对比学习检索。它的优势是共享文本生成接口，代价是描述遗漏的信息无法在后续检索中恢复。
 
-![原论文 Table 11–13：提示选择和音频主干冻结消融](figures/original-page-017-04.png)
+![原文 Table 11](figures/original-p017-table-11.png)
+
+![原文 Table 12](figures/original-p017-table-12.png)
+
+![原文 Table 13](figures/original-p017-table-13.png)
 
 **读图：Table 11–13，PDF 第 17 页。** 提示的最佳选择依任务改变：ESC50 的 metadata 提示 0.9195，高于 caption 0.8870、事件提示 0.6910；US8K 则 caption 0.7185，高于 metadata 0.6585。主表成绩因此应连同具体提示理解。Table 13 显示更新音频主干后，ESC50 从 0.8950 到 0.9195、FSD50K 从 0.4117 到 0.4676、AudioCaps SPIDEr 从 0.4535 到 0.4667，支持在此设置下训练音频表示的必要性。
 

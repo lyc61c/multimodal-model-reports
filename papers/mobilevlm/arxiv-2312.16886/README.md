@@ -28,9 +28,11 @@
 
 ## 3. 整体架构
 
-![Figure 1 架构和 LDP；Figure 2 冻结与训练范围](figures/original-page-005-01.png)
+![原文 Figure 1](figures/original-p005-figure-1.png)
 
-*原文 Figure 1、Figure 2，PDF 第 5 页完整页面，保留层结构、残差连接、冻结/训练图例与原公式。*
+![原文 Figure 2](figures/original-p005-figure-2.png)
+
+*原文 Figure 1、Figure 2，PDF 第 5 页图表区域裁切，保留层结构、残差连接、冻结/训练图例与模块标记。*
 
 右侧主流程为图像→视觉编码器→LDP→MobileLLaMA。文字问题经 tokenizer 与词嵌入进入同一个语言骨干；两种输入在嵌入空间汇合，输出仍是语言 token。这里没有生成图像的解码器。
 
@@ -100,9 +102,9 @@ H_v=\mathrm{LN}(\mathrm{PW}_4(\mathrm{LN}(\mathrm{DW}_{s=2}(f_1)))).
 
 ## 7. 实验设置与主要结果
 
-![Table 4 六类多模态评测](figures/original-page-007-02.png)
+![原文 Table 4](figures/original-p007-table-4.png)
 
-*原文 Table 4，PDF 第 7 页完整页面，保留模型、分辨率、PT/IT、所有结果列与脚注。*
+*原文 Table 4，PDF 第 7 页图表区域裁切，保留模型、分辨率、PT/IT、所有结果列与脚注。*
 
 | 模型 | GQA | ScienceQA-IMG | TextVQA | POPE | MME | MMBench-dev |
 |---|---:|---:|---:|---:|---:|---:|
@@ -112,17 +114,21 @@ H_v=\mathrm{LN}(\mathrm{PW}_4(\mathrm{LN}(\mathrm{DW}_{s=2}(f_1)))).
 
 MME 是综合分数，不能与其余百分制列直接做算术平均。3B 相比部分早期 7B/13B 模型有优势，但仍在表中所有六项低于 LLaVA-1.5 7B。文本骨干 MMLU 为 24.97%/27.30%；常识任务的竞争力不能替代广泛科学与知识推理。LoRA 也不是各项都提高：1.7B 的 POPE 84.5→86.0，但 MMBench 53.2→50.4；3B 的 MMBench 59.6→57.0。
 
-![Table 6 移动和 Orin 延迟](figures/original-page-009-03.png)
+![原文 Table 6](figures/original-p009-table-6.png)
 
-*原文 Table 6，PDF 第 9 页完整页面，保留精度、大小、各速度列、总时长与输出长度脚注。*
+*原文 Table 6，PDF 第 9 页图表区域裁切，保留精度、大小、各速度列、总时长与输出长度脚注。*
 
 该实验使用 llama.cpp，LLM 4-bit，视觉编码器与投影器保持原精度，336 图像加固定图片描述问题。1.7B 在骁龙 888 上解码 21.54 token/s，总时长 18.51s；Orin 上 65.27 token/s、5.14s。3B 分别为 12.21/38.34 token/s，总时长 33.10/8.31s。“Sample” 是采样吞吐，“Eval prompt” 是前缀处理速度，“Eval” 才是生成解码速度，不能把上万 token/s 的 Sample 列当成模型输出速度。
 
 正文声称所有 VLM 输出固定 256 token，但表脚注明确 Vicuna 7B 只生成 51 token，其余 256。因此 Total 时间比较含输出长度、加载等差异，不能据此得到等长输出的统一倍速。TinyLLaMA 基线在 Orin 解码 76.63 token/s，快于 MobileVLM 1.7B；但前缀更多使总时长 5.90s，高于 5.14s。报告的价值在于展示端到端前缀成本，而非证明 MobileVLM 每个速度指标都是最快。
 
-![Tables 9–11 投影器、文本 SFT 与输入降分辨率消融](figures/original-page-011-04.png)
+![原文 Table 9](figures/original-p011-table-9.png)
 
-*原文 Table 9、10、11，PDF 第 11 页完整页面，保留所有配置行与表头。*
+![原文 Table 10](figures/original-p011-table-10.png)
+
+![原文 Table 11](figures/original-p011-table-11.png)
+
+*原文 Table 9、10、11，PDF 第 11 页图表区域裁切，保留所有配置行与表头。*
 
 投影消融显示，直接 DW 下采样的 144-token 配置 TextVQA 为 40.2；加入前端两层 PW 后为 41.5，但仍低于 576-token MLP 的 43.7。LDP 同时使 ScienceQA 53.6→54.7、MME 1137.7→1196.2，说明压缩存在任务相关得失。继续增加卷积模块并未稳定提高结果。
 

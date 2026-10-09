@@ -1,1 +1,28 @@
-{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"v1标题作者机构日期与34页核对","facts":"方法及Tables1–12核对，保持COCO排序、文档人工评价、语言退化边界","math":"扩散潜空间、冻结参数梯度通路、标准LM与原公式区分；CFG明确约定；未称所有图像统一离散CE","images":"view_image逐张检查PDF4/7/8/26，图文创作、架构和表头完整","claims":"协同改善量明确，CLIP对齐失败限于该配置，7B口径是语言骨干"},"model_execution":"not_run"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "checks": {
+    "identity": "v1标题作者机构日期与34页核对",
+    "facts": "方法及Tables1–12核对，保持COCO排序、文档人工评价、语言退化边界",
+    "math": "扩散潜空间、冻结参数梯度通路、标准LM与原公式区分；CFG明确约定；未称所有图像统一离散CE",
+    "images": "view_image逐张检查PDF4/7/8/26，图文创作、架构和表头完整",
+    "claims": "协同改善量明确，CLIP对齐失败限于该配置，7B口径是语言骨干",
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  },
+  "model_execution": "not_run",
+  "article_sha256": "37cc993bcd1503ed02afa740f9ee05066e358e912f0223f51fe3cfe70bad26d5",
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: full DreamLLM interleaved-input causal model, dream queries, image decoding loop and Figure 2 caption retained.",
+      "Viewed source page and crop: entire labelled Figure 3 interleaved generation demonstration with its embedded example images, legend and caption retained; surrounding paper prose excluded.",
+      "Three isolated complete Figure 4/5 and Table 3 crops; adjacent left-column analysis removed.",
+      "Full Table 11 training recipe restored through GPU/time rows."
+    ]
+  }
+}

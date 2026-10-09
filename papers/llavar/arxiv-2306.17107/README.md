@@ -24,7 +24,9 @@ LLaVAR 以早期 LLaVA 为基础，增强模型阅读海报、书封、广告和
 
 ## 3. 整体架构
 
-![LLaVAR 原文 Figure 3 与 Table 1：两阶段模型训练和数据组成](figures/original-page-004-02.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
+
+![原文 Table 1](figures/original-p004-table-1.png)
 
 **原图：Figure 3、Table 1，PDF 第 4 页。** 模块 V、W、D 分别是视觉编码器、投影矩阵、语言解码器；蓝色固定、黄色训练。左边只有 W 为黄色，右边 W 与 D 为黄色，说明所谓增强“预训练”并未更新视觉骨干。图下方的表按对话数统计，不能把多轮对话数直接当作问答对数。
 
@@ -54,7 +56,7 @@ CLIP 的 patch 为 14，因此两种方形输入对应 16×16 与 24×24 的网�
 
 ## 5. 数据构建与处理
 
-![LLaVAR 原文 Figure 1：OCR 与 caption 驱动的合成问答](figures/original-page-002-01.png)
+![原文 Figure 1](figures/original-p002-figure-1.png)
 
 **原图：Figure 1，PDF 第 2 页。** 左下是书封，顶端是两个 OCR 版本与图像描述，右下是文字版 GPT-4 产生的对话。阅读时注意教师输入并非底部原图；问题除了直接读标题，还会询问类型和画面，展示识字监督如何扩展为视觉指令。
 
@@ -82,7 +84,9 @@ ScienceQA 结果来自另一路专门实验：从 336 分辨率的第一阶段�
 
 ## 7. 实验设置与主要结果
 
-![LLaVAR 原文 Table 2 与 Table 3：文字 VQA 主结果和数据消融](figures/original-page-005-03.png)
+![原文 Table 2](figures/original-p005-table-2.png)
+
+![原文 Table 3](figures/original-p005-table-3.png)
 
 **原表：Table 2、Table 3，PDF 第 5 页。** 上表区分引用他人结果与作者重现结果，按 224/336 分辨率分组；括号是对同分辨率 LLaVA 的百分点增量。下表改变训练数据，所有模型使用 336 分辨率。OCR-VQA 一列显示完整方案并非每项消融中的最高分。
 
@@ -101,7 +105,7 @@ ScienceQA 专门微调平均准确率 **91.42**，对 LLaVA 的 90.92 提高 0.5
 
 GPT-4 评估在 30 张 COCO 图片的 90 个问题以及 50 张文字密集图片上进行。336 模型的 conversation/detail/complex/read 相对分数由 LLaVA 的 83.9/78.2/95.3/87.9 变为 **84.5/78.9/96.5/91.7**。这是相对文字 GPT-4 回复的打分，100 不是准确率上限；教师信息和评委偏好也会影响结果，样本数较小。[原文 Table 5–6，PDF 第 7、9–10 页](https://arxiv.org/pdf/2306.17107v1#page=7)
 
-![LLaVAR 原文 Figure 6：海报问答的改进与仍存在的幻觉](figures/original-page-009-04.png)
+![原文 Figure 6](figures/original-p009-figure-6.png)
 
 **原图：Figure 6，PDF 第 9 页。** 蓝色是用户问题，粉色为 LLaVA，绿色为 LLaVAR。LLaVAR 正确读取发行日期和主演，却在图中未给出导演信息时仍编造导演。这张图同时说明数据增强的价值与边界：能读出关键文字不代表已学会对未知事实拒答。图中的文字也有拼写错误。
 

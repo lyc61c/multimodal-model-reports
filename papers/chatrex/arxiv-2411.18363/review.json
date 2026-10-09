@@ -2,9 +2,44 @@
   "checked_file": "README.md",
   "verdict": "complete_self_review",
   "source_identity": "Title/IDEA authors/version2411.18363v1 verified page1",
-  "facts_checked": ["UPN vs LLM responsibilities", "Actual high-resolution input768 vs pretraining model label320", "Indices do not generate new coordinates", "GT training boxes vs inference proposals", "Stage updates/hyperparameters", "Different recall thresholds and semantic metrics", "Numerical counterexamples retained"],
+  "facts_checked": [
+    "UPN vs LLM responsibilities",
+    "Actual high-resolution input768 vs pretraining model label320",
+    "Indices do not generate new coordinates",
+    "GT training boxes vs inference proposals",
+    "Stage updates/hyperparameters",
+    "Different recall thresholds and semantic metrics",
+    "Numerical counterexamples retained"
+  ],
   "math_checked": "Prompt/query matrix shapes and RoI+PE checked; gate addition dimensions described; recall ceiling requires fixed proposal-only selection; no fabricated loss coefficients.",
-  "images_checked": ["Viewed page7 Figure5 complete architecture/legend", "Viewed page9 Figure6 full automated pipeline", "Viewed page11 Tables1–2 complete headers", "Viewed page13 Tables5–6 complete captions/metrics"],
+  "images_checked": [
+    "Viewed page7 Figure5 complete architecture/legend",
+    "Viewed page9 Figure6 full automated pipeline",
+    "Viewed page11 Tables1–2 complete headers",
+    "Viewed page13 Tables5–6 complete captions/metrics"
+  ],
   "model_execution": "not_run",
-  "remaining_limitations": ["Automated text consistency checking is not independent visual truth validation", "No model benchmark reproduction", "Training schedule details partly absent"]
+  "remaining_limitations": [
+    "Automated text consistency checking is not independent visual truth validation",
+    "No model benchmark reproduction",
+    "Training schedule details partly absent"
+  ],
+  "article_sha256": "4b0bc08ae95917898db2efadc43ebad1b3fab05a6d5dbff276ce3f25a88f2982",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

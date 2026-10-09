@@ -26,7 +26,9 @@ OtterHD 研究的是提高输入分辨率能否增强小物体、细文字和复
 
 图像被划成 30×30 像素块，经线性映射进入语言序列，按行优先排列，每行加入 image-newline 标记。输入图像先缩放到指定目标，右边与底部补齐到 patch 网格。文字格式包含 User/Assistant，Fuyu 原生 `\x04` 标记表示答案起点，后续生成答案和 EOS。
 
-![原文 Figure 1 与 Table 1，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
+
+![原文 Table 1](figures/original-p003-table-1.png)
 
 **读图：**上方以《清明上河图》局部展示复杂图像的描述和计数，下方记录模型训练、评测分辨率及结果。此页没有新的网络结构图；原文的架构描述主要是文字，不能把演示绘图称为架构图。Table 1 的 Original 指使用各图自身分辨率而不重新缩放，其他行则按指定方形尺寸测试。
 
@@ -52,7 +54,9 @@ $$
 
 这里计算的是 instruction/response 对，而非唯一图像。Table 1 将 LLaVA-1.5 的多轮样本展开得到约 3.6M 问答，因此与常见的 665K 多轮样本并不矛盾；Qwen 行的 1.4B 又包含不同规模语料，不能仅凭这一列证明训练效率高出几千倍。
 
-![原文 Figure 2/3：吞吐与 MagnifierBench 样例，PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
+
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读图：**Figure 3 分别测试小物体位置、计数和颜色，每题有选项答案和自由答案两种格式；Figure 2 的 tokens/s 包括图像与文字，是训练吞吐。细节基准不只考 OCR，也不等于通用图像能力。
 
@@ -79,11 +83,15 @@ MagnifierBench 选择题要求直接输出字母，采用严格正确选项匹�
 
 扩大固定分辨率提高细节基准，但 1024 配置的 POPE、MM-Vet、MMBench、MathVista 低于 512，说明收益依赖任务与训练。动态配置 Mag 多选较 Fuyu 增加 13.4 个百分点、自由增加 24.7；但其 MME 感知低于 512，MMBench 也不是本表最高。不能说高分辨率全面改善推理能力。
 
-![原文 Figure 4 与 Table 2：分辨率泛化和 token 数，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
+
+![原文 Table 2](figures/original-p007-table-2.png)
 
 **读图：**左轴为 MagBench 准确率，右轴为 token 比例。动态训练在 448/512/1024/1440 测试约 30.1/32.4/39.7/42.3；512 固定训练在 1440 仅 27.5，低于 512 测试的约 32.4。图中 1440 是未见过的训练分辨率，但该图按指定尺寸评测，与 Table 1 原图评测 42.7 不是同一配置。它证明的是该实验中的预算泛化，并非任意大图无上限支持。
 
-![原文 Figure 9 与 Table 5：LoRA 比较，PDF 第 12 页](figures/original-page-012-04.png)
+![原文 Figure 9](figures/original-p012-figure-9.png)
+
+![原文 Table 5](figures/original-p012-table-5.png)
 
 **读图与表：**150K、1 epoch 下全参 MagBench/MM-Vet 为 32.6/24.0，LoRA 为 29.9/22.1。右图 LoRA 吞吐较高，左图却是全参训练损失更接近零，不能照正文概括写成 LoRA 损失更低。低训练损失也不自动证明更好的泛化，表中成绩才是对应评价。
 

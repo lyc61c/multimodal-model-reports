@@ -32,7 +32,7 @@ ChatRex 关注的是“会解释场景，却找不全对象”的问题。作者
 
 ## 3. 整体架构
 
-![原文 Figure 5：ChatRex 架构与索引式输出，PDF 第 7 页完整截图](figures/original-page-007-01.png)
+![原文 Figure 5](figures/original-p007-figure-5.png)
 
 *原文 Figure 5，PDF 第 7 页。左侧 CLIP 与 ConvNeXt 产生全图视觉 token，UPN 框在高分辨率特征上经 RoI Align 形成对象 token；对象 token 之前有对应索引，LLM 答案中的索引指回候选框。右侧展示检测、区域理解和带定位对话共用同一接口。*
 
@@ -80,7 +80,7 @@ V_i=C_i+\operatorname{PE}(B_i).
 
 ## 5. 数据构建与处理
 
-![原文 Figure 6：Rexverse-2M 数据引擎，PDF 第 9 页完整截图](figures/original-page-009-02.png)
+![原文 Figure 6](figures/original-p009-figure-6.png)
 
 *原文 Figure 6，PDF 第 9 页。InternVL2 先描述全图，SpaCy 抽取名词短语，Grounding DINO 1.5 将短语定位到框；再针对区域、结合短语生成描述，由 Llama3 检查并压缩为指代表达。图中箭头体现的是自动标注模块，不能当作 ChatRex 推理时必须全部运行的模块。*
 
@@ -100,7 +100,9 @@ UPN 先进行自己的检测训练：粗粒度来源含 O365、OpenImages、Bamb
 
 附录 B.1 区分**匹配代价**与**优化损失**的权重：Hungarian matching 中分类/L1/GIoU 为 2/5/2，最终 loss 中为 1/5/2。可写为 \(\mathcal L_{UPN}=\mathcal L_{focal}+5\mathcal L_{L1}+2\mathcal L_{GIoU}\)，这是按原文权重整理，不要误把匹配的分类系数 2 套入训练损失。GIoU 是检测框几何目标，与后面的区域分类 S-IoU 指标不是同一东西。
 
-![原文 Table 1–2：两阶段数据和检测结果，PDF 第 11 页完整截图](figures/original-page-011-03.png)
+![原文 Table 1](figures/original-p011-table-1.png)
+
+![原文 Table 2](figures/original-p011-table-2.png)
 
 *PDF 第 11 页。上方按任务列出两阶段样本数，下方检测表同时包含 P/R 与 mAP；不同模型未报告的 AP 是缺失值，不能写为零。*
 
@@ -125,7 +127,9 @@ UPN 先进行自己的检测训练：粗粒度来源含 O365、OpenImages、Bamb
 
 通用理解 Table 4 中 ChatRex 的 MMB 65.8、MM-Vet 36.4、SEED-I 69.6、LLaVA-W 65.9、MMMU 38.0、POPE 87.3、Hallusion 45.8，相对 LLaVA-1.5-7B 的 64.3/30.5/66.1/63.4/35.7/85.9/27.6 有改善；但 Ferret-v2 的 POPE 87.8 仍更高。它说明感知接口没有明显破坏这套理解指标，不能只凭不同模型横向表就把所有增益归因于一个组件。
 
-![原文 Table 5–6：区域分类与 UPN 粒度消融，PDF 第 13 页完整截图](figures/original-page-013-04.png)
+![原文 Table 5](figures/original-p013-table-5.png)
+
+![原文 Table 6](figures/original-p013-table-6.png)
 
 *PDF 第 13 页。上方 SS/S-IoU 是区域类别语义指标，并非框坐标 IoU；下方 R@0.3 的 0.3 在原文明确是 proposal 置信度阈值，与 Table 2 的 IoU0.5 意义不同。*
 

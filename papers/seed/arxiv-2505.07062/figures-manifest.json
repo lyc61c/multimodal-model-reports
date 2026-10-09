@@ -4,63 +4,128 @@
   "source_pdf_sha256": "31f4a473f3653102aa2db5c13c9cfad6e667fe0a5440d2916a02e086b9f1d5e4",
   "assets": [
     {
-      "asset_path": "figures/original-page-005-01.png",
-      "original_label": "Figure 1, full original PDF page 5",
+      "asset_path": "figures/original-p005-figure-1.png",
+      "original_label": "Figure 1",
       "pdf_page": 5,
       "source_url": "https://arxiv.org/pdf/2505.07062v1#page=5",
       "source_version": "2505.07062v1",
       "source_sha256": "31f4a473f3653102aa2db5c13c9cfad6e667fe0a5440d2916a02e086b9f1d5e4",
-      "asset_sha256": "68ce0ed5b9cf76895b0c3f6017679394c6a6a0586cf2d33d2fcb021c0785358e",
+      "asset_sha256": "e4142bbfbd551f06f135271b5b8c5bbb759743309d33eddc75947070b3ba72e1",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          73.66,
+          552.31,
+          438.91
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Seed1.5-VL Figure 1: inspected complete top token squares and Text tokens label. Text bbox y79.69–89.69 and tokens are inside y73.66 top boundary; no truncation. All video frames, image dimensions, legend and caption intact.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-015-02.png",
-      "original_label": "Figure 4 and scaling equations, full original PDF page 15",
+      "asset_path": "figures/original-p015-figure-4.png",
+      "original_label": "Figure 4",
       "pdf_page": 15,
       "source_url": "https://arxiv.org/pdf/2505.07062v1#page=15",
       "source_version": "2505.07062v1",
       "source_sha256": "31f4a473f3653102aa2db5c13c9cfad6e667fe0a5440d2916a02e086b9f1d5e4",
-      "asset_sha256": "c98d3ed28cef0be098480c763b29a441deb31967e2c72937825086a8a0d327df",
+      "asset_sha256": "591eee3478f16e38d67ff0971326d2c356251a65cfab4ac4bd85271c290d061c",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          83.98,
+          544.19,
+          278.97
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Seed1.5-VL Figure 4: all cold-start/SFT/rejection-sampling/RL paths, right supervision branches and complete caption preserved.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-024-03.png",
-      "original_label": "Table 6, full original PDF page 24",
+      "asset_path": "figures/original-p024-table-6.png",
+      "original_label": "Table 6",
       "pdf_page": 24,
       "source_url": "https://arxiv.org/pdf/2505.07062v1#page=24",
       "source_version": "2505.07062v1",
       "source_sha256": "31f4a473f3653102aa2db5c13c9cfad6e667fe0a5440d2916a02e086b9f1d5e4",
-      "asset_sha256": "34fae82feffc597dcbcde0c55e1f4a8b17728ec0eb91a75b7c6e2697db48097d",
+      "asset_sha256": "2a72e26c0494427567a9f80862957001b72fd5a6aa32b8ba324318b66c144108",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.59,
+          129.46,
+          557.17,
+          668.36
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Seed1.5-VL Table 6: all public benchmark categories, column headers, final All-Angles Bench row, two footnotes and full caption preserved.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-026-04.png",
-      "original_label": "Tables 7 and 8, full original PDF page 26",
+      "asset_path": "figures/original-p026-table-7.png",
+      "original_label": "Table 7",
       "pdf_page": 26,
       "source_url": "https://arxiv.org/pdf/2505.07062v1#page=26",
       "source_version": "2505.07062v1",
       "source_sha256": "31f4a473f3653102aa2db5c13c9cfad6e667fe0a5440d2916a02e086b9f1d5e4",
-      "asset_sha256": "8245649ea9116ea3af80cb394445142d7ef0b36feb411b1b242e854bc9fbd245",
+      "asset_sha256": "693d50cff27f1f23e519a9046e76cf9251ed61d0e184dcca95123cbe22a9f875",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.59,
+          85.33,
+          559.87,
+          532.32
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Seed1.5-VL Tables 7 and 8: both full video and GUI benchmark tables, all final rows, notes and captions preserved; page number excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p026-table-8.png",
+      "original_label": "Table 8",
+      "pdf_page": 26,
+      "source_url": "https://arxiv.org/pdf/2505.07062v1#page=26",
+      "source_version": "2505.07062v1",
+      "source_sha256": "31f4a473f3653102aa2db5c13c9cfad6e667fe0a5440d2916a02e086b9f1d5e4",
+      "asset_sha256": "2d97cdc21676bca580dbd20909a4f9b116d410346a7fe1f21a1cd9b4aae583e3",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          71.98,
+          556.32,
+          540.02,
+          712.62
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": " Independent last12 source/crop visual recheck: Seed1.5-VL Tables 7 and 8: both full video and GUI benchmark tables, all final rows, notes and captions preserved; page number excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

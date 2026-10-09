@@ -4,63 +4,178 @@
   "source_pdf_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
   "assets": [
     {
-      "asset_path": "figures/original-page-007-01.png",
-      "original_label": "PDF page 7",
+      "asset_path": "figures/original-p007-table-2.png",
+      "original_label": "Table 2",
       "pdf_page": 7,
       "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=7",
       "source_version": "official-system-card-2024-08-08",
       "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
-      "asset_sha256": "5f06ac32040c5bd8f16c392795c67fa4598c0b1c1f10be3000004647931778dc",
+      "asset_sha256": "f51cf64c42d1ac983da8f66ffab80397aad8c8c1253c14acf27a76b2a0adc5e5",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 135,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          100.44,
+          237.3,
+          494.34,
+          318.75
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Tables 2/3 complete with separate referenced note 5; unrelated note 4 excluded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-009-02.png",
-      "original_label": "PDF page 9",
+      "asset_path": "figures/original-p007-table-3.png",
+      "original_label": "Table 3",
+      "pdf_page": 7,
+      "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=7",
+      "source_version": "official-system-card-2024-08-08",
+      "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+      "asset_sha256": "82ca832d7b76460ad2430fe878f7182f671a03ed3fadc47878b6d47cb9d29893",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          154,
+          609,
+          441,
+          688
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Tables 2/3 complete with separate referenced note 5; unrelated note 4 excluded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p007-table-2-note-5.png",
+      "original_label": "Table 2 note 5",
+      "pdf_page": 7,
+      "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=7",
+      "source_version": "official-system-card-2024-08-08",
+      "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+      "asset_sha256": "eb096c70cb15fa01ec8b6d70b245ffe46750cc1fe55fde27a57ff652df23257f",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          68,
+          719,
+          528,
+          744
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Tables 2/3 complete with separate referenced note 5; unrelated note 4 excluded.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p009-unnumbered-figure-capability-evaluations-across-system-and-h.png",
+      "original_label": "Unnumbered figure: capability evaluations across system and human voices",
       "pdf_page": 9,
       "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=9",
       "source_version": "official-system-card-2024-08-08",
       "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
-      "asset_sha256": "c3670c1b6acbad2a23b5c65ea67906964fa3a7c1f250c6efb1767c2cc90d0f71",
+      "asset_sha256": "65794c90f9f119b47c21982af439bbebd16f2d529ac63d1085f91a3535ae5a23",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 135,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67,
+          67,
+          528,
+          451
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed original chart and crop at individual size earlier, and current exclusive crop: all four voice-comparison panels, title, all row labels, axes and legend retained. Tables 4 and 5 are only mentioned by following Chinese prose and occur on other pages, not missing image targets.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-021-03.png",
-      "original_label": "PDF page 21",
+      "asset_path": "figures/original-p021-table-7.png",
+      "original_label": "Table 7",
       "pdf_page": 21,
       "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=21",
       "source_version": "official-system-card-2024-08-08",
       "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
-      "asset_sha256": "4b74d1a51a11be85347536e0dfd7e9ddc07512a70e1fdf20cc535d26fa597978",
+      "asset_sha256": "84187db6866ba2e7ba6bbf1cbe83293cb7a6b62ff1394f8673f3ff089c6ddc45",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 135,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.48,
+          216.65,
+          527.27,
+          554.11
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: complete GPT-4o medical/clinical Table 7, two model columns, zero/few-shot paired rows and caption retained.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-024-04.png",
-      "original_label": "PDF page 24",
+      "asset_path": "figures/original-p024-table-8.png",
+      "original_label": "Table 8",
       "pdf_page": 24,
       "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=24",
       "source_version": "official-system-card-2024-08-08",
       "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
-      "asset_sha256": "10d35d97e89eed3219a60aea6ecf2795c4c247751637baaf2c0f1e1a2fc42923",
+      "asset_sha256": "f43e14a1d2b6a54ac8282abb3d1c9910759ee3ecf8106747f8f6f47d34644496",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 135,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          435,
+          527.41,
+          581.94
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Tables 8/9 complete, preceding analysis removed.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p024-table-9.png",
+      "original_label": "Table 9",
+      "pdf_page": 24,
+      "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf#page=24",
+      "source_version": "official-system-card-2024-08-08",
+      "source_sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+      "asset_sha256": "da1747574ca8e1c933b3910eb3393e33dcebd5c37436e51db2266fe45033b8bf",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          602.81,
+          527.41,
+          750.89
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Tables 8/9 complete, preceding analysis removed.",
+        "page_size": [
+          595.276,
+          841.89
+        ]
       }
     }
   ]

@@ -2,7 +2,7 @@
 
 # ASMv2：把对象、关系与位置统一为关系对话
 
-> 采用 [arXiv:2402.19474v1](https://arxiv.org/pdf/2402.19474v1)。配图为原文整页截图，保留图表与周围正文；本文的解释性数学表达均单独注明。
+> 采用 [arXiv:2402.19474v1](https://arxiv.org/pdf/2402.19474v1)。配图为原文图表区域裁切；本文的解释性数学表达均单独注明。
 
 ## 1. 论文信息与模型定位
 
@@ -29,9 +29,9 @@
 
 ## 3. 整体架构
 
-![原文 Figure 1 所在第 2 页：普通、带定位与带关系的多模态模型比较](figures/original-page-002-01.png)
+![原文 Figure 1](figures/original-p002-figure-1.png)
 
-> 来源：原文 Figure 1，v1 PDF 第 2 页，整页截图。[原图所在页](https://arxiv.org/pdf/2402.19474v1#page=2)。从左向右看输出形式如何从文字扩展到对象框，再扩展到带两端定位的关系。
+> 来源：原文 Figure 1，v1 PDF 第 2 页，图表区域裁切。[原图所在页](https://arxiv.org/pdf/2402.19474v1#page=2)。从左向右看输出形式如何从文字扩展到对象框，再扩展到带两端定位的关系。
 
 模型沿用 LLaVA-1.5 的视觉编码器、视觉语言连接器、语言模型三段式结构。图像经编码器形成视觉表示，连接器将其转换成语言模型可接收的特征，语言模型在图像条件下生成回答。框坐标被写进文本序列，因此模型通过生成方式表达区域与关系，不需要在这份报告中另假设一个检测头。
 
@@ -50,9 +50,9 @@
 
 **关系对话的对象与谓词绑定。** ReC 用 `<ref>...</ref>` 标记对象名称，随后给出一个对象框；用 `<pred>...</pred>` 标记谓词，随后依次给出主语与宾语的两个框。坐标规范化为 `[0,1000)` 的整数，并按 `<box>[[x1,y1,x2,y2]]</box>` 输出。必须保留两端顺序，因为“人骑马”和“马骑人”使用相同实体名称，却表达完全不同的关系。[原文 §4.1](https://arxiv.org/pdf/2402.19474v1#page=9)
 
-![原文 Figure 5 所在第 9 页：公交车、道路与 driving on 的关系序列](figures/original-page-009-02.png)
+![原文 Figure 5](figures/original-p009-figure-5.png)
 
-> 来源：Figure 5，v1 PDF 第 9 页，整页截图。[来源](https://arxiv.org/pdf/2402.19474v1#page=9)。红色框对应 bus，绿色框对应 road；谓词后重复的两个框确定关系方向。
+> 来源：Figure 5，v1 PDF 第 9 页，图表区域裁切。[来源](https://arxiv.org/pdf/2402.19474v1#page=9)。红色框对应 bus，绿色框对应 road；谓词后重复的两个框确定关系方向。
 
 读图时先看对象标记与坐标，再看谓词后的两组坐标。解析器把坐标作为匹配键，找到名称 bus 与 road，从而恢复 `(bus, driving on, road)`。与只在名词后放框的方式相比，谓词自身也显式指定区域，降低了读者或解析器猜测它修饰哪两个实体的需要。这是表示方式的作用解释；论文没有单独量化每一个特殊标记的贡献。
 
@@ -81,9 +81,9 @@ AS-V2 并非单纯让 GPT-4V 自由编写图像故事。提示同时提供任务
 
 127K 是样本数，90K 是对话部分的轮次数，两者不应相加当成总样本。负指令包含错误关系，期望模型识别错误，而不是总顺从提问的前提。这对“某对象是不是做了某动作”的问题尤其重要。
 
-![原文 Table 10 所在第 28 页：第二阶段指令数据和训练实现细节](figures/original-page-028-04.png)
+![原文 Table 10](figures/original-p028-table-10.png)
 
-> 来源：Table 10 与 Appendix C.2，v1 PDF 第 28 页，整页截图。[来源](https://arxiv.org/pdf/2402.19474v1#page=28)。表中 RegionVQA 的 2.3M 是主要组成，AS-V2 包含在 Conversation 来源中。
+> 来源：Table 10 与 Appendix C.2，v1 PDF 第 28 页，图表区域裁切。[来源](https://arxiv.org/pdf/2402.19474v1#page=28)。表中 RegionVQA 的 2.3M 是主要组成，AS-V2 包含在 Conversation 来源中。
 
 训练并不只使用 127K 新数据。第二阶段指令集约 4M，包含 124K 描述、314K VQA、157K OCR、643K 定位、2.3M 区域问答、500K 对话和 40K 纯文本。这些类别帮助保持一般能力，同时把新关系任务置于较丰富的区域监督中。表中数值为近似统计，不能要求它们按未经舍入的数字精确相加。
 
@@ -108,9 +108,9 @@ CRPE 的人工核查与训练合成要分开看：基准会确保关系两端的
 
 所有主要评测使用同一检查点，覆盖整图问答、区域定位与描述、开放场景图和 CRPE。各任务单位不同：MME 是评分总量，CRPE 是循环判定下的准确率，PSG 是三元组 Recall/mRecall，不能合成一项总性能。
 
-![原文 Table 6 所在第 14 页：CRPE 各分项及关系总体准确率](figures/original-page-014-03.png)
+![原文 Table 6](figures/original-p014-table-6.png)
 
-> 来源：Table 6，v1 PDF 第 14 页，整页截图。[来源](https://arxiv.org/pdf/2402.19474v1#page=14)。Overall 是 Subject、Predicate、Object 三项平均，**不包含 Existence**。
+> 来源：Table 6，v1 PDF 第 14 页，图表区域裁切。[来源](https://arxiv.org/pdf/2402.19474v1#page=14)。Overall 是 Subject、Predicate、Object 三项平均，**不包含 Existence**。
 
 | CRPE 模型 | Existence | Subject | Predicate | Object | Overall |
 |---|---:|---:|---:|---:|---:|

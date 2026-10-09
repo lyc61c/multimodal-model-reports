@@ -30,9 +30,9 @@ PaperOwl 研究的并非“看图回答一句话”，而是如何把论文中�
 
 ## 3. 整体架构
 
-![Figure 6 PaperOwl 模块与输入](figures/original-page-006-02.png)
+![原文 Figure 6](figures/original-p006-figure-6.png)
 
-*原文 Figure 6，PDF 第 6 页完整页面；保留 Context/Outline/Instruction、图像/LaTeX 路径和冻结、训练标记。*
+*原文 Figure 6，PDF 第 6 页图表区域裁切；保留 Context/Outline/Instruction、图像/LaTeX 路径和冻结、训练标记。*
 
 图像走无参数 Cropping Module，将 448×448 切成四张 224×224。每个子图由 ViT-L/14 编码，视觉编码器为 24 层、16 个注意力头、隐藏宽度 1024。一个子图包含 16×16=256 个空间 patch。裁图保留了比直接缩小更清楚的局部细节，但原文没有加入跨窗口视觉注意力；多个子图的关系主要由后续序列与语言解码器整合。
 
@@ -60,9 +60,9 @@ CIDErGPT 是参考段落相似度指标，不直接验证图中事实。GPT 的�
 
 ## 5. 数据构建与处理
 
-![Figure 2 M-Paper 构建与三项任务](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文 Figure 2，PDF 第 4 页完整页面，保留论文采集、图表渲染、段落对齐、提纲生成与任务输入输出。*
+*原文 Figure 2，PDF 第 4 页图表区域裁切，保留论文采集、图表渲染、段落对齐、提纲生成与任务输入输出。*
 
 研究首先通过 PapersWithCode 收集约 48K arXiv ID，再下载 LaTeX，最终 M-Paper 含 48,688 篇，覆盖 15 个以上深度学习与计算机科学方向。把社区收录视为质量筛选是作者的经验选择，不代表全部论文已通过同行评审或内容无误。
 
@@ -99,9 +99,13 @@ PaperOwl 从已训练的 DocOwl 继续指令微调；并非本文重新从头训
 
 ## 7. 实验设置与主要结果
 
-![Tables 3–5 主结果、上下文与提纲消融](figures/original-page-007-03.png)
+![原文 Table 4](figures/original-p007-table-4.png)
 
-*原文 Table 3、Table 4、Table 5，PDF 第 7 页完整页面，保留模型设置、全部指标、训练/测试提纲来源。*
+![原文 Table 5](figures/original-p007-table-5.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+*原文 Table 3、Table 4、Table 5，PDF 第 7 页图表区域裁切，保留模型设置、全部指标、训练/测试提纲来源。*
 
 | 指标 | DocOwl 零样本 | LLaVA-1.5 零样本 | PaperOwl 任务微调 |
 |---|---:|---:|---:|
@@ -117,9 +121,11 @@ PaperOwl 从已训练的 DocOwl 继续指令微调；并非本文重新从头训
 
 提纲消融尤其重要：无提纲训练、无提纲测试为 1.81；有 GPT 提纲训练但无提纲测试为 2.13；模型自动提纲为 2.59；训练和测试均给 GPT 提取提纲为 11.23。大幅收益主要处在有参考分析生成的提纲条件下。自动推荐的收益小得多，不能把 11.23 宣称为模型完全独立得出结论的水平。
 
-![Figure 7 数值错误与 Table 6 视觉编码消融](figures/original-page-008-04.png)
+![原文 Figure 7](figures/original-p008-figure-7.png)
 
-*原文 Figure 7、Table 6，PDF 第 8 页完整页面；保留三张图、Context/Outline、GT/预测和红色错误标记。*
+![原文 Table 6](figures/original-p008-table-6.png)
+
+*原文 Figure 7、Table 6，PDF 第 8 页图表区域裁切；保留三张图、Context/Outline、GT/预测和红色错误标记。*
 
 冻结 abstractor 时分析 CIDErGPT 为 8.78，解冻为 11.23；224 直接增至 448 为 11.46，再裁图为 11.50。标题 CIDEr 则从 27.61 增至 32.12。裁图更明显地帮助标题，但分析提升很小；语义 F1 0.41→0.39，还体现多图与长前缀的负担，不能说更高分辨率全面提升。
 

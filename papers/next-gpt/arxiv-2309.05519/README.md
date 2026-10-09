@@ -23,7 +23,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 1：三层连接架构，PDF 第 1 页](figures/original-page-001-01.png)
+![原文 Figure 1](figures/original-p001-figure-1.png)
 
 **读图：**左侧编码图像、音频、视频，输入投影把特征送进中间 LLM；右侧输出投影分别连接图像、音频、视频扩散模型。文字直接进出 LLM。雪花表示冻结的大模块，火焰表示可训练接口。底部的更多模态箭头是扩展方向，并非已完成的实验证据。
 
@@ -41,7 +41,7 @@
 
 ## 4. 核心创新与数学原理
 
-![原文 Figure 3：输入和输出两端的对齐，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 **读图：**上半部让输入内容经过投影后驱动冻结 LLM 生成正确 caption；下半部让 LLM 的模态信号表示对齐各生成器原本的文本条件表示。下半部训练只需 caption 文本，无须每次真正生成图像或波形。
 
@@ -73,7 +73,7 @@ MosIT 从人工设计的人机对话模板出发，用超过 100 个主题或关
 
 输入对齐阶段以各模态-caption 对训练输入投影，固定编码器与语言底座，目标是让 LLM 描述内容。输出对齐阶段利用纯 caption 文本训练各输出投影，把模态信号映射到冻结生成器的文本条件；它没有重新训练 Stable Diffusion、AudioLDM 或 Zeroscope。
 
-![原文 Figure 4：模态切换指令训练，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **读图：**多轮指令进入左端，LLM 的文字和信号与中间标注做交叉熵，信号表示再与右端 caption 条件做距离对齐。LLM 上的 LoRA 在该阶段更新，编码器及生成器仍冻结，接口投影参与调优。
 
@@ -83,7 +83,23 @@ v1 未公布各阶段 optimizer、batch、学习率、训练步数/epoch、LoRA 
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 3–11：生成、描述与编辑，PDF 第 9 页](figures/original-page-009-04.png)
+![原文 Table 3](figures/original-p009-table-3.png)
+
+![原文 Table 4](figures/original-p009-table-4.png)
+
+![原文 Table 5](figures/original-p009-table-5.png)
+
+![原文 Table 6](figures/original-p009-table-6.png)
+
+![原文 Table 7](figures/original-p009-table-7.png)
+
+![原文 Table 8](figures/original-p009-table-8.png)
+
+![原文 Table 9](figures/original-p009-table-9.png)
+
+![原文 Table 10](figures/original-p009-table-10.png)
+
+![原文 Table 11](figures/original-p009-table-11.png)
 
 **读表：**顶排为文字生成其他模态，中排为其他模态生成文字，底排为文字条件编辑。箭头指明方向：FID、FD、MCD 越低越好，IS、CLIP 相似度和 caption 指标越高越好。AudioCaps CIDEr 使用小数标度，不能与 COCO 表中百分标度的 CIDEr 直接比较。
 

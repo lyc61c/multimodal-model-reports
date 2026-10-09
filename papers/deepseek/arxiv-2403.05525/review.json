@@ -40,7 +40,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "tables_checked_against_images": true
+    "tables_checked_against_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Fig4ratio caption reversed vsTable1andprose",
@@ -48,5 +49,20 @@
     "Languageperformance notuniformlypreserved",
     "Taskdevscores nottest",
     "GPUprocessingunit is8cardsnot1"
-  ]
+  ],
+  "article_sha256": "3a6da508998429c40f5d27acc366785a2254ed0e72bf0f243e66d4bbbf3a8796",
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: all three DeepSeek-VL training stages, train/freeze icons, data labels and Figure 3 caption retained.",
+      "Viewed source page and crop: all six Figure 4 panels with legends/axes and caption retained. Table 1 mentioned in the following Chinese explanatory prose is on another PDF page and is not a missing same-page target.",
+      "Table 4 includes both 1B and 7B models and caption.",
+      "Both comparison Tables 5 and 6 complete."
+    ]
+  }
 }

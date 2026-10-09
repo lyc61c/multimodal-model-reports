@@ -41,5 +41,10 @@
     "Table2七评测均existing，但Table9视觉文字提取Exist=×，统计归类不一致。",
     "OFA参数472M/473M为报告不同位置近似口径。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

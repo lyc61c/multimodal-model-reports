@@ -23,7 +23,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 1：图像、文字、音频输入及模态 LoRA，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 1](figures/original-p004-figure-1.png)
 
 **读图：**图像经过视觉编码、token merging 和投影，音频经过独立编码及投影，文字经 tokenizer，三者在相应占位位置组成输入序列。语言层右侧保留原权重，并可使用视觉或音频 LoRA 分支。图中画出路由选择，但报告没有公开完整的 token 级路由算法、概率归一化或混合门控训练损失，本文不将它套成常规 Top-k 稀疏 MoE。
 
@@ -82,7 +82,7 @@ SQA 根据真实语音转写合成问答，SQQA 把文本查询用内部 TTS 转
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 1/2：视觉语言与视觉—语音评测，PDF 第 10 页](figures/original-page-010-02.png)
+![原文 Table 1](figures/original-p010-table-1.png)
 
 **读表：**视觉 15 项平均为 **72.0**，Phi-3.5-Vision 为 60.9；这混合不同基准计分，不能当作统一总体准确率。MMMU **55.1**，ScienceQA **97.5**，MathVista **62.4**，DocVQA **93.2**，InfoVQA **72.7**，OCRBench **84.4**。OCRBench 在此使用归一化显示尺度，不能与其他论文的 844 式原始分直接混在一列。
 
@@ -90,7 +90,7 @@ SQA 根据真实语音转写合成问答，SQQA 把文本查询用内部 TTS 转
 
 四个将查询转为语音的视觉任务为 **68.9、69.0、87.3、63.7**，平均 72.2，InternOmni 平均 62.6；但 AI2D 68.9 略低于 Gemini-2.0-Flash 的 69.4。作者对 Gemini 加额外文字格式指令方便提取答案，属于需要说明的协议差异。Table 1 图注称统一内部流程，正文又说明 DocVQA／InfoVQA 等服务器基准的部分基线直接采用报告值，因此不能声称所有数字都在本实验完全重跑。
 
-![原文 Table 3：语音与音频主结果，PDF 第 12 页](figures/original-page-012-03.png)
+![原文 Table 3](figures/original-p012-table-3.png)
 
 转写在 CV15、FLEURS、OpenASR 的平均错误率为 **6.80、4.00、6.14**；日语与中文采用 **CER**，其余六语采用 WER，所以前两个多语平均并非全部是同种词级误差。Table 4 中 Canary-1B 的 OpenASR 为 6.50，下降 \((6.50-6.14)/6.50\approx5.5\%\) 是**相对误差降低**，不是降低 5.5 个百分点。榜首描述对应报告注明的 **2025 年 1 月 14 日**，本文不将其当作现在的排名。
 
@@ -100,7 +100,7 @@ SQA 根据真实语音转写合成问答，SQQA 把文本查询用内部 TTS 转
 
 会议摘要 Golden3／AMI 的 GPT-4 整体分为 **6.28／6.29（满分 7）**，GPT-4o 为 6.76／6.53。裁判读取真实转写；Golden3 有 108 场会议、1071 查询，AMI 测试有 20 场平均 32 分钟会议、200 查询。摘要中被判有幻觉的比例为 **0.14／0.13**，不是零。Qwen2-Audio 在该对比有 30 秒输入限制，摘要低分也反映输入容量不匹配，不能全部归因于内容理解质量。
 
-![原文 Table 9：独立推理增强预览与正式 Mini，PDF 第 20 页](figures/original-page-020-04.png)
+![原文 Table 9](figures/original-p020-table-9.png)
 
 **读表：**正式 Mini 的 AIME／MATH-500／GPQA Diamond 为 **10.0／71.8／36.9**，独立推理训练后为 **50.0／90.4／49.0**。这些是预览推理模型的结果，不能写到多模态检查点名下。Table 7 正式 Mini 的 MATH 为 64.0、HumanEval 为 74.4、IFEval 为 70.1，但多语 MMLU **49.3** 低于前代 55.4，报告也承认提高代码比重后多语数据比例下降。
 

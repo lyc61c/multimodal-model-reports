@@ -43,5 +43,10 @@
     "汇总CIDErGPT不等于汇总CIDEr乘平均F1，原文未完全披露聚合细节，保留报告值",
     "三task train总692966 vs 最终765293含额外无纲变体未逐项拆分"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

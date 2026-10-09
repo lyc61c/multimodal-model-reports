@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "CogCoM：通过定位、裁剪与放大建立可追踪的视觉操作链"
+  "title_zh": "CogCoM：通过定位、裁剪与放大建立可追踪的视觉操作链",
+  "chinese_characters": 2131,
+  "figure_revision_date": "2026-10-09"
 }

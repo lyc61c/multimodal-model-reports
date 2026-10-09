@@ -7,18 +7,30 @@
     "核验 CLIP L/14 336、576 网格、Vicuna v1.5 7B、单层注意力后投影；前缀在交叉注意力前选择。",
     "核验每步均匀抽一个偶数长度，仅第二阶段弹性训练；未虚构优化器和连接器子模块冻结。",
     "核验 Table 1/2/3 精确分数、星号训练图像可见、11 项归一化平均、77-token 未见配置、TFLOPs 与实测速度区别。",
-    "原图 Figure 4 针对随机单 token，未称为平均或确定物体定位；未进行模型训练或推理复现。"
+    "原图 Figure 4 针对随机单 token，未称为平均或确定物体定位；未进行模型训练或推理复现。",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "ce2679699ae4ad00677bdbd18dfe0022d35e190547dc4a1bf0fb29eae0fef74b",
+  "article_sha256": "6779c05ec2a90516dbe7a2594d841c4b5856fd4a94dbc7c638d5ed44111ba538",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and repaired crops: Figure 2 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and repaired crops: Table 1, Figure 3 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crop: Figure 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Table 2 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ]
+  }
 }

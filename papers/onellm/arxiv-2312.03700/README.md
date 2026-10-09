@@ -22,7 +22,7 @@ UPM 混合三个从图文对齐初始化的投影专家。各模态有自己的�
 
 ## 3. 整体架构
 
-![原文 Figure 2：OneLLM 架构，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：**左边不同 tokenizer 输出都经过同一 Universal Encoder；中间连接模态查询 $q_m$ 与输入特征 $x_m$，三个投影专家按路由权重融合；右边丢弃输入 token，仅将查询的输出作为固定长度模态摘要送入 LLM。雪花与火焰的变化表示对齐和指令两个阶段的不同冻结范围。
 
@@ -48,7 +48,11 @@ $K=3$，各专家权重非负且和为一。查询与输入一起在专家 Trans
 
 ## 5. 数据构建与处理
 
-![原文 Table 9–11：数据与训练/评测提示，PDF 第 10 页](figures/original-page-010-04.png)
+![原文 Table 9](figures/original-p010-table-9.png)
+
+![原文 Table 10](figures/original-p010-table-10.png)
+
+![原文 Table 11](figures/original-p010-table-11.png)
 
 **读表：**左表区分对齐数据和指令数据，右上是训练提示，右下是评测提示。数据来源规模不能等同于每阶段唯一消费样本数；不同任务通过提示控制长描述、单词答案和选项字母。
 
@@ -82,7 +86,15 @@ fMRI caption 使用受试者看到的图像描述作目标，采用与引用工�
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 1–5：图像、视频、音频和点云结果，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
+
+![原文 Table 2](figures/original-p006-table-2.png)
+
+![原文 Table 3](figures/original-p006-table-3.png)
+
+![原文 Table 4](figures/original-p006-table-4.png)
+
+![原文 Table 5](figures/original-p006-table-5.png)
 
 **读表：**图像表将专门视觉助手与多模态 generalist 分组；下方其他模态表有 0-shot 列，不能把训练过对应任务的专门模型与未在该基准微调的模型解释成同一数据条件。caption 的 CIDEr/SPIDEr 与问答准确率也不能混成一个平均分。
 
@@ -98,7 +110,9 @@ fMRI caption 使用受试者看到的图像描述作目标，采用与引用工�
 
 正文称音视频三项均超过 ChatBridge，但 Table 4 的 AVSD 74.5 低于 75.4；本文以表为准。OneLLM 未用成对音视频数据训练，组合输入的表现支持一定跨模态迁移，不能据此保证所有音画联合推理。不同训练条件的 Pengi 与专门模型也不能简单解释成统一模型全方面领先。
 
-![原文 Table 6/7：深度/法线与设计消融，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 6](figures/original-p007-table-6.png)
+
+![原文 Table 7](figures/original-p007-table-7.png)
 
 **读表：**OneLLM-D/N 的实际输入应按 D 为 depth、N 为 normal 理解，表注顺序存在歧义。深度输入在 NYUv2/SUN RGB-D 为 50.9/29.0，法线输入为 46.5/21.2；灰度深度 CLIP 为 41.9/25.4，因此法线的 SUN 分数更低，不能概括所有设置都优于 CLIP。监督 ImageBind 与 Omnivore 的数据条件不同。
 

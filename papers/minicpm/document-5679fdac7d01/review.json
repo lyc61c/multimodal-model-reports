@@ -33,12 +33,28 @@
     "正确4.5官方报告未混入后续版本",
     "七节和原图齐全",
     "未虚构主干初始化/训练GPU/全量数据规模",
-    "原文公式与解释性公式区分"
+    "原文公式与解释性公式区分",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "原文Table5字幕表头关系与主表不同，保留原表不擅改",
     "Table2叙述73.6与表格73.5不一致，采用表格",
     "正文未充分披露SFT和RL冻结配置",
     "未执行模型和独立复现"
-  ]
+  ],
+  "article_sha256": "f32822649de636ff8993df147025f4b0bfea8bdd0006da06fc16dc36b64a68a1",
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
+    ]
+  }
 }

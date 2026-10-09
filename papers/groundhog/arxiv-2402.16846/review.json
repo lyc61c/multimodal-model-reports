@@ -1,1 +1,47 @@
-{"checked_file":"README.md","verdict":"complete_self_review","fact_checks":["entityselectionarchitecture distinctfromgenerativemaskdecoder","proposaltrainingseparatefromfrozenLLMfinetuning","actualtrainsetbalancingandmissinghyperparamsdisclosed","singlecheckpointnotunseentaskzero-shot","benchmarksprotocols andnonwins retained"],"math_checks":["weightedpixelmax equationfaithfultounnumberedsource","querysumnotassertaveragedwithoutqualification","conditionalhybridloss matchesavailableannotationandactualweights","projectionnotexactshapeconstraint","LoRAdefinitionexplicitlystandard"],"image_checks":{"viewed":["figures/original-page-003-01.png","figures/original-page-006-02.png","figures/original-page-008-03.png","figures/original-page-014-04.png"],"result":"Originalproposal/fusionarrows,tableheaders,maskfailuresanddatasetannotationimages complete;PDFvsappendixprintedpage clarified"},"model_execution":"not_run","limitations":"Selfreview,noindependentmodelrun;severalv1internaldescriptiondifferencesretained"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "fact_checks": [
+    "entityselectionarchitecture distinctfromgenerativemaskdecoder",
+    "proposaltrainingseparatefromfrozenLLMfinetuning",
+    "actualtrainsetbalancingandmissinghyperparamsdisclosed",
+    "singlecheckpointnotunseentaskzero-shot",
+    "benchmarksprotocols andnonwins retained"
+  ],
+  "math_checks": [
+    "weightedpixelmax equationfaithfultounnumberedsource",
+    "querysumnotassertaveragedwithoutqualification",
+    "conditionalhybridloss matchesavailableannotationandactualweights",
+    "projectionnotexactshapeconstraint",
+    "LoRAdefinitionexplicitlystandard"
+  ],
+  "image_checks": {
+    "viewed": [
+      "figures/original-page-003-01.png",
+      "figures/original-page-006-02.png",
+      "figures/original-page-008-03.png",
+      "figures/original-page-014-04.png"
+    ],
+    "result": "Originalproposal/fusionarrows,tableheaders,maskfailuresanddatasetannotationimages complete;PDFvsappendixprintedpage clarified"
+  },
+  "model_execution": "not_run",
+  "limitations": "Selfreview,noindependentmodelrun;severalv1internaldescriptiondifferencesretained",
+  "article_sha256": "2a1aefa6cb5c96f721e38233f4b2dc8a3efb1b166cd9a0e5d08d65a4796ad6de",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 12,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
+    ]
+  }
+}

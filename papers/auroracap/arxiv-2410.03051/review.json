@@ -8,18 +8,30 @@
     "Figure6 reversed retention axis verified",
     "TableE6 trainable modules and hyperparameters verified",
     "Equation1 +log s faithfully explained",
-    "No model execution claimed"
+    "No model execution claimed",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 9,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "9c37de43108ccfce735388ab74211ed4aa57333cc45544273039c8baa5f1eb1b",
+  "article_sha256": "5a691786df8a011feab81a8aba40efda1b2bab28f7796337064d590374977b66",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+      "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

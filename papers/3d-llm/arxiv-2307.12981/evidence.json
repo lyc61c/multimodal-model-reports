@@ -2,14 +2,44 @@
   "source_version": "2307.12981v1",
   "identity_checked": "PDF page 1 title, authors, arXiv identifier",
   "facts": [
-    {"claim": "Three feature construction paths: direct reconstruction, gradSLAM fusion, neural voxel field", "location": "Section 4.2, PDF pages 5–6"},
-    {"claim": "BLIP2 1408-dim and Flamingo 1024-dim input features", "location": "Section 5, PDF page 7"},
-    {"claim": "Position features concatenated; six AABB coordinate tokens", "location": "Section 4.3.2, PDF page 6"},
-    {"claim": "More than 300K generated data; 8:1:1 train/val/test split", "location": "Abstract and Section 5, PDF pages 1,7"},
-    {"claim": "ScanQA evaluation finetunes on its training set, not zero-shot", "location": "Section 5.1, PDF page 7"},
-    {"claim": "ScanQA validation BLIP2-FlanT5 B1=39.3, CIDEr=69.4, EM=20.5; baseline 30.2,64.9,21.0", "location": "Table 1, PDF page 8"},
-    {"claim": "100K BLIP2 steps, 8 nodes x 8 V100; Flamingo 8 A100 and distinct LR recipe", "location": "Appendix B.1, PDF pages 13–14"}
+    {
+      "claim": "Three feature construction paths: direct reconstruction, gradSLAM fusion, neural voxel field",
+      "location": "Section 4.2, PDF pages 5–6"
+    },
+    {
+      "claim": "BLIP2 1408-dim and Flamingo 1024-dim input features",
+      "location": "Section 5, PDF page 7"
+    },
+    {
+      "claim": "Position features concatenated; six AABB coordinate tokens",
+      "location": "Section 4.3.2, PDF page 6"
+    },
+    {
+      "claim": "More than 300K generated data; 8:1:1 train/val/test split",
+      "location": "Abstract and Section 5, PDF pages 1,7"
+    },
+    {
+      "claim": "ScanQA evaluation finetunes on its training set, not zero-shot",
+      "location": "Section 5.1, PDF page 7"
+    },
+    {
+      "claim": "ScanQA validation BLIP2-FlanT5 B1=39.3, CIDEr=69.4, EM=20.5; baseline 30.2,64.9,21.0",
+      "location": "Table 1, PDF page 8"
+    },
+    {
+      "claim": "100K BLIP2 steps, 8 nodes x 8 V100; Flamingo 8 A100 and distinct LR recipe",
+      "location": "Appendix B.1, PDF pages 13–14"
+    }
   ],
   "math": "Cross attention, inverse camera projection, quantization and output likelihood explicitly labelled explanatory; no invented original equation numbers.",
-  "images_viewed": [4,5,8]
+  "images_viewed": [
+    4,
+    5,
+    8
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

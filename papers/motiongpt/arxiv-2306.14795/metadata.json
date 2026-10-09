@@ -10,5 +10,7 @@
   "document_kind": "application_model_paper",
   "catalogue_group": "scope_review",
   "article_template_version": "1.1",
-  "title_zh": "MotionGPT：动作词表与统一动作语言生成"
+  "title_zh": "MotionGPT：动作词表与统一动作语言生成",
+  "chinese_characters": 2430,
+  "figure_revision_date": "2026-10-09"
 }

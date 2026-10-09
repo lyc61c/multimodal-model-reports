@@ -25,7 +25,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "220K非全部训练样本，默认含学术数据且星号图片接触口径明确",
@@ -34,5 +35,20 @@
     "新增混合数据不单调提高开放问答，7B部分指标下降",
     "MMVet正文3.6%与表不一致，按表2.0分记录",
     "未在本报告列出的LR/GPU/context等不从基线记忆补造"
-  ]
+  ],
+  "article_sha256": "cbe901d61a2af46346742d9d365f14d36750a0315c399270812c23b5b6693a51",
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and repaired crops: Figure 3, Figure 4 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crop: Table 1 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed fresh repaired source/crop contact: Table 2, Table 3 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+      "Viewed source and crop: source contains body/formulas or a long prompt algorithm only; no required model diagram or results table; drop confirmed."
+    ]
+  }
 }

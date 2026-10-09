@@ -1,1 +1,39 @@
-{"source_id":"256dc49b7c06","source_version":"2510.26583v1","read_scope":"Full technical body sections 1-7, contributors and qualitative figures; references not used as independent evidence","claims":[{"topic":"architecture","source":"2.2-2.3, Table1, Figure3","checks":"34.1B vs introduction 32B; tokenizer455M separately; GQA64/8, vocab282926, context32768"},{"topic":"data_and_training","source":"3.1-3.2,4.1-4.3,5.1-5.2,Tables2-3,Figure4","checks":"SFT150B token not samples; actual seen10.3T+3.5T; DiDA13B figure vs few billion summary; lossweights; source sample counts"},{"topic":"math","source":"3.2,4.2-4.3,Figure9","checks":"NTP and advantage equations explicitly explanatory; no invented diffusion transition or epsilon; per-axis16downsample yields token256compression"},{"topic":"results","source":"6.1-6.8,Tables5-16","checks":"AR vs DiDA times under same engine; metric declines; automated preferences not robot execution; storywin49.2%"}],"source_inconsistencies":["32B introduction vs34.1B detailed total","150B samples summary vs token Table3","approximately13T summary vs actual seen13.8T Table2","few billion DiDA summary vs13B Figure4"],"model_execution":"not_run"}
+{
+  "source_id": "256dc49b7c06",
+  "source_version": "2510.26583v1",
+  "read_scope": "Full technical body sections 1-7, contributors and qualitative figures; references not used as independent evidence",
+  "claims": [
+    {
+      "topic": "architecture",
+      "source": "2.2-2.3, Table1, Figure3",
+      "checks": "34.1B vs introduction 32B; tokenizer455M separately; GQA64/8, vocab282926, context32768"
+    },
+    {
+      "topic": "data_and_training",
+      "source": "3.1-3.2,4.1-4.3,5.1-5.2,Tables2-3,Figure4",
+      "checks": "SFT150B token not samples; actual seen10.3T+3.5T; DiDA13B figure vs few billion summary; lossweights; source sample counts"
+    },
+    {
+      "topic": "math",
+      "source": "3.2,4.2-4.3,Figure9",
+      "checks": "NTP and advantage equations explicitly explanatory; no invented diffusion transition or epsilon; per-axis16downsample yields token256compression"
+    },
+    {
+      "topic": "results",
+      "source": "6.1-6.8,Tables5-16",
+      "checks": "AR vs DiDA times under same engine; metric declines; automated preferences not robot execution; storywin49.2%"
+    }
+  ],
+  "source_inconsistencies": [
+    "32B introduction vs34.1B detailed total",
+    "150B samples summary vs token Table3",
+    "approximately13T summary vs actual seen13.8T Table2",
+    "few billion DiDA summary vs13B Figure4"
+  ],
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
+}

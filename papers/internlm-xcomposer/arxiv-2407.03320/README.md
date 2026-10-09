@@ -23,7 +23,7 @@ IXC-2.5 的主要变化是把长图、多张图和视频帧都转换为带全局
 
 ## 3. 整体架构
 
-![Figure 5：图片和视频共用动态分块、全局与局部编码流程](figures/original-page-006-01.png)
+![原文 Figure 5](figures/original-p006-figure-5.png)
 
 *原文 Figure 5，PDF 第 6 页，完整原页。读图时注意局部子图、缩小后的全局视图、行分隔标记和文本各自进入序列的位置；PLoRA 为视觉与语言对齐提供适配。*
 
@@ -66,7 +66,9 @@ p_h=\left\lceil p_w\frac hw\right\rceil.
 
 ## 5. 数据构建与处理
 
-![Tables 1、2：理解模型的预训练与监督数据；右栏为文章偏好数据流程](figures/original-page-008-02.png)
+![原文 Table 1](figures/original-p008-table-1.png)
+
+![原文 Table 2](figures/original-p008-table-2.png)
 
 *原文 Tables 1、2，PDF 第 8 页，完整原页。数据列表显示覆盖任务，不提供各来源最终样本量；右栏的 5,000、80,000、2,000 是不同阶段统计。*
 
@@ -96,7 +98,9 @@ p_h=\left\lceil p_w\frac hw\right\rceil.
 
 主要理解结果在 SFT 后模型上评测，通常使用 OpenCompass VLMEvalKit；网页分支仅量化截图转代码，其他网页指令和简历主页任务缺少统一基准。Table 3 的 MMBench-Video 从 0–3 线性转换为 0–100；TempCompass 只报告 MCQA、Yes/No、Caption Match 等确定性部分。不同列不能默认同一种分数。
 
-![Tables 3、4：视频、高分辨率、多图和一般视觉问答比较](figures/original-page-009-03.png)
+![原文 Table 3](figures/original-p009-table-3.png)
+
+![原文 Table 4](figures/original-p009-table-4.png)
 
 *原文 Tables 3、4，PDF 第 9 页，完整原页。开源基线的“Previous SOTA”每列是不同模型，不能当成一个统一对手；脚注限定了视频评测口径。*
 
@@ -113,7 +117,7 @@ p_h=\left\lceil p_w\frac hw\right\rceil.
 | MMMU / HallusionBench | 42.9 / 42.4 | GPT-4V 56.8 / 46.5 | 复杂学科及幻觉诊断仍较弱 |
 | MME | 2229.0 | InternVL1.5 2189.6 | 累计分数，不是准确率百分比 |
 
-![Table 5：Design2Code 的网页视觉复现指标](figures/original-page-010-04.png)
+![原文 Table 5](figures/original-p010-table-5.png)
 
 *原文 Table 5，PDF 第 10 页，完整原页。文本、位置、颜色、CLIP 和 block-match 分别反映页面复现的不同方面。*
 

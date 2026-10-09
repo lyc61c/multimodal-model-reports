@@ -2,7 +2,7 @@
 
 # AuroraCap：以 Token 合并提高视频详细描述效率
 
-> 采用 [arXiv:2410.03051v1](https://arxiv.org/pdf/2410.03051v1)。图表为原文整页截图。论文同时提出模型、VDC 数据集和 VDCScore 指标，三者的贡献分别说明。
+> 采用 [arXiv:2410.03051v1](https://arxiv.org/pdf/2410.03051v1)。图表为原文图表区域裁切。论文同时提出模型、VDC 数据集和 VDCScore 指标，三者的贡献分别说明。
 
 ## 1. 论文信息与模型定位
 
@@ -58,9 +58,9 @@ Q、K 是查询与键，d 是相应特征维度，s 是某个 Token 合并后代
 
 **把长描述比较分解为短问答。** VDCScore 避免只对整段文字直接打一个笼统分数。先由 GPT-4o 从参考描述生成开放问题与简短正确答案，再要求裁判只依据预测描述回答问题，最后比较“问题、正确答案、预测答案”三元组，给出正确性和质量评分。问题集预先固定，避免不同模型被不同问题集合评估。[原文 §3.2.1](https://arxiv.org/pdf/2410.03051v1#page=7)
 
-![原文 Figure 3 所在第 7 页：VDCScore 问答分解流程](figures/original-page-007-01.png)
+![原文 Figure 3](figures/original-p007-figure-3.png)
 
-> 来源：Figure 3，v1 PDF 第 7 页，整页截图。[来源](https://arxiv.org/pdf/2410.03051v1#page=7)。滑雪者身份在左右描述中匹配，衣服颜色不同则判错；读图应跟随“提问—取答案—比较”的箭头。
+> 来源：Figure 3，v1 PDF 第 7 页，图表区域裁切。[来源](https://arxiv.org/pdf/2410.03051v1#page=7)。滑雪者身份在左右描述中匹配，衣服颜色不同则判错；读图应跟随“提问—取答案—比较”的箭头。
 
 这使指标更直接检查具体信息是否被描述覆盖，但裁判主要比较两段文字，不独立回看视频纠正参考标注。参考描述的遗漏、生成问题的选择和裁判偏好都会影响结果。因此它是辅助评测，相关性证据不能当作完全无偏的质量证明。
 
@@ -83,9 +83,15 @@ VDC 从 Panda-70M、Ego4D、Mixkit、Pixabay、Pexels 取视频，尽量平衡�
 
 三阶段策略先建立接口，再改变视觉表征，最后共同学习高质量语言生成。Vision stage 的许多标签只包含短词或短语，作者担心同期更新 LLM 会损害语言能力，因此冻结语言端；Language stage 再用较高质量的描述与指令放开全部组件。[原文 §2.2](https://arxiv.org/pdf/2410.03051v1#page=4)
 
-![原文 Table E6 所在第 33 页：训练、评测设置和能力局限](figures/original-page-033-04.png)
+![原文 Table E6](figures/original-p033-table-E6.png)
 
-> 来源：Table E6，以及同页 Tables F7、G8、G9，v1 PDF 第 33 页，整页截图。[来源](https://arxiv.org/pdf/2410.03051v1#page=33)。E6 三列依次为对齐、视觉、语言阶段，不能用 LLaVA 通常的冻结方式替代这里的设置。
+![原文 Table F7](figures/original-p033-table-F7.png)
+
+![原文 Table G8](figures/original-p033-table-G8.png)
+
+![原文 Table G9](figures/original-p033-table-G9.png)
+
+> 来源：Table E6，以及同页 Tables F7、G8、G9，v1 PDF 第 33 页，图表区域裁切。[来源](https://arxiv.org/pdf/2410.03051v1#page=33)。E6 三列依次为对齐、视觉、语言阶段，不能用 LLaVA 通常的冻结方式替代这里的设置。
 
 | 设置 | Pretraining | Vision | Language |
 |---|---|---|---|
@@ -105,9 +111,11 @@ VDC 从 Panda-70M、Ego4D、Mixkit、Pixabay、Pexels 取视频，尽量平衡�
 
 视频短字幕 Table 3 的 MSR-VTT、VATEX CIDEr 分别为 33.1、33.8；问答 Table 4 中 ActivityNet-QA 准确率 61.8、iVQA 55.2，而 MSVD 为 62.6、MSR-VTT 为 43.5，低于部分视频问答模型。描述能力强并不等于所有问答也最佳。作者观察到某些问题在先要求详细描述后能得到正确信息，但仍将指令遵循弱点列为后续研究方向。
 
-![原文 Figure 4、Table 6 所在第 8 页：VDC 质量与 Token 预算比较](figures/original-page-008-02.png)
+![原文 Figure 4](figures/original-p008-figure-4.png)
 
-> 来源：Figure 4、Table 6，v1 PDF 第 8 页，整页截图。[来源](https://arxiv.org/pdf/2410.03051v1#page=8)。图横轴为输入视觉 Token 数；AuroraCap 调整合并比例，其他模型主要调整帧数，这不是完全相同的压缩实验。
+![原文 Table 6](figures/original-p008-table-6.png)
+
+> 来源：Figure 4、Table 6，v1 PDF 第 8 页，图表区域裁切。[来源](https://arxiv.org/pdf/2410.03051v1#page=8)。图横轴为输入视觉 Token 数；AuroraCap 调整合并比例，其他模型主要调整帧数，这不是完全相同的压缩实验。
 
 | VDC 模型 | VDCScore Acc | VDCScore Score | 人工 Elo |
 |---|---:|---:|---:|
@@ -118,8 +126,10 @@ VDC 从 Panda-70M、Ego4D、Mixkit、Pixabay、Pexels 取视频，尽量平衡�
 
 VDCScore 列按五类描述平均，VDD、CIDEr 和 BLEU 的汇总在原表另有限定，只对背景和主对象平均，不能把所有列看成同一内容集合。AuroraCap 的人工 Elo 高于表内对照，VDCScore 却低于 Gemini，表明指标与人工判断不是完全一致。Figure 5 中 VDCScore 与人工 Elo 的 Pearson r=0.86，ROUGE-L 为 0.66，VDD 为 0.12，支持该样本比较中更高相关性，不证明任何场景都成立。
 
-![原文 Figures 5、6 所在第 10 页：人工相关性与 Token 合并消融](figures/original-page-010-03.png)
+![原文 Figure 5](figures/original-p010-figure-5.png)
 
-> 来源：Figures 5、6，v1 PDF 第 10 页，整页截图。[来源](https://arxiv.org/pdf/2410.03051v1#page=10)。Figure 6 横轴从左侧 1.0 向右侧 0.0，保留量越少不总越好；中间比例有时优于全量，极端压缩会退化。
+![原文 Figure 6](figures/original-p010-figure-6.png)
+
+> 来源：Figures 5、6，v1 PDF 第 10 页，图表区域裁切。[来源](https://arxiv.org/pdf/2410.03051v1#page=10)。Figure 6 横轴从左侧 1.0 向右侧 0.0，保留量越少不总越好；中间比例有时优于全量，极端压缩会退化。
 
 论文确有压缩比例、slowfast、训练阶段与骨干消融。不同任务对压缩敏感度不同，GQA 比 COCO 短描述需要更高 Token 保留；首帧全量并未一致改善描述。能力边界也清楚：Table G9 中 DocVQA 为 34.60，低于 LLaVA-1.6-7B 的 74.35。最终支持的结论是，该配置以较低视觉 Token 数提供有竞争力的详细描述，而非对精细 OCR、所有问答或所有视频长度均无损压缩。

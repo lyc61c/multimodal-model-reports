@@ -2,7 +2,7 @@
 
 # All-Seeing：用区域数据引擎统一视觉识别与语言生成
 
-> 固定解读 [arXiv:2308.01907v1](https://arxiv.org/abs/2308.01907v1)。本文的图表为原 PDF 页面截图，保留图例、原表头及外围文字；补充数学表达单独注明为解读公式。
+> 固定解读 [arXiv:2308.01907v1](https://arxiv.org/abs/2308.01907v1)。本文的图表为原 PDF 图表裁图，保留图例、原表头及必要注释；补充数学表达单独注明为解读公式。
 
 ## 1. 论文信息与模型定位
 
@@ -30,7 +30,7 @@
 
 ## 3. 整体架构
 
-![Figure 4：ASM位置感知编码与生成、判别两条任务路径，原文第11页](figures/original-page-011-02.png)
+![原文 Figure 4](figures/original-p011-figure-4.png)
 
 *来源：原文 Figure 4 与公式 (1)，PDF 第 11 页；[原页](https://arxiv.org/pdf/2308.01907v1#page=11)。*
 
@@ -69,7 +69,7 @@ $v_i,t_i$ 分别由 `<align>` 隐藏表示得到，$B$ 是批大小，$s$ 为相
 
 ## 5. 数据构建与处理
 
-![Figure 3：区域定位、语义生成、匹配、属性描述与人工反馈，原文第6页](figures/original-page-006-01.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 *来源：原文 Figure 3，PDF 第 6 页；[原页](https://arxiv.org/pdf/2308.01907v1#page=6)。*
 
@@ -104,7 +104,9 @@ ASM 的多任务训练使用区域语义标签训练判别对齐，区域问答�
 
 ## 7. 实验设置与主要结果
 
-![Tables 6/7：区域与整图描述成绩，原文第18页](figures/original-page-018-03.png)
+![原文 Table 6](figures/original-p018-table-6.png)
+
+![原文 Table 7](figures/original-p018-table-7.png)
 
 *来源：原文 Table 6、7，PDF 第 18 页；[原页](https://arxiv.org/pdf/2308.01907v1#page=18)。先读 Zero-shot 列，ASM-FT 在区域任务使用相关训练数据，不能作为纯零样本结果。*
 
@@ -119,7 +121,13 @@ ASM 的多任务训练使用区域语义标签训练判别对齐，区域问答�
 
 零样本 RefCOCOg 的 Meteor 高于 Kosmos-2 的 12.2，但 CIDEr 41.9 低于其 60.3，不能概括为两个指标都更好。整图 NoCaps 上，ASM-FT 117.2 仍低于 InstructBLIP 的 123.1，表明区域能力增强并未带来每个整图基准的最优成绩。Meteor、CIDEr、SPICE 用不同方式衡量参考文本匹配，不是准确率百分比；长描述也可能因措辞和长度与人工参考不同而影响分数。
 
-![Tables 8–11：给定真实框的区域识别与数据工程消融，原文第19页](figures/original-page-019-04.png)
+![原文 Table 8](figures/original-p019-table-8.png)
+
+![原文 Table 10](figures/original-p019-table-10.png)
+
+![原文 Table 9](figures/original-p019-table-9.png)
+
+![原文 Table 11](figures/original-p019-table-11.png)
 
 *来源：原文 Table 8–11，PDF 第 19 页；[原页](https://arxiv.org/pdf/2308.01907v1#page=19)。表 8 比较模型，表 9–11 使用 R-CLIP 分析数据处理，请勿跨表当成同一个 ASM 配置。*
 

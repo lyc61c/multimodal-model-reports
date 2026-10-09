@@ -10,5 +10,7 @@
   "document_kind": "analysis_paper",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "Beyond Language Modeling：从零统一预训练中的视觉表示、MoE与缩放不对称"
+  "title_zh": "Beyond Language Modeling：从零统一预训练中的视觉表示、MoE与缩放不对称",
+  "chinese_characters": 2861,
+  "figure_revision_date": "2026-10-09"
 }

@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "BRAVE：以多编码器查询Transformer拓宽视觉表示"
+  "title_zh": "BRAVE：以多编码器查询Transformer拓宽视觉表示",
+  "chinese_characters": 2046,
+  "figure_revision_date": "2026-10-09"
 }

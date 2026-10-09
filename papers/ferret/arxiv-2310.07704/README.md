@@ -24,7 +24,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 3：混合区域表示、采样器与模型](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 Figure 3 位于 PDF 第 5 页。左上并列点、框、自由形状，左下展示采点、KNN、特征融合与池化；右侧把全图 token、文本和区域 embedding 一起送入语言模型。绿色框的输出是模型生成坐标的可视化。区域特征不只是将矩形裁下来再独立编码，而从全图 CLIP feature map 和指定 mask 中采样，因此可兼顾周围上下文与选中形状。
 
@@ -50,7 +50,7 @@ h_{ik}=\sigma([\theta([Z(x_{ik})-Z(x_i);C(x_{ik})-C(x_i)]);Z(x_i);C(x_i)]).
 
 ## 5. 数据构建与处理
 
-![原文 Figure 4：GRIT 的对象、关系、区域、推理与负样本](figures/original-page-006-02.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 PDF 第 6 页 Figure 4 的前几行来自公共标注，推理行来自教师生成，最后一行教模型识别不存在的物体。对象位置可位于输入或输出，颜色框将各示例关联到同一图像。它说明数据粒度和方向多样，而不是每条样本同时具备全部能力。
 
@@ -72,13 +72,19 @@ CLIP-ViT-L/14@336p 与 Vicuna 提供初始化，投影层使用 LLaVA 第一阶�
 
 LVIS 指代分类从验证集采样 **2667** 个对象，将真类别与同图附近另一个类别组成二选一问题，点靠近对象边界，自由形状由内部随机笔画模拟。Ferret-13B 点/框/自由形状分数为 **68.35/80.46/70.98**，7B 为 67.94/79.42/69.77。随机猜测为 50，这不是从上千 LVIS 类别直接开放生成的 Top-1 accuracy，也不能证明任意用户涂画都准确。
 
-![原文 Table 5、Figure 5：定位结果与实际任务示例](figures/original-page-010-03.png)
+![原文 Table 5](figures/original-p010-table-5.png)
+
+![原文 Figure 5](figures/original-p010-figure-5.png)
 
 PDF 第 10 页 Table 5 使用 Acc@0.5，按 RefCOCO 的 val/testA/testB、RefCOCO+ 和 RefCOCOg 等拆分。Ferret-13B RefCOCO 为 **89.48/92.41/84.36**，RefCOCOg val/test 为 **85.83/86.34**，Flickr30k test 为 **84.76**。但 RefCOCO+ val 的 82.81 略低于 Shikra-13B 的 82.89，不能将“所有指标优秀”解释成每项都排名第一。Figure 5 展示词语、对象与框的对应，应结合表的 IoU 门槛理解定位，而不只看可视化是否好看。
 
 Flickr30k 带定位描述分别评文字和定位。13B CIDEr 为 **76.1**，\(F1_{all}\) 为 **15.12**、\(F1_{loc}\) 为 **38.03**；后者只在正确预测对象词上计算，因而更高，不等于所有名词均正确定位。不同分母决定两个 F1 不能互换。[PDF 第 9–10 页](https://arxiv.org/pdf/2310.07704v1#page=9)
 
-![原文 Table 7–9：对话评测与采样器、双向数据消融](figures/original-page-012-04.png)
+![原文 Table 7](figures/original-p012-table-7.png)
+
+![原文 Table 8](figures/original-p012-table-8.png)
+
+![原文 Table 9](figures/original-p012-table-9.png)
 
 PDF 第 12 页 Table 7 的 Ferret-Bench 三类各采 40 张 COCO 验证图，区域统一用框以便对照。问题与伪答案由 GPT-4 生成，GPT-4 再以文字场景真值对模型回答和自身答案打 1–10 分，报告的是两者评分比值。13B 平均 **66.3**、Shikra-7B 为 45.9，差 **20.4 个百分点**；它不是人工确认的任务成功率，更不应说“定位精度提高 20.4%”。裁判与生成者相同、样本较少、API 会演进，均限制结果稳定性。
 

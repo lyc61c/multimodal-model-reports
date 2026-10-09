@@ -29,9 +29,9 @@
 
 ## 3. 整体架构
 
-![Figure 2 TextMonkey 与 Token Resampler 架构](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
-*原文 Figure 2，PDF 第 3 页完整页面；保留原始 ViT 的冻结标记、移位层与两级 resampler 的训练标记。*
+*原文 Figure 2，PDF 第 3 页图表区域裁切；保留原始 ViT 的冻结标记、移位层与两级 resampler 的训练标记。*
 
 模型使用 Qwen-VL 预训练的 ViT-BigG 与 LLM。高分辨率图像划分成非重叠 448×448 窗口，每个窗口再按 14×14 划分，得到 32×32=1024 个 patch token。普通 CLIP 层分别处理窗口，间隔插入可训练的移位注意力层，让原本分属不同窗口的邻近文字交换信息。
 
@@ -45,9 +45,11 @@
 
 报告 Eq. (1) 写成 \(x=BA\hat x\)，其中 A 高斯初始化，B 零初始化，用于新增分支的平稳起点。开始时 \(BA\hat x=0\)，减少新增路径对预训练特征的即时扰动。其梯度解释是：B 可以先获得梯度，A 的该路径梯度初始可能为零，随后 B 更新后再传播；这属于标准零初始化分支的数学解释。论文受到 LoRA 启发，但没有披露 A/B 的低秩大小，不能因此称模型使用某个 rank 的 LoRA，也不能将所有 CLIP 输出理解为被置零。
 
-![Figures 3、4 相似度分析与 Algorithm 1](figures/original-page-004-02.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
-*原文 Figure 3、Figure 4、Algorithm 1，PDF 第 4 页完整页面；热图、色条、阈值曲线、坐标与算法行完整保留。*
+![原文 Figure 4](figures/original-p004-figure-4.png)
+
+*原文 Figure 3、Figure 4、Algorithm 1，PDF 第 4 页图表区域裁切；热图、色条、阈值曲线、坐标与算法行完整保留。*
 
 算法用一个 token 与其余 token 的最大余弦相似度衡量重复程度。设已映射特征为 \(z_i\)，可以整理为：
 
@@ -96,9 +98,13 @@ Figure 2 显示原 ViT 编码层冻结，新增移位层、Image Resampler、Tok
 
 ## 7. 实验设置与主要结果
 
-![Tables 3–5 统一准确率、原始任务指标与文字定位](figures/original-page-006-03.png)
+![原文 Table 3](figures/original-p006-table-3.png)
 
-*原文 Table 3、Table 4、Table 5，PDF 第 6 页完整页面；保留全部模型行、各指标、词典与评测条件说明。*
+![原文 Table 4](figures/original-p006-table-4.png)
+
+![原文 Table 5](figures/original-p006-table-5.png)
+
+*原文 Table 3、Table 4、Table 5，PDF 第 6 页图表区域裁切；保留全部模型行、各指标、词典与评测条件说明。*
 
 | 指标（Table 3） | Monkey | TextMonkey | TextMonkey† |
 |---|---:|---:|---:|
@@ -116,9 +122,15 @@ Spotting 同时报告 Trans 和 Pos：Total-Text 为 78.2/57.8，CTW1500 为 63.
 
 组件消融中，加入移位注意力使 DocVQA 62.6→64.1、TextVQA 62.4→64.8；再加 Token Resampler 为 64.3/65.9。零初始化增益较小，ChartQA 57.6→58.2。随机查询替换特征查询后 DocVQA 46.7，而完整方法为 64.3；只筛 token 不做聚合为 63.5；不按原顺序排列为 62.1。它们支持独特性查询、聚合和序列顺序的作用，不能把不同对照差异全归因于一个组件。
 
-![Tables 9、10 与 Figures 6、7：分辨率取舍、结构化输出和定位错误](figures/original-page-008-04.png)
+![原文 Table 9](figures/original-p008-table-9.png)
 
-*原文 Table 9、Table 10、Figure 6、Figure 7，PDF 第 8 页完整页面；保留所有消融配置和完整输入/输出。*
+![原文 Figure 6](figures/original-p008-figure-6.png)
+
+![原文 Table 10](figures/original-p008-table-10.png)
+
+![原文 Figure 7](figures/original-p008-figure-7.png)
+
+*原文 Table 9、Table 10、Figure 6、Figure 7，PDF 第 8 页图表区域裁切；保留所有消融配置和完整输入/输出。*
 
 无 Token Resampler 时，896→1344 使 DocVQA 64.1→54.9，下降 9.2 个百分点；为 1344 配置 r=1024 后恢复到 64.5，InfoVQA 为 31.4，高于 896/r512 的 28.2。但 TextVQA 65.1低于 65.9、SROIE 46.0低于47.0。增加分辨率与压缩容量需要随任务取舍，不能仅凭最大分辨率排序模型优劣。
 

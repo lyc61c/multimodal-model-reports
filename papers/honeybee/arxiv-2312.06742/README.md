@@ -20,7 +20,9 @@ Honeybee 是面向图像理解与文字回答的多模态模型，用 CLIP 视�
 
 ## 3. 整体架构
 
-![原文 Figures 3–4：空间理解动机与两种 abstractor，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
+
+![原文 Figure 4](figures/original-p004-figure-4.png)
 
 Figure 3 左侧示例说明 resampler 的注意力可能主要落在人物等显著对象，遗漏餐具或背景区域；右侧柱状比较空间理解平均分。Figure 4 进一步给出解决方案：上方 C-Abstractor 用卷积—池化—卷积，下方 D-Abstractor 用空间采样和可变形注意力。单个注意力示例用于解释设计动机，不是对所有 resampler 的普遍失败证明。
 
@@ -56,7 +58,9 @@ Table 2 列出来源池：BlipCapFilt 与 COYO100M 合计 200M 图像描述样�
 
 同图多个问答可组成多轮对话。附录的去重操作保留重复目标中的一项，减少模型根据上一轮相同答案走捷径的机会；这不是对全语料做严格语义去重的证明。最终模板采用每数据集一个细粒度模板，已有 GPT 辅助指令保留原请求与回答。
 
-![原文 Tables 4–5：训练数据混合与模板消融，PDF 第 7 页](figures/original-page-007-02.png)
+![原文 Table 4](figures/original-p007-table-4.png)
+
+![原文 Table 5](figures/original-p007-table-5.png)
 
 Table 4 应先看左侧勾选的数据类型，再比较右侧指标。移除选择式 VQA 后，MMBench 从 69.2 降到 30.4，SEED 图像子集从 64.2 降到 20.8，说明回答形式训练对这类评测很重要。移除 caption 数据对 LLaVA-Bench 的影响更突出；移除视觉与纯文本指令后，其分数从 64.5 降到 26.1。不同指标反映的数据能力不同。
 
@@ -64,7 +68,11 @@ Table 5 显示手调 per-dataset 采样 AvgN 70.6，按数据集等概率为 70.
 
 ## 6. 训练流程与目标
 
-![原文 Tables 10–12：训练配置、附加消融与采样比例，PDF 第 13 页](figures/original-page-013-04.png)
+![原文 Table 10](figures/original-p013-table-10.png)
+
+![原文 Table 11](figures/original-p013-table-11.png)
+
+![原文 Table 12](figures/original-p013-table-12.png)
 
 第一阶段冻结 CLIP 和 Vicuna，只更新新投影器，在 BlipCapFilt 与 COYO100M 之间按 1:1 采样进行图文对齐。第二阶段更新投影器与整个语言模型，视觉编码器不在 Table 11 的可训练模块中。论文使用全参数语言模型微调；LoRA 是消融设置而非最终训练配置。
 
@@ -85,7 +93,9 @@ Table 5 显示手调 per-dataset 采样 AvgN 70.6，按数据集等概率为 70.
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 6–7：模型比较和增加视觉 token 的代价，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Table 6](figures/original-p008-table-6.png)
+
+![原文 Table 7](figures/original-p008-table-7.png)
 
 主要使用 MMBench-dev、MME、SEED-Bench Image-only 和 LLaVA-Bench In-the-Wild。最后一项由 GPT-4 评估开放回答，与客观选项准确率并非同一种指标。AvgN 先按各基准上限归一化，再平均。效率的 s/step 是预训练单步时间，不能当作解码 token/s 或用户请求延迟。
 

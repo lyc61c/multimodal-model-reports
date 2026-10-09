@@ -29,5 +29,10 @@
     "RL Eq1 ratio/logratio Clip and optimizer direction notfullyaligned",
     "WideSearch single72.8 earlierprose versus72.7formalTables4/6"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

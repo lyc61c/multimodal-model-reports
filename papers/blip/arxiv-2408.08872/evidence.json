@@ -54,5 +54,10 @@
       ],
       "source": "Section7;Tables5-8;Figure8"
     }
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

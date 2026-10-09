@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "mPLUG-DocOwl：以统一指令微调实现无需外部OCR的文档理解"
+  "title_zh": "mPLUG-DocOwl：以统一指令微调实现无需外部OCR的文档理解",
+  "chinese_characters": 2257,
+  "figure_revision_date": "2026-10-09"
 }

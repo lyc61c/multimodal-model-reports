@@ -2,9 +2,43 @@
   "checked_file": "README.md",
   "verdict": "complete_self_review",
   "source_identity": "Title/authors/2311.16483v1 matched page 1; 19 pages including supplement",
-  "facts_checked": ["Pipeline stages distinct from training stages", "Code generation distinct from pixel generation", "Foundation training data vs new chart data separated", "BLEU finetuning protocol", "Executable filtering limitations", "Tables 2–6 and multilingual OCR limitation"],
+  "facts_checked": [
+    "Pipeline stages distinct from training stages",
+    "Code generation distinct from pixel generation",
+    "Foundation training data vs new chart data separated",
+    "BLEU finetuning protocol",
+    "Executable filtering limitations",
+    "Tables 2–6 and multilingual OCR limitation"
+  ],
   "math_checked": "No fabricated paper Eq.; LoRA dimensions correct; Figure 6 mean checked and rounding discrepancy explicitly explained.",
-  "images_checked": ["Viewed page 4 Figure 3 full pipeline", "Viewed page 7 Tables 2–4 full headers", "Viewed page 8 Figures 4–5 with axes/data", "Viewed page 11 Figure 6 and Tables 5–6 complete"],
+  "images_checked": [
+    "Viewed page 4 Figure 3 full pipeline",
+    "Viewed page 7 Tables 2–4 full headers",
+    "Viewed page 8 Figures 4–5 with axes/data",
+    "Viewed page 11 Figure 6 and Tables 5–6 complete"
+  ],
   "model_execution": "not_run",
-  "remaining_limitations": ["Final training hyperparameters incomplete in fixed original", "GPT rubric details vary between main text and appendix", "No independent benchmark run"]
+  "remaining_limitations": [
+    "Final training hyperparameters incomplete in fixed original",
+    "GPT rubric details vary between main text and appendix",
+    "No independent benchmark run"
+  ],
+  "article_sha256": "59b3a8568b61ebdb64c00397b58d4899020fc0b7a49c2d6bc9979a63b8de85f5",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 9,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 20）：Figure 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 21）：Table 2, Table 3, Table 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 22）：Figure 4, Figure 5 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 23）：Table 5, Figure 6, Table 6 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
 }

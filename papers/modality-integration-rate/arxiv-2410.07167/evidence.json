@@ -10,5 +10,10 @@
     "核对默认100随机样本、至少20稳定经验、1.8M/1.9M近似规模、caption截断和共享665K SFT。",
     "核对QFormer未BLIP2预对齐、MiniGemini因链接缺失用复现版、MoCa LLaVA MME退步及绝对1.5/0.9分；未运行模型。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Cambrian-1：用空间视觉聚合器连接多种视觉表征与语言模型"
+  "title_zh": "Cambrian-1：用空间视觉聚合器连接多种视觉表征与语言模型",
+  "chinese_characters": 3400,
+  "figure_revision_date": "2026-10-09"
 }

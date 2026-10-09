@@ -24,7 +24,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Tokenlevelcompressiondifferenttimepairsperspatiallocation notglobalframe",
@@ -33,5 +34,20 @@
     "GPUcomparison60vs100frames disclosed",
     "Onlineprocessing not real-time latency; Figure6 seconds noted",
     "Table11-13trainingreadtextnotselectedimage;noGPUtimeinferred"
-  ]
+  ],
+  "article_sha256": "f1d8cc89460b549dcac1f866f99c7214253d703678cda9deaf5256828271c4bb",
+  "artifact_checks": {
+    "original_assets": 13,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 117）：Figure 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 118）：Table 1, Table 2, Table 3, Table 4, Table 5 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。拼图未完全显示的末张 Table 5 / Table 9 已额外单独打开原尺寸草图确认。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 119）：Table 8, Figure 3, Table 6, Table 7, Table 9 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。拼图未完全显示的末张 Table 5 / Table 9 已额外单独打开原尺寸草图确认。",
+      "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 120）：Table 10, Figure 6 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
+    ]
+  }
 }

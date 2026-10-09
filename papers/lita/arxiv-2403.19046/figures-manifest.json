@@ -4,63 +4,153 @@
   "source_pdf_sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca",
   "assets": [
     {
-      "asset_path": "figures/original-page-003-01.png",
-      "original_label": "Figure 2 (PDF page 3)",
+      "asset_path": "figures/original-p003-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 3,
       "source_url": "https://arxiv.org/pdf/2403.19046v1#page=3",
       "source_version": "2403.19046v1",
       "source_sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca",
-      "asset_sha256": "d1cd54ef4e64ee269e41dfa1265117b594624a029b9c10f556f481d0f7aed683",
+      "asset_sha256": "b49ea99982fa9cfbdfc6952bb8b1d7990ab0e82d7bb35b0be7c7d4ca13513817",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          41.72,
+          69.0,
+          548.12,
+          304.04
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Figure 2 full SlowFast model diagram and caption.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-006-02.png",
-      "original_label": "Table 1 (PDF page 6)",
+      "asset_path": "figures/original-p006-table-1.png",
+      "original_label": "Table 1",
       "pdf_page": 6,
       "source_url": "https://arxiv.org/pdf/2403.19046v1#page=6",
       "source_version": "2403.19046v1",
       "source_sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca",
-      "asset_sha256": "1d3563a208ae977676cb9bf675d65953f3f93b2275f18eeb3e29e79e6918b7d5",
+      "asset_sha256": "e573cc50f1bcc909cd75d0b085fa1ee6fd9d86d9a9701896d3b92d364aa7a14e",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          305.86,
+          69.87,
+          556.18,
+          228.54
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Table 1 caption, all baseline and final model rows complete.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-007-03.png",
-      "original_label": "Figure 4 and Table 2 (PDF page 7)",
+      "asset_path": "figures/original-p007-figure-4.png",
+      "original_label": "Figure 4",
       "pdf_page": 7,
       "source_url": "https://arxiv.org/pdf/2403.19046v1#page=7",
       "source_version": "2403.19046v1",
       "source_sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca",
-      "asset_sha256": "7dc7e299ea4cf36123321a405d5362fd40c59199db7d871b0840bc52887ca2eb",
+      "asset_sha256": "702272dc5963992278ec91eac5a678a863930279b407cd3d070290db296d2733",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          47.02,
+          69.0,
+          548.72,
+          246.9
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Figure 4 three comparative examples and Table 2 complete.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-008-04.png",
-      "original_label": "Figure 5 and Table 3 (PDF page 8)",
+      "asset_path": "figures/original-p007-table-2.png",
+      "original_label": "Table 2",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2403.19046v1#page=7",
+      "source_version": "2403.19046v1",
+      "source_sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca",
+      "asset_sha256": "fa520b4b9f05ef8625733a80c9230020575928039c5fe834aeafc80ad977cb80",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          47.11,
+          254.84,
+          548.11,
+          397.55
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Figure 4 three comparative examples and Table 2 complete.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-figure-5.png",
+      "original_label": "Figure 5",
       "pdf_page": 8,
       "source_url": "https://arxiv.org/pdf/2403.19046v1#page=8",
       "source_version": "2403.19046v1",
       "source_sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca",
-      "asset_sha256": "a7cb233d2813786bc5f44943a8595939b43bb544c0c701b64de3b9713ab3263b",
+      "asset_sha256": "ded6cf78f94788be50528ff177a52d7ca9379d46df2afdfb5b2affed3de9db82",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 145,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          45.92,
+          69.0,
+          548.12,
+          294.29
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Figure 5 examples and Table 3 training-task ablation complete.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p008-table-3.png",
+      "original_label": "Table 3",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2403.19046v1#page=8",
+      "source_version": "2403.19046v1",
+      "source_sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca",
+      "asset_sha256": "78d8d213c7cb2452afe3aca742d3caa953bf7c228df39c5b8bf5816f3436f4bc",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          305.86,
+          310.21,
+          556.08,
+          429.0
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Figure 5 examples and Table 3 training-task ablation complete.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

@@ -29,7 +29,7 @@ Cosmos 3 希望把物理智能所需的几类能力放进同一框架：解释�
 
 **序列由 AR 前缀和 DM 后缀组成。** AR 放置文字以及 ViT 编码的视觉信息，以 EOS、BOG 分界；DM 放置 VAE 视频、音频和动作。DM 内先排列干净条件 token，再排列待去噪 token。文生图、文生视频、图生视频、视频延续和控制视频转 RGB，只需改变哪些 token 是已知条件，哪些是生成目标。
 
-![Figure 5：Cosmos 3 MoT 双路径和注意力掩码，PDF 第 12 页](figures/original-page-012-01.png)
+![原文 Figure 5](figures/original-p012-figure-5.png)
 
 **读图方式：** 左半图蓝色是 Reasoner，橙色是 Generator，分别拥有归一化、注意力投影和 MLP 参数。两者在注意力计算中交换条件信息，不是所有参数完全共享。右半掩码的左上区域为 AR 的因果三角，右上为零，意味着 AR 不读取带噪生成目标；下面两个区域允许 DM 读取全部 AR 和 DM。图为直观展示画出干净输出，实际生成训练预测的是 flow velocity。[原文第 9–12 页](https://arxiv.org/pdf/2606.02800v1#page=9)
 
@@ -89,7 +89,9 @@ $$
 
 先训练 Reasoner，再以其权重初始化 Generator。Reasoner 的预训练从一开始联合更新语言骨干、projector、ViT，无单独冻结骨干的 projector 对齐阶段；以 NTP 训练两轮，最大序列 16K，单样本图片最多 2,048 token、视频最多 8,192 token。语言/projector 峰值 LR 为 $5\times10^{-5}$，ViT 为 $5\times10^{-6}$；AdamW 为 (0.9,0.999)，WD 0.05，10% warmup 后余弦降至峰值 0.1 倍。SFT 运行 8,200 步、全局 batch 512，LR 降至 $10^{-5}$ 与 $10^{-6}$，warmup 1,000，Adam 系数 (0.9,0.95)、WD 0.1。SFT 以 1:4 采样预算混入预训练样本，维持一般能力。[原文第 26–27 页](https://arxiv.org/pdf/2606.02800v1#page=26)
 
-![Table 5 与 Figure 10：生成训练的尺寸、时长和序列打包，PDF 第 28 页](figures/original-page-028-02.png)
+![原文 Table 5](figures/original-p028-table-5.png)
+
+![原文 Figure 10](figures/original-p028-figure-10.png)
 
 **读图方式：** 三种颜色分别表示 256p、480p、720p；变长视频组成固定 74,000 token 的打包序列，避免补齐到最长样本。较高分辨率会用更少帧，720p 上限为 300，低两档最多 400。右图显示图片 20%、视频 80%，视频档位为 20%/40%/20%。具体模式依据正文为 T2I/T2V/I2V/V2V = 20%/56%/16%/8%；图注同时使用“uniformly”措辞，与图中视频内 70/20/10 不一致，本文沿用明确的图内及正文比例，不把它改成均匀采样。
 
@@ -114,7 +116,7 @@ Generator 预训练只更新生成专用参数，Reasoner 塔冻结。所有连�
 
 PAIBench-G 在 720p、16:9、189 帧、每提示五个 seed 下评测，Super T2V/I2V 为 80.0/82.8，Nano 为 79.4/82.7。此表使用 Qwen2.5-VL-72B-Instruct 裁判，与公开榜单另一裁判协议有差异。RBench 则为 121 帧、单 seed，Nano 58.4%，Super 58.1%。这些分数不能混成统一的视频“准确率”。[原文第 56–57 页](https://arxiv.org/pdf/2606.02800v1#page=56)
 
-![Table 13：Physics-IQ 直接采样与奖励重排，PDF 第 58 页](figures/original-page-058-03.png)
+![原文 Table 13](figures/original-p058-table-13.png)
 
 **读表方式：** 左侧为单图条件 I2V，右侧为三秒视频条件、续生成五秒的 V2V。两侧又分别列直接生成和 WMReward best-of-N。Super 的 I2V 43.8、V2V 59.7，奖励重排后为 48.9/63.4。重排数字包含多候选推理，不是单次生成结果；视频条件比单图包含更多运动证据，不能将两个模式差值全部归因于模型改进。Physics-IQ 比较实际物理过程的空间、时间与像素一致性，它仍不是长期因果仿真的完备测试。
 
@@ -122,7 +124,9 @@ PAIBench-G 在 720p、16:9、189 帧、每提示五个 seed 下评测，Super T2
 
 **动作中训练的主要证据来自匹配适配预算的对照。** 相同模型、数据和训练预算下，从中训练 MT-init 初始化比无动作中训练的 PT-init 更易适配：机器人前向动力学 Super PSNR 从 22.69 到 26.04，Nano 从 23.24 到 25.52。PSNR 是短期像素重建代理，不等于控制成功率。相机轨迹也由另一个估计器从生成视频恢复，因此评价含姿态估计误差。[原文第 65–67 页](https://arxiv.org/pdf/2606.02800v1#page=65)
 
-![Figure 24 与 Table 19：机器人前向预测和 RoboLab 策略，PDF 第 68 页](figures/original-page-068-04.png)
+![原文 Figure 24](figures/original-p068-figure-24.png)
+
+![原文 Table 19](figures/original-p068-table-19.png)
 
 **读图表方式：** 上半逐行对比真实帧、Ctrl-World、Nano MT-init，绿色框是原文标出的局部伪影差异，只作定性展示。下半表则是真正闭环的 RoboLab-120 任务成功率，分别测试模糊、默认、具体指令；Nano-Policy-DROID 总成功率为 20.6%/36.8%/39.7%，具体指令条件下 $\pi_{0.5}$ 为 28.1%、DreamZero 按表为 23.9%。这不是所有任务近乎完成，而且复杂任务的模糊指令条件下，MT-init 的 4.1% 低于 PT-init 的 7.1%。原文“所有粒度和难度均超过”的叙述存在例外，本文保留表中差异。
 

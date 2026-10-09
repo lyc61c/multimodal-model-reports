@@ -24,7 +24,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：Partial LoRA；PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图方式**：Figure 2 的蓝色方块表示视觉 token，灰色方块表示文字 token。右侧大矩阵是共同使用的预训练权重，蓝色支路经过两个低秩矩阵后与视觉主路相加；灰色支路没有这项增量。这里展示的是解码器线性层内部的计算差异，而不是两个独立语言模型。
 
@@ -34,7 +34,7 @@
 
 创作路径分两层：模型先根据要求形成文字，再确定适合插图的位置。默认沿用前作的图片检索流程；当用户提供参考图片，则使用这些图片。这使系统能根据“标题—段落—图片”组织内容，但图片检索质量、插图与段落一致性仍是最终产品质量的一部分。[原文 §3.4，PDF 第 5 页](https://arxiv.org/pdf/2401.16420v1#page=5)
 
-![原文 Figure 3：法式甜点图文创作示例；PDF 第 12 页](figures/original-page-012-04.png)
+![原文 Figure 3](figures/original-p012-figure-3.png)
 
 **读图方式**：上方是标题指令，下面的文章按可颂、马卡龙、闪电泡芙等小节安排图片。它说明模型可以形成多段文字与插图的交错布局。这是作者挑选的定性示例，不能据此计算插图正确率，也不能把页面里的图片理解为模型从像素生成的结果。
 
@@ -58,7 +58,9 @@ Partial LoRA 将传统低秩适配的作用范围限定到视觉位置。对一�
 
 ## 5. 数据构建与处理
 
-![原文 Table 1、Table 2：预训练与 SFT 数据；PDF 第 4 页](figures/original-page-004-02.png)
+![原文 Table 1](figures/original-p004-table-1.png)
+
+![原文 Table 2](figures/original-p004-table-2.png)
 
 **读表方式**：上表按三个对齐目标分类，下表按多任务训练与自由创作指令分类。同一个来源可能服务不同阶段，例如描述数据先用于语义学习，再用于任务训练；表中的数据集名称不代表作者重新使用了这些数据集公开全集。
 
@@ -82,7 +84,11 @@ SFT 包含顺序进行的多任务训练和自由图文创作训练，视觉编�
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 4、Table 5、Table 6：开放模型、幻觉与写作评测；PDF 第 6 页](figures/original-page-006-03.png)
+![原文 Table 4](figures/original-p006-table-4.png)
+
+![原文 Table 5](figures/original-p006-table-5.png)
+
+![原文 Table 6](figures/original-p006-table-6.png)
 
 **读表方式**：Table 4 将 MME 拆为感知与认知两个分数，最后一行是本文模型；Table 5 中 POPE 是三个设置的平均 F1，HallusionBench 带星号表示跳过非视觉问题；Table 6 分无 GPT-4 参考答案与有参考答案两种条件，C/R/UDF/LC 分别对应创意、丰富性、满足用户需求和逻辑连贯性。三张表的数值单位不同，不能相加或作为同一种正确率比较。
 

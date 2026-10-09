@@ -27,7 +27,7 @@ K2.5 围绕两条路线构建。第一条是让文本和视觉从联合预训练
 
 视频把最多四帧的 patch 联合打包为时空序列，用同一组注意力权重读取空间和时间关系。经过编码后，对同一空间位置的时间表示聚合，再送入 MLP，达到四帧组内约四倍时间压缩。这里包含池化之前的时空交互，不能写成“每帧完全独立编码后直接平均”。这一压缩增加固定上下文内可放入的视频帧数量，未保证每个短暂事件的信息都完整保留。
 
-![Figure 3：编排者创建角色、并行分派任务、汇总结果](figures/original-page-005-01.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 *原文 Figure 3，PDF 第 5 页，完整原页。箭头区分创建与任务分派、返回结果；同一角色可以接收不同任务。下方为 PARL 训练设置与奖励描述。*
 
@@ -76,7 +76,7 @@ budget(x)=\operatorname{Percentile}_\rho\{,|y_i|:r(x,y_i)=1\,\}.
 
 作者说明过滤、去重和质量检查，但没有公开每类条数、来源权重、所有阈值或训练集与所有基准的完整去污染审计。SFT 候选回答由 K2、K2 Thinking 和内部专家生成，结合人工标注、提示设计、多阶段验证。PARL 的任务包含宽搜索、深搜索、长文档分析和批量文件获取，合成提示本身不直接要求并行，让模型从任务分布和反馈中学会分解。
 
-![Table 3：视觉预训练、联合预训练和长上下文阶段](figures/original-page-007-02.png)
+![原文 Table 3](figures/original-p007-table-3.png)
 
 *原文 Table 3，PDF 第 7 页，完整原页。保留各阶段 token 量、序列长度和更新模块；表下正文详细说明图像视频编码与短暂投影器对齐。*
 
@@ -103,7 +103,7 @@ budget(x)=\operatorname{Percentile}_\rho\{,|y_i|:r(x,y_i)=1\,\}.
 
 默认温度 1.0、top-p 0.95、上下文 256K，但附录 E 为各任务给出重要例外。视觉和视频最多输出 64K，三次运行平均；AIME/HMMT Feb 为 Avg@64，GPQA 为 Avg@8。SWE 和 Terminal Bench 使用非 Thinking 设置，代码结果 Avg@5。短视频采样 128 帧、最大空间分辨率 896，长视频采样 2048 帧、分辨率 448；Video-MME 使用字幕。GUI 最大 100 步，OSWorld 温度 0、WebArena 0.1，且只测一次。
 
-![Table 4：完整主结果及工具、上下文管理、Swarm 设置](figures/original-page-012-03.png)
+![原文 Table 4](figures/original-p012-table-4.png)
 
 *原文 Table 4，PDF 第 12 页，完整原页。保留所有分区、模型列和脚注。星号为作者内部评测；HLE 的文本子集与全量集另有脚注，不能直接混比。*
 
@@ -123,7 +123,7 @@ budget(x)=\operatorname{Percentile}_\rho\{,|y_i|:r(x,y_i)=1\,\}.
 
 Swarm 在 BrowseComp 为 78.4，单智能体无上下文管理为 60.6、有 discard-all 管理为 74.9；因此 +17.8 个百分点是相对无管理基线，而相对管理版本只有 3.5。WideSearch 由 72.7→79.0 Item-F1，内部 Swarm Bench 由 41.6→58.3；内部测试特意包含并行友好的大规模任务，外部可复核性弱于公开基准。正文早处写单智能体 72.8，正式 Tables 4、6 为 72.7，本介绍以表格为准。
 
-![Figure 8：达到相同搜索质量时的运行时间](figures/original-page-015-04.png)
+![原文 Figure 8](figures/original-p015-figure-8.png)
 
 *原文 Figure 8，PDF 第 15 页，完整原页。横轴目标 Item-F1，纵轴归一化执行时间，图注为 WideSearch；并非单 token 推理速度或总 FLOPs。*
 

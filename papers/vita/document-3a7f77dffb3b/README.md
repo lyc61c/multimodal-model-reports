@@ -31,7 +31,7 @@
 
 ## 3. 整体架构
 
-![VITA-QinYu 原文 Figure 1](figures/figure-01-hybrid-architecture.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
 *原文 Figure 1，PDF 第 3 页原页。底部是文本 / 语音输入及说话人条件，顶部是文字与多层音频 token 生成；灰色区域包含延迟码本的填充。*
 
@@ -79,7 +79,7 @@ $$
 
 ## 5. 数据构建与处理
 
-![VITA-QinYu 原文 Figure 3](figures/figure-03-data-pipelines.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 *原文 Figure 3，PDF 第 6 页原页。上部为自然对话管线，下左为角色脚本和表达性合成，下右为歌曲拆分、MIDI 提取及指令转换。*
 
@@ -105,7 +105,7 @@ SQA 即语音问题输入、文字答案输出，被用于保留语言主干理�
 
 ## 7. 实验设置与主要结果
 
-![VITA-QinYu 原文角色评测](figures/table-02-role-playing.png)
+![原文 Table 2](figures/original-p007-table-2.png)
 
 *原文 Table 2，PDF 第 7 页原页。文字三项由 5 分线性转为 100 分，与 speaker similarity 求平均；主观角色匹配、自然度、情绪仍采用 5 分制。*
 
@@ -113,7 +113,9 @@ SQA 即语音问题输入、文字答案输出，被用于保留语言主干理�
 
 五位标注者给角色语音主观打分：4B 的 CMS / MOS-N / MOS-E 为 3.54 / 3.84 / 4.08，8B 为 3.45 / 3.74 / 3.99。较大模型并非在全部主观声学项更高，文本能力与声音自然度需要分别观察。
 
-![VITA-QinYu 原文歌唱与 C3 评测](figures/table-03-04-singing-conversation.png)
+![原文 Table 3](figures/original-p009-table-3.png)
+
+![原文 Table 4](figures/original-p009-table-4.png)
 
 *原文 Table 3–4，PDF 第 9 页原页。歌唱主观评测由三人评价随机 100 个请求；C3 分开给出英文和中文。*
 
@@ -121,7 +123,7 @@ SQA 即语音问题输入、文字答案输出，被用于保留语言主干理�
 
 C3 英文 Overall：8B 44.05，Qwen2.5-Omni 51.91；中文：8B 50.70，Qwen2.5-Omni 40.08。模型在中文上下文依赖任务更强，英文歧义等能力仍有不足。摘要的综合领先描述不应掩盖分语言差异。
 
-![VITA-QinYu 原文 URO 评测](figures/table-05-uro.png)
+![原文 Table 5](figures/original-p010-table-5.png)
 
 *原文 Table 5，PDF 第 10 页原页。U / C / R 分别是理解、口语对话和推理，Avg 为三项平均。*
 

@@ -14,5 +14,10 @@
     "Table4 Open召回率与Closed准确率，SLAKE英文，FT列为0才零样本；灰色注释与FT矛盾保留",
     "13Bzero40.25低于7B41.22，FT9/15/18非单调；多个初始化最好指标不拼成单模型"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

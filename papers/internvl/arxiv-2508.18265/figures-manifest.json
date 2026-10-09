@@ -4,63 +4,153 @@
   "source_pdf_sha256": "026111368090f83532b0eb21dff717f498f1a233807c45ca3b395cce693449cf",
   "assets": [
     {
-      "asset_path": "figures/original-page-003-01.png",
-      "original_label": "PDF page 3",
+      "asset_path": "figures/original-p003-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 3,
       "source_url": "https://arxiv.org/pdf/2508.18265v1#page=3",
       "source_version": "2508.18265v1",
       "source_sha256": "026111368090f83532b0eb21dff717f498f1a233807c45ca3b395cce693449cf",
-      "asset_sha256": "aae81ea79803814ad5f37ff14f237a29ea00d4d29c33183c500b64147428956c",
+      "asset_sha256": "af06464ac3e3eb4ba56a37be258a26a15f601d6d711aa021276a26dd1f55e51d",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          83,
+          69,
+          532,
+          210
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-009-02.png",
-      "original_label": "PDF page 9",
+      "asset_path": "figures/original-p009-table-2.png",
+      "original_label": "Table 2",
       "pdf_page": 9,
       "source_url": "https://arxiv.org/pdf/2508.18265v1#page=9",
       "source_version": "2508.18265v1",
       "source_sha256": "026111368090f83532b0eb21dff717f498f1a233807c45ca3b395cce693449cf",
-      "asset_sha256": "ba6f1ff53c5fa6eff429710e08d64f5ac659168a27f593f271d0406993ce7071",
+      "asset_sha256": "aa505b92252a49201303cc9c01a3526f3b9a2adc2b55e45a1889bb722a7e0128",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          83.09,
+          116.62,
+          530.34,
+          640.55
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-023-03.png",
-      "original_label": "PDF page 23",
+      "asset_path": "figures/original-p023-table-15.png",
+      "original_label": "Table 15",
       "pdf_page": 23,
       "source_url": "https://arxiv.org/pdf/2508.18265v1#page=23",
       "source_version": "2508.18265v1",
       "source_sha256": "026111368090f83532b0eb21dff717f498f1a233807c45ca3b395cce693449cf",
-      "asset_sha256": "6f4d7782f2842b551c695e1db7b60b40bc9159a450d0f1e4b99b53c6f5cf6375",
+      "asset_sha256": "4d40aa35a0a7946b603cf16538900e8446a3f41bc1866d3ced492f49240ffb39",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          95.55,
+          69.05,
+          514.71,
+          398.43
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-024-04.png",
-      "original_label": "PDF page 24",
+      "asset_path": "figures/original-p023-table-16.png",
+      "original_label": "Table 16",
+      "pdf_page": 23,
+      "source_url": "https://arxiv.org/pdf/2508.18265v1#page=23",
+      "source_version": "2508.18265v1",
+      "source_sha256": "026111368090f83532b0eb21dff717f498f1a233807c45ca3b395cce693449cf",
+      "asset_sha256": "73da78c2cefbb38f3f38568e47b75d76560fa425fa28ff9b8ccd05d470460d29",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          96.43,
+          417.61,
+          513.83,
+          505.35
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p024-table-17.png",
+      "original_label": "Table 17",
       "pdf_page": 24,
       "source_url": "https://arxiv.org/pdf/2508.18265v1#page=24",
       "source_version": "2508.18265v1",
       "source_sha256": "026111368090f83532b0eb21dff717f498f1a233807c45ca3b395cce693449cf",
-      "asset_sha256": "4f6d7adce4e398ad027156aa2bd4508537706837efd51b8f7cfe8e8748d7476c",
+      "asset_sha256": "7c79badccd9a74a2e59239b37d095af7f354653afcf200b9760599b95312ffb1",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 170,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          92.08,
+          69.05,
+          519.92,
+          203.91
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p024-table-18.png",
+      "original_label": "Table 18",
+      "pdf_page": 24,
+      "source_url": "https://arxiv.org/pdf/2508.18265v1#page=24",
+      "source_version": "2508.18265v1",
+      "source_sha256": "026111368090f83532b0eb21dff717f498f1a233807c45ca3b395cce693449cf",
+      "asset_sha256": "f71e30392c370854bb4cbb0f7e2745493efe1b431728bb6fff653b541d3a4a36",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          83.09,
+          228.55,
+          529.27,
+          404.77
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

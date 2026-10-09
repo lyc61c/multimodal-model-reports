@@ -6,18 +6,30 @@
     "Viewedfouroriginalpagestablescompleteandmetriccolumnschecked",
     "SeparatedfrozenpretrainandLLMunfrozenSFT",
     "Separatedgeneralist/specialist/chatandshortablation",
-    "Sevensections;notmodelexecution"
+    "Sevensections;notmodelexecution",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 8,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "39fb39320e8bccb858ace814ac35efd9d01c9d599f98f86e1b046f35ddfb02ba",
+  "article_sha256": "f48adda23a37ae99b3ff162e7243dac580f22abe49e713c6b09e730b5937765a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: complete CogVLM input and visual-expert diagrams, labels, arrows and Figure 3 caption retained.",
+      "Tables 1 and 2 complete; repaired Table 2 includes every result row.",
+      "All Tables 4–6 restored to full column width.",
+      "Distinct correct hyperparameter Tables 7 and 8 after repair."
+    ]
+  }
 }

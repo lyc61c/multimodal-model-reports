@@ -31,7 +31,7 @@ ChartLlama 的“生成图表”主要是**生成绘图程序后执行绘制**�
 
 ## 3. 整体架构
 
-![原文 Figure 3：三步数据构建，PDF 第 4 页完整截图](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 *原文 Figure 3，PDF 第 4 页。绿色框产生表格与数据描述，橙色框产生图表和视觉描述，蓝色框生成问答、抽取、重绘与编辑指令。这是数据流水线，不能把三个 Stage 当作三个模型网络层或三次学生模型训练。*
 
@@ -70,7 +70,11 @@ LoRA 的通常定义为 \(W'=W+(\alpha/r)BA\)，其中 \(A\in\mathbb R^{r\times 
 
 实际过滤检查输出标记和数据格式是否符合要求，并执行绘图脚本，无法运行的图对应样本被移除。可执行性是必要条件，但一个可执行程序仍可能画错序列、单位或颜色，文字描述也可能与像素不一致。报告没有给出全面人工语义核验比例或自动验证覆盖率。因此“已知底层数据”提高了可控性，但不能等同于训练监督的数值正确率 100%。
 
-![原文 Figure 6、Table 5–6：数值示例、特殊图表与生成提示消融，PDF 第 11 页完整截图](figures/original-page-011-04.png)
+![原文 Table 5](figures/original-p011-table-5.png)
+
+![原文 Figure 6](figures/original-p011-figure-6.png)
+
+![原文 Table 6](figures/original-p011-table-6.png)
 
 *PDF 第 11 页，附录印刷页码为 1。Figure 6 的绿色条数值和模型回答可直接核对；右侧 Table 6 是教师绘图数据生成成功率，85% 并不是学生模型在图表问答中的准确率。*
 
@@ -91,7 +95,11 @@ Table 6 对第二步提示做消融：完整提示成功率 85%，删 in-context
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 2–4：传统与新任务结果，PDF 第 7 页完整截图](figures/original-page-007-02.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
 
 *PDF 第 7 页完整截图，Table 2 是传统任务，Table 3 是新任务及 GPT 评分，Table 4 是特殊类型图表问答。BLEU-4、GPT Score、可执行成功率、抽取 F1 的含义不同，不能直接排成同一准确率排行榜。*
 
@@ -113,7 +121,9 @@ GPT 评测根据参考描述、原始数据、参考代码和预测代码给分�
 
 Table 4 的六种特殊图表中，ChartLlama 的漏斗 70.59、甘特 56.64、热图 53.18、散点 54.97、箱线 37.33、蜡烛 46.20，高于表中 Baseline* 与 Unichart。这里“新图表类型”是相对既有基准覆盖范围，合成训练本身覆盖这些类型，不能叫它们学生模型从未见过的类型。
 
-![原文 Figure 4–5：重绘、编辑与文字绘图实例，PDF 第 8 页完整截图](figures/original-page-008-03.png)
+![原文 Figure 4](figures/original-p008-figure-4.png)
+
+![原文 Figure 5](figures/original-p008-figure-5.png)
 
 *原文 Figure 4–5，PDF 第 8 页。上方既比较重绘，也比较竖柱图改横柱图；下方比较表格到漏斗图和折线图。看图时应核对类别、数值、坐标轴与指令，而不只比较是否画得漂亮。*
 

@@ -7,18 +7,30 @@
     "核验 InternLM2-7B、ConvNeXt-L CLIP1024、pixel shuffle后256稠密token另加对象token、点框掩码注意力约束与共享MLP。",
     "Eq2按逐像素对象softmax说明广播转置，Eq4/5未编造权重与聚合；训练冻结与ft解冻分别表述。",
     "核验来源数据规模、1epoch/batch256/128/lr1e-3/2e-4/seq2048，记录正文4GPU与附录每GPUbatch乘积矛盾。",
-    "核验Table3各split及冻结/ft区别，GCG微调维度、先验消融、最后层选择、GLaMM数据条件；未捏造图像级和视频语言指标，未运行模型。"
+    "核验Table3各split及冻结/ft区别，GCG微调维度、先验消融、最后层选择、GLaMM数据条件；未捏造图像级和视频语言指标，未运行模型。",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 9,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "dc06f2beb33894d8a933c0e044e168a34a501a570b29b3ed36c4a5a926830113",
+  "article_sha256": "cda4a343016c0e0bd503e17ea502237215c74e2f5b968f467db5b13fa82b461b",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and repaired crops: Figure 3 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and repaired crops: Figure 4, Figure 5 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and repaired crops: Table 3, Table 4, Table 5, Table 2 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crop: Table 8, Figure 7 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ]
+  }
 }

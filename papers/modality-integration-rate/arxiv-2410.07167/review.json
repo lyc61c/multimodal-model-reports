@@ -6,18 +6,30 @@
     "视查Equation2–4原页，确认均值差平方、同alpha缩放、Equation4文本协方差下标笔误；MIR越低越好不作训练loss。",
     "四张原页Figure6、Tables2/3、Tables4/5完整，核对7项与更多项平均的任务集合，不混用不同表Average。",
     "核对默认100随机样本、至少20稳定经验、1.8M/1.9M近似规模、caption截断和共享665K SFT。",
-    "核对QFormer未BLIP2预对齐、MiniGemini因链接缺失用复现版、MoCa LLaVA MME退步及绝对1.5/0.9分；未运行模型。"
+    "核对QFormer未BLIP2预对齐、MiniGemini因链接缺失用复现版、MoCa LLaVA MME退步及绝对1.5/0.9分；未运行模型。",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "e80f4260a03c6b68fa12a0e89ca830f70e4161790e2d4606429fdd5d9c3fb432",
+  "article_sha256": "10de2078858f42334ff24d55b6a3f8218f0222758cd04ce003c0d2ca985b4bc5",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and crop: source contains body/formulas or a long prompt algorithm only; no required model diagram or results table; drop confirmed.",
+      "Viewed source and crop: Figure 6 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Table 2, Table 3 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Table 4, Table 5 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ]
+  }
 }

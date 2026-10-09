@@ -8,18 +8,30 @@
     "核对HD9/16/25/55预算、576→144压缩、换行/全局/分隔和两阶段参数超参",
     "主表test与消融val/SEED2K分开；MMMU39.7取Table3不取Figure1的39.9",
     "核对所有主要数字与涨跌，保留MME舍入口径及InfoVQA50.5→60.8为10.3pp",
-    "未补造损失或PartialLoRA内部细节，未运行模型，作者原文核验"
+    "未补造损失或PartialLoRA内部细节，未运行模型，作者原文核验",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 9,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "25d30d50f4dac236a84825604b69c265a0e355ffecc8e0611300f59e810df144",
+  "article_sha256": "ec964b4340b3900cd7d36ff61626554ee040e832c1018e58b364f72f3f8ec586",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

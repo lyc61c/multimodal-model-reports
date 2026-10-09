@@ -28,7 +28,7 @@
 
 写实人物分类器基于已有的 Sora 未成年人分类器构建，输出无写实人物、写实成年人、写实儿童三类；若成人与儿童同时出现，设计为儿童类别优先。该分类器影响编辑请求判断，属于辅助安全组件，不是图像生成网络本身。
 
-![原文 Table 4：写实人物分类器，PDF 第 5 页整页截图](figures/original-page-005-02.png)
+![原文 Table 4](figures/original-p005-table-4.png)
 
 **读表**：Table 4 列出样本数、precision、recall。儿童类别较高的 recall 与 0.80 precision 同时存在，说明识别出更多儿童仍伴随误判；不能将 recall 写成总体准确率。
 
@@ -62,7 +62,9 @@
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 1 与 Table 2：人工及自动红队汇总，PDF 第 3 页整页截图](figures/original-page-003-01.png)
+![原文 Table 1](figures/original-p003-table-1.png)
+
+![原文 Table 2](figures/original-p003-table-2.png)
 
 **读表**：第一行只有提示和输出阻断；第二行再加入聊天模型拒绝。两列都是越高越好，第二种配置并非两列同时提高。
 
@@ -79,7 +81,13 @@
 
 Table 4 中写实人物总体 precision/recall 为 **0.905/0.99**，成年人 **0.80/0.776**，儿童 **0.80/0.97**。这反映保守识别的取舍，不能只保留儿童召回率而忽略精确率。
 
-![原文 Tables 6–9：性别、族群和肤色分布及多样性，PDF 第 8 页整页截图](figures/original-page-008-03.png)
+![原文 Table 6](figures/original-p008-table-6.png)
+
+![原文 Table 7](figures/original-p008-table-7.png)
+
+![原文 Table 8](figures/original-p008-table-8.png)
+
+![原文 Table 9](figures/original-p008-table-9.png)
 
 **读表**：Table 6 为性别的熵和异质频率，Table 7 为族群分布，Table 8 为族群多样性，Table 9 为肤色分布。指标定义不同，不把分布百分比与熵直接比较。
 

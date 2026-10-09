@@ -40,5 +40,10 @@
     "总/激活/可训练参数在描述中混用",
     "QwenVLChat AVG56.7与列出七项均值不一致"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

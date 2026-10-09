@@ -41,7 +41,7 @@ $$
 
 这是对原文 NLL 指标的数学展开，不是报告新提出的损失。输入前端信息少，预测的不确定性通常较高；随着上下文积累，如果模型能读懂文档结构、函数关系和重复模式，后续预测会更容易，累计平均 NLL 会下降。原文对曲线拟合使用 $L(x)=\alpha x^\beta+\gamma$，这是实验性的幂律拟合，不能当作训练时直接优化的目标或结构公式。
 
-![Figure 7：长文档和代码的累计平均 NLL，PDF 第 10 页](figures/original-page-010-01.png)
+![原文 Figure 7](figures/original-p010-figure-7.png)
 
 **读图方式：** Figure 7 左侧为长文档，右侧为代码；横轴是序列位置，纵轴是累计平均 NLL，越低越好。蓝色 Pro 曲线在文档约 1M token 和代码最高 10M token 处仍继续下降，红色 Flash 展示到文档 1M、代码 2M。虚线是 Pro 的幂律拟合。图没有给出可供跨论文直接比较的绝对 NLL 刻度；它证明的是该数据与模型条件下的预测趋势。代码接近 10M 时偏离拟合，作者认为重复代码块可能带来额外收益，尚需进一步研究。[原文第 10–11 页](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=10)
 
@@ -49,7 +49,7 @@ $$
 
 多针实验则要求一次找回 100 条信息，召回率可理解为“正确返回的目标条目数/全部目标条目数”。MRCR 再提高相似性难度：长对话中存在主题、体裁接近的请求，模型必须根据“第一首”“关于企鹅”等指代找出正确历史回复。MRCR 使用字符串相似度评分，并不等同于二分类回答准确率。
 
-![Figure 11：100 条目标信息的多针检索，PDF 第 15 页](figures/original-page-015-02.png)
+![原文 Figure 11](figures/original-p015-figure-11.png)
 
 **读图方式：** 横轴是上下文 token 数，纵轴为召回率；蓝点为 Pro，红点为 GPT-4 Turbo。Pro 在约 128K 时维持约 70%，到 1M 仍超过 60%，与单针实验 99% 以上的数字差距很大。虚线表示对照模型约 128K 的窗口边界。脚注明确本图使用 **2 月版 Pro**，不能将它重新标成更新模型的结果。这个实验说明长上下文容量增加了可访问的信息，却没有保证所有信息都能在一次回答中完整输出。[原文第 14–16 页](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=14)
 
@@ -87,11 +87,11 @@ SFT 使用多模态“指令—适当回答”配对。安全相关样本通过�
 
 单针文本检索中，Pro 在最高约 530K token 达到 100%，1M 为 99.7%，10M 为 99.2%；Flash 在最高 2M 达到 100%。这些数字说明随机目标的定位很强，但多针检索和 MRCR 已显示更复杂任务有明显下降。长文档问答使用完整《悲惨世界》上下文，并与 TF-IDF 检索约 4K token 的 RAG 设置比较。评分使用 Gemini 1.5 Pro 作为裁判，再用 Bradley–Terry 模型估计偏好强度，完整上下文 Pro 对其 RAG 版本的拟合偏好概率约 78%。这是裁判下的成对偏好，存在自评偏差，不能称作“问答准确率 78%”。[原文第 10–16、21–23 页](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=10)
 
-![Table 9：1H-VideoQA 不同帧数对照，PDF 第 25 页](figures/original-page-025-03.png)
+![原文 Table 9](figures/original-p025-table-9.png)
 
 **读表方式：** 列为输入 16 帧、150 帧和全视频 1 fps 帧；行是不同模型，指标为五选一准确率。Pro 从 45.2% 提高到 56.3%、72.2%，Flash 从 39.7% 提高到 50.8%、65.9%；GPT-4V 的 16/150 帧为 36.5%/52.3%，当时接口不能接受全帧设置。Pro 在相同 150 帧条件下的优势和接收全帧后的优势是两个不同证据。全帧仍未解决所有问题，附录 Table 47 给出计数、小字识别和情节位置等失败案例。这比单帧叠字找针更接近实际长视频理解。[原文第 24–25、111 页](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=24)
 
-![Table 18：图片理解核心评测，PDF 第 39 页](figures/original-page-039-04.png)
+![原文 Table 18](figures/original-p039-table-18.png)
 
 **读表方式：** 表格按多模态推理、图表文档、自然图像分组；DocVQA、DUDE、InfographicVQA 使用 ANLS，其他多数为准确率。更新 Pro 的 MMMU val 为 62.2%、MathVista testmini 为 63.9%、ChartQA 为 87.2%；Flash 对应 56.1%、58.4%、85.4%。这些任务均为零样本，但 MMMU、MathVista、ChartQA 允许生成推理过程。**DocVQA 额外提供 Google Cloud OCR 标注**，Pro 93.1% 不能作为纯视觉、无 OCR 的结果引用。Pro 在 TextVQA 的 78.7% 低于 1.0 Ultra 的 82.3%，在 DUDE 的 46% 也低于 Flash 的 48%，因此新一代没有在每项任务上普遍领先。
 

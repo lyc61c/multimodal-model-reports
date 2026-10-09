@@ -22,7 +22,7 @@
 
 ## 3. 整体架构
 
-![Figure 2，训练范式，PDF 第 5 页](figures/original-page-005-01.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 **读图：Figure 2，PDF 第 5 页。** 左侧图像经过冻结的 ImageBind 图像编码器，输出一个全局向量；bind network 把它映射到 LLaMA 词嵌入维度。中间零门控控制注入强度，右侧展示向所有 32 层的语言 token 加入同一个条件向量。图中的“partial tuning”对应后续参数高效微调，不代表从头训练整个语言模型。
 
@@ -40,7 +40,7 @@ $$
 
 其中 $w_1,w_2\in\mathbb R^{C\times C_h}$，$w_3\in\mathbb R^{C_h\times C}$；实际模块还含 RMSNorm。门控乘法决定哪些投影维度通过，残差保留原特征。得到 $T_I$ 后，原式（2）对语言 token 采用 $T^j=T_W^j+g_{zero}T_I$。初始 $g_{zero}=0$，新增条件在训练开头不改变原语言表示，随后逐渐学会引入视觉信息。这个设计解释了稳定接入的动机，不能据此推断模型消除了幻觉。
 
-![Figure 4，缓存检索推理，PDF 第 7 页](figures/original-page-007-02.png)
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **读图：Figure 4，PDF 第 7 页。** 左半将训练图像特征同时存为 keys 和 values；右半非图像输入先检索近邻，再把增强特征送入连接器。检索发生在语言模型之前，是特征校准，而不是从文档库检索一段文本答案。
 
@@ -71,7 +71,9 @@ $S_{topk}$ 是余弦相似度，$F_{value}\in\mathbb R^{k\times C_I}$。论文�
 
 ## 7. 实验设置与主要结果
 
-![Table 1、Table 2，27 个视觉语言数据集，PDF 第 10 页](figures/original-page-010-03.png)
+![原文 Table 1](figures/original-p010-table-1.png)
+
+![原文 Table 2](figures/original-p010-table-2.png)
 
 **读图：Table 1、Table 2，PDF 第 10 页。** 最后两列分别为基础版和多轮版 -D；两者均只使用一个模态 token。OCR 为单词准确率，KIE 为实体级 F1，caption 为 CIDEr；Table 2 的 VisDial 用 MRR，其他项目按本文口径用 top-1 accuracy，**这里 DocVQA 的数值不是通常榜单中的 ANLS**。所有任务通过 VQA 风格提示评估，比较的是本报告使用的早期实现与配置。
 
@@ -86,7 +88,9 @@ $S_{topk}$ 是余弦相似度，$F_{value}\in\mathbb R^{k\times C_I}$。论文�
 
 多轮版没有一致提高所有任务，ScienceQA 图像子集反而下降。其结果支持部分跨模态接入与问答能力，但不支持“在全部视觉任务超过其他模型”。
 
-![Table 3、Table 4，MME 感知与认知，PDF 第 11 页](figures/original-page-011-04.png)
+![原文 Table 3](figures/original-p011-table-3.png)
+
+![原文 Table 4](figures/original-p011-table-4.png)
 
 **读图：Table 3、Table 4，PDF 第 11 页。** 感知 10 个子任务满分合计 2000，认知 4 个子任务合计 800，二者都不是百分比准确率。ImageBind-LLM 感知 **775.77**，比 PandaGPT **642.59** 高 **133.18**，但低于 LLaMA-Adapter V2 **972.67** 和 MiniGPT-4 **866.58**。认知 **213.57** 则低于 PandaGPT **228.57**、MiniGPT-4 **292.14**，不能把感知提升推广为全面认知提升。Table 4 图注误写 perception，本表内容与末行明确为 cognition。
 

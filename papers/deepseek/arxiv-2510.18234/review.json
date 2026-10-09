@@ -1,1 +1,28 @@
-{"checked_file":"README.md","verdict":"complete_self_review","checks":{"identity":"核对DeepSeek作者与2510.18234v1、22页","facts":"Tables1–4、参数激活口径、数据与PP冻结策略核对","math":"原式1与2及标准NTP解释区分；token压缩不当作字节无损压缩；窗口为主不写全系统线性","images":"逐张view_image核验PDF5/6/10/11，架构与各表的表头、指标方向、200dpi标记保留","claims":"97%限于Fox OCR、最后区间4页；吞吐限于作者报告；遗忘未写成已验证能力"},"model_execution":"not_run"}
+{
+  "checked_file": "README.md",
+  "verdict": "complete_self_review",
+  "checks": {
+    "identity": "核对DeepSeek作者与2510.18234v1、22页",
+    "facts": "Tables1–4、参数激活口径、数据与PP冻结策略核对",
+    "math": "原式1与2及标准NTP解释区分；token压缩不当作字节无损压缩；窗口为主不写全系统线性",
+    "images": "逐张view_image核验PDF5/6/10/11，架构与各表的表头、指标方向、200dpi标记保留",
+    "claims": "97%限于Fox OCR、最后区间4页；吞吐限于作者报告；遗忘未写成已验证能力",
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  },
+  "model_execution": "not_run",
+  "article_sha256": "c3794b0e8ed81857507339063ca88cd3bdbe74a2ee89f18d2d21701c1ae7bb24",
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
+}

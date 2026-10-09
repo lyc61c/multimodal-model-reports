@@ -20,9 +20,9 @@ ConvLLaVA 关注视觉编码器与语言模型之间的计算分配：提高图�
 
 ## 3. 整体架构
 
-![ConvLLaVA 原文 Figure 1，PDF 第3页完整页面](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
-*原文 Figure 1，PDF 第 3 页完整页面。左图是 ViT 方案，中图是逐阶段缩小特征的 ConvNeXt，右图的火焰与雪花分别表示三个训练阶段中的更新与冻结。视觉阶段和训练阶段是两种不同的编号。*
+*原文 Figure 1，PDF 第 3 页图表区域裁切。左图是 ViT 方案，中图是逐阶段缩小特征的 ConvNeXt，右图的火焰与雪花分别表示三个训练阶段中的更新与冻结。视觉阶段和训练阶段是两种不同的编号。*
 
 系统仍由视觉编码器、两层 MLP projector、Vicuna-7B 构成。原文用 $z=h(g(x))$ 表达视觉编码 $g$ 与映射 $h$，随后将 $z$ 和文字嵌入沿序列维拼接，交给语言模型自回归生成答案。变化集中在 $g$：采用 LAION-2B 对比预训练的 ConvNeXt-L，原始四阶段 block 数为 3、3、27、3，并增加包含 6 个 ConvNeXt block 的第五阶段。
 
@@ -53,7 +53,9 @@ $$
 
 ## 6. 训练流程与目标
 
-![ConvLLaVA 原文 Tables 14–15，PDF 第17页完整页面](figures/original-page-017-03.png)
+![原文 Table 14](figures/original-p017-table-14.png)
+
+![原文 Table 15](figures/original-p017-table-15.png)
 
 *PDF 第 17 页原始训练表。Table 14 对应较小数据消融，Table 15 对应最终 Tables 5–6；数据栏明确区分了两个配方。*
 
@@ -75,7 +77,9 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![ConvLLaVA 原文 Tables 5–6，PDF 第8页完整页面](figures/original-page-008-02.png)
+![原文 Table 5](figures/original-p008-table-5.png)
+
+![原文 Table 6](figures/original-p008-table-6.png)
 
 *PDF 第 8 页保留综合问答、OCR 与定位主表。Table 5 的 DocVQA“59/65”对应正方形与保持比例两种测试输入，不能当作两个随机重复实验。*
 

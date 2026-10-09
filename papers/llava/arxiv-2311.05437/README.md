@@ -21,7 +21,7 @@ LLaVA-Plus把已有LLaVA视觉语言模型作为规划器，学习选工具、�
 
 ## 3. 整体架构
 
-![Figure 2：四步工具使用流程，原PDF第3页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **读图：**①用户输入图像与指令；②助手生成工具名和参数；③执行器调用技能并返回结果；④助手结合原始图像和结果输出回复。原图展示的是系统循环，并非新增Transformer内部层。图像在会话中持续作为条件，工具返回的框、类别、OCR或检索文字也进入历史。
 
@@ -45,7 +45,7 @@ All Tools把多数视觉理解工具的输出预先加入训练和评测条件�
 
 ## 5. 数据构建与处理
 
-![Table 2：技能与数据来源，原PDF第5页](figures/original-page-005-02.png)
+![原文 Table 2](figures/original-p005-table-2.png)
 
 **读表：**COCO提供检测、分割、caption、tagging与组合样本；HierText提供OCR，InfoSeek用于检索，JourneyDB用于生成，Instruct-Pix2Pix数据用于编辑。检测13,783条、实例分割5,228条、OCR6,528条、检索4,087条是相应使用案例的统计，不能将各行直接解释成同样数量的独立图像，组合会话可能重用源图。
 
@@ -65,7 +65,9 @@ All Tools把多数视觉理解工具的输出预先加入训练和评测条件�
 
 ## 7. 实验设置与主要结果
 
-![Table 4–5：理解和工具使用结果，原PDF第8页](figures/original-page-008-03.png)
+![原文 Table 4](figures/original-p008-table-4.png)
+
+![原文 Table 5](figures/original-p008-table-5.png)
 
 LLaVA-Bench COCO有30图90问，In-the-Wild有24图60问，用gpt4-0314相对参考回复评分；SEED-Bench约19K多选问题。表4显示：
 
@@ -80,7 +82,9 @@ All Tools在这三项均高于原模型；Fly在COCO总分80.4却低于81.2，�
 
 工具专项仅44题，分grounding10、tagging12、caption12、OCR10。All Tools总82.3，Fly76.5，原LLaVA58.7，GPT-4链工具76.9；这是相对回复分，可以超过100，不是API调用成功率。例如All Tools OCR48.8低于MM-REACT77.3；专项总体领先不意味着每种工具更强。
 
-![Table 6–7：MMVet与VisIT-Bench，原PDF第9页](figures/original-page-009-04.png)
+![原文 Table 6](figures/original-p009-table-6.png)
+
+![原文 Table 7](figures/original-p009-table-7.png)
 
 **读表：**MMVet上作者复跑LLaVA-7B为24.1±0.0，Plus-7B All Tools27.5±0.3，提高3.4分；13B Plus35.0±0.0，对公开LLaVA-13B32.5±0.1提高2.5。7B OCR13.3→23.6、空间18.7→28.5较明显，但数学8.1→7.7略降。MM-REACT-GPT4总44.6仍更高，且它是另一工具系统，不能遗漏。
 

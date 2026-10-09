@@ -30,7 +30,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "training_numbers_verified_in_image": true
+    "training_numbers_verified_in_image": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "原式概率乘积为似然形式，负对数式是解释转换，不称原文NLL公式",
@@ -39,5 +40,20 @@
     "未披露LoRA rank/batch/优化器等，不编造",
     "组合例出现输入不支持细节，不把创作等同感知事实",
     "只核对PDF音频标注，未试听音频"
-  ]
+  ],
+  "article_sha256": "175f5cb7c112851a881f21a5c0d9b6404593b977d909f6dd11a18bf982893bd6",
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
+      "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
+    ]
+  }
 }

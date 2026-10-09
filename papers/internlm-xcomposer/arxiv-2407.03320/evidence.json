@@ -27,5 +27,10 @@
   "source_inconsistencies": [
     "15 matching/exceeding benchmarks Figure1 caption versus16 abstract/body"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

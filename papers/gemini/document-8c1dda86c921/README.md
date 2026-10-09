@@ -35,7 +35,7 @@ Section 2.1 描述统一支持视觉和音频输入的稀疏 MoE 主干：每个
 
 思考预算约束回答前可使用的额外计算，不是提升模型参数量。RL 让模型学习如何分配推理步骤，随后可随预算提高表现；报告没有公开 RL 算法与可执行损失。Deep Think 进一步采用并行思考、多个假设和批判选择，是另一个实验推理方案，不能混入主表单次尝试成绩。
 
-![原报告 Figure 4：思考预算与三种任务表现](figures/original-page-006-01.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
 
 **读图：Figure 4，PDF 第 6 页。** 横轴为 1024–32768 思考 token，纵轴为准确率或通过率。总体随预算提高而改善，但局部并非严格单调，GPQA 曲线在中间点略降；大预算的边际增益也趋缓。图的证据是此处三个基准上的预算实验，不是所有请求总能通过延长思考解决。
 
@@ -59,7 +59,7 @@ Section 2.1 描述统一支持视觉和音频输入的稀疏 MoE 主干：每个
 
 Section 3.1 默认采用 API 默认采样、单次尝试 pass@1，少量小基准平均多轮以降方差；多次尝试可选择候选但单列。对手多数来自各厂家自报，SWE-bench scaffolding 不同而**不可直接等同对照**。部分视觉任务用 Gemini 评判，包括 Vibe-Eval、ZeroBench、BetterChartQA。
 
-![原报告 Table 3：Gemini 家族核心评测](figures/original-page-013-02.png)
+![原文 Table 3](figures/original-p013-table-3.png)
 
 **读图：Table 3，PDF 第 13 页。** 最右两列是 2.5 Flash 与 Pro。长上下文按不超过 128K 和恰好 1M 分开，多次代理尝试也单列；切勿把它们各取最高值拼成一个设置。
 
@@ -76,13 +76,13 @@ Section 3.1 默认采用 API 默认采样、单次尝试 pass@1，少量小基�
 
 Pro 的 MRCR-V2 从 ≤128K 的 58.0% 降到 1M 的 16.4%，且在 1M 低于 Flash。Table 4 中 MMMU 82.0% 低于 o3 的 82.9%，AIME 88.0% 低于 o4-mini 的 92.7%；结果不支持“所有任务全面领先”。正文曾给出与 Table 3 不同的前代 LiveCodeBench 数字，本文以明确列名的原表为准。
 
-![原报告 Table 5/6：音频与视频评测](figures/original-page-015-03.png)
+![原文 Table 5](figures/original-p015-table-5.png)
 
 **读图：Table 5/6，PDF 第 15 页。** FLEURS 越低越好，翻译 BLEU 越高越好。2.5 Pro/Flash 的 FLEURS 为 6.66/9.95，1.5 Pro 为 7.14；CoVoST2 为 38.48/36.15。FLEURS 选取 53 种语言，其中中日韩泰聚合字符错误率，其余为词错误率，并非完整 102 语言测试。
 
 视频中 Pro 的 VideoMMMU 为 83.6、1H-VideoQA 为 81.0、LVBench 为 78.7，GPT-4.1 对应 60.9/56.8/63.4。不同基准仍有不同采样预算，caption 的 CIDEr 也不能算作问答准确率。
 
-![原报告 Table 11 续页：VideoMME 划分与采样设置](figures/original-page-066-04.png)
+![原文 Table 11](figures/original-p066-table-11.png)
 
 **读图：Table 11 续页，PDF 第 66 页。** VideoMME **音频加视觉使用 Long 子集**，Pro/Flash 为 84.3/75.5；**再加字幕使用全测试集**，为 86.9/81.5。两组不只字幕不同，不能把 Pro 的 2.6 分差直接解释为字幕增益。附录设置为 1 fps 后均匀下采样，最大 1024 帧；GPT-4.1 因 API 限制使用 500 帧，虽正文称输入可比较，实际帧预算需要明确保留。1H-VideoQA 的 Gemini 上限则为 7200 帧。
 

@@ -4,63 +4,128 @@
   "source_pdf_sha256": "52b9cef0bd060cdd32110fa8393ce90a92a28c92584a4f5482083ca55acd427e",
   "assets": [
     {
-      "asset_path": "figures/original-page-002-01.png",
-      "original_label": "PDF page 2",
-      "pdf_page": 2,
-      "source_url": "https://arxiv.org/pdf/2309.09958v1#page=2",
-      "source_version": "2309.09958v1",
-      "source_sha256": "52b9cef0bd060cdd32110fa8393ce90a92a28c92584a4f5482083ca55acd427e",
-      "asset_sha256": "7b908b50b4c04473ec197588ae8ce1cc4245c414aa93aeead40f7a68d43643f4",
-      "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 120,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
-      }
-    },
-    {
-      "asset_path": "figures/original-page-003-02.png",
-      "original_label": "PDF page 3",
+      "asset_path": "figures/original-p003-table-1.png",
+      "original_label": "Table 1",
       "pdf_page": 3,
       "source_url": "https://arxiv.org/pdf/2309.09958v1#page=3",
       "source_version": "2309.09958v1",
       "source_sha256": "52b9cef0bd060cdd32110fa8393ce90a92a28c92584a4f5482083ca55acd427e",
-      "asset_sha256": "1cd0c6ae7f372a82cf2b2567685acf486950fcba281512148b0206ab131b8bdd",
+      "asset_sha256": "9dde62938fba61d79f671d34fe4e4e9ad7e43e8c3dc7004e563ccf071f6212fa",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 120,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105.0,
+          70.0,
+          507.0,
+          203.0
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-005-03.png",
-      "original_label": "PDF page 5",
+      "asset_path": "figures/original-p003-table-2.png",
+      "original_label": "Table 2",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2309.09958v1#page=3",
+      "source_version": "2309.09958v1",
+      "source_sha256": "52b9cef0bd060cdd32110fa8393ce90a92a28c92584a4f5482083ca55acd427e",
+      "asset_sha256": "42e6ca23efa02954f693dcf1970848256741750a644be49f33b1d04bb3f101bb",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105.0,
+          219.0,
+          507.0,
+          521.0
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p005-table-3.png",
+      "original_label": "Table 3",
       "pdf_page": 5,
       "source_url": "https://arxiv.org/pdf/2309.09958v1#page=5",
       "source_version": "2309.09958v1",
       "source_sha256": "52b9cef0bd060cdd32110fa8393ce90a92a28c92584a4f5482083ca55acd427e",
-      "asset_sha256": "2d264ddefb3c1dd3cc023bd4bac849e661d2b7111557386f285eec06fdfc1f3f",
+      "asset_sha256": "cfe2faf752f77fd65a5554985aabccaeaa0a923418fecca1ce2806c8a770cdc8",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 120,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105,
+          70,
+          507,
+          259
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-006-04.png",
-      "original_label": "PDF page 6",
+      "asset_path": "figures/original-p005-table-4.png",
+      "original_label": "Table 4",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2309.09958v1#page=5",
+      "source_version": "2309.09958v1",
+      "source_sha256": "52b9cef0bd060cdd32110fa8393ce90a92a28c92584a4f5482083ca55acd427e",
+      "asset_sha256": "c6df1d82b9befbe8fec7bfd1c2f6436d3dd323b442b9e6813b5c0ff7e77ba238",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          104.64,
+          274.21,
+          507.18,
+          396.26
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p006-table-5.png",
+      "original_label": "Table 5",
       "pdf_page": 6,
       "source_url": "https://arxiv.org/pdf/2309.09958v1#page=6",
       "source_version": "2309.09958v1",
       "source_sha256": "52b9cef0bd060cdd32110fa8393ce90a92a28c92584a4f5482083ca55acd427e",
-      "asset_sha256": "4d0be151fe274f256527a7f420fcd0dbbec438f38ade28d5ede8cb2e4f412f77",
+      "asset_sha256": "b17ac387d47b86755d310bb419bdad1c9c509776b6e071f0ca7adc324f3e96ba",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 120,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          119.39,
+          69.01,
+          490.19,
+          250.22
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

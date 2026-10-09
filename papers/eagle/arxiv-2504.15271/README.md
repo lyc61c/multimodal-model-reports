@@ -16,7 +16,9 @@ Eagle-Video-110K 通过长视频章节级描述/问答和短片段细节问答�
 
 ## 3. 整体架构
 
-![原论文 Figure 2、Figure 3 与 Equation 1，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
+
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 *Figure 2 是模型通路，Figure 3 是切图方式比较，页底 Equation 1 给出切图选择目标。*
 
@@ -46,7 +48,7 @@ Open-Data 包含视频分类、时序动作定位、视频片段定位、密集�
 
 新视频选择强调内容差异：从多个候选视频集合抽取 1 FPS 的 CLIP 特征，将视频分为 10 秒片段并池化。对候选片段 $a_j$，取与现有训练片段最大余弦相似度 $S_{\max}(a_j)=\max_iS(b_i,a_j)$，保留小于 **0.5** 的片段及其原视频。这是语义新颖性筛选，不等同于按精确图像哈希完成训练/测试去重。
 
-![原论文 Figure 5，双层视频标注，PDF 第 8 页](figures/original-page-008-02.png)
+![原文 Figure 5](figures/original-p008-figure-5.png)
 
 *Figure 5，PDF 第 8 页。左侧从短片段生成局部问题，右侧从人工章节组织全视频问题。*
 
@@ -64,7 +66,9 @@ Stage 2/3/4 分别设长度 32,768/65,536/128K，均训练完整约 8B 模型，
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 2 与 Table 3，视频和图像基准，PDF 第 9 页](figures/original-page-009-03.png)
+![原文 Table 2](figures/original-p009-table-2.png)
+
+![原文 Table 3](figures/original-p009-table-3.png)
 
 *上部 Table 2 为视频任务，下部 Table 3 为图像任务。保留原表以核对字幕条件、数据分割与模型名称。*
 
@@ -83,7 +87,9 @@ CG-Bench 的 Clue/Long/Open/mIoU 为 55.8/46.6/45.6/13.4，Clue 仍低于 Claude
 
 原表将小型 Qwen2.5-VL 行标作“8B”，其 MMMU 58.6、MathVista 68.2、DocVQA 95.7 都高于 Eagle；本文保留原表名称口径，不用这行宣称 Eagle 全面领先。同样，Table 4 消融采用 DocVQA/InfoVQA val 与 MMBench EN-val，不能把它们与 Table 3 的 test 数字混写。
 
-![原论文 Table 7 与 Figure 6，PDF 第 11 页](figures/original-page-011-04.png)
+![原文 Table 7](figures/original-p011-table-7.png)
+
+![原文 Figure 6](figures/original-p011-figure-6.png)
 
 *Table 7 对训练调度及新数据作比较；Figure 6 展示不同上下文检查点随帧数改变的趋势。*
 

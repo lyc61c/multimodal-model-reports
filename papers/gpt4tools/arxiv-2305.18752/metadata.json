@@ -10,5 +10,7 @@
   "document_kind": "tool_use_method",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "GPT4Tools：通过自指令数据教开源语言模型调用视觉工具"
+  "title_zh": "GPT4Tools：通过自指令数据教开源语言模型调用视觉工具",
+  "chinese_characters": 2629,
+  "figure_revision_date": "2026-10-09"
 }

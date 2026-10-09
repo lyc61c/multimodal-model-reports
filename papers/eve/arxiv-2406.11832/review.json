@@ -7,18 +7,30 @@
     "Verified PEL/PAL token flows, teacher onlytraining, Vicuna freeze_stage1/full_stage2-3",
     "Verified realTable8 hyperparameters; SFT1.8M vsappendix1.35M inconsistency disclosed",
     "Verified all extracted main/ablation rows; interval4 not all metricsbest and HD alone MMB worsens",
-    "Verified Table6 vision component vsLLMlatency; not10xendtoend; no model execution"
+    "Verified Table6 vision component vsLLMlatency; not10xendtoend; no model execution",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 8,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "1a56afb552b99680c20a64c01100df2a0486642c71c6f32d06632183394e8863",
+  "article_sha256": "531627eae750bec6c82305a8060124d958f23bab1e2fcad8a56e0bf2940399a3",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Figures 2 and 3 fully restored as separate crops, no prose.",
+      "Viewed source page and crop: all EVE training-stage panels, stability plots, inference panel and complete Figure 4 caption retained.",
+      "Viewed source page and crop: Table 3 full explanatory caption, all benchmark columns, encoder-based/encoder-free groups and last EVE-7B HD row retained.",
+      "Tables 4/5 and Figures 5/6 independently cropped; all captions, legends and result rows complete."
+    ]
+  }
 }

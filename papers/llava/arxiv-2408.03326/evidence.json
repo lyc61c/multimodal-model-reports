@@ -46,5 +46,10 @@
     "VideoChatGPT7B Table2 3.49/Table5 3.51",
     "Table16语言子标题450K同时误列647K，采用450K逐项记录"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

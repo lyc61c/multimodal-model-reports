@@ -48,12 +48,28 @@
     "QLoRA not fullweight",
     "BPS not endtoend tokens/sec",
     "POPE losing comparison",
-    "illustrative formulas labeled"
+    "illustrative formulas labeled",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "no independent peer review or reproduction",
     "teacher imageattachment details absent",
     "no systematic failurecase study",
     "no detailed annotation labor accounting"
-  ]
+  ],
+  "article_sha256": "bffa9e0d3e673579bfa954aa4d97771f7f88d1815d4b818cb9f5a7d3886affcc",
+  "artifact_checks": {
+    "original_assets": 3,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

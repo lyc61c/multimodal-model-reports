@@ -16,9 +16,9 @@ CoVLM 面向实体与关系的组合理解：不只判断图中有“人”和�
 
 ## 3. 整体架构
 
-![原论文 Figure 2，通信解码架构，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*Figure 2，PDF 第 4 页；整页保留了架构图及模块说明。蓝色和橙色箭头对应不同解码时刻的视觉查询。*
+*Figure 2，PDF 第 4 页；裁图保留了架构图及模块说明。蓝色和橙色箭头对应不同解码时刻的视觉查询。*
 
 CLIP 首先提取全图 patch 特征，经线性层映射到 Pythia 的语言嵌入空间，置于文字序列前。与一次性图像前缀不同，通信模块还接收语言模型当前最后一层的隐藏状态，将其广播到视觉网格上，与各位置特征拼接。检测器据此预测边界框及置信度，经过非极大值抑制保留候选区域。
 
@@ -66,7 +66,7 @@ HICO-DET 还比较“人正在做某动作”与“人没有做某动作”两�
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 1，组合推理比较，PDF 第 7 页](figures/original-page-007-02.png)
+![原文 Table 1](figures/original-p007-table-1.png)
 
 *Table 1，PDF 第 7 页。ARO 和 Cola 为准确率，HICO-DET 为 mAP，三组列不能混作同一种指标。*
 
@@ -81,7 +81,9 @@ ARO 使用 23,937 张测试图片，要求根据主体与关系预测对象；�
 
 与 KOSMOS-2 相比，HICO Full 提高 17.74 个 mAP 分数点、Cola 提高 13.81 个准确率百分点；ARO 相对该表最强 BLIP 的 Top-1 提高 2.68 点。摘要的“约 20%/14%/3%”是粗略表述，不能读成统一的相对增长率。与任务专用监督模型相比，Table 3 中 CoVLM 的 Rare 为 50.82，高于所列监督方法，但 Full 39.00 低于监督 RLIPv2 的 45.09。
 
-![原论文 Table 4 与 Figure 3，定位和问答，PDF 第 9 页](figures/original-page-009-03.png)
+![原文 Table 4](figures/original-p009-table-4.png)
+
+![原文 Figure 3](figures/original-p009-figure-3.png)
 
 *Table 4 位于页首；Figure 3 位于右下，报告 VQAv2 test-dev 自动准确率。*
 
@@ -89,7 +91,11 @@ CoVLM 2.8B 的 RefCOCOg val/test 为 61.23/62.33，RefCOCO+ val/testA/testB 为 
 
 Figure 3 显示 VQAv2 自动分数：CoVLM 1.4B 为 45.2、2.8B 为 48.8，BLIP-2 为 49.7，Flamingo3B 为 49.2。作者另从 1,000 个随机样本进行人工评估，CoVLM 2.8B 为 57.11、BLIP-2 为 56.62；该小规模人工结果与自动全测试指标口径不同，也不能据此认定总体问答已经领先。
 
-![原论文 Figure 5–7，区域与关系案例，PDF 第 15 页](figures/original-page-015-04.png)
+![原文 Figure 5](figures/original-p015-figure-5.png)
+
+![原文 Figure 6](figures/original-p015-figure-6.png)
+
+![原文 Figure 7](figures/original-p015-figure-7.png)
 
 *PDF 第 15 页：上部为 ARO 候选排名，中部为 Cola 配对，下部为 HICO-DET 主体和对象框。*
 

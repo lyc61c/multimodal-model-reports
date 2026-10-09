@@ -8,18 +8,30 @@
     "HRBench usesTable2 85.4/82.4 instead inconsistentbody85.3/82.3; RealWorldQA32BTable78.4notbody79.4.",
     "DeepStack internal15B-A2B200Bnopost and TextVQAdrop; missing square-rootformula not fabricated.",
     "PuretextflagshipGPQA77.1<81.1LCB70.1<74.1;1Mneedleextrapolationnotnative.",
-    "No model execution or independent reproduction."
+    "No model execution or independent reproduction.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "dfa6ccb204eb5fd998cacb45ace33d9428c827613cda99d127c8541bc9a65fa2",
+  "article_sha256": "c119f06bcae70d4de7cc2ef683c31eccf2bb1fe28eb25bbacc061be1f6cde0f4",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      " Independent last12 source/crop visual recheck: Qwen3-VL Figure 1 complete token streams, DeepStack inset, image/video diagrams, dimensions and full multiline caption.",
+      " Independent last12 source/crop visual recheck: Qwen3-VL Table 2 repaired y1=791; final data text ends y786.79 and bottom rule y789.09, while page number starts y793.77. Re-rendered and viewed all final agent rows and bottom rule intact; page number removed.",
+      " Independent last12 source/crop visual recheck: Qwen3-VL Table 4 complete caption, model headers, every category including final agent rows and bottom rule. Current y1=773.37 already excludes page number beginning y793.77; no change needed.",
+      " Independent last12 source/crop visual recheck: Qwen3-VL Tables 11 and 12: both separate ablation tables have complete captions, all headers and both result rows; paragraphs between excluded."
+    ]
+  }
 }

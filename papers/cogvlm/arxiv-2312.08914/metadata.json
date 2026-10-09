@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "CogAgent：通过高分辨率视觉理解操作图形界面"
+  "title_zh": "CogAgent：通过高分辨率视觉理解操作图形界面",
+  "chinese_characters": 2305,
+  "figure_revision_date": "2026-10-09"
 }

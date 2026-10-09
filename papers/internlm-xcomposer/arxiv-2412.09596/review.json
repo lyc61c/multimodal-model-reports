@@ -30,12 +30,28 @@
     "Seven sections",
     "Separate system and model abilities",
     "Original figures and table headers checked",
-    "Fixed v1 source verified"
+    "Fixed v1 source verified",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "Qwen2 model-size inconsistency preserved",
     "No full recipe or end-to-end latency measurement",
     "No multi-day memory performance reported",
     "No independent reproduction"
-  ]
+  ],
+  "article_sha256": "6805278bc4e0b353076247482c0a27496e0107d1fa9edd087fca8c0a727893ab",
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Complete OmniLive perception-memory-thinking architecture and caption.",
+      "Figure 3 full frontend/backend streaming system and caption.",
+      "Viewed source and crop after manual repair: Table 3, Table 4, Table 5 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Tables 6/7 all benchmark rows and captions."
+    ]
+  }
 }

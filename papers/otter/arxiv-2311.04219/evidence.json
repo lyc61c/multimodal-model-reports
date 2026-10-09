@@ -11,5 +11,10 @@
     "核验全参/LoRA表4 batch/epoch差异、r32alpha32、AdamW/cos/warmup/Zero2、吞吐不等于生成速度。",
     "Table1全部配置精确数值；Figure4固定512大图失败、Figure9全参loss更低，未机械复述不符图文概括，无模型运行。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

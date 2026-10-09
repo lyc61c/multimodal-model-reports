@@ -22,7 +22,7 @@
 
 ## 3. 整体架构
 
-![原论文 Figure 2，PDF 第 2 页](figures/original-page-002-01.png)
+![原文 Figure 2](figures/original-p002-figure-2.png)
 
 *蓝色箭头表示数据生成，橙色箭头表示训练。上半先从两份图像描述生成结构化比较；下半的标注模型则真正接收图像与既有差异描述。中间视觉编码器、MLP 和 LoRA 标记显示模型基本架构沿用 LLaVA。*
 
@@ -48,7 +48,7 @@ $$
 
 核心设计有两层。第一，比较不只列“哪里不同”，还要求提取共同点，帮助建立可比较的对象与属性集合；第二，用六个维度引导结构化回答，而不强迫每个样本包含全部维度。图像选择的第二轮把这些长篇比较重新约束到具体图像，减少把两图内容混淆的可能。
 
-![原论文 Table 7，PDF 第 9 页](figures/original-page-009-03.png)
+![原文 Table 7](figures/original-p009-table-7.png)
 
 *表中 comm.、diff. 与 t2i retriev. 是三种训练任务。共同点和差异联合后，加入文本到图像选择可明显提升 BISON/SVO；但单独共同点训练在 VG comm. 上仍最高。应按各列分析互补性，不能写成联合训练所有任务均最优。*
 
@@ -66,7 +66,9 @@ CaD-QA 则采用 Visual Genome 图像与 SVIT 详细描述，选择描述重叠�
 
 ## 6. 训练流程与目标
 
-![原论文 Figure 9–10 与训练配置，PDF 第 15 页](figures/original-page-015-04.png)
+![原文 Figure 9](figures/original-p015-figure-9.png)
+
+![原文 Figure 10](figures/original-p015-figure-10.png)
 
 *上面的两个提示分别使用文字描述和真实图像；页面下部明确给出一轮训练、LoRA rank/alpha 和设备。读取时要区分数据生成的模型采样设置与学生训练的优化超参数。*
 
@@ -76,7 +78,7 @@ CaD-QA 则采用 Visual Genome 图像与 SVIT 详细描述，选择描述重叠�
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 1，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 *BISON/SVO/NLVR2 的随机机会为 50%，EQBEN/COLA 为 25%。后两者要求两次图文匹配都正确。表列 Instruction Data 是混合资源规模，不能直接说明不同模型训练计算相同。*
 

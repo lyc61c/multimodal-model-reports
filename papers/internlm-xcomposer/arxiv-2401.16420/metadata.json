@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "InternLM-XComposer2：用 Partial LoRA 连接视觉理解与自由图文创作"
+  "title_zh": "InternLM-XComposer2：用 Partial LoRA 连接视觉理解与自由图文创作",
+  "chinese_characters": 3190,
+  "figure_revision_date": "2026-10-09"
 }

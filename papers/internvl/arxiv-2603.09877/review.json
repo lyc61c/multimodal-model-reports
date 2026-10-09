@@ -62,12 +62,28 @@
     "Read original formulas and complete training table",
     "Background F1 and target accuracy distinguished",
     "No unsupported RL or MoE routing inference",
-    "CoT and non-CoT, full benchmark and MiniSet evaluated separately"
+    "CoT and non-CoT, full benchmark and MiniSet evaluated separately",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "limitations": [
     "Final total unique training samples, complete GPU count and training cost are not disclosed",
     "Reported metrics have no comprehensive error intervals or full isolated ablation",
     "Table 19 Overall follows original reported value rather than recomputing a mean from task columns",
     "Self-review; no benchmark or model execution"
-  ]
+  ],
+  "article_sha256": "127f282403b3629052bb31763de7582fbe0943a46987a573cb081f9c39ebf8db",
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
+      "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
+    ]
+  }
 }

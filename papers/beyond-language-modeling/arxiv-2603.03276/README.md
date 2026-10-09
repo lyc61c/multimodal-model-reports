@@ -29,7 +29,7 @@
 
 ## 3. 整体架构
 
-![Figure 1与Equations 1–3：共享骨干、两种模态目标](figures/original-page-004-01.png)
+![原文 Figure 1](figures/original-p004-figure-1.png)
 
 *来源：原文Figure 1，PDF第4页，[原页](https://arxiv.org/pdf/2603.03276v1#page=4)。同一骨干顶部同时预测离散文字和连续视觉状态；下方五轴是实验主题，不是五个独立模型模块。*
 
@@ -54,7 +54,7 @@ MoE粒度原文公式4为 $G=4d_{model}/d_{expert}$。固定激活计算时增�
 
 专家分析用归一化选择率 $R_m^{(i)}=C_m^{(i)}/(N_m k)$，再计算 $S_i=(R_{text}^{(i)}-R_{image}^{(i)})/(R_{text}^{(i)}+R_{image}^{(i)})$。$S>0.5$表示文字选择率超过视觉三倍，$S<-0.5$相反；居中称混合专家。它是验证资料上的使用偏好，不是证明某专家专属储存某类知识。图像生成/理解路由相关 $r\ge0.90$支持共享视觉处理，不能据相关性证明每层计算完全相同。[原文 §6、E.8](https://arxiv.org/pdf/2603.03276v1#page=36)
 
-![Figures 23–24：等计算下分别拟合语言与视觉的最优规模](figures/original-page-017-04.png)
+![原文 Figure 23](figures/original-p017-figure-23.png)
 
 *来源：原文Figure23/24，PDF第17页，[原页](https://arxiv.org/pdf/2603.03276v1#page=17)。左列U形曲线各颜色是同一计算预算，上行语言、下行视觉；右侧对数坐标直线含远超实测预算的外推。*
 
@@ -82,7 +82,11 @@ VQA结果另在Cambrian-7M训练一轮，视觉冻结，64GPU、约1M token全�
 
 ## 7. 实验设置与主要结果
 
-![Figures 11–13：文字数字动作、导航指标与领域数据比例](figures/original-page-010-02.png)
+![原文 Figure 11](figures/original-p010-figure-11.png)
+
+![原文 Figure 12](figures/original-p010-figure-12.png)
+
+![原文 Figure 13](figures/original-p010-figure-13.png)
 
 *来源：原文Figure11–13，PDF第10页，[原页](https://arxiv.org/pdf/2603.03276v1#page=10)。上方四帧与动作条件预测右侧目标；下方ATE/RPE向左越好，右侧横轴领域数据比例不等距。*
 
@@ -90,7 +94,7 @@ VQA结果另在Cambrian-7M训练一轮，视觉冻结，64GPU、约1M token全�
 
 表示对照中SigLIP2多模态预训练＋VQA微调平均40.3，纯文字初始化＋同类后续微调27.8；VAE、其它语义表示和raw pixel提升幅度不同。固定20B VQA加80B文字得37.9，加图文36.9，加视频36.1，均超过100B只VQA的35.7。这支持多样资料的价值，不能当所有领域资料扩展无效的普遍规则。
 
-![Figures 21–22：设计叠加与知识生成基准](figures/original-page-016-03.png)
+![原文 Figure 21](figures/original-p016-figure-21.png)
 
 *来源：原文Figure21/22，PDF第16页，[原页](https://arxiv.org/pdf/2603.03276v1#page=16)。橙色PPL越低越好、蓝色DPG越高越好；图中数字已按原像素核验，不能从文本提取位置误配数值。*
 

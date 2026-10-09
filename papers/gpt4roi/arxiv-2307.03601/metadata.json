@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "GPT4RoI：用框选区域的视觉特征执行空间指令"
+  "title_zh": "GPT4RoI：用框选区域的视觉特征执行空间指令",
+  "chinese_characters": 2319,
+  "figure_revision_date": "2026-10-09"
 }

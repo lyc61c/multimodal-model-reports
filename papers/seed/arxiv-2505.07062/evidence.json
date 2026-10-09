@@ -14,5 +14,10 @@
     "Video-MME without subtitles 77.9/77.6 versus Gemini 87.0; video evaluation at most 640 frames, 128K, dataset-specific FPS. Streaming proactive 68.0/82.8, temporal grounding uses mIoU.",
     "GUI comparisons preserve losses versus CUA/UI-TARS; internal weighted 59.3 below Gemini 61.6. Local sampling/scaling not treated as full-component causal ablation; no model reproduction."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

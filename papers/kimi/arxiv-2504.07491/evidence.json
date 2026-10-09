@@ -13,5 +13,10 @@
     "标准/Thinking及无有字幕和full/mini/val分开；长区NIAH87/91.7及MathVista预算非单调",
     "OSWorld多步8.22区别单步92.8，无假设帧预算、无独立组件消融、未运行模型"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

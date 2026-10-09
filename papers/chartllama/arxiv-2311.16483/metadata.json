@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "ChartLlama：从表格与绘图代码合成监督，学习图表理解和编辑"
+  "title_zh": "ChartLlama：从表格与绘图代码合成监督，学习图表理解和编辑",
+  "chinese_characters": 3335,
+  "figure_revision_date": "2026-10-09"
 }

@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "LLaVA-OneVision-1.5：概念均衡数据与高效中期训练"
+  "title_zh": "LLaVA-OneVision-1.5：概念均衡数据与高效中期训练",
+  "chinese_characters": 2727,
+  "figure_revision_date": "2026-10-09"
 }

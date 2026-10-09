@@ -30,9 +30,9 @@ LongLLaVA 将视觉 token 压缩、混合序列网络与多图数据协议结合
 
 ## 3. 整体架构
 
-![Figure 2：视觉压缩与混合语言主干](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文 Figure 2，PDF 第 4 页完整页面；保留网络图、说明和视觉模型脚注。*
+*原文 Figure 2，PDF 第 4 页图表区域裁切；保留网络图、说明和视觉模型脚注。*
 
 图像先经 CLIP 编成二维特征，在投影之前聚合相邻 2×2 网格，从 24×24=576 降为 12×12=144。两层 MLP 将这些连续特征映射到语言嵌入空间，然后与文字共同进入混合 LLM。Figure 2 每组画出七个 Mamba 类层、一个 Transformer 层，重复四组；正文“Transformer and Mamba … 7:1”的顺序措辞容易反读，本文按实际图示说明为 **Mamba:Transformer≈7:1**。
 
@@ -72,9 +72,11 @@ Table 1 对 Mamba 的 ICL 标为“无”，但 Table 5 的 Cobra 实验仍有�
 
 ### 明确图与图之间的关系
 
-![Figure 3、4：输入协议与课程数据](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
-*原文 Figure 3、Figure 4，PDF 第 5 页完整页面；保留全部四种输入示意和训练阶段。*
+![原文 Figure 4](figures/original-p005-figure-4.png)
+
+*原文 Figure 3、Figure 4，PDF 第 5 页图表区域裁切；保留全部四种输入示意和训练阶段。*
 
 每张图用 `<img>` 和 `</img>` 包围；视频整体再用 `<vid>` 和 `</vid>` 包围，帧间加入 `<t>`。高分辨率图先放整体图，再按左上到右下排列裁块，用换行分隔裁块行。Figure 3 的重点是让相同的视觉序列接口具有不同的时间或空间语义。`<t>` 是帧间标记，报告没有将它定义为精确时间戳，也未披露按秒编码的公式。
 
@@ -117,9 +119,11 @@ SubImage 从前一单图阶段抽样，经过 padding 和分割，生成 336×33
 
 VNBench 平均为 52.1，高于 GPT-4V 48.9，低于 GPT-4o 64.4 和 Gemini 66.7。部分检索为 100，但排序与计数仍明显较低；对少数简单检索满分不能概括为全部时间关系处理都很强。
 
-![Table 4、5：消融与效率](figures/original-page-008-03.png)
+![原文 Table 4](figures/original-p008-table-4.png)
 
-*原文 Table 4、Table 5，PDF 第 8 页完整页面；保留所有消融行与 100K 效率列。*
+![原文 Table 5](figures/original-p008-table-5.png)
+
+*原文 Table 4、Table 5，PDF 第 8 页图表区域裁切；保留所有消融行与 100K 效率列。*
 
 加入 Jamba 后 MMMU 34.4→41.4、MileBench 27.6→38.2，但 GQA 63.3→63.2，并非所有指标上升。二维池化后 token 576→144，GQA 63.2→61.3，SEED 69.8→67.4。与一维池化相比它更好，但仍有细节损失。增加多图训练使 MileBench 50.0→57.4，同时 GQA 62.2→59.9、MMMU 42.1→39.2、SEED 68.9→65.3；扩展能力伴随单图回退。
 
@@ -127,9 +131,9 @@ VNBench 平均为 52.1，高于 GPT-4V 48.9，低于 GPT-4o 64.4 和 Gemini 66.7
 
 Figure 5 的 V* 裁块数量增加先改善后回退，而且裁块大小也同时从 448 到 336、224、168 改变，所以不能把它当作只改变图像数量的严格缩放规律。Figure 6 增帧总体有益，但长视频也存在局部下降，并非每增加一次帧数都提升。
 
-![Figure 7：长视觉检索热图](figures/original-page-010-04.png)
+![原文 Figure 7](figures/original-p010-figure-7.png)
 
-*原文 Figure 7，PDF 第 10 页完整页面；保留数量轴、深度轴、颜色刻度与每格数字。*
+*原文 Figure 7，PDF 第 10 页图表区域裁切；保留数量轴、深度轴、颜色刻度与每格数字。*
 
 该原图明确写在一张 A800 80GB 上测量。100–900 帧在列出的五种深度均为 1.00，1000 帧均为 0.25，与 Section 6 “1000 图接近 100%”的文字不一致；没有单独的原始结果可以消除这一冲突。训练长度之外的性能下降和更强视觉压缩都值得关注，因此本篇不将“千图接近满分”作为无条件结论。
 

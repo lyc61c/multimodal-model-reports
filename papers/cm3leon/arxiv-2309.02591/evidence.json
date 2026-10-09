@@ -3,13 +3,39 @@
   "source_url": "https://arxiv.org/pdf/2309.02591v1",
   "read_scope": "Full 19-page report including pretraining, decoding, SFT and Appendices A–E",
   "facts": [
-    {"claim": "256x256 to1024 tokens,8192 image codes,56320 text vocab", "location": "Section2.1 page3"},
-    {"claim": "CM3 masked span relocation, no extra target loss weighting and no span across break", "location": "Section2.2 pages3–4"},
-    {"claim": "CFG uses same model conditional/unconditional streams, CD-K kth probability threshold", "location": "Equations1–3 page5"},
-    {"claim": "4.88 FID requires two inference retrieved documents and CLIP selection among8", "location": "Table1 caption page6"},
-    {"claim": "350M/760M/7B architecture/training tokens and SFT30B", "location": "Tables3–4 pages13,16"},
-    {"claim": "Editing600K vs appendix127K; OCR200K vs appendix300K", "location": "Section4.1 pages6–7 vs Table5 page18"},
-    {"claim": "0-shot text task table does not mean unseen training dataset", "location": "Section4.2 and Table2 page8; Table5 page18"}
+    {
+      "claim": "256x256 to1024 tokens,8192 image codes,56320 text vocab",
+      "location": "Section2.1 page3"
+    },
+    {
+      "claim": "CM3 masked span relocation, no extra target loss weighting and no span across break",
+      "location": "Section2.2 pages3–4"
+    },
+    {
+      "claim": "CFG uses same model conditional/unconditional streams, CD-K kth probability threshold",
+      "location": "Equations1–3 page5"
+    },
+    {
+      "claim": "4.88 FID requires two inference retrieved documents and CLIP selection among8",
+      "location": "Table1 caption page6"
+    },
+    {
+      "claim": "350M/760M/7B architecture/training tokens and SFT30B",
+      "location": "Tables3–4 pages13,16"
+    },
+    {
+      "claim": "Editing600K vs appendix127K; OCR200K vs appendix300K",
+      "location": "Section4.1 pages6–7 vs Table5 page18"
+    },
+    {
+      "claim": "0-shot text task table does not mean unseen training dataset",
+      "location": "Section4.2 and Table2 page8; Table5 page18"
+    }
   ],
-  "math": "Original CFG Eq1–2 and CD-K Eq3 checked; CM3 CE expansion and CFG probability equivalence explicitly labelled explanatory derivations."
+  "math": "Original CFG Eq1–2 and CD-K Eq3 checked; CM3 CE expansion and CFG probability equivalence explicitly labelled explanatory derivations.",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

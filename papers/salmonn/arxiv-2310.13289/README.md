@@ -22,7 +22,7 @@ SALMONN 是 Speech Audio Language Music Open Neural Network。它希望在一个
 
 ## 3. 整体架构
 
-![原文 Figure 1：SALMONN 架构，PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 1](figures/original-p004-figure-1.png)
 
 **读图：**两个冻结编码器读同一音频，特征沿通道拼接；窗口级 Q-Former 是可训练连接器。音频嵌入与文字提示共同送入冻结 Vicuna，LoRA 更新其自注意力 Q、V 投影。火焰和雪花分别表示可训练和冻结部分。
 
@@ -60,7 +60,7 @@ $I$ 为指令，$Y$ 为回答。大量短且确定的转录/描述监督可能�
 
 预训练语音识别使用 960 小时 LibriSpeech、1,000 小时 GigaSpeech M-set；描述使用约 2,800 小时 WavCaps，并移除超过 180 秒的片段，另有 AudioCaps、Clotho。不同任务的数据不是全都无监督：识别、描述和标签提供明确目标。
 
-![原文 Table 1：指令微调数据，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Table 1](figures/original-p006-table-1.png)
 
 **读表：**同一音频源可被用于转录、音素识别、性别和问答，不能逐行把重复小时数相加后宣称独立音频总量。作者汇总约 4,400 小时、2.3M 指令样本。
 
@@ -78,7 +78,11 @@ $I$ 为指令，$Y$ 为回答。大量短且确定的转录/描述监督可能�
 
 ## 7. 实验设置与主要结果
 
-![原文 Figure 2、Table 3、Figure 3：激活及缩放实验，PDF 第 8 页](figures/original-page-008-03.png)
+![原文 Table 3](figures/original-p008-table-3.png)
+
+![原文 Figure 3](figures/original-p008-figure-3.png)
+
+![原文 Figure 2](figures/original-p008-figure-2.png)
 
 **读表：**Table 3(a) 是训练覆盖任务；(b) 是未覆盖或开放任务。括号为 following rate（FR），前面的数是准确率或多样性，不能把括号数当正确率。ASR 三元组依次为 LibriSpeech clean、other、GigaSpeech。
 
@@ -96,7 +100,9 @@ $I$ 为指令，$Y$ 为回答。大量短且确定的转录/描述监督可能�
 
 Figure 3 中缩放从 4 降至约 2，可提高开放任务 FR，同时使转录和音素错误率增大。正文将相关变化写成“PER drops”，与实际曲线方向冲突；本文依据原图记录为错误率恶化。
 
-![原文 Tables 4–5：困惑度与激活方式消融，PDF 第 9 页](figures/original-page-009-04.png)
+![原文 Table 4](figures/original-p009-table-4.png)
+
+![原文 Table 5](figures/original-p009-table-5.png)
 
 长故事激活的 SAC 准确率为 0.50，长 QA 为 0.34、纯文本故事为 0.11、长 ASR 为 0.12。长 QA 还使重复回答比例达到 4.6%，故事方案为 0.1%。只更新 LoRA 可获得 SQQA 0.44，但 SAC 0.34 低于同时更新连接器与 LoRA 的 0.50，说明不同任务对适配范围敏感。
 

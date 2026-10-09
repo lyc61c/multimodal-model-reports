@@ -28,7 +28,9 @@ LION-12B 报告 VSR 73.77、TextCaps CIDEr 108.76、RefCOCOg 零样本 val 66.12
 
 ## 3. 整体架构
 
-![LION 原文整体架构与三阶段训练流程](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
+
+![原文 Figure 3](figures/original-p003-figure-3.png)
 
 > 来源：原文 Figures 2–3，2311.11860v1，PDF 第 3 页；完整图注、模块和训练阶段均保留。
 
@@ -76,7 +78,9 @@ B(X;Y)=\operatorname{FFN}(\operatorname{XAttn}(\operatorname{Attn}(X),Y)).
 
 ## 5. 数据构建与处理
 
-![LION 指令数据与评测划分原表](figures/original-page-012-04.png)
+![原文 Table 7](figures/original-p012-table-7.png)
+
+![原文 Table 8](figures/original-p012-table-8.png)
 
 > 来源：原文 Tables 7–8，PDF 第 12 页；保留全部数据行、阶段勾选、划分与指标列。
 
@@ -129,7 +133,9 @@ Caption 用 CIDEr，VisDial 用 MRR，其余图文问答用 top-1 accuracy。cap
 
 据原文 Table 1 整理。带星号结果为作者用公开 checkpoint 重测，原评测配置不完整，只供参考；dagger 表示使用非公开内部数据。不能省略这些脚注后把差值写成等条件优势。Table 6 报告 MMBench test 73.4，超过同表 mPLUG-Owl2 的 66.0，但比较模型的语言与视觉骨干不同。
 
-![LION 区域定位结果与训练策略消融](figures/original-page-006-02.png)
+![原文 Table 2](figures/original-p006-table-2.png)
+
+![原文 Table 3](figures/original-p006-table-3.png)
 
 > 来源：原文 Tables 2–3，PDF 第 6 页；完整零样本、额外任务微调分组及八个划分保留。
 
@@ -137,7 +143,11 @@ Caption 用 CIDEr，VisDial 用 MRR，其余图文问答用 top-1 accuracy。cap
 
 Table 3 的单阶段 REC 平均只有 3.78，分阶段为 54.46，加 router 为 54.98。这支持先学习区域任务的作用；router 同时把 held-out 均值从 61.91 提到 62.16，却把 held-in 从 88.07 降到 87.67，没有全面单调提升。
 
-![LION 标签消融、对象幻觉评测及聚合器消融](figures/original-page-007-03.png)
+![原文 Table 4](figures/original-p007-table-4.png)
+
+![原文 Table 5](figures/original-p007-table-5.png)
+
+![原文 Figure 5](figures/original-p007-figure-5.png)
 
 > 来源：原文 Tables 4–5、Figure 5，PDF 第 7 页；全表与柱状图图例、坐标、数值、图注完整可见。
 

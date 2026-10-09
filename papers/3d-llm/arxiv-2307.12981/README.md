@@ -2,7 +2,7 @@
 
 # 3D-LLM：把多视角视觉知识映射到三维场景，再交给语言模型
 
-> 本文依据 [arXiv:2307.12981v1](https://arxiv.org/pdf/2307.12981v1)。图像为该版本原文页面截图，保留原图、表头与上下文。未重新运行模型；补充公式明确标为解读表达。
+> 本文依据 [arXiv:2307.12981v1](https://arxiv.org/pdf/2307.12981v1)。图像为该版本原文图表裁图，保留原图、表头与必要注释。未重新运行模型；补充公式明确标为解读表达。
 
 ## 1. 论文信息与模型定位
 
@@ -28,9 +28,9 @@
 
 ## 3. 整体架构
 
-![3D-LLM 原文架构 Figure 3 所在页面](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
-> 原文 Figure 3，v1 PDF 第 5 页；[原页](https://arxiv.org/pdf/2307.12981v1#page=5)。本资产为完整页面截图。
+> 原文 Figure 3，v1 PDF 第 5 页；[原页](https://arxiv.org/pdf/2307.12981v1#page=5)。仅保留所引用的原文图表区域。
 
 读图时从左往右：三维场景首先渲染为多个相机视角，二维编码器为每幅图产生像素对齐的密集特征；中间三条路径将这些特征归并到三维表示；右侧用 Perceiver 或 Q-Former 将可变数量的点特征压缩为语言模型可读取的表示，并与用户问题联合生成答案。图中 `<loc…>` 是新增位置 token，体现空间定位被纳入语言输出。
 
@@ -69,7 +69,7 @@ q 是均匀量化函数，b 对应六个位置 token。原图示例回答只给�
 
 ## 5. 数据构建与处理
 
-![原文 Figure 2：三种三维语言合成管线](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 > Figure 2，PDF 第 4 页；[原页](https://arxiv.org/pdf/2307.12981v1#page=4)。页面上半部分展示合成管线。
 
@@ -102,7 +102,11 @@ s 是任务提示，F3D 是场景表示，y 是目标文本/位置序列。对 F
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 1、2、3：ScanQA 与自建任务结果](figures/original-page-008-03.png)
+![原文 Table 1](figures/original-p008-table-1.png)
+
+![原文 Table 2](figures/original-p008-table-2.png)
+
+![原文 Table 3](figures/original-p008-table-3.png)
 
 > Table 1–3，PDF 第 8 页；[原页](https://arxiv.org/pdf/2307.12981v1#page=8)。先按任务和切分选表，再在同一指标列比较。
 

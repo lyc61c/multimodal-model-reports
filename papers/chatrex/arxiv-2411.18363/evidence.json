@@ -3,13 +3,39 @@
   "source_url": "https://arxiv.org/pdf/2411.18363v1",
   "read_scope": "35-page PDF including architecture/data/training/experiments and Appendices A–C",
   "facts": [
-    {"claim": "Vicuna7B + CLIP336 + ConvNeXt768 + object-index retrieval", "location": "Section 3/Figure 5 and Appendix B.2, pages 6–8,33"},
-    {"claim": "Two granularity UPN prompts and independent detector training", "location": "Eq.1–2 page 5; Section 4.2 page 10; Appendix B.1 page 33"},
-    {"claim": "Gate fusion, RoIAlign and added coordinate PE", "location": "Section 3.2, Eq.3–4, pages 6–7"},
-    {"claim": "Rexverse2M detailed count 2.1M images and multiple overlapping region annotation sets", "location": "Section 4.1 page 10"},
-    {"claim": "GT boxes mixed with proposals only in training, max100", "location": "Section 4.2 page 10"},
-    {"claim": "Detection evaluation supplies GT category list, UPN scores used for AP", "location": "Section 5.1 page 11 and Appendix A page 32"},
-    {"claim": "Table6 threshold0.3 is score confidence, not IoU", "location": "Table6 caption and Section5.3 page 13"}
+    {
+      "claim": "Vicuna7B + CLIP336 + ConvNeXt768 + object-index retrieval",
+      "location": "Section 3/Figure 5 and Appendix B.2, pages 6–8,33"
+    },
+    {
+      "claim": "Two granularity UPN prompts and independent detector training",
+      "location": "Eq.1–2 page 5; Section 4.2 page 10; Appendix B.1 page 33"
+    },
+    {
+      "claim": "Gate fusion, RoIAlign and added coordinate PE",
+      "location": "Section 3.2, Eq.3–4, pages 6–7"
+    },
+    {
+      "claim": "Rexverse2M detailed count 2.1M images and multiple overlapping region annotation sets",
+      "location": "Section 4.1 page 10"
+    },
+    {
+      "claim": "GT boxes mixed with proposals only in training, max100",
+      "location": "Section 4.2 page 10"
+    },
+    {
+      "claim": "Detection evaluation supplies GT category list, UPN scores used for AP",
+      "location": "Section 5.1 page 11 and Appendix A page 32"
+    },
+    {
+      "claim": "Table6 threshold0.3 is score confidence, not IoU",
+      "location": "Table6 caption and Section5.3 page 13"
+    }
   ],
-  "math": "Original Eq1–4 and unnumbered gate formula checked; recall ceiling and CE explicitly marked explanatory, matching vs loss weights separated."
+  "math": "Original Eq1–4 and unnumbered gate formula checked; recall ceiling and CE explicitly marked explanatory, matching vs loss weights separated.",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

@@ -9,18 +9,30 @@
     "Explicitly recorded GPT3.5Turbo正文 versus GPT4 figure labels and abstract multi-turn versus body single-turn discrepancy.",
     "Checked 8 A100, batch4 accumulation3,5epochs lr3e-5 FP16 sequence512; optimizer/kernel/frame budgets unreported.",
     "No benchmark scores or component ablations exist in this v1; demonstration evidence not generalized to quantitative claims.",
-    "No original audio replay, model run or independent reproduction claimed."
+    "No original audio replay, model run or independent reproduction claimed.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "c5f5c2e066b47ceec58ec4d0dd3c04ef0f548acc317212a95e03ef3c81fec063",
+  "article_sha256": "f8a2d40e2d9dd832493a3f7775ef80049459220bc60553f0a30b1cb3e2a75245",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and crop: Figure 1 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and crop: Figure 2 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
+      "Viewed source and repaired crops: Table 1 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crop: Figure 8, Figure 9 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ]
+  }
 }

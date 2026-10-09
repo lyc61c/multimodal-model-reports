@@ -22,5 +22,10 @@
   "source_inconsistencies": [
     "Figure2 3D box output exceeds prompt0-1;normalizationprotocol notspecified"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

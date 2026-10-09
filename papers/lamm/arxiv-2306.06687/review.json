@@ -45,5 +45,24 @@
     "optimizer/batch/epochs/maskingnotpublished",
     "GPTmetricrankingaggregationnotdefined",
     "pointcloudcoordinatespromptinconsistent"
-  ]
+  ],
+  "article_sha256": "2d32e8b16d89f62a28b0f36681eae6d240bc8187eaa1c964042ac7b840a9c69d",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Figure 1 complete data-generation flow and six examples with caption.",
+      "Figure 2 full benchmark pipeline including three metric modules.",
+      "Figure 3 architecture plus full Table 1.",
+      "Viewed source and crop after manual repair: Table 2, Table 3, Table 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
 }

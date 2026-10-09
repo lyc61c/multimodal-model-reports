@@ -35,5 +35,10 @@
     "BLIP3-o额外数据量Table1和表注描述不完全一致，未作为精确公平成本对照。",
     "正文把普通BLIP3-o8BGenEval称.84而Table3普通.83、星号.84；本文按Table3。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

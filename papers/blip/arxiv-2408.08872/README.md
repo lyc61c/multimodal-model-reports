@@ -29,7 +29,7 @@ BLIP-2 通过 Q-Former 建立图像与语言连接，并使用图文对比、匹
 
 ## 3. 整体架构
 
-![Figure 2：视觉采样、交错序列与文字损失，原文第3页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 *来源：原文 Figure 2，PDF 第 3 页；[原页](https://arxiv.org/pdf/2408.08872v1#page=3)。雪花代表冻结，火焰代表更新。*
 
@@ -54,7 +54,9 @@ $$
 
 其次是**逐块采样与全图固定采样的区别**。若局部块加缩小整图一共有 $K$ 组特征，每组采样为 $m$ 个 token，则逐块方案的语言侧预算可概括为 $Km$；全图固定方案先拼接各组特征，最终只取 $m$ 或固定指定数量。前者为每个块留出表示容量，后者在图片包含更多块时逐渐加大压缩比。这个容量差异解释了为什么“已经高分辨率编码”不保证 OCR 提升：细节可能在后续固定长度压缩中又丢掉。
 
-![Figure 8 与 Table 7：采样策略及视觉token数消融，原文第12页](figures/original-page-012-04.png)
+![原文 Table 7](figures/original-p012-table-7.png)
+
+![原文 Figure 8](figures/original-p012-figure-8.png)
 
 *来源：原文 Figure 8、Table 7，PDF 第 12 页；[原页](https://arxiv.org/pdf/2408.08872v1#page=12)。Figure 8(a) 横轴是 DocVQA、ChartQA、OCRBench，青绿色柱为逐块采样，其他柱为固定分辨率或统一采样。*
 
@@ -70,7 +72,7 @@ $$\mathcal L_{\mathrm{text}}=-\sum_{t\in\mathcal T}\log p_\theta(s_t\mid s_{<t})
 
 ## 5. 数据构建与处理
 
-![Figure 3：预训练数据混合与图文实例，原文第5页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 *来源：原文 Figure 3，PDF 第 5 页；[原页](https://arxiv.org/pdf/2408.08872v1#page=5)。饼图是训练采样比例，外围是不同来源的示例，不能把它当各数据集原始库存占比。*
 
@@ -112,7 +114,9 @@ DPO 通过比较同一输入下较好与较差回答改变生成倾向，通常�
 
 ## 7. 实验设置与主要结果
 
-![Tables 1/2：base少样例与指令模型单图评测，原文第9页](figures/original-page-009-03.png)
+![原文 Table 1](figures/original-p009-table-1.png)
+
+![原文 Table 2](figures/original-p009-table-2.png)
 
 *来源：原文 Table 1、2，PDF 第 9 页；[原页](https://arxiv.org/pdf/2408.08872v1#page=9)。上表 VQA 是准确率，描述是 CIDEr；下表带星模型使用作者评测代码重新测得。*
 

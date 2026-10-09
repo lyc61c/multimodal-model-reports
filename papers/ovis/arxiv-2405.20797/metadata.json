@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Ovis：用概率视觉词表对齐图像与语言的嵌入结构"
+  "title_zh": "Ovis：用概率视觉词表对齐图像与语言的嵌入结构",
+  "chinese_characters": 2468,
+  "figure_revision_date": "2026-10-09"
 }

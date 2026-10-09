@@ -2,9 +2,38 @@
   "checked_file": "README.md",
   "verdict": "complete_self_review",
   "source_identity": "Title/authors/arXiv version matched PDF page 1",
-  "facts_checked": ["Dual visual paths and frozen modules", "Training appendix hyperparameters", "Table 1 vs Table 2 OCR protocol", "Table 4 baseline counterexample", "All reported metric values and evaluation split limitations"],
+  "facts_checked": [
+    "Dual visual paths and frozen modules",
+    "Training appendix hyperparameters",
+    "Table 1 vs Table 2 OCR protocol",
+    "Table 4 baseline counterexample",
+    "All reported metric values and evaluation split limitations"
+  ],
   "math_checked": "Equations labelled explanatory, not fabricated original Eq.; gradients can traverse frozen LLM; added patch tokens do not imply lower total attention cost.",
-  "images_checked": ["Manually viewed page 3 Figure 2, complete architecture", "Manually viewed page 5 Figure 4 and Table 1, complete captions/headers", "Manually viewed page 7 Tables 3–6, complete headers/values"],
+  "images_checked": [
+    "Manually viewed page 3 Figure 2, complete architecture",
+    "Manually viewed page 5 Figure 4 and Table 1, complete captions/headers",
+    "Manually viewed page 7 Tables 3–6, complete headers/values"
+  ],
   "model_execution": "not_run",
-  "remaining_limitations": ["Original v1 inconsistencies are retained and explained; no independent benchmark reproduction"]
+  "remaining_limitations": [
+    "Original v1 inconsistencies are retained and explained; no independent benchmark reproduction"
+  ],
+  "article_sha256": "99b4828dbeb513a339e775015e562ec281fc01c5814ff55df275c85010aa66fb",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+      "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
+    ]
+  }
 }

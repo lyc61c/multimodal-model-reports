@@ -12,5 +12,10 @@
     "核对所有主要数字与涨跌，保留MME舍入口径及InfoVQA50.5→60.8为10.3pp",
     "未补造损失或PartialLoRA内部细节，未运行模型，作者原文核验"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

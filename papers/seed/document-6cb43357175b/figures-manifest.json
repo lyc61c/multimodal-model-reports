@@ -4,63 +4,178 @@
   "source_pdf_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
   "assets": [
     {
-      "asset_path": "figures/original-page-004-01.png",
-      "original_label": "PDF page 4",
+      "asset_path": "figures/original-p004-table-2.png",
+      "original_label": "Table 2",
       "pdf_page": 4,
       "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=4",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
-      "asset_sha256": "0e0c73da9d3bd6bbe72f4bb431394c69d728e7bae6748c148f6bd24b688ceb4c",
+      "asset_sha256": "0e753c5eefd15f00c3c19bc241f32c2832c1ef036428f4a1acb0bc55022ea403",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.53,
+          74.21,
+          544.17,
+          601
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed fresh repaired source/crop contact: Table 2 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-009-02.png",
-      "original_label": "PDF page 9",
+      "asset_path": "figures/original-p009-table-6.png",
+      "original_label": "Table 6",
       "pdf_page": 9,
       "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=9",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
-      "asset_sha256": "536b0460f1cd433f667224cf3a89a3aa60323fc7d5de3a9cc6df919d08feeed0",
+      "asset_sha256": "04e8df1d369e7bec416b1bcd7d989cba642ac9d1a880369c0d88f5b50fa7b6f3",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.53,
+          74.21,
+          544.17,
+          189
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed fresh repaired source/crop contact: Table 6, Figure 1, Figure 2 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-017-03.png",
-      "original_label": "PDF page 17",
+      "asset_path": "figures/original-p009-figure-1.png",
+      "original_label": "Figure 1",
+      "pdf_page": 9,
+      "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=9",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
+      "asset_sha256": "38d19526b66b99f9dbcb7f682659fc8b41b5180c25a6f06fa639563273d58a34",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          193,
+          544.15,
+          397.82
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed fresh repaired source/crop contact: Table 6, Figure 1, Figure 2 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p009-figure-2.png",
+      "original_label": "Figure 2",
+      "pdf_page": 9,
+      "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=9",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
+      "asset_sha256": "1507a640d50a778a6bd63122ebf6c3a5e9b2922165868d170ef8266373153d75",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          403.91,
+          544.13,
+          590.31
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed fresh repaired source/crop contact: Table 6, Figure 1, Figure 2 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p017-figure-6.png",
+      "original_label": "Figure 6",
       "pdf_page": 17,
       "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=17",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
-      "asset_sha256": "7093f12baefa9ae1d254eae8330e762e43f98b06161a7b95474f86a0bd9c3066",
+      "asset_sha256": "4e2c7477298ee54f9d5f3627a4a4dc826b2a4ad69d68c32485d8356d557c9210",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          67.87,
+          74.95,
+          544.4,
+          375.86
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crops: Figure 6 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-020-04.png",
-      "original_label": "PDF page 20",
+      "asset_path": "figures/original-p020-figure-9.png",
+      "original_label": "Figure 9",
       "pdf_page": 20,
       "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=20",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
-      "asset_sha256": "091ac8c54a7ca204c0fa3d9a1ca3a0ef815e11ca15d7ab9775ef3f95dda76271",
+      "asset_sha256": "d6447bd92f34ddf7092acbee88992e22aa9001ee392e2e8172567771c40c0c43",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          66.79,
+          74.95,
+          544.4,
+          307.33
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crops: Figure 9, Figure 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p020-figure-10.png",
+      "original_label": "Figure 10",
+      "pdf_page": 20,
+      "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=20",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
+      "asset_sha256": "fcfb23338a39334d29598666420d26d75fb44ca4a62c47d7cbd3b00a1b88b5af",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          185.43,
+          322.75,
+          426.56,
+          488.68
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source and crops: Figure 9, Figure 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

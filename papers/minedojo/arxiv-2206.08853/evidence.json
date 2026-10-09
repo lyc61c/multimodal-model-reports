@@ -44,5 +44,10 @@
   "source_inconsistencies": [
     "正文训练片段概括16秒，附录采样扩展8–16秒，文章采用附录精确描述。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

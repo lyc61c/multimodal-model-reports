@@ -24,7 +24,7 @@ GPT4Tools 是文字语言模型的**多模态工具控制器**。它没有为 Vi
 
 ## 3. 整体架构
 
-![GPT4Tools 原文 Figure 1：教师数据生成与 LoRA 工具控制器](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
 **原图：Figure 1，PDF 第 3 页。** 上半部分将图像内容的 caption/对象框与 Tool Pocket 交给 ChatGPT，左下转换为标准指令和响应；中间蓝色语言骨干固定、黄色 LoRA 训练；右边部署后接收用户请求。图里显示原图是为了说明信息来源，教师与控制模型主要读取文字表示。
 
@@ -62,7 +62,7 @@ SR=\frac1N\sum_i
 
 ## 5. 数据构建与处理
 
-![GPT4Tools 原文 Figure 3：正例、负例与上下文样本](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **原图：Figure 3，PDF 第 5 页。** 左例是分割后条件生成的两步调用；中例询问词义，应直接回答；右例把深度预测步骤移到输入历史，要求续接生成步骤。图中 Observation 的文件名是标准化调用轨迹内容，不能据此推断所有合成样本都实际运行过工具并验证了图片。
 
@@ -78,7 +78,7 @@ SR=\frac1N\sum_i
 
 ## 6. 训练流程与目标
 
-![GPT4Tools 原文 Table 12：按语言模型区分的微调配置](figures/original-page-017-04.png)
+![原文 Table 12](figures/original-p017-table-12.png)
 
 **原表：Table 12，PDF 第 17 页。** 两列分别为 Vicuna/LLaMA 与 OPT，特别注意 OPT 的学习率低于正文概括的共同值。表给的是最大长度 2048，不能同时把它无条件解释成另外 2048 个输出 token 加在任意长提示之后。
 
@@ -98,7 +98,7 @@ SR=\frac1N\sum_i
 
 ## 7. 实验设置与主要结果
 
-![GPT4Tools 原文 Table 2：已见与未见工具的分项成功率](figures/original-page-007-03.png)
+![原文 Table 2](figures/original-p007-table-2.png)
 
 **原表：Table 2，PDF 第 7 页。** 左半是训练涉及的 23 个工具，右半是 8 个未见工具；每个开源模型两行对比微调前后。GPT-3.5 基线明确为 `text-davinci-003`，不是数据教师 `gpt-3.5-turbo`。两测试部分任务结构不同，不能仅凭右侧更高分就推断新工具更容易泛化。
 

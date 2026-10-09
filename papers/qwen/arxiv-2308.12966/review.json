@@ -36,7 +36,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Self-review, no external reviewer/model execution",
@@ -44,5 +45,20 @@
     "Fixed resolution and compressed token budget",
     "Chat scores lower on several traditional benchmarks",
     "No comprehensive mechanism/data ablations or contamination audit"
-  ]
+  ],
+  "article_sha256": "23c0a40d80e294bd0fd4a3510c018d240a6981e9c2cd1f9bf6716b8c56fae978",
+  "artifact_checks": {
+    "original_assets": 7,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source and crops: Figure 3 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crops: Table 5, Table 6, Table 7, Table 8 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crops: Table 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
+      "Viewed source and crops: Figure 4 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
+    ]
+  }
 }

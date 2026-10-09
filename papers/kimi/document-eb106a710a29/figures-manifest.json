@@ -4,63 +4,103 @@
   "source_pdf_sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c",
   "assets": [
     {
-      "asset_path": "figures/original-page-003-01.png",
-      "original_label": "PDF page 3",
+      "asset_path": "figures/original-p003-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 3,
       "source_url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf#page=3",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c",
-      "asset_sha256": "ab927f8360f35858a33534e695609c4ad2803b8514be277b6f85a7d989aaadf5",
+      "asset_sha256": "ed71b6d4f844b6c6f1f91f0096f500d27640a168b7898e8ab9e7e24814945a70",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          68.68,
+          52.91,
+          544.57,
+          495.33
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-005-02.png",
-      "original_label": "PDF page 5",
+      "asset_path": "figures/original-p005-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 5,
       "source_url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf#page=5",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c",
-      "asset_sha256": "541c74a192fb95c63bcd77c9a7510dd1a03772302a1c0e336f93758b9029d5c0",
+      "asset_sha256": "ae370303e8e775b5e22789c01a7f815836e8e9a163246822ee71a898678ecb62",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          69.0,
+          67.51,
+          543.15,
+          268.89
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-009-03.png",
-      "original_label": "PDF page 9",
+      "asset_path": "figures/original-p009-figure-6.png",
+      "original_label": "Figure 6",
       "pdf_page": 9,
       "source_url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf#page=9",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c",
-      "asset_sha256": "3f3d41544f8f37f11727c576c6a74a83b01d9900f3ca54685247acf0355abdc0",
+      "asset_sha256": "446b536abef5d21728a6341c374465088be2257fb893d8c744684de5f2f2fcc3",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          69,
+          510,
+          545,
+          674
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-027-04.png",
-      "original_label": "PDF page 27",
+      "asset_path": "figures/original-p027-table-2.png",
+      "original_label": "Table 2",
       "pdf_page": 27,
       "source_url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf#page=27",
       "source_version": "official-source-snapshot-2026-10-08",
       "source_sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c",
-      "asset_sha256": "81eba4bf437e5374056e709c92cafba96bad7bbcc4d71735841fccaf8878a938",
+      "asset_sha256": "729ccfa8ad6649378fdab5213b14d838db1aa7ff31a8f59d2583fed89fc33667",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 150,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          68.68,
+          79.94,
+          543.0,
+          688.88
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

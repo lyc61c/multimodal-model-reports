@@ -10,18 +10,30 @@
     "Read SFT construction, 16-answer STEM filtering, hybrid PPO final-answer rewards, distinct KL coefficients, context versus output budgets, four iterations, H800-normalized compute.",
     "All Table 6 metrics checked by mode: DocVQA 96.9 thinking and 96.7 non-thinking despite contradictory prose; VisualWebBench 88.0 non-thinking, not prose 87.8. OCRBench raw 861/881, Qwen 885.",
     "Video-MME without subtitles 77.9/77.6 versus Gemini 87.0; video evaluation at most 640 frames, 128K, dataset-specific FPS. Streaming proactive 68.0/82.8, temporal grounding uses mIoU.",
-    "GUI comparisons preserve losses versus CUA/UI-TARS; internal weighted 59.3 below Gemini 61.6. Local sampling/scaling not treated as full-component causal ablation; no model reproduction."
+    "GUI comparisons preserve losses versus CUA/UI-TARS; internal weighted 59.3 below Gemini 61.6. Local sampling/scaling not treated as full-component causal ablation; no model reproduction.",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 5,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "6e15aad01046c1ab690581659bd374c01e2585ee72ff40ac6f0612d7c702b691",
+  "article_sha256": "ebc877cefba989ce9c4aa29c29cc91cb884aace2ac11f4bace86b8df3b054206",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      " Independent last12 source/crop visual recheck: Seed1.5-VL Figure 1: inspected complete top token squares and Text tokens label. Text bbox y79.69–89.69 and tokens are inside y73.66 top boundary; no truncation. All video frames, image dimensions, legend and caption intact.",
+      " Independent last12 source/crop visual recheck: Seed1.5-VL Figure 4: all cold-start/SFT/rejection-sampling/RL paths, right supervision branches and complete caption preserved.",
+      " Independent last12 source/crop visual recheck: Seed1.5-VL Table 6: all public benchmark categories, column headers, final All-Angles Bench row, two footnotes and full caption preserved.",
+      " Independent last12 source/crop visual recheck: Seed1.5-VL Tables 7 and 8: both full video and GUI benchmark tables, all final rows, notes and captions preserved; page number excluded."
+    ]
+  }
 }

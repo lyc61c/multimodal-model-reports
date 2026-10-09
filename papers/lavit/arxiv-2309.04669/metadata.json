@@ -10,5 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "LaVIT：动态视觉 token 与统一图文下一 token 预测"
+  "title_zh": "LaVIT：动态视觉 token 与统一图文下一 token 预测",
+  "chinese_characters": 2696,
+  "figure_revision_date": "2026-10-09"
 }

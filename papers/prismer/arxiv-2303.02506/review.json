@@ -32,5 +32,23 @@
     "未运行模型、辅助专家或吞吐测量；成本是报告/估算不包含基础专家原预训练。",
     "专家噪声鲁棒无方差，不能宣称部署任意热插拔；COCO属于预训，零样本非图像未见。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "726d6946264d1144f8b85981e81da588bb3983fbc71cfc2be97cf562d0853153",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      " Independent last12 source/crop visual recheck: Prismer Figure 2: both complete encoder/decoder branches, visual patches, expert labels and full caption preserved.",
+      " Independent last12 source/crop visual recheck: Prismer Table 3: all three size groups, headers, metrics and complete caption preserved.",
+      " Independent last12 source/crop visual recheck: Prismer Table 5: all seven architecture/training ablation groups and complete caption preserved.",
+      " Independent last12 source/crop visual recheck: Prismer Table 6 repaired y0=202; preceding paragraph ends y192.10, top table rule is y205.04. Re-rendered and visually checked full header, nine parameter rows and full caption; no body prose."
+    ]
+  }
 }

@@ -58,5 +58,10 @@
     "Table1注统一内部pipeline与正文Doc/Info基线采用已报告服务器数值范围不同，正文如实说明。",
     "5.6B表规模与新增模块约数加总5.53B口径非精确参数审计。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

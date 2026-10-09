@@ -31,9 +31,9 @@ Claude 3 的报告围绕三个问题展开：视觉输入能否与知识和推�
 
 公开材料能确认的功能链路是：用户提供图像与文本问题，模型利用视觉内容和上下文知识形成回答，然后逐 Token 输出文本。模型卡明确介绍了自回归式生成行为，但没有披露图像切块方式、视觉 Token 数、编码器结构、融合位置或注意力形式。因此，下文围绕报告实际展示的信息流解释，保留这些内部配置的未知状态。
 
-![原文 Figure 1 所在页：Claude 3 Opus 图表理解与多步推理](figures/figure-01-chart-reasoning-page.png)
+![原文 Figure 1](figures/original-p009-figure-1.png)
 
-> 来源：原文 **Figure 1**，PDF 第 **9** 页，整页原样渲染并保留图注。[原页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=9)。图中的统计图来自 Pew Research Center，原模型卡已注明其来源。
+> 来源：原文 **Figure 1**，PDF 第 **9** 页，按原文图表区域裁切。[原页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=9)。图中的统计图来自 Pew Research Center，原模型卡已注明其来源。
 
 读图时依次看统计图、用户问题和模型回答。任务要求模型先根据知识确定哪些国家属于 G7，再从图中读取这些国家的数据，最后进行计算。这里同时涉及视觉读数、集合筛选和算术；只识别文字或只列出国家都不足以完成任务。这张图展示了能力链路，图中的问答框不能当成内部网络模块。
 
@@ -50,7 +50,9 @@ Claude 3 的报告围绕三个问题展开：视觉输入能否与知识和推�
 
 模型卡没有提出可复现的新增网络算子，核心变化主要体现在多模态能力、行为训练和评价方法。Constitutional AI 的基本思路是把行为原则明确写成模型训练中的指导依据，使模型学习适当的回答和拒绝行为。Claude 3 延续了先前的大部分原则，并加入与残障人士权益相关的原则。报告没有逐项提供 Claude 3 的原则采样、奖励建模、强化学习更新或损失权重。[原文 §2.6、§4.1，PDF 第 3–4 页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=3)
 
-![原文 Figure 2和3所在页：请求类别与拒绝行为](figures/figure-02-03-refusal-page.png)
+![原文 Figure 2](figures/original-p011-figure-2.png)
+
+![原文 Figure 3](figures/original-p011-figure-3.png)
 
 > 来源：原文 **Figure 2、Figure 3**，PDF 第 **11** 页；[原页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=11)。原图中的拒绝率应结合数据子集解释。
 
@@ -93,7 +95,7 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![原文Table 3所在页：Claude 3多模态结果](figures/table-03-vision-page.png)
+![原文 Table 3](figures/original-p008-table-3.png)
 
 > 来源：原文 **Table 3**，PDF 第 **8** 页；[原页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=8)。下表按该原表摘录，分数以原表口径表示。
 
@@ -109,7 +111,9 @@ $$
 
 这组结果显示 Opus 在 MMMU 和视觉数学上有较强表现，但文档和图表并非所有场景都由最大型号领先。Haiku 的 ChartQA 比 Opus 高 0.9 个百分点，Sonnet 的 DocVQA 与 AI2D 也略高于 Opus。不能由型号定位推出每行都严格随规模提升；不同指标、输入和提示条件也不能合并成一个“视觉总分”。
 
-![原文Figure14与Table6所在页：长上下文与长文本理解](figures/figure-14-table-06-long-context-page.png)
+![原文 Figure 14](figures/original-p021-figure-14.png)
+
+![原文 Table 6](figures/original-p021-table-6.png)
 
 > 来源：原文 **Figure 14、Table 6**，PDF 第 **21** 页；[原页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=21)。图中损失、表中问答准确率分别支持不同结论。
 

@@ -1,1 +1,42 @@
-{"source_version":"2305.06500v1","identity_checked":"p1 title/authors/id","facts":[{"claim":"QFormer trained,ViT and language frozen;instruction feeds bothQFormer andLM","location":"Sections2.3/2.6,p5–6"},{"claim":"13heldin/13heldout;fourtask categoriesheldout;bodyoneinstance28datasets differsfrom26","location":"Sections2.1–2.2,p4"},{"claim":"Square-root dataset probability plus manual adjustment","location":"Section2.4,p5"},{"claim":"16A10040GB,max60Ksteps,batch192/128/64","location":"Section2.6,p6"},{"claim":"ScienceQA54.9->70.4 zero-shot;90.7 downstreamfinetune separate","location":"Tables1/3,p6/9"},{"claim":"RemovalQFormer instructioniVQA52.2->36.8;data balanceIconQA43.1->43.5","location":"Table2,p7"}],"math":"Original unnumbered square-root sampling formula retained;QFormer/likelihood/ranking formulas markedexplanatory.","images_viewed":[3,4,6,7]}
+{
+  "source_version": "2305.06500v1",
+  "identity_checked": "p1 title/authors/id",
+  "facts": [
+    {
+      "claim": "QFormer trained,ViT and language frozen;instruction feeds bothQFormer andLM",
+      "location": "Sections2.3/2.6,p5–6"
+    },
+    {
+      "claim": "13heldin/13heldout;fourtask categoriesheldout;bodyoneinstance28datasets differsfrom26",
+      "location": "Sections2.1–2.2,p4"
+    },
+    {
+      "claim": "Square-root dataset probability plus manual adjustment",
+      "location": "Section2.4,p5"
+    },
+    {
+      "claim": "16A10040GB,max60Ksteps,batch192/128/64",
+      "location": "Section2.6,p6"
+    },
+    {
+      "claim": "ScienceQA54.9->70.4 zero-shot;90.7 downstreamfinetune separate",
+      "location": "Tables1/3,p6/9"
+    },
+    {
+      "claim": "RemovalQFormer instructioniVQA52.2->36.8;data balanceIconQA43.1->43.5",
+      "location": "Table2,p7"
+    }
+  ],
+  "math": "Original unnumbered square-root sampling formula retained;QFormer/likelihood/ranking formulas markedexplanatory.",
+  "images_viewed": [
+    3,
+    4,
+    6,
+    7
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
+}

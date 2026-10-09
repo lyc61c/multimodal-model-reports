@@ -11,5 +11,10 @@
     "标明1M/3M缓存口径差异、缓存无softmax、原文无组件定量消融",
     "音频点云迁移与外接生成/检测/API区别；未运行模型，仅作者来源核验"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

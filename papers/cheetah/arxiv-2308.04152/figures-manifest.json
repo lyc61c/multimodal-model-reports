@@ -4,63 +4,203 @@
   "source_pdf_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
   "assets": [
     {
-      "asset_path": "figures/original-page-005-01.png",
-      "original_label": "Figure2;PDFpage5",
+      "asset_path": "figures/original-p005-figure-2.png",
+      "original_label": "Figure 2",
       "pdf_page": 5,
       "source_url": "https://arxiv.org/pdf/2308.04152v1#page=5",
       "source_version": "2308.04152v1",
       "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
-      "asset_sha256": "07d6e674a7d06afc27af513ac2c3f639662e3ecddefa9602ce579d1bac9bb7e4",
+      "asset_sha256": "cfc28325132ccfd8d02d27ad11e424ac84a26bc4608a5d1931506620bcd39024",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 140,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105,
+          67,
+          507,
+          219
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Complete three-step Cheetah architecture and caption after width repair.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-006-02.png",
-      "original_label": "Figure3 and CLORI formulas;PDFpage6",
+      "asset_path": "figures/original-p006-figure-3.png",
+      "original_label": "Figure 3",
       "pdf_page": 6,
       "source_url": "https://arxiv.org/pdf/2308.04152v1#page=6",
       "source_version": "2308.04152v1",
       "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
-      "asset_sha256": "326034749015668e3990fa624ad29e95c7d26aa382b6ebd4dcdb3815a350dae7",
+      "asset_sha256": "07885736759abfada4a3c50c6c77f37785a525145f2fefc0934ccd9b0ea73519",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 140,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105.0,
+          67.52,
+          506.92,
+          259.05
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed source page and crop: complete counterfactual image-editing pipeline, all four example operations and Figure 3 caption retained.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-008-03.png",
-      "original_label": "Tables2–3;PDFpage8",
+      "asset_path": "figures/original-p008-table-2.png",
+      "original_label": "Table 2",
       "pdf_page": 8,
       "source_url": "https://arxiv.org/pdf/2308.04152v1#page=8",
       "source_version": "2308.04152v1",
       "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
-      "asset_sha256": "436ae9ecbbc6e91f038e9e25ce5455edda5fc534d33629490e368c61e6e8ecd3",
+      "asset_sha256": "0a24750308502153bfed5489e7b5708af12fb9a8c28a9eeedb4bf4f1baeda15a",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 140,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          111.0,
+          67.64,
+          501.0,
+          183.36
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed two distant table crops against source page: both Table 2 and Table 3 titles, all models/categories and numerical results retained, intervening prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     },
     {
-      "asset_path": "figures/original-page-019-04.png",
-      "original_label": "Tables9–12;PDFpage19",
+      "asset_path": "figures/original-p008-table-3.png",
+      "original_label": "Table 3",
+      "pdf_page": 8,
+      "source_url": "https://arxiv.org/pdf/2308.04152v1#page=8",
+      "source_version": "2308.04152v1",
+      "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
+      "asset_sha256": "7541885e679a18aae4cb757b9dd4dbf5d9ebff9e02440c288b1a02ba0f4c5159",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          112.19,
+          679.77,
+          499.8,
+          730.17
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "Viewed two distant table crops against source page: both Table 2 and Table 3 titles, all models/categories and numerical results retained, intervening prose excluded.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p019-table-9.png",
+      "original_label": "Table 9",
       "pdf_page": 19,
       "source_url": "https://arxiv.org/pdf/2308.04152v1#page=19",
       "source_version": "2308.04152v1",
       "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
-      "asset_sha256": "60912b50f78bebebe389e3b9014c8f493e74ae41967abf1c0c5d93af4035c20c",
+      "asset_sha256": "294c9c16839ce2374d8cd41445c121e91cc1289f381a19fe9a311666d4655872",
       "processing": {
-        "method": "full_pdf_page_render",
-        "dpi": 140,
-        "crop_bbox": null,
-        "note": "Original pixels retained; full-page render includes surrounding text"
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          106.84,
+          95.45,
+          505.17,
+          217.98
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "All four Tables 9–12 present with headers and notes.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p019-table-10.png",
+      "original_label": "Table 10",
+      "pdf_page": 19,
+      "source_url": "https://arxiv.org/pdf/2308.04152v1#page=19",
+      "source_version": "2308.04152v1",
+      "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
+      "asset_sha256": "92e5c2e96ec9fb5d8bfb1e2a33e62e41a6a2d7b2eeb81bdb762b52f269927d8c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          125.52,
+          255.28,
+          483.99,
+          399.31
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "All four Tables 9–12 present with headers and notes.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p019-table-11.png",
+      "original_label": "Table 11",
+      "pdf_page": 19,
+      "source_url": "https://arxiv.org/pdf/2308.04152v1#page=19",
+      "source_version": "2308.04152v1",
+      "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
+      "asset_sha256": "d2d46712f8459d0bdcf9ab7146abd72ac1d20a4ed919f72d49e512471eecdc74",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          164.33,
+          425.89,
+          445.18,
+          569.92
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "All four Tables 9–12 present with headers and notes.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
+      }
+    },
+    {
+      "asset_path": "figures/original-p019-table-12.png",
+      "original_label": "Table 12",
+      "pdf_page": 19,
+      "source_url": "https://arxiv.org/pdf/2308.04152v1#page=19",
+      "source_version": "2308.04152v1",
+      "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
+      "asset_sha256": "8f065f0f822454ece62ba5636a5cdb4c50af4011ef8c891662dcfa12e9b06c3c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          106.62,
+          596.49,
+          505.39,
+          714.1
+        ],
+        "note": "Original figure/table pixels rendered from the fixed PDF; surrounding prose excluded.",
+        "visual_review": "All four Tables 9–12 present with headers and notes.",
+        "page_size": [
+          612.0,
+          792.0
+        ]
       }
     }
   ]

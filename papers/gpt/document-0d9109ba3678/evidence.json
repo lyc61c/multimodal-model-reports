@@ -55,5 +55,10 @@
     "HealthBench linear adjustment equation transcribes the card's stated coefficient and2,000-character reference",
     "Independent-attempt probability expression is explicitly rejected as a direct derivation of correlated empirical Gray Swan results"
   ],
-  "model_run": false
+  "model_run": false,
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

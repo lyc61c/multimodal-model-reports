@@ -24,13 +24,13 @@ OmniLive 面向持续的视频、声音输入及语音交互。它希望在回�
 
 ## 3. 整体架构
 
-![原文 Figure 2：感知、记忆与推理模块；PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 **读图方式**：左下角音频路径先识别背景声音与语音内容；右下角视觉路径编码各视频片段。右侧记忆区域逐级压缩，并按问题筛选片段；上方语言模型使用声音转写、相关视觉片段和记忆回答。最上方波形来自后续 TTS。图中多个 Compressor 方块表示压缩过程，不是为每段视频新增一个独立大模型。
 
 音频模块用 Whisper 将输入变成连续特征，投影到小语言模型的输入空间，再输出“声音类别”和“语音文本”。这样，雨声、敲门声或笑声能够以文本形式交给推理模块。视频模块独立使用 CLIP-L/14，避免在首版中让视听联合训练彼此干扰。记忆模块存储视觉细节与跨片段摘要，推理模块通过额外投影器读取记忆，同时看检索到的原片段。[原文 §3.1–3.3，PDF 第 3–5 页](https://arxiv.org/pdf/2412.09596v1#page=3)
 
-![原文 Figure 3：前端、SRS 与后端队列；PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
 
 **读图方式**：绿色方框代表线程或进程。视频持续进入 Frame Queue，再进行记忆提取；音频经过 VAD、ASR、指令判断、记忆检索、回答和 TTS。Voice Start 的箭头一方面中断前端播放，另一方面保存当时的记忆快照。快照使问题绑定到用户开始说话附近的环境状态，而不任由之后的视频覆盖它。
 
@@ -81,7 +81,11 @@ H_k,\hat H_k=\operatorname{Compressor}([F_k\circ H_k\circ\hat H_k]).
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 3–5：ASR、MLVU 与 Video-MME；PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 3](figures/original-p007-table-3.png)
+
+![原文 Table 4](figures/original-p007-table-4.png)
+
+![原文 Table 5](figures/original-p007-table-5.png)
 
 **读表方式**：Table 3 的 WER 带向下箭头，越低越好；Table 4 的 M-Avg 为七个多选任务的汇总；Table 5 按短、中、长视频区分。ASR 的 9.0 与视频的 66.2 不是同一种分数。音频结果表的 1.5B 标注也与方法部分 1.8B 有差异。
 
@@ -96,7 +100,9 @@ H_k,\hat H_k=\operatorname{Compressor}([F_k\circ H_k\circ\hat H_k]).
 
 视频基准使用每视频 **64 个抽样帧**。MLVU 视频为 3 分钟至 2 小时，本文只评七个多选任务；并非 MLVU 全部九类任务。Video-MME 的短、中、长结果分别为 72.7、58.2、50.8，随视频变长仍明显下降。因此，长记忆设计不意味着长视频信息没有损失。[原文 §4.2、Table 4–8，PDF 第 7–9 页](https://arxiv.org/pdf/2412.09596v1#page=7)
 
-![原文 Table 6–7：流式视觉与开放问答；PDF 第 8 页](figures/original-page-008-04.png)
+![原文 Table 6](figures/original-p008-table-6.png)
+
+![原文 Table 7](figures/original-p008-table-7.png)
 
 **读表方式**：Table 6 覆盖对象、因果、片段总结、属性、事件、文字、前瞻、空间、动作和计数；整体高不表示每项都最好。Table 7 将感知与推理分别汇总，开放答案由 GPT-4 评估，分数受评审设置影响。
 

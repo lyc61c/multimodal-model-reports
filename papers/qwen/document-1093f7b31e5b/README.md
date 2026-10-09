@@ -28,7 +28,7 @@ Qwen2.5-Omni 将整体系统分成 Thinker 与 Talker。Thinker 负责理解文�
 
 ## 3. 整体架构
 
-![原文Figure2：Thinker-Talker总览](figures/figure-02-thinker-talker.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
 > 来源：原文 **Figure 2**，PDF 第 **3** 页。此处保留原图及所在页文字；[原页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=3)。
 
@@ -49,7 +49,7 @@ Qwen2.5-Omni 将整体系统分成 Thinker 与 Talker。Thinker 负责理解文�
 
 ### 4.1 TMRoPE：把画面与声音放到共同时间轴
 
-![原文Figure3：时间对齐的多模态RoPE](figures/figure-03-tmrope.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
 
 > 来源：原文 **Figure 3**，PDF 第 **4** 页；[原页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=4)。图中位置编号与不同模态的块组织需一起阅读。
 
@@ -65,7 +65,7 @@ Talker 同时读取高维语义表示和实际采样出的文字。隐藏表示�
 
 ### 4.3 滑动窗口DiT：在连续性与首包等待之间折中
 
-![原文Figure4：码到波形生成的滑动窗口](figures/figure-04-streaming-dit.png)
+![原文 Figure 4](figures/original-p005-figure-4.png)
 
 > 来源：原文 **Figure 4**，PDF 第 **5** 页；[原页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=5)。注意图中的历史、当前与前瞻块。
 
@@ -114,7 +114,9 @@ $x$ 包含输入及回复文字，$y^+$、$y^-$ 是偏好不同的生成语音�
 
 评测按 **X→Text** 理解任务和 **X→Speech** 语音生成任务划分。理解覆盖纯文本、音频、图像、视频和混合模态，生成主要以类似 TTS 的内容一致性、声音相似度和自然度评价。WER 越低越好，SIM 与 NMOS 则是不同口径，不能把它们混成单一生成质量分。
 
-![原文Table7和8：视频与混合模态理解](figures/table-07-08-video-omni.png)
+![原文 Table 7](figures/original-p012-table-7.png)
+
+![原文 Table 8](figures/original-p012-table-8.png)
 
 > 来源：原文 **Table 7、Table 8**，PDF 第 **12** 页；[原页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=12)。
 
@@ -130,7 +132,9 @@ $x$ 包含输入及回复文字，$y^+$、$y^-$ 是偏好不同的生成语音�
 
 MMAU、VoiceBench 取自 Table 3（第 10 页），视觉结果取自 Table 5（第 11 页）。从这组比较看，Omni 能在同一系统中保留较强视觉能力，同时提高听觉和视听联合任务表现，但其“统一”并不意味着每个单模态基准都获益。纯文本 Table 1 也显示 MMLU-Pro 为 47.0，低于 Qwen2.5-7B 的 56.3；GSM8K 为 88.7，低于 91.6。将额外模态加入模型后，能力保留仍需逐项检验。[原文 Table 1、3、5，PDF 第 8、10、11 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=8)
 
-![原文Table9和10：语音生成稳定性、相似度与自然度](figures/table-09-10-speech.png)
+![原文 Table 9](figures/original-p013-table-9.png)
+
+![原文 Table 10](figures/original-p013-table-10.png)
 
 > 来源：原文 **Table 9、Table 10**，PDF 第 **13** 页；[原页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=13)。
 

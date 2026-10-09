@@ -11,5 +11,10 @@
     "核验 T2M14.7K、MosIT5K平均4.8轮3–7轮、三模态约4K；记录第9页low quality与其他叙述矛盾。",
     "核验九表结果及不足，单轮定量与多模态人工评分区别；没有组件消融或完整训练recipe，未运行模型。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

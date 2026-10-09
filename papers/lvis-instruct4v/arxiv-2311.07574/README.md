@@ -22,7 +22,9 @@
 
 原文没有另画一个新的学生骨干，也没有新增检测头来输出 LVIS 分割标签。LVIS 框信息主要用来限制教师的数据生成：最终回答以自然语言表达对象数量与空间关系，不要求暴露原始框坐标。
 
-![原文 PDF 第 4 页：Figure 3，指令案例；Figure 4，细粒度词汇分布](figures/original-page-004-01.png)
+![原文 Figure 3](figures/original-p004-figure-3.png)
+
+![原文 Figure 4](figures/original-p004-figure-4.png)
 
 **Figure 3，PDF 第 4 页** 左侧是图像，中间是旧 LLaVA 指令，右侧是 LVIS-Instruct4V。街道案例的新数据讨论车辆、标识、交通灯与整体布局；餐桌案例增加物体及相对位置。应观察监督包含的视觉信息密度，而不能仅凭回答变长认定所有细节都正确。
 
@@ -46,9 +48,9 @@ f_c=\frac{\text{类别 }c\text{ 的词汇出现次数}}{\text{指令总数}}.
 
 ## 5. 数据构建与处理
 
-![原文 PDF 第 10 页：Algorithm 1，真实生成提示与调用伪代码](figures/original-page-010-04.png)
 
-**Algorithm 1，PDF 第 10 页** 分成 conversation 和 detail 两个提示。阅读上半部可核对问题种类和可确定性要求，下半部可核对框格式、组内对象联合描述、自然语言关系及失败标记。图片和提示作为用户消息交给 GPT-4V；本文只解释其思路，不将伪代码的接口写法视为当前可直接执行的 SDK 示例。
+
+**[Algorithm 1，PDF 第 10 页](https://arxiv.org/pdf/2311.07574v1#page=10)** 分成 conversation 和 detail 两个提示。conversation 规定问题种类和可确定性要求，detail 规定框格式、组内对象联合描述、自然语言关系及失败标记。图片和提示作为用户消息交给 GPT-4V；本文只解释其思路，不将伪代码的接口写法视为当前可直接执行的 SDK 示例。
 
 110K 图片生成 220K 指令条目，包含多轮对话和详细描述。220K 是作者给出的数据集规模，不应直接当作所有单轮问答的总数；多轮记录内部可有多个问题。固定版本没有详细提供对话轮数分布、总 token、调用成本、去重率或人工审核覆盖率。
 
@@ -68,7 +70,7 @@ Table 2 还测试三种设置：冻结语言模型、在已有 LLaVA-1.5 上继�
 
 ## 7. 实验设置与主要结果
 
-![原文 PDF 第 5 页：Table 1，传统 VQA 与综合多模态评测](figures/original-page-005-02.png)
+![原文 Table 1](figures/original-p005-table-1.png)
 
 **Table 1，PDF 第 5 页** 包括传统 VQA 与 POPE、MME、MMBench 英文/中文、SEED、LLaVA-in-the-Wild、MM-Vet。下表按本论文 13B 行摘录，避免用其他 LLaVA 报告的略有差异数字替代。
 
@@ -88,7 +90,9 @@ Table 2 还测试三种设置：冻结语言模型、在已有 LLaVA-1.5 上继�
 
 混合 13B 的 MME 比基线高 **43.6 分**，MM-Vet 37.4 相较 35.4 高 **2.0 分**；纯替换的 MM-Vet 高 **4.8 分**。本文据表计算，不沿用正文中与这些数值不一致的“3.6%”叙述。
 
-![原文 PDF 第 6 页：Table 2，训练消融；Table 3，细节辨别案例](figures/original-page-006-03.png)
+![原文 Table 2](figures/original-p006-table-2.png)
+
+![原文 Table 3](figures/original-p006-table-3.png)
 
 **Table 2，PDF 第 6 页** 可核对冻结、继续微调和训练轮数的折中。**Table 3，同页** 展示招牌额外小字读取与两张图中碗颜色/位置的区分，说明更细的监督可能改善局部信息利用。它们是定性例子，不是对全部 OCR 和空间关系错误的消除证明。
 

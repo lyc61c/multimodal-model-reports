@@ -49,7 +49,8 @@
     "numeric_results_checked": true,
     "formula_and_time_direction_checked": true,
     "pretraining_and_vqa_finetuning_distinguished": true,
-    "Figure21_scores_checked_from_pixels": true
+    "Figure21_scores_checked_from_pixels": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "骨干从零训练，但视觉encoder与decoder预训练",
@@ -58,5 +59,20 @@
     "外推大规模数据需求未实际测量",
     "原始视频ATE最好，文字动作RPE更低",
     "实际硬件通信储存不因固定激活FLOPs而消失"
-  ]
+  ],
+  "article_sha256": "1f2a46b09220d81d77d5d2258241ad01f21f80c2350dfeb9978dc41b2ec4276a",
+  "artifact_checks": {
+    "original_assets": 6,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: complete study overview, five colored study axes and Figure 1 caption retained.",
+      "Viewed repaired three crops: navigation conditioning/prediction example and Figure 11 caption restored; both Figure 12 and Figure 13 plots and captions retained separately, without following body.",
+      "Viewed source page and crop: all architecture-ablation bars, axes, category names, values and Figure 21 caption retained.",
+      "Viewed source page and crop: all eight scaling panels, legends, axes and complete Figure 23 caption retained; Figure 24 excluded as unreferenced."
+    ]
+  }
 }

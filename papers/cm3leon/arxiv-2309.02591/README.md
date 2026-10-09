@@ -31,7 +31,11 @@ CM3Leon 的结构与后来同样读作 Chameleon 的模型名称容易混淆，�
 
 ## 3. 整体架构
 
-![原文 Figure 8–9 和 Table 3：图文 token 格式与模型配置，PDF 第 13 页完整截图](figures/original-page-013-03.png)
+![原文 Figure 8](figures/original-p013-figure-8.png)
+
+![原文 Figure 9](figures/original-p013-figure-9.png)
+
+![原文 Table 3](figures/original-p013-table-3.png)
 
 *原文 Figure 8–9，PDF 第 13 页。红色文字 token 后接模态分隔符与蓝色图像 token；完整训练例包含多个检索图文对及目标图文对。下方 Table 3 列出层数、宽度、训练长度和 token 预算。*
 
@@ -74,7 +78,9 @@ CD-K 则对比“有文字条件”与“无文字条件”的 log-probability�
 
 检索需兼顾相关、多模态完整性与多样性。模型使用图像和文字查询各获取文档，训练时从检索结果随机选三个样例，再与当前图文对组成上下文，约使可用序列 token 增为四倍。为减少几乎相同文档，跳过过于相似或已检索的候选，实际只使用 relevance score 不超过 0.9 的样例；查询还随机丢弃 20% token 作正则与多样化。训练使用三个检索样例，不代表最终评测一定也用三个，Table 1 的最佳推理配置是两个。
 
-![原文 Figure 5–6：多任务 SFT 与可控生成，PDF 第 7 页完整截图](figures/original-page-007-02.png)
+![原文 Figure 5](figures/original-p007-figure-5.png)
+
+![原文 Figure 6](figures/original-p007-figure-6.png)
 
 *原文 Figure 5–6，PDF 第 7 页。上方把编辑、结构控制、空间布局、图中文字和图像到文字都格式化成图文序列；下方是编辑与姿态控制的定性结果，不能替代全测试集的定量成功率。*
 
@@ -94,7 +100,7 @@ CD-K 则对比“有文字条件”与“无文字条件”的 log-probability�
 
 三种模型都使用长度 4096 与 1500 warmup step。batch 的 8M 是每批 token 数量级，不能读成 800 万张图片。760M 与 7B 在一遍训练后恢复训练，Figure 3 中验证 perplexity 的小反弹源于学习率突然提高，后续仍下降；这说明报告所用预算下尚未饱和，但不是无限缩放必然有效的证明。
 
-![原文 Table 4：SFT 设置，PDF 第 16 页完整截图](figures/original-page-016-04.png)
+![原文 Table 4](figures/original-p016-table-4.png)
 
 *原文 Table 4，PDF 第 16 页。SFT 使用 760M 与 7B 两种档位，每种处理约 30B token；批量 2M 是 token 批量，与每 GPU 搜索的 4/8/16 样本数不是同一单位。*
 
@@ -104,7 +110,9 @@ SFT 将任务输入与输出连接后继续采用 CM3 目标。760M/7B 分别用
 
 ## 7. 实验设置与主要结果
 
-![原文 Figure 4 与 Table 1：解码消融和 FID，PDF 第 6 页完整截图](figures/original-page-006-01.png)
+![原文 Figure 4](figures/original-p006-figure-4.png)
+
+![原文 Table 1](figures/original-p006-table-1.png)
 
 *PDF 第 6 页。左侧在 8K 验证图像上调 CFG，右侧横轴是每提示生成的候选数，不是训练 batch；下方 Table 1 明确列出推理检索文档数，4.88 对应两份检索上下文。*
 

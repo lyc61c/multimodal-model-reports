@@ -11,5 +11,10 @@
     "核验来源数据规模、1epoch/batch256/128/lr1e-3/2e-4/seq2048，记录正文4GPU与附录每GPUbatch乘积矛盾。",
     "核验Table3各split及冻结/ft区别，GCG微调维度、先验消融、最后层选择、GLaMM数据条件；未捏造图像级和视频语言指标，未运行模型。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

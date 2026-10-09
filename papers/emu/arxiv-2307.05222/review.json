@@ -41,7 +41,8 @@
   "checks": {
     "seven_sections": true,
     "source_title_matches": true,
-    "scores_verified_in_images": true
+    "scores_verified_in_images": true,
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "limitations": [
     "Vision LR discrepancy retained",
@@ -49,5 +50,20 @@
     "Starred zero-shot includes text-only demonstrations",
     "FID inferior to SDv1.5",
     "Source SFT sample pool and actual sampled amounts distinguished"
-  ]
+  ],
+  "article_sha256": "dcc4aeb0ff006dec49d440417c077645813ffd2d0ba6a1258ace4dc508197559",
+  "artifact_checks": {
+    "original_assets": 4,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: complete Emu unified encoder/causal-transformer/LLM/decoder diagram, token labels and Figure 2 caption retained.",
+      "Viewed source page and crop: complete timestamped video-storyboard data-construction diagram, subtitles, sort arrow and Figure 3 caption retained.",
+      "Viewed source page and crop: Table 1 image/video benchmark headers, all model rows, bold/underlined results and full evaluation-caption explanation retained.",
+      "Viewed source page and right-column crop: Table 2 FID header, both model categories, all rows and full caption retained; left-column prose excluded."
+    ]
+  }
 }

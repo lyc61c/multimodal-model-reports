@@ -54,5 +54,10 @@
     "图文dropout正文.1与Table29因果侧.2不一致，并列。",
     "NLVR/E-SNLI正文epoch与附录54Ksteps分别披露，不推定严格等价。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

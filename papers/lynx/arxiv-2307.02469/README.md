@@ -15,7 +15,7 @@
 
 ## 3. 整体架构
 
-![Figure 2：冻结语言块与可训练适配器，原文 PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 视觉编码器采用 EVA-1B，patch 下采样率为 14。原始图像的特征序列很长，Resampler 用可学习查询将它压缩为 32 个视觉 token，然后与指令 token 直接串联。语言模型在已有因果注意力中读取视觉前缀，再从左到右生成回答。这种 PT 结构使用普通输入 token 路径，与在语言层中额外加入跨注意力的 CA 对照不同。
 
@@ -62,13 +62,17 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![Figure 3 与 Table 1：评测样例及图像 Open-VQA，原文 PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
+
+![原文 Table 1](figures/original-p006-table-1.png)
 
 Open-VQA 共 **450** 条，按 Table 1/2 的类别分母分为 302 条图像和 148 条视频。问题涵盖 OCR、计数、位置、颜色、推理、动作等，作者人工检查并改写问题和答案，再让 GPT-4 判断预测是否蕴含参考答案。与人工超过 95% 的一致率是在随机 **100 条、本模型输出**上检查的，不能推广为所有模型和所有问题的裁判准确率。
 
 Table 1 的图像总体准确率：Lynx **76.16**，InstructBLIP **74.50**，BLIP-2 **61.26**，MiniGPT-4 **59.27**。Lynx 不是每类都领先：OCR 为 **36/53**，低于 InstructBLIP **41/53**；颜色 **21/30**，低于 **23/30**；动作 **17/20**，低于 **18/20**。视频 Table 2 总体 Lynx **66.22**，mPLUG-owl **56.76**、InstructBLIP **56.08**。消融 Table 4 把动作分母写为 109，与 Table 2 的 108 及总体统计存在不一致；本文保留总体报告值，不据此重算视频样本数。
 
-![Table 3 与 Figure 7：结构、数据与提示消融及 MME，原文 PDF 第 9 页](figures/original-page-009-03.png)
+![原文 Table 3](figures/original-p009-table-3.png)
+
+![原文 Figure 7](figures/original-p009-figure-7.png)
 
 Table 3 的图像总体结果如下，数字都是本文 Open-VQA 的百分比分数：
 
@@ -84,7 +88,7 @@ Table 3 的图像总体结果如下，数字都是本文 Open-VQA 的百分比�
 
 提示多样性在图像总体仅提升 0.66 点，而视频总体从 **59.46** 提升到 **66.22**；不同任务收益不同。MME 的 Figure 7 与附录 Table 7 将分数归一化到 0–100，不能当作常见 MME 原始总分。Lynx 感知均分 **68.66**，认知均分 **26.96**，数值推理 **8.75**、翻译 **21.25**、代码推理 **22.50**，显示感知与认知能力不均衡。
 
-![Figure 12：OwlEval 的长文本输出对照，原文 PDF 第 28 页](figures/original-page-028-04.png)
+![原文 Figure 12](figures/original-p028-figure-12.png)
 
 OwlEval 为 50 张图、82 个问题，人工评分 1–5，先看正确再看内容丰富度，限制并列情况。作者还为图像添加 8 像素边框，试图降低原始评测图与模型展示图重合的影响；这并不能证明消除训练污染。Figure 12 展示诗歌、角色背景和对话，解释长文本评测为何有别于短答 VQA；这些创作中的细节也可能超出图像证据，不能当作全部视觉事实。
 

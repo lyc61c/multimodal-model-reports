@@ -11,5 +11,10 @@
     "核验 8 A100、1 epoch、每 GPU 每模态 batch 1、累积16、总 batch256、lr1e-5 cosine，监督仅回答和EOS。",
     "所列公式为明确标注的标准机制解释；没有原文不存在的成绩、训练成本或独立模型验证。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

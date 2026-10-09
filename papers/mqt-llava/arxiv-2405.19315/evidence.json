@@ -11,5 +11,10 @@
     "核验 Table 1/2/3 精确分数、星号训练图像可见、11 项归一化平均、77-token 未见配置、TFLOPs 与实测速度区别。",
     "原图 Figure 4 针对随机单 token，未称为平均或确定物体定位；未进行模型训练或推理复现。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

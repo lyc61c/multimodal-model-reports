@@ -11,5 +11,10 @@
     "Separated Figure1/table discrepant metrics, standard vsBo8, video maximum across16/32/48/64 frames and subtitles.",
     "Recorded doc/Info/math/code and video losses; GUI prose81.4 vs90.3 error not propagated; no model reproduction."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

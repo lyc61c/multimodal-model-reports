@@ -1,1 +1,32 @@
-{"verdict":"complete_self_review","source_identity_verified":true,"source_version":"2309.16058v1","fact_check":"Verified all displayed benchmark values, dataset scope, quantization-versus-full-tuning distinction and appendix settings.","math_check":"Checked Eq1 autoregressive likelihood and Eq2 projected modality representations; LoRA r distinct from token count.","image_check":"view_image inspected original pages3,7,8 including fullFigure2 and table footnotes.","model_execution":"not_run","limitations":["Self-review","Body/appendix token ranges differ","AudioCaps zero-shot label needs dataset-split interpretation"]}
+{
+  "verdict": "complete_self_review",
+  "source_identity_verified": true,
+  "source_version": "2309.16058v1",
+  "fact_check": "Verified all displayed benchmark values, dataset scope, quantization-versus-full-tuning distinction and appendix settings.",
+  "math_check": "Checked Eq1 autoregressive likelihood and Eq2 projected modality representations; LoRA r distinct from token count.",
+  "image_check": "view_image inspected original pages3,7,8 including fullFigure2 and table footnotes.",
+  "model_execution": "not_run",
+  "limitations": [
+    "Self-review",
+    "Body/appendix token ranges differ",
+    "AudioCaps zero-shot label needs dataset-split interpretation"
+  ],
+  "article_sha256": "168c0c8507288633526cdd03e2bc5694b6ecb5be0ae74b3ac950d2f6e217f6e7",
+  "checks": [
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+  ],
+  "artifact_checks": {
+    "original_assets": 5,
+    "no_full_page_screenshots": true
+  },
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Viewed source page and crop: both AnyMAL training stages, modality labels, legend and complete Figure 2 caption retained; no surrounding prose.",
+      "Tables 3 and 4 complete with captions and all rows.",
+      "Both audio/video Tables 5 and 6 complete with captions."
+    ],
+    "caption_wording_updated_for_cropped_assets": true
+  }
+}

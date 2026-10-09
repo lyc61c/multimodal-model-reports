@@ -25,7 +25,7 @@
 
 ## 3. 整体架构
 
-![原文 Figure 2：图像特征与文字序列分路输入；PDF 第 4 页](figures/original-page-004-01.png)
+![原文 Figure 2](figures/original-p004-figure-2.png)
 
 **读图方式**：左侧视觉编码器产生各图 patch 特征，右侧语言模型处理文字及图像占位符。橙色 Hyper Attention 层将视觉信息注入文字状态，其余层继续使用原 Transformer。图像特征没有在每个语言层都以普通文字 token 的形式参加自注意力。
 
@@ -37,7 +37,7 @@
 
 ## 4. 核心创新与数学原理
 
-![原文 Figure 3：并行注意力与因果视觉掩码；PDF 第 5 页](figures/original-page-005-02.png)
+![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读图方式**：粉色表示新增模块。Hyper Attention 的两条 attention operator 共享文字查询，分别读取文字与图像；右侧灰格是被禁止访问的视觉位置。图像占位符之前的文字不能读取后来的图像，保留交错序列的因果关系。
 
@@ -58,7 +58,9 @@ H^i_{fused}=\bar H^i_{text}\odot g+\hat H^i_{text}\odot(1-g).
 
 ## 5. 数据构建与处理
 
-![原文 Table 1、Table 2：三阶段数据比例及训练设置；PDF 第 6 页](figures/original-page-006-03.png)
+![原文 Table 2](figures/original-p006-table-2.png)
+
+![原文 Table 1](figures/original-p006-table-1.png)
 
 **读表方式**：上表给每阶段的来源百分比，下表给学习率、全局 batch、步数与可训练模块。第三阶段表头写 Self-Supervised Finetuning，但 §3.1.3 明确称 Supervised-Finetuning 并使用指令监督数据；本文按正文解释为监督微调。
 
@@ -95,7 +97,11 @@ H^i_{fused}=\bar H^i_{text}\odot g+\hat H^i_{text}\odot(1-g).
 
 视频默认 8 帧设置下，NextQA **78.6**、MVBench **54.5**、Video-MME **无字幕 53.5**、LongVideoBench-val **52.1**。MVBench 低于表中 Video-LLaMA2 54.6；这里不能把无字幕结果与使用字幕的结果混比。[原文 Table 5](https://arxiv.org/pdf/2408.04840v1#page=9)
 
-![原文 Table 7–9：多图分项与架构消融；PDF 第 11 页](figures/original-page-011-04.png)
+![原文 Table 7](figures/original-p011-table-7.png)
+
+![原文 Table 8](figures/original-p011-table-8.png)
+
+![原文 Table 9](figures/original-p011-table-9.png)
 
 **读表方式**：Table 7 是 MI-Bench，不是前述六项多图基准的同一个总分。Table 8、9 采用 Qwen1.5 消融配置，衡量结构泛化；不能把主模型 Qwen2 的结果直接归给这些行。
 

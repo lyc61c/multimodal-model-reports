@@ -24,9 +24,9 @@ CogCoM 是沿用 CogVLM 架构的约 17B 视觉语言模型。它让模型在回
 
 ## 3. 整体架构
 
-![原论文 Figure 2，PDF 第 3 页](figures/original-page-003-01.png)
+![原文 Figure 2](figures/original-p003-figure-2.png)
 
-*整页保留原图图例。左半是训练链的制作：语言标注器提出步骤，视觉工具补入结果，遍历分支选出可到达答案的路径。右半是模型：新图像进入编码器，当前轮注意力访问历史 Key/Value；蓝色冻结模块与橙色更新模块应结合训练表理解。*
+*裁图保留原图图例。左半是训练链的制作：语言标注器提出步骤，视觉工具补入结果，遍历分支选出可到达答案的路径。右半是模型：新图像进入编码器，当前轮注意力访问历史 Key/Value；蓝色冻结模块与橙色更新模块应结合训练表理解。*
 
 基本模块与 CogVLM 相同：视觉编码器得到图像特征，两层 MLP 将其投影至语言空间；语言骨干的注意力和前馈层增加视觉专用权重，便于视觉 token 与文本 token 深度交互。CoM 的主要架构扩展是保留各层历史 KV，使一次推理可以跨越原图及若干裁剪图。
 
@@ -60,7 +60,7 @@ $$
 
 ## 6. 训练流程与目标
 
-![原论文 Table 5 与训练提示，PDF 第 15 页](figures/original-page-015-04.png)
+![原文 Table 5](figures/original-p015-table-5.png)
 
 *Table 5 把预训练的两个子阶段与对齐阶段分开。Images 是数据资源规模，Iterations × Batch size 是实际样本曝光量，两者不能直接当成“完整遍历一次数据”。表中三个阶段都以 next-token prediction 为目标。*
 
@@ -76,7 +76,9 @@ $$
 
 ## 7. 实验设置与主要结果
 
-![原论文 Table 1 与 Figure 3，PDF 第 6 页](figures/original-page-006-02.png)
+![原文 Figure 3](figures/original-p006-figure-3.png)
+
+![原文 Table 1](figures/original-p006-table-1.png)
 
 *Table 1 区分通用模型与任务专家，并标出少样本成绩。Figure 3 的蓝线是答案成绩，红线是解释成绩；蓝线后期有所回落，不能只根据文字说明认定最后一步一定最佳。*
 
@@ -89,7 +91,9 @@ $$
 
 按原表 GQA 增加 6.5 分；正文写 5.97，与表中四舍五入数据不一致。结果优于表列通用基线，但某些专用模型更高，例如 ST-VQA 专家 86.0，因此不应称全面超过所有模型。（PDF 第 5–6 页）
 
-![原论文 Table 2–3，PDF 第 7 页](figures/original-page-007-03.png)
+![原文 Table 2](figures/original-p007-table-2.png)
+
+![原文 Table 3](figures/original-p007-table-3.png)
 
 *定位表每个数据集分多个切分，应逐列比较；POPE 单列按正文为对抗子集 F1，不能读作全部幻觉问题的准确率。*
 

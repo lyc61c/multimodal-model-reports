@@ -35,5 +35,10 @@
     "原文公式2复用T表示答案长度与问题下标，文章以完整q和La澄清。",
     "Figure5最后一例图注LCX/RCA与题目标签LAD/RCA文本不一致，未作为正确知识。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

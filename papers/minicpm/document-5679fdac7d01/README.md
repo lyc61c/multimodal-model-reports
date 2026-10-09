@@ -21,7 +21,7 @@ MiniCPM-V 4.5 面向图像、多图、文档与视频理解，输出文本，支
 
 ## 3. 整体架构
 
-![原文 Figure 1，PDF 第 3 页：统一图片与视频编码](figures/original-page-003-01.png)
+![原文 Figure 1](figures/original-p003-figure-1.png)
 
 **Figure 1 的读法。** 从底部输入向上看，高分辨率及极端长宽比图片先切片，视频先按时间组成包，两类输入都经过视觉编码器与统一 3D-Resampler，再作为紧凑 token 送入语言解码器。右侧放大图中，图片主要压缩空间；视频还压缩相邻帧的冗余。顶端两种输出说明推理风格可控，不是两套独立解码器。
 
@@ -63,7 +63,7 @@ $$
 
 ## 5. 数据构建与处理
 
-![原文 Figure 2，PDF 第 5 页：文档文字的三种扰动强度](figures/original-page-005-02.png)
+![原文 Figure 2](figures/original-p005-figure-2.png)
 
 **Figure 2 的读法。** 同一论文页面中选取文字区域，右侧展示轻度噪声后可辨认的字符、中度噪声后模糊的文本，以及完全空白的遮挡。图不是三个独立模型的比较，而是同一训练目标在不同可见度下迫使模型使用不同信息来源。
 
@@ -91,7 +91,7 @@ RL 覆盖数学、文档表格图表、综合推理、指令遵循；每部分�
 
 ## 7. 实验设置与主要结果
 
-![原文 Table 1，PDF 第 10 页：多任务成绩与模式标记](figures/original-page-010-03.png)
+![原文 Table 1](figures/original-p010-table-1.png)
 
 **Table 1 的读法。** 带 † 的条目使用推理模式，取三次结果平均；带 * 的对照是作者自行评测官方 checkpoint；GPT-4o 带 ‡ 的条目取 OpenCompass 的 GPT-4o-latest，其他采用 GPT-4o-1120。比较时应同时读成绩与模式、来源。OpenCompass 平均分包含五个以长推理运行的基准，因此 77.0 不能表述为全部任务短回答的分数。
 
@@ -106,7 +106,11 @@ RL 覆盖数学、文档表格图表、综合推理、指令遵循；每部分�
 
 效率在 **8 张 A100** 的评测配置测得。Table 2 中 OpenCompass 完整评测耗时 7.5 小时，对照 GLM-4.1V 为 17.5 小时；Video-MME 为 0.26 小时、28G 显存，对照 Qwen2.5-VL-7B 为 3.00 小时、60G，GLM-4.1V 为 2.63 小时、32G。前一对照对应 8.7% 时间和 46.7% 显存。这是批量基准评测效率，**不是手机实测延迟**；报告该页叙述写 73.6，但 Table 2 的自身分数为 73.5，这里采用表格。[PDF 第 10–11 页](https://arxiv.org/pdf/2509.18154v1#page=10)
 
-![原文 Figure 3 与 Tables 4–5，PDF 第 12 页：奖励、文档与压缩消融](figures/original-page-012-04.png)
+![原文 Figure 3](figures/original-p012-figure-3.png)
+
+![原文 Table 4](figures/original-p012-table-4.png)
+
+![原文 Table 5](figures/original-p012-table-5.png)
 
 **消融页的读法。** Figure 3 左图对比规则奖励和规则加概率奖励，后者随训练更好；中、右图分别给出响应长度和熵，不能仅凭熵曲线推断事实准确性。Table 4 在 100 万高质量样本、其中 20% 知识文档的消融设置中，统一学习将 MMMU 从 49.0 提至 51.4、OCRBench 从 576 提至 617。该 OCRBench 使用原始分数口径，与主表的 89.0 不应直接相减。
 

@@ -32,7 +32,7 @@ Chat-UniVi 处理的是视觉上下文预算问题。图像问答需要保留对
 
 ## 3. 整体架构
 
-![原文 Figure 3，PDF 第 3 页：统一图像与视频输入流程](figures/original-page-003-01.png)
+![原文 Figure 3](figures/original-p003-figure-3.png)
 
 **读图：**上方是单图，下方是视频。视频多一步 Temporal Merging，将帧组织为事件；随后两种输入都经过三次 Spatial Merging。每一级结果均经 Projection W 送入语言模型，而非只保留最后最粗一级。图中的冻结标记对应视觉编码器，微调标记对应指令阶段的语言模型和投影。
 
@@ -46,9 +46,9 @@ CLIP 首先输出规则网格的 patch 特征。空间聚类根据语义距离�
 
 ## 4. 核心创新与数学原理
 
-![原文 Eq. (1)–(4)，PDF 第 4 页：密度峰值聚类与跨帧合并](figures/original-page-004-02.png)
 
-**读图：**左栏定义 token 密度与到更高密度 token 的距离，右栏把同样算法应用到事件内的跨帧 token。密度高且远离其他高密度点的 token 被选为中心。这里距离写成平方欧氏范数，不能把 OCR 文本中的上标误认成普通下标。
+
+**原文公式说明：**[Eq. (1)–(4)，PDF 第 4 页](https://arxiv.org/pdf/2311.08046v1#page=4) 先定义 token 密度与到更高密度 token 的距离，再把同样算法应用到事件内的跨帧 token。密度高且远离其他高密度点的 token 被选为中心。这里距离写成平方欧氏范数，不能把 OCR 文本中的上标误认成普通下标。
 
 令原始视觉 token 为 $Z=\{z_i\}_{i=1}^{L}$，原文局部密度定义为
 
@@ -108,7 +108,9 @@ ScienceQA 专门微调是另一配置：9 epochs、batch 32、学习率 $2\times
 
 ## 7. 实验设置与主要结果
 
-![原文 Tables 4–5，PDF 第 6 页：视频问答与对象幻觉](figures/original-page-006-03.png)
+![原文 Table 4](figures/original-p006-table-4.png)
+
+![原文 Table 5](figures/original-p006-table-5.png)
 
 **读图：**Table 4 每个数据集都有 Accuracy 与 0–5 的 GPT Score，两者不是同一量。Table 5 的 Random、Popular、Adversarial 是 POPE 的负对象采样方式，“Yes”是回答肯定的比例，不是准确率。完整表头能避免把这些数值混合。
 
@@ -125,7 +127,13 @@ ScienceQA 专门微调是另一配置：9 epochs、batch 32、学习率 $2\times
 
 POPE 多尺度版本的 Random/Popular/Adversarial Accuracy 为 85.19/69.50/64.97；单尺度为 73.88/56.36/55.63，说明该配置下多尺度改善对象存在判断。不过 InstructBLIP-13B 三种准确率均更高，MiniGPT-4 的 adversarial 65.17 也略高。因此原文总体宣传不能改写成“解决幻觉”或“全部幻觉指标领先”。
 
-![原文 Tables 6–8 与 Figure 4，PDF 第 7 页：混合训练、数量消融和人工评分](figures/original-page-007-04.png)
+![原文 Table 6](figures/original-p007-table-6.png)
+
+![原文 Table 7](figures/original-p007-table-7.png)
+
+![原文 Table 8](figures/original-p007-table-8.png)
+
+![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **读图：**Table 6 的“Image + Video”指先图像后视频，“Image & Video”指混合；Table 7 改三级空间簇数；Table 8 改时间聚类比例。下方 Figure 4 是各 30 个图像/视频对话场景的 0–10 人工评分，不能与上方 GPT 百分制直接比较。
 

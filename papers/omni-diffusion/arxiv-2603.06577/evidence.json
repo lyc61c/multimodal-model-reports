@@ -27,5 +27,10 @@
     "Table1文字声称专用模型优势但CosyVoiceWER2.89低于3.07",
     "正文阶段概括与Table4细项加入阶段不同；完整N_t日程未披露"
   ],
-  "model_run": false
+  "model_run": false,
+  "figure_revision": {
+    "date": "2026-10-09",
+    "method": "Original PDF region extraction",
+    "unchanged_source_versions": true
+  }
 }

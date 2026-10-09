@@ -9,18 +9,30 @@
     "10,009视频33,557训练问答；229问答160视频人工评测；GPT仅读带时间文字描述",
     "五任务有放回100K各；8A100 9/13小时与GPU小时区别；原文未给优化器mask等不补",
     "Table1同任务逐步消融和三次平均；缺时间基线为缺失不是0",
-    "Score相对GPT解释评分非正确率；Table2相对增长与绝对准确率区分；评价偏差原文限制"
+    "Score相对GPT解释评分非正确率；Table2相对增长与绝对准确率区分；评价偏差原文限制",
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "seven_sections": true,
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 6,
+    "no_full_page_screenshots": true
   },
-  "article_sha256": "10481ab09bc64e43d63e83059f2e63977168ef6cdeeca0da77e4159d06e8d2d3",
+  "article_sha256": "3ab3a07f359e3246c25148683b0d1d756ab0fc4b8b63c5ca4276f75f2841b782",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "figure_revision": {
+    "date": "2026-10-09",
+    "regions_and_sources": "figures-manifest.json",
+    "visual_checks": [
+      "Figure 2 full SlowFast model diagram and caption.",
+      "Table 1 caption, all baseline and final model rows complete.",
+      "Figure 4 three comparative examples and Table 2 complete.",
+      "Figure 5 examples and Table 3 training-task ablation complete."
+    ]
+  }
 }

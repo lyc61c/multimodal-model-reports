@@ -10,5 +10,7 @@
   "document_kind": "embodied_model_report",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "PaLM-E：把连续感知与机器人状态嵌入语言模型"
+  "title_zh": "PaLM-E：把连续感知与机器人状态嵌入语言模型",
+  "chinese_characters": 3243,
+  "figure_revision_date": "2026-10-09"
 }
