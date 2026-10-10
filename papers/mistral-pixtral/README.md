@@ -2,30 +2,13 @@
 
 项目主体 / 机构：Mistral AI。快照：2026-10-08。
 
-本系列共收录 **2 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **2 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| Pixtral-12B | 2024-09-17 | [阅读全文](document-3ebe839c6607/README.md) | [原文](https://mistral.ai/news/pixtral-12b/) |
+| Introducing Mistral 3 | 2025-12-02 | [阅读全文](document-6276d6c37ba5/README.md) | [原文](https://mistral.ai/news/mistral-3) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [Mistral 3：稀疏大模型与端侧多模态模型的联合发布](document-6276d6c37ba5/README.md) | official-source-snapshot-2026-10-08 |
-| [Pixtral 12B：可变分辨率视觉编码与交错图文指令遵循](document-3ebe839c6607/README.md) | official-source-snapshot-2026-10-08 |
-
-## 同家族补充与筛选记录
-
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| Mistral / Pixtral | [Pixtral-12B](https://mistral.ai/news/pixtral-12b/) | 2024-09-17 | N/A（原表无 GitHub） | — | 候选：无 Star 指标 | release_blog / 补充材料 |
-| Mistral / Pixtral | [Introducing Mistral 3](https://mistral.ai/news/mistral-3) | 2025-12-02 | N/A（原表无 GitHub） | — | 候选：无 Star 指标 | release_blog / 补充材料 |
-
-## 判定依据与数据提示
-
-- **Introducing Mistral 3**：上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。
-- **Pixtral-12B**：上游链接模型发布博文/页面；不是论文或技术报告，建议补充区展示。
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

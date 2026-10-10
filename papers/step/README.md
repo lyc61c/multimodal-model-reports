@@ -2,27 +2,12 @@
 
 项目主体 / 机构：StepFun（阶跃星辰）。快照：2026-10-08。
 
-本系列共收录 **1 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **1 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| Step3: Cost-Effective Multimodal Intelligence | 2025-07-31 | [阅读全文](document-26d59ba3132d/README.md) | [原文](https://stepfun.ai/research/step3) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [Step3：通过模型与系统协同设计降低解码成本](document-26d59ba3132d/README.md) | 2507.19427v1 |
-
-## 同家族补充与筛选记录
-
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| Step | [Step3: Cost-Effective Multimodal Intelligence](https://stepfun.ai/research/step3) | 2025-07-31 | [455](https://github.com/stepfun-ai/Step3) | [stepfun-ai/Step3](https://github.com/stepfun-ai/Step3) | Star 达标 | release_blog / 补充材料 |
-
-## 判定依据与数据提示
-
-- **Step3: Cost-Effective Multimodal Intelligence**：上游题名指向官方研究页面；stars 徽章错误指向 GLM-4.1V-Thinking，应使用 stepfun-ai/Step3 实际仓库。；Upstream star badge points to THUDM/GLM-4.1V-Thinking; Code column points to stepfun-ai/Step3
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

@@ -2,22 +2,12 @@
 
 项目主体 / 机构：Toyota Research Institute / Prismatic 研究团队。快照：2026-10-08。
 
-本系列共收录 **1 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **1 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| Prismatic | [Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models](https://arxiv.org/pdf/2402.07865) | 2024-02-12 | [1,020](https://github.com/TRI-ML/prismatic-vlms) | [TRI-ML/prismatic-vlms](https://github.com/TRI-ML/prismatic-vlms) | Star 达标 | model_paper / 模型文献 |
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models | 2024-02-12 | [阅读全文](arxiv-2402.07865/README.md) | [原文](https://arxiv.org/pdf/2402.07865) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [Prismatic：视觉语言模型设计空间的控制实验与 PRISM 配方](arxiv-2402.07865/README.md) | 2402.07865v1 |
-
-## 判定依据与数据提示
-
-- **Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models**：Prismatic VLM 模型系列及设计空间研究，候选模型报告；不能仅因含 analysis 含义排除。
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

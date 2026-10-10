@@ -2,25 +2,13 @@
 
 项目主体 / 机构：MCG-NJU / VideoChat3 研究团队；OpenGVLab 研究团队。快照：2026-10-08。
 
-本系列共收录 **2 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **2 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| VideoChat | [VideoChat: Chat-Centric Video Understanding](https://arxiv.org/pdf/2305.06355.pdf) | 2023-05-10 | [3,355](https://github.com/OpenGVLab/Ask-Anything) | [OpenGVLab/Ask-Anything](https://github.com/OpenGVLab/Ask-Anything) | Star 达标 | model_paper / 模型文献 |
-| VideoChat | [VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding](https://arxiv.org/pdf/2607.14935) | 2026-07-16 | [349](https://github.com/MCG-NJU/VideoChat3) | [MCG-NJU/VideoChat3](https://github.com/MCG-NJU/VideoChat3) | Star 达标 | model_paper / 模型文献 |
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| VideoChat: Chat-Centric Video Understanding | 2023-05-10 | [阅读全文](arxiv-2305.06355/README.md) | [原文](https://arxiv.org/pdf/2305.06355.pdf) |
+| VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding | 2026-07-16 | [阅读全文](arxiv-2607.14935/README.md) | [原文](https://arxiv.org/pdf/2607.14935) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [VideoChat3](arxiv-2607.14935/README.md) | 2607.14935v1 |
-| [VideoChat：从视频文本化到视频嵌入的早期多轮对话系统](arxiv-2305.06355/README.md) | 2305.06355v1 |
-
-## 判定依据与数据提示
-
-- **VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding**：模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。
-- **VideoChat: Chat-Centric Video Understanding**：模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

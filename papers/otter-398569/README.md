@@ -2,27 +2,12 @@
 
 项目主体 / 机构：repo:Luodian。快照：2026-10-08。
 
-本系列共收录 **1 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **1 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| MIMIC-IT: Multi-Modal In-Context Instruction Tuning | 2023-06-08 | [阅读全文](arxiv-2306.05425/README.md) | [原文](https://arxiv.org/pdf/2306.05425.pdf) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [MIMIC-IT：多模态上下文指令调优与 Otter](arxiv-2306.05425/README.md) | 2306.05425v1 |
-
-## 同家族补充与筛选记录
-
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| Otter / MIMIC-IT | [MIMIC-IT: Multi-Modal In-Context Instruction Tuning](https://arxiv.org/pdf/2306.05425.pdf) | 2023-06-08 | [3,444](https://github.com/Luodian/Otter) | [Luodian/Otter](https://github.com/Luodian/Otter) | Star 达标 | dataset_or_benchmark / 非模型文献 |
-
-## 判定依据与数据提示
-
-- **MIMIC-IT: Multi-Modal In-Context Instruction Tuning**：MIMIC-IT 指令数据集；模型 Otter 应以对应模型工作独立处理。；Code repository redirects to EvolvingLMMs-Lab/Otter; stars are the current destination repository's stars
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

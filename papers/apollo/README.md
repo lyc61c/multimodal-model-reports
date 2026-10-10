@@ -2,22 +2,12 @@
 
 项目主体 / 机构：Meta GenAI / Stanford 联合研究。快照：2026-10-08。
 
-本系列共收录 **1 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **1 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| Apollo | [Apollo: An Exploration of Video Understanding in Large Multimodal Models](https://arxiv.org/pdf/2412.10360) | 2024-12-13 | N/A（原表无 GitHub） | — | 候选：无 Star 指标 | model_paper / 模型文献 |
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| Apollo: An Exploration of Video Understanding in Large Multimodal Models | 2024-12-13 | [阅读全文](arxiv-2412.10360/README.md) | [原文](https://arxiv.org/pdf/2412.10360) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [Apollo：用视频设计实验建立高效长视频理解模型](arxiv-2412.10360/README.md) | 2412.10360v1 |
-
-## 判定依据与数据提示
-
-- **Apollo: An Exploration of Video Understanding in Large Multimodal Models**：模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

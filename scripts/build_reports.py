@@ -109,6 +109,27 @@ def article_table(articles, directory, family_names=None):
     return "\n".join(lines)
 
 
+def family_paper_table(items, introductions, directory):
+    """List each retained source once, beside its local introduction."""
+    lines = ["| 论文 / 资料 | 日期 | 中文介绍 | 原文 |", "|---|---|---|---|"]
+    labels = {"source_unavailable": "原文待获取", "planned": "待撰写",
+              "writing": "撰写中", "needs_review": "待复核"}
+    for item in sorted(items, key=lambda item: (item["date"], item["title"].casefold())):
+        introduction = introductions.get(item["id"], {})
+        status = introduction.get("article_status", "planned")
+        label = "阅读全文" if status == "complete" else labels.get(status, "待整理")
+        if introduction.get("document_exists"):
+            path = ROOT / introduction["article_path"]
+            relative = Path(os.path.relpath(path, directory)).as_posix()
+            reading_link = f'[{label}]({urllib.parse.quote(relative, safe="/.-_")})'
+        else:
+            reading_link = labels.get(status, "待整理")
+        source_url = item.get("paper_url") or introduction.get("source_url") or item.get("github_code_url")
+        source_link = f'[原文]({source_url})' if source_url else "—"
+        lines.append(f'| {escape(item["title"])} | {escape(item["date"])} | {reading_link} | {source_link} |')
+    return "\n".join(lines)
+
+
 def article_progress(entries):
     """List every retained document; do not present unfinished notes as complete."""
     plan_path = ROOT / "data/article-plan.json"
@@ -135,7 +156,7 @@ def article_progress(entries):
         lines.append(f'| {escape(row["family"])} | {title} | {escape(row["document_kind"])} | {labels.get(row["article_status"], row["article_status"])} |')
     lines += ["", "[返回项目](../README.md)"]
     write("reports/article-index.md", "\n".join(lines))
-    return {"total": len(rows), "counts": counts}
+    return {"total": len(rows), "counts": counts, "entries": rows}
 
 
 STATUS_LABELS = {"passes_star": "Star 达标", "excluded_low_star": "排除：Star < 100", "not_assessable": "候选：无 Star 指标", "unresolved_star": "待核验 Star"}
@@ -230,11 +251,10 @@ def main():
     write("reports/supporting-materials.md", "# 补充材料与非模型文献\n\n" + intro + f"\n\n共 **{len(supplements)}** 篇，包含方法、数据、评测、综述、工具和发布资料。它们不进入模型技术报告主目录，但保留供项目后续参考；Star 筛选结果仍逐项显示。\n\n" + table(supplements))
     write("reports/scope-review.md", "# 纳入范围待审\n\n" + intro + f"\n\n共 **{len(review)}** 篇。包括是否属于多模态大模型、是否纳入具身与世界模型、材料是否足够构成模型报告等边界。具体依据见下表。\n\n" + table(review) + "\n\n" + "\n".join(f'- **{escape(x["title"])}**：{escape(x["scope"].get("note"))}' for x in review))
 
-    # Create exactly one directory per surviving model family, including singleton families.
-    main_groups = defaultdict(list)
-    for item in main_entries:
-        main_groups[item["family"]].append(item)
+    # Create one concise reading list per surviving family, including singletons.
     articles = completed_articles()
+    progress = article_progress(entries)
+    introductions = {row["id"]: row for row in progress["entries"]} if progress else {}
     articles_by_family = defaultdict(list)
     for article in articles:
         articles_by_family[article["family_slug"]].append(article)
@@ -242,29 +262,21 @@ def main():
     for item in entries:
         if item["catalogue_group"] != "excluded_low_star":
             retained_groups[item["family"]].append(item)
-    surviving_groups = {name: groups[name] for name in retained_groups}
-    for name, all_items in surviving_groups.items():
-        items = main_groups.get(name, [])
-        exemplar = all_items[0]
-        organizations = "；".join(dict.fromkeys(x["organization"] for x in all_items))
-        body = f"# {name}\n\n项目主体 / 机构：{escape(organizations)}。快照：{snapshot['snapshot_date']}。\n\n本系列共收录 **{len(retained_groups[name])} 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。\n\n## 模型论文 / 技术报告 / 模型卡\n\n" + table(items) + "\n\n"
-        if articles_by_family[exemplar["family_slug"]]:
-            body += "## 已完成的逐篇介绍\n\n" + article_table(articles_by_family[exemplar["family_slug"]], ROOT / "papers" / exemplar["family_slug"]) + "\n\n"
-        other = [x for x in all_items if x not in items]
-        if other:
-            body += "## 同家族补充与筛选记录\n\n" + table(other) + "\n\n"
-        notes = [x for x in all_items if x["warnings"] or x["scope"].get("note")]
-        if notes:
-            body += "## 判定依据与数据提示\n\n" + "\n".join(f'- **{escape(x["title"])}**：{escape(x["scope"].get("note"))}' + ("；" + "；".join(x["warnings"]) if x["warnings"] else "") for x in notes)
-        body += "\n\n[返回项目索引](../../README.md)"
+    for name, items in retained_groups.items():
+        exemplar = items[0]
+        directory = ROOT / "papers" / exemplar["family_slug"]
+        organizations = "；".join(dict.fromkeys(item["organization"] for item in items))
+        body = (f"# {name}\n\n项目主体 / 机构：{escape(organizations)}。快照：{snapshot['snapshot_date']}。\n\n"
+                f"共收录 **{len(items)} 篇论文与资料**，按发布日期排序。\n\n## 论文列表\n\n"
+                + family_paper_table(items, introductions, directory)
+                + "\n\n[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)")
         write(f"papers/{exemplar['family_slug']}/README.md", body)
 
-    family_names = {items[0]["family_slug"]: name for name, items in surviving_groups.items()}
+    family_names = {items[0]["family_slug"]: name for name, items in retained_groups.items()}
     for family_slug, family_articles in articles_by_family.items():
         if family_slug not in family_names:
-            body = f"# {family_slug}\n\n## 已完成的逐篇介绍\n\n" + article_table(family_articles, ROOT / "papers" / family_slug)
+            body = f"# {family_slug}\n\n## 论文列表\n\n" + article_table(family_articles, ROOT / "papers" / family_slug)
             write(f"papers/{family_slug}/README.md", body + "\n\n[返回项目索引](../../README.md)")
-    progress = article_progress(entries)
     original_assets = 0
     without_static_assets = []
     for article in articles:

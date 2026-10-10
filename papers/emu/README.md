@@ -2,28 +2,14 @@
 
 项目主体 / 机构：北京智源研究院（BAAI）。快照：2026-10-08。
 
-本系列共收录 **3 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **3 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| Emu | [Generative Pretraining in Multimodality](https://arxiv.org/pdf/2307.05222.pdf) | 2023-07-11 | [1,777](https://github.com/baaivision/Emu) | [baaivision/Emu](https://github.com/baaivision/Emu) | Star 达标 | model_paper / 模型文献 |
-| Emu | [Emu3: Next-Token Prediction is All You Need](https://arxiv.org/pdf/2409.18869) | 2024-09-27 | [2,449](https://github.com/baaivision/Emu3) | [baaivision/Emu3](https://github.com/baaivision/Emu3) | Star 达标 | model_paper / 模型文献 |
-| Emu | [Emu3.5: Native Multimodal Models are World Learners](https://arxiv.org/pdf/2510.26583) | 2025-10-30 | [1,561](https://github.com/baaivision/Emu3.5) | [baaivision/Emu3.5](https://github.com/baaivision/Emu3.5) | Star 达标 | model_paper / 模型文献 |
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| Generative Pretraining in Multimodality | 2023-07-11 | [阅读全文](arxiv-2307.05222/README.md) | [原文](https://arxiv.org/pdf/2307.05222.pdf) |
+| Emu3: Next-Token Prediction is All You Need | 2024-09-27 | [阅读全文](arxiv-2409.18869/README.md) | [原文](https://arxiv.org/pdf/2409.18869) |
+| Emu3.5: Native Multimodal Models are World Learners | 2025-10-30 | [阅读全文](arxiv-2510.26583/README.md) | [原文](https://arxiv.org/pdf/2510.26583) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [Emu3.5：用统一离散序列学习图文世界，并适配并行图像生成](arxiv-2510.26583/README.md) | 2510.26583v1 |
-| [Emu3：以离散 token 的自回归预测统一文字、图像与视频](arxiv-2409.18869/README.md) | 2409.18869v1 |
-| [Emu：交错多模态序列的生成预训练](arxiv-2307.05222/README.md) | 2307.05222v1 |
-
-## 判定依据与数据提示
-
-- **Emu3.5: Native Multimodal Models are World Learners**：模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。
-- **Emu3: Next-Token Prediction is All You Need**：模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。
-- **Generative Pretraining in Multimodality**：模型/架构论文候选；非逐篇阅读全文结论，最终纳入须另判仓库 stars。
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

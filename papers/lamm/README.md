@@ -2,27 +2,12 @@
 
 项目主体 / 机构：repo:OpenLAMM。快照：2026-10-08。
 
-本系列共收录 **1 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **1 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark | 2023-06-11 | [阅读全文](arxiv-2306.06687/README.md) | [原文](https://arxiv.org/pdf/2306.06687.pdf) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [LAMM：把图像、点云与传统视觉任务接入指令语言模型](arxiv-2306.06687/README.md) | 2306.06687v1 |
-
-## 同家族补充与筛选记录
-
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| LAMM | [LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark](https://arxiv.org/pdf/2306.06687.pdf) | 2023-06-11 | [318](https://github.com/OpenLAMM/LAMM) | [OpenLAMM/LAMM](https://github.com/OpenLAMM/LAMM) | Star 达标 | dataset_framework_and_model / 补充材料 |
-
-## 判定依据与数据提示
-
-- **LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark**：主要贡献为数据集、框架和评测，同时提供 baseline 模型；不武断删除，但与模型技术报告分开。；Code repository redirects to OpenGVLab/LAMM; stars are the current destination repository's stars
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

@@ -2,22 +2,12 @@
 
 项目主体 / 机构：authors。快照：2026-10-08。
 
-本系列共收录 **1 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。
+共收录 **1 篇论文与资料**，按发布日期排序。
 
-## 模型论文 / 技术报告 / 模型卡
+## 论文列表
 
-| 家族 | 文献 / 发布资料 | 日期 | Star | 仓库 | 筛选结果 | 文献类型 / 范围 |
-|---|---|---|---:|---|---|---|
-| An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models | [An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models](https://arxiv.org/pdf/2309.09958.pdf) | 2023-09-18 | N/A（原表无 GitHub） | — | 候选：无 Star 指标 | analysis_with_model_release / 模型文献 |
+| 论文 / 资料 | 日期 | 中文介绍 | 原文 |
+|---|---|---|---|
+| An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models | 2023-09-18 | [阅读全文](arxiv-2309.09958/README.md) | [原文](https://arxiv.org/pdf/2309.09958.pdf) |
 
-## 已完成的逐篇介绍
-
-| 逐篇介绍 | 原文版本 |
-|---|---|
-| [大规模视觉指令微调：LLaVA 的 33B、65B 与参数高效训练研究](arxiv-2309.09958/README.md) | 2309.09958v1 |
-
-## 判定依据与数据提示
-
-- **An Empirical Study of Scaling Instruction-Tuned Large Multimodal Models**：研究 LLaVA 33B/65B/70B 的 scaling，摘要明确发布 LLaVA Model Zoo 权重；可作为 LLaVA 系列补充报告。
-
-[返回项目索引](../../README.md)
+[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)
