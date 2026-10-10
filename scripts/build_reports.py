@@ -238,12 +238,16 @@ def main():
     articles_by_family = defaultdict(list)
     for article in articles:
         articles_by_family[article["family_slug"]].append(article)
-    surviving_groups = {name: values for name, values in groups.items() if any(x["catalogue_group"] != "excluded_low_star" for x in values)}
+    retained_groups = defaultdict(list)
+    for item in entries:
+        if item["catalogue_group"] != "excluded_low_star":
+            retained_groups[item["family"]].append(item)
+    surviving_groups = {name: groups[name] for name in retained_groups}
     for name, all_items in surviving_groups.items():
         items = main_groups.get(name, [])
         exemplar = all_items[0]
         organizations = "；".join(dict.fromkeys(x["organization"] for x in all_items))
-        body = f"# {name}\n\n项目主体 / 机构：{escape(organizations)}。快照：{snapshot['snapshot_date']}。\n\n本页有 {len(items)} 篇模型文献；同家族其他资料与排除项一并列出便于审计。版本按日期列出。\n\n## 模型论文 / 技术报告 / 模型卡\n\n" + table(items) + "\n\n"
+        body = f"# {name}\n\n项目主体 / 机构：{escape(organizations)}。快照：{snapshot['snapshot_date']}。\n\n本系列共收录 **{len(retained_groups[name])} 篇论文与资料**，按日期列出；附带的历史筛选记录不计入收录数量。\n\n## 模型论文 / 技术报告 / 模型卡\n\n" + table(items) + "\n\n"
         if articles_by_family[exemplar["family_slug"]]:
             body += "## 已完成的逐篇介绍\n\n" + article_table(articles_by_family[exemplar["family_slug"]], ROOT / "papers" / exemplar["family_slug"]) + "\n\n"
         other = [x for x in all_items if x not in items]
@@ -275,21 +279,18 @@ def main():
             without_static_assets.append(f'[{escape(article["title"])}]({urllib.parse.quote(relative, safe="/.-_")})')
 
     # Keep complete directories one click away from a compact project homepage.
-    family_index = ["| 模型家族 | 项目主体 / 机构 | 主目录模型文献 | Star 达标 | 无 Star 候选 | 已完成介绍 |",
-                    "|---|---|---:|---:|---:|---:|"]
-    for name in sorted(main_groups, key=str.casefold):
-        items = main_groups[name]
+    family_index = ["| 模型系列 | 项目主体 / 机构 | 论文数量 |", "|---|---|---:|"]
+    for name in sorted(retained_groups, key=str.casefold):
+        items = retained_groups[name]
         exemplar = items[0]
-        passed = sum(item["star_decision"] == "passes_star" for item in items)
         organizations = "；".join(dict.fromkeys(item["organization"] for item in items))
         family_index.append(f'| [{escape(name)}](../papers/{exemplar["family_slug"]}/README.md) | '
-                            f'{escape(organizations)} | {len(items)} | {passed} | {len(items)-passed} | '
-                            f'{len(articles_by_family[exemplar["family_slug"]])} |')
+                            f'{escape(organizations)} | {len(items)} |')
     write("reports/model-family-index.md", f"# 模型家族完整索引\n\n"
-          f"主目录共 **{len(main_groups)} 个模型家族、{len(main_entries)} 篇模型文献**。按家族名称排序，点击家族查看版本与逐篇介绍。\n\n"
-          "同一官方系列合并，单版本模型独立成类；机构与家族分开记录。已完成介绍还可能包含该家族的补充材料，"
-          "因此不一定等于主目录模型文献数。主目录之外的保留资料见[全部中文详解](paper-reading-guide.md)"
-          "和[筛选与整理状态](article-index.md)。\n\n"
+          f"共收录 **{len(retained_groups)} 个模型系列、{sum(map(len, retained_groups.values()))} 篇论文与资料**。按系列名称排序，点击系列查看版本与逐篇介绍。\n\n"
+          "论文数量按该系列筛选后保留的全部资料去重统计，包含论文、技术报告、模型卡与补充资料；"
+          "已排除条目不计入数量，也不按介绍完成状态拆分。"
+          "[全部中文详解](paper-reading-guide.md) · [全部资料与整理状态](article-index.md)\n\n"
           + "\n".join(family_index) + "\n\n[返回项目首页](../README.md)")
     write("reports/paper-reading-guide.md", f"# 逐篇论文详解\n\n"
           f"已完成 **{len(articles)} 篇**中文介绍，按模型家族排序。每篇采用统一的七部分结构，结合原文图表解释模型设计、数据、训练与实验。\n\n"
@@ -297,7 +298,7 @@ def main():
           "[按模型家族浏览](model-family-index.md) · [查看全部保留资料与整理状态](article-index.md)\n\n"
           + article_table(articles, ROOT / "reports", family_names) + "\n\n[返回项目首页](../README.md)")
 
-    by_slug = {items[0]["family_slug"]: name for name, items in main_groups.items()}
+    by_slug = {items[0]["family_slug"]: name for name, items in retained_groups.items()}
     featured_slugs = ["qwen", "deepseek", "internvl", "minicpm", "llava", "kimi", "glm", "seed",
                       "gemini", "gpt", "claude", "llama", "blip", "emu", "mplug", "videollama",
                       "vita", "vila", "internlm-xcomposer", "mimo"]
@@ -342,23 +343,23 @@ def main():
 
 本项目围绕多模态大模型的设计与训练，逐篇解读论文、技术报告与模型卡，并用原文中的架构图、流程图和实验表格辅助说明。同一官方模型系列集中整理，单版本模型独立成类，便于阅读与比较。
 
-| 已完成中文详解 | 主目录模型家族 | 原文图表资产 |
+| 已完成中文详解 | 模型系列 | 原文图表资产 |
 |:---:|:---:|:---:|
-| **{len(articles)} 篇** | **{len(main_groups)} 个** | **{original_assets:,} 个** |
+| **{len(articles)} 篇** | **{len(retained_groups)} 个** | **{original_assets:,} 个** |
 
-本轮保留 **{total_retained} 条资料**；主目录包含 **{len(main_entries)} 篇模型文献**，完整阅读目录另收录保留的补充材料与范围待审资料。{pending_note}
+本轮筛选后共保留 **{total_retained} 篇论文与资料**，按模型系列统一整理。{pending_note}
 
 ## 阅读导航
 
 | 想做什么 | 从这里进入 |
 |---|---|
 | 找一篇论文，直接阅读中文详解 | [全部 {len(articles)} 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
-| 按模型系列阅读，比较不同版本 | [{len(main_groups)} 个模型家族完整索引 →](reports/model-family-index.md) |
+| 按模型系列阅读，比较不同版本 | [{len(retained_groups)} 个模型系列完整索引 →](reports/model-family-index.md) |
 | 查文献类型、收录情况与整理进度 | [全部 {total_retained} 条保留资料与状态 →](reports/article-index.md) |
 
 ## 模型家族索引
 
-以下为部分系列的快捷入口；[完整索引](reports/model-family-index.md)包含全部主目录家族及其机构、文献数量和筛选状态。
+以下为部分系列的快捷入口；[完整索引](reports/model-family-index.md)按系列列出机构与论文总数。
 
 {"\n".join(featured)}
 
@@ -412,14 +413,14 @@ def main():
 | Star ≥ {snapshot['threshold']} 的文献 | {stats['star_decisions'].get('passes_star', 0)} |
 | Star < {snapshot['threshold']} 的排除文献 | {len(low)} |
 | 原表未提供 GitHub 的文献 | {len(no_stars)} |
-| 主目录模型文献 / 家族 | {len(main_entries)} / {len(main_groups)} |
+| 保留论文与资料 / 模型系列 | {total_retained} / {len(retained_groups)} |
 
 ### 筛选口径
 
 1. 只筛选上述两个章节，按 arXiv ID 或题名去重。GPT-5 发布资料和 Gemini 1 技术报告各跨章节出现一次。
 2. 使用 Code 栏对应仓库的整数 Star；恰好 {snapshot['threshold']} 保留，数值以本次快照为准。
 3. 原表没有 GitHub 的记录不视为 0 Star，也不宣称已经通过 Star 门槛。
-4. 模型研究论文、技术报告与模型卡进入主目录；数据集、评测、综述、工具、通用方法和发布博客在补充清单中保留。逐篇介绍依据原文说明实际文献定位。
+4. 保留资料统一按模型系列归档；模型研究论文、技术报告、模型卡和补充资料的实际定位依据原文说明，筛选记录与文献类型另见完整台账。
 5. 机构与模型家族分开记录；未核实的机构明确标注。第三方基于 LLaVA、BLIP 等训练的独立模型不自动并入官方家族。
 
 “Star 达标”包含全部文献类型，不等于技术报告数量。各审计清单可能交叉，不能相加作为总数。
