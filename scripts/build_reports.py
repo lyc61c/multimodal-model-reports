@@ -7,6 +7,7 @@ import os
 import re
 import urllib.parse
 from collections import Counter, defaultdict
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,6 +73,10 @@ def star_label(entry):
 
 def completed_articles():
     """Discover finished introductions without touching their source files."""
+    publication_dates = {
+        (ROOT / entry["destination"]).resolve(): entry["date"]
+        for entry in read("data/article-plan.json")["entries"]
+    }
     articles = []
     for metadata_path in sorted((ROOT / "papers").glob("*/*/metadata.json")):
         metadata = json.loads(metadata_path.read_text(encoding="utf-8-sig"))
@@ -89,23 +94,26 @@ def completed_articles():
         article_path = (metadata_path.parent / relative_path).resolve()
         if not article_path.is_relative_to(metadata_path.parent.resolve()) or not article_path.is_file():
             continue
+        publication_date = metadata.get("source_first_submission") or publication_dates[metadata_path.parent.resolve()]
+        date.fromisoformat(publication_date)
         articles.append({
+            "date": publication_date,
             "family_slug": family_slug,
             "title": metadata.get("title_zh") or metadata.get("title") or metadata_path.parent.name,
             "source_version": metadata.get("source_version") or "未标注",
             "path": article_path,
         })
-    return sorted(articles, key=lambda article: (article["family_slug"], article["title"].casefold()))
+    return sorted(articles, key=lambda article: (article["date"], article["family_slug"], article["title"].casefold()))
 
 
 def article_table(articles, directory, family_names=None):
-    lines = ["| " + ("模型家族 | " if family_names is not None else "") + "逐篇介绍 | 原文版本 |",
-             "|" + ("---|" if family_names is not None else "") + "---|---|"]
+    lines = ["| 发表 / 发布日期 | " + ("模型家族 | " if family_names is not None else "") + "逐篇介绍 | 原文版本 |",
+             "|---|" + ("---|" if family_names is not None else "") + "---|---|"]
     for article in articles:
         relative = Path(os.path.relpath(article["path"], directory)).as_posix()
         url = urllib.parse.quote(relative, safe="/.-_")
         prefix = f' {escape(family_names.get(article["family_slug"], article["family_slug"]))} |' if family_names is not None else ""
-        lines.append(f'|{prefix} [{escape(article["title"])}]({url}) | {escape(article["source_version"])} |')
+        lines.append(f'| {article["date"]} |{prefix} [{escape(article["title"])}]({url}) | {escape(article["source_version"])} |')
     return "\n".join(lines)
 
 
@@ -301,7 +309,7 @@ def main():
           "[全部中文详解](paper-reading-guide.md) · [全部资料与整理状态](article-index.md)\n\n"
           + "\n".join(family_index) + "\n\n[返回项目首页](../README.md)")
     write("reports/paper-reading-guide.md", f"# 逐篇论文详解\n\n"
-          f"已完成 **{len(articles)} 篇**中文介绍，按模型家族排序。每篇采用统一的七部分结构，结合原文图表解释模型设计、数据、训练与实验。\n\n"
+          f"共 **{len(articles)} 篇**中文介绍，按发表 / 发布日期由早到晚排列。每篇结合原文图表解释模型设计、数据、训练与实验。\n\n"
           "本页包含模型论文、技术报告、模型卡及保留的补充资料；文献的实际定位在各篇开头说明。"
           "[按模型家族浏览](model-family-index.md) · [查看全部保留资料与整理状态](article-index.md)\n\n"
           + article_table(articles, ROOT / "reports", family_names) + "\n\n[返回项目首页](../README.md)")
@@ -331,6 +339,8 @@ def main():
 
 [开始阅读](reports/paper-reading-guide.md) · [模型系列](reports/model-family-index.md)
 
+![多模态大模型概览：图像、视频、音频与文本，以及理解、推理与生成能力](assets/multimodal-overview.svg)
+
 </div>
 
 ---
@@ -345,7 +355,7 @@ def main():
 
 | 阅读方式 | 入口 |
 |---|---|
-| 按论文阅读中文详解 | [全部 {len(articles)} 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
+| 按发表时间阅读中文详解（由早到晚） | [全部 {len(articles)} 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
 | 按模型系列比较不同版本 | [{len(retained_groups)} 个模型系列完整索引 →](reports/model-family-index.md) |
 
 ## 模型家族索引

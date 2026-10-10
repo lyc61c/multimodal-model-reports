@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500" role="img" aria-labelledby="title description">
+  <title id="title">多模态大模型 · 从感知到理解、推理与生成</title>
+  <desc id="description">仓库内容概览。左侧为图像与视频、音频与语音、文本与指令，中间为多模态模型，右侧为理解、推理和生成能力；底部列出架构、原理、数据、训练和实验五个阅读主题。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0c162c"/>
+      <stop offset="1" stop-color="#152741"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5b8cfa"/>
+      <stop offset=".5" stop-color="#a68aff"/>
+      <stop offset="1" stop-color="#50d5c8"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#7185f5" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#7185f5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#a2b5d7" opacity=".12"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="500" rx="24" fill="url(#background)"/>
+  <rect width="1280" height="500" rx="24" fill="url(#grid)"/>
+  <ellipse cx="640" cy="260" rx="360" ry="250" fill="url(#glow)"/>
+  <g font-family="'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-serif">
+    <text x="56" y="53" fill="#8cadd8" font-size="14" font-weight="600" letter-spacing="3">MULTIMODAL MODEL REPORTS</text>
+    <text x="56" y="103" fill="#f4f7ff" font-size="34" font-weight="700">从多模态感知，到理解、推理与生成</text>
+
+    <g fill="none" stroke-width="2">
+      <path d="M338 196 C430 196 425 269 520 269" stroke="#6599ed"/>
+      <path d="M338 270 H520" stroke="#aa95ee"/>
+      <path d="M338 344 C430 344 425 269 520 269" stroke="#5ac9bb"/>
+      <path d="M760 269 C855 269 850 196 942 196" stroke="#6599ed"/>
+      <path d="M760 269 H942" stroke="#aa95ee"/>
+      <path d="M760 269 C855 269 850 344 942 344" stroke="#5ac9bb"/>
+    </g>
+    <g fill="#c2d2ef">
+      <circle cx="430" cy="231" r="3"/>
+      <circle cx="430" cy="270" r="3"/>
+      <circle cx="430" cy="307" r="3"/>
+      <circle cx="850" cy="231" r="3"/>
+      <circle cx="850" cy="269" r="3"/>
+      <circle cx="850" cy="307" r="3"/>
+    </g>
+
+    <g>
+      <rect x="56" y="166" width="282" height="60" rx="14" fill="#172c47" stroke="#31567f"/>
+      <rect x="56" y="240" width="282" height="60" rx="14" fill="#232b49" stroke="#4e4875"/>
+      <rect x="56" y="314" width="282" height="60" rx="14" fill="#14323e" stroke="#29655f"/>
+      <g stroke="#82b5ff" stroke-width="2" fill="none" stroke-linejoin="round">
+        <rect x="77" y="183" width="30" height="25" rx="4"/>
+        <circle cx="85" cy="190" r="2"/>
+        <path d="m79 204 9-8 7 6 5-4 5 6"/>
+        <path d="m112 190 7-4v19l-7-4"/>
+      </g>
+      <g stroke="#c1adff" stroke-width="3" stroke-linecap="round">
+        <path d="M80 265v10 M88 257v26 M96 252v36 M104 261v18 M112 266v8"/>
+      </g>
+      <g stroke="#78decd" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M81 332h27a5 5 0 0 1 5 5v15a5 5 0 0 1-5 5H96l-10 7v-7h-5a5 5 0 0 1-5-5v-15a5 5 0 0 1 5-5Z"/>
+        <path d="M85 341h19 M85 348h13"/>
+      </g>
+      <g fill="#e5edff" font-size="22" font-weight="600">
+        <text x="142" y="204">图像 · 视频</text>
+        <text x="142" y="278">音频 · 语音</text>
+        <text x="142" y="352">文本 · 指令</text>
+      </g>
+    </g>
+
+    <g>
+      <rect x="520" y="163" width="240" height="212" rx="28" fill="#132039" stroke="url(#core)" stroke-width="2"/>
+      <g fill="none" stroke="url(#core)" stroke-width="2.5" stroke-linejoin="round">
+        <path d="m640 187 42 24v48l-42 24-42-24v-48Z"/>
+        <path d="m598 211 42 24 42-24 M640 235v48 M620 198l42 24v25l-22 13-22-13v-25l42-24"/>
+      </g>
+      <g fill="#b3bbff">
+        <circle cx="640" cy="187" r="4"/>
+        <circle cx="598" cy="211" r="4"/>
+        <circle cx="682" cy="211" r="4"/>
+        <circle cx="640" cy="235" r="4"/>
+        <circle cx="640" cy="283" r="4"/>
+      </g>
+      <text x="640" y="322" text-anchor="middle" fill="#f3f6ff" font-size="28" font-weight="700">多模态模型</text>
+      <text x="640" y="350" text-anchor="middle" fill="#9bafd2" font-size="14" letter-spacing="1">MULTIMODAL MODELS</text>
+    </g>
+
+    <g>
+      <rect x="942" y="166" width="282" height="60" rx="14" fill="#172c47" stroke="#31567f"/>
+      <rect x="942" y="240" width="282" height="60" rx="14" fill="#232b49" stroke="#4e4875"/>
+      <rect x="942" y="314" width="282" height="60" rx="14" fill="#14323e" stroke="#29655f"/>
+      <g font-size="22" font-weight="700">
+        <text x="966" y="204" fill="#91bbff">理解</text>
+        <text x="966" y="278" fill="#c8b5ff">推理</text>
+        <text x="966" y="352" fill="#79ddcf">生成</text>
+      </g>
+      <g fill="#bac9df" font-size="17">
+        <text x="1032" y="202">识别 · 问答 · 定位</text>
+        <text x="1032" y="276">关联 · 分析 · 决策</text>
+        <text x="1032" y="350">文本 · 图像 · 音频</text>
+      </g>
+    </g>
+
+    <path d="M56 412H1224" stroke="#344660"/>
+    <text x="56" y="456" fill="#8ca5c9" font-size="15" font-weight="600" letter-spacing="2">阅读主题</text>
+    <g fill="#e1e9f8" font-size="18" text-anchor="middle">
+      <text x="310" y="456">整体架构</text>
+      <text x="510" y="456">核心原理</text>
+      <text x="710" y="456">数据构建</text>
+      <text x="910" y="456">训练目标</text>
+      <text x="1110" y="456">实验结果</text>
+    </g>
+  </g>
+</svg>

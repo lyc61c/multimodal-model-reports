@@ -12,6 +12,8 @@
 
 [开始阅读](reports/paper-reading-guide.md) · [模型系列](reports/model-family-index.md)
 
+![多模态大模型概览：图像、视频、音频与文本，以及理解、推理与生成能力](assets/multimodal-overview.svg)
+
 </div>
 
 ---
@@ -26,7 +28,7 @@
 
 | 阅读方式 | 入口 |
 |---|---|
-| 按论文阅读中文详解 | [全部 271 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
+| 按发表时间阅读中文详解（由早到晚） | [全部 271 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
 | 按模型系列比较不同版本 | [183 个模型系列完整索引 →](reports/model-family-index.md) |
 
 ## 模型家族索引
