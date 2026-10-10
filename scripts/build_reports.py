@@ -19,7 +19,10 @@ def read(name):
 def write(name, text):
     target = ROOT / name
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(text.rstrip() + "\n", encoding="utf-8")
+    previous = target.read_bytes() if target.exists() else b""
+    newline = "\r\n" if previous.count(b"\r\n") > previous.count(b"\n") / 2 else "\n"
+    content = (text.rstrip() + "\n").replace("\r\n", "\n")
+    target.write_bytes(content.replace("\n", newline).encode("utf-8"))
 
 
 def dump(name, value):
@@ -257,10 +260,7 @@ def main():
         if family_slug not in family_names:
             body = f"# {family_slug}\n\n## 已完成的逐篇介绍\n\n" + article_table(family_articles, ROOT / "papers" / family_slug)
             write(f"papers/{family_slug}/README.md", body + "\n\n[返回项目索引](../../README.md)")
-    article_index = article_table(articles, ROOT, family_names) if articles else "当前尚无已完成的逐篇介绍。"
     progress = article_progress(entries)
-    progress_note = (f'本轮全部 **{progress["total"]} 条**保留资料，已完成 **{progress["counts"].get("complete", 0)} 篇**介绍。'
-                     f'其余状态与阅读入口见[完整介绍索引](reports/article-index.md)。') if progress else ""
     original_assets = 0
     without_static_assets = []
     for article in articles:
@@ -273,114 +273,216 @@ def main():
         if not assets:
             relative = Path(os.path.relpath(article["path"], ROOT)).as_posix()
             without_static_assets.append(f'[{escape(article["title"])}]({urllib.parse.quote(relative, safe="/.-_")})')
-    progress_note += f' 已附 **{original_assets:,} 个**原始图表资产，各文记录来源、版本和图表位置。'
-    if without_static_assets:
-        progress_note += " 以下发布资料仅提供动态或 HTML 图表，静态原图缺项已在对应文档注明：" + "、".join(without_static_assets) + "。"
 
-    priority = ["Qwen", "DeepSeek", "InternVL", "MiniCPM", "LLaVA", "VITA", "Kimi", "GLM", "Gemini", "GPT", "Claude", "Llama", "Emu", "BLIP", "VideoLLaMA", "mPLUG", "Phi", "MiMo"]
-    def order(name):
-        return (next((i for i, term in enumerate(priority) if name.casefold().startswith(term.casefold())), len(priority)), name.casefold())
-    index = ["| 模型家族 | 项目主体 / 机构 | 模型文献 | Star 达标 | 无 Star 候选 |", "|---|---|---:|---:|---:|"]
-    for name in sorted(main_groups, key=order):
+    # Keep complete directories one click away from a compact project homepage.
+    family_index = ["| 模型家族 | 项目主体 / 机构 | 主目录模型文献 | Star 达标 | 无 Star 候选 | 已完成介绍 |",
+                    "|---|---|---:|---:|---:|---:|"]
+    for name in sorted(main_groups, key=str.casefold):
         items = main_groups[name]
-        x = items[0]
+        exemplar = items[0]
         passed = sum(item["star_decision"] == "passes_star" for item in items)
         organizations = "；".join(dict.fromkeys(item["organization"] for item in items))
-        index.append(f'| [{escape(name)}](papers/{x["family_slug"]}/README.md) | {escape(organizations)} | {len(items)} | {passed} | {len(items)-passed} |')
-    readme = f"""# 多模态大模型技术报告
+        family_index.append(f'| [{escape(name)}](../papers/{exemplar["family_slug"]}/README.md) | '
+                            f'{escape(organizations)} | {len(items)} | {passed} | {len(items)-passed} | '
+                            f'{len(articles_by_family[exemplar["family_slug"]])} |')
+    write("reports/model-family-index.md", f"# 模型家族完整索引\n\n"
+          f"主目录共 **{len(main_groups)} 个模型家族、{len(main_entries)} 篇模型文献**。按家族名称排序，点击家族查看版本与逐篇介绍。\n\n"
+          "同一官方系列合并，单版本模型独立成类；机构与家族分开记录。已完成介绍还可能包含该家族的补充材料，"
+          "因此不一定等于主目录模型文献数。主目录之外的保留资料见[全部中文详解](paper-reading-guide.md)"
+          "和[筛选与整理状态](article-index.md)。\n\n"
+          + "\n".join(family_index) + "\n\n[返回项目首页](../README.md)")
+    write("reports/paper-reading-guide.md", f"# 逐篇论文详解\n\n"
+          f"已完成 **{len(articles)} 篇**中文介绍，按模型家族排序。每篇采用统一的七部分结构，结合原文图表解释模型设计、数据、训练与实验。\n\n"
+          "本页包含模型论文、技术报告、模型卡及保留的补充资料；文献的实际定位在各篇开头说明。"
+          "[按模型家族浏览](model-family-index.md) · [查看全部保留资料与整理状态](article-index.md)\n\n"
+          + article_table(articles, ROOT / "reports", family_names) + "\n\n[返回项目首页](../README.md)")
 
-[GitHub 仓库](https://github.com/lyc61c/multimodal-model-reports) · [全部介绍目录](reports/article-index.md)
+    by_slug = {items[0]["family_slug"]: name for name, items in main_groups.items()}
+    featured_slugs = ["qwen", "deepseek", "internvl", "minicpm", "llava", "kimi", "glm", "seed",
+                      "gemini", "gpt", "claude", "llama", "blip", "emu", "mplug", "videollama",
+                      "vita", "vila", "internlm-xcomposer", "mimo"]
+    featured_links = [f'[{escape(by_slug[slug])}](papers/{slug}/README.md)'
+                      for slug in featured_slugs if slug in by_slug]
+    featured = ["| 模型系列 | 模型系列 | 模型系列 | 模型系列 |", "|---|---|---|---|"]
+    for offset in range(0, len(featured_links), 4):
+        cells = featured_links[offset:offset + 4]
+        featured.append("| " + " | ".join(cells + ["—"] * (4 - len(cells))) + " |")
 
-按模型家族整理多模态大模型论文、技术报告与模型卡。Qwen 系列合并为一个家族，DeepSeek 系列合并为一个家族；单版本模型单独建立家族。机构与模型家族分开记录，同厂商的不同模型家族保持独立。
+    examples = [
+        ("papers/qwen/qwen2.5-vl/README.md", "Qwen2.5-VL", "动态分辨率、窗口注意力与绝对时间编码"),
+        ("papers/deepseek/arxiv-2412.10302/README.md", "DeepSeek-VL2", "动态切图与稀疏专家"),
+        ("papers/internvl/arxiv-2504.10479/README.md", "InternVL3", "联合预训练与混合偏好优化"),
+        ("papers/blip/arxiv-2301.12597/README.md", "BLIP-2", "Q-Former 与冻结视觉、语言模型之间的连接"),
+    ]
+    complete_paths = {article["path"].relative_to(ROOT).as_posix() for article in articles}
+    example_rows = [f"| [{title}]({path}) | {topic} |" for path, title, topic in examples if path in complete_paths]
+    total_retained = progress["total"] if progress else len(articles)
+    unfinished = total_retained - len(articles)
+    pending_note = f"另有 **{unfinished} 条**尚未完成，具体状态见[完整索引](reports/article-index.md)。" if unfinished else "全部保留资料均已完成介绍。"
+    static_note = ("\n\n静态原图缺项：" + "、".join(without_static_assets)
+                   + "。对应发布资料仅提供动态或 HTML 图表，已在文中注明。") if without_static_assets else ""
 
-{intro}
+    readme = f"""<div align="center">
 
-{progress_note}
+# 多模态大模型技术报告
 
-配图仅展示正文引用的原文图表区域，保留图例、表头与必要脚注，去掉周围正文及页眉页脚。
+**Multimodal Model Reports**
 
-## 首轮筛选结果
+按模型家族整理的中文论文详解 · 原文图表 · 架构、原理、数据与训练
+
+[![Introductions](https://img.shields.io/badge/Introductions-{len(articles)}-2563eb?style=flat-square)](reports/paper-reading-guide.md)
+[![Figures](https://img.shields.io/badge/Original_figures-{original_assets}-0f766e?style=flat-square)](reports/figure-crop-audit.md)
+[![Snapshot](https://img.shields.io/badge/Snapshot-{snapshot['snapshot_date'].replace('-', '.')}-64748b?style=flat-square)](reports/screening-all.md)
+
+[开始阅读](reports/paper-reading-guide.md) · [模型家族](reports/model-family-index.md) · [整理状态](reports/article-index.md) · [来源与核对](#来源与核对)
+
+</div>
+
+---
+
+本项目围绕多模态大模型的设计与训练，逐篇解读论文、技术报告与模型卡，并用原文中的架构图、流程图和实验表格辅助说明。同一官方模型系列集中整理，单版本模型独立成类，便于阅读与比较。
+
+| 已完成中文详解 | 主目录模型家族 | 原文图表资产 |
+|:---:|:---:|:---:|
+| **{len(articles)} 篇** | **{len(main_groups)} 个** | **{original_assets:,} 个** |
+
+本轮保留 **{total_retained} 条资料**；主目录包含 **{len(main_entries)} 篇模型文献**，完整阅读目录另收录保留的补充材料与范围待审资料。{pending_note}
+
+## 阅读导航
+
+| 想做什么 | 从这里进入 |
+|---|---|
+| 找一篇论文，直接阅读中文详解 | [全部 {len(articles)} 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
+| 按模型系列阅读，比较不同版本 | [{len(main_groups)} 个模型家族完整索引 →](reports/model-family-index.md) |
+| 查文献类型、收录情况与整理进度 | [全部 {total_retained} 条保留资料与状态 →](reports/article-index.md) |
+
+## 模型家族索引
+
+以下为部分系列的快捷入口；[完整索引](reports/model-family-index.md)包含全部主目录家族及其机构、文献数量和筛选状态。
+
+{"\n".join(featured)}
+
+家族按官方系列与版本关系划分。Qwen、DeepSeek 各自合并为一类；同厂商的不同家族分别整理，第三方衍生模型独立记录。
+
+<a id="论文图文介绍"></a>
+
+## 逐篇论文详解
+
+每篇介绍采用以下七部分结构，原文未披露的细节会在对应位置注明。
+
+| 内容 | 主要回答的问题 |
+|---|---|
+| **01 · 论文信息与模型定位** | 谁提出了模型？面向什么任务？与前代或相关工作是什么关系？ |
+| **02 · 快速概览** | 主要贡献是什么？有哪些模型规格与能力边界？ |
+| **03 · 整体架构** | 各模态如何编码、连接、融合与输出？结合原文模型图说明。 |
+| **04 · 核心创新与数学原理** | 关键机制如何工作？相关公式与设计动机是什么？ |
+| **05 · 数据构建与处理** | 数据来自哪里？如何清洗、合成、配比与预处理？ |
+| **06 · 训练流程与目标** | 分哪些阶段？训练哪些参数？优化目标与损失如何设计？ |
+| **07 · 实验设置与主要结果** | 如何评测？主要结果、消融实验和适用范围是什么？ |
+
+可以先从这些介绍查看内容形式：
+
+| 阅读示例 | 主要内容 |
+|---|---|
+{"\n".join(example_rows)}
+
+**[查看全部逐篇详解 →](reports/paper-reading-guide.md)**
+
+配图只保留用到的原文图表区域，保留图例、表头与必要脚注；各篇记录图表来源与原文版本。{static_note}
+
+## 收录范围与筛选
+
+来源为 [Awesome Multimodal Large Language Models]({snapshot['upstream_repository']}) 的 **Multimodal Instruction Tuning (& Latest Works)** 与 **Foundation Models** 两个章节，数据快照为 **{snapshot['snapshot_date']}**。
+
+按 Code 栏对应仓库的 Star 筛选：**小于 {snapshot['threshold']} 的条目排除**；未提供 GitHub 的条目记为 **N/A**，另作候选或范围待审。Star 是仓库关注度指标，不能直接代表论文质量。
+
+<details>
+<summary><strong>展开筛选统计与归类口径</strong></summary>
+
+<a id="首轮筛选结果"></a>
+
+### 首轮筛选结果
 
 | 项目 | 数量 |
 |---|---:|
 | Multimodal Instruction Tuning (& Latest Works) 原始条目 | {snapshot['section_rows']['Multimodal Instruction Tuning (& Latest Works)']} |
 | Foundation Models 原始条目 | {snapshot['section_rows']['Foundation Models']} |
 | 原始总记录 / 去重后文献 | {snapshot['raw_rows']} / {len(entries)} |
-| 原表 GitHub 仓库标识（逐一核验） | {len(stars)} |
-| 重定向后的实际 GitHub 仓库 | {len(canonical_groups)} |
-| Star ≥ 100 的文献 | {stats['star_decisions'].get('passes_star', 0)} |
-| Star < 100 的排除文献 | {len(low)} |
+| 原表 GitHub 仓库标识 / 重定向后实际仓库 | {len(stars)} / {len(canonical_groups)} |
+| Star ≥ {snapshot['threshold']} 的文献 | {stats['star_decisions'].get('passes_star', 0)} |
+| Star < {snapshot['threshold']} 的排除文献 | {len(low)} |
 | 原表未提供 GitHub 的文献 | {len(no_stars)} |
 | 主目录模型文献 / 家族 | {len(main_entries)} / {len(main_groups)} |
 
-“Star 达标”统计包含全部文献类型，不等于技术报告数量。主目录收录首轮判为模型研究论文、技术报告与模型卡的候选；博客和发布页单列补充材料。目录保留首轮文献类型判定，逐篇介绍再根据原文说明实际定位；综述、评测、方法或发布页不会被写成作者新训练的模型。无 GitHub 指标的模型文献为候选，未宣称通过 Star 门槛。
+### 筛选口径
 
-## 筛选口径
+1. 只筛选上述两个章节，按 arXiv ID 或题名去重。GPT-5 发布资料和 Gemini 1 技术报告各跨章节出现一次。
+2. 使用 Code 栏对应仓库的整数 Star；恰好 {snapshot['threshold']} 保留，数值以本次快照为准。
+3. 原表没有 GitHub 的记录不视为 0 Star，也不宣称已经通过 Star 门槛。
+4. 模型研究论文、技术报告与模型卡进入主目录；数据集、评测、综述、工具、通用方法和发布博客在补充清单中保留。逐篇介绍依据原文说明实际文献定位。
+5. 机构与模型家族分开记录；未核实的机构明确标注。第三方基于 LLaVA、BLIP 等训练的独立模型不自动并入官方家族。
 
-1. 只筛选指定两个章节；按论文 arXiv ID 或题名去重。GPT-5 发布资料和 Gemini 1 技术报告各跨章节出现一次。
-2. 使用 Code 栏对应 GitHub 仓库的精确整数 Star。小于 100 排除，恰好 100 保留。Star 随时间变化，应以本次快照为准。
-3. 原表没有 GitHub 仓库的记录记为 N/A，保留候选或范围待审。没有把闭源报告当作 0 Star。
-4. 数据集、评测、综述、工具、通用方法和发布博客不作为模型技术报告，独立列在附录。Star 达标不改变文献类型。
-5. 家族依据发布主体与版本关系划分。第三方基于 LLaVA、BLIP 等训练的独立模型不自动并入原厂官方家族；仓库主体未核实的机构会明确标注。
+“Star 达标”包含全部文献类型，不等于技术报告数量。各审计清单可能交叉，不能相加作为总数。
 
-## 模型家族索引
+原表 Step3 的徽章指向 GLM-4.1V-Thinking，本项目按实际 Code 仓库 stepfun-ai/Step3 计数。LAVIS、UniLM 等共享仓库的 Star 是母仓库指标；旧仓库重定向时按当前目标计数，相关条目均保留提示。
 
-{"\n".join(index)}
+</details>
 
-## 论文图文介绍
+<a id="全量清单与审计"></a>
 
-当前已完成 **{len(articles)} 篇**逐篇介绍，按已审核的七部分模板组织，并引用原文图表。
+## 来源与核对
 
-{progress_note}
-
-{article_index}
-
-## 全量清单与审计
-
-- [完整首轮筛选台账：全部 {len(entries)} 篇](reports/screening-all.md)
-- [低于 100 Star：{len(low)} 篇](reports/excluded-low-star.md)
-- [原表无 GitHub 指标：{len(no_stars)} 篇](reports/no-github.md)
-- [补充材料与非模型文献：{len(supplements)} 篇](reports/supporting-materials.md)
-- [纳入范围待审：{len(review)} 篇](reports/scope-review.md)
-- [完整机器可读数据](data/catalogue.json) · [统计](data/statistics.json) · [Star 证据](data/stars.json)
-- [数据完整性与链接验证](data/validation.json) · [独立复核](data/quality-audit.json)
-- [文章结构与原图来源检查](data/article-verification.json) · [四篇介绍的独立原文抽查](reports/final-source-spotcheck.md)
-- [Seed1.8 介绍的独立原文抽查](reports/seed18-source-spotcheck.md)
-- [整页截图替换与图表裁切记录](reports/figure-crop-audit.md) · [逐图坐标与来源](data/figure-crop-audit.json)
-
-各审计清单按不同维度切分，可能交叉，不应相加作为总数。原表 Step3 的徽章指向 GLM-4.1V-Thinking；本项目按实际 Code 仓库 stepfun-ai/Step3 计数。LAVIS、UniLM 等共享仓库的 Star 是母仓库指标，不能当作子模型单独的 Star。Qwen2-VL、Qwen2.5-VL 等旧地址重定向到新版本仓库，Star 按当前目标记录，逐篇标注重定向与共仓库关系。
+| 资料 | 阅读入口 |
+|---|---|
+| 筛选台账 | [全部 {len(entries)} 篇](reports/screening-all.md) · [低于门槛 {len(low)} 篇](reports/excluded-low-star.md) · [无 GitHub 指标 {len(no_stars)} 篇](reports/no-github.md) |
+| 文献范围 | [补充与非模型文献 {len(supplements)} 篇](reports/supporting-materials.md) · [范围待审 {len(review)} 篇](reports/scope-review.md) |
+| 图表来源 | [裁切与替换记录](reports/figure-crop-audit.md) · [逐图坐标与来源](data/figure-crop-audit.json) |
+| 原文抽查 | [四篇介绍抽查](reports/final-source-spotcheck.md) · [Seed1.8 抽查](reports/seed18-source-spotcheck.md) |
+| 数据与检查 | [文献数据](data/catalogue.json) · [统计](data/statistics.json) · [Star 证据](data/stars.json) · [数据与链接检查](data/validation.json) · [独立复核](data/quality-audit.json) · [文章与图片检查](data/article-verification.json) |
 
 ## 项目结构与更新
 
+<details>
+<summary><strong>查看目录结构与维护方式</strong></summary>
+
 ```text
-papers/<family>/README.md     每个模型家族的版本与论文链接
-papers/<family>/<paper>/README.md        逐篇图文介绍
-papers/<family>/<paper>/metadata.json    介绍状态、标题与原文版本
-papers/<family>/<paper>/figures/         从原文提取的图表
-papers/<family>/<paper>/figures-manifest.json  图表编号、页码与来源
-reports/                     全量筛选、排除与待审清单
-data/catalogue.json          合并后的模型、范围和 Star 数据
-data/stars.json              仓库 Star、采集时间与证据
-data/family-mapping.json     可编辑的家族归类规则
-data/scope-mapping.json      可编辑的文献类型与纳入依据
-source/awesome-upstream.md  原清单快照
-scripts/                    数据采集、目录生成与可选 PDF 图表提取脚本
+papers/
+└── <family>/
+    ├── README.md                 家族介绍与版本入口
+    └── <paper>/
+        ├── README.md             七部分中文详解
+        ├── figures/              原文图表
+        ├── figures-manifest.json 图表编号、页码、坐标与来源
+        ├── metadata.json         文献信息与整理状态
+        ├── evidence.json         原文版本与资产记录
+        └── review.json           来源核对记录
+reports/                          阅读目录、筛选清单与核对报告
+data/                             文献数据、分类规则与 Star 证据
+source/awesome-upstream.md        上游清单快照
+scripts/                          数据采集、目录生成与图表提取
 ```
 
-目录采集与生成脚本使用 Python 3.12+ 标准库，无第三方依赖；可选的 PDF 图表提取脚本需要 `pdfplumber`。更新公开仓库 Star 后重建目录：
+更新公开仓库 Star 后重建目录（Python 3.12+）：
 
 ```bash
 python scripts/catalog.py --refresh-stars --snapshot-date YYYY-MM-DD
 python scripts/build_reports.py
+python scripts/verify_catalogue.py
 ```
 
-PDF 配图必须显式指定裁切坐标；`scripts/paper_sources.py assets --specs ...` 用于提取图表，`scripts/crop_paper_figures.py render/apply` 用于复核后批量替换已有图片。每张配图的固定原文版本、PDF 页码、裁切范围与图片哈希均保存在对应 `figures-manifest.json`。整页渲染只可用于本地阅读。
+更新上游清单时加 `--refresh-source`；新题名须补充 `data/scope-mapping.json`。家族归类优先读取 `data/family-mapping.json` 的 `by_entry_id`，新记录再按题名与仓库规则匹配。调整后先审阅 JSON 再重建目录；取消整个家族时应移走对应旧目录，避免遗留页面。
 
-更新上游清单时加 `--refresh-source`；新题名须补充 scope-mapping，重建脚本会阻止未分类条目进入目录。现有家族分类优先读取 family-mapping 的 `by_entry_id`，调整归类时应同步该字段；新记录再按题名与仓库规则匹配。修改后先审阅 JSON 再重建报告，运行 `python scripts/verify_catalogue.py` 检查数据与内链。目录按当前输入生成；取消整个家族时应移走对应旧目录，避免遗留页面。
+PDF 配图须显式指定裁切坐标。`scripts/paper_sources.py assets --specs ...` 提取图表，`scripts/crop_paper_figures.py render/apply` 用于复核后批量替换已有图片。固定原文版本、页码、裁切范围与图片哈希记录在各篇 `figures-manifest.json`；整页渲染仅用于本地阅读。
 
-已完成文献筛选、项目索引与 **{len(articles)} 篇**介绍。每篇统一采用七部分结构；原文未披露的配置、表文冲突、评估范围与未独立复现的限制均在正文说明。未完成条目独立标识，不计入完成数。PDF/网页阅读缓存位于 `source/papers/`，由 `.gitignore` 排除；原图与出处清单保留在文章目录。
+修改文章后运行 `python scripts/verify_articles.py` 检查七节结构、图片引用与文件哈希，再运行 `python scripts/build_reports.py` 更新首页和阅读入口。`review.json` 与 `evidence.json` 是整理过程的来源记录，不代表外部同行评议；自动检查不证明数值与解释的语义准确性。
 
-逐篇 `review.json` 记录作者来源核对，`evidence.json` 记录来源版本与资产；它们不代表外部同行评议。运行 `python scripts/verify_articles.py` 可检查七节结构、图片引用与文件哈希；该检查不自动证明数值和解释的语义准确性。更新文章后运行 `python scripts/build_reports.py` 重建阅读入口。
+PDF/网页阅读缓存位于 `source/papers/`，由 `.gitignore` 排除；原图与出处清单保留在文章目录。
+
+</details>
+
+---
+
+文献清单来源于 [BradyFU/Awesome-Multimodal-Large-Language-Models]({snapshot['upstream_repository']})。图表来自对应论文或官方发布资料，具体出处见各篇介绍。
 """
     write("README.md", readme)
     print(json.dumps({k: v for k, v in stats.items() if k != "warnings"}, ensure_ascii=False, indent=2))
