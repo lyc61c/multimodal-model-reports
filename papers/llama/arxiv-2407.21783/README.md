@@ -76,17 +76,17 @@
 
 **组合式视觉读取。** 视觉适配器可用以下解释式理解：
 
-$$
+```math
 \mathrm{CrossAttn}(H,V)=\mathrm{softmax}((HW_Q)(VW_K)^\top/\sqrt d)VW_V
-$$
+```
 
 文字隐藏状态 $`H`$ 提问，视觉特征 $`V`$ 提供信息。冻结语言权重使文字路径得到保护，视觉编码器及新跨注意力学习如何满足该骨干的特征需求。多层特征缓解语义抽象和位置精度的矛盾；它没有提供生成图像的解码器。
 
 **拒绝采样与 DPO 的作用不同。** 奖励模型先筛选回答，再用标准目标 token 交叉熵进行 SFT。为解释 DPO，可用以下标准式：
 
-$$
+```math
 \mathcal L_{\mathrm{DPO}}=-\mathbb E\log\sigma(\beta[\log\frac{\pi_\theta(y^+\mid x)}{\pi_{\mathrm{ref}}(y^+\mid x)}-\log\frac{\pi_\theta(y^-\mid x)}{\pi_{\mathrm{ref}}(y^-\mid x)}])
-$$
+```
 
 该式是所用 DPO 的通用数学表达，原文还明确修改格式 token 的参与方式，并添加 chosen 序列 NLL 正则。视觉 DPO 另采用每隔若干步 EMA 更新 reference，不能把语言 DPO 与视觉 DPO 的细节完全合并。[PDF 第 16、60 页](https://arxiv.org/pdf/2407.21783v1#page=16)
 

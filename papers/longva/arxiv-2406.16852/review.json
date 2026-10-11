@@ -37,7 +37,7 @@
     "2000frames288Ktokens beyond224Ktraining;not200Kexact",
     "Frameincrease notmonotonic;image performance retreats"
   ],
-  "article_sha256": "eadd1fde3cffe38b2d5913037218dcd68464a7e4fdb9c381f24da048c0d3c6f0",
+  "article_sha256": "adc1195d3fd9c7bbcf19295c781b090ce94503312c377982e7909ef3b534ce4c",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -73,11 +73,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
       "delimiter_conversions": 6,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 1
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

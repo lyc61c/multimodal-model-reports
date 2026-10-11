@@ -61,7 +61,9 @@ Mask2Former+从COCO-panoptic、Swin-L backbone checkpoint起步，在原200实�
 
 **输入以实体为单位，输出以可解释的候选选择为单位。** 第2.2节把查询定义为两端GRD末层表示相加：$`z_p=h_{\langle GRD\rangle}+h_{\langle/GRD\rangle}`$。Figure2 caption写“averaged”，而正文与Table10采用Sum，本文按后两处解释，同时注明不一致。查询与实体表示拼接评分，原文给出未编号合并式：
 
-$$M_{h,w}=\max_q\big(S_q\widehat M_{q,h,w}\big),\qquad S_q\in[0,1].$$
+```math
+M_{h,w}=\max_q\big(S_q\widehat M_{q,h,w}\big),\qquad S_q\in[0,1].
+```
 
 $`\widehat M_q`$是proposal的像素概率，$`S_q`$是短语对它的检索得分。若“两只狗”的两项都高分，它们的非重叠像素同时进入输出；重叠位置取max，不是求和或平均。这样避免重复候选让像素概率越加越大。模型不能把一个包含多人的粗候选自动分成精确单人，因此第2.3节强调候选应具有合适的语义原子性和足够覆盖率。
 
@@ -69,7 +71,9 @@ $`\widehat M_q`$是proposal的像素概率，$`S_q`$是短语对它的检索得�
 
 有mask监督时，用Dice与BCE；只有box时，用projection loss。按附录C可整理为下列说明式，原文并未编号：
 
-$$\mathcal L=\mathcal L_{lm}+\mathbf1_{mask}(\mathcal L_{dice}+0.1\mathcal L_{bce})+\mathbf1_{box-only}\mathcal L_{proj}.$$
+```math
+\mathcal L=\mathcal L_{lm}+\mathbf1_{mask}(\mathcal L_{dice}+0.1\mathcal L_{bce})+\mathbf1_{box-only}\mathcal L_{proj}.
+```
 
 projection loss比较预测mask在x/y轴投影与真值框投影的一维Dice。它约束横纵覆盖范围，不能唯一决定框内部形状。掩码边界通过共同的mask数据和proposal网络补充学习，不能把box标注当成像素级人工真值。
 

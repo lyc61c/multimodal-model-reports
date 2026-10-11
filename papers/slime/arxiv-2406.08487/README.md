@@ -57,18 +57,18 @@ Llama3-8B 版本在 Table 1 的 MMBench 得到 75.00，在 Table 2 的 MathVista
 
 **全局混合。** 对视觉特征 $`x`$，两个适配器输出按门控系数相加：
 
-$$
+```math
 h_g=G_0(x)f_m(x)+G_1(x)f_q(x),\qquad
 G(x)=\mathrm{softmax}\!\left(xW_g+\epsilon\,\mathrm{softplus}(xW_n)\right).
-$$
+```
 
 $`\epsilon`$ 为训练时的高斯噪声。其目的在于减轻门控过早偏向容易收敛的 MLP；两个输出都参与软混合，不是只激活一个专家的稀疏路由。（§2.1）
 
 **按相关性而非固定数量选 token。** 局部表示 $`z_v`$ 与文本表示 $`z_x`$ 的相似度矩阵为 $`S=z_vz_x^\top`$。对文本位置平均，再对视觉位置 softmax，得到概率 $`p_i`$。将其降序排列，保留满足下式的最短前缀：
 
-$$
+```math
 k=\min\left\{r:\sum_{j=1}^{r}p_{(j)}>\gamma\right\}.
-$$
+```
 
 $`\gamma=75\%`$ 表示累计相关性质量的阈值，不能解读为固定保留 75% 的 token。论文称其为 cosine 路由，但展示的乘积公式没有明确列出向量归一化；不能据此断言代码一定计算标准余弦。训练时还向选择分数加入 $`\mathcal N(0,0.1)`$ 噪声。（§2.2）
 
@@ -98,7 +98,7 @@ SMR 汇集 Arxiv-QA、ScienceQA、TextBookQA、GeoQA、Geometry3K、TabMWP、DVQ
 
 配置表给出 AdamW、BF16、weight decay 0、warmup 比例 0.03、余弦退火和 1 epoch；使用 8 张 A100 80GB。视觉编码器在 Figure 2 三阶段均标为冻结。13B 配置与 Vicuna-7B 类似；附录另列 70B LoRA 设置，不能据此宣称主结果表验证了 70B 的完整表现。（第 5、7、20 页）
 
-文本答案的自回归监督可以解释为 $`\mathcal L=-\sum_t\log p_\theta(y_t\mid y_{<t},I,q)`$；这是对指令训练目标的通用说明，论文并未给出额外的独立路由奖励函数。三阶段在这里主要解决模块学习失衡；作者同时承认它延长训练时间，未提供可把 token 减少换算为固定端到端加速倍数的完整测速表。（§4）
+文本答案的自回归监督可以解释为 $`\mathcal L=-\sum_t\log p_\theta(y_t\mid y_{\lt t},I,q)`$；这是对指令训练目标的通用说明，论文并未给出额外的独立路由奖励函数。三阶段在这里主要解决模块学习失衡；作者同时承认它延长训练时间，未提供可把 token 减少换算为固定端到端加速倍数的完整测速表。（§4）
 
 <a id="experiments"></a>
 

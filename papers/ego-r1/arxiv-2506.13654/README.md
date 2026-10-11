@@ -56,20 +56,20 @@ Ego-R1 是多模型工具系统。3B 指负责调度的语言模型，不包含 
 
 原文式 (1) 将工具链表示为 $`C=(S_0,\ldots,S_n)`$，$`S_i=(T_i^{th},T_i^{to},o_i)`$，分别为推理文本、工具调用和返回观察。按任务语义，可作如下政策解释：
 
-$$
+```math
 a_i\sim\pi_\theta(\cdot\mid q,o_{<i},a_{<i}),\qquad
 o_i=\mathrm{Tool}(a_i).
-$$
+```
 
 这是本文对原文流程的形式化解释；工具返回的证据由环境生成，代理只生成选择与参数。一次调用改变后续可用信息，因而“推理更长”只是过程表象，关键在于是否检索到正确时间和视觉证据。
 
 RL 公式展示组内采样、概率比裁剪与 KL 约束。用更清晰的记号解释其组内优势：
 
-$$
+```math
 \hat A_i=\frac{R_i-\overline R}{\mathrm{std}(R_1,\ldots,R_G)},
 \qquad
 r_{i,t}=\frac{\pi_\theta(s_{i,t}\mid h_{i,t})}{\pi_{old}(s_{i,t}\mid h_{i,t})}.
-$$
+```
 
 原文说明优势来自同一问题的多条 rollout 最终答案奖励，裁剪项取 $`\min(r\hat A,\mathrm{clip}(r,1-\epsilon,1+\epsilon)\hat A)`$，并用参考策略的 KL 约束限制漂移。报告把 GRPO 展开为“Gradient-Regularized Policy Optimization”，但展示的内容是组内奖励标准化和裁剪政策优化；本文依据实际公式解释，不额外添加一个正文没有定义的“梯度方差正则损失”。原式在多轮、轨迹、token 索引的文字描述上也不够一致，因此不据此编造逐步奖励分配算法。
 

@@ -68,13 +68,17 @@
 
 本篇没有新型数学目标或缩放方程，其贡献来自控制与比较训练选择。用说明式可把视觉接入写成 $`z_i=W_v x_i`$，把回答训练写成
 
-$$\mathcal L_{\rm answer}=-\sum_t\log p_\theta(y_t\mid Z,q,y_{<t}).$$
+```math
+\mathcal L_{\rm answer}=-\sum_t\log p_\theta(y_t\mid Z,q,y_{<t}).
+```
 
 这只是沿用框架的机制解释，原文没有给它独立公式编号或完整 token masking 规则。第一阶段重点学习 $`W_v`$ 让视觉条件可被语言端解释；第二阶段同时更新连接器，并以全量或适配器方式调整语言端。
 
 LoRA 的常用解释是将权重变化限制在低秩乘积：
 
-$$W'=W+\frac{\alpha}{r}BA,\qquad A\in\mathbb R^{r\times d_{in}},\ B\in\mathbb R^{d_{out}\times r}.$$
+```math
+W'=W+\frac{\alpha}{r}BA,\qquad A\in\mathbb R^{r\times d_{in}},\ B\in\mathbb R^{d_{out}\times r}.
+```
 
 原文采用该已有方法，并未把此式作为新推导。rank $`r`$ 控制可训练增量容量，$`\alpha/r`$ 控制相对尺度；因此提高 rank 与提高更新强度是不同操作。本文实验设置 alpha=2r，配合 $`10^{-4}`$ 学习率。QLoRA 又让基础权重采用量化表示，在较低显存下训练增量；报告没有逐层列出量化精度和所有适配器挂载位置，不能从名称补造配置。
 

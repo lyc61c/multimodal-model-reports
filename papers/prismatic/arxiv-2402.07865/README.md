@@ -50,15 +50,15 @@ PRISM 的主要融合版本采用 DINOv2＋SigLIP、384px 输入和直接缩放�
 
 论文的形式化模型为：
 
-$$
+```math
 p_{\rm img}=V_\omega(x_{\rm img}),\qquad e_{\rm img}=F_\psi(p_{\rm img}),\qquad u_{\rm gen}=LM_\theta([e_{\rm img};\mathrm{embed}(u_{\rm prompt})]).
-$$
+```
 
 给定图像、提示与目标回答，优化条件负对数似然：
 
-$$
+```math
 \mathcal L=-\log p(\hat u_{\rm gen}\mid x_{\rm img},u_{\rm prompt}).
-$$
+```
 
 本文没有新造“融合对比损失”。两种视觉表示直接拼接后交给同一 MLP，学习信号仍来自答案生成。DINOv2 更偏空间结构、SigLIP 更偏图文语义互补，是作者对结果的解释，未被单独证明为唯一因果机制。
 

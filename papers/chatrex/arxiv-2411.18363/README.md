@@ -67,12 +67,12 @@ ChatRex 的图像编码路径使用 CLIP ViT-Large-14-336 和 LAION 预训练 Co
 UPN 原有的类别分数由 prompt embeddings 与检测 queries 点积得到，原文 Eq. (1) 为 $`S_{cls}=EQ_{dec}^{\top}`$。新增两个可学习粒度 prompt 后，Eq. (2) 变为
 
 
-$$
+```math
 S_{cls}=P_{concat}Q_{dec}^{\top},\qquad
 P_{concat}\in\mathbb R^{2\times D},\quad
 Q_{dec}\in\mathbb R^{N\times D},\quad
 S_{cls}\in\mathbb R^{2\times N}.
-$$
+```
 
 
 这里 2 表示 coarse 与 fine，而不是所有视觉对象只剩两种语义类别。UPN 先判断某 query 对应哪种粒度的前景候选；真正的“狗、椅子、手套”等语义识别在后面的 LLM 接口中完成。将粒度拆开避免了同一图像部件在不同数据集里一会儿被标成前景、一会儿无标注造成的监督冲突。
@@ -80,9 +80,9 @@ $$
 第 3.2 节的门控融合为原文无编号公式：
 
 
-$$
+```math
 F_v=f_L+\sigma\bigl(W_G[W_1f_L;W_2f_H]\bigr)\odot W_2f_H.
-$$
+```
 
 
 $`W_1,W_2`$ 为 1×1 卷积映射，门控网络产生逐元素权重，决定高分辨率特征以多大强度补入低分辨率残差。各项相加必须有匹配的空间与通道维度。它与增加一倍视觉序列长度的直接拼接不同，融合发生在特征维度；但高分辨率编码器的计算仍存在，不应据此宣称系统没有额外开销。
@@ -90,10 +90,10 @@ $`W_1,W_2`$ 为 1×1 卷积映射，门控网络产生逐元素权重，决定�
 对象表示对应原文 Eq. (3)–(4)：
 
 
-$$
+```math
 C_i=\mathrm{RoIAlign}(F_H,B_i),\qquad
 V_i=C_i+\mathrm{PE}(B_i).
-$$
+```
 
 
 $`B_i`$ 是候选框，$`C_i`$ 是区域内容，$`PE(B_i)`$ 是坐标位置表示。RoI Align 通过连续采样减少粗糙量化对区域读取的影响；位置向量补足单独区域内容不携带全图坐标的问题。输入已有框后，检测任务从“生成四个坐标”变成“选择哪个索引”，短语与索引的对应关系也可沿用到描述和对话中。
@@ -139,7 +139,7 @@ UPN 先进行自己的检测训练：粗粒度来源含 O365、OpenImages、Bamb
 | Alignment | image/object MLP，新增词表对应的 LLM 输入与输出 embeddings；其余骨干保持 | grounding 1.32M、referring 1.32M、region description 1.32M、image caption 976K；总 batch 256（每设备 32），LR $`10^{-3}`$ |
 | Visual instruction tuning | 原文称更新 ChatRex 全部模型参数，联合感知与理解；UPN 的独立训练已在前述环节说明 | detection 623K、referring 623K、region description 545K、region QA/relations 266K、counting 328K、grounded caption 600K、grounded conversation 777K、通用 conversation/QA 538K；总 batch 128（每设备 16），LR $`2\times10^{-5}`$ |
 
-新增索引词表需要更新 embeddings，这是与“仅训练投影就能对齐”的简单接口不同之处。后续阶段同时包含索引选择、区域描述、带框描述及普通问答，采用下一 token 预测来保持统一输出。标准解释为 $`\mathcal L=-\sum_t\log p(y_t\mid y_{<t},I,\{B_i,V_i\},s)`$，该式是目标机制的整理，并非原文另一个编号公式。固定版本没有完整披露 epoch、优化器 beta、warmup、训练 GPU 与总耗时，本文不从基础模型默认设置推填。[来源：第 4.2 节、Table 1、Appendix B，PDF 第 10–11、33 页。](https://arxiv.org/pdf/2411.18363v1)
+新增索引词表需要更新 embeddings，这是与“仅训练投影就能对齐”的简单接口不同之处。后续阶段同时包含索引选择、区域描述、带框描述及普通问答，采用下一 token 预测来保持统一输出。标准解释为 $`\mathcal L=-\sum_t\log p(y_t\mid y_{\lt t},I,\{B_i,V_i\},s)`$，该式是目标机制的整理，并非原文另一个编号公式。固定版本没有完整披露 epoch、优化器 beta、warmup、训练 GPU 与总耗时，本文不从基础模型默认设置推填。[来源：第 4.2 节、Table 1、Appendix B，PDF 第 10–11、33 页。](https://arxiv.org/pdf/2411.18363v1)
 
 <a id="experiments"></a>
 

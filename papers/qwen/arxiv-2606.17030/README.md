@@ -62,9 +62,9 @@
 
 文本条件为 $`h=\phi(S)`$，视频状态为 $`z=E(x)`$，生成结果通过 VAE 解码。下面是说明双流联合注意力的示意式，原报告未逐项写出注意力公式：
 
-$$
+```math
 \mathrm{Attention}(Q,K,V)=\mathrm{softmax}\!\left(\frac{QK^\top}{\sqrt{128}}\right)V.
-$$
+```
 
 两个流的 token 能共同参与 K/V 的条件交互，让生成过程持续读取语言语义。冻结语义模型中的世界知识是一种学习先验，不是刚体长度、接触或守恒方程的硬约束。
 
@@ -72,10 +72,10 @@ $$
 
 报告采用 flow matching。为解释目标，可用常见线性插值形式表示，而不是将此当作作者完整实现公式：
 
-$$
+```math
 z_\tau=(1-\tau)z_0+\tau\epsilon,\qquad
 \mathcal L_{\mathrm{FM}}=\mathbb E\left[\Vert v_\theta(z_\tau,\tau,h)-(\epsilon-z_0)\Vert _2^2\right].
-$$
+```
 
 这里 $`\epsilon\sim\mathcal N(0,I)`$，τ 是噪声时间；报告说明时间采样采用 log-normal 配置，并随视频序列长度进行自适应偏移，但没有披露完整参数化。生成目标的时间从噪声走向干净视频，观察首帧或 Scene2Robot 条件段固定在干净的 τ=0，并排除对应去噪损失。排除条件 token 的直接损失不等于它们不能通过注意力影响生成或参数梯度。
 

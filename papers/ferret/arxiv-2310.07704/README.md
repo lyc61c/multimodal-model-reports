@@ -57,9 +57,9 @@ CLIP 输出 $`Z\in\mathbb R^{H\times W\times C}`$，文本分词成 $`T\in\mathb
 原文式 (1) 将邻居 $`x_{ik}`$ 和中心 $`x_i`$ 的相对内容与相对坐标融合：
 
 
-$$
+```math
 h_{ik}=\sigma([\theta([Z(x_{ik})-Z(x_i);C(x_{ik})-C(x_i)]);Z(x_i);C(x_i)]).
-$$
+```
 
 
 $`C(x)`$ 为二维坐标，分号代表通道拼接，$`\theta`$、$`\sigma`$ 在正文中均实现为线性层；这里的 $`\sigma`$ 不应因符号惯例被误解成 sigmoid。相对差分描述局部关系，中心自身特征保留全局参照。原文式 (2) 对邻居逐通道 max pooling：$`h_i=\max_k h_{ik}`$。最终把 32 点特征展平并投影为一个语言维度向量，而不是让 LLM 为每个采样点独立生成描述。
@@ -88,7 +88,7 @@ PDF 第 6 页 Figure 4 的前几行来自公共标注，推理行来自教师生
 
 CLIP-ViT-L/14@336p 与 Vicuna 提供初始化，投影层使用 LLaVA 第一阶段权重，区域采样器随机初始化。Figure 3 图注明确 **除图像编码器外均可训练**，因此不能写成只更新 projector 或采用 LoRA。GRIT 训练三轮，使用 AdamW（正文引用 Decoupled Weight Decay Regularization）、学习率 2e-5、batch 128；8 张 A100 上，13B/7B 分别约 5/2.5 天。来源没有明确 A100 显存版本、优化器 beta/epsilon、warmup、最大序列长度、精度、梯度累积及详细 task sampling ratio。
 
-训练区域随机使用中心点、框，或在有 mask 时使用分割区域，使同一对象以不同指代形式出现。数据要求模型生成自然文字与数字坐标，适合用条件自回归负对数似然理解：$`-\sum_t\log p_\theta(y_t\mid y_{<t},I,R,q)`$。这是生成式指令学习的解释性表达，**论文未单列完整损失公式、输入/回答掩码及坐标 token 权重**，不能宣称坐标有专门权重或联合 mask loss。
+训练区域随机使用中心点、框，或在有 mask 时使用分割区域，使同一对象以不同指代形式出现。数据要求模型生成自然文字与数字坐标，适合用条件自回归负对数似然理解：$`-\sum_t\log p_\theta(y_t\mid y_{\lt t},I,R,q)`$。这是生成式指令学习的解释性表达，**论文未单列完整损失公式、输入/回答掩码及坐标 token 权重**，不能宣称坐标有专门权重或联合 mask loss。
 
 本篇没有为 Ferret 增加一个从头大规模预训练阶段；模型使用已有 CLIP、Vicuna 和 LLaVA 投影初始化，再训练空间指令能力。SAM、GLIPv2、ChatGPT/GPT-4 主要用于构建数据，也不应混写为推理时必需逐个调用的组件。[PDF 第 5、8–9 页](https://arxiv.org/pdf/2310.07704v1#page=8)
 

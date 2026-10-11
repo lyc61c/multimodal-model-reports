@@ -55,9 +55,9 @@ PaLI-X 达到约 55B，而 PaLI-3 将总规模降至约 5B，同时更换视觉�
 
 SigLIP 将图文匹配视为二分类。原文描述了 sigmoid cross-entropy 与图文嵌入点积，没有列编号公式；可用标准形式解释：
 
-$$
+```math
 \mathcal L_{sig}=-\sum_{i,j}\log\sigma(z_{ij}s_{ij}),\qquad z_{ij}\in\{+1,-1\}.
-$$
+```
 
 $`s_{ij}`$ 是图像 $`i`$ 与文本 $`j`$ 的匹配分数，正负标签表示是否对应。它与 CLIP 在整个 batch 上做 softmax 的对比目标不同，逐对判断匹配。上式仅解释原理，具体温度、偏置、采样与归一化应按引用的 SigLIP recipe，本文没有补写 PaLI-3 未公布的数值。
 
@@ -67,7 +67,7 @@ $`s_{ij}`$ 是图像 $`i`$ 与文本 $`j`$ 的匹配分数，正负标签表示�
 
 这些结果说明分类线性可分性不是多模态表示价值的充分指标。但对照也改变了预训练数据：Classif 使用 JFT，SigLIP 使用 WebLI，不能把全部收益严格归因到 sigmoid 一个操作。对较简单的 caption 并非全都改善，B/16 的 XM3600 英文和其他语言均有小幅下降。
 
-多模态部分将任务监督转成文本生成，可用标准自回归目标 $`-\sum_t\log p(y_t\mid y_{<t},\mathrm{image},\mathrm{prompt})`$ 理解，原文没有设计新的奖励函数或 RLHF。分割则预测 VQ-VAE 离散掩码码，保持语言式输出接口；文中未给 VQ-VAE 全套 loss 或码本训练超参，本文不推造。
+多模态部分将任务监督转成文本生成，可用标准自回归目标 $`-\sum_t\log p(y_t\mid y_{\lt t},\mathrm{image},\mathrm{prompt})`$ 理解，原文没有设计新的奖励函数或 RLHF。分割则预测 VQ-VAE 离散掩码码，保持语言式输出接口；文中未给 VQ-VAE 全套 loss 或码本训练超参，本文不推造。
 
 <a id="data"></a>
 

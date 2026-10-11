@@ -56,23 +56,23 @@
 
 省略批次、层和头索引，令 $`k_t`$ 为卷积后经 L2 归一化的 key，$`q_t`$ 为归一化并乘以 $`1/\sqrt{128}`$ 的 query，$`v_t`$ 为 value，单头状态 $`S_t\in\mathbb R^{128\times128}`$。递推为：
 
-$$
+```math
 \begin{aligned}
 \bar S_t &= \exp(g_t)S_{t-1},\\
 \delta_t &= \beta_t\bigl(v_t-\bar S_t^\top k_t\bigr),\\
 S_t &= \bar S_t+k_t\delta_t^\top,\\
 o_t &= S_t^\top q_t.
 \end{aligned}
-$$
+```
 
 实现令 $`\beta_t=\sigma(b_t)`$、$`g_t=-\exp(A_{\log})\mathrm{softplus}(a_t+d_{\rm bias})`$，其中 $`a_t,b_t`$ 是当前隐藏状态的线性投影，$`A_{\log},d_{\rm bias}`$ 是学习参数。衰减门控制遗忘，增量项修正“当前 value 与已有状态预测”之间的差，而不是简单叠加所有历史 key-value 外积。递推输出再经过带 SiLU 门的 RMSNorm 和输出投影。预填充采用分块计算，缓存后的单 token 解码可按递推式更新；两者是计算实现方式，不是两个不同的训练目标。固定宽度状态减少这些层随序列增长的历史存储，但另外 15 个完整注意力层仍有 KV 缓存。
 
 **归一化稀疏路由与共享专家门。** 对 MoE 输入 $`h`$，设 $`p=\mathrm{softmax}(W_rh)`$，$`I=\mathrm{Top10}(p)`$，所核对实现为：
 
-$$
+```math
 \tilde p_i=\frac{p_i}{\sum_{j\in I}p_j},\qquad
 m(h)=\sum_{i\in I}\tilde p_i E_i(h)+\sigma(w_s^\top h)E_{\rm shared}(h).
-$$
+```
 
 这里 $`m(h)`$ 是前馈分支输出，随后还要与残差相加；共享专家并非恒以系数 1 加入。单个专家采用 $`E(h)=W_d[\mathrm{SiLU}(W_gh)\odot W_uh]`$，中间宽度为 1024。路由压缩的是当前 token 的计算量，未被选择的专家权重仍属于模型。配置还给出 `router_aux_loss_coef=0.001`，实现包含负载均衡辅助损失；这能说明已发布代码中的选项，不能证明完整预训练中所有阶段都以相同方式启用该损失。
 
@@ -100,7 +100,7 @@ $$
 
 模型卡明确这不是仅预训练的基础模型，而是经过 **pretraining 与 post-training** 的版本，具备默认思考模式及非思考模式。思考模式默认开启，可通过聊天模板中的 `enable_thinking=False` 关闭；卡片说明不支持旧式软切换 `/think`、`/no_think`。这些是使用行为和模板约定，不是损失函数。
 
-对因果语言模型而言，可用条件生成交叉熵理解基本学习问题：$`\mathcal L_{\rm CE}=-\sum_t\log p_\theta(y_t\mid y_{<t},x)`$，其中 $`x`$ 可包含图像、视频和文本上下文。这个式子仅解释生成训练的通常形式；材料没有披露本版本如何对视觉 token、思考过程或工具轨迹设置损失掩码，也没有公开 MTP 与主损失的组合权重。
+对因果语言模型而言，可用条件生成交叉熵理解基本学习问题：$`\mathcal L_{\rm CE}=-\sum_t\log p_\theta(y_t\mid y_{\lt t},x)`$，其中 $`x`$ 可包含图像、视频和文本上下文。这个式子仅解释生成训练的通常形式；材料没有披露本版本如何对视觉 token、思考过程或工具轨迹设置损失掩码，也没有公开 MTP 与主损失的组合权重。
 
 后训练描述涉及思考、非思考及智能体强化学习，但没有提供 SFT 样本数、偏好对数量、优化算法、奖励定义和冻结策略。学习率、batch size、训练步数、GPU 型号与数量同样未披露。模型卡中的 temperature、top-p、top-k、最大输出长度以及推测解码参数均是推理设置，不能填入训练超参数表。
 

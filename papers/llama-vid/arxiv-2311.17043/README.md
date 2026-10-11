@@ -57,10 +57,10 @@ LLaMA-VID 针对图像、短视频和长电影输入的文本问答。核心问�
 原文式 (1) 定义 context 表示：
 
 
-$$
+```math
 E_t=\mathrm{Mean}_{M}\!\left[
 \mathrm{Softmax}_{N}(Q_tX_t^\top)X_t\right].
-$$
+```
 
 
 $`Q_tX_t^\top`$ 得到每个查询对每个 patch 的匹配分数，softmax 沿 patch 维归一化；每个查询获取一份视觉加权和，最后沿查询维求平均，得到 $`1\times C`$ 向量。Algorithm 1 的代码还在 softmax 前除以 $`\sqrt C`$，而正文公式省略该缩放；具体实现解读应以代码为准，不能把二者写成完全相同的公式。
@@ -99,7 +99,7 @@ Content 路径可概括为 $`E_t^V=P_V(\mathrm{Pool}_n(X_t))`$，context 路径�
 
 ## 6. 训练流程与目标
 
-三个阶段采用条件文本生成的监督学习，原文没有另设 context/content 重建或对比损失。若记模型视觉 token 序列为 $`H`$、用户提示为 $`q`$、目标回答为 $`y`$，可解释为 $`-\sum_t\log p_\theta(y_t\mid H,q,y_{<t})`$；这是对训练描述的数学归纳。
+三个阶段采用条件文本生成的监督学习，原文没有另设 context/content 重建或对比损失。若记模型视觉 token 序列为 $`H`$、用户提示为 $`q`$、目标回答为 $`y`$，可解释为 $`-\sum_t\log p_\theta(y_t\mid H,q,y_{\lt t})`$；这是对训练描述的数学归纳。
 
 | 配置 | 阶段 1：对齐 | 阶段 2：指令 | 阶段 3：可选长视频 |
 |---|---|---|---|

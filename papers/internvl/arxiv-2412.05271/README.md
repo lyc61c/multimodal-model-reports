@@ -62,19 +62,23 @@
 
 动态高分辨率先构造可用网格的长宽比集合，原文 Eq. (1–3) 可用核心形式表示为：
 
-$$
+```math
 \mathcal R=\{i/j:i\,j\in[n_{\min},n_{\max}]\},\qquad
 r_{\mathrm{best}}=\arg\min_{r'\in\mathcal R}\vert W/H-r'\vert ,
-$$
+```
 
-$$W_{\mathrm{new}}=448i_{\mathrm{best}},\qquad
-H_{\mathrm{new}}=448j_{\mathrm{best}}.$$
+```math
+W_{\mathrm{new}}=448i_{\mathrm{best}},\qquad
+H_{\mathrm{new}}=448j_{\mathrm{best}}.
+```
 
 实际集合还限制整数边长。多个网格长宽比同样接近时，作者用与原图面积的关系约束，减少低分辨率图片过度放大。超过一块时额外生成缩略图，单块时跳过。多图预算 Eq. (4) 为 $`n_{\max,i}=\max(1,\lfloor n_{\max}/N_{\mathrm{image}}\rfloor)`$；至少一块的约束意味着不能把它理解为任何图数下都绝不超过最初名义总预算。[PDF 第 5–6 页](https://arxiv.org/pdf/2412.05271v1#page=5)
 
 损失重权解决长短回答之间的竞争。将原文 Eq. (5) 整理为所有响应 token 的求和形式，令第 $`i`$ 个 token 的交叉熵为 $`\ell_i`$，所属响应长度为 $`x_i`$：
 
-$$\mathcal L=\frac{\sum_i x_i^{-1/2}\ell_i}{\sum_i x_i^{-1/2}}.$$
+```math
+\mathcal L=\frac{\sum_i x_i^{-1/2}\ell_i}{\sum_i x_i^{-1/2}}.
+```
 
 token 平均使用权重 1，长回答包含更多 token，因此总贡献更大；样本平均使用每 token 的 $`1/x_i`$，每个回答贡献相等，却可能鼓励短答。square averaging 用 $`1/\sqrt{x_i}`$，一个长度 $`x`$ 的样本在未归一化前总权重为 $`\sqrt{x}`$，介于两者之间。这只是权重折中，不等于单独奖励模型生成更长思考链。随机 JPEG 质量 75–100 则模拟网页压缩，作用于图片而不对不同视频帧独立施加随机质量，以免制造不一致帧质量。[PDF 第 8–9 页](https://arxiv.org/pdf/2412.05271v1#page=8)
 

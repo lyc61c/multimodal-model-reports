@@ -53,7 +53,7 @@
     "训练初始化成本不含于200B联合阶段统计",
     "未执行模型或独立复现"
   ],
-  "article_sha256": "ab9f53a0790e7944e3107818bb83e5b2d487bf1c237d41648f2005fecb313103",
+  "article_sha256": "611b5556e792a0eca478bed0e976b870d0b4b08a9553aeca6258736552a15ef7",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -71,18 +71,21 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 15,
+    "math_delimiters_converted": 19,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 15,
+      "delimiter_conversions": 19,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 4,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

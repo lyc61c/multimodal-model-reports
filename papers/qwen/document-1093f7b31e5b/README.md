@@ -124,9 +124,9 @@ Talker 同时读取高维语义表示和实际采样出的文字。隐藏表示�
 
 Talker 的续接训练使用 next-token prediction，并学习语义表示与语音之间的单调映射。作者还使用音色解耦，减少某个声音与不常见文本模式之间的偶然绑定。DPO 阶段则比较同一输入下较好和较差的语音生成结果。原文 Equation **(1)** 可按好/差样本符号转写为：
 
-$$
+```math
 \mathcal L_{\mathrm{DPO}}=-\mathbb E_{(x,y^+,y^-)\sim D}\log\sigma\left[\beta\left(\log\frac{P_\theta(y^+\mid x)}{P_{\mathrm{ref}}(y^+\mid x)}-\log\frac{P_\theta(y^-\mid x)}{P_{\mathrm{ref}}(y^-\mid x)}\right)\right].
-$$
+```
 
 $`x`$ 包含输入及回复文字，$`y^+`$、$`y^-`$ 是偏好不同的生成语音序列；$`P_\theta`$ 为更新模型，$`P_{\mathrm{ref}}`$ 为参考模型。奖励排序涉及 WER 和标点停顿错误率，因而此阶段主要约束语音内容及稳定性。随后说话人微调强化目标声音的韵律和自然度。报告没有披露 $`\beta`$、全部优化超参和训练硬件成本，不能由标准 DPO 名称补全这些配置。[原文 §3–4、Eq. (1)，PDF 第 6–7 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=7)
 

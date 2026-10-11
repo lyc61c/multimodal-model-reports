@@ -64,14 +64,14 @@ Cheetah 的问题定位很具体：基于图片描述训练的视觉接口容易
 
 原文用 $`h_N^{L/2}`$ 表示 $`L`$ 层语言模型中间层最后 token 的隐状态。条件生成、查询修改与注入可整理为以下与正文一致的记号：
 
-$$
+```math
 c=\mathrm{Linear}(h_N^{L/2}),\qquad Q'=Q+c,
-$$
+```
 
-$$
+```math
 \overline V_j=\mathrm{QFormer}(Q',E(I_j)),\qquad
 \widetilde V_j^{L/2}=V_j^{L/2}+\mathrm{Linear}(\overline V_j).
-$$
+```
 
 $`j`$ 指第 $`j`$ 张图，$`E(I_j)`$ 是视觉编码特征，$`Q\in\mathbb R^{K\times d}`$ 是新查询，条件 $`c`$ 广播加到每个查询。两个 Linear 分别将语言隐状态变为查询条件、将补充视觉提示变为语言隐状态。它不是将图像特征与问题文本仅拼接一次，而是在上下文已经被语言模型处理后再条件化视觉信息。
 

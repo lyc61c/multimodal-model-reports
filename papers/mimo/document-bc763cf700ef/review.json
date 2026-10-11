@@ -20,11 +20,11 @@
     "无完整harness、音频专项实验或训练复现信息"
   ],
   "model_execution": "not_run",
-  "article_sha256": "9e95b88b8ba0944fddaf908d256f7bc41047acc4ffdfe857f6d4f509929e18f9",
+  "article_sha256": "cfdd90d1994532aea0dd94e19b18ccd2a70f1891263e81ada4594e4ee88bac8d",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 15,
+    "math_delimiters_converted": 16,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -49,11 +49,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 7,
+      "delimiter_conversions": 8,
       "operatorname_replacements": 2,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 1,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

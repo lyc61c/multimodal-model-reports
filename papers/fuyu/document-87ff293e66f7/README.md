@@ -51,10 +51,10 @@ Fuyu 的出发点是简化图像进入语言模型的路径。模型没有独立
 
 可将其数据流解释为：
 
-$$
- z_i=W\mathrm{vec}(P_i)+b,\qquad
+```math
+z_i=W\mathrm{vec}(P_i)+b,\qquad
  S=[z_1,\ldots,z_k,e_{\mathrm{newline}},\ldots,e_{\mathrm{text}}].
-$$
+```
 
 $`P_i`$ 为图像块，$`z_i`$ 为投影向量，换行标记记录一行结束，文本向量接在后面。该公式是对模型卡线性投影和序列组织的说明，不是模型卡公开的专门损失函数。
 

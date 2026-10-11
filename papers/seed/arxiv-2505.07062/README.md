@@ -46,21 +46,21 @@ SeedViT使用14×14 patch、2D RoPE、27层Transformer、1280维隐藏表示和2
 
 **数据规模与局部性能预测。** 原文式(1)–(3)借用参数量与数据量的幂律分析，在固定模型的Stage 1中简化为：
 
-$$
+```math
 \widehat L\sim B D^{-\beta},\qquad
 \log\widehat L\sim-\beta\log D+\log B.
-$$
+```
 
 这里D是训练token规模，损失是平均负对数似然。作者拟合OCR子集得到 `log(L_ocr) ≈ -0.1817 log(D) - 0.7011`，grounding得到 `-0.0785 log(D) - 0.0745`。这意味着在其观测范围内，两种能力的损失下降速度不同。ChartQA与OCR损失的局部关系为 `Acc ≈ -0.0968 log(L_ocr) + 0.7139`，这些准确率来自预训练模型，不能与最终RL结果直接混用；准确率有上下界，局部线性拟合也不能无限外推。〔Figure 3，PDF第14–15页〕
 
 **混合奖励让模型探索推理路径。** 泛化视觉问答使用生成式奖励模型，STEM、定位等任务使用可验证奖励。同一批混合两类提示，共享一个critic，两类奖励都归一到[0,1]。一般任务的KL系数是1e-5，可验证任务为0。奖励模型只看最终solution，截去thought；数学用SymPy判断答案，定位以IoU奖励，格式失败可置零。下面仅是对原文奖励分流的**解释性写法**，不是报告给出的完整PPO目标：
 
-$$
+```math
 R(x,y)=\begin{cases}
 R_{\mathrm{RM}}(x,\mathrm{solution}(y)),&\text{一般任务},\\
 R_{\mathrm{verifier}}(x,\mathrm{solution}(y)),&\text{可验证任务}.
 \end{cases}
-$$
+```
 
 奖励模型采用两回答的生成式偏好判别，并交换回答顺序计算概率来降低位置偏差。最终答案正确带来的奖励会优化整条生成轨迹，但“不给thought直接监督”不能推出每一步思考都正确。附录Figure 25甚至展示了最终答案正确、推理错误的3D案例。〔PDF第17–20、63页〕
 

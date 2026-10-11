@@ -66,9 +66,9 @@
 **从只调提示到全层轻量调制。** 原文 Equations (1)–(2) 将线性层写为：
 
 
-$$
+```math
 y=s\cdot(Wx+b),\qquad b\leftarrow0,\quad s\leftarrow1.
-$$
+```
 
 
 $`W`$ 是冻结预训练矩阵，$`b,s`$ 是新参数。初始化时输出与原 $`Wx`$ 相同，避免一开始破坏原模型。随着训练，bias 改变输出位置，scale 改变输出大小，norm 参数改变各层归一化后的表达。原文没有完全说明 scale 是标量还是逐通道配置，不能由此自行推导精确全模型参数数目。
@@ -80,11 +80,11 @@ $`W`$ 是冻结预训练矩阵，$`b,s`$ 是新参数。初始化时输出与原
 **以数据决定更新参数组。** 同一系统面对 caption 与纯文本指令，但二者不更新完全相同的参数。设 $`\theta_v`$ 为视觉投影与早层门控，$`\theta_i`$ 为后层提示、门控、norm/bias/scale，下式是对原文训练策略的**概念写法**：
 
 
-$$
+```math
 \theta_v\leftarrow\theta_v-\eta_v\nabla_{\theta_v}\mathcal L_{caption},
 \qquad
 \theta_i\leftarrow\theta_i-\eta_i\nabla_{\theta_i}\mathcal L_{instruction}.
-$$
+```
 
 
 重点是按任务选择可更新参数，而不是存在已披露的梯度投影算法或 loss 权重优化。它减少两类任务在同一适配参数上的直接竞争，但视觉信息仍会通过共享冻结网络影响最终输出，不能称为完全没有交互或已证明消除所有任务冲突。原文没有分别量化早融合、bias tuning 和参数分组的全面受控消融。[Sections 3–4](https://arxiv.org/pdf/2304.15010v1)
@@ -123,9 +123,9 @@ $$
 文字生成可用标准回答交叉熵解释，原文没有给出独立编号 loss：
 
 
-$$
+```math
 \mathcal L=-\sum_t\log P_\theta(y_t\mid I,Q,C,y_{<t}).
-$$
+```
 
 
 $`I`$ 是图像条件，$`Q`$ 是指令，$`C`$ 是可能的文字上下文；纯文本分支没有 I。原文未披露 loss mask、优化器、学习率、batch、epoch、warmup、序列长度、训练硬件或耗时，应保留缺项，不复制初代或仓库默认值。

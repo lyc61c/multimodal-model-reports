@@ -74,10 +74,10 @@ Figure 9 上方时间轴标输入画面和用户发问，下方不同符号表�
 
 **把推理用于闭环行动。** 用一个概念式表达交互：
 
-$$
+```math
 h_t=(q,o_0,a_0,o_1,\ldots,a_{t-1},o_t),
 \qquad a_t\sim\pi_\theta(\cdot\mid h_t).
-$$
+```
 
 $`q`$ 是用户目标，$`o_t`$ 是当前观察，$`a_t`$ 可以是工具调用、界面操作或结束回答。该式只是本文解释，不是模型卡中的策略梯度算法。与只生成一次答案相比，下一次动作取决于外部结果：截图可能显示商品缺货，检索可能带来相互矛盾的资料，工具也可能报错。因此模型需要保存关键证据，并在必要时调整计划或澄清条件。原文没有披露这一能力具体由哪种训练目标获得。[PDF 第 1、7–8、16–17 页](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=1)
 
@@ -95,9 +95,9 @@ $`q`$ 是用户目标，$`o_t`$ 是当前观察，$`a_t`$ 可以是工具调用�
 
 **真实任务的正确性包含约束满足。** WorldTravel 的任务同时涉及预算、开放时间、行程顺序和预订界面，可用以下概念式理解：
 
-$$
+```math
 \text{find }x\quad\text{such that}\quad c_i(x)=\mathrm{true},\ i=1,\ldots,m.
-$$
+```
 
 必要时再优化偏好或成本。原文称每项任务包含 10 至超过 20 个相互耦合的条件，并使用“难解、易验”的自动验证；它未公开统一目标函数、约束求解器或整套判分代码。这里强调的是能把约束落实到完整计划，不是证明模型实现了某种优化算法或产生实际投资回报。[PDF 第 11、39–40 页](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf#page=39)
 

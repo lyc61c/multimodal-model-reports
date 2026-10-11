@@ -64,9 +64,9 @@ DvD 把 ViT、MLP 及 Flash 的 ViR 放在视觉服务器，LLM 放在语言服�
 **离线偏好训练为在线采样提供起点。** 原文 Eq. (3) 的 MPO 为：
 
 
-$$
+```math
 \mathcal L_{MPO}=w_p\mathcal L_p+w_q\mathcal L_q+w_g\mathcal L_g,
-$$
+```
 
 
 其中偏好项采用 DPO，质量项采用 BCO，生成项采用语言建模损失。报告未列出这些项的具体权重。离线回答能在不同模型间复用，成本较低；随后 GSPO 根据当前模型生成的新回答继续训练，避免只能学习固定候选分布。
@@ -74,20 +74,20 @@ $$
 **GSPO 在回答级使用长度归一化的重要性比率。** Eqs. (4)–(6) 定义同一问题下的组内优势及比率：
 
 
-$$
+```math
 \hat A_i=\frac{r(x,y_i)-\mathrm{mean}_j r(x,y_j)}{\mathrm{std}_j r(x,y_j)},\qquad
 s_i(\theta)=\left[\frac{\pi_\theta(y_i\mid x)}{\pi_{old}(y_i\mid x)}\right]^{1/\vert y_i\vert }
 =\exp\!\left(\frac1{\vert y_i\vert }\sum_t\log\frac{\pi_\theta(y_{i,t}\mid x,y_{i,<t})}{\pi_{old}(y_{i,t}\mid x,y_{i,<t})}\right).
-$$
+```
 
 
 这里奖励衡量整个回答，几何平均让不同长度回答的重要性权重更可比。原文 Eq. (5) 写成以下 clipped surrogate 的期望：
 
 
-$$
+```math
 J_{GSPO}=\mathbb E\!\left[\frac1G\sum_i
 \min\{s_i\hat A_i,\mathrm{clip}(s_i,1-\epsilon,1+\epsilon)\hat A_i\}\right].
-$$
+```
 
 
 原文把它标为 $`\mathcal L_{GSPO}`$，但表达式是要最大化的策略收益形式；若用梯度下降实现损失，需要取负号。本介绍用 $`J`$ 表示收益以避免方向混淆。旧策略用于采样及重要性修正，不等于固定参考模型；作者明确在线阶段没有 reference-model 约束，不能额外加一个原文未使用的 KL 正则。奖励细节、零标准差组的处理和 clip 数值未在本报告完整展开。
@@ -95,11 +95,11 @@ $$
 **先学会压缩，再学会决定哪里压缩。** ViCO 的一致性阶段冻结原 InternVL3.5 为高分辨率教师，学生输入每个子图的 256 或 64 token，最小化 Eq. (7)：
 
 
-$$
+```math
 \mathcal L_{ViCO}=\mathbb E_\xi\frac1N\sum_i
 D_{KL}\big[\pi_{ref}(\cdot\mid y_{<i},I)\;\Vert \;\pi_\theta(\cdot\mid y_{<i},I_\xi)\big],
 \qquad \xi\in\{1/4,1/16\}.
-$$
+```
 
 
 KL 比较的是下一 token 的概率分布，教师始终使用 256 token 的视觉表示；同一图像的各子图在一致性训练时用同一个随机压缩率。它不是只让两个模型的最终字符串相同，也不是教师自己随机切到低分辨率。
@@ -127,10 +127,10 @@ ViCO 一致性阶段复用 SFT 类型数据，路由训练采用富含 OCR/VQA �
 原文 Eqs. (1)–(2) 对文本位置做下一个 token 预测：
 
 
-$$
+```math
 \ell_i=-\log p_\theta(x_i\mid x_{<i}),\qquad
 \ell_i'=\frac{w_i}{\sum_jw_j}\ell_i,\quad w_i=N^{-1/2}.
-$$
+```
 
 
 前缀可含文本或视觉 token，但损失只预测文本；对话样本只计算回答 token。$`N`$ 是该样本参与损失的 token 数。square averaging 为该样本每个监督 token 赋 $`1/\sqrt N`$ 权重，相比纯按 token 平均缓和长回答优势，又保留比每样本等权更多的长度贡献；不能直接称为每样本完全等权。

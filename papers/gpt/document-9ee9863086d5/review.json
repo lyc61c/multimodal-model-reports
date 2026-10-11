@@ -52,7 +52,7 @@
     "Table8正文误写语言数值；沿实际表头核验",
     "官方评测并非本仓库复现"
   ],
-  "article_sha256": "36049da77e1f649ebdd88bc8aeef161215eea4aae5d6871c3e6ec43a4be9be28",
+  "article_sha256": "e10944efbe9223a90ac6959e1ed629a7d0f168526f4d654067af8d366a79d386",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -70,7 +70,7 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 15,
+    "math_delimiters_converted": 16,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -98,14 +98,16 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 14,
+      "delimiter_conversions": 15,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 1,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
-    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
-    "whitespace": "Removed one trailing space before a display equation; no formula or scientific claim changed"
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

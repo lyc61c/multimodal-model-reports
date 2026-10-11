@@ -63,17 +63,17 @@ Paint 从 Stable Diffusion 初始化 U-Net。CPM-Bee hidden states 经线性层�
 
 图像到文本预训练的原文式 (1) 为：
 
-$$
+```math
 \mathcal L_1=-\sum_i\log p_\theta(y_i^{l_p}\mid h_\xi(x_i)),\qquad \theta=\{\xi\}.
-$$
+```
 
 冻结语言模型，只更新视觉模块。指令微调式 (2) 以图像和问题为条件预测回答，并更新 $`\theta=\{\xi,\sigma\}`$。两个阶段的训练对象不同：后者也校准回答语言与指令遵循。
 
 文生图采用原文式 (3) 的扩散噪声预测：
 
-$$
+```math
 \mathcal L_{\mathrm{diff}}=\mathbb E_{x,y^{l_p},\epsilon,\tau}\left[\Vert g_\delta(x_\tau,f_\sigma(y^{l_p}),\tau)-\epsilon\Vert _2^2\right].
-$$
+```
 
 如果中文文本条件与对应英文条件接近，冻结的语言模型就能让已训练的去噪器生成相关图像。实际 Paint 只更新去噪网络的交叉注意力及连接模块，而非全部 U-Net。该范式依赖骨干语言能力和视觉概念覆盖，不能保证未知语言或文化概念自动迁移。
 

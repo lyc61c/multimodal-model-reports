@@ -66,27 +66,27 @@ CogVLM-17B中的17B是整个系统规格，不能与Vicuna-7B语言骨干或可�
 
 设某层视觉和文字隐状态分别为$`X_I,X_T`$，原文Eq.(2)将查询、键、值写为
 
-$$
+```math
 Q=\mathrm{concat}(X_IW_I^Q,X_TW_T^Q),\quad
 K=\mathrm{concat}(X_IW_I^K,X_TW_T^K),\quad
 V=\mathrm{concat}(X_IW_I^V,X_TW_T^V).
-$$
+```
 
 下标$`I`$对应视觉专家，$`T`$对应原语言模型。投影分开而注意力合并，因此文字问题可以读取视觉键值，视觉位置也可以按因果规则读取已在其之前的信息。用显式掩码重写原文Eq.(1)的含义为
 
-$$
+```math
 \mathrm{Attention}=\mathrm{softmax}
 \left(\frac{QK^\top}{\sqrt D}+M_{\mathrm{causal}}\right)V.
-$$
+```
 
 原文用$`\mathrm{Tril}`$表示下三角遮挡操作；此处$`M_{\mathrm{causal}}`$是等价解释记号，允许位置取0、未来位置取负无穷，不能把遮挡理解为将未来分数置零后仍参与softmax。$`D`$按原文注意力缩放维度使用。
 
 FFN则保持按模态独立：
 
-$$
+```math
 \mathrm{FFN}(X)=\mathrm{concat}
 \bigl(\mathrm{FFN}_I(X_I),\mathrm{FFN}_T(X_T)\bigr).
-$$
+```
 
 若输入没有图像，则不存在视觉token分支；当原语言权重固定时，文字计算路径与原模型一致。这是其保留纯文字能力的机制依据，并非本文提供了一个覆盖所有NLP任务的完整无退化实测表。SFT放开语言权重后，纯文字行为可能发生变化，不能继续套用同一推论。
 

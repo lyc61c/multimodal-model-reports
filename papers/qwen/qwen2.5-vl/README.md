@@ -69,10 +69,10 @@ ViT 的空间位置由 2D-RoPE 编码，语言模型侧的图文视频序列由 
 
 输入图像在处理后，高度和宽度均为 28 的倍数；视觉编码器以 14×14 空间 Patch 提取特征，连接器再合并相邻 2×2 个 Patch。因此，在报告所描述的空间划分下，一张处理后大小为 $`H'\times W'`$ 的图像对应：
 
-$$
+```math
 N_{\mathrm{patch}}=\frac{H'W'}{14^2},\qquad
 N_{\mathrm{visual}}=\frac{N_{\mathrm{patch}}}{4}=\frac{H'W'}{28^2}.
-$$
+```
 
 这是根据架构整理的**解读公式**。图中三个例子能直接验证它：8204×1092 的长图对应 11,427 个 Token；28×224 的公式图对应 8 个；700×1260 的图片对应 1,125 个。于是，视觉序列长度随输入尺寸变化，细节丰富的长图可以得到更多表示位置。[原文 Figure 1 与 §2.1](https://arxiv.org/pdf/2502.13923v1#page=3)
 
@@ -94,17 +94,17 @@ $$
 
 用 [Transformer 的标准缩放点积注意力](https://arxiv.org/abs/1706.03762) 解释其计算差异：
 
-$$
+```math
 \mathrm{Attention}(Q,K,V)=
 \mathrm{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V.
-$$
+```
 
 若有 $`N`$ 个视觉特征、每头特征维度为 $`d_k`$，全局注意力的两两交互需要处理 $`N\times N`$ 个关系。将特征划成每个最多 $`M`$ 个 Token 的窗口后，窗口内交互约为：
 
-$$
+```math
 C_{\mathrm{global}}=O(N^2d_k),\qquad
 C_{\mathrm{window}}=O\!\left(\frac{N}{M}M^2d_k\right)=O(NMd_k).
-$$
+```
 
 这里比较的是**注意力交互项**，未包含投影与前馈网络的全部成本。空间窗口上限对应 $`M=64`$，窗口大小固定时，单个窗口层的该项随 $`N`$ 近似线性增长。但四个全局层依然存在二次交互，不能将整个视觉编码器的注意力复杂度写成严格线性。这个组合让多数层局部提取信息，并通过少数全局层交换跨窗口信息；后一作用是对架构的解释，报告没有单独消融量化其贡献。
 
@@ -120,21 +120,21 @@ $$
 
 MRoPE 将位置表达分成时间、高度、宽度三部分，可用以下**解释性写法**概括：
 
-$$
+```math
 p=(p_t,p_h,p_w),\qquad
 \widetilde q=\mathrm{Concat}\!\left(
 R(p_t)q_t,\ R(p_h)q_h,\ R(p_w)q_w\right).
-$$
+```
 
 $`q_t,q_h,q_w`$ 表示分配给不同位置分量的特征，$`R`$ 表示相应的旋转位置变换；键向量同样接受对应变换。标准 RoPE 在一个二维子空间中的旋转形式为：
 
-$$
+```math
 R_\omega(p)=
 \begin{bmatrix}
 \cos(p\omega)&-\sin(p\omega)\\
 \sin(p\omega)&\cos(p\omega)
 \end{bmatrix}.
-$$
+```
 
 它满足 $`R_\omega(p)^\top R_\omega(s)=R_\omega(s-p)`$，所以变换后的查询与键的点积可以携带相对位置差。这里用于解释 [RoPE 的标准性质](https://arxiv.org/abs/2104.09864)，报告没有列出这些编号公式，也没有完整公开各维度划分和时间映射参数。
 
@@ -146,10 +146,10 @@ $$
 
 Merger 的作用可写为四个相邻视觉特征的拼接与投影：
 
-$$
+```math
 z=\mathrm{MLP}\!\left(
 [x_{1,1};x_{1,2};x_{2,1};x_{2,2}]\right).
-$$
+```
 
 每个 $`x`$ 在报告配置下是 1280 维，拼接表示为 5120 维；$`z`$ 映射到相应语言模型的嵌入维度。该表达省略了实现内部的归一化与非线性细节，用来说明 2×2 空间合并，而不替代完整实现。[原文 §2.1、Table 1](https://arxiv.org/pdf/2502.13923v1#page=4)
 
@@ -200,17 +200,17 @@ SFT 清洗先用从 Qwen2-VL-72B 派生的 Qwen2-VL-Instag，将问答分为 **8
 
 为说明这些目标，可以采用以下**标准数学表达作为阅读辅助；它们不是该报告给出的公式或完整实现配方**。对视觉输入与指令构成的上下文 $`x`$、目标回答 $`y`$，常见监督生成目标为：
 
-$$
+```math
 \mathcal L_{\mathrm{SFT}}=-\mathbb E_{(x,y)}\sum_{t=1}^{\vert y\vert }\log p_\theta(y_t\mid x,y_{<t}).
-$$
+```
 
 它让模型在看到图像、视频和指令后，提高参考回答逐 token 的概率。这里强调回答区间；论文未给出具体标签掩码规则，不能由此反推官方对各 token 的损失处理。
 
 [标准 DPO](https://arxiv.org/abs/2305.18290) 则比较同一输入下的偏好回答 $`y^+`$ 与较差回答 $`y^-`$：
 
-$$
+```math
 \mathcal L_{\mathrm{DPO}}=-\mathbb E\log\sigma\!\left[\beta\left(\log\frac{p_\theta(y^+\mid x)}{p_{\mathrm{ref}}(y^+\mid x)}-\log\frac{p_\theta(y^-\mid x)}{p_{\mathrm{ref}}(y^-\mid x)}\right)\right].
-$$
+```
 
 $`p_\theta`$ 是正在更新的模型，$`p_{\mathrm{ref}}`$ 是参考模型，$`\sigma`$ 是 sigmoid，$`\beta`$ 控制偏好调整强度。SFT 提供“参考回答怎样写”的监督，DPO 利用成对比较调整回答倾向。报告只明确采用 DPO，没有公布 $`\beta`$、参考模型选取和偏好数据规模；上式用于解释方法，不构成 Qwen2.5-VL 的可复现训练配置。
 

@@ -51,17 +51,17 @@
 设 trigger 隐藏状态为 $`t`$，框解码器为 $`F`$，论文 **Equation (1)** 为
 
 
-$$
+```math
 b=F(t),\qquad b=[x_0,y_0,x_1,y_1]\in\mathbb R^4.
-$$
+```
 
 
 位置输出因而成为连续回归任务，允许直接使用几何损失。**Equation (2)** 组合坐标 L1 与 GIoU 损失：
 
 
-$$
+```math
 \mathcal L_{\mathrm{det}}=\mathcal L_1(b,b_{gt})+0.4\,\mathcal L_{\mathrm{GIoU}}(b,b_{gt}).
-$$
+```
 
 
 这里按正文含义写明 GIoU 是损失，避免把需要最大化的 GIoU 指标与最小化目标混同。L1 约束四坐标数值接近，GIoU 关注预测框与目标框的几何覆盖，特别能为没有重叠的框提供几何信息。它比只预测“某个坐标类别”的监督更直接，但也需要额外的回归接口。
@@ -69,11 +69,11 @@ $$
 位置输入通过 $`G(b)`$ 变成嵌入。单靠文字生成损失，编码器可能只学到对回答足够有用、却不精确的空间表示。因此 **Equation (4)** 增加
 
 
-$$
+```math
 \mathcal L_{\mathrm{cyc}}=
 \mathcal L_1\bigl(b,F(G(b))\bigr)+
 \mathcal L_2\bigl(t,G(F(t))\bigr).
-$$
+```
 
 
 第一项检查“框→嵌入→框”，第二项检查“嵌入→框→嵌入”。两条路径把编码和解码绑定起来，减少两种接口各自漂移。它是位置表示的循环约束，不是图像重建，也不能证明所有语言语义经四维框都可无损保留。
@@ -87,10 +87,10 @@ $$
 分割监督 **Equation (3)** 为
 
 
-$$
+```math
 \mathcal L_{\mathrm{seg}}=\mathcal L_{\mathrm{IoU}}+
 \mathcal L_{\mathrm{Dice}}+20\,\mathcal L_{\mathrm{Focal}}.
-$$
+```
 
 
 IoU/Dice 约束掩码重叠，Focal 调整像素分类贡献。这里使用原文明确的 **20** 系数，不把它替换为其他 SAM 适配论文的配方。

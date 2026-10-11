@@ -51,9 +51,9 @@ Flash 的 DeepSWE v1.1 从 **65.3% 到 73.7%**，CharXiv Reasoning 从 **84.5% �
 这里可讨论的主要原理是推理预算与任务成功率的关系，而非新的训练公式。任务成本可以解释为
 
 
-$$
+```math
 C_{\mathrm{task}}=p_{\mathrm{in}}N_{\mathrm{in}}+p_{\mathrm{out}}N_{\mathrm{out}}+C_{\mathrm{tools}}.
-$$
+```
 
 
 计数和单价需用一致单位。**这是分析成本的解释式，不是 Google 的训练目标或完整计费公式。** 更多循环可能增加输入历史与输出量，单位价格低不能独立保证任务更便宜。

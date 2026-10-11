@@ -65,10 +65,10 @@ MobileLLaMA 1.4B 是 24 层、隐藏维度 2048、16 个注意力头；2.7B 是 
 报告 Eq. (1)、(2) 的基本关系可以写成：
 
 
-$$
+```math
 f=F_{\rm enc}(X_v),\qquad H_v=P(f),\qquad
 p(Y\mid H_v,H_q)=\prod_{i=1}^{L}p(y_i\mid H_v,H_q,y_{<i}).
-$$
+```
 
 
 这里 $`f\in\mathbb R^{576\times D_v}`$，$`H_v\in\mathbb R^{144\times D_t}`$。视觉向量作为连续嵌入输入语言模型，并非先转成 OCR 文本后回答。最终概率分解属于标准自回归建模，创新集中在接口的空间压缩和部署取舍。
@@ -76,19 +76,19 @@ $$
 为把 Eq. (3) 的运算次序说清，可将不同层的权重与步长分开记为：
 
 
-$$
+```math
 f_0=\mathrm{PW}_2(\mathrm{GELU}(\mathrm{PW}_1(f))),
-$$
+```
 
 
-$$
+```math
 f_1=f_0+\mathrm{LN}(\mathrm{PW}_3(\mathrm{LN}(\mathrm{DW}_{s=1}(f_0)))),
-$$
+```
 
 
-$$
+```math
 H_v=\mathrm{LN}(\mathrm{PW}_4(\mathrm{LN}(\mathrm{DW}_{s=2}(f_1)))).
-$$
+```
 
 
 这是对原文 Eq. (3) 与图结构的整理，不是增加新算法。Pointwise 卷积在同一空间位置混合通道；depthwise 卷积逐通道处理邻近空间位置。第 5.2 节文字将 feature/token interaction 的对应说得不够一致，读者应以卷积实际运算理解：前者负责通道映射，后者带来空间 token 的局部交互。
@@ -126,7 +126,7 @@ $$
 
 多模态阶段采用 AdamW，无 weight decay，cosine 与 3% warmup。报告称 8 张 A100 上 1.7B/3B VLM 训练耗时 5/8 小时；此数值没有包含前面的 1.3T 文本预训练成本。
 
-其语言建模目标可用标准负对数似然解释：$`\mathcal L=-\sum_{i\in\mathcal A}\log p(y_i\mid H_v,H_q,y_{<i})`$。$`\mathcal A`$ 表示参与监督的答案位置；答案掩码在文本 SFT 中明确披露，多模态阶段正文只写语言模型损失，未逐 token 描述完整掩码实现。这一公式是解释，不是新增的原文编号公式。
+其语言建模目标可用标准负对数似然解释：$`\mathcal L=-\sum_{i\in\mathcal A}\log p(y_i\mid H_v,H_q,y_{\lt i})`$。$`\mathcal A`$ 表示参与监督的答案位置；答案掩码在文本 SFT 中明确披露，多模态阶段正文只写语言模型损失，未逐 token 描述完整掩码实现。这一公式是解释，不是新增的原文编号公式。
 
 另外报告测试图文指令阶段的 LoRA：冻结 LLM 原权重，只更新低秩矩阵，r=128、α=256。LLM 相关更新参数比例为 8.87%/7.41%，不是整个 VLM 的统一比例；LDP 属于独立接口。LoRA 的作用是减小训练更新量，不自动消除推理时视觉编码与语言解码成本。
 

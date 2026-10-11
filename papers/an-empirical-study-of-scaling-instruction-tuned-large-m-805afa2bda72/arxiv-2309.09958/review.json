@@ -31,7 +31,7 @@
     "MMLU正文增加2.4与表值增加2.0有冲突，按表保留",
     "第一阶段epoch和完整优化器等未披露"
   ],
-  "article_sha256": "297191c7cbf1a4459b39b1535e163fff256c0e761c66039ce997201133374492",
+  "article_sha256": "d274c2a530f78d6bae9a05a459fee82b2127602af8892cec1cd372966877fe09",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -49,7 +49,7 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 10,
+    "math_delimiters_converted": 12,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -86,11 +86,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 10,
+      "delimiter_conversions": 12,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 2,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

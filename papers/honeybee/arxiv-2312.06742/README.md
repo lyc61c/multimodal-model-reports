@@ -52,25 +52,29 @@ D-Abstractor 使用六个块，通过查询的二维参考点与学习到的采�
 
 ## 4. 核心创新与数学原理
 
-线性投影对每个视觉位置独立变换，输出数 $`M=N`$，有利于保留位置对应，但无法压缩序列。标准 resampler 用 M 个查询向 N 个特征做 cross-attention，可以选 $`M<N`$，但每个查询可能聚焦类似显著区域。论文的创新是在抽象过程中加入局部空间结构，让压缩与局部理解共同优化。
+线性投影对每个视觉位置独立变换，输出数 $`M=N`$，有利于保留位置对应，但无法压缩序列。标准 resampler 用 M 个查询向 N 个特征做 cross-attention，可以选 $`M\lt N`$，但每个查询可能聚焦类似显著区域。论文的创新是在抽象过程中加入局部空间结构，让压缩与局部理解共同优化。
 
 对 C-Abstractor，可用下面的示意式解释 Figure 4，而非冒充原文新增的编号公式：
 
-$$X_{out}=\mathrm{ResBlocks}_2\big(\mathrm{AdaptiveAvgPool}_{\sqrt M\times\sqrt M}(\mathrm{ResBlocks}_1(X_{feat}+P))\big).$$
+```math
+X_{out}=\mathrm{ResBlocks}_2\big(\mathrm{AdaptiveAvgPool}_{\sqrt M\times\sqrt M}(\mathrm{ResBlocks}_1(X_{feat}+P))\big).
+```
 
 P 为位置嵌入，卷积在池化前提取邻域上下文，池化确定序列长度，池化后的卷积进一步整理局部表示。它并不保证无损恢复全部原始细节，而是把空间归纳偏置加入可训练投影器。
 
 D-Abstractor 的附录式（2）明确写作：
 
-$$z^{l+1}=\sum_{k=1}^{K} A_k^l X_{feat}(p+\Delta o_k^l).$$
+```math
+z^{l+1}=\sum_{k=1}^{K} A_k^l X_{feat}(p+\Delta o_k^l).
+```
 
 p 是参考点，$`\Delta o_k^l`$ 是采样偏移，$`A_k^l`$ 是注意力权重。与对全部位置密集聚合相比，它围绕参考点取若干可学习位置。均匀参考点初始化提供图像覆盖，视觉池化查询提供与内容相关的初值。Table 9 中去掉后者 AvgN 从 69.7 降至 69.2，去掉均匀参考点初始化降至 68.7。[PDF 第 12–13 页](https://arxiv.org/pdf/2312.06742v1#page=13)
 
 语言输出仍采用原文式（1）的条件自回归分解：
 
-$$
+```math
 p(Y\mid X_{img},X_{text})=\prod_i p(w_i\mid X_{img},X_{text},w_{<i})
-$$
+```
 
 对应回答的负对数似然是这一概率模型的训练解释，论文没有另设奖励函数或一个显式强制覆盖全图的注意力损失。
 

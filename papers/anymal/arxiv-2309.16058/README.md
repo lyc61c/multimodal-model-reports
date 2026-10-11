@@ -65,18 +65,18 @@ AnyMAL 的“任意模态”指设计可通过编码器与投影模块扩展输�
 
 **模态对齐使用描述生成，而非只做向量距离匹配。** 原文 Eq. (1) 为：
 
-$$
+```math
 p(X_{\rm text}\mid X_{\rm modality})
 =\prod_{i=1}^{L}p_\theta\big(X_{\rm text}^{[i]}\mid Z_{\rm modality},Z_{\rm text}^{[1:i-1]}\big).
-$$
+```
 
 Xmodality 是感知信号，Xtext 是描述，L 是文本长度。模型根据模态表示与此前文字逐 token 生成目标描述。训练负对数似然时，语言模型权重保持冻结，但投影器可通过语言模型的梯度知道哪些输入表示有利于描述生成。这里“对齐到语言空间”是由生成任务定义，不等于直接把 CLIP 文本 embedding 当成 LLaMA 的词向量。
 
 原文 Eq. (2) 定义：
 
-$$
+```math
 Z_{\rm modality}=\mathrm{Projection}_\theta\big(h_{\rm latents},g(X_{\rm modality})\big).
-$$
+```
 
 g 是模态编码器，hlatents 表示学习潜在查询。图像 Resampler 利用查询压缩输入；线性投影分支不必具有相同注意力结构。论文利用已经与文本语义对齐的 CLIP、CLAP、IMU2CLIP 减少接口训练难度，DINOv2 消融则用于检验不同视觉预训练方式的影响。[§3.1](https://arxiv.org/pdf/2309.16058v1#page=3)
 

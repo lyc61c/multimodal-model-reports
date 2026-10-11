@@ -36,7 +36,7 @@
     "Figure1雷达MMMU43.1与Table9的43.8不同，以Table9为准",
     "通道拼接公式和生成目标是解释式，非新损失；所有指标非单调改善"
   ],
-  "article_sha256": "4eb54023594d2a68a948dc8ebf1f813ea9d95693877965d9d1f97b6d2fdd25f5",
+  "article_sha256": "281fd2145657bc8cbf244ad9682984b2aae98810c14f34359b4e6ed15c90ca23",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -54,7 +54,7 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 12,
+    "math_delimiters_converted": 14,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -74,11 +74,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 5,
+      "delimiter_conversions": 7,
       "operatorname_replacements": 1,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 2,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

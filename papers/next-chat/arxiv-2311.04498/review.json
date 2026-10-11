@@ -40,7 +40,7 @@
     "定位指标阈值未完整重述，不自行写IoU0.5",
     "GIoU在公式按正文明确为损失而非最大化metric"
   ],
-  "article_sha256": "26797bc38f278e9d67812bb0e6eea28074d82d4e3aee09c9184b4f6a5be3d5ed",
+  "article_sha256": "d79bd9e0a265b4b6a19ba3f5cf1e6795b4c9197f76ae6a4e4aa2e6c20cd6acdf",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -58,18 +58,21 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 18,
+    "math_delimiters_converted": 22,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 7,
+      "delimiter_conversions": 11,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 4,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

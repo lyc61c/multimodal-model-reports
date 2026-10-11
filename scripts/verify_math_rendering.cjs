@@ -40,35 +40,46 @@ const failures = [], gfmFailures = [], artifacts = [], byArticle = new Map();
 for (const expression of input.expressions) {
   if (!byArticle.has(expression.article)) byArticle.set(expression.article,[]);
   byArticle.get(expression.article).push(expression);
-  try {
-    if (/\\operatorname\b/.test(expression.tex)) throw Error('operatorname is not permitted in this compatibility profile');
-    const svg = adaptor.outerHTML(document.convert(expression.tex,{display:expression.display}));
-    const error = svg.match(/data-mjx-error="([^"]+)"/);
-    if(error || svg.includes('data-mml-node="merror"')) throw Error(error?.[1]||'MathJax merror');
-    artifacts.push({...expression,svg});
-  } catch(error) {failures.push({article:expression.article,tex:expression.tex,error:error.message});}
 }
 
-function collectGuarded(tokens, result) {
+function collectMath(tokens, result) {
   if (!Array.isArray(tokens)) return;
   for(let i=0;i<tokens.length;i++) {
     const token = tokens[i];
     if(token.type==='codespan' && tokens[i-1]?.type==='text' && tokens[i+1]?.type==='text'
-       && tokens[i-1].text.endsWith('$') && tokens[i+1].text.startsWith('$')) result.push(token.text);
-    if(token.tokens) collectGuarded(token.tokens,result);
-    if(token.items) token.items.forEach(item=>collectGuarded(item.tokens,result));
-    if(token.header) token.header.forEach(cell=>collectGuarded(cell.tokens,result));
-    if(token.rows) token.rows.forEach(row=>row.forEach(cell=>collectGuarded(cell.tokens,result)));
+       && tokens[i-1].text.endsWith('$') && tokens[i+1].text.startsWith('$'))
+      result.push({tex:token.text.trim(),display:false,delimiter:'guarded'});
+    if(token.type==='code' && token.lang==='math')
+      result.push({tex:token.text.trim(),display:true,delimiter:'math_fence'});
+    if(token.tokens) collectMath(token.tokens,result);
+    if(token.items) token.items.forEach(item=>collectMath(item.tokens,result));
+    if(token.header) token.header.forEach(cell=>collectMath(cell.tokens,result));
+    if(token.rows) token.rows.forEach(row=>row.forEach(cell=>collectMath(cell.tokens,result)));
   }
 }
-let guardedPreserved = 0;
+let guardedPreserved = 0, displayPreserved = 0;
 for(const [article,expressions] of byArticle) {
   const body = fs.readFileSync(path.join(root,article),'utf8').replaceAll('\r\n','\n');
   const actual = [];
-  collectGuarded(marked.lexer(body,{gfm:true}),actual);
-  const expected = expressions.filter(value=>value.delimiter==='guarded').map(value=>value.tex);
-  if(JSON.stringify(actual)!==JSON.stringify(expected)) gfmFailures.push({article,expected:expected.length,actual:actual.length,firstDifference:expected.findIndex((value,index)=>value!==actual[index])});
-  else guardedPreserved += expected.length;
+  collectMath(marked.lexer(body,{gfm:true}),actual);
+  const expected = expressions.map(({tex,display,delimiter})=>({tex,display,delimiter}));
+  if(JSON.stringify(actual)!==JSON.stringify(expected)) {
+    gfmFailures.push({article,expected:expected.length,actual:actual.length,
+      firstDifference:expected.findIndex((value,index)=>JSON.stringify(value)!==JSON.stringify(actual[index]))});
+    continue;
+  }
+  guardedPreserved += actual.filter(value=>!value.display).length;
+  displayPreserved += actual.filter(value=>value.display).length;
+  // Compile the Markdown parser's payload, rather than silently falling back to source TeX.
+  for(const expression of actual) {
+    try {
+      if (/\\operatorname\b/.test(expression.tex)) throw Error('operatorname is not permitted in this compatibility profile');
+      const svg = adaptor.outerHTML(document.convert(expression.tex,{display:expression.display}));
+      const error = svg.match(/data-mjx-error="([^"]+)"/);
+      if(error || svg.includes('data-mml-node="merror"')) throw Error(error?.[1]||'MathJax merror');
+      artifacts.push({article,...expression,svg});
+    } catch(error) {failures.push({article,tex:expression.tex,error:error.message});}
+  }
 }
 const result = {
   status:failures.length||gfmFailures.length?'failed':'passed',
@@ -76,9 +87,10 @@ const result = {
   equations:input.expressions.length,
   failures,
   gfm_protected_inline_expressions_preserved:guardedPreserved,
+  gfm_display_expressions_preserved:displayPreserved,
   gfm_failures:gfmFailures,
   article_manifest_sha256:input.validation.article_manifest_sha256,
-  scope:'Exact protected inline TeX is checked after GFM tokenization, then all extracted equations are compiled. This is not a live GitHub browser check or a scientific correctness review.'
+  scope:'All inline and fenced display TeX is compared with the full GFM token stream; the resulting parser payloads are compiled. This is not a live GitHub browser check or a scientific correctness review.'
 };
 fs.writeFileSync(path.join(root,'data/math-validation.json'),JSON.stringify(result,null,2)+'\n');
 fs.writeFileSync(path.join(root,'tmp/math-rendered.json'),JSON.stringify(artifacts));

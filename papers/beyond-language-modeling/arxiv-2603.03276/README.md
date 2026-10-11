@@ -57,10 +57,14 @@
 
 ## 4. 核心创新与数学原理
 
-原文公式1是文字交叉熵：$`\mathcal L_{LM}=-\sum_i\log p_\theta(x_i\mid x_{<i})`$。公式2以干净latent $`z_0`$ 和标准高斯噪声 $`\epsilon`$ 构造
+原文公式1是文字交叉熵：$`\mathcal L_{LM}=-\sum_i\log p_\theta(x_i\mid x_{\lt i})`$。公式2以干净latent $`z_0`$ 和标准高斯噪声 $`\epsilon`$ 构造
 
-$$z_t=(1-t)\epsilon+t z_0,\qquad t\sim U[0,1],$$
-$$\mathcal L_{flow}=\mathbb E\left[\Vert v_\theta(z_t,t,context)-(z_0-\epsilon)\Vert _2^2\right].$$
+```math
+z_t=(1-t)\epsilon+t z_0,\qquad t\sim U[0,1],
+```
+```math
+\mathcal L_{flow}=\mathbb E\left[\Vert v_\theta(z_t,t,context)-(z_0-\epsilon)\Vert _2^2\right].
+```
 
 这里 $`t=0`$是噪声、$`t=1`$是干净latent，目标速度 $`z_0-\epsilon`$ 沿连接二者的路径。每张图/帧独立采样一个t，帧内所有token共享该t。训练调整高维表示的噪声调度，不能直接把它和离散图像token的下一词分类等同。公式3默认 $`\mathcal L=\mathcal L_{LM}+3\mathcal L_{flow}`$；x-pred对照直接预测干净状态，RAE与VAE的优劣并不相同。
 
@@ -68,7 +72,7 @@ RAE把已有语义encoder和像素decoder组成视觉表示系统。实验统一
 
 MoE粒度原文公式4为 $`G=4d_{model}/d_{expert}`$。固定激活计算时增大G意味着使用更多小专家；G=1为16大专家、Top1，G=16为更细粒度，G=64理论1024专家、实现1008。粒度、总专家数和激活专家数是不同变量；稀疏扫描固定16激活、专家维512，总专家32→1008，总参数2.30B→51.46B，激活仅1.50B→1.53B。更大总参数仍增加储存、通信和路由压力，不能称真实训练完全无额外系统成本。
 
-专家分析用归一化选择率 $`R_m^{(i)}=C_m^{(i)}/(N_m k)`$，再计算 $`S_i=(R_{text}^{(i)}-R_{image}^{(i)})/(R_{text}^{(i)}+R_{image}^{(i)})`$。$`S>0.5`$表示文字选择率超过视觉三倍，$`S<-0.5`$相反；居中称混合专家。它是验证资料上的使用偏好，不是证明某专家专属储存某类知识。图像生成/理解路由相关 $`r\ge0.90`$支持共享视觉处理，不能据相关性证明每层计算完全相同。[原文 §6、E.8](https://arxiv.org/pdf/2603.03276v1#page=36)
+专家分析用归一化选择率 $`R_m^{(i)}=C_m^{(i)}/(N_m k)`$，再计算 $`S_i=(R_{text}^{(i)}-R_{image}^{(i)})/(R_{text}^{(i)}+R_{image}^{(i)})`$。$`S\gt 0.5`$表示文字选择率超过视觉三倍，$`S\lt -0.5`$相反；居中称混合专家。它是验证资料上的使用偏好，不是证明某专家专属储存某类知识。图像生成/理解路由相关 $`r\ge0.90`$支持共享视觉处理，不能据相关性证明每层计算完全相同。[原文 §6、E.8](https://arxiv.org/pdf/2603.03276v1#page=36)
 
 ![原文 Figure 23](figures/original-p017-figure-23.png)
 

@@ -48,7 +48,7 @@
     "MMVet broad prose contradicted by table",
     "Not lossless long-memory or native audio model"
   ],
-  "article_sha256": "179e344198ba61a5d7be9b2e4a7130339bed4603f4bd0c18527971d7bfd547c7",
+  "article_sha256": "0911475efed11e05deaf56b697646186dd93c7afefeaa9801b604aefd1803896",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -66,7 +66,7 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 11,
+    "math_delimiters_converted": 12,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -84,11 +84,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 5,
+      "delimiter_conversions": 6,
       "operatorname_replacements": 1,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 1,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

@@ -62,9 +62,9 @@ Qwen2-VL 的两个关键变化是 **Naive Dynamic Resolution** 与 **M-RoPE**。
 
 动态分辨率改变的不是视觉 token 的语义格式，而是其数量。对于宽高可被 28 整除的图像，按 patch 14 和空间 2×2 合并，视觉内容 token 数可解释为：
 
-$$
+```math
 N_{\rm visual}=\frac{H}{28}\frac{W}{28}.
-$$
+```
 
 这是依据结构的计算说明，不是论文额外提出的训练公式。224×224 对应 64 个内容 token，加两个视觉边界标记后为报告所述的 66。增加分辨率提高细节也增加注意力与缓存成本；不能把动态尺寸说成固定 256 token 的压缩器。
 
@@ -72,9 +72,9 @@ M-RoPE 将旋转嵌入通道分成时间、高度、宽度三部分，并分别�
 
 训练的基本目标是文本 next-token prediction：虽然总预算计入图像和文本 token，**只有文本 token 接受监督**。可用条件负对数似然理解其目标：
 
-$$
+```math
 \mathcal L_{\rm text}=-\sum_{i\in\mathcal T}\log p_\theta(y_i\mid y_{<i},\text{visual inputs}),
-$$
+```
 
 其中 $`\mathcal T`$ 为受监督文本位置。这是对原文训练说明的数学表达，报告未另列视觉重建、图像生成或 M-RoPE 专用损失。
 

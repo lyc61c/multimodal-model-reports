@@ -45,7 +45,7 @@
     "No quantitative independent hour-long benchmark",
     "Main equation and pseudocode scaling differ"
   ],
-  "article_sha256": "3c8d35d72edc41ad8d16f9fc8e40b876ca7c3a8290ef754043634cf0b37c217f",
+  "article_sha256": "ff0084ccf5e5a8ca3de7f33eb692a4e2f042b70c051fc57e709bc0c421f15815",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -77,7 +77,7 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 49,
+    "math_delimiters_converted": 50,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -95,11 +95,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 24,
+      "delimiter_conversions": 25,
       "operatorname_replacements": 3,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 1,
+      "inline_angle_replacements": 1
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

@@ -50,16 +50,16 @@ Mistral 版本总参数约 8.26B、每 token 激活约 7.80B；Mixtral 版本总
 
 对输入 $`X\in\mathbb R^{N\times C_{in}}`$，原文式 (2) 的路由器先计算：
 
-$$
+```math
 W=\mathrm{softmax}(\mathrm{Linear}(X))\in\mathbb R^{N\times S}.
-$$
+```
 
 每个 token 选 $`S`$ 个专家中的 $`K`$ 个，输出为原文式 (4) 所述的加权和：
 
-$$
+```math
 y_n=\sum_{s\in\mathcal S_n}w_{n,s}\mathrm{MLP}_s(x_n),
 \qquad \vert \mathcal S_n\vert =K.
-$$
+```
 
 这里按 token 重写原式记号，便于区分不同 token 的专家集合。固定采用 $`S=4,K=2`$，每次运行两套 MLP；CLIP 自注意力并未被改成稀疏注意力。扩大专家数也不会缩短视觉序列。
 
@@ -69,9 +69,9 @@ Co-upcycling 将训练好的稠密 MLP 复制为多个专家，路由器从头�
 
 原文式 (5) 的目标为：
 
-$$
+```math
 \mathcal L=\mathcal L_{ce}+0.1\mathcal L_b+0.01\mathcal L_z.
-$$
+```
 
 $`\mathcal L_{ce}`$ 是下一 token 的语言交叉熵；负载平衡项避免少量专家吸收几乎所有输入，router z-loss 约束路由器数值尺度、帮助稳定训练。报告引用 ST-MoE，但未在本文展开两项辅助损失的全部定义，因此这里不伪造它们的原文公式。稠密 Mistral 没有语言 MoE 路由器；语言侧辅助损失适用于带路由器的 Mixtral 版本。
 

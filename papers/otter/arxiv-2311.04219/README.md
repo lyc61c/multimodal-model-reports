@@ -64,9 +64,9 @@ OtterHD 没有额外 CLIP 编码器、Q-Former 或多窗口 LoRA，也没有把�
 
 原文未提出编号数学公式。根据 patch 及换行规则，若补齐后图像共有 $`n_h=\lceil H/30\rceil`$ 行、$`n_w=\lceil W/30\rceil`$ 列，可用
 
-$$
+```math
 N_{patch}=n_hn_w,\qquad N_{image+newline}=n_h(n_w+1)
-$$
+```
 
 解释 token 成本；这是机制换算。Table 2 给出方形 448/512/768/1024 下 patch 为 225/324/676/1225，加换行为 240/342/702/1260，文字平均约 200 token。细节预算增大同时提高视觉相对于文字的序列比例，这与“模型一定更关注每个细节”的因果证明不同。
 

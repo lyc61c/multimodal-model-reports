@@ -62,13 +62,17 @@ PaLM-E 的输入是“多模态句子”：普通文字之间可以穿插图像�
 
 **连续信息如何进入离散词语言模型。** PaLM 的文字词表约 256,000 项，词 embedding 为 $`\gamma:\mathcal W\to\mathbb R^k`$。观察编码器则为 $`\phi:\mathcal O\to(\mathbb R^k)^q`$，一条观察变成 $`q`$ 个向量。原文 Eq. (3) 的核心是输入位置可以取两种来源：
 
-$$x_i=\begin{cases}\gamma(w_i),&\text{文字位置},\\[2pt]\phi_j(O_j)_i,&\text{观测位置}.\end{cases}$$
+```math
+x_i=\begin{cases}\gamma(w_i),&\text{文字位置},\\[2pt]\phi_j(O_j)_i,&\text{观测位置}.\end{cases}
+```
 
 因此无需先为视觉创建一个离散图像词表，也无需把状态压成自然语言数值叙述。LLM 的 self-attention 在统一维度上处理两者。对齐的是输入向量空间和任务损失，不代表视觉与词向量天然一一对应，或 embedding 的每一维都具有相同可解释物理含义。
 
 **自回归目标没有改变。** 原文 Eq. (1)–(2) 对文字概率作标准条件分解。把多模态 prefix 写作 $`X_{1:n}`$，目标回答为文字 $`w_{n+1:L}`$，可记为：
 
-$$p(w_{n+1:L}\mid X_{1:n})=\prod_{l=n+1}^{L}p_{\mathrm{LM}}(w_l\mid X_{1:n},w_{n+1:l-1}).$$
+```math
+p(w_{n+1:L}\mid X_{1:n})=\prod_{l=n+1}^{L}p_{\mathrm{LM}}(w_l\mid X_{1:n},w_{n+1:l-1}).
+```
 
 这只是将原文条件模型用混合 prefix 重写以便解释，感知 token 没有成为待生成的图像输出。训练在非 prefix 的答案位置平均交叉熵；机器人规划、视觉问答、caption 都用相同文字恢复目标。全文未提出图像生成扩散损失或直接连续动作回归损失。
 

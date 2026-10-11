@@ -59,17 +59,17 @@
 
 若 F 帧每帧含 P 个未压缩 patch，整块池化与空间合并后的近似 token 数为：
 
-$$
+```math
 N_{\mathrm{visual}}\approx\frac{FP}{4T}.
-$$
+```
 
 这是解释论文压缩比例的近似式，忽略末块不足 T 帧和时间戳等开销。压缩发生在时空交互之后，保留局部动态的机会优于直接稀疏抽帧，但不保证所有细节无损。
 
 下一窗口预算由当前状态确定：
 
-$$
+```math
 b_{t+1}=\begin{cases}448^2,&s_t=\mathrm{Standby},\\224^2,&s_t\in\{\mathrm{Silence},\mathrm{Response}\}.\end{cases}
-$$
+```
 
 该控制器是确定规则，不是独立学习的连续预算优化器。若低预算窗口没有识别出关键线索，就可能无法及时进入高预算状态。
 
@@ -79,9 +79,9 @@ $$
 
 直接训练全部状态 token 会被大量 Silence 主导，只训练转换又容易学到状态模式捷径。论文令转换集合为 $`\mathcal T`$，从延续集合抽取 $`\widetilde{\mathcal C}`$，满足 $`\vert \widetilde{\mathcal C}\vert =\vert \mathcal T\vert`$，采用：
 
-$$
+```math
 \mathcal L_{\mathrm{state}}=-\frac{1}{\sum_t m_t}\sum_t m_t\log p_\theta(s_t\mid V_{\le t},y_{<t}),\qquad m_t=\mathbf1[t\in\mathcal T\cup\widetilde{\mathcal C}].
-$$
+```
 
 答案文本另用下一 token 预测损失。文中的 Silence:Standby:Response≈2:2:1 是典型循环的有效监督比例，不是任意视频的固定标签分布。训练预算由上一真实状态控制，推理预算由预测状态控制，错误状态仍可能造成偏差累积。
 

@@ -58,7 +58,9 @@ EVE 的第一项设计是 LLM 引导的预对齐：随机初始化的视觉入�
 
 第二项是位置对齐的特征监督。按论文文字操作，可用说明性形式
 
-$$\mathcal L_{\rm patch}=\frac1P\sum_{p=1}^P\Vert \widehat a_p-\widehat v_p\Vert _2^2$$
+```math
+\mathcal L_{\rm patch}=\frac1P\sum_{p=1}^P\Vert \widehat a_p-\widehat v_p\Vert _2^2
+```
 
 解释：$`a_p`$ 为 PAL 聚合输出，$`v_p`$ 为教师对应位置输出，帽号表示 $`\ell_2`$ 归一化。归一化后平方距离等于 $`2-2\cos(a_p,v_p)`$，因此该项主要对齐方向；这是基于标准恒等式的解释，原论文未把它单独列为推导。图片和教师采用不同分辨率，空间匹配通过自适应池化实现，而非要求原始 token 数一模一样。
 

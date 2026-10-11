@@ -42,7 +42,7 @@
     "Tables/prose contain repeated-score and universal-superiority inconsistencies",
     "No quantitative open-set replacement full benchmarks or runtime costs"
   ],
-  "article_sha256": "2d1195dfaaa330945b6f1691cc02bd7064a19a4cb28794eb7b5555f1618f2928",
+  "article_sha256": "824736369a50418f2f16881ee02a8f4515329cd4f8e6e5d19980eed0d305c75d",
   "artifact_checks": {
     "original_assets": 10,
     "no_full_page_screenshots": true
@@ -74,7 +74,7 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 25,
+    "math_delimiters_converted": 26,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -92,11 +92,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 12,
+      "delimiter_conversions": 13,
       "operatorname_replacements": 1,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 1,
+      "inline_angle_replacements": 1
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

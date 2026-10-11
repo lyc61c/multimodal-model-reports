@@ -66,10 +66,10 @@ LoRA 的通常表达为 $`W=W_0+BA`$，保持基础权重 $`W_0`$ 不变，训�
 **综合分数需要区分量纲。** 原文先对每个基准归一化：
 
 
-$$
+```math
 s_{\rm norm}=\frac{s-s_{\min}}{s_{\max}-s_{\min}},
 \qquad \bar s_{\rm norm}=\mathrm{Mean}(s_{\rm norm}).
-$$
+```
 
 
 其中最小/最大值取自纳入比较的方法。这样可将 MME 分数与准确率等放到统一区间，但结果会随所选比较模型变化，并非通用的绝对能力量表。报告所称 12.99%/11.76% 是归一化综合成绩的改善，不是每项准确率增加这些百分点。[原文 §3.4，PDF 第 5 页](https://arxiv.org/pdf/2401.17981v1#page=5)
@@ -107,7 +107,7 @@ $$
 
 LAR/LAF 指令阶段 LoRA rank 为 **128**、alpha **256**，optimizer AdamW，cosine 学习率，warm-up ratio 0.03。视觉编码器和外部检测器不被作为共同训练的模块。原文没有公开本实验的 GPU 数、精度、总训练时间、确切步数、完整最大上下文或全部优化器参数，本文不从 LLaVA 后续实现补填。
 
-如果将训练目标记为 $`-\sum_t\log p_\theta(y_t\mid I,q,S_{\rm obj},S_{\rm ocr},y_{<t})`$，它只监督回答 token；这个数学写法是本文归纳，不是新增的检测损失。论文没有同时回归 DINO 框，也没有让 LLM 对 OCR 输出提供置信度校准。[原文 §3.3、Table 6，PDF 第 4–5、15 页](https://arxiv.org/pdf/2401.17981v1#page=15)
+如果将训练目标记为 $`-\sum_t\log p_\theta(y_t\mid I,q,S_{\rm obj},S_{\rm ocr},y_{\lt t})`$，它只监督回答 token；这个数学写法是本文归纳，不是新增的检测损失。论文没有同时回归 DINO 框，也没有让 LLM 对 OCR 输出提供置信度校准。[原文 §3.3、Table 6，PDF 第 4–5、15 页](https://arxiv.org/pdf/2401.17981v1#page=15)
 
 <a id="experiments"></a>
 

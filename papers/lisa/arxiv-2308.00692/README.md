@@ -53,8 +53,12 @@ Figure 3 中图像有两条路径。上方 Vision Backbone 提取适合掩码解
 
 原文公式 (1)、(2) 将过程写为：
 
-$$\widehat y_{\mathrm{txt}}=F(x_{\mathrm{img}},x_{\mathrm{txt}}),$$
-$$h_{\mathrm{seg}}=\gamma(\widehat h_{\mathrm{seg}}),\qquad f=F_{\mathrm{enc}}(x_{\mathrm{img}}),\qquad \widehat M=F_{\mathrm{dec}}(h_{\mathrm{seg}},f).$$
+```math
+\widehat y_{\mathrm{txt}}=F(x_{\mathrm{img}},x_{\mathrm{txt}}),
+```
+```math
+h_{\mathrm{seg}}=\gamma(\widehat h_{\mathrm{seg}}),\qquad f=F_{\mathrm{enc}}(x_{\mathrm{img}}),\qquad \widehat M=F_{\mathrm{dec}}(h_{\mathrm{seg}},f).
+```
 
 $`F`$ 是多模态语言模型，$`\widehat h_{\mathrm{seg}}`$ 是生成 `<SEG>` 时的隐藏表示，$`\gamma`$ 是投影 MLP，$`f`$ 是像素解码所用图像特征，$`F_{\mathrm{dec}}`$ 是分割 decoder，$`\widehat M`$ 是预测二值掩码。文字输出是离散 token，但隐藏表示是连续特征，这个连续桥梁使分割监督能够训练相关语言适配与投影模块。
 
@@ -68,13 +72,19 @@ $`F`$ 是多模态语言模型，$`\widehat h_{\mathrm{seg}}`$ 是生成 `<SEG>`
 
 第二项是**文本与像素联合监督**。原文公式 (3)、(4) 明确为：
 
-$$\mathcal L=\lambda_{\mathrm{txt}}\mathcal L_{\mathrm{txt}}+\lambda_{\mathrm{mask}}\mathcal L_{\mathrm{mask}},$$
-$$\mathcal L_{\mathrm{txt}}=\mathrm{CE}(\widehat y_{\mathrm{txt}},y_{\mathrm{txt}}),\quad
-\mathcal L_{\mathrm{mask}}=\lambda_{\mathrm{bce}}\mathrm{BCE}(\widehat M,M)+\lambda_{\mathrm{dice}}\mathrm{DICE}(\widehat M,M).$$
+```math
+\mathcal L=\lambda_{\mathrm{txt}}\mathcal L_{\mathrm{txt}}+\lambda_{\mathrm{mask}}\mathcal L_{\mathrm{mask}},
+```
+```math
+\mathcal L_{\mathrm{txt}}=\mathrm{CE}(\widehat y_{\mathrm{txt}},y_{\mathrm{txt}}),\quad
+\mathcal L_{\mathrm{mask}}=\lambda_{\mathrm{bce}}\mathrm{BCE}(\widehat M,M)+\lambda_{\mathrm{dice}}\mathrm{DICE}(\widehat M,M).
+```
 
 文字交叉熵教模型何时输出 `<SEG>`，以及怎样回答用户；BCE 监督各像素前景/背景判断，DICE 关注预测区域与真实区域的重叠。它们作用互补：背景面积很大时，单纯逐像素正确可能不足以保证小目标被分完整。常见 soft Dice 的阅读辅助式是：
 
-$$\mathrm{DiceLoss}=1-\frac{2\sum_p\widehat M_p M_p+\epsilon}{\sum_p\widehat M_p+\sum_pM_p+\epsilon}.$$
+```math
+\mathrm{DiceLoss}=1-\frac{2\sum_p\widehat M_p M_p+\epsilon}{\sum_p\widehat M_p+\sum_pM_p+\epsilon}.
+```
 
 $`p`$ 为像素，$`\epsilon`$ 防止分母为零。原文没有在编号式中展开 Dice 的平滑实现，这里只是解释重叠损失含义，不能从上式推断官方所有阈值、归约和数值稳定实现。
 
@@ -130,8 +140,10 @@ ReasonSeg 从 OpenImages 与 ScanNetv2 图像构建复杂隐含指令及高质�
 
 原文的 gIoU 指每张图 IoU 的平均，**不是目标检测常用的 Generalized IoU 损失**；cIoU 是累积交集除以累积并集。前者每图同权，后者大区域影响更大，作者更重视前者。可用定义概括为：
 
-$$\mathrm{gIoU}=\frac1n\sum_i\frac{\vert P_i\cap G_i\vert }{\vert P_i\cup G_i\vert },\qquad
-\mathrm{cIoU}=\frac{\sum_i\vert P_i\cap G_i\vert }{\sum_i\vert P_i\cup G_i\vert }.$$
+```math
+\mathrm{gIoU}=\frac1n\sum_i\frac{\vert P_i\cap G_i\vert }{\vert P_i\cup G_i\vert },\qquad
+\mathrm{cIoU}=\frac{\sum_i\vert P_i\cap G_i\vert }{\sum_i\vert P_i\cup G_i\vert }.
+```
 
 | 模型 | val gIoU/cIoU | test总体 gIoU/cIoU |
 |---|---|---|

@@ -70,15 +70,15 @@ Stage III 从 Stage II 的稠密多模态 FFN 复制专家，随后训练使这�
 设 token 隐藏向量为 $`x\in\mathbb R^D`$，专家数为 $`E`$。将原文 Eq. (5)、(6) 的维度与 Top-k 索引整理为：
 
 
-$$
+```math
 p(x)=\mathrm{softmax}(x^\top W),\quad W\in\mathbb R^{D\times E},\qquad
 \mathcal S(x)=\mathrm{TopK}(p(x),k),
-$$
+```
 
 
-$$
+```math
 \mathrm{MoE}(x)=\sum_{i\in\mathcal S(x)}p_i(x)\,e_i(x),\qquad E=4,\ k=2.
-$$
+```
 
 
 这里求和遍历被选中的专家编号，不是固定调用第 1、2 个专家。原文直接使用 softmax 权重，未明确说明选中后是否再次归一化，故不额外加入这种实现设定。论文称其为 soft router，指路由分数可学习；实际仍执行离散 Top-k 选择，而非计算全部专家的密集加权输出。
@@ -88,10 +88,10 @@ $$
 负载均衡的意图是防止大量 token 聚集到少数专家。Eq. (9) 为 $`\mathcal L_{aux}=E\sum_i F_i P_i`$。为避免原文 Eq. (10) 求和下标和专家下标混乱，可用标准 Top-1 统计定义示意：
 
 
-$$
+```math
 F_i=\frac1B\sum_{b=1}^{B}\mathbf1[\arg\max_j p_j(x_b)=i],\qquad
 P_i=\frac1B\sum_{b=1}^{B}p_i(x_b).
-$$
+```
 
 
 原式使用 argmax，但默认前向为 Top-2；它没有清楚披露实际实现是否统计两条分配，以及是否按 Top-k 重新缩放。本式解释的是原文采用的 Top-1 形式，不冒充已经查证的 dispatcher 实现。硬选择计数通常不直接求梯度，均衡信号通过平均路由概率影响 router。均衡是正则目标，不保证每层每位专家恰好处理 25% token；原文自己的路由图存在明显层间偏好。
@@ -132,7 +132,7 @@ MoE-tuning 的新意主要在初始化和课程顺序，而不是发明 Top-k �
 
 各阶段 cosine 调度、weight decay 0、长度 2048、gradient checkpointing；Table 9 为 8×A800-80G、BF16，前两阶段 ZeRO-2，第三阶段 ZeRO-2 offload。附录另提可用 A100 和小模型的 8×V100-32G，Table 6 时间实验明确采用 V100，不能将不同硬件上的时间混成统一成本。该表未披露优化器种类、β、warmup 比例等，不能自行填成 LLaVA 默认配置。作者发现两 epoch 易过拟合，使用一 epoch；FP16 曾出现 NaN，不能据此说 BF16 解决了所有训练稳定性问题。
 
-原文总目标 Eq. (7) 为 $`\mathcal L=\mathcal L_{regressive}+0.01\mathcal L_{aux}`$。答案项用标准记号解释为：$`\mathcal L_{regressive}=-\sum_{t=1}^{M}\log p_\theta(y_t\mid V,Q,y_{<t})`$，仅对生成文字计算。原文 Eq. (8) 将输出长度、视觉长度与隐藏维度的符号混用；这里以 $`M`$ 单独代表答案长度，保持其自回归监督含义。该训练没有报告奖励模型、PPO 或 DPO。
+原文总目标 Eq. (7) 为 $`\mathcal L=\mathcal L_{regressive}+0.01\mathcal L_{aux}`$。答案项用标准记号解释为：$`\mathcal L_{regressive}=-\sum_{t=1}^{M}\log p_\theta(y_t\mid V,Q,y_{\lt t})`$，仅对生成文字计算。原文 Eq. (8) 将输出长度、视觉长度与隐藏维度的符号混用；这里以 $`M`$ 单独代表答案长度，保持其自回归监督含义。该训练没有报告奖励模型、PPO 或 DPO。
 
 <a id="experiments"></a>
 

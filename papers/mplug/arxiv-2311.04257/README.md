@@ -48,10 +48,10 @@
 
 Abstractor 的查询 $`V^0=Q`$ 反复从原图特征 $`I`$ 和已有查询状态中收集信息。原文 Equation 1、2 为：
 
-$$
+```math
 C^i=\mathrm{Attn}(V^i,[I;V^i],[I;V^i]),
 \qquad V^{i+1}=\mathrm{SwiGLU}(C^iW_1)W_2.
-$$
+```
 
 视觉与查询特征加正弦位置 embedding，以保留空间线索。压缩后的视觉 token 与文本连接，统一自回归生成。原文将操作称 self-attention，按其 query 与 key/value 形式理解即可，不应把它误写为 BERT Q-Former 的完整训练程序。
 
@@ -63,15 +63,15 @@ MAM 用模态标识 $`M`$ 区分视觉与文本。Equation 3 定义选择操作 
 
 忽略层索引以便阅读，Equation 5—8 的主要结构为：
 
-$$
+```math
 H^Q=\tilde H W^Q,
 \quad H^K=\phi(\tilde H,M,0)W^{K0}+\phi(\tilde H,M,1)W^{K1},
-$$
+```
 
-$$
+```math
 H^V=\phi(\tilde H,M,0)W^{V0}+\phi(\tilde H,M,1)W^{V1},
 \quad C=\mathrm{softmax}(H^Q(H^K)^\top/\sqrt d)H^V.
-$$
+```
 
 共享 Q 让视觉、文字查询在同一关系计算中工作；不同 K 影响怎样被检索，不同 V 决定被检索到的内容怎样进入上下文；后续共享 FFN 促进知识协作。原文也对归一化作模态区分，不能只概括成“两个额外投影层”。
 

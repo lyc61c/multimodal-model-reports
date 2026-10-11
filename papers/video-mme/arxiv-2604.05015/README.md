@@ -59,9 +59,9 @@
 
 原文式 (1) 为逐题准确率：
 
-$$
+```math
 \mathrm{AvgAcc}=\frac1{\vert Q\vert }\sum_{q\in Q}\mathbf1[\hat y_q=y_q].
-$$
+```
 
 主指标则按组平均，$`\mathrm{Overall}=\vert G\vert ^{-1}\sum_g S(g)`$。一致性组四题中答对 $`N`$ 题，使用 $`S(g)=(N/4)^2`$；答对两题的逐题准确率是 50%，组得分只有 25%，答对三题则为 56.25%。平方项奖励成组正确，降低零散正确的收益。
 

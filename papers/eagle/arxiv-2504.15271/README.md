@@ -50,7 +50,9 @@ Figure 3 对一个 2,000×1,300 的图像比较两类网格。IAP 并非单纯�
 
 原文 Equation 1 在 $`r_wr_h\le N`$ 的候选网格中最大化
 
-$$\min\left(\frac{A_{\rm new}}{A_{\rm orig}},0.6\right)\min\left(\frac{r_t}{r_{\rm orig}},\frac{r_{\rm orig}}{r_t}\right),$$
+```math
+\min\left(\frac{A_{\rm new}}{A_{\rm orig}},0.6\right)\min\left(\frac{r_t}{r_{\rm orig}},\frac{r_{\rm orig}}{r_t}\right),
+```
 
 其中 $`A_{\rm orig}=WH`$，$`A_{\rm new}=r_wr_hs^2`$，$`r_t=r_w/r_h`$，$`r_{\rm orig}=W/H`$。面积项在达到原图面积 60% 后饱和，避免无限奖励更大网格；宽高比项在两者一致时为 1，偏离时下降。**60% 是评分偏好，不是候选集合不足时仍必然满足的硬约束**；这里的面积表示缩放后像素预算，也不等于识别内容准确率达到某比例。
 

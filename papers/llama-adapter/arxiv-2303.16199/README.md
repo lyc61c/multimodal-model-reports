@@ -53,19 +53,19 @@
 
 零初始化机制的重点在于分开归一化。设当前文字query对提示的logit为 $`S_P`$，对已有文字的logit为 $`S_T`$，对应value为 $`V_P,V_T`$。原式(7)–(8)等价于：
 
-$$
+```math
 o_l=W_o\left[g_l\,\mathrm{softmax}(S_P)V_P+
 \mathrm{softmax}(S_T)V_T\right],\qquad g_l(0)=0.
-$$
+```
 
 多头注意力的每个head分别学习门控。初始化时提示贡献为零，文字分支不受新增随机提示的softmax分母影响，因此保留原始注意力输出；随后门控与提示逐步学习补充信号。这里“zero-init attention”不表示把原语言注意力全部清零，也不表示所有提示向量必须初始化为零。原文没有将门控定义成softmax概率或必在[0,1]之间的权重，不能额外假定概率约束。
 
 视觉条件按原式(9)–(10)构造：
 
-$$
+```math
 I_p=\mathrm{Projection}\left(\mathrm{Concat}_c(I_1,\ldots,I_M)\right),\qquad
 P_l^v=P_l+\mathrm{Repeat}_K(I_p).
-$$
+```
 
 第一个concat沿通道，重复与加法不改变提示长度K。这是很强的压缩：图像由多尺度全局向量注入，细粒度区域关系没有单独的patch token接口。论文未证明这一结构适合小字OCR或高分辨率文档任务。
 

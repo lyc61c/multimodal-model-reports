@@ -56,10 +56,10 @@ KDA 使用固定大小递归状态处理历史，全局 MLA 则保留逐 token �
 **KDA：具有逐通道遗忘的 delta 递归。** 原文式（1）为
 
 
-$$
+```math
 S_t=(I-\beta_tk_tk_t^\top)\mathrm{Diag}(\alpha_t)S_{t-1}
  +\beta_tk_tv_t^\top,\qquad \tilde o_t=S_t^\top q_t.
-$$
+```
 
 
 $`S_t`$ 是 key×value 状态，$`\alpha_t`$ 是每个 key 通道的保留率，$`\beta_t`$ 控制写入强度。状态先衰减，再通过 delta 项减少当前 key 方向的旧关联，最后写入当前 value；它不同于仅把所有 $`kv^\top`$ 累加。query/key 经短卷积、Swish 与 L2 归一化，输出又经过归一化和输入相关的全秩门控。该递归可以按块转换为块内并行、块间传递状态的计算。[PDF 第 4–5 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=4)。
@@ -67,10 +67,10 @@ $`S_t`$ 是 key×value 状态，$`\alpha_t`$ 是每个 key 通道的保留率，
 **有下界的衰减，让硬件矩阵计算可行。** K3 将 log-decay 改为原文式（5）
 
 
-$$
+```math
 g_t^h=-5\,\mathrm{Sigmoid}(e^{A_h}z_t^h),\qquad
 \alpha_t^h=e^{g_t^h}\in(e^{-5},1).
-$$
+```
 
 
 16-token 子块的累计 log-decay 大于 -80，倒数缩放小于 $`e^{80}`$，仍在 BF16 动态范围内，避免对角子块因无限小衰减而必须逐位置对计算。这是数值参数化与 kernel 的共同设计，不是简单将 token 注意力裁成固定窗口。
@@ -82,12 +82,12 @@ $$
 **AttnRes：沿网络深度选择信息。** 普通残差把历史不断加到一个状态，AttnRes 为层 $`l`$ 设置可学习伪 query $`w_l`$，以归一化后的早期表示作为 key：
 
 
-$$
+```math
 \alpha_{i\to l}=
 \frac{\exp(w_l^\top\mathrm{RMSNorm}(k_i))}
 {\sum_j\exp(w_l^\top\mathrm{RMSNorm}(k_j))},\qquad
 h_l=\sum_i\alpha_{i\to l}v_i.
-$$
+```
 
 
 这来自原文式（8–9），注意力发生在**层表示之间**。完整形式需保存所有层输出；Block 形式把块内输出求和，仅跨块选择，使保存与通信由 $`O(Ld)`$ 降为 $`O(Nd)`$。K3 每块最多 12 层、共 8 个计算块，Embedding 也作为可选源；不是给每个 token 任意跳过执行后续层。[PDF 第 6 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=6)。
@@ -99,11 +99,11 @@ Quantile Balancing 进一步用各专家分数相对 token top-(k+1) 门槛的�
 **多教师蒸馏：不同预算的策略进入一个学生。** 三领域、三预算产生九个完整教师；学生采样轨迹后，使用对应教师给出密集 token 奖励。原文式（15）核心为
 
 
-$$
+```math
 r_{opd}=\mathrm{clip}\left(
 \mathrm{sg}\left[\log\frac{\pi_{teacher}^{(d,e)}(y_t\mid x,y_{<t})}
 {\pi_\theta(y_t\mid e,x,y_{<t})}\right],-R_{\max},R_{\max}\right).
-$$
+```
 
 
 教师由领域 $`d`$ 与预算 $`e`$ 决定，sg 表示不通过奖励项反传。报告采用这个截断 token 信号接入 RL，而非宣称对全部词表精确计算 KL；更细的 top-k 蒸馏在其测试中没有明确收益。$`R_{\max}`$ 及教师采样配比未公布。[PDF 第 13–14 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=13)。

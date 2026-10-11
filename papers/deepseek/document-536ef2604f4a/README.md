@@ -71,12 +71,12 @@
 
 设视觉 token 数为 $`m`$，查询数为 $`n`$，本文选择 $`n=m`$。原文 Equation 1 的可见性矩阵为
 
-$$
+```math
 M=\begin{bmatrix}
 \mathbf 1_{m\times m}&\mathbf 0_{m\times n}\\
 \mathbf 1_{n\times m}&\mathrm{LowerTri}(n)
 \end{bmatrix},\qquad n=m.
-$$
+```
 
 左上块让图像区域全局交互；右上为零，避免视觉 token 通过读入未来查询间接破坏因果约束；左下让每个查询都能检查整张图；右下让查询 $`q_i`$ 只能参考 $`q_{\leq i}`$。$`M`$ 是 0/1 可见性矩阵，实际注意力实现需把禁止位置屏蔽，例如转成加性 $`-\infty`$，不能把原文的 0 当成普通的零分数后继续 softmax。
 
@@ -86,9 +86,9 @@ $$
 
 原文 Equation 2 可以重述为
 
-$$
+```math
 O=\mathcal D\!\left(\pi_Q\left(\mathcal T^L([\mathcal E(I);Q_0];M)\right)\right).
-$$
+```
 
 $`\mathcal E`$ 将图像 $`I`$ 编成视觉表示，$`\mathcal T^L`$ 是受 $`M`$ 约束的多层编码器，$`\pi_Q`$ 取出查询输出，$`\mathcal D`$ 进行文本解码。文本提示在实际条件生成中同样参与解码，但该式集中表达图像路径。
 
@@ -102,9 +102,9 @@ $`\mathcal E`$ 将图像 $`I`$ 编成视觉表示，$`\mathcal T^L`$ 是受 $`M`
 
 若局部裁剪数 $`k\in[0,6]`$，送入解码器的视觉数量为
 
-$$
+```math
 N_{\mathrm{visual}}=256+144k\in[256,1120].
-$$
+```
 
 例如六个局部图加一个全局图是 $`256+6\times144=1120`$。这是视觉 token 数，不包含文字提示和最终答案。原文说明两边都小于 768 时不做局部裁剪。有限容量控制成本，也为密集报纸等场景留下性能瓶颈。[来源：PDF §3.2，第 6–7 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=6)
 
@@ -136,7 +136,7 @@ $$
 
 第三阶段冻结编码器，让语言解码器在固定的新视觉表示上继续适应。作者称相同 global batch 下训练速度超过翻倍，但没有给出一套完整吞吐曲线；本文保留该条件，避免把它解释成最终推理速度翻倍。
 
-原文明确第一阶段使用 language modeling / next-token prediction。可用 $`-\sum_t\log p(y_t\mid I,p,y_{<t})`$ 解释其条件生成目标，其中 $`p`$ 是提示；报告没有逐阶段公布独立辅助 loss、排序真值监督或 RL 奖励。因果查询从任务监督中学习组织信息，并非由人工 patch 排序标签直接训练。[来源：PDF §4.2，第 8 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=8)
+原文明确第一阶段使用 language modeling / next-token prediction。可用 $`-\sum_t\log p(y_t\mid I,p,y_{\lt t})`$ 解释其条件生成目标，其中 $`p`$ 是提示；报告没有逐阶段公布独立辅助 loss、排序真值监督或 RL 奖励。因果查询从任务监督中学习组织信息，并非由人工 patch 排序标签直接训练。[来源：PDF §4.2，第 8 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=8)
 
 <a id="experiments"></a>
 

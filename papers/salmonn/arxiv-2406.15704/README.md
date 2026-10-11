@@ -67,24 +67,24 @@ MRC Q-Former 有两层 Transformer、隐藏维度 768。默认使用 0.5 秒与 
 
 第 r 级有窗口长度 $`k_r`$、查询数 $`N_r`$，输入长度 T 时：
 
-$$
+```math
 W_r=\left\lceil\frac{T}{k_r}\right\rceil,\qquad W_rN_r=C.
-$$
+```
 
 作者约束各级总输出长度为 C，便于融合。将查询矩阵按“token×维度”排列，可写为：
 
-$$
+```math
 H=\sum_r H^{(r)}P_r,\qquad H^{(r)}\in\mathbb R^{C\times768},\quad P_r\in\mathbb R^{768\times E}.
-$$
+```
 
 这是按维度一致性整理的行向量写法；原文 Eq.(4) 将投影写在左侧，同时把其形状记为 D×E，符号方向并不完全一致。多级结果是投影后相加，不是把 token 数量按分辨率倍增。固定 C 需要对齐和边界处理，报告对任意长度的补齐细节未给出完整规则。
 
 低分辨率窗口的多个查询可能重复读同一关键帧。作者最小化同窗口不同查询的余弦相似度：
 
-$$
+```math
 \mathcal L_{\mathrm{diverse}}=\sum_{r=2}^{R}\sum_{w=1}^{W_r}\sum_{i=1}^{N_r}\sum_{j\ne i}^{N_r}\frac{h^{(r)}_{w,i}\cdot h^{(r)}_{w,j}}{\Vert h^{(r)}_{w,i}\Vert \Vert h^{(r)}_{w,j}\Vert },\qquad
 \mathcal L=\mathcal L_{\mathrm{CE}}+\lambda\mathcal L_{\mathrm{diverse}}.
-$$
+```
 
 它鼓励查询差异，却不保证每个查询对应独立事件或严格正交。求和包含 i→j 和 j→i，不能擅自改成均值还沿用同一个 λ。实验显示过大 λ 会损害生成和提高语音插入错误，多样性并非越大越好。
 

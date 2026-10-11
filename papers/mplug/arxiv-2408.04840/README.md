@@ -66,10 +66,10 @@ MI-RoPE 为每张图记录占位符在文字序列中的位置，其所有 patch
 原文将交叉、自注意力输出记为 $`\bar H^i`$、$`\hat H^i`$，Eq. (1)–(2) 为：
 
 
-$$
+```math
 g=\mathrm{Sigmoid}(\hat H^i),\qquad
 H^i_{fused}=\bar H^i_{text}\odot g+\hat H^i_{text}\odot(1-g).
-$$
+```
 
 
 $`\odot`$ 表示逐元素加权。门值随文本状态改变，可在需要图像细节时让交叉分支提供更多信息。首版公式没有展开额外门控权重矩阵，而训练表将 Adaptive Gate 列为可训练模块；本文保留其披露层次，不自行写成一个具体参数化门控网络。[原文 Eq. (1)–(2)](https://arxiv.org/pdf/2408.04840v1#page=5)

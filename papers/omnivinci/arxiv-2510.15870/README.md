@@ -54,28 +54,34 @@ OmniAlignNet 接收已投影的视觉序列 $`E_v\in\mathbb R^{N_v\times C}`$ �
 
 首先是视频级语义对齐。对同一批 $`K`$ 个视频，令归一化表示为 $`V_i,A_i`$，相似度 $`s_{ij}=V_i^\top A_j`$。将原文 Eq. (1) 的批大小统一写成 $`K`$，双向目标为：
 
-$$
+```math
 L_{v\to a}=-\frac1K\sum_i\log
 \frac{\exp(s_{ii})}{\sum_j\exp(s_{ij})},\qquad
 L_{a\to v}=-\frac1K\sum_i\log
 \frac{\exp(s_{ii})}{\sum_j\exp(s_{ji})},
-$$
+```
 
-$$L_{\mathrm{o-align}}=\tfrac12(L_{v\to a}+L_{a\to v}).$$
+```math
+L_{\mathrm{o-align}}=\tfrac12(L_{v\to a}+L_{a\to v}).
+```
 
 同一视频的两路为正样本，不同视频为负样本。该目标使“画面与声音表达相同事件”更容易被主干利用，但视频级对比无法单独判断第几秒的声音对应第几秒的动作，因此还需要时间机制。原文公式没有显式温度项，本篇不自行添加温度超参数。
 
 TEG 把时间分成长度为 $`T_G`$ 的窗口。若两个窗口的视觉组为 $`G_v^1,G_v^2`$，音频组为 $`G_a^1,G_a^2`$，输入改排为：
 
-$$E_{\mathrm{group}}=[G_v^1,G_a^1,G_v^2,G_a^2].$$
+```math
+E_{\mathrm{group}}=[G_v^1,G_a^1,G_v^2,G_a^2].
+```
 
 这保留同一时间窗内的邻近关系，让因果语言模型更容易把同期画面与声音联系起来。但组序本身只告诉模型“先后”，无法单独区分相同事件间隔 1 秒还是 1 分钟。
 
 CRTE 向嵌入加入真实时间戳。原文使用由最大时间尺度 $`T_{\max}`$ 与频率缩放参数 $`\theta`$ 控制的几何频率族，令 $`\Omega_{i,j}=\omega_i t_j`$，Eq. (5) 为：
 
-$$\mathrm{CRTE}(x,\Omega_{:,j})=
+```math
+\mathrm{CRTE}(x,\Omega_{:,j})=
 x\odot\cos\Omega_{:,j}
-+\mathrm{RotateHalf}(x)\odot\sin\Omega_{:,j}.$$
++\mathrm{RotateHalf}(x)\odot\sin\Omega_{:,j}.
+```
 
 高频维度对近距离时间变化敏感，低频维度提供更长时间尺度的线索。时间尺度限制尝试平衡局部与全局敏感度，而不是声称任意长视频上绝无周期混叠。报告没有给出足以将 $`T_G,T_{\max},\theta`$ 全部数值化复现的统一配置，本篇保留机制不编数值。[PDF 第 3–5 页](https://arxiv.org/pdf/2510.15870v1#page=3)
 

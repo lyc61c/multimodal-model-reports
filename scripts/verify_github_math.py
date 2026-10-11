@@ -28,12 +28,14 @@ def main():
         manifest.append(relative + ":" + hashlib.sha256(path.read_bytes()).hexdigest())
         for expression in math_expressions(body):
             expressions.append({"article": relative, **expression})
-            if expression["delimiter"] not in {"guarded", "display", "math_fence"}:
+            if expression["delimiter"] not in {"guarded", "math_fence"}:
                 issues.append({"article": relative, "problem": "Unprotected or legacy math delimiter", "tex": expression["tex"][:120]})
             if FORBIDDEN.search(expression["tex"]):
                 issues.append({"article": relative, "problem": "Restricted/custom math macro", "tex": expression["tex"][:120]})
             if "|" in expression["tex"]:
                 issues.append({"article": relative, "problem": "Literal pipe can collide with a GFM table", "tex": expression["tex"][:120]})
+            if not expression["display"] and re.search(r"[<>]|&(?:lt|gt|amp);", expression["tex"]):
+                issues.append({"article": relative, "problem": "Inline math can acquire HTML entities; use TeX relation commands", "tex": expression["tex"][:120]})
         for segment, is_code in markdown_segments(body):
             if is_code:
                 continue

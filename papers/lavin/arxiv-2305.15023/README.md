@@ -55,10 +55,10 @@
 
 令模态one-hot向量 $`m\in\mathbb R^2`$，可学习模态嵌入 $`E_m\in\mathbb R^{2\times c}`$，原式（1）定义 $`t_m=mE_m`$。输入特征 $`Z`$ 经双适配器后，原式（2）（3）为：
 
-$$
+```math
 Z'=Z+s\big(\hat w_0f_{a1}(Z)+\hat w_1f_{a2}(Z)\big),\qquad
 \hat w=\mathrm{softmax}\left(\frac{t_mW_m+b_m}{\tau}\right).
-$$
+```
 
 $`s`$ 是适配输出缩放，$`\tau`$ 是路由温度；$`W_m\in\mathbb R^{c\times2}`$、$`b_m\in\mathbb R^2`$。两个候选RepAdapter共享降维层。残差保留已有表示，路由允许纯文本与图文采取不同适配组合。
 

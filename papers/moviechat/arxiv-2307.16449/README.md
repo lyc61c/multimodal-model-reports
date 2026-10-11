@@ -54,9 +54,9 @@ Global 使用 $`\mathcal L`$；Breakpoint 将 $`\mathcal L`$、$`\mathcal S`$ �
 
 **相邻相似表示合并。** 原文 Equation 3 用同位置 token 的平均余弦相似度衡量相邻帧：
 
-$$
+```math
 s_i=\frac1N\sum_{j=1}^{N}\cos(x_i^j,x_{i+1}^j).
-$$
+```
 
 $`N`$ 为每帧 token 数，$`j`$ 为对应 token 位置。Algorithm 1 重复寻找相邻对中最大的 $`s_i`$，将那一对合并，删除其中一个，再重新计算，直到达到目标容量。原图以 weighted sum 示意合并，但没有完整展开所有权重更新规则，不假定固定简单平均。
 

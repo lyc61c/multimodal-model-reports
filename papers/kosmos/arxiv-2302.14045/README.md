@@ -62,9 +62,9 @@ Figure 1 位于 PDF 第 1 页。中间的 embedding 层将感知输入接入语�
 **以文字输出统一任务。** 不同任务可以表示成 $`p_\theta(y\mid I,x)`$，其中 $`I`$ 是可选图像，$`x`$ 是说明或示例。预训练使用 next-token prediction，仅**离散 token**进入损失；连续图像 embedding 是条件，不做视觉向量回归。用解释性形式写为
 
 
-$$
+```math
 \mathcal L=-\sum_{t\in\mathcal D}\log p_\theta(u_t\mid u_{<t}),
-$$
+```
 
 
 $`\mathcal D`$ 表示离散 token 位置。原文没有编号给出该式或全部模态边界 token 的权重，它是对第 2.3 节最大对数似然的数学整理。与 Emu 之类同时回归视觉输出的路线不同，本篇的生成空间仍是文字。

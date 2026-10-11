@@ -62,17 +62,21 @@ Dream-7B-Instruct 的 embedding 和输出层随新增图像/语音词表扩展�
 
 **共同训练目标。** 原文 Eq. (1) 令干净序列为 $`x_0`$、损坏后为 $`x_t`$，时间决定掩码比例：
 
-$$\mathcal L=-\mathbb E_{t,q(x_t\mid x_0)}\left[\sum_{i=1}^{L}\mathbf1[x_t^i=\mathrm{MASK}]\log p_\theta(x_0^i\mid x_t)\right].$$
+```math
+\mathcal L=-\mathbb E_{t,q(x_t\mid x_0)}\left[\sum_{i=1}^{L}\mathbf1[x_t^i=\mathrm{MASK}]\log p_\theta(x_0^i\mid x_t)\right].
+```
 
 只有被掩码的位置计入交叉熵，图像与语音的生成也都是离散分类任务。**这篇的公式没有 MMaDA 的 $`1/t`$ 因子**，不能因同属离散扩散就照搬另一篇的加权目标。它也没有给每个模态另设连续噪声 MSE。联合损失鼓励在可见文字、图像、语音条件中恢复缺失内容，但共享词表本身并不保证所有组合任务均已有效对齐，还需要数据覆盖。
 
 **负熵决定先生成哪里。** 论文 Eq. (2) 是：
 
-$$c_t^i=-H(p_t^i)=\sum_{v=1}^{V}p_t^{i,v}\log p_t^{i,v},\qquad p_t^i=\mathrm{softmax}(z_t^i).$$
+```math
+c_t^i=-H(p_t^i)=\sum_{v=1}^{V}p_t^{i,v}\log p_t^{i,v},\qquad p_t^i=\mathrm{softmax}(z_t^i).
+```
 
 分布越集中，熵越小，$`c`$ 越大。每步选择最高置信度的 top-$`k`$ 位置，从这些位置的概率分布采样 token，其余位置继续保持 MASK。选择位置和选择具体 token 是两个环节，不是对每个位置直接 argmax。重复惩罚与 classifier-free guidance 先调整 logits，再算分布；报告没有给全套推理系数，不能补出一个唯一默认配置。
 
-**位置惩罚为何会改变解码顺序。** 作者观察到两端向中间同时生成时，上下图像区域容易出现相似重复图案，因而在早期将最后 $`N_t`$ 个位置 logits 乘 $`\gamma_p<1`$。这不是强制的块状自回归，而是降低尾部的确定性。用标准 softmax 温度解释，$`\mathrm{softmax}(\gamma_p z)`$ 等价于升高温度，通常使分布更平，负熵置信度降低，在 top-$`k`$ 排序中更晚被选中。
+**位置惩罚为何会改变解码顺序。** 作者观察到两端向中间同时生成时，上下图像区域容易出现相似重复图案，因而在早期将最后 $`N_t`$ 个位置 logits 乘 $`\gamma_p\lt 1`$。这不是强制的块状自回归，而是降低尾部的确定性。用标准 softmax 温度解释，$`\mathrm{softmax}(\gamma_p z)`$ 等价于升高温度，通常使分布更平，负熵置信度降低，在 top-$`k`$ 排序中更晚被选中。
 
 更精确地，对固定 logits $`z`$，标准微分给 $`\frac{d}{d\gamma}H(\mathrm{softmax}(\gamma z))=-\gamma\,\mathrm{Var}_{p_\gamma}(z)\le0`$；减小正数 $`\gamma`$ 因而增加熵。这是本文用于解释策略的数学推导，**不是论文另一个编号公式或对重复图案消除的严格保证**。附录配置为 $`\gamma_p=0.5`$、$`N_T=L-100`$，未完整给出每个时间点如何随 $`t`$ 调整惩罚范围。
 

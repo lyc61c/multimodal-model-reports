@@ -39,7 +39,7 @@
     "Taskadapted checkpoints differ",
     "No GPUor contextlength disclosed"
   ],
-  "article_sha256": "27150fb46b0137922bfca0e52bd341e16e3b49ebcdea7911b5ff895b59830ad4",
+  "article_sha256": "2f405784a6ac0eeca11b40d7c64908528cd089365b38aa2b9d8c9b93b6410cfe",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -58,7 +58,7 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 3,
+    "math_delimiters_converted": 4,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -76,11 +76,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 3,
+      "delimiter_conversions": 4,
       "operatorname_replacements": 4,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 1,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

@@ -65,18 +65,18 @@ MIR 的数据流与模型回答路径要分开：同一检查点先前向处理�
 
 文本中心缩放因子为：
 
-$$
+```math
 \alpha_k=\frac{s}{\sum_{j=1}^{s}\Vert f^t_{k,j}\Vert _2}.
-$$
+```
 
 这样文本 token 平均二范数归一到 1，而视觉 token 也乘同一个 $`\alpha_k`$，保留两模态之间原有幅值差异。分别把每个 token 归一为单位向量会抹掉这部分信息；完全不缩放又会让深层较大幅值干扰跨层比较。
 
 异常值函数 $`\omega`$ 按 3σ 原则移除少量高范数 token，之后计算两类 token 的均值 $`\mu`$、样本协方差 $`\Sigma`$。原文的 MIR 是：
 
-$$
+```math
 \mathrm{MIR}=\log\sum_k\left[\Vert \mu_{v,k}-\mu_{t,k}\Vert _2^2+
 \mathrm{Tr}\left(\Sigma_{v,k}+\Sigma_{t,k}-2(\Sigma_{v,k}\Sigma_{t,k})^{1/2}\right)\right].
-$$
+```
 
 这是借用 FID 的分布距离形式；此处特征来自 LLM 隐状态，**不运行 Inception 图像分类器**。均值项比较整体偏移，协方差项比较分布扩散与方向。原文 Equation 4 将文本协方差左侧也排成 $`\Sigma_{v,k}`$，属于下标笔误；根据定义及 Equation 3，本介绍按 $`\Sigma_{t,k}`$ 理解，不引入第二个视觉协方差。
 
@@ -84,10 +84,10 @@ $$
 
 MoCa 的原文 Equation 5 为：
 
-$$
+```math
 \psi(f_k^v)=u\odot f_k^v+b,
 \qquad u,b\in\mathbb R^{1\times d}.
-$$
+```
 
 原文把偏移向量记作 $`v`$，这里用 $`b`$ 避免与视觉模态下标混淆。缩放初始全 1、偏移全 0，因此初始变换为恒等映射。它只增加逐通道仿射参数，不改变文本分支；不是把 MIR 直接加成可微训练损失，也没有新建跨注意力模块。
 

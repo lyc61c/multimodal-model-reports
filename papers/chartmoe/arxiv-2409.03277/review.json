@@ -41,7 +41,7 @@
     "GPUhours do not imply trainingcardcount",
     "Gate renormalization and auxiliaryloss notdisclosed"
   ],
-  "article_sha256": "8a5585b56b2d43af7f1d714cb82cc50d83ee28693b43906b6846bddbec6b4666",
+  "article_sha256": "10558b7599087b9b1167a213015de282c2bf31da5c379b48e7ec11cc12fd6931",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -59,7 +59,7 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
+    "math_delimiters_converted": 9,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
@@ -77,11 +77,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 8,
+      "delimiter_conversions": 9,
       "operatorname_replacements": 2,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 1,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

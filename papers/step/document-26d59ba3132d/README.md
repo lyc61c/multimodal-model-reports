@@ -73,10 +73,10 @@ AFD 的 attention 实例保存 KV 并计算注意力，FFN 实例保存专家权
 
 根据正文第 2 节，query 计算可用解释性记号表示为：
 
-$$
+```math
 q= W_{\mathrm{up}}\mathrm{Norm}(W_{\mathrm{down}}h),
 \qquad 7168\rightarrow2048\rightarrow64\times256.
-$$
+```
 
 这是报告配置的示意，完整 MFA 推导由其引用的另一篇 MFA 论文展开，本介绍不冒称这里给出了全部矩阵分解公式。64 个 query head 与共享 K/V 的设计，在减少缓存的同时保留较多 query 表达方向。系统论文将其 attention effective rank 记为 16384；这一分析指标不能直接当作视觉理解效果分数。
 
@@ -90,10 +90,10 @@ $$
 
 原文以单位运算费用 $`u_F`$ 和单位访存费用 $`u_B`$ 估计 attention 与 FFN：
 
-$$
+```math
 C_A=\max(F_Au_F,B_{KV}u_B)+F_{\mathrm{linear}}u_F,
 \qquad C_F=F_{\mathrm{FFN}}u_F.
-$$
+```
 
 attention 主算子取计算与访存费用的较大值，线性投射另计；FFN 在足够大 batch、接近计算上限的假设下以 FLOPs 计费。AFD 再允许给两部分选择不同硬件。作者假设通信可被完全重叠，并忽略占比小于约 5% 的 embedding / LM head。费用表还用 2025 年报告中的估计云卡价格，910B 价格并非公开报价；因此不是当前 API 价格，也不是完整生产账单。（PDF 第 4–7 页）
 
@@ -101,9 +101,9 @@ attention 主算子取计算与访存费用的较大值，线性投射另计；F
 
 若 $`S`$ 是激活专家权重占比，原文用 roofline 推出：
 
-$$
+```math
 B_{\mathrm{MoE}}\ge\frac{F_{\max}}{2S B_{\max}}.
-$$
+```
 
 更稀疏意味着每专家更难积累足够 token，需要更大总 batch 来摊薄权重读取。每层网络量约 $`3HB_{\mathrm{MoE}}`$，来自 8-bit dispatch 与 16-bit combine；它又必须满足流水线通信预算。因此专家数和 top-k 应同时考虑网络能力，不能只看每 token 激活量。该模型分析采用理想调度，真实负载不均衡和网络抖动会影响结论。（PDF 第 9–11 页）
 
@@ -121,9 +121,9 @@ $$
 
 首版系统论文没有完整给出预训练、视觉接入、SFT、强化学习的阶段安排、GPU 总量或优化器设置。正文提及推理加速可以降低 RL 训练成本，但不是披露了一套可以直接复现的 RL 目标。自回归生成本身可用下式解释：
 
-$$
+```math
 p_\theta(y\mid V,q)=\prod_t p_\theta(y_t\mid y_{<t},V,q).
-$$
+```
 
 它表达文本在视觉和提示条件下生成，不足以据此补全原文未公开的训练损失、偏好目标或任务权重。本条目的重点可复查流程是部署：attention、FFN、通信三阶段预算各约 16.6ms，总目标 TPOT 50ms；三组微批错开运行，用 direct RDMA 重叠通信与计算。4K FP8 实测配置使用 2A2F、32 张 GPU、总 batch 6144、三个 2048 微批。
 

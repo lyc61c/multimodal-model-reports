@@ -63,7 +63,7 @@
     "Total pretraining tokens, full cluster GPU count and aggregate training cost are not disclosed",
     "Self-review against the source; model or benchmarks were not rerun"
   ],
-  "article_sha256": "f7574e9cedc419ca261de4d6821c2234b812206fd45cda778bab23a017d6bfb6",
+  "article_sha256": "40965ffd3488b5baa6ffc52b13b049bfde2d6a6fb143ff240950832ca5265b15",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -81,18 +81,21 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 24,
+    "math_delimiters_converted": 28,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 20,
+      "delimiter_conversions": 24,
       "operatorname_replacements": 6,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 4,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

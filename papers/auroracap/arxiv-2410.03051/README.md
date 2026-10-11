@@ -72,9 +72,9 @@
 
 原文 Equation (1) 为：
 
-$$
+```math
 A=\mathrm{softmax}\left(\frac{QK^\top}{\sqrt d}+\log s\right).
-$$
+```
 
 Q、K 是查询与键，d 是相应特征维度，s 是某个 Token 合并后代表的 Patch 数，广播到对应的注意力列。log s 调整让一个代表多个原始 Patch 的 Token 在归一化注意力中保留相应权重，而不是与单 Patch Token 完全同权。把该项理解成“所有合并 Token 被进一步削弱”会与公式方向冲突。
 

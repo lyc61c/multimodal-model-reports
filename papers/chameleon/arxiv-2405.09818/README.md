@@ -57,13 +57,15 @@
 
 ## 4. 核心创新与数学原理
 
-统一离散序列 $`s_1,\ldots,s_T`$ 的生成可用机制说明式 $`\mathcal L_{AR}=-\sum_t\log p_\theta(s_t\mid s_{<t})`$ 表达：文字和视觉code都在同一词表预测，区别于文字CE＋视觉连续回归两目标。原文未给完整预训练loss编号式，本文用它解释token建模，不额外宣称新的视觉对比或像素重构目标。图像tokenizer的训练是单独环节，其压缩错误无法通过语言预测完全恢复。
+统一离散序列 $`s_1,\ldots,s_T`$ 的生成可用机制说明式 $`\mathcal L_{AR}=-\sum_t\log p_\theta(s_t\mid s_{\lt t})`$ 表达：文字和视觉code都在同一词表预测，区别于文字CE＋视觉连续回归两目标。原文未给完整预训练loss编号式，本文用它解释token建模，不额外宣称新的视觉对比或像素重构目标。图像tokenizer的训练是单独环节，其压缩错误无法通过语言预测完全恢复。
 
 attention logits通常含 $`QK^\top/\sqrt d`$。QK-Norm在query与key上用layer norm，直接约束进入attention softmax的表示尺度，减轻norm不受控增长；它与最后词表softmax的logit漂移不同，不能只做QK-Norm就认为全部问题解决。
 
 词表softmax具有平移不变性：$`\mathrm{softmax}(z+c)=\mathrm{softmax}(z)`$。概率可保持近似不变而logits共同漂移，数值范围仍可能出问题。原文进一步正则化分区函数 $`Z=\sum_i e^{z_i}`$，增加
 
-$$\mathcal L_z=10^{-5}(\log Z)^2.$$
+```math
+\mathcal L_z=10^{-5}(\log Z)^2.
+```
 
 这不是对每个类别logit平方直接惩罚，也不是强制文字/图像概率相等。报告将不同模态共同训练的norm竞争作为问题解释，以训练曲线与去掉图片生成对照佐证；不能由此推出所有多模态系统必定存在相同发散机制。
 

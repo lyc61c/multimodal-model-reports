@@ -69,27 +69,27 @@ CLIP 首先输出规则网格的 patch 特征。空间聚类根据语义距离�
 
 令原始视觉 token 为 $`Z=\{z_i\}_{i=1}^{L}`$，原文局部密度定义为
 
-$$
+```math
 \rho_i=\exp\left(-\frac1K
 \sum_{z_k\in\mathrm{KNN}(z_i,Z)}\Vert z_k-z_i\Vert ^2\right).
-$$
+```
 
 相邻特征越相似，平均距离越小，密度越高。随后定义
 
-$$
+```math
 \delta_i=\begin{cases}
 \min_{j:\rho_j>\rho_i}\Vert z_j-z_i\Vert ^2,&\exists j:\rho_j>\rho_i,\\
 \max_j\Vert z_j-z_i\Vert ^2,&\text{否则}.
 \end{cases}
-$$
+```
 
 选择较大 $`\rho_i\delta_i`$ 的点作为中心，一方面要求局部具有代表性，另一方面要求与其他高密度点有分离度。其他 token 按最近中心归属，簇内平均形成合并表示。高密度背景可能被压成少数簇；对象内部有不同特征时可能获得多个簇。但这不是显式按问句挑选相关对象，聚类发生在视觉特征上，原文没有提出指令条件化的 token 选择器。
 
 时间聚类对帧级特征使用相同原则。若第 $`n`$ 个事件包含帧索引集合 $`F_n`$，原文 Eq. (3) 将其 token 集合写为
 
-$$
+```math
 \widetilde Z_n=\{z_i^m\mid m\in F_n,\ i\in\{1,\ldots,L\}\}.
-$$
+```
 
 再把空间公式中的候选集改成 $`\widetilde Z_n`$。因此合并可以发生于不同帧的相似视觉特征，而非仅分别压缩每帧再简单平均。保留多个事件能减轻全视频平均造成的先后关系丢失，但时间细节仍受采样帧、事件划分和语言模型长度限制。
 

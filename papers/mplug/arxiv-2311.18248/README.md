@@ -63,9 +63,9 @@ LaTeX 表格作为文字直接进入语言路径，不需要先生成表格截�
 其第一项方法是将写作任务分成可控制的条件生成：
 
 
-$$
+```math
 p(A\mid C,D,O,I)=\prod_t p(a_t\mid C,D,O,I,a_{<t}),
-$$
+```
 
 
 其中 C 为前文、D 为图像或 LaTeX 图表、O 为提纲、I 为指令。此式是标准自回归解释，原文没有新增编号的训练公式。提纲先约束讨论方向，图表提供具体证据和数值，前文提供专名与背景。没有提纲时，模型可能给出与图表相符但偏离作者目标的讨论；提供提纲时，也可能只把提示改写成流畅段落。这两个问题都需要通过实际结果区分。
@@ -119,7 +119,7 @@ PaperOwl 从已训练的 DocOwl 继续指令微调；并非本文重新从头训
 
 没有披露 LoRA α、完整注入层名单、优化器、warmup、weight decay、训练精度和全局序列上限，不以基础 DocOwl 的外部默认值补充。64 A100 days 不能写成 64 张 A100 各自训练 64 天，也不包含整个基础模型的历史预训练成本。
 
-训练目标可按标准生成式监督解释为：$`\mathcal L=-\sum_t\log p_\theta(y_t\mid C,D,O,I,y_{<t})`$，目标 y 分别为 caption、analysis、outline。正文未逐 token 说明所有 prompt mask 和任务权重；此式说明任务形式，不是报告新增的数学损失。CIDErGPT 用于评测，没有作为强化学习奖励训练模型；GPT-3.5 参与提纲构建与评审，也不等于 PaperOwl 运行时调用 GPT。
+训练目标可按标准生成式监督解释为：$`\mathcal L=-\sum_t\log p_\theta(y_t\mid C,D,O,I,y_{\lt t})`$，目标 y 分别为 caption、analysis、outline。正文未逐 token 说明所有 prompt mask 和任务权重；此式说明任务形式，不是报告新增的数学损失。CIDErGPT 用于评测，没有作为强化学习奖励训练模型；GPT-3.5 参与提纲构建与评审，也不等于 PaperOwl 运行时调用 GPT。
 
 <a id="experiments"></a>
 

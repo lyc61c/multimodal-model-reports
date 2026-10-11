@@ -44,12 +44,12 @@ tokenizer训练时同时把离散表示交给音频decoder重建Mel谱、交给�
 
 **残差量化兼顾语义与声学。** 一帧特征逐层量化其未被表示的残差，8层码合起来逼近原特征。以下为RVQ机制的**解释性表达**，报告未给出此公式或每层码本大小：
 
-$$
+```math
 r^{(0)}=h,\quad
 c^{(\ell)}=\arg\min_{c\in\mathcal C_\ell}\Vert r^{(\ell-1)}-c\Vert _2^2,\quad
 r^{(\ell)}=r^{(\ell-1)}-c^{(\ell)},\quad
 \widehat h=\sum_{\ell=1}^{8}c^{(\ell)}.
-$$
+```
 
 h为Whisper及下采样后的帧特征，码本向量修正前一级剩余误差。转录预测推动这些码携带词义，Mel重建推动它保留声音细节。原文没有公布这两类损失的权重、量化器更新方法或commitment loss配置，不能据标准RVQ实现补写超参。〔PDF第7页〕
 

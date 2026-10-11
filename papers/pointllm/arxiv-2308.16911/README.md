@@ -51,11 +51,13 @@ Point-BERT 按 ULIP-2 的思路把点云表示与 CLIP 相关空间对齐。原 
 
 模型将点集合 $`P\in\mathbb R^{n\times6}`$ 编成特征 $`X=f_{pe}(P)\in\mathbb R^{m\times c}`$，再投影为 $`Y=f_{proj}(X)\in\mathbb R^{m\times c'}`$。投影不改变这里的特征位置数 m，主要改变通道，使连续点云特征能够作为语言模型的输入嵌入。
 
-原文式（1）写作 $`\hat z_i=f_{llm}(Z_{<i})`$，式（2）再经词表映射选择概率最大的文字 token。点云、指令、历史回答共享因果上下文，但输出仍限定在文字词表。点云输入不是把每个 xyz 直接打印成一串数字，也不是先渲染图像后以图像 token 作为主输入。
+原文式（1）写作 $`\hat z_i=f_{llm}(Z_{\lt i})`$，式（2）再经词表映射选择概率最大的文字 token。点云、指令、历史回答共享因果上下文，但输出仍限定在文字词表。点云输入不是把每个 xyz 直接打印成一串数字，也不是先渲染图像后以图像 token 作为主输入。
 
 对原文第 5 页的负对数似然描述，可用下式明确监督掩码：
 
-$$\mathcal L=-\sum_{t\in\mathcal R}\log p_\theta(w_t\mid P,\text{instruction},w_{<t}),$$
+```math
+\mathcal L=-\sum_{t\in\mathcal R}\log p_\theta(w_t\mid P,\text{instruction},w_{<t}),
+```
 
 其中 $`\mathcal R`$ 只包含助理回答和 `</s>`。这是对原文训练文字的解释式，论文没有把它列为新编号损失。用户指令、点云占位嵌入不计入文字预测损失。第一阶段通过固定语言模型来学习投影器，第二阶段开放语言模型，以适应复杂问答。
 

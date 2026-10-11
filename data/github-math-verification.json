@@ -4,9 +4,9 @@
   "expressions": 2855,
   "delimiters": {
     "guarded": 2355,
-    "display": 500
+    "math_fence": 500
   },
-  "article_manifest_sha256": "c9a156416616aa94b5752666ae21c20666bf44d90a031594f290687821abd4a7",
+  "article_manifest_sha256": "18701f99865bc48c70c6bc4ab3428601db0dba9e7948126c34b88631bcf68530",
   "issues": [],
   "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
   "limits": "Syntax/macro checks precede Markdown and engine validation. This is not a complete GitHub macro whitelist or a mathematical proof check."

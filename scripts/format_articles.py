@@ -140,7 +140,8 @@ def math_expressions(body):
 
 def normalize_math_details(body):
     """Use GitHub's protected inline syntax and deployment-compatible named operators."""
-    statistics = {"delimiter_conversions": 0, "operatorname_replacements": 0, "vertical_bar_replacements": 0}
+    statistics = {"delimiter_conversions": 0, "operatorname_replacements": 0, "vertical_bar_replacements": 0,
+                  "display_fence_conversions": 0, "inline_angle_replacements": 0}
 
     def compatible_tex(tex):
         if re.search(r"\\operatorname\*", tex):
@@ -162,12 +163,20 @@ def normalize_math_details(body):
             kind = match.lastgroup
             tex = compatible_tex(match[kind])
             if kind in {"display", "legacy_display"}:
-                if kind == "legacy_display":
-                    statistics["delimiter_conversions"] += 1
-                    return "\n\n$$\n" + tex.strip() + "\n$$\n\n"
-                return "$$" + tex + "$$"
+                statistics["delimiter_conversions"] += 1
+                statistics["display_fence_conversions"] += 1
+                # Dollar blocks still undergo Markdown escaping/emphasis on GitHub.
+                # A math fence preserves TeX braces, row breaks and punctuation verbatim.
+                prefix = "\n\n" if text[text.rfind("\n", 0, match.start()) + 1:match.start()].strip() else ""
+                end = text.find("\n", match.end())
+                suffix = "\n\n" if text[match.end():end if end >= 0 else len(text)].strip() else ""
+                return prefix + "```math\n" + tex.strip() + "\n```" + suffix
             if "\n" in tex or "`" in tex:
                 raise ValueError("Inline math requires a single line without a literal backtick")
+            # GitHub's protected inline code can double-encode HTML angle brackets.
+            # TeX relation names avoid leaking entities such as &lt; into MathJax.
+            statistics["inline_angle_replacements"] += tex.count("<") + tex.count(">")
+            tex = tex.replace("<", r"\lt ").replace(">", r"\gt ")
             if kind != "guarded":
                 statistics["delimiter_conversions"] += 1
             return "$`" + tex.strip() + "`$"
@@ -320,6 +329,7 @@ def main():
         review["github_math_revision"] = {
             "date": args.revision_date,
             "inline_syntax": "$`TeX`$",
+            "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
             "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
             "changes": {key: value + prior_counts.get(key, 0) for key, value in compatibility.items()},
             "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",

@@ -56,11 +56,11 @@ CoM 把一步定义为 $`(f_i,\mathrm{desc}_i)`$：$`f_i`$ 是操作，描述说
 
 原文跨轮注意力为：
 
-$$
+```math
 \mathrm{att}(X)=\mathrm{softmax}\!\left(\frac{Q_tK_t'{}^T}{\sqrt d}\right)V_t',
 \quad K_t'=\mathrm{trunc}([K_0;\ldots;K_t]),\quad
 V_t'=\mathrm{trunc}([V_0;\ldots;V_t]).
-$$
+```
 
 当前查询读取累积的历史键和值，保留“这张放大图来自之前哪个目标”的上下文。这是原文机制公式，不是额外引入的强化学习或多步奖励目标。放大通过重新采样增加模型看到的局部像素占比，不能凭插值创造原图不存在的信息。（PDF 第 4 页）
 

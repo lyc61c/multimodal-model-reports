@@ -60,15 +60,17 @@
 
 **空间指令不是坐标的纯文本编码。** 给定框$`b`$及四级特征$`F_\ell`$，可用下式解释第3节的模块关系：
 
-$$r_b=\mathrm{Fuse}\big(\mathrm{RoIAlign}(\mathrm{Shuffle}(F_\ell,C_\ell),b;14,14)\big)_{\ell=1}^4.$$
+```math
+r_b=\mathrm{Fuse}\big(\mathrm{RoIAlign}(\mathrm{Shuffle}(F_\ell,C_\ell),b;14,14)\big)_{\ell=1}^4.
+```
 
 $`C_\ell`$表示坐标信息。此式是本文说明记号，原文没有编号数学公式，也没有给Fuse/Shuffle的所有具体算子与参数。它表达的是保留不同深度视觉信息、对齐到用户的连续坐标区域、再融合进语言空间。
 
 RoIAlign 采用连续位置插值；标准双线性采样可写为：
 
-$$
+```math
 F(x,y)=\sum_{i,j}F(i,j)\max(0,1-\vert x-i\vert )\max(0,1-\vert y-j\vert )
-$$
+```
 
 实际只有邻近四个格点有非零贡献。这是标准定义解释，不是作者提出的新公式。相比离散取整框，它能减少坐标量化误差；但不能恢复视觉骨干输入时已经丢失的小字、小物体细节。
 
@@ -76,7 +78,9 @@ $$
 
 语言损失只监督回答和停止字符串`###`。按第4节描述整理为：
 
-$$\mathcal L=-\sum_t m_t\log p_\theta(y_t\mid y_{<t},I,\{r_b\}),\qquad m_t=\mathbf1[t\text{ 位于回答或停止串}].$$
+```math
+\mathcal L=-\sum_t m_t\log p_\theta(y_t\mid y_{<t},I,\{r_b\}),\qquad m_t=\mathbf1[t\text{ 位于回答或停止串}].
+```
 
 这是标准next-token损失的解释式。问题和视觉占位符是条件，未作为全部待预测文本算损失。第二阶段仍为监督微调，原文没有强化学习、DPO或显式区域对比损失，不能由“推理能力”反推其使用RL。
 

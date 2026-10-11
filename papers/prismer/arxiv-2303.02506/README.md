@@ -63,11 +63,11 @@ Table 2 将 Resampler 列为四层；BASE 宽 768，LARGE 宽 1024，默认采�
 第二项机制是**固定长度重采样**。设拼接后的辅助特征为 $`X\in\mathbb R^{N\times d}`$，latent 为 $`Q\in\mathbb R^{M\times d}`$，默认 $`M=64`$。下式为 Figure 3 的标准注意力解释，**不是原文编号公式**：
 
 
-$$
+```math
 Z=\mathrm{softmax}\!\left(
 \frac{(QW_Q)([X;Q]W_K)^\top}{\sqrt{d_k}}
 \right)([X;Q]W_V).
-$$
+```
 
 
 Query 来自 latent，key／value 来自**辅助特征与 latent 的拼接**，随后还有前馈更新。输出长度为 $`M`$，不随辅助专家数量增长。设 RGB patch 数为 $`P`$，视觉骨干的自注意力长度因此保持约 $`P+M`$，复杂度约 $`O((P+M)^2d)`$。但 Resampler 的注意力仍涉及 $`M(N+M)`$，原始专家推理及输入 stem 也随输入增加，所以“下游注意力长度固定”不能改写成“全部推理成本与专家数无关”。
@@ -77,9 +77,9 @@ Query 来自 latent，key／value 来自**辅助特征与 latent 的拼接**，�
 训练只使用**自回归下一 token 预测**。第 3.4 节直接给出无编号目标：
 
 
-$$
+```math
 \mathcal L=-\sum_{t=1}^{T}\log p(y_t\mid y_{<t},z).
-$$
+```
 
 
 这里 $`z`$ 是融合后的视觉表示。深度、分割等预测只作为条件输入，统一网络并没有通过额外深度或分割损失重新训练这些专家。描述任务生成文本；问答及分类可对候选答案的每 token 对数似然排序，所以“生成式训练”不等于所有评测都采取完全自由回答。

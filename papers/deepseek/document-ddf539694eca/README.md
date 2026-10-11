@@ -50,15 +50,15 @@
 
 原文 Section 3.1 将副作用表示为“状态变换及其逆”的对。这里逆主要指**左逆**，并非要求每个操作可双向无损互换。对变换的组合采用 Equation 4：
 
-$$
+```math
 (f_1,g_1)\circ(f_2,g_2)=(f_1\circ f_2,g_2\circ g_1).
-$$
+```
 
 正向按通常函数复合执行，撤销次序相反。其跟踪状态是 $`\partial\Gamma=\Gamma\times(\Gamma\to\Gamma)`$；Equation 6 把当前状态与既有撤销器 $`(\gamma,\varphi)`$ 更新为
 
-$$
+```math
 \mathrm{track}(f,g)(\gamma,\varphi)=(f(\gamma),\varphi\circ g).
-$$
+```
 
 这使多步修改能被累计为统一清理操作。实际实现由回调返回或迭代器逐步产生 disposer，运行时负责收集与调用；**它不验证用户提供的逆是否正确**，这是组件作者须满足的义务（PDF 第 59 页）。
 

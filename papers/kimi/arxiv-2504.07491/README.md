@@ -55,9 +55,9 @@ MoE 从 Moonlight 的 5.2T 纯文本、8K 上下文中间检查点继续训练�
 
 视觉塔采用 CoCa 式联合目标，原文明示：
 
-$$
+```math
 \mathcal L=\mathcal L_{siglip}+2\mathcal L_{caption}.
-$$
+```
 
 图文编码器计算 SigLIP 对比损失，轻量文本 decoder 根据图像特征做下一 token 预测。全局语义对齐与细节描述共同训练；后者目标还包含 OCR 文字和 grounding bounding boxes。报告没有展开 SigLIP 的具体逐对公式及全部负样本实现，不能替换成已确认的 CLIP batch-softmax 公式。
 
@@ -65,11 +65,11 @@ $$
 
 Thinking 版 RL 采用在线 policy mirror descent 的变体。以条件分布记号明确原式（1）的含义：
 
-$$
+```math
 \max_\theta\ \mathbb E_{(x,y^*)\sim D}
 \left[\mathbb E_{(y,z)\sim\pi_\theta(\cdot\mid x)}r(x,y,y^*)
 -\tau D_{KL}\big(\pi_\theta(\cdot\mid x)\Vert \pi_{\theta_i}(\cdot\mid x)\big)\right].
-$$
+```
 
 $`x`$ 是问题，$`y`$ 是答案，$`z`$ 是生成的推理过程；正确性奖励取0/1，KL 约束本轮策略相对当前参考策略的变化。下一轮参考更新为已优化的模型。奖励针对最终答案，不是给每个思考 token 人工逐步评分。另有长度惩罚防止冗长，以及按难度和样本成功率进行课程/优先采样；论文未给长度惩罚的完整公式和系数，也不是直接宣称采用 GRPO。
 

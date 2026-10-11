@@ -65,9 +65,9 @@ Q-Former 仅加载 BERT 的文字与位置嵌入，词表 30,522、位置嵌入�
 **在压缩前融合用户交互。** 单独将视觉提示拼在 LLM 输入后，无法改变已提取的整场景前缀。LL3DA 提前将 query、点击/框特征和文字指令放进共享 self-attention，再让 query 与提示经 cross-attention 查询点云。它使“关注哪个对象”影响场景压缩过程，而不只是影响最终文字解码。注意力可用下列标准定义理解，原文没有将其列为新编号公式：
 
 
-$$
+```math
 \mathrm{Attn}(Q,K,V)=\mathrm{softmax}(QK^\top/\sqrt d)V.
-$$
+```
 
 
 固定 32 query 限制了送入 LLM 的场景序列长度，query-to-scene 访问成本随 1,024 个场景 token 增加，而场景编码本身仍有计算开销。本文没有端到端速度曲线，不宜把固定查询数量直接等同于已证明的全模型高吞吐。
@@ -75,11 +75,11 @@ $$
 **将点击转为空间位置特征。** 原文 Equation (2) 为：
 
 
-$$
+```math
 \mathrm{pos}(p)=
 [\sin(2\pi pB);\cos(2\pi pB)],\quad
 p\in\mathbb R^3,\ B\in\mathbb R^{3\times d/2}.
-$$
+```
 
 
 $`p`$ 在场景范围内归一化，$`B`$ 可学习；正弦与余弦拼接给出 d 维表示。随后 Equation (3) 用两种独立 FFN 转换点击位置编码和框 ROI 特征。位置编码输入是连续 0–1 值，输出文字中的坐标却是离散 0–255，这两种尺度不能混用。
@@ -87,11 +87,11 @@ $`p`$ 在场景范围内归一化，$`B`$ 可学习；正弦与余弦拼接给�
 **用已有文字词表表达三维空间。** 点表达为 `<loc>x,y,z</loc>`，框表达为 `<obj>cx,cy,cz,w,h,l</obj>`，后者是中心与尺寸，不能当作两个对角点。原文按输入场景边界将数值离散到无符号整数 0–255，不新增可学习坐标词。以单轴坐标为例，以下为帮助理解的线性量化示意，并非原文规定的取整代码：
 
 
-$$
+```math
 q\approx\mathrm{round}\left(255\frac{x-x_{min}}{x_{max}-x_{min}}\right),
 \quad
 x\approx x_{min}+\frac{q}{255}(x_{max}-x_{min}).
-$$
+```
 
 
 区间被划为 255 个间隔，细节精度受场景范围与取整影响；原文未给出退化轴、越界裁剪和尺寸量化完整实现。文字标签本身由已有 tokenizer 切分，不表示每个整数都有专门单 token。
@@ -99,11 +99,11 @@ $$
 **同时评价定位与文字质量。** 原文 Equation (7) 的 $`m@kIoU`$ 把 caption 分数乘以定位成功条件，再对实例平均：
 
 
-$$
+```math
 m@kIoU=\frac1N\sum_{i=1}^N
 m(c_i^{pred},c_i^{gt})\,
 \mathbf1[\mathrm{IoU}(b_i^{pred},b_i^{gt})\ge k].
-$$
+```
 
 
 若框没有达到重叠阈值，该实例 caption 分数归零。C@0.5 因而是带定位门槛的 CIDEr，不是“65.19% 的对象框正确”。句子相似性高也不保证几何准确，正确理解这一指标是区分外部框与语言生成框的关键。[Section 5.2、Appendix C](https://arxiv.org/pdf/2311.18651v1)
@@ -147,10 +147,10 @@ $$
 原文 Equations (5)–(6) 最大化回答序列似然，实际使用回答 token 交叉熵：
 
 
-$$
+```math
 \mathcal L(\theta)=-\sum_{i=1}^{\vert s\vert }
 \log P(s_i\mid PC,I_v,I_t,s_{<i};\theta).
-$$
+```
 
 
 $`PC`$ 为点云，$`I_v,I_t`$ 为视觉与文字交互，$`\theta`$ 只涵盖可训练部分。坐标在文本输出里同样接受 token 监督，没有另设已披露的 box IoU 或控制策略奖励。

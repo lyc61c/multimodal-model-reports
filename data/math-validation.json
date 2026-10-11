@@ -4,7 +4,8 @@
   "equations": 2855,
   "failures": [],
   "gfm_protected_inline_expressions_preserved": 2355,
+  "gfm_display_expressions_preserved": 500,
   "gfm_failures": [],
-  "article_manifest_sha256": "c9a156416616aa94b5752666ae21c20666bf44d90a031594f290687821abd4a7",
-  "scope": "Exact protected inline TeX is checked after GFM tokenization, then all extracted equations are compiled. This is not a live GitHub browser check or a scientific correctness review."
+  "article_manifest_sha256": "18701f99865bc48c70c6bc4ab3428601db0dba9e7948126c34b88631bcf68530",
+  "scope": "All inline and fenced display TeX is compared with the full GFM token stream; the resulting parser payloads are compiled. This is not a live GitHub browser check or a scientific correctness review."
 }

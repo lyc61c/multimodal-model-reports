@@ -65,9 +65,9 @@ v1 没有明确列出图像输入分辨率、visual token 总数、特征维度�
 **简单连接器，突出数据作用。** 原文 Equation (1) 为：
 
 
-$$
+```math
 Z_v=g(X_v),\qquad H_v=WZ_v.
-$$
+```
 
 
 视觉特征经线性映射取得语言嵌入维度，映射本身并不将图像量化到文字词表，也没有把每个 patch 赋予明确的词义。原文邻近一处文字把输出误记为 Hq，公式与 Figure 1 的视觉输出是 Hv；这里采用公式口径。Stage 1 在冻结语言模型下优化 W，使生成 caption 的梯度指导视觉特征进入语言模型能够处理的空间。
@@ -75,18 +75,18 @@ $$
 **以多轮回答为目标，而不预测所有输入。** Equation (2) 指定第一轮随机排列问题与图像，之后每轮加入新问题；同一图像影响所有后续回答。Equation (3) 用回答序列的自回归条件概率表示监督：
 
 
-$$
+```math
 p(X_a\mid X_v,X_{instruct})=
 \prod_{i=1}^{L}p_\theta(x_i\mid X_v,X_{instruct,<i},X_{a,<i}).
-$$
+```
 
 
 这里 i 遍历需要预测的回答 token；system、用户问题、此前停止标记等也是上下文条件，原式为简洁省略它们。与监督方式一致，可将优化解释为回答 token 的负对数似然：
 
 
-$$
+```math
 \mathcal L=-\sum_{i\in\mathcal A}\log p_\theta(x_i\mid\text{此前完整上下文}).
-$$
+```
 
 
 后式是对 Equation (3) 的解释性写法，$`\mathcal A`$ 为 assistant 回答与相应停止目标位置。Table 2 明确强调预测回答和何时停止，不能把视觉输入、用户问题、全部 system message 都当作普通 next-token loss 标签。本文视觉输入只提供条件，没有预测视觉 token 或图像重建目标。

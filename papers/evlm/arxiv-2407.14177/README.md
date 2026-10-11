@@ -59,19 +59,23 @@ EVA2-CLIP-E-Plus 去掉最后 Transformer 后面的 norm 和 head，从最后 40
 
 **让视觉序列不经过宽 LLM 的全部自注意力与 FFN。** 若视觉长度 $`s_v`$、文本长度 $`s_t`$、语言宽度 $`h`$、batch $`B`$，原文 Eq.(1) 为：
 
-$$F_{\rm full}=24B(s_v+s_t)h^2+4B(s_v+s_t)^2h.$$
+```math
+F_{\rm full}=24B(s_v+s_t)h^2+4B(s_v+s_t)^2h.
+```
 
 前项包含投影和 FFN，后项是注意力矩阵乘法的二次项。原文 Eq.(2) 的交叉注意力估算为：
 
-$$F_{\rm cross}=4(6+r_{xc}+r_{xf})B(16+s_t)h^2+4B(16+s_t)^2h+4r_{xc}Bs_vd_vh+4r_{xc}B(16+s_t)s_vh.$$
+```math
+F_{\rm cross}=4(6+r_{xc}+r_{xf})B(16+s_t)h^2+4B(16+s_t)^2h+4r_{xc}Bs_vd_vh+4r_{xc}B(16+s_t)s_vh.
+```
 
 其中 $`d_v`$ 为视觉宽度，$`r_{xc}`$、$`r_{xf}`$ 为新增注意力/FFN 相对语言宽度的设置。语言模块主要处理 $`16+s_t`$ 个位置，视觉长度出现在视觉 KV 投影与交叉乘积中。固定文本长度时，这部分对视觉长度呈线性增长；视觉 ViT 自身依然有注意力开销，多图时还要计入每图的 media token，不能把这个单图单层估算推广成整个模型严格线性。
 
 报告采用以下示例配置：
 
-$$
+```math
 h=5120,d_v=1792,r_{xc}=.2,r_{xf}=.5,s_t=64
-$$
+```
 
 当 $`s_v=256`$ 时 $`F_{cross}/F_{full}\approx.24`$，$`s_v=1024`$ 时约 .077。附录 ViT sequence length 是 257/1025，包含额外 token，而 FLOPs 示例采用 256/1024；本文保留两者原口径。
 
@@ -99,7 +103,7 @@ SFT汇总称2.3M：ShareGPT4V665K、LLaVA-ZH150K，文档图表270K，以及Math
 
 ## 6. 训练流程与目标
 
-训练目标是文本 token 的自回归交叉熵。用说明式写为 $`\mathcal L=-\sum_{t\in\mathrm{text}}\log p_\theta(y_t\mid y_{<t},V)`$；图像可学习标记用于输入，不是要生成像素的监督目标。此式根据第3节文字整理，不是报告原编号公式。
+训练目标是文本 token 的自回归交叉熵。用说明式写为 $`\mathcal L=-\sum_{t\in\mathrm{text}}\log p_\theta(y_t\mid y_{\lt t},V)`$；图像可学习标记用于输入，不是要生成像素的监督目标。此式根据第3节文字整理，不是报告原编号公式。
 
 ![原文 Table 6](figures/original-p020-table-6.png)
 

@@ -65,19 +65,19 @@ Cosmos 3 希望把物理智能所需的几类能力放进同一框架：解释�
 
 **一是兼容两种不同生成规则的单向条件桥接。** 原文式 7、8 为：
 
-$$
+```math
 O_{\mathrm{AR}}=\mathrm{Attn}_{\mathrm{causal}}(Q_{\mathrm{AR}},K_{\mathrm{AR}},V_{\mathrm{AR}}),
 \qquad
 O_{\mathrm{DM}}=\mathrm{Attn}_{\mathrm{full}}(Q_{\mathrm{DM}},[K_{\mathrm{AR}};K_{\mathrm{DM}}],[V_{\mathrm{AR}};V_{\mathrm{DM}}]).
-$$
+```
 
 文字生成需要保留因果顺序，连续媒体去噪则需要查看整个目标的空间和时间关系。非对称掩码使两种规则并存：Generator 接受 Reasoner 的语义条件，Reasoner 不受每一步噪声状态反向污染。推理时固定条件的 Reasoner 输出因此可以只算一次并缓存；这与近似跳过若干扩散层的缓存方法不同，是由结构保证的不变条件复用。[原文第 11、47 页](https://arxiv.org/pdf/2606.02800v1#page=11)
 
 **二是统一连续模态的 flow matching。** 原文把干净潜变量 $`x_0`$ 与高斯噪声 $`\epsilon`$ 连接：
 
-$$
+```math
 x_\sigma=\sigma\epsilon+(1-\sigma)x_0,\qquad v^*=\epsilon-x_0.
-$$
+```
 
 模型 $`v_\theta(x_\sigma,\sigma,c)`$ 预测沿这条路径的速度，用掩码 MSE 拟合 $`v^*`$，不对干净条件帧计算目标损失。用本文整理的记号，可以将多模态目标写为 $`\sum_m\lambda_m\mathbb E\Vert M_m\odot(v_{\theta,m}-v_m^*)\Vert ^2`$；这是对原文叙述的汇总，不是其额外编号公式。中训练中动作损失乘 10，以补偿归一化动作向量较小的逐元素误差，不能直接把它理解成“动作采样占比扩大十倍”。[原文第 27、30 页](https://arxiv.org/pdf/2606.02800v1#page=27)
 

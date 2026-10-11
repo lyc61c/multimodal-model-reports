@@ -64,15 +64,15 @@ Vicuna-7B 是主要实验配置，FlanT5-XXL 是另一个语言骨干配置。�
 原文没有提出带编号的新数学公式。下面使用明确的符号重写其结构与目标，属于机制解释，不是声称复现原文某个 Eq.。设图像编码结果为 $`V=E(I)\in\mathbb R^{N\times d_v}`$，问题为 $`s`$，查询集合为 $`Q_0`$。两条路径可表达为
 
 
-$$
+```math
 Z_q=P_q\bigl(F_{\mathrm{QFormer}}(Q_0,s,V)\bigr),\qquad
 Z_p=VP_p+b_p,
-$$
+```
 
 
-$$
+```math
 X_{\mathrm{LLM}}=[\mathrm{Embed}(s);Z_q;Z_p].
-$$
+```
 
 
 其中 $`P_q`$ 是查询输出到语言空间的映射，$`P_p`$ 是新增 patch 投影；两路输出的最后一维必须与 LLM 的嵌入维度一致，才能在序列轴拼接。这里的拼接不是对两路向量逐元素平均。论文没有在正文明确列出全部实际 token 数，因而本文不把某个常见 Q-Former 配置的查询数当作本文逐项披露的超参数。
@@ -84,10 +84,10 @@ $$
 生成训练使用语言建模损失，可解释为
 
 
-$$
+```math
 \mathcal L_{\mathrm{LM}}
 =-\sum_{t=1}^{T}\log p_\theta(y_t\mid y_{<t},s,Z_q,Z_p).
-$$
+```
 
 
 $`y_t`$ 是目标描述或答案 token。主配置中的 $`\theta`$ 仅包含允许更新的接口模块，但损失仍经过冻结的 LLM 反向传播到视觉提示。对于分类和多选任务，作者采用候选答案的 log-likelihood ranking，可概括为 $`\hat a=\arg\max_{a\in\mathcal A}\log p(a\mid I,s)`$；开放生成采用 beam search。原文没有在此给出统一候选长度归一化细节或 beam 数，不能自行添加。

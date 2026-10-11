@@ -61,22 +61,22 @@ Slow 分支少取帧但保留细节，Fast 分支多取帧但强压缩空间网�
 
 **在空间和时间间分配预算。** 令逐帧投影特征为 $`F\in\mathbb R^{N\times H\times W\times D}`$。本文补写特征维度 $`D`$，原论文表达聚焦帧数及网格尺寸。Slow 和 Fast 操作可表示为：
 
-$$
+```math
 F_s=\mathrm{Pool}_{\sigma_h,\sigma_w}(\mathrm{Sample}_{N_s}(F)),\qquad
 F_f=\mathrm{Pool}_{\gamma_h,\gamma_w}(F).
-$$
+```
 
 其中 $`N_s\ll N`$，且 $`\gamma`$ 大于 $`\sigma`$。原文式（2）–（4）将最终输入写作：
 
-$$
+```math
 A=\mathrm{LLM}(\mathrm{Prompt},[\mathrm{flat}(F_s);\mathrm{flat}(F_f)],Q).
-$$
+```
 
 视觉长度为：
 
-$$
+```math
 B_v=N_s\frac H{\sigma_h}\frac W{\sigma_w}+N\frac H{\gamma_h}\frac W{\gamma_w}.
-$$
+```
 
 相比把全部帧保留高空间分辨率，双路方法降低语言模型序列长度；相比把每帧都压得很小，又保留部分细节。这个设计改变表示组织，没有引入新的优化损失。（第 4–5 页）
 

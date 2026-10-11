@@ -67,11 +67,11 @@
 
 **联合目标兼顾文字与像素。** 原文报告使用句子交叉熵、掩码二元交叉熵与 Dice 损失。其组合可概括为：
 
-$$
+```math
 \mathcal L=\lambda_t\mathcal L_{\mathrm{CE,text}}+
 \lambda_b\mathcal L_{\mathrm{BCE,mask}}+
 \lambda_d\mathcal L_{\mathrm{Dice,mask}}.
-$$
+```
 
 例如 Dice 衡量预测概率与真值掩码的重叠，常见解释形式为 $`1-(2\sum_i p_i g_i+\epsilon)/(\sum_i p_i+\sum_i g_i+\epsilon)`$。本文用该式说明作用；原文没有给出损失系数、平滑常数和具体归一化实现，不能将示意式当作精确复现配方。（§5）
 

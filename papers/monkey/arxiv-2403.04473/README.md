@@ -72,10 +72,10 @@
 算法用一个 token 与其余 token 的最大余弦相似度衡量重复程度。设已映射特征为 $`z_i`$，可以整理为：
 
 
-$$
+```math
 u_i=1-\max_{j\ne i}\frac{z_i^\top z_j}{\Vert z_i\Vert \Vert z_j\Vert },\qquad
 \mathcal S=\mathrm{TopR}(u,r).
-$$
+```
 
 
 必须排除自身，否则每个 token 与自己相似度为 1，独特性分数就会失去意义。选中集合随后按原始顺序重排，以保留视觉序列的空间组织。这里“独特”是特征空间判断，不等于已经测得对答案的因果贡献；背景异常也可能独特。
@@ -114,10 +114,10 @@ Figure 2 显示原 ViT 编码层冻结，新增移位层、Image Resampler、Tok
 原文 Eq. (2) 用最大化对数似然表达下一 token 训练。以标准无泄漏的答案记号整理为：
 
 
-$$
+```math
 \max_\theta\sum_{t=1}^{M}\log p_\theta(y_t\mid I,Q,y_{<t}),
 \quad\text{等价于最小化其负值。}
-$$
+```
 
 
 这里坐标、识别文本、JSON 字段都作为生成序列监督；并未披露独立框回归损失、IoU 损失或奖励模型。原式输入/输出符号和 `s1:i` 写法不够清楚，本式说明标准 teacher forcing 应以此前 token 为条件，而非把当前答案作为可见输入。正文也没有逐 token 展开 prompt mask，不能补造精确实现。

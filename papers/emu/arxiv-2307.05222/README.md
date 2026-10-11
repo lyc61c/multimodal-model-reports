@@ -56,20 +56,20 @@ Causal Transformer 每层包含因果 self-attention、cross-attention 和前馈
 原文式 (1) 将图像 $`I`$ 的 EVA 编码 $`g(I)`$ 与随机初始化查询 $`e_{1:N}`$ 映射为
 
 
-$$
+```math
 z_{1:N}=\mathrm{CausalTransformer}(g(I),e_{1:N}).
-$$
+```
 
 
-这些 $`z_i`$ 是连续向量，不是 VQ 词表中的离散视觉 ID。它们捕获的是学习到的潜在依赖，不能解释成现实世界因果关系的识别。将图像、视频帧和文字组织为 $`u_{1:m}`$ 后，原文式 (2) 的思想是最大化 $`\sum_i\log P_\theta(u_i\mid u_{<i})`$，近似建模原始多模态语料。
+这些 $`z_i`$ 是连续向量，不是 VQ 词表中的离散视觉 ID。它们捕获的是学习到的潜在依赖，不能解释成现实世界因果关系的识别。将图像、视频帧和文字组织为 $`u_{1:m}`$ 后，原文式 (2) 的思想是最大化 $`\sum_i\log P_\theta(u_i\mid u_{\lt i})`$，近似建模原始多模态语料。
 
 实际优化分成两类，可用以下解释式表达：
 
 
-$$
+```math
 \mathcal L= -\sum_{i\in\mathcal T}\log p_\theta(u_i\mid u_{<i})
  +\lambda\sum_{i\in\mathcal V}\Vert \hat z_i-z_i\Vert _2^2.
-$$
+```
 
 
 $`\mathcal T`$ 和 $`\mathcal V`$ 分别是文字、视觉位置；第一项分类，第二项回归。这里的合并表达用于解释论文两种损失，**原文没有给出 $`\lambda`$、损失归一化或每种模态位置的完整权重**。若把平方误差理解为固定方差高斯负对数似然，也需要额外假设；论文并未以这种假设推导其概率近似。

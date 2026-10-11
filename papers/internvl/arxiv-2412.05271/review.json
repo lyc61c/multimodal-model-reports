@@ -53,7 +53,7 @@
     "大模型继承视觉与LLM训练成本",
     "本文未运行或复现模型"
   ],
-  "article_sha256": "cb36b550abece9a42ace981c6d11ca9e173a90054ce4c9f30ac3120f103c26ce",
+  "article_sha256": "a410136fb1b5a17e5e40a874366391f4c49f61d7d275fa90ad08e425bc3d405e",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -71,18 +71,21 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 9,
+    "math_delimiters_converted": 12,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
   },
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 9,
+      "delimiter_conversions": 12,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 2
+      "vertical_bar_replacements": 2,
+      "display_fence_conversions": 3,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

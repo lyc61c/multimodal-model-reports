@@ -55,9 +55,9 @@ OMG 解码器使用 masked cross-attention 读取图像，self-attention 处理�
 
 原文 Eq. 1 将任务统一为
 
-$$
+```math
 (T_t^{out},T_{ov}^{out})=\mathrm{LLM}(T_{pv}^{in},T_{ov}^{in},T_t^{in}).
-$$
+```
 
 $`T_t`$ 为文本，$`T_{pv}`$ 为像素中心表示，$`T_{ov}`$ 为对象中心表示。caption 主要生成文本；区域描述额外读取用户区域；分割任务则生成可解码的对象表示。这里的对象输出实际通过 `[SEG]` 隐藏状态承载，不是让 LLM 直接逐像素生成二值掩码。
 
@@ -69,17 +69,17 @@ $`T_t`$ 为文本，$`T_{pv}`$ 为像素中心表示，$`T_{ov}`$ 为对象中�
 
 设图像特征 $`F\in\mathbb R^{HW\times C}`$，对象查询 $`Q\in\mathbb R^{N_q\times C}`$，掩码为 $`M`$，对象置信度为 $`S`$。原文 Eq. 2/3 为 mask-score softmax 与特征融合。为明确广播和转置，可在像素位置 $`p`$ 写成
 
-$$
+```math
 w_{p,j}=\frac{\exp(M_{j,p}S_j)}{\sum_{k=1}^{N_q}\exp(M_{k,p}S_k)},\qquad T_{pv}=WQ+F.
-$$
+```
 
 这与原式 $`M_S=\mathrm{Softmax}(M\odot S)`$ 的逐像素、沿查询维度归一化含义一致，避免原文列出掩码与结果相反轴序造成的矩阵歧义。先验让 LLM 接触“这个位置更像属于哪个对象”的信息，降低生成查询时从零适配冻结分割器的难度；它不新增 ground-truth 掩码作为推理输入。
 
 预训练中原文 Eq. 4 用对象表示的往返约束：
 
-$$
+```math
 \mathcal L_{pre}=\mathcal L_{text}+\mathcal L_{reg},\qquad\mathcal L_{reg}=(T_{ov}-P_t(P_v(T_{ov})))^2.
-$$
+```
 
 目的是在视觉→文本→视觉投影后保留对象信息。指令阶段 Eq. 5 为 $`\mathcal L_{text}+\alpha\mathcal L_{CE}+\beta\mathcal L_{DICE}`$，同时学习回答和掩码。原文未明确报告 $`\alpha,\beta`$ 数值及平方项聚合方式，不能补出精确权重。
 

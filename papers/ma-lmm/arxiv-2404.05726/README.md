@@ -52,13 +52,17 @@ Figure 2 左侧蓝色库保存视觉特征，绿色库保存查询；中间的 c
 
 cross-attention 的原文式（2）令 $`Q=z_tW_Q`$、$`K=F_tW_K`$、$`V=F_tW_V`$，再使用式（3）：
 
-$$O=\mathrm{Softmax}\left(\frac{QK^T}{\sqrt C}\right)V.$$
+```math
+O=\mathrm{Softmax}\left(\frac{QK^T}{\sqrt C}\right)V.
+```
 
 当前查询通过 key-value 直接读取过去帧，不必把这些帧全部作为语言模型上下文。query memory 则把 K、V 来源换成历史查询 $`Z_t`$，对应式（4），把之前的语义处理结果也纳入当前更新。两种记忆提供原始感知与高层状态两类信息。
 
 如果不限制长度，视觉库为 tP 个位置，查询库为 tN 个位置，仍会随视频增长。MBC 在超过上限 M 时合并一对条目。原文式（5）至（7）的 token 级过程为：
 
-$$s_t^i=\cos(f_t^i,f_{t+1}^i),\quad k_i=\arg\max_t s_t^i,\quad \hat f_{k_i}^i=\frac{f_{k_i}^i+f_{k_i+1}^i}{2}.$$
+```math
+s_t^i=\cos(f_t^i,f_{t+1}^i),\quad k_i=\arg\max_t s_t^i,\quad \hat f_{k_i}^i=\frac{f_{k_i}^i+f_{k_i+1}^i}{2}.
+```
 
 i 表示同一空间位置；不同空间位置可能选择不同时间相邻对。它不是先给整帧算一个全局相似度再统一删除一帧，附录明确区分 token-level 和 frame-level 两种压缩。query memory 使用类似过程。
 
@@ -82,7 +86,9 @@ Breakfast 有 1712 个早餐准备视频，平均约 2.7 分钟；COIN 有 11,82
 
 原文式（8）为目标文字的平均交叉熵：
 
-$$\mathcal L=-\frac1S\sum_{i=1}^{S}\log P(w_i\mid w_{<i},V).$$
+```math
+\mathcal L=-\frac1S\sum_{i=1}^{S}\log P(w_i\mid w_{<i},V).
+```
 
 V 是视频，$`w_i`$ 为真实目标文字。视觉编码器与语言模型冻结，学习主要集中在 Q-Former 及图中的连接层。不同下游任务通过目标序列和提示表达，报告没有额外的记忆重建损失或强化学习目标。
 

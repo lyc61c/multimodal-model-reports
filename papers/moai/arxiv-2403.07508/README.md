@@ -57,9 +57,9 @@ Compressor 用固定 64 个可学习 token 收集辅助证据，输出通道维 
 
 **压缩变长感知描述。** 原文 Equation 1 写为：
 
-$$
+```math
 A=\mathrm{MoAI\!\!-Compressor}([A_{PS},A_{OWOD},A_{SGG},A_{OCR}],A_{input}).
-$$
+```
 
 四组输入来自不同感知任务，长度随图像变化；$`A_{input}`$ 提供固定查询，最终 $`A\in\mathbb R^{4096\times64}`$。固定长度减少语言模型不断读取长检测清单的代价，同时也可能丢掉细节，因此需要后续任务损失训练压缩器。
 
@@ -67,12 +67,12 @@ $$
 
 按照 Equation 5，视觉门控为：
 
-$$
+```math
 [w_{AUX},w_{LANG},w_{SELF}]
 =\mathrm{softmax}(I^{(l)T}W_{GatingI}),
 \qquad
 \hat I^{(l)}=w_{AUX}\odot I_{AUX}^{(l)}+w_{LANG}\odot I_{LANG}^{(l)}+w_{SELF}\odot I_{SELF}^{(l)}.
-$$
+```
 
 语言门控独立计算 $`[w_{AUX},w_{IMG},w_{SELF}]`$，没有参数共享。softmax 沿三专家维归一化，每个 token 可有不同权重；这些权重是可学习的融合比例，不能当作经过校准的事实可信度。表中最佳 $`k=3`$ 表示三个分支全参与，不是每 token 只激活一个专家的稀疏路由。
 

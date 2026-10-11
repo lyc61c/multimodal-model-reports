@@ -61,26 +61,34 @@ backbone 从 Qwen2.5-7B 迁移，使用深层双向注意力。训练保留 logi
 
 **统一表示需要两种约束。** 量化先把连续编码 $`z^M`$ 映射到最近码本向量，标准最近邻表达为 $`c^*=\arg\min_{c\in C^M}\Vert z^M-c\Vert ^2`$。原文 Eq. (1) 把每个模态 warmup 的目标写成：
 
-$$\mathcal L^M_{\mathrm{total}}=\mathcal L^M_{\mathrm{rec}}+\mathcal L^M_{\mathrm{sem}},\qquad M\in\{A,V\}.$$
+```math
+\mathcal L^M_{\mathrm{total}}=\mathcal L^M_{\mathrm{rec}}+\mathcal L^M_{\mathrm{sem}},\qquad M\in\{A,V\}.
+```
 
 视觉重建还包含像素、LPIPS 感知、量化、判别损失；音频包含 mel 频谱、特征匹配、量化、判别损失。视觉语义使用句子级对比，音频使用 token 级 caption 监督。单纯语义监督可能忽略字体边缘或音色细节，单纯重建又未必具备易于推理的高层语义，组合目标用于平衡两者。
 
 **离散流的“速度”是转移率。** 附录 A 定义 $`t=0`$ 为来源分布、$`t=1`$ 为目标 $`x_1`$。metric-induced 路径（Eq. (5)）为：
 
-$$p_t(x^i\mid x_1^i)=\mathrm{Softmax}_{x^i}\big[-\beta_t d(x^i,x_1^i)\big],\qquad
-\beta_t=3\left(\frac{t}{1-t}\right)^{0.9}.$$
+```math
+p_t(x^i\mid x_1^i)=\mathrm{Softmax}_{x^i}\big[-\beta_t d(x^i,x_1^i)\big],\qquad
+\beta_t=3\left(\frac{t}{1-t}\right)^{0.9}.
+```
 
 $`d`$ 是 token embedding 的余弦距离。随着 $`\beta_t`$ 增大，离目标近的类别得到更多概率。该日程在 $`t\to1`$ 发散，是端点极限；数值推理怎样截断需要实现确定。网络学习预测目标 token 的条件分布，继而用它构造状态跳转，不能把离散编号直接当成像素坐标做连续线性插值。
 
 Eq. (6) 对当前状态 $`z^i`$ 跳到候选 $`x^i`$ 的条件速度写为：
 
-$$u_t^i(x^i,z^i\mid x_1)=p_t(x^i\mid x_1^i)\,\dot\beta_t\,\max\{d(z^i,x_1^i)-d(x^i,x_1^i),0\}.$$
+```math
+u_t^i(x^i,z^i\mid x_1)=p_t(x^i\mid x_1^i)\,\dot\beta_t\,\max\{d(z^i,x_1^i)-d(x^i,x_1^i),0\}.
+```
 
 只有候选离目标更近时该转移率才为正。网络先采样预测终点，再计算离开当前状态的总率 $`\lambda_i`$；长度为 $`h`$ 的时间步中，按 $`1-e^{-h\lambda_i}`$ 决定是否跳转，再按归一化率选新 token。这是连续时间马尔可夫链采样，用 Euler 时间推进模拟，并非对文本 embedding 直接积分一个连续速度向量。
 
 **训练分类、推理跳转。** 正文 Eq. (2) 用交叉熵恢复 $`x_1`$，Eq. (3) 加上图像与音频重建约束：
 
-$$\mathcal L_{\mathrm{overall}}=\lambda_1\mathcal L_{\mathrm{ce}}+\lambda_2\mathcal L^V_{\mathrm{rec}}+\lambda_3\mathcal L^A_{\mathrm{rec}}.$$
+```math
+\mathcal L_{\mathrm{overall}}=\lambda_1\mathcal L_{\mathrm{ce}}+\lambda_2\mathcal L^V_{\mathrm{rec}}+\lambda_3\mathcal L^A_{\mathrm{rec}}.
+```
 
 权重通过 GradNorm 动态调整。这里的 CE 是目标 token 分类，而不是连续 flow matching 常见的速度向量 MSE；指令数据只对 response 做纠错训练。双向 attention 带来融合上下文的机会，但本身仍有长序列开销，不能由并行去噪推出整体计算线性或一次前向生成全部正确内容。
 

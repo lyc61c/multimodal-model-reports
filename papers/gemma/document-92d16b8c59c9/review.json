@@ -20,11 +20,11 @@
     "训练细节未披露，未运行权重"
   ],
   "model_execution": "not_run",
-  "article_sha256": "c8bf6d72c0c4af6aafe8e0ef109160d45d86d610e697543636dcc24a0b3c168e",
+  "article_sha256": "cf886f9bb0b58518db7d3345550c695aab9f51e0524f40831f870de49c3f1671",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 23,
+    "math_delimiters_converted": 24,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "mobile_math_layout": {
       "date": "2026-10-11",
@@ -66,11 +66,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 11,
+      "delimiter_conversions": 12,
       "operatorname_replacements": 3,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 1,
+      "inline_angle_replacements": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

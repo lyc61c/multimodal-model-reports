@@ -61,10 +61,10 @@
 
 令视频网格 $`X\in\mathbb R^{T\times H\times W\times C}`$，可将正文的 STC 路径解释为：
 
-$$
+```math
 Z=\mathrm{Proj}\left(\mathrm{RegStage}_2\left(
 \mathrm{Conv3D}_{\downarrow}\left(\mathrm{RegStage}_1(X)\right)\right)\right).
-$$
+```
 
 这是架构说明记号，原文 Algorithm 1 给出简化伪代码。三维卷积可以在局部同时整合相邻帧和图像区域；前后空间交互模块缓解直接压缩的信息损失。保持时空顺序并不是直接保证正确推理，而是让训练与推理的 token 顺序保持一致。
 
@@ -108,10 +108,10 @@ $$
 
 正文将目标描述为文字响应的 next-token / cross-entropy，解释性写法为：
 
-$$
+```math
 \mathcal L_{\mathrm{text}}=-\sum_{t\in\mathcal R}
 \log p_\theta(y_t\mid y_{<t},P_V,P_A,q).
-$$
+```
 
 不同阶段按可用模态提供条件，$`\mathcal R`$ 表示参与监督的文字响应。论文没有逐阶段完整披露学习率、GPU 数、所有 batch 与采样权重；本介绍不从其他论文借用训练参数。尤其要注意音频第二阶段解冻 BEATs、但不解冻 LLM，不能套用视频第二阶段的更新范围。
 

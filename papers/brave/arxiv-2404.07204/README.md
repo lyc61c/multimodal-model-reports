@@ -58,11 +58,13 @@ MEQ-Former包含12层，cross-attention隔一层出现；输入为可学习查�
 
 论文没有新损失公式，关键在跨encoder统一查询。机制解读为 $`X=\mathrm{Concat}_{seq}(E_1(I)W_1,\ldots,E_K(I)W_K)`$，再用
 
-$$Q'=\mathrm{softmax}\left(\frac{Q(XW_{key})^\top}{\sqrt d}\right)XW_{value}.$$
+```math
+Q'=\mathrm{softmax}\left(\frac{Q(XW_{key})^\top}{\sqrt d}\right)XW_{value}.
+```
 
 这里Q含可学习查询，实际模型还包含文字交互、自注意力与FFN；表达式仅解释一个cross-attention，不是原文完整网络公式。查询长度M远小于视觉总长度N时，cross-attention读视觉的主要矩阵为M×N，较在所有视觉token上做N×N attention轻。视觉encoder各自内部计算仍存在，不能声称整个系统完全线性或推理免费。
 
-以描述/答案监督可解释为条件序列交叉熵 $`-\sum_t\log p(y_t\mid Q',q,y_{<t})`$。FlanT5是encoder-decoder文字模型，不能套写成Vicuna式decoder-only骨干；条件生成表达不意味着网络架构相同。原文绕过BLIP2单encoder两阶段预训练，直接用caption目标训练桥接，没有另加本篇的新图文对比、匹配或图像生成损失。
+以描述/答案监督可解释为条件序列交叉熵 $`-\sum_t\log p(y_t\mid Q',q,y_{\lt t})`$。FlanT5是encoder-decoder文字模型，不能套写成Vicuna式decoder-only骨干；条件生成表达不意味着网络架构相同。原文绕过BLIP2单encoder两阶段预训练，直接用caption目标训练桥接，没有另加本篇的新图文对比、匹配或图像生成损失。
 
 “互补”需看实验。Table2中EVA-CLIP在GQA50.1/MMVP27.3较强，SILC在COCO141.1/OKVQA63.4较强；不同目标encoder可在常规问答相近，但MMVP更易暴露视觉差异。联合连接器对照独立Q-Former ensemble，116M对605M可训练，224分辨率下COCO145.2对140.9、VQAv2 79.6对78.5、OKVQA65.0对64.3。它支持当前联合桥更有效，不是普遍否定ensemble。[原文 Table2、Table6](https://arxiv.org/pdf/2404.07204v1#page=14)
 

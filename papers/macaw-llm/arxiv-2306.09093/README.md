@@ -45,15 +45,15 @@ Figure 1 的下层为模态编码器，中间为对齐模块，上层为语言�
 
 对任一模态 $`m`$，原文式 2–4 的处理为：
 
-$$
+```math
 h_m=\mathrm{Encoder}_m(x_m),\qquad
 h'_m=\mathrm{Linear}(\mathrm{Conv1D}(h_m)),
-$$
+```
 
-$$
+```math
 \tilde h_m=\mathrm{Attn}(h'_m,E,E)
 =\mathrm{softmax}\!\left(\frac{h'_mE^\top}{\sqrt{d_e}}\right)E.
-$$
+```
 
 $`E\in\mathbb R^{V\times d_e}`$ 是 LLaMA 的词表嵌入矩阵。查询来自感知特征，键和值来自词嵌入，因此按原公式，每个输出向量是词表向量的加权组合。这样接口的数值落在语言嵌入所构成的空间中，而不只是把视觉向量直接线性投影到相同维度。它是连续软 token，不能把注意力最大的位置解释为已生成一个确定词语。
 
@@ -61,11 +61,11 @@ $`E\in\mathbb R^{V\times d_e}`$ 是 LLaMA 的词表嵌入矩阵。查询来自�
 
 最终输入（式 5）为：
 
-$$
+```math
 x=[\tilde h_i;\tilde h_v;\tilde h_a;\mathrm{Embed}(x_t)].
-$$
+```
 
-训练最小化回答负对数似然（式 6）。原文公式省略了前面回答 token 的条件，按其语言模型生成含义可写为 $`-\sum_j\log p_\theta(y_j\mid x,y_{<j})`$。没有独立对齐回归、对比学习或强化学习损失。作者认为单阶段可减轻多阶段错误传播，这是一项方法动机；本版本没有对应消融来证明优势。
+训练最小化回答负对数似然（式 6）。原文公式省略了前面回答 token 的条件，按其语言模型生成含义可写为 $`-\sum_j\log p_\theta(y_j\mid x,y_{\lt j})`$。没有独立对齐回归、对比学习或强化学习损失。作者认为单阶段可减轻多阶段错误传播，这是一项方法动机；本版本没有对应消融来证明优势。
 
 <a id="data"></a>
 

@@ -71,7 +71,7 @@
     "Table 19 Overall follows original reported value rather than recomputing a mean from task columns",
     "Self-review; no benchmark or model execution"
   ],
-  "article_sha256": "8e5cdb911c69ed0aa518bc2bf79cda8015036bc8113d64115ccbf5225ee5ad24",
+  "article_sha256": "c777c387a8a945865389f42f0110d6d6cd22fd7629492211212e0826e2f9e8d3",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -142,11 +142,14 @@
   "github_math_revision": {
     "date": "2026-10-11",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
       "delimiter_conversions": 15,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 2
+      "vertical_bar_replacements": 2,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 1
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

@@ -55,23 +55,23 @@ Q-Former 不把整段音频强行压成固定几个 token，而将特征切成�
 
 原文式 (1) 是双编码器特征拼接：
 
-$$
+```math
 Z=\mathrm{Concat}(\mathrm{Encoder}_{\rm Whisper}(X),\mathrm{Encoder}_{\rm BEATs}(X)).
-$$
+```
 
 $`X`$ 是音频，$`Z`$ 含 T 个时间帧。原文式 (2) 将其分成 L 帧窗口，最后一个不足窗口零填充：
 
-$$
+```math
 H=[\mathrm{QFormer}(Q,Z_l)]_{l=1}^{\lceil T/L\rceil},\qquad \vert H\vert =N\lceil T/L\rceil.
-$$
+```
 
 这个数量随输入时长变化；窗口顺序保证输出与音频保持单调时间对应。Q-Former 查询内部无因果掩码，但窗口结果仍按先后排列。它能压缩长音频而保留较细粒度的时间结构，不能称为逐词精确声文对齐标注。
 
 作者用原文式 (5) 分析过拟合：
 
-$$
+```math
 P(Y\mid X,I)=\frac{P(I\mid Y,X)P(Y\mid X)}{P(I\mid X)}.
-$$
+```
 
 $`I`$ 为指令，$`Y`$ 为回答。大量短且确定的转录/描述监督可能使条件回答分布偏向简单输出，对新指令下的长回答给出低概率。这是解释性分析，并非严格证明所有错误由单一概率项造成。
 
