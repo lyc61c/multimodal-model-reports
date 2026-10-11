@@ -66,7 +66,7 @@ Q-Former 仅加载 BERT 的文字与位置嵌入，词表 30,522、位置嵌入�
 
 
 $$
-\operatorname{Attn}(Q,K,V)=\operatorname{softmax}(QK^\top/\sqrt d)V.
+\mathrm{Attn}(Q,K,V)=\mathrm{softmax}(QK^\top/\sqrt d)V.
 $$
 
 
@@ -76,19 +76,19 @@ $$
 
 
 $$
-\operatorname{pos}(p)=
+\mathrm{pos}(p)=
 [\sin(2\pi pB);\cos(2\pi pB)],\quad
 p\in\mathbb R^3,\ B\in\mathbb R^{3\times d/2}.
 $$
 
 
-$p$ 在场景范围内归一化，$B$ 可学习；正弦与余弦拼接给出 d 维表示。随后 Equation (3) 用两种独立 FFN 转换点击位置编码和框 ROI 特征。位置编码输入是连续 0–1 值，输出文字中的坐标却是离散 0–255，这两种尺度不能混用。
+$`p`$ 在场景范围内归一化，$`B`$ 可学习；正弦与余弦拼接给出 d 维表示。随后 Equation (3) 用两种独立 FFN 转换点击位置编码和框 ROI 特征。位置编码输入是连续 0–1 值，输出文字中的坐标却是离散 0–255，这两种尺度不能混用。
 
 **用已有文字词表表达三维空间。** 点表达为 `<loc>x,y,z</loc>`，框表达为 `<obj>cx,cy,cz,w,h,l</obj>`，后者是中心与尺寸，不能当作两个对角点。原文按输入场景边界将数值离散到无符号整数 0–255，不新增可学习坐标词。以单轴坐标为例，以下为帮助理解的线性量化示意，并非原文规定的取整代码：
 
 
 $$
-q\approx\operatorname{round}\left(255\frac{x-x_{min}}{x_{max}-x_{min}}\right),
+q\approx\mathrm{round}\left(255\frac{x-x_{min}}{x_{max}-x_{min}}\right),
 \quad
 x\approx x_{min}+\frac{q}{255}(x_{max}-x_{min}).
 $$
@@ -96,13 +96,13 @@ $$
 
 区间被划为 255 个间隔，细节精度受场景范围与取整影响；原文未给出退化轴、越界裁剪和尺寸量化完整实现。文字标签本身由已有 tokenizer 切分，不表示每个整数都有专门单 token。
 
-**同时评价定位与文字质量。** 原文 Equation (7) 的 $m@kIoU$ 把 caption 分数乘以定位成功条件，再对实例平均：
+**同时评价定位与文字质量。** 原文 Equation (7) 的 $`m@kIoU`$ 把 caption 分数乘以定位成功条件，再对实例平均：
 
 
 $$
 m@kIoU=\frac1N\sum_{i=1}^N
 m(c_i^{pred},c_i^{gt})\,
-\mathbf1[\operatorname{IoU}(b_i^{pred},b_i^{gt})\ge k].
+\mathbf1[\mathrm{IoU}(b_i^{pred},b_i^{gt})\ge k].
 $$
 
 
@@ -148,12 +148,12 @@ $$
 
 
 $$
-\mathcal L(\theta)=-\sum_{i=1}^{|s|}
+\mathcal L(\theta)=-\sum_{i=1}^{\vert s\vert }
 \log P(s_i\mid PC,I_v,I_t,s_{<i};\theta).
 $$
 
 
-$PC$ 为点云，$I_v,I_t$ 为视觉与文字交互，$\theta$ 只涵盖可训练部分。坐标在文本输出里同样接受 token 监督，没有另设已披露的 box IoU 或控制策略奖励。
+$`PC`$ 为点云，$`I_v,I_t`$ 为视觉与文字交互，$`\theta`$ 只涵盖可训练部分。坐标在文本输出里同样接受 token 监督，没有另设已披露的 box IoU 或控制策略奖励。
 
 AdamW weight decay=0.1，总 batch=16，学习率以 cosine 从 1e-4 降到 1e-6；每 4K iterations 评测。OPT 以 float16 加载，单个训练过程使用不超过 8 张 RTX3090 24GB，作者报告在一天内完成。未披露 Adam beta、warmup、精确训练样本混合、随机种子或系统总训练成本。常规指标生成使用 beam size=4；长定性输出使用 top-k=50、top-p=0.95，附录长文本评测还禁止重复 4-gram。不同解码设置不应混成一个统一默认值。[Sections 3.2、5.1、5.4、Appendices B、E](https://arxiv.org/pdf/2311.18651v1)
 

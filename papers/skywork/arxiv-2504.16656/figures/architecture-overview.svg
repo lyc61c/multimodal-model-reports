@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1119" viewBox="0 0 720 1119" role="img" aria-labelledby="title desc">
+<title id="title">Skywork R1V2：模块化跨模态接口（自绘，非原文图）</title>
+<desc id="desc">公开组件关系自绘，非原文图。；原 Figure 1 为训练信号流，应另行阅读。；冻结策略按训练实验区分。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1117" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Skywork R1V2：模块化跨模态接口</text>
+<path d="M191,230 V263 H191 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M684,177 H702 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,746 V779 H360 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">视觉任务输入</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">问题文字</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">推理条件</text>
+<rect x="36" y="296" width="310" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="191" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">InternViT-6B</text>
+<text x="191" y="362" text-anchor="middle" font-size="20" fill="#475569">视觉特征编码</text>
+<rect x="36" y="468" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">MLP 适配器</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">映射到语言输入空间</text>
+<text x="191" y="559" text-anchor="middle" font-size="20" fill="#475569">报告未列层数与 token 数</text>
+<rect x="36" y="640" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">推理语言模型</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">§3.1 以 QwQ-32B 举例</text>
+<text x="360" y="731" text-anchor="middle" font-size="20" fill="#475569">接收图文条件</text>
+<rect x="36" y="812" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="847" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">推理及回答</text>
+<text x="360" y="878" text-anchor="middle" font-size="20" fill="#475569">同一语言模型生成</text>
+<line x1="36" y1="966" x2="684" y2="966" stroke="#e2e8f0"/>
+<text x="36" y="993" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1024" font-size="17" fill="#64748b">公开组件关系自绘，非原文图。</text>
+<text x="36" y="1049" font-size="17" fill="#64748b">原 Figure 1 为训练信号流，应另行阅读。</text>
+<text x="36" y="1074" font-size="17" fill="#64748b">冻结策略按训练实验区分。</text>
+</g></svg>

@@ -53,5 +53,43 @@
         }
       ]
     }
+  ],
+  "math_boundary_revision_history": [
+    {
+      "date": "2026-10-11",
+      "id": "3d5274c82d6d",
+      "path": "papers/internvl/arxiv-2508.18265/README.md",
+      "kind": "manual_math_boundary_repair",
+      "scope": "人工将已识别的裸括号变量/表达式恢复为 GitHub 官方 $`…`$ 行内数学边界；修复一处孤立反斜杠右括号；公式内部数值与含义保持不变。未重新核验原文全部数学事实。",
+      "changed_lines": 5,
+      "changes": [
+        {
+          "line_before": 93,
+          "before": "原文把它标为 $\\mathcal L_{GSPO}$，但表达式是要最大化的策略收益形式；若用梯度下降实现损失，需要取负号。本介绍用 (J) 表示收益以避免方向混淆。旧策略用于采样及重要性修正，不等于固定参考模型；作者明确在线阶段没有 reference-model 约束，不能额外加一个原文未使用的 KL 正则。奖励细节、零标准差组的处理和 clip 数值未在本报告完整展开。",
+          "after": "原文把它标为 $\\mathcal L_{GSPO}$，但表达式是要最大化的策略收益形式；若用梯度下降实现损失，需要取负号。本介绍用 $`J`$ 表示收益以避免方向混淆。旧策略用于采样及重要性修正，不等于固定参考模型；作者明确在线阶段没有 reference-model 约束，不能额外加一个原文未使用的 KL 正则。奖励细节、零标准差组的处理和 clip 数值未在本报告完整展开。"
+        },
+        {
+          "line_before": 107,
+          "before": "路由训练根据 Eq. (8) 的低/高压缩 loss 比值 (r_i=\\mathcal L_{ViCO}(I_{1/16})/\\mathcal L_{ViCO}(I_{1/4})) 构建二分类标签：比值低于阈值时选 64，否则选 256。阈值由滑动窗口历史比值的某个百分位动态确定，目标标签分布保持平衡，并非固定取 1。此时冻结 ViT、MLP、LLM，只训练路由器。",
+          "after": "路由训练根据 Eq. (8) 的低/高压缩 loss 比值 $`r_i=\\mathcal L_{ViCO}(I_{1/16})/\\mathcal L_{ViCO}(I_{1/4})`$ 构建二分类标签：比值低于阈值时选 64，否则选 256。阈值由滑动窗口历史比值的某个百分位动态确定，目标标签分布保持平衡，并非固定取 1。此时冻结 ViT、MLP、LLM，只训练路由器。"
+        },
+        {
+          "line_before": 109,
+          "before": "对于 (n_h) 个高保真子图及 (n_l) 个低 token 子图，语言侧视觉长度可写作 (256n_h+64n_l)。这是计数解释，报告的整体约 50% token 减少取决于实际路由分布，而非每个子图都固定减半。",
+          "after": "对于 $`n_h`$ 个高保真子图及 $`n_l`$ 个低 token 子图，语言侧视觉长度可写作 $`256n_h+64n_l`$。这是计数解释，报告的整体约 50% token 减少取决于实际路由分布，而非每个子图都固定减半。"
+        },
+        {
+          "line_before": 136,
+          "before": "前缀可含文本或视觉 token，但损失只预测文本；对话样本只计算回答 token。(N) 是该样本参与损失的 token 数。square averaging 为该样本每个监督 token 赋 (1/\\sqrt N) 权重，相比纯按 token 平均缓和长回答优势，又保留比每样本等权更多的长度贡献；不能直接称为每样本完全等权。",
+          "after": "前缀可含文本或视觉 token，但损失只预测文本；对话样本只计算回答 token。$`N`$ 是该样本参与损失的 token 数。square averaging 为该样本每个监督 token 赋 $`1/\\sqrt N`$ 权重，相比纯按 token 平均缓和长回答优势，又保留比每样本等权更多的长度贡献；不能直接称为每样本完全等权。"
+        },
+        {
+          "line_before": 149,
+          "before": "测试时扩展另分 Thinking 深度推理与 Parallel Thinking。并行分支采用 Best-of-N，以 VisualPRM-v1.1 评价多个候选并选择回答。除明确标为 Parallel Thinking 等设置外，报告默认实验不使用 TTS；因此不能把多次采样的增强分数写成单次调用分数，报告也未固定披露所有任务的 (N)。",
+          "after": "测试时扩展另分 Thinking 深度推理与 Parallel Thinking。并行分支采用 Best-of-N，以 VisualPRM-v1.1 评价多个候选并选择回答。除明确标为 Parallel Thinking 等设置外，报告默认实验不使用 TTS；因此不能把多次采样的增强分数写成单次调用分数，报告也未固定披露所有任务的 $`N`$。"
+        }
+      ],
+      "article_sha256": "b7a96e0b4af0c4d1742e6838338c97ad6058c4ce3ae7861ca7e3b10d8e574cf6"
+    }
   ]
 }

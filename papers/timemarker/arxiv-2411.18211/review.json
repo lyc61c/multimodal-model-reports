@@ -17,7 +17,7 @@
     "asset_hashes_match": true,
     "original_assets": 6
   },
-  "article_sha256": "3fd1452bee4dd8aa92cc693826904d54ce6328a5dd7e70e59403077337c7a229",
+  "article_sha256": "f9a1e86a8aa363a812376488f681c48dd2edd45d726513b4f25b011c2eb5e130",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -25,7 +25,33 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 15,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "expanded",
+      "source_recheck": [
+        "§3.3、Algorithm1；PDF 第4–5页"
+      ],
+      "diagram_plan": null,
+      "article_sha256": "981c881ee4db3142a5434adedcafbb0c3774442a27cf2ce0126dc7eeef3b2fb5",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 15,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

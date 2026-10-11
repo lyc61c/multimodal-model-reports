@@ -40,7 +40,7 @@
     "私有数据非全部公开",
     "计时硬件与部分指标标识未充分披露"
   ],
-  "article_sha256": "ab725e4921e579eba9b0487b83515525dd40e8ab5d3f62a55170018c6f34b3bb",
+  "article_sha256": "b3f4ab6cc098787c84cb6ec38164ae77850a63393c73d772a82b0e09e7ebdc0e",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -61,8 +61,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
+    "math_delimiters_converted": 23,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 23,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

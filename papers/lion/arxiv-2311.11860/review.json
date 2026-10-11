@@ -48,7 +48,7 @@
     "epoch-stepcountsamplingunclear",
     "crossmodeldifferentbones/data"
   ],
-  "article_sha256": "7590faa9af23ca369ffbab20e433bd3fd128ce9b8aee48ed7d6fb125ec1482cf",
+  "article_sha256": "868de9027d2729e0081092df677e857e0dbdfa2059cc52f5d5d40abcb76172d6",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -69,7 +69,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 9,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 5,
+      "operatorname_replacements": 4,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

@@ -19,7 +19,7 @@
     "original_assets": 9,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "aa711a24dc761b396c5c22fd8f019833c69ad23997b1863666a725a0cdc54921",
+  "article_sha256": "aa329627b83ae4820e79ecbfcb6b19a7b21f417fd9d3d7143850be79bdca2e73",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -37,7 +37,40 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 2,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "retained",
+      "source_recheck": [
+        "§2.1、Appendix D/E；PDF 第3、28–29页"
+      ],
+      "diagram_plan": "papers/auroracap/arxiv-2410.03051/architecture-diagram.json",
+      "article_sha256": "aa711a24dc761b396c5c22fd8f019833c69ad23997b1863666a725a0cdc54921",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 2,
+      "operatorname_replacements": 1,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

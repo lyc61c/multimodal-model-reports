@@ -17,5 +17,28 @@
     "Reported weaknesses retained: SimpleQA36.0 versus72.1, FactScore71.2 versus92.6, SWE-Evo8.5 versus27.1, NL2Repo-Bench27.9 versus49.3 and single-pass3.0. Table11/13 Scicode48.5/52.1 and Table3/13 FrontierSci25.0/23.3 not collapsed.",
     "Scientific output failure cases retained; author claims of expert proof checking and Seed-Prover formalization not presented as independently verified novelty. No model/API invocation or reproduction."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2607.00248v1",
+          "locator": "2607.00248v1; VideoCut / GUI and coding workflow cases",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "公开工作流自绘，非原文图。",
+        "VideoCut 改变观察证据，不是神经网络层。",
+        "原 GUI 案例图保留，展示具体任务轨迹。"
+      ],
+      "article_sha256": "53cc461e44643b0fb27482da3a2edbc3b34d566c1f2e923aef23367cbe239941",
+      "model_executed": false
+    }
+  ]
 }

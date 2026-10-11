@@ -18,7 +18,7 @@
     "original_assets": 7,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "10725b0779756b173fb091f6fec7ae1f55f98d9a7ac06fd8ff3d118f31b5700b",
+  "article_sha256": "45ba483c94b39c9475f942d1a6d18521ccc59f9c240734cd859d0298457a9695",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -36,8 +36,41 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
+    "math_delimiters_converted": 1,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "expanded",
+      "source_recheck": [
+        "§2.1；PDF 第4–5页",
+        "§2.1；PDF 第3–5页"
+      ],
+      "diagram_plan": "papers/qwen/arxiv-2409.12191/architecture-diagram.json",
+      "article_sha256": "d0f005dba436f7f59728ef39dd17f4b21ae3757568e9da6cb8ccf6aa838895c9",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 1,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

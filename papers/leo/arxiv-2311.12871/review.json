@@ -53,7 +53,7 @@
     "主表与消融对象提案协议不同不可混比",
     "未执行真实机器人或独立复现"
   ],
-  "article_sha256": "afc4ae25680afe1065c78596d713bf0c5f43bb9a5ca9db091b0e158e7665adb3",
+  "article_sha256": "b70d37b280018c1aa74d4aaf25bee1ea7a008522ef88848f2aa7d00f754f055a",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -71,7 +71,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 14,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

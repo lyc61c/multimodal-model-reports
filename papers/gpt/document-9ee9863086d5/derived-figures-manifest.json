@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "9ee9863086d5",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "05867fadf0426edd1a99fcbc986f0589203b86b216e5a4753c8a2c93f5b32a65",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://cdn.openai.com/gpt-4o-system-card.pdf",
+          "locator": "§1、§3.3.1；PDF 第1、6–7页",
+          "note": "端到端omni输入输出；预设声线条件与外部流式声线分类器。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；输出能力以系统卡描述为准，不等于发布日全部开放。；声线分类器是外部部署监测，不是音频解码头。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

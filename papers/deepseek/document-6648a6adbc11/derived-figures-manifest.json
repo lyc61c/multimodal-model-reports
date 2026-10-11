@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "6648a6adbc11",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "50a43ab559052260aa89b670c15c4b215e6e24c3507bb81bf00c84bb7c7abd63",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news260821/",
+          "locator": "official-source-snapshot-2026-10-08; Multimodal API support / Files API",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开接口自绘，非原文图。；file_id 复用上传文件，不证明视觉特征缓存。；不移植纯语言 V4 的视觉编码器规格。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "paper_id": "4213cab70d10",
+  "title": "InternVL-U：理解骨干与图像生成头",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "图像与文字条件",
+      "lines": [
+        "理解或编辑的语义信息"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "z",
+      "title": "生成噪声/条件原图",
+      "lines": [
+        "带噪 VAE 潜变量",
+        "编辑时另有原图 VAE 条件"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "v",
+      "title": "视觉理解编码器",
+      "lines": [
+        "ViT 提取高层语义"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "l",
+      "title": "上下文骨干",
+      "lines": [
+        "融合视觉语义与文字",
+        "输出多模态上下文表示"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "g",
+      "title": "MMDiT 生成头",
+      "lines": [
+        "上下文流与视觉流交互",
+        "预测 flow velocity"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "a",
+      "title": "文字生成头",
+      "lines": [
+        "自回归答案或推理"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "d",
+      "title": "VAE 解码",
+      "lines": [
+        "连续潜变量恢复像素"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "o",
+      "title": "生成或编辑图像",
+      "lines": [
+        "保留条件并迭代生成"
+      ],
+      "row": 5,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "v",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "v",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "l",
+      "to": "a",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "l",
+      "to": "g",
+      "label": "语义条件",
+      "style": "solid"
+    },
+    {
+      "from": "z",
+      "to": "g",
+      "label": "视觉潜变量",
+      "style": "solid"
+    },
+    {
+      "from": "g",
+      "to": "d",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "d",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "整体路径自绘，非原文图。",
+    "原 Figure 4 专门展开生成头，仍保留。",
+    "生成目标无需先经过上下文骨干。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2603.09877v1",
+      "locator": "2603.09877v1; §3.1 / Figures 3–4",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

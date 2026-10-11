@@ -63,7 +63,7 @@
     "Total pretraining tokens, full cluster GPU count and aggregate training cost are not disclosed",
     "Self-review against the source; model or benchmarks were not rerun"
   ],
-  "article_sha256": "a7946afd066562b501022a5bdfe493006c1b4b6194f07b73e0fc57b0b4c2de01",
+  "article_sha256": "f7574e9cedc419ca261de4d6821c2234b812206fd45cda778bab23a017d6bfb6",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -81,8 +81,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 4,
+    "math_delimiters_converted": 24,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 20,
+      "operatorname_replacements": 6,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

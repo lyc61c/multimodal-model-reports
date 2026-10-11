@@ -42,6 +42,14 @@ ALLaVA 的研究重心是训练数据。它沿用 LLaVA-v1.5 的视觉编码器�
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘模型架构示意，非原文图](figures/architecture-overview.svg)
+
+*自绘模型架构示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[§4.1、Table2；PDF 第7页](https://arxiv.org/pdf/2402.11684v1)。
+<!-- derived-architecture:end -->
+
 ![原文 Table 1](figures/original-p007-table-1.png)
 
 ![原文 Table 2](figures/original-p007-table-2.png)

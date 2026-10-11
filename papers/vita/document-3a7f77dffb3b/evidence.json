@@ -16,5 +16,24 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "去除裁图后的原页表述。",
+        "补输出tokenizer名称与多码本速率，避免时间帧率和索引总量混用。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2605.06765v1",
+          "locator": "Figure 1, PDF p3; §3 Speech Decoder, PDF p4",
+          "version": "2605.06765v1"
+        }
+      ],
+      "article_sha256": "c8959c818763af65a4fc7802f10795f5869b489275c96ec7e26e26c35d953ca7",
+      "model_executed": false
+    }
+  ]
 }

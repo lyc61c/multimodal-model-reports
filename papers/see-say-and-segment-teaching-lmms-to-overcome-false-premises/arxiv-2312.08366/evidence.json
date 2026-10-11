@@ -12,5 +12,20 @@
     "Loss components reported; weights, LoRA rank and complete freezing schedule not invented; DGX GPU-count wording ambiguity preserved.",
     "Positive-only cIoU decreases versus LISA and non-perfect FP recall retained; appendix reasoning model additional datasets not conflated with main model."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§4–5；PDF 第5–6页、Figure4",
+        "§4–5；PDF 第5–6页、Figure4"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages",
+        "Authored source-limited architecture-diagram.json; root will render/insert separately"
+      ],
+      "article_sha256": "2a158c8fc62b8a2908692c849b8805112290e28692290a6b598e2532ebd67c74"
+    }
+  ]
 }

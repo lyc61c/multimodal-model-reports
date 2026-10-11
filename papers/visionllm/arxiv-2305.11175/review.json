@@ -17,7 +17,7 @@
     "asset_hashes_match": true,
     "original_assets": 4
   },
-  "article_sha256": "5294a2ba534de3c213d6cafd9992f1030f9f06555f8586eab213183e705e9233",
+  "article_sha256": "21cb9cd5096d73e6c807be5f5b91788003d9f81fc067f06454c3fe1f1ece3f19",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -25,12 +25,47 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
+    "math_delimiters_converted": 5,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "mobile_math_layout": {
       "date": "2026-10-11",
       "long_inline_equations_promoted_to_display": 1,
       "scope": "Display layout and connective punctuation only; formula contents preserved"
+    },
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2305.11175v1",
+      "source_cache": "source/papers/417d4df3d8fa/source.txt",
+      "source_locators": [
+        "§3.1–3.4、Figure 4、§4.1，PDF pp.5–7"
+      ],
+      "changes": [
+        "第3节补充：指令参与两次不同计算"
+      ],
+      "article_sha256_before": "5294a2ba534de3c213d6cafd9992f1030f9f06555f8586eab213183e705e9233",
+      "article_sha256_after": "228ff05ca65c3d207520bf68a001aeeb7f00f7bb964943e1f40ff585a3734c64",
+      "diagram_plan": false,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
     }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 5,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

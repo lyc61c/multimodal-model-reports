@@ -43,40 +43,40 @@ Emu 是以 LLaMA-13B 为语言主干、EVA-CLIP 为视觉编码器的约 14B 多
 
 Figure 2 在 PDF 第 4 页。上方图像经过 EVA-CLIP 和 Causal Transformer，蓝色块为连续视觉 embedding，文字和特殊标记夹在它们之间；下方 LLaMA 的两个输出头分别做文字分类和视觉回归。右下角扩散解码器把生成的视觉向量转成图像。沿图阅读可以发现，“统一”发生在多模态自回归主干与目标组织上，不意味着编码器、输出头和像素解码器完全相同。
 
-每幅图像由 EVA-CLIP 提取密集表征，再由一组可学习查询转成 $N$ 个因果潜在向量。一个 $T$ 帧视频转成 $T\times N$ 个视觉向量，各帧前后用 `[IMG]`、`[/IMG]` 包围，完整序列用 `<s>`、`</s>` 标记。论文保留 $N$ 为参数，没有在本文已披露配置中明确其固定数值，不能补成其他模型常用的 32 或 256。
+每幅图像由 EVA-CLIP 提取密集表征，再由一组可学习查询转成 $`N`$ 个因果潜在向量。一个 $`T`$ 帧视频转成 $`T\times N`$ 个视觉向量，各帧前后用 `[IMG]`、`[/IMG]` 包围，完整序列用 `<s>`、`</s>` 标记。论文保留 $`N`$ 为参数，没有在本文已披露配置中明确其固定数值，不能补成其他模型常用的 32 或 256。
 
-Causal Transformer 每层包含因果 self-attention、cross-attention 和前馈层。cross-attention 的 key/value 来自 EVA 视觉表征，query 来自因果自注意力的输出；相比双向 Q-Former，它让第 $i$ 个潜在查询仅依赖之前的潜在查询。图像本身没有文字式的左到右语义顺序，作者因此不在原像素栅格上直接施加语言式自回归，而在学习的潜在空间构造顺序。
+Causal Transformer 每层包含因果 self-attention、cross-attention 和前馈层。cross-attention 的 key/value 来自 EVA 视觉表征，query 来自因果自注意力的输出；相比双向 Q-Former，它让第 $`i`$ 个潜在查询仅依赖之前的潜在查询。图像本身没有文字式的左到右语义顺序，作者因此不在原像素栅格上直接施加语言式自回归，而在学习的潜在空间构造顺序。
 
-视觉解码器采用潜在扩散，将 Emu 的 $N$ 个视觉 embedding 作为条件，并替换 Stable Diffusion cross-attention 的线性投影以匹配维度。解码阶段与主干预训练分开，不能把扩散训练成本漏掉后再比较整套模型开销。[PDF 第 3–4、6 页](https://arxiv.org/pdf/2307.05222v1#page=3)
+视觉解码器采用潜在扩散，将 Emu 的 $`N`$ 个视觉 embedding 作为条件，并替换 Stable Diffusion cross-attention 的线性投影以匹配维度。解码阶段与主干预训练分开，不能把扩散训练成本漏掉后再比较整套模型开销。[PDF 第 3–4、6 页](https://arxiv.org/pdf/2307.05222v1#page=3)
 
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
-原文式 (1) 将图像 $I$ 的 EVA 编码 $g(I)$ 与随机初始化查询 $e_{1:N}$ 映射为
+原文式 (1) 将图像 $`I`$ 的 EVA 编码 $`g(I)`$ 与随机初始化查询 $`e_{1:N}`$ 映射为
 
 
 $$
-z_{1:N}=\operatorname{CausalTransformer}(g(I),e_{1:N}).
+z_{1:N}=\mathrm{CausalTransformer}(g(I),e_{1:N}).
 $$
 
 
-这些 $z_i$ 是连续向量，不是 VQ 词表中的离散视觉 ID。它们捕获的是学习到的潜在依赖，不能解释成现实世界因果关系的识别。将图像、视频帧和文字组织为 $u_{1:m}$ 后，原文式 (2) 的思想是最大化 $\sum_i\log P_\theta(u_i\mid u_{<i})$，近似建模原始多模态语料。
+这些 $`z_i`$ 是连续向量，不是 VQ 词表中的离散视觉 ID。它们捕获的是学习到的潜在依赖，不能解释成现实世界因果关系的识别。将图像、视频帧和文字组织为 $`u_{1:m}`$ 后，原文式 (2) 的思想是最大化 $`\sum_i\log P_\theta(u_i\mid u_{<i})`$，近似建模原始多模态语料。
 
 实际优化分成两类，可用以下解释式表达：
 
 
 $$
 \mathcal L= -\sum_{i\in\mathcal T}\log p_\theta(u_i\mid u_{<i})
- +\lambda\sum_{i\in\mathcal V}\|\hat z_i-z_i\|_2^2.
+ +\lambda\sum_{i\in\mathcal V}\Vert \hat z_i-z_i\Vert _2^2.
 $$
 
 
-$\mathcal T$ 和 $\mathcal V$ 分别是文字、视觉位置；第一项分类，第二项回归。这里的合并表达用于解释论文两种损失，**原文没有给出 $\lambda$、损失归一化或每种模态位置的完整权重**。若把平方误差理解为固定方差高斯负对数似然，也需要额外假设；论文并未以这种假设推导其概率近似。
+$`\mathcal T`$ 和 $`\mathcal V`$ 分别是文字、视觉位置；第一项分类，第二项回归。这里的合并表达用于解释论文两种损失，**原文没有给出 $`\lambda`$、损失归一化或每种模态位置的完整权重**。若把平方误差理解为固定方差高斯负对数似然，也需要额外假设；论文并未以这种假设推导其概率近似。
 
-推理时，文字任务使用语言 head 输出词，图像任务在提示末尾添加 `[IMG]` 后自回归生成 $N$ 个视觉向量，再扩散解码。上下文中可放示例图文对，模型通过后续补全表现出 in-context 能力，这不涉及当次更新参数。
+推理时，文字任务使用语言 head 输出词，图像任务在提示末尾添加 `[IMG]` 后自回归生成 $`N`$ 个视觉向量，再扩散解码。上下文中可放示例图文对，模型通过后续补全表现出 in-context 能力，这不涉及当次更新参数。
 
-附录 Table 5 明确扩散目标为 $\epsilon$-prediction，可用 $\mathbb E\|\epsilon-\epsilon_\phi(x_t,t,z)\|^2$ 理解预测加到 latent 上的噪声；这是标准形式的解释，来源没有完整展开噪声 schedule。训练随机丢弃 10% 图像条件以支持 classifier-free guidance，测试 Emu 用 guidance 5.0、SD v1.5 用 3.0，都是各自选择的配置，不能将 FID 差异归因于某一个单独因素。[PDF 第 4–5、8、16 页](https://arxiv.org/pdf/2307.05222v1#page=4)
+附录 Table 5 明确扩散目标为 $`\epsilon`$-prediction，可用 $`\mathbb E\Vert \epsilon-\epsilon_\phi(x_t,t,z)\Vert ^2`$ 理解预测加到 latent 上的噪声；这是标准形式的解释，来源没有完整展开噪声 schedule。训练随机丢弃 10% 图像条件以支持 classifier-free guidance，测试 Emu 用 guidance 5.0、SD v1.5 用 3.0，都是各自选择的配置，不能将 FID 差异归因于某一个单独因素。[PDF 第 4–5、8、16 页](https://arxiv.org/pdf/2307.05222v1#page=4)
 
 <a id="data"></a>
 

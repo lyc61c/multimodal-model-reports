@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1120" viewBox="0 0 1440 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Qwen3.5-397B-A17B 图像问答架构</title>
+  <desc id="desc">根据固定版本公开配置与 Transformers v5.2.0 实现自绘。图像经过块嵌入、27层视觉编码器和2乘2空间合并，得到4096维视觉token，替换文本序列中的图像占位符。混合解码器共60层，每四层含三个Gated DeltaNet和一个Gated Attention，每层均带稀疏MoE。最终由语言模型头生成答案。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#62748a"/></marker>
+    <style>
+      text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#20324a}
+      .heading{font-size:30px;font-weight:700}.subtitle{font-size:18px;fill:#53677f}
+      .paneltitle{font-size:22px;font-weight:700}.label{font-size:21px;font-weight:700}.body{font-size:18px}.small{font-size:16px;fill:#53677f}
+      .panel{fill:#fff;stroke:#d9e2ed;stroke-width:2}.vision{fill:#eaf6f3;stroke:#7cb6a7;stroke-width:2}.textbox{fill:#eef3ff;stroke:#95a9d5;stroke-width:2}
+      .delta{fill:#ecf7f2;stroke:#8ab9a2;stroke-width:2}.attention{fill:#fff2e4;stroke:#d9ac78;stroke-width:2}.fusion{fill:#eff3fa;stroke:#99adca;stroke-width:2}
+      .arrow{fill:none;stroke:#62748a;stroke-width:2.4;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1440" height="1120" fill="#f6f8fc"/>
+  <text x="40" y="51" class="heading">Qwen3.5-397B-A17B · 一次图像问答如何通过模型</text>
+  <text x="40" y="85" class="subtitle">根据公开资料自绘，非原文图 · 仅对应此型号 · 模型配置固定 revision + Transformers v5.2.0</text>
+
+  <rect x="40" y="120" width="830" height="310" rx="18" class="panel"/>
+  <text x="62" y="155" class="paneltitle">视觉路径</text>
+  <rect x="62" y="180" width="175" height="92" rx="12" class="vision"/>
+  <text x="149" y="213" text-anchor="middle" class="label">输入图像</text>
+  <text x="149" y="242" text-anchor="middle" class="body">缩放、归一化</text>
+  <path d="M237 226H269" class="arrow"/>
+  <rect x="270" y="180" width="220" height="92" rx="12" class="vision"/>
+  <text x="380" y="213" text-anchor="middle" class="label">块嵌入 Conv3D</text>
+  <text x="380" y="242" text-anchor="middle" class="body">时间 2 × 空间 16 × 16</text>
+  <path d="M490 226H521" class="arrow"/>
+  <rect x="522" y="180" width="322" height="92" rx="12" class="vision"/>
+  <text x="683" y="213" text-anchor="middle" class="label">视觉 Transformer · 27 层</text>
+  <text x="683" y="242" text-anchor="middle" class="body">隐藏维度 1152 · 16 个头</text>
+  <path d="M683 272V302" class="arrow"/>
+  <rect x="522" y="303" width="322" height="93" rx="12" class="vision"/>
+  <text x="683" y="335" text-anchor="middle" class="label">2 × 2 空间合并 + MLP</text>
+  <text x="683" y="366" text-anchor="middle" class="body">4 × 1152 → 4608 → 4096</text>
+  <text x="62" y="328" class="small">静态图像复制为两个相同帧，</text>
+  <text x="62" y="354" class="small">仅用于填满时间块；不是两张图片。</text>
+  <text x="62" y="396" class="small">空间 token 数压缩为原来的 1/4。</text>
+
+  <rect x="900" y="120" width="500" height="310" rx="18" class="panel"/>
+  <text x="924" y="155" class="paneltitle">文本路径</text>
+  <rect x="925" y="180" width="450" height="92" rx="12" class="textbox"/>
+  <text x="1150" y="213" text-anchor="middle" class="label">问题 + 聊天模板 → tokenizer</text>
+  <text x="1150" y="242" text-anchor="middle" class="body">按视觉网格展开图像占位符</text>
+  <path d="M1150 272V302" class="arrow"/>
+  <rect x="925" y="303" width="450" height="93" rx="12" class="textbox"/>
+  <text x="1150" y="335" text-anchor="middle" class="label">文本 token embedding</text>
+  <text x="1150" y="366" text-anchor="middle" class="body">每个 token 的隐藏维度为 4096</text>
+
+  <path d="M683 396V457" class="arrow"/>
+  <path d="M1150 396V457" class="arrow"/>
+  <rect x="40" y="460" width="1360" height="105" rx="16" class="fusion"/>
+  <text x="720" y="497" text-anchor="middle" class="paneltitle">视觉向量替换图像占位符 → 图文混合 embedding 序列</text>
+  <text x="720" y="532" text-anchor="middle" class="body">统一维度 4096 · 配置图文位置索引 · 共同进入因果语言主干</text>
+  <path d="M720 565V598" class="arrow"/>
+
+  <rect x="40" y="600" width="1360" height="255" rx="18" class="panel"/>
+  <text x="64" y="637" class="paneltitle">混合解码器 · 下列四层顺序重复 15 次，共 60 层</text>
+  <rect x="65" y="663" width="280" height="111" rx="12" class="delta"/>
+  <text x="205" y="697" text-anchor="middle" class="label">Gated DeltaNet</text><text x="205" y="728" text-anchor="middle" class="body">+ MoE</text><text x="205" y="754" text-anchor="middle" class="small">固定宽度递推状态</text>
+  <path d="M345 718H394" class="arrow"/>
+  <rect x="395" y="663" width="280" height="111" rx="12" class="delta"/>
+  <text x="535" y="697" text-anchor="middle" class="label">Gated DeltaNet</text><text x="535" y="728" text-anchor="middle" class="body">+ MoE</text><text x="535" y="754" text-anchor="middle" class="small">16 个 Q/K 头，64 个 V 头</text>
+  <path d="M675 718H724" class="arrow"/>
+  <rect x="725" y="663" width="280" height="111" rx="12" class="delta"/>
+  <text x="865" y="697" text-anchor="middle" class="label">Gated DeltaNet</text><text x="865" y="728" text-anchor="middle" class="body">+ MoE</text><text x="865" y="754" text-anchor="middle" class="small">各头维度 128</text>
+  <path d="M1005 718H1054" class="arrow"/>
+  <rect x="1055" y="663" width="320" height="111" rx="12" class="attention"/>
+  <text x="1215" y="697" text-anchor="middle" class="label">Gated Attention</text><text x="1215" y="728" text-anchor="middle" class="body">+ MoE</text><text x="1215" y="754" text-anchor="middle" class="small">32 个 Q 头 / 2 个 KV 头</text>
+  <text x="64" y="807" class="body">每一层：RMSNorm → 序列混合 → 残差；RMSNorm → MoE → 残差</text>
+  <text x="64" y="835" class="small">每个 MoE：512 个路由专家中选 10 个并归一化加权，另加 sigmoid 门控的 1 个共享专家。</text>
+  <path d="M720 855V885" class="arrow"/>
+  <rect x="40" y="887" width="1360" height="83" rx="16" class="fusion"/>
+  <text x="720" y="921" text-anchor="middle" class="paneltitle">末层 RMSNorm → 语言模型头（词表 248320）→ 下一个答案 token</text>
+  <text x="720" y="951" text-anchor="middle" class="small">继续自回归生成；DeltaNet 使用递推缓存，完整注意力层保留 KV 历史。</text>
+
+  <rect x="40" y="997" width="1360" height="86" rx="14" fill="#e9eef7"/>
+  <text x="62" y="1028" class="body">尺寸示例：已缩放到 448 × 448 的单图 → 784 个视觉块（1152 维）→ 196 个视觉 token（4096 维）。</text>
+  <text x="62" y="1058" class="small">448 仅用于演示形状，不是固定输入分辨率。early fusion 指早期联合训练，图中仍保留独立视觉编码器。</text>
+</svg>

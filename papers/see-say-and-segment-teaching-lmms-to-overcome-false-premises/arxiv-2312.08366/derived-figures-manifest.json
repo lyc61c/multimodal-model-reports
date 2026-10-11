@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "b46cedd95a4b",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "d7be760ae214ecf9a545999f9eb2209d08c33dae7c1295131622f1ffea1531a9",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2312.08366v1",
+          "locator": "§4–5；PDF 第5–6页、Figure4",
+          "note": "LLaVA-v1.5-7B与SAM组件；语言控制分割与无需分割的回复。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；只画统一模型；级联基线另由 LLaVA 接 LISA。；原文未展开继承自 LISA 的完整连接层尺寸。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

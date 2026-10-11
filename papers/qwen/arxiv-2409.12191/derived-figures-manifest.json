@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "32bc63503a35",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "cfd3a08da453900b82039d987022119c6b7ae5116dc71c3a07bb794ff229f755",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2409.12191v1",
+          "locator": "§2.1；PDF 第3–5页",
+          "note": "ViT/MLP/Qwen2连接，图像视频共用patch结构与两种位置编码。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；二维 RoPE 属视觉编码器；M-RoPE 属混合序列位置。；视觉 token 随分辨率变化，不固定为图中方块数。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

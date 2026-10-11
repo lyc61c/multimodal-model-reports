@@ -32,6 +32,14 @@ Table 1列出当时Pro/Lite/Mini输入每百万token分别0.47/0.09/0.03美元�
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘公开接口示意，非原文图](figures/architecture-overview.svg)
+
+*自绘公开接口示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[2607.00248v1; VideoCut / GUI and coding workflow cases](https://arxiv.org/pdf/2607.00248v1)。
+<!-- derived-architecture:end -->
+
 **内部网络架构未披露。** 原文没有给出视觉patch、连接器、位置编码、专家路由、层数或注意力实现，所以这一节采用报告可观察的系统工作流解释能力接口。文本、图像、文档和视频提供任务证据；模型生成回答或操作；工具返回执行信息或补充视觉片段；模型根据新证据继续判断。这样的工作流描述不代表底层采用某种特定encoder或MoE设计。
 
 VideoCut是报告明确介绍的视觉工具：面对长视频或快运动片段，模型可以重放相关时间段并提高FPS，细看先前低密度输入遗漏的动作。它改变的是可见证据与调用过程，不是报告证明的一种新的可训练网络模块。原文未给出具体工具schema、调用次数、单次片段上限或统一延迟预算。〔PDF第15页〕
@@ -51,7 +59,7 @@ Figure 19是**GUI案例工作流图，非模型网络结构图**。从箭头看�
 **严格一致性评价比单题准确率更苛刻。** DynaMath采用worst-case accuracy，每个原题的10种变体全部正确才计分。以下是对原文评价规则的**解释性数学表达**，并非报告的训练公式：
 
 $$
-\operatorname{Acc}_{\mathrm{worst}}
+\mathrm{Acc}_{\mathrm{worst}}
 =\frac{1}{M}\sum_{i=1}^{M}\prod_{j=1}^{10}
 \mathbf 1[\widehat y_{ij}=y_{ij}].
 $$

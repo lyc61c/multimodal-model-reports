@@ -21,7 +21,7 @@
     "original_assets": 6,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "7e461087ec31ade82adfde4e323c7653fe1d40292a694efa1aab94996beddf08",
+  "article_sha256": "735029b8f6e81e5470eae3b0683894613e638ef8d638b17dd0e3c6a5ae3221e8",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -39,8 +39,50 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
+    "math_delimiters_converted": 1,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2311.05437v1",
+      "source_cache": "source/papers/84a7abb884a3/source.txt",
+      "source_locators": [
+        "§2.1、Eq.(1)–(2)，PDF p.3"
+      ],
+      "changes": [
+        "第3节补充：这里有模型内与模型外两条连接",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "7e461087ec31ade82adfde4e323c7653fe1d40292a694efa1aab94996beddf08",
+      "article_sha256_after": "3cae1cbac646f60e64e8ac5c908f7feab39b78a8982ac0cac39c28ba929bbd07",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 1,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

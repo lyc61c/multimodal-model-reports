@@ -18,7 +18,7 @@
     "asset_hashes_match": true,
     "original_assets": 5
   },
-  "article_sha256": "b82ce917b5f1845e193cb6fdd238e14f7ce80ddfdbce57f876f4ea93b307e54c",
+  "article_sha256": "74242e440ade9ed8ca5ad3ac13c15280a2a88a89e08a45ff047227503444c642",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -27,6 +27,38 @@
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补视觉编码器初始化来源。",
+        "补视频一次推理路径及像素差与特征删减的对应。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2501.13106v1",
+          "locator": "§3 Training, PDF p5; §2.2 Differential Frame Pruner / §3 Training, PDF p5",
+          "version": "2501.13106v1"
+        }
+      ],
+      "article_sha256": "3722c2ad3dfaee068fd2bc9df6f865d43acee24a0c380cc5eac191c02bcd19c2",
+      "model_executed": false
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

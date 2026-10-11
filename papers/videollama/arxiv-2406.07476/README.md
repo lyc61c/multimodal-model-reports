@@ -51,22 +51,24 @@
 
 声音先由 BEATs 编码，经线性层映射到 LLM 输入空间。视觉与音频表示同提示一起输入语言解码器。音频分支并非复用上一代 Audio Q-Former；原文此处采用简单线性投射。论文支持的是音频理解和文字回答，没有相应音频生成器。（PDF 第 3–5 页）
 
+视觉输入先填充、缩放至 **336×336**，由 **CLIP ViT-L/14** 逐帧编码；语言端实验使用 **Mistral-Instruct 或 Mixtral-Instruct**，不是统一沿用第一代的语言底座。Table 1 的连接器设计实验抽取 8 帧，选定的 RegStage＋3D Conv 配置以 `(2,2,2)` 做时空降采样，输出 576 个 token；这个数对应该实验的帧数和网格，不是任何视频长度下恒定的总预算。音频另转为 128-bin fbank，BEATs 特征经线性映射后进入同一语言空间。（§2、Table1，PDF 第3–5页）
+
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
 ### 4.1 在送入语言模型前融合时空信息
 
-令视频网格 $X\in\mathbb R^{T\times H\times W\times C}$，可将正文的 STC 路径解释为：
+令视频网格 $`X\in\mathbb R^{T\times H\times W\times C}`$，可将正文的 STC 路径解释为：
 
 $$
-Z=\operatorname{Proj}\left(\operatorname{RegStage}_2\left(
-\operatorname{Conv3D}_{\downarrow}\left(\operatorname{RegStage}_1(X)\right)\right)\right).
+Z=\mathrm{Proj}\left(\mathrm{RegStage}_2\left(
+\mathrm{Conv3D}_{\downarrow}\left(\mathrm{RegStage}_1(X)\right)\right)\right).
 $$
 
 这是架构说明记号，原文 Algorithm 1 给出简化伪代码。三维卷积可以在局部同时整合相邻帧和图像区域；前后空间交互模块缓解直接压缩的信息损失。保持时空顺序并不是直接保证正确推理，而是让训练与推理的 token 顺序保持一致。
 
-在表 1 的 8 帧、24×24 patch 网格设置下，原始网格有 $8\times24\times24=4608$ 个位置；时间与两维空间均二倍降采样后为 $4\times12\times12=576$ 个 token。2D 空间二倍降采样保持 8 帧，则为 1152。这一计算解释表内 token 数，不应用于任意不同帧数的版本。
+在表 1 的 8 帧、24×24 patch 网格设置下，原始网格有 $`8\times24\times24=4608`$ 个位置；时间与两维空间均二倍降采样后为 $`4\times12\times12=576`$ 个 token。2D 空间二倍降采样保持 8 帧，则为 1152。这一计算解释表内 token 数，不应用于任意不同帧数的版本。
 
 ![原文 Figure 2 和 Table 1：STC 设计与受控消融](figures/stc.png)
 
@@ -111,7 +113,7 @@ $$
 \log p_\theta(y_t\mid y_{<t},P_V,P_A,q).
 $$
 
-不同阶段按可用模态提供条件，$\mathcal R$ 表示参与监督的文字响应。论文没有逐阶段完整披露学习率、GPU 数、所有 batch 与采样权重；本介绍不从其他论文借用训练参数。尤其要注意音频第二阶段解冻 BEATs、但不解冻 LLM，不能套用视频第二阶段的更新范围。
+不同阶段按可用模态提供条件，$`\mathcal R`$ 表示参与监督的文字响应。论文没有逐阶段完整披露学习率、GPU 数、所有 batch 与采样权重；本介绍不从其他论文借用训练参数。尤其要注意音频第二阶段解冻 BEATs、但不解冻 LLM，不能套用视频第二阶段的更新范围。
 
 联合训练从视频抽取匹配音轨，再裁切或补齐到音频训练的时长。其数据包含 GPT 生成的指令回答；这属于合成文字监督，并非论文实施了 DPO 或 RLHF。（PDF 第 6–8 页）
 

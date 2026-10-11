@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "paper_id": "7c5f11db06d6",
+  "title": "AuroraCap：帧内合并与多帧描述",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "frames",
+      "title": "图像／采样视频帧",
+      "lines": [
+        "短边 378，保持宽高比"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "query",
+      "title": "描述指令",
+      "lines": [
+        "文字提示"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vit",
+      "title": "CLIP ViT-H",
+      "lines": [
+        "逐帧编码空间特征"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "tome",
+      "title": "ViT 内 Token 合并",
+      "lines": [
+        "注意力后、MLP 前",
+        "Key 相似度匹配与加权合并"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "projector",
+      "title": "两层 MLP",
+      "lines": [
+        "视觉特征对齐语言维度",
+        "按帧组织多帧表示"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "Vicuna-1.5-7B-16k",
+      "lines": [
+        "结合视觉前缀与指令"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "自然语言描述",
+      "lines": [
+        "输出视频内容与事件细节"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vit",
+      "style": "solid",
+      "from": "frames"
+    },
+    {
+      "to": "tome",
+      "style": "solid",
+      "from": "vit"
+    },
+    {
+      "to": "projector",
+      "style": "solid",
+      "from": "tome"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "projector"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "query"
+    },
+    {
+      "to": "out",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "合并发生在 ViT 多个层中；分框不表示仅末层合并。",
+    "逐帧空间合并，不把不同时间帧平均成同一图像。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2410.03051v1",
+      "locator": "§2.1、Appendix D/E；PDF 第3、28–29页",
+      "note": "ViT内部ToMe时序、双层MLP与选定CLIP/Vicuna配置；保持宽高比。"
+    }
+  ]
+}

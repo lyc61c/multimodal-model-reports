@@ -207,7 +207,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sources", action="store_true", help="Also verify ignored original source caches on this machine")
     args = parser.parse_args()
-    for script in ("verify_catalogue.py", "verify_articles.py"):
+    for script in ("verify_catalogue.py", "verify_articles.py", "verify_github_math.py"):
         completed = subprocess.run([sys.executable, "-X", "utf8", str(ROOT / "scripts" / script)],
                                    cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
         if completed.returncode:
@@ -305,7 +305,8 @@ def main():
     integrity = read("data/article-verification.json")
     result = {"status": "failed" if issues else "passed", "documents_checked": len(documents),
               "complete_introductions": len(articles), "model_series": len(list(ROOT.glob("papers/*/README.md"))),
-              "original_assets": integrity["original_assets"], "local_links_and_anchors_checked": links_checked,
+              "original_assets": integrity["original_assets"], "derived_assets": integrity["derived_assets"],
+              "local_links_and_anchors_checked": links_checked,
               "chronological_navigation": chronological_navigation, "source_caches_checked": source_caches,
               "source_provenance_statistics": dict(source_statistics),
               "issues": issues, "limits": "Structural, link, delimiter and provenance checks; scientific claims need source review. External URL availability is not inferred from local links."

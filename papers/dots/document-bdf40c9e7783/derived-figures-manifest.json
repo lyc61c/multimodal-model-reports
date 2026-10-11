@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "paper_id": "bdf40c9e7783",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "061b8b8bb9a376bfe426e879a3645f31803f81e7b178705cdb6a8a5f33c53ee4",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://github.com/rednote-hilab/dots.vlm1",
+          "locator": "official-source-snapshot-2026-10-08; Methods",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/blog.md",
+          "locator": "Methods §3.1–3.2; byte-identical to 2026-10-08 cached hash, fetched again 2026-10-11",
+          "note": "支持1.2B/42层自训NaViT、MLP、DeepSeekV3及AIMv2设计参照。",
+          "sha256": "b113f8c5f230618c9eea95029e1283da2a9cf5af7f23aba5387a519d98c25386"
+        }
+      ],
+      "scope": "根据官方 Methods 自绘，非原文图。；AIMv2 是相似设计参照，不是现成初始化权重。；不从 NaViT 名称推定 patch 或打包规格。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

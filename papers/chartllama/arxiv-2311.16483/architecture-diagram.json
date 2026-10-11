@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "paper_id": "243076aca63f",
+  "title": "ChartLlama 图表到代码路径",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "media_input",
+      "title": "图表",
+      "lines": [
+        "padding 后缩放"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text_input",
+      "title": "文字输入",
+      "lines": [
+        "重绘／编辑请求"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "CLIP ViT-L/14",
+      "lines": [
+        "输入分辨率 336",
+        "提取图表视觉特征"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "text_embedding",
+      "title": "文字词嵌入",
+      "lines": [
+        "由语言 tokenizer 处理",
+        "映射到词嵌入空间"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "bridge",
+      "title": "两层 MLP",
+      "lines": [
+        "匹配语言输入空间",
+        "与用户文字共同接入"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "text_condition",
+      "title": "文字条件",
+      "lines": [
+        "问题及已有上下文",
+        "保持文字序列结构"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "LLaVA-1.5 学生",
+      "lines": [
+        "LoRA 适配语言模型",
+        "生成绘图 Python 代码"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "render",
+      "title": "外部绘图库",
+      "lines": [
+        "执行 Matplotlib/Plotly 等",
+        "代码转为渲染图表"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "output",
+      "title": "新图表",
+      "lines": [
+        "重绘／编辑结果",
+        "问答任务直接输出文字"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vision",
+      "style": "solid",
+      "from": "media_input"
+    },
+    {
+      "to": "text_embedding",
+      "style": "solid",
+      "from": "text_input"
+    },
+    {
+      "to": "bridge",
+      "style": "solid",
+      "from": "vision"
+    },
+    {
+      "to": "text_condition",
+      "style": "solid",
+      "from": "text_embedding"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "bridge",
+      "label": "视觉条件"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "text_condition",
+      "label": "文字条件"
+    },
+    {
+      "to": "render",
+      "style": "solid",
+      "from": "llm"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "render"
+    }
+  ],
+  "notes": [
+    "仓库自绘：本图选择代码生成任务。",
+    "数据制造的三个 Stage 不是在线网络层。",
+    "代码需外部执行，非直接生成像素。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2311.16483v1",
+      "locator": "§4.1–4.2、附录 A，PDF pp.6、11",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

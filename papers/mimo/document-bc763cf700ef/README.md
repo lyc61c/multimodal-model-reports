@@ -44,7 +44,7 @@ MiMo-V2.5 在 MiMo-V2-Flash 的混合滑动窗口语言主干上加入自研视�
 
 ![MiMo-V2.5官方架构原图的忠实PNG渲染](figures/official-architecture-preview.png)
 
-[下载官方 SVG 原图](figures/official-architecture.svg)。图中的蓝色、绿色、黄色分别表示音频、视觉与文本 token。音频路径从波形经过 Audio Tokenizer、Local Transformer 和 Audio Projector；视觉路径由图像或视频帧进入 MiMo ViT，再经过 Visual Projector；文本则形成文本 token。这些表征共同进入 MiMo Hybrid-SWA Backbone，上方连接 LM Head 和 MTP Block。
+[官方未编号架构图](figures/official-architecture.svg)中的蓝色、绿色、黄色分别表示音频、视觉与文本 token。音频路径从波形经过 Audio Tokenizer、Local Transformer 和 Audio Projector；视觉路径由图像或视频帧进入 MiMo ViT，再经过 Visual Projector；文本则形成文本 token。这些表征共同进入 MiMo Hybrid-SWA Backbone，上方连接 LM Head 和 MTP Block。
 
 原图明确指出音频与视觉不是先转换成文字再输入模型，也不是所有原始波形和像素直接进入无编码器主干。两类编码器均由团队内部预训练，语言骨干继承 MiMo-V2-Flash 的混合滑动窗口注意力。但“继承架构”并未公开 V2.5 的精确层序列、窗口宽度、全局注意力比例或 KV cache 方案，本文不将旧版本所有细节直接移植到新版本。
 
@@ -60,13 +60,13 @@ MiMo-V2.5 在 MiMo-V2-Flash 的混合滑动窗口语言主干上加入自研视�
 $$
 z_v=P_v(E_v(I_{1:T})),\qquad
 z_a=P_a(E_a(a)),\qquad
-z_t=\operatorname{Embed}(x),
+z_t=\mathrm{Embed}(x),
 $$
 
 
-然后让统一主干处理这些表征。这里 $E_v$ 对应 MiMo ViT，$E_a$ 概括音频 tokenizer 与局部 Transformer；$P_v,P_a$ 是各自 projector。公式是本文对原图的抽象，不表示原文公布了它们的张量形状、精确拼接次序或投影层数。
+然后让统一主干处理这些表征。这里 $`E_v`$ 对应 MiMo ViT，$`E_a`$ 概括音频 tokenizer 与局部 Transformer；$`P_v,P_a`$ 是各自 projector。公式是本文对原图的抽象，不表示原文公布了它们的张量形状、精确拼接次序或投影层数。
 
-混合滑动窗口注意力通过局部邻域减少部分层的长序列配对成本。标准局部注意力可写为 $\operatorname{softmax}(Q_tK_{\mathcal N_t}^{\top}/\sqrt d)V_{\mathcal N_t}$，其中 $\mathcal N_t$ 是窗口中的可见位置。固定窗口 $W$ 下，局部层注意力成本约为 $O(NWd)$；若混合结构包含全局层，仍有全局的二次项。发布页没有给出混合比例，因此不能把全模型推理成本断言为严格线性。
+混合滑动窗口注意力通过局部邻域减少部分层的长序列配对成本。标准局部注意力可写为 $`\mathrm{softmax}(Q_tK_{\mathcal N_t}^{\top}/\sqrt d)V_{\mathcal N_t}`$，其中 $`\mathcal N_t`$ 是窗口中的可见位置。固定窗口 $`W`$ 下，局部层注意力成本约为 $`O(NWd)`$；若混合结构包含全局层，仍有全局的二次项。发布页没有给出混合比例，因此不能把全模型推理成本断言为严格线性。
 
 稀疏专家把总容量与每 token 激活量分离。15B/310B 约为 **4.84%**，这是激活与总参数之比；全部专家仍要存储，通信、注意力和共享模块也有计算，不能按此比例直接换算显存或服务成本。页面未提供路由专家总数、top-k、共享专家配置及负载平衡方法。
 

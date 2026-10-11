@@ -60,7 +60,7 @@
     "Failed requests excluded by source evaluation",
     "Incorrect intermediate reasoning acknowledged by source"
   ],
-  "article_sha256": "5adda9d3104a601b22d013cdc5e502b3f1d8a4c850e209974b557646c2ca306a",
+  "article_sha256": "a954b531f18b46dcb61a594f3ae8965d307433e8e8e0648e1e2bc2737e60333a",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -78,7 +78,38 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补原文已给的视觉与语言骨干身份。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2507.01006v1",
+          "locator": "§2 Model Architecture, PDF p3",
+          "version": "2507.01006v1"
+        }
+      ],
+      "article_sha256": "6adc72955f2a61a3c0ecd3754e4c9ae3c02816218bbd2dd61d46d40955530452",
+      "model_executed": false
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 6,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 4
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

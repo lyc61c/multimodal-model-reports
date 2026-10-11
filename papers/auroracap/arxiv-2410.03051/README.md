@@ -43,6 +43,14 @@
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘模型架构示意，非原文图](figures/architecture-overview.svg)
+
+*自绘模型架构示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[§2.1、Appendix D/E；PDF 第3、28–29页](https://arxiv.org/pdf/2410.03051v1)。
+<!-- derived-architecture:end -->
+
 输入图像或视频帧先经过 CLIP ViT-H。模型在视觉 Transformer 的注意力与 MLP 之间实施合并，用当前注意力 Key 特征计算相似度。合并后的视觉序列经两层 MLP 映射到 Vicuna 的词嵌入空间，语言模型结合提示生成描述。视频按帧处理空间 Token，原文称为 frame-wise token merging；这不等价于把不同时间帧直接平均成一张图。[原文 §2.1](https://arxiv.org/pdf/2410.03051v1#page=3)
 
 | 模块 | 具体配置与作用 | 数据流中的意义 |
@@ -65,12 +73,12 @@
 原文 Equation (1) 为：
 
 $$
-A=\operatorname{softmax}\left(\frac{QK^\top}{\sqrt d}+\log s\right).
+A=\mathrm{softmax}\left(\frac{QK^\top}{\sqrt d}+\log s\right).
 $$
 
 Q、K 是查询与键，d 是相应特征维度，s 是某个 Token 合并后代表的 Patch 数，广播到对应的注意力列。log s 调整让一个代表多个原始 Patch 的 Token 在归一化注意力中保留相应权重，而不是与单 Patch Token 完全同权。把该项理解成“所有合并 Token 被进一步削弱”会与公式方向冲突。
 
-加权平均的机制可用解释性表达 $x_{new}=(s_ax_a+s_bx_b)/(s_a+s_b)$，新的大小为 $s_a+s_b$。这只是对原文加权合并步骤的展开，不是报告另一条编号公式。合并会损失空间细节，因此 r 或 Rvtk 需要依据任务选择；计数、细小文字和关系区分可能比冗余背景更依赖细粒度 Token。[原文 §2.1 与 Appendix D](https://arxiv.org/pdf/2410.03051v1#page=27)
+加权平均的机制可用解释性表达 $`x_{new}=(s_ax_a+s_bx_b)/(s_a+s_b)`$，新的大小为 $`s_a+s_b`$。这只是对原文加权合并步骤的展开，不是报告另一条编号公式。合并会损失空间细节，因此 r 或 Rvtk 需要依据任务选择；计数、细小文字和关系区分可能比冗余背景更依赖细粒度 Token。[原文 §2.1 与 Appendix D](https://arxiv.org/pdf/2410.03051v1#page=27)
 
 **把长描述比较分解为短问答。** VDCScore 避免只对整段文字直接打一个笼统分数。先由 GPT-4o 从参考描述生成开放问题与简短正确答案，再要求裁判只依据预测描述回答问题，最后比较“问题、正确答案、预测答案”三元组，给出正确性和质量评分。问题集预先固定，避免不同模型被不同问题集合评估。[原文 §3.2.1](https://arxiv.org/pdf/2410.03051v1#page=7)
 

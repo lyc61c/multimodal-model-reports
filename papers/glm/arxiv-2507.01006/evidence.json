@@ -69,5 +69,23 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补原文已给的视觉与语言骨干身份。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2507.01006v1",
+          "locator": "§2 Model Architecture, PDF p3",
+          "version": "2507.01006v1"
+        }
+      ],
+      "article_sha256": "6adc72955f2a61a3c0ecd3754e4c9ae3c02816218bbd2dd61d46d40955530452",
+      "model_executed": false
+    }
+  ]
 }

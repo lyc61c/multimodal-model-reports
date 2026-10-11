@@ -21,7 +21,7 @@
     "original_assets": 6,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "23b117b5ba774aad47a8c38eb655233f89489d6450308a95ef24ee49c78758a4",
+  "article_sha256": "1969a3e221b2a43fae090d0b071e46038f9914a2389a25c9eb62bf086e9a116a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -39,8 +39,50 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
+    "math_delimiters_converted": 3,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2306.00890v1",
+      "source_cache": "source/papers/fcd07866797c/source.txt",
+      "source_locators": [
+        "§4，PDF pp.4–6"
+      ],
+      "changes": [
+        "第3节补充：部署时的主路径与课程训练流程需要分开：医学图像先经视觉编码器成为特征，线性连接层把它们映射到语言输入空间，语言模型再结合用户问题与历史对话生成自由文本",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "23b117b5ba774aad47a8c38eb655233f89489d6450308a95ef24ee49c78758a4",
+      "article_sha256_after": "c797f8af486f54de4bb75d46c4d9355f9d04ade68406042673b8bd9acb55fd61",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 3,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

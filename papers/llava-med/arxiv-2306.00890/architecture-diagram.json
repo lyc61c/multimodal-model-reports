@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "paper_id": "fcd07866797c",
+  "title": "LLaVA-Med 在线回答路径",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "media_input",
+      "title": "医学图片",
+      "lines": [
+        "图片输入"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text_input",
+      "title": "文字输入",
+      "lines": [
+        "用户问题／对话历史"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "视觉编码器",
+      "lines": [
+        "图像转为视觉特征",
+        "初始化配置依实验变体"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "text_embedding",
+      "title": "文字词嵌入",
+      "lines": [
+        "由语言 tokenizer 处理",
+        "映射到词嵌入空间"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "bridge",
+      "title": "线性投影",
+      "lines": [
+        "映射到语言嵌入维度",
+        "与问题表示共同接入"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "text_condition",
+      "title": "文字条件",
+      "lines": [
+        "问题及已有上下文",
+        "保持文字序列结构"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "语言模型",
+      "lines": [
+        "沿用 LLaVA 的结构",
+        "条件自回归生成"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "医学文字回答",
+      "lines": [
+        "开放答案或候选项回答",
+        "不输出诊断分类头结果"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vision",
+      "style": "solid",
+      "from": "media_input"
+    },
+    {
+      "to": "text_embedding",
+      "style": "solid",
+      "from": "text_input"
+    },
+    {
+      "to": "bridge",
+      "style": "solid",
+      "from": "vision"
+    },
+    {
+      "to": "text_condition",
+      "style": "solid",
+      "from": "text_embedding"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "bridge",
+      "label": "视觉条件"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "text_condition",
+      "label": "文字条件"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "仓库自绘：表示推理而非课程训练。",
+    "GPT-4 用于离线数据生成和评估。",
+    "具体骨干初始化随实验配置区分。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2306.00890v1",
+      "locator": "§4，PDF pp.4–6",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

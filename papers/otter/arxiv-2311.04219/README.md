@@ -38,6 +38,14 @@ OtterHD 研究的是提高输入分辨率能否增强小物体、细文字和复
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘模型架构示意，非原文图](figures/architecture-overview.svg)
+
+*自绘模型架构示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[§2.1，PDF pp.3–4](https://arxiv.org/pdf/2311.04219v1)。
+<!-- derived-architecture:end -->
+
 模型沿用 Fuyu/Persimmon：隐藏维度 4096、64 个 attention heads、36 层，使用 squared ReLU、RoPE、Q/K LayerNorm 与独立输入输出嵌入。原文列出的 Persimmon 737B 文本预训练 tokens 是底座背景，不是 OtterHD 新执行的预训练。
 
 图像被划成 30×30 像素块，经线性映射进入语言序列，按行优先排列，每行加入 image-newline 标记。输入图像先缩放到指定目标，右边与底部补齐到 patch 网格。文字格式包含 User/Assistant，Fuyu 原生 `\x04` 标记表示答案起点，后续生成答案和 EOS。
@@ -54,7 +62,7 @@ OtterHD 没有额外 CLIP 编码器、Q-Former 或多窗口 LoRA，也没有把�
 
 ## 4. 核心创新与数学原理
 
-原文未提出编号数学公式。根据 patch 及换行规则，若补齐后图像共有 $n_h=\lceil H/30\rceil$ 行、$n_w=\lceil W/30\rceil$ 列，可用
+原文未提出编号数学公式。根据 patch 及换行规则，若补齐后图像共有 $`n_h=\lceil H/30\rceil`$ 行、$`n_w=\lceil W/30\rceil`$ 列，可用
 
 $$
 N_{patch}=n_hn_w,\qquad N_{image+newline}=n_h(n_w+1)
@@ -86,9 +94,9 @@ MagnifierBench 从 PVSG 视频选复杂帧，参考约占画面 1% 的物体尺�
 
 ## 6. 训练流程与目标
 
-OtterHD 直接从 Fuyu 指令微调，采用文本生成监督，原文没有新的像素重建损失或单独视觉预训练。OB 为全参数微调，OB-Light 为 LoRA，$r=32,\alpha=32$，覆盖注意力和线性层包括 head。原文没有完整列出生成损失 mask 的细节，不能把仅回答监督的具体实现冒充已披露公式。
+OtterHD 直接从 Fuyu 指令微调，采用文本生成监督，原文没有新的像素重建损失或单独视觉预训练。OB 为全参数微调，OB-Light 为 LoRA，$`r=32,\alpha=32`$，覆盖注意力和线性层包括 head。原文没有完整列出生成损失 mask 的细节，不能把仅回答监督的具体实现冒充已披露公式。
 
-训练使用 PyTorch、Transformers、FlashAttention-2 与 fused 算子，8 张 A100。AdamW 学习率 $10^{-5}$、weight decay 0.1、cosine、warmup ratio 0.03、DeepSpeed ZeRO-2。附录 Table 4 区分全参 batch 64、3 epochs 与 LoRA batch 128、6 epochs；正文统一 batch64 的概述不能覆盖 LoRA 设置。峰值每 GPU 显存约 72GB/70GB。
+训练使用 PyTorch、Transformers、FlashAttention-2 与 fused 算子，8 张 A100。AdamW 学习率 $`10^{-5}`$、weight decay 0.1、cosine、warmup ratio 0.03、DeepSpeed ZeRO-2。附录 Table 4 区分全参 batch 64、3 epochs 与 LoRA batch 128、6 epochs；正文统一 batch64 的概述不能覆盖 LoRA 设置。峰值每 GPU 显存约 72GB/70GB。
 
 作者报告全参约 3 小时/epoch，LoRA 约 1 小时/epoch；附录还有基于 150K LLaVA 数据、1 epoch 的受控比较，不能直接把这些成本与主表 370K 模型混为同一训练。Figure 2 在 512 下基础 HF 315.9 tokens/s/GPU，优化全参 2178.5、LoRA 3751；1024 下为 892.5/1872.9，分辨率代价明显。这些是作者 30 分钟窗口的平均训练吞吐，不是聊天输出速度。
 

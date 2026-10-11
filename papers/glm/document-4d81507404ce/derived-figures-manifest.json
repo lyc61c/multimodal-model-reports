@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "4d81507404ce",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "917190864b9a873d3a732d937202836c3df1acc1db6d59eabcba3885dec7e403",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/README.md",
+          "locator": "官方README固定快照：介绍、使用／模型推理",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘，仅展开 README 披露组件。；查询数量与桥梁后配置未完整披露。；图像缓存是接口复用能力，非新增骨干。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

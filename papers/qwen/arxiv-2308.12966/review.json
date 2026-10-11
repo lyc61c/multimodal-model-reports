@@ -46,7 +46,7 @@
     "Chat scores lower on several traditional benchmarks",
     "No comprehensive mechanism/data ablations or contamination audit"
   ],
-  "article_sha256": "1d0c57aee6918dc651c20467cde47471c72bd0b638d866034b18ab4fed7e0393",
+  "article_sha256": "1a4b1b176aec94136318d8c22d036541783167bd686b66920c2ec8f8915bfc80",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -64,7 +64,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 13,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 26,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 13,
+      "operatorname_replacements": 1,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

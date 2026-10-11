@@ -38,6 +38,14 @@ Qwen2-VL 的两个关键变化是 **Naive Dynamic Resolution** 与 **M-RoPE**。
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘模型架构示意，非原文图](figures/architecture-overview.svg)
+
+*自绘模型架构示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[§2.1；PDF 第3–5页](https://arxiv.org/pdf/2409.12191v1)。
+<!-- derived-architecture:end -->
+
 675M ViT 由 DFN 视觉权重初始化，把原有绝对位置嵌入换为二维 RoPE。图像以 14×14 patch 编码；ViT 后的 MLP 将相邻 2×2 视觉 token 合并为一个，再由视觉起止标记包围，送入 Qwen2。
 
 对于视频，按每秒两帧采样，以时间深度为 2 的 3D 卷积处理相邻帧的 tube。静态图像复制为两张相同帧，从而共用视频输入结构。训练动态调整帧分辨率，使单个视频最多使用 16,384 个视觉 token；这是预算约束，长视频可能以较低空间细节换取更多时间覆盖。
@@ -45,6 +53,8 @@ Qwen2-VL 的两个关键变化是 **Naive Dynamic Resolution** 与 **M-RoPE**。
 ![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **读图：** 视频 token 的位置由时间、高、宽三元组描述。文字的三项位置 ID 相同，静态图像的时间 ID 不变、空间 ID 随 patch 改变；视频时间 ID 随帧递增。后续模态的位置从前一段最大 ID 加一开始。
+
+两种 RoPE 的作用位置不同：**二维 RoPE 在 ViT 内**表达图像 patch 的高、宽；**M-RoPE 在 Qwen2 的混合输入序列中**给文字、图像和视频位置建立统一规则。一次图像请求先把可变大小网格编码、2×2 合并，再将视觉序列放回文字提示的位置，由 Qwen2 自回归回答。例如 224×224 输入按公开结构产生 64 个视觉内容 token，加视觉起止标记共 66 个；增加分辨率会相应增加输入长度，而非始终输出固定数量查询。（§2.1，PDF 第4–5页）
 
 <a id="principles"></a>
 
@@ -66,7 +76,7 @@ $$
 \mathcal L_{\rm text}=-\sum_{i\in\mathcal T}\log p_\theta(y_i\mid y_{<i},\text{visual inputs}),
 $$
 
-其中 $\mathcal T$ 为受监督文本位置。这是对原文训练说明的数学表达，报告未另列视觉重建、图像生成或 M-RoPE 专用损失。
+其中 $`\mathcal T`$ 为受监督文本位置。这是对原文训练说明的数学表达，报告未另列视觉重建、图像生成或 M-RoPE 专用损失。
 
 <a id="data"></a>
 

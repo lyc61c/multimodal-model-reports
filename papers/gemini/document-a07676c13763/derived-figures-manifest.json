@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "a07676c13763",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "dd213b7a1d039f39b60314c5a2d09cab142cd892cbbd748406c557c192b05d3e",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "locator": "official-source-snapshot-2026-10-08; Enterprise workflows / internal coding uses",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开系统接口自绘，非原文图。；部署监控位于模型周围，不是内部神经层。；长输出空间不等于取消任务停止条件。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -68,10 +68,10 @@ Thinking 版 RL 采用在线 policy mirror descent 的变体。以条件分布�
 $$
 \max_\theta\ \mathbb E_{(x,y^*)\sim D}
 \left[\mathbb E_{(y,z)\sim\pi_\theta(\cdot\mid x)}r(x,y,y^*)
--\tau D_{KL}\big(\pi_\theta(\cdot\mid x)\|\pi_{\theta_i}(\cdot\mid x)\big)\right].
+-\tau D_{KL}\big(\pi_\theta(\cdot\mid x)\Vert \pi_{\theta_i}(\cdot\mid x)\big)\right].
 $$
 
-$x$ 是问题，$y$ 是答案，$z$ 是生成的推理过程；正确性奖励取0/1，KL 约束本轮策略相对当前参考策略的变化。下一轮参考更新为已优化的模型。奖励针对最终答案，不是给每个思考 token 人工逐步评分。另有长度惩罚防止冗长，以及按难度和样本成功率进行课程/优先采样；论文未给长度惩罚的完整公式和系数，也不是直接宣称采用 GRPO。
+$`x`$ 是问题，$`y`$ 是答案，$`z`$ 是生成的推理过程；正确性奖励取0/1，KL 约束本轮策略相对当前参考策略的变化。下一轮参考更新为已优化的模型。奖励针对最终答案，不是给每个思考 token 人工逐步评分。另有长度惩罚防止冗长，以及按难度和样本成功率进行课程/优先采样；论文未给长度惩罚的完整公式和系数，也不是直接宣称采用 GRPO。
 
 优化使用增强 Muon，加入 weight decay、调整参数更新尺度并实现 ZeRO-1 分布式版本。报告描述这些改动但未推导全部矩阵更新公式，本文不补写成未经核验的数学实现。
 
@@ -104,7 +104,7 @@ SFT 非推理任务先人工构造种子数据、训练 seed model，再为多�
 
 更新语言模型的三个联合阶段共 **2.3T**。cooldown QA 用于激活特定能力，比例保持较低；不把它直接等同于最后的对话微调。
 
-标准版 SFT 更新视觉塔、MLP、语言模型，ChatML 格式，仅对答案和特殊 token 监督，system/user 内容遮蔽。先32K训练1 epoch，LR从 $2\times10^{-5}$ 降至 $2\times10^{-6}$；再128K训练1 epoch，re-warmup至 $10^{-5}$，末尾降至 $10^{-6}$，多样本 packing 提高效率。Thinking 再用小而高质量的长CoT进行轻量SFT，然后进行上节RL。未公开所有预训练LR、batch、RL步数等细节，不能补造。
+标准版 SFT 更新视觉塔、MLP、语言模型，ChatML 格式，仅对答案和特殊 token 监督，system/user 内容遮蔽。先32K训练1 epoch，LR从 $`2\times10^{-5}`$ 降至 $`2\times10^{-6}`$；再128K训练1 epoch，re-warmup至 $`10^{-5}`$，末尾降至 $`10^{-6}`$，多样本 packing 提高效率。Thinking 再用小而高质量的长CoT进行轻量SFT，然后进行上节RL。未公开所有预训练LR、batch、RL步数等细节，不能补造。
 
 工程侧结合 DP/EP/PP/CP 四维并行、ZeRO-1、选择性激活重算。作者报告优化后训练吞吐比7B稠密VLM高约60%，但未给完整同硬件复现表，因此它是该训练系统对比，不能当作所有部署环境下固定加速比例。
 

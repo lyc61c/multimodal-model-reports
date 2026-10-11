@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "e0eb180c5217",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "db6fc5dd3cded9e6ab8a7a1ccced59e07a3297f6d12687a54d062403ac7e7ed2",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2306.04387v1",
+          "locator": "§4.1、视频实验，PDF pp.6–7",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：展示论文验证用 Ying 模型。；M3IT 数据模式不等于学生网络模块。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

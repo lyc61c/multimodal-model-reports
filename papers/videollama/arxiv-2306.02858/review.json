@@ -15,7 +15,7 @@
     "asset_hashes_match": true,
     "original_assets": 3
   },
-  "article_sha256": "53fb3d534f0c4a2cf0d8dcf32710fd863eac010729ee2d6f2e2dab4fb2bda955",
+  "article_sha256": "68ed510c9e6ccee0e66b53af2f7efc82d519a4ba7bc195d6480289f114d69056",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -23,7 +23,42 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2306.02858v1",
+      "source_cache": "source/papers/cabdd815635d/source.txt",
+      "source_locators": [
+        "§2.1.1–2.1.2，PDF pp.3–4"
+      ],
+      "changes": [
+        "第3节补充：视觉分支包含两次不同粒度的汇聚：冻结的 BLIP-2 图像 Q-Former 先把每帧转成一组视觉向量；加入帧位置后，Video Q-Former 才从整段帧表示提取定长视频表示"
+      ],
+      "article_sha256_before": "53fb3d534f0c4a2cf0d8dcf32710fd863eac010729ee2d6f2e2dab4fb2bda955",
+      "article_sha256_after": "8de6d0c985c1b5c24805ca6efd954bacff2f6f9703009747e27085ab80a2903f",
+      "diagram_plan": false,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 7,
+      "operatorname_replacements": 2,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

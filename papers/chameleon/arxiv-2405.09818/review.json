@@ -49,7 +49,7 @@
     "原文未披露SFT全部冻结/步数和统一图像生成评分",
     "报告完整系统不等同后续公开checkpoint功能"
   ],
-  "article_sha256": "3c95f3d9157954c941c853df6bfc659ab9335236e9bab7dde0f1f002f9a688f1",
+  "article_sha256": "b1e9862e3be4ca9472884c2c5989c9c395eeef2dc0fbb13ff22edee2e0b4b6c8",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -67,7 +67,31 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 15,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "retained",
+      "source_recheck": [],
+      "diagram_plan": null,
+      "article_sha256": "3c95f3d9157954c941c853df6bfc659ab9335236e9bab7dde0f1f002f9a688f1",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 15,
+      "operatorname_replacements": 6,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

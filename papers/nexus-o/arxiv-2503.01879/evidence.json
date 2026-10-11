@@ -47,5 +47,23 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补本篇语言基座与层数，不从家族名称推断。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2503.01879v1",
+          "locator": "§3.1 Language model, PDF p5",
+          "version": "2503.01879v1"
+        }
+      ],
+      "article_sha256": "09030d899414089c1d495ce461f2490c80e150b0cee94aa477e5e1cc7e47237a",
+      "model_executed": false
+    }
+  ]
 }

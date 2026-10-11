@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "14aa0b2943d0",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "543cef0c1329290ec01f0d9a64be6db3aadb6797b25434ff744435a920940351",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2502.05177v1",
+          "locator": "2502.05177v1; §3.1 / Table 2",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "根据原文 §3.1 自绘，非原文图。；已有 pixel shuffle，不等于完全不缩减 token。；张量/上下文并行是部署方式。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

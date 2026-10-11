@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "paper_id": "84a7abb884a3",
+  "title": "LLaVA-Plus 规划与技能执行",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "图片与用户任务",
+      "lines": [
+        "原始图像条件持续保留",
+        "当前请求与会话历史"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "planner",
+      "title": "LLaVA 多模态规划器",
+      "lines": [
+        "图像表示与文字条件",
+        "预测工具名和参数"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "tools",
+      "title": "技能仓库与执行器",
+      "lines": [
+        "检测／分割／检索／生成",
+        "专门模型执行调用"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "feedback",
+      "title": "结果回传给规划器",
+      "lines": [
+        "工具结果进入会话",
+        "结合原图与问题再生成"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "最终文字或工具结果",
+      "lines": [
+        "回答用户请求",
+        "无待执行工具时结束"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "planner",
+      "style": "solid",
+      "from": "input"
+    },
+    {
+      "to": "tools",
+      "style": "solid",
+      "from": "planner"
+    },
+    {
+      "to": "feedback",
+      "style": "solid",
+      "from": "tools"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "feedback"
+    }
+  ],
+  "notes": [
+    "仓库自绘：同一助手可再次调用工具。",
+    "外部工具网络不属于 LMM 内部层。",
+    "展示一次工具使用，不保证任意循环次数。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2311.05437v1",
+      "locator": "§2.1、Eq.(1)–(2)，PDF p.3",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

@@ -37,6 +37,14 @@ Pro 定位于高能力推理、代码与多模态理解，Flash 是可控制推�
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘公开接口示意，非原文图](figures/architecture-overview.svg)
+
+*自绘公开接口示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[official-source-snapshot-2026-10-08; §2.1 Model Architecture / agentic capabilities](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf)。
+<!-- derived-architecture:end -->
+
 Section 2.1 描述统一支持视觉和音频输入的稀疏 MoE 主干：每个 token 动态路由至一部分专家，借此使模型总容量和每 token 的计算量分离。报告称改善了大模型训练稳定性、信号传播和优化动态，但没有给出可复现的路由器、归一化或视觉连接器结构图。本文不补画一张假定为官方实现的编码器架构。
 
 多模态输入、长上下文与思考在同一模型中结合，并可与搜索、代码执行、函数调用交替使用。工具返回的内容会成为后续推理依据；完成一项代理任务仍依赖工具和运行环境，不能把整个代理系统等同于单次模型调用。

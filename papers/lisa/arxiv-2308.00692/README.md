@@ -56,7 +56,7 @@ Figure 3 中图像有两条路径。上方 Vision Backbone 提取适合掩码解
 $$\widehat y_{\mathrm{txt}}=F(x_{\mathrm{img}},x_{\mathrm{txt}}),$$
 $$h_{\mathrm{seg}}=\gamma(\widehat h_{\mathrm{seg}}),\qquad f=F_{\mathrm{enc}}(x_{\mathrm{img}}),\qquad \widehat M=F_{\mathrm{dec}}(h_{\mathrm{seg}},f).$$
 
-$F$ 是多模态语言模型，$\widehat h_{\mathrm{seg}}$ 是生成 `<SEG>` 时的隐藏表示，$\gamma$ 是投影 MLP，$f$ 是像素解码所用图像特征，$F_{\mathrm{dec}}$ 是分割 decoder，$\widehat M$ 是预测二值掩码。文字输出是离散 token，但隐藏表示是连续特征，这个连续桥梁使分割监督能够训练相关语言适配与投影模块。
+$`F`$ 是多模态语言模型，$`\widehat h_{\mathrm{seg}}`$ 是生成 `<SEG>` 时的隐藏表示，$`\gamma`$ 是投影 MLP，$`f`$ 是像素解码所用图像特征，$`F_{\mathrm{dec}}`$ 是分割 decoder，$`\widehat M`$ 是预测二值掩码。文字输出是离散 token，但隐藏表示是连续特征，这个连续桥梁使分割监督能够训练相关语言适配与投影模块。
 
 默认模型用 SAM ViT-H 骨干，掩码 decoder 遵循 SAM 结构。报告指出可以替换 Mask2Former 等骨干，并给出实际对照，因此框架的语义条件接口不依赖唯一一种视觉 backbone。这里的“可替换”并不意味着任意分割器不用重新适配就具有同等结果。[原文 §4.1、§5.1、Table 3](https://arxiv.org/pdf/2308.00692v1#page=8)
 
@@ -69,18 +69,18 @@ $F$ 是多模态语言模型，$\widehat h_{\mathrm{seg}}$ 是生成 `<SEG>` 时
 第二项是**文本与像素联合监督**。原文公式 (3)、(4) 明确为：
 
 $$\mathcal L=\lambda_{\mathrm{txt}}\mathcal L_{\mathrm{txt}}+\lambda_{\mathrm{mask}}\mathcal L_{\mathrm{mask}},$$
-$$\mathcal L_{\mathrm{txt}}=\operatorname{CE}(\widehat y_{\mathrm{txt}},y_{\mathrm{txt}}),\quad
-\mathcal L_{\mathrm{mask}}=\lambda_{\mathrm{bce}}\operatorname{BCE}(\widehat M,M)+\lambda_{\mathrm{dice}}\operatorname{DICE}(\widehat M,M).$$
+$$\mathcal L_{\mathrm{txt}}=\mathrm{CE}(\widehat y_{\mathrm{txt}},y_{\mathrm{txt}}),\quad
+\mathcal L_{\mathrm{mask}}=\lambda_{\mathrm{bce}}\mathrm{BCE}(\widehat M,M)+\lambda_{\mathrm{dice}}\mathrm{DICE}(\widehat M,M).$$
 
 文字交叉熵教模型何时输出 `<SEG>`，以及怎样回答用户；BCE 监督各像素前景/背景判断，DICE 关注预测区域与真实区域的重叠。它们作用互补：背景面积很大时，单纯逐像素正确可能不足以保证小目标被分完整。常见 soft Dice 的阅读辅助式是：
 
-$$\operatorname{DiceLoss}=1-\frac{2\sum_p\widehat M_p M_p+\epsilon}{\sum_p\widehat M_p+\sum_pM_p+\epsilon}.$$
+$$\mathrm{DiceLoss}=1-\frac{2\sum_p\widehat M_p M_p+\epsilon}{\sum_p\widehat M_p+\sum_pM_p+\epsilon}.$$
 
-$p$ 为像素，$\epsilon$ 防止分母为零。原文没有在编号式中展开 Dice 的平滑实现，这里只是解释重叠损失含义，不能从上式推断官方所有阈值、归约和数值稳定实现。
+$`p`$ 为像素，$`\epsilon`$ 防止分母为零。原文没有在编号式中展开 Dice 的平滑实现，这里只是解释重叠损失含义，不能从上式推断官方所有阈值、归约和数值稳定实现。
 
 第三项是**推理能力与显式分割监督的组合迁移**。训练题“分出桌子”给精确掩码，已有多模态语言模型提供常识和复杂指令理解；推理查询将两者组合成新的任务形式。论文把不使用 ReasonSeg 训练例的结果称为零样本推理分割，但模型并非完全没接受分割训练。它已经大量学习如何输出掩码，仅对隐式问题这一特定监督形式没有直接训练。
 
-LoRA 在大部分语言权重保持固定的基础上加入低秩增量，可用标准解释 $W'=W+BA$。$A,B$ 可训练，秩小于完整矩阵维度，减少更新参数。论文没有在正文指定完整的秩、缩放系数和所有注入层，本文不擅自给出。它的主要价值是在既有 LLaVA 能力上添加分割，而不将语言模型全部从头重训。[原文 §4.2、第 6 页](https://arxiv.org/pdf/2308.00692v1#page=6)
+LoRA 在大部分语言权重保持固定的基础上加入低秩增量，可用标准解释 $`W'=W+BA`$。$`A,B`$ 可训练，秩小于完整矩阵维度，减少更新参数。论文没有在正文指定完整的秩、缩放系数和所有注入层，本文不擅自给出。它的主要价值是在既有 LLaVA 能力上添加分割，而不将语言模型全部从头重训。[原文 §4.2、第 6 页](https://arxiv.org/pdf/2308.00692v1#page=6)
 
 <a id="data"></a>
 
@@ -104,7 +104,7 @@ ReasonSeg 从 OpenImages 与 ScanNetv2 图像构建复杂隐含指令及高质�
 
 ## 6. 训练流程与目标
 
-训练冻结分割图像骨干 $F_{\mathrm{enc}}$，对多模态 LLM 使用 LoRA；mask decoder 全量微调，语言词嵌入和投影 MLP $\gamma$ 也更新。因此“LLM 通过 LoRA”不能简化成所有语言参数均冻结，词嵌入是明确可训练例外；“冻结视觉”指所列分割骨干，不宜凭图示额外推断每个子组件的未披露设置。
+训练冻结分割图像骨干 $`F_{\mathrm{enc}}`$，对多模态 LLM 使用 LoRA；mask decoder 全量微调，语言词嵌入和投影 MLP $`\gamma`$ 也更新。因此“LLM 通过 LoRA”不能简化成所有语言参数均冻结，词嵌入是明确可训练例外；“冻结视觉”指所列分割骨干，不宜凭图示额外推断每个子组件的未披露设置。
 
 | 设置 | 原文值 |
 |---|---|
@@ -112,8 +112,8 @@ ReasonSeg 从 OpenImages 与 ScanNetv2 图像构建复杂隐含指令及高质�
 | 优化器 | AdamW，学习率 0.0003，weight decay=0 |
 | 日程 | WarmupDecayLR，warmup 100 次迭代 |
 | batch | 每设备 2，梯度累计 10；按这些值推算一次更新约 160 样本 |
-| 文字/掩码权重 | $\lambda_{\mathrm{txt}}=1,\lambda_{\mathrm{mask}}=1$ |
-| mask子项权重 | $\lambda_{\mathrm{bce}}=2,\lambda_{\mathrm{dice}}=0.5$ |
+| 文字/掩码权重 | $`\lambda_{\mathrm{txt}}=1,\lambda_{\mathrm{mask}}=1`$ |
+| mask子项权重 | $`\lambda_{\mathrm{bce}}=2,\lambda_{\mathrm{dice}}=0.5`$ |
 | 训练长度 | 方法讨论称 LISA-7B 训练 10,000 步；不把它推断为所有档位所有阶段固定长度 |
 
 有效 batch 160 是由设备、微批和累计步数乘积得到的解读，不是原文额外列出的测量。报告还给投影通道配置，但未完整展开 token embedding 到 mask prompt 的每个形状方向，复现时需使用对应代码，不能仅凭通道列表调换顺序。
@@ -130,8 +130,8 @@ ReasonSeg 从 OpenImages 与 ScanNetv2 图像构建复杂隐含指令及高质�
 
 原文的 gIoU 指每张图 IoU 的平均，**不是目标检测常用的 Generalized IoU 损失**；cIoU 是累积交集除以累积并集。前者每图同权，后者大区域影响更大，作者更重视前者。可用定义概括为：
 
-$$\mathrm{gIoU}=\frac1n\sum_i\frac{|P_i\cap G_i|}{|P_i\cup G_i|},\qquad
-\mathrm{cIoU}=\frac{\sum_i|P_i\cap G_i|}{\sum_i|P_i\cup G_i|}.$$
+$$\mathrm{gIoU}=\frac1n\sum_i\frac{\vert P_i\cap G_i\vert }{\vert P_i\cup G_i\vert },\qquad
+\mathrm{cIoU}=\frac{\sum_i\vert P_i\cap G_i\vert }{\sum_i\vert P_i\cup G_i\vert }.$$
 
 | 模型 | val gIoU/cIoU | test总体 gIoU/cIoU |
 |---|---|---|

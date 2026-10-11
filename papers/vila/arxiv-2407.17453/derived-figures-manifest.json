@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "1d245a12f207",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "e7e9525bc9549ec8f9f466a97c62a9804bc5bf17d0ed56b028a36ad8d3644de5",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2407.17453v1",
+          "locator": "§3 Model Architecture；PDF 第6页",
+          "note": "最终视觉编码器、2×2合并与MLP、语言型号；离线专家与推理组件区别。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；只画最终模型；自增强和三类专家为离线训练数据环节。；8B 扩展的 S2 视图处理不按单一方形输入理解。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

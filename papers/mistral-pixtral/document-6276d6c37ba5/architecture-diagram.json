@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "paper_id": "6276d6c37ba5",
+  "title": "Mistral 3：家族的两种主干定位",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "文本与视觉任务",
+      "lines": [
+        "按对应型号使用接口"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "l",
+      "title": "Mistral Large 3",
+      "lines": [
+        "稀疏 MoE",
+        "675B 总量 / 41B 激活"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "s",
+      "title": "Ministral 3",
+      "lines": [
+        "稠密模型系列",
+        "3B / 8B / 14B 档位"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "a",
+      "title": "对应型号输出",
+      "lines": [
+        "理解与任务回答"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "b",
+      "title": "对应型号输出",
+      "lines": [
+        "面向较低资源部署"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "i",
+      "to": "s",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "l",
+      "to": "a",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "s",
+      "to": "b",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "家族结构定位自绘，非原文图。",
+    "左右为不同型号，非单次前向的并行专家。",
+    "博客未展开视觉编码器或跨模态连接器。"
+  ],
+  "sources": [
+    {
+      "url": "https://mistral.ai/news/mistral-3",
+      "locator": "official-source-snapshot-2026-10-08; Mistral Large 3 / Ministral 3",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

@@ -68,7 +68,7 @@ BLIP-2 版本的输入特征为 1408 维，与其 EVA-CLIP 表示一致；Flamin
 **固定大小潜在表示读取任意点数。** 不把所有点直接塞进语言模型，而由少量可学习查询对点特征做交叉注意力。其标准解读形式是：
 
 $$
-Z=\operatorname{softmax}(QK_F^\top/\sqrt d)V_F.
+Z=\mathrm{softmax}(QK_F^\top/\sqrt d)V_F.
 $$
 
 F 是点特征序列，Q 是潜在查询，K_F、V_F 为投影后的键和值。输出长度由查询数决定，输入点数变化不会直接使语言序列同幅度增加。论文复用不同骨干中的 Perceiver/Q-Former，而不是为所有版本规定同一查询数或同一层配置；上式省略其多层交互，只说明压缩读取机制。[§4.3.1](https://arxiv.org/pdf/2307.12981v1#page=6)

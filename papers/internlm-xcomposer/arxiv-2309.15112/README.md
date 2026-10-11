@@ -57,7 +57,7 @@ InternLM 负责将这些视觉向量与文本 token 一同建模。报告介绍�
 
 
 $$
-Z=\operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt d}\right)V,
+Z=\mathrm{softmax}\!\left(\frac{QK^\top}{\sqrt d}\right)V,
 \qquad Q\in\mathbb R^{64\times d},\quad K,V\text{ 来自图像特征}.
 $$
 
@@ -74,15 +74,15 @@ $$
 
 
 $$
-s(c,I)=\frac{f_T(c)^\top f_I(I)}{\|f_T(c)\|\|f_I(I)\|},\quad
-\mathcal C=\operatorname{Top}_m s(c,I),\quad
+s(c,I)=\frac{f_T(c)^\top f_I(I)}{\Vert f_T(c)\Vert \Vert f_I(I)\Vert },\quad
+\mathcal C=\mathrm{Top}_m s(c,I),\quad
 k^*=\arg\max_k p_\theta(k\mid T_{\le j},I_{\rm previous},\mathcal C).
 $$
 
 
-前一个相似度用于 CLIP 图文召回，后一个条件分布解释模型选择候选编号的任务。它们是本介绍对流程的形式化说明。报告未固定公布所有部署中的候选数 (m)，也未将整个流程写成可微的联合检索损失。图库决定可用图片的上限，选图能力与文章事实准确性仍是不同问题。
+前一个相似度用于 CLIP 图文召回，后一个条件分布解释模型选择候选编号的任务。它们是本介绍对流程的形式化说明。报告未固定公布所有部署中的候选数 $`m`$，也未将整个流程写成可微的联合检索损失。图库决定可用图片的上限，选图能力与文章事实准确性仍是不同问题。
 
-**通过 LoRA 保留基础语言模型。** 微调中标准的低秩更新可写为 (W'=W+(\alpha/r)BA\)，其中 (B\in\mathbb R^{d_{out}\times r})、(A\in\mathbb R^{r\times d_{in}})。原文将 rank 与 alpha 都设为 256，作用于注意力 Q/K/V 和前馈网络。它减少需要优化的参数，但不能据此推断总显存或推理延迟下降多少。
+**通过 LoRA 保留基础语言模型。** 微调中标准的低秩更新可写为 $`W'=W+(\alpha/r)BA`$，其中 $`B\in\mathbb R^{d_{out}\times r}`$、$`A\in\mathbb R^{r\times d_{in}}`$。原文将 rank 与 alpha 都设为 256，作用于注意力 Q/K/V 和前馈网络。它减少需要优化的参数，但不能据此推断总显存或推理延迟下降多少。
 
 <a id="data"></a>
 
@@ -114,7 +114,7 @@ $$
 $$
 
 
-其中 (\mathcal S) 表示参与文本预测的位置；图像提供条件。原文没有逐项公开各数据类型的 loss mask，不能进一步断言所有系统提示、用户指令是否都计入损失。成文、选位置、写图注、选候选编号，都是转为文本预测的监督任务。
+其中 $`\mathcal S`$ 表示参与文本预测的位置；图像提供条件。原文没有逐项公开各数据类型的 loss mask，不能进一步断言所有系统提示、用户指令是否都计入损失。成文、选位置、写图注、选候选编号，都是转为文本预测的监督任务。
 
 | 阶段 | 更新模块 | 数据和公开设置 |
 |---|---|---|

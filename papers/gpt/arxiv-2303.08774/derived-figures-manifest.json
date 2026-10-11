@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "c14c2ea07b95",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "d7ae0e1f0fb8f8444917ccf6a2292ff136bf868034cb5a5d8e6aa186295a0999",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2303.08774v1",
+          "locator": "§1–2，PDF pp.1–2",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：仅表示公开输入输出。；层数、规模和视觉连接器未知。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

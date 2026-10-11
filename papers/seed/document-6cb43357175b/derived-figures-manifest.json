@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "6cb43357175b",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "a95b10caa463c6cb2103c5a4d3b360824ff4aeea5ac6f0383aa0b3b4859ea565",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf",
+          "locator": "official-source-snapshot-2026-10-08; Video tool use / streaming interaction",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开工作流自绘，非原文图。；VideoCut 是外部重新取帧工具。；流式中断与离线重放是两种机制。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

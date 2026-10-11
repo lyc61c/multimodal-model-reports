@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "783b062a88f0",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "c551bde70c3313ab99f5fb38212db3f3d83977c759c0a5f91ff3789960803cef",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2602.02276v1",
+          "locator": "2602.02276v1; MoonViT-3D / architecture section",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "根据原文视觉章节自绘，非原文图。；时间池化之前已有组内时空交互。；保留原 Agent Swarm 图，两图范围不同。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

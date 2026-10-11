@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "32a268f7f1d8",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "c5b75b4561a50a51bd0a208e3275c60c6d13417556b203d2a19722d6bd0b08c5",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://openai.com/index/gpt-4-1/",
+          "locator": "official-release-2026-10-08; Vision / Coding / Long context",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开接口示意，非原文图。；核心内部编码与融合未在本来源展开。；工具执行属于模型外部环境。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

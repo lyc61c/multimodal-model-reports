@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "7cca3ca5d4d3",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "954d8a14b92ec58a40438d2b06269d87498a5e3a63ecb0ffea048924e1d9411c",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+          "locator": "official-source-snapshot-2026-10-08; Code-based animation / complex system synthesis",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开应用接口自绘，非原文图。；SVG 与三维场景由代码及应用渲染。；不将演示配乐视作原生音频 token。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

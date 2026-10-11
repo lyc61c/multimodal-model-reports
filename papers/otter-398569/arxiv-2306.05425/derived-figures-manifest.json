@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "0c4a9f5a9115",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "233951de7d22c4af3e8c8edd7b7d875185e8d9739dfe221e67c5463987270cb7",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2306.05425v1",
+          "locator": "§4.1–4.2、Table 2，PDF pp.8–9",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：公开条件化关系示意。；不补造 resampler 数量或跨注意力间隔。；Sythus 数据管线不在在线回答路径中。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

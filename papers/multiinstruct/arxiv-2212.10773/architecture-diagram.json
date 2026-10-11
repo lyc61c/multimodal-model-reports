@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "paper_id": "ce68e6c9946a",
+  "title": "MultiInstruct 的 OFA 实验路径",
+  "kind": "method_workflow",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "任务输入",
+      "lines": [
+        "指令模板与任务字段",
+        "可选图像／区域坐标"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "format",
+      "title": "填充统一指令",
+      "lines": [
+        "问题、候选项与区域信息",
+        "按任务填写文字模板"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "encoder",
+      "title": "OFA 编码器",
+      "lines": [
+        "联合读取文字与图像",
+        "形成条件表示"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "encoder"
+    },
+    {
+      "id": "decoder",
+      "title": "OFA 解码器",
+      "lines": [
+        "按任务生成目标序列",
+        "复用统一词表"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "任务结果",
+      "lines": [
+        "文本／位置码／图像码",
+        "依任务解释输出"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "format",
+      "style": "solid",
+      "from": "input"
+    },
+    {
+      "to": "encoder",
+      "style": "solid",
+      "from": "format"
+    },
+    {
+      "to": "decoder",
+      "style": "solid",
+      "from": "encoder"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "decoder"
+    }
+  ],
+  "notes": [
+    "仓库自绘：展示论文实验底座的推理。",
+    "不把数据集任务分类图当作新网络结构。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2212.10773v1",
+      "locator": "§3.2、§4.1，PDF pp.4–5",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "paper_id": "60c8f90edfca",
+  "title": "ASMv2：关系对话的输入输出路径",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图像",
+      "lines": [
+        "336×336 训练输入"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "query",
+      "title": "指令及可选区域",
+      "lines": [
+        "区域用文字坐标表达"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "视觉编码器",
+      "lines": [
+        "沿用 LLaVA-1.5 结构"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "tokens",
+      "title": "文字 token",
+      "lines": [
+        "任务或区域提示"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "connector",
+      "title": "视觉语言连接器",
+      "lines": [
+        "映射视觉特征至语言空间"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "语言模型",
+      "lines": [
+        "联合读取图像与指令",
+        "生成 ReC 标记及框坐标"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "关系对话文本",
+      "lines": [
+        "对象、谓词与区域关联"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "parse",
+      "title": "场景图解析",
+      "lines": [
+        "从生成文本读取节点与边"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vision",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "tokens",
+      "style": "solid",
+      "from": "query"
+    },
+    {
+      "to": "connector",
+      "style": "solid",
+      "from": "vision"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "connector"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "tokens"
+    },
+    {
+      "to": "out",
+      "style": "solid",
+      "from": "llm"
+    },
+    {
+      "to": "parse",
+      "style": "solid",
+      "from": "out",
+      "label": "解析"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "框坐标来自文本生成，不另画未披露的检测头。",
+    "固定版本未完整公开各组件型号和视觉 token 数。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2402.19474v1",
+      "locator": "§4–4.1、Appendix C.2；PDF 第8–9、28页",
+      "note": "三模块架构、ReC标记与区域文本、生成结果转为场景图；336输入见实现。"
+    }
+  ]
+}

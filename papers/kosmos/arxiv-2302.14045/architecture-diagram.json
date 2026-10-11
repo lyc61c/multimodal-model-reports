@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "paper_id": "fc11ce0896e9",
+  "title": "KOSMOS-1 图文条件生成",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "media_input",
+      "title": "图片",
+      "lines": [
+        "按文档位置出现"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text_input",
+      "title": "文字输入",
+      "lines": [
+        "文字提示与上下文"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "CLIP 视觉编码",
+      "lines": [
+        "图像转连续特征"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "text_embedding",
+      "title": "文字词嵌入",
+      "lines": [
+        "由语言 tokenizer 处理",
+        "映射到词嵌入空间"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "bridge",
+      "title": "Resampler 与序列",
+      "lines": [
+        "汇聚图像表示",
+        "用图像边界标记组装"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "text_condition",
+      "title": "文字条件",
+      "lines": [
+        "问题及已有上下文",
+        "保持文字序列结构"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "MAGNETO 主干",
+      "lines": [
+        "因果 Transformer",
+        "联合读取图文序列"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "文字输出",
+      "lines": [
+        "下一 token 预测",
+        "回答／描述／类别名称"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vision",
+      "style": "solid",
+      "from": "media_input"
+    },
+    {
+      "to": "text_embedding",
+      "style": "solid",
+      "from": "text_input"
+    },
+    {
+      "to": "bridge",
+      "style": "solid",
+      "from": "vision"
+    },
+    {
+      "to": "text_condition",
+      "style": "solid",
+      "from": "text_embedding"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "bridge",
+      "label": "视觉条件"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "text_condition",
+      "label": "文字条件"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "仓库自绘，依据固定 v1 方法说明。",
+    "图像是连续输入条件，非像素输出路径。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2302.14045v1",
+      "locator": "§2.1–2.2、§3.2，PDF pp.5–7",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

@@ -11,5 +11,43 @@
     "Sofa3159000 depends on solid equal-height L-prism approximation; model repetition/intermediate errors and original hallucination warnings preserved.",
     "No invented RL/SFT recipe, hidden architecture changes, corpus counts, tools, generation budgets or universal multimodal capabilities; no model execution claimed."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+          "locator": "official-source-snapshot-2026-10-08; Introduction / Limitations",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "根据公开发布页自绘，非原文图。",
+        "不移植后代模型的视觉参数或融合模块。",
+        "推理文字不代表重新调用视觉检测器。"
+      ],
+      "article_sha256": "22446ce713c4d02eabeb4b9234d021597b9de22928d48b925778652445353135",
+      "model_executed": false
+    },
+    {
+      "date": "2026-10-11",
+      "scope": "第三节首句来源范围明确化，未增加模型结构参数。",
+      "changes": [
+        "将未披露范围限定到所收录发布页，避免把单份材料未写泛化为所有公开来源均未知。"
+      ],
+      "sources": [
+        {
+          "url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+          "locator": "official-source-snapshot-2026-10-08; Introduction / Limitations",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "article_sha256": "bc0bdbb7c4bd9eb6457380c325ac72260e2a43fafe3042b0279a4005fa9584e4"
+    }
+  ]
 }

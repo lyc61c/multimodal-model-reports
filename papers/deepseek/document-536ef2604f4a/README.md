@@ -53,11 +53,11 @@
 
 第一部分是视觉 tokenizer。它沿用约 80M 参数的 SAM-base 加两层卷积，将原始视觉 token 数压缩 16 倍；最后卷积输出维度由上一代的 1024 调为 896，以对接后续模块。这里主要减少 token 数与激活量，不是将图像先转成离散自然语言词汇。
 
-第二部分是 DeepEncoder V2 的 LM 风格编码器。它以 Qwen2-0.5B-base 初始化，将压缩后的视觉 token $V$ 与可学习查询 $Q_0$ 前后拼接。视觉部分保持全局双向交互，查询部分可以读全部视觉表示及此前查询，不能读未来查询。输出时只截取查询对应的后半段表示，供解码器使用。
+第二部分是 DeepEncoder V2 的 LM 风格编码器。它以 Qwen2-0.5B-base 初始化，将压缩后的视觉 token $`V`$ 与可学习查询 $`Q_0`$ 前后拼接。视觉部分保持全局双向交互，查询部分可以读全部视觉表示及此前查询，不能读未来查询。输出时只截取查询对应的后半段表示，供解码器使用。
 
 第三部分是沿用的 DeepSeek 3B MoE 解码器。保留解码器有助于突出编码器改动；但整个训练系统仍包含联合优化阶段，因此“沿用结构”不等于“全部解码器权重始终冻结”。图中标注 MOE-A570M，而 §3.3 正文约称 500M，本文保留正文的近似说法，不把这个近似描述当作精确参数审计。
 
-还有一个关键边界：编码器内部序列是 $[V;Q_0]$，长度约为压缩视觉 token 数的两倍；送到解码器时只保留 $Q$ 部分。该设计没有把新增查询全部额外加到解码器的上下文中，但编码器本身仍需承担对拼接序列的计算。视觉 token 上限接近上一代，不代表总编码开销完全相同。[来源：PDF §3.1–3.3，第 5–7 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=5)
+还有一个关键边界：编码器内部序列是 $`[V;Q_0]`$，长度约为压缩视觉 token 数的两倍；送到解码器时只保留 $`Q`$ 部分。该设计没有把新增查询全部额外加到解码器的上下文中，但编码器本身仍需承担对拼接序列的计算。视觉 token 上限接近上一代，不代表总编码开销完全相同。[来源：PDF §3.1–3.3，第 5–7 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=5)
 
 <a id="principles"></a>
 
@@ -69,18 +69,18 @@
 
 *原文 Figure 5、Equation 1–2，PDF 第 7 页原页。绿色表示可见，粉色表示不可见；右下角查询区域是含对角线的下三角。*
 
-设视觉 token 数为 $m$，查询数为 $n$，本文选择 $n=m$。原文 Equation 1 的可见性矩阵为
+设视觉 token 数为 $`m`$，查询数为 $`n`$，本文选择 $`n=m`$。原文 Equation 1 的可见性矩阵为
 
 $$
 M=\begin{bmatrix}
 \mathbf 1_{m\times m}&\mathbf 0_{m\times n}\\
-\mathbf 1_{n\times m}&\operatorname{LowerTri}(n)
+\mathbf 1_{n\times m}&\mathrm{LowerTri}(n)
 \end{bmatrix},\qquad n=m.
 $$
 
-左上块让图像区域全局交互；右上为零，避免视觉 token 通过读入未来查询间接破坏因果约束；左下让每个查询都能检查整张图；右下让查询 $q_i$ 只能参考 $q_{\leq i}$。$M$ 是 0/1 可见性矩阵，实际注意力实现需把禁止位置屏蔽，例如转成加性 $-\infty$，不能把原文的 0 当成普通的零分数后继续 softmax。
+左上块让图像区域全局交互；右上为零，避免视觉 token 通过读入未来查询间接破坏因果约束；左下让每个查询都能检查整张图；右下让查询 $`q_i`$ 只能参考 $`q_{\leq i}`$。$`M`$ 是 0/1 可见性矩阵，实际注意力实现需把禁止位置屏蔽，例如转成加性 $`-\infty`$，不能把原文的 0 当成普通的零分数后继续 softmax。
 
-用解释性标准注意力形式表示，$A=\operatorname{softmax}(QK^\top/\sqrt d+B_M)V$，其中 $B_M$ 在允许位置为 0，禁止位置为 $-\infty$。这个式子用于说明 Equation 1 怎样约束注意力，并非论文额外提出的损失函数。
+用解释性标准注意力形式表示，$`A=\mathrm{softmax}(QK^\top/\sqrt d+B_M)V`$，其中 $`B_M`$ 在允许位置为 0，禁止位置为 $`-\infty`$。这个式子用于说明 Equation 1 怎样约束注意力，并非论文额外提出的损失函数。
 
 ### 4.2 因果查询形成新表示，而非显式排序索引
 
@@ -90,7 +90,7 @@ $$
 O=\mathcal D\!\left(\pi_Q\left(\mathcal T^L([\mathcal E(I);Q_0];M)\right)\right).
 $$
 
-$\mathcal E$ 将图像 $I$ 编成视觉表示，$\mathcal T^L$ 是受 $M$ 约束的多层编码器，$\pi_Q$ 取出查询输出，$\mathcal D$ 进行文本解码。文本提示在实际条件生成中同样参与解码，但该式集中表达图像路径。
+$`\mathcal E`$ 将图像 $`I`$ 编成视觉表示，$`\mathcal T^L`$ 是受 $`M`$ 约束的多层编码器，$`\pi_Q`$ 取出查询输出，$`\mathcal D`$ 进行文本解码。文本提示在实际条件生成中同样参与解码，但该式集中表达图像路径。
 
 “重排序”在这里是查询对视觉信息的学习性重组。模型没有输出一个保证每个原 patch 恰好出现一次的排列矩阵；查询可以融合多个区域，也可能重复关注同一处。因此不能把该机制解释成一个显式的版面排序算法，更不能仅凭因果 mask 断定每个查询已经获得可解释的人类眼动轨迹。
 
@@ -98,15 +98,15 @@ $\mathcal E$ 将图像 $I$ 编成视觉表示，$\mathcal T^L$ 是受 $M$ 约束
 
 ### 4.3 查询容量与局部裁剪
 
-对宽高为 $W,H$ 的输入，原文给出压缩后视觉数量 $WH/(16^2\times16)$。1024×1024 全局图得到 256 个查询，768×768 局部图得到 144 个查询；局部视图共享一套 query embeddings，全局视图使用另一套。
+对宽高为 $`W,H`$ 的输入，原文给出压缩后视觉数量 $`WH/(16^2\times16)`$。1024×1024 全局图得到 256 个查询，768×768 局部图得到 144 个查询；局部视图共享一套 query embeddings，全局视图使用另一套。
 
-若局部裁剪数 $k\in[0,6]$，送入解码器的视觉数量为
+若局部裁剪数 $`k\in[0,6]`$，送入解码器的视觉数量为
 
 $$
 N_{\mathrm{visual}}=256+144k\in[256,1120].
 $$
 
-例如六个局部图加一个全局图是 $256+6\times144=1120$。这是视觉 token 数，不包含文字提示和最终答案。原文说明两边都小于 768 时不做局部裁剪。有限容量控制成本，也为密集报纸等场景留下性能瓶颈。[来源：PDF §3.2，第 6–7 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=6)
+例如六个局部图加一个全局图是 $`256+6\times144=1120`$。这是视觉 token 数，不包含文字提示和最终答案。原文说明两边都小于 768 时不做局部裁剪。有限容量控制成本，也为密集报纸等场景留下性能瓶颈。[来源：PDF §3.2，第 6–7 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=6)
 
 <a id="data"></a>
 
@@ -136,7 +136,7 @@ $$
 
 第三阶段冻结编码器，让语言解码器在固定的新视觉表示上继续适应。作者称相同 global batch 下训练速度超过翻倍，但没有给出一套完整吞吐曲线；本文保留该条件，避免把它解释成最终推理速度翻倍。
 
-原文明确第一阶段使用 language modeling / next-token prediction。可用 $-\sum_t\log p(y_t\mid I,p,y_{<t})$ 解释其条件生成目标，其中 $p$ 是提示；报告没有逐阶段公布独立辅助 loss、排序真值监督或 RL 奖励。因果查询从任务监督中学习组织信息，并非由人工 patch 排序标签直接训练。[来源：PDF §4.2，第 8 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=8)
+原文明确第一阶段使用 language modeling / next-token prediction。可用 $`-\sum_t\log p(y_t\mid I,p,y_{<t})`$ 解释其条件生成目标，其中 $`p`$ 是提示；报告没有逐阶段公布独立辅助 loss、排序真值监督或 RL 奖励。因果查询从任务监督中学习组织信息，并非由人工 patch 排序标签直接训练。[来源：PDF §4.2，第 8 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=8)
 
 <a id="experiments"></a>
 

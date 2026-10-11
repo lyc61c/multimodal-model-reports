@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "3be706b07979",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "c224eee0ea3dfaadb77783ab32bf46b48e617ce542b418a1dd7660b0fc25a3e7",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2309.02591v1",
+          "locator": "§2.1–2.3，PDF pp.3–4",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：展示检索增强生成路径。；不启用检索时直接组织当前条件序列。；图像输出依靠离散图像码，不由 CLIP 生成。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -41,7 +41,7 @@
     "组合例出现输入不支持细节，不把创作等同感知事实",
     "只核对PDF音频标注，未试听音频"
   ],
-  "article_sha256": "cf5e4a1ad0677d5f8988aadf41d6987aaa5caefdebeb3b07afc70b0d2e3e52e2",
+  "article_sha256": "3b5548fbb1319cdc8ade38572f22b91166f7466a216b27e9d11f427d2380c5ff",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -59,7 +59,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 14,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 26,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 12,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "paper_id": "4d81507404ce",
+  "title": "VisualGLM-6B 公开组件",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "media_input",
+      "title": "图片",
+      "lines": [
+        "图片路径／图像"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text_input",
+      "title": "文字输入",
+      "lines": [
+        "问题与历史对话"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "视觉侧表示",
+      "lines": [
+        "图像信息提取",
+        "README 未列完整配置"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "unknown"
+    },
+    {
+      "id": "text_embedding",
+      "title": "文字词嵌入",
+      "lines": [
+        "由语言 tokenizer 处理",
+        "映射到词嵌入空间"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "qformer",
+      "title": "BLIP2-Qformer",
+      "lines": [
+        "建立视觉语言桥梁",
+        "对齐到语言语义空间"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "text_condition",
+      "title": "文字条件",
+      "lines": [
+        "问题及已有上下文",
+        "保持文字序列结构"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "ChatGLM-6B",
+      "lines": [
+        "结合问题及历史",
+        "生成中英文回答"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "回答与图像缓存",
+      "lines": [
+        "文本回答及历史",
+        "SAT 可复用图像表示"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vision",
+      "style": "solid",
+      "from": "media_input"
+    },
+    {
+      "to": "text_embedding",
+      "style": "solid",
+      "from": "text_input"
+    },
+    {
+      "to": "qformer",
+      "style": "solid",
+      "from": "vision"
+    },
+    {
+      "to": "text_condition",
+      "style": "solid",
+      "from": "text_embedding"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "qformer",
+      "label": "视觉条件"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "text_condition",
+      "label": "文字条件"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "仓库自绘，仅展开 README 披露组件。",
+    "查询数量与桥梁后配置未完整披露。",
+    "图像缓存是接口复用能力，非新增骨干。"
+  ],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/README.md",
+      "locator": "官方README固定快照：介绍、使用／模型推理",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

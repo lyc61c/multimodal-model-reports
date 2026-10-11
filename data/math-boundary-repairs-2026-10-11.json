@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-11",
+  "articles_fixed": 5,
+  "lines_fixed": 18,
+  "scope": "仅人工恢复已确认的数学边界；全库 operatorname 替换和普通行内表达式保护由根代理统一处理。",
+  "entries": [
+    {
+      "article": "papers/internlm-xcomposer/arxiv-2309.15112/README.md",
+      "lines_fixed": 3,
+      "scope": "人工将已识别的裸括号变量/表达式恢复为 GitHub 官方 $`…`$ 行内数学边界；修复一处孤立反斜杠右括号；公式内部数值与含义保持不变。未重新核验原文全部数学事实。",
+      "repair_snapshot_sha256": "b0b9ecfb9fdfe86eb1d09207e38dc1603a093716af7ded8f5027c4ee77168bff",
+      "formatted_article_sha256": "da9de50307b703b2586d39b18b23c006a45166b655842e2f2ac859a26db4d339"
+    },
+    {
+      "article": "papers/internlm-xcomposer/arxiv-2407.03320/README.md",
+      "lines_fixed": 4,
+      "scope": "人工将已识别的裸括号变量/表达式恢复为 GitHub 官方 $`…`$ 行内数学边界；修复一处孤立反斜杠右括号；公式内部数值与含义保持不变。未重新核验原文全部数学事实。",
+      "repair_snapshot_sha256": "fd48c410d181c377f57030b933f19e24b6837eb36c83bfceba332d7a64dde1c1",
+      "formatted_article_sha256": "f03c86927cb1c76f448ce4dd949d088c992ea74ed78324b5a3ff7554b36af3ac"
+    },
+    {
+      "article": "papers/internvl/arxiv-2404.16821/README.md",
+      "lines_fixed": 4,
+      "scope": "人工将已识别的裸括号变量/表达式恢复为 GitHub 官方 $`…`$ 行内数学边界；修复一处孤立反斜杠右括号；公式内部数值与含义保持不变。未重新核验原文全部数学事实。",
+      "repair_snapshot_sha256": "9b84723591471622b7e170f7a5903512764fd39d78631fe4a192e69838203738",
+      "formatted_article_sha256": "0b11cf80b7b0fb37943b4b5ca210dc50e889e27e4974a5e5807ad947348c5c96"
+    },
+    {
+      "article": "papers/internvl/arxiv-2508.18265/README.md",
+      "lines_fixed": 5,
+      "scope": "人工将已识别的裸括号变量/表达式恢复为 GitHub 官方 $`…`$ 行内数学边界；修复一处孤立反斜杠右括号；公式内部数值与含义保持不变。未重新核验原文全部数学事实。",
+      "repair_snapshot_sha256": "b7a96e0b4af0c4d1742e6838338c97ad6058c4ce3ae7861ca7e3b10d8e574cf6",
+      "formatted_article_sha256": "e127b40d48892749d4f24b21939175f8644445bb59f07c360c1947cdbe55694b"
+    },
+    {
+      "article": "papers/kimi/arxiv-2602.02276/README.md",
+      "lines_fixed": 2,
+      "scope": "人工将已识别的裸括号变量/表达式恢复为 GitHub 官方 $`…`$ 行内数学边界；修复一处孤立反斜杠右括号；公式内部数值与含义保持不变。未重新核验原文全部数学事实。",
+      "repair_snapshot_sha256": "f994192d1116e7eb0586b59a5a475b70cc7dbda86fab385b0f791ecf8516dd9d",
+      "formatted_article_sha256": "d0ab46065a7cd7d5b0be8de803465f2a23e145b4056c50780d2fdc88e62e9298"
+    }
+  ]
+}

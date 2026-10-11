@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "04898d842f0c",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "f5b537a6764dd2cd0eaae6f73de2d0a47494199110c1070e2616af2521166ac1",
+      "origin": "self_drawn",
+      "kind": "method_workflow",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2410.07167v1",
+          "locator": "§2.1；PDF 第3–4页；MoCa见第10页 Eq.5",
+          "note": "MIR收集、缩放、异常值、分布统计、FID及聚合顺序；MoCa独立作用位置。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；这是离线度量流程，不是新的生成模型网络。；MoCa 另在各语言层输出处只校准视觉 token。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

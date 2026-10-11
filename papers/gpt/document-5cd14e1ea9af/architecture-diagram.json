@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "paper_id": "5cd14e1ea9af",
+  "title": "GPT-4V 公开接口范围",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图片",
+      "lines": [
+        "用户视觉输入"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "文字",
+      "lines": [
+        "问题与上下文"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "core",
+      "title": "内部多模态模型",
+      "lines": [
+        "视觉编码和融合未知",
+        "后训练含安全行为调整"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "output",
+      "title": "文字回应",
+      "lines": [
+        "依据图文条件回答",
+        "可按规则拒答"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "core",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "core",
+      "style": "solid",
+      "from": "text"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "core"
+    }
+  ],
+  "notes": [
+    "仓库自绘：只画公开接口，不猜内部骨干。",
+    "部署另含文字／图片审核及图中文字 OCR。",
+    "审核细节与调用次序未完整公开。"
+  ],
+  "sources": [
+    {
+      "url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf",
+      "locator": "§1、§2.4.1–2.4.2，PDF pp.1、12–14",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

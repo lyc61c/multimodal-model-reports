@@ -50,17 +50,17 @@ DreamLLM 研究理解任务与生成任务能否相互帮助。它让语言模�
 
 ## 4. 核心创新与数学原理
 
-原文式 (3) 可概括为 $C=F_\theta(d,\text{history})$：learnable queries $d$ 读取之前的多模态上下文，经条件 projector 转成生成条件。相比先预测某个冻结 CLIP 表征再拟合它，DreamLLM 直接通过目标图像的扩散去噪误差监督这条条件通路。
+原文式 (3) 可概括为 $`C=F_\theta(d,\text{history})`$：learnable queries $`d`$ 读取之前的多模态上下文，经条件 projector 转成生成条件。相比先预测某个冻结 CLIP 表征再拟合它，DreamLLM 直接通过目标图像的扩散去噪误差监督这条条件通路。
 
 其核心式 (4) 为：
 
 $$
 \mathcal L_{DM}=\mathbb E_{t,\epsilon}
-\left\|\epsilon_\xi(z_t;C,t)-\epsilon\right\|_2^2,
+\left\Vert \epsilon_\xi(z_t;C,t)-\epsilon\right\Vert _2^2,
 \qquad z_t=\sqrt{\alpha_t}z+\sqrt{1-\alpha_t}\epsilon.
 $$
 
-$z$ 是目标图像的扩散潜变量，$\epsilon$ 为加入的噪声，$\epsilon_\xi$ 是冻结 U-Net。由于 $C$ 依赖语言模型、查询和投影，梯度可以经条件输入回传，虽然 $\xi$ 不更新。本文将其解释为利用冻结生成模型指导条件学习，不把它误写成优化当前生成图像像素的独立 DreamFusion 流程。
+$`z`$ 是目标图像的扩散潜变量，$`\epsilon`$ 为加入的噪声，$`\epsilon_\xi`$ 是冻结 U-Net。由于 $`C`$ 依赖语言模型、查询和投影，梯度可以经条件输入回传，虽然 $`\xi`$ 不更新。本文将其解释为利用冻结生成模型指导条件学习，不把它误写成优化当前生成图像像素的独立 DreamFusion 流程。
 
 理解端使用下一文字 token 的语言建模目标，原文式 (1) 条件包含此前文字与视觉序列。报告式 (6) 从概念上写出统一因果目标：
 
@@ -68,9 +68,9 @@ $$
 \mathcal L_{joint}=-\mathbb E_t\log p_\Theta(x_t\mid x_{<t}).
 $$
 
-$x_t$ 可代表文字或图像内容；实际训练文字采用交叉熵、图像采用上述扩散噪声预测，不是把所有图像当作离散词表 token 直接做同一个 softmax。原文对扩散目标与最大似然的关系依赖“预训练 SD 是最优 score function”等假设，这属于建模解释，不能当作有限模型已经精确学习全部真实联合分布的证明。
+$`x_t`$ 可代表文字或图像内容；实际训练文字采用交叉熵、图像采用上述扩散噪声预测，不是把所有图像当作离散词表 token 直接做同一个 softmax。原文对扩散目标与最大似然的关系依赖“预训练 SD 是最优 score function”等假设，这属于建模解释，不能当作有限模型已经精确学习全部真实联合分布的证明。
 
-附录在推理使用 classifier-free guidance，并将噪声组合写为 $(1+s)\epsilon_{cond}-s\epsilon_{empty}$，默认 $s=7.5$、COCO $s=2.0$。这与一些实现采用 $\epsilon_{empty}+g(\epsilon_{cond}-\epsilon_{empty})$ 的记号不同；若按此原式转换，$g=1+s$，不能在未核验实现时把同一数值直接代入另一约定。
+附录在推理使用 classifier-free guidance，并将噪声组合写为 $`(1+s)\epsilon_{cond}-s\epsilon_{empty}`$，默认 $`s=7.5`$、COCO $`s=2.0`$。这与一些实现采用 $`\epsilon_{empty}+g(\epsilon_{cond}-\epsilon_{empty})`$ 的记号不同；若按此原式转换，$`g=1+s`$，不能在未核验实现时把同一数值直接代入另一约定。
 
 <a id="data"></a>
 
@@ -96,9 +96,9 @@ $x_t$ 可代表文字或图像内容；实际训练文字采用交叉熵、图�
 
 | 阶段 | 更新范围 | 学习率 / epoch / 数据 |
 |---|---|---|
-| I：对齐 | 视觉 projector、条件 projector、dream queries；LLM、CLIP、SD 冻结 | $2\times10^{-3}$ / 1 / 约 30M 图文对 |
-| II：I-GPT | 继续训练连接模块和查询，解冻 LLM；CLIP、SD 保持冻结 | $2\times10^{-5}$ / 1 / 4M 文档与图文对 |
-| III：SFT | LLM 和连接模块、查询继续训练；CLIP、SD 仍冻结 | $4\times10^{-5}$ / 3 / 120K 指令样本 |
+| I：对齐 | 视觉 projector、条件 projector、dream queries；LLM、CLIP、SD 冻结 | $`2\times10^{-3}`$ / 1 / 约 30M 图文对 |
+| II：I-GPT | 继续训练连接模块和查询，解冻 LLM；CLIP、SD 保持冻结 | $`2\times10^{-5}`$ / 1 / 4M 文档与图文对 |
+| III：SFT | LLM 和连接模块、查询继续训练；CLIP、SD 仍冻结 | $`4\times10^{-5}`$ / 3 / 120K 指令样本 |
 
 各阶段使用 AdamW、weight decay 0、warmup ratio 0.003、余弦调度、最大长度 2048、每 GPU batch 8。采用 FlashAttention 与 PyTorch FSDP；报告使用 128 张 A800，阶段时间分别约 6、10、1.5 小时。这是作者记录的该配置成本，不是模型在个人硬件上的训练估计。CLIP 和 SD 已经预训练，其历史成本不包含在本轮适配时间内。
 

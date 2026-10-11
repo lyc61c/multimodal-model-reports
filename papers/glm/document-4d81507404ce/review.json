@@ -30,11 +30,54 @@
     "样例非准确率测量，不把CogVLM成绩归到VisualGLM",
     "数学式均为通用解释而非原文公式"
   ],
-  "article_sha256": "b818bdcbc3346fc035ec90b1616885fd00680c448b0c61e4a73f5e27bea402d5",
+  "article_sha256": "805cf33157e8d2b2bf1e3a152e0a983e076850c5d18c3946b4f6901d14150df6",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 15,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_cache": "source/papers/4d81507404ce/source.txt",
+      "source_locators": [
+        "官方README固定快照：介绍、使用／模型推理"
+      ],
+      "changes": [
+        "第3节补充：按公开实现入口，一次对话先提供图片路径与问题：视觉侧提取图像信息，BLIP2-Qformer 桥梁使其能被 ChatGLM-6B 使用；ChatGLM 同时结合问题与对话历史生成中英文回答",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "b818bdcbc3346fc035ec90b1616885fd00680c448b0c61e4a73f5e27bea402d5",
+      "article_sha256_after": "127043c890e338ee0b89d4f669fc6cd16dbcaaee2900458302f9425715c9b8d8",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 7,
+      "operatorname_replacements": 1,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

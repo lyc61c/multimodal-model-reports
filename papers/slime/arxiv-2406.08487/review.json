@@ -17,7 +17,7 @@
     "asset_hashes_match": true,
     "original_assets": 4
   },
-  "article_sha256": "7c4008abb6c9919bdf8eedef427e89eb421411fbb7c9def95b4bed7b12d338af",
+  "article_sha256": "f20d90220687bf33b3fac44ba491ed8d0e9af124f2d12fc50b37623e7e69de34",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -25,7 +25,31 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "retained",
+      "source_recheck": [],
+      "diagram_plan": null,
+      "article_sha256": "7c4008abb6c9919bdf8eedef427e89eb421411fbb7c9def95b4bed7b12d338af",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 14,
+      "operatorname_replacements": 2,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

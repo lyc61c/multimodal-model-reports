@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "paper_id": "fa8d772918c0",
+  "title": "SpatialVLM：直接空间问答接口",
+  "kind": "method_workflow",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "单目图像",
+      "lines": [
+        "实际推理输入"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "query",
+      "title": "空间问题",
+      "lines": [
+        "定性关系或定量距离"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "PaLM-E 视觉路径",
+      "lines": [
+        "沿用 PaLM-E 架构",
+        "具体编码配置未重述"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "text",
+      "title": "问题文本表示",
+      "lines": [
+        "与视觉表示共同输入"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "PaLM 2-S 主干",
+      "lines": [
+        "以空间问答数据训练",
+        "直接生成自然语言答案"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "answer",
+      "title": "空间答案",
+      "lines": [
+        "关系、方向、距离或尺寸"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vision",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "text",
+      "style": "solid",
+      "from": "query"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "vision"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "text"
+    },
+    {
+      "to": "answer",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "本图只画直接问答，不把离线几何工具接入推理。",
+    "多跳模式另由外部 LLM 拆题并反复调用此接口。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2401.12168v1",
+      "locator": "§3.3；PDF 第6–7页",
+      "note": "直接空间推理输入/输出、继承PaLM-E并改用PaLM2-S；外部协调器与离线标注的边界。"
+    }
+  ]
+}

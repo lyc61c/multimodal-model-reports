@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="947" viewBox="0 0 720 947" role="img" aria-labelledby="title desc">
+<title id="title">Gemini 1.5：公开多模态接口（自绘，非原文图）</title>
+<desc id="desc">根据公开原文自绘，非原文插图。；Pro/Flash 为可选型号，并非串联的两个推理模块。；路由规模、音视频同步和内部 token 预算未披露。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="945" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 公开接口示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Gemini 1.5：公开多模态接口</text>
+<path d="M191,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H360 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像／视频／音频</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">可在同一上下文交错</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字与代码</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">问题及已有上下文</text>
+<rect x="36" y="296" width="648" height="106" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="360" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">多模态表示接口</text>
+<text x="360" y="362" text-anchor="middle" font-size="20" fill="#475569">编码器与连接器未公开</text>
+<text x="360" y="387" text-anchor="middle" font-size="20" fill="#475569">token 配置不作假设</text>
+<rect x="36" y="468" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">Gemini 1.5</text>
+<text x="360" y="534" text-anchor="middle" font-size="20" fill="#475569">Pro：稀疏 MoE Transformer</text>
+<text x="360" y="559" text-anchor="middle" font-size="20" fill="#475569">Flash：Transformer decoder</text>
+<rect x="36" y="640" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文本生成</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">基于混合上下文回答</text>
+<line x1="36" y1="794" x2="684" y2="794" stroke="#e2e8f0"/>
+<text x="36" y="821" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="852" font-size="17" fill="#64748b">根据公开原文自绘，非原文插图。</text>
+<text x="36" y="877" font-size="17" fill="#64748b">Pro/Flash 为可选型号，并非串联的两个推理模块。</text>
+<text x="36" y="902" font-size="17" fill="#64748b">路由规模、音视频同步和内部 token 预算未披露。</text>
+</g></svg>

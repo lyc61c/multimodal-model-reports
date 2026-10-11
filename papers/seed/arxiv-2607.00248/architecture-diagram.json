@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "paper_id": "188b7c797733",
+  "title": "Seed2.0：视觉证据与执行闭环",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "任务与上下文",
+      "lines": [
+        "文字、图像、文档与视频"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "model",
+      "title": "Seed2.0",
+      "lines": [
+        "任务推理与操作选择",
+        "内部网络未在报告展开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "answer",
+      "title": "回答或产物",
+      "lines": [
+        "回答、操作或完成产物"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "call",
+      "title": "工具调用请求",
+      "lines": [
+        "模型选择操作及参数"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "tools",
+      "title": "外部执行环境",
+      "lines": [
+        "VideoCut、GUI、代码工具",
+        "片段、界面状态或验证结果"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "resume",
+      "title": "同一模型继续",
+      "lines": [
+        "工具结果回填上下文",
+        "重复调用，非第二独立模型"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "unknown"
+    },
+    {
+      "id": "followup",
+      "title": "后续回答或行动",
+      "lines": [
+        "继续判断并推进任务"
+      ],
+      "row": 5,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "answer",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "call",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "call",
+      "to": "tools",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "tools",
+      "to": "resume",
+      "label": "观察反馈",
+      "style": "dashed"
+    },
+    {
+      "from": "resume",
+      "to": "followup",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开工作流自绘，非原文图。",
+    "VideoCut 改变观察证据，不是神经网络层。",
+    "原 GUI 案例图保留，展示具体任务轨迹。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2607.00248v1",
+      "locator": "2607.00248v1; VideoCut / GUI and coding workflow cases",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

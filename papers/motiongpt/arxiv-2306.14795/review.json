@@ -42,7 +42,7 @@
     "Main text/Table2 implies single setting but Table3/10 separate fine tuning; article uses explicit tables",
     "Loss weights and ADE/FDE units not invented; quoted FID not state of art across all metrics"
   ],
-  "article_sha256": "ba70f583f1b38008621c82de693e1fdf61021ec0375a7a6361b822aec1af78c8",
+  "article_sha256": "e52002b4bf4e806012d656d638442025374eead7b42023428da39750094ea7d8",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -60,7 +60,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 5,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 5,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "paper_id": "d746d75f8685",
+  "title": "Claude 3：公开视觉语言接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图像输入",
+      "lines": [
+        "图表、图形与照片"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "文字与会话历史",
+      "lines": [
+        "上下文窗口内可用信息"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "repr",
+      "title": "视觉表示与融合",
+      "lines": [
+        "编码器、连接器未披露",
+        "不指定 patch 或查询数"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "claude",
+      "title": "Claude 3",
+      "lines": [
+        "Opus／Sonnet／Haiku",
+        "内部网络规模未披露"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "文本回复",
+      "lines": [
+        "逐步预测后续 token"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "repr",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "repr",
+      "style": "solid",
+      "from": "text"
+    },
+    {
+      "to": "claude",
+      "style": "solid",
+      "from": "repr"
+    },
+    {
+      "to": "out",
+      "style": "solid",
+      "from": "claude"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "这是模型卡公开接口，不是内部网络结构复原。",
+    "三个型号为替代配置，并非多模型推理级联。"
+  ],
+  "sources": [
+    {
+      "url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "locator": "§2.1；PDF 第2页",
+      "note": "视觉输入、会话上下文和逐步文本生成接口；内部未披露边界。"
+    }
+  ]
+}

@@ -28,5 +28,18 @@
         "Expanded tables"
       ]
     }
+  ],
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "官方博客 Detailed Technical Improvement (3)、Model Card"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages"
+      ],
+      "article_sha256": "1d3ea80c572a8a3ff2ca850d8285a8d5d52c277f679ffd4d228fbf4b7b68d145"
+    }
   ]
 }

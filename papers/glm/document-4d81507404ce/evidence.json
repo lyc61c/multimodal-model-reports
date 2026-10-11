@@ -28,5 +28,28 @@
         "介绍"
       ]
     }
+  ],
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_cache": "source/papers/4d81507404ce/source.txt",
+      "source_locators": [
+        "官方README固定快照：介绍、使用／模型推理"
+      ],
+      "changes": [
+        "第3节补充：按公开实现入口，一次对话先提供图片路径与问题：视觉侧提取图像信息，BLIP2-Qformer 桥梁使其能被 ChatGLM-6B 使用；ChatGLM 同时结合问题与对话历史生成中英文回答",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "b818bdcbc3346fc035ec90b1616885fd00680c448b0c61e4a73f5e27bea402d5",
+      "article_sha256_after": "127043c890e338ee0b89d4f669fc6cd16dbcaaee2900458302f9425715c9b8d8",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
   ]
 }

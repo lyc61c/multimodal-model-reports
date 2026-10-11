@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1119" viewBox="0 0 720 1119" role="img" aria-labelledby="title desc">
+<title id="title">SESAME：统一识别、纠错与分割（自绘，非原文图）</title>
+<desc id="desc">根据公开原文自绘，非原文插图。；只画统一模型；级联基线另由 LLaVA 接 LISA。；原文未展开继承自 LISA 的完整连接层尺寸。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1117" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">SESAME：统一识别、纠错与分割</text>
+<path d="M191,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M684,349 H702 V693 H684" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M36,177 H18 V693 H374" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="157.6" y="670" width="76.8" height="23" rx="4" fill="#fff"/>
+<text x="196" y="687" text-anchor="middle" font-size="16" fill="#475569">图像条件</text>
+<path d="M529,746 V779 H529 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">输入图像</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">相同图像用于语言和分割</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">用户请求</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">对象存在性与分割指令</text>
+<rect x="36" y="296" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">LLaVA-v1.5-7B</text>
+<text x="360" y="362" text-anchor="middle" font-size="20" fill="#475569">理解图像与请求</text>
+<text x="360" y="387" text-anchor="middle" font-size="20" fill="#475569">生成解释、纠错或分割标记</text>
+<rect x="36" y="468" width="310" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">语言回复</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">确认对象或纠正错误前提</text>
+<rect x="374" y="640" width="310" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="529" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">SAM 分割支路</text>
+<text x="529" y="706" text-anchor="middle" font-size="20" fill="#475569">根据分割标记生成掩码</text>
+<text x="529" y="731" text-anchor="middle" font-size="20" fill="#475569">并非所有请求都输出掩码</text>
+<rect x="374" y="812" width="310" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="529" y="847" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">像素掩码</text>
+<text x="529" y="878" text-anchor="middle" font-size="20" fill="#475569">定位所指对象</text>
+<line x1="36" y1="966" x2="684" y2="966" stroke="#e2e8f0"/>
+<text x="36" y="993" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1024" font-size="17" fill="#64748b">根据公开原文自绘，非原文插图。</text>
+<text x="36" y="1049" font-size="17" fill="#64748b">只画统一模型；级联基线另由 LLaVA 接 LISA。</text>
+<text x="36" y="1074" font-size="17" fill="#64748b">原文未展开继承自 LISA 的完整连接层尺寸。</text>
+</g></svg>

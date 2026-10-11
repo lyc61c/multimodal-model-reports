@@ -38,7 +38,7 @@ Slow 分支少取帧但保留细节，Fast 分支多取帧但强压缩空间网�
 | CLIP 输出网格 | 24×24 |
 | Slow 输出 | 10 帧，每帧 12×24 token |
 | Fast 输出 | 50 帧，每帧 4×4 token |
-| 总视觉 token | $10\times12\times24+50\times4\times4=3680$ |
+| 总视觉 token | $`10\times12\times24+50\times4\times4=3680`$ |
 | 上下文扩展 | RoPE scaling factor 2，扩至 8192 token |
 
 “高/低分辨率”在这里指池化后的 token 网格，两个分支并不是使用不同的原始图像尺寸。默认设置受 34B 模型在 80GB GPU 上的显存约束影响。（第 3 页脚注、第 5–6 页）
@@ -59,14 +59,14 @@ Slow 分支少取帧但保留细节，Fast 分支多取帧但强压缩空间网�
 
 ## 4. 核心创新与数学原理
 
-**在空间和时间间分配预算。** 令逐帧投影特征为 $F\in\mathbb R^{N\times H\times W\times D}$。本文补写特征维度 $D$，原论文表达聚焦帧数及网格尺寸。Slow 和 Fast 操作可表示为：
+**在空间和时间间分配预算。** 令逐帧投影特征为 $`F\in\mathbb R^{N\times H\times W\times D}`$。本文补写特征维度 $`D`$，原论文表达聚焦帧数及网格尺寸。Slow 和 Fast 操作可表示为：
 
 $$
 F_s=\mathrm{Pool}_{\sigma_h,\sigma_w}(\mathrm{Sample}_{N_s}(F)),\qquad
 F_f=\mathrm{Pool}_{\gamma_h,\gamma_w}(F).
 $$
 
-其中 $N_s\ll N$，且 $\gamma$ 大于 $\sigma$。原文式（2）–（4）将最终输入写作：
+其中 $`N_s\ll N`$，且 $`\gamma`$ 大于 $`\sigma`$。原文式（2）–（4）将最终输入写作：
 
 $$
 A=\mathrm{LLM}(\mathrm{Prompt},[\mathrm{flat}(F_s);\mathrm{flat}(F_f)],Q).

@@ -37,5 +37,18 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§4.1、Table2；PDF 第7页"
+      ],
+      "changes": [
+        "Authored source-limited architecture-diagram.json; root will render/insert separately"
+      ],
+      "article_sha256": "f8dd7475d9f8d0ac35e1f069d1aebd37060161ef452ab3520e9d136d272dd675"
+    }
+  ]
 }

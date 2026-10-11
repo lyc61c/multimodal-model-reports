@@ -17,7 +17,7 @@
     "asset_hashes_match": true,
     "original_assets": 4
   },
-  "article_sha256": "a83c205c56a77c6e966c20f83756c29e0535558ef3d80c09bc909f153ad95563",
+  "article_sha256": "2007df9690964fb8f124f2a7eb3b9b66748d2c7336ab2d15f83c97eb3590f161",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -25,7 +25,41 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 2,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "expanded",
+      "source_recheck": [
+        "官方发布页 Vision models 段落",
+        "官方发布页 Vision models 段落"
+      ],
+      "diagram_plan": "papers/llama/document-0c6cca94a384/architecture-diagram.json",
+      "article_sha256": "3608bb0e4be7f96761ecff3e541fd5636a6e7a50e70e5618294cd411d30453e6",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 2,
+      "operatorname_replacements": 2,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

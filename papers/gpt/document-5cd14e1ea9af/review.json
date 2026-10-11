@@ -34,7 +34,7 @@
     "内部测试数据、规模和置信区间未完整公开；医学仅整理原文评估无诊断建议。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "9b07497f6a925f4f0a462bd8bbc38588348295058a28eca57be255f9543a4b8d",
+  "article_sha256": "3951372f7b68e740d59a8bee912b54bd0c5bbe03f8ed45663771581f75f82a7b",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -54,7 +54,50 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 4,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "official-source-snapshot-2026-10-08",
+      "source_cache": "source/papers/5cd14e1ea9af/source.txt",
+      "source_locators": [
+        "§1、§2.4.1–2.4.2，PDF pp.1、12–14"
+      ],
+      "changes": [
+        "第3节补充：公开接口可概括为“用户图片与文字请求 → 内部未披露的多模态模型 → 文字回答”",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "9b07497f6a925f4f0a462bd8bbc38588348295058a28eca57be255f9543a4b8d",
+      "article_sha256_after": "0b04894cd353fc38be848da5b70656cce06da95cd382dc31d15821a963bca81b",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 3,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

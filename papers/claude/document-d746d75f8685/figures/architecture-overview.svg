@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="947" viewBox="0 0 720 947" role="img" aria-labelledby="title desc">
+<title id="title">Claude 3：公开视觉语言接口（自绘，非原文图）</title>
+<desc id="desc">根据公开原文自绘，非原文插图。；这是模型卡公开接口，不是内部网络结构复原。；三个型号为替代配置，并非多模型推理级联。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="945" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 公开接口示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Claude 3：公开视觉语言接口</text>
+<path d="M191,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H360 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像输入</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">图表、图形与照片</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字与会话历史</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">上下文窗口内可用信息</text>
+<rect x="36" y="296" width="648" height="106" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="360" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">视觉表示与融合</text>
+<text x="360" y="362" text-anchor="middle" font-size="20" fill="#475569">编码器、连接器未披露</text>
+<text x="360" y="387" text-anchor="middle" font-size="20" fill="#475569">不指定 patch 或查询数</text>
+<rect x="36" y="468" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">Claude 3</text>
+<text x="360" y="534" text-anchor="middle" font-size="20" fill="#475569">Opus／Sonnet／Haiku</text>
+<text x="360" y="559" text-anchor="middle" font-size="20" fill="#475569">内部网络规模未披露</text>
+<rect x="36" y="640" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文本回复</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">逐步预测后续 token</text>
+<line x1="36" y1="794" x2="684" y2="794" stroke="#e2e8f0"/>
+<text x="36" y="821" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="852" font-size="17" fill="#64748b">根据公开原文自绘，非原文插图。</text>
+<text x="36" y="877" font-size="17" fill="#64748b">这是模型卡公开接口，不是内部网络结构复原。</text>
+<text x="36" y="902" font-size="17" fill="#64748b">三个型号为替代配置，并非多模型推理级联。</text>
+</g></svg>

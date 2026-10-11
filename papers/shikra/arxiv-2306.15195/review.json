@@ -16,7 +16,7 @@
     "asset_hashes_match": true,
     "original_assets": 5
   },
-  "article_sha256": "3d534099e0a232319be59c7bade3346ba73f9b44a79f8c0c5fbb2dd69244224d",
+  "article_sha256": "50ed43e56099df8ac659d5a1a3881ce686c03a0972c39a3f98b5a139aa8f5d46",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -24,7 +24,50 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2306.15195v1",
+      "source_cache": "source/papers/261e4c6f7250/source.txt",
+      "source_locators": [
+        "§5.1–5.2，PDF pp.4–5"
+      ],
+      "changes": [
+        "第3节补充：坐标与图像特征通过不同入口接入同一语言序列：CLIP 产生的视觉向量经线性层投影；用户给出的点或框则直接写在文字中，和问题一起由 Vicuna-7B/13B 的 tokenizer 处理",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "3d534099e0a232319be59c7bade3346ba73f9b44a79f8c0c5fbb2dd69244224d",
+      "article_sha256_after": "1955837adac17bda2840e4210179eea44cba0cb3f6c1ab1a28265f38565c6fa4",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 7,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

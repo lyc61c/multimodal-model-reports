@@ -41,7 +41,7 @@
     "GPUhours do not imply trainingcardcount",
     "Gate renormalization and auxiliaryloss notdisclosed"
   ],
-  "article_sha256": "99bb94c169dbfb100fd4341b10edfef5dbe5b5624a44561a4be4b2c2b0d89ea0",
+  "article_sha256": "8a5585b56b2d43af7f1d714cb82cc50d83ee28693b43906b6846bddbec6b4666",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -59,7 +59,31 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "retained",
+      "source_recheck": [],
+      "diagram_plan": null,
+      "article_sha256": "99bb94c169dbfb100fd4341b10edfef5dbe5b5624a44561a4be4b2c2b0d89ea0",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 8,
+      "operatorname_replacements": 2,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

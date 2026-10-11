@@ -44,9 +44,9 @@ LLaMA-VID 针对图像、短视频和长电影输入的文本问答。核心问�
 
 **原图：Figure 2、Algorithm 1，PDF 第 3 页。** 从左边帧进入视觉编码器后，特征分两路：上路与用户指令生成的 Text Query 做 Context Attention；下路经过 Pool。两个 Projector 把输出送入 LLM，虚线 content 区域表示可伸缩数量。图中“Text Decoder”是用于跨模态查询的模块，不是最后生成回答的 Vicuna。
 
-第 $t$ 帧经过 EVA-G 产生 $X_t\in\mathbb R^{N\times C}$。QFormer 接收用户指令与视觉特征，输出 $M$ 个问题相关查询 $Q_t\in\mathbb R^{M\times C}$。Context Attention 再用查询从视觉特征中取出相关内容，并平均成一个 context 表示。
+第 $`t`$ 帧经过 EVA-G 产生 $`X_t\in\mathbb R^{N\times C}`$。QFormer 接收用户指令与视觉特征，输出 $`M`$ 个问题相关查询 $`Q_t\in\mathbb R^{M\times C}`$。Context Attention 再用查询从视觉特征中取出相关内容，并平均成一个 context 表示。
 
-另一条路径对 $X_t$ 的空间网格做平均池化，生成 $n$ 个 content 表示，$1\le n\le N$。视频令 $n=1$，图像可保留全部 patch。两个独立线性投影将表示转到语言输入空间，帧 token 按时间顺序与用户文字一起进入 LLM；长电影配置还穿插字幕 token。
+另一条路径对 $`X_t`$ 的空间网格做平均池化，生成 $`n`$ 个 content 表示，$`1\le n\le N`$。视频令 $`n=1`$，图像可保留全部 patch。两个独立线性投影将表示转到语言输入空间，帧 token 按时间顺序与用户文字一起进入 LLM；长电影配置还穿插字幕 token。
 
 这种压缩发生在**视觉编码器之后、LLM 之前**，减少 LLM 的视觉序列长度，但不等于视觉骨干只看两个 patch。它也没有通过跨帧时序编码器证明每个动作细节完整保留；低帧率抽样和空间池化都可能丢失信息。[原文 §3.1–3.2，PDF 第 3–4 页](https://arxiv.org/pdf/2311.17043v1#page=3)
 
@@ -58,16 +58,16 @@ LLaMA-VID 针对图像、短视频和长电影输入的文本问答。核心问�
 
 
 $$
-E_t=\operatorname{Mean}_{M}\!\left[
-\operatorname{Softmax}_{N}(Q_tX_t^\top)X_t\right].
+E_t=\mathrm{Mean}_{M}\!\left[
+\mathrm{Softmax}_{N}(Q_tX_t^\top)X_t\right].
 $$
 
 
-$Q_tX_t^\top$ 得到每个查询对每个 patch 的匹配分数，softmax 沿 patch 维归一化；每个查询获取一份视觉加权和，最后沿查询维求平均，得到 $1\times C$ 向量。Algorithm 1 的代码还在 softmax 前除以 $\sqrt C$，而正文公式省略该缩放；具体实现解读应以代码为准，不能把二者写成完全相同的公式。
+$`Q_tX_t^\top`$ 得到每个查询对每个 patch 的匹配分数，softmax 沿 patch 维归一化；每个查询获取一份视觉加权和，最后沿查询维求平均，得到 $`1\times C`$ 向量。Algorithm 1 的代码还在 softmax 前除以 $`\sqrt C`$，而正文公式省略该缩放；具体实现解读应以代码为准，不能把二者写成完全相同的公式。
 
 相比直接把 QFormer 的多个查询输出全部交给 LLM，这里查询充当“如何汇聚原始视觉特征”的中介，最终只输出一个 context token。问题不同，查询及关注区域也可变化。注意力热图只显示匹配响应，不能自动视为模型推理因果的证明。[原文式 (1)、Algorithm 1、Figure 6，PDF 第 3、8 页](https://arxiv.org/pdf/2311.17043v1#page=3)
 
-Content 路径可概括为 $E_t^V=P_V(\operatorname{Pool}_n(X_t))$，context 路径为 $E_t^T=P_T(E_t)$，再拼接为 $[E_t^T;E_t^V]$。这两式是本文对图和伪代码的整理，不是论文另外编号的目标。$n=1$ 是全局平均，$n=N$ 保留空间特征。代价与信息取舍集中在 $n$ 的选择，而非新增一套文字损失。
+Content 路径可概括为 $`E_t^V=P_V(\mathrm{Pool}_n(X_t))`$，context 路径为 $`E_t^T=P_T(E_t)`$，再拼接为 $`[E_t^T;E_t^V]`$。这两式是本文对图和伪代码的整理，不是论文另外编号的目标。$`n=1`$ 是全局平均，$`n=N`$ 保留空间特征。代价与信息取舍集中在 $`n`$ 的选择，而非新增一套文字损失。
 
 以 224 输入、patch 14 的 256 个视觉 token 为参照，视频的 2 个 token 在**视觉输入数量**上是 1/128。但 LLM 还有问题、字幕和输出 token，且视觉编码及 QFormer 开销仍存在，所以不能把这个比例描述成已经测得的整套系统 128 倍提速。更少 token 也不是无损编码。
 
@@ -99,12 +99,12 @@ Content 路径可概括为 $E_t^V=P_V(\operatorname{Pool}_n(X_t))$，context 路
 
 ## 6. 训练流程与目标
 
-三个阶段采用条件文本生成的监督学习，原文没有另设 context/content 重建或对比损失。若记模型视觉 token 序列为 $H$、用户提示为 $q$、目标回答为 $y$，可解释为 $-\sum_t\log p_\theta(y_t\mid H,q,y_{<t})$；这是对训练描述的数学归纳。
+三个阶段采用条件文本生成的监督学习，原文没有另设 context/content 重建或对比损失。若记模型视觉 token 序列为 $`H`$、用户提示为 $`q`$、目标回答为 $`y`$，可解释为 $`-\sum_t\log p_\theta(y_t\mid H,q,y_{<t})`$；这是对训练描述的数学归纳。
 
 | 配置 | 阶段 1：对齐 | 阶段 2：指令 | 阶段 3：可选长视频 |
 |---|---|---|---|
 | 全局 batch | 256 | 128 | 8 |
-| 学习率 | $10^{-3}$ | $2\times10^{-5}$ | $2\times10^{-5}$ |
+| 学习率 | $`10^{-3}`$ | $`2\times10^{-5}`$ | $`2\times10^{-5}`$ |
 | 最大序列长度 | 2048 | 2048 | 65536 |
 | 视觉编码器 | 冻结 | 冻结 | 冻结 |
 | QFormer 文本查询模块 | 冻结 | 训练 | 再冻结以省显存 |

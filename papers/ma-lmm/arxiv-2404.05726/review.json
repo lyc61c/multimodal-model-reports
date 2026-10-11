@@ -35,7 +35,7 @@
     "Onlineprocessing not real-time latency; Figure6 seconds noted",
     "Table11-13trainingreadtextnotselectedimage;noGPUtimeinferred"
   ],
-  "article_sha256": "c0906c33c49d1169c8dd9752478986d4933328919b19d844c256a3ee44170681",
+  "article_sha256": "f611018410b72b6a44e18cf36afe9d93f529f26b075f2ae5eb16a32ad20353a5",
   "artifact_checks": {
     "original_assets": 13,
     "no_full_page_screenshots": true
@@ -53,7 +53,33 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "expanded",
+      "source_recheck": [
+        "§3.3、§4.2；PDF 第4–5页"
+      ],
+      "diagram_plan": null,
+      "article_sha256": "41e69aa386bdf7d4cd797724cd46164d15aa04aa73a0b50a314e1dfee10eeb87",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 8,
+      "operatorname_replacements": 2,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "82234a35c6a4",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "976e11d9eb1dc0d1bcd067b3a061593e9bbd36158a55f9836376ca50317a4ec8",
+      "origin": "self_drawn",
+      "kind": "method_workflow",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2501.06186v1",
+          "locator": "2501.06186v1; §3 / §4.2.1 / multi-turn examples",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "方法接口自绘，非原文图。；四类推理内容不是四个独立神经网络。；课程学习属于训练，不另画为推理模块。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

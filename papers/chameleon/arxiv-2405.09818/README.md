@@ -57,11 +57,11 @@
 
 ## 4. 核心创新与数学原理
 
-统一离散序列 $s_1,\ldots,s_T$ 的生成可用机制说明式 $\mathcal L_{AR}=-\sum_t\log p_\theta(s_t\mid s_{<t})$ 表达：文字和视觉code都在同一词表预测，区别于文字CE＋视觉连续回归两目标。原文未给完整预训练loss编号式，本文用它解释token建模，不额外宣称新的视觉对比或像素重构目标。图像tokenizer的训练是单独环节，其压缩错误无法通过语言预测完全恢复。
+统一离散序列 $`s_1,\ldots,s_T`$ 的生成可用机制说明式 $`\mathcal L_{AR}=-\sum_t\log p_\theta(s_t\mid s_{<t})`$ 表达：文字和视觉code都在同一词表预测，区别于文字CE＋视觉连续回归两目标。原文未给完整预训练loss编号式，本文用它解释token建模，不额外宣称新的视觉对比或像素重构目标。图像tokenizer的训练是单独环节，其压缩错误无法通过语言预测完全恢复。
 
-attention logits通常含 $QK^\top/\sqrt d$。QK-Norm在query与key上用layer norm，直接约束进入attention softmax的表示尺度，减轻norm不受控增长；它与最后词表softmax的logit漂移不同，不能只做QK-Norm就认为全部问题解决。
+attention logits通常含 $`QK^\top/\sqrt d`$。QK-Norm在query与key上用layer norm，直接约束进入attention softmax的表示尺度，减轻norm不受控增长；它与最后词表softmax的logit漂移不同，不能只做QK-Norm就认为全部问题解决。
 
-词表softmax具有平移不变性：$\operatorname{softmax}(z+c)=\operatorname{softmax}(z)$。概率可保持近似不变而logits共同漂移，数值范围仍可能出问题。原文进一步正则化分区函数 $Z=\sum_i e^{z_i}$，增加
+词表softmax具有平移不变性：$`\mathrm{softmax}(z+c)=\mathrm{softmax}(z)`$。概率可保持近似不变而logits共同漂移，数值范围仍可能出问题。原文进一步正则化分区函数 $`Z=\sum_i e^{z_i}`$，增加
 
 $$\mathcal L_z=10^{-5}(\log Z)^2.$$
 
@@ -71,7 +71,7 @@ $$\mathcal L_z=10^{-5}(\log Z)^2.$$
 
 *来源：原文Figure6与§2.3，PDF第7页，[原页](https://arxiv.org/pdf/2405.09818v1#page=7)。曲线横轴步数、纵轴训练loss；左图只显示前600K步，不是全部训练。右图同时说明dropout与norm重排的组合并不自动稳定。*
 
-34B的残差更新改为 $h=x+\operatorname{Norm}_{att}(\operatorname{Att}(x))$，$o=h+\operatorname{Norm}_{ffn}(\operatorname{FFN}(h))$；LLaMA2对照则在Att/FFN之前归一化。区别是残差分支输出的尺度受约束，不是删掉残差连接。SwiGLU乘性结构可能进一步放大norm，使这项配置在大模型有用。作者随后发现7B也可用重排无dropout稳定，但主训练表7B仍为0.1，不能用事后发现替代实际训练配置。[原文 §2.3](https://arxiv.org/pdf/2405.09818v1#page=7)
+34B的残差更新改为 $`h=x+\mathrm{Norm}_{att}(\mathrm{Att}(x))`$，$`o=h+\mathrm{Norm}_{ffn}(\mathrm{FFN}(h))`$；LLaMA2对照则在Att/FFN之前归一化。区别是残差分支输出的尺度受约束，不是删掉残差连接。SwiGLU乘性结构可能进一步放大norm，使这项配置在大模型有用。作者随后发现7B也可用重排无dropout稳定，但主训练表7B仍为0.1，不能用事后发现替代实际训练配置。[原文 §2.3](https://arxiv.org/pdf/2405.09818v1#page=7)
 
 <a id="data"></a>
 
@@ -94,16 +94,16 @@ SFT输入图片用border padding保留信息，答案图片center crop重视觉�
 | 配置 | 7B | 34B |
 |---|---:|---:|
 | 上下文 | 4096 | 4096 |
-| 主学习率 | $10^{-4}$ | $10^{-4}$ |
-| global token batch | $2^{23}$，约8M | $3\times2^{22}$，约12M |
+| 主学习率 | $`10^{-4}`$ | $`10^{-4}`$ |
+| global token batch | $`2^{23}`$，约8M | $`3\times2^{22}`$，约12M |
 | 预训练dropout | 0.1 | 0 |
-| QK-Norm/z-loss | 有/$10^{-5}$ | 有/$10^{-5}$ |
+| QK-Norm/z-loss | 有/$`10^{-5}`$ | 有/$`10^{-5}`$ |
 | A100-80GB并发卡数 | 1024 | 3072 |
 | 总GPU hours | 856,481 | 4,282,407 |
 
-AdamW β1/β2=0.9/0.95、epsilon=$10^{-5}$，weight decay0.1、global clipping1；warmup4000step，之后指数学习率衰减至0。不得将此预训练schedule写成cosine。RSC使用InfiniBand，报告GPU hours包含实际训练资源统计，不能将GPU hours除成几个小时墙钟而不考虑并发变化。
+AdamW β1/β2=0.9/0.95、epsilon=$`10^{-5}`$，weight decay0.1、global clipping1；warmup4000step，之后指数学习率衰减至0。不得将此预训练schedule写成cosine。RSC使用InfiniBand，报告GPU hours包含实际训练资源统计，不能将GPU hours除成几个小时墙钟而不考虑并发变化。
 
-SFT使用cosine、初始 $10^{-5}$、weight decay0.1、batch128、序列4096，pack多个prompt/answer并以标记分隔，只对答案token计loss；dropout0.05，保留z-loss。文章没有说全程冻结34B或仅训练LoRA，也没有提供SFT总step/epoch和完整模块冻结表，不补造配置。预训练与SFT的dropout和schedule需分别陈述。
+SFT使用cosine、初始 $`10^{-5}`$、weight decay0.1、batch128、序列4096，pack多个prompt/answer并以标记分隔，只对答案token计loss；dropout0.05，保留z-loss。文章没有说全程冻结34B或仅训练LoRA，也没有提供SFT总step/epoch和完整模块冻结表，不补造配置。预训练与SFT的dropout和schedule需分别陈述。
 
 这套报告对齐主要是监督微调，安全拒答也来自SFT；RLHF/RLAIF作为可能进一步提高的工作提及，不能写为已经执行的最后训练阶段。单任务SFT、multitask任务微调和一般Chameleon-SFT并非同一评测设置。[原文 §3.2、§5.2](https://arxiv.org/pdf/2405.09818v1#page=16)
 

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "8c1dda86c921",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "13c1dd0c0ee54000f59ed639e7b07832b5429667933f0786a13d7942ff299b06",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+          "locator": "official-source-snapshot-2026-10-08; §2.1 Model Architecture / agentic capabilities",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开架构边界自绘，非原文图。；只确认稀疏 MoE，不假定专家数或视觉维度。；音频专用变体的输出不能概括为全部型号。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

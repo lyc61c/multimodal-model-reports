@@ -58,11 +58,11 @@ Vary-base 对同一图像分别准备 1024×1024 的新分支输入和 224×224 
 **在连续表示上增加视觉容量。** 融合可用以下维度明确的解释式表示：
 
 $$
-H=\operatorname{Concat}_{\rm channel}\big(F_{\rm CLIP}W_c+b_c,
+H=\mathrm{Concat}_{\rm channel}\big(F_{\rm CLIP}W_c+b_c,
 F_{\rm new}W_n+b_n\big),\quad H\in\mathbb R^{256\times4096}.
 $$
 
-每个 $F$ 是 256×1024，两个投影各输出 2048 维。其目标是兼顾自然图像语义与细粒度文字信息，而不是要求语言模型把两份不同长度的视觉序列自行对齐。（第 5 页）
+每个 $`F`$ 是 256×1024，两个投影各输出 2048 维。其目标是兼顾自然图像语义与细粒度文字信息，而不是要求语言模型把两份不同长度的视觉序列自行对齐。（第 5 页）
 
 **用生成目标学习密集内容。** 新分支通过预测 OCR 全文和图表结构，学习把较长、较密的内容压进固定 token 数。可概括为：
 
@@ -94,9 +94,9 @@ Vary-base 补充带公式、表格格式的合成文档：从 arXiv TeX 源抽�
 
 | 阶段 | 更新与冻结 | 配置 |
 |---|---|---|
-| Vary-tiny | 更新视觉编码器、卷积、投影和 OPT 全部参数 | batch 512，3 epochs，学习率 $5\times10^{-5}$ |
-| Vary-base 预训练 | 冻结新分支与 CLIP；更新两投影和 7B LLM | batch 256，1 epoch，学习率 $5\times10^{-5}$ |
-| Vary-base SFT | 继续冻结视觉编码器，学习指令与问答输出 | batch 256，1 epoch，学习率 $10^{-5}$ |
+| Vary-tiny | 更新视觉编码器、卷积、投影和 OPT 全部参数 | batch 512，3 epochs，学习率 $`5\times10^{-5}`$ |
+| Vary-base 预训练 | 冻结新分支与 CLIP；更新两投影和 7B LLM | batch 256，1 epoch，学习率 $`5\times10^{-5}`$ |
+| Vary-base SFT | 继续冻结视觉编码器，学习指令与问答输出 | batch 256，1 epoch，学习率 $`10^{-5}`$ |
 
 优化器 AdamW、余弦退火；Vary-tiny 把 OPT 上下文插值到 4096 token。图像 token 用 `<img>`、`</img>` 标记；Vicuna 与 Qwen 采用相应的对话格式。（§3.2.3、3.3.3、4.2）
 

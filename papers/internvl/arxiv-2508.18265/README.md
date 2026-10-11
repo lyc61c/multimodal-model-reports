@@ -75,9 +75,9 @@ $$
 
 
 $$
-\hat A_i=\frac{r(x,y_i)-\operatorname{mean}_j r(x,y_j)}{\operatorname{std}_j r(x,y_j)},\qquad
-s_i(\theta)=\left[\frac{\pi_\theta(y_i\mid x)}{\pi_{old}(y_i\mid x)}\right]^{1/|y_i|}
-=\exp\!\left(\frac1{|y_i|}\sum_t\log\frac{\pi_\theta(y_{i,t}\mid x,y_{i,<t})}{\pi_{old}(y_{i,t}\mid x,y_{i,<t})}\right).
+\hat A_i=\frac{r(x,y_i)-\mathrm{mean}_j r(x,y_j)}{\mathrm{std}_j r(x,y_j)},\qquad
+s_i(\theta)=\left[\frac{\pi_\theta(y_i\mid x)}{\pi_{old}(y_i\mid x)}\right]^{1/\vert y_i\vert }
+=\exp\!\left(\frac1{\vert y_i\vert }\sum_t\log\frac{\pi_\theta(y_{i,t}\mid x,y_{i,<t})}{\pi_{old}(y_{i,t}\mid x,y_{i,<t})}\right).
 $$
 
 
@@ -86,27 +86,27 @@ $$
 
 $$
 J_{GSPO}=\mathbb E\!\left[\frac1G\sum_i
-\min\{s_i\hat A_i,\operatorname{clip}(s_i,1-\epsilon,1+\epsilon)\hat A_i\}\right].
+\min\{s_i\hat A_i,\mathrm{clip}(s_i,1-\epsilon,1+\epsilon)\hat A_i\}\right].
 $$
 
 
-原文把它标为 $\mathcal L_{GSPO}$，但表达式是要最大化的策略收益形式；若用梯度下降实现损失，需要取负号。本介绍用 (J) 表示收益以避免方向混淆。旧策略用于采样及重要性修正，不等于固定参考模型；作者明确在线阶段没有 reference-model 约束，不能额外加一个原文未使用的 KL 正则。奖励细节、零标准差组的处理和 clip 数值未在本报告完整展开。
+原文把它标为 $`\mathcal L_{GSPO}`$，但表达式是要最大化的策略收益形式；若用梯度下降实现损失，需要取负号。本介绍用 $`J`$ 表示收益以避免方向混淆。旧策略用于采样及重要性修正，不等于固定参考模型；作者明确在线阶段没有 reference-model 约束，不能额外加一个原文未使用的 KL 正则。奖励细节、零标准差组的处理和 clip 数值未在本报告完整展开。
 
 **先学会压缩，再学会决定哪里压缩。** ViCO 的一致性阶段冻结原 InternVL3.5 为高分辨率教师，学生输入每个子图的 256 或 64 token，最小化 Eq. (7)：
 
 
 $$
 \mathcal L_{ViCO}=\mathbb E_\xi\frac1N\sum_i
-D_{KL}\big[\pi_{ref}(\cdot\mid y_{<i},I)\;\|\;\pi_\theta(\cdot\mid y_{<i},I_\xi)\big],
+D_{KL}\big[\pi_{ref}(\cdot\mid y_{<i},I)\;\Vert \;\pi_\theta(\cdot\mid y_{<i},I_\xi)\big],
 \qquad \xi\in\{1/4,1/16\}.
 $$
 
 
 KL 比较的是下一 token 的概率分布，教师始终使用 256 token 的视觉表示；同一图像的各子图在一致性训练时用同一个随机压缩率。它不是只让两个模型的最终字符串相同，也不是教师自己随机切到低分辨率。
 
-路由训练根据 Eq. (8) 的低/高压缩 loss 比值 (r_i=\mathcal L_{ViCO}(I_{1/16})/\mathcal L_{ViCO}(I_{1/4})) 构建二分类标签：比值低于阈值时选 64，否则选 256。阈值由滑动窗口历史比值的某个百分位动态确定，目标标签分布保持平衡，并非固定取 1。此时冻结 ViT、MLP、LLM，只训练路由器。
+路由训练根据 Eq. (8) 的低/高压缩 loss 比值 $`r_i=\mathcal L_{ViCO}(I_{1/16})/\mathcal L_{ViCO}(I_{1/4})`$ 构建二分类标签：比值低于阈值时选 64，否则选 256。阈值由滑动窗口历史比值的某个百分位动态确定，目标标签分布保持平衡，并非固定取 1。此时冻结 ViT、MLP、LLM，只训练路由器。
 
-对于 (n_h) 个高保真子图及 (n_l) 个低 token 子图，语言侧视觉长度可写作 (256n_h+64n_l)。这是计数解释，报告的整体约 50% token 减少取决于实际路由分布，而非每个子图都固定减半。
+对于 $`n_h`$ 个高保真子图及 $`n_l`$ 个低 token 子图，语言侧视觉长度可写作 $`256n_h+64n_l`$。这是计数解释，报告的整体约 50% token 减少取决于实际路由分布，而非每个子图都固定减半。
 
 <a id="data"></a>
 
@@ -133,7 +133,7 @@ $$
 $$
 
 
-前缀可含文本或视觉 token，但损失只预测文本；对话样本只计算回答 token。(N) 是该样本参与损失的 token 数。square averaging 为该样本每个监督 token 赋 (1/\sqrt N) 权重，相比纯按 token 平均缓和长回答优势，又保留比每样本等权更多的长度贡献；不能直接称为每样本完全等权。
+前缀可含文本或视觉 token，但损失只预测文本；对话样本只计算回答 token。$`N`$ 是该样本参与损失的 token 数。square averaging 为该样本每个监督 token 赋 $`1/\sqrt N`$ 权重，相比纯按 token 平均缓和长回答优势，又保留比每样本等权更多的长度贡献；不能直接称为每样本完全等权。
 
 | 阶段 | 参数与目标 |
 |---|---|
@@ -146,7 +146,7 @@ $$
 
 训练主要基于 XTuner，使用参数分片、数据 packing、FP8、融合交叉熵、FlashAttention-3、MoE grouped GEMM；在线 RL 使用 verl。报告没有给出所有型号的学习率、batch、轮数、MPO 权重、GSPO group size、奖励实现等完整配方，不能从框架名字补出参数。
 
-测试时扩展另分 Thinking 深度推理与 Parallel Thinking。并行分支采用 Best-of-N，以 VisualPRM-v1.1 评价多个候选并选择回答。除明确标为 Parallel Thinking 等设置外，报告默认实验不使用 TTS；因此不能把多次采样的增强分数写成单次调用分数，报告也未固定披露所有任务的 (N)。
+测试时扩展另分 Thinking 深度推理与 Parallel Thinking。并行分支采用 Best-of-N，以 VisualPRM-v1.1 评价多个候选并选择回答。除明确标为 Parallel Thinking 等设置外，报告默认实验不使用 TTS；因此不能把多次采样的增强分数写成单次调用分数，报告也未固定披露所有任务的 $`N`$。
 
 <a id="experiments"></a>
 

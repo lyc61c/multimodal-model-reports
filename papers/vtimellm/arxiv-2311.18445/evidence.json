@@ -11,5 +11,18 @@
     "核对ActivityNet参与训练而Charades未参与、13B部分指标下降和Table2Addition非逐项最佳。",
     "核对无阶段1整段区间偏置，附录提示差异和无法解析输出排除，未将GPT评分写成准确率。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§3.1；PDF 第3页"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages"
+      ],
+      "article_sha256": "b34407d614d2dd851834c0de1a449fa74c3035394893667e9bcc0311c50e8a3d"
+    }
+  ]
 }

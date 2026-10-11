@@ -11,5 +11,23 @@
     "Verified Figure5 LONG64 versus91 and Figure6 real83.3/76.7; separated30-trial success, ten-test2.26sec speech response and no quantitative emergency-stop latency.",
     "Original source pages and final crops visually checked; no independent reproduction, unconditional instant stop or arbitrary contact-safe retraction claim."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补高层理解与低层扩散控制职责，并区分模型组件、实例角色和状态。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2510.21817v1",
+          "locator": "§3.1 Overall Framework, PDF pp4–5",
+          "version": "2510.21817v1"
+        }
+      ],
+      "article_sha256": "efc6a86d13a5a396a5909a4af9a46bbec6e2a40c4a1b2b3cd96a04cf59b99dd2",
+      "model_executed": false
+    }
+  ]
 }

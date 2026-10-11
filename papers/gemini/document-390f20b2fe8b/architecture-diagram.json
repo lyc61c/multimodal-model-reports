@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "paper_id": "390f20b2fe8b",
+  "title": "Gemini 3.8 Flash：模型与开发环境",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "任务与上下文",
+      "lines": [
+        "任务材料与长期工作状态"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "model",
+      "title": "Gemini 3.8 Flash",
+      "lines": [
+        "Flash / Cyber 面向不同环境",
+        "内部模态结构未在博客展开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "answer",
+      "title": "回答或产物",
+      "lines": [
+        "代码、分析与任务结果"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "call",
+      "title": "工具调用请求",
+      "lines": [
+        "模型选择操作及参数"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "tools",
+      "title": "外部执行环境",
+      "lines": [
+        "Antigravity、AI Studio 等环境",
+        "工具执行与验证结果"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "resume",
+      "title": "同一模型继续",
+      "lines": [
+        "工具结果回填上下文",
+        "重复调用，非第二独立模型"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "unknown"
+    },
+    {
+      "id": "followup",
+      "title": "后续回答或行动",
+      "lines": [
+        "继续判断并推进任务"
+      ],
+      "row": 5,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "answer",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "call",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "call",
+      "to": "tools",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "tools",
+      "to": "resume",
+      "label": "观察反馈",
+      "style": "dashed"
+    },
+    {
+      "from": "resume",
+      "to": "followup",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开系统接口自绘，非原文图。",
+    "Nano Banana 生成纹理属于外部服务。",
+    "共享基础智能不证明两版完全同权重。"
+  ],
+  "sources": [
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "locator": "official-source-snapshot-2026-10-08; Long-horizon agent / application demos",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

@@ -13,5 +13,28 @@
     "Image1MregressionsMathVista50.3vs65.5 and MMVetexception57.4 retained; VideoMME128K256frames66.4 vs1M4096frames55.8.",
     "20Btable includesPLlava34B; inconsistentLongVILAinternaldataflagsTables5/6 retained; baselineframehardwaredifferences and noalltaskSOTA conclusion."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2502.05177v1",
+          "locator": "2502.05177v1; §3.1 / Table 2",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "根据原文 §3.1 自绘，非原文图。",
+        "已有 pixel shuffle，不等于完全不缩减 token。",
+        "张量/上下文并行是部署方式。"
+      ],
+      "article_sha256": "3b43870f091d59e82768c9b4563bfe395a5ec8eeba95f0d2141e52b9d8937849",
+      "model_executed": false
+    }
+  ]
 }

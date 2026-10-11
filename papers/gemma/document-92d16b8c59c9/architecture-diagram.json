@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "paper_id": "92d16b8c59c9",
+  "title": "Gemma 4：按型号区分模态入口",
+  "kind": "architecture",
+  "columns": 3,
+  "nodes": [
+    {
+      "id": "a",
+      "title": "E2B / E4B 输入",
+      "lines": [
+        "文字、图像、音频"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "b",
+      "title": "31B / 26B A4B 输入",
+      "lines": [
+        "文字与图像；无音频编码器"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "c",
+      "title": "12B Unified 输入",
+      "lines": [
+        "文字、图像、音频波形"
+      ],
+      "row": 0,
+      "col": 2,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "ea",
+      "title": "独立模态编码器",
+      "lines": [
+        "视觉约 150M",
+        "音频约 300M"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "eb",
+      "title": "独立视觉编码器",
+      "lines": [
+        "视觉约 550M"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "ec",
+      "title": "轻量线性投影",
+      "lines": [
+        "图像 patch 与音频波形",
+        "无独立模态编码器"
+      ],
+      "row": 1,
+      "col": 2,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "la",
+      "title": "稠密解码器",
+      "lines": [
+        "局部与全局注意力交错"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "lb",
+      "title": "对应型号解码器",
+      "lines": [
+        "31B 稠密；26B A4B 稀疏",
+        "26B：128 选 8 + 1 共享"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "lc",
+      "title": "统一解码器",
+      "lines": [
+        "所有模态共同进入",
+        "局部与全局注意力交错"
+      ],
+      "row": 2,
+      "col": 2,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "oa",
+      "title": "文字输出",
+      "lines": [
+        "按对应型号生成"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "ob",
+      "title": "文字输出",
+      "lines": [
+        "按对应型号生成"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "oc",
+      "title": "文字输出",
+      "lines": [
+        "按对应型号生成"
+      ],
+      "row": 3,
+      "col": 2,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "a",
+      "to": "ea",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "ea",
+      "to": "la",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "la",
+      "to": "oa",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "b",
+      "to": "eb",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "eb",
+      "to": "lb",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "lb",
+      "to": "ob",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "c",
+      "to": "ec",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "ec",
+      "to": "lc",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "lc",
+      "to": "oc",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据官方模型卡自绘，非原文图。",
+    "三列是不同型号路径，不是一个模型的三条分支。",
+    "没有独立编码器仍需分块、线性投影与序列组织。"
+  ],
+  "sources": [
+    {
+      "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "locator": "2026-10-08 cached model card; Models Overview / Dense and MoE tables",
+      "note": "支持按型号区分输入编码、共享混合注意力与26B专家配置。"
+    }
+  ]
+}

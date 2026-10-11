@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "ebaf67f69f80",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "f056999ec251f5d6c238becd8ed9fd71777a6f9406d77fbfa7684d562739b029",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://qwen.ai/blog?id=qwen3.8",
+          "locator": "official-source-snapshot-2026-10-08; Hybrid Agent / Qwen-MM-Plugins",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开系统接口自绘，非原文图。；不继承 Qwen3.5 的精确层数或专家比例。；外部记忆与思考保留不等于在线权重更新。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

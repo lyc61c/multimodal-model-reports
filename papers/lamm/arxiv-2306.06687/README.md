@@ -72,7 +72,7 @@ B_m\in\mathbb R^{d_{out}\times32}.
 $$
 
 
-其中 $m$ 是图像或点云，$W_0$ 为共享且冻结的原权重，$s$ 是缩放因子；本文没有披露缩放参数。低秩更新的参数量为 $32(d_{in}+d_{out})$，这是矩阵尺寸推导，不是论文报告的整套参数量。论文把 LoRA 加入自注意力的所有投影层，没有声称对所有前馈层也使用 LoRA。[Section 5.1](https://arxiv.org/pdf/2306.06687v1)
+其中 $`m`$ 是图像或点云，$`W_0`$ 为共享且冻结的原权重，$`s`$ 是缩放因子；本文没有披露缩放参数。低秩更新的参数量为 $`32(d_{in}+d_{out})`$，这是矩阵尺寸推导，不是论文报告的整套参数量。论文把 LoRA 加入自注意力的所有投影层，没有声称对所有前馈层也使用 LoRA。[Section 5.1](https://arxiv.org/pdf/2306.06687v1)
 
 **把传统视觉任务翻译成可监督的语言输出。** 与只生成开放式图像描述不同，检测可以被表达成“类别 + 坐标”，计数要求明确整数，OCR 要求可匹配的词。任务含义、输出结构、实际问题共同构成推理指令。随后使用 NLTK 和正则抽取回答实体。这一步会把语言格式错误也计入系统能力：模型可能大致理解场景，却因没有给出可解析数字而无法通过评测。
 
@@ -84,7 +84,7 @@ $$
 
 
 $$
-\operatorname{BinLoc}=\frac1N\sum_i
+\mathrm{BinLoc}=\frac1N\sum_i
 \mathbf1[x_i^{min}\le\hat x_i\le x_i^{max}
 \land y_i^{min}\le\hat y_i\le y_i^{max}].
 $$
@@ -129,7 +129,7 @@ $$
 $$
 
 
-这是帮助理解文字输出监督的标准定义，不是原文编号公式；$V,Q$ 是视觉输入和指令，$\mathcal A$ 表示回答 token。原文没有完整说明实际 loss masking、优化器、学习率、batch、epoch、序列长度、精度、LoRA alpha 或耗时，不能把其他 Vicuna/LoRA 项目的默认配置迁移成 LAMM 的训练事实。更没有 RLHF、DPO 或图像生成训练阶段。[Section 5.1](https://arxiv.org/pdf/2306.06687v1)
+这是帮助理解文字输出监督的标准定义，不是原文编号公式；$`V,Q`$ 是视觉输入和指令，$`\mathcal A`$ 表示回答 token。原文没有完整说明实际 loss masking、优化器、学习率、batch、epoch、序列长度、精度、LoRA alpha 或耗时，不能把其他 Vicuna/LoRA 项目的默认配置迁移成 LAMM 的训练事实。更没有 RLHF、DPO 或图像生成训练阶段。[Section 5.1](https://arxiv.org/pdf/2306.06687v1)
 
 <a id="experiments"></a>
 

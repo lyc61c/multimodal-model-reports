@@ -17,5 +17,23 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "纠正裁图后仍称保留原页文字。"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf",
+          "locator": "Figure 2, PDF p3",
+          "version": "official-source-snapshot-2026-10-08"
+        }
+      ],
+      "article_sha256": "bbdf746a2025e3337bb03ae67bd239aee740e536fb7bf75ba5c44a476c450546",
+      "model_executed": false
+    }
+  ]
 }

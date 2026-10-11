@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "390f20b2fe8b",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "d580407281089900d6f1fa65188d2f896832fe098cd6de9c7117778fa01c5c64",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+          "locator": "official-source-snapshot-2026-10-08; Long-horizon agent / application demos",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开系统接口自绘，非原文图。；Nano Banana 生成纹理属于外部服务。；共享基础智能不证明两版完全同权重。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -69,7 +69,7 @@ BAGEL 不是让语言模型只吐出一小组条件向量，再交给完全独�
 
 $$
 z_t=(1-t)z_0+tz_1,\qquad
-\mathcal L_{\rm flow}=\mathbb E\|v_\theta(z_t,t,c)-(z_1-z_0)\|^2.
+\mathcal L_{\rm flow}=\mathbb E\Vert v_\theta(z_t,t,c)-(z_1-z_0)\Vert ^2.
 $$
 
 t∈[0,1]，c 是文字与既有图像条件，vθ 学习连续轨迹的速度。推理从噪声出发，数值积分 `dz/dt=vθ`，再由 VAE 解码成像素。以上是机制解读，不是报告的编号公式；实际 timestep 分布、shift、采样器会改变数值实现。本模型并非逐 token 自回归生成离散图像词码。

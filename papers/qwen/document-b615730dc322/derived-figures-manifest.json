@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "b615730dc322",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "b355ab2299a4c03ab44f691f9bfadac271aa6f4cac764a2a4f25a4faa8ba07ec",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+          "locator": "official-source-snapshot-2026-10-08; Introduction / Limitations",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "根据公开发布页自绘，非原文图。；不移植后代模型的视觉参数或融合模块。；推理文字不代表重新调用视觉检测器。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -24,7 +24,7 @@ InternVL3 是图像、视频与文本理解模型家族，覆盖约 1B–78B，�
 
 - 保留 ViT–MLP–LLM，448×448 tile 经 pixel unshuffle 后为 256 视觉 token。
 - 联合预训练约 **200B token**，纯语言 50B、多模态 150B；共同更新视觉、连接器和语言参数。
-- V2PE 为视觉 token 设置较小位置增量，控制位置跨度；主文除专门消融外，**测试统一使用 $\delta=1$**。
+- V2PE 为视觉 token 设置较小位置增量，控制位置跨度；主文除专门消融外，**测试统一使用 $`\delta=1`$**。
 - SFT 数据由 16.3M 扩为 **21.7M**；MPO 约 300K，组合相对偏好、绝对质量及优选响应生成目标。
 - VisualPRM-8B 可选取八个候选中最好的响应，增加推理计算与额外评判模型；不等同于单次生成。
 
@@ -32,11 +32,21 @@ InternVL3 是图像、视频与文本理解模型家族，覆盖约 1B–78B，�
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘模型架构示意，非原文图](figures/architecture-overview.svg)
+
+*自绘模型架构示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[2504.10479v1; §2.1 / Table 1 / Equations 1–5](https://arxiv.org/pdf/2504.10479v1)。
+<!-- derived-architecture:end -->
+
 ![原文 Table 1](figures/original-p004-table-1.png)
 
 **读图：Table 1、Equations 1–5，PDF 第 4 页。** 表明确每个变体的视觉与语言初始化。1B/2B/8B/14B 对应 InternViT-300M 与 Qwen2.5-0.5B/1.5B/7B/14B；9B 使用 InternLM3-8B。38B/78B 使用 InternViT-6B 与 Qwen2.5-32B/72B。实际总量为 0.9/1.9/8.1/9.2/15.1/38.4/78.4B，名称不是精确参数数值。
 
 随机初始化的两层 MLP 将视觉特征接入语言输入空间。pixel unshuffle 将相邻空间特征合并，token 数降至四分之一，每 tile 保留 256 个表示；它降低序列计算量，也改变可直接访问的视觉粒度。图像与视频表示作为文字生成的上下文，模型不以自回归方式预测图像本身。文章没有完整复述前代的高分辨率切图上限和视频时间表示，不能把其他版本的默认值直接填入。
+
+因此，一次图像问答的路径是“图像 tile → InternViT → pixel unshuffle → 两层 MLP → 与问题文字交错 → 语言主干 → 文字答案”。§2.1 还明确使用 **V2PE**：视觉 token 采用更小、可变的位置增量，减少长视觉序列对位置窗口的占用；这改变的是序列位置组织，不会再删掉视觉 token。视觉和语言组件均以预训练**基础权重**初始化，不能把表中的 Qwen2.5 自动写成 Instruct 版本。原文 §2.1，PDF 第 3–4 页。
 
 <a id="principles"></a>
 
@@ -48,7 +58,7 @@ $$
 p_1=0,\qquad p_i=p_{i-1}+\begin{cases}1,&x_i\in\mathrm{Text}\\\delta,&x_i\in\mathrm{Vision}.\end{cases}
 $$
 
-训练逐图从 $\{1,1/2,1/4,\ldots,1/256\}$ 选 $\delta$，同一图内保持固定。它压缩视觉位置增长，**并没有删除 token**，也不把物理注意力长度自动缩短。推理可随序列选择步长，$\delta=1$ 退化为普通递增；本报告标准成绩采用该退化设置。
+训练逐图从 $`\{1,1/2,1/4,\ldots,1/256\}`$ 选 $`\delta`$，同一图内保持固定。它压缩视觉位置增长，**并没有删除 token**，也不把物理注意力长度自动缩短。推理可随序列选择步长，$`\delta=1`$ 退化为普通递增；本报告标准成绩采用该退化设置。
 
 联合预训练的 Equations 6–7 只计算文本目标：
 
@@ -56,9 +66,9 @@ $$
 \mathcal L=-\sum_{i:x_i\in\mathrm{Text}}w_i\log p_\theta(x_i\mid x_{<i}),\qquad w_i=l^{-1/2}.
 $$
 
-$l$ 是该样本需要计算损失的 token 数。square averaging 使样本总权重约随 $\sqrt l$ 增长，介于逐 token 平均与逐样本平均之间，以缓和长短响应的偏置。虽然视觉不成为预测目标，文本误差仍传到视觉主干。
+$`l`$ 是该样本需要计算损失的 token 数。square averaging 使样本总权重约随 $`\sqrt l`$ 增长，介于逐 token 平均与逐样本平均之间，以缓和长短响应的偏置。虽然视觉不成为预测目标，文本误差仍传到视觉主干。
 
-MPO（Equation 9）为 $\mathcal L=w_p\mathcal L_p+w_q\mathcal L_q+w_g\mathcal L_g$。其中 DPO 比较 chosen 与 rejected 相对参考策略的对数概率差；BCO 分别区分好坏响应，使用历史奖励移动平均作平移；生成项继续拟合 chosen 文本。令 $r(y)=\beta\log[\pi_\theta(y|x)/\pi_0(y|x)]$，原文 DPO 项可简写为 $-\log\sigma(r(y_c)-r(y_r))$。该报告没有给出全部权重、$\beta$ 等数值，不能自行指定。
+MPO（Equation 9）为 $`\mathcal L=w_p\mathcal L_p+w_q\mathcal L_q+w_g\mathcal L_g`$。其中 DPO 比较 chosen 与 rejected 相对参考策略的对数概率差；BCO 分别区分好坏响应，使用历史奖励移动平均作平移；生成项继续拟合 chosen 文本。令 $`r(y)=\beta\log[\pi_\theta(y\vert x)/\pi_0(y\vert x)]`$，原文 DPO 项可简写为 $`-\log\sigma(r(y_c)-r(y_r))`$。该报告没有给出全部权重、$`\beta`$ 等数值，不能自行指定。
 
 VisualPRM 按解题步骤预测正负符号，把生成“+”的概率作为每步分数，再平均以选候选。它是过程监督的外部评判，不是模型凭多数投票必然正确；误判或多个候选共享错误仍会影响结果。
 

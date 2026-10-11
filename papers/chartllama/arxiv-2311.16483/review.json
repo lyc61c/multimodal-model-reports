@@ -23,7 +23,7 @@
     "GPT rubric details vary between main text and appendix",
     "No independent benchmark run"
   ],
-  "article_sha256": "5b1dcb3a72164c2019f21830c88f1c66009124676698dfdd19f221f2bc6713f0",
+  "article_sha256": "95145d82f152d9df7d5326ae3dac1f5b30e6bb1a17e7f97bdd4bdf99d493b1c5",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -44,8 +44,9 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 18,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 35,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   },
   "content_regression_history": [
     {
@@ -110,5 +111,47 @@
       "visually_inspected": [],
       "article_sha256": "5b1dcb3a72164c2019f21830c88f1c66009124676698dfdd19f221f2bc6713f0"
     }
-  ]
+  ],
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2311.16483v1",
+      "source_cache": "source/papers/243076aca63f/source.txt",
+      "source_locators": [
+        "§4.1–4.2、附录 A，PDF pp.6、11"
+      ],
+      "changes": [
+        "第3节补充：可将一次图表重绘分为模型内理解与模型外执行：输入图表先 padding，再经 336 分辨率 CLIP 和 MLP 进入语言模型；用户的重绘要求指定输出 Python 程序；生成的程序交给绘图库执行，得到新图",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "5b1dcb3a72164c2019f21830c88f1c66009124676698dfdd19f221f2bc6713f0",
+      "article_sha256_after": "9f2868981b46cf3ff040f70f83a261e15512d125cb1b89feee50ce2011f7cd28",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 17,
+      "operatorname_replacements": 1,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
 }

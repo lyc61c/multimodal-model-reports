@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "5cd14e1ea9af",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "78a20a61feba736a359ef40bc205d29c6004cfee454fe06c30d780715bdfb791",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf",
+          "locator": "§1、§2.4.1–2.4.2，PDF pp.1、12–14",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：只画公开接口，不猜内部骨干。；部署另含文字／图片审核及图中文字 OCR。；审核细节与调用次序未完整公开。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

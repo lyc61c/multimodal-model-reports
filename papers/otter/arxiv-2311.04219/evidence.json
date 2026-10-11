@@ -16,5 +16,27 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2311.04219v1",
+      "source_cache": "source/papers/fc3fb82e955e/source.txt",
+      "source_locators": [
+        "§2.1，PDF pp.3–4"
+      ],
+      "changes": [
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "e1d7b7d899caeaaac0604db50edf74a1ce7d9e3f0fc931bf3533818822149a8e",
+      "article_sha256_after": "e1d7b7d899caeaaac0604db50edf74a1ce7d9e3f0fc931bf3533818822149a8e",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ]
 }

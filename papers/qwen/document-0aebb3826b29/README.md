@@ -36,7 +36,7 @@
 
 ![官方 README 架构原图的忠实 PNG 预览，无编号](figures/official-architecture-preview.png)
 
-[查看未修改的原始 SVG](figures/official-architecture.svg)。原始网页只有这一张技术架构图；本文保留该图，不用社区徽章凑图数。
+原文[未编号架构图](figures/official-architecture.svg)展示插件如何连接能力与代理运行环境。
 
 **读图**：左列是能力，中央把每项能力封装为独立插件，右列是接收插件的运行环境。中间的 Skill/MCP server 分别承担工作流指导和工具执行。图中 `video-memory` 的“100-hour”是能力宣传示意，README 没有相应控制实验，不能当作已独立核验的视频时长上限。
 

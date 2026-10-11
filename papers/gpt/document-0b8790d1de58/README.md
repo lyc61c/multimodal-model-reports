@@ -34,6 +34,14 @@
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘公开接口示意，非原文图](figures/architecture-overview.svg)
+
+*自绘公开接口示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[official-source-snapshot-2026-10-08; §2 Native image generation / mitigation controls](https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf)。
+<!-- derived-architecture:end -->
+
 报告没有原始网络架构图。可确认的设计包括原生自回归生成路径，以及围绕请求和输出的系统控制链：
 
 1. 聊天模型根据经过后训练的安全行为判断是否触发图像生成。

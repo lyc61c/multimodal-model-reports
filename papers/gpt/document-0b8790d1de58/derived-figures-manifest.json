@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "0b8790d1de58",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "d359b6fb2a3d8869c839ae0794e147be08e3214eb83b278842a3894c0d2d0364",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf",
+          "locator": "official-source-snapshot-2026-10-08; §2 Native image generation / mitigation controls",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开系统链自绘，非原文图。；阻断组件是系统控制，不是生成网络层。；不假设扩散模型、共享权重或图像词表。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "paper_id": "b46cedd95a4b",
+  "title": "SESAME：统一识别、纠错与分割",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "输入图像",
+      "lines": [
+        "相同图像用于语言和分割"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "query",
+      "title": "用户请求",
+      "lines": [
+        "对象存在性与分割指令"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "lmm",
+      "title": "LLaVA-v1.5-7B",
+      "lines": [
+        "理解图像与请求",
+        "生成解释、纠错或分割标记"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "text",
+      "title": "语言回复",
+      "lines": [
+        "确认对象或纠正错误前提"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "sam",
+      "title": "SAM 分割支路",
+      "lines": [
+        "根据分割标记生成掩码",
+        "并非所有请求都输出掩码"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "mask",
+      "title": "像素掩码",
+      "lines": [
+        "定位所指对象"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "lmm",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "lmm",
+      "style": "solid",
+      "from": "query"
+    },
+    {
+      "to": "text",
+      "style": "solid",
+      "from": "lmm"
+    },
+    {
+      "to": "sam",
+      "style": "solid",
+      "from": "lmm",
+      "entry_side": "right"
+    },
+    {
+      "to": "sam",
+      "style": "solid",
+      "from": "image",
+      "entry_side": "left",
+      "label": "图像条件"
+    },
+    {
+      "to": "mask",
+      "style": "solid",
+      "from": "sam"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "只画统一模型；级联基线另由 LLaVA 接 LISA。",
+    "原文未展开继承自 LISA 的完整连接层尺寸。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2312.08366v1",
+      "locator": "§4–5；PDF 第5–6页、Figure4",
+      "note": "LLaVA-v1.5-7B与SAM组件；语言控制分割与无需分割的回复。"
+    }
+  ]
+}

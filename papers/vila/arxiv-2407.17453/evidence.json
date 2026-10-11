@@ -14,5 +14,20 @@
     "Distinguish final VILA-squared family name from self-augmentation loop indices; 40B combines Yi34B and InternViT6B.",
     "Synthetic labels are text supervision, not teacher-logit KL or RLAIF; commercial models are judges and some public GPT-generated datasets remain in the recipe."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§3；PDF 第6页",
+        "§3 Model Architecture；PDF 第6页"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages",
+        "Authored source-limited architecture-diagram.json; root will render/insert separately"
+      ],
+      "article_sha256": "20cdd191d5935b72985fd1a711048125b0da3b2a0040b0fa6a00076377b26a43"
+    }
+  ]
 }

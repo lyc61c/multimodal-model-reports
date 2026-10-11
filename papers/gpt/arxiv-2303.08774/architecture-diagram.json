@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "paper_id": "c14c2ea07b95",
+  "title": "GPT-4 公开多模态接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图片",
+      "lines": [
+        "用户视觉输入"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "文字",
+      "lines": [
+        "问题与上下文"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "core",
+      "title": "内部多模态模型",
+      "lines": [
+        "Transformer 风格",
+        "视觉编码与融合未披露"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "output",
+      "title": "文字回答",
+      "lines": [
+        "条件语言生成",
+        "输出能力依任务评估"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "core",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "core",
+      "style": "solid",
+      "from": "text"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "core"
+    }
+  ],
+  "notes": [
+    "仓库自绘：仅表示公开输入输出。",
+    "层数、规模和视觉连接器未知。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2303.08774v1",
+      "locator": "§1–2，PDF pp.1–2",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

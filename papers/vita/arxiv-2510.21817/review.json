@@ -16,7 +16,7 @@
     "asset_hashes_match": true,
     "original_assets": 7
   },
-  "article_sha256": "e5bc086523b25835e0869eb088074235b7fc7cd07d8072a70f17cea47a0057cc",
+  "article_sha256": "a3d554b7acf9717a61b84f124ead55e4f51ec9f43f7efd61d160b68a24a839b9",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -24,7 +24,38 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 6,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补高层理解与低层扩散控制职责，并区分模型组件、实例角色和状态。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2510.21817v1",
+          "locator": "§3.1 Overall Framework, PDF pp4–5",
+          "version": "2510.21817v1"
+        }
+      ],
+      "article_sha256": "efc6a86d13a5a396a5909a4af9a46bbec6e2a40c4a1b2b3cd96a04cf59b99dd2",
+      "model_executed": false
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 6,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

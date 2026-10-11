@@ -60,10 +60,10 @@ VIMA 将语言指令、目标图像、演示视频帧和视觉约束放入同一
 
 ## 4. 核心创新与数学原理
 
-**任务条件与历史分开建模。** 设多模态提示为 $P$，交互历史为 $H_t=[o_1,a_1,\ldots,o_t]$，学习策略 $\pi_\theta(a_t\mid P,H_t)$。历史作为 Query，提示作为 Key 和 Value，交叉注意为：
+**任务条件与历史分开建模。** 设多模态提示为 $`P`$，交互历史为 $`H_t=[o_1,a_1,\ldots,o_t]`$，学习策略 $`\pi_\theta(a_t\mid P,H_t)`$。历史作为 Query，提示作为 Key 和 Value，交叉注意为：
 
 $$
-H'=\operatorname{softmax}\left(\frac{Q_HK_P^\top}{\sqrt d}\right)V_P.
+H'=\mathrm{softmax}\left(\frac{Q_HK_P^\top}{\sqrt d}\right)V_P.
 $$
 
 这使每一步决策都可以重新读取任务提示。其后使用因果自注意处理交互顺序，禁止访问未来信息。交叉注意省去提示与所有历史之间的完整联合自注意，但总体计算仍包含历史侧的自注意，不能笼统说成整个模型线性复杂度。（第 5、35 页）
@@ -101,7 +101,7 @@ VIMA-Bench 在 Ravens / PyBullet 上构建 UR5 桌面环境，工作区大小为
 | 项目 | 原文配置 |
 |---|---|
 | 优化器 | AdamW；Transformer 中采用 GEGLU |
-| 学习率 | $10^{-4}$ |
+| 学习率 | $`10^{-4}`$ |
 | 日程 | warmup 7K 步；cosine annealing 17K 步 |
 | 正则与稳定性 | weight decay 0；dropout 0.1；梯度裁剪 1.0 |
 | 模型扩展 | 2、4、9、20、43、92、200M 控制器 |

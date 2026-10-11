@@ -34,6 +34,14 @@
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘公开接口示意，非原文图](figures/architecture-overview.svg)
+
+*自绘公开接口示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[official-source-snapshot-2026-10-08; Perception and Agency in One Model / OpenClaw demos](https://mimo.xiaomi.com/mimo-v2-omni)。
+<!-- derived-architecture:end -->
+
 可确认的是 **多种专用编码器→共享骨干→推理及结构化行动输出**。它把感知和代理目标放在共同模型中，而非只发布几个互不相关的转录和看图服务。但本材料没有给出编码器名称、骨干层数、参数规模、稠密/MoE 形式、tokenizer、音视频同步编码或输出解码器配置。
 
 “支持结构化工具调用”表示模型可以产生工具请求，外部环境实际执行函数并返回状态。官网两项代理演示以 OpenClaw 为运行框架：它负责浏览器、文件系统与终端，MiMo 提供感知、推理和选择动作。完成任务是模型与工具环境共同作用，不能把浏览器状态变化写成模型权重自身执行的动作。

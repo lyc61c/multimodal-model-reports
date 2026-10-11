@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "paper_id": "3be706b07979",
+  "title": "CM3Leon 混合序列生成",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "多模态条件",
+      "lines": [
+        "文字／图片／补全请求",
+        "检索增强可选"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "retrieve",
+      "title": "可选 CLIP 检索",
+      "lines": [
+        "冻结编码器查记忆库",
+        "检索图文作为上下文"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "tokens",
+      "title": "混合离散序列",
+      "lines": [
+        "图像 tokenizer＋文字码",
+        "break/mask/infill 标记"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "encoder"
+    },
+    {
+      "id": "llm",
+      "title": "单一因果解码器",
+      "lines": [
+        "从头训练混合模态主干",
+        "预测文字或图像 token"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "文本或图像结果",
+      "lines": [
+        "文字 token 还原文字",
+        "图像码交图像解码器"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "retrieve",
+      "style": "dashed",
+      "from": "input"
+    },
+    {
+      "to": "tokens",
+      "style": "dashed",
+      "from": "retrieve"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "tokens"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "仓库自绘：展示检索增强生成路径。",
+    "不启用检索时直接组织当前条件序列。",
+    "图像输出依靠离散图像码，不由 CLIP 生成。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2309.02591v1",
+      "locator": "§2.1–2.3，PDF pp.3–4",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

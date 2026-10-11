@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "paper_id": "fc3fb82e955e",
+  "title": "OtterHD 的原生图文序列",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "media_input",
+      "title": "图片",
+      "lines": [
+        "缩放后补齐 patch 网格"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text_input",
+      "title": "文字输入",
+      "lines": [
+        "用户指令与会话格式"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "patch",
+      "title": "30×30 图像块",
+      "lines": [
+        "线性映射到语言空间",
+        "逐行排序并加换行标记"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "text_embedding",
+      "title": "文字词嵌入",
+      "lines": [
+        "由语言 tokenizer 处理",
+        "映射到词嵌入空间"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "sequence",
+      "title": "共享输入序列",
+      "lines": [
+        "图像块按行排列",
+        "每行加入换行标记"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "text_condition",
+      "title": "文字条件",
+      "lines": [
+        "问题及已有上下文",
+        "保持文字序列结构"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "Fuyu/Persimmon 主干",
+      "lines": [
+        "共享因果 Transformer",
+        "36 层，隐藏宽度 4096"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "文字回答",
+      "lines": [
+        "从答案起点继续生成",
+        "预测回答及结束标记"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "patch",
+      "style": "solid",
+      "from": "media_input"
+    },
+    {
+      "to": "text_embedding",
+      "style": "solid",
+      "from": "text_input"
+    },
+    {
+      "to": "sequence",
+      "style": "solid",
+      "from": "patch"
+    },
+    {
+      "to": "text_condition",
+      "style": "solid",
+      "from": "text_embedding"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "sequence",
+      "label": "视觉条件"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "text_condition",
+      "label": "文字条件"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "仓库自绘，依据原文 §2.1。",
+    "没有独立 CLIP 或 Q-Former。",
+    "分辨率提高会增加图像块序列。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2311.04219v1",
+      "locator": "§2.1，PDF pp.3–4",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

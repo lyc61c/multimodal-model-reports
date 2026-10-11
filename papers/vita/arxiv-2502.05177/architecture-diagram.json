@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "paper_id": "14aa0b2943d0",
+  "title": "Long-VITA：视觉序列进入长上下文",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "im",
+      "title": "图像或视频帧",
+      "lines": [
+        "动态切块；448 尺寸配置"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "tx",
+      "title": "文字上下文",
+      "lines": [
+        "用户问题及文本材料"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "ve",
+      "title": "InternViT-300M",
+      "lines": [
+        "各视觉块提取特征"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "p",
+      "title": "重排与投影",
+      "lines": [
+        "pixel shuffle：token 减至 1/4",
+        "两层 MLP 对齐语言空间"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "lm",
+      "title": "Qwen2.5-14B",
+      "lines": [
+        "Instruct 语言主干",
+        "图文序列共同生成答案"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "o",
+      "title": "文字输出",
+      "lines": [
+        "长上下文条件生成"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "im",
+      "to": "ve",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "ve",
+      "to": "p",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "p",
+      "to": "lm",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "tx",
+      "to": "lm",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "lm",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据原文 §3.1 自绘，非原文图。",
+    "已有 pixel shuffle，不等于完全不缩减 token。",
+    "张量/上下文并行是部署方式。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2502.05177v1",
+      "locator": "2502.05177v1; §3.1 / Table 2",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

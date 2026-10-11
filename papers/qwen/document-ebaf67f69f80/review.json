@@ -29,11 +29,54 @@
     "未运行模型"
   ],
   "model_execution": "not_run",
-  "article_sha256": "892285d2d03fcb86fc558f94e02fa10146ab2f621df5a12e57959e6a2b653e81",
+  "article_sha256": "8345255731de4ceb681d8528421920eef7ac4b248e091b9566f1b71d38ccbcd2",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 3,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 6,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://qwen.ai/blog?id=qwen3.8",
+          "locator": "official-source-snapshot-2026-10-08; Hybrid Agent / Qwen-MM-Plugins",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "公开系统接口自绘，非原文图。",
+        "不继承 Qwen3.5 的精确层数或专家比例。",
+        "外部记忆与思考保留不等于在线权重更新。"
+      ],
+      "article_sha256": "892285d2d03fcb86fc558f94e02fa10146ab2f621df5a12e57959e6a2b653e81",
+      "model_executed": false
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 3,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

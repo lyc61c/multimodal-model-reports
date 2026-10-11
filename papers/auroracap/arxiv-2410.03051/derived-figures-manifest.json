@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "7c5f11db06d6",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "0c022ed1fe42b7e89b786dcfcbd4f902bc2a598a54c4178c4f8fedff19fb464a",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2410.03051v1",
+          "locator": "§2.1、Appendix D/E；PDF 第3、28–29页",
+          "note": "ViT内部ToMe时序、双层MLP与选定CLIP/Vicuna配置；保持宽高比。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；合并发生在 ViT 多个层中；分框不表示仅末层合并。；逐帧空间合并，不把不同时间帧平均成同一图像。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

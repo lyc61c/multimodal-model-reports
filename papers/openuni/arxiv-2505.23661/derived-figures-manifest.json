@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "e8057196e511",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "34bf22f4f0fe4977378c088340d4eca2782c325dd4a88cd5e1eb338020e2c233",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2505.23661v1",
+          "locator": "2505.23661v1; Architecture / Table 1 / implementation details",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "根据公开组件自绘，非原文图。；查询状态是主干前向的结果，不是另一个 LLM。；L-512 的正文与 Table 1 冲突保留在正文。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

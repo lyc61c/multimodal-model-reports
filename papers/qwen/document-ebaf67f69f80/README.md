@@ -39,6 +39,14 @@ Qwen3.8-Max 的能力组织围绕“完成任务并检查结果”：写代码�
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘公开接口示意，非原文图](figures/architecture-overview.svg)
+
+*自绘公开接口示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[official-source-snapshot-2026-10-08; Hybrid Agent / Qwen-MM-Plugins](https://qwen.ai/blog?id=qwen3.8)。
+<!-- derived-architecture:end -->
+
 内部网络只披露“基于 Qwen3.5 架构基础”与规模扩展，不能由这句话推导新版的全部层数、注意力比例、专家数量和投影器。系统层则比较清楚：语言与视觉模型接收任务历史，harness 提供代码、GUI 与其他工具，工具执行产生文本、截图和结果文件，再反馈给模型。
 
 **Hybrid Agent** 把代码与 GUI 操作结合：代码负责实现或大规模处理，GUI 负责与真实运行应用交互并验证结果。RecreationBench 对此进行黑盒应用重建评测，覆盖 Ubuntu、macOS、Windows、Android 和 web；模型只能交互观察，没有源代码或互联网。这是带环境约束的 Agent 任务，不能当作仅凭一张图片重建所有应用的纯视觉基准。
@@ -53,7 +61,7 @@ Qwen-MM-Plugins 是给现有 Agent harness 使用的扩展库，提供图像视�
 
 官方没有编号公式。下面的表达用于说明其公开系统思路，并不代替实际奖励实现。
 
-把训练环境表示为 $e=(\text{task},\text{workspace},\text{harness})$，可理解在多个独立轴上扩展得到环境组合，而非每次完全重新集成一个单任务环境。在线平衡器控制采样分布 $q_t(e)$，训练目标可概括成 $\mathbb E_{e\sim q_t,\tau\sim\pi_\theta}[R(e,\tau)]$。原文未公布奖励函数、优势估计、KL 系数或优化算法，本文不将它写成 PPO/GRPO 的确定配方。
+把训练环境表示为 $`e=(\text{task},\text{workspace},\text{harness})`$，可理解在多个独立轴上扩展得到环境组合，而非每次完全重新集成一个单任务环境。在线平衡器控制采样分布 $`q_t(e)`$，训练目标可概括成 $`\mathbb E_{e\sim q_t,\tau\sim\pi_\theta}[R(e,\tau)]`$。原文未公布奖励函数、优势估计、KL 系数或优化算法，本文不将它写成 PPO/GRPO 的确定配方。
 
 Universal Reward System 将不同任务的验证纳入统一框架：可执行任务用运行结果，开放产物用 rubric 约束文字与渲染判断，复杂工作可用 Agent 检查。统一框架旨在减少多个独立 verifier 的不一致，但博客没有给出奖励标定、偏差测试或可证明的等价性。模型评审与视觉评审本身也可能出错，不能由统一名称推断奖励恒正确。
 

@@ -52,11 +52,11 @@ D-Abstractor 使用六个块，通过查询的二维参考点与学习到的采�
 
 ## 4. 核心创新与数学原理
 
-线性投影对每个视觉位置独立变换，输出数 $M=N$，有利于保留位置对应，但无法压缩序列。标准 resampler 用 M 个查询向 N 个特征做 cross-attention，可以选 $M<N$，但每个查询可能聚焦类似显著区域。论文的创新是在抽象过程中加入局部空间结构，让压缩与局部理解共同优化。
+线性投影对每个视觉位置独立变换，输出数 $`M=N`$，有利于保留位置对应，但无法压缩序列。标准 resampler 用 M 个查询向 N 个特征做 cross-attention，可以选 $`M<N`$，但每个查询可能聚焦类似显著区域。论文的创新是在抽象过程中加入局部空间结构，让压缩与局部理解共同优化。
 
 对 C-Abstractor，可用下面的示意式解释 Figure 4，而非冒充原文新增的编号公式：
 
-$$X_{out}=\operatorname{ResBlocks}_2\big(\operatorname{AdaptiveAvgPool}_{\sqrt M\times\sqrt M}(\operatorname{ResBlocks}_1(X_{feat}+P))\big).$$
+$$X_{out}=\mathrm{ResBlocks}_2\big(\mathrm{AdaptiveAvgPool}_{\sqrt M\times\sqrt M}(\mathrm{ResBlocks}_1(X_{feat}+P))\big).$$
 
 P 为位置嵌入，卷积在池化前提取邻域上下文，池化确定序列长度，池化后的卷积进一步整理局部表示。它并不保证无损恢复全部原始细节，而是把空间归纳偏置加入可训练投影器。
 
@@ -64,7 +64,7 @@ D-Abstractor 的附录式（2）明确写作：
 
 $$z^{l+1}=\sum_{k=1}^{K} A_k^l X_{feat}(p+\Delta o_k^l).$$
 
-p 是参考点，$\Delta o_k^l$ 是采样偏移，$A_k^l$ 是注意力权重。与对全部位置密集聚合相比，它围绕参考点取若干可学习位置。均匀参考点初始化提供图像覆盖，视觉池化查询提供与内容相关的初值。Table 9 中去掉后者 AvgN 从 69.7 降至 69.2，去掉均匀参考点初始化降至 68.7。[PDF 第 12–13 页](https://arxiv.org/pdf/2312.06742v1#page=13)
+p 是参考点，$`\Delta o_k^l`$ 是采样偏移，$`A_k^l`$ 是注意力权重。与对全部位置密集聚合相比，它围绕参考点取若干可学习位置。均匀参考点初始化提供图像覆盖，视觉池化查询提供与内容相关的初值。Table 9 中去掉后者 AvgN 从 69.7 降至 69.2，去掉均匀参考点初始化降至 68.7。[PDF 第 12–13 页](https://arxiv.org/pdf/2312.06742v1#page=13)
 
 语言输出仍采用原文式（1）的条件自回归分解：
 
@@ -80,7 +80,7 @@ $$
 
 Table 2 列出来源池：BlipCapFilt 与 COYO100M 合计 200M 图像描述样本；VQAv2、GQA、OCRVQA、VSR 等开放问答 2.2M；ScienceQA 与 A-OKVQA 选择题 0.03M；RefCOCO 系列及 Visual Genome 的指代表达数据 5.7M；LLaVA150K 与 ShareGPT 指令数据约 0.2M。来源池规模不等于训练中所有样本均被完整遍历，也不能由此称第二阶段训练 200M 独立指令。
 
-对已有任务做 instructization 时，开放问答要求单词或短语，选择题要求选项字母，定位输出归一化框坐标 $[x_{min},y_{min},x_{max},y_{max}]$。RefCOCO、RefCOCO+、RefCOCOg 的区域描述模板分别强调位置、避免位置而描述外观、给出较详细描述。相似图像和问题的目标分布不同，用单一粗粒度任务标记可能难以区分这些回答要求。VSR 的陈述与真假标签被转成是非问题；描述任务则直接预测 caption。[PDF 第 5、14–15 页](https://arxiv.org/pdf/2312.06742v1#page=14)
+对已有任务做 instructization 时，开放问答要求单词或短语，选择题要求选项字母，定位输出归一化框坐标 $`[x_{min},y_{min},x_{max},y_{max}]`$。RefCOCO、RefCOCO+、RefCOCOg 的区域描述模板分别强调位置、避免位置而描述外观、给出较详细描述。相似图像和问题的目标分布不同，用单一粗粒度任务标记可能难以区分这些回答要求。VSR 的陈述与真假标签被转成是非问题；描述任务则直接预测 caption。[PDF 第 5、14–15 页](https://arxiv.org/pdf/2312.06742v1#page=14)
 
 同图多个问答可组成多轮对话。附录的去重操作保留重复目标中的一项，减少模型根据上一轮相同答案走捷径的机会；这不是对全语料做严格语义去重的证明。最终模板采用每数据集一个细粒度模板，已有 GPT 辅助指令保留原请求与回答。
 

@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "paper_id": "32bc63503a35",
+  "title": "Qwen2-VL：从动态视觉网格到语言生成",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图像或视频",
+      "lines": [
+        "图像复制为两帧",
+        "视频采样相邻帧"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "query",
+      "title": "文本指令",
+      "lines": [
+        "原语言 tokenizer"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "patch",
+      "title": "视觉 patch／tube",
+      "lines": [
+        "14×14 空间 patch",
+        "时间深度 2 的卷积"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "vit",
+      "title": "675M ViT",
+      "lines": [
+        "动态网格；二维 RoPE"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "merge",
+      "title": "MLP 合并",
+      "lines": [
+        "相邻 2×2 压成一 token",
+        "添加视觉起止标记"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "qwen",
+      "title": "Qwen2 语言主干",
+      "lines": [
+        "交错读取视觉与文字",
+        "M-RoPE：时间／高／宽"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "文字与结构化响应",
+      "lines": [
+        "自回归生成后续 token"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "patch",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "vit",
+      "style": "solid",
+      "from": "patch"
+    },
+    {
+      "to": "merge",
+      "style": "solid",
+      "from": "vit"
+    },
+    {
+      "to": "qwen",
+      "style": "solid",
+      "from": "merge"
+    },
+    {
+      "to": "qwen",
+      "style": "solid",
+      "from": "query"
+    },
+    {
+      "to": "out",
+      "style": "solid",
+      "from": "qwen"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "二维 RoPE 属视觉编码器；M-RoPE 属混合序列位置。",
+    "视觉 token 随分辨率变化，不固定为图中方块数。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2409.12191v1",
+      "locator": "§2.1；PDF 第3–5页",
+      "note": "ViT/MLP/Qwen2连接，图像视频共用patch结构与两种位置编码。"
+    }
+  ]
+}

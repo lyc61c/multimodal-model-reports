@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "67bea1fbb2c5",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "11a33230691f6549d27c52f5e76d712271ff4efb07e4da5c2152f2244329baaa",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://qwen.ai/blog?id=qwen3.6",
+          "locator": "official-source-snapshot-2026-10-08; Agent capabilities / API preserve_thinking",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开代理接口自绘，非原文图。；preserve_thinking 控制历史，不表示更新权重。；模型产物与外部渲染/编辑行为分开理解。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

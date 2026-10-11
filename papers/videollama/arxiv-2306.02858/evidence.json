@@ -10,5 +10,27 @@
     "Section 2.2.2 explicitly uses visual-text for the audio interface, despite inconsistent introductory audio-caption wording; preserved the distinction from pretrained ImageBind audio learning.",
     "Explanatory formulas marked as such, frozen parameters distinguished from gradient flow, and sample-based findings not presented as quantitative superiority."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2306.02858v1",
+      "source_cache": "source/papers/cabdd815635d/source.txt",
+      "source_locators": [
+        "§2.1.1–2.1.2，PDF pp.3–4"
+      ],
+      "changes": [
+        "第3节补充：视觉分支包含两次不同粒度的汇聚：冻结的 BLIP-2 图像 Q-Former 先把每帧转成一组视觉向量；加入帧位置后，Video Q-Former 才从整段帧表示提取定长视频表示"
+      ],
+      "article_sha256_before": "53fb3d534f0c4a2cf0d8dcf32710fd863eac010729ee2d6f2e2dab4fb2bda955",
+      "article_sha256_after": "8de6d0c985c1b5c24805ca6efd954bacff2f6f9703009747e27085ab80a2903f",
+      "diagram_plan": false,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ]
 }

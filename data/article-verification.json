@@ -6,1679 +6,1919 @@
   },
   "completed_with_integrity_issues": 0,
   "original_assets": 1516,
+  "derived_assets": 62,
   "entries": [
     {
       "id": "0809c95bdef1",
       "status": "complete",
       "destination": "papers/3d-llm/arxiv-2307.12981",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "393a3fae7620",
       "status": "complete",
       "destination": "papers/all-seeing/arxiv-2308.01907",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "60c8f90edfca",
       "status": "complete",
       "destination": "papers/all-seeing/arxiv-2402.19474",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "ee804bbbd9e2",
       "status": "complete",
       "destination": "papers/allava/arxiv-2402.11684",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "805afa2bda72",
       "status": "complete",
       "destination": "papers/an-empirical-study-of-scaling-instruction-tuned-large-m-805afa2bda72/arxiv-2309.09958",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "d8431f38c1b7",
       "status": "complete",
       "destination": "papers/anygpt/arxiv-2402.12226",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "b0dd57197992",
       "status": "complete",
       "destination": "papers/anymal/arxiv-2309.16058",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "bdbff4edfa9b",
       "status": "complete",
       "destination": "papers/apollo/arxiv-2412.10360",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "7c5f11db06d6",
       "status": "complete",
       "destination": "papers/auroracap/arxiv-2410.03051",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 1
     },
     {
       "id": "08e2182e1746",
       "status": "complete",
       "destination": "papers/bagel/arxiv-2505.14683",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "165201d8355a",
       "status": "complete",
       "destination": "papers/baichuan/document-165201d8355a",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "0343cb473d18",
       "status": "complete",
       "destination": "papers/beyond-language-modeling/arxiv-2603.03276",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "bfa86ff73462",
       "status": "complete",
       "destination": "papers/blip/arxiv-2301.12597",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "b8ba588e2b2c",
       "status": "complete",
       "destination": "papers/blip/arxiv-2305.06500",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "1999df957779",
       "status": "complete",
       "destination": "papers/blip/arxiv-2408.08872",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "49419f245339",
       "status": "complete",
       "destination": "papers/blip3-o/arxiv-2505.09568",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "2ec13c8f3442",
       "status": "complete",
       "destination": "papers/bliva/arxiv-2308.09936",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "4eb0c6c91d73",
       "status": "complete",
       "destination": "papers/brave/arxiv-2404.07204",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "a564ecbb9adf",
       "status": "complete",
       "destination": "papers/bubogpt/arxiv-2307.08581",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "59ef5f35121a",
       "status": "complete",
       "destination": "papers/cambrian-1/arxiv-2406.16860",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "3041e8771957",
       "status": "complete",
       "destination": "papers/chameleon/arxiv-2405.09818",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "b2ee855497bf",
       "status": "complete",
       "destination": "papers/chartassistant/arxiv-2401.02384",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "243076aca63f",
       "status": "complete",
       "destination": "papers/chartllama/arxiv-2311.16483",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 1
     },
     {
       "id": "44d7362792f1",
       "status": "complete",
       "destination": "papers/chartmoe/arxiv-2409.03277",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "e3d9f4f47a74",
       "status": "complete",
       "destination": "papers/chat-univi/arxiv-2311.08046",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "6aa52f4e3f6d",
       "status": "complete",
       "destination": "papers/chatrex/arxiv-2411.18363",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "53e291db1fda",
       "status": "complete",
       "destination": "papers/chatspot/arxiv-2307.09474",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "5bbb66493e7a",
       "status": "complete",
       "destination": "papers/cheetah/arxiv-2308.04152",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "d746d75f8685",
       "status": "complete",
       "destination": "papers/claude/document-d746d75f8685",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 1
     },
     {
       "id": "3be706b07979",
       "status": "complete",
       "destination": "papers/cm3leon/arxiv-2309.02591",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 1
     },
     {
       "id": "3c88228a1567",
       "status": "complete",
       "destination": "papers/cogcom/arxiv-2402.04236",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "cc862c751f87",
       "status": "complete",
       "destination": "papers/cogvlm/arxiv-2311.03079",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "98206802ffba",
       "status": "complete",
       "destination": "papers/cogvlm/arxiv-2312.08914",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "f3ccc8a656c8",
       "status": "complete",
       "destination": "papers/comparison-visual-instruction-tuning/arxiv-2406.09240",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "6a394cea1d1e",
       "status": "complete",
       "destination": "papers/compcap/arxiv-2412.05243",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "ad0e7c1e8b23",
       "status": "complete",
       "destination": "papers/convllava/arxiv-2405.15738",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "dd2d1990e567",
       "status": "complete",
       "destination": "papers/cosmos/arxiv-2606.02800",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "ba17caefc898",
       "status": "complete",
       "destination": "papers/covlm/arxiv-2311.03354",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "3aceb543bb4d",
       "status": "complete",
       "destination": "papers/cumo/arxiv-2405.05949",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "e8e055db30fe",
       "status": "complete",
       "destination": "papers/deepseek/arxiv-2403.05525",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "1bd54f613caa",
       "status": "complete",
       "destination": "papers/deepseek/arxiv-2412.10302",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "c352e12407c2",
       "status": "complete",
       "destination": "papers/deepseek/arxiv-2510.18234",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "536ef2604f4a",
       "status": "complete",
       "destination": "papers/deepseek/document-536ef2604f4a",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "08e9e69bb6bb",
       "status": "complete",
       "destination": "papers/deepseek/document-08e9e69bb6bb",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "ddf539694eca",
       "status": "complete",
       "destination": "papers/deepseek/document-ddf539694eca",
       "issues": [],
-      "assets": 2
+      "assets": 2,
+      "derived_assets": 0
     },
     {
       "id": "6648a6adbc11",
       "status": "complete",
       "destination": "papers/deepseek/document-6648a6adbc11",
       "issues": [],
-      "assets": 2
+      "assets": 2,
+      "derived_assets": 1
     },
     {
       "id": "54e8efcf3e7e",
       "status": "complete",
       "destination": "papers/denseworld-1m/arxiv-2506.24102",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "c37f94b70941",
       "status": "complete",
       "destination": "papers/detgpt/arxiv-2305.14167",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 0
     },
     {
       "id": "bdf40c9e7783",
       "status": "complete",
       "destination": "papers/dots/document-bdf40c9e7783",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 1
     },
     {
       "id": "659a6bf04fbf",
       "status": "complete",
       "destination": "papers/dreamllm/arxiv-2309.11499",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "43a04598fc70",
       "status": "complete",
       "destination": "papers/eagle/arxiv-2408.15998",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "9f31ab035853",
       "status": "complete",
       "destination": "papers/eagle/arxiv-2504.15271",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "9e3cb917f6e0",
       "status": "complete",
       "destination": "papers/ego-r1/arxiv-2506.13654",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "b9dea683bda2",
       "status": "complete",
       "destination": "papers/emu/arxiv-2307.05222",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "017aa9c6b44d",
       "status": "complete",
       "destination": "papers/emu/arxiv-2409.18869",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "256dc49b7c06",
       "status": "complete",
       "destination": "papers/emu/arxiv-2510.26583",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "e94f5590857f",
       "status": "complete",
       "destination": "papers/enhancing-multimodal-large-language-models-with-vision-e94f5590857f/arxiv-2401.17981",
       "issues": [],
-      "assets": 10
+      "assets": 10,
+      "derived_assets": 0
     },
     {
       "id": "85842e4c40d6",
       "status": "complete",
       "destination": "papers/eve/arxiv-2406.11832",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "c609f22c00f9",
       "status": "complete",
       "destination": "papers/evlm/arxiv-2407.14177",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "9393822c356b",
       "status": "complete",
       "destination": "papers/ferret/arxiv-2310.07704",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "3b84e8a511a7",
       "status": "complete",
       "destination": "papers/ferret/arxiv-2404.05719",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "87ff293e66f7",
       "status": "complete",
       "destination": "papers/fuyu/document-87ff293e66f7",
       "issues": [],
-      "assets": 2
+      "assets": 2,
+      "derived_assets": 0
     },
     {
       "id": "044099a491e0",
       "status": "complete",
       "destination": "papers/gemini/document-044099a491e0",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "1855460a9712",
       "status": "complete",
       "destination": "papers/gemini/document-1855460a9712",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "8c1dda86c921",
       "status": "complete",
       "destination": "papers/gemini/document-8c1dda86c921",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "7cca3ca5d4d3",
       "status": "complete",
       "destination": "papers/gemini/document-7cca3ca5d4d3",
       "issues": [],
-      "assets": 2
+      "assets": 2,
+      "derived_assets": 1
     },
     {
       "id": "390f20b2fe8b",
       "status": "complete",
       "destination": "papers/gemini/document-390f20b2fe8b",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "a07676c13763",
       "status": "complete",
       "destination": "papers/gemini/document-a07676c13763",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 1
     },
     {
       "id": "92d16b8c59c9",
       "status": "complete",
       "destination": "papers/gemma/document-92d16b8c59c9",
       "issues": [],
-      "assets": 1
+      "assets": 1,
+      "derived_assets": 1
     },
     {
       "id": "7fa226a145bd",
       "status": "complete",
       "destination": "papers/glamm/arxiv-2311.03356",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "4d81507404ce",
       "status": "complete",
       "destination": "papers/glm/document-4d81507404ce",
       "issues": [],
-      "assets": 2
+      "assets": 2,
+      "derived_assets": 1
     },
     {
       "id": "ee7e46a385e1",
       "status": "complete",
       "destination": "papers/glm/arxiv-2507.01006",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "e213666dcb0d",
       "status": "complete",
       "destination": "papers/glm/document-e213666dcb0d",
       "issues": [],
-      "assets": 1
+      "assets": 1,
+      "derived_assets": 1
     },
     {
       "id": "c14c2ea07b95",
       "status": "complete",
       "destination": "papers/gpt/arxiv-2303.08774",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "5cd14e1ea9af",
       "status": "complete",
       "destination": "papers/gpt/document-5cd14e1ea9af",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "9ee9863086d5",
       "status": "complete",
       "destination": "papers/gpt/document-9ee9863086d5",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 1
     },
     {
       "id": "0b8790d1de58",
       "status": "complete",
       "destination": "papers/gpt/document-0b8790d1de58",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 1
     },
     {
       "id": "32a268f7f1d8",
       "status": "complete",
       "destination": "papers/gpt/document-32a268f7f1d8",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 1
     },
     {
       "id": "d0807662cb93",
       "status": "complete",
       "destination": "papers/gpt/document-d0807662cb93",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 1
     },
     {
       "id": "e2a1f413a7a5",
       "status": "complete",
       "destination": "papers/gpt/document-e2a1f413a7a5",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "0d9109ba3678",
       "status": "complete",
       "destination": "papers/gpt/document-0d9109ba3678",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "9df910b0d239",
       "status": "complete",
       "destination": "papers/gpt4roi/arxiv-2307.03601",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "a98a5134828c",
       "status": "complete",
       "destination": "papers/gpt4tools/arxiv-2305.18752",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "b23f276af3c7",
       "status": "complete",
       "destination": "papers/graphist/arxiv-2404.14368",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "271326464386",
       "status": "complete",
       "destination": "papers/groundhog/arxiv-2402.16846",
       "issues": [],
-      "assets": 12
+      "assets": 12,
+      "derived_assets": 0
     },
     {
       "id": "ea869973b3f4",
       "status": "complete",
       "destination": "papers/honeybee/arxiv-2312.06742",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 0
     },
     {
       "id": "d90de9cbd1b4",
       "status": "complete",
       "destination": "papers/imagebind-llm/arxiv-2309.03905",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "d40d5f0effb8",
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2309.15112",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "4fac110a8bc0",
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2401.16420",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "b3fa7d6669df",
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2404.06512",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 0
     },
     {
       "id": "4ce7489403d3",
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2407.03320",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "b50cc85db3e1",
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2412.09596",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "4c5b6e3fdc3c",
       "status": "complete",
       "destination": "papers/internvl/arxiv-2312.14238",
       "issues": [],
-      "assets": 10
+      "assets": 10,
+      "derived_assets": 0
     },
     {
       "id": "85233c027ab7",
       "status": "complete",
       "destination": "papers/internvl/arxiv-2404.16821",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "c698100db08f",
       "status": "complete",
       "destination": "papers/internvl/arxiv-2412.05271",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "c93332aa16ea",
       "status": "complete",
       "destination": "papers/internvl/arxiv-2504.10479",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "3d5274c82d6d",
       "status": "complete",
       "destination": "papers/internvl/arxiv-2508.18265",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "4213cab70d10",
       "status": "complete",
       "destination": "papers/internvl/arxiv-2603.09877",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 1
     },
     {
       "id": "b4ed240e59d1",
       "status": "complete",
       "destination": "papers/kimi/arxiv-2504.07491",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "783b062a88f0",
       "status": "complete",
       "destination": "papers/kimi/arxiv-2602.02276",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "eb106a710a29",
       "status": "complete",
       "destination": "papers/kimi/document-eb106a710a29",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "fc11ce0896e9",
       "status": "complete",
       "destination": "papers/kosmos/arxiv-2302.14045",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 1
     },
     {
       "id": "53cf10e9418a",
       "status": "complete",
       "destination": "papers/kosmos/arxiv-2306.14824",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 1
     },
     {
       "id": "538999c03fea",
       "status": "complete",
       "destination": "papers/lamm/arxiv-2306.06687",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "5cee12bded74",
       "status": "complete",
       "destination": "papers/languagebind/arxiv-2310.01852",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "93a3f7533997",
       "status": "complete",
       "destination": "papers/lavin/arxiv-2305.15023",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "2cec8f84c6fc",
       "status": "complete",
       "destination": "papers/lavit/arxiv-2309.04669",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "f5075f04641a",
       "status": "complete",
       "destination": "papers/leo/arxiv-2311.12871",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "a7e45338d121",
       "status": "complete",
       "destination": "papers/libra/arxiv-2405.10140",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "538866b2b3e5",
       "status": "complete",
       "destination": "papers/lion/arxiv-2311.11860",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 0
     },
     {
       "id": "ad7c3ef3316b",
       "status": "complete",
       "destination": "papers/lisa/arxiv-2308.00692",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "010869b30cc2",
       "status": "complete",
       "destination": "papers/lita/arxiv-2403.19046",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "2e176468b484",
       "status": "complete",
       "destination": "papers/ll3da/arxiv-2311.18651",
       "issues": [],
-      "assets": 12
+      "assets": 12,
+      "derived_assets": 0
     },
     {
       "id": "de3cebb4c28b",
       "status": "complete",
       "destination": "papers/llama/arxiv-2407.21783",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "0c6cca94a384",
       "status": "complete",
       "destination": "papers/llama/document-0c6cca94a384",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "4003084812b3",
       "status": "complete",
       "destination": "papers/llama/document-4003084812b3",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "605e0eb44c0c",
       "status": "complete",
       "destination": "papers/llama-adapter/arxiv-2303.16199",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "c33a09b8e12e",
       "status": "complete",
       "destination": "papers/llama-adapter/arxiv-2304.15010",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "eedfaab008bf",
       "status": "complete",
       "destination": "papers/llama-vid/arxiv-2311.17043",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "82234a35c6a4",
       "status": "complete",
       "destination": "papers/llamav-o1/arxiv-2501.06186",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 1
     },
     {
       "id": "17c587e141d0",
       "status": "complete",
       "destination": "papers/llava/arxiv-2304.08485",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "ffb5962a4615",
       "status": "complete",
       "destination": "papers/llava/arxiv-2310.03744",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "84a7abb884a3",
       "status": "complete",
       "destination": "papers/llava/arxiv-2311.05437",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 1
     },
     {
       "id": "86e88fe4b1ec",
       "status": "complete",
       "destination": "papers/llava/document-86e88fe4b1ec",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 0
     },
     {
       "id": "3982811bbd36",
       "status": "complete",
       "destination": "papers/llava/arxiv-2408.03326",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "61fb40e0922c",
       "status": "complete",
       "destination": "papers/llava/arxiv-2509.23661",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "fcd07866797c",
       "status": "complete",
       "destination": "papers/llava-med/arxiv-2306.00890",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 1
     },
     {
       "id": "28cff82a03c5",
       "status": "complete",
       "destination": "papers/llava-mod/arxiv-2408.15881",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "ea413a33ed50",
       "status": "complete",
       "destination": "papers/llavar/arxiv-2306.17107",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "043e8b783fad",
       "status": "complete",
       "destination": "papers/llmga/arxiv-2311.16500",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "189d4e96133c",
       "status": "complete",
       "destination": "papers/longllava/arxiv-2409.02889",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "80ba1aca81a3",
       "status": "complete",
       "destination": "papers/longva/arxiv-2406.16852",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "9b2b1ee3cca4",
       "status": "complete",
       "destination": "papers/longvu/arxiv-2410.17434",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "e41bd5d121cd",
       "status": "complete",
       "destination": "papers/ltu/arxiv-2305.10790",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "d361fe1e8636",
       "status": "complete",
       "destination": "papers/lvis-instruct4v/arxiv-2311.07574",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "13c77d6bc5ad",
       "status": "complete",
       "destination": "papers/lynx/arxiv-2307.02469",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "e0eb180c5217",
       "status": "complete",
       "destination": "papers/m3it/arxiv-2306.04387",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 1
     },
     {
       "id": "e217a2f7dee4",
       "status": "complete",
       "destination": "papers/ma-lmm/arxiv-2404.05726",
       "issues": [],
-      "assets": 13
+      "assets": 13,
+      "derived_assets": 0
     },
     {
       "id": "9a512bd249d3",
       "status": "complete",
       "destination": "papers/macaw-llm/arxiv-2306.09093",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "0d9a53261f0c",
       "status": "complete",
       "destination": "papers/metalm/arxiv-2206.06336",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "a9bd8a70a04d",
       "status": "complete",
       "destination": "papers/meteor/arxiv-2405.15574",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 0
     },
     {
       "id": "cfe0bfb02a66",
       "status": "complete",
       "destination": "papers/mimo/arxiv-2506.03569",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "1ccf04ffaeaa",
       "status": "complete",
       "destination": "papers/mimo/document-1ccf04ffaeaa",
       "issues": [],
-      "assets": 0
+      "assets": 0,
+      "derived_assets": 1
     },
     {
       "id": "bc763cf700ef",
       "status": "complete",
       "destination": "papers/mimo/document-bc763cf700ef",
       "issues": [],
-      "assets": 1
+      "assets": 1,
+      "derived_assets": 0
     },
     {
       "id": "7b59a50595cb",
       "status": "complete",
       "destination": "papers/minedojo/arxiv-2206.08853",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "73a7060a7335",
       "status": "complete",
       "destination": "papers/mini-gemini/arxiv-2403.18814",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "694e2e46c3f0",
       "status": "complete",
       "destination": "papers/minicpm/arxiv-2408.01800",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "5679fdac7d01",
       "status": "complete",
       "destination": "papers/minicpm/document-5679fdac7d01",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "9be303a31d11",
       "status": "complete",
       "destination": "papers/minicpm/document-9be303a31d11",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 0
     },
     {
       "id": "42a19fa4924f",
       "status": "complete",
       "destination": "papers/minigpt/arxiv-2304.10592",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "395568228602",
       "status": "complete",
       "destination": "papers/minigpt/arxiv-2310.09478",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "3ebe839c6607",
       "status": "complete",
       "destination": "papers/mistral-pixtral/document-3ebe839c6607",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "6276d6c37ba5",
       "status": "complete",
       "destination": "papers/mistral-pixtral/document-6276d6c37ba5",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 1
     },
     {
       "id": "bf65e963e9a4",
       "status": "complete",
       "destination": "papers/mm1/arxiv-2403.09611",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "b2f9a2e04391",
       "status": "complete",
       "destination": "papers/mmada/arxiv-2505.15809",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "314d5fc9e979",
       "status": "complete",
       "destination": "papers/mmsearch-r1/arxiv-2506.20670",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "ce90899e45f9",
       "status": "complete",
       "destination": "papers/moai/arxiv-2403.07508",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "64f6e640117f",
       "status": "complete",
       "destination": "papers/mobilevlm/arxiv-2312.16886",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "e221f65190af",
       "status": "complete",
       "destination": "papers/mobilevlm/arxiv-2402.03766",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "04898d842f0c",
       "status": "complete",
       "destination": "papers/modality-integration-rate/arxiv-2410.07167",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "d1278457cf12",
       "status": "complete",
       "destination": "papers/moe-llava/arxiv-2401.15947",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "16bdceae9f46",
       "status": "complete",
       "destination": "papers/molmo/arxiv-2409.17146",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 0
     },
     {
       "id": "694f3d557578",
       "status": "complete",
       "destination": "papers/monkey/arxiv-2311.06607",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "4aebd8866807",
       "status": "complete",
       "destination": "papers/monkey/arxiv-2403.04473",
       "issues": [],
-      "assets": 10
+      "assets": 10,
+      "derived_assets": 0
     },
     {
       "id": "288029b84990",
       "status": "complete",
       "destination": "papers/motiongpt/arxiv-2306.14795",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "31d1dbadfc98",
       "status": "complete",
       "destination": "papers/moviechat/arxiv-2307.16449",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "f63e44cf9cfe",
       "status": "complete",
       "destination": "papers/mplug/arxiv-2304.14178",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "8423dfa0647c",
       "status": "complete",
       "destination": "papers/mplug/arxiv-2307.02499",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 1
     },
     {
       "id": "5fd6c12daf4f",
       "status": "complete",
       "destination": "papers/mplug/arxiv-2311.04257",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 0
     },
     {
       "id": "b9f56cfcf73f",
       "status": "complete",
       "destination": "papers/mplug/arxiv-2311.18248",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "7d81a24fd25c",
       "status": "complete",
       "destination": "papers/mplug/arxiv-2408.04840",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "ced90da09c5d",
       "status": "complete",
       "destination": "papers/mqt-llava/arxiv-2405.19315",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "ce68e6c9946a",
       "status": "complete",
       "destination": "papers/multiinstruct/arxiv-2212.10773",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 1
     },
     {
       "id": "c5605af838a0",
       "status": "complete",
       "destination": "papers/multimodal-foundation-survey/arxiv-2309.10020",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "9119ddd424b5",
       "status": "complete",
       "destination": "papers/multimodal-gpt/arxiv-2305.04790",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "d3f532e98132",
       "status": "complete",
       "destination": "papers/multimodal-reasoning-survey/arxiv-2505.04921",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "52928aca6048",
       "status": "complete",
       "destination": "papers/muse/document-52928aca6048",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "9f624d5a9663",
       "status": "complete",
       "destination": "papers/next-chat/arxiv-2311.04498",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "1e9b1698c00f",
       "status": "complete",
       "destination": "papers/next-gpt/arxiv-2309.05519",
       "issues": [],
-      "assets": 12
+      "assets": 12,
+      "derived_assets": 0
     },
     {
       "id": "a0635d8ae9e6",
       "status": "complete",
       "destination": "papers/next-omni/arxiv-2510.13721",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "35036f86d753",
       "status": "complete",
       "destination": "papers/nexus-o/arxiv-2503.01879",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "3be9597e0637",
       "status": "complete",
       "destination": "papers/omg-llava/arxiv-2406.19389",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 0
     },
     {
       "id": "1dfedbb1e043",
       "status": "complete",
       "destination": "papers/omni-diffusion/arxiv-2603.06577",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "e625e0db2452",
       "status": "complete",
       "destination": "papers/omnivinci/arxiv-2510.15870",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "c5d0078138d7",
       "status": "complete",
       "destination": "papers/onellm/arxiv-2312.03700",
       "issues": [],
-      "assets": 11
+      "assets": 11,
+      "derived_assets": 0
     },
     {
       "id": "e8057196e511",
       "status": "complete",
       "destination": "papers/openuni/arxiv-2505.23661",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 1
     },
     {
       "id": "7dd657f0b348",
       "status": "complete",
       "destination": "papers/osprey/arxiv-2312.10032",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "fc3fb82e955e",
       "status": "complete",
       "destination": "papers/otter/arxiv-2311.04219",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 1
     },
     {
       "id": "0c4a9f5a9115",
       "status": "complete",
       "destination": "papers/otter-398569/arxiv-2306.05425",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "515954506dd5",
       "status": "complete",
       "destination": "papers/ovis/arxiv-2405.20797",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "bf191b32aa7d",
       "status": "complete",
       "destination": "papers/pali/arxiv-2310.09199",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "bb0333d38954",
       "status": "complete",
       "destination": "papers/palm-e/arxiv-2303.03378",
       "issues": [],
-      "assets": 10
+      "assets": 10,
+      "derived_assets": 0
     },
     {
       "id": "bc184d59768a",
       "status": "complete",
       "destination": "papers/pandagpt/arxiv-2305.16355",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "1a7d73a43be0",
       "status": "complete",
       "destination": "papers/pengi/arxiv-2305.11834",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "14ecd062f291",
       "status": "complete",
       "destination": "papers/phi/arxiv-2503.01743",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "1a94548cd5cc",
       "status": "complete",
       "destination": "papers/pi/arxiv-2604.15483",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "704f6450d39f",
       "status": "complete",
       "destination": "papers/pixel-aligned-language-models/arxiv-2312.09237",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "6d5e22b45d00",
       "status": "complete",
       "destination": "papers/pmc-vqa/arxiv-2305.10415",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "6ac4bd0f10cf",
       "status": "complete",
       "destination": "papers/pointllm/arxiv-2308.16911",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "28acd80eab47",
       "status": "complete",
       "destination": "papers/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-wor-28acd80eab47/document-28acd80eab47",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "82948b475ada",
       "status": "complete",
       "destination": "papers/prismatic/arxiv-2402.07865",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "46e51c664c9f",
       "status": "complete",
       "destination": "papers/prismer/arxiv-2303.02506",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "1b338ecffdda",
       "status": "complete",
       "destination": "papers/qwen/arxiv-2308.12966",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "32bc63503a35",
       "status": "complete",
       "destination": "papers/qwen/arxiv-2409.12191",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 1
     },
     {
       "id": "b615730dc322",
       "status": "complete",
       "destination": "papers/qwen/document-b615730dc322",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "365932f60cc3",
       "status": "complete",
       "destination": "papers/qwen/qwen2.5-vl",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "1093f7b31e5b",
       "status": "complete",
       "destination": "papers/qwen/document-1093f7b31e5b",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "244376c2123a",
       "status": "complete",
       "destination": "papers/qwen/document-244376c2123a",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "3b40d0cc757b",
       "status": "complete",
       "destination": "papers/qwen/arxiv-2509.17765",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "f0c46ccf05fd",
       "status": "complete",
       "destination": "papers/qwen/arxiv-2511.21631",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "7cdfed4ac9e5",
       "status": "complete",
       "destination": "papers/qwen/document-7cdfed4ac9e5",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 1
     },
     {
       "id": "54010b187750",
       "status": "complete",
       "destination": "papers/qwen/document-54010b187750",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "67bea1fbb2c5",
       "status": "complete",
       "destination": "papers/qwen/document-67bea1fbb2c5",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "e122aca8cc58",
       "status": "complete",
       "destination": "papers/qwen/document-e122aca8cc58",
       "issues": [],
-      "assets": 2
+      "assets": 2,
+      "derived_assets": 1
     },
     {
       "id": "6f94cf51e082",
       "status": "complete",
       "destination": "papers/qwen/arxiv-2606.17030",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "0aebb3826b29",
       "status": "complete",
       "destination": "papers/qwen/document-0aebb3826b29",
       "issues": [],
-      "assets": 1
+      "assets": 1,
+      "derived_assets": 0
     },
     {
       "id": "ebaf67f69f80",
       "status": "complete",
       "destination": "papers/qwen/document-ebaf67f69f80",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 1
     },
     {
       "id": "2ea7273632dc",
       "status": "complete",
       "destination": "papers/qwen/document-2ea7273632dc",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 0
     },
     {
       "id": "7bf0daebcd98",
       "status": "complete",
       "destination": "papers/robopoint/arxiv-2406.10721",
       "issues": [],
-      "assets": 9
+      "assets": 9,
+      "derived_assets": 0
     },
     {
       "id": "162553e9a74f",
       "status": "complete",
       "destination": "papers/salmonn/arxiv-2310.13289",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "ca69d196c301",
       "status": "complete",
       "destination": "papers/salmonn/arxiv-2406.15704",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "b46cedd95a4b",
       "status": "complete",
       "destination": "papers/see-say-and-segment-teaching-lmms-to-overcome-false-premises/arxiv-2312.08366",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "45ba78abafbb",
       "status": "complete",
       "destination": "papers/seed/arxiv-2505.07062",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "6cb43357175b",
       "status": "complete",
       "destination": "papers/seed/document-6cb43357175b",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 1
     },
     {
       "id": "188b7c797733",
       "status": "complete",
       "destination": "papers/seed/arxiv-2607.00248",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 1
     },
     {
       "id": "7d194d7a209f",
       "status": "complete",
       "destination": "papers/sharegpt4v/arxiv-2311.12793",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "261e4c6f7250",
       "status": "complete",
       "destination": "papers/shikra/arxiv-2306.15195",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "3b9bfda2a47f",
       "status": "complete",
       "destination": "papers/show-o/arxiv-2506.15564",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "d9cbc42c82ec",
       "status": "complete",
       "destination": "papers/skywork/arxiv-2504.16656",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "0e50bfd7b81c",
       "status": "complete",
       "destination": "papers/slime/arxiv-2406.08487",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "8d5b451aee7d",
       "status": "complete",
       "destination": "papers/slowfast-llava/arxiv-2407.15841",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "fa8d772918c0",
       "status": "complete",
       "destination": "papers/spatialvlm/arxiv-2401.12168",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "89f6c4738085",
       "status": "complete",
       "destination": "papers/sphinx/arxiv-2311.07575",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "26d59ba3132d",
       "status": "complete",
       "destination": "papers/step/document-26d59ba3132d",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "f074a90123d2",
       "status": "complete",
       "destination": "papers/streamchat/arxiv-2412.08646",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "6ad14948aa28",
       "status": "complete",
       "destination": "papers/svit/arxiv-2307.04087",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "534b58b82f31",
       "status": "complete",
       "destination": "papers/thyme/arxiv-2508.11630",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "3409e698d392",
       "status": "complete",
       "destination": "papers/timechat/arxiv-2312.02051",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "474539d7100c",
       "status": "complete",
       "destination": "papers/timemarker/arxiv-2411.18211",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "d730f529319b",
@@ -1691,224 +1931,256 @@
       "status": "complete",
       "destination": "papers/unigen/arxiv-2505.14682",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "4af858ff9dbc",
       "status": "complete",
       "destination": "papers/unival/arxiv-2307.16184",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "9700d0fb0a43",
       "status": "complete",
       "destination": "papers/vaquita/arxiv-2312.02310",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "e7d5fa625fde",
       "status": "complete",
       "destination": "papers/vary/arxiv-2312.06109",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "aa49a3ceebeb",
       "status": "complete",
       "destination": "papers/video-chatgpt/arxiv-2306.05424",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "64c86d5eafd7",
       "status": "complete",
       "destination": "papers/video-llava/arxiv-2311.10122",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "fba7c87c09df",
       "status": "complete",
       "destination": "papers/video-mme/arxiv-2604.05015",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "f018d0129ec4",
       "status": "complete",
       "destination": "papers/videochat/arxiv-2305.06355",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "6527e8551a9d",
       "status": "complete",
       "destination": "papers/videochat/arxiv-2607.14935",
       "issues": [],
-      "assets": 8
+      "assets": 8,
+      "derived_assets": 0
     },
     {
       "id": "cabdd815635d",
       "status": "complete",
       "destination": "papers/videollama/arxiv-2306.02858",
       "issues": [],
-      "assets": 3
+      "assets": 3,
+      "derived_assets": 0
     },
     {
       "id": "f1c390102dd0",
       "status": "complete",
       "destination": "papers/videollama/arxiv-2406.07476",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "68c32964bf01",
       "status": "complete",
       "destination": "papers/videollama/arxiv-2501.13106",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "cecc6a20b4b8",
       "status": "complete",
       "destination": "papers/videollm-online/arxiv-2406.11816",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "1acc7b9da68d",
       "status": "complete",
       "destination": "papers/vila/arxiv-2312.07533",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "1d245a12f207",
       "status": "complete",
       "destination": "papers/vila/arxiv-2407.17453",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "1773ce2a23e8",
       "status": "complete",
       "destination": "papers/vila/arxiv-2412.04468",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "0c005b277aba",
       "status": "complete",
       "destination": "papers/vima/arxiv-2210.03094",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "a0d99f32668c",
       "status": "complete",
       "destination": "papers/vip-llava/arxiv-2312.00784",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "d08b52bb40c6",
       "status": "complete",
       "destination": "papers/viscpm/arxiv-2308.12038",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "417d4df3d8fa",
       "status": "complete",
       "destination": "papers/visionllm/arxiv-2305.11175",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "118dd38c7a7a",
       "status": "complete",
       "destination": "papers/vita/arxiv-2408.05211",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "33ab7b32ee03",
       "status": "complete",
       "destination": "papers/vita/arxiv-2501.01957",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "14aa0b2943d0",
       "status": "complete",
       "destination": "papers/vita/arxiv-2502.05177",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 1
     },
     {
       "id": "69f7e479479c",
       "status": "complete",
       "destination": "papers/vita/arxiv-2505.03739",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "9faa140a0b57",
       "status": "complete",
       "destination": "papers/vita/arxiv-2510.09607",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "00501b0da246",
       "status": "complete",
       "destination": "papers/vita/arxiv-2510.21817",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "3a7f77dffb3b",
       "status": "complete",
       "destination": "papers/vita/document-3a7f77dffb3b",
       "issues": [],
-      "assets": 6
+      "assets": 6,
+      "derived_assets": 0
     },
     {
       "id": "f588b0cc5a2b",
       "status": "complete",
       "destination": "papers/vitron/document-f588b0cc5a2b",
       "issues": [],
-      "assets": 7
+      "assets": 7,
+      "derived_assets": 0
     },
     {
       "id": "0d9927d7fce6",
       "status": "complete",
       "destination": "papers/vpgtrans/arxiv-2305.01278",
       "issues": [],
-      "assets": 5
+      "assets": 5,
+      "derived_assets": 0
     },
     {
       "id": "e364433c1393",
       "status": "complete",
       "destination": "papers/vtimellm/arxiv-2311.18445",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "31a81e153f28",
       "status": "complete",
       "destination": "papers/x-llm/arxiv-2305.04160",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     },
     {
       "id": "5991ef3fff72",
       "status": "complete",
       "destination": "papers/yi/document-5991ef3fff72",
       "issues": [],
-      "assets": 4
+      "assets": 4,
+      "derived_assets": 0
     }
   ],
   "limits": "Structural and provenance validation. Semantic accuracy is checked by the source-reading notes, not inferred from this script."

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "60c8f90edfca",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "b274ff9ef96ea7258789cc4efd04bc606a1323a1322150e8240e3d3a19262c11",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2402.19474v1",
+          "locator": "§4–4.1、Appendix C.2；PDF 第8–9、28页",
+          "note": "三模块架构、ReC标记与区域文本、生成结果转为场景图；336输入见实现。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；框坐标来自文本生成，不另画未披露的检测头。；固定版本未完整公开各组件型号和视觉 token 数。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

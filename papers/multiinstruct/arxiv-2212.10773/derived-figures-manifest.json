@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "ce68e6c9946a",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "a76964e9f1b423ddf1dd46e2ea37992501eff7b5e2d4baa35936c07dfee6cde6",
+      "origin": "self_drawn",
+      "kind": "method_workflow",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2212.10773v1",
+          "locator": "§3.2、§4.1，PDF pp.4–5",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：展示论文实验底座的推理。；不把数据集任务分类图当作新网络结构。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

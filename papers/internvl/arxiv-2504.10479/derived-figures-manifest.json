@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "c93332aa16ea",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "303d56b4c5192d4f13b879da7d61398387a185d7e2df05cf1d55df2861af1716",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2504.10479v1",
+          "locator": "2504.10479v1; §2.1 / Table 1 / Equations 1–5",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "根据 §2.1 自绘，非原文图。；型号初始化以原文 Table 1 为准。；V2PE 改位置增量，不再压缩 token。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "paper_id": "0c4a9f5a9115",
+  "title": "MIMIC-IT 的 Otter 接口",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "上下文与查询",
+      "lines": [
+        "示例图像／视频及问答",
+        "当前媒体与用户指令"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "format",
+      "title": "多模态会话组织",
+      "lines": [
+        "按 Human/Assistant 排列",
+        "示例后接当前查询"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "condition",
+      "title": "OpenFlamingo 接口",
+      "lines": [
+        "以对应媒体条件化语言",
+        "本文未展开全部内部配置"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "llm",
+      "title": "Otter 语言生成",
+      "lines": [
+        "实验语言骨干 LLaMA-7B",
+        "利用示例与查询上下文"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "当前查询回复",
+      "lines": [
+        "生成回答",
+        "保留多模态上下文关系"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "format",
+      "style": "solid",
+      "from": "input"
+    },
+    {
+      "to": "condition",
+      "style": "solid",
+      "from": "format"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "condition"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "仓库自绘：公开条件化关系示意。",
+    "不补造 resampler 数量或跨注意力间隔。",
+    "Sythus 数据管线不在在线回答路径中。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2306.05425v1",
+      "locator": "§4.1–4.2、Table 2，PDF pp.8–9",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    }
+  ]
+}

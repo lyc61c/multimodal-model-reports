@@ -11,5 +11,28 @@
     "Verified IPI 0.7 is attack success at k=15, vulnerability metrics pass@1 and internal/black-box protocols differ.",
     "Separated actual 300TiB freed from projected savings, Rust-port-relative 2.7x and migrations pending audits; no hidden architecture/training recipe/ablation invented."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "locator": "official-source-snapshot-2026-10-08; Enterprise workflows / internal coding uses",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "公开系统接口自绘，非原文图。",
+        "部署监控位于模型周围，不是内部神经层。",
+        "长输出空间不等于取消任务停止条件。"
+      ],
+      "article_sha256": "7ebe9376f611d2fc1087fed0e5a0f5bc475cf01e0709d94bbbf86748e45f97fd",
+      "model_executed": false
+    }
+  ]
 }

@@ -10,5 +10,18 @@
     "ViPBench judge scores not accuracy; 3520-example arrow test distinct from arbitrary prompt reliability.",
     "Mask annotations used to render prompts not claimed as predicted segmentation; unspecified training hyperparameters not filled by assumption."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§3.1、§5.1；PDF 第3、5页"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages"
+      ],
+      "article_sha256": "bdf524d0488989d4ce937c91b8db20549c6cd8e6721eb3a83b34e18e17a7a232"
+    }
+  ]
 }

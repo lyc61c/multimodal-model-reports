@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "805afa2bda72",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "00f598a6aedf4563bf70ebe42c347e8c9f613553bc364ee10d9535ef9aedb938",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2309.09958v1",
+          "locator": "§2，PDF p.2",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：原文没有独立网络图。；训练方法的不同不改变该输入拓扑。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

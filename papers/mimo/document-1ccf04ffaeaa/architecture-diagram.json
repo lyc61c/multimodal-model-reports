@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "paper_id": "1ccf04ffaeaa",
+  "title": "MiMo-V2-Omni：统一感知与代理执行",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "任务与上下文",
+      "lines": [
+        "图像、视频、声音、文字"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "model",
+      "title": "MiMo-V2-Omni",
+      "lines": [
+        "专用编码器接共享骨干",
+        "编码与融合规格未在官网展开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "answer",
+      "title": "回答或产物",
+      "lines": [
+        "推理、结构化行动请求"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "call",
+      "title": "工具调用请求",
+      "lines": [
+        "模型选择操作及参数"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "tools",
+      "title": "外部执行环境",
+      "lines": [
+        "OpenClaw：浏览器、文件、终端",
+        "执行动作后返回新状态"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "resume",
+      "title": "同一模型继续",
+      "lines": [
+        "工具结果回填上下文",
+        "重复调用，非第二独立模型"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "unknown"
+    },
+    {
+      "id": "followup",
+      "title": "后续回答或行动",
+      "lines": [
+        "继续判断并推进任务"
+      ],
+      "row": 5,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "answer",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "call",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "call",
+      "to": "tools",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "tools",
+      "to": "resume",
+      "label": "观察反馈",
+      "style": "dashed"
+    },
+    {
+      "from": "resume",
+      "to": "followup",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开系统路径自绘，非原文图。",
+    "独立编码器名称与同步细节未展开。",
+    "动作的实际执行由外部框架完成。"
+  ],
+  "sources": [
+    {
+      "url": "https://mimo.xiaomi.com/mimo-v2-omni",
+      "locator": "official-source-snapshot-2026-10-08; Perception and Agency in One Model / OpenClaw demos",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

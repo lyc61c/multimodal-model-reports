@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "paper_id": "e8057196e511",
+  "title": "OpenUni：理解与生成两条路径",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "文字与可选图像",
+      "lines": [
+        "文本问题或图像生成需求"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "l",
+      "title": "InternVL3 理解骨干",
+      "lines": [
+        "B：1B；L：2B",
+        "理解骨干保持冻结"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "a",
+      "title": "理解回答",
+      "lines": [
+        "保留原有图像问答路径"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "q",
+      "title": "查询隐藏状态",
+      "lines": [
+        "256 个可学习查询参与主干",
+        "提取生成条件"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "c",
+      "title": "轻量连接器",
+      "lines": [
+        "六层 Transformer",
+        "输出生成交叉注意力条件"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "s",
+      "title": "SANA 生成模型",
+      "lines": [
+        "按 Table 1 区分版本",
+        "生成路径接收查询条件"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "o",
+      "title": "生成图像",
+      "lines": [
+        "512 或 1024 档位"
+      ],
+      "row": 5,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "l",
+      "to": "a",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "l",
+      "to": "q",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "q",
+      "to": "c",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "c",
+      "to": "s",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "s",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据公开组件自绘，非原文图。",
+    "查询状态是主干前向的结果，不是另一个 LLM。",
+    "L-512 的正文与 Table 1 冲突保留在正文。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2505.23661v1",
+      "locator": "2505.23661v1; Architecture / Table 1 / implementation details",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

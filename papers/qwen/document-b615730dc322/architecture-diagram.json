@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "paper_id": "b615730dc322",
+  "title": "QVQ：继承底座与视觉推理接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "v",
+      "title": "图像",
+      "lines": [
+        "问题所需的视觉条件"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "t",
+      "title": "文字问题",
+      "lines": [
+        "用户指令"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "m",
+      "title": "QVQ-72B-Preview",
+      "lines": [
+        "基于 Qwen2-VL-72B",
+        "新增内部结构未披露"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "o",
+      "title": "推理与答案",
+      "lines": [
+        "逐步组织条件与结论",
+        "更长回答不等于新增网络层"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "v",
+      "to": "m",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "t",
+      "to": "m",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "m",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据公开发布页自绘，非原文图。",
+    "不移植后代模型的视觉参数或融合模块。",
+    "推理文字不代表重新调用视觉检测器。"
+  ],
+  "sources": [
+    {
+      "url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+      "locator": "official-source-snapshot-2026-10-08; Introduction / Limitations",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

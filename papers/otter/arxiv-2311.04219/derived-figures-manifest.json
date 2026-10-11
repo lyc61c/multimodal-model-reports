@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "fc3fb82e955e",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "8b5fd2118e13a0702cc00120eadff526ce3e09f6a1fa82b80e01f3f3d4f354f3",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2311.04219v1",
+          "locator": "§2.1，PDF pp.3–4",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘，依据原文 §2.1。；没有独立 CLIP 或 Q-Former。；分辨率提高会增加图像块序列。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

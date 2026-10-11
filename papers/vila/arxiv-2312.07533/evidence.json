@@ -13,5 +13,18 @@
     "Generic projector, cosine and NLL notation explicitly identified as explanatory; Chamfer implementation and undisclosed learning rates not invented.",
     "Preserved POPE regression and slight 7B text capability gap; distinguish extra ShareGPT4V variant and training-image-visible benchmarks."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "Table5、§3；PDF 第3、6页"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages"
+      ],
+      "article_sha256": "1e90fb15ade89eeb08d0c91eeb599bbbaa3a30f38436ac3be4406c1b918647db"
+    }
+  ]
 }

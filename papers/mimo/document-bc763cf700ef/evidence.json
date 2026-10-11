@@ -21,5 +21,23 @@
     "正文内部编码比较提MiMo-V2.5-Pro，但codingModels pro标为MiMo-V2-Pro，本文未等同",
     "正文general subset62.3，数组标Claw-Eval Text；保留命名不同"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "去掉收集下载过程，直接说明图内容。"
+      ],
+      "sources": [
+        {
+          "url": "https://mimo.xiaomi.com/mimo-v2-5",
+          "locator": "Official unnumbered architecture SVG",
+          "version": "official-source-snapshot-2026-10-08"
+        }
+      ],
+      "article_sha256": "76181ea4404a8a970ad07ac28e75899c4f2991b99c0653185417af813d39830d",
+      "model_executed": false
+    }
+  ]
 }

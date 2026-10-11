@@ -23,7 +23,7 @@
   },
   "model_execution": "not_run",
   "limitations": "v1 lacks citedappendices;no modelreproductionorindependentreviewerclaimed",
-  "article_sha256": "b824ba2296988b56314769ce93be5fe25df7076df2a7db641298e9591b2bc94f",
+  "article_sha256": "a23c5655320e39c53e5c0798340d87889b6073d045659a9caa49d05f5f86eab0",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
     "2026-10-11 targeted content audit: 三个分开的实验表仍用上表/中表/右下指代；改为 Table 3/4/5 与任务名。"
@@ -67,7 +67,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 12,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 12,
+      "operatorname_replacements": 3,
+      "vertical_bar_replacements": 6
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

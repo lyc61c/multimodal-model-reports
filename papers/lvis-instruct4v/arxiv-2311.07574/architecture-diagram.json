@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "paper_id": "d361fe1e8636",
+  "title": "LVIS-Instruct4V 的在线学生",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "media_input",
+      "title": "测试图片",
+      "lines": [
+        "不要求提供 LVIS 标注"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text_input",
+      "title": "文字输入",
+      "lines": [
+        "用户问题"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "LLaVA-1.5 视觉侧",
+      "lines": [
+        "CLIP ViT-L/336px",
+        "提取视觉 patch 特征"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "text_embedding",
+      "title": "文字词嵌入",
+      "lines": [
+        "由语言 tokenizer 处理",
+        "映射到词嵌入空间"
+      ],
+      "row": 1,
+      "col": 1,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "bridge",
+      "title": "两层 MLP",
+      "lines": [
+        "对齐语言输入维度",
+        "与用户问题共同输入"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "text_condition",
+      "title": "文字条件",
+      "lines": [
+        "问题及已有上下文",
+        "保持文字序列结构"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "Vicuna 学生",
+      "lines": [
+        "7B／13B 实验配置",
+        "自回归生成回答"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "文字回答",
+      "lines": [
+        "对象细节与关系问答",
+        "不新增 LVIS 检测头"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vision",
+      "style": "solid",
+      "from": "media_input"
+    },
+    {
+      "to": "text_embedding",
+      "style": "solid",
+      "from": "text_input"
+    },
+    {
+      "to": "bridge",
+      "style": "solid",
+      "from": "vision"
+    },
+    {
+      "to": "text_condition",
+      "style": "solid",
+      "from": "text_embedding"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "bridge",
+      "label": "视觉条件"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "text_condition",
+      "label": "文字条件"
+    },
+    {
+      "to": "output",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "仓库自绘：本图为在线学生路径。",
+    "GPT-4V 离线读取图像与标注制造监督。",
+    "网络沿用 LLaVA-1.5，主要变量是数据。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2311.07574v1",
+      "locator": "§3、§4.1，PDF pp.3–5；LLaVA-1.5基线 §3、Figure 1",
+      "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2310.03744v1",
+      "locator": "基线 §3、Figure 1，PDF pp.1–3",
+      "note": "LVIS 原文声明沿用的 CLIP、两层 MLP、Vicuna 模块"
+    }
+  ]
+}

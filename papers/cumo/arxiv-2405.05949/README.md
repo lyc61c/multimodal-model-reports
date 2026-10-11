@@ -48,22 +48,22 @@ Mistral 版本总参数约 8.26B、每 token 激活约 7.80B；Mixtral 版本总
 
 ## 4. 核心创新与数学原理
 
-对输入 $X\in\mathbb R^{N\times C_{in}}$，原文式 (2) 的路由器先计算：
+对输入 $`X\in\mathbb R^{N\times C_{in}}`$，原文式 (2) 的路由器先计算：
 
 $$
-W=\operatorname{softmax}(\operatorname{Linear}(X))\in\mathbb R^{N\times S}.
+W=\mathrm{softmax}(\mathrm{Linear}(X))\in\mathbb R^{N\times S}.
 $$
 
-每个 token 选 $S$ 个专家中的 $K$ 个，输出为原文式 (4) 所述的加权和：
+每个 token 选 $`S`$ 个专家中的 $`K`$ 个，输出为原文式 (4) 所述的加权和：
 
 $$
-y_n=\sum_{s\in\mathcal S_n}w_{n,s}\operatorname{MLP}_s(x_n),
-\qquad |\mathcal S_n|=K.
+y_n=\sum_{s\in\mathcal S_n}w_{n,s}\mathrm{MLP}_s(x_n),
+\qquad \vert \mathcal S_n\vert =K.
 $$
 
-这里按 token 重写原式记号，便于区分不同 token 的专家集合。固定采用 $S=4,K=2$，每次运行两套 MLP；CLIP 自注意力并未被改成稀疏注意力。扩大专家数也不会缩短视觉序列。
+这里按 token 重写原式记号，便于区分不同 token 的专家集合。固定采用 $`S=4,K=2`$，每次运行两套 MLP；CLIP 自注意力并未被改成稀疏注意力。扩大专家数也不会缩短视觉序列。
 
-权重细节需谨慎：原文式 (3) 写成 $W_K=\operatorname{softmax}(\operatorname{TopK}(W))$，即对已经 softmax 的选中值再次 softmax。这与通常直接归一化选中概率并不等价。本文保留其路由与加权机制描述，不在未核验代码的情况下将式 (3) 静默改写成标准概率重归一化实现。
+权重细节需谨慎：原文式 (3) 写成 $`W_K=\mathrm{softmax}(\mathrm{TopK}(W))`$，即对已经 softmax 的选中值再次 softmax。这与通常直接归一化选中概率并不等价。本文保留其路由与加权机制描述，不在未核验代码的情况下将式 (3) 静默改写成标准概率重归一化实现。
 
 Co-upcycling 将训练好的稠密 MLP 复制为多个专家，路由器从头学习。假设初始化时专家完全相同、路由权重和为 1，则加权输出仍等于原 MLP 输出，这是本文对稳定起点的解释；后续不同 token、路由和梯度使专家逐渐分化。复制权重本身不会立即增加知识或证明专家具有语义分工。
 
@@ -73,7 +73,7 @@ $$
 \mathcal L=\mathcal L_{ce}+0.1\mathcal L_b+0.01\mathcal L_z.
 $$
 
-$\mathcal L_{ce}$ 是下一 token 的语言交叉熵；负载平衡项避免少量专家吸收几乎所有输入，router z-loss 约束路由器数值尺度、帮助稳定训练。报告引用 ST-MoE，但未在本文展开两项辅助损失的全部定义，因此这里不伪造它们的原文公式。稠密 Mistral 没有语言 MoE 路由器；语言侧辅助损失适用于带路由器的 Mixtral 版本。
+$`\mathcal L_{ce}`$ 是下一 token 的语言交叉熵；负载平衡项避免少量专家吸收几乎所有输入，router z-loss 约束路由器数值尺度、帮助稳定训练。报告引用 ST-MoE，但未在本文展开两项辅助损失的全部定义，因此这里不伪造它们的原文公式。稠密 Mistral 没有语言 MoE 路由器；语言侧辅助损失适用于带路由器的 Mixtral 版本。
 
 <a id="data"></a>
 
@@ -97,13 +97,13 @@ $\mathcal L_{ce}$ 是下一 token 的语言交叉熵；负载平衡项避免少�
 
 | 阶段 | 模块与结构 | 附录 Table 9 配置 |
 |---|---|---|
-| PT：对齐 | 只训练稠密连接器；CLIP、LLM 冻结 | LR $10^{-3}$，8×A100，每 GPU batch 32，max token 2048 |
-| PFT：预热 | CLIP、连接器、LLM 均更新，尚未扩成 MoE | LR $2\times10^{-6}$，16×A100，每 GPU batch 8，max token 4096 |
-| VIT：指令 | 对视觉侧复制专家并加入路由器，全部模块更新 | LR $4\times10^{-6}$，32×A100，每 GPU batch 8，max token 4096 |
+| PT：对齐 | 只训练稠密连接器；CLIP、LLM 冻结 | LR $`10^{-3}`$，8×A100，每 GPU batch 32，max token 2048 |
+| PFT：预热 | CLIP、连接器、LLM 均更新，尚未扩成 MoE | LR $`2\times10^{-6}`$，16×A100，每 GPU batch 8，max token 4096 |
+| VIT：指令 | 对视觉侧复制专家并加入路由器，全部模块更新 | LR $`4\times10^{-6}`$，32×A100，每 GPU batch 8，max token 4096 |
 
-使用 AdamW 与余弦学习率；分布式配置依次为 ZeRO-2、ZeRO-3、ZeRO-3-offload。正文 §4.1 却称最终模型全参数学习率降为 $2\times10^{-6}$，与附录最终 $4\times10^{-6}$ 不一致。上表采用明确标注主结果的附录配置，同时保留差异；报告没有足够信息解释是哪一次训练改变了该值。
+使用 AdamW 与余弦学习率；分布式配置依次为 ZeRO-2、ZeRO-3、ZeRO-3-offload。正文 §4.1 却称最终模型全参数学习率降为 $`2\times10^{-6}`$，与附录最终 $`4\times10^{-6}`$ 不一致。上表采用明确标注主结果的附录配置，同时保留差异；报告没有足够信息解释是哪一次训练改变了该值。
 
-消融主要用 558K/665K 的较小配方，部分采用 batch 128、$2\times10^{-5}$ 或 $2\times10^{-6}$ 学习率。它们不能与最终三阶段、扩大数据、多尺度模型的分数直接归因对比。这里的预热是正式梯度训练，不是优化器 warmup 的同义词；原文没有给出主模型总训练步数、精确 epoch、warmup 比例或完整训练 FLOPs，不宜补写。
+消融主要用 558K/665K 的较小配方，部分采用 batch 128、$`2\times10^{-5}`$ 或 $`2\times10^{-6}`$ 学习率。它们不能与最终三阶段、扩大数据、多尺度模型的分数直接归因对比。这里的预热是正式梯度训练，不是优化器 warmup 的同义词；原文没有给出主模型总训练步数、精确 epoch、warmup 比例或完整训练 FLOPs，不宜补写。
 
 <a id="experiments"></a>
 

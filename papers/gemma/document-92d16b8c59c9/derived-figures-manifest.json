@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "92d16b8c59c9",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "f05a267d60e73904ee82acf10f9df1454cc09294b1a55ba5033d8b346a8f2b11",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+          "locator": "2026-10-08 cached model card; Models Overview / Dense and MoE tables",
+          "note": "支持按型号区分输入编码、共享混合注意力与26B专家配置。"
+        }
+      ],
+      "scope": "根据官方模型卡自绘，非原文图。；三列是不同型号路径，不是一个模型的三条分支。；没有独立编码器仍需分块、线性投影与序列组织。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

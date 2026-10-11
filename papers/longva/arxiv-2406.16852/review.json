@@ -37,7 +37,7 @@
     "2000frames288Ktokens beyond224Ktraining;not200Kexact",
     "Frameincrease notmonotonic;image performance retreats"
   ],
-  "article_sha256": "b469145c14a4decae7a003b2bbb999abcb92dbefb12f8444eb1655bd55662d51",
+  "article_sha256": "eadd1fde3cffe38b2d5913037218dcd68464a7e4fdb9c381f24da048c0d3c6f0",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -55,7 +55,31 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 6,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "retained",
+      "source_recheck": [],
+      "diagram_plan": null,
+      "article_sha256": "b469145c14a4decae7a003b2bbb999abcb92dbefb12f8444eb1655bd55662d51",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 6,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

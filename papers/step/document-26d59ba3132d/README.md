@@ -43,6 +43,14 @@
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘模型架构示意，非原文图](figures/architecture-overview.svg)
+
+*自绘模型架构示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[2507.19427v1; §2 / Table 1 / §3 AFD](https://arxiv.org/pdf/2507.19427v1)。
+<!-- derived-architecture:end -->
+
 ![原文 Table 1：Step3 的语言部分配置和整体参数](figures/configuration.png)
 
 *来源：系统报告 PDF 第 3 页。*
@@ -55,6 +63,8 @@
 
 AFD 的 attention 实例保存 KV 并计算注意力，FFN 实例保存专家权重并执行前馈计算；两者在每层通过网络传 hidden states。attention→FFN 使用 FP8 表示，FFN→attention 返回 BF16，以保留较高残差精度。它是同一模型计算的部署分离，并非把注意力和 FFN 训练成两个不同模型；也可与 TP、EP 配合。
 
+多模态输入端还包括一个 **5B 视觉编码器**：系统报告把它与 316B 语言主干分列，总 VLM 为 321B。报告明确因关注解码系统而不展开视觉编码器，因此此处只画“图像 → 视觉编码 → 未展开的视觉语言接口 → 语言主干”这一边界，不补造 patch 大小、特征压缩、连接器形状或 token 数。图文条件到达语言侧后，后续 token 才沿上述 MFA/FFN 层序列解码；AFD 是这段计算的部署拆分。原文 §2、Table 1，PDF 第 2–3 页。
+
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
@@ -64,7 +74,7 @@ AFD 的 attention 实例保存 KV 并计算注意力，FFN 实例保存专家权
 根据正文第 2 节，query 计算可用解释性记号表示为：
 
 $$
-q= W_{\mathrm{up}}\operatorname{Norm}(W_{\mathrm{down}}h),
+q= W_{\mathrm{up}}\mathrm{Norm}(W_{\mathrm{down}}h),
 \qquad 7168\rightarrow2048\rightarrow64\times256.
 $$
 
@@ -74,11 +84,11 @@ $$
 
 *来源：PDF 第 8 页。*
 
-定义算术强度 $I=\mathrm{FLOPs}/\mathrm{bytes}$，硬件的计算带宽比 $R=F_{\max}/B_{\max}$。如果 $I$ 远高于 $R$，计算可能成为瓶颈；远低则更受访存限制。报告在 8-bit KV 假设下给 MFA/MLA/GQA 的强度分别约 128/512/32，分析 MFA 为何在 H20、A800 等平台更均衡。此处依赖具体精度与算子实现，不能视为所有注意力变体的固定常数。
+定义算术强度 $`I=\mathrm{FLOPs}/\mathrm{bytes}`$，硬件的计算带宽比 $`R=F_{\max}/B_{\max}`$。如果 $`I`$ 远高于 $`R`$，计算可能成为瓶颈；远低则更受访存限制。报告在 8-bit KV 假设下给 MFA/MLA/GQA 的强度分别约 128/512/32，分析 MFA 为何在 H20、A800 等平台更均衡。此处依赖具体精度与算子实现，不能视为所有注意力变体的固定常数。
 
 ### 4.2 用成本模型拆解瓶颈
 
-原文以单位运算费用 $u_F$ 和单位访存费用 $u_B$ 估计 attention 与 FFN：
+原文以单位运算费用 $`u_F`$ 和单位访存费用 $`u_B`$ 估计 attention 与 FFN：
 
 $$
 C_A=\max(F_Au_F,B_{KV}u_B)+F_{\mathrm{linear}}u_F,
@@ -89,13 +99,13 @@ attention 主算子取计算与访存费用的较大值，线性投射另计；F
 
 ### 4.3 专家稀疏度与批量、网络的约束
 
-若 $S$ 是激活专家权重占比，原文用 roofline 推出：
+若 $`S`$ 是激活专家权重占比，原文用 roofline 推出：
 
 $$
 B_{\mathrm{MoE}}\ge\frac{F_{\max}}{2S B_{\max}}.
 $$
 
-更稀疏意味着每专家更难积累足够 token，需要更大总 batch 来摊薄权重读取。每层网络量约 $3HB_{\mathrm{MoE}}$，来自 8-bit dispatch 与 16-bit combine；它又必须满足流水线通信预算。因此专家数和 top-k 应同时考虑网络能力，不能只看每 token 激活量。该模型分析采用理想调度，真实负载不均衡和网络抖动会影响结论。（PDF 第 9–11 页）
+更稀疏意味着每专家更难积累足够 token，需要更大总 batch 来摊薄权重读取。每层网络量约 $`3HB_{\mathrm{MoE}}`$，来自 8-bit dispatch 与 16-bit combine；它又必须满足流水线通信预算。因此专家数和 top-k 应同时考虑网络能力，不能只看每 token 激活量。该模型分析采用理想调度，真实负载不均衡和网络抖动会影响结论。（PDF 第 9–11 页）
 
 <a id="data"></a>
 

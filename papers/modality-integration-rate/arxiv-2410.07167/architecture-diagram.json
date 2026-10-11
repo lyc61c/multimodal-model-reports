@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "paper_id": "04898d842f0c",
+  "title": "MIR：检查点的离线对齐诊断流程",
+  "kind": "method_workflow",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "pairs",
+      "title": "图像—文字样本",
+      "lines": [
+        "诊断用样本集合"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "model",
+      "title": "已有视觉语言检查点",
+      "lines": [
+        "视觉编码器＋连接器＋LLM"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "states",
+      "title": "各层隐状态",
+      "lines": [
+        "按来源分开视觉与文本 token"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "prep",
+      "title": "分布预处理",
+      "lines": [
+        "文本中心缩放",
+        "去除异常 token"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "stats",
+      "title": "每层分布统计",
+      "lines": [
+        "分别计算均值、协方差"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "fid",
+      "title": "每层 FID 距离",
+      "lines": [
+        "衡量视觉与文本分布差异"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "out",
+      "title": "MIR 标量",
+      "lines": [
+        "层间求和后取 log"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "states",
+      "style": "solid",
+      "from": "pairs"
+    },
+    {
+      "to": "states",
+      "style": "solid",
+      "from": "model"
+    },
+    {
+      "to": "prep",
+      "style": "solid",
+      "from": "states"
+    },
+    {
+      "to": "stats",
+      "style": "solid",
+      "from": "prep"
+    },
+    {
+      "to": "fid",
+      "style": "solid",
+      "from": "stats"
+    },
+    {
+      "to": "out",
+      "style": "solid",
+      "from": "fid"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "这是离线度量流程，不是新的生成模型网络。",
+    "MoCa 另在各语言层输出处只校准视觉 token。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2410.07167v1",
+      "locator": "§2.1；PDF 第3–4页；MoCa见第10页 Eq.5",
+      "note": "MIR收集、缩放、异常值、分布统计、FID及聚合顺序；MoCa独立作用位置。"
+    }
+  ]
+}

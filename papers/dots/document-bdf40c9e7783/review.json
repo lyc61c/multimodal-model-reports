@@ -31,11 +31,60 @@
     "正文不从有矛盾的README TP每节点说明推算训练GPU数",
     "原图为案例，无架构原图时不伪造原Figure"
   ],
-  "article_sha256": "564aca0edbf44948bba1d25f5dfb35a850265f597fefd412d1cb2e573a1bfe34",
+  "article_sha256": "80afaa15166b90bf9ebcdb21d81683b9010bd09632d879414d3dd9705d525c2c",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 6,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 11,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://github.com/rednote-hilab/dots.vlm1",
+          "locator": "official-source-snapshot-2026-10-08; Methods",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/blog.md",
+          "locator": "Methods §3.1–3.2; byte-identical to 2026-10-08 cached hash, fetched again 2026-10-11",
+          "note": "支持1.2B/42层自训NaViT、MLP、DeepSeekV3及AIMv2设计参照。",
+          "sha256": "b113f8c5f230618c9eea95029e1283da2a9cf5af7f23aba5387a519d98c25386"
+        }
+      ],
+      "unknown_boundary": [
+        "根据官方 Methods 自绘，非原文图。",
+        "AIMv2 是相似设计参照，不是现成初始化权重。",
+        "不从 NaViT 名称推定 patch 或打包规格。"
+      ],
+      "article_sha256": "564aca0edbf44948bba1d25f5dfb35a850265f597fefd412d1cb2e573a1bfe34",
+      "model_executed": false
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 5,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

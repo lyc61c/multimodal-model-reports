@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "1ccf04ffaeaa",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "145a14b7647f4bfa68dd4a6a38943bca89942c82936f4582e866137490bc95f5",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://mimo.xiaomi.com/mimo-v2-omni",
+          "locator": "official-source-snapshot-2026-10-08; Perception and Agency in One Model / OpenClaw demos",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开系统路径自绘，非原文图。；独立编码器名称与同步细节未展开。；动作的实际执行由外部框架完成。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

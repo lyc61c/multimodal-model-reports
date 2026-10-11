@@ -12,5 +12,18 @@
     "Audio BEATs tuned only in audio multitask stage, LLM frozen there; joint stage encoders frozen and LLM unfrozen.",
     "AVSD/AVSSD evaluate one-eighth subsets; non-leading TUT2017,AVSD,ActivityNet values and DPO appendix comparison noted."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§2、Table1；PDF 第3–5页"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages"
+      ],
+      "article_sha256": "c52581b55dba9d0f87a2db53411a2e989b0e2403ebe6bf9afa589d36a3deb565"
+    }
+  ]
 }

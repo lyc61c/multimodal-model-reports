@@ -66,26 +66,26 @@ Cosmos 3 希望把物理智能所需的几类能力放进同一框架：解释�
 **一是兼容两种不同生成规则的单向条件桥接。** 原文式 7、8 为：
 
 $$
-O_{\mathrm{AR}}=\operatorname{Attn}_{\mathrm{causal}}(Q_{\mathrm{AR}},K_{\mathrm{AR}},V_{\mathrm{AR}}),
+O_{\mathrm{AR}}=\mathrm{Attn}_{\mathrm{causal}}(Q_{\mathrm{AR}},K_{\mathrm{AR}},V_{\mathrm{AR}}),
 \qquad
-O_{\mathrm{DM}}=\operatorname{Attn}_{\mathrm{full}}(Q_{\mathrm{DM}},[K_{\mathrm{AR}};K_{\mathrm{DM}}],[V_{\mathrm{AR}};V_{\mathrm{DM}}]).
+O_{\mathrm{DM}}=\mathrm{Attn}_{\mathrm{full}}(Q_{\mathrm{DM}},[K_{\mathrm{AR}};K_{\mathrm{DM}}],[V_{\mathrm{AR}};V_{\mathrm{DM}}]).
 $$
 
 文字生成需要保留因果顺序，连续媒体去噪则需要查看整个目标的空间和时间关系。非对称掩码使两种规则并存：Generator 接受 Reasoner 的语义条件，Reasoner 不受每一步噪声状态反向污染。推理时固定条件的 Reasoner 输出因此可以只算一次并缓存；这与近似跳过若干扩散层的缓存方法不同，是由结构保证的不变条件复用。[原文第 11、47 页](https://arxiv.org/pdf/2606.02800v1#page=11)
 
-**二是统一连续模态的 flow matching。** 原文把干净潜变量 $x_0$ 与高斯噪声 $\epsilon$ 连接：
+**二是统一连续模态的 flow matching。** 原文把干净潜变量 $`x_0`$ 与高斯噪声 $`\epsilon`$ 连接：
 
 $$
 x_\sigma=\sigma\epsilon+(1-\sigma)x_0,\qquad v^*=\epsilon-x_0.
 $$
 
-模型 $v_\theta(x_\sigma,\sigma,c)$ 预测沿这条路径的速度，用掩码 MSE 拟合 $v^*$，不对干净条件帧计算目标损失。用本文整理的记号，可以将多模态目标写为 $\sum_m\lambda_m\mathbb E\|M_m\odot(v_{\theta,m}-v_m^*)\|^2$；这是对原文叙述的汇总，不是其额外编号公式。中训练中动作损失乘 10，以补偿归一化动作向量较小的逐元素误差，不能直接把它理解成“动作采样占比扩大十倍”。[原文第 27、30 页](https://arxiv.org/pdf/2606.02800v1#page=27)
+模型 $`v_\theta(x_\sigma,\sigma,c)`$ 预测沿这条路径的速度，用掩码 MSE 拟合 $`v^*`$，不对干净条件帧计算目标损失。用本文整理的记号，可以将多模态目标写为 $`\sum_m\lambda_m\mathbb E\Vert M_m\odot(v_{\theta,m}-v_m^*)\Vert ^2`$；这是对原文叙述的汇总，不是其额外编号公式。中训练中动作损失乘 10，以补偿归一化动作向量较小的逐元素误差，不能直接把它理解成“动作采样占比扩大十倍”。[原文第 27、30 页](https://arxiv.org/pdf/2606.02800v1#page=27)
 
-**三是把不同采样率映射到同一物理时间轴。** 视频、音频和动作每秒 token 数不同，如果只按序列位置递增，碰撞声和碰撞画面会在位置编码中错位。Cosmos 3 扩展 3D MRoPE：视频使用时间、高、宽坐标；音频与动作的空间坐标为零，只保留时间。原文式 9 为 $\delta_t=\mathrm{TPS}_{\text{base}}/\mathrm{TPS}$，其中基准 TPS 为 $24/4=6$。所以 25 TPS 音频相邻位置间隔为 $6/25$，不同模态相同现实时间能占据相同坐标范围。模型还在 AR 与 DM 间加入固定 15,000 的时间位置间隔，缓解最初帧的过饱和和棋盘伪影；这不是额外 15,000 个输入 token。[原文第 12–14 页](https://arxiv.org/pdf/2606.02800v1#page=12)
+**三是把不同采样率映射到同一物理时间轴。** 视频、音频和动作每秒 token 数不同，如果只按序列位置递增，碰撞声和碰撞画面会在位置编码中错位。Cosmos 3 扩展 3D MRoPE：视频使用时间、高、宽坐标；音频与动作的空间坐标为零，只保留时间。原文式 9 为 $`\delta_t=\mathrm{TPS}_{\text{base}}/\mathrm{TPS}`$，其中基准 TPS 为 $`24/4=6`$。所以 25 TPS 音频相邻位置间隔为 $`6/25`$，不同模态相同现实时间能占据相同坐标范围。模型还在 AR 与 DM 间加入固定 15,000 的时间位置间隔，缓解最初帧的过饱和和棋盘伪影；这不是额外 15,000 个输入 token。[原文第 12–14 页](https://arxiv.org/pdf/2606.02800v1#page=12)
 
-**四是用共享几何组件统一动作。** 位姿伪动作由连续状态计算 $\Delta T_t=T_{t-1}^{-1}T_t$，包括 3D 平移与 6D 旋转表示；抓取状态直接记录当前值，而非时间差。相机和车辆为 9 维，单臂机器人为 10 维，双臂为 20 维，第一人称头手运动为 57 维。领域 $k$ 使用专用线性层 $z=W_{\text{in}}^{(k)}x+b_{\text{in}}^{(k)}$，并以专用输出层还原原领域动作空间；骨干共享，接口不强求维度一致。[原文第 8–9 页](https://arxiv.org/pdf/2606.02800v1#page=8)
+**四是用共享几何组件统一动作。** 位姿伪动作由连续状态计算 $`\Delta T_t=T_{t-1}^{-1}T_t`$，包括 3D 平移与 6D 旋转表示；抓取状态直接记录当前值，而非时间差。相机和车辆为 9 维，单臂机器人为 10 维，双臂为 20 维，第一人称头手运动为 57 维。领域 $`k`$ 使用专用线性层 $`z=W_{\text{in}}^{(k)}x+b_{\text{in}}^{(k)}`$，并以专用输出层还原原领域动作空间；骨干共享，接口不强求维度一致。[原文第 8–9 页](https://arxiv.org/pdf/2606.02800v1#page=8)
 
-由此产生三种条件分解：前向动力学给定动作生成未来视觉状态；逆向动力学给定视觉转变推断动作；policy 联合生成动作与未来视频。以条件概率表述分别是 $p(v_{\text{future}}\mid v_{\text{past}},a)$、$p(a\mid v_{\text{past}},v_{\text{future}})$、$p(a,v_{\text{future}}\mid v_{\text{past}},l)$。这组概率写法是帮助理解的概念表达，原文实际通过干净/带噪 token 配置训练，不是另设三套任务骨干。
+由此产生三种条件分解：前向动力学给定动作生成未来视觉状态；逆向动力学给定视觉转变推断动作；policy 联合生成动作与未来视频。以条件概率表述分别是 $`p(v_{\text{future}}\mid v_{\text{past}},a)`$、$`p(a\mid v_{\text{past}},v_{\text{future}})`$、$`p(a,v_{\text{future}}\mid v_{\text{past}},l)`$。这组概率写法是帮助理解的概念表达，原文实际通过干净/带噪 token 配置训练，不是另设三套任务骨干。
 
 <a id="data"></a>
 
@@ -109,7 +109,7 @@ $$
 
 ## 6. 训练流程与目标
 
-先训练 Reasoner，再以其权重初始化 Generator。Reasoner 的预训练从一开始联合更新语言骨干、projector、ViT，无单独冻结骨干的 projector 对齐阶段；以 NTP 训练两轮，最大序列 16K，单样本图片最多 2,048 token、视频最多 8,192 token。语言/projector 峰值 LR 为 $5\times10^{-5}$，ViT 为 $5\times10^{-6}$；AdamW 为 (0.9,0.999)，WD 0.05，10% warmup 后余弦降至峰值 0.1 倍。SFT 运行 8,200 步、全局 batch 512，LR 降至 $10^{-5}$ 与 $10^{-6}$，warmup 1,000，Adam 系数 (0.9,0.95)、WD 0.1。SFT 以 1:4 采样预算混入预训练样本，维持一般能力。[原文第 26–27 页](https://arxiv.org/pdf/2606.02800v1#page=26)
+先训练 Reasoner，再以其权重初始化 Generator。Reasoner 的预训练从一开始联合更新语言骨干、projector、ViT，无单独冻结骨干的 projector 对齐阶段；以 NTP 训练两轮，最大序列 16K，单样本图片最多 2,048 token、视频最多 8,192 token。语言/projector 峰值 LR 为 $`5\times10^{-5}`$，ViT 为 $`5\times10^{-6}`$；AdamW 为 (0.9,0.999)，WD 0.05，10% warmup 后余弦降至峰值 0.1 倍。SFT 运行 8,200 步、全局 batch 512，LR 降至 $`10^{-5}`$ 与 $`10^{-6}`$，warmup 1,000，Adam 系数 (0.9,0.95)、WD 0.1。SFT 以 1:4 采样预算混入预训练样本，维持一般能力。[原文第 26–27 页](https://arxiv.org/pdf/2606.02800v1#page=26)
 
 ![原文 Table 5](figures/original-p028-table-5.png)
 
@@ -117,7 +117,7 @@ $$
 
 **读图方式：** 三种颜色分别表示 256p、480p、720p；变长视频组成固定 74,000 token 的打包序列，避免补齐到最长样本。较高分辨率会用更少帧，720p 上限为 300，低两档最多 400。右图显示图片 20%、视频 80%，视频档位为 20%/40%/20%。具体模式依据正文为 T2I/T2V/I2V/V2V = 20%/56%/16%/8%；图注同时使用“uniformly”措辞，与图中视频内 70/20/10 不一致，本文沿用明确的图内及正文比例，不把它改成均匀采样。
 
-Generator 预训练只更新生成专用参数，Reasoner 塔冻结。所有连续模态用 rectified flow：图片、音频、动作使用 logit-normal 噪声采样，视频使用 mode sampling；分辨率越高，noise shift 越大。预训练 shift 为 1/3/5，中训练为 3/5/10。FusedAdamW LR $10^{-4}$、系数 (0.9,0.99)、WD 0.05，梯度裁剪 1，文字 dropout 10% 以支持 CFG。[原文第 27–30 页](https://arxiv.org/pdf/2606.02800v1#page=27)
+Generator 预训练只更新生成专用参数，Reasoner 塔冻结。所有连续模态用 rectified flow：图片、音频、动作使用 logit-normal 噪声采样，视频使用 mode sampling；分辨率越高，noise shift 越大。预训练 shift 为 1/3/5，中训练为 3/5/10。FusedAdamW LR $`10^{-4}`$、系数 (0.9,0.99)、WD 0.05，梯度裁剪 1，文字 dropout 10% 以支持 CFG。[原文第 27–30 页](https://arxiv.org/pdf/2606.02800v1#page=27)
 
 | Generator 阶段 | Nano | Super | 补充条件 |
 |---|---:|---:|---|
@@ -126,7 +126,7 @@ Generator 预训练只更新生成专用参数，Reasoner 塔冻结。所有连�
 
 中训练流比例为图像 10%、视频 32%、视频+音频 8%、动作 25%、通用控制转移 20%、驾驶转移 5%。这些是训练流混合权重，与原始数据条数或不同帧尺寸下 token 占比不是一回事。训练采用 HSDP 与 Ulysses context parallelism、变长注意力和按 rank 同步的数据流选择；后者避免高分辨率视频与图片计算量差异造成集群等待。[原文第 30、37–44 页](https://arxiv.org/pdf/2606.02800v1#page=30)
 
-专用后训练分别开展：文生图为 20K 步广泛 SFT 加 2K 步高质量 refinement；图生视频为约 10K 步、50B token，针对 480p、189 帧。DROID 策略从 Nano 中训练版本恢复，重新初始化动作接口，动作参数 LR 为其他参数五倍，训练预测 **32 个未来绝对关节位置**及辅助 RGB；LR 为 $2\times10^{-4}$。它接受本体状态和三视角 540×640 画布，以 15Hz 控制 Franka Panda，已不同于通用中训练的相对位姿伪动作。[原文第 30–32 页](https://arxiv.org/pdf/2606.02800v1#page=30)
+专用后训练分别开展：文生图为 20K 步广泛 SFT 加 2K 步高质量 refinement；图生视频为约 10K 步、50B token，针对 480p、189 帧。DROID 策略从 Nano 中训练版本恢复，重新初始化动作接口，动作参数 LR 为其他参数五倍，训练预测 **32 个未来绝对关节位置**及辅助 RGB；LR 为 $`2\times10^{-4}`$。它接受本体状态和三视角 540×640 画布，以 15Hz 控制 Franka Panda，已不同于通用中训练的相对位姿伪动作。[原文第 30–32 页](https://arxiv.org/pdf/2606.02800v1#page=30)
 
 基础视听生成默认 50 步、guidance 6、shift 10；DROID policy 为 4 步、guidance 3、shift 5，并跳过视频潜变量解码，报告部署于两块 RTX Pro 6000。不能把后者的推理速度归给 50 步、720p 世界视频生成。部分主训练未给出精确总步数/全局 batch，仍应以已披露 token 与硬件范围为准，不反算缺失时长。[原文第 32、73 页](https://arxiv.org/pdf/2606.02800v1#page=32)
 
@@ -152,11 +152,11 @@ PAIBench-G 在 720p、16:9、189 帧、每提示五个 seed 下评测，Super T2
 
 ![原文 Table 19](figures/original-p068-table-19.png)
 
-**读图表方式：** 上半逐行对比真实帧、Ctrl-World、Nano MT-init，绿色框是原文标出的局部伪影差异，只作定性展示。下半表则是真正闭环的 RoboLab-120 任务成功率，分别测试模糊、默认、具体指令；Nano-Policy-DROID 总成功率为 20.6%/36.8%/39.7%，具体指令条件下 $\pi_{0.5}$ 为 28.1%、DreamZero 按表为 23.9%。这不是所有任务近乎完成，而且复杂任务的模糊指令条件下，MT-init 的 4.1% 低于 PT-init 的 7.1%。原文“所有粒度和难度均超过”的叙述存在例外，本文保留表中差异。
+**读图表方式：** 上半逐行对比真实帧、Ctrl-World、Nano MT-init，绿色框是原文标出的局部伪影差异，只作定性展示。下半表则是真正闭环的 RoboLab-120 任务成功率，分别测试模糊、默认、具体指令；Nano-Policy-DROID 总成功率为 20.6%/36.8%/39.7%，具体指令条件下 $`\pi_{0.5}`$ 为 28.1%、DreamZero 按表为 23.9%。这不是所有任务近乎完成，而且复杂任务的模糊指令条件下，MT-init 的 4.1% 低于 PT-init 的 7.1%。原文“所有粒度和难度均超过”的叙述存在例外，本文保留表中差异。
 
 LIBERO-10 适配每个检查点 500 rollouts，MT-init 在 500 步为 24.6% 而 PT-init 为 0%；到 2,000 步分别为 97.4%/95.2%，最明显优势是早期收敛。RoboArena 真实机器人第一名记录为 2026-05-30 的双盲成对比较排名，与 RoboLab 成功率是不同指标。[原文第 68–70 页](https://arxiv.org/pdf/2606.02800v1#page=68)
 
-消融揭示统一训练也有取舍：PushT 三模式联合训练将逆向动作 MSE 从 $1.11\times10^{-3}$ 降至 $3.09\times10^{-4}$，policy coverage 从 74.1% 到 77.3%，但前向 PSNR 从 27.13 降至 26.22；合成数据混合改善多数物理类别，却在 Human 类仍下降。Cosmos 3 的有力结论是共享物理与动作先验能支持多任务适配，评测尚不足以证明任意新环境中的长期精确仿真或无需后训练的通用机器人控制。[原文第 103–108 页](https://arxiv.org/pdf/2606.02800v1#page=103)
+消融揭示统一训练也有取舍：PushT 三模式联合训练将逆向动作 MSE 从 $`1.11\times10^{-3}`$ 降至 $`3.09\times10^{-4}`$，policy coverage 从 74.1% 到 77.3%，但前向 PSNR 从 27.13 降至 26.22；合成数据混合改善多数物理类别，却在 Human 类仍下降。Cosmos 3 的有力结论是共享物理与动作先验能支持多任务适配，评测尚不足以证明任意新环境中的长期精确仿真或无需后训练的通用机器人控制。[原文第 103–108 页](https://arxiv.org/pdf/2606.02800v1#page=103)
 
 <!-- article-footer:start -->
 ---

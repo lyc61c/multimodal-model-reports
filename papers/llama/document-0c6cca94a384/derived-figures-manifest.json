@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "0c6cca94a384",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "f3df9d615d0b15c812ddfb74c28a7af4710198375d352861b298325ad78724ef",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+          "locator": "官方发布页 Vision models 段落",
+          "note": "图像编码器、cross-attention adapter、Llama3.1冻结语言骨干与视觉型号。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；适配器嵌入语言网络；图中分框只表示公开职责。；1B/3B 剪枝蒸馏属于另一纯文本分支。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

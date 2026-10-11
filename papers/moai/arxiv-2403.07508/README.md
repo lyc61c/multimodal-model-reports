@@ -49,6 +49,8 @@ Compressor 用固定 64 个可学习 token 收集辅助证据，输出通道维 
 
 对每个 Mixer，视觉分支有“视觉读辅助”“视觉读语言”“视觉读自身”三个专家，语言分支有“语言读辅助”“语言读视觉”“语言读自身”三个专家。专家结果经门控混合，再交给原 Transformer decoder block。
 
+基础视觉语言路径具体使用 **CLIP-L/14 → 两层线性层加 GELU → InternLM-7B**。辅助专家的输出先被文字化，再经语言侧嵌入和 Compressor 形成辅助 token；它们没有替换 CLIP 原有的图像网格。一次推理因此同时保留“原图视觉特征”“用户问题”“专家辅助信息”三种来源，Mixer 在选定语言层中学习它们的交换与组合，最后仍由 InternLM 输出文本。外部专家承担实际前处理，不能把这部分计算视为压成 64 个向量后便无需执行。（§3.1，PDF 第6页）
+
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
@@ -56,25 +58,25 @@ Compressor 用固定 64 个可学习 token 收集辅助证据，输出通道维 
 **压缩变长感知描述。** 原文 Equation 1 写为：
 
 $$
-A=\operatorname{MoAI\!\!-Compressor}([A_{PS},A_{OWOD},A_{SGG},A_{OCR}],A_{input}).
+A=\mathrm{MoAI\!\!-Compressor}([A_{PS},A_{OWOD},A_{SGG},A_{OCR}],A_{input}).
 $$
 
-四组输入来自不同感知任务，长度随图像变化；$A_{input}$ 提供固定查询，最终 $A\in\mathbb R^{4096\times64}$。固定长度减少语言模型不断读取长检测清单的代价，同时也可能丢掉细节，因此需要后续任务损失训练压缩器。
+四组输入来自不同感知任务，长度随图像变化；$`A_{input}`$ 提供固定查询，最终 $`A\in\mathbb R^{4096\times64}`$。固定长度减少语言模型不断读取长检测清单的代价，同时也可能丢掉细节，因此需要后续任务损失训练压缩器。
 
-**显式角色的注意力专家。** Equation 3 中，视觉分支读取辅助信息为 $I_{AUX}^{(l)}=CA(q=I^{(l)},k=A,v=A)$，读取语言则把 key/value 换成 $L^{(l)}$；语言分支对称构造，另有各自 self-attention。专家负责的信息通道事先明确，门控再学习何时使用何种信息。
+**显式角色的注意力专家。** Equation 3 中，视觉分支读取辅助信息为 $`I_{AUX}^{(l)}=CA(q=I^{(l)},k=A,v=A)`$，读取语言则把 key/value 换成 $`L^{(l)}`$；语言分支对称构造，另有各自 self-attention。专家负责的信息通道事先明确，门控再学习何时使用何种信息。
 
 按照 Equation 5，视觉门控为：
 
 $$
 [w_{AUX},w_{LANG},w_{SELF}]
-=\operatorname{softmax}(I^{(l)T}W_{GatingI}),
+=\mathrm{softmax}(I^{(l)T}W_{GatingI}),
 \qquad
 \hat I^{(l)}=w_{AUX}\odot I_{AUX}^{(l)}+w_{LANG}\odot I_{LANG}^{(l)}+w_{SELF}\odot I_{SELF}^{(l)}.
 $$
 
-语言门控独立计算 $[w_{AUX},w_{IMG},w_{SELF}]$，没有参数共享。softmax 沿三专家维归一化，每个 token 可有不同权重；这些权重是可学习的融合比例，不能当作经过校准的事实可信度。表中最佳 $k=3$ 表示三个分支全参与，不是每 token 只激活一个专家的稀疏路由。
+语言门控独立计算 $`[w_{AUX},w_{IMG},w_{SELF}]`$，没有参数共享。softmax 沿三专家维归一化，每个 token 可有不同权重；这些权重是可学习的融合比例，不能当作经过校准的事实可信度。表中最佳 $`k=3`$ 表示三个分支全参与，不是每 token 只激活一个专家的稀疏路由。
 
-**低秩参数化。** 注意力投影写成 $W=W_AW_B$，$W_A\in\mathbb R^{d\times r}$、$W_B\in\mathbb R^{r\times d}$，$d=4096,r=64$。原文明确分解的是 **$W$ 本身，而非常规 LoRA 的增量 $\Delta W$**。将 $d^2$ 参数变成 $2dr$ 减少投影开销；输入 query 与专家输出有残差相加，以减小对冻结 decoder 的扰动。完整系统依然需要运行四个 CV 模型，低秩并不意味着整体推理免费。
+**低秩参数化。** 注意力投影写成 $`W=W_AW_B`$，$`W_A\in\mathbb R^{d\times r}`$、$`W_B\in\mathbb R^{r\times d}`$，$`d=4096,r=64`$。原文明确分解的是 **$`W`$ 本身，而非常规 LoRA 的增量 $`\Delta W`$**。将 $`d^2`$ 参数变成 $`2dr`$ 减少投影开销；输入 query 与专家输出有残差相加，以减小对冻结 decoder 的扰动。完整系统依然需要运行四个 CV 模型，低秩并不意味着整体推理免费。
 
 <a id="data"></a>
 

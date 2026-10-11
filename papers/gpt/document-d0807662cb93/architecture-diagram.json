@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "paper_id": "d0807662cb93",
+  "title": "GPT-5：发布时的系统路由",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "会话与任务",
+      "lines": [
+        "类型、复杂度、工具需求、意图"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "r",
+      "title": "实时路由器",
+      "lines": [
+        "选择适合的模型组件"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "f",
+      "title": "快速模型",
+      "lines": [
+        "处理多数常见请求",
+        "内部神经结构未在系统卡展开"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "unknown"
+    },
+    {
+      "id": "s",
+      "title": "推理模型",
+      "lines": [
+        "更深的推理过程",
+        "内部神经结构未在系统卡展开"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "unknown"
+    },
+    {
+      "id": "o",
+      "title": "回答或工具请求",
+      "lines": [
+        "由被选组件产生"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "r",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "r",
+      "to": "f",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "r",
+      "to": "s",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "f",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "s",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开系统组件自绘，非原文图。",
+    "路由器是系统选模型，不是 token 级 MoE 证据。",
+    "Pro 采用推理模型的额外并行测试时计算。"
+  ],
+  "sources": [
+    {
+      "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+      "locator": "official-system-card-2025-08-13; release-2025-08-07; Overview, system-card pp5–6",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

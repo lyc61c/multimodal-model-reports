@@ -66,8 +66,8 @@ InstructBLIP 主要研究参数受限的视觉指令学习及未见任务泛化�
 **问题先进入视觉读取过程。** 用解读表达把两步区分：
 
 $$
-Q_s=\operatorname{SelfAttn}(Q,S),\qquad
-Z_s=\operatorname{CrossAttn}(Q_s,F_I).
+Q_s=\mathrm{SelfAttn}(Q,S),\qquad
+Z_s=\mathrm{CrossAttn}(Q_s,F_I).
 $$
 
 Q是学习查询，S是指令token，FI是冻结视觉特征，Zs是适配指令的视觉提示。这只是图3机制的简化示意，不是论文编号公式，也省略了多层交互、残差和FFN。关键在于Z会随指令变化，而非所有问题共享同一个最终视觉压缩。标准cross-attention对视觉值按相似性加权，因此指令能通过改变query表示，改变所保留的视觉信息。

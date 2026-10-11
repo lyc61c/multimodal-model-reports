@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="992" height="947" viewBox="0 0 992 947" role="img" aria-labelledby="title desc">
+<title id="title">Gemma 4：按型号区分模态入口（自绘，非原文图）</title>
+<desc id="desc">根据官方模型卡自绘，非原文图。；三列是不同型号路径，不是一个模型的三条分支。；没有独立编码器仍需分块、线性投影与序列组织。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="990" height="945" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="496.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Gemma 4：按型号区分模态入口</text>
+<path d="M180,230 V263 H180 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M180,402 V435 H180 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M180,574 V607 H180 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M496,230 V263 H496 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M496,402 V435 H496 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M496,574 V607 H496 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M812,230 V263 H812 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M812,402 V435 H812 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M812,574 V607 H812 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="288" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="180" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">E2B / E4B 输入</text>
+<text x="180" y="190" text-anchor="middle" font-size="20" fill="#475569">文字、图像、音频</text>
+<rect x="352" y="124" width="288" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="496" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">31B / 26B A4B 输入</text>
+<text x="496" y="190" text-anchor="middle" font-size="20" fill="#475569">文字与图像；无音频编码</text>
+<text x="496" y="215" text-anchor="middle" font-size="20" fill="#475569">器</text>
+<rect x="668" y="124" width="288" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="812" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">12B Unified 输入</text>
+<text x="812" y="190" text-anchor="middle" font-size="20" fill="#475569">文字、图像、音频波形</text>
+<rect x="36" y="296" width="288" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="180" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">独立模态编码器</text>
+<text x="180" y="362" text-anchor="middle" font-size="20" fill="#475569">视觉约 150M</text>
+<text x="180" y="387" text-anchor="middle" font-size="20" fill="#475569">音频约 300M</text>
+<rect x="352" y="296" width="288" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="496" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">独立视觉编码器</text>
+<text x="496" y="362" text-anchor="middle" font-size="20" fill="#475569">视觉约 550M</text>
+<rect x="668" y="296" width="288" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="812" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">轻量线性投影</text>
+<text x="812" y="362" text-anchor="middle" font-size="20" fill="#475569">图像 patch 与音频波形</text>
+<text x="812" y="387" text-anchor="middle" font-size="20" fill="#475569">无独立模态编码器</text>
+<rect x="36" y="468" width="288" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="180" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">稠密解码器</text>
+<text x="180" y="534" text-anchor="middle" font-size="20" fill="#475569">局部与全局注意力交错</text>
+<rect x="352" y="468" width="288" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="496" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">对应型号解码器</text>
+<text x="496" y="534" text-anchor="middle" font-size="20" fill="#475569">31B 稠密；26B A4B 稀疏</text>
+<text x="496" y="559" text-anchor="middle" font-size="20" fill="#475569">26B：128 选 8 + 1 共享</text>
+<rect x="668" y="468" width="288" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="812" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">统一解码器</text>
+<text x="812" y="534" text-anchor="middle" font-size="20" fill="#475569">所有模态共同进入</text>
+<text x="812" y="559" text-anchor="middle" font-size="20" fill="#475569">局部与全局注意力交错</text>
+<rect x="36" y="640" width="288" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="180" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字输出</text>
+<text x="180" y="706" text-anchor="middle" font-size="20" fill="#475569">按对应型号生成</text>
+<rect x="352" y="640" width="288" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="496" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字输出</text>
+<text x="496" y="706" text-anchor="middle" font-size="20" fill="#475569">按对应型号生成</text>
+<rect x="668" y="640" width="288" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="812" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字输出</text>
+<text x="812" y="706" text-anchor="middle" font-size="20" fill="#475569">按对应型号生成</text>
+<line x1="36" y1="794" x2="956" y2="794" stroke="#e2e8f0"/>
+<text x="36" y="821" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="852" font-size="17" fill="#64748b">根据官方模型卡自绘，非原文图。</text>
+<text x="36" y="877" font-size="17" fill="#64748b">三列是不同型号路径，不是一个模型的三条分支。</text>
+<text x="36" y="902" font-size="17" fill="#64748b">没有独立编码器仍需分块、线性投影与序列组织。</text>
+</g></svg>

@@ -59,11 +59,11 @@ Mask2Former+从COCO-panoptic、Swin-L backbone checkpoint起步，在原200实�
 
 ## 4. 核心创新与数学原理
 
-**输入以实体为单位，输出以可解释的候选选择为单位。** 第2.2节把查询定义为两端GRD末层表示相加：$z_p=h_{\langle GRD\rangle}+h_{\langle/GRD\rangle}$。Figure2 caption写“averaged”，而正文与Table10采用Sum，本文按后两处解释，同时注明不一致。查询与实体表示拼接评分，原文给出未编号合并式：
+**输入以实体为单位，输出以可解释的候选选择为单位。** 第2.2节把查询定义为两端GRD末层表示相加：$`z_p=h_{\langle GRD\rangle}+h_{\langle/GRD\rangle}`$。Figure2 caption写“averaged”，而正文与Table10采用Sum，本文按后两处解释，同时注明不一致。查询与实体表示拼接评分，原文给出未编号合并式：
 
 $$M_{h,w}=\max_q\big(S_q\widehat M_{q,h,w}\big),\qquad S_q\in[0,1].$$
 
-$\widehat M_q$是proposal的像素概率，$S_q$是短语对它的检索得分。若“两只狗”的两项都高分，它们的非重叠像素同时进入输出；重叠位置取max，不是求和或平均。这样避免重复候选让像素概率越加越大。模型不能把一个包含多人的粗候选自动分成精确单人，因此第2.3节强调候选应具有合适的语义原子性和足够覆盖率。
+$`\widehat M_q`$是proposal的像素概率，$`S_q`$是短语对它的检索得分。若“两只狗”的两项都高分，它们的非重叠像素同时进入输出；重叠位置取max，不是求和或平均。这样避免重复候选让像素概率越加越大。模型不能把一个包含多人的粗候选自动分成精确单人，因此第2.3节强调候选应具有合适的语义原子性和足够覆盖率。
 
 可解释性也来自这层分解：若目标根本无合适候选，是proposal覆盖问题；若合适候选存在却评分低，是图文对齐/识别问题。它揭示的是计算链路中的候选选择，并不证明LLM所有文字推理都忠实于这条链路。
 
@@ -73,7 +73,7 @@ $$\mathcal L=\mathcal L_{lm}+\mathbf1_{mask}(\mathcal L_{dice}+0.1\mathcal L_{bc
 
 projection loss比较预测mask在x/y轴投影与真值框投影的一维Dice。它约束横纵覆盖范围，不能唯一决定框内部形状。掩码边界通过共同的mask数据和proposal网络补充学习，不能把box标注当成像素级人工真值。
 
-Dice的标准解释为$1-2\sum_i p_i g_i/(\sum_i p_i+\sum_i g_i)$，实际实现通常另加平滑项；这只是帮助理解重叠优化的定义，原文未给所有数值实现细节。LoRA也可用标准$W'=W+(\alpha/r)BA$理解，本文不把它当作作者新提出公式。
+Dice的标准解释为$`1-2\sum_i p_i g_i/(\sum_i p_i+\sum_i g_i)`$，实际实现通常另加平滑项；这只是帮助理解重叠优化的定义，原文未给所有数值实现细节。LoRA也可用标准$`W'=W+(\alpha/r)BA`$理解，本文不把它当作作者新提出公式。
 
 <a id="data"></a>
 
@@ -97,7 +97,7 @@ GVQA从VizWiz-Grounding、TextVQA-X、GQA、VQS等取得证据位置，并从LVI
 
 ## 6. 训练流程与目标
 
-proposal模型先独立训练20K iterations、batch16、Detectron2，之后在落地模型训练中冻结。CLIP和DINOv2也冻结；训练两路MLP投影与mask retrieval head，LLM采用LoRA $r=16,\alpha=16$。报告称涉及全部线性层、input embedding与LM head，并称全系统可训练参数少于2%；这不是模型总参数或推理激活量减少到2%。
+proposal模型先独立训练20K iterations、batch16、Detectron2，之后在落地模型训练中冻结。CLIP和DINOv2也冻结；训练两路MLP投影与mask retrieval head，LLM采用LoRA $`r=16,\alpha=16`$。报告称涉及全部线性层、input embedding与LM head，并称全系统可训练参数少于2%；这不是模型总参数或推理激活量减少到2%。
 
 AdamW初始LR2e-4、cosine，平衡M3G2训练2epochs，8张A100 40GB约2天。第4.4节提到低分辨率320px训练、评估提高输入分辨率。它与CLIP pretrained checkpoint名字@336及proposal评估分辨率不是同一概念，不能把所有模型输入分辨率机械归为固定336。公开v1未完整列出batch、warmup、weight decay与最长LLM上下文，不补出惯用默认值。
 

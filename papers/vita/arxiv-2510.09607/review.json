@@ -16,7 +16,7 @@
     "asset_hashes_match": true,
     "original_assets": 6
   },
-  "article_sha256": "622865a3556407529f988cd81edbe321248650b5e4f6fe4c98da50b0b3325370",
+  "article_sha256": "8f446c2ee2926f332e59e92ccda0f051cadc8e04da999d43538a1a730bd4c36c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -24,7 +24,38 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补动作系统的视觉语言基座并区分两个三层MLP。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2510.09607v1",
+          "locator": "Model Backbone / State Input / Action Token, PDF p4",
+          "version": "2510.09607v1"
+        }
+      ],
+      "article_sha256": "f476fee19123115b8bdd62e1df07f956807c8b01684dd264938d5eaeecbc66b7",
+      "model_executed": false
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 7,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 4
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

@@ -42,6 +42,14 @@
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘公开接口示意，非原文图](figures/architecture-overview.svg)
+
+*自绘公开接口示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[official-source-snapshot-2026-10-08; Code-based animation / complex system synthesis](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)。
+<!-- derived-architecture:end -->
+
 原文没有模型内部架构图。公开描述能支持的系统流程是：用户提出任务，3.1 Pro 进行推理或生成代码，相关应用与工具执行代码、调用 API，并展示结果。基准表也明确区分无工具问答、终端 harness、搜索加 Python 加浏览器，以及使用 MCP 的多步骤工作流。模型分数中的一部分来自这些执行环境，不能全部归因于一个孤立的文本生成函数。
 
 四类官方演示说明了输出和执行层之间的关系：

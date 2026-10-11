@@ -44,7 +44,7 @@ Qwen2.5-Omni 将整体系统分成 Thinker 与 Talker。Thinker 负责理解文�
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
 
-> 来源：原文 **Figure 2**，PDF 第 **3** 页。此处保留原图及所在页文字；[原页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=3)。
+> 来源：原文 **Figure 2**，PDF 第 **3** 页。此处保留架构图区域及必要图注；[原页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=3)。
 
 沿输入到输出读图：文本经过 Tokenizer，音频和视觉信号经各自编码器变成特征；Thinker 将这些信息结合成上下文并生成文字。Talker 接收 Thinker 的隐藏表示与文字嵌入，生成离散语音码，随后由码到 Mel、Mel 到波形的链路输出声音。输入的跨模态理解和输出的语音表达因此分配给不同模块，同时保留共同上下文。
 
@@ -69,7 +69,7 @@ Qwen2.5-Omni 将整体系统分成 Thinker 与 Talker。Thinker 负责理解文�
 
 > 来源：原文 **Figure 3**，PDF 第 **4** 页；[原页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=4)。图中位置编号与不同模态的块组织需一起阅读。
 
-TMRoPE 将位置分解为时间、高度和宽度。文字的三个位置分量相同，图像的时间分量固定而空间分量变化；音频按 40ms 一档表达时间。对于非固定帧率的视频，视频帧的时间 ID 随其实际时间间隔调整，使一档仍对应 40ms。以时间戳 $\tau$ 表示秒数时，可将其尺度关系概括为 $p_t\propto\tau/0.04$；这是阅读辅助，完整编号还包括序列偏移及离散处理，报告未给出一个通用的取整公式。
+TMRoPE 将位置分解为时间、高度和宽度。文字的三个位置分量相同，图像的时间分量固定而空间分量变化；音频按 40ms 一档表达时间。对于非固定帧率的视频，视频帧的时间 ID 随其实际时间间隔调整，使一档仍对应 40ms。以时间戳 $`\tau`$ 表示秒数时，可将其尺度关系概括为 $`p_t\propto\tau/0.04`$；这是阅读辅助，完整编号还包括序列偏移及离散处理，报告未给出一个通用的取整公式。
 
 序列结构还承担对齐任务。带声音的视频按实际时间切成两秒块，每块先排列视觉表示，再排列音频表示，随后进入下一块。这样，相近时刻的画面和声音在序列上也处于相关的局部范围。位置尺度与交错结构共同帮助模型连接“此时看见什么”和“此时听到什么”；不能仅依据位置编码就断言模型能恢复未采样的画面或未出现的声音。
 
@@ -128,7 +128,7 @@ $$
 \mathcal L_{\mathrm{DPO}}=-\mathbb E_{(x,y^+,y^-)\sim D}\log\sigma\left[\beta\left(\log\frac{P_\theta(y^+\mid x)}{P_{\mathrm{ref}}(y^+\mid x)}-\log\frac{P_\theta(y^-\mid x)}{P_{\mathrm{ref}}(y^-\mid x)}\right)\right].
 $$
 
-$x$ 包含输入及回复文字，$y^+$、$y^-$ 是偏好不同的生成语音序列；$P_\theta$ 为更新模型，$P_{\mathrm{ref}}$ 为参考模型。奖励排序涉及 WER 和标点停顿错误率，因而此阶段主要约束语音内容及稳定性。随后说话人微调强化目标声音的韵律和自然度。报告没有披露 $\beta$、全部优化超参和训练硬件成本，不能由标准 DPO 名称补全这些配置。[原文 §3–4、Eq. (1)，PDF 第 6–7 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=7)
+$`x`$ 包含输入及回复文字，$`y^+`$、$`y^-`$ 是偏好不同的生成语音序列；$`P_\theta`$ 为更新模型，$`P_{\mathrm{ref}}`$ 为参考模型。奖励排序涉及 WER 和标点停顿错误率，因而此阶段主要约束语音内容及稳定性。随后说话人微调强化目标声音的韵律和自然度。报告没有披露 $`\beta`$、全部优化超参和训练硬件成本，不能由标准 DPO 名称补全这些配置。[原文 §3–4、Eq. (1)，PDF 第 6–7 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=7)
 
 <a id="experiments"></a>
 

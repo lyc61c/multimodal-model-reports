@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "paper_id": "d361fe1e8636",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "fde1ec0303121153becd62898fae49c5b8634ed6443c99ef17b2fc41b6bd380c",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2311.07574v1",
+          "locator": "§3、§4.1，PDF pp.3–5；LLaVA-1.5基线 §3、Figure 1",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2310.03744v1",
+          "locator": "基线 §3、Figure 1，PDF pp.1–3",
+          "note": "LVIS 原文声明沿用的 CLIP、两层 MLP、Vicuna 模块"
+        }
+      ],
+      "scope": "仓库自绘：本图为在线学生路径。；GPT-4V 离线读取图像与标注制造监督。；网络沿用 LLaVA-1.5，主要变量是数据。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

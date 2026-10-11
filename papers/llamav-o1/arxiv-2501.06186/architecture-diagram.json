@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "paper_id": "82234a35c6a4",
+  "title": "LlamaV-o1：视觉底座与答案搜索",
+  "kind": "method_workflow",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "图像与问题",
+      "lines": [
+        "多模态任务条件"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "v",
+      "title": "11B 视觉语言底座",
+      "lines": [
+        "继承 Llama-3.2",
+        "新增视觉模块未在报告展开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "g",
+      "title": "候选推理序列",
+      "lines": [
+        "概要、相关描述、推理、答案",
+        "同一模型的输出内容"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    },
+    {
+      "id": "s",
+      "title": "Beam 搜索",
+      "lines": [
+        "搜索候选答案序列"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "o",
+      "title": "最终答案",
+      "lines": [
+        "按报告推理设置得到"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "v",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "v",
+      "to": "g",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "g",
+      "to": "s",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "s",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "方法接口自绘，非原文图。",
+    "四类推理内容不是四个独立神经网络。",
+    "课程学习属于训练，不另画为推理模块。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2501.06186v1",
+      "locator": "2501.06186v1; §3 / §4.2.1 / multi-turn examples",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "52928aca6048",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "9054d18861b07798de96f3cb01d6599975b2e705e667f6548e6f2a6332de315e",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+          "locator": "official-source-snapshot-2026-10-08; Capabilities / Contemplating mode",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开系统接口自绘，非原文图。；协作协议与视觉中间表示未在博客展开。；不把 visual CoT 推定为图像生成解码器。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

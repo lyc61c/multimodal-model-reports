@@ -12,5 +12,20 @@
     "Qualitative gains, OKVQA decline and robot-domain noisy-data limitations retained; MSE(m) unit in paper flagged dimensionally.",
     "Coordinator text-davinci-003 versus GPT4 wording conflict and Figure4 triangle naming conflict not used as exact reproducible setup; no actual RL policy success rate claimed."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§3.3；PDF 第6–7页",
+        "§3.3；PDF 第6–7页"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages",
+        "Authored source-limited architecture-diagram.json; root will render/insert separately"
+      ],
+      "article_sha256": "003a4163b32ff54556b14f14c772741614835f7ae44ca36fd02c7acd33004483"
+    }
+  ]
 }

@@ -53,7 +53,7 @@
     "模型配置仅支持本实验结论，不能声称全部7B每项都胜出",
     "未披露完整最终训练时长、GPU小时及峰值显存"
   ],
-  "article_sha256": "d1578988e40a285f44e1409c9e33dccc7c93f2e0f004e7f92f324bb560252f03",
+  "article_sha256": "26637f6bb660ede737b0d058705f2f95dbc7d91c2fe210d3b3b3984a1e08cfcf",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -71,7 +71,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 16,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 16,
+      "operatorname_replacements": 1,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

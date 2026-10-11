@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "d0807662cb93",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "b8330c8c805e81baa89cdf889e473fc78ffe31684bd39d9da7dac5ef9c016ddb",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+          "locator": "official-system-card-2025-08-13; release-2025-08-07; Overview, system-card pp5–6",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开系统组件自绘，非原文图。；路由器是系统选模型，不是 token 级 MoE 证据。；Pro 采用推理模型的额外并行测试时计算。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

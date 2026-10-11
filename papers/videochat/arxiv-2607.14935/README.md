@@ -77,7 +77,7 @@ $$
 
 *原论文 Figure 9，PDF 第 14 页。保留全部状态转换，以及等量随机抽样的状态延续位置。*
 
-直接训练全部状态 token 会被大量 Silence 主导，只训练转换又容易学到状态模式捷径。论文令转换集合为 $\mathcal T$，从延续集合抽取 $\widetilde{\mathcal C}$，满足 $|\widetilde{\mathcal C}|=|\mathcal T|$，采用：
+直接训练全部状态 token 会被大量 Silence 主导，只训练转换又容易学到状态模式捷径。论文令转换集合为 $`\mathcal T`$，从延续集合抽取 $`\widetilde{\mathcal C}`$，满足 $`\vert \widetilde{\mathcal C}\vert =\vert \mathcal T\vert`$，采用：
 
 $$
 \mathcal L_{\mathrm{state}}=-\frac{1}{\sum_t m_t}\sum_t m_t\log p_\theta(s_t\mid V_{\le t},y_{<t}),\qquad m_t=\mathbf1[t\in\mathcal T\cup\widetilde{\mathcal C}].

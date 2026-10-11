@@ -24,7 +24,7 @@
   },
   "model_execution": "not_run",
   "limitations": "Self-review only; no reproduction or independent benchmark validation",
-  "article_sha256": "bc67a07cbc9a3e2018f7f5c2037f47998b77dfbed34046a24a156a9bbe902a14",
+  "article_sha256": "06731121f0e8f5f331de3e6c3c46de8daaeb96243e168f726952cd05e4c23a9f",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -45,12 +45,36 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
+    "math_delimiters_converted": 16,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "mobile_math_layout": {
       "date": "2026-10-11",
       "long_inline_equations_promoted_to_display": 1,
       "scope": "Display layout and connective punctuation only; formula contents preserved"
+    },
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "retained",
+      "source_recheck": [],
+      "diagram_plan": null,
+      "article_sha256": "bc67a07cbc9a3e2018f7f5c2037f47998b77dfbed34046a24a156a9bbe902a14",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
     }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 16,
+      "operatorname_replacements": 1,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

@@ -15,7 +15,7 @@
     "asset_hashes_match": true,
     "original_assets": 5
   },
-  "article_sha256": "26279a328e56466cb4b77a04b1335fea99a9da4c757573d3784f0c238138cde4",
+  "article_sha256": "37f677a4fc62ef6ff306eab9d7b38679fa26765998e333a0e230b7cf3fb916ab",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -23,7 +23,42 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 9,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2305.01278v1",
+      "source_cache": "source/papers/0d9927d7fce6/source.txt",
+      "source_locators": [
+        "§2.1–2.2，PDF pp.3–4"
+      ],
+      "changes": [
+        "第3节补充：VPG 与 projector 的职责不同：视觉编码器先提取图像特征，Q-Former 将其整理成定长连续软提示；线性 projector 只把这些提示的宽度对齐到目标 LLM 的词嵌入维度，随后目标 LLM 根据视觉条件和文字提示生成句子"
+      ],
+      "article_sha256_before": "26279a328e56466cb4b77a04b1335fea99a9da4c757573d3784f0c238138cde4",
+      "article_sha256_after": "b9ee0d841c12956e07b2839cbd511725e2446cf7c0fe4667c87490c9105feae4",
+      "diagram_plan": false,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 9,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

@@ -38,7 +38,7 @@
     "Figure5原文称JSON但原图形式存在重复键未引用值，未声称合法可解析",
     "颜色证据框为作者标注不是模型attention或定位输出"
   ],
-  "article_sha256": "d019e70a275522583e23a897e62b1ba3293d392275bcfc571a01c893b6ac5eb3",
+  "article_sha256": "da960243cb7c6007a428bd9ca20a0a964440ec31366ee46bbf343faa03688262",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -56,7 +56,50 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2307.02499v1",
+      "source_cache": "source/papers/8423dfa0647c/source.txt",
+      "source_locators": [
+        "§3.1–3.2，PDF p.3"
+      ],
+      "changes": [
+        "第3节补充：一次文档问答先把页面作为图片送入视觉骨干；abstractor 的可学习查询从页面特征中提取较紧凑的视觉表示，再与问题的词嵌入串联，交由语言模型预测回答",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "d019e70a275522583e23a897e62b1ba3293d392275bcfc571a01c893b6ac5eb3",
+      "article_sha256_after": "c553fe3b7f9955968b2cd7dafe31ebf8574a5666339d3670ea959e9b6df98352",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 6,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

@@ -46,7 +46,7 @@ tokenizer训练时同时把离散表示交给音频decoder重建Mel谱、交给�
 
 $$
 r^{(0)}=h,\quad
-c^{(\ell)}=\arg\min_{c\in\mathcal C_\ell}\|r^{(\ell-1)}-c\|_2^2,\quad
+c^{(\ell)}=\arg\min_{c\in\mathcal C_\ell}\Vert r^{(\ell-1)}-c\Vert _2^2,\quad
 r^{(\ell)}=r^{(\ell-1)}-c^{(\ell)},\quad
 \widehat h=\sum_{\ell=1}^{8}c^{(\ell)}.
 $$

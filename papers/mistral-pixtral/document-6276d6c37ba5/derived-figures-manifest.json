@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "6276d6c37ba5",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "477af498d62481683e840005e23001cf98895336fa36b5b81c042717578caf9b",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://mistral.ai/news/mistral-3",
+          "locator": "official-source-snapshot-2026-10-08; Mistral Large 3 / Ministral 3",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "家族结构定位自绘，非原文图。；左右为不同型号，非单次前向的并行专家。；博客未展开视觉编码器或跨模态连接器。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

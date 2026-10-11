@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "d9cbc42c82ec",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "8ffa808ef00c76b7decdcb81929f7be958d66394eb4ee4733af6eedb4d66695b",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2504.16656v1",
+          "locator": "2504.16656v1; §3.1 / Table 4",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开组件关系自绘，非原文图。；原 Figure 1 为训练信号流，应另行阅读。；冻结策略按训练实验区分。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

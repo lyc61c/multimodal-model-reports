@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1291" viewBox="0 0 720 1291" role="img" aria-labelledby="title desc">
+<title id="title">GPT-4o 图像生成：公开生成与控制链（自绘，非原文图）</title>
+<desc id="desc">公开系统链自绘，非原文图。；阻断组件是系统控制，不是生成网络层。；不假设扩散模型、共享权重或图像词表。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1289" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 公开接口示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">GPT-4o 图像生成：公开生成与控制链</text>
+<path d="M360,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H360 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="321.6" y="412" width="76.8" height="23" rx="4" fill="#fff"/>
+<text x="360" y="429" text-anchor="middle" font-size="16" fill="#475569">触发生成</text>
+<path d="M360,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="321.6" y="584" width="76.8" height="23" rx="4" fill="#fff"/>
+<text x="360" y="601" text-anchor="middle" font-size="16" fill="#475569">通过检查</text>
+<path d="M360,746 V779 H360 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,918 V951 H360 V984" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="321.6" y="928" width="76.8" height="23" rx="4" fill="#fff"/>
+<text x="360" y="945" text-anchor="middle" font-size="16" fill="#475569">通过检查</text>
+<rect x="36" y="124" width="648" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="360" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">生成或编辑请求</text>
+<text x="360" y="190" text-anchor="middle" font-size="20" fill="#475569">文字及可选上传图像</text>
+<rect x="36" y="296" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">聊天模型触发判断</text>
+<text x="360" y="362" text-anchor="middle" font-size="20" fill="#475569">依据请求决定生成或拒绝</text>
+<rect x="36" y="468" width="648" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="360" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">提示阻断</text>
+<text x="360" y="534" text-anchor="middle" font-size="20" fill="#475569">生成调用后的输入检查</text>
+<rect x="36" y="640" width="648" height="106" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">原生自回归图像生成</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">内部视觉表示与参数关系未披露</text>
+<rect x="36" y="812" width="648" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="360" y="847" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">输出阻断</text>
+<text x="360" y="878" text-anchor="middle" font-size="20" fill="#475569">分类器及推理监控器检查</text>
+<rect x="36" y="984" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="1019" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">可交付图像</text>
+<text x="360" y="1050" text-anchor="middle" font-size="20" fill="#475569">通过系统检查的输出</text>
+<line x1="36" y1="1138" x2="684" y2="1138" stroke="#e2e8f0"/>
+<text x="36" y="1165" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1196" font-size="17" fill="#64748b">公开系统链自绘，非原文图。</text>
+<text x="36" y="1221" font-size="17" fill="#64748b">阻断组件是系统控制，不是生成网络层。</text>
+<text x="36" y="1246" font-size="17" fill="#64748b">不假设扩散模型、共享权重或图像词表。</text>
+</g></svg>

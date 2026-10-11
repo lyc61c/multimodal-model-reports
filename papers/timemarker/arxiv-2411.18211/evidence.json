@@ -12,5 +12,18 @@
     "CharadesSTA zero-shot restricted to its grounding annotations; ActivityNet uses training annotations; pretrained asset costs and recipe missing fields not invented.",
     "Regressions versus Qwen2VL7B VideoMME/TempCompass and supervised Charades highIoU retained; differentframe protocols and score scales disclosed."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§3.3、Algorithm1；PDF 第4–5页"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages"
+      ],
+      "article_sha256": "981c881ee4db3142a5434adedcafbb0c3774442a27cf2ce0126dc7eeef3b2fb5"
+    }
+  ]
 }

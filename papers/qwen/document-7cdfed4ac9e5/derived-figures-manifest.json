@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "paper_id": "7cdfed4ac9e5",
+  "assets": [
+    {
+      "asset_path": "derived-figures/qwen3.5-397b-a17b-architecture.svg",
+      "asset_sha256": "90a634ce9e907d3a9238e22b061660aa7d785179ed5f1e88a9e4d56daac9c679",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/resolve/8472618112abcbd45acbcdc58436aff4233c23f7/config.json",
+          "locator": "vision_config, text_config, layer_types, mtp_num_hidden_layers",
+          "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+          "sha256": "3ae7fa89c2f7d1354096418ddaf1331e9e0898a8ca11e804fb6dbaa087efb7da"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/resolve/8472618112abcbd45acbcdc58436aff4233c23f7/preprocessor_config.json",
+          "locator": "processor_class, image_processor_type, patch_size, temporal_patch_size, merge_size",
+          "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+          "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen3_5_moe/modeling_qwen3_5_moe.py",
+          "locator": "VisionPatchEmbed/VisionModel/VisionPatchMerger; Model.forward/get_placeholder_mask; DecoderLayer; GatedDeltaNet/torch_recurrent_gated_delta_rule; Attention; TopKRouter/SparseMoeBlock; LM head",
+          "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+          "sha256": "b3001ab72dbddce268207a5771365e09961505e5e9fd092244fa17d362f57da5"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen2_vl/image_processing_qwen2_vl_fast.py",
+          "locator": "Qwen2VLImageProcessorFast._preprocess: temporal padding, grid layout",
+          "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+          "sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+          "locator": "Qwen3VLProcessor.__call__: grid product / merge_size squared placeholder expansion",
+          "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+          "sha256": "19a94c048293161fa63362ee3660e73c5a77c0dc3ce5871697a346827a1ccd41"
+        }
+      ],
+      "scope": "Qwen3.5-397B-A17B 单图问答公开前向路径。依据固定模型 revision 和 Transformers v5.2.0；448×448 为推导尺寸示例，不代表固定输入或训练分辨率。early fusion 为模型卡训练描述，不表示省略视觉编码器。非原文图。",
+      "review": {
+        "date": "2026-10-11",
+        "facts_checked": [
+          "Vision depth/width/head/patch/merge/out width",
+          "60 decoder layers with 45 DeltaNet and 15 full attention",
+          "Every layer has MoE, Top10 renormalization and sigmoid shared expert",
+          "Placeholder replacement and static-image token-count example"
+        ],
+        "svg_xml_checked": true,
+        "render_visually_checked": true,
+        "model_executed": false,
+        "visual_review": "Rendered with sharp at 1440x1120; all Chinese labels, arrows and bounds inspected; no overlaps or clipping observed.",
+        "parent_visual_review": "Root agent independently viewed rendered PNG; layout clear."
+      }
+    }
+  ]
+}

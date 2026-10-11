@@ -65,7 +65,7 @@ MRC Q-Former 有两层 Transformer、隐藏维度 768。默认使用 0.5 秒与 
 
 ## 4. 核心创新与数学原理
 
-第 r 级有窗口长度 $k_r$、查询数 $N_r$，输入长度 T 时：
+第 r 级有窗口长度 $`k_r`$、查询数 $`N_r`$，输入长度 T 时：
 
 $$
 W_r=\left\lceil\frac{T}{k_r}\right\rceil,\qquad W_rN_r=C.
@@ -82,7 +82,7 @@ $$
 低分辨率窗口的多个查询可能重复读同一关键帧。作者最小化同窗口不同查询的余弦相似度：
 
 $$
-\mathcal L_{\mathrm{diverse}}=\sum_{r=2}^{R}\sum_{w=1}^{W_r}\sum_{i=1}^{N_r}\sum_{j\ne i}^{N_r}\frac{h^{(r)}_{w,i}\cdot h^{(r)}_{w,j}}{\|h^{(r)}_{w,i}\|\|h^{(r)}_{w,j}\|},\qquad
+\mathcal L_{\mathrm{diverse}}=\sum_{r=2}^{R}\sum_{w=1}^{W_r}\sum_{i=1}^{N_r}\sum_{j\ne i}^{N_r}\frac{h^{(r)}_{w,i}\cdot h^{(r)}_{w,j}}{\Vert h^{(r)}_{w,i}\Vert \Vert h^{(r)}_{w,j}\Vert },\qquad
 \mathcal L=\mathcal L_{\mathrm{CE}}+\lambda\mathcal L_{\mathrm{diverse}}.
 $$
 

@@ -58,26 +58,26 @@ OmniLive 面向持续的视频、声音输入及语音交互。它希望在回�
 
 ## 4. 核心创新与数学原理
 
-记忆模块的目标是降低历史视频对主推理上下文的占用，而不是无限保存全部原始 token。对第 $k$ 段视频，视觉特征记为 $F_k\in\mathbb R^{TN\times C}$，其中 $T$ 为帧数、$N$ 为每帧特征数量、$C$ 为通道维度。短期记忆 $H_k\in\mathbb R^{TP\times C}$ 由空间下采样初始化，另有全局记忆 $\hat H_k\in\mathbb R^{1\times C}$。原文压缩写为：
+记忆模块的目标是降低历史视频对主推理上下文的占用，而不是无限保存全部原始 token。对第 $`k`$ 段视频，视觉特征记为 $`F_k\in\mathbb R^{TN\times C}`$，其中 $`T`$ 为帧数、$`N`$ 为每帧特征数量、$`C`$ 为通道维度。短期记忆 $`H_k\in\mathbb R^{TP\times C}`$ 由空间下采样初始化，另有全局记忆 $`\hat H_k\in\mathbb R^{1\times C}`$。原文压缩写为：
 
 
 $$
-H_k,\hat H_k=\operatorname{Compressor}([F_k\circ H_k\circ\hat H_k]).
+H_k,\hat H_k=\mathrm{Compressor}([F_k\circ H_k\circ\hat H_k]).
 $$
 
 
-$\circ$ 表示序列拼接。利用语言网络的自回归与特征聚合，指定记忆位置吸收片段信息。短期记忆保留较多局部细节，全局向量提供较粗的片段摘要。[原文 §3.2，PDF 第 4–5 页](https://arxiv.org/pdf/2412.09596v1#page=4)
+$`\circ`$ 表示序列拼接。利用语言网络的自回归与特征聚合，指定记忆位置吸收片段信息。短期记忆保留较多局部细节，全局向量提供较粗的片段摘要。[原文 §3.2，PDF 第 4–5 页](https://arxiv.org/pdf/2412.09596v1#page=4)
 
 对多个片段，再将短期与全局记忆拼接输入 Compressor，产生：
 
 
 $$
-\bar H_1,\ldots,\bar H_k=\operatorname{Compressor}([H_1\circ\cdots\circ H_k\circ\hat H_1\circ\cdots\circ\hat H_k]),
+\bar H_1,\ldots,\bar H_k=\mathrm{Compressor}([H_1\circ\cdots\circ H_k\circ\hat H_1\circ\cdots\circ\hat H_k]),
 \qquad \bar H\in\mathbb R^{k\times C}.
 $$
 
 
-长期表示以每片段一个向量描述历史，从而比全部帧特征紧凑。其长度仍随片段数量 $k$ 增长；首版没有给出无限时长下的固定容量、淘汰策略或信息保真保证。
+长期表示以每片段一个向量描述历史，从而比全部帧特征紧凑。其长度仍随片段数量 $`k`$ 增长；首版没有给出无限时长下的固定容量、淘汰策略或信息保真保证。
 
 检索时，将长期记忆与分词后的问题送入 Compressor，取最后一个 token 的特征作为记忆空间中的问题表示，再计算它与各片段全局记忆的相似度。最相关的片段及对应短期记忆被交给推理模块。原文没有在这里明确给出相似度函数、固定 top-k 或检索损失权重，本文不补写成已披露的余弦 softmax 公式。[原文 §3.2，PDF 第 5 页](https://arxiv.org/pdf/2412.09596v1#page=5)
 

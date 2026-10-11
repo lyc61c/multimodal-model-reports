@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "e122aca8cc58",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "4e43a9e2256b30ebaf334816d694bd38eb381b14ae9c1370072363a4a72092d3",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+          "locator": "official-source-snapshot-2026-10-08; Vision Language / agent scaffold / API Usage",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开使用接口自绘，非原文图。；稠密模型不能套用邻近 MoE 专家配置。；不同上下文示例不合并为原生长度证据。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

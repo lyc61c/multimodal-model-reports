@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "paper_id": "1d245a12f207",
+  "title": "VILA²：最终模型的一次图像推理",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "输入图像",
+      "lines": [
+        "按选定型号预处理"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "用户指令",
+      "lines": [
+        "语言 tokenizer"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "视觉编码器",
+      "lines": [
+        "Llama：SigLIP",
+        "Yi-34B：InternViT-6B"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "merge",
+      "title": "相邻 2×2 特征合并",
+      "lines": [
+        "沿通道拼接",
+        "视觉 token 数约为四分之一"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "projector",
+      "title": "MLP 与投影",
+      "lines": [
+        "匹配语言嵌入空间"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "语言主干",
+      "lines": [
+        "Llama2／Llama3／Yi",
+        "结合图像与文本生成"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "文字回答",
+      "lines": [
+        "描述与视觉问答"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "vision",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "merge",
+      "style": "solid",
+      "from": "vision"
+    },
+    {
+      "to": "projector",
+      "style": "solid",
+      "from": "merge"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "projector"
+    },
+    {
+      "to": "llm",
+      "style": "solid",
+      "from": "text"
+    },
+    {
+      "to": "out",
+      "style": "solid",
+      "from": "llm"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "只画最终模型；自增强和三类专家为离线训练数据环节。",
+    "8B 扩展的 S2 视图处理不按单一方形输入理解。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2407.17453v1",
+      "locator": "§3 Model Architecture；PDF 第6页",
+      "note": "最终视觉编码器、2×2合并与MLP、语言型号；离线专家与推理组件区别。"
+    }
+  ]
+}

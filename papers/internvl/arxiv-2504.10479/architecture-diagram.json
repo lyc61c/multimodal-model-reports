@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "paper_id": "c93332aa16ea",
+  "title": "InternVL3：视觉压缩与语言生成",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "图像 tile",
+      "lines": [
+        "448 × 448 空间块"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "t",
+      "title": "文字问题",
+      "lines": [
+        "文本 token embedding"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "v",
+      "title": "InternViT",
+      "lines": [
+        "300M 或 6B 版本",
+        "按变体选择预训练视觉主干"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "p",
+      "title": "压缩与连接",
+      "lines": [
+        "pixel unshuffle：256 token/tile",
+        "随机初始化两层 MLP"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "l",
+      "title": "图文语言主干",
+      "lines": [
+        "Qwen2.5 或 InternLM3",
+        "V2PE 组织视觉位置增量"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "o",
+      "title": "文字答案",
+      "lines": [
+        "自回归文字生成"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "v",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "v",
+      "to": "p",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "p",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "t",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "l",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据 §2.1 自绘，非原文图。",
+    "型号初始化以原文 Table 1 为准。",
+    "V2PE 改位置增量，不再压缩 token。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2504.10479v1",
+      "locator": "2504.10479v1; §2.1 / Table 1 / Equations 1–5",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

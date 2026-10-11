@@ -39,7 +39,7 @@
     "No universal smartphone latency claim; no per-size training time or undisclosed precision inferred",
     "Table7 and appendix read as text; selected tables 3-6 visually checked"
   ],
-  "article_sha256": "a99dd8dc01837cda0de23bec4de88806ad7ad39f457034e0cb7f54c6f77a691b",
+  "article_sha256": "8f81cbcb96172b819a5534d0c69615a72e8c30fae661e565d9e397f19a702294",
   "artifact_checks": {
     "original_assets": 8,
     "no_full_page_screenshots": true
@@ -57,7 +57,33 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 2,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "expanded",
+      "source_recheck": [
+        "§3.1–3.2、Figure2；PDF 第3页"
+      ],
+      "diagram_plan": null,
+      "article_sha256": "8eb2c08341e38cdc5a6f2aa62ff318caec3fc470a736d37d3c9420f2ba744765",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 2,
+      "operatorname_replacements": 5,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

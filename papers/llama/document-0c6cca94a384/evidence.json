@@ -12,5 +12,20 @@
     "Checked lightweight IFEval/BFCL/summary scores, Phi stronger MMLU/GSM8K and1B-to3B regressions;128K does not imply perfect long-context performance.",
     "BF16 released weights distinguished from unreleased quantized demos and Guard1B file-size reduction; no model inference, undisclosed hyperparameters or ablations claimed."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "官方发布页 Vision models 段落",
+        "官方发布页 Vision models 段落"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages",
+        "Authored source-limited architecture-diagram.json; root will render/insert separately"
+      ],
+      "article_sha256": "3608bb0e4be7f96761ecff3e541fd5636a6e7a50e70e5618294cd411d30453e6"
+    }
+  ]
 }

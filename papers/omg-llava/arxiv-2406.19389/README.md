@@ -59,7 +59,7 @@ $$
 (T_t^{out},T_{ov}^{out})=\mathrm{LLM}(T_{pv}^{in},T_{ov}^{in},T_t^{in}).
 $$
 
-$T_t$ 为文本，$T_{pv}$ 为像素中心表示，$T_{ov}$ 为对象中心表示。caption 主要生成文本；区域描述额外读取用户区域；分割任务则生成可解码的对象表示。这里的对象输出实际通过 `[SEG]` 隐藏状态承载，不是让 LLM 直接逐像素生成二值掩码。
+$`T_t`$ 为文本，$`T_{pv}`$ 为像素中心表示，$`T_{ov}`$ 为对象中心表示。caption 主要生成文本；区域描述额外读取用户区域；分割任务则生成可解码的对象表示。这里的对象输出实际通过 `[SEG]` 隐藏状态承载，不是让 LLM 直接逐像素生成二值掩码。
 
 ![原文 Figure 4](figures/original-p006-figure-4.png)
 
@@ -67,13 +67,13 @@ $T_t$ 为文本，$T_{pv}$ 为像素中心表示，$T_{ov}$ 为对象中心表�
 
 **读图：** Figure 4 右侧区分点、框、掩码的注意力区域；Figure 5 先将对象查询的分割掩码及置信度结合，再给每个空间位置求对象加权表示，与原图像特征相加。前景查询也单独接到视觉序列尾部。
 
-设图像特征 $F\in\mathbb R^{HW\times C}$，对象查询 $Q\in\mathbb R^{N_q\times C}$，掩码为 $M$，对象置信度为 $S$。原文 Eq. 2/3 为 mask-score softmax 与特征融合。为明确广播和转置，可在像素位置 $p$ 写成
+设图像特征 $`F\in\mathbb R^{HW\times C}`$，对象查询 $`Q\in\mathbb R^{N_q\times C}`$，掩码为 $`M`$，对象置信度为 $`S`$。原文 Eq. 2/3 为 mask-score softmax 与特征融合。为明确广播和转置，可在像素位置 $`p`$ 写成
 
 $$
 w_{p,j}=\frac{\exp(M_{j,p}S_j)}{\sum_{k=1}^{N_q}\exp(M_{k,p}S_k)},\qquad T_{pv}=WQ+F.
 $$
 
-这与原式 $M_S=\mathrm{Softmax}(M\odot S)$ 的逐像素、沿查询维度归一化含义一致，避免原文列出掩码与结果相反轴序造成的矩阵歧义。先验让 LLM 接触“这个位置更像属于哪个对象”的信息，降低生成查询时从零适配冻结分割器的难度；它不新增 ground-truth 掩码作为推理输入。
+这与原式 $`M_S=\mathrm{Softmax}(M\odot S)`$ 的逐像素、沿查询维度归一化含义一致，避免原文列出掩码与结果相反轴序造成的矩阵歧义。先验让 LLM 接触“这个位置更像属于哪个对象”的信息，降低生成查询时从零适配冻结分割器的难度；它不新增 ground-truth 掩码作为推理输入。
 
 预训练中原文 Eq. 4 用对象表示的往返约束：
 
@@ -81,7 +81,7 @@ $$
 \mathcal L_{pre}=\mathcal L_{text}+\mathcal L_{reg},\qquad\mathcal L_{reg}=(T_{ov}-P_t(P_v(T_{ov})))^2.
 $$
 
-目的是在视觉→文本→视觉投影后保留对象信息。指令阶段 Eq. 5 为 $\mathcal L_{text}+\alpha\mathcal L_{CE}+\beta\mathcal L_{DICE}$，同时学习回答和掩码。原文未明确报告 $\alpha,\beta$ 数值及平方项聚合方式，不能补出精确权重。
+目的是在视觉→文本→视觉投影后保留对象信息。指令阶段 Eq. 5 为 $`\mathcal L_{text}+\alpha\mathcal L_{CE}+\beta\mathcal L_{DICE}`$，同时学习回答和掩码。原文未明确报告 $`\alpha,\beta`$ 数值及平方项聚合方式，不能补出精确权重。
 
 <a id="data"></a>
 
@@ -100,7 +100,7 @@ $$
 | 阶段 | 更新模块 | 公开配置 |
 | --- | --- | --- |
 | 图文预训练 | 视觉与文本投影；冻结编码器、OMG head 与 LLM | 1 epoch，lr 0.001，batch 256 |
-| 联合指令训练 | 两种投影及 LLM LoRA；冻结感知模型 | 1 epoch，lr $2\times10^{-4}$，batch 128 |
+| 联合指令训练 | 两种投影及 LLM LoRA；冻结感知模型 | 1 epoch，lr $`2\times10^{-4}`$，batch 128 |
 | 特定任务 ft | 根据结果表另行微调 | 指代分割 ft 明确解冻 OMG 解码器 |
 
 最大语言序列 2048，图像 1024×1024，基于 XTuner。正文报告 4 张 80GB A800，两个阶段约 7/48 小时；附录却同时列 batch 256、每 GPU 32 和 batch 128、每 GPU 16，若不含累积会对应 8 张 GPU，累积次数未披露。本文分别保留这些记录，不能替作者指定不存在的梯度累积设定。optimizer、调度、LoRA rank 和训练参数占比也未完整提供。

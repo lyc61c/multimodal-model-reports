@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "d746d75f8685",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "902e6fdf43fb18f5ebd3391af5e9fd30e6ec7c42978bbb264765e6522f6adb3a",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+          "locator": "§2.1；PDF 第2页",
+          "note": "视觉输入、会话上下文和逐步文本生成接口；内部未披露边界。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；这是模型卡公开接口，不是内部网络结构复原。；三个型号为替代配置，并非多模型推理级联。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

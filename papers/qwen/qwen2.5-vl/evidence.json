@@ -684,5 +684,23 @@
     },
     "time_id_note": "Figure 1 shows two temporal IDs per second; do not equate all temporal IDs to seconds",
     "equations": "Standard/explanatory, not numbered original-paper equations"
-  }
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "精简裁图后来源说明。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2502.13923v1",
+          "locator": "Figure 1, PDF p3",
+          "version": "2502.13923v1"
+        }
+      ],
+      "article_sha256": "4bee8d08963b7e7415b5e58a78fae8418cf334ab220e2fb00733eefe09dc9c5f",
+      "model_executed": false
+    }
+  ]
 }

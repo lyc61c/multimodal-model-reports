@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "84a7abb884a3",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "0f4468d19202edd2163d4e45c68d356adeffcb7d875b2bf83580f6f581ca98c3",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2311.05437v1",
+          "locator": "§2.1、Eq.(1)–(2)，PDF p.3",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：同一助手可再次调用工具。；外部工具网络不属于 LMM 内部层。；展示一次工具使用，不保证任意循环次数。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

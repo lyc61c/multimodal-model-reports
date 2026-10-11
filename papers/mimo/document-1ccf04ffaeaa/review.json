@@ -18,7 +18,7 @@
     "asset_hashes_match": true,
     "original_assets": 0
   },
-  "article_sha256": "a19d145ff60f0c12e5124f24e88d43c9b7407bccc79e2d07e8809f7baccec612",
+  "article_sha256": "6b7cdac4dcdf7b560b41525e68b95bf5156fa57d4f0b5853c13224f434f373d3",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -28,5 +28,35 @@
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://mimo.xiaomi.com/mimo-v2-omni",
+          "locator": "official-source-snapshot-2026-10-08; Perception and Agency in One Model / OpenClaw demos",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "公开系统路径自绘，非原文图。",
+        "独立编码器名称与同步细节未展开。",
+        "动作的实际执行由外部框架完成。"
+      ],
+      "article_sha256": "a19d145ff60f0c12e5124f24e88d43c9b7407bccc79e2d07e8809f7baccec612",
+      "model_executed": false
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "ee804bbbd9e2",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "dc4784370039e6274069a9730238930339e31b22779232c9488c13b7ef3b3cce",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2402.11684v1",
+          "locator": "§4.1、Table2；PDF 第7页",
+          "note": "LLaVA-v1.5式三模块、CLIP/Phi2型号、投影规模与图文回答路径。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；GPT-4V 用于离线生成训练数据，不在本推理路径。；投影器层数与最终视觉 token 数未在该表公开。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

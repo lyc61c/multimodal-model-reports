@@ -20,11 +20,81 @@
     "No claim of independent peer review or model execution",
     "Input examples are not generated answers"
   ],
-  "article_sha256": "b053ffcb4d72b7051ce2b4fb76cf785eb9025432c8eddf0c1e900c9224fdb210",
+  "article_sha256": "58f7d0edae9371b77f5562bbe82fef6316f9f0001d63c56aece37e6965d923fa",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 32,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision": {
+    "date": "2026-10-11",
+    "scope": "Sections 3 and 4 architecture and math; section 1 source-scope sentence only. Targeted public config/implementation review, not full retraining or independent benchmarks.",
+    "model_revision": "8472618112abcbd45acbcdc58436aff4233c23f7",
+    "implementation_version": "Transformers v5.2.0",
+    "sources": [
+      {
+        "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/resolve/8472618112abcbd45acbcdc58436aff4233c23f7/config.json",
+        "locator": "vision_config, text_config, layer_types, mtp_num_hidden_layers",
+        "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+        "sha256": "3ae7fa89c2f7d1354096418ddaf1331e9e0898a8ca11e804fb6dbaa087efb7da"
+      },
+      {
+        "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/resolve/8472618112abcbd45acbcdc58436aff4233c23f7/preprocessor_config.json",
+        "locator": "processor_class, image_processor_type, patch_size, temporal_patch_size, merge_size",
+        "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+        "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen3_5_moe/modeling_qwen3_5_moe.py",
+        "locator": "VisionPatchEmbed/VisionModel/VisionPatchMerger; Model.forward/get_placeholder_mask; DecoderLayer; GatedDeltaNet/torch_recurrent_gated_delta_rule; Attention; TopKRouter/SparseMoeBlock; LM head",
+        "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+        "sha256": "b3001ab72dbddce268207a5771365e09961505e5e9fd092244fa17d362f57da5"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen2_vl/image_processing_qwen2_vl_fast.py",
+        "locator": "Qwen2VLImageProcessorFast._preprocess: temporal padding, grid layout",
+        "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+        "sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+        "locator": "Qwen3VLProcessor.__call__: grid product / merge_size squared placeholder expansion",
+        "note": "固定版本原始文件；实际读取配置或所列实现路径。",
+        "sha256": "19a94c048293161fa63362ee3660e73c5a77c0dc3ce5871697a346827a1ccd41"
+      }
+    ],
+    "changes": [
+      "Corrected card-only non-disclosure of vision details using public config.",
+      "Explained pixel/patch/vision merger/placeholder/hybrid decoder/LM-head dataflow.",
+      "Added gated DeltaNet recurrence and normalized Top10 router plus gated shared-expert equations from pinned implementation.",
+      "448x448 derived example explicitly marked illustrative."
+    ],
+    "not_verified": [
+      "Weights were not loaded or executed.",
+      "Training data recipe, global vision parameter accounting and full training settings remain unverified.",
+      "Implementation details are scoped to this model config and Transformers v5.2.0."
+    ],
+    "article_sha256": "2fd5cbc0020a7c697a6b3424c44f181cfca81e73a6b6a35631ea7ca85c325b16",
+    "derived_figure_visual_check": "XML parsed; sharp rasterization 1440x1120 and visual inspection passed, source schematic not original figure",
+    "math_syntax_check": {
+      "engine": "Local MathJax 3.2.2",
+      "equations_compiled": 26,
+      "failures": 0,
+      "scope": "Current Qwen3.5 article formulas; syntax only, separate from pinned implementation math-content review."
+    }
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 24,
+      "operatorname_replacements": 5,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

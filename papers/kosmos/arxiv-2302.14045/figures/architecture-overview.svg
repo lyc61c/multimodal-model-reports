@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1094" viewBox="0 0 720 1094" role="img" aria-labelledby="title desc">
+<title id="title">KOSMOS-1 图文条件生成（自绘，非原文图）</title>
+<desc id="desc">仓库自绘，依据固定 v1 方法说明。；图像是连续输入条件，非像素输出路径。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1092" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">KOSMOS-1 图文条件生成</text>
+<path d="M191,230 V263 H191 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,230 V263 H529 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,402 V435 H529 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="237.1" y="584" width="76.8" height="23" rx="4" fill="#fff"/>
+<text x="275.5" y="601" text-anchor="middle" font-size="16" fill="#475569">视觉条件</text>
+<path d="M529,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="406.1" y="584" width="76.8" height="23" rx="4" fill="#fff"/>
+<text x="444.5" y="601" text-anchor="middle" font-size="16" fill="#475569">文字条件</text>
+<path d="M360,746 V779 H360 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图片</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">按文档位置出现</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字输入</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">文字提示与上下文</text>
+<rect x="36" y="296" width="310" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="191" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">CLIP 视觉编码</text>
+<text x="191" y="362" text-anchor="middle" font-size="20" fill="#475569">图像转连续特征</text>
+<rect x="374" y="296" width="310" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="529" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字词嵌入</text>
+<text x="529" y="362" text-anchor="middle" font-size="20" fill="#475569">由语言 tokenizer 处理</text>
+<text x="529" y="387" text-anchor="middle" font-size="20" fill="#475569">映射到词嵌入空间</text>
+<rect x="36" y="468" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">Resampler 与序列</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">汇聚图像表示</text>
+<text x="191" y="559" text-anchor="middle" font-size="20" fill="#475569">用图像边界标记组装</text>
+<rect x="374" y="468" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="529" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字条件</text>
+<text x="529" y="534" text-anchor="middle" font-size="20" fill="#475569">问题及已有上下文</text>
+<text x="529" y="559" text-anchor="middle" font-size="20" fill="#475569">保持文字序列结构</text>
+<rect x="36" y="640" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">MAGNETO 主干</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">因果 Transformer</text>
+<text x="360" y="731" text-anchor="middle" font-size="20" fill="#475569">联合读取图文序列</text>
+<rect x="36" y="812" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="847" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字输出</text>
+<text x="360" y="878" text-anchor="middle" font-size="20" fill="#475569">下一 token 预测</text>
+<text x="360" y="903" text-anchor="middle" font-size="20" fill="#475569">回答／描述／类别名称</text>
+<line x1="36" y1="966" x2="684" y2="966" stroke="#e2e8f0"/>
+<text x="36" y="993" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1024" font-size="17" fill="#64748b">仓库自绘，依据固定 v1 方法说明。</text>
+<text x="36" y="1049" font-size="17" fill="#64748b">图像是连续输入条件，非像素输出路径。</text>
+</g></svg>

@@ -36,7 +36,7 @@
     "MMVet正文3.6%与表不一致，按表2.0分记录",
     "未在本报告列出的LR/GPU/context等不从基线记忆补造"
   ],
-  "article_sha256": "d2d27854898efa946d803e7a5d82292d2a58b7caf0e06c026a645a50ce426d47",
+  "article_sha256": "cd82038ee3b3e8bd1fbf0cfaa965c1335da17780ee179f1b0c209e175426c5bc",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -54,7 +54,50 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 7,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 13,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2311.07574v1",
+      "source_cache": "source/papers/d361fe1e8636/source.txt",
+      "source_locators": [
+        "§3、§4.1，PDF pp.3–5；LLaVA-1.5基线 §3、Figure 1"
+      ],
+      "changes": [
+        "第3节补充：学生的一次推理只需要测试图片与用户问题：LLaVA-1.5 的视觉编码、投影和 Vicuna 依次把图像条件转成文字回答，GPT-4V 教师不在这条在线路径中",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "d2d27854898efa946d803e7a5d82292d2a58b7caf0e06c026a645a50ce426d47",
+      "article_sha256_after": "a1fd89feec47ad5970c75ae8d1aa331ff8b4ce39598045616e6b6fe72974b6bf",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 6,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

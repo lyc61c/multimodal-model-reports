@@ -1,0 +1,33 @@
+{
+  "reviewed_on": "2026-10-11",
+  "sources": [
+    {
+      "filename": "config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/resolve/8472618112abcbd45acbcdc58436aff4233c23f7/config.json",
+      "sha256": "3ae7fa89c2f7d1354096418ddaf1331e9e0898a8ca11e804fb6dbaa087efb7da"
+    },
+    {
+      "filename": "preprocessor_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/resolve/8472618112abcbd45acbcdc58436aff4233c23f7/preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    {
+      "filename": "modeling_qwen3_5_moe.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen3_5_moe/modeling_qwen3_5_moe.py",
+      "sha256": "b3001ab72dbddce268207a5771365e09961505e5e9fd092244fa17d362f57da5"
+    },
+    {
+      "filename": "image_processing_qwen2_vl_fast.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen2_vl/image_processing_qwen2_vl_fast.py",
+      "sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0"
+    },
+    {
+      "filename": "processing_qwen3_vl.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.2.0/src/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+      "sha256": "19a94c048293161fa63362ee3660e73c5a77c0dc3ce5871697a346827a1ccd41"
+    }
+  ],
+  "implementation_version": "Transformers v5.2.0",
+  "model_revision": "8472618112abcbd45acbcdc58436aff4233c23f7",
+  "scope": "Configuration and selected implementation paths inspected; weights not executed."
+}

@@ -18,7 +18,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "fc62f6e2782f8a496e6c2ace2a7624fba1ca2b0308b5bb37e6469b5285287c66",
+  "article_sha256": "7ffc6375081987657e71bcf4985fd05e1413271d4ba166acba904fe73fc54f3f",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -36,7 +36,66 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 10,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补完整问答路径、V2PE职责及base初始化边界。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2504.10479v1",
+          "locator": "§2.1 Model Architecture / V2PE, PDF pp3–4",
+          "version": "2504.10479v1"
+        }
+      ],
+      "article_sha256": "63f1a37a330d6cd4b5ad05385007b9222c3b25150bdf9d1a2d9c33cb8edeb266",
+      "model_executed": false
+    },
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2504.10479v1",
+          "locator": "2504.10479v1; §2.1 / Table 1 / Equations 1–5",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "根据 §2.1 自绘，非原文图。",
+        "型号初始化以原文 Table 1 为准。",
+        "V2PE 改位置增量，不再压缩 token。"
+      ],
+      "article_sha256": "63f1a37a330d6cd4b5ad05385007b9222c3b25150bdf9d1a2d9c33cb8edeb266",
+      "model_executed": false
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 10,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

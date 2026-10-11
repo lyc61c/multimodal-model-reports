@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "fcd07866797c",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "d8258a4c4383dd72d991eb7b9a2d51c1dc5207b27ce2ddd747fe465ecb05bc5a",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2306.00890v1",
+          "locator": "§4，PDF pp.4–6",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：表示推理而非课程训练。；GPT-4 用于离线数据生成和评估。；具体骨干初始化随实验配置区分。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

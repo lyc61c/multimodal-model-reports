@@ -32,7 +32,7 @@
     "敏感度数学定义存在原文矛盾，报告数值按作者口径保留。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "0856d5d2fab322b42e0a1711b3f79901703c65d6b60e3e28f19b0497832edcd5",
+  "article_sha256": "83c796285493e321b40c8a38adb5d3c5d48a0572f805fa9d876c5c1084a746b3",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -67,8 +67,50 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 16,
+    "math_delimiters_converted": 30,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2212.10773v1",
+      "source_cache": "source/papers/ce68e6c9946a/source.txt",
+      "source_locators": [
+        "§3.2、§4.1，PDF pp.4–5"
+      ],
+      "changes": [
+        "第3节补充：一次任务推理可以按“填充指令 → 联合编码 → 按任务解码”阅读：先把题目、候选答案或区域坐标填入指令模板；若任务含图像，图像与填好的文字一同进入 OFA encoder；decoder 在编码结果条件下输出答案、位置 token 或图像码",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "0856d5d2fab322b42e0a1711b3f79901703c65d6b60e3e28f19b0497832edcd5",
+      "article_sha256_after": "2840dac00f420e3478aa1bd1f3104ad944dadbc502dbfa85dbc94bf2f2f9a700",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "method_workflow",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 14,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

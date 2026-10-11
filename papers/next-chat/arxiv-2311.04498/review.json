@@ -40,7 +40,7 @@
     "定位指标阈值未完整重述，不自行写IoU0.5",
     "GIoU在公式按正文明确为损失而非最大化metric"
   ],
-  "article_sha256": "bdc8c58f53cc88e556fb698e3c6b985ccd58747af04c45c5d29c8525d8f77761",
+  "article_sha256": "26797bc38f278e9d67812bb0e6eea28074d82d4e3aee09c9184b4f6a5be3d5ed",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -58,7 +58,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 11,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 18,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 7,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

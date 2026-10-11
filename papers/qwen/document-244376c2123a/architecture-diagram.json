@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "paper_id": "244376c2123a",
+  "title": "Qwen VLo：理解、生成与编辑接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "任务与上下文",
+      "lines": [
+        "文字要求与可选输入图像"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "model",
+      "title": "Qwen VLo",
+      "lines": [
+        "理解与生成的统一交互接口",
+        "内部编码及生成表示未展开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "answer",
+      "title": "输出",
+      "lines": [
+        "文字回答、生成图或修改图"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "answer",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开输入输出示意，非原文图。",
+    "渐进生成方向不确定每步 token 或网络类型。"
+  ],
+  "sources": [
+    {
+      "url": "https://qwenlm.github.io/blog/qwen-vlo/",
+      "locator": "official-source-snapshot-2026-10-08; The Creative Process / Understanding to Creation",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

@@ -44,13 +44,13 @@
 
 **Figure 2，PDF 第 4 页。** 左侧图像经过 ViT、Visual Abstractor 后与文字 embedding 合并，进入由 MAM 和共享 FFN 构成的解码器。中间图明确 K、V 由两模态不同矩阵产生，Q 是共有矩阵；右侧火焰 / 雪花展示第一阶段训练视觉和新参数，第二阶段全模型训练。这里的“协作”来自专属映射后的共同注意力和 FFN，不是对两个模型回答投票。
 
-输入 $H\times W$ 图像以 14×14 patch 编码，patch 数 $P=(H/14)(W/14)$。224 与 448 输入分别产生 256 / 1024 个视觉 patch token；abstractor 都压到 **64 token**。语言模型仍能读取图像细节，但精细信息需要通过有限查询，因此压缩率与 OCR 能力存在权衡。
+输入 $`H\times W`$ 图像以 14×14 patch 编码，patch 数 $`P=(H/14)(W/14)`$。224 与 448 输入分别产生 256 / 1024 个视觉 patch token；abstractor 都压到 **64 token**。语言模型仍能读取图像细节，但精细信息需要通过有限查询，因此压缩率与 OCR 能力存在权衡。
 
-Abstractor 的查询 $V^0=Q$ 反复从原图特征 $I$ 和已有查询状态中收集信息。原文 Equation 1、2 为：
+Abstractor 的查询 $`V^0=Q`$ 反复从原图特征 $`I`$ 和已有查询状态中收集信息。原文 Equation 1、2 为：
 
 $$
-C^i=\operatorname{Attn}(V^i,[I;V^i],[I;V^i]),
-\qquad V^{i+1}=\operatorname{SwiGLU}(C^iW_1)W_2.
+C^i=\mathrm{Attn}(V^i,[I;V^i],[I;V^i]),
+\qquad V^{i+1}=\mathrm{SwiGLU}(C^iW_1)W_2.
 $$
 
 视觉与查询特征加正弦位置 embedding，以保留空间线索。压缩后的视觉 token 与文本连接，统一自回归生成。原文将操作称 self-attention，按其 query 与 key/value 形式理解即可，不应把它误写为 BERT Q-Former 的完整训练程序。
@@ -59,7 +59,7 @@ $$
 
 ## 4. 核心创新与数学原理
 
-MAM 用模态标识 $M$ 区分视觉与文本。Equation 3 定义选择操作 $\phi(X,M,m)=X\odot\mathbf1\{M=m\}$；Equation 4 对两类特征分别归一化后再组合为 $\tilde H$。因此同一层仍有共同序列结构，模态差别保存在参数选择中。
+MAM 用模态标识 $`M`$ 区分视觉与文本。Equation 3 定义选择操作 $`\phi(X,M,m)=X\odot\mathbf1\{M=m\}`$；Equation 4 对两类特征分别归一化后再组合为 $`\tilde H`$。因此同一层仍有共同序列结构，模态差别保存在参数选择中。
 
 忽略层索引以便阅读，Equation 5—8 的主要结构为：
 
@@ -70,14 +70,14 @@ $$
 
 $$
 H^V=\phi(\tilde H,M,0)W^{V0}+\phi(\tilde H,M,1)W^{V1},
-\quad C=\operatorname{softmax}(H^Q(H^K)^\top/\sqrt d)H^V.
+\quad C=\mathrm{softmax}(H^Q(H^K)^\top/\sqrt d)H^V.
 $$
 
 共享 Q 让视觉、文字查询在同一关系计算中工作；不同 K 影响怎样被检索，不同 V 决定被检索到的内容怎样进入上下文；后续共享 FFN 促进知识协作。原文也对归一化作模态区分，不能只概括成“两个额外投影层”。
 
 这种设计没有禁止跨模态 attention，也不是把所有参数按视觉 / 文字隔离。它通过部分共享取得平衡，是否改善仍需实验支持，不能从参数结构直接推导出永远消除干扰的保证。
 
-Abstractor 将语言解码器注意力长度从 $P+L$ 变成 $K+L$，其平方项复杂度由 $O((P+L)^2)$ 变为 $O((K+L)^2)$，$K=64$。这只比较 LLM 侧注意力，不包含视觉编码和 abstractor 自身计算。论文没有提供统一端到端 FLOPs 和时延，不应将该式当作全模型计算节省比例。
+Abstractor 将语言解码器注意力长度从 $`P+L`$ 变成 $`K+L`$，其平方项复杂度由 $`O((P+L)^2)`$ 变为 $`O((K+L)^2)`$，$`K=64`$。这只比较 LLM 侧注意力，不包含视觉编码和 abstractor 自身计算。论文没有提供统一端到端 FLOPs 和时延，不应将该式当作全模型计算节省比例。
 
 <a id="data"></a>
 
@@ -99,7 +99,7 @@ VQAv2 选最高置信答案，把同图问答组合；GQA、OKVQA、OCRVQA 也�
 
 **第一阶段视觉语言预训练。** 训练 ViT、随机初始化六层 abstractor、新增 MAM 参数，冻结原 LLaMA-2 参数。MAM 从语言模型参数初始化。输入分辨率 224×224，LLM 序列长度 256，42500 steps，global batch 8192，峰值 / 最低学习率 1e-4 / 1e-6，warmup 1000，weight decay 0.05。
 
-**第二阶段联合指令调优。** 纯文本与视觉指令一起训练整模型，分辨率增为 448×448、序列长 2048。正文称一个 epoch，附录列 4800 steps、batch 256；峰值 / 最低学习率 2e-5 / 1e-7，warmup 250，weight decay 0。两阶段均使用 AdamW，$\beta_1=0.9,\beta_2=0.98,\epsilon=10^{-6}$，cosine schedule、梯度裁剪 1、BF16，梯度累计 16，并使用 Megatron 并行、优化器分片和 activation checkpointing。
+**第二阶段联合指令调优。** 纯文本与视觉指令一起训练整模型，分辨率增为 448×448、序列长 2048。正文称一个 epoch，附录列 4800 steps、batch 256；峰值 / 最低学习率 2e-5 / 1e-7，warmup 250，weight decay 0。两阶段均使用 AdamW，$`\beta_1=0.9,\beta_2=0.98,\epsilon=10^{-6}`$，cosine schedule、梯度裁剪 1、BF16，梯度累计 16，并使用 Megatron 并行、优化器分片和 activation checkpointing。
 
 正文强调 ViT layer-wise LR decay 为 **0.9**，Table 15 的“ViT learning rate decay”却列 **0**，没有解释两者的关系；这里保留原文差异，不能把表中的 0 自动改成 weight decay 或唯一有效配置。视觉编码器学习率层次控制的作用由 Table 6 消融支持。
 

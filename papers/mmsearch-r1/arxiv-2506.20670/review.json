@@ -53,7 +53,7 @@
     "search penalty config mapping not explicitly specified",
     "no experiment reproduction or independent peer review"
   ],
-  "article_sha256": "69ec04922be10e7eddc8d6e2060589e210ef97dcd6c25fe1c528a47292965eb4",
+  "article_sha256": "9c7aa41c96b18353e685fd4ee43475b920045220e6ad7a04c594335589d35236",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -72,7 +72,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 11,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 19,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 8,
+      "operatorname_replacements": 3,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

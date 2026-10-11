@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "paper_id": "0b8790d1de58",
+  "title": "GPT-4o 图像生成：公开生成与控制链",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "生成或编辑请求",
+      "lines": [
+        "文字及可选上传图像"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "c",
+      "title": "聊天模型触发判断",
+      "lines": [
+        "依据请求决定生成或拒绝"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "p",
+      "title": "提示阻断",
+      "lines": [
+        "生成调用后的输入检查"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "g",
+      "title": "原生自回归图像生成",
+      "lines": [
+        "内部视觉表示与参数关系未披露"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "b",
+      "title": "输出阻断",
+      "lines": [
+        "分类器及推理监控器检查"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "o",
+      "title": "可交付图像",
+      "lines": [
+        "通过系统检查的输出"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "c",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "c",
+      "to": "p",
+      "label": "触发生成",
+      "style": "solid"
+    },
+    {
+      "from": "p",
+      "to": "g",
+      "label": "通过检查",
+      "style": "solid"
+    },
+    {
+      "from": "g",
+      "to": "b",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "b",
+      "to": "o",
+      "label": "通过检查",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开系统链自绘，非原文图。",
+    "阻断组件是系统控制，不是生成网络层。",
+    "不假设扩散模型、共享权重或图像词表。"
+  ],
+  "sources": [
+    {
+      "url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf",
+      "locator": "official-source-snapshot-2026-10-08; §2 Native image generation / mitigation controls",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

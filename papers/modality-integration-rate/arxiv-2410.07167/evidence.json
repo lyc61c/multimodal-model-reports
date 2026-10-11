@@ -15,5 +15,21 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§2.1、Eq.5；PDF 第3–4、10页",
+        "§2.1；PDF 第3–4页；MoCa见第10页 Eq.5"
+      ],
+      "changes": [
+        "Align prose with supplemental/public-interface drawing and remove obsolete page-position wording",
+        "Added article-specific architecture/interface explanation supported by the cited local source passages",
+        "Authored source-limited architecture-diagram.json; root will render/insert separately"
+      ],
+      "article_sha256": "7e41f4a28d8bc33c538a685fdc12859ccaeb81f4fe6abcda42424ae57a34be50"
+    }
+  ]
 }

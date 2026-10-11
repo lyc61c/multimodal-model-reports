@@ -44,6 +44,14 @@
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘模型架构示意，非原文图](figures/architecture-overview.svg)
+
+*自绘模型架构示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[2504.16656v1; §3.1 / Table 4](https://arxiv.org/pdf/2504.16656v1)。
+<!-- derived-architecture:end -->
+
 推理路径可以概括为：图像经 InternViT-6B 提取视觉特征，MLP 适配器将特征映射到语言模型可处理的空间，再与文本问题一起送入推理语言模型生成回答。§3.1 将 QwQ-32B 作为语言侧示例，官方发布模型为 38B。报告没有提供适配器层数、视觉 token 数及完整分辨率配置，因此不能据此写出可直接复现的结构参数表。
 
 ![原文 Figure 1：SSB 与 GRPO 的训练信号流](figures/ssb-training.png)
@@ -59,7 +67,7 @@
 **SSB 针对组内相对优势退化。** 对同一问题采样多个回答，通过奖励差异确定哪些输出值得提高概率。下面的式子用于解释标准组相对优势，并非报告逐项公开的实现公式：
 
 $$
-A_i=\frac{r_i-\operatorname{mean}(r_1,\ldots,r_G)}{\operatorname{std}(r_1,\ldots,r_G)+\epsilon}.
+A_i=\frac{r_i-\mathrm{mean}(r_1,\ldots,r_G)}{\mathrm{std}(r_1,\ldots,r_G)+\epsilon}.
 $$
 
 若一组回答奖励都相同，分子为零，这些回答不会提供区分好坏的优势信号。SSB 保存此前具有非零优势的样本，按优势绝对值优先加权抽取，再加入更新过程。作者观察到有效样本比例可能从训练初期约 60% 降到后期不足 10%，因此缓冲的目标是维持有信息的更新。（§3.3，第 4–5 页）

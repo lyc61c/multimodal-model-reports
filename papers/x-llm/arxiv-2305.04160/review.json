@@ -16,7 +16,7 @@
     "asset_hashes_match": true,
     "original_assets": 4
   },
-  "article_sha256": "8bfbcc662b6663db801bf622757558306c2263e3daaf76c9ef151e815c5428c6",
+  "article_sha256": "c6a2c19c71981b57bf397054bbbe1cb717e41da2d3ed0d23fae2f99bb744ae05",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -24,7 +24,42 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 11,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2305.04160v1",
+      "source_cache": "source/papers/31a81e153f28/source.txt",
+      "source_locators": [
+        "§3–3.1，PDF p.4"
+      ],
+      "changes": [
+        "第3节补充：三个 X2L 接口输出的都是连续嵌入，Adapter 负责把各自表示映射到 ChatGLM 的输入向量空间；“外语”是对这种接口统一的比喻，并不要求先生成一段可读的外语文字"
+      ],
+      "article_sha256_before": "8bfbcc662b6663db801bf622757558306c2263e3daaf76c9ef151e815c5428c6",
+      "article_sha256_after": "e16ab5f6cfad5226fd7b49185880035a7ba9baa5a392ff4f7289e2425383791a",
+      "diagram_plan": false,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ],
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 11,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

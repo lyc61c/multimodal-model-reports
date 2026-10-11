@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "fa8d772918c0",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "c7a6f3800028b74ff7046a18c0c485bf5775900c9b8f9b9c41948bbcd8c93737",
+      "origin": "self_drawn",
+      "kind": "method_workflow",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2401.12168v1",
+          "locator": "§3.3；PDF 第6–7页",
+          "note": "直接空间推理输入/输出、继承PaLM-E并改用PaLM2-S；外部协调器与离线标注的边界。"
+        }
+      ],
+      "scope": "根据公开原文自绘，非原文插图。；本图只画直接问答，不把离线几何工具接入推理。；多跳模式另由外部 LLM 拆题并反复调用此接口。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

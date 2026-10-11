@@ -13,5 +13,24 @@
     "Table7 2B MMVU39.9 conflicts with prose37.6; image table calls Qwen2VL8B whereas video table7B; no invented reconciliation.",
     "Separated percentages, MME/OCRBench scores and temporal mIoU; no claim of controlled causality or measured universal speedup."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "补视觉编码器初始化来源。",
+        "补视频一次推理路径及像素差与特征删减的对应。"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2501.13106v1",
+          "locator": "§3 Training, PDF p5; §2.2 Differential Frame Pruner / §3 Training, PDF p5",
+          "version": "2501.13106v1"
+        }
+      ],
+      "article_sha256": "3722c2ad3dfaee068fd2bc9df6f865d43acee24a0c380cc5eac191c02bcd19c2",
+      "model_executed": false
+    }
+  ]
 }

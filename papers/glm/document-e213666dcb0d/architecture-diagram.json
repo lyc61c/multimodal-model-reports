@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "paper_id": "e213666dcb0d",
+  "title": "GLM-5.3-Flash：公开架构边界",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "任务与上下文",
+      "lines": [
+        "文本与视觉任务条件"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "model",
+      "title": "GLM-5.3-Flash",
+      "lines": [
+        "稀疏 + 线性注意力，采用 mHC",
+        "视觉接口与层序列未在卡片展开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "answer",
+      "title": "输出",
+      "lines": [
+        "任务回答"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "answer",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开结构边界自绘，非原文图。",
+    "不假定稀疏规则、递推维度或专家数。"
+  ],
+  "sources": [
+    {
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md",
+      "locator": "official-model-card-2026-10-08; Model overview",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "paper_id": "ee804bbbd9e2",
+  "title": "ALLaVA：轻量视觉语言模型",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "输入图像",
+      "lines": [
+        "336×336"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "query",
+      "title": "文字指令",
+      "lines": [
+        "语言模型 tokenizer"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "clip",
+      "title": "CLIP ViT-L/14",
+      "lines": [
+        "303M 参数",
+        "视觉编码器冻结"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "projector",
+      "title": "视觉投影器",
+      "lines": [
+        "6.3M 参数",
+        "从头初始化"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "phi",
+      "title": "Phi2 2.7B",
+      "lines": [
+        "视觉表示与指令共同输入",
+        "自回归生成回答"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "文字回复",
+      "lines": [
+        "描述、问答与推理解释"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "clip",
+      "style": "solid",
+      "from": "image"
+    },
+    {
+      "to": "projector",
+      "style": "solid",
+      "from": "clip"
+    },
+    {
+      "to": "phi",
+      "style": "solid",
+      "from": "projector"
+    },
+    {
+      "to": "phi",
+      "style": "solid",
+      "from": "query"
+    },
+    {
+      "to": "out",
+      "style": "solid",
+      "from": "phi"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "GPT-4V 用于离线生成训练数据，不在本推理路径。",
+    "投影器层数与最终视觉 token 数未在该表公开。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2402.11684v1",
+      "locator": "§4.1、Table2；PDF 第7页",
+      "note": "LLaVA-v1.5式三模块、CLIP/Phi2型号、投影规模与图文回答路径。"
+    }
+  ]
+}

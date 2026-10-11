@@ -12,5 +12,27 @@
     "核验中文Drawbench 174提示5评审，每模型四图以中文CLIP选一，偏好不是随机一次成功率。",
     "原文架构、生成样例与表格已渲染查看；不以自绘或新生成图代替原论文素材。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2308.12038v1",
+      "source_cache": "source/papers/d08b52bb40c6/source.txt",
+      "source_locators": [
+        "§3.2–3.3、§4.2、附录 B–C，PDF pp.4–6、20–21"
+      ],
+      "changes": [
+        "第3节补充：两种变体的推理方向不同"
+      ],
+      "article_sha256_before": "3bc0cf3e91b4d1645133759199b447ebb667faf3fba72944a999c14459fcbaf1",
+      "article_sha256_after": "76d079895c775f8f92bb8dcc51cdea35957bc2079b144fd2a4de19dc4946c93e",
+      "diagram_plan": false,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ]
 }

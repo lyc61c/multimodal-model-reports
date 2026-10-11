@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "articles": 271,
+  "expressions": 2855,
+  "delimiters": {
+    "guarded": 2355,
+    "display": 500
+  },
+  "article_manifest_sha256": "c9a156416616aa94b5752666ae21c20666bf44d90a031594f290687821abd4a7",
+  "issues": [],
+  "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
+  "limits": "Syntax/macro checks precede Markdown and engine validation. This is not a complete GitHub macro whitelist or a mathematical proof check."
+}

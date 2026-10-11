@@ -24,7 +24,7 @@
   },
   "model_execution": "not_run",
   "limitations": "No numericalevaluationprovidedinv1;noindependentreproductionclaimed",
-  "article_sha256": "36e7f89adf2633b9e6b9053d2554598352708cadbea137d5c12d64ea76881afd",
+  "article_sha256": "5c056f7416a8a7c679f692e4ba29cf8a51ac2541e5472fc10d6d32c017451260",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -44,12 +44,25 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
+    "math_delimiters_converted": 3,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "mobile_math_layout": {
       "date": "2026-10-11",
       "long_inline_equations_promoted_to_display": 1,
       "scope": "Display layout and connective punctuation only; formula contents preserved"
-    }
+    },
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 3,
+      "operatorname_replacements": 3,
+      "vertical_bar_replacements": 4
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

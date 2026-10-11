@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "paper_id": "783b062a88f0",
+  "title": "Kimi K2.5：图像与视频进入 MoE",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "图像或视频帧组",
+      "lines": [
+        "原生分辨率 patch packing",
+        "视频组最多四帧"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "t",
+      "title": "文字与任务历史",
+      "lines": [
+        "用户问题与上下文"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "v",
+      "title": "MoonViT-3D",
+      "lines": [
+        "共享图像与视频参数",
+        "组内时空联合注意力"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "p",
+      "title": "时间池化与 MLP",
+      "lines": [
+        "视频组内约 4 倍时间压缩",
+        "视觉特征对齐语言空间"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "l",
+      "title": "Kimi K2 MoE",
+      "lines": [
+        "视觉条件与文字共同推理"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "o",
+      "title": "回答或工具请求",
+      "lines": [
+        "Agent Swarm 属于另一系统层"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "v",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "v",
+      "to": "p",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "p",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "t",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "l",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据原文视觉章节自绘，非原文图。",
+    "时间池化之前已有组内时空交互。",
+    "保留原 Agent Swarm 图，两图范围不同。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2602.02276v1",
+      "locator": "2602.02276v1; MoonViT-3D / architecture section",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

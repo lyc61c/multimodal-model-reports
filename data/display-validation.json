@@ -1,14 +1,61 @@
 {
-  "validation_date": "2026-10-11",
-  "renderer": "Local marked GFM, MathJax 3.2.2 SVG and headless Edge; approximate GitHub styling",
-  "article_math_layout_scan": {
-    "articles": 271,
-    "desktop_width": 1120,
-    "mobile_width": 375,
-    "page_overflow_count": 0,
-    "figure_mode": "Fixed-size local placeholders for this math/layout scan; original asset integrity is checked separately"
-  },
-  "sample_pages": [
+  "date": "2026-10-11",
+  "local_browser_engine": "Headless Microsoft Edge; GFM plus compiled MathJax SVG",
+  "pages_scanned": 271,
+  "page_overflow_failures": 0,
+  "scan_widths": [
+    1120,
+    375
+  ],
+  "real_asset_sample_pages": 11,
+  "sample_widths": [
+    1120,
+    430
+  ],
+  "broken_sample_images": 0,
+  "sample_results": [
+    {
+      "file": "papers/qwen/document-7cdfed4ac9e5/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 26
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/internlm-xcomposer/arxiv-2309.15112/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 8
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/internvl/arxiv-2404.16821/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 11
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
     {
       "file": "papers/metalm/arxiv-2206.06336/README.md",
       "desktop": {
@@ -137,6 +184,14 @@
       }
     }
   ],
-  "article_manifest_sha256": "fd786dbdf90d0d0e346a9ec62cfc436fbb4abbe00029f12e6b0220d0989e082a",
-  "limits": "Sample screenshots use original local assets and were visually inspected. Local previews do not verify the live GitHub renderer. Scrollable wide tables and display equations are permitted; page-level overflow is checked."
+  "pixel_spot_checks": [
+    "Qwen3.5 mathematical principles",
+    "InternLM-XComposer mathematical principles",
+    "InternVL 1.5 mathematical principles"
+  ],
+  "derived_architecture_diagrams": 62,
+  "derived_diagram_geometry_checked": 61,
+  "derived_diagram_pixel_checked": 62,
+  "limitations": "Whole-library layout scan uses placeholder original images to isolate text and equation layout. Eleven sample pages embed their actual local assets. Wide table contents may scroll horizontally within the table. This is local rendering, not live GitHub frontend verification.",
+  "article_manifest_sha256": "c9a156416616aa94b5752666ae21c20666bf44d90a031594f290687821abd4a7"
 }

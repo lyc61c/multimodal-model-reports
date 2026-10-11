@@ -1,6 +1,7 @@
 """Validate authored document integrity and report unfinished entries separately."""
 import hashlib
 import re
+import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
 from paper_sources import ROOT, PLAN, dump, read
@@ -61,6 +62,45 @@ for entry in read(PLAN)['entries']:
                     if not asset.get('source_url'):
                         row['issues'].append('Asset lacks original source URL')
             review_path=folder/'review.json'
+            derived_path=folder/'derived-figures-manifest.json'
+            row['derived_assets']=0
+            if derived_path.exists():
+                derived=read(derived_path)
+                row['derived_assets']=len(derived.get('assets',[]))
+                originals={asset['asset_path'] for asset in read(manifest_path).get('assets',[])} if manifest_path.exists() else set()
+                for asset in derived.get('assets',[]):
+                    label=asset.get('asset_path','')
+                    file=(folder/label).resolve()
+                    if not label or not file.is_relative_to(folder.resolve()) or label in originals:
+                        row['issues'].append('Derived asset path is invalid or mixed with original figures: '+label)
+                        continue
+                    if asset.get('origin')!='self_drawn' or asset.get('kind') not in {'architecture','public_interface','method_workflow'}:
+                        row['issues'].append('Derived asset lacks an explicit origin or diagram type: '+label)
+                    sources=asset.get('sources',[])
+                    if not sources or any(not source.get('url','').startswith('https://') or not source.get('locator') for source in sources):
+                        row['issues'].append('Derived asset lacks located primary sources: '+label)
+                    if not asset.get('scope') or label not in body:
+                        row['issues'].append('Derived asset scope or article reference is missing: '+label)
+                    if not file.is_file():
+                        row['issues'].append('Missing derived asset: '+label)
+                        continue
+                    if hashlib.sha256(file.read_bytes()).hexdigest()!=asset.get('asset_sha256'):
+                        row['issues'].append('Derived asset hash mismatch: '+label)
+                    if file.suffix.lower()!='.svg':
+                        row['issues'].append('Architecture diagrams must use native SVG: '+label)
+                        continue
+                    try:
+                        svg=ET.fromstring(file.read_bytes())
+                        ns={'s':'http://www.w3.org/2000/svg'}
+                        if not svg.findtext('s:title',namespaces=ns) or not svg.findtext('s:desc',namespaces=ns) or not svg.get('viewBox'):
+                            row['issues'].append('Derived SVG lacks an accessible title, description or viewBox: '+label)
+                        if any(element.tag.rsplit('}',1)[-1] in {'script','foreignObject','image'} for element in svg.iter()):
+                            row['issues'].append('Derived SVG contains executable or external raster content: '+label)
+                        if any(key.rsplit('}',1)[-1].lower().startswith('on') or (key.rsplit('}',1)[-1]=='href' and not value.startswith('#'))
+                               for element in svg.iter() for key,value in element.attrib.items()):
+                            row['issues'].append('Derived SVG contains an external or executable reference: '+label)
+                    except ET.ParseError:
+                        row['issues'].append('Derived SVG is not valid XML: '+label)
             if not review_path.exists():
                 row['issues'].append('Missing document review record')
             else:
@@ -70,7 +110,8 @@ for entry in read(PLAN)['entries']:
     results.append(row)
 report={'total':len(results),'states':dict(Counter(r['status'] for r in results)),
         'completed_with_integrity_issues':sum(bool(r['issues']) for r in results),
-        'original_assets':sum(r.get('assets',0) for r in results),'entries':results,
+        'original_assets':sum(r.get('assets',0) for r in results),
+        'derived_assets':sum(r.get('derived_assets',0) for r in results),'entries':results,
         'limits':'Structural and provenance validation. Semantic accuracy is checked by the source-reading notes, not inferred from this script.'}
 dump(ROOT/'data/article-verification.json',report)
 print({k:v for k,v in report.items() if k!='entries'})

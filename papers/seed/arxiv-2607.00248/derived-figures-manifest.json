@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "188b7c797733",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "62df5f5cc5739e4483c159a114e055d3766945c7a63f27052ed7196698348b1a",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2607.00248v1",
+          "locator": "2607.00248v1; VideoCut / GUI and coding workflow cases",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开工作流自绘，非原文图。；VideoCut 改变观察证据，不是神经网络层。；原 GUI 案例图保留，展示具体任务轨迹。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

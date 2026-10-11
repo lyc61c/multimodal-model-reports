@@ -60,7 +60,7 @@
     "原始视频ATE最好，文字动作RPE更低",
     "实际硬件通信储存不因固定激活FLOPs而消失"
   ],
-  "article_sha256": "55fb90832500139321ca62dfff5489270217f9961157297822b4a4173b28d3d7",
+  "article_sha256": "4b851d254ae99f795755c196119c63c50c5940908f9a6bc8558d325500ea07ce",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -78,7 +78,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 20,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 20,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

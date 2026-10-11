@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "e213666dcb0d",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "e41c97420538df2fd2d06ce6e69c3e47ac421edb54d73079921cc3e1df6d9e35",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md",
+          "locator": "official-model-card-2026-10-08; Model overview",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开结构边界自绘，非原文图。；不假定稀疏规则、递推维度或专家数。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

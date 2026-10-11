@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="972" viewBox="0 0 720 972" role="img" aria-labelledby="title desc">
+<title id="title">GPT-5：发布时的系统路由（自绘，非原文图）</title>
+<desc id="desc">公开系统组件自绘，非原文图。；路由器是系统选模型，不是 token 级 MoE 证据。；Pro 采用推理模型的额外并行测试时计算。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="970" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 公开接口示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">GPT-5：发布时的系统路由</text>
+<path d="M360,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H529 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,599 V632 H360 V665" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,599 V632 H360 V665" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="648" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="360" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">会话与任务</text>
+<text x="360" y="190" text-anchor="middle" font-size="20" fill="#475569">类型、复杂度、工具需求、意图</text>
+<rect x="36" y="296" width="648" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="360" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">实时路由器</text>
+<text x="360" y="362" text-anchor="middle" font-size="20" fill="#475569">选择适合的模型组件</text>
+<rect x="36" y="468" width="310" height="131" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">快速模型</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">处理多数常见请求</text>
+<text x="191" y="559" text-anchor="middle" font-size="20" fill="#475569">内部神经结构未在系统卡展</text>
+<text x="191" y="584" text-anchor="middle" font-size="20" fill="#475569">开</text>
+<rect x="374" y="468" width="310" height="131" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="529" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">推理模型</text>
+<text x="529" y="534" text-anchor="middle" font-size="20" fill="#475569">更深的推理过程</text>
+<text x="529" y="559" text-anchor="middle" font-size="20" fill="#475569">内部神经结构未在系统卡展</text>
+<text x="529" y="584" text-anchor="middle" font-size="20" fill="#475569">开</text>
+<rect x="36" y="665" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="700" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">回答或工具请求</text>
+<text x="360" y="731" text-anchor="middle" font-size="20" fill="#475569">由被选组件产生</text>
+<line x1="36" y1="819" x2="684" y2="819" stroke="#e2e8f0"/>
+<text x="36" y="846" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="877" font-size="17" fill="#64748b">公开系统组件自绘，非原文图。</text>
+<text x="36" y="902" font-size="17" fill="#64748b">路由器是系统选模型，不是 token 级 MoE 证据。</text>
+<text x="36" y="927" font-size="17" fill="#64748b">Pro 采用推理模型的额外并行测试时计算。</text>
+</g></svg>

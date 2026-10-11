@@ -42,6 +42,14 @@
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘公开接口示意，非原文图](figures/architecture-overview.svg)
+
+*自绘公开接口示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[official-source-snapshot-2026-10-08; Vision Language / agent scaffold / API Usage](https://qwen.ai/blog?id=qwen3.6-27b)。
+<!-- derived-architecture:end -->
+
 博客明确给出“dense 27B”和原生多模态，但没有公布层数、隐藏维度、注意力结构、视觉编码器、连接器、视觉 token 压缩方式或视频时序编码。它也没有架构图，因此本文不根据相邻 Qwen 版本猜测这些实现。
 
 从使用接口可确认，模型接收图文/视频上下文并生成回复；在代码智能体中，宿主软件提供 shell、文件编辑等工具，模型与工具结果反复交互。SWE-bench 成绩来自带 bash 与文件编辑工具的内部 agent scaffold，不能视为只生成一次补丁、没有工具反馈的成绩。（原文 Vision Language、Language 表下注）

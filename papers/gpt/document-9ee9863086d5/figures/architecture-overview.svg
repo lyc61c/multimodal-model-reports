@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1119" viewBox="0 0 720 1119" role="img" aria-labelledby="title desc">
+<title id="title">GPT-4o：端到端全模态公开接口（自绘，非原文图）</title>
+<desc id="desc">根据公开原文自绘，非原文插图。；输出能力以系统卡描述为准，不等于发布日全部开放。；声线分类器是外部部署监测，不是音频解码头。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1117" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 公开接口示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">GPT-4o：端到端全模态公开接口</text>
+<path d="M191,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H529 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,574 V607 H529 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,746 V779 H529 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像／视频／音频</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">可与文字组合输入</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字与上下文</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">含预设声线系统条件</text>
+<rect x="36" y="296" width="648" height="106" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="360" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">GPT-4o omni 模型</text>
+<text x="360" y="362" text-anchor="middle" font-size="20" fill="#475569">同一网络端到端处理</text>
+<text x="360" y="387" text-anchor="middle" font-size="20" fill="#475569">自回归生成；内部未披露</text>
+<rect x="36" y="468" width="310" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字／图像输出</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">报告描述的模型输出能力</text>
+<rect x="374" y="468" width="310" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="529" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">音频输出</text>
+<text x="529" y="534" text-anchor="middle" font-size="20" fill="#475569">生成中的语音流</text>
+<rect x="374" y="640" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="529" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">声线输出分类器</text>
+<text x="529" y="706" text-anchor="middle" font-size="20" fill="#475569">流式检查允许声线</text>
+<text x="529" y="731" text-anchor="middle" font-size="20" fill="#475569">异常时阻断输出</text>
+<rect x="374" y="812" width="310" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="529" y="847" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">允许的语音输出</text>
+<text x="529" y="878" text-anchor="middle" font-size="20" fill="#475569">部署监测之后交付</text>
+<line x1="36" y1="966" x2="684" y2="966" stroke="#e2e8f0"/>
+<text x="36" y="993" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1024" font-size="17" fill="#64748b">根据公开原文自绘，非原文插图。</text>
+<text x="36" y="1049" font-size="17" fill="#64748b">输出能力以系统卡描述为准，不等于发布日全部开放。</text>
+<text x="36" y="1074" font-size="17" fill="#64748b">声线分类器是外部部署监测，不是音频解码头。</text>
+</g></svg>

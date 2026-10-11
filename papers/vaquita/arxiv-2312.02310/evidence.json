@@ -11,5 +11,18 @@
     "核验 Table 1、2 的 GPT 评审协议与提示收益范围，Figure 6 50.8 消融不是主表 48.8 同一初始化。",
     "原图已渲染和查看，修复架构图与主表图注边界；压缩 ratio 不等同实际加速。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revisions": [
+    {
+      "date": "2026-10-11",
+      "scope": "Section3 architecture explanation and/or source-limited diagram plan",
+      "source_locations": [
+        "§3.1–3.2、§4；PDF 第4–6页"
+      ],
+      "changes": [
+        "Added article-specific architecture/interface explanation supported by the cited local source passages"
+      ],
+      "article_sha256": "d6a2c02a4c26fde81ca094f2b74f6163051b03c4da9fd42aeaa3da1436c88a5a"
+    }
+  ]
 }

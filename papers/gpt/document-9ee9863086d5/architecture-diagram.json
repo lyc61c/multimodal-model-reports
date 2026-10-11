@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "paper_id": "9ee9863086d5",
+  "title": "GPT-4o：端到端全模态公开接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "media",
+      "title": "图像／视频／音频",
+      "lines": [
+        "可与文字组合输入"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "文字与上下文",
+      "lines": [
+        "含预设声线系统条件"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "omni",
+      "title": "GPT-4o omni 模型",
+      "lines": [
+        "同一网络端到端处理",
+        "自回归生成；内部未披露"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "nonvoice",
+      "title": "文字／图像输出",
+      "lines": [
+        "报告描述的模型输出能力"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "voice",
+      "title": "音频输出",
+      "lines": [
+        "生成中的语音流"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "monitor",
+      "title": "声线输出分类器",
+      "lines": [
+        "流式检查允许声线",
+        "异常时阻断输出"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "out",
+      "title": "允许的语音输出",
+      "lines": [
+        "部署监测之后交付"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "to": "omni",
+      "style": "solid",
+      "from": "media"
+    },
+    {
+      "to": "omni",
+      "style": "solid",
+      "from": "text"
+    },
+    {
+      "to": "nonvoice",
+      "style": "solid",
+      "from": "omni"
+    },
+    {
+      "to": "voice",
+      "style": "solid",
+      "from": "omni"
+    },
+    {
+      "to": "monitor",
+      "style": "solid",
+      "from": "voice"
+    },
+    {
+      "to": "out",
+      "style": "solid",
+      "from": "monitor"
+    }
+  ],
+  "notes": [
+    "根据公开原文自绘，非原文插图。",
+    "输出能力以系统卡描述为准，不等于发布日全部开放。",
+    "声线分类器是外部部署监测，不是音频解码头。"
+  ],
+  "sources": [
+    {
+      "url": "https://cdn.openai.com/gpt-4o-system-card.pdf",
+      "locator": "§1、§3.3.1；PDF 第1、6–7页",
+      "note": "端到端omni输入输出；预设声线条件与外部流式声线分类器。"
+    }
+  ]
+}

@@ -51,7 +51,7 @@ PRISM 的主要融合版本采用 DINOv2＋SigLIP、384px 输入和直接缩放�
 论文的形式化模型为：
 
 $$
-p_{\rm img}=V_\omega(x_{\rm img}),\qquad e_{\rm img}=F_\psi(p_{\rm img}),\qquad u_{\rm gen}=LM_\theta([e_{\rm img};\operatorname{embed}(u_{\rm prompt})]).
+p_{\rm img}=V_\omega(x_{\rm img}),\qquad e_{\rm img}=F_\psi(p_{\rm img}),\qquad u_{\rm gen}=LM_\theta([e_{\rm img};\mathrm{embed}(u_{\rm prompt})]).
 $$
 
 给定图像、提示与目标回答，优化条件负对数似然：

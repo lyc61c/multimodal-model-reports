@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "8423dfa0647c",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "30d5b1ae1159873ff43be1e1dbf52bf3d0e6c3b64daae4d848b914770358f976",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2307.02499v1",
+          "locator": "§3.1–3.2，PDF p.3",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘，依据原文 §3.1。；查询数、分辨率和层宽不补造。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

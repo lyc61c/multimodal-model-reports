@@ -40,19 +40,21 @@
 
 Figure 2 左侧蓝色库保存视觉特征，绿色库保存查询；中间的 cross-attention 读取视觉历史，self-attention 读取查询历史。视觉编码器与语言模型用雪花标示冻结，Q-Former 与连接 FC 层用火焰标示可训练。右侧示例把相似度最高的相邻条目合并，并保持其在时间序列中的位置。
 
-每帧编码得到 $v_t\in\mathbb R^{P\times C}$，时间位置嵌入加入后为 $f_t=v_t+PE(t)$，对应原文式（1）。视觉库在压缩前为 $F_t=\operatorname{Concat}(f_1,\ldots,f_t)$。所有 Q-Former cross-attention 层共享这组原始视觉特征。
+每帧编码得到 $`v_t\in\mathbb R^{P\times C}`$，时间位置嵌入加入后为 $`f_t=v_t+PE(t)`$，对应原文式（1）。视觉库在压缩前为 $`F_t=\mathrm{Concat}(f_1,\ldots,f_t)`$。所有 Q-Former cross-attention 层共享这组原始视觉特征。
 
 每层查询的抽象程度不同，因此 query memory 并不是一个所有层共享的静态表；每个 self-attention 层有自己的查询记忆库。当前查询与历史查询交互，再从视觉特征中读取有用信息。最后时刻的 Q-Former 输出经连接层送给语言模型，视觉输入从 T 帧各 32 个查询、总计 32T，变成最终 32 个查询。这些是连续视觉嵌入，不能理解成已生成的 32 个自然语言单词。[PDF 第 3–5 页](https://arxiv.org/pdf/2404.05726v1#page=4)
+
+具体实现采用 **EVA-CLIP ViT-G/14、InstructBLIP 初始化的 Q-Former、Vicuna-7B**。视频帧顺次进入视觉编码器，Q-Former 在每一步读取当前帧与记忆；处理完已提供的视频后，最后时刻的查询表示通过全连接层交给 Vicuna，结合问题或任务提示生成文字。视觉/查询记忆库服务于 Q-Former 的视频汇总，不能直接等同于 Vicuna 解码时缓存历史文本的 KV cache，也不要求把全部历史帧的 patch 一次性放入语言上下文。（§3.3、§4.2，PDF 第4–5页）
 
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
-cross-attention 的原文式（2）令 $Q=z_tW_Q$、$K=F_tW_K$、$V=F_tW_V$，再使用式（3）：
+cross-attention 的原文式（2）令 $`Q=z_tW_Q`$、$`K=F_tW_K`$、$`V=F_tW_V`$，再使用式（3）：
 
-$$O=\operatorname{Softmax}\left(\frac{QK^T}{\sqrt C}\right)V.$$
+$$O=\mathrm{Softmax}\left(\frac{QK^T}{\sqrt C}\right)V.$$
 
-当前查询通过 key-value 直接读取过去帧，不必把这些帧全部作为语言模型上下文。query memory 则把 K、V 来源换成历史查询 $Z_t$，对应式（4），把之前的语义处理结果也纳入当前更新。两种记忆提供原始感知与高层状态两类信息。
+当前查询通过 key-value 直接读取过去帧，不必把这些帧全部作为语言模型上下文。query memory 则把 K、V 来源换成历史查询 $`Z_t`$，对应式（4），把之前的语义处理结果也纳入当前更新。两种记忆提供原始感知与高层状态两类信息。
 
 如果不限制长度，视觉库为 tP 个位置，查询库为 tN 个位置，仍会随视频增长。MBC 在超过上限 M 时合并一对条目。原文式（5）至（7）的 token 级过程为：
 
@@ -82,7 +84,7 @@ Breakfast 有 1712 个早餐准备视频，平均约 2.7 分钟；COIN 有 11,82
 
 $$\mathcal L=-\frac1S\sum_{i=1}^{S}\log P(w_i\mid w_{<i},V).$$
 
-V 是视频，$w_i$ 为真实目标文字。视觉编码器与语言模型冻结，学习主要集中在 Q-Former 及图中的连接层。不同下游任务通过目标序列和提示表达，报告没有额外的记忆重建损失或强化学习目标。
+V 是视频，$`w_i`$ 为真实目标文字。视觉编码器与语言模型冻结，学习主要集中在 Q-Former 及图中的连接层。不同下游任务通过目标序列和提示表达，报告没有额外的记忆重建损失或强化学习目标。
 
 | 数据任务 | epoch | 学习率 | batch | 采样帧数 | 记忆长度 |
 | --- | ---: | ---: | ---: | ---: | ---: |

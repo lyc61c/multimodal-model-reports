@@ -19,7 +19,7 @@
     "original_assets": 7,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "96c4725657c8c9270adbcec538e8b9e2c8df65f1f06aab1381963924b752e953",
+  "article_sha256": "05c2082a440c69b0dd0c28eea0838271bf432d03d25a8dd4ce4bdd0db5bbf065",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -38,5 +38,35 @@
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf",
+          "locator": "official-source-snapshot-2026-10-08; §2 Native image generation / mitigation controls",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "公开系统链自绘，非原文图。",
+        "阻断组件是系统控制，不是生成网络层。",
+        "不假设扩散模型、共享权重或图像词表。"
+      ],
+      "article_sha256": "96c4725657c8c9270adbcec538e8b9e2c8df65f1f06aab1381963924b752e953",
+      "model_executed": false
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   }
 }

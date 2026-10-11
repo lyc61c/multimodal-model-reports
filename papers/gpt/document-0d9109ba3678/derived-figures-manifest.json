@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "0d9109ba3678",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "7615af03e112618db974f859907d73befa4704c3de665f29c7b7bfcb98e647ce",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "locator": "official-source-snapshot-2026-10-08; Long-running tasks / asynchronous clarifications / system-card deployment",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开系统接口自绘，非原文图。；澄清与工具动作是不同决策出口。；外部笔记及检索不是无限原生上下文。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

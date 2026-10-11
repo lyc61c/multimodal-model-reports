@@ -30,6 +30,14 @@ Flash 的 DeepSWE v1.1 从 **65.3% 到 73.7%**，CharXiv Reasoning 从 **84.5% �
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘公开接口示意，非原文图](figures/architecture-overview.svg)
+
+*自绘公开接口示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[official-source-snapshot-2026-10-08; Long-horizon agent / application demos](https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/)。
+<!-- derived-architecture:end -->
+
 原文称两版本共享基础智能，面向不同部署环境，并配有不同安全缓解策略。这个说法不足以证明二者完全同权重，也没有披露稠密/MoE 类型、模态编码器、连接器或上下文结构。
 
 发布页还称长期 agent 循环会递归评估和改进基础模型，安全领域训练促进共同的编码与推理能力。但没有说明循环如何生成数据、何时更新权重或采用什么奖励，不能将其直接写成某个确定的强化学习或自蒸馏算法。

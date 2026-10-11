@@ -11,7 +11,7 @@
     "targeted_content_audit_2026-10-11": "2026-10-11 targeted content audit: Figure 2/3 仍称完整截图，Figure 2 已不含页内公式；说明虚线反馈，按 §3.2/附录 C.2 定位冻结解释。"
   },
   "model_execution": "not_run",
-  "article_sha256": "cee71c22d0027d90e1055724ff61cbfa56f21363692c378d758d61387de58519",
+  "article_sha256": "56825d0986326fbece2a56f237e6b7e1cdcd8c9232b56da86a89bc6d60173a00",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -51,7 +51,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 16,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 16,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 2
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

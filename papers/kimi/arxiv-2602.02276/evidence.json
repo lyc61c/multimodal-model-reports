@@ -155,5 +155,51 @@
       ],
       "article_sha256": "f08b3907b113eb29958616749889f1e54de28cd52bc6b2d89e999c4e8a6397b7"
     }
+  ],
+  "math_boundary_revision_history": [
+    {
+      "date": "2026-10-11",
+      "id": "783b062a88f0",
+      "path": "papers/kimi/arxiv-2602.02276/README.md",
+      "kind": "manual_math_boundary_repair",
+      "scope": "人工将已识别的裸括号变量/表达式恢复为 GitHub 官方 $`…`$ 行内数学边界；修复一处孤立反斜杠右括号；公式内部数值与含义保持不变。未重新核验原文全部数学事实。",
+      "changed_lines": 2,
+      "changes": [
+        {
+          "line_before": 83,
+          "before": "**Toggle 交替学习节省 token 与利用更长推理。** 固定预算训练可能让模型无法利用更多计算，作者每隔 (m) 次迭代切换预算受限与普通扩展阶段。预算基于正确回答长度的百分位，原文 Eq. (2) 的意图可写为：",
+          "after": "**Toggle 交替学习节省 token 与利用更长推理。** 固定预算训练可能让模型无法利用更多计算，作者每隔 $`m`$ 次迭代切换预算受限与普通扩展阶段。预算基于正确回答长度的百分位，原文 Eq. (2) 的意图可写为："
+        },
+        {
+          "line_before": 91,
+          "before": "预算在训练开始时估计，之后固定；受限阶段仅在该题平均正确率超过阈值时惩罚超预算回答，以免早期为省 token 放弃难题。这里整理了原文集合中不统一的下标，没有补充未披露的 (m,\\rho) 或准确率阈值。Figure 5 的 25%–30% 输出减少实验是在 **K2 Thinking** 上验证 Toggle，不能声称该图直接测得 K2.5 所有任务同样降幅。",
+          "after": "预算在训练开始时估计，之后固定；受限阶段仅在该题平均正确率超过阈值时惩罚超预算回答，以免早期为省 token 放弃难题。这里整理了原文集合中不统一的下标，没有补充未披露的 $`m,\\rho`$ 或准确率阈值。Figure 5 的 25%–30% 输出减少实验是在 **K2 Thinking** 上验证 Toggle，不能声称该图直接测得 K2.5 所有任务同样降幅。"
+        }
+      ],
+      "article_sha256": "f994192d1116e7eb0586b59a5a475b70cc7dbda86fab385b0f791ecf8516dd9d"
+    }
+  ],
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2602.02276v1",
+          "locator": "2602.02276v1; MoonViT-3D / architecture section",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "根据原文视觉章节自绘，非原文图。",
+        "时间池化之前已有组内时空交互。",
+        "保留原 Agent Swarm 图，两图范围不同。"
+      ],
+      "article_sha256": "f994192d1116e7eb0586b59a5a475b70cc7dbda86fab385b0f791ecf8516dd9d",
+      "model_executed": false
+    }
   ]
 }

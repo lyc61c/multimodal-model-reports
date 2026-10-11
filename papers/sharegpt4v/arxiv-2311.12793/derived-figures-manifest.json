@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "7d194d7a209f",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "d0208f5241abe91cf6aef4fa1810f4eb587b2e218d47b11ced634cbe3a09016a",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2311.12793v1",
+          "locator": "§3.3、§4.1–4.3，PDF pp.5–6",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：展示最终学生，非数据管线。；GPT4-Vision 与 Share-Captioner 生成监督。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

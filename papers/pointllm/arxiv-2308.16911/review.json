@@ -42,7 +42,7 @@
     "Humanwin on200objects2judgesnotuniversalhuman superiority",
     "No impliedpointcloudgeneration or roboticscontrol"
   ],
-  "article_sha256": "3d7df14a4de7a9c0575db7506a2c9cb85dfc037a6d9254acc092be610c147768",
+  "article_sha256": "bd5294ed8e04f1195ad5e65e178759cdb29add0976922752ae4ffd73eaa9e502",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -60,7 +60,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 5,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 5,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

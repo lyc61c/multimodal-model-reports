@@ -33,7 +33,7 @@
     "榜首固定2025-01-14；闭源prompt/输出解析影响成绩；音频摘要容量对比不匹配。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "79b14429debbedd7ef7026646ba54ceeeed0cf49ed68378a6ad488c680d4e018",
+  "article_sha256": "4e3e3eef03eac3239e0cbb1cd019f909e7013c0658d689d3078c0aedb9935e04",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -54,8 +54,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 17,
+    "math_delimiters_converted": 32,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 15,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

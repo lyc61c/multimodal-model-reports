@@ -1,9 +1,10 @@
 {
-  "engine": "Local MathJax 3.2.2",
-  "equations": 2803,
+  "status": "passed",
+  "engine": "MathJax 3.2.2 base+ams with operatorname excluded",
+  "equations": 2855,
   "failures": [],
-  "validation_date": "2026-10-11",
-  "article_count": 271,
-  "article_manifest_sha256": "fd786dbdf90d0d0e346a9ec62cfc436fbb4abbe00029f12e6b0220d0989e082a",
-  "scope": "Every extracted inline and display math expression outside code was compiled locally. Compilation validates syntax, not mathematical correctness or live GitHub rendering."
+  "gfm_protected_inline_expressions_preserved": 2355,
+  "gfm_failures": [],
+  "article_manifest_sha256": "c9a156416616aa94b5752666ae21c20666bf44d90a031594f290687821abd4a7",
+  "scope": "Exact protected inline TeX is checked after GFM tokenization, then all extracted equations are compiled. This is not a live GitHub browser check or a scientific correctness review."
 }

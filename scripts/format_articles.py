@@ -30,6 +30,7 @@ def markdown_segments(body):
     offset = 0
     indented = None
     legacy_display = False
+    dollar_display = False
     for line in body.splitlines(keepends=True):
         if fence:
             marker, length = fence
@@ -49,6 +50,12 @@ def markdown_segments(body):
                     ranges.append((indented, offset))
                     indented = None
                 legacy_display = r"\]" not in line
+            elif re.fullmatch(r" {0,3}\$\$[ \t]*\n?", line) or dollar_display:
+                if indented is not None:
+                    ranges.append((indented, offset))
+                    indented = None
+                if re.fullmatch(r" {0,3}\$\$[ \t]*\n?", line):
+                    dollar_display = not dollar_display
             elif re.match(r"^(?: {4}|\t)", line):
                 if indented is None:
                     indented = offset
@@ -75,6 +82,12 @@ def markdown_segments(body):
             if closing is None:
                 index += 1
                 continue
+            if (opening[0] == "`" and opening.start() > 0
+                    and prose[opening.start() - 1] == "$"
+                    and prose[runs[closing].end():runs[closing].end() + 1] == "$"):
+                # GitHub's $`TeX`$ form is math, not an ordinary inline code span.
+                index = closing + 1
+                continue
             yield prose[cursor:opening.start()], False
             yield prose[opening.start():runs[closing].end()], True
             cursor = runs[closing].end()
@@ -89,28 +102,92 @@ def markdown_segments(body):
     yield from inline_segments(body[cursor:])
 
 
-def normalize_math(body):
-    """Change delimiters outside code, preserving formula contents."""
-    conversions = 0
+MATH_PATTERN = re.compile(
+    r"(?<!\\)\$\$(?P<display>[\s\S]*?)(?<!\\)\$\$"
+    r"|(?<!\\)\$`(?P<guarded>[^`\n]+)`\$"
+    r"|(?<!\\)\\\[(?P<legacy_display>[\s\S]*?)\\\]"
+    r"|(?<!\\)\\\((?P<legacy_inline>[^\n]*?)\\\)"
+    r"|(?<!\\)\$(?![$`])(?P<inline>[^`\n$]+?)(?<!\\)\$(?!\$)"
+)
+
+
+def fenced_math(segment):
+    """Return the contents of a math fence, while leaving ordinary code alone."""
+    lines = segment.splitlines(keepends=True)
+    if len(lines) < 3:
+        return None
+    opening = re.fullmatch(r" {0,3}(`{3,}|~{3,})math[ \t]*\n", lines[0])
+    if not opening:
+        return None
+    marker = re.escape(opening[1][0])
+    if not re.fullmatch(rf" {{0,3}}{marker}{{{len(opening[1])},}}[ \t]*\n?", lines[-1]):
+        return None
+    return "".join(lines[1:-1])
+
+
+def math_expressions(body):
+    """Extract TeX before Markdown can consume escapes, underscores or angle brackets."""
+    for segment, is_code in markdown_segments(body):
+        if is_code:
+            tex = fenced_math(segment)
+            if tex is not None:
+                yield {"tex": tex.strip(), "display": True, "delimiter": "math_fence"}
+            continue
+        for match in MATH_PATTERN.finditer(segment):
+            kind = match.lastgroup
+            yield {"tex": match[kind].strip(), "display": kind in {"display", "legacy_display"}, "delimiter": kind}
+
+
+def normalize_math_details(body):
+    """Use GitHub's protected inline syntax and deployment-compatible named operators."""
+    statistics = {"delimiter_conversions": 0, "operatorname_replacements": 0, "vertical_bar_replacements": 0}
+
+    def compatible_tex(tex):
+        if re.search(r"\\operatorname\*", tex):
+            raise ValueError("Starred operators need an explicit limits-layout review")
+        tex, count = re.subn(r"\\operatorname(?=\s*\{)", lambda _: r"\mathrm", tex)
+        statistics["operatorname_replacements"] += count
+        # GFM tables consume escaped pipes even in code spans; TeX names avoid that collision.
+        def escaped_pipe(match):
+            slashes = match[1]
+            return (slashes[:-1] + r"\Vert ") if len(slashes) % 2 else (slashes + r"\vert ")
+        tex, count = re.subn(r"(\\+)\|", escaped_pipe, tex)
+        statistics["vertical_bar_replacements"] += count
+        tex, count = re.subn(r"(?<!\\)\|", lambda _: r"\vert ", tex)
+        statistics["vertical_bar_replacements"] += count
+        return tex
 
     def prose(text):
-        nonlocal conversions
+        def expression(match):
+            kind = match.lastgroup
+            tex = compatible_tex(match[kind])
+            if kind in {"display", "legacy_display"}:
+                if kind == "legacy_display":
+                    statistics["delimiter_conversions"] += 1
+                    return "\n\n$$\n" + tex.strip() + "\n$$\n\n"
+                return "$$" + tex + "$$"
+            if "\n" in tex or "`" in tex:
+                raise ValueError("Inline math requires a single line without a literal backtick")
+            if kind != "guarded":
+                statistics["delimiter_conversions"] += 1
+            return "$`" + tex.strip() + "`$"
+        return re.sub(r"\n{4,}", "\n\n\n", MATH_PATTERN.sub(expression, text))
 
-        def inline(match):
-            nonlocal conversions
-            conversions += 1
-            return "$" + match[1] + "$"
+    parts = []
+    for segment, is_code in markdown_segments(body):
+        if not is_code:
+            parts.append(prose(segment))
+        elif fenced_math(segment) is not None:
+            lines = segment.splitlines(keepends=True)
+            parts.append(lines[0] + compatible_tex("".join(lines[1:-1])) + lines[-1])
+        else:
+            parts.append(segment)
+    return "".join(parts), statistics
 
-        def display(match):
-            nonlocal conversions
-            conversions += 1
-            return "\n\n$$\n" + match[1].strip() + "\n$$\n\n"
 
-        text = re.sub(r"(?<!\\)\\\((.*?)\\\)", inline, text, flags=re.S)
-        text = re.sub(r"(?<!\\)\\\[(.*?)\\\]", display, text, flags=re.S)
-        return re.sub(r"\n{4,}", "\n\n\n", text)
-
-    return "".join(text if is_code else prose(text) for text, is_code in markdown_segments(body)), conversions
+def normalize_math(body):
+    result, statistics = normalize_math_details(body)
+    return result, statistics["delimiter_conversions"]
 
 
 def normalize_emphasis(body):
@@ -236,6 +313,17 @@ def main():
             "math_delimiters_converted": previous_conversions + conversions,
             "strong_emphasis": "Unicode punctuation spacing outside code",
             "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+        }
+        _, compatibility = normalize_math_details(old)
+        prior_math = review.get("github_math_revision", {})
+        prior_counts = prior_math.get("changes", {}) if prior_math.get("date") == args.revision_date else {}
+        review["github_math_revision"] = {
+            "date": args.revision_date,
+            "inline_syntax": "$`TeX`$",
+            "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+            "changes": {key: value + prior_counts.get(key, 0) for key, value in compatibility.items()},
+            "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+            "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
         }
         write(str(review_path.relative_to(ROOT)), json.dumps(review, ensure_ascii=False, indent=2))
     print(json.dumps({"articles": len(articles), "changed": len(changed), "metadata_titles_synchronized": len(title_changes), "math_articles": math_articles,

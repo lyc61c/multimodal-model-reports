@@ -47,6 +47,14 @@ CM3Leon 的结构与后来同样读作 Chameleon 的模型名称容易混淆，�
 
 ## 3. 整体架构
 
+<!-- derived-architecture:start -->
+![自绘模型架构示意，非原文图](figures/architecture-overview.svg)
+
+*自绘模型架构示意（非原文图）。依据下述公开资料归纳；方框表示功能组件，不代表逐层实现。*
+
+依据：[§2.1–2.3，PDF pp.3–4](https://arxiv.org/pdf/2309.02591v1)。
+<!-- derived-architecture:end -->
+
 ![原文 Figure 8](figures/original-p013-figure-8.png)
 
 ![原文 Figure 9](figures/original-p013-figure-9.png)
@@ -65,7 +73,7 @@ CM3Leon 的结构与后来同样读作 Chameleon 的模型名称容易混淆，�
 
 ## 4. 核心创新与数学原理
 
-CM3 将双向补全需求改写成单向因果生成。例如原序列为 `a chameleon <break> image`，可以把文字中的短语遮盖成 `a <mask> <break> image <infill> chameleon`，让 decoder 在看到图像后补文字；也可在文字提示后继续生成图像。对转换后的序列 $\tilde x$，原文以 $-\log p(\tilde x)$ 描述目标，按通常因果分解可展开为
+CM3 将双向补全需求改写成单向因果生成。例如原序列为 `a chameleon <break> image`，可以把文字中的短语遮盖成 `a <mask> <break> image <infill> chameleon`，让 decoder 在看到图像后补文字；也可在文字提示后继续生成图像。对转换后的序列 $`\tilde x`$，原文以 $`-\log p(\tilde x)`$ 描述目标，按通常因果分解可展开为
 
 
 $$
@@ -83,9 +91,9 @@ $$
 $$
 
 
-两条流由同一网络产生 logits，CM3 训练自然支持 mask 条件，因此不需要为了获得这一流再训练一个独立弱模型。$\alpha_c=1$ 回到通常条件 logits，较大权重强化条件差异；在给定同一历史和标准 softmax 情况下，其概率可解释为 $p_{cfg}(v)\propto p_{cond}(v)^{\alpha_c}/p_{uncond}(v)^{\alpha_c-1}$。后者是从 logits 式推导的说明，不能误作报告的新 Eq.。
+两条流由同一网络产生 logits，CM3 训练自然支持 mask 条件，因此不需要为了获得这一流再训练一个独立弱模型。$`\alpha_c=1`$ 回到通常条件 logits，较大权重强化条件差异；在给定同一历史和标准 softmax 情况下，其概率可解释为 $`p_{cfg}(v)\propto p_{cond}(v)^{\alpha_c}/p_{uncond}(v)^{\alpha_c-1}`$。后者是从 logits 式推导的说明，不能误作报告的新 Eq.。
 
-CD-K 则对比“有文字条件”与“无文字条件”的 log-probability：允许候选中的分数为 $\log p_{EXP}(v)-\log p_{AMA}(v)$，不在候选集中为负无穷。在这篇报告中 EXP 与 AMA 是同一模型不同条件，不是大模型与小模型的组合。原有 contrastive decoding 用 $\alpha$ 倍最大条件概率筛候选，作者发现过严会趋向贪心，于是在 Eq. (3) 改用第 $k$ 大概率：
+CD-K 则对比“有文字条件”与“无文字条件”的 log-probability：允许候选中的分数为 $`\log p_{EXP}(v)-\log p_{AMA}(v)`$，不在候选集中为负无穷。在这篇报告中 EXP 与 AMA 是同一模型不同条件，不是大模型与小模型的组合。原有 contrastive decoding 用 $`\alpha`$ 倍最大条件概率筛候选，作者发现过严会趋向贪心，于是在 Eq. (3) 改用第 $`k`$ 大概率：
 
 
 $$
@@ -94,7 +102,7 @@ $$
 $$
 
 
-这不是简单“取 top-k token”：阈值由第 k 大值再乘 $\alpha$，可以保留超过 k 个候选。可信候选约束防止条件/无条件比值偏向两边都极不可能的 token；较宽候选集允许更多多样性。Top-p 与 CD-K 产生互补样例，混合候选后做 CLIP 重排继续降低 FID。采样策略、guidance 和重排都影响最终结果，不能把架构本身与解码优化混成一个原因。[来源：第 2.2、3.1 节、Eq. (1)–(3)。](https://arxiv.org/pdf/2309.02591v1)
+这不是简单“取 top-k token”：阈值由第 k 大值再乘 $`\alpha`$，可以保留超过 k 个候选。可信候选约束防止条件/无条件比值偏向两边都极不可能的 token；较宽候选集允许更多多样性。Top-p 与 CD-K 产生互补样例，混合候选后做 CLIP 重排继续降低 FID。采样策略、guidance 和重排都影响最终结果，不能把架构本身与解码优化混成一个原因。[来源：第 2.2、3.1 节、Eq. (1)–(3)。](https://arxiv.org/pdf/2309.02591v1)
 
 <a id="data"></a>
 
@@ -122,9 +130,9 @@ $$
 
 | 预训练模型，Table 3 | 层数/隐藏宽度 | 累计混合 token | 峰值 LR | batch（token） | GPU 数 |
 |---|---|---:|---:|---:|---:|
-| 350M | 24/1024 | 1.4T | $6\times10^{-4}$ | 8M | 256 |
-| 760M | 24/1536 | 1.9T | $5\times10^{-4}$ | 8M | 256 |
-| 7B | 32/4096 | 2.4T | $1.2\times10^{-4}$ | 8M | 512 |
+| 350M | 24/1024 | 1.4T | $`6\times10^{-4}`$ | 8M | 256 |
+| 760M | 24/1536 | 1.9T | $`5\times10^{-4}`$ | 8M | 256 |
+| 7B | 32/4096 | 2.4T | $`1.2\times10^{-4}`$ | 8M | 512 |
 
 三种模型都使用长度 4096 与 1500 warmup step。batch 的 8M 是每批 token 数量级，不能读成 800 万张图片。760M 与 7B 在一遍训练后恢复训练，Figure 3 中验证 perplexity 的小反弹源于学习率突然提高，后续仍下降；这说明报告所用预算下尚未饱和，但不是无限缩放必然有效的证明。
 
@@ -132,7 +140,7 @@ $$
 
 *原文 Table 4，PDF 第 16 页。SFT 使用 760M 与 7B 两种档位，每种处理约 30B token；批量 2M 是 token 批量，与每 GPU 搜索的 4/8/16 样本数不是同一单位。*
 
-SFT 将任务输入与输出连接后继续采用 CM3 目标。760M/7B 分别用 64/128 张 80GB A100，长度 4096、batch 2M token、LR $5\times10^{-5}$、warmup 150 step、累计约 30B token。作者在验证集上从 LR $10^{-5},3\times10^{-5},5\times10^{-5},10^{-4}$ 及每 GPU batch 4/8/16 选择设置，并以 3/0.3 阈值进行数据上/下采样；固定版本没有给出该采样阈值对应的完整可复算概率公式。
+SFT 将任务输入与输出连接后继续采用 CM3 目标。760M/7B 分别用 64/128 张 80GB A100，长度 4096、batch 2M token、LR $`5\times10^{-5}`$、warmup 150 step、累计约 30B token。作者在验证集上从 LR $`10^{-5},3\times10^{-5},5\times10^{-5},10^{-4}`$ 及每 GPU batch 4/8/16 选择设置，并以 3/0.3 阈值进行数据上/下采样；固定版本没有给出该采样阈值对应的完整可复算概率公式。
 
 报告没有采用冻结 LLM 加投影的路线，也没有披露 LoRA 或 DPO 阶段。其重点是继续更新统一生成模型，使原始图文建模能力适应多种任务。论文没有完整列出优化器 beta、weight decay 与全部学习率调度细节，本文不根据其他模型推填。训练计算对比使用等效 A100 小时，不代表用户单张设备上的生成时长。[来源：第 2.4、4 节、Appendix B.2、E.1。](https://arxiv.org/pdf/2309.02591v1)
 

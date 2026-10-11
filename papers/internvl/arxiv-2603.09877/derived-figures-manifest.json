@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "4213cab70d10",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "331d1b0277179563b6d20d35e90421b58349d21b5e4f24437dc4b06e61da5580",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2603.09877v1",
+          "locator": "2603.09877v1; §3.1 / Figures 3–4",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "整体路径自绘，非原文图。；原 Figure 4 专门展开生成头，仍保留。；生成目标无需先经过上下文骨干。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "244376c2123a",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "3863e63653785177822b3d79d2321ea67e040900c71f78dbff4e00e5e0bf1318",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen-vlo/",
+          "locator": "official-source-snapshot-2026-10-08; The Creative Process / Understanding to Creation",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开输入输出示意，非原文图。；渐进生成方向不确定每步 token 或网络类型。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

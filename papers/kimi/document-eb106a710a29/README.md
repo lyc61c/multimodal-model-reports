@@ -57,56 +57,56 @@ KDA 使用固定大小递归状态处理历史，全局 MLA 则保留逐 token �
 
 
 $$
-S_t=(I-\beta_tk_tk_t^\top)\operatorname{Diag}(\alpha_t)S_{t-1}
+S_t=(I-\beta_tk_tk_t^\top)\mathrm{Diag}(\alpha_t)S_{t-1}
  +\beta_tk_tv_t^\top,\qquad \tilde o_t=S_t^\top q_t.
 $$
 
 
-$S_t$ 是 key×value 状态，$\alpha_t$ 是每个 key 通道的保留率，$\beta_t$ 控制写入强度。状态先衰减，再通过 delta 项减少当前 key 方向的旧关联，最后写入当前 value；它不同于仅把所有 $kv^\top$ 累加。query/key 经短卷积、Swish 与 L2 归一化，输出又经过归一化和输入相关的全秩门控。该递归可以按块转换为块内并行、块间传递状态的计算。[PDF 第 4–5 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=4)。
+$`S_t`$ 是 key×value 状态，$`\alpha_t`$ 是每个 key 通道的保留率，$`\beta_t`$ 控制写入强度。状态先衰减，再通过 delta 项减少当前 key 方向的旧关联，最后写入当前 value；它不同于仅把所有 $`kv^\top`$ 累加。query/key 经短卷积、Swish 与 L2 归一化，输出又经过归一化和输入相关的全秩门控。该递归可以按块转换为块内并行、块间传递状态的计算。[PDF 第 4–5 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=4)。
 
 **有下界的衰减，让硬件矩阵计算可行。** K3 将 log-decay 改为原文式（5）
 
 
 $$
-g_t^h=-5\,\operatorname{Sigmoid}(e^{A_h}z_t^h),\qquad
+g_t^h=-5\,\mathrm{Sigmoid}(e^{A_h}z_t^h),\qquad
 \alpha_t^h=e^{g_t^h}\in(e^{-5},1).
 $$
 
 
-16-token 子块的累计 log-decay 大于 -80，倒数缩放小于 $e^{80}$，仍在 BF16 动态范围内，避免对角子块因无限小衰减而必须逐位置对计算。这是数值参数化与 kernel 的共同设计，不是简单将 token 注意力裁成固定窗口。
+16-token 子块的累计 log-decay 大于 -80，倒数缩放小于 $`e^{80}`$，仍在 BF16 动态范围内，避免对角子块因无限小衰减而必须逐位置对计算。这是数值参数化与 kernel 的共同设计，不是简单将 token 注意力裁成固定窗口。
 
 ![原文 Figure 3](figures/original-p005-figure-3.png)
 
 **如何读图：** 左侧灰线是此前无下界的负 Softplus，红线被限制在 -5 到 0；右侧橙色对角块原本走特殊 position-pair 路径，K3 可将因果对角和非对角块都变为蓝色的 Tensor Core 路径。改善的是块计算的数值范围与执行方式，没有保证每个实际输入都同样快。
 
-**AttnRes：沿网络深度选择信息。** 普通残差把历史不断加到一个状态，AttnRes 为层 $l$ 设置可学习伪 query $w_l$，以归一化后的早期表示作为 key：
+**AttnRes：沿网络深度选择信息。** 普通残差把历史不断加到一个状态，AttnRes 为层 $`l`$ 设置可学习伪 query $`w_l`$，以归一化后的早期表示作为 key：
 
 
 $$
 \alpha_{i\to l}=
-\frac{\exp(w_l^\top\operatorname{RMSNorm}(k_i))}
-{\sum_j\exp(w_l^\top\operatorname{RMSNorm}(k_j))},\qquad
+\frac{\exp(w_l^\top\mathrm{RMSNorm}(k_i))}
+{\sum_j\exp(w_l^\top\mathrm{RMSNorm}(k_j))},\qquad
 h_l=\sum_i\alpha_{i\to l}v_i.
 $$
 
 
-这来自原文式（8–9），注意力发生在**层表示之间**。完整形式需保存所有层输出；Block 形式把块内输出求和，仅跨块选择，使保存与通信由 $O(Ld)$ 降为 $O(Nd)$。K3 每块最多 12 层、共 8 个计算块，Embedding 也作为可选源；不是给每个 token 任意跳过执行后续层。[PDF 第 6 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=6)。
+这来自原文式（8–9），注意力发生在**层表示之间**。完整形式需保存所有层输出；Block 形式把块内输出求和，仅跨块选择，使保存与通信由 $`O(Ld)`$ 降为 $`O(Nd)`$。K3 每块最多 12 层、共 8 个计算块，Embedding 也作为可选源；不是给每个 token 任意跳过执行后续层。[PDF 第 6 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=6)。
 
-**Stable LatentMoE：稀疏宽度扩展需要数值与负载控制。** 路由专家在半宽潜空间运算，聚合后 RMSNorm 再升维，降低每次路由通信与权重流量。SiTU-GLU 对 SwiGLU 的 gate 与 up 两个线性因子使用 $\beta\tanh(z/\beta)$ 平滑限幅，仍保留 Sigmoid 门控；$\beta_1=4,\beta_2=25$，所以每个输出坐标绝对值不超过 100。这个上界针对激活函数输出，不是整个模型隐藏状态或最终 logits 上界。[PDF 第 7–8、43 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=7)。
+**Stable LatentMoE：稀疏宽度扩展需要数值与负载控制。** 路由专家在半宽潜空间运算，聚合后 RMSNorm 再升维，降低每次路由通信与权重流量。SiTU-GLU 对 SwiGLU 的 gate 与 up 两个线性因子使用 $`\beta\tanh(z/\beta)`$ 平滑限幅，仍保留 Sigmoid 门控；$`\beta_1=4,\beta_2=25`$，所以每个输出坐标绝对值不超过 100。这个上界针对激活函数输出，不是整个模型隐藏状态或最终 logits 上界。[PDF 第 7–8、43 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=7)。
 
-Quantile Balancing 进一步用各专家分数相对 token top-(k+1) 门槛的分位数更新路由 bias，目标负载为 $mk/n$。bias 只影响选专家，不加入最终混合权重；当前批统计只在下一训练步生效，推理时 bias 冻结。大规模实现统计全局直方图，而非平均每张卡的分位数。它和 MoonEP 的运行时均衡不同：MoonEP 动态复制/迁移专家以均衡设备执行负载，并不要求当前路由数据已经严格均衡。[PDF 第 8–9、19–20、43–46 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=8)。
+Quantile Balancing 进一步用各专家分数相对 token top-(k+1) 门槛的分位数更新路由 bias，目标负载为 $`mk/n`$。bias 只影响选专家，不加入最终混合权重；当前批统计只在下一训练步生效，推理时 bias 冻结。大规模实现统计全局直方图，而非平均每张卡的分位数。它和 MoonEP 的运行时均衡不同：MoonEP 动态复制/迁移专家以均衡设备执行负载，并不要求当前路由数据已经严格均衡。[PDF 第 8–9、19–20、43–46 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=8)。
 
 **多教师蒸馏：不同预算的策略进入一个学生。** 三领域、三预算产生九个完整教师；学生采样轨迹后，使用对应教师给出密集 token 奖励。原文式（15）核心为
 
 
 $$
-r_{opd}=\operatorname{clip}\left(
-\operatorname{sg}\left[\log\frac{\pi_{teacher}^{(d,e)}(y_t\mid x,y_{<t})}
+r_{opd}=\mathrm{clip}\left(
+\mathrm{sg}\left[\log\frac{\pi_{teacher}^{(d,e)}(y_t\mid x,y_{<t})}
 {\pi_\theta(y_t\mid e,x,y_{<t})}\right],-R_{\max},R_{\max}\right).
 $$
 
 
-教师由领域 $d$ 与预算 $e$ 决定，sg 表示不通过奖励项反传。报告采用这个截断 token 信号接入 RL，而非宣称对全部词表精确计算 KL；更细的 top-k 蒸馏在其测试中没有明确收益。$R_{\max}$ 及教师采样配比未公布。[PDF 第 13–14 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=13)。
+教师由领域 $`d`$ 与预算 $`e`$ 决定，sg 表示不通过奖励项反传。报告采用这个截断 token 信号接入 RL，而非宣称对全部词表精确计算 KL；更细的 top-k 蒸馏在其测试中没有明确收益。$`R_{\max}`$ 及教师采样配比未公布。[PDF 第 13–14 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=13)。
 
 <a id="data"></a>
 
@@ -114,7 +114,7 @@ $$
 
 文本资料包含网页、代码、数学、知识四类，使用规则、质量分类器及去重，并在小模型消融中确定领域采样率；具体采样值未公开。知识与数学还通过多风格、多视角改写、分块自回归生成和对原文的忠实性验证扩充，不能把所有合成资料简单视作无源自由生成。
 
-视觉资料覆盖 caption、交错图文、OCR、感知、视频和视觉代码。坐标监督同时提供绝对坐标及 $[0,1]$ 归一化形式，兼顾精确定位与分辨率变化。程序化多模态资料把 SVG、3D、网页、游戏和 CAD 等代码与实际渲染图像配对，支持“修改代码—看结果”的学习。[PDF 第 10 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=10)。
+视觉资料覆盖 caption、交错图文、OCR、感知、视频和视觉代码。坐标监督同时提供绝对坐标及 $`[0,1]`$ 归一化形式，兼顾精确定位与分辨率变化。程序化多模态资料把 SVG、3D、网页、游戏和 CAD 等代码与实际渲染图像配对，支持“修改代码—看结果”的学习。[PDF 第 10 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=10)。
 
 长文和视频有专门清洗：精确/模糊去重、视频帧感知哈希、启发式和分类器质量过滤、结构验证，清除二进制块、截断文档、无效日志等。稀少的连贯长资料被上采样，同时通过重排和组合多模态文档/子任务，把解题证据散布到完整上下文；仅拼接到足够长度不足以形成长程依赖。
 
@@ -134,11 +134,11 @@ SFT 轨迹由此前 Kimi 的领域专长模型生成，经过多阶段验证及�
 
 长度先在预训练扩到 64K，再在 cooldown 经 256K 到 1M；主干 NoPE 不需 RoPE 重缩放，但仍通过长数据与课程学习适应目标长度。KDA 的并行训练交换“段的累计状态变换＋从零产生的状态”，再做前缀组合，不能仅把各段状态相加，否则会丢失 delta 递归对进入状态的依赖。
 
-后训练先 SFT，再分别训练一般任务、一般 agent、代码 agent；每领域从 max 预算逐步收紧为 high、low。给问题初始预算 $b_0(x)$，超过 $\tau b_0(x)$ 的轨迹奖励改为 -1；一般任务计 thinking token，agent 计所有累计输出及工具参数。$\tau$ 按领域人工参与调节，数值未公开。非易验证任务使用 agent GRM，必须读取产物、形成 rubric、逐候选评分并记录 scorepad，同时限制过长输出以减少靠啰嗦获得奖励。[PDF 第 12–14 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=12)。
+后训练先 SFT，再分别训练一般任务、一般 agent、代码 agent；每领域从 max 预算逐步收紧为 high、low。给问题初始预算 $`b_0(x)`$，超过 $`\tau b_0(x)`$ 的轨迹奖励改为 -1；一般任务计 thinking token，agent 计所有累计输出及工具参数。$`\tau`$ 按领域人工参与调节，数值未公开。非易验证任务使用 agent GRM，必须读取产物、形成 rubric、逐候选评分并记录 scorepad，同时限制过长输出以减少靠啰嗦获得奖励。[PDF 第 12–14 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=12)。
 
 partial rollout 在一定比例轨迹完成后暂停生成，未完长轨迹下一轮优先续跑；一问题所有候选完成后才进入对应更新。跨轮轨迹产生策略滞后，原文称采用逐 token 正则容忍这类 off-policy 状况，没有给出完整正则系数，不能直接把训练算法改称某个常见 GRPO 配方。沙箱与外部 KV 池保存真实环境和推理状态，防止暂停后从头执行带副作用操作。
 
-SFT 起即采用 QAT：路由专家权重 MXFP4、相关激活 MXFP8，而共享专家、注意力、潜空间投影和 router 等维持更高精度，rollout 与训练量化一致。草稿模型阶段则冻结目标模型，将 MTP 微调为 EAGLE-3 式 draft，优化 $-\log\sum_x\min(p(x),q(x))$，直接提高无损 speculative sampling 接受率，不加额外 ground-truth CE。不能把此阶段的冻结条件误写成整个主模型后训练冻结。[PDF 第 14 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=14)。
+SFT 起即采用 QAT：路由专家权重 MXFP4、相关激活 MXFP8，而共享专家、注意力、潜空间投影和 router 等维持更高精度，rollout 与训练量化一致。草稿模型阶段则冻结目标模型，将 MTP 微调为 EAGLE-3 式 draft，优化 $`-\log\sum_x\min(p(x),q(x))`$，直接提高无损 speculative sampling 接受率，不加额外 ground-truth CE。不能把此阶段的冻结条件误写成整个主模型后训练冻结。[PDF 第 14 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=14)。
 
 系统报告“每个百万上下文 RL 实验在几百张 GPU 内”，并统计全部训练/评测累计创建 51,219,741 个沙箱；这些分别是实验部署规模和环境实例次数，均不是完整预训练 GPU 数或独立任务数。[PDF 第 21–22 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=21)。
 

@@ -12,5 +12,28 @@
     "核验 Qwen 对照为最终 checkpoint 再训练，Figure 2 与最终 SFT 不同选图设置，规模曲线非严格单调。",
     "原图与表格渲染已视觉查看；解释性 AR 公式明确不是新损失，44 A100 GPU days 是生成成本。"
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "revision_id": "2026-10-11-architecture-1",
+      "date": "2026-10-11",
+      "scope": "第3节架构定向深化与补图来源计划；不改变其他科学内容或全局版式",
+      "method": "通读当前第3节，按输入表示、组件职责、连接/压缩/融合、骨干、一次推理数据流检查；新增内容对照固定缓存方法段落",
+      "source_version": "2311.12793v1",
+      "source_cache": "source/papers/7d194d7a209f/source.txt",
+      "source_locators": [
+        "§3.3、§4.1–4.3，PDF pp.5–6"
+      ],
+      "changes": [
+        "第3节补充：在最终学生的在线路径中，576 个视觉 token 经 MLP 逐项映射，保持对应的视觉序列长度，再与问题文字共同输入 Vicuna",
+        "新增有来源的自绘架构／公开接口图计划；未渲染或插图"
+      ],
+      "article_sha256_before": "0e05b3d641f1f950e89c9b3a33604bbd6efca47ccda7f0e1f5c8390d2f292a5a",
+      "article_sha256_after": "afaef5c5512b3fc56e55a71c85f37d3de80e1b550951c68efb38554df0b7a058",
+      "diagram_plan": true,
+      "limitations": [
+        "本轮为第3节定向核对，不是原文全文复审；未执行模型。"
+      ]
+    }
+  ]
 }

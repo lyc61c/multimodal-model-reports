@@ -51,7 +51,7 @@
     "FID inferior to SDv1.5",
     "Source SFT sample pool and actual sampled amounts distinguished"
   ],
-  "article_sha256": "6dcafdab024f6b25f401193f8ff467ee764391495a268cc1a1ac1f8d5c818198",
+  "article_sha256": "d369b23b41b643a51c90c5f26bfd0fcd7264c0f26b8260dc0a097e7e82bc57d7",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -69,7 +69,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 20,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 38,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 18,
+      "operatorname_replacements": 1,
+      "vertical_bar_replacements": 4
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

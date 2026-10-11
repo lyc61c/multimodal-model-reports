@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1094" viewBox="0 0 720 1094" role="img" aria-labelledby="title desc">
+<title id="title">MultiInstruct 的 OFA 实验路径（自绘，非原文图）</title>
+<desc id="desc">仓库自绘：展示论文实验底座的推理。；不把数据集任务分类图当作新网络结构。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1092" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 方法流程示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">MultiInstruct 的 OFA 实验路径</text>
+<path d="M360,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H360 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,746 V779 H360 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="648" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="360" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">任务输入</text>
+<text x="360" y="190" text-anchor="middle" font-size="20" fill="#475569">指令模板与任务字段</text>
+<text x="360" y="215" text-anchor="middle" font-size="20" fill="#475569">可选图像／区域坐标</text>
+<rect x="36" y="296" width="648" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="360" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">填充统一指令</text>
+<text x="360" y="362" text-anchor="middle" font-size="20" fill="#475569">问题、候选项与区域信息</text>
+<text x="360" y="387" text-anchor="middle" font-size="20" fill="#475569">按任务填写文字模板</text>
+<rect x="36" y="468" width="648" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="360" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">OFA 编码器</text>
+<text x="360" y="534" text-anchor="middle" font-size="20" fill="#475569">联合读取文字与图像</text>
+<text x="360" y="559" text-anchor="middle" font-size="20" fill="#475569">形成条件表示</text>
+<rect x="36" y="640" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">OFA 解码器</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">按任务生成目标序列</text>
+<text x="360" y="731" text-anchor="middle" font-size="20" fill="#475569">复用统一词表</text>
+<rect x="36" y="812" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="847" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">任务结果</text>
+<text x="360" y="878" text-anchor="middle" font-size="20" fill="#475569">文本／位置码／图像码</text>
+<text x="360" y="903" text-anchor="middle" font-size="20" fill="#475569">依任务解释输出</text>
+<line x1="36" y1="966" x2="684" y2="966" stroke="#e2e8f0"/>
+<text x="36" y="993" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1024" font-size="17" fill="#64748b">仓库自绘：展示论文实验底座的推理。</text>
+<text x="36" y="1049" font-size="17" fill="#64748b">不把数据集任务分类图当作新网络结构。</text>
+</g></svg>

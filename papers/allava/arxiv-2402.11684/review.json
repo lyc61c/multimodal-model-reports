@@ -10,7 +10,7 @@
     "Self-review",
     "Table4/6/7 numerical inconsistencies explicitly noted"
   ],
-  "article_sha256": "f8dd7475d9f8d0ac35e1f069d1aebd37060161ef452ab3520e9d136d272dd675",
+  "article_sha256": "204ccdf3c27635bca2bac14a892a7fec6f5349158b398ccf2bd99441f956acb0",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -33,5 +33,25 @@
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "architecture_reviews": [
+    {
+      "date": "2026-10-11",
+      "scope": "Read every paragraph of section3, including existing diagram-reading prose; inspected corresponding manifest/census caption records. Original source targeted-read only where listed below.",
+      "decision": "retained",
+      "source_recheck": [
+        "§4.1、Table2；PDF 第7页"
+      ],
+      "diagram_plan": "papers/allava/arxiv-2402.11684/architecture-diagram.json",
+      "article_sha256": "f8dd7475d9f8d0ac35e1f069d1aebd37060161ef452ab3520e9d136d272dd675",
+      "limits": "No model reproduction; no claim of complete original-paper reread. Unpublished component sizes remain unknown."
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-11",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   }
 }

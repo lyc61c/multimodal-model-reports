@@ -75,7 +75,7 @@ Xmodality 是感知信号，Xtext 是描述，L 是文本长度。模型根据�
 原文 Eq. (2) 定义：
 
 $$
-Z_{\rm modality}=\operatorname{Projection}_\theta\big(h_{\rm latents},g(X_{\rm modality})\big).
+Z_{\rm modality}=\mathrm{Projection}_\theta\big(h_{\rm latents},g(X_{\rm modality})\big).
 $$
 
 g 是模态编码器，hlatents 表示学习潜在查询。图像 Resampler 利用查询压缩输入；线性投影分支不必具有相同注意力结构。论文利用已经与文本语义对齐的 CLIP、CLAP、IMU2CLIP 减少接口训练难度，DINOv2 消融则用于检验不同视觉预训练方式的影响。[§3.1](https://arxiv.org/pdf/2309.16058v1#page=3)

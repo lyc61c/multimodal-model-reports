@@ -35,7 +35,7 @@
     "Not uniformly SOTA across RefCOCO+ splits",
     "Projection channel order not inferred from list"
   ],
-  "article_sha256": "a012fb5dae6ea76359b2a179e6cbdeef7e5c9986eeb508b12984f822c84f01a4",
+  "article_sha256": "ffb1a01a9963f88455c1af27d7934c600dafa78b9f046524e87c5440063d2be7",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -53,7 +53,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 0,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 14,
+      "operatorname_replacements": 4,
+      "vertical_bar_replacements": 8
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

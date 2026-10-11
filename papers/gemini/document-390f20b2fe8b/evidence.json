@@ -29,5 +29,28 @@
         "CWE-Bench image"
       ]
     }
+  ],
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+          "locator": "official-source-snapshot-2026-10-08; Long-horizon agent / application demos",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "公开系统接口自绘，非原文图。",
+        "Nano Banana 生成纹理属于外部服务。",
+        "共享基础智能不证明两版完全同权重。"
+      ],
+      "article_sha256": "fd083551bff18fab9d3aca357f6609c3b77e6e77b6a1ac8371de3e3ad752e0fa",
+      "model_executed": false
+    }
   ]
 }

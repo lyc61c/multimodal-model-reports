@@ -18,5 +18,28 @@
     }
   ],
   "source_inconsistencies": [],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "diagram": "architecture-diagram.json",
+      "diagram_origin": "self_drawn_from_public_sources",
+      "diagram_status": "schema_only_not_yet_rendered_or_visually_checked",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+          "locator": "official-source-snapshot-2026-10-08; Code-based animation / complex system synthesis",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "unknown_boundary": [
+        "公开应用接口自绘，非原文图。",
+        "SVG 与三维场景由代码及应用渲染。",
+        "不将演示配乐视作原生音频 token。"
+      ],
+      "article_sha256": "0abf0e18dfee13084b3ee55713cd66ed88bdde15be3b04d045e28c3606274a8e",
+      "model_executed": false
+    }
+  ]
 }

@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "paper_id": "7cca3ca5d4d3",
+  "title": "Gemini 3.1 Pro：代码与应用执行接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "任务与上下文",
+      "lines": [
+        "任务材料、指令与应用需求"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "model",
+      "title": "Gemini 3.1 Pro",
+      "lines": [
+        "推理或代码生成",
+        "内部多模态结构未在博客展开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "answer",
+      "title": "回答或产物",
+      "lines": [
+        "解释、代码与应用产物"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "call",
+      "title": "工具调用请求",
+      "lines": [
+        "模型选择操作及参数"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "tools",
+      "title": "外部执行环境",
+      "lines": [
+        "浏览器、API 与应用环境",
+        "执行代码并展示结果"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "resume",
+      "title": "同一模型继续",
+      "lines": [
+        "工具结果回填上下文",
+        "重复调用，非第二独立模型"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "unknown"
+    },
+    {
+      "id": "followup",
+      "title": "后续回答或行动",
+      "lines": [
+        "继续判断并推进任务"
+      ],
+      "row": 5,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "answer",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "call",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "call",
+      "to": "tools",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "tools",
+      "to": "resume",
+      "label": "观察反馈",
+      "style": "dashed"
+    },
+    {
+      "from": "resume",
+      "to": "followup",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开应用接口自绘，非原文图。",
+    "SVG 与三维场景由代码及应用渲染。",
+    "不将演示配乐视作原生音频 token。"
+  ],
+  "sources": [
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "locator": "official-source-snapshot-2026-10-08; Code-based animation / complex system synthesis",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

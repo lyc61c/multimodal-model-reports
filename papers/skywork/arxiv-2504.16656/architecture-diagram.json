@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "paper_id": "d9cbc42c82ec",
+  "title": "Skywork R1V2：模块化跨模态接口",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "i",
+      "title": "图像",
+      "lines": [
+        "视觉任务输入"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "t",
+      "title": "问题文字",
+      "lines": [
+        "推理条件"
+      ],
+      "row": 0,
+      "col": 1,
+      "span": 1,
+      "kind": "input"
+    },
+    {
+      "id": "v",
+      "title": "InternViT-6B",
+      "lines": [
+        "视觉特征编码"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "p",
+      "title": "MLP 适配器",
+      "lines": [
+        "映射到语言输入空间",
+        "报告未列层数与 token 数"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "l",
+      "title": "推理语言模型",
+      "lines": [
+        "§3.1 以 QwQ-32B 举例",
+        "接收图文条件"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "o",
+      "title": "推理及回答",
+      "lines": [
+        "同一语言模型生成"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "i",
+      "to": "v",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "v",
+      "to": "p",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "p",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "t",
+      "to": "l",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "l",
+      "to": "o",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开组件关系自绘，非原文图。",
+    "原 Figure 1 为训练信号流，应另行阅读。",
+    "冻结策略按训练实验区分。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2504.16656v1",
+      "locator": "2504.16656v1; §3.1 / Table 4",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

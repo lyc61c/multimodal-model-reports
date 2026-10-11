@@ -61,29 +61,31 @@
 
 Stage III 从 Stage II 的稠密多模态 FFN 复制专家，随后训练使这些副本逐渐分化。第 3.2 节曾写从 Stage I 复制，但第 3.3 节、Figure 3 和训练动机都明确是 Stage II 后的初始化，本介绍按后一组相互一致的说明解读并记录差异。
 
+主配置均是 **4 个 FFN 专家、每个 token 激活 top-2**，但语言底座和稀疏层数不同：StableLM-1.6B 的 32 层中有 16 个 MoE 层，Qwen-1.8B 的 24 层中有 12 个，Phi2-2.7B 的 32 层中有 16 个。默认交替替换 FFN，因此图像和文字共同经过原自注意力，进入稀疏 FFN 时才分别按 token 路由。top-2 指每层每个 token 的专家选择，不是只运行整网两层，也不代表四个独立视觉编码器。（Table1、§4.1，PDF 第5页）
+
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
-设 token 隐藏向量为 $x\in\mathbb R^D$，专家数为 $E$。将原文 Eq. (5)、(6) 的维度与 Top-k 索引整理为：
+设 token 隐藏向量为 $`x\in\mathbb R^D`$，专家数为 $`E`$。将原文 Eq. (5)、(6) 的维度与 Top-k 索引整理为：
 
 
 $$
-p(x)=\operatorname{softmax}(x^\top W),\quad W\in\mathbb R^{D\times E},\qquad
-\mathcal S(x)=\operatorname{TopK}(p(x),k),
+p(x)=\mathrm{softmax}(x^\top W),\quad W\in\mathbb R^{D\times E},\qquad
+\mathcal S(x)=\mathrm{TopK}(p(x),k),
 $$
 
 
 $$
-\operatorname{MoE}(x)=\sum_{i\in\mathcal S(x)}p_i(x)\,e_i(x),\qquad E=4,\ k=2.
+\mathrm{MoE}(x)=\sum_{i\in\mathcal S(x)}p_i(x)\,e_i(x),\qquad E=4,\ k=2.
 $$
 
 
 这里求和遍历被选中的专家编号，不是固定调用第 1、2 个专家。原文直接使用 softmax 权重，未明确说明选中后是否再次归一化，故不额外加入这种实现设定。论文称其为 soft router，指路由分数可学习；实际仍执行离散 Top-k 选择，而非计算全部专家的密集加权输出。
 
-若稠密共享部分参数为 $P_s$，每个专家的参数为 $P_e$，MoE 层数为 $L_m$，可用近似关系理解存储与激活差异：$P_{total}\approx P_s+L_m E P_e$，$P_{active}\approx P_s+L_m kP_e$。这只是参数组成的解释，不是论文的新公式。注意力、视觉编码器、词嵌入、路由开销并没有变成零；随着 $k$ 增大，激活计算也增大。所以“保持成本不变”应限定为增加专家数但固定激活专家数的理想 FFN 计算比较，不能推断模型端到端延迟恒定。
+若稠密共享部分参数为 $`P_s`$，每个专家的参数为 $`P_e`$，MoE 层数为 $`L_m`$，可用近似关系理解存储与激活差异：$`P_{total}\approx P_s+L_m E P_e`$，$`P_{active}\approx P_s+L_m kP_e`$。这只是参数组成的解释，不是论文的新公式。注意力、视觉编码器、词嵌入、路由开销并没有变成零；随着 $`k`$ 增大，激活计算也增大。所以“保持成本不变”应限定为增加专家数但固定激活专家数的理想 FFN 计算比较，不能推断模型端到端延迟恒定。
 
-负载均衡的意图是防止大量 token 聚集到少数专家。Eq. (9) 为 $\mathcal L_{aux}=E\sum_i F_i P_i$。为避免原文 Eq. (10) 求和下标和专家下标混乱，可用标准 Top-1 统计定义示意：
+负载均衡的意图是防止大量 token 聚集到少数专家。Eq. (9) 为 $`\mathcal L_{aux}=E\sum_i F_i P_i`$。为避免原文 Eq. (10) 求和下标和专家下标混乱，可用标准 Top-1 统计定义示意：
 
 
 $$
@@ -130,7 +132,7 @@ MoE-tuning 的新意主要在初始化和课程顺序，而不是发明 Top-k �
 
 各阶段 cosine 调度、weight decay 0、长度 2048、gradient checkpointing；Table 9 为 8×A800-80G、BF16，前两阶段 ZeRO-2，第三阶段 ZeRO-2 offload。附录另提可用 A100 和小模型的 8×V100-32G，Table 6 时间实验明确采用 V100，不能将不同硬件上的时间混成统一成本。该表未披露优化器种类、β、warmup 比例等，不能自行填成 LLaVA 默认配置。作者发现两 epoch 易过拟合，使用一 epoch；FP16 曾出现 NaN，不能据此说 BF16 解决了所有训练稳定性问题。
 
-原文总目标 Eq. (7) 为 $\mathcal L=\mathcal L_{regressive}+0.01\mathcal L_{aux}$。答案项用标准记号解释为：$\mathcal L_{regressive}=-\sum_{t=1}^{M}\log p_\theta(y_t\mid V,Q,y_{<t})$，仅对生成文字计算。原文 Eq. (8) 将输出长度、视觉长度与隐藏维度的符号混用；这里以 $M$ 单独代表答案长度，保持其自回归监督含义。该训练没有报告奖励模型、PPO 或 DPO。
+原文总目标 Eq. (7) 为 $`\mathcal L=\mathcal L_{regressive}+0.01\mathcal L_{aux}`$。答案项用标准记号解释为：$`\mathcal L_{regressive}=-\sum_{t=1}^{M}\log p_\theta(y_t\mid V,Q,y_{<t})`$，仅对生成文字计算。原文 Eq. (8) 将输出长度、视觉长度与隐藏维度的符号混用；这里以 $`M`$ 单独代表答案长度，保持其自回归监督含义。该训练没有报告奖励模型、PPO 或 DPO。
 
 <a id="experiments"></a>
 

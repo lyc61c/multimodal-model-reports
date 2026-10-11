@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "paper_id": "ebaf67f69f80",
+  "title": "Qwen3.8-Max：代码与 GUI 反馈",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "任务与上下文",
+      "lines": [
+        "任务历史、文字与视觉观察"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "model",
+      "title": "Qwen3.8-Max",
+      "lines": [
+        "扩展 Qwen3.5 架构基础",
+        "新版内部规格未在博客展开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "answer",
+      "title": "回答或产物",
+      "lines": [
+        "回答或下一步行动"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "call",
+      "title": "工具调用请求",
+      "lines": [
+        "模型选择操作及参数"
+      ],
+      "row": 2,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    },
+    {
+      "id": "tools",
+      "title": "外部执行环境",
+      "lines": [
+        "代码、GUI、插件与记忆工具",
+        "截图、文件及执行结果回流"
+      ],
+      "row": 3,
+      "col": 1,
+      "span": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "resume",
+      "title": "同一模型继续",
+      "lines": [
+        "工具结果回填上下文",
+        "重复调用，非第二独立模型"
+      ],
+      "row": 4,
+      "col": 1,
+      "span": 1,
+      "kind": "unknown"
+    },
+    {
+      "id": "followup",
+      "title": "后续回答或行动",
+      "lines": [
+        "继续判断并推进任务"
+      ],
+      "row": 5,
+      "col": 1,
+      "span": 1,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "answer",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "model",
+      "to": "call",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "call",
+      "to": "tools",
+      "label": "",
+      "style": "solid"
+    },
+    {
+      "from": "tools",
+      "to": "resume",
+      "label": "观察反馈",
+      "style": "dashed"
+    },
+    {
+      "from": "resume",
+      "to": "followup",
+      "label": "",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "公开系统接口自绘，非原文图。",
+    "不继承 Qwen3.5 的精确层数或专家比例。",
+    "外部记忆与思考保留不等于在线权重更新。"
+  ],
+  "sources": [
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "locator": "official-source-snapshot-2026-10-08; Hybrid Agent / Qwen-MM-Plugins",
+      "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+    }
+  ]
+}

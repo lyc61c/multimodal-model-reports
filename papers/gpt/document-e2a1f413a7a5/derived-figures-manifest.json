@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "e2a1f413a7a5",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "b048c9fbe3598b8c4ece7c50f5c7098da54dde682f33b70efddda6a1f3d131dd",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-gpt-5-2/?output=1",
+          "locator": "official-release-2026-10-08; Visual understanding / tool use / API reasoning",
+          "note": "支持图中公开组件与路径；未知项保持未知，不移植其他版本规格。"
+        }
+      ],
+      "scope": "公开接口示意，非原文图。；核心内部编码与融合未在本来源展开。；工具执行属于模型外部环境。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

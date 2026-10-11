@@ -46,7 +46,7 @@
     "budget scope incompletely itemized in report",
     "seven categories wording lists eight categories"
   ],
-  "article_sha256": "d79c2278e7779d91f8fe0cf58ea85ca795c6e29a811fd1bf798c621e7da5d619",
+  "article_sha256": "2ecfd6611e3bd95dd348d2d13b6099ade93a9b16d58d20df2624fc9e0b7356db",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -64,7 +64,20 @@
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+    "math_delimiters_converted": 15,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
+  },
+  "github_math_revision": {
+    "date": "2026-10-11",
+    "inline_syntax": "$`TeX`$",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 7,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 4
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
   }
 }

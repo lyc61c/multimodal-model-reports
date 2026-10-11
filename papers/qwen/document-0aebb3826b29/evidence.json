@@ -11,5 +11,23 @@
     "No model training recipe, mathematical derivation, numeric benchmark or 100-hour validated limit is invented; cookbook and illustrative functionality are distinguished from measured results.",
     "No installation, model inference, application operation or hardware execution was performed."
   ],
-  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md"
+  "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
+  "architecture_revision_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "第三节逐段完整阅读；组件职责、输入表示、融合/压缩、骨干和一次推理路径针对性检查；不是论文全文或所有参数重审。",
+      "changes": [
+        "去掉下载和凑图过程描述，保留技术对象。"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/QwenLM/Qwen-MM-Plugins/main/README.md",
+          "locator": "Official architecture SVG",
+          "version": "official-readme-2026-10-08"
+        }
+      ],
+      "article_sha256": "2fd230feeb6781dd6481c85a41367575587f47a6d0eddaa5a2db8d6553e16752",
+      "model_executed": false
+    }
+  ]
 }

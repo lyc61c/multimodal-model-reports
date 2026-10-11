@@ -41,7 +41,7 @@
 
 **读图：** 低层仍使用原注意力；高层添加独立的可训练提示。红色提示分支带零初始化门控，原文字分支单独计算softmax。两条分支相加后进入原层，而不是把所有新增提示直接放进同一个归一化分母。语言投影权重保持冻结。
 
-每个被插入的层有 $P_l\in\mathbb R^{K\times C}$。它们是隐藏空间中的可训练向量，不是用户书写的自然语言前缀，也不是LoRA对原Q/K/V矩阵的低秩更新。默认K=10、插入L=30层，语言模型共N=32层（§4.1）。每层自己的提示可以学习不同的任务补充信息。
+每个被插入的层有 $`P_l\in\mathbb R^{K\times C}`$。它们是隐藏空间中的可训练向量，不是用户书写的自然语言前缀，也不是LoRA对原Q/K/V矩阵的低秩更新。默认K=10、插入L=30层，语言模型共N=32层（§4.1）。每层自己的提示可以学习不同的任务补充信息。
 
 ![原文 Figure 3](figures/original-p004-figure-3.png)
 
@@ -51,11 +51,11 @@
 
 ## 4. 核心创新与数学原理
 
-零初始化机制的重点在于分开归一化。设当前文字query对提示的logit为 $S_P$，对已有文字的logit为 $S_T$，对应value为 $V_P,V_T$。原式(7)–(8)等价于：
+零初始化机制的重点在于分开归一化。设当前文字query对提示的logit为 $`S_P`$，对已有文字的logit为 $`S_T`$，对应value为 $`V_P,V_T`$。原式(7)–(8)等价于：
 
 $$
-o_l=W_o\left[g_l\,\operatorname{softmax}(S_P)V_P+
-\operatorname{softmax}(S_T)V_T\right],\qquad g_l(0)=0.
+o_l=W_o\left[g_l\,\mathrm{softmax}(S_P)V_P+
+\mathrm{softmax}(S_T)V_T\right],\qquad g_l(0)=0.
 $$
 
 多头注意力的每个head分别学习门控。初始化时提示贡献为零，文字分支不受新增随机提示的softmax分母影响，因此保留原始注意力输出；随后门控与提示逐步学习补充信号。这里“zero-init attention”不表示把原语言注意力全部清零，也不表示所有提示向量必须初始化为零。原文没有将门控定义成softmax概率或必在[0,1]之间的权重，不能额外假定概率约束。
@@ -63,8 +63,8 @@ $$
 视觉条件按原式(9)–(10)构造：
 
 $$
-I_p=\operatorname{Projection}\left(\operatorname{Concat}_c(I_1,\ldots,I_M)\right),\qquad
-P_l^v=P_l+\operatorname{Repeat}_K(I_p).
+I_p=\mathrm{Projection}\left(\mathrm{Concat}_c(I_1,\ldots,I_M)\right),\qquad
+P_l^v=P_l+\mathrm{Repeat}_K(I_p).
 $$
 
 第一个concat沿通道，重复与加法不改变提示长度K。这是很强的压缩：图像由多尺度全局向量注入，细粒度区域关系没有单独的patch token接口。论文未证明这一结构适合小字OCR或高分辨率文档任务。

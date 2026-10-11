@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "243076aca63f",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "3da877be4d4a2138c3f5358d0860d716983e4c7eab49a348bb94e5c1c88c7e8e",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2311.16483v1",
+          "locator": "§4.1–4.2、附录 A，PDF pp.6、11",
+          "note": "支持图中输入、组件职责与流转；依据该条目固定版本缓存"
+        }
+      ],
+      "scope": "仓库自绘：本图选择代码生成任务。；数据制造的三个 Stage 不是在线网络层。；代码需外部执行，非直接生成像素。",
+      "review": {
+        "date": "2026-10-11",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}
