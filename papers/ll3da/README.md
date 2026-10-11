@@ -1,8 +1,10 @@
+[项目首页](../../README.md) · [模型系列索引](../../reports/model-family-index.md)
+
 # LL3DA
 
-项目主体 / 机构：repo:Open3DA。快照：2026-10-08。
+[Open3DA](https://github.com/Open3DA)
 
-共收录 **1 篇论文与资料**，按发布日期排序。
+**1 篇论文与资料** · 按发布日期由早到晚排列。
 
 ## 论文列表
 

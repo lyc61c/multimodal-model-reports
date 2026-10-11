@@ -34,5 +34,24 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "完整原页。",
+          "after": "独立图表裁图。",
+          "kind": "crop_caption_clarity"
+        },
+        {
+          "before": "上表包含每个阶段的全部结果，下表区分一轮、两轮 GSPO；",
+          "after": "Table 15 包含每个阶段的结果，Table 16 区分一轮、两轮 GSPO；",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

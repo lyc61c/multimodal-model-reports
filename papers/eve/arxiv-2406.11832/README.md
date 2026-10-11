@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [EVE](../README.md)
+<!-- article-header:end -->
+
 # EVE：用语言底座预对齐和视觉特征监督构建无深层视觉编码器模型
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 论文 **Unveiling Encoder-Free Vision-Language Models** 由 Haiwen Diao、Yufeng Cui、Xiaotong Li、Yueze Wang、Huchuan Lu、Xinlong Wang 提出，机构为大连理工大学、北京智源人工智能研究院和北京大学。本文采用 [arXiv 2406.11832v1](https://arxiv.org/pdf/2406.11832v1)，提交日期为 2024 年 6 月 17 日；[代码与模型](https://github.com/baaivision/EVE)为首页指定仓库。
 
 EVE 从 Vicuna-7B 演化出视觉语言理解模型，不在推理通路中串接一个深层 CLIP/EVA 视觉编码器，而用轻量 patch embedding 把图片送入统一因果解码器。它提供标准 EVE-7B 和高分辨率 EVE-7B（HD），任务为文字条件的视觉理解与文字回答；没有报告图像/视频生成或音频训练。“Encoder-free”不表示没有任何图像映射层，也不表示训练完全不用视觉编码器，教师视觉特征正是重要监督来源。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -13,6 +27,8 @@ EVE 从 Vicuna-7B 演化出视觉语言理解模型，不在推理通路中串�
 模型读取保留宽高比的图像，标准版最长边 672，HD 为 1,344，不依赖预设宽高比网格或多张切图来适应固定视觉编码器。训练时的辅助 Patch Aligning Layer（PAL）在推理中删除；输入侧的 Patch Embedding Layer（PEL）保留。
 
 预训练数据池 33M，来自 SA-1B、OpenImages、LAION 的重新描述；标准版 SFT 为 665K，HD 主文标为约 1.8M。HD 的 VQAv2/GQA 为 78.6/62.6，接近部分同规模编码器模型；但 MMBench 52.3、MMVet 25.7 仍有明显差距。移除深层视觉编码器主要节省视觉前处理成本，不能将局部编码阶段约十倍加速写成整个问答过程十倍。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -34,6 +50,8 @@ PAL 从主干多个中间层取出视觉 token，移除 `<CLS>/<SPL>`，还原�
 
 因此部署模型不需要教师 CLIP 或 PAL 的前向计算，但其视觉能力是在训练中借助这些模块获得的。把训练教师与实际推理模块分开，才能正确理解该架构的简化程度。
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 EVE 的第一项设计是 LLM 引导的预对齐：随机初始化的视觉入口先在冻结语言模型条件下获得可理解表示，再允许整个网络改变。它保护初始语言知识免于过早受到视觉入口噪声干扰。论文提供了有/无预对齐的训练曲线与结果，属于特定数据、底座和学习率下的实证结论，不能推导为所有无编码器模型都必然需要完全相同阶段。
@@ -48,6 +66,8 @@ $$\mathcal L_{\rm patch}=\frac1P\sum_{p=1}^P\|\widehat a_p-\widehat v_p\|_2^2$$
 
 多层聚合选择的 interval 标准值为 4，指从完整网络按层间隔取特征，而不是仅取最后 4 层。Figure 5 中这种配置在部分任务较好，但 MMBench 的 interval=2 为 35.57，高于 interval=4 的 35.33，不能称标准 interval 所有指标最高。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练共 33M 对：SA-1B 11M，由 LLaVA-1.5-13B 描述；OpenImages 7M、LAION 15M，由 Emu2-17B 描述。保留高于 448×448 的源图，去掉重复文字和不完整句子。LAION 先用 EVA-CLIP 提取特征，再做 50,000 类 K-means，各类取距中心最近的 300 张，合计 15M，目标是选取代表性图片，不能视为严格的全部重复图去除或长尾分布保证。
@@ -58,6 +78,8 @@ Stage 1 使用上述 33M 中的 16M 子集，Stage 2 使用完整 33M。这里 1
 
 教师特征监督用 CLIP-ViT-L/14，把图像填充并缩到 336×336。EVE 本体可接收保比例的大图，教师则仍有固定网格限制；PAL 正是在两个空间之间提供对齐桥梁。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 第一阶段冻结 Vicuna，只训练 PEL/PAL，使用文字交叉熵和 patch MSE；第二阶段解冻 PEL/PAL 及整个语言主干，以 33M 对继续联合训练；第三阶段全部模型继续用同类目标进行 SFT，HD 只在此阶段扩展最大图片分辨率，不是从第一阶段始终以 1,344 训练。
@@ -65,6 +87,8 @@ Stage 1 使用上述 33M 中的 16M 子集，Stage 2 使用完整 33M。这里 1
 正文与附录 Table 8 报告：三阶段批量 512/512/128，最大学习率 $4\times10^{-4}$/$4\times10^{-5}$/$2\times10^{-5}$，AdamW、余弦衰减、权重衰减 0、各 1 epoch，warmup 比例 0.03/0.01/0.01，DeepSpeed stage 3。标准版训练样本为 16M/33M/665K，在两个各 8 张 A100 40GB 的节点上约 9 天完成。该耗时主要对应标准 EVE-7B，报告没有把所有数据生成成本或完整 HD 成本明确计入。
 
 作者观察到大量图文预训练提升视觉能力但削弱语言与指令能力，于是第二阶段使用较低学习率；增加语言数据或 MoE 被提出为后续方向，不能把它们写成已实施的标准预训练方案。SFT 本身含纯文字对话，但并不表示 Stage 2 已全面混入大规模纯文本。此处的“generative pre-training”指文本自回归训练，不等同于像素图像生成。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -99,3 +123,11 @@ Table 5 中，无 Stage 1 的 4M/8M VQAv2 为 64.6/50.2；有 Stage 1 对应 69.
 Table 6 的视觉侧耗时从 LLaVA-1.5 的 0.033 秒降至 EVE 的 0.003 秒，LLM 侧两者同为 0.48 秒；按分量相加仅约 0.513→0.483 秒，不能宣称端到端十倍。HD 视觉/LLM 为 0.013/1.52 秒，LLaVA-1.6 为 0.13/2.07 秒，配置的 token 与计算量也不同。原文未完整列明这些延迟的硬件、批量、输出长度协议，应作为报告设置下的结果。
 
 EVE 的贡献在于展示可部署的统一解码器路线及预对齐、特征监督的必要实证，而不是证明视觉教师已不再有用。公开数据、较轻视觉入口与高分辨率灵活性具有研究价值，但语言遗忘、指令遵循、数据规模需求及与强编码器模型的性能差距仍需处理。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：RoboPoint](../../robopoint/arxiv-2406.10721/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：VideoLLM-online →](../../videollm-online/arxiv-2406.11816/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

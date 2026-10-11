@@ -17,7 +17,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "cdd9f76fbda7dee5d112a522477f69dee67dfd8e129ad275dea86db4cb9af91f",
+  "article_sha256": "c17ddd054a8bc59b74842231bcffc1ae35bdb84a83d00c45950d59b325ae39f2",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -31,5 +31,12 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 18）：Figure 14 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 19）：Figure 20 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

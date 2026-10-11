@@ -49,7 +49,7 @@
     "原文未披露SFT全部冻结/步数和统一图像生成评分",
     "报告完整系统不等同后续公开checkpoint功能"
   ],
-  "article_sha256": "629b208e3018de27ccba44280fd5ec66466b769698861ef95deb860906d342e2",
+  "article_sha256": "3c95f3d9157954c941c853df6bfc659ab9335236e9bab7dde0f1f002f9a688f1",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -63,5 +63,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

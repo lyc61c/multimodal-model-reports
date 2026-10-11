@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Comparison Visual Instruction Tuning](../README.md)
+<!-- article-header:end -->
+
 # Comparison Visual Instruction Tuning：同时学习图像的共同点与差异
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **论文**：*Comparison Visual Instruction Tuning*，Wei Lin、Muhammad Jehanzeb Mirza、Sivan Doveh、Rogerio Feris 等，机构包括 JKU Linz、TU Graz、IBM Research、Weizmann、Tel Aviv University 与 MIT-IBM Watson AI Lab。本文依据 [arXiv:2406.09240v1](https://arxiv.org/abs/2406.09240v1)，2024 年 6 月；[项目页面](https://wlin-at.github.io/cad_vi)与[CaD-Inst 数据集](https://huggingface.co/datasets/wlin21at/CaD-Inst)。
 
 本文主要贡献是比较视觉指令的数据生成方法 CaD-VI、349K 图像对训练集 CaD-Inst，以及开放问答基准 CaD-QA。示范模型 CaD-LLaVA 建立在 LLaVA-1.5 的 7B/13B 版本上。它针对单图指令训练较少教授的能力：判断两图哪些内容相同、哪些不同，并正确把属性、动作与相应图像绑定。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -20,6 +34,8 @@
 
 “349K”指图像对训练资源，不是语言模型规模，也不能直接理解为 698K 个彼此不重复的图像。两阶段模型名称描述训练流程，第一阶段的 13B 模型又充当第二阶段的标注器。（PDF 第 2–7、15 页）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p002-figure-2.png)
@@ -29,6 +45,8 @@
 同一视觉编码器分别处理两张图，MLP 将它们映射至语言空间。视觉序列按图像顺序与文本指令拼接，语言模型自回归生成回复。没有另建对象匹配网络、像素差分模块或跨图专用注意力层；跨图关系依靠语言模型在同一上下文中学习。
 
 这使比较能力的来源更容易判断：论文主要改变监督数据的任务内容，并通过两轮数据制作让模型逐渐从“读文字比较”转向“看图比较”。第一阶段语言标注器没有看到图像，后续模型训练却只得到图像 token，不提供那些描述文本，迫使模型依据视觉输入完成回答。（PDF 第 4–5 页）
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -54,6 +72,8 @@ $$
 
 仅训练检索任务的 BISON/SVO 为 58.00/51.33；共同点加差异为 72.00/82.60；再加检索为 92.00/92.27。这支持生成式比较与辨别式绑定互补。第二阶段再加入重标注数据后达到 95.33/92.73，数据迭代的增益随任务而异。（PDF 第 9 页）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 第一阶段从 Localized Narratives 的 873K 图文资源中选择 278K 图像对。资源覆盖 COCO、Flickr30K、ADE20K、Open Images，描述来自口述转录，平均 36.5 词。作者用两段描述中重叠名词的数量衡量配对相似程度，覆盖相似与较不相似的场景；CLIP 相似度用于附录分布分析，不是主文所述配对规则。
@@ -64,17 +84,21 @@ Mixtral 8×7B Instruct v0.1 只读两份描述，生成平均 157 词的共同�
 
 CaD-QA 则采用 Visual Genome 图像与 SVIT 详细描述，选择描述重叠至少八个名词的图像对。Mixtral 先生成比较摘要，再生成多轮问答，每组随机选一个问答。实际统计为 7,520 对，答案平均 26 词，其中 2,916 个问题只询问两图中的一张，以检查图像身份绑定。主文近似写 7.5K/7.6K，本文以明确统计为准。（PDF 第 6 页）
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 ![原文 Figure 9](figures/original-p015-figure-9.png)
 
 ![原文 Figure 10](figures/original-p015-figure-10.png)
 
-*上面的两个提示分别使用文字描述和真实图像；页面下部明确给出一轮训练、LoRA rank/alpha 和设备。读取时要区分数据生成的模型采样设置与学生训练的优化超参数。*
+*Figure 9 展示用文字描述生成比较标注的提示，Figure 10 展示使用真实图像进行重标注的提示。训练一轮、LoRA rank/alpha 与设备配置来自正文和附录训练说明，见下文；应与数据生成时的采样设置区分。*
 
 实验从 LLaVA-1.5 第一阶段预训练权重开始，按照其指令微调流程训练。视觉编码器冻结，连接器更新，语言基座冻结但训练 LoRA 适配器。批量 128、训练一轮；LLM LoRA 学习率 1e-4，连接器 2e-5；LoRA rank 128、alpha 256，使用四张 A100-80G。第二阶段按相同指令训练方式使用扩大后的数据。论文没有完整列出优化器、调度、最大训练上下文和精确训练耗时，不能据“沿用 LLaVA”补作本文公开配置。（PDF 第 5、14–15 页）
 
 数据制作的 Mixtral 使用 8-bit 推理，批量 16、最多生成 750 token；第二阶段标注器与 VQA 推理采用 temperature 0、最多 256 token、单 beam。这些限制影响生成答案长度，但不等于训练序列长度。开放问答评价也使用 Mixtral，裁判只读问题、参考答案和预测，以 0–5 分判断语义匹配；裁判没有直接验证图像。（PDF 第 7、14–17 页）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -95,3 +119,11 @@ CaD-QA 则采用 Visual Genome 图像与 SVIT 详细描述，选择描述重叠�
 开放式 CaD-QA 中，13B 的裁判分从 2.65 到 3.34；但 COLA 差异描述 1.31 仍低于 InternLM-XComposer2-VL 的 1.36。生成数据与评价均使用 Mixtral，加上参考答案来自描述代理，结果支持该评价口径下的改善，尚不能取代直接人工看图判断。（PDF 第 7 页）
 
 SEED 单图测试从 68.83 到 69.11，说明该测试中未明显遗忘原能力；双帧视频分为 43.09，高于本模型单帧 40.16，但仅输入两帧，不是长视频理解验证。数据消融还表明原 Scene-Difference 标注已能大幅提高比较任务，本文的结构化重标注再提供补充增益。适用边界仍是两图比较，三图以上群体关系未在本文系统验证。本文未运行权重或重评测。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：SliME](../../slime/arxiv-2406.08487/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：RoboPoint →](../../robopoint/arxiv-2406.10721/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

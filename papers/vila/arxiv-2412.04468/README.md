@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VILA / NVILA](../README.md)
+<!-- article-header:end -->
+
 # NVILA：兼顾效果与全流程效率的视觉语言模型
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 NVILA 将 VILA 的视觉编码器—连接器—语言模型结构保留下来，把研究重点移到视觉信息密度和系统效率。它首先提高输入的空间或时间分辨率，再压缩送入语言模型的视觉 token；配合数据筛选、FP8 训练和分模块量化，让模型处理更多细节。本文依据首版报告描述，不将后续代码版本的配置补写为论文原始结果。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 问题 | 方法 | 为什么有效 |
@@ -25,6 +39,8 @@ NVILA 将 VILA 的视觉编码器—连接器—语言模型结构保留下来�
 
 最值得借鉴的是这种完整配方：分辨率提升负责增加信息，压缩负责降低成本，额外训练阶段负责恢复效果。表 1 中空间压缩后的 DocVQA 从 82.3 回升至 88.8，仍低于未压缩高分辨率模型的 91.1，说明效率收益存在精度权衡，而非所有压缩都没有损失。（PDF 第 4–8 页）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![NVILA 原文 Figure 4：先提高图像分块和视频帧数，再压缩视觉 token](figures/architecture.png)
@@ -34,6 +50,8 @@ NVILA 将 VILA 的视觉编码器—连接器—语言模型结构保留下来�
 图像经 SigLIP 提取特征，由两层 MLP 投射到 Qwen2 的输入空间，再与文字 token 拼接，语言模型自回归生成答案。视频先均匀采样帧，复用视觉编码器；时间压缩汇聚相邻帧的视觉表示。
 
 Dynamic-S2 从 S2 多尺度提特征出发。例如预训练分辨率为 448² 时，可采用 448²、896²、1344² 多尺度，各尺度分为 448² 图块，编码后拼回特征图。与所有尺度都缩放为正方形的 S2 相比，Dynamic-S2 的最大尺度采用接近原始长宽比、可以整分为图块的尺寸；各尺度特征插值到最大尺度网格并沿通道拼接。这样小字号、狭长文档不必完全依赖一次统一缩图。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -77,6 +95,8 @@ $$
 
 视觉压缩降低 LLM 预填充负担后，视觉塔成为重要瓶颈；因此预填充阶段使用视觉塔 W8A8。解码阶段使用 AWQ 的语言模型 W4A16，并优化矩阵乘中的 FP16 累加。权重与激活精度分别由 W、A 表示；训练中的 FP8 与部署的这些量化配置属于不同实验。（PDF 第 7–8 页）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 附录 Table A1 给出五阶段来源：连接器对齐使用 LLaVA-CC3M；视觉对齐使用 ALLAVA、Docmatix、PDFA、LSVT、ArT；多模态预训练包含 VILA² 重描述的 COYO 25M 子集、ShareGPT4V、文档数据与 MMC4 交错数据。图像 SFT 混合 OCR、图表、一般 VQA、指令、纯文本和部分视频数据，并包括 Molmo、Cauldron、Cambrian、OneVision 的子集。最终视频阶段使用 LLaVA-Video-178K，并继续混入 OneVision 图像子集。（PDF 第 20 页）
@@ -84,6 +104,8 @@ $$
 正文描述训练涉及超过 100M 数据，另在效率部分说明 SFT 候选混合为约 10M 样本、经 DeltaLoss 保留约 5M。这三个数量分别对应总体训练、SFT 候选与筛选后集合，不能相加视为独立图片数。
 
 筛选在各数据子集中进行，避免直接让大来源主导所有名额。表 3 比较 DeltaLoss、SigLIP 特征 k-means 聚类筛选及随机筛选；随机实验运行三次报告平均。保留 50% 时 Image-10 从 75.6 到 75.5、DocVQA 从 90.1 到 89.7；保留 10% 时 DocVQA 降至 84.4。作者采用 50% 作为后续配置，不代表任意数据都能裁去九成且不掉分。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -111,6 +133,8 @@ $$
 
 领域微调建议视觉编码器学习率比语言模型小 5–50 倍，并比较视觉 LayerNorm 与 LoRA。表 5 的视觉 LN＋LLM LoRA 使用 19.2GB、平均分 71.4，全量微调为 63.5GB、77.7；显存降低同时伴随效果差距。此测量限定 A100-80G、batch 1、单图、448 分辨率、上下文 300，不能直接推为所有长视频微调的显存需求。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 8：图像基准结果，保留 MMMU val/test/pro 等列说明](figures/image-results.png)
@@ -136,3 +160,11 @@ NVILA-Lite-8B 的 MMMU val 为 50.7，反而高于完整 8B 的 49.9。报告所
 效率对比采用单张 RTX 4090，视频双方都输入 64 帧；Qwen2-VL 使用 vLLM 和 W4A16，NVILA 使用专用引擎并量化视觉塔。图中视频 TTFT 为 Qwen2-VL 575＋871=1446ms、最终 NVILA 515＋137=652ms，约 2.22 倍；视频解码为 50.8 对 144.6 token/s，约 2.84 倍。图像 TTFT 改善约 1.55 倍、解码约 1.24 倍。Figure 6 图注明写 NVILA-7B，而主体结果写 8B；本介绍保留这个标记差异，不据此虚构另一个已明确发布的权重。
 
 这些结果支持针对视觉 token、数据和算子的联合优化路线。原文还展示导航、医疗与时间定位扩展，但它们涉及专门微调或专家模型；这里不将它们视为基础模型直接具备的统一零样本能力。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：TimeMarker](../../timemarker/arxiv-2411.18211/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：CompCap →](../../compcap/arxiv-2412.05243/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

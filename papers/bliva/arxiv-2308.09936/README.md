@@ -1,6 +1,18 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [BLIVA](../README.md)
+<!-- article-header:end -->
+
 # BLIVA：用查询特征与完整 patch 特征共同回答含文字图像的问题
 
 [返回 BLIVA 系列](../README.md) · [返回仓库](../../../README.md)
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -16,6 +28,8 @@
 
 BLIVA 的问题意识很具体：一个语言模型可能知道路牌、广告或电影海报的语义，却没有收到足够清晰的视觉细节。InstructBLIP 用一小组可学习查询将视觉 patch 压缩为提示向量，这有利于选取与问题相关的信息，但小字可能在压缩过程里被忽略。BLIVA 保留这一分支，再把原始编码 patch 通过另一条投影路径送给语言模型，让“经过指令筛选的摘要”和“较完整的视觉特征”同时存在。它不调用外部 OCR 系统来解决这个瓶颈，也没有重新预训练一个语言基础模型。[来源：原文 Introduction、Method，PDF 第 1–4 页。](https://arxiv.org/pdf/2308.09936v1)
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 需要把握的问题 | BLIVA 的回答 |
@@ -29,6 +43,8 @@ BLIVA 的问题意识很具体：一个语言模型可能知道路牌、广告�
 
 这篇论文适合用于理解“视觉压缩与细节保真”的取舍。其创新不依赖复杂的新损失，而是调整 LLM 能看到的视觉信息。这里也要区分两种 TextVQA 协议：Table 1 不提供 OCR 文本，BLIVA 得分 42.18；Table 2 为对齐 InstructBLIP 的一般任务协议提供 OCR tokens，得分 57.96。两个数不能直接混为一次实验，更不能把后者称为纯图像 OCR-free 能力。[来源：原文 Table 1–2，PDF 第 5–6 页。](https://arxiv.org/pdf/2308.09936v1)
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
@@ -41,35 +57,44 @@ BLIVA 的问题意识很具体：一个语言模型可能知道路牌、广告�
 
 Vicuna-7B 是主要实验配置，FlanT5-XXL 是另一个语言骨干配置。原文将后者称为可用于商业使用的 LLM 版本；本文只记录论文当时的实验定位，实际资源使用仍应查看各组件对应的许可。两种骨干的内部生成结构不同，不能仅凭连接图认为所有参数及训练成本完全一致。BLIVA 的核心共同点是双分支视觉入口和主配置冻结 LLM。[来源：原文 Architecture Overview、Implementation Details，PDF 第 3–4 页。](https://arxiv.org/pdf/2308.09936v1)
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
-原文没有提出带编号的新数学公式。下面使用明确的符号重写其结构与目标，属于机制解释，不是声称复现原文某个 Eq.。设图像编码结果为 \(V=E(I)\in\mathbb R^{N\times d_v}\)，问题为 \(s\)，查询集合为 \(Q_0\)。两条路径可表达为
+原文没有提出带编号的新数学公式。下面使用明确的符号重写其结构与目标，属于机制解释，不是声称复现原文某个 Eq.。设图像编码结果为 $V=E(I)\in\mathbb R^{N\times d_v}$，问题为 $s$，查询集合为 $Q_0$。两条路径可表达为
 
-\[
+
+$$
 Z_q=P_q\bigl(F_{\mathrm{QFormer}}(Q_0,s,V)\bigr),\qquad
 Z_p=VP_p+b_p,
-\]
+$$
 
-\[
+
+$$
 X_{\mathrm{LLM}}=[\operatorname{Embed}(s);Z_q;Z_p].
-\]
+$$
 
-其中 \(P_q\) 是查询输出到语言空间的映射，\(P_p\) 是新增 patch 投影；两路输出的最后一维必须与 LLM 的嵌入维度一致，才能在序列轴拼接。这里的拼接不是对两路向量逐元素平均。论文没有在正文明确列出全部实际 token 数，因而本文不把某个常见 Q-Former 配置的查询数当作本文逐项披露的超参数。
 
-查询分支的关键是条件化：\(Z_q\) 依赖问题 \(s\)，并非先计算一个永远不变的图像摘要后只把问题交给 LLM。patch 分支的关键是降低额外压缩：\(Z_p\) 直接来源于更密集的视觉序列。它能补充小字、局部纹理、空间关系，但并不保证恢复已经被图像缩放或视觉编码器丢掉的像素。因此，双路输入可以缓解查询瓶颈，却不能从 224×224 图像里凭空还原不可见的细小字符。
+其中 $P_q$ 是查询输出到语言空间的映射，$P_p$ 是新增 patch 投影；两路输出的最后一维必须与 LLM 的嵌入维度一致，才能在序列轴拼接。这里的拼接不是对两路向量逐元素平均。论文没有在正文明确列出全部实际 token 数，因而本文不把某个常见 Q-Former 配置的查询数当作本文逐项披露的超参数。
 
-这种设计也有计算代价。若问题含 \(L\) 个 token、查询输出含 \(M\) 个 token、patch 输出含 \(N\) 个 token，进入解码器的提示长度由约 \(L+M\) 增至约 \(L+M+N\)。标准密集自注意力的注意力矩阵规模相应随序列长度平方变化。这是通常 Transformer 的复杂度解释，而非论文报告的实测延迟；冻结 LLM 参数只减少优化所需的状态，并不会取消对这些视觉提示的前向计算和梯度传播。
+查询分支的关键是条件化：$Z_q$ 依赖问题 $s$，并非先计算一个永远不变的图像摘要后只把问题交给 LLM。patch 分支的关键是降低额外压缩：$Z_p$ 直接来源于更密集的视觉序列。它能补充小字、局部纹理、空间关系，但并不保证恢复已经被图像缩放或视觉编码器丢掉的像素。因此，双路输入可以缓解查询瓶颈，却不能从 224×224 图像里凭空还原不可见的细小字符。
+
+这种设计也有计算代价。若问题含 $L$ 个 token、查询输出含 $M$ 个 token、patch 输出含 $N$ 个 token，进入解码器的提示长度由约 $L+M$ 增至约 $L+M+N$。标准密集自注意力的注意力矩阵规模相应随序列长度平方变化。这是通常 Transformer 的复杂度解释，而非论文报告的实测延迟；冻结 LLM 参数只减少优化所需的状态，并不会取消对这些视觉提示的前向计算和梯度传播。
 
 生成训练使用语言建模损失，可解释为
 
-\[
+
+$$
 \mathcal L_{\mathrm{LM}}
 =-\sum_{t=1}^{T}\log p_\theta(y_t\mid y_{<t},s,Z_q,Z_p).
-\]
+$$
 
-\(y_t\) 是目标描述或答案 token。主配置中的 \(\theta\) 仅包含允许更新的接口模块，但损失仍经过冻结的 LLM 反向传播到视觉提示。对于分类和多选任务，作者采用候选答案的 log-likelihood ranking，可概括为 \(\hat a=\arg\max_{a\in\mathcal A}\log p(a\mid I,s)\)；开放生成采用 beam search。原文没有在此给出统一候选长度归一化细节或 beam 数，不能自行添加。
+
+$y_t$ 是目标描述或答案 token。主配置中的 $\theta$ 仅包含允许更新的接口模块，但损失仍经过冻结的 LLM 反向传播到视觉提示。对于分类和多选任务，作者采用候选答案的 log-likelihood ranking，可概括为 $\hat a=\arg\max_{a\in\mathcal A}\log p(a\mid I,s)$；开放生成采用 beam search。原文没有在此给出统一候选长度归一化细节或 beam 数，不能自行添加。
 
 论文将效果归因于互补表示，这一解释有直观依据，但必须结合消融的实际结果判断：Table 4 中直接微调的本地 InstructBLIP baseline 在 OCR-VQA 已达到 65.8，略高于完整 BLIVA 的 65.38；因此“17.76 点提升”是相对 Table 1 的原始 InstructBLIP 47.62，不能声称对所有公平重训 baseline 都提高同样幅度。架构改动有效与某个提升数完全由架构造成，是不同强度的结论。[来源：原文 Method、Table 1、Table 4，PDF 第 3–7 页。](https://arxiv.org/pdf/2308.09936v1)
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -83,9 +108,11 @@ X_{\mathrm{LLM}}=[\operatorname{Embed}(s);Z_q;Z_p].
 
 ![原文 Table 1](figures/original-p005-table-1.png)
 
-*原文 Figure 4 与 Table 1，PDF 第 5 页。上半部分是 YTTB-VQA 缩略图的长描述、短描述和问答示例；下半部分是不用 OCR tokens 的四个文本图像基准。示例中的正确回答不能替代下方的定量实验。*
+*原文 Figure 4 与 Table 1，PDF 第 5 页。Figure 4 展示 YTTB-VQA 缩略图的长描述、短描述和问答示例；Table 1 比较不用 OCR tokens 的四个文本图像基准。示例中的正确回答不能替代定量实验。*
 
 YTTB-VQA 是另行构建的**评测集**：100 组 YouTube 缩略图问答，覆盖 13 类视频。作者随机选择带有丰富文字的缩略图，通过视频 ID 获取高分辨率 thumbnail，再由人工记录问题、答案、视频类别与视频链接。类别包含科技、购物、体育、娱乐、企业、交通、食物、电影、天文、历史、音乐、地理和学术分享。论文没有将这 100 组描述为大规模训练语料。它体现工业场景的可用性，但样本数有限，3 个百分点的差距仅对应约 3 题，不能据此证明覆盖广泛真实场景的稳定优势。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -95,9 +122,11 @@ YTTB-VQA 是另行构建的**评测集**：100 组 YouTube 缩略图问答，覆
 | 视觉指令微调 | 混合 caption/VQA/指令数据；生成目标答案 | Q-Former 与投影层共同更新；视觉编码器和 LLM 冻结 | batch 24，最多 200K step，原文称约两遍训练数据；不足两天 |
 | LLM 更新消融 | 与第二阶段配合的 LoRA | 额外更新 LLM 的低秩适配参数 | 本文不补写原文未披露的 LoRA rank 或 alpha |
 
-两阶段均采用 AdamW，\(\beta_1=0.9\)、\(\beta_2=0.999\)，weight decay 0.05。前 1K step 线性 warmup，将学习率从 \(10^{-8}\) 提升到 \(10^{-5}\)，之后 cosine decay 到 0。附录报告使用 8 张 48GB NVIDIA A6000 Ada GPU；这里按原文的命名记录，不据此推算未披露的总 FLOPs。训练时间也仅覆盖 BLIVA 的新增阶段，不包括 EVA-CLIP、InstructBLIP 或 Vicuna 的历史训练。[来源：Appendix Implementation Details，PDF 第 10 页。](https://arxiv.org/pdf/2308.09936v1)
+两阶段均采用 AdamW，$\beta_1=0.9$、$\beta_2=0.999$，weight decay 0.05。前 1K step 线性 warmup，将学习率从 $10^{-8}$ 提升到 $10^{-5}$，之后 cosine decay 到 0。附录报告使用 8 张 48GB NVIDIA A6000 Ada GPU；这里按原文的命名记录，不据此推算未披露的总 FLOPs。训练时间也仅覆盖 BLIVA 的新增阶段，不包括 EVA-CLIP、InstructBLIP 或 Vicuna 的历史训练。[来源：Appendix Implementation Details，PDF 第 10 页。](https://arxiv.org/pdf/2308.09936v1)
 
 冻结骨干的逻辑是保持已有表示和语言能力，同时让接口适应它们。论文指出解冻视觉编码器可能造成灾难性遗忘，但没有给出与主结果同等充分的视觉解冻数值表。LLM LoRA 则确实列在 Table 4–5：有些 OCR 分数略升，多个一般任务下降，因此作者选择冻结 LLM 的版本作为主配置。应将这种取舍理解为当前数据、模型、超参数下的结果，而不是“多模态模型永远不该微调 LLM”的一般规律。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -120,8 +149,16 @@ YTTB-VQA 是另行构建的**评测集**：100 组 YouTube 缩略图问答，覆
 
 ![原文 Table 6](figures/original-p007-table-6.png)
 
-*PDF 第 7 页完整截图，包含 Table 3–6。Table 4–5 的勾选是逐步增加 patch 分支、预训练和 LLM LoRA；每一行的参照应是同一表中的相邻配置，而不是直接套用 Table 1 的公开模型分数。*
+*PDF 第 7 页原文图表裁图，包含 Table 3–6。Table 4–5 的勾选是逐步增加 patch 分支、预训练和 LLM LoRA；每一行的参照应是同一表中的相邻配置，而不是直接套用 Table 1 的公开模型分数。*
 
 消融显示预训练和双路信息的作用依赖任务。Table 5 中只增加 patch 分支，TextVQA 从 37.58 到 58.8，Flickr30K 从 84.61 到 87.4；加入预训练后 VSR 从 58.85 到 62.2、Visual Dialog 从 41.67 到 45.63，但 TextVQA 从 58.8 降至 57.96。再加入 LLM LoRA，VSR 从 62.2 降至 51.39，Flickr30K 从 87.1 降至 82.7，同时 VizWiz 从 42.9 升至 44.91。Table 4 中 LoRA 的 OCR-VQA 66.48 略好于冻结版本 65.38。证据支持作者选择一个较均衡的冻结配置，而不支持“每个组件在每个指标上必然增加分数”。
 
 YTTB-VQA 的 Table 6 给出 BLIVA 92%、InstructBLIP 89%、MiniGPT-4 43%、LLaVA 40%。结合 Figure 4，它说明两路视觉提示在这组缩略图问题中有帮助；结合只有 100 题的规模，则应保留对方差与外推的谨慎。原文还承认数值符号识别有困难。BLIVA 最值得记住的技术结论，是在冻结骨干的框架内增加一条密集视觉路径可能提升局部细节利用，同时增加 token 成本，而且无法绕过图像分辨率与训练数据的限制。[来源：原文 Table 1–6、Conclusion，PDF 第 5–7 页。](https://arxiv.org/pdf/2308.09936v1)
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Cheetah](../../cheetah/arxiv-2308.04152/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：VisCPM →](../../viscpm/arxiv-2308.12038/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

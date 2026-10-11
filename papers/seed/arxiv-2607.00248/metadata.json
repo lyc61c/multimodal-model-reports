@@ -11,10 +11,10 @@
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
   "owner": "writer_3",
-  "title_zh": "Seed2.0：真实复杂任务的多模态模型卡与工作流评测",
+  "title_zh": "Seed2.0：面向真实复杂任务的多模态模型卡与工作流评测",
   "source_sha256": "1449a46c4ebcdf4c6e00c863d15cdf6418ee75cfa8d1de91453cbf62d1f4a441",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3484,
+  "chinese_characters": 3549,
   "figures_manifest": "figures-manifest.json"
 }

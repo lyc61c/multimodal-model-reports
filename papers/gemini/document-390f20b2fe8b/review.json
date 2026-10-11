@@ -29,5 +29,12 @@
     "价格是发布优惠快照含截止日，不保证永久现行价",
     "内部/合作方案例不泛化且未复现",
     "共享基础智能不证明同权重"
-  ]
+  ],
+  "article_sha256": "fd083551bff18fab9d3aca357f6609c3b77e6e77b6a1ac8371de3e3ad752e0fa",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 1,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

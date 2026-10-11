@@ -17,7 +17,7 @@
     "original_assets": 6,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "b6f79e6affbc80d50819abf58bcf8ed96c2af500d2d5360eae2dae8f659bbfd6",
+  "article_sha256": "8e64157ed7099961c02d1906878d4b5978607d296491684c7c7979a1ccf02d09",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -32,5 +32,36 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 35）：Figure 6, Figure 5, Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/6a394cea1d1e/source.txt",
+        "papers/compcap/arxiv-2412.05243/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "第 8 页上部 Table 3 是逐次增加数据类型的消融，中部 Figure 5 是描述与指令比例实验，下部 Figure 6 是食物链描述案例。",
+          "after": "原文第 8 页：Table 3 展示逐次增加数据类型的消融，Figure 5 展示描述与指令比例实验，Figure 6 展示食物链描述案例。",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "b6f79e6affbc80d50819abf58bcf8ed96c2af500d2d5360eae2dae8f659bbfd6",
+      "article_sha256": "a7ce925168901851d5669863635904f5c9a1078825fe43e345c0a3a2f41c0936",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

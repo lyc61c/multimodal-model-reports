@@ -42,7 +42,7 @@
     "Tables/prose contain repeated-score and universal-superiority inconsistencies",
     "No quantitative open-set replacement full benchmarks or runtime costs"
   ],
-  "article_sha256": "970ad27abac9cabe48c00b1992575f8bd152a379731de26efa90251e456dc3af",
+  "article_sha256": "e348fdac176b3a18bd10ea46965b2535ba4acd1974cfe7b331a3c59f54e306a6",
   "artifact_checks": {
     "original_assets": 10,
     "no_full_page_screenshots": true
@@ -56,5 +56,25 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 52）：Table 6, Table 7, Table 8 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 53）：Table 9, Table 10, Table 11 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "full_read",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "通读介绍，对照 TFI/LAR/LAF 训练初始化及 Tables 6–11；79.0/60.5/60.1 主表与 OCR/DINO 消融区分正确，按独立表编号修正多处原页方位。",
+      "changes": [
+        "将 Figure 2/3、Table 6/7/8、Table 9/10/11 的跨页面方位说明改为各自编号与含义。"
+      ],
+      "article_sha256": "abbcb810bb7e9a3785c556f37afdd953f0eceb3dec1818bf7f491d9eb116db09",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 13,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

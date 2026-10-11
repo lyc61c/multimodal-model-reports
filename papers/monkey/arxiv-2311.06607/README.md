@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Monkey / TextMonkey](../README.md)
+<!-- article-header:end -->
+
 # Monkey：让高分辨率图像与细粒度描述共同发挥作用
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -14,11 +26,15 @@
 
 Monkey 是独立方法条目，虽继承 Qwen-VL 组件，原论文和新增设计均属于 Monkey。它不从头进行大规模多模态预训练，而以图像分块、局部 LoRA 与丰富 caption 在指令阶段增强已有模型；不能把这里“省去预训练”理解成基础视觉和语言主干未经预训练。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 论文同时处理两个瓶颈：低分辨率缩放会让小字、小物体消失，而简短标签即便配高清图片，也可能不监督那些细节。架构将大图的局部块与整体缩略图一起编码；数据流程则汇集全局 caption、区域描述、分割对象和 OCR，再形成包含位置与关系的细致描述。
 
 常规实验用 896 像素方图，原视觉编码窗口仍为 448×448。最大示例扩展到 896×1344，对文档任务继续改善。Monkey 的 TextVQA 为 67.6、STVQA 为 67.7；相对 Qwen-VL 的 63.8 / 59.1 有提升，但 ChartQA 65.1 低于 Qwen-VL 的 65.7。它的证据更适合说明细节感知和多类问答改善，而非“所有任务胜过原模型”。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -30,6 +46,8 @@ Monkey 是独立方法条目，虽继承 Qwen-VL 组件，原论文和新增设�
 
 视觉 resampler 使用 256 个可学习查询，以跨注意力从图像特征提取固定表示。语言模型约 7.7B、视觉编码器约 1.9B、resampler 90M、新增 LoRA 117M，报告总计约 9.8B；各分项均为近似数，简单相加不必与总数最后一位完全一致。语言最大序列长为 2048，因此提高视觉信息密度仍受上下文预算限制。
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 **固定窗口与全局视图。** 若把整张大图压到 448 像素，字符可能只剩少数像素，后续网络无法恢复已丢失的观察。分块把每个局部以基础编码器熟悉的尺寸输入，再保留缩略图作为总体语义。代价是多次视觉编码和更多 token；论文强调训练效率，但没有完整 FLOPs 和端到端延迟表，不应解释为提高分辨率完全不增加成本。
@@ -39,6 +57,8 @@ Monkey 是独立方法条目，虽继承 Qwen-VL 组件，原论文和新增设�
 **可学习重采样。** 若 $F$ 为某视图视觉特征，$Q$ 为可学习查询，跨注意力可理解为 $\operatorname{softmax}(QK^\top/\sqrt d)V$，$K,V$ 来源于 $F$。这是解释原文所述 cross-attention 的标准形式，并非论文给出的新方程。其作用是让语言模型读取压缩后的细节，而非未经限制的全部 patch 特征；固定查询也意味着被压缩细节可能丢失。
 
 **让标签与可观察细节匹配。** 分辨率只增加可见信息，详细 caption 才为物体属性、位置、文字及联系提供监督。作者用多级生成器把这两者联系起来：全局主题、局部对象、文字和坐标共同交给 ChatGPT 汇总。这里的 ChatGPT 是训练数据生成环节，不是推理时必须调用的在线模块，也没有为 Monkey 本身添加实时 OCR 工具链。
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -50,13 +70,17 @@ Monkey 是独立方法条目，虽继承 Qwen-VL 组件，原论文和新增设�
 
 简短描述与详细描述分别用 `Generate the caption in English:`、`Generate the detailed caption in English:`；问答统一为 `User: question Assistant: answer`。统一格式方便学习任务意图，同时并不能单凭格式推断模型具备任意多轮对话能力。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 Monkey 直接继承已训练 Qwen-VL，不重新进行从头预训练。指令调优冻结原视觉主干，训练图上标明的局部 LoRA、共享 resampler 和语言模型。窗口尺寸 448×448、resampler 查询 256、最大序列 2048；attention / MLP 的 LoRA rank 分别 16 / 32。
 
 优化器 AdamW，学习率 1e-5，cosine schedule，$\beta_1=0.9,\beta_2=0.95$，warmup 100 steps，batch 1024，weight decay 0.1。原文没有完整披露总 epoch、GPU 数、混合精度和每类监督 loss mask。文本回答和 caption 提供生成监督，但没有新的显式损失方程，也未报告 RLHF、DPO 或独立视觉重建目标，因此不套用其他模型的训练阶段来补齐。
 
-数据质量消融需要另看：作者在 **LLaVA1.5（336 ViT-L、Vicuna-13B）**上，把原预训练数据中的 400K 标签替换为生成描述，再保持其 SFT 数据不变。这个实验不是 Monkey 自己又多做一轮预训练，也不是对 Monkey 参数规模的消融；它专门验证标注方式能否迁移到另一架构。
+数据质量消融需要另看：作者在 **LLaVA1.5（336 ViT-L、Vicuna-13B）** 上，把原预训练数据中的 400K 标签替换为生成描述，再保持其 SFT 数据不变。这个实验不是 Monkey 自己又多做一轮预训练，也不是对 Monkey 参数规模的消融；它专门验证标注方式能否迁移到另一架构。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -98,3 +122,11 @@ Table 4 将方形输入从 672 / 784 / 896 增大，DeepForm **31.3→38.9→40.
 **Figure 5，PDF 第 10 页。** 四组原图覆盖 infographic 定位、柱状图计算、Wiki 表格关系和密集发票字段。右上图 16% 与 13% 的差写成 0.03，体现不同数值表示；定性案例提供读图路径，不能证明对所有金额与单位都可靠。正文与附录还展示详细 caption，部分句子存在重复，报告没有系统测量冗余和幻觉率。
 
 这些结果支持分块保留细节、用细致标注教模型利用细节的联合方向。完整可重复的训练成本、独立数据审计、不同长宽比预算和系统性生成可信度仍披露有限；更高分辨率与更长 caption 的效果需要结合任务而判断。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LLaVA-Plus](../../llava/arxiv-2311.05437/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：LVIS-Instruct4V →](../../lvis-instruct4v/arxiv-2311.07574/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

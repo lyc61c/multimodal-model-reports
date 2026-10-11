@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "VideoLLM-online：流式视频学习与静默决策",
+  "title_zh": "VideoLLM-online：让视频语言模型学会何时说话、何时等待",
   "source_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1913,
+  "chinese_characters": 1978,
   "figures_manifest": "figures-manifest.json"
 }

@@ -32,7 +32,7 @@
     "敏感度数学定义存在原文矛盾，报告数值按作者口径保留。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "79117dc7c2bef69019e2d8ff78b72d9be892429bf56365312fe4744d0f62fee4",
+  "article_sha256": "0856d5d2fab322b42e0a1711b3f79901703c65d6b60e3e28f19b0497832edcd5",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -49,5 +49,26 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照统一词表、VQ-GAN 图像 token 与四个位置 token 的原例；修正四个角点为四个坐标值，避免误读八坐标；OK-VQA 21.19/26.88 与原表一致。",
+      "changes": [
+        "将区域框四个角点坐标改为四个坐标值；原例恰有四个位置 token。"
+      ],
+      "article_sha256": "0446c11262f34f83c36a235d3a696411e8fa605adc9d6910655870aed94e564c",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 16,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

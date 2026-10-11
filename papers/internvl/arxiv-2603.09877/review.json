@@ -71,7 +71,7 @@
     "Table 19 Overall follows original reported value rather than recomputing a mean from task columns",
     "Self-review; no benchmark or model execution"
   ],
-  "article_sha256": "127f282403b3629052bb31763de7582fbe0943a46987a573cb081f9c39ebf8db",
+  "article_sha256": "2a89fc2c6d89052799aeafc74a74d5982ee3786526528f79b469eb1670eef97f",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -85,5 +85,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "InternVL 3.5：级联强化学习、自适应视觉压缩与分离部署",
-  "chinese_characters": 2680,
+  "title_zh": "InternVL 3.5：级联强化学习与自适应视觉压缩",
+  "chinese_characters": 2747,
   "figure_revision_date": "2026-10-09"
 }

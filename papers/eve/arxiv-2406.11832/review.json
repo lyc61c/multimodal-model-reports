@@ -18,7 +18,7 @@
     "original_assets": 8,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "531627eae750bec6c82305a8060124d958f23bab1e2fcad8a56e0bf2940399a3",
+  "article_sha256": "92d665de51e45cc86ccc5abae2b4f37834da29101f73b37ad0db7ae6634a9f6d",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -32,5 +32,11 @@
       "Viewed source page and crop: Table 3 full explanatory caption, all benchmark columns, encoder-based/encoder-free groups and last EVE-7B HD row retained.",
       "Tables 4/5 and Figures 5/6 independently cropped; all captions, legends and result rows complete."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

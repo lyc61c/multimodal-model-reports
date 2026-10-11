@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [GROUNDHOG](../README.md)
+<!-- article-header:end -->
+
 # GROUNDHOG：从候选实体掩码中检索并合并语言所指区域
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -11,6 +23,8 @@
 | 定位 | 单图语言与像素落地，涵盖对象、背景、部件、对象集合和视觉文字 |
 
 GROUNDHOG把分割落地拆成“先提出候选mask”和“结合图文理解选择mask”。LLM不直接回归整张像素图，而是给候选实体评分，再合并成短语对应区域。因此既能给文本答案，也能解释哪个候选被选中、哪个未被选中。正文语言基础写LLaMA2-7B并从LLaVA1.5初始化，附录C称Vicuna-7B且用Vicuna模板；本文保留这一具体checkpoint描述差异，不擅自认定两处完全相同。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -25,6 +39,8 @@ GROUNDHOG把分割落地拆成“先提出候选mask”和“结合图文理解�
 
 主要实验共享一套权重，没有逐测试集追加FT。不过M3G2本身包含这些任务的训练数据，所以“一套权重直接评测”不等于每个任务都是未见数据域的零样本测试。报告明确限制为单图，视频与3D扩展仍未验证。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
@@ -38,6 +54,8 @@ GROUNDHOG把分割落地拆成“先提出候选mask”和“结合图文理解�
 语言输出在可落地短语两侧生成GRD标记。对应查询与每个实体token的末层表示拼接，由MLP mask retrieval head产生标量分数。模型可以同时选择多个mask，不要求所有分数构成一个只选一项的softmax分类。输出分割是对已有候选的加权合并，因此候选漏掉所需部件时，语言模块通常不能凭空画出新边界。
 
 Mask2Former+从COCO-panoptic、Swin-L backbone checkpoint起步，在原200实体query之外分别增加50部件query和50文字query。不同数据集只对有注释的对应query组做matching loss，避免把未标注的部件错误视作负例。分类标签在proposal训练中不使用，语义识别留给LLM。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -57,6 +75,8 @@ projection loss比较预测mask在x/y轴投影与真值框投影的一维Dice。
 
 Dice的标准解释为$1-2\sum_i p_i g_i/(\sum_i p_i+\sum_i g_i)$，实际实现通常另加平滑项；这只是帮助理解重叠优化的定义，原文未给所有数值实现细节。LoRA也可用标准$W'=W+(\alpha/r)BA$理解，本文不把它当作作者新提出公式。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Table 11](figures/original-p014-table-11.png)
@@ -73,6 +93,8 @@ GVQA从VizWiz-Grounding、TextVQA-X、GQA、VQS等取得证据位置，并从LVI
 
 附录C为小数据源增加采样权重：ReasonSeg、D-Cube、Shikra-Binary/RD10倍，HierText5倍、PNG2倍；VCR部分、GuessWhat等降采样，平衡后约**1.8M**训练样本。结论另写1.9M，和2.5M原始池/1.8M采样集不完全一致，本文按附录实际采样口径。不能将这三项写为一个一致的精确训练量。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 proposal模型先独立训练20K iterations、batch16、Detectron2，之后在落地模型训练中冻结。CLIP和DINOv2也冻结；训练两路MLP投影与mask retrieval head，LLM采用LoRA $r=16,\alpha=16$。报告称涉及全部线性层、input embedding与LM head，并称全系统可训练参数少于2%；这不是模型总参数或推理激活量减少到2%。
@@ -80,6 +102,8 @@ proposal模型先独立训练20K iterations、batch16、Detectron2，之后在�
 AdamW初始LR2e-4、cosine，平衡M3G2训练2epochs，8张A100 40GB约2天。第4.4节提到低分辨率320px训练、评估提高输入分辨率。它与CLIP pretrained checkpoint名字@336及proposal评估分辨率不是同一概念，不能把所有模型输入分辨率机械归为固定336。公开v1未完整列出batch、warmup、weight decay与最长LLM上下文，不补出惯用默认值。
 
 学习目标同时包含语言生成和检索合并后的mask监督。Dice/projection权重各1，BCE .1，语言损失直接求和。已有mask候选虽然冻结，仍能通过检索分数和连接模块训练语言到实体的选择。一套权重用于所有主要测试任务；Table10消融则在三任务子集上重新训练，不是同一完整checkpoint随意切模块就得到的数值。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -122,3 +146,11 @@ POPE三split accuracy/F1为Random91.03/90.79、Popular90.13/89.70、Adversarial8
 Table10消融：CLIP+DINOv2的RefCOCO+/Flickr/TextVQA-X为66.6/77.2/34.0，优于CLIP59.8/75.0/32.0和DINO62.3/76.3/28.4。Mask2Former+相比原版在TextVQA-X9.8→34.0，但RefCOCO+67.1→66.6略降。评估分辨率224–480→800–1024时54.7/67.2/27.6→66.6/77.2/34.0。Table1的proposal Any-IoU在TextVQA-X .137→.446，是挑最佳候选的覆盖性评估，不是端到端mask得分。部件/文字候选改进解释了部分收益，但更高分辨率也增加开销。
 
 这项工作的实用优点是可替换视觉专家和定位失败来源。它依赖候选覆盖、视觉特征和既有数据的质量，尚未验证视频/3D，不能直接称为所有模态的可靠落地模型。所有结果来自原文，本文未复现运行。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：AnyGPT](../../anygpt/arxiv-2402.12226/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：ASMv2 →](../../all-seeing/arxiv-2402.19474/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

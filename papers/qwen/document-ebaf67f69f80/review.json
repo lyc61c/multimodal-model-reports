@@ -28,5 +28,12 @@
     "训练细节与统计区间未公开；内部基准和单次展示限制",
     "未运行模型"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "892285d2d03fcb86fc558f94e02fa10146ab2f621df5a12e57959e6a2b653e81",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 3,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

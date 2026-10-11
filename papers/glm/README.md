@@ -1,8 +1,10 @@
+[项目首页](../../README.md) · [模型系列索引](../../reports/model-family-index.md)
+
 # GLM / VisualGLM
 
-项目主体 / 机构：智谱 / Z.ai / THUDM 的 GLM 团队。快照：2026-10-08。
+智谱 / Z.ai / THUDM 的 GLM 团队
 
-共收录 **3 篇论文与资料**，按发布日期排序。
+**3 篇论文与资料** · 按发布日期由早到晚排列。
 
 ## 论文列表
 

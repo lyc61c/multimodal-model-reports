@@ -34,7 +34,7 @@
     "生成错误和来源交叉、训练细节与评价投票规模缺项明确说明。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "0ce1884eaa466896b86547e9c9b55c9c18d22c7e0237eef9c912b417d396a96b",
+  "article_sha256": "3d4e0e180e588526c6a0b4b941eaa0fa8bba9d38be3b7ec8aa849089b7e52cee",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -51,5 +51,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 9,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

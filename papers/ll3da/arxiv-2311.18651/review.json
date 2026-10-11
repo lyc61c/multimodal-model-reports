@@ -50,7 +50,7 @@
     "pointinvarianceexplanationnotformalproof",
     "multipleexperimentalsettingspreserved"
   ],
-  "article_sha256": "a3f0f08a61e11f3f67a09e38a524f5b867ac59c59bedabb002b4a1ca68792d78",
+  "article_sha256": "b5579beebd7bc47183b49c7a279ec76cb022d0a7e56f5b03382105ec95acb808",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -67,5 +67,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 11,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

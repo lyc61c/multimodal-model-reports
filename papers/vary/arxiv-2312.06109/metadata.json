@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Vary：扩展细粒度视觉表示的文档与图表模型",
+  "title_zh": "Vary：增加细粒度视觉编码分支，改善文档与图表理解",
   "source_sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1827,
+  "chinese_characters": 1892,
   "figures_manifest": "figures-manifest.json"
 }

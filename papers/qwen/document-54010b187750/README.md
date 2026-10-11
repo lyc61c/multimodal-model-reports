@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Qwen](../README.md)
+<!-- article-header:end -->
+
 # Qwen3.5-Omni：Hybrid MoE、ARIA 与实时音视频交互
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 目录记录为 2026 年 3 月发布；原页面的引用块也写 March 2026，但页头出现 January 7, 2026，存在日期不一致。因此本文固定观察版本，不把页头日期当作精确发布日。页面没有披露三种规格的总参数、激活参数和完整专家配置。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 模型延续 Thinker–Talker 分工，但两者均改为 Hybrid-Attention MoE。Thinker 整合音视频并输出文本，Talker 结合多模态上下文生成语音。本代加入 **ARIA**，使文本与语音单元按可变节奏交错，针对漏读、读错和数字发音问题提高流式合成稳定性。
@@ -21,25 +35,31 @@
 
 页面宣称支持超过十小时音频输入，以及 1fps、720P 条件下超过 400 秒音视频。时长上限与采样率、分辨率、输出细度有关；推荐用法又给出了较低分辨率长视频与高细节短片的不同配置，不能把所有最高设置拼成一个能力承诺。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![官方 Architecture 原图，无编号](figures/original-architecture.jpg)
 
-**读图：**最下方视觉编码器和 AuT 分别产生视觉、音频表示，交错送入 Thinker。中间层隐藏表示传到 Talker；右上方 MTP 模块和流式 codec decoder 将语音码转成波形。不同颜色表示文本 token、隐藏状态、视觉/音频状态和语音码，不是不同模型独立输出。
+**读图：** 最下方视觉编码器和 AuT 分别产生视觉、音频表示，交错送入 Thinker。中间层隐藏表示传到 Talker；右上方 MTP 模块和流式 codec decoder 将语音码转成波形。不同颜色表示文本 token、隐藏状态、视觉/音频状态和语音码，不是不同模型独立输出。
 
 Thinker 使用 TMRoPE 编码交错音视频位置并生成文本。Talker 接收上下文的多模态隐藏表示以及 Thinker 的文本输出，结合参考音频生成上下文相关的声音。它不是仅拿最终文字交给外部通用 TTS 的流水线。
 
 语音用 RVQ 表示，沿用 Qwen3-Omni 的码生成思路，替代较重的 DiT 操作。图中展示首层语音码与后续码级预测、求和和解码，但页面没有给出完整码本规格、码率、每块时长和 MTP 计算细节。输入分块流式处理与 Talker 的流式生成共同支持交互。
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
-**ARIA 的问题背景。**文字 token 和语音码的编码效率不同：同一数字、缩写或语言片段可能对应不同数量文字 token 和不同发音长度。固定 1:1 组织可能让语音过早前进或遗漏需要表达的文字。ARIA 动态对齐文本与语音单元后交错，取代前代的双轨输入组织。
+**ARIA 的问题背景。** 文字 token 和语音码的编码效率不同：同一数字、缩写或语言片段可能对应不同数量文字 token 和不同发音长度。固定 1:1 组织可能让语音过早前进或遗漏需要表达的文字。ARIA 动态对齐文本与语音单元后交错，取代前代的双轨输入组织。
 
 可以将其理解为每段文字对应可变长度的语音段，而非强制“一文字 token 对一个语音单元”。这是机制说明；页面没有公开对齐器计算、阈值、监督标签或目标函数，本文不编造 ARIA 的公式和损失。
 
-**RVQ 的含义。**残差向量量化按多层码本逐步表达尚未被前层解释的声学残差；架构图中的多个码级表示最终组合后交给 codec 解码。这是理解离散语音表示的通用原理，不表示该发布页给出了可复现的量化训练方法。
+**RVQ 的含义。** 残差向量量化按多层码本逐步表达尚未被前层解释的声学残差；架构图中的多个码级表示最终组合后交给 codec 解码。这是理解离散语音表示的通用原理，不表示该发布页给出了可复现的量化训练方法。
 
-**语义打断与工具。**模型判断用户发声是否表达接管话轮的意图，以避免附和音、背景噪声被误作打断；搜索与函数调用使对话能取得外部事实和反馈。页面没有公开话轮预测公式、打断延迟、检测精确率和工具策略训练细节，因此不能把“支持”改写成稳定的定量承诺。
+**语义打断与工具。** 模型判断用户发声是否表达接管话轮的意图，以避免附和音、背景噪声被误作打断；搜索与函数调用使对话能取得外部事实和反馈。页面没有公开话轮预测公式、打断延迟、检测精确率和工具策略训练细节，因此不能把“支持”改写成稳定的定量承诺。
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -51,6 +71,8 @@ Thinker 使用 TMRoPE 编码交错音视频位置并生成文本。Talker 接收
 
 FLEURS 的 ASR 与翻译评测覆盖子集不同：ASR top60；S2TT top59 因没有相应翻译测试而排除 Afrikaans。中文 MIR-1K 转录先转简体。没有信息支持自行补写音频采样率、特征帧移和训练声学标注流程。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 发布页明确“原生全模态预训练”，但没有列出预训练阶段数、冻结/解冻状态、token 预算、优化器、学习率、批大小与训练硬件；也没有公开后训练中 SFT、蒸馏或 RL 的具体组合。本文不把 Qwen3-Omni 或 Qwen3.5 的配方直接移植到本代。
@@ -59,11 +81,13 @@ FLEURS 的 ASR 与翻译评测覆盖子集不同：ASR top60；S2TT top59 因没
 
 Offline 示例使用音视频内容并流式返回文本；Realtime 示例持续发送麦克风音频，接收音频及转录事件，并可启用搜索。示例中的客户端输入 16kHz、播放 24kHz 是接口示例配置，不能当作全部训练采样率。本仓库仅介绍发布材料，未调用收费 API、训练模型或执行演示。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![官方 Audio-Visual 原始结果图，无编号](figures/original-audio-visual.png)
 
-**读图：**紫色 Plus、黄绿色 Flash、绿色 Gemini-3.1-Pro。图仅选取五项，完整网页表还包含 VideoMME 和 OmniGAIA。各项不能相加为统一准确率。
+**读图：** 紫色 Plus、黄绿色 Flash、绿色 Gemini-3.1-Pro。图仅选取五项，完整网页表还包含 VideoMME 和 OmniGAIA。各项不能相加为统一准确率。
 
 | 音视频指标 | Plus | Flash | Gemini-3.1-Pro |
 |---|---:|---:|---:|
@@ -79,16 +103,24 @@ VideoMME 设 use_audio_in_video=True，不能与另一个视觉表的“无字�
 
 ![官方 Audio 原始结果图，无编号](figures/original-audio.png)
 
-**读图：**FLEURS 图使用 **Score=1−WER**，约 93.5 是高分表示，原表则使用错误率。URO 图显示综合数，原表又列理解、推理、口语三维，不能对错列。
+**读图：** FLEURS 图使用 **Score=1−WER**，约 93.5 是高分表示，原表则使用错误率。URO 图显示综合数，原表又列理解、推理、口语三维，不能对错列。
 
 Plus 的 MMAU 为 82.2（Gemini 81.1）、VoiceBench 93.1（88.9）、音乐 RUL-MuchoMusic 72.4（59.6）。但 MMAR 为 80.0，低于 Gemini 83.7；WildSpeech 75.4 低于 76.3。FLEURS top60 WER/CER 为 **6.55**，Flash 10.75、Gemini 7.32，越低越好；Wenetspeech meeting 5.84 又略高于 Flash 5.51。S2TT 中英文综合表为 32.8/29.4/32.1，不能将它解释为错误率。
 
 ![官方 Visual 原始结果图，无编号](figures/original-visual.png)
 
-**读图：**该图还包含 Gemini-3-Pro，和上两图的 Gemini-3.1-Pro 不是相同版本。网页主表的主要对比是 Qwen3.5-Plus-NoThinking，全部采用无思考设置。
+**读图：** 该图还包含 Gemini-3-Pro，和上两图的 Gemini-3.1-Pro 不是相同版本。网页主表的主要对比是 Qwen3.5-Plus-NoThinking，全部采用无思考设置。
 
 Plus 的 MMMU 为 80.1、MathVista mini 为 86.1、OCRBench 为 **91.3**、无字幕 VideoMME 为 81.9、MLVU M-Avg 为 86.8。这里 OCRBench 使用网页的百分尺度，不与 Qwen3-VL 原始 920 分直接相减。对应 Qwen3.5-Plus-NoThinking 为 81.0/86.9/91.4/81.0/85.1：音视频扩展并没有让所有视觉指标上升。文本 GPQA 83.9 也低于纯基线 85.9。
 
 语音生成原网页另列稳定性 WER：自定义声音 Seed-hard 为 6.24，20 语言公开集 2.06，9 语言内部集 5.82；声音克隆公开集 WER 1.87、余弦相似度 0.79。对比 API 明确在 2026 年 3 月测试且使用指定音色，不能视为所有音色、所有调用时刻结果；Seed-en 1.35 也高于 GPT-Audio 的 1.16。
 
 公开材料支持跨模态整合与流式语音机制的改进，但没有 ARIA 独立消融、同算力训练对照或完整实时延迟结果。本文对原文数字和原图做核验，未作独立复现。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：MiMo-V2-Omni](../../mimo/document-1ccf04ffaeaa/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Gemma 4 →](../../gemma/document-92d16b8c59c9/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

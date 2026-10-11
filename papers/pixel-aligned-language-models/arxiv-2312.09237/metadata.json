@@ -10,11 +10,11 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "PixelLLM：逐词连续位置回归与区域语言任务",
+  "title_zh": "PixelLLM：把语言模型的每个词对齐到图像位置",
   "source_sha256": "c35af2f89bb19bf4757b6c7c896df91984396b1820f51613b0a8cc4ba959b1a1",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1988,
+  "chinese_characters": 2053,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

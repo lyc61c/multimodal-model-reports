@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [SALMONN](../README.md)
+<!-- article-header:end -->
+
 # SALMONN：双音频编码器与少样本激活微调
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 SALMONN 是 Speech Audio Language Music Open Neural Network。它希望在一个模型中处理转录、翻译、音频问答和混合声音推理，不依赖每个任务单独调用外部工具。本文固定原始 v1，不把后续音视频或语音生成扩展并入：本模型的输出是文字，不能合成语音、音乐或图像。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 系统将 Whisper-Large-v2 的语音编码器与 BEATs 的非语音编码器并行使用，再通过窗口级 Q-Former 压缩为语言模型能接收的音频表示。训练仅更新 Q-Former 与 Vicuna 的 LoRA，约 33M 参数，约占整个系统 0.24%。
@@ -20,15 +34,19 @@ SALMONN 是 Speech Audio Language Music Open Neural Network。它希望在一个
 
 这里“涌现”主要指恢复未被音频指令训练直接覆盖的任务能力。它不能证明模型凭十二条故事创造了全新知识，也不能把提高指令遵循率等同于答案正确率。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 1](figures/original-p004-figure-1.png)
 
-**读图：**两个冻结编码器读同一音频，特征沿通道拼接；窗口级 Q-Former 是可训练连接器。音频嵌入与文字提示共同送入冻结 Vicuna，LoRA 更新其自注意力 Q、V 投影。火焰和雪花分别表示可训练和冻结部分。
+**读图：** 两个冻结编码器读同一音频，特征沿通道拼接；窗口级 Q-Former 是可训练连接器。音频嵌入与文字提示共同送入冻结 Vicuna，LoRA 更新其自注意力 Q、V 投影。火焰和雪花分别表示可训练和冻结部分。
 
 Whisper 编码器提供语音内容及一定背景噪声信息，BEATs 提供声音事件语义。后者采用 fine-tuned BEATs iter3+（AS2M，cpt2）。两者输出均为 50Hz，从而可逐帧同步；这里 50Hz 是特征帧率，不是原始波形采样率。
 
 Q-Former 不把整段音频强行压成固定几个 token，而将特征切成短窗口，在每个窗口用共享查询和注意力提取表示，再按时间顺序串联。实际窗口 L=17 帧、每窗 N=1 查询，约 0.33 秒；报告称 30 秒音频产生 88 个输出 token，精确边界由编码与窗口实现决定。语言端 LoRA rank 8，正常缩放系数 4.0。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -56,17 +74,21 @@ $I$ 为指令，$Y$ 为回答。大量短且确定的转录/描述监督可能�
 
 缩小 LoRA 影响相当于改变冻结语言骨干和音频适配增量的相对贡献；无需删除音频输入。但纯推理时降缩放会破坏已训练任务的适配。激活微调改为用长、多样且音频相关的目标进行 teacher-forcing 交叉熵训练，同时更新 Q-Former 与 LoRA。论文不使用新的奖励模型或 RL 目标。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练语音识别使用 960 小时 LibriSpeech、1,000 小时 GigaSpeech M-set；描述使用约 2,800 小时 WavCaps，并移除超过 180 秒的片段，另有 AudioCaps、Clotho。不同任务的数据不是全都无监督：识别、描述和标签提供明确目标。
 
 ![原文 Table 1](figures/original-p006-table-1.png)
 
-**读表：**同一音频源可被用于转录、音素识别、性别和问答，不能逐行把重复小时数相加后宣称独立音频总量。作者汇总约 4,400 小时、2.3M 指令样本。
+**读表：** 同一音频源可被用于转录、音素识别、性别和问答，不能逐行把重复小时数相加后宣称独立音频总量。作者汇总约 4,400 小时、2.3M 指令样本。
 
 指令阶段覆盖 ASR、英译中、声音描述、音素/情绪/性别识别、音乐描述、重叠语音、说话人验证及语音/声音/音乐问答。示例包括 430 小时 CoVoST2-En2Zh、IEMOCAP Session 1–4、14 小时 MusicCaps、260 小时 LibriMix、1,200 小时 VoxCeleb1。GPT-3.5 根据转录或描述标签生成问题与答案，因此问答标签可能继承文本和生成器偏差。
 
 激活阶段的十二个故事由降低 LoRA 缩放的 SALMONN 基于音频自行生成，并非十二个人工黄金标签。零样本 SQQA 和关键词提取测试的语音由商业 TTS 生成；SAC 为内部混合声音数据，不能与真实自由对话的全部噪声条件等同。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -76,6 +98,8 @@ $I$ 为指令，$Y$ 为回答。大量短且确定的转录/描述监督可能�
 
 对照实验比较长 ASR、纯文本故事、长问答，以及只更新 LoRA 的音频故事。这一设计试图区分“仅仅变长”与“在音频条件下学习丰富响应”。主要证据来自这套模型和有限数据规模，尚不能把激活方法推广为所有模态过拟合的通用解法。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 3](figures/original-p008-table-3.png)
@@ -84,7 +108,7 @@ $I$ 为指令，$Y$ 为回答。大量短且确定的转录/描述监督可能�
 
 ![原文 Figure 2](figures/original-p008-figure-2.png)
 
-**读表：**Table 3(a) 是训练覆盖任务；(b) 是未覆盖或开放任务。括号为 following rate（FR），前面的数是准确率或多样性，不能把括号数当正确率。ASR 三元组依次为 LibriSpeech clean、other、GigaSpeech。
+**读表：** Table 3(a) 是训练覆盖任务；(b) 是未覆盖或开放任务。括号为 following rate（FR），前面的数是准确率或多样性，不能把括号数当正确率。ASR 三元组依次为 LibriSpeech clean、other、GigaSpeech。
 
 | 指标 | 激活前 | 激活后 | 解释 |
 |---|---:|---:|---|
@@ -107,3 +131,11 @@ Figure 3 中缩放从 4 降至约 2，可提高开放任务 FR，同时使转录
 长故事激活的 SAC 准确率为 0.50，长 QA 为 0.34、纯文本故事为 0.11、长 ASR 为 0.12。长 QA 还使重复回答比例达到 4.6%，故事方案为 0.1%。只更新 LoRA 可获得 SQQA 0.44，但 SAC 0.34 低于同时更新连接器与 LoRA 的 0.50，说明不同任务对适配范围敏感。
 
 FR 的定义带有启发式：SQQA/槽填充输出与语音问题的 WER<30% 被判为只做转录；故事最多 200 输出 token，少于 50 个词判为未遵循；SAC 由 GPT-3.5 分别判尝试答题与正确性。更丰富的文字仍可能包含虚构，不能用故事长度或低困惑度代替事实可靠性。本文未运行模型或独立复现实验。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Fuyu-8B](../../fuyu/document-87ff293e66f7/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：CoVLM →](../../covlm/arxiv-2311.03354/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

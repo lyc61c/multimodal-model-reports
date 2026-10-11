@@ -38,7 +38,7 @@
     "Figure5原文称JSON但原图形式存在重复键未引用值，未声称合法可解析",
     "颜色证据框为作者标注不是模型attention或定位输出"
   ],
-  "article_sha256": "a31bd2238262f51c53312de72b90c4caf889d45041254eb727cffd2a9d762e95",
+  "article_sha256": "d019e70a275522583e23a897e62b1ba3293d392275bcfc571a01c893b6ac5eb3",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -52,5 +52,11 @@
       "Viewed source and crop: Figure 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
       "Viewed source and repaired crops: Figure 5 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

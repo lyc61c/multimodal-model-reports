@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Cosmos](../README.md)
+<!-- article-header:end -->
+
 # Cosmos 3：以双路径 Transformer 统一理解、世界生成与动作预测
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -7,6 +19,8 @@
 Cosmos 3 希望把物理智能所需的几类能力放进同一框架：解释当前场景、生成可能的未来图像和视频、同步生成声音、根据动作预测环境变化，以及根据观察反推或生成动作。它既包含输出文字的 Reasoner，也包含生成连续潜变量的 Generator。定位是供机器人、自动驾驶和物理场景数据生成进一步适配的基础模型，不是只做看图聊天的 VLM，也不是已被证明可精确替代物理引擎的仿真器。[原文第 5–7 页](https://arxiv.org/pdf/2606.02800v1#page=5)
 
 报告训练 Edge、Nano、Super 三种尺度，MoT 双路径型号约为 4B、16B、64B；对应单路径骨干约为 2B、8B、32B。本文介绍报告中的基础模型和专用后训练分支，区分 Cosmos3-Super-Text2Image、Cosmos3-Super-Image2Video、Cosmos3-Nano-Policy-DROID。报告当时发布 Nano 和 Super，Edge 拟后续发布，不能把家族所有分支的成绩都归给同一检查点。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -22,6 +36,8 @@ Cosmos 3 希望把物理智能所需的几类能力放进同一框架：解释�
 | 重要验证 | 物理视频评测、人工原子问题评分、动作适配、真实机器人与模拟闭环成功率 |
 
 理解该报告的关键是把“同一架构支持不同模式”和“一个现成检查点已经在所有模式上达到专用最优”区分开。专用后训练不改变基本结构，却会改变动作接口、生成分辨率、时长和推理配置。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -42,6 +58,8 @@ Cosmos 3 希望把物理智能所需的几类能力放进同一框架：解释�
 | Super | Qwen3-VL-32B | 64 | 5,120 | 64/8 | 25,600 |
 
 各型号 head dimension 为 128。Edge 的语言骨干移除 QK normalization，并使用 ReLU-squared；这些差异属于 Edge，不能同时归给 Nano、Super。[原文第 14 页](https://arxiv.org/pdf/2606.02800v1#page=14)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -69,6 +87,8 @@ $$
 
 由此产生三种条件分解：前向动力学给定动作生成未来视觉状态；逆向动力学给定视觉转变推断动作；policy 联合生成动作与未来视频。以条件概率表述分别是 $p(v_{\text{future}}\mid v_{\text{past}},a)$、$p(a\mid v_{\text{past}},v_{\text{future}})$、$p(a,v_{\text{future}}\mid v_{\text{past}},l)$。这组概率写法是帮助理解的概念表达，原文实际通过干净/带噪 token 配置训练，不是另设三套任务骨干。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 **Reasoner 数据约 2,420 万条。** Table 3 中预训练为 22,002,013 条，SFT 为 2,171,673 条；图文和视频行统计媒体样本，纯文字行统计对话，单位并不完全一致。预训练 OCR 占 42.9%、2D grounding 占 16.5%；SFT 的视频样本比例提高至约一半，覆盖机器人、驾驶和智能基础设施。原文另称 SFT 混合加入 80 万轻量指令样本，不能把这句话与 Table 3 简单相加后宣称精确去重总数。[原文第 15–19、27 页](https://arxiv.org/pdf/2606.02800v1#page=15)
@@ -84,6 +104,8 @@ $$
 **音频处理强调真实视听因果对齐。** 预训练约 138.9M 视频有可用音轨，中训练保留约 18.8M：12.8M 非语音和 6M 口型同步语音。先用 SAM-Audio 分离语音，再用 SyncNet 检验有脸和口型同步，用语音/音乐检测判断旁白及后配音乐；可见演奏乐器的声音应保留。音轨一旦经过去语音或去音乐，就重新写 caption，防止文字仍描述已被删除的声音。[原文第 23–24 页](https://arxiv.org/pdf/2606.02800v1#page=23)
 
 **动作中训练有 8.4M episodes、61.3K 小时。** 第一人称运动占 67.4%、车辆 16.3%、机器人 8.7%、相机运动 7.5%。动作逐维归一化到约 [-1,1]，多视角组成画布，保留空闲步数以便采样平衡。通用中训练包含失败和空闲片段；DROID 专用策略后训练则使用社区的空闲过滤和失败演示移除，两个阶段的处理不同。[原文第 24–25、32 页](https://arxiv.org/pdf/2606.02800v1#page=24)
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -107,6 +129,8 @@ Generator 预训练只更新生成专用参数，Reasoner 塔冻结。所有连�
 专用后训练分别开展：文生图为 20K 步广泛 SFT 加 2K 步高质量 refinement；图生视频为约 10K 步、50B token，针对 480p、189 帧。DROID 策略从 Nano 中训练版本恢复，重新初始化动作接口，动作参数 LR 为其他参数五倍，训练预测 **32 个未来绝对关节位置**及辅助 RGB；LR 为 $2\times10^{-4}$。它接受本体状态和三视角 540×640 画布，以 15Hz 控制 Franka Panda，已不同于通用中训练的相对位姿伪动作。[原文第 30–32 页](https://arxiv.org/pdf/2606.02800v1#page=30)
 
 基础视听生成默认 50 步、guidance 6、shift 10；DROID policy 为 4 步、guidance 3、shift 5，并跳过视频潜变量解码，报告部署于两块 RTX Pro 6000。不能把后者的推理速度归给 50 步、720p 世界视频生成。部分主训练未给出精确总步数/全局 batch，仍应以已披露 token 与硬件范围为准，不反算缺失时长。[原文第 32、73 页](https://arxiv.org/pdf/2606.02800v1#page=32)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -133,3 +157,11 @@ PAIBench-G 在 720p、16:9、189 帧、每提示五个 seed 下评测，Super T2
 LIBERO-10 适配每个检查点 500 rollouts，MT-init 在 500 步为 24.6% 而 PT-init 为 0%；到 2,000 步分别为 97.4%/95.2%，最明显优势是早期收敛。RoboArena 真实机器人第一名记录为 2026-05-30 的双盲成对比较排名，与 RoboLab 成功率是不同指标。[原文第 68–70 页](https://arxiv.org/pdf/2606.02800v1#page=68)
 
 消融揭示统一训练也有取舍：PushT 三模式联合训练将逆向动作 MSE 从 $1.11\times10^{-3}$ 降至 $3.09\times10^{-4}$，policy coverage 从 74.1% 到 77.3%，但前向 PSNR 从 27.13 降至 26.22；合成数据混合改善多数物理类别，却在 Human 类仍下降。Cosmos 3 的有力结论是共享物理与动作先验能支持多任务适配，评测尚不足以证明任意新环境中的长期精确仿真或无需后训练的通用机器人控制。[原文第 103–108 页](https://arxiv.org/pdf/2606.02800v1#page=103)
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：π0.7](../../pi/arxiv-2604.15483/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：世界动作模型 →](../../pretrained-to-imagine-fine-tuned-to-act-the-rise-of-wor-28acd80eab47/document-28acd80eab47/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

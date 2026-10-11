@@ -7,7 +7,8 @@
     "Verified Tiny MLA exception and activation size scopes",
     "Verified all extracted benchmark rows/column headers and InfoVQA budget",
     "Preserved weaker results and no component causal claims",
-    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
+    "2026-10-11 targeted content audit: 分开的 Figure 3/Table 1 仍用上部/中部的原页位置；改为图号与内容。"
   ],
   "artifact_checks": {
     "seven_sections": true,
@@ -17,7 +18,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "d0b38f2091f4dedda0c0b270d88aa32d066d4aa642022d6baf0973158466348f",
+  "article_sha256": "d3cf421edc5be73ba945a48d6258834adf3071b82b001a0f3a2c855c76d1b3c5",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -31,5 +32,39 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "kind": "targeted_source_and_math_check",
+      "scope": "逐篇阅读七部分的关键起始段落/表格，检查公开方法公式与主结果摘表；并非全文逐句审计。",
+      "corrections": [
+        "分开的 Figure 3/Table 1 仍用上部/中部的原页位置；改为图号与内容。"
+      ],
+      "source_checks": [
+        {
+          "claim": "DeepSeek-VL2 全局 210 token、分隔 token 和局部 14m(14n+1) 长度表达",
+          "source_file": "source/papers/1bd54f613caa/source.txt",
+          "source_query": "210",
+          "pdf_page": 5,
+          "result": "对应主张在固定原文缓存中得到支持；范围限于此处记录。"
+        }
+      ],
+      "visual_crops_inspected": [
+        "original-p005-figure-3.png",
+        "original-p005-table-1.png"
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "mobile_math_layout": {
+      "date": "2026-10-11",
+      "long_inline_equations_promoted_to_display": 1,
+      "scope": "Display layout and connective punctuation only; formula contents preserved"
+    }
   }
 }

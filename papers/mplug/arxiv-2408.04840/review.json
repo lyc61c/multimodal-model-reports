@@ -48,7 +48,7 @@
     "MMVet broad prose contradicted by table",
     "Not lossless long-memory or native audio model"
   ],
-  "article_sha256": "1386f374d4194850854cef599728c984cb3d719a3fdfe584ff360dd8e26cd18c",
+  "article_sha256": "4431f958cc322fb3ec79cc0c3f70ca77ca36ee3ea830d253dd2794037f3e5634",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -62,5 +62,11 @@
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 6,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "SESAME：错误前提感知的理解、解释与分割",
+  "title_zh": "SESAME：看见、解释与分割，纠正用户的错误视觉前提",
   "source_sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1855,
+  "chinese_characters": 1920,
   "figures_manifest": "figures-manifest.json"
 }

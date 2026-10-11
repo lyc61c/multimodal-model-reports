@@ -34,7 +34,7 @@
     "内部测试数据、规模和置信区间未完整公开；医学仅整理原文评估无诊断建议。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "eeac8f8c2efdfb61b42cd40787ce534e20005f3db8cdf63f266102be21481644",
+  "article_sha256": "9b07497f6a925f4f0a462bd8bbc38588348295058a28eca57be255f9543a4b8d",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -50,5 +50,11 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 63）：Figure 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 64）：Figure 11 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 4,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

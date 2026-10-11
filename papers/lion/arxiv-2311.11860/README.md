@@ -1,6 +1,16 @@
-[返回模型家族](../README.md) · [返回仓库](../../../README.md)
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LION (JiuTian)](../README.md)
+<!-- article-header:end -->
 
 # LION：用区域训练与图像标签补足双层视觉知识
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -16,6 +26,8 @@
 
 LION 的“双层”是细粒度空间知识和高层语义标签，不能理解为只有两层网络。其语言骨干是编码器—解码器式 FlanT5，而非 LLaMA。方法把整图任务和区域任务先分别学习再融合，另外调用冻结的 RAM 图像标签模型提供对象、场景、动作、属性提示。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 整图图文预训练擅长表达整体场景，却未必让模型掌握某个对象的精确位置。直接混合区域坐标任务与描述问答任务，在作者的有限训练配置中又会造成明显冲突。LION 因此设置两条视觉接入路径和两套语言适配器，先分别训练，再用任务类型对应的路由向量融合它们。
@@ -25,6 +37,8 @@ LION 的“双层”是细粒度空间知识和高层语义标签，不能理解
 另一条补充路径用 RAM 输出图像标签，并把一个可学习 soft prompt 放入“允许使用部分标签”的指令里，减少错误标签被无条件采纳的风险。这是条件提示与参数学习，不是已定义的逐标签置信度筛选算法。
 
 LION-12B 报告 VSR 73.77、TextCaps CIDEr 108.76、RefCOCOg 零样本 val 66.12、MMBench test 73.4。消融显示分阶段训练明显改善 REC，标签对部分整图任务有效，但也有轻微退步；POPE 的 random F1 并非优于所有对比模型。[Sections 3–4](https://arxiv.org/pdf/2311.11860v1)
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -47,34 +61,44 @@ LION-12B 报告 VSR 73.77、TextCaps CIDEr 108.76、RefCOCOg 零样本 val 66.12
 
 附录没有给出输入分辨率、各路径 token 数和完整张量尺寸，不能用其他 InstructBLIP 配置补成此文事实。RAM 标签只提供额外证据，输出正确与否仍需语言模型综合视觉输入判断，本文不保证标签无噪声。[Section 3、Appendix A](https://arxiv.org/pdf/2311.11860v1)
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 **分开学习，再按任务融合。** 原文 Equations (1)–(2) 的 adapter 为：
 
-\[
-O=F(X)+H(X),\qquad H(X)=W_u\operatorname{ReLU}(W_dX).
-\]
 
-这里 \(F\) 是原前馈层，\(H\) 先降维到瓶颈 64，再升维。矩阵乘法方向按原文记法表示线性映射；它是具有非线性激活的瓶颈 adapter，不能直接当成 LoRA 的低秩线性权重更新。
+$$
+O=F(X)+H(X),\qquad H(X)=W_u\operatorname{ReLU}(W_dX).
+$$
+
+
+这里 $F$ 是原前馈层，$H$ 先降维到瓶颈 64，再升维。矩阵乘法方向按原文记法表示线性映射；它是具有非线性激活的瓶颈 adapter，不能直接当成 LoRA 的低秩线性权重更新。
 
 第三阶段将两种 adapter 作为分支，Equation (3) 为：
 
-\[
-O_t=F(X)+\sum_{k=1}^{K}G_k^t\odot H_k(X),\qquad G_k^t\in\mathbb R^D.
-\]
 
-\(t\) 是整图或区域任务类型，\(G_k^t\) 对每个隐藏维度调制分支输出，并在 token 维广播。这是按任务定义的可训练向量，不是文本内容驱动的 top-k 稀疏 MoE router，也没有披露 softmax 归一化、路由负载均衡损失或只激活一个专家。两个阶段学到的适配器因此可以在第三阶段联合使用，同时降低坐标格式与自然语言格式的直接干扰。
+$$
+O_t=F(X)+\sum_{k=1}^{K}G_k^t\odot H_k(X),\qquad G_k^t\in\mathbb R^D.
+$$
+
+
+$t$ 是整图或区域任务类型，$G_k^t$ 对每个隐藏维度调制分支输出，并在 token 维广播。这是按任务定义的可训练向量，不是文本内容驱动的 top-k 稀疏 MoE router，也没有披露 softmax 归一化、路由负载均衡损失或只激活一个专家。两个阶段学到的适配器因此可以在第三阶段联合使用，同时降低坐标格式与自然语言格式的直接干扰。
 
 **多层视觉聚合。** Equations (4)–(5) 写成：
 
-\[
+
+$$
 \bar V=B_2(B_1(V_i;V_j);V_k),\quad
 B(X;Y)=\operatorname{FFN}(\operatorname{XAttn}(\operatorname{Attn}(X),Y)).
-\]
+$$
 
-特征取自视觉层索引 \(i=L-1,j=2L/3,k=L/3\)。先把前两组特征聚合，再结合第三组；高层语义与较低层细节共同提供区域定位依据。新模块并不显式裁剪框内像素，也没有给出自由形状区域采样器；其空间能力主要由坐标任务监督塑造，而不是区域特征提取本身已具备准确定位保证。
+
+特征取自视觉层索引 $i=L-1,j=2L/3,k=L/3$。先把前两组特征聚合，再结合第三组；高层语义与较低层细节共同提供区域定位依据。新模块并不显式裁剪框内像素，也没有给出自由形状区域采样器；其空间能力主要由坐标任务监督塑造，而不是区域特征提取本身已具备准确定位保证。
 
 **带可学习提示的标签条件。** 标签被放入专门文字模板，模板中的 hint 被可学习向量替代。训练目标指导模型有选择地使用标签，机制没有单独的逐标签正确性监督或明示过滤概率。这降低无条件相信标签的风险，却不能保证消除标签幻觉。由于标签仍需 RAM 推理，论文所说避免额外“特征对齐”开销也不等同于完全零额外计算。[Section 3.2](https://arxiv.org/pdf/2311.11860v1)
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -99,6 +123,8 @@ B(X;Y)=\operatorname{FFN}(\operatorname{XAttn}(\operatorname{Attn}(X),Y)).
 
 作者比较公开配置与带 WebCapFilt 的原 InstructBLIP，并另行复现不含私有数据的 InstructBLIP。Visual Genome 在正文以 3.6M 描述，而 Table 7 按 REC/REG 分别记数；WebCapFilt 为 14M，不能据这些行直接断言 LION 所有训练总样本更少或两个系统的预训练完全一致。数据全面去重、标签生成阈值、RAM 错标签人工复核及每类混合比例未披露。[Sections 3.1、4.1、Appendix A](https://arxiv.org/pdf/2311.11860v1)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 更新模块与目的 | batch / 训练长度 | 学习率 |
@@ -111,11 +137,15 @@ B(X;Y)=\operatorname{FFN}(\operatorname{XAttn}(\operatorname{Attn}(X),Y)).
 
 所有阶段采用标准语言建模损失。对于 FlanT5，可用以下**标准解释公式**表示条件回答监督，原文没有给出编号损失式：
 
-\[
+
+$$
 \mathcal L=-\sum_t\log P_\theta(y_t\mid V,Q,\text{tags},y_{<t}).
-\]
+$$
+
 
 输入图像特征、指令及标签经编码条件影响解码器回答；区域框也作为文字 token 目标，并不是另设一个框回归头和 L1/IoU 损失。没有 RLHF、DPO、检测器训练或 RAM 联合训练阶段。序列长度、显存、GPU 数量、耗时与任务微调的完整优化配置未披露。[Section 3.1、Appendix A](https://arxiv.org/pdf/2311.11860v1)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -154,3 +184,11 @@ Table 3 的单阶段 REC 平均只有 3.78，分阶段为 54.46，加 router 为
 **读图与表**：Table 4 在 4B 配置中，先加区域训练再加标签，AOKVQA 从 56.12→56.90→59.98，Flickr 从 83.71→83.99→85.57。标签使 VSR 73.20→72.96、REC 54.98→54.92 略降；后者与 Table 2 的 4B REC 均值 54.98 口径有差异，应按对应表保留数值。Figure 5 的 aggregator 总平均 54.6→56.0，但 RefCOCOg val 65.1→64.8，并非所有划分都改善。
 
 POPE 检查对象是否存在，LION 在 random/popular/adversarial 的 F1 为 88.33/85.94/84.71。InstructBLIP random F1 89.27 仍更高；LION popular/adversarial 更高，但 recall 约 81%，低于 InstructBLIP 的 95.13%，体现更保守回答带来的精确率与召回权衡。因此结论应是特定协议下部分对象幻觉指标改善，不是所有幻觉被消除，也不能用 MMBench 总分直接证明事实可靠性。以上均为原文报告，本介绍未运行模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LEO](../../leo/arxiv-2311.12871/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：ShareGPT4V →](../../sharegpt4v/arxiv-2311.12793/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

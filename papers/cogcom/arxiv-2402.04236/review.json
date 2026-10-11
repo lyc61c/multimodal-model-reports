@@ -39,7 +39,7 @@
     "Taskadapted checkpoints differ",
     "No GPUor contextlength disclosed"
   ],
-  "article_sha256": "527278f3c12461c1c5658cfa886e61c09d997fd38d7ca3af703a9fe314bbdb19",
+  "article_sha256": "1d265ed42732b47d0eae00b5e1f491aee4576def5b761a94c395c66377a8d558",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -54,5 +54,11 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 31）：Table 5 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

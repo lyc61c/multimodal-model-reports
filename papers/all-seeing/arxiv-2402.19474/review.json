@@ -18,7 +18,7 @@
     "original_assets": 4,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "6fbf9da920a6e8123b6a2b7100b1eb5850197e4ae7537bef08a2ac5d9e4a17ed",
+  "article_sha256": "68e5ef784189572a5cba94c94956c3d265ebd3292cd14dca60864d2500cfa218",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -32,5 +32,11 @@
       "Viewed source page and re-rendered right-column crop: Table 6 title, all six columns and all three model rows retained; surrounding left-column prose excluded.",
       "Viewed fresh exclusive-path render: Table 10 title, column headers and all seven task rows retained; following paragraph removed."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

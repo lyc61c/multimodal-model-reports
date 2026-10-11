@@ -85,7 +85,7 @@
     "token效率不自动推出FLOPs延迟或价格优势"
   ],
   "checked_at": "2026-10-08",
-  "article_sha256": "7d6195fd90743c7290e0bcc7ded7b1314725730d25433c8c6cdcaeed1cf5dfaf",
+  "article_sha256": "0a6a7f882d091aece0a3bb7095f3fde1b9761c690591fff0c95277717d3a43c6",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -102,5 +102,11 @@
       "Viewed source and crops: Figure 6 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
       "Viewed source and crops: Figure 9, Figure 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Kimi](../README.md)
+<!-- article-header:end -->
+
 # Kimi K2.5：视觉与文本联合训练，以及可学习的并行智能体编排
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 报告给出 K2 语言骨干 1.04T 总参数、32B 激活参数，384 个专家、每 token 激活 8 个。它没有另行逐项核算加入视觉模块后 K2.5 的精确总参数，因而应将这些数解释为语言基础规模。Agent Swarm 是围绕模型和工具建立的多智能体运行及训练机制，不能只凭模型权重下载就默认获得完整并发环境。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 K2.5 围绕两条路线构建。第一条是让文本和视觉从联合预训练开始相互支持：采用适度视觉比例早期融合，之后只用文本 SFT 启动视觉推理和程序工具使用，再进行文本与视觉联合强化学习。所谓 zero-vision SFT 仅指这一 SFT 阶段没有视觉样本；前面的预训练和后面的 RL 都有大量视觉内容。
@@ -20,6 +34,8 @@ K2.5 围绕两条路线构建。第一条是让文本和视觉从联合预训练
 第二条是把复杂任务交给可学习的编排者：模型按需要创建不同角色子智能体、分配任务、收集结果，而不是固定执行每步工具调用。Parallel-Agent RL（PARL）只更新编排者，子智能体保持固定，减少最终奖励难以分摊到各参与者的困难。
 
 图像和视频共享 MoonViT-3D；最多四个相邻帧形成一组，先做时空注意力，再以时间池化减少送入 LLM 的 token。报告的 MathVista mini 为 90.1、OCRBench 为 92.3、OSWorld-Verified 成功率为 63.3。搜索任务中 Swarm 的 WideSearch Item-F1 为 79.0，对应单智能体 72.7；完成同等目标 Item-F1 的时间最高可减少 4.5 倍，但不代表全部任务减少相同计算量。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -29,11 +45,13 @@ K2.5 围绕两条路线构建。第一条是让文本和视觉从联合预训练
 
 ![原文 Figure 3](figures/original-p005-figure-3.png)
 
-*原文 Figure 3，PDF 第 5 页，完整原页。箭头区分创建与任务分派、返回结果；同一角色可以接收不同任务。下方为 PARL 训练设置与奖励描述。*
+*原文 Figure 3，PDF 第 5 页，原文图表裁图。箭头区分创建与任务分派、返回结果；同一角色可以接收不同任务。PARL 训练设置与奖励见原文 §3。*
 
 Agent Swarm 的可训练 orchestrator 使用 `create_subagent` 和 `assign_task` 等工具，子智能体来自固定中间策略检查点。训练时只优化编排者，子智能体轨迹不进入其优化目标，输出被当作环境观察。作者先用较小子智能体训练，再切换更大模型来兼顾效率。子智能体有独立工作上下文，只返回相关结果，不把全部工具日志塞回中心上下文。
 
 运行环境以异步任务支持递归子任务、工具 sandbox 和多种 judge。附录 D 提到训练 Rollout Manager 可管理最多 100,000 个并发 agent task，这是训练框架的任务调度规模，不是一次用户任务必须创建十万个智能体的能力承诺。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -43,28 +61,36 @@ Agent Swarm 的可训练 orchestrator 使用 `create_subagent` 和 `assign_task`
 
 **PARL 同时约束有用并行与最终任务质量。** 原文第 3 节定义：
 
-\[
+
+$$
 r_{PARL}(x,y)=\lambda_1r_{parallel}+\lambda_2r_{finish}+r_{perf}(x,y).
-\]
+$$
+
 
 创建子智能体的奖励鼓励探索并行，完成率奖励抑制大量创建但不实际执行的“假并行”，最终表现奖励约束任务质量。两项辅助权重在训练中逐渐衰减到零，使最终策略回到主要任务目标。报告没有给出这两个权重的具体初值和完整退火曲线。
 
 并发开销用关键路径思想计数：
 
-\[
+
+$$
 \operatorname{CriticalSteps}=\sum_{t=1}^T
 \left(S_{main}^{(t)}+\max_i S_{sub,i}^{(t)}\right).
-\]
+$$
+
 
 每个阶段的并发部分由最长子任务决定，随后阶段依次累加。原文用步数代理时延；工具耗时、通信等待、模型服务吞吐并不完全相同，不能将该式当作精确秒数模型。缩短最慢分支可降低关键步数，但总调用数或总生成 token 可能增加，因此降低墙钟时间与降低总计算成本需要分别检验。
 
 **Toggle 交替学习节省 token 与利用更长推理。** 固定预算训练可能让模型无法利用更多计算，作者每隔 (m) 次迭代切换预算受限与普通扩展阶段。预算基于正确回答长度的百分位，原文 Eq. (2) 的意图可写为：
 
-\[
+
+$$
 budget(x)=\operatorname{Percentile}_\rho\{,|y_i|:r(x,y_i)=1\,\}.
-\]
+$$
+
 
 预算在训练开始时估计，之后固定；受限阶段仅在该题平均正确率超过阈值时惩罚超预算回答，以免早期为省 token 放弃难题。这里整理了原文集合中不统一的下标，没有补充未披露的 (m,\rho) 或准确率阈值。Figure 5 的 25%–30% 输出减少实验是在 **K2 Thinking** 上验证 Toggle，不能声称该图直接测得 K2.5 所有任务同样降幅。
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -78,7 +104,9 @@ budget(x)=\operatorname{Percentile}_\rho\{,|y_i|:r(x,y_i)=1\,\}.
 
 ![原文 Table 3](figures/original-p007-table-3.png)
 
-*原文 Table 3，PDF 第 7 页，完整原页。保留各阶段 token 量、序列长度和更新模块；表下正文详细说明图像视频编码与短暂投影器对齐。*
+*原文 Table 3，PDF 第 7 页，原文图表裁图。保留各阶段 token 量、序列长度和更新模块；图像视频编码与短暂投影器对齐分别见原文 §4.2、§4.3。*
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -93,11 +121,13 @@ budget(x)=\operatorname{Percentile}_\rho\{,|y_i|:r(x,y_i)=1\,\}.
 
 正文概述“约 15T”与表中另列视觉 1T、联合 15T、长上下文 500B→200B 的近似口径不完全一致，应分别引用阶段量，而不是声称总计精确为 15T 或所有数据只看一遍。语言基础 K2 自身先前训练的 15T 文本也不能跟 K2.5 继续训练的 15T 混为一阶段。
 
-视觉 caption 的标准目标可以解释为 \(\mathcal L_{caption}=-\sum_t\log p(y_t\mid y_{<t},I)\)，这是交叉熵机制说明，未冒充原文的新编号公式。RL 的 Eq. (1) 结合组内平均奖励作为基线、token 级策略比率裁剪和对数比率平方约束；文字解释其裁剪是按 off-policy 偏差屏蔽梯度，与按优势符号工作的 PPO clipped surrogate 不同。v1 对 Clip 的 ratio/log-ratio 表述与目标正负方向没有完全展开一致的定义，本介绍不据它编写一个确定可运行的 RL 算法。
+视觉 caption 的标准目标可以解释为 $\mathcal L_{caption}=-\sum_t\log p(y_t\mid y_{<t},I)$，这是交叉熵机制说明，未冒充原文的新编号公式。RL 的 Eq. (1) 结合组内平均奖励作为基线、token 级策略比率裁剪和对数比率平方约束；文字解释其裁剪是按 off-policy 偏差屏蔽梯度，与按优势符号工作的 PPO clipped surrogate 不同。v1 对 Clip 的 ratio/log-ratio 表述与目标正负方向没有完全展开一致的定义，本介绍不据它编写一个确定可运行的 RL 算法。
 
 视觉奖励按任务设计：框定位使用 IoU 软匹配 F1，点定位使用最优匹配下高斯距离权重，多边形分割栅格化后计算 mask IoU，OCR 用归一化编辑距离，计数用绝对误差。开放式任务使用生成式奖励模型和不同 rubric，代码与可验证推理使用规则结果奖励。报告缺少所有奖励权重、学习率、batch、迭代轮数和 clipping 阈值，无法仅靠报告完整复现。
 
 训练在 H800 集群上，节点间 8×400Gbps RoCE；结合 16 路流水线、16 路专家并行和 ZeRO-1。Decoupled Encoder Process 先把视觉前向均衡到各 GPU，只保留输出，完成主骨干前反向后再重算视觉前向并做视觉反向。它换取负载均衡和激活内存节省，仍有重算成本；作者给出相对纯文本训练约 90% 效率，未公开全套计时统计和总训练 GPU 数。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -105,7 +135,7 @@ budget(x)=\operatorname{Percentile}_\rho\{,|y_i|:r(x,y_i)=1\,\}.
 
 ![原文 Table 4](figures/original-p012-table-4.png)
 
-*原文 Table 4，PDF 第 12 页，完整原页。保留所有分区、模型列和脚注。星号为作者内部评测；HLE 的文本子集与全量集另有脚注，不能直接混比。*
+*原文 Table 4，PDF 第 12 页，原文图表裁图。保留所有分区、模型列和脚注。星号为作者内部评测；HLE 的文本子集与全量集另有脚注，不能直接混比。*
 
 | 任务与设置 | K2.5 | 对照或解释 |
 |---|---:|---|
@@ -125,8 +155,16 @@ Swarm 在 BrowseComp 为 78.4，单智能体无上下文管理为 60.6、有 dis
 
 ![原文 Figure 8](figures/original-p015-figure-8.png)
 
-*原文 Figure 8，PDF 第 15 页，完整原页。横轴目标 Item-F1，纵轴归一化执行时间，图注为 WideSearch；并非单 token 推理速度或总 FLOPs。*
+*原文 Figure 8，PDF 第 15 页，原文图表裁图。横轴目标 Item-F1，纵轴归一化执行时间，图注为 WideSearch；并非单 token 推理速度或总 FLOPs。*
 
 WideSearch 达到目标 Item-F1 30%–70% 时，Swarm 比顺序单智能体快约 3–4.5 倍。附录另设预算：BrowseComp 中心 15 步、每个子智能体 100 步；WideSearch 两者均 100；内部测试中心 100、子智能体 50。并行模式改变总可用工作量，报告没有证明总 GPU 或 token 花费等量。
 
 Figure 11 的 24 小时、32 段视频分析依靠多个视觉子智能体分段处理并汇总 HTML；它是系统案例，不能说明一次 256K 前向直接完整读入 24 小时原视频。报告将联合训练、工具执行与并行编排结合得较完整，但对开放式搜索、长视频事实完整性及总成本仍缺少全面误差分析。本仓库未运行模型或 agent 环境，以上均为原文成绩和设置。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：DeepSeek-OCR 2](../../deepseek/document-536ef2604f4a/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：MiniCPM-o 4.5 →](../../minicpm/document-9be303a31d11/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

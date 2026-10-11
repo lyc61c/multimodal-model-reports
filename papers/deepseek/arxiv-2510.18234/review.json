@@ -10,7 +10,7 @@
     "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "model_execution": "not_run",
-  "article_sha256": "c3794b0e8ed81857507339063ca88cd3bdbe74a2ee89f18d2d21701c1ae7bb24",
+  "article_sha256": "bfcb95a6efd95ecbed0482e95f7bdb31758a9ff22cdf41977bb72e109782ffd5",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -24,5 +24,47 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
-  }
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "c352e12407c2",
+      "path": "papers/deepseek/arxiv-2510.18234/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 42,
+          "before": "完整截图",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p005-figure-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            67.87,
+            88.45,
+            527.63,
+            278.24
+          ],
+          "page_size": [
+            595.276,
+            841.89
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "bfcb95a6efd95ecbed0482e95f7bdb31758a9ff22cdf41977bb72e109782ffd5"
+    }
+  ]
 }

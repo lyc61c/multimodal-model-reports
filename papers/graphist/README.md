@@ -1,8 +1,10 @@
+[项目首页](../../README.md) · [模型系列索引](../../reports/model-family-index.md)
+
 # Graphist
 
-项目主体 / 机构：repo:graphic-design-ai。快照：2026-10-08。
+[graphic-design-ai](https://github.com/graphic-design-ai)
 
-共收录 **1 篇论文与资料**，按发布日期排序。
+**1 篇论文与资料** · 按发布日期由早到晚排列。
 
 ## 论文列表
 

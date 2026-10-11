@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VITA](../README.md)
+<!-- article-header:end -->
+
 # VITA-Audio：用跨模态多 token 预测加速流式语音
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 本篇解决交错生成文本和音频时，逐 token 调用大语言模型导致的开销。核心是让轻量 MCTP 模块利用 LLM 隐藏状态生成后续多个 token。报告重点是语音，不应因属于 VITA 家族就默认其具有本篇未评测的图像或视频功能。（第 1、4、9 页）
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 问题 | 方法 | 边界 |
@@ -23,6 +37,8 @@
 | 速度和文字质量有取舍 | Turbo、Boost、Balance、Vanilla 模式 | 速度最大不等于问答与 ASR 最优 |
 
 7B 的输出生成速度测试中，Turbo 相对 Vanilla 为 4.72 倍，Boost 为 2.64 倍。计时不包含音频编解码；首段完整管线另有约 243ms 的结果。（Tables 8–9）
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -35,6 +51,8 @@
 主模型最后一层的隐藏状态与已预测 token 的嵌入分别归一化，经线性投影、Transformer 块和共享输出头生成下一 token。后续 MCTP 读取前一个模块的状态与结果。生成结果并入下一轮主模型输入，最终音频 token 交给语音解码器。默认设置包括十个 MCTP 模块。（第 5–6 页）
 
 观察实验显示，对应文本 token 的隐藏状态可以提供合成相关音频所需的上下文，包括中文多音字判断。遮掉其余文本仍可读对，全部文本遮掉则失败。但这是一组机制探索，不是所有语言、韵律和长对话都只需单个文本状态的证明。（Figure 1，第 2 页）
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -50,6 +68,8 @@ MCTP 借鉴多 token 预测，但不像严格推测解码那样通过主模型�
 
 “音频 token 延迟”定义为首次主模型前向后还需多少次主模型前向才能获得首个音频 token；“音频生成延迟”则看能否凑够可解码的一块。零步骤仍包含首次 LLM 前向、MCTP、音频解码和输入处理耗时。Balance 因严格控制文本音频比例需要两次前向才能形成首块，不能把所有模式都概括为首轮即可播放。（第 3、9 页）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 训练使用公开 ASR、TTS、语音问答及普通/长文本数据。ASR 总体约 100K 小时，覆盖 WenetSpeech、LibriSpeech、多语 LibriSpeech、GigaSpeech、Common Voice、AISHELL 等；TTS 约 100K 小时，主要来自 WenetSpeech4TTS、LibriTTS、GLOBE 与 Emilia。（Table 2，第 6–7 页）
@@ -57,6 +77,8 @@ MCTP 借鉴多 token 预测，但不像严格推测解码那样通过主模型�
 语音问答为 VoiceAssistant-400K 与 AudioQA-1.0M，共 1.4M 记录。文本包含 OpenHermes、LIMA、数学数据和 LongAlign、LongCite、LongWriter 等长文本指令。小时数、问题记录数与来源数据池大小不可直接相加。
 
 统一打包到 8K token，重置位置及注意力掩码，独立样本只关注本样本。SFT 阶段降低 ASR/TTS/文本取样至 0.05，语音问答取样系数为 2.0；这不是“200% 的总数据属于语音问答”。输出构造为文字片段与音频片段交错，而非等整段文字生成完再合成。（第 7–9 页）
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -74,6 +96,8 @@ MCTP 借鉴多 token 预测，但不像严格推测解码那样通过主模型�
 全局 batch 为 256，AdamW 的 beta 为 0.9/0.95，原文称训练 1 epoch，未给出逐阶段完整步数。分阶段初始化降低同时训练多个位置分布的难度，不能被描述成十个模块从随机初始化一次训练完成。（第 8–9 页）
 
 Turbo 允许 MCTP 生成部分文本和音频，最快但问答易损；Boost 保留由主模型生成文本；Balance 进一步控制交错比例；Vanilla 完全由主模型预测。首版在 §3.4 又使用 Speed 命名，Figure 4 的 Balance 图注还有将一组音频 token 写成 text tokens 的表述问题，本文以具体表格行名报告成绩，不无条件将名称合并为同一检查点。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -102,3 +126,11 @@ LibriSpeech test_clean/test_other 的 WER，Turbo 为 6.29/12.86、基础 Vanill
 *原文 Table 9，PDF 第 14 页。flow matching 解码设置为一步。*
 
 Boost 首批 token 53ms，输入编码 39ms、音频解码 151ms，总计 243ms；Vanilla 分别为 236、39、151ms，总计 426ms。总延迟约缩短 1.75 倍，不能直接使用 token 生成加速倍数称整条语音管线加速 4.72 倍。该时间也不包括用户完整录音时长、网络传输与真实服务排队。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Skywork R1V2](../../skywork/arxiv-2504.16656/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：感知、推理、思考与规划 →](../../multimodal-reasoning-survey/arxiv-2505.04921/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

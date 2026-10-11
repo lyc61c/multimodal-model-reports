@@ -27,5 +27,17 @@
     "约一天的精确模型卡数为32GPUx30小时",
     "旧TextVQA星号训练图像接触口径与新版本不同",
     "示例交通时间源自常识而非实时调用"
-  ]
+  ],
+  "article_sha256": "2fd4c89f171f22e38bca257bd922120d08eb74eeb55e8732b9dd0772ec4954ff",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 10,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "mobile_math_layout": {
+      "date": "2026-10-11",
+      "long_inline_equations_promoted_to_display": 1,
+      "scope": "Display layout and connective punctuation only; formula contents preserved"
+    }
+  }
 }

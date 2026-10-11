@@ -12,12 +12,23 @@
     "Checked table4 GPT4V1106 comparison and MMMU/LlavaBench deficits, table5 OCRBench raw725 versus percentages.",
     "Checked Table6 complementary ObjectHalBench orientation, MME/MMMU regressions and translated GPT4Turbo multilingual evaluation.",
     "Checked phone Figure6 image stage versus prefilling9.4s and decoding8.2token/s, loading included and initial64.2/64.6 difference.",
-    "No model, phone benchmark or independent reproduction claimed."
+    "No model, phone benchmark or independent reproduction claimed.",
+    "2026-10-11 targeted content audit: DPO 标准解释中的 log 概率比没有括号/分式，可能被解析成 log(概率)/概率；改为显式 log\\frac。"
   ],
   "citation_locations": "Sources and exact PDF pages/figure/table numbers appear next to the claims in README.md",
   "figure_revision": {
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "通读七部分正文。",
+      "corrections": [
+        "DPO 标准解释中的 log 概率比没有括号/分式，可能被解析成 log(概率)/概率；改为显式 log\\frac。"
+      ],
+      "article_sha256": "6a6094039da51717f9e34c6d41e335d795636e9fdd6f2b4d2bd2ae215e3fe1cf"
+    }
+  ]
 }

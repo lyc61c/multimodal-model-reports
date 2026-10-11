@@ -53,7 +53,7 @@
     "search penalty config mapping not explicitly specified",
     "no experiment reproduction or independent peer review"
   ],
-  "article_sha256": "71fc90a9162a861c96ffe2daebaaa43251c54bd310e9037bf0ca24972b33c6ff",
+  "article_sha256": "69ec04922be10e7eddc8d6e2060589e210ef97dcd6c25fe1c528a47292965eb4",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -68,5 +68,11 @@
       "Viewed source and crop: Figure 5 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 11,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

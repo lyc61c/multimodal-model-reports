@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [DeepSeek](../README.md)
+<!-- article-header:end -->
+
 # DeepSeek-OCR 2：以 Visual Causal Flow 改善文档阅读顺序
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -17,6 +29,8 @@
 
 它的主要实验场景是文档解析。论文把“两级一维因果结构通向二维理解”作为探索方向；不能把文档指标提升扩大成已经解决通用二维推理，也不能把未来统一音频、文本与图像编码的设想写成已发布的全模态能力。[来源：PDF 第 3、11 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=3)
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 问题 | 本文设计 | 已提供的证据 |
@@ -28,6 +42,8 @@
 | OCR 成绩与实际产线质量差异 | 除标准评测外，报告生产重复率 | 明确说明生产数据没有完整 ground truth |
 
 主结果在 OmniDocBench v1.5 上从 87.36 提高到 91.09，增加 **3.73 个百分点**。论文文字使用“3.73% improvement”，本文依据表中相减关系表述为百分点，避免把它与相对增幅混淆。提升主要与新编码器方案同时出现，但数据采样也有调整，不能视为所有组件都已单独做过严格消融。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -42,6 +58,8 @@
 第三部分是沿用的 DeepSeek 3B MoE 解码器。保留解码器有助于突出编码器改动；但整个训练系统仍包含联合优化阶段，因此“沿用结构”不等于“全部解码器权重始终冻结”。图中标注 MOE-A570M，而 §3.3 正文约称 500M，本文保留正文的近似说法，不把这个近似描述当作精确参数审计。
 
 还有一个关键边界：编码器内部序列是 $[V;Q_0]$，长度约为压缩视觉 token 数的两倍；送到解码器时只保留 $Q$ 部分。该设计没有把新增查询全部额外加到解码器的上下文中，但编码器本身仍需承担对拼接序列的计算。视觉 token 上限接近上一代，不代表总编码开销完全相同。[来源：PDF §3.1–3.3，第 5–7 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=5)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -90,6 +108,8 @@ $$
 
 例如六个局部图加一个全局图是 $256+6\times144=1120$。这是视觉 token 数，不包含文字提示和最终答案。原文说明两边都小于 768 时不做局部裁剪。有限容量控制成本，也为密集报纸等场景留下性能瓶颈。[来源：PDF §3.2，第 6–7 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=6)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 数据源大体沿用 DeepSeek-OCR：OCR 1.0、OCR 2.0 和一般视觉数据，OCR 占训练混合的 80%。这里的“一般视觉数据”说明训练不只含字符转录，但报告的核心验证仍是文档解析，不能用训练类别名称替代一般视觉能力评测。
@@ -99,6 +119,8 @@ $$
 前期训练使用 768×768 和 1024×1024 两个 dataloader，后期通过多裁剪整合为一个。局部视图承担细节，全局视图提供版面上下文。论文没有公开完整去重策略与各数据集逐项数量；第一阶段约 100M 图文对是作者按 8K sequence packing 描述的样本规模，不能直接用 batch×steps 替代得到唯一图片数。
 
 报纸样本约 250K，作者将其不足视为报纸表现不佳的可能原因。由于还存在视觉预算限制，这只是解释性假设；没有单独增加报纸数据的实验，就不能把弱点全部归因于训练数量。[来源：PDF §4.1、第 8 页；§5.2、第 10 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=8)
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -115,6 +137,8 @@ $$
 第三阶段冻结编码器，让语言解码器在固定的新视觉表示上继续适应。作者称相同 global batch 下训练速度超过翻倍，但没有给出一套完整吞吐曲线；本文保留该条件，避免把它解释成最终推理速度翻倍。
 
 原文明确第一阶段使用 language modeling / next-token prediction。可用 $-\sum_t\log p(y_t\mid I,p,y_{<t})$ 解释其条件生成目标，其中 $p$ 是提示；报告没有逐阶段公布独立辅助 loss、排序真值监督或 RL 奖励。因果查询从任务监督中学习组织信息，并非由人工 patch 排序标签直接训练。[来源：PDF §4.2，第 8 页。](https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf#page=8)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -146,3 +170,11 @@ Table 2 的整体编辑距离从 0.129 降至 0.100；Gemini-3 Pro 为 0.115，S
 Table 3 显示阅读顺序九类均改善，但文字识别仍有退化：Book 的 ED 从 0.022 升至 0.033，Newspaper 从 0.131 升至 0.139。密集信息与压缩预算之间存在取舍，这些反例应与总分一起阅读。作者提出未来增加局部裁剪与报纸数据的方向，尚未提供这两项改动后的结果。
 
 生产评测 Table 4 中，线上图片重复率由 6.25% 降至 4.17%，预训练 PDF 产线由 3.69% 降至 2.88%。由于产线没有完整真值，重复率是可观测质量指标，不能称为生产 OCR 准确率。这份报告最有价值的实验证据是文档顺序和解析质量改善；广义二维因果推理、统一全模态编码器及每个组件的单独贡献仍属于后续验证问题。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Seed1.8](../../seed/document-6cb43357175b/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Kimi K2.5 →](../../kimi/arxiv-2602.02276/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [MovieChat](../README.md)
+<!-- article-header:end -->
+
 # MovieChat：把密集视频 token 转成短期与长期记忆
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -14,6 +26,8 @@
 
 本介绍依据最初 v1，不能将后续 MovieChat 版本的新数据集、训练或长视频基准放进来。原文明确视觉组件为 EVA-CLIP ViT-G/14 与 BLIP-2 Q-Former，但没有完整给出语言主干型号、参数数与对齐训练配置，因此不凭项目印象填写。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 逐帧堆积全部视觉 token 会迅速增加存储与语言模型上下文需求。MovieChat 保留一段近期密集表示作为短期记忆，把旧帧中相邻且相似的表示合并成长期记忆。这样，新事件仍有细节，早期事件则用更稀疏的形式留下。
@@ -21,6 +35,8 @@
 系统提供 Global 与 Breakpoint 模式：前者回答整段视频的问题，仅使用长期记忆；后者在指定时刻结合长期、当前短期与当前片段特征。它不是用每帧 caption 拼接长文本，也不是查询数据库获得整部电影剧情。
 
 原文给出超过 10K 帧在 24GB 显卡上的视觉推理展示，以及 ActivityNet-QA 51.5 的问答准确率。但前者是资源测试，后者属于作者称为短视频问答的量化表，不能据此宣称万帧视频上的所有细节都能精确恢复。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -31,6 +47,8 @@
 视觉特征以图像模型逐帧产生，而非先由一个整体视频 Transformer 对所有帧做注意力。$x_i$ 表示一个窗口中帧的 token，局部缓存让系统不必同时把全部原帧保存在 GPU 和 RAM。短期记忆的 FIFO 更新优先保留近期上下文；长期记忆减少重复画面的成本。
 
 Global 使用 $\mathcal L$；Breakpoint 将 $\mathcal L$、$\mathcal S$ 和当前 $x$ 拼接。文本问题 $Q$ 与投影视觉表示送入 LLM，原文 Equation 4 可写为 $A=LLM(Q,P(V))$。正文还提到 Q-Former 与线性投影，具体两个 Q-Former 调用位置和权重连接未完整展开，不能把示意图当成详细实现清单。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -50,6 +68,8 @@ $N$ 为每帧 token 数，$j$ 为对应 token 位置。Algorithm 1 重复寻找�
 
 原文 Equation 1 的窗口索引上界排成 $\lceil C/T\rceil$，与“总帧 $T$、窗口 $C$”说明存在次序疑点。本介绍按滑动窗口过程说明算法，不把该索引直接作为可执行分块代码。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 本版没有披露专门新建的训练图文、视频或指令数据规模，相关工作列出的 YouCook、HowTo100M、MovieNet 等也不能自动视为 MovieChat 的训练集。它的公开处理重点在视频窗口、视觉 token 和记忆压缩。
@@ -58,15 +78,19 @@ $N$ 为每帧 token 数，$j$ 为对应 token 位置。Algorithm 1 重复寻找�
 
 资源图实验明确为 **224×224、visual-only、without frame sampling**。长视频案例来自《疯狂动物城》与《鬼怪》的片段，问题标注在帧位置，如 3930、11130、10290、14250；这些数字是时刻位置，不是样本数。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 MovieChat v1 的公开技术主体是记忆推理机制，没有完整的新增训练 recipe：未给出训练集构建、冻结参数表、投影层训练步数、学习率、batch、优化器或训练损失。视觉编码器和 Q-Former 使用预训练组件，可以确认；是否重新调优各模块和怎样对齐语言主干则未充分说明。
 
 ![原文 Table 2](figures/original-p012-table-2.png)
 
-**Table 2，PDF 第 12 页。** 三行仅给窗口、短期容量和压缩容量，属于推理配置；上半页说明问答评估，不是训练目标。不能把 cosine similarity 合并写成需要反向传播优化的损失，Algorithm 1 是按相似度选择合并的程序。
+**Table 2，PDF 第 12 页。** 三行仅给窗口、短期容量和压缩容量，属于推理配置；同页正文另述问答评估协议，并非训练目标。不能把 cosine similarity 合并写成需要反向传播优化的损失，Algorithm 1 是按相似度选择合并的程序。
 
 运行时先按窗口扫描并更新记忆，在用户给定模式后构成 $V$，进行投影和文本生成。Global 有利于摘要，Breakpoint 为局部问题保留更多近期信息。本文没有实际加载模型或运行该过程，亦不声称已复现资源曲线。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -94,3 +118,11 @@ Figure 1 报告视觉推理显存随帧数增长：MovieChat 平均增量约 **2
 **Figure 3、4，PDF 第 5 页。** 紫色位置标记对应 Breakpoint 问题，下面的第三问要求整体概述。输出能提到人物和场景，也有宽泛、重复及未经独立标注验证的细节。两组案例展示交互形式，不能作为标准长视频 benchmark。
 
 本版没有给出短期长度、64-token 压缩率、合并策略和位置编码方法的系统消融，也没有报告不确定度或长距离事件检索准确率。它提供了一条把长视频存储与语言上下文解耦的工程方向，但压缩后是否保存所有关键细节，需要更完整的长视频量化检验。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：UnIVAL](../../unival/arxiv-2307.16184/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：LISA →](../../lisa/arxiv-2308.00692/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

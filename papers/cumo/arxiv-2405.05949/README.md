@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [CuMo](../README.md)
+<!-- article-header:end -->
+
 # CuMo：从稠密检查点扩展视觉编码器和连接器专家
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,21 +24,27 @@
 
 CuMo 将扩容重点放到视觉侧。它先训练普通稠密模块，再把对应 MLP 权重复制到多个专家中，让路由器逐 token 选出少数专家计算。最终模型没有将 Mistral 临时扩造成语言 MoE：语言骨干可保持稠密，也可直接使用已经大规模预训练的 Mixtral。这一区别决定了“协同 upcycling”实际发生在哪些模块。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 方法包含三步：先对齐连接器；再用高质量图像描述预热整套稠密模型；最后同时扩展 CLIP 的前馈层和连接器为 Top-2-in-4 MoE，进行指令微调。复制专家比从零初始化稳定，负载平衡与 router z-loss 辅助路由训练。
 
 Mistral 版本总参数约 8.26B、每 token 激活约 7.80B；Mixtral 版本总参数约 47.71B、激活约 13.45B。激活参数少于总参数有助于限制运算量，但模型权重、路由、通信和批处理仍有成本，不能把“7B 类别”解释为只有 7B 权重或与普通 7B 模型同样内存。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p002-figure-2.png)
 
-*原文 Figure 2，PDF 第 2 页完整截图。视觉经过 CLIP-MoE 和 MLP-MoE，随后与文字嵌入进入语言模型。左侧示意每个 token 只调用部分专家，图为简化展示而省略残差。*
+*原文 Figure 2，PDF 第 2 页原文图表裁图。视觉经过 CLIP-MoE 和 MLP-MoE，随后与文字嵌入进入语言模型。左侧示意每个 token 只调用部分专家，图为简化展示而省略残差。*
 
 基础模块是预训练 CLIP ViT-L、两层 MLP 连接器和 Mistral-7B。CuMo 保留 CLIP 的注意力与残差，在各 transformer block 中将原 MLP 替换为带路由的专家集合；连接器则由一个两层 MLP 扩展成多个两层 MLP 专家。输出通道和原模块一致，因而无需改变后续语言模型的输入接口。
 
 最终模型另使用 S2 风格多分辨率视觉特征，选择 1× 与 3× 的组合，并在通道维拼接特征以保持 token 数与低分辨率输入一致。保持 token 数不等于减少视觉编码器调用次数；多尺度本身需要额外视觉计算。报告没有在这份固定版本中完整列出其切块、重采样与输入像素配置，不能仅凭倍率补写具体分辨率。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -57,6 +75,8 @@ $$
 
 $\mathcal L_{ce}$ 是下一 token 的语言交叉熵；负载平衡项避免少量专家吸收几乎所有输入，router z-loss 约束路由器数值尺度、帮助稳定训练。报告引用 ST-MoE，但未在本文展开两项辅助损失的全部定义，因此这里不伪造它们的原文公式。稠密 Mistral 没有语言 MoE 路由器；语言侧辅助损失适用于带路由器的 Mixtral 版本。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练仅使用 LCS-558K。稠密预热阶段使用 ALLaVA-Caption 708K。指令阶段汇合 LLaVA-665K、ShareGPT4V、LAION-GPT-V、DocVQA、SynDog-EN、ChartQA、DVQA、AI2D、InfoVQA、ALLaVA、LIMA 与 ALLaVA-Text，统一改成视觉指令格式。OCR、图表、文档与通用对话共同训练，LIMA 等文本资料用于保留指令交互能力。
@@ -71,6 +91,8 @@ $\mathcal L_{ce}$ 是下一 token 的语言交叉熵；负载平衡项避免少�
 
 原文的指令样本总数存在差异：正文称约 1.65M；Table 8 逐项相加为约 1.85M，包括 143K ALLaVA-Text 和 50K DVQA。报告未解释差额是否来自去重或实际采样，本文不将其中一个数当作精确、无争议的训练记录。SynDog-EN 和 DVQA 各抽取 50K，作者称使用过多合成样本可能损害零样本表现。这里“训练数据公开”描述的是此轮多模态适配所用来源，不代表 CLIP、Mistral、Mixtral 的原始预训练语料全部公开。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 模块与结构 | 附录 Table 9 配置 |
@@ -82,6 +104,8 @@ $\mathcal L_{ce}$ 是下一 token 的语言交叉熵；负载平衡项避免少�
 使用 AdamW 与余弦学习率；分布式配置依次为 ZeRO-2、ZeRO-3、ZeRO-3-offload。正文 §4.1 却称最终模型全参数学习率降为 $2\times10^{-6}$，与附录最终 $4\times10^{-6}$ 不一致。上表采用明确标注主结果的附录配置，同时保留差异；报告没有足够信息解释是哪一次训练改变了该值。
 
 消融主要用 558K/665K 的较小配方，部分采用 batch 128、$2\times10^{-5}$ 或 $2\times10^{-6}$ 学习率。它们不能与最终三阶段、扩大数据、多尺度模型的分数直接归因对比。这里的预热是正式梯度训练，不是优化器 warmup 的同义词；原文没有给出主模型总训练步数、精确 epoch、warmup 比例或完整训练 FLOPs，不宜补写。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -104,3 +128,11 @@ $\mathcal L_{ce}$ 是下一 token 的语言交叉熵；负载平衡项避免少�
 机制消融显示，连接器 Top-2-in-4 从零训练时 SQA 从 72.8 降到 68.1，复制初始化后为 73.7；MM-Vet 从 29.3 到 32.3，加辅助损失到 33.1。单独解冻 CLIP 和增加视觉 MoE 都有贡献，不能把所有收益归为专家数量。把 Mistral 扩成 8×7B 的消融 MM-Vet 为 35.7，改用预训练 Mixtral 为 40.0，支持语言专家初始化的重要性。
 
 Figure 5 在 MME 测试输入上展示各层的专家使用比例较均匀，说明没有明显单专家垄断，却不足以证明专家已形成明确语义类别。原文定性例子仍出现把人物位置说错的幻觉。论文没有完整报告吞吐、延迟与通信消融；“少量激活参数增加”有参数表支持，实际部署效率仍需实测。本文核验了原文与图片，未运行模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：InternVL 1.5](../../internvl/arxiv-2404.16821/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：GPT-4o →](../../gpt/document-9ee9863086d5/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

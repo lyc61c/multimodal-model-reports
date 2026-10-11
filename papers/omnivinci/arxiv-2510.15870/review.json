@@ -53,7 +53,7 @@
     "训练初始化成本不含于200B联合阶段统计",
     "未执行模型或独立复现"
   ],
-  "article_sha256": "c0dac78e4c3691a052250995b3ecad32e025d34e777b5be7bd1a986bacba55b2",
+  "article_sha256": "51537273905dede265cc3df3aa8cbb135e4f5051452aebda7e8eceeaabfe38b9",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -67,5 +67,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

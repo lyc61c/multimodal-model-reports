@@ -46,7 +46,7 @@
     "Chat scores lower on several traditional benchmarks",
     "No comprehensive mechanism/data ablations or contamination audit"
   ],
-  "article_sha256": "23c0a40d80e294bd0fd4a3510c018d240a6981e9c2cd1f9bf6716b8c56fae978",
+  "article_sha256": "1d0c57aee6918dc651c20467cde47471c72bd0b638d866034b18ab4fed7e0393",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -60,5 +60,11 @@
       "Viewed source and crops: Table 10 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
       "Viewed source and crops: Figure 4 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 13,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

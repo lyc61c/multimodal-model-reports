@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [TimeMarker](../README.md)
+<!-- article-header:end -->
+
 # TimeMarker：用文字时间戳与自适应压缩统一长短视频理解
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 模型把帧的真实采样时间写成文字，与视觉 token 交错输入。通过动态抽帧和空间池化，它调整长短视频的信息密度；这种设计支持处理较长输入，但名称 AnyLength 不表示无限上下文或任意精度的事件边界恢复。（§3）
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 设计 | 作用 |
@@ -25,6 +39,8 @@
 
 主表 VideoVista 78.4、MVBench 67.4、MLVU test 49.2；Charades-STA 的 R@1、IoU=0.5 为 51.9。模型在部分测试领先同级模型，但 VideoMME 57.3、TempCompass 60.4 低于 Qwen2-VL-7B 的 63.3、67.8，应按基准分别理解。（Tables 1–3）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 3：按帧投影、空间压缩、插入时间文字](figures/architecture.png)
@@ -34,6 +50,8 @@
 每个 336×336 视频帧由 CLIP-ViT-L 编码，再经过带 GELU 的两层 MLP 对齐到 Llama3-8B。Adaptive Token Merge 在投影后执行平均池化。视觉块前插入时间文字，随后与用户问题一起输入 LLM；响应可以描述事件，也可以直接输出开始和结束时间。（§3.1、4.1）
 
 输入形如 `Second{0.0} + 帧特征 + Second{8.0} + 帧特征`。分隔符使用已有的文本编码能力，论文没有说为所有时间值创建新的专用词表项；训练答案中的时间表达也转成相同格式，使输入与输出共享时间表示。（§3.2）
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -58,6 +76,8 @@ $$
 
 以 24×24 patch 网格说明，三档每帧约 144、72、36 token，视觉总量约受 $36M$ 限制，SFT 时约 4608。该数是由网格和池化规则推导的解释，不包含文字时间戳与问题开销，也不是原文实测延迟。更强池化会损失小字与细小动作的空间信息。（§3.3）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 4：数据任务、来源和训练阶段](figures/training-data.png)
@@ -70,6 +90,8 @@ PT1 使用约 60M 图文对，来自 LAION、Zero、CapsFusion、COYO、CC12M、
 
 视频训练时长分布并不均衡：88.49% 小于 3 分钟，6.6% 为 3–10 分钟，4.9% 为 10–30 分钟，仅 0.01% 超过 30 分钟，最长 126 分钟。因此“训练包含两小时视频”不能解读为大量长视频预训练。各来源条目属于训练记录，不能都看作互不重复的视频文件。（第 5 页）
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 更新参数与训练内容 | 基础学习率 / ViT 学习率 |
@@ -81,6 +103,8 @@ PT1 使用约 60M 图文对，来自 LAION、Zero、CapsFusion、COYO、CC12M、
 ViT 使用逐层学习率衰减，因子 0.9。实现段另写 PT1 的视频输入均匀采 16 帧，但数据段只列 60M 图像对，没有说明 PT1 视频混合来源；本文保留此处信息缺口，不补造额外视频规模。报告也没有给出完整 batch、总 steps、设备与精度配置。（第 5–6 页）
 
 文本答案训练可解释为自回归交叉熵 $-\sum_t\log p_\theta(y_t\mid y_{<t},V,q)$，时间数字同样是文字 token。论文没有为时间区间另加一个明确的连续坐标回归目标或时序 IoU 优化项，因此评测 IoU 不能当成训练损失。（§3.4）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -109,3 +133,11 @@ Charades-STA 未使用该数据集的定位标注训练，R@1@0.3/0.5/0.7 为 73
 移除后 Charades 的 mIoU 48.4→41.9，ActivityNet 49.5→37.9，支持显式时间表示的贡献。但本文未将全部综合成绩都归因于该单项设计：模型同时受益于时间标注、图像和多图训练，AnyLength 的独立消融及端到端测速在本报告中不足。案例中的小数秒输出也不能直接证明达到相应毫秒精度。（§4.4–4.5）
 
 **来源说明：** 本文按 v1 区分训练阶段、测试划分与比较条件，未复现训练；原图出处和裁切记录见 [图片清单](figures-manifest.json)。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：ChatRex](../../chatrex/arxiv-2411.18363/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：NVILA →](../../vila/arxiv-2412.04468/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

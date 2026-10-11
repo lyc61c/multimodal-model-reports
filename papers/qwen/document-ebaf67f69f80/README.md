@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Qwen](../README.md)
+<!-- article-header:end -->
+
 # Qwen3.8-Max：超大规模模型、真实工作强化学习与视觉反馈 Agent
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 该材料提供了真实工作 RL 的系统思路和大量评测配置，但没有完整披露主干层数、专家路由、视觉编码器、预训练 token 或训练超参数。95B 激活与 2.4T 总参数需要分开：它们体现容量与计算参与范围的差别，不能把模型当作只需存储 95B 参数的稠密网络。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 Qwen3.8-Max 的能力组织围绕“完成任务并检查结果”：写代码、运行测试、观察 GUI 或渲染输出、修改方案，再继续执行。多模态不是只在初始输入阶段使用，而是贯穿反馈循环。长视频理解另配 Qwen-MM-Plugins 的记忆系统；超过 100 小时视频的展示不等于全部原始视频帧一次进入主干窗口。
@@ -20,6 +34,8 @@ Qwen3.8-Max 的能力组织围绕“完成任务并检查结果”：写代码�
 训练方面，博客重点是联合扩大 RL 环境和计算：任务从单个步骤扩展到多任务和多日，工作区从多文件扩展到复杂层级，harness 则覆盖多种种类、版本和技能。统一奖励体系结合执行检查、按 rubric 的文字与渲染视觉判断，以及 Agent 检查；在线数据平衡器调整任务、难度、工作区和 harness 的 batch 分布。
 
 主要能力数字包括 PaperBench **93.0**、OSWorld-Verified **86.1**、ERQA **77.8**、OmniDocBench 1.5 **92.1**。但模型并未全面领先：SWE-bench Pro 67.7 低于 Fable5 80.0，Terminal Bench 2.1 86.6 低于 GPT-5.6 Sol 88.8；MMMU-Pro 82.3 也低于 GPT-5.6 Sol 83.0。表中的旧模型在语言部分多为 Qwen3.7-Max，视觉部分为 Qwen3.7-Plus，两类基线不能混写成一个版本。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -31,11 +47,13 @@ Qwen-MM-Plugins 是给现有 Agent harness 使用的扩展库，提供图像视�
 
 推理 API 支持 xhigh、medium、low 三档 reasoning_effort，发布默认 xhigh；**preserve_thinking 默认开启**，这与 Qwen3.6-Plus 的默认行为不同。保留任务思考和外部记忆不等于推理时更新权重，博客的“持续学习”业务案例主要描述从交易反馈调整决策，不应自动称为在线梯度训练。
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 官方没有编号公式。下面的表达用于说明其公开系统思路，并不代替实际奖励实现。
 
-把训练环境表示为 \(e=(\text{task},\text{workspace},\text{harness})\)，可理解在多个独立轴上扩展得到环境组合，而非每次完全重新集成一个单任务环境。在线平衡器控制采样分布 \(q_t(e)\)，训练目标可概括成 \(\mathbb E_{e\sim q_t,\tau\sim\pi_\theta}[R(e,\tau)]\)。原文未公布奖励函数、优势估计、KL 系数或优化算法，本文不将它写成 PPO/GRPO 的确定配方。
+把训练环境表示为 $e=(\text{task},\text{workspace},\text{harness})$，可理解在多个独立轴上扩展得到环境组合，而非每次完全重新集成一个单任务环境。在线平衡器控制采样分布 $q_t(e)$，训练目标可概括成 $\mathbb E_{e\sim q_t,\tau\sim\pi_\theta}[R(e,\tau)]$。原文未公布奖励函数、优势估计、KL 系数或优化算法，本文不将它写成 PPO/GRPO 的确定配方。
 
 Universal Reward System 将不同任务的验证纳入统一框架：可执行任务用运行结果，开放产物用 rubric 约束文字与渲染判断，复杂工作可用 Agent 检查。统一框架旨在减少多个独立 verifier 的不一致，但博客没有给出奖励标定、偏差测试或可证明的等价性。模型评审与视觉评审本身也可能出错，不能由统一名称推断奖励恒正确。
 
@@ -47,6 +65,8 @@ Universal Reward System 将不同任务的验证纳入统一框架：可执行�
 
 代码与视觉反馈可以形成“生成—执行—观察—修改”循环。它的价值在于把错误显式转为下一步条件，而不是只依赖一次性生成。是否发生权重学习、每类反馈的可靠性及回合预算，需要分别验证，不能把每次修改都叫模型训练。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 原文未提供预训练总 token、图文比例、独立视觉训练集合或后训练样本数。较具体的是 RL 环境设计和在线 batch 平衡：任务、难度、工作区、harness 四类分布被共同控制，以降低 batch 间梯度变化、维持扩大 RL 计算的稳定性。这是官方设计目标；缺少采样权重和对照消融，不能单独量化每个轴的贡献。
@@ -54,6 +74,8 @@ Universal Reward System 将不同任务的验证纳入统一框架：可执行�
 某些基准经过处理：SWE-bench Pro 修正有问题的题目后重评基线；MathVision 和 CharXiv 少量错误真值经过人工核验修正。MathVision 的本模型用固定提示，对比模型取有无 boxed 格式的较高结果。不同来源表格若没有同样修正和提示，不能直接拼接。
 
 内部评测包括 CoWorkBench、QwenSWEBench、QwenQoderBench、QwenReactBench、QwenSVGBench、QwenBlenderBench 和 QwenVisualOffice，覆盖代码、专业工作、渲染产物等。其完整样本与污染审计未在博客披露。电商模拟使用淘宝天猫脱敏交易数据，含 12 类店铺、60 类商品、近 600 供应商、7000 商品及 152 个欺诈商家；这是**评测模拟环境**的信息，不能直接写成全部模型训练语料。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -64,6 +86,8 @@ Universal Reward System 将不同任务的验证纳入统一框架：可执行�
 图中 Qwen3.8-Max 在 CoWorkBench 的五种 harness 得分约为 73.2–75.8，WorkspaceBench 为 67.0–71.2；JobBench 更分散，从 OpenCode 53.4 到 OpenClaw 59.8。它体现多种 harness 下都能工作，但不是“任何框架得分完全一样”。某些外部模型列使用 OpenClaw 或 OpenCode，条件也要保留，不能只挑每个模型的最高点进行不加说明的比较。
 
 实验资源属于推理设置：PaperBench 在 BasicAgent Code-Dev 下由 Opus 4.6 评审，三次运行平均、每次最多 12 小时；Terminal Bench 2.1 的本模型采用 Claude Code、avg@10、5 小时超时与 max_tokens=131072，其他模型采用跨 harness 的最佳公开成绩。SkillsBench 87 个任务每题三次平均，不同模型分别使用 Claude Code、Codex、OpenCode；这些配置不是统一 harness 的严格受控比较。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -99,3 +123,11 @@ Universal Reward System 将不同任务的验证纳入统一框架：可执行�
 硬件设计案例把综合门数从 8298 降至 678，版图从 106×106 降到 46×46 平方微米，面积约降低 81%；采用 Iverilog、Yosys、cocotb 与 OpenROAD/Nangate45 验证。它是仿真、综合和布局布线结果，不能表述为已流片的实物芯片验证。电商模拟最终余额 416252 元、初始 100000 元，约为本金的 4.16 倍，余额不能被当作净利润。量化示例的 6000 次回测与选出因子同样属于研究展示，不证明真实交易收益。
 
 本文保留官方丰富的数值与配置，也明确环境、工具、平均分、通过率及前代型号的区别。发布页缺少完整训练配方、统计区间与全部任务运行记录，不能据展示证明跨行业结果恒可靠；本介绍没有运行模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：DeepSeek Harness 来源核验](../../deepseek/document-ddf539694eca/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：DeepSeek-V4-Flash-Vision-Exp →](../../deepseek/document-6648a6adbc11/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

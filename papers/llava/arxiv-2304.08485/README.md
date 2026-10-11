@@ -1,6 +1,16 @@
-[返回模型家族](../README.md) · [返回仓库](../../../README.md)
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LLaVA（官方研究谱系）](../README.md)
+<!-- article-header:end -->
 
 # LLaVA 初代：从文字教师生成视觉指令，到端到端语言适配
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -16,6 +26,8 @@
 
 本文是 LLaVA 初代固定 v1，不包含后续 LLaVA-1.5 的 MLP projector、更大指令混合或 OneVision 的多图/视频能力。v1 正文把语言骨干称为 LLaMA，不能从后续仓库配置补写其采用版本为某个 Vicuna checkpoint。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 图文 caption 教会模型“描述什么”，却未必教会它“根据用户想做的事怎样回答”。初代 LLaVA 的主要贡献是在简单视觉—语言连接器上加入视觉指令数据：使用文字版 GPT-4，把已有 COCO captions 与对象框变成多轮对话、详细描述和复杂推理。教师不接收图像像素，只通过标注的符号信息模拟视觉助手，因此数据质量受原标注覆盖与教师推断共同影响。
@@ -24,13 +36,15 @@
 
 在 30 张 COCO 验证图片、90 道合成问题的 GPT-4 裁判实验中，完整指令数据的相对分为 85.1，没有指令调优时为 21.5。ScienceQA 单模型为 90.92%，GPT-4 在两模型分歧时重新判断可达 92.53%。前者是主观评分比，后者是带外部语言模型的选择题准确率；都不等于模型达到多模态 GPT-4 的通用能力。[Sections 3–5](https://arxiv.org/pdf/2304.08485v1)
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 1](figures/original-p004-figure-1.png)
 
 > 来源：原文 Figure 1、Equation (1)，2304.08485v1，PDF 第 4 页；完整架构、图注与线性映射式保留。
 
-**读图**：图像 \(X_v\) 经 CLIP 得到网格特征 \(Z_v\)，投影 W 产生视觉嵌入 \(H_v\)；文字指令 \(X_q\) 编码成 \(H_q\)，与视觉 token 一起进入自回归语言模型，输出回答 \(X_a\)。图中线性层只是维度桥接，没有额外 query 压缩、cross-attention 插层或独立像素生成头。
+**读图**：图像 $X_v$ 经 CLIP 得到网格特征 $Z_v$，投影 W 产生视觉嵌入 $H_v$；文字指令 $X_q$ 编码成 $H_q$，与视觉 token 一起进入自回归语言模型，输出回答 $X_a$。图中线性层只是维度桥接，没有额外 query 压缩、cross-attention 插层或独立像素生成头。
 
 | 组件 | 原文实际内容 | 意义 |
 |---|---|---|
@@ -42,34 +56,44 @@
 
 v1 没有明确列出图像输入分辨率、visual token 总数、特征维度或最终上下文长度，不能据 patch14 自行宣称采用 224 或 336 输入。本版本也未展示动态分辨率、视频帧采样、区域坐标输出的检测能力。用于数据生成的框信息不是推理时要求用户提供的输入框。[Sections 4.1–4.2](https://arxiv.org/pdf/2304.08485v1)
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 **用符号视觉背景组织指令监督。** 合成教师看到 captions、对象类别和空间框，由此回答“有什么”“相对位置怎样”“为什么需要这样做”等问题。学生训练时接收图像本身和问题，并学习教师的回答。这是数据层面的教师监督，不是匹配教师隐藏层或 logit 的知识蒸馏损失；本文没有逐样本人工审查或保证生成答案均由像素证实。
 
 **简单连接器，突出数据作用。** 原文 Equation (1) 为：
 
-\[
+
+$$
 Z_v=g(X_v),\qquad H_v=WZ_v.
-\]
+$$
+
 
 视觉特征经线性映射取得语言嵌入维度，映射本身并不将图像量化到文字词表，也没有把每个 patch 赋予明确的词义。原文邻近一处文字把输出误记为 Hq，公式与 Figure 1 的视觉输出是 Hv；这里采用公式口径。Stage 1 在冻结语言模型下优化 W，使生成 caption 的梯度指导视觉特征进入语言模型能够处理的空间。
 
 **以多轮回答为目标，而不预测所有输入。** Equation (2) 指定第一轮随机排列问题与图像，之后每轮加入新问题；同一图像影响所有后续回答。Equation (3) 用回答序列的自回归条件概率表示监督：
 
-\[
+
+$$
 p(X_a\mid X_v,X_{instruct})=
 \prod_{i=1}^{L}p_\theta(x_i\mid X_v,X_{instruct,<i},X_{a,<i}).
-\]
+$$
+
 
 这里 i 遍历需要预测的回答 token；system、用户问题、此前停止标记等也是上下文条件，原式为简洁省略它们。与监督方式一致，可将优化解释为回答 token 的负对数似然：
 
-\[
-\mathcal L=-\sum_{i\in\mathcal A}\log p_\theta(x_i\mid\text{此前完整上下文}).
-\]
 
-后式是对 Equation (3) 的解释性写法，\(\mathcal A\) 为 assistant 回答与相应停止目标位置。Table 2 明确强调预测回答和何时停止，不能把视觉输入、用户问题、全部 system message 都当作普通 next-token loss 标签。本文视觉输入只提供条件，没有预测视觉 token 或图像重建目标。
+$$
+\mathcal L=-\sum_{i\in\mathcal A}\log p_\theta(x_i\mid\text{此前完整上下文}).
+$$
+
+
+后式是对 Equation (3) 的解释性写法，$\mathcal A$ 为 assistant 回答与相应停止目标位置。Table 2 明确强调预测回答和何时停止，不能把视觉输入、用户问题、全部 system message 都当作普通 next-token loss 标签。本文视觉输入只提供条件，没有预测视觉 token 或图像重建目标。
 
 **先兼容，再改变语言模型。** 冻结大骨干进行初始对齐，避免刚初始化的视觉映射同时改变语言参数；随后完整语言更新让模型学会较复杂的视觉指令。论文的 ScienceQA 消融支持对齐阶段重要，但它不是比较所有冻结/解冻策略的全面证明，也没有偏好优化或显式强化学习阶段。[Section 4、Table 7](https://arxiv.org/pdf/2304.08485v1)
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -91,6 +115,8 @@ p(X_a\mid X_v,X_{instruct})=
 
 CC3M 过滤并非只按 caption 长度。附录用 spaCy 提取名词短语并计数，忽略频次<3 的短语；从较低频但保留的概念开始，把含该短语的 captions 放入候选集，对频次>100 的短语随机最多取 100 个 captions。得到约 595K 对，Figure 2 的独立名词短语数为原始 108,182、过滤后 31,423。该策略旨在平衡覆盖与训练量，不是保留所有罕见概念或证明彻底去重；全文没有完整记录数据损坏、跨集重复与污染审查。[Section 3、Appendices A–B](https://arxiv.org/pdf/2304.08485v1)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 ![原文 Table 2](figures/original-p005-table-2.png)
@@ -106,6 +132,8 @@ CC3M 过滤并非只按 caption 长度。附录用 spaCy 提取名词短语并�
 | 2 ScienceQA 适配 | 问题与图像/文字上下文 → 理由与答案 | 同样更新 W、phi | 主结果 13B，使用 CLIP 最后一层前的特征，先理由后答案，12 epochs |
 
 聊天与 ScienceQA 是作者列出的两个适配用途，并不表示每个聊天 checkpoint 又串行在 ScienceQA 训练。ScienceQA 的“scratch”消融跳过视觉对齐，不是把 CLIP 或 LLaMA 从随机权重重训。v1 没有完整披露学习率、optimizer、batch、训练硬件、时长、精度、warmup、聊天 epoch 或生成采样配置，不能用后续修订版超参数填补。损失就是第 4 节的回答自回归监督，不涉及图像生成、DPO 或 RLHF。[Section 4.2、5.2](https://arxiv.org/pdf/2304.08485v1)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -140,3 +168,11 @@ CC3M 过滤并非只按 caption 长度。附录用 spaCy 提取名词短语并�
 Table 7 的最后层特征为 89.96，最后层前特征的最佳版本为 90.92；跳过初始对齐为 85.81，降低 5.11 个百分点；7B 为 89.84，比 13B 低 1.08。答案在理由前的实验表列为最后层特征下 89.77，不能把它与不同特征的最佳版本差值全归因于 CoT 顺序。正文关于 reasoning-first 在 6 epochs 达到 89.77 后不再提高的说明，与最佳 90.92 的条件未完全对齐；可支持其收敛讨论，不能补出不存在的完整训练曲线。
 
 Tables 4–5 和附录 Figures 3–5 展示图像异常解释、食品建议、艺术与影视知识连接等能力，同时存在过度推断和细节错误。原文自身把扩大概念/OCR 覆盖、接入更多视觉模型列为未来方向。此篇最清楚的证据是合成视觉指令改善回答行为及 ScienceQA 适配结果；精确检测、OCR、视频和实际任务执行没有在本版完成系统评测。以上来自论文，本介绍未运行模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LLaMA-Adapter](../../llama-adapter/arxiv-2303.16199/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：MiniGPT-4 →](../../minigpt/arxiv-2304.10592/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

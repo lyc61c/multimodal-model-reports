@@ -39,7 +39,7 @@
     "No universal smartphone latency claim; no per-size training time or undisclosed precision inferred",
     "Table7 and appendix read as text; selected tables 3-6 visually checked"
   ],
-  "article_sha256": "1eeca523d65748acd5e0c53da00e81939a60cb64605ebe4652f75518aa82308b",
+  "article_sha256": "a99dd8dc01837cda0de23bec4de88806ad7ad39f457034e0cb7f54c6f77a691b",
   "artifact_checks": {
     "original_assets": 8,
     "no_full_page_screenshots": true
@@ -53,5 +53,11 @@
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

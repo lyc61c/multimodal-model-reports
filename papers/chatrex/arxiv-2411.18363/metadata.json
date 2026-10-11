@@ -11,6 +11,6 @@
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
   "title_zh": "ChatRex：先产生候选框，再让语言模型选择对象并解释场景",
-  "chinese_characters": 3128,
+  "chinese_characters": 3189,
   "figure_revision_date": "2026-10-09"
 }

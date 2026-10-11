@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "PointLLM：三维点云与语言模型的对齐及评价",
-  "chinese_characters": 2226,
+  "title_zh": "PointLLM：让语言模型直接理解带颜色的三维物体点云",
+  "chinese_characters": 2291,
   "figure_revision_date": "2026-10-09"
 }

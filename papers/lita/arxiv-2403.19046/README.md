@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LITA](../README.md)
+<!-- article-header:end -->
+
 # LITA：能回答“何时发生”的视频语言助手
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **LITA: Language Instructed Temporal-Localization Assistant** 由 NVIDIA 的 De-An Huang、Shijia Liao、Subhashree Radhakrishnan、Hongxu Yin、Pavlo Molchanov、Zhiding Yu、Jan Kautz 提出。本介绍依据 [arXiv 2403.19046v1](https://arxiv.org/pdf/2403.19046v1)（2024-03-27，10页），[官方代码](https://github.com/NVlabs/LITA)为NVlabs/LITA。
 
 LITA 在 LLaVA 风格的图像语言模型上增加视频时间表达，使用 CLIP-L-14、线性投影和 Vicuna，实验分别有7B及13B语言模型版本。研究问题是视频助手能描述“什么发生了”，却难以可靠回答“何时发生”。它进一步提出 **Reasoning Temporal Localization（RTL）**：问题不直接命名动作，而要求先推断对应事件，再输出起止时间与解释，例如从舞蹈动作中找出最活跃的片段。这不是直接把已有事件描述配到时间段的同义任务，也不是音频驱动模型。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -18,15 +32,19 @@ LITA 在 LLaVA 风格的图像语言模型上增加视频时间表达，使用 C
 
 三个改动分别解决输出如何表示时间、输入如何保留时间信息、监督从哪里获得的问题。相对位置依赖给定的视频边界；100档的离散化并不保证短动作边界有秒级精度。全文没有报告真实部署吞吐、超长视频扩展或音轨联合理解。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
 
-**读图：**输入帧先被视觉编码器转成patch特征，左侧快路径对每帧空间特征取均值，保留密集时间序列；慢路径只取少量帧，但留下更多空间位置。两组特征经线性投影后与问题文本一起输入语言模型。图顶端答案含专用时间token，推理结束后再转回真实时间。
+**读图：** 输入帧先被视觉编码器转成patch特征，左侧快路径对每帧空间特征取均值，保留密集时间序列；慢路径只取少量帧，但留下更多空间位置。两组特征经线性投影后与问题文本一起输入语言模型。图顶端答案含专用时间token，推理结束后再转回真实时间。
 
 实际配置均匀采100帧，每帧CLIP产生256视觉token。快路径得到100个token，慢路径均匀采4帧，以2×2窗口做空间平均，每帧保留64个token，共256。因此输入356个视频token，而不是把100帧全部25600个patch直接塞给LLM（§5.1，PDF第6页）。这里“SlowFast”指token池化方式，原文没有把视频SlowFast卷积网络作为第二个独立视觉编码器。
 
 线性投影用LLaVA预训练权重初始化。输出统一为语言序列：描述问题输出自然语言，定位问题输出专用时间token，推理定位再附解释。模型不依赖外接检测器或单独边界回归模块；不同视频任务共享自回归接口。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -43,6 +61,8 @@ SlowFast池化的压缩也有明确计算。原序列为 $T\times M$，快路径
 
 RTL要求“事件推断→片段定位→解释”共同成立。解释是训练答案的一部分，并非单独奖励优化。原文没有引入强化学习、IoU可微损失或额外一致性正则；用指令监督训练生成式模型。将相对时间档当普通数字字符串也不准确：它们是新增专用token。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ActivityNet-RTL建立在ActivityNet-Captions带人工起止时间的密集描述上。把每段“起止时间+描述”交给GPT-4，辅以人工few-shot示例，要求产生需要推理的时间问题以及时间段与解释（§4.2，PDF第5页）。GPT-4读取的是文字描述及时间注释，而非原视频，因此不能写成“GPT-4看完每段视频进行完整视觉标注”。
@@ -50,6 +70,8 @@ ActivityNet-RTL建立在ActivityNet-Captions带人工起止时间的密集描述
 训练集由10,009视频生成33,557问答。作者观察到部分题其实直接询问已有描述中的事件，没有额外推理，但为保留标准定位能力仍留在训练集。评测则从ActivityNet-Captions验证集子集出发，人工去掉非推理题，复核时间和解释，得到160视频、229问答。故训练题并非全部人工核验的严格RTL；评测规模也较小，结论不能自动推广到任意视频领域。
 
 其余训练任务使用ActivityNet-Captions与YouCook2约11K视频构建密集描述与事件定位，用描述作查询、时间作目标；视频问答用NExT-QA，图像自然语言问答用LLaVA-150K。密集描述按起始时间排序，每句前加起止token；标准事件定位只输出起止token；短答案视频题显式要求单词或短语，避免这种格式污染自然语言对话。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -61,7 +83,9 @@ ActivityNet-RTL建立在ActivityNet-Captions带人工起止时间的密集描述
 
 ![原文 Table 3](figures/original-p008-table-3.png)
 
-**读图：**只学RTL时，非时间问题也容易输出带时间的固定格式；加入标准视频任务后可以回答一般问答，但常偏短；再加入图像自然语言问答后回答更完整。表3显示从RTL Only到完整模型，mIoU26.6→28.6、P@0.5 20.9→25.9、解释分43.5→46.3。这支持任务组合有收益，不能把自然语言质量变化全部解释为视觉架构单独带来的效果。
+**读图：** 只学RTL时，非时间问题也容易输出带时间的固定格式；加入标准视频任务后可以回答一般问答，但常偏短；再加入图像自然语言问答后回答更完整。表3显示从RTL Only到完整模型，mIoU26.6→28.6、P@0.5 20.9→25.9、解释分43.5→46.3。这支持任务组合有收益，不能把自然语言质量变化全部解释为视觉架构单独带来的效果。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -84,6 +108,14 @@ RTL定位用预测段与标注段的IoU，mIoU和P@0.5先在每个视频内平�
 
 ![原文 Table 2](figures/original-p007-table-2.png)
 
-**读图表：**Figure4展示第二次掰手腕、烤棉花糖及跌倒后恢复的时间和解释；这是案例证据而非全数据保证。表2为Video-based Text Generation Benchmarking的GPT评分：LITA正确性2.94、细节2.98、上下文3.43、时间理解2.68、一致性3.19，均值3.04；Video-ChatGPT均值2.38。正确性相对2.40提高22.5%，时间理解相对1.98提高35.4%，对应原文约22%与36%的表述，都是**相对评分变化而非百分点准确率**。
+**读图表：** Figure4展示第二次掰手腕、烤棉花糖及跌倒后恢复的时间和解释；这是案例证据而非全数据保证。表2为Video-based Text Generation Benchmarking的GPT评分：LITA正确性2.94、细节2.98、上下文3.43、时间理解2.68、一致性3.19，均值3.04；Video-ChatGPT均值2.38。正确性相对2.40提高22.5%，时间理解相对1.98提高35.4%，对应原文约22%与36%的表述，都是**相对评分变化而非百分点准确率**。
 
 作者还承认即便要求GPT-4忽略解释中的时间，解释评分仍略受时间影响（§5.2）。LITA的证据因此主要支持“时间token、密集快token与时间监督协同改善定位和对话”，并未证明评价裁判完全无偏、短事件定位已解决，或能在未采样到动作时精确恢复边界。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：MM1](../../mm1/arxiv-2403.09611/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Mini-Gemini →](../../mini-gemini/arxiv-2403.18814/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

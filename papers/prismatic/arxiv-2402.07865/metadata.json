@@ -10,11 +10,11 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Prismatic：视觉语言模型设计空间的控制实验与 PRISM 配方",
+  "title_zh": "Prismatic VLMs：用控制变量实验探索视觉语言模型的设计空间",
   "source_sha256": "7027cf1a9560a0643686546f0a6de8b6aeaf017d67410c0d6dafb99126eb57f0",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1733,
+  "chinese_characters": 1798,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [DreamLLM](../README.md)
+<!-- article-header:end -->
+
 # DreamLLM：联合学习图像理解、图像生成与交错图文创作
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,23 +24,29 @@
 
 DreamLLM 研究理解任务与生成任务能否相互帮助。它让语言模型决定何时写字、何时插入图像，再用从语言上下文提取的条件控制 Stable Diffusion。模型实际仍使用 CLIP 编码输入图像；“不依赖 CLIP 对齐”特指生成侧不以 CLIP 中间表征作为拟合目标，不能理解为整个系统没有 CLIP。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 模型在词表中加入 `<dream>`，当它生成该标记时，插入 64 个可学习 dream queries，读取此前的图文语义，经投影作为扩散模型条件。生成图片再由视觉编码器编码，返回上下文，语言模型继续写后续文本。整体文档按内容顺序因果生成，每幅图内部通过扩散去噪合成。
 
 原文报告 COCO 文生图 FID 8.46、MM-Vet 35.9、VQAv2 56.6，并展示自动安排插图位置的文档。对“协同”更关键的证据来自控制实验：在相同交错数据下，纯理解模型 MM-Vet 34.4，联合模型 35.9；纯生成与联合生成的 COCO FID 则非常接近。它支持该配置下联合学习的益处，但尚不是所有模型与任务都必然获益的定律。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p004-figure-2.png)
 
-*原文 Figure 2，PDF 第 4 页完整截图。蓝色语言模型接收文字、dream queries 和视觉嵌入；上方冻结的 U-Net 将条件转成图像，图像随后通过下方视觉编码器反馈。原图同时保留方法公式。*
+*原文 Figure 2，PDF 第 4 页原文图表裁图。蓝色语言模型接收文字、dream queries 和视觉嵌入；上方冻结的 U-Net 将条件转成图像，图像随后通过下方视觉编码器反馈。图中虚线表示生成图像重新编码后进入后续上下文。*
 
 语言骨干采用基于 LLaMA-1 的 Vicuna-7B v1.1。图像输入由冻结的 CLIP-L/14 编码，224×224 对应 256 个视觉 patch token，前后加 `<IMG>`、`<IMG/>` 标记，经线性视觉 projector 映射到语言空间。文字仍使用语言模型的词嵌入。
 
 生成侧使用冻结的 Stable Diffusion v2.1，输出分辨率 512×512。64 个 dream queries 是可学习向量，它们经过语言模型获得带历史条件的隐藏表示，再由另一个线性 condition projector 映射给扩散 U-Net。`<dream/>` 标记结束 query 序列。查询不是 64 个自然语言单词，也不是把图像离散化为 64 个像素代码；它们承担扩散条件接口。
 
 生成 `<dream>` 时，语言模型决定文档里的图片位置。图像合成与文字续写之间存在真实反馈通路，使下一段文字可依据已经生成的图像。该结构不等于语言模型逐像素自回归采样：文字与图片位置由因果模型控制，单幅图像仍由潜空间扩散与图像解码器产生。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -54,6 +72,8 @@ $x_t$ 可代表文字或图像内容；实际训练文字采用交叉熵、图�
 
 附录在推理使用 classifier-free guidance，并将噪声组合写为 $(1+s)\epsilon_{cond}-s\epsilon_{empty}$，默认 $s=7.5$、COCO $s=2.0$。这与一些实现采用 $\epsilon_{empty}+g(\epsilon_{cond}-\epsilon_{empty})$ 的记号不同；若按此原式转换，$g=1+s$，不能在未核验实现时把同一数值直接代入另一约定。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 第一阶段约 30M 图文对，Table 11 列出 LLaVAPretrain 558K、BLIP-LAION 8M、LAION400M 11M、LAION-COCO 11M。数量是约数和训练抽样配方，不表示重新采集的互不重叠图像。
@@ -62,15 +82,17 @@ $x_t$ 可代表文字或图像内容；实际训练文字采用交叉熵、图�
 
 ![原文 Figure 3](figures/original-p007-figure-3.png)
 
-*原文 Figure 3，PDF 第 7 页完整截图。蓝色 `<dream_1>` 等表示模型选择插图位置，右侧展示真实生成的图片；维也纳介绍和机器人取手机的文章是图文创作示例，不能当作真实机器人任务执行记录。*
+*原文 Figure 3，PDF 第 7 页原文图表裁图。蓝色 `<dream_1>` 等表示模型选择插图位置，右侧展示真实生成的图片；维也纳介绍和机器人取手机的文章是图文创作示例，不能当作真实机器人任务执行记录。*
 
 交错监督同时提供文字顺序、图片位置和图片内容。训练图像按用途分别缩放到 CLIP 的 224 和 SD 的 512，避免将输入感知分辨率与输出生成分辨率混淆。报告指出 MMC4 含广告和低质量图片，因此网页文档训练也可能把商业语言或风格带入输出。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
 ![原文 Table 11](figures/original-p026-table-11.png)
 
-*原文 Table 11，PDF 第 26 页，保留优化、数据、硬件与时间表。下方正文明确指出 CLIP 与 SD 在全部阶段冻结，而语言模型从阶段 II 开始解冻。*
+*原文 Table 11，PDF 第 26 页，保留优化、数据、硬件与时间表。正文 §3.2 与附录 C.2 明确指出 CLIP 与 SD 在全部阶段冻结，而语言模型从阶段 II 开始解冻。*
 
 | 阶段 | 更新范围 | 学习率 / epoch / 数据 |
 |---|---|---|
@@ -81,6 +103,8 @@ $x_t$ 可代表文字或图像内容；实际训练文字采用交叉熵、图�
 各阶段使用 AdamW、weight decay 0、warmup ratio 0.003、余弦调度、最大长度 2048、每 GPU batch 8。采用 FlashAttention 与 PyTorch FSDP；报告使用 128 张 A800，阶段时间分别约 6、10、1.5 小时。这是作者记录的该配置成本，不是模型在个人硬件上的训练估计。CLIP 和 SD 已经预训练，其历史成本不包含在本轮适配时间内。
 
 训练同时让模型预测文本与 `<dream>` 位置，并通过冻结 SD 的去噪误差学习图像条件。报告没有完整给出所有 loss 的实际缩放比例或逐 token 掩码实现，本文不补写未公开权重，也不声称整个 U-Net 在更新。query 数量消融中 32、64、128 的 COCO FID 分别为 9.56、8.46、14.24，说明更长条件序列在当前数据与解码器下并不必然更好。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -108,3 +132,11 @@ Table 1 的 DreamLLM 结果为 COCO caption CIDEr 115.4、Image2Paragraph 17.4�
 文档图片质量评估使用 15K held-out 文档及真值文字条件，FID 为 36.62，对照 SD 为 74.77；它不是完全自由创作全部文档后测量的端到端文本事实分数。150 个创作样本由 5 位志愿者评审，模型 supportive rate 60.68%，原始 MMC4 为 77.24%。论文将其与“图灵测试”阈值比较，但本文只将其作为该人工评估中的支持比例，不能推断一般人类无法识别。
 
 语言能力并非全部保持：MMLU 5-shot 从 Vicuna 的 45.0 下降到 41.8。POPE adversarial F1 76.47 也低于 InstructBLIP 的 77.32。附录报告多主体生成可能把两个对象融合成单个混合体，且对提示敏感；A800 上 50 步扩散生成延迟 3.65 秒、SD 3.46 秒只对应指定单图配置。本文核验原文与图片，未运行模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Multimodal Foundation Models](../../multimodal-foundation-survey/arxiv-2309.10020/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：GPT-4V 系统卡 →](../../gpt/document-5cd14e1ea9af/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

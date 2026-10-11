@@ -47,7 +47,7 @@
     "No exact GPU count/lr/batch/epochs in article",
     "GPT4 teacher is text-only and synthetic labels may contain hallucinations"
   ],
-  "article_sha256": "468749e2f2a0a70b0d485e2dab662154004348b90cdf072d32db9e62280d8c6f",
+  "article_sha256": "ddb64c00875fcee19745e0c7cbdec6cd6da448486697fcc1305853bfdc82352b",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -61,5 +61,25 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照方形补边后缩放的预处理与 224/336 配置；重现基线 24.3/10.8/31.0/5.2 与原表一致；按 Table 1 明确数据表指代。",
+      "changes": [
+        "将图下方的表改为 Table 1，避免依赖整页版面。"
+      ],
+      "article_sha256": "29e84e77f5755743910ad6c40bea2b3f06ad8afeac6a18e3bc3a7d34e9988386",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 5,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

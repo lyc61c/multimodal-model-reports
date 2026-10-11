@@ -19,7 +19,7 @@
     "original_assets": 6,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "f661ee1d43264ae25723dccee49c329fbed1ef421cc937db281788001cbc359d",
+  "article_sha256": "19a0fe58d749236de96ea421565396335031fbedc10cdb4a0a05c7973a997bc2",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -34,5 +34,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

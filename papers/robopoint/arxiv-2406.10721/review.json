@@ -37,7 +37,7 @@
     "Some VQA decline and navigation failures retained",
     "No undisclosedepochs/precision/optimizerfilledfromLLaVA"
   ],
-  "article_sha256": "d7c27b5dba6a2d6a17328f0724ee52d4f6bf1283d41069b4afc243fe8ff36155",
+  "article_sha256": "41ca57b6364e90ae32628ab2ade2b4b4c4c7182765412626a69287e26f359e8a",
   "artifact_checks": {
     "original_assets": 9,
     "no_full_page_screenshots": true
@@ -51,5 +51,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -1,8 +1,10 @@
+[项目首页](../../README.md) · [模型系列索引](../../reports/model-family-index.md)
+
 # LVIS-INSTRUCT4V
 
-项目主体 / 机构：repo:X2FD。快照：2026-10-08。
+[X2FD](https://github.com/X2FD)
 
-共收录 **1 篇论文与资料**，按发布日期排序。
+**1 篇论文与资料** · 按发布日期由早到晚排列。
 
 ## 论文列表
 

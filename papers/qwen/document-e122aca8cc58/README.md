@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Qwen](../README.md)
+<!-- article-header:end -->
+
 # Qwen3.6-27B：面向代码智能体的 27B 稠密多模态模型
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -9,6 +21,8 @@
 ![官方发布主图](figures/official-banner.png)
 
 *发布页原图没有 Figure 编号。它概括 Agentic Coding、Multimodality 与部署诉求，是产品定位图，不是网络结构或显存实验图。“Lower VRAM”不能替代具体量化格式、上下文与并发条件下的显存测量。*
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -24,6 +38,8 @@
 
 官方把它与 Qwen3.5-397B-A17B 对比，强调更小总参数规模下的代码成绩。前者是稠密，后者总参数 397B、激活约 17B；这组比较支持性能与权重规模的观察，但不能自动转化为“计算成本低十五倍”。（原文 Introduction、Performance）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 博客明确给出“dense 27B”和原生多模态，但没有公布层数、隐藏维度、注意力结构、视觉编码器、连接器、视觉 token 压缩方式或视频时序编码。它也没有架构图，因此本文不根据相邻 Qwen 版本猜测这些实现。
@@ -31,6 +47,8 @@
 从使用接口可确认，模型接收图文/视频上下文并生成回复；在代码智能体中，宿主软件提供 shell、文件编辑等工具，模型与工具结果反复交互。SWE-bench 成绩来自带 bash 与文件编辑工具的内部 agent scaffold，不能视为只生成一次补丁、没有工具反馈的成绩。（原文 Vision Language、Language 表下注）
 
 接口提供 preserve_thinking，用于保留前序回合的思考内容，官方推荐用于智能体任务。它说明如何组织多轮推理上下文，不等于模型新增一个记忆数据库或公开了跨轮训练机制。博客的 OpenClaw 配置写 contextWindow=131072，评测脚注却使用 200K/256K 窗口；这些分别是示例配置和评测设置，不能合并为一个确定的模型原生最大长度。（原文 API Usage、OpenClaw）
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -40,17 +58,23 @@
 
 思考模式与非思考模式也不是两套公开架构。原文说它们存在于同一检查点中，但未说明训练时如何分配样本、约束思考长度或切换目标。可以介绍其能力与接口，不能推导未公开的训练机制。（原文 Introduction、Vision Language）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 博客未列预训练数据来源、token 总量、图像/视频规模、代码数据清洗、去重或 SFT/RL 样本构造方法。不能依据代码成绩推断用了特定软件仓库或证明没有测试污染，也不能把评测题目数当作训练数据量。
 
 公开的**评测构建**则较具体。SWE-bench Pro 中部分问题被作者修正，并在修正版本上评价全部基线；SkillsBench 使用排除 API 依赖任务后的 78 个自包含任务子集；QwenWebBench 是内部前端生成基准，覆盖中英文与网页、应用、游戏、SVG、可视化、动画、3D 七类，自动渲染后用多模态裁判评分，再用 BT/Elo 汇总。这些信息用于解释结果口径，不是数据训练流程。（原文 Language 表下注）
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 原文没有披露预训练、指令微调、偏好对齐或强化学习阶段；学习率、batch、训练步数、冻结配置、GPU 和损失函数均未给出。因此本节不能形成可复现的训练配方，也不把其他 Qwen 报告的设置当成本模型事实。
 
 可核验的推理设置包括：SWE-bench 系列 temperature=1.0、top_p=0.95、200K 上下文；Terminal-Bench 2.0 使用 Harbor/Terminus-2、三小时超时、32 CPU/48GB 内存、最多 80K 输出 token、256K 上下文，五次运行取平均。这里的 CPU/RAM 是工具任务环境，不是训练或模型服务器硬件。SkillsBench 同样五次取平均；NL2Repo 对其他模型使用 Claude Code，故跨系统比较仍应关注宿主差异。（原文 Language 表下注）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -71,3 +95,11 @@
 视觉结果包括 MMMU 82.9、MMMU-Pro 75.8、MathVista mini 87.4、RealWorldQA 84.1、CC-OCR 81.2、OCRBench 89.4、RefCOCO 平均 92.5、VideoMME 带字幕 87.7、AndroidWorld 70.3。与 Qwen3.5-27B 比较并非全部提高：MathVista mini 从 87.8 到 87.4，CharXiv RQ 从 79.5 到 78.4。视频结果明确含字幕；OCRBench 表列口径为 89.4，不能与其他论文常用千分制原始分数直接混用。（原文 Vision Language）
 
 资料展示的是官方评测和发布能力，尚缺公开方法消融、完整训练配方及统一成本实验。本文逐项核对官方图表，未下载模型、执行代码任务或调用线上 API。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Xiaomi MiMo-V2.5](../../mimo/document-bc763cf700ef/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：DeepSeek-V4 →](../../deepseek/document-08e9e69bb6bb/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

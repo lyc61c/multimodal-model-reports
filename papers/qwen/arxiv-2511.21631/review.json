@@ -19,7 +19,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "c119f06bcae70d4de7cc2ef683c31eccf2bb1fe28eb25bbacc061be1f6cde0f4",
+  "article_sha256": "389402732c2fcd7ab6deb860d85e6ae77bb76d60223a4c371d1ca589cde7d77a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -33,5 +33,12 @@
       " Independent last12 source/crop visual recheck: Qwen3-VL Table 4 complete caption, model headers, every category including final agent rows and bottom rule. Current y1=773.37 already excludes page number beginning y793.77; no change needed.",
       " Independent last12 source/crop visual recheck: Qwen3-VL Tables 11 and 12: both separate ablation tables have complete captions, all headers and both result rows; paragraphs between excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

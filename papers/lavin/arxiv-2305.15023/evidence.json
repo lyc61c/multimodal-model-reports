@@ -18,5 +18,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "下方Figure 5是案例，",
+          "after": "Figure 5 展示案例，",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

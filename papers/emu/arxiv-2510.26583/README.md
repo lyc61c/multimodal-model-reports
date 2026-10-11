@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Emu](../README.md)
+<!-- article-header:end -->
+
 # Emu3.5：用统一离散序列学习图文世界，并适配并行图像生成
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -11,6 +23,8 @@
 | 定位 | 原生图文理解与生成模型，重点是图像编辑、文字渲染和连续图文状态预测 |
 
 Emu3.5 把图像编码为离散 token，与语言放进同一个 Transformer，既读图文，也写图文。报告中的“世界模型”具体表现为根据指令生成后续观察图、子任务说明与关键帧，不等于已经完成物理机器人闭环控制验证。引言称它为 32B 模型，但第 2.2 节的精确口径是 Transformer 31.2B、embedding 2.9B，合计 **34.1B**；另有视觉 tokenizer 和可选扩散解码器。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -27,6 +41,8 @@ Emu3.5 把图像编码为离散 token，与语言放进同一个 Transformer，�
 
 所谓“约 20 倍”不是所有配置都恰好 20 倍：同表 naive 实现是 512→22 秒，约 23.3 倍；FlagScale 是 120→10 秒，12 倍。指标也有小幅变化，不能把“基本保持质量”写成每个分数严格不变。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 输入图像先由 455M 的 IBQ tokenizer 转成网格码，码向量维度 256。文本沿用 QwenTokenizer。序列含图像边界、尺寸等格式信息，主干用 RMSNorm、QK-Norm、SwiGLU 和 RoPE 处理交错 token，在同一词表预测下一项。模型从 Qwen3 初始化，报告没有把视觉输入与图像输出分成两套独立大型语义骨干。
@@ -38,6 +54,8 @@ Emu3.5 把图像编码为离散 token，与语言放进同一个 Transformer，�
 视觉码可以由原始图像 decoder 重建，也可交给以 SD3.5-medium 初始化的扩散图像 decoder，输出每个方向两倍的像素分辨率，最高支持 2K。后者通过 LoRA 蒸馏把 50 步缩至 4 步。它和 DiDA 是两件事：DiDA 加速**视觉离散码预测**，扩散 decoder 改善**码到像素的还原**。
 
 连续视频还可用 Wan2.2-5B 初始化的 DiT decoder，在生成关键帧码的条件下补中间帧。量化 embedding 给低层细节，可选帧间文字给语义条件，4 通道 mask 指示哪些帧已有条件。主干预测关键状态、视频 decoder 补连续变化，因此不应把所有视频像素都说成由统一主干逐 token 生成。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -59,6 +77,8 @@ DiDA 的训练为每张图复制带噪版本。带噪位置对同图带噪码使
 
 多任务 RL 使用 GRPO：对同一提示采样多条输出，利用组内奖励的相对好坏学习。标准机制可解释为 $A_j=(R_j-\bar R)/(\operatorname{std}(R)+\epsilon)$，这只是 GRPO 的通常解释，并非报告原文公式或已公布的 epsilon。奖励包括 CLIP/VLM 对齐、审美、OCR 与布局、身份保持和跨帧一致性，各项先归一至 [1,10] 再组合。多奖励有助于减少偏科，但奖励曲线本身不能证明绝不存在 reward hacking。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 视频交错数据约 **6,300 万段**，平均 6.5 分钟，合计约 790 年视频。PySceneDetect 分场景：短场景取中帧，长场景按间隔取帧，保留时间戳，平均每秒 0.27 个关键帧。Whisper-large-v2 经 Faster-Whisper 转写，spaCy 根据停顿和语法划句，然后按时间排序构成图文链。音频在这里成为 ASR 文本，不能据此宣称模型原生生成声音。
@@ -68,6 +88,8 @@ DiDA 的训练为每张图复制带噪版本。带噪位置对同图带噪码使
 另外还有约 5 亿图文对、3,000 万视频文本对、2,735 万 X2I 样本及约 3T 纯文本 token。视频文本对采用 1 FPS 并按原视频时间顺序打包；X2I 包含 SEED-Data-Edit、PromptFix、OmniGen 系列等公开数据和自建真实／合成材料。它们的样本数不应与重复训练后的 seen tokens 混加。
 
 SFT 的六类数据在 Table 3 中总计约 **150.1B token**。第 2.1 节写“150 billion samples”，但图和数据表的单位明确是 token，本文采用后者。故事 430K 样本，教程 960K，导航 200K，操作 973K；操作来源分别为 OXE 920K、Agi-world Alpha 40K、Songling Aloha 13K。视频经分段、去冗余、caption/ASR 合并后构造全局及图级 CoT；教程仅保留 2–10 步。操作数据将轨迹切为语义子任务，也从中间状态起步训练。教师模型生成的标注提供监督，不等于每条思维过程都经过人工事实核验。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -92,6 +114,8 @@ RL 为每种下游任务筛约 10K 提示，并纳入约 1K 人类反馈样本�
 
 Tokenizer 单独训练 500K iterations，batch256，Adam beta .5/.9，LR1e-4、warmup15K；联合重建、量化、LPIPS、PatchGAN、熵与 SigLIP 语义蒸馏目标。报告将这些目标列为组成项，没有给所有精确权重。可选图像 decoder 用 flow matching，先512px训练200K步，再多分辨率50K步，最后6K步LoRA蒸馏。视频 decoder 先1秒片段80K步，再2–5秒80K步，最后1080px微调；最终阶段完整超参未披露。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 | 指标与原表 | Emu3.5 | 对照及解释 |
@@ -115,3 +139,11 @@ Tokenizer 单独训练 500K iterations，batch256，Adam beta .5/.9，LR1e-4、w
 DiDA 的 GenEval 与 AR 都是 .86，DPG 88.26→87.46，GEdit7.59→7.56。扩散 decoder 在 Table15 的文字重建均值 T-ACC 为51.11，普通decoder41.52；但一般图像rFID反而.42→.49、LPIPS.08→.10。这说明它偏重局部可读性，不能描述成所有重建指标都改善。
 
 交错任务用 ChatGPT 与 Nano Banana 做偏好比较：故事胜49.2%/平10.3%/负40.5%，教程51.5/9.5/39.0，导航65.5/0/34.5，操作67.1/2.4/30.5。操作评测331样本含10张实拍、109个抽样和192个合成，判的是生成计划与图像的一致性、物理合理性等，**没有给真实机器人任务执行成功率**。故事胜率也不能改写为超过50%。预训练验证损失持续下降支持训练可扩展性，但它是teacher-forced损失，并非相同幅度的任务成功率提升。报告将更系统的长期生成评估与物理具身代理列为后续工作；本文所有数值来自原报告，未运行模型复现。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：VITA-E](../../vita/arxiv-2510.21817/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Qwen3-VL →](../../qwen/arxiv-2511.21631/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

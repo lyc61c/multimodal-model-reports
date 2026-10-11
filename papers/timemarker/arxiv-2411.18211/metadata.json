@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "TimeMarker：文字时间戳与自适应长短视频表示",
+  "title_zh": "TimeMarker：用文字时间戳与自适应压缩统一长短视频理解",
   "source_sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1620,
+  "chinese_characters": 1685,
   "figures_manifest": "figures-manifest.json"
 }

@@ -48,7 +48,7 @@
     "epoch-stepcountsamplingunclear",
     "crossmodeldifferentbones/data"
   ],
-  "article_sha256": "05edfc6bf932e3f973353193d76e328a17d5f22bf644bf93b4c3fa5c111592d2",
+  "article_sha256": "7590faa9af23ca369ffbab20e433bd3fd128ce9b8aee48ed7d6fb125ec1482cf",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -65,5 +65,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 9,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

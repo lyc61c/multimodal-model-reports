@@ -24,7 +24,7 @@
   },
   "model_execution": "not_run",
   "limitations": "Self-review only; no reproduction or independent benchmark validation",
-  "article_sha256": "d824187431c95fdb58562bf9fdba15d302d0ab208b14d45fde409b355ff141bd",
+  "article_sha256": "bc67a07cbc9a3e2018f7f5c2037f47998b77dfbed34046a24a156a9bbe902a14",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -41,5 +41,16 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "mobile_math_layout": {
+      "date": "2026-10-11",
+      "long_inline_equations_promoted_to_display": 1,
+      "scope": "Display layout and connective punctuation only; formula contents preserved"
+    }
   }
 }

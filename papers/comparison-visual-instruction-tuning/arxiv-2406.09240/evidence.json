@@ -43,5 +43,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "full_read",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "通读介绍，对照 LoRA rank 128/alpha 256、4×A100-80G、学习率与 13B 比较任务成绩；删去参数位于提示裁图页面下部的错误指代。",
+      "changes": [
+        "Figure 9/10 提示图分别说明；明确训练超参数来自正文/附录与下文，删除页面下部说明。"
+      ],
+      "article_sha256": "f94937198fcd6ac27ccd0f691171bc4d23fe500529b46603984856396b0e7655",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ]
 }

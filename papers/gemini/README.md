@@ -1,8 +1,10 @@
+[项目首页](../../README.md) · [模型系列索引](../../reports/model-family-index.md)
+
 # Gemini
 
-项目主体 / 机构：Google / Google DeepMind。快照：2026-10-08。
+Google / Google DeepMind
 
-共收录 **6 篇论文与资料**，按发布日期排序。
+**6 篇论文与资料** · 按发布日期由早到晚排列。
 
 ## 论文列表
 

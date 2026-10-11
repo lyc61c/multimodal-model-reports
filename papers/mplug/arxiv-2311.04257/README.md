@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [mPLUG](../README.md)
+<!-- article-header:end -->
+
 # mPLUG-Owl2：以模态专属 K/V 与共享模块促进协作
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -14,13 +26,17 @@
 
 相较前代 mPLUG-Owl，本版重点在语言解码器内部怎样既共享知识又保留模态差别。它没有将视觉 token 完全当成普通词 embedding，也不把视觉与文本分成两套完整语言模型。本文只介绍该 v1，不将后续 Owl3 等版本的架构或数据混入。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
-论文把多模态学习的难点分为协作与干扰：图像提供对象和关系知识，可能帮助文字任务；但直接对所有 token 使用同一参数，也可能让纯文本能力退化。**Modality-Adaptive Module（MAM）**为两类 token 设置专属归一化、key 与 value 投影，同时共享 query 和 FFN。
+论文把多模态学习的难点分为协作与干扰：图像提供对象和关系知识，可能帮助文字任务；但直接对所有 token 使用同一参数，也可能让纯文本能力退化。**Modality-Adaptive Module（MAM）** 为两类 token 设置专属归一化、key 与 value 投影，同时共享 query 和 FFN。
 
 视觉侧通过六层 abstractor 用 64 个查询压缩 patch 特征，语言侧联合学习纯文本与视觉指令。预训练和指令调优均允许视觉编码器学习，辅以分层学习率策略。原文报告纯文本 MMLU 53.4、BBH 45.0，图像 MM-Vet 36.2；MME 1450.19 却低于同表 LLaVA-1.5 的 1510.70。
 
 这是一份具有架构、数据、训练和消融信息的报告，但部分表间配置存在差异。TextVQA 54.3 / 58.2 分别为无 / 有额外 OCR 输入；MMBench 64.5 与 65.4 分别来自 test 与 dev 相关表，不能简单当作互相矛盾的统一结果。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -38,6 +54,8 @@ C^i=\operatorname{Attn}(V^i,[I;V^i],[I;V^i]),
 $$
 
 视觉与查询特征加正弦位置 embedding，以保留空间线索。压缩后的视觉 token 与文本连接，统一自回归生成。原文将操作称 self-attention，按其 query 与 key/value 形式理解即可，不应把它误写为 BERT Q-Former 的完整训练程序。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -61,6 +79,8 @@ $$
 
 Abstractor 将语言解码器注意力长度从 $P+L$ 变成 $K+L$，其平方项复杂度由 $O((P+L)^2)$ 变为 $O((K+L)^2)$，$K=64$。这只比较 LLM 侧注意力，不包含视觉编码和 abstractor 自身计算。论文没有提供统一端到端 FLOPs 和时延，不应将该式当作全模型计算节省比例。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练从 CC3M/CC12M、COCO、Laion-en、COYO、DataComp 等公共图文数据随机选取约 **400M 对**。实际 42500 steps×8192 batch 约为 348M 对，两者分别是候选集合和训练消耗；不混写成 400M 全部训练一次。图像用随机 resized crop、0.5 概率水平翻转。
@@ -73,6 +93,8 @@ Abstractor 将语言解码器注意力长度从 $P+L$ 变成 $K+L$，其平方�
 
 VQAv2 选最高置信答案，把同图问答组合；GQA、OKVQA、OCRVQA 也做同图合并。A-OKVQA 通过调整选项顺序增强多选题鲁棒性；caption 每图随机选一个参考，区域问答补充定位能力。数据复用既有任务标注和生成指令，报告没有完整公开去重阈值、训练与测试污染审计及来源授权明细。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 **第一阶段视觉语言预训练。** 训练 ViT、随机初始化六层 abstractor、新增 MAM 参数，冻结原 LLaMA-2 参数。MAM 从语言模型参数初始化。输入分辨率 224×224，LLM 序列长度 256，42500 steps，global batch 8192，峰值 / 最低学习率 1e-4 / 1e-6，warmup 1000，weight decay 0.05。
@@ -82,6 +104,8 @@ VQAv2 选最高置信答案，把同图问答组合；GQA、OKVQA、OCRVQA 也�
 正文强调 ViT layer-wise LR decay 为 **0.9**，Table 15 的“ViT learning rate decay”却列 **0**，没有解释两者的关系；这里保留原文差异，不能把表中的 0 自动改成 weight decay 或唯一有效配置。视觉编码器学习率层次控制的作用由 Table 6 消融支持。
 
 两阶段使用语言建模生成监督，把任务转为文字回答。报告未给出完整 token loss mask 与对话模板规则，也没有引入偏好优化或 RL 目标。全模型联合学习的收益应通过“相同数据、有无 MAM”实验判断，而不能只将其归因于新增多模态数据量。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -110,3 +134,11 @@ Table 6 冻结 / 解冻 / 解冻加分层 LR，TextVQA 为 **39.8 / 40.3 / 42.5*
 视频 Table 4 分 exact match 与 GPT-assisted。Owl2 在 MSRVTT / MSVD / TGIF 的 exact-match accuracy 为 **23.6 / 42.4 / 61.6**；GPT-assisted 为 **46.7 / 65.4 / 67.1**，relevance score 为 2.9 / 3.5 / 3.7。MSRVTT 的 GPT accuracy 低于 Video-ChatGPT 49.3，不能按“全部领先”转述正文。报告未统一披露抽帧预算，不据图像分辨率推导视频总 token 数。
 
 附录 MMHal-Bench 分数 2.17、幻觉率 0.56，POPE random / popular / adversarial F1 为 87.85 / 85.60 / 83.80；random F1 低于 InstructBLIP 的 89.27。Figure 5 的彩虹案例输出含 white、漏 red，尽管作者称识别正确，不能将该案例当作事实保证。报告整体支持部分共享与专属参数的协作方向，其结论仍依赖数据、分辨率和任务设置。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：GLaMM](../../glamm/arxiv-2311.03356/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：OtterHD →](../../otter/arxiv-2311.04219/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

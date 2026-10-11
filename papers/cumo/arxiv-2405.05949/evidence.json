@@ -44,5 +44,18 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "verification_notes": [
+    "2026-10-11 targeted content audit: Figure 2 配图已裁切而说明仍称完整截图；修正文案。"
+  ],
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "逐篇阅读七部分的关键起始段落/表格，检查公开方法公式与主结果摘表；并非全文逐句审计。",
+      "corrections": [
+        "Figure 2 配图已裁切而说明仍称完整截图；修正文案。"
+      ],
+      "article_sha256": "a58078bd8222d8b4961b457471e21e67fb1f27dc4abbf604b5ab011bb2a743e4"
+    }
+  ]
 }

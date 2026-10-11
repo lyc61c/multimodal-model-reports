@@ -38,7 +38,7 @@
     "patchgrid/CLAP汇总记载缺陷保留"
   ],
   "model_execution": "not_run",
-  "article_sha256": "a7df5e29a13360679eefda5af1beee8ed48dd26d16a7f7063077f5e2bf5cbd5b",
+  "article_sha256": "bee05c9166b3e68c5c17ff582e7b2792d32327634ba7786f93779126ebb8b383",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -55,5 +55,11 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 115）：Table 3, Table 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 116）：Table 6 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 6,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

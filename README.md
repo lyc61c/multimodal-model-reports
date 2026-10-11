@@ -12,17 +12,16 @@
 
 [开始阅读](reports/paper-reading-guide.md) · [模型系列](reports/model-family-index.md)
 
-![多模态大模型概览：图像、视频、音频与文本，以及理解、推理与生成能力](assets/multimodal-overview.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/multimodal-overview-mobile.svg">
+  <img src="assets/multimodal-overview.svg" alt="多模态大模型概览：图像、视频、音频与文本，以及理解、推理与生成能力" width="1280">
+</picture>
 
 </div>
 
 ---
 
 聚焦多模态大模型的整体架构、核心原理、数据与训练，结合原文图表解读实验结果。支持按论文阅读，也可按模型系列比较不同版本。
-
-| 中文详解 | 模型系列 | 原文图表 |
-|:---:|:---:|:---:|
-| **271 篇** | **183 个** | **1,516 个** |
 
 ## 阅读导航
 
@@ -31,21 +30,25 @@
 | 按发表时间阅读中文详解（由早到晚） | [全部 271 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
 | 按模型系列比较不同版本 | [183 个模型系列完整索引 →](reports/model-family-index.md) |
 
-## 模型家族索引
+## 模型系列
 
 点击下方系列查看论文列表，更多系列见[完整索引](reports/model-family-index.md)。
 
-| 模型系列 | 模型系列 | 模型系列 | 模型系列 |
-|---|---|---|---|
-| [Qwen](papers/qwen/README.md) | [DeepSeek](papers/deepseek/README.md) | [InternVL](papers/internvl/README.md) | [MiniCPM-V / MiniCPM-o](papers/minicpm/README.md) |
-| [LLaVA（官方研究谱系）](papers/llava/README.md) | [Kimi](papers/kimi/README.md) | [GLM / VisualGLM](papers/glm/README.md) | [Seed](papers/seed/README.md) |
-| [Gemini](papers/gemini/README.md) | [GPT](papers/gpt/README.md) | [Claude](papers/claude/README.md) | [Llama](papers/llama/README.md) |
-| [BLIP / xGen-MM](papers/blip/README.md) | [Emu](papers/emu/README.md) | [mPLUG](papers/mplug/README.md) | [VideoLLaMA](papers/videollama/README.md) |
-| [VITA](papers/vita/README.md) | [VILA / NVILA](papers/vila/README.md) | [InternLM-XComposer](papers/internlm-xcomposer/README.md) | [MiMo](papers/mimo/README.md) |
+| 模型系列 | 模型系列 | 模型系列 |
+|---|---|---|
+| [Qwen](papers/qwen/README.md) | [DeepSeek](papers/deepseek/README.md) | [InternVL](papers/internvl/README.md) |
+| [MiniCPM](papers/minicpm/README.md) | [LLaVA](papers/llava/README.md) | [Kimi](papers/kimi/README.md) |
+| [GLM](papers/glm/README.md) | [Seed](papers/seed/README.md) | [Gemini](papers/gemini/README.md) |
+| [GPT](papers/gpt/README.md) | [Claude](papers/claude/README.md) | [Llama](papers/llama/README.md) |
+| [BLIP](papers/blip/README.md) | [Emu](papers/emu/README.md) | [mPLUG](papers/mplug/README.md) |
+| [VideoLLaMA](papers/videollama/README.md) | [VITA](papers/vita/README.md) | [VILA](papers/vila/README.md) |
+| [XComposer](papers/internlm-xcomposer/README.md) | [MiMo](papers/mimo/README.md) | — |
 
 <a id="论文图文介绍"></a>
 
 ## 逐篇论文详解
+
+[按发表时间阅读全部 271 篇 →](reports/paper-reading-guide.md)
 
 每篇详解包含以下七部分：
 

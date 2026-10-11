@@ -15,5 +15,24 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "Table 4 位于页首；Figure 3 位于右下，报告 VQAv2 test-dev 自动准确率。",
+          "after": "Table 4 比较指代表达理解结果；Figure 3 报告 VQAv2 test-dev 自动准确率。两者均来自 PDF 第 9 页。",
+          "kind": "crop_caption_clarity"
+        },
+        {
+          "before": "PDF 第 15 页：上部为 ARO 候选排名，中部为 Cola 配对，下部为 HICO-DET 主体和对象框。",
+          "after": "PDF 第 15 页：Figure 5 展示 ARO 候选排名，Figure 6 展示 Cola 配对，Figure 7 展示 HICO-DET 主体和对象框。",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

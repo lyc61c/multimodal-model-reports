@@ -29,5 +29,12 @@
     "官方发布说明无可复现网络/训练配方",
     "官方成绩未独立复测"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "71723f7f5d9ceab3fb2620a7be06636bed64832d4a1c94862b1c525ffb4dade3",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 4,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

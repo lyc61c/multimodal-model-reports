@@ -18,7 +18,7 @@
     "original_assets": 7,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "8455fd2a7dc5f504ba592c27b59ccba3afdafbf6dfd19697cbc8d9a14ae9d690",
+  "article_sha256": "412060704bcddd4a363dd622d3630a295ed32e5d1d1862e1f92325fac1d7fb8d",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -32,5 +32,36 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/9f31ab035853/source.txt",
+        "papers/eagle/arxiv-2504.15271/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "上部 Table 2 为视频任务，下部 Table 3 为图像任务。",
+          "after": "Table 2 为视频任务，Table 3 为图像任务。",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "8455fd2a7dc5f504ba592c27b59ccba3afdafbf6dfd19697cbc8d9a14ae9d690",
+      "article_sha256": "f9dab082ad4f2c998c33faf3b1e2d8dc197c8668b71fdf459c6f4fb36d633045",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

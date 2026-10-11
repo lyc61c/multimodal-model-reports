@@ -32,5 +32,129 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "4ce7489403d3",
+      "path": "papers/internlm-xcomposer/arxiv-2407.03320/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 44,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 99,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 135,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 152,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p006-figure-5.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            307,
+            70,
+            548,
+            462
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p008-table-1.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69,
+            548.12,
+            137
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p008-table-2.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            141.92,
+            298.58,
+            397.16
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p009-table-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69,
+            548.12,
+            213
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p009-table-4.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            214,
+            548.12,
+            336.92
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p010-table-5.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69.05,
+            548.11,
+            206.37
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "7d4d4cdf1e28d2dee905ff03bb9f4e9fdb0a96d9e94c97d61218182a022c92f0"
+    }
+  ]
 }

@@ -17,7 +17,7 @@
     "original_assets": 7,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "f90f283d00a197356bbe48376036627152c8f38424a1e0379b2294a7d6bddc00",
+  "article_sha256": "52389ced0f2186e5066c7b9a3cd1132ae828e37ab5995fc3d5c08866d058909a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -31,5 +31,41 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/ba17caefc898/source.txt",
+        "papers/covlm/arxiv-2311.03354/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "Table 4 位于页首；Figure 3 位于右下，报告 VQAv2 test-dev 自动准确率。",
+          "after": "Table 4 比较指代表达理解结果；Figure 3 报告 VQAv2 test-dev 自动准确率。两者均来自 PDF 第 9 页。",
+          "kind": "crop_caption_clarity"
+        },
+        {
+          "before": "PDF 第 15 页：上部为 ARO 候选排名，中部为 Cola 配对，下部为 HICO-DET 主体和对象框。",
+          "after": "PDF 第 15 页：Figure 5 展示 ARO 候选排名，Figure 6 展示 Cola 配对，Figure 7 展示 HICO-DET 主体和对象框。",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "f90f283d00a197356bbe48376036627152c8f38424a1e0379b2294a7d6bddc00",
+      "article_sha256": "ca086b590ca50fd060afab6b38c2cb6535cd31351aef2865cdcb8d0642217020",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -27,5 +27,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照图像/点云投影与各自 LoRA、共享 LLM；CIFAR10 34.5 与检测 4.82 表项未混为统一准确率；修正完整原页的过时描述。",
+      "changes": [
+        "删除保留完整原页的过时表述，分别说明模型框架和零样本表。"
+      ],
+      "article_sha256": "0982be4db6634523cfe94680a8863d1322775f859831fcae0cf582dce45538c9",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ]
 }

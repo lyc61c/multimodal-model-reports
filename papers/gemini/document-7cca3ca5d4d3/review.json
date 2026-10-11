@@ -23,5 +23,12 @@
     "博客信息有限，无模型内部架构与可复现训练流程",
     "官方演示非独立成功率评测"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "0abf0e18dfee13084b3ee55713cd66ed88bdde15be3b04d045e28c3606274a8e",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 1,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

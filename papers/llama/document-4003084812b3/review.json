@@ -32,5 +32,12 @@
     "官方博客未公开完整配方和评测运行记录",
     "网页可能修订，按缓存版本解读"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "a57129e450e3f66f267d3a952cc2339d606985a792f28e070fecfad2a093753d",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 12,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

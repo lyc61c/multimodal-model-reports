@@ -1,6 +1,6 @@
 {
   "paper_id": "d0807662cb93",
-  "source_version": "official-system-card-2025-08-07",
+  "source_version": "official-system-card-2025-08-13",
   "source_pdf_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
   "assets": [
     {
@@ -8,7 +8,7 @@
       "original_label": "Table 1",
       "pdf_page": 5,
       "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=5",
-      "source_version": "official-system-card-2025-08-07",
+      "source_version": "official-system-card-2025-08-13",
       "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
       "asset_sha256": "a1adea48fd27c4857342103ce1e8d5dc80ef46f3adf2481801f2dfedb0daba7e",
       "processing": {
@@ -33,7 +33,7 @@
       "original_label": "Figure 1",
       "pdf_page": 13,
       "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=13",
-      "source_version": "official-system-card-2025-08-07",
+      "source_version": "official-system-card-2025-08-13",
       "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
       "asset_sha256": "40877954691b65d7ac55d62bd9583d0f442b512ac59a02be134f867512af4d7a",
       "processing": {
@@ -58,7 +58,7 @@
       "original_label": "Figure 2",
       "pdf_page": 13,
       "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=13",
-      "source_version": "official-system-card-2025-08-07",
+      "source_version": "official-system-card-2025-08-13",
       "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
       "asset_sha256": "9fc94e26652b6d15e8d08a04493fbc5c6f36cf65ffbf0c9cfa7e745501c898a0",
       "processing": {
@@ -83,7 +83,7 @@
       "original_label": "Figure 5",
       "pdf_page": 17,
       "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=17",
-      "source_version": "official-system-card-2025-08-07",
+      "source_version": "official-system-card-2025-08-13",
       "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
       "asset_sha256": "5bc0a6682b87c8c5d2dda2ebc87f540135c3a6e67674dce9dc8981c0bbfa9210",
       "processing": {
@@ -108,7 +108,7 @@
       "original_label": "Table 10",
       "pdf_page": 17,
       "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=17",
-      "source_version": "official-system-card-2025-08-07",
+      "source_version": "official-system-card-2025-08-13",
       "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
       "asset_sha256": "709d359bc5edb45df43d6a354c79158e0caa17ede925ba6f32f9c9bc35ad163c",
       "processing": {
@@ -133,7 +133,7 @@
       "original_label": "Figure 19",
       "pdf_page": 37,
       "source_url": "https://cdn.openai.com/gpt-5-system-card.pdf#page=37",
-      "source_version": "official-system-card-2025-08-07",
+      "source_version": "official-system-card-2025-08-13",
       "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
       "asset_sha256": "e3f5936bbebe2b1df2b2cd952264c18914bcfd7f052a7eb56912fd7572a64b14",
       "processing": {
@@ -153,5 +153,11 @@
         ]
       }
     }
-  ]
+  ],
+  "source_version_correction": {
+    "date": "2026-10-11",
+    "previous_label": "official-system-card-2025-08-07",
+    "corrected_label": "official-system-card-2025-08-13",
+    "basis": "The archived 60-page PDF with unchanged SHA256 f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459 has August 13, 2025 on its cover. August 7 is the original release date, not the cached PDF version date. Original source and asset SHA256 values are unchanged."
+  }
 }

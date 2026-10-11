@@ -42,7 +42,7 @@
     "D-Abstractor1e-4 table footnote not expanded to unsupported all-stage replacement",
     "No full source-dataset dedup or absolute no-leakage assertion"
   ],
-  "article_sha256": "6807a9bcc25bb0add32154d7980d63d8041d3121febf6afccc3de57594f0f491",
+  "article_sha256": "98df7f238d6f699667a6cfd45d197ff276bfeb8b92082e3719fa0ecea387e4cc",
   "artifact_checks": {
     "original_assets": 9,
     "no_full_page_screenshots": true
@@ -56,5 +56,16 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "mobile_math_layout": {
+      "date": "2026-10-11",
+      "long_inline_equations_promoted_to_display": 1,
+      "scope": "Display layout and connective punctuation only; formula contents preserved"
+    }
   }
 }

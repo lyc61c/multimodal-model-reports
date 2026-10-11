@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "InternLM-XComposer：双语视觉理解与检索式图文文章编排",
-  "chinese_characters": 2568,
+  "title_zh": "InternLM-XComposer：把图像理解接入双语语言模型，再完成图文文章编排",
+  "chinese_characters": 2644,
   "figure_revision_date": "2026-10-09"
 }

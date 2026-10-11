@@ -23,7 +23,7 @@
     "GPT rubric details vary between main text and appendix",
     "No independent benchmark run"
   ],
-  "article_sha256": "59b3a8568b61ebdb64c00397b58d4899020fc0b7a49c2d6bc9979a63b8de85f5",
+  "article_sha256": "5b1dcb3a72164c2019f21830c88f1c66009124676698dfdd19f221f2bc6713f0",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -40,5 +40,75 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 22）：Figure 4, Figure 5 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 23）：Table 5, Figure 6, Table 6 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
-  }
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 18,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "243076aca63f",
+      "path": "papers/chartllama/arxiv-2311.16483/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 130,
+          "before": "完整截图",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p007-table-2.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69.0,
+            548.11,
+            189.31
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            196.38,
+            548.12,
+            267.13
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-4.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            282.22,
+            289.36,
+            444.77
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "5b1dcb3a72164c2019f21830c88f1c66009124676698dfdd19f221f2bc6713f0"
+    }
+  ]
 }

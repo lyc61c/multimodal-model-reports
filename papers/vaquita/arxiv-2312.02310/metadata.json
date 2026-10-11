@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "VaQuitA：视频与问题的数据及特征对齐",
+  "title_zh": "VaQuitA：在抽帧与特征融合两处对齐视频和问题",
   "source_sha256": "fda9f2d3d31a8f10e0749244fb3438eccd128f8bafc156b1bef4f7c768ef4079",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1571,
+  "chinese_characters": 1638,
   "figures_manifest": "figures-manifest.json"
 }

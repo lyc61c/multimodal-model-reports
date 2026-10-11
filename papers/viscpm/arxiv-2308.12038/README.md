@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VisCPM](../README.md)
+<!-- article-header:end -->
+
 # VisCPM：以多语言模型为桥梁迁移视觉能力
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 本文用英语作为拥有丰富图文数据的枢纽语言，通过已学会中文和英文的语言骨干将视觉能力迁移到中文。Chat 与 Paint 是不同模型分支，不能把二者描述成同一个既理解又生成图像的端到端检查点。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 分支 | 架构与训练重点 | “零样本”的具体范围 |
@@ -21,6 +35,8 @@
 | `+` 版本 | 加入中文原生、翻译图文数据 | 不再是只用英文图文训练的设置 |
 
 只进行英文聊天指令微调时，模型能够理解中文问题，但通常用英文回答，作者称之为 quasi-zero-shot。为校准输出语言，最终 Chat 加入中文指令。这是标题中“零样本跨语言”最容易被误读的地方。（正文第 4、6 页）
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -35,6 +51,8 @@ Paint 从 Stable Diffusion 初始化 U-Net。CPM-Bee hidden states 经线性层�
 ![原文 Figure 5：生成样例](figures/generation-examples.png)
 
 *原文 Figure 5，PDF 第 9 页。这里使用论文中已经生成的图片，不是本仓库重新生成的素材。*
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -56,6 +74,8 @@ $$
 
 如果中文文本条件与对应英文条件接近，冻结的语言模型就能让已训练的去噪器生成相关图像。实际 Paint 只更新去噪网络的交叉注意力及连接模块，而非全部 U-Net。该范式依赖骨干语言能力和视觉概念覆盖，不能保证未知语言或文化概念自动迁移。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 Chat 使用 CC3M、CC12M、COCO、Visual Genome、LAION-COCO 英文图文数据；LAION-COCO 的 caption 由 BLIP 生成。附录 Table 6 为基础 Chat 列出 626K、8.4M、390M 数据池和 12.5%、25%、62.5% 的采样权重；正文用“100M 图文”概述训练规模，不宜将其当作附录全部不同样本的精确总数。（第 5、19–20 页）
@@ -64,6 +84,8 @@ Chat 使用 CC3M、CC12M、COCO、Visual Genome、LAION-COCO 英文图文数据�
 
 中文图文对照使用 Wukong 与 Zero，并以中文 CLIP 分数 >0.18 过滤。本文 v1 的规模记法并不完全统一：正文列出的中文原生/翻译数据，与 Table 6、附录 D 的 20M 合并原生数据、136M 或 390M 翻译数据存在差别。这里保留不同实验位置的说明，不给出一个拼接后的“准确总量”。（第 6、19、21 页）
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 Chat 预训练 180K 步、batch 768、学习率 10⁻⁵、Adam；SFT 80K 步、batch 64、同一学习率与优化器。Chat+ 附录报告预训练 480K 步，SFT 配方同基础版。推理采用 beam size=3。（第 5–6、20 页）
@@ -71,6 +93,8 @@ Chat 预训练 180K 步、batch 768、学习率 10⁻⁵、Adam；SFT 80K 步、
 Paint 训练共 300K 步、batch 4096、学习率 10⁻⁴、AdamW。前 200K 步分辨率存在来源冲突：正文写 384×384，附录 C 写 256×256；后 100K 步均写 512×512。这里不能任选其一而删除矛盾。采样采用 DDPM scheduler、50 步，附录说明每个提示生成四张，以中文 CLIP 选得分最高的图。（第 6、21 页）
 
 原文没有统一披露完整硬件与训练耗时，不能由 batch 和步数推算实际成本。语言间表示近似来自已有骨干，论文训练并未从头建立完整语言预训练过程。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -95,3 +119,11 @@ Chinese Drawbench 包含 174 个提示、八类能力，五位评审比较最佳
 英文预训练、双语 SFT 的聊天平均分为 88.0；加原生中文变成 87.8，再加翻译中文为 88.2。文生图英文训练 FID 10.9，继续用未过滤中文降为 12.8，过滤后为 10.7，加入翻译中文为 9.6。这支持数据质量与语言骨干的作用，但不支持“更多中文数据总会提升”，也不能据少量语言和翻译基准推出所有低资源语言的可靠迁移。
 
 配图取自原论文；[来源清单](figures-manifest.json)。本仓库未重新训练复现。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：BLIVA](../../bliva/arxiv-2308.09936/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Qwen-VL →](../../qwen/arxiv-2308.12966/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

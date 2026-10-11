@@ -18,7 +18,7 @@
     "original_assets": 6,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "61c14745aa8178cc045a885e0d06f2b6d2424980e9e78afe8bb354defd6bd442",
+  "article_sha256": "0ceef1f83c2b04c386009c796341d5040c23a8f10c24b863c4bad85687d8a14a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -32,5 +32,36 @@
       "Figure 5 all eight examples and Table 3 complete after top-boundary repair.",
       "Correct distinct Tables 6 and 7 complete after repair."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/b23f276af3c7/source.txt",
+        "papers/graphist/arxiv-2404.14368/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "上方对比同一组真实素材的布局，下方 content-aware 表才提供定量证据。",
+          "after": "Figure 5 对比同一组真实素材的布局，Table 3 的 content-aware 结果提供定量证据。",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "61c14745aa8178cc045a885e0d06f2b6d2424980e9e78afe8bb354defd6bd442",
+      "article_sha256": "e8a26656b1f1c6be7cb2268d4e9faef4e0cbc40b50b321c0e92c1a6e03d9d09f",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

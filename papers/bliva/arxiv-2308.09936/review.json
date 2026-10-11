@@ -19,7 +19,7 @@
   "remaining_limitations": [
     "Original v1 inconsistencies are retained and explained; no independent benchmark reproduction"
   ],
-  "article_sha256": "99b4828dbeb513a339e775015e562ec281fc01c5814ff55df275c85010aa66fb",
+  "article_sha256": "64b0bb8826e06d8c07b4350241456eabba8d24f02fab2bce91052e3c46ad947e",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -35,5 +35,114 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
-  }
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/2ec13c8f3442/source.txt",
+        "papers/bliva/arxiv-2308.09936/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "上半部分是 YTTB-VQA 缩略图的长描述、短描述和问答示例；下半部分是不用 OCR tokens 的四个文本图像基准。示例中的正确回答不能替代下方的定量实验。",
+          "after": "Figure 4 展示 YTTB-VQA 缩略图的长描述、短描述和问答示例；Table 1 比较不用 OCR tokens 的四个文本图像基准。示例中的正确回答不能替代定量实验。",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "99b4828dbeb513a339e775015e562ec281fc01c5814ff55df275c85010aa66fb",
+      "article_sha256": "8f1a6c25d98ac16053ca94e0f5bcdff389af5d3cd9befed5c122366f0e622f80",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 23,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "2ec13c8f3442",
+      "path": "papers/bliva/arxiv-2308.09936/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 152,
+          "before": "完整截图",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p007-table-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            52,
+            63,
+            561,
+            157
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-4.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            52,
+            162,
+            561,
+            274
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-5.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            52,
+            280,
+            561,
+            379
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-6.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            316.5,
+            392.95,
+            561.0,
+            495.95
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "64b0bb8826e06d8c07b4350241456eabba8d24f02fab2bce91052e3c46ad947e"
+    }
+  ]
 }

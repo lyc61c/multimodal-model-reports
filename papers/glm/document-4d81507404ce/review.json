@@ -29,5 +29,12 @@
     "量化语言模块与视觉模块区分，6.3/7/9.8/15GB为不同配置",
     "样例非准确率测量，不把CogVLM成绩归到VisualGLM",
     "数学式均为通用解释而非原文公式"
-  ]
+  ],
+  "article_sha256": "b818bdcbc3346fc035ec90b1616885fd00680c448b0c61e4a73f5e27bea402d5",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

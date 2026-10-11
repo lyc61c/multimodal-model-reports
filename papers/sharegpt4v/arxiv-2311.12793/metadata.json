@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "ShareGPT4V：详细图像描述改善视觉语言对齐",
+  "title_zh": "ShareGPT4V：用更充分的图像描述改善视觉语言对齐",
   "source_sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1663,
+  "chinese_characters": 1728,
   "figures_manifest": "figures-manifest.json"
 }

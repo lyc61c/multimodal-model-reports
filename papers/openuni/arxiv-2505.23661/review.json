@@ -34,7 +34,7 @@
     "原文骨干和额外数据版本矛盾保留，未独断实际实现。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "08fc3f7b58b5e627e493d83f5dd72b708e3a66a892dd2b7eb43d2118729da0c8",
+  "article_sha256": "c3821dcce5bac3360d6210de4931495ccc2e56fa7753f8c82b27f6b288673bbb",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -51,5 +51,11 @@
       "Viewed source and crop: Table 4, Table 5 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
       "Viewed source and repaired crops: Figure 2 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 17,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

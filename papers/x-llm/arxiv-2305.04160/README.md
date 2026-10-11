@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [X-LLM](../README.md)
+<!-- article-header:end -->
+
 # X-LLM：把图像、视频和语音映射成语言模型可读的软表示
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 “把模态当作外语”是接口设计类比：非文本信号转换为连续向量，再输入 LLM。它不要求先把图像翻译为离散汉字，也没有训练语音或图像生成器。总参数约 7.6B，包括编码器和 ChatGLM；6B 指语言骨干。（第 4、16 页）
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 输入 | 视觉/语音接口 | 输出及边界 |
@@ -23,6 +37,8 @@
 
 其主要贡献是冻结成熟骨干、训练独立模态接口，并以少量联合指令连接这些接口。论文声称的 84.5% 是特定参考评分比例，不能直接视为 GPT-4 的整体能力比例。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 1：三个 X2L 接口](figures/architecture.png)
@@ -32,6 +48,8 @@
 图像接口用 BLIP-2 第二阶段预训练 Q-Former 初始化，生成 32 个查询表示，再经线性 I-Adapter 对齐 ChatGLM 嵌入维度。视频均匀采样 $T$ 帧，每帧使用相同机制，拼接后长 $32T$；帧数增加会线性增加输入表示数量，本文没有引入专门的跨帧压缩器。（第 4、16 页）
 
 语音接口先由 CIF 将帧级特征压成 token 级表示，再经 12 层 Transformer 建模上下文，使用 bert-base-chinese 初始化，最后经线性 S-Adapter 映射语言空间。I/V/S 三种 Adapter 都是线性层。训练好 CIF-ASR 后，其编码器和 CIF 在后续语言对齐中冻结；ChatGLM 和视觉编码器也冻结。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -47,6 +65,8 @@ $$
 
 其中不存在的模态输入省略，$q$ 是指令；正文说明提示本身不单独计算预测损失。该公式是语言训练目标的解释性展开，而不是论文编号公式。英文 Q-Former 可以作为中文接口初始化，但最终使用约 14M 中文图文对继续训练，因而不能称为完全没有中文图文训练的跨语言零样本模型。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 图文训练集含 CC3M、COCO、VG captions、Flickr30k、SBU、AI Challenger、Wukong。英文数据翻译为中文；Wukong 用 CLIP 相似度大于 0.45 筛出约 10M 对，与其余约 4M 合成 14M。视频使用翻译的 MSRVTT 训练集，表 5 列约 7.7K 样本。（第 15–16 页）
@@ -54,6 +74,8 @@ $$
 语音使用 AISHELL-2 与自建 VSDial-CN。后者把 VisDial 文本翻译为中文，用在 AISHELL-3 上训练的 FastSpeech2 合成问题语音；约 1.2M 对话条目去重后约 370K 独立语音，二者不是同一计数。测试原始问题 2,000 条、人工另写 300 条，手机录音并统一为 16kHz，训练合成语音与测试真实录音有分布差异。
 
 第三阶段表 5 报告约 10K 联合指令，正文分别描述翻译 MiniGPT-4 的 3.5K、选择 AISHELL-2 的 2K、ActivityNet 的 1K、VSDial-CN 的 1K，并使用不同指令模板。上述选择数与最终指令条目数不是逐项可直接相加的同一统计；文中没有给出完整展开去重规则。（第 6、15–16 页）
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -73,6 +95,8 @@ $$
 
 使用 AdamW，$\beta=(0.9,0.98)$、weight decay 0.05、余弦衰减；除 CIF-ASR 外梯度累积 16。图像为 $224^2$，使用随机裁剪与水平翻转。表中接口 batch 4/2 与累积设置并列给出，不应未经说明当成最终全局有效 batch。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 1：90 道问题上的相对评分](figures/visual-evaluation.png)
@@ -88,3 +112,11 @@ BLIP-2 初始化使 4M 配置相对分数从 73.8 到 81.9，支持接口复用�
 *Table 4，PDF 第 9 页。指标为 CER%，越低越好；斜杠表示联合微调前后。*
 
 AISHELL-2 三个设备测试 CER 为 8.7/9.0/9.4，弱于 CIF-ASR 的 6.0/6.4/6.4。VSDial-CN 的仅语音 CER 为 3.4/4.7，加入图像后升至 4.7/6.8；联合微调降为 4.3/6.3，仍未超过仅语音基线。论文展示联合输入能够回答问题，却没有证据支持“加入视觉一定改善 ASR”。视频、视觉语音对话及多模态翻译主要是定性案例，正文承认推理不可靠、事实编造与感知覆盖有限。（第 7、9–10、17 页）
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：VPGTrans](../../vpgtrans/arxiv-2305.01278/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：MultiModal-GPT →](../../multimodal-gpt/arxiv-2305.04790/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

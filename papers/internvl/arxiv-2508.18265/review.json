@@ -46,7 +46,7 @@
     "Missing fulloptimizerreward/routinghyperparameters",
     "Deployment totalvisualhardware notspecified; no perrequestlatencyclaim"
   ],
-  "article_sha256": "791cd84feb28483114ea45df763f55fb3370205c454f5eded63d54740fcd24a8",
+  "article_sha256": "59b3ae2a6936ca4a0555793fe825be51f36c366c07ae0d8d32d56ed40b9deb8f",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -63,5 +63,41 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/3d5274c82d6d/source.txt",
+        "papers/internvl/arxiv-2508.18265/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "完整原页。",
+          "after": "独立图表裁图。",
+          "kind": "crop_caption_clarity"
+        },
+        {
+          "before": "上表包含每个阶段的全部结果，下表区分一轮、两轮 GSPO；",
+          "after": "Table 15 包含每个阶段的结果，Table 16 区分一轮、两轮 GSPO；",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "791cd84feb28483114ea45df763f55fb3370205c454f5eded63d54740fcd24a8",
+      "article_sha256": "5807143acb1484c528a9b370c3e6598867ccf94f802d4feb4904dd7738fe5f0e",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 6,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

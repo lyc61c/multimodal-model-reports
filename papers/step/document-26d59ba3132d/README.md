@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Step](../README.md)
+<!-- article-header:end -->
+
 # Step3：通过模型与系统协同设计降低解码成本
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 本介绍综合官方仓库模型配置与原始评测图片、同仓库明确链接的开放系统论文。后者主动说明不讨论视觉编码器细节，因此它不是完整的数据与多模态训练报告。下文区分模型能力图、系统实测、理论费用估计与尚未披露的训练信息。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 关键问题 | Step3 的处理 |
@@ -24,6 +38,8 @@
 | 结果表达 | 4K、FP8、无 MTP、20 token/s 单请求 SLA 下报告每 GPU 解码吞吐 |
 
 值得关注的结论是：激活参数少并不直接等于解码便宜。成本还受 KV 大小、注意力计算强度、批量、网络通信与实际 GPU 利用率影响。报告针对生成阶段研究这些因素；它没有证明同等比例的整段多模态请求端到端费用下降。（PDF 第 1–5 页）
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -38,6 +54,8 @@
 *来源：PDF 第 12 页。*
 
 AFD 的 attention 实例保存 KV 并计算注意力，FFN 实例保存专家权重并执行前馈计算；两者在每层通过网络传 hidden states。attention→FFN 使用 FP8 表示，FFN→attention 返回 BF16，以保留较高残差精度。它是同一模型计算的部署分离，并非把注意力和 FFN 训练成两个不同模型；也可与 TP、EP 配合。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -79,11 +97,15 @@ $$
 
 更稀疏意味着每专家更难积累足够 token，需要更大总 batch 来摊薄权重读取。每层网络量约 $3HB_{\mathrm{MoE}}$，来自 8-bit dispatch 与 16-bit combine；它又必须满足流水线通信预算。因此专家数和 top-k 应同时考虑网络能力，不能只看每 token 激活量。该模型分析采用理想调度，真实负载不均衡和网络抖动会影响结论。（PDF 第 9–11 页）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 系统报告未公布 Step3 多模态预训练语料规模、图像/视频分布、OCR 标注流程、去重规则或 SFT 数据配比，仓库模型卡也未提供完整数据清单。它明确称视觉编码器约 5B，并暂不讨论其细节。这里不能据“cost-effective”推导模型只用了少量图文数据，或据 tokenizer 名称认定训练数据来自 DeepSeek。
 
 报告可核对的是服务端输入处理：decode batch 按微批编排；attention 实例保留上下文 KV；FFN 收到量化 hidden states、尺度因子及专家分布元数据。StepMesh 预注册 GPU tensor，避免反复序列化或复制，并将接收数据直接放到连续内存切片。这属于推理数据流优化，与训练语料清洗是两个不同层面。（PDF 第 12–13 页）
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -96,6 +118,8 @@ $$
 它表达文本在视觉和提示条件下生成，不足以据此补全原文未公开的训练损失、偏好目标或任务权重。本条目的重点可复查流程是部署：attention、FFN、通信三阶段预算各约 16.6ms，总目标 TPOT 50ms；三组微批错开运行，用 direct RDMA 重叠通信与计算。4K FP8 实测配置使用 2A2F、32 张 GPU、总 batch 6144、三个 2048 微批。
 
 MTP 在此报告中是后续优化方向，作者只给估计收益；已报告 4039 的配置明确没有 MTP。将预计 MTP 加速再乘到实测吞吐，并写为完成验证的结果，会超出原文证据。（PDF 第 14–15 页）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -121,3 +145,11 @@ MTP 在此报告中是后续优化方向，作者只给估计收益；已报告 
 单 attention 层实验另用 4 张 GPU、总 batch 256、BF16 attention：32K 时 H20 上 MFA 1452μs、MLA 4817μs、GQA 3042μs。MLA 在 A800 的值未测试，不能把破折号解释为零延迟。更长上下文和超过 600B upcycling 的部分数字是外推/分析；例如 8K 外推约 2693 和表内实测 2643 应分开。
 
 理论费用分析支持 MFA＋AFD 在既定假设下较低的解码成本，系统测量提供了工程证据；它们不能替代视觉模型结构、训练数据与训练目标的完整披露。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：GLM-4.1V-Thinking](../../glm/arxiv-2507.01006/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：dots.vlm1 →](../../dots/document-bdf40c9e7783/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

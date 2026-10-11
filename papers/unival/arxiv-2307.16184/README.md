@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [UnIVAL](../README.md)
+<!-- article-header:end -->
+
 # UnIVAL：以统一序列任务连接图像、视频、音频与语言
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 UnIVAL 将描述、问答、定位和匹配等任务统一成序列生成，并研究渐进加入模态、任务平衡与微调模型权重合并。它属于小规模统一模型路线，不能仅因目录收录就称为一个数十亿参数的通用聊天大模型。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 统一轴 | 具体做法 |
@@ -22,6 +36,8 @@ UnIVAL 将描述、问答、定位和匹配等任务统一成序列生成，并�
 | 目标 | 条件下一 token 预测，交叉熵训练 |
 
 模型先进行图文、视频文本预训练，**音频描述与文生图是在后续任务微调中加入**。音频微调还使用经过 AudioSet 分类预训练的编码器，所以不能把音频结果解释为无需音频学习的零样本能力。不同任务的定量结果通常来自各自微调模型，权重合并实验另行研究把这些能力组合起来。（第 1、8、11–13 页）
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -36,6 +52,8 @@ UnIVAL 将描述、问答、定位和匹配等任务统一成序列生成，并�
 共享 Transformer 从 BART-base 初始化。图像使用 ImageNet 预训练 ResNet-101，视频使用 Kinetics-400 预训练 3D ResNeXt-101，音频使用 PANN-CNN14。CNN 特征展开为序列，经线性层映射到语言维度，加入模态及位置嵌入，与任务文本拼接。作者保留 CNN 最后一个 block，以减少送入语言模型的 token 数。（第 7、19–20 页）
 
 编码器在输入序列上做双向交互，解码器自回归生成结果，其交叉注意力以解码状态为 query、编码结果为 key/value。框定位输出四个离散位置 token；文生图适配采用 VQ-GAN 离散表示。共享输出格式并不意味着输入端完全没有模态专用模块。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -61,6 +79,8 @@ $$
 
 *Figures 3–4，PDF 第 13 页。插值呈现任务间权衡，域外优势也依赖具体合并流程。*
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练采用公开训练集：图像描述来自 COCO、Visual Genome、SBU、CC3M、CC12M；问答来自 VQAv2、GQA、VG；定位来自 RefCOCO 系列；视频描述与问答来自 WebVid2M、WebVidQA。区域描述、图文/视频文本匹配也被改写为生成任务，匹配负例用随机不对应描述构建。（第 6、20 页）
@@ -68,6 +88,8 @@ $$
 原表 1 的 21.4M 图像任务样本、5M 视频任务样本，与其他表中的 14M 图像、2.5M 视频属于不同样本统计表达；表 4 另有 21.6M 图像任务配置。本文不把这些数字相加为去重的图像数或全部下载文件数。CC12M 仅用于前一阶段，加入视频时移除它。（第 4、7–8 页）
 
 下游音频描述使用 AudioCaps、Clotho v1；文生图使用 COCO。所有输入输出保持同一序列约定，但下游任务的微调数据、分辨率和约束解码各不相同。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -82,9 +104,11 @@ $$
 
 AudioCaps/Clotho 微调 10 epochs、batch 128，采用 64 mel bins。文生图先做 50K steps 交叉熵，再做 5K steps CLIP 分数优化；评测从 24 个生成图像中按 CLIP 选最好者，因此并非单次无筛选生成。（第 22 页）
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
-课程学习的消融在同样 GPU 数上，将每 epoch 时间从 2h04m 减为 1h42m，约快 18%，报告显存约减 25%；成绩接近，RefCOCO+ 70.89→70.19、MSRVTT-QA 42.38→42.27 有小幅下降。它主要支持训练效率改善，不能说所有指标提高。（Table 2）
+课程学习的消融在同样 GPU 数上，将每 epoch 时间从 2h04m 减为 1h42m，耗时减少约 18%（22/124），按这组每 epoch 用时计算，加速比约为 1.22（124/102），报告显存约减 25%；成绩接近，RefCOCO+ 70.89→70.19、MSRVTT-QA 42.38→42.27 有小幅下降。它主要支持训练效率改善，不能说所有指标提高。（Table 2）
 
 定位微调的 RefCOCO testB 为 85.16，高于 OFA-base 的 83.30；RefCOCO+ testA 86.92 则低于 OFA 的 87.15。VQAv2 test-std 77.1 与复现 OFA 相同，COCO CIDEr 137.0 低于 OFA 的 138.1。Table 10 是见过训练任务的数据集上不再微调的评测，Table 11 才侧重未见数据集；两者不应都称为严格数据集零样本。（第 8–11 页）
 
@@ -95,3 +119,11 @@ AudioCaps/Clotho 微调 10 epochs、batch 128，采用 64 mel bins。文生图�
 视频问答准确率为 43.48/49.55，仍低于 LAVENDER 的 45.0/56.6；MSRVTT 描述 CIDEr 60.5 较有竞争力。ActivityNet B@4 为 4.76，低于含转录输入 MV-GPT 的 6.84，原文“显著超过既有方法”必须结合具体对照理解。AudioCaps CIDEr 0.713 高于表中基线，Clotho 0.380 与最好结果持平，其他音频指标并非全领先。文生图 FID 15.4 仍弱于 OFA 的 13.9。（Tables 7–9、19）
 
 权重插值的个别配置将描述 CIDEr 136.52 提升到 138.51，Ratatouille 的域外泛化较强，但不存在所有任务无损合并的保证。正文也记录对象幻觉、细小物体、数字识别和复杂指令困难；统一框架的主要价值在共享训练与迁移方法，不能据此认定模型已经覆盖所有模态和全部任务。（第 12–14 页）
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：3D-LLM](../../3d-llm/arxiv-2307.12981/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：MovieChat →](../../moviechat/arxiv-2307.16449/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -67,5 +67,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "左下是训练表，右下两表分别是数据格式与评测格式，不能把评测提示当额外训练数据。",
+          "after": "Table 5 给出训练超参数，Table 6 比较回答格式提示，Table 7 列出指令训练数据及其格式，Table 8 列出评测格式；不能把评测提示当额外训练数据。",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

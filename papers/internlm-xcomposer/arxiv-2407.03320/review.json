@@ -43,7 +43,7 @@
     "No quantitative article/DPO ablation",
     "No independent96K reliability plot"
   ],
-  "article_sha256": "d9504224af3d90ebfe7d46ffe6798ec839dc8cabf8940d453c0331d47ffceeb1",
+  "article_sha256": "7d4d4cdf1e28d2dee905ff03bb9f4e9fdb0a96d9e94c97d61218182a022c92f0",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -60,5 +60,135 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 75）：Table 3, Table 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 76）：Table 5 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
-  }
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "4ce7489403d3",
+      "path": "papers/internlm-xcomposer/arxiv-2407.03320/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 44,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 99,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 135,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 152,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p006-figure-5.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            307,
+            70,
+            548,
+            462
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p008-table-1.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69,
+            548.12,
+            137
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p008-table-2.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            141.92,
+            298.58,
+            397.16
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p009-table-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69,
+            548.12,
+            213
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p009-table-4.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            214,
+            548.12,
+            336.92
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p010-table-5.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69.05,
+            548.11,
+            206.37
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "7d4d4cdf1e28d2dee905ff03bb9f4e9fdb0a96d9e94c97d61218182a022c92f0"
+    }
+  ]
 }

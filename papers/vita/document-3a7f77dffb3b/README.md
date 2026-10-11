@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VITA](../README.md)
+<!-- article-header:end -->
+
 # VITA-QinYu：在统一语音模型中学习角色扮演与歌唱表达
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -16,6 +28,8 @@
 
 “原生端到端”在论文中描述文本与语音生成的联合模型设计；实际 demo 的轮次检测、打断控制和文字到音色模块仍使用额外组件。模型侧训练与完整交互系统要分开理解。仓库路线图写明歌唱 checkpoint 仍在内部审核，不能因为论文报告歌唱结果，就假设所有歌唱权重均已公开。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 关键设计 | 具体内容 | 作用 |
@@ -28,6 +42,8 @@
 | 交互工程 | 外部 VAD、ASR、turn detector 实现打断与轮次 | 本篇不把系统功能称为无辅助模块的原生全双工训练 |
 
 最有代表性的结果是角色条件下音色相似度明显提高，并且中英文 URO 平均分具有竞争力。歌唱验证了统一语音模型可以学习音乐表达，但在多个主观指标上仍低于 MIDI 条件的专门 SVS 系统，不能只保留摘要中的领先描述。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -42,6 +58,8 @@
 多轮历史保留用户的原始文本或语音查询，助手历史主要保留文字回答、丢弃冗长且与文字重复的语音。角色扮演时，DeepDubbing 的 Text-to-Timbre 模块依据角色描述生成助手 embedding；有参考音频时也可提取音色信息。
 
 系统 demo 使用 SileroVAD 检测语音活动、Whisper 做 ASR，再用 TEN 判断轮次是否结束。检测器触发后把音频送到 VITA-QinYu，用户发声可触发中断。这是实用的交互控制流程，不能据此证明主干在训练时已经直接学习所有连续听说状态。[来源：PDF §3，第 3–5 页。](https://arxiv.org/pdf/2605.06765v1#page=3)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -77,6 +95,8 @@ $$
 
 说话人预训练消融去掉第一阶段中的用户和助手音色信息后，8B 的角色文字与 speaker similarity 均下降，例如相似度从 64.70 到 64.02。这个实验支持预训练时显式音色信息有帮助，但增幅不能替代大规模随机种子和置信区间分析。[来源：PDF 第 4、19–20 页。](https://arxiv.org/pdf/2605.06765v1#page=19)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 3](figures/original-p006-figure-3.png)
@@ -91,6 +111,8 @@ $$
 
 角色与歌唱分别约 2.6K 和 1.2K 小时，与自然对话合计约 15.8K 小时。附录预训练还列出约 867K 小时 TTS（762K 内部、105K 开源）、100K 小时 ASR、18K 小时 SQA 与 11B 文本 tokens。这些是不同任务与单位的规模，不等于仅用 15.8K 小时完成全部训练，也不能简单相加视为唯一不重复的录音总量。[来源：PDF §4 及附录 B，第 5–7、17 页。](https://arxiv.org/pdf/2605.06765v1#page=17)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 更新内容 | 主要设置 |
@@ -102,6 +124,8 @@ $$
 全部数据 packing 到固定 10K token 序列，提高训练利用率。附录对 Stage 0 的 effective batch 写为 1.28M，而后两阶段明确是 tokens；本文保留原报告口径，不擅自把 1.28M 解释成样本数。音频与 speaker encoder 在上述流程中保持冻结。
 
 SQA 即语音问题输入、文字答案输出，被用于保留语言主干理解和推理能力；TTS 和表达性 SFT 则学习如何产生声学输出。训练目标围绕联合序列监督展开，报告没有给出用于本模型的 RL、DPO 或歌唱奖励优化方案，因此这些不纳入已披露训练流程。[来源：PDF 附录 C，第 17 页。](https://arxiv.org/pdf/2605.06765v1#page=17)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -130,3 +154,11 @@ C3 英文 Overall：8B 44.05，Qwen2.5-Omni 51.91；中文：8B 50.70，Qwen2.5-
 URO 的英文 / 中文 Avg 为 8B 76.62 / 76.27，4B 69.54 / 69.48。8B 在这张比较表中两种语言的平均值均最高，但英文 Conversation 73.64 低于 Qwen2.5-Omni 76.16，英文 Reasoning 66.32 也低于其 69.62。因此平均领先不代表所有子能力最好。
 
 附录 ASR、TTS 提供基础语音能力参考：8B 的 LibriSpeech test-clean WER 1.75，Seed-TTS 中文 CER 1.01、英文 WER 2.29。这些转录指标反映内容一致性，不衡量旋律正确或角色表达。整体证据支持统一表达性语音建模的可行性；更广歌曲泛化、同码率 tokenizer 对比、全双工原生训练和完整延迟验证仍需额外研究。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Qwen3.6-Plus](../../qwen/document-67bea1fbb2c5/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Video-MME-v2 →](../../video-mme/arxiv-2604.05015/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -1,0 +1,9 @@
+{
+  "engine": "Local MathJax 3.2.2",
+  "equations": 2803,
+  "failures": [],
+  "validation_date": "2026-10-11",
+  "article_count": 271,
+  "article_manifest_sha256": "fd786dbdf90d0d0e346a9ec62cfc436fbb4abbe00029f12e6b0220d0989e082a",
+  "scope": "Every extracted inline and display math expression outside code was compiled locally. Compilation validates syntax, not mathematical correctness or live GitHub rendering."
+}

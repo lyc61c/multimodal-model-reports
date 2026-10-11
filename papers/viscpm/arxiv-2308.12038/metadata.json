@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "VisCPM：多语言骨干驱动的视觉能力迁移",
+  "title_zh": "VisCPM：以多语言模型为桥梁迁移视觉能力",
   "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1703,
+  "chinese_characters": 1768,
   "figures_manifest": "figures-manifest.json"
 }

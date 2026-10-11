@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Graphist](../README.md)
+<!-- article-header:end -->
+
 # Graphist：从无序素材生成分层平面设计
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **论文**：[Graphic Design with Large Multimodal Model](https://arxiv.org/abs/2404.14368)，依据 2024 年 4 月 22 日 [v1 报告](https://arxiv.org/pdf/2404.14368v1)。作者 Yutao Cheng、Zhao Zhang、Maoke Yang、Hui Nie、Chunyuan Li、Xinglong Wu、Jie Shao，来自 ByteDance 与中国科学院大学。
 
 Graphist 是面向平面设计布局的多模态应用模型。它接收用户已有的图片、装饰和文字素材，输出各元素的坐标、大小与图层顺序，再由渲染器合成海报。其核心任务 **Hierarchical Layout Generation，HLG** 比传统 GLG 多预测图层前后关系，因此用户不必事先把素材按正确遮挡顺序排列。模型不负责凭空生成完整素材集合，评测也不针对通用视觉问答。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -20,6 +34,8 @@ Graphist 是面向平面设计布局的多模态应用模型。它接收用户�
 
 方法的价值是把素材内容、空间数值与排序统一放进序列生成。压缩策略适合这里的布局任务，但不能由“5 个 token 足够排版”推导出同样预算足够完成 OCR、医学图像或复杂空间推理。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
@@ -29,6 +45,8 @@ Graphist 是面向平面设计布局的多模态应用模型。它接收用户�
 透明通道提供素材有效区域的信息。例如文字周围大面积透明像素与字形本身有不同含义，纯 RGB 合成背景可能让模型难以区分它们。初始化时 CLIP 只覆盖原 RGB 参数，新增 alpha 输入要在第一阶段适配。
 
 视觉编码器原始输出为 256 个网格 token 加一个 CLS。压缩后 $V\in\mathbb R^{5\times D}$，投影到语言维度 $V'\in\mathbb R^{5\times D'}$。Figure 2 把投影标为 linear layer，正文称 one MLP layer，报告没有进一步给出多层深度，本文统称投影层。多个素材的 token 可以插入输入序列各处，素材编号把视觉内容与输出条目关联起来。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -40,6 +58,8 @@ Graphist 使用普通数字 token 表达坐标，参考 Shikra 的方式，不�
 
 论文引入 IOPR 衡量重叠元素对中的逆序关系，但 v1 的文字定义称“低值好”，表中却把 Graphist 接近 0.97 的结果当作优势；公式的求和与文字也不完全清晰。本文保留这个矛盾，**不把表中 0.97 换算成已确认的 97% 排序准确率，也不擅自取 1−IOPR 修正**。可靠结论需待实现代码或作者澄清指标口径。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 公开训练采用 ShareGPT4V、Flickr30k 的图像描述以及 Crello 设计数据，第三阶段加入 CGL-V2。Crello 含元素图层顺序、空间坐标、类别等信息，可以构造 GLG 与 HLG。文字先渲染成 RGBA 素材，实现统一输入。报告未披露全部图像预处理细节、字体渲染参数及精确任务采样比例。
@@ -47,6 +67,8 @@ Graphist 使用普通数字 token 表达坐标，参考 Shikra 的方式，不�
 Graphist* 增加内部 IH-RGBA 图文数据和 **80K IH-Design** 平面设计数据。前者用于带透明通道的视觉适配，后者增加领域布局监督；内部图文集规模没有公开。因此带星号版本的收益同时涉及数据增量，不能只归因于一个网络模块。
 
 Crello 的旧版划分为 19,095/1,951/2,375 个训练、验证、测试样本，但本文面对 v2 与当前 v4 的差异，取两版测试集交集，最终评估 **242 个作品**。CGL-V2 则报告 **60,548 训练、1,035 测试**：content-aware 输入背景及文字，content-agnostic 只输入背景，后者自行预测文字、底衬与装饰相关布局信息。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -59,6 +81,8 @@ Crello 的旧版划分为 19,095/1,951/2,375 个训练、验证、测试样本�
 第一阶段让编码器适应 alpha 通道并建立视觉语言连接；第二阶段学习核心布局映射；第三阶段用更长序列和更多任务扩展适用范围。按 Table 1，后两阶段不再列出 patch embedding 更新，编码器其余层也没有列为训练部分。报告给出 Base 训练约 5 天，Tiny 预计约 2 天，但未完整披露 GPU 配置、学习率、优化器与资源成本，不能据此核算吞吐率。
 
 任务通过目标 JSON 或 caption 的序列预测训练。正文没有单列损失公式，也没有报告独立的坐标回归损失、图层排序损失或审美奖励学习，所以不把这种结构化输出误写成额外的多目标优化或强化学习。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -74,7 +98,7 @@ Crello 的旧版划分为 19,095/1,951/2,375 个训练、验证、测试样本�
 
 ![原文 Table 3](figures/original-p012-table-3.png)
 
-**读图：Figure 5/Table 3，PDF 第 12 页。** 上方对比同一组真实素材的布局，下方 content-aware 表才提供定量证据。Graphist* 的 $R_{ali}=0.004$、$R_{ove}=0.002$、$R_{und}=0.996$ 在该表最佳，$R_{occ}=1.000$ 并列最佳；但越低越好的 **$R_{com}=12.150$ 落后于 RADM 的 10.260**。正文“lowest”的说法与表格冲突，应以原表数值为准。content-agnostic 的 Table 4 中，Graphist* 报告 $R_{com}=7.074$、$R_{ali}=0.0003$、$R_{ove}=0.001$、$R_{und}=1.000$，这些项目表现更强。
+**读图：Figure 5/Table 3，PDF 第 12 页。** Figure 5 对比同一组真实素材的布局，Table 3 的 content-aware 结果提供定量证据。Graphist* 的 $R_{ali}=0.004$、$R_{ove}=0.002$、$R_{und}=0.996$ 在该表最佳，$R_{occ}=1.000$ 并列最佳；但越低越好的 **$R_{com}=12.150$ 落后于 RADM 的 10.260**。正文“lowest”的说法与表格冲突，应以原表数值为准。content-agnostic 的 Table 4 中，Graphist* 报告 $R_{com}=7.074$、$R_{ali}=0.0003$、$R_{ove}=0.001$、$R_{und}=1.000$，这些项目表现更强。
 
 ![原文 Table 6](figures/original-p015-table-6.png)
 
@@ -83,3 +107,11 @@ Crello 的旧版划分为 19,095/1,951/2,375 个训练、验证、测试样本�
 **读图：Table 6/Table 7，PDF 第 15 页。** 同规模 Qwen1.5-7B 相对 InternLM2-7B 在 CGL-V2 部分指标更好。Tiny 从 5 增至 17 个视觉 token 后，Crello 的布局评分 5.44→5.47、可读性 4.60→4.67，但图形协调 6.35→6.28、创新 4.94→4.88，属于混合变化，不能宣称更多 token 必然更好。Table 8 比较 RGB-A 与 RGB，前者四项评分 5.44/6.35/4.94/4.60，后者 5.24/6.14/4.62/4.22，支持透明通道在本任务的作用。
 
 这些结果支持领域数据与 RGBA 序列建模改善素材布局，但其优势受任务、版本、成功子集及模型裁判限制。报告同时指出完整素材生成、用户意图与人类审美的一致性仍待进一步研究。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：BRAVE](../../brave/arxiv-2404.07204/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：InternVL 1.5 →](../../internvl/arxiv-2404.16821/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

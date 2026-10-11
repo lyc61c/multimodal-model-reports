@@ -29,5 +29,94 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "verification_notes": [
+    "2026-10-11 targeted content audit: Figure 3 已裁图但仍称完整原页；改为原文图表裁图。"
+  ],
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "逐篇阅读七部分的关键起始段落/表格，检查公开方法公式与主结果摘表；并非全文逐句审计。",
+      "corrections": [
+        "Figure 3 已裁图但仍称完整原页；改为原文图表裁图。"
+      ],
+      "article_sha256": "81347f265de6c0f72671e009cd3655188a08bb123f59b1ce0fbe38f288509d62"
+    }
+  ],
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "85233c027ab7",
+      "path": "papers/internvl/arxiv-2404.16821/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 69,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 129,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 148,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p004-figure-4.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            305.86,
+            54.92,
+            548.11,
+            293.72
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p006-table-2.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47,
+            69,
+            549,
+            342
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p008-figure-6.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69.0,
+            548.13,
+            522.39
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "d97d3ed699ed412fedfed930b30ce3f25de8b9ad2560c1076c4a7fae3dd633c5"
+    }
+  ]
 }

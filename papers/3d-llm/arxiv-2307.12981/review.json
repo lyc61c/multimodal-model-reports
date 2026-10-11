@@ -10,9 +10,10 @@
     "Self-review, not an independent second-model review",
     "All benchmark values are authors' reported results"
   ],
-  "article_sha256": "ee4bba204ee1da0b7a1a22b0360b568c527ac943c44bb9fd0ce945090c7d3653",
+  "article_sha256": "fe29ed7e08b401dedbfe65b6871563e57fb8aadd1447fbcc6ccc9ee7ff54c5bf",
   "checks": [
-    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
+    "2026-10-11 targeted content audit: Figure 2 裁图仍写页面上半部分；改为图中三条合成路径。"
   ],
   "artifact_checks": {
     "original_assets": 5,
@@ -27,5 +28,33 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "kind": "targeted_source_and_math_check",
+      "scope": "通读七部分正文。",
+      "corrections": [
+        "Figure 2 裁图仍写页面上半部分；改为图中三条合成路径。"
+      ],
+      "source_checks": [
+        {
+          "claim": "ScanQA 验证集 BLIP2-FlanT5 BLEU-1 39.3，CIDEr 69.4、EM 20.5 同行对应",
+          "source_file": "source/papers/0809c95bdef1/source.txt",
+          "source_query": "39.3",
+          "pdf_page": 8,
+          "result": "对应主张在固定原文缓存中得到支持；范围限于此处记录。"
+        }
+      ],
+      "visual_crops_inspected": [
+        "original-p004-figure-2.png"
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

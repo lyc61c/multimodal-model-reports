@@ -36,7 +36,7 @@
     "Figure1雷达MMMU43.1与Table9的43.8不同，以Table9为准",
     "通道拼接公式和生成目标是解释式，非新损失；所有指标非单调改善"
   ],
-  "article_sha256": "d1dd6ba40a3f9268afb1a180ebae600f369b181652b3e569ace9999d6fef4011",
+  "article_sha256": "d817c41b773e93417d004c5e4b08daf796d6adfdcb7af3acb11c0b135c2f3fa1",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -50,5 +50,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

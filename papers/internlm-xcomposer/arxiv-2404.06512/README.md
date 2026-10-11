@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [InternLM-XComposer](../README.md)
+<!-- article-header:end -->
+
 # InternLM-XComposer2-4KHD：动态分块与二维结构保留的高分辨率视觉语言模型
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **论文**：[InternLM-XComposer2-4KHD: A Pioneering Large Vision-Language Model Handling Resolutions from 336 Pixels to 4K HD](https://arxiv.org/abs/2404.06512)，依据 2024 年 4 月 9 日 [v1 报告](https://arxiv.org/pdf/2404.06512v1)。作者 Xiaoyi Dong、Pan Zhang、Yuhang Zang 等来自上海人工智能实验室、香港中文大学、商汤和清华大学。
 
 它继承 XComposer2 的视觉语言架构，把重点放在**长宽比各异的高分辨率文档、图表与信息图**。语言基座为 InternLM2-7B；Table 5 将完整模型标为 8B，因此“7B”主要指语言基座，不能把视觉编码器等参数当作不存在。本文中的“4KHD”按作者口径为 **3840×1600**，不替换为通常显示屏的 3840×2160。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -21,6 +35,8 @@
 
 这套方案没有让单次 ViT 直接处理整幅 4K 图像，而是复用固定分辨率编码器处理更多局部块。更多块会增加语言侧序列长度与计算，四分之一压缩和混合分辨率用于控制成本，并没有消除高分辨率开销。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 4](figures/original-p005-figure-4.png)
@@ -30,6 +46,8 @@
 一张大图的局部块各自可见细字，却可能缺乏全文布局；全局图有布局，却可能看不清小字。两路互补，语言模型同时获得宏观结构与细节。分块后重新组装特征图也不同于把所有块任意串起来：局部顺序与行边界有明确结构约束。
 
 架构沿用轻量视觉编码器、InternLM2 和 Partial LoRA。当前报告将 Partial LoRA 的完整设计指向前代论文，本文仅依据本报告已披露的作用和 rank 描述，不补造未在这里展开的内部路由。高分辨率能力来自输入处理、结构标记与训练策略共同调整，不能只解释为增加语言模型参数。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -47,6 +65,8 @@ ViT 每块输出 24×24=576 个网格 token，相邻四个特征沿通道拼接�
 
 动态分辨率同时用于训练增强：普通任务在原尺寸与 HD-25 预算之间变化，模型不只适应一个固定 token 数。高密度文字任务用 HD-55。这样训练后可以试更高推理分辨率，但原文实验显示增益受任务影响，不能把“超出训练分辨率”解释为任意尺寸都保持正确。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练沿用三类目的：通用语义对齐、世界知识对齐、视觉能力增强。Table 1 包含 ShareGPT4V-PT、COCO、NoCaps、TextCaps、LAION400M、SBU、CC3M、Concept Data；视觉增强部分包括 WanJuan、Flickr、MMC-Inst，以及 RCTW-17、CTW、LSVT、ReCTs、ArT 等文字数据。重点增加 OCR 与结构图像来源，支持高分辨率训练。
@@ -55,6 +75,8 @@ SFT 的 Table 2 按任务列出 caption、一般 QA、科学图解、图表、�
 
 InfoVQA 有一半图像长边超过 2000 像素，说明简单缩图容易损失文字细节。普通感知任务对分辨率相对不敏感，因此数据来源决定分辨率策略。多源数据按规模进行加权抽样，HD-55 因视觉 token 更多还调整 loader 的 batch 与采样权重。报告未列完整数据总量、最终权重、去重规则与清洗阈值，本文不把来源列表当作已公开完整可复现数据配方。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 **预训练**冻结 LLM 主体，微调视觉编码器及 Partial LoRA，使用 HD-25。Partial LoRA 在 decoder 各线性层采用 **rank 256**；分隔和换行 token 随机初始化。batch **4096**、**2 epoch**；前 1% 步数线性 warmup 到 $2\times10^{-4}$，之后余弦衰减到零。视觉编码器采用 layer-wise learning rate decay，系数 **0.90**，用于降低对原有视觉知识的扰动。
@@ -62,6 +84,8 @@ InfoVQA 有一半图像长边超过 2000 像素，说明简单缩图容易损失
 **SFT**联合训练各组件，batch **2048**，共 **3500 步**，最大学习率 $5\times10^{-5}$。视觉侧继续采用 0.9 层间衰减；LLM 学习率固定乘 **0.2**，相对减慢语言侧更新。HD-OCR QA 使用 HD-55，其他任务在原尺寸与 HD-25 范围间动态变化。这里公开的总 batch 不代表两种分辨率每一步都使用完全相同的实际图片数。
 
 训练围绕视觉条件下的语言生成与监督回答。当前报告没有单列损失公式，也没有宣布独立的 OCR 坐标损失、图表结构监督或强化学习奖励，不能据题名补充这些算法。其可验证的训练贡献是冻结与解冻策略、分辨率混合、结构标记和学习率配置。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -104,3 +128,11 @@ OCRBench 这里沿用原表的 67.5 数值口径，不写成 1000 分量表的�
 **读图：Table 7–9，PDF 第 9 页。** HD-9 去掉全局视图，MMBench **79.5→75.1**、MME **2201→2019**；说明局部块难独自提供稳定全局理解。4KHD 加换行标记后 DocVQA val **88.1→89.0**、InfoVQA val **67.4→69.3**、TextVQA **75.9→77.2**，但 MME **2232→2205**，并非全指标变好。相同压缩率下 Concat 与 C-Abstractor 接近：InfoVQA **69.3 对 69.5**；Re-Sampler 为 **67.1**。简单拼接是一种有效选择，表格不支持它全面优于所有连接器。
 
 本报告最强证据是高分辨率文字任务的提升及结构消融。更高分辨率的上限因计算成本未探索；超长信息图案例证明可处理部分输入，不等于任意尺寸的稳健性或准确率保证。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：MA-LMM](../../ma-lmm/arxiv-2404.05726/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：BRAVE →](../../brave/arxiv-2404.07204/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

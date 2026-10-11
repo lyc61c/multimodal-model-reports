@@ -20,7 +20,7 @@
     "original_assets": 6,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "3ab3a07f359e3246c25148683b0d1d756ab0fc4b8b63c5ca4276f75f2841b782",
+  "article_sha256": "046d36f149229efd804d07b2cd67f75dd7f990d3211c4b0c401f41444804fc1c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -34,5 +34,12 @@
       "Figure 4 three comparative examples and Table 2 complete.",
       "Figure 5 examples and Table 3 training-task ablation complete."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

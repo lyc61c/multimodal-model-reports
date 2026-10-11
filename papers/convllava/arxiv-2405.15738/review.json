@@ -10,7 +10,7 @@
     "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "model_execution": "not_run",
-  "article_sha256": "4e807990d8f80361cf079d565fbbf19687dbd29a546c58a9f1fd2648a4a60528",
+  "article_sha256": "e55d0af916ec11680b0c878e1bbe64f73ff52f6221f390b8408475a3ea3116c0",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -23,5 +23,11 @@
       "Tables 5 and 6 complete, captions and all model rows visible.",
       "Tables 14 and 15 complete with training data and optimizer rows."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

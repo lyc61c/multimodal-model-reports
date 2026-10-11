@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [SliME](../README.md)
+<!-- article-header:end -->
+
 # SliME：保留全局上下文，压缩并按问题选择局部细节
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 论文关注高分辨率切片的两个问题：局部 token 容易淹没全局上下文；全局映射较容易学习，直接联合训练可能让模型忽略局部压缩模块。SliME 因此给两条分支安排不同表示方式和训练顺序。这里的“专家”是视觉适配器中的 MLP 与查询模块，并不是把语言模型改成稀疏 MoE。（§1–2）
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 设计 | 作用与代价 |
@@ -25,6 +39,8 @@
 
 Llama3-8B 版本在 Table 1 的 MMBench 得到 75.00，在 Table 2 的 MathVista 得到 43.30。表现支持“较少但相关的局部 token 有用”，并不意味着所有指标领先：MM-Vet、MMMU 与部分数学测试仍低于表中的商业模型。（PDF 第 7–8 页）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2：切片、全局混合、局部压缩与联合训练](figures/architecture.png)
@@ -34,6 +50,8 @@ Llama3-8B 版本在 Table 1 的 MMBench 得到 75.00，在 Table 2 的 MathVista
 原图先生成一个填充、缩放后的 336×336 全局视图，再根据宽高选择局部网格。候选网格的两个方向最大到 6；每个局部块独立编码。全局特征分别经过 MLP 和基于可学习查询的注意力模块，由门控加权混合后进入 LLM。全局分支保留 token 数量，避免把场景关系全部压缩到少量摘要。（§2.1）
 
 局部特征先经过查询 Transformer，再投影到语言空间。文本引导路由器根据当前问题选择相关局部 token；这些 token 与全局表示一起作为 LLM 的视觉输入。论文脚注明确：文中小写 qformer 表示通用查询机制，不等于使用 BLIP-2 的完整 Q-Former 方法或其初始化。（§2、脚注 1）
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -56,6 +74,8 @@ $\gamma=75\%$ 表示累计相关性质量的阈值，不能解读为固定保留
 
 **交替学习的解释边界。** 作者用 $\frac12\|uv^\top-X\|_F^2$ 的秩一双线性近似说明两个模块的优化相互影响。固定一侧求解另一侧可形成类似幂迭代的更新。该简化分析不是完整 Transformer 的收敛证明：幂迭代还需要初始化含主特征方向、特征值幅值有间隔等条件，不能把论文的“保证收敛”直接推广到任意多模态网络。（§2.3、附录 C）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 3：科学图示、几何、表格与图表推理样例](figures/smr-data.png)
@@ -65,6 +85,8 @@ $\gamma=75\%$ 表示累计相关性质量的阈值，不能解读为固定保留
 SMR 汇集 Arxiv-QA、ScienceQA、TextBookQA、GeoQA、Geometry3K、TabMWP、DVQA、AI2D、ChartQA 等公开资源。部分任务提供中间推理步骤，例如 Arxiv-QA、几何题和表格数学题；这些步骤进入监督答案，让模型学习利用图中标注解释结果。正文还提到 MATH-Vision，因此必须结合训练划分判断评测独立性，不能默认所有数学评测都完全零样本。（§2.4、附录 B）
 
 清理包括模糊图像、错乱文字、不相关图文和错误推理链；作者用 GPT-4V 重建部分错误推理过程。论文概述总体约 200 万训练数据，但未在该版本完整列出各阶段最终混合配比。图示 DVQA 200K、ChartQA 28.3K，与附录实际选取 DVQA 100K、ChartQA 人工问答 9.6K 不同，本文保留这一区别。作者声称检查了训练测试泄漏，但未给出足够细节供本文独立验证。（第 6、9、15 页）
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -77,6 +99,8 @@ SMR 汇集 Arxiv-QA、ScienceQA、TextBookQA、GeoQA、Geometry3K、TabMWP、DVQ
 配置表给出 AdamW、BF16、weight decay 0、warmup 比例 0.03、余弦退火和 1 epoch；使用 8 张 A100 80GB。视觉编码器在 Figure 2 三阶段均标为冻结。13B 配置与 Vicuna-7B 类似；附录另列 70B LoRA 设置，不能据此宣称主结果表验证了 70B 的完整表现。（第 5、7、20 页）
 
 文本答案的自回归监督可以解释为 $\mathcal L=-\sum_t\log p_\theta(y_t\mid y_{<t},I,q)$；这是对指令训练目标的通用说明，论文并未给出额外的独立路由奖励函数。三阶段在这里主要解决模块学习失衡；作者同时承认它延长训练时间，未提供可把 token 减少换算为固定端到端加速倍数的完整测速表。（§4）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -97,3 +121,11 @@ Table 4 的受控消融更直接支持训练设计：联合端到端方案 TextV
 需要保留两处读表限制：Table 3 的 Final 行 POPE 是 84.9，与 Table 2 的 86.0 不一致，本文分别注明来源；LoRA 的 MathVista 43.60 略高于全量版本 43.30，却在 LLaVA-Bench 从 73.90 降到 64.90。附录展示其对短答案提示更敏感，这支持特定设置下的指令遵循问题，不能推导成 LoRA 普遍不可用。（第 7–9、19–21 页）
 
 **来源说明：** 本文固定依据 v1。图表保留原始标注；数值、设置与限制均按正文和附录区分，未复现模型训练。来源与裁切坐标见 [图片清单](figures-manifest.json)。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：VideoLLaMA 2](../../videollama/arxiv-2406.07476/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Comparison Visual Instruction Tuning →](../../comparison-visual-instruction-tuning/arxiv-2406.09240/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

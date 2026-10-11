@@ -19,5 +19,12 @@
     "动态评测图无直接静态原图，采用真实JS结果表，不伪造截图",
     "无完整harness、音频专项实验或训练复现信息"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "fcb52cd38552b4cd7f822a0c5655396c64c602eac492ab0d038421dcc86fe710",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

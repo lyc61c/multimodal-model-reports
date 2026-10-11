@@ -55,5 +55,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照 context/content 双 token 架构及视频表；修复 Mean 后缺失的 left 命令反斜线，数学内容不变，根代理 MathJax 已定位缺配括号。",
+      "changes": [
+        "修复 \\operatorname{Mean}_{M}\\!left[ 为 \\operatorname{Mean}_{M}\\!\\left[；配对 right 命令，不改变计算。"
+      ],
+      "article_sha256": "3d09cca498674834c92608196a4f3f394e006eb47622d38afab054884b92bfa2",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ]
 }

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Yi-VL](../README.md)
+<!-- article-header:end -->
+
 # Yi-VL：以可训练视觉编码器和分辨率递进构建中英双语视觉助手
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -16,6 +28,8 @@ Yi-VL 是 Yi 语言模型的视觉扩展分支。技术报告还包含语言预�
 
 模型沿用 LLaVA 式的视觉编码器、投影模块与语言模型组织方式，重点在于让视觉侧参与训练、提高输入分辨率，并在中英双语图文数据上递进训练。它的输出仍是文字，不包含原生图像生成或语音生成分支。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 设计 | 具体选择 | 为什么有意义 |
@@ -29,6 +43,8 @@ Yi-VL 是 Yi 语言模型的视觉扩展分支。技术报告还包含语言预�
 
 理解本模型最有效的顺序是看 Figure 7 的三阶段火焰/雪花标记，再对照各阶段的数据、分辨率和学习率。参数更新范围与数据分布一起改变，所以最终提升不能仅归因于“图片变大”。[来源：PDF 第 15–17 页。](https://arxiv.org/pdf/2403.04652v1#page=15)
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 7](figures/original-p016-figure-7.png)
@@ -40,6 +56,8 @@ Yi-VL 是 Yi 语言模型的视觉扩展分支。技术报告还包含语言预�
 语言侧采用稠密 decoder-only Transformer，6B 与 34B 主干分别为 32 层和 60 层，隐藏维度 4096 和 7168；报告 Table 1 的 Q/KV 头数分别为 32/4 和 56/8。它们描述语言基础模型，不能据此将整个视觉系统的总参数或显存直接等同于型号名中的 6B、34B。
 
 官方 VL README 补充说明：图像占位符使用 `<image_placeholder>`，系统提示包含中英双语说明；相较 LLaVA，在两层 MLP 投影中加入 LayerNorm，并训练 ViT 参数。占位符和提示规定输入格式，真正传递视觉信息的是投影后的图像特征，不能将字符串占位符本身误当成图像内容。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -66,6 +84,8 @@ ViT-H/14 的 patch 边长为 14。在只计 patch 网格、不计特殊 token �
 
 Yi 主干使用 GQA，让多组 query head 共享较少的 key/value head，降低 KV 表示的成本；同时使用 SwiGLU 和 RoPE。它们来自语言基础模型，不是 Yi-VL 单独提出的视觉创新。视觉扩展的贡献是将双语 Chat 模型与可训练视觉模块、大规模图文训练以及最终多模态对话统一起来。[来源：PDF §2.3、§7.2。](https://arxiv.org/pdf/2403.04652v1#page=6)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 1](figures/original-p004-figure-1.png)
@@ -86,6 +106,8 @@ Yi-VL 的数据按阶段组织：
 
 语言 Chat 模型使用少于 10K 的精修指令数据，是家族报告的另一部分；Yi-VL 第三阶段的约 1M 图文对是不同的统计范围，不能称整个 Yi-VL 只用“不到一万条指令”训练。[来源：PDF §2.1、§3.1、§7.2。](https://arxiv.org/pdf/2403.04652v1#page=16)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 分辨率 | 更新范围 | batch / learning rate / gradient clip / epochs |
@@ -99,6 +121,8 @@ Yi-VL 的数据按阶段组织：
 从任务行为看，模型在图文条件下学习生成目标答案。可用条件负对数似然 $-\sum_t\log p(y_t\mid I,x,y_{<t})$ 解释生成监督，但 §7.2 未单独展开损失公式、具体 loss mask 或额外辅助项，本文不将概念重述当成完整训练代码。也没有证据表明这三个视觉阶段都采用 RL 或偏好优化。
 
 分阶段的关键不是一个通用口号，而是明确的冻结状态与数据转换：语言模型先提供稳定的双语语义空间，视觉模块适应该空间，再共同优化对话任务。是否比始终冻结 ViT 或从第一步联合训练更优，报告没有给出专门控制实验。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -121,3 +145,11 @@ Yi-VL 的数据按阶段组织：
 表格是发布时榜单式比较，报告没有在该处提供所有模型统一重测的提示、随机种子或置信区间。它的 test 成绩也不能和别篇报告的 MMMU validation、不同 CoT 设置或更新版本直接拼接排名。Figure 7 的猫图详细描述是定性示例，说明模型能够生成细节丰富的描述，但不代替系统性幻觉或 OCR 测试。
 
 公开证据支持双语视觉扩展与三阶段训练方案，并展示 MMMU 的竞争力。更细的结论，例如 LayerNorm 的单独增益、分辨率变化贡献、视觉微调是否影响纯文本能力，以及高分辨率 OCR 的上限，需要额外消融或评测；本篇不把家族语言模型的其他成绩自动转归 Yi-VL。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：SpatialVLM](../../spatialvlm/arxiv-2401.12168/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：InternLM-XComposer2 →](../../internlm-xcomposer/arxiv-2401.16420/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

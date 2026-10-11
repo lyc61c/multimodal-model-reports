@@ -34,5 +34,126 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "783b062a88f0",
+      "path": "papers/kimi/arxiv-2602.02276/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 48,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 107,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 138,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 158,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "cropped_prose_reference",
+          "before": "下方为 PARL 训练设置与奖励描述。",
+          "after": "PARL 训练设置与奖励见原文 §3。"
+        },
+        {
+          "kind": "cropped_prose_reference",
+          "before": "表下正文详细说明图像视频编码与短暂投影器对齐。",
+          "after": "图像视频编码与短暂投影器对齐分别见原文 §4.2、§4.3。"
+        }
+      ],
+      "source_checks": [
+        {
+          "file": "source/papers/783b062a88f0/source.txt",
+          "source_version": "2602.02276v1",
+          "lines": "200–244",
+          "scope": "§3 Agent Swarm 的 Architecture and Learning Setup/PARL Reward；原文未将其编号为 §3.2。"
+        },
+        {
+          "file": "source/papers/783b062a88f0/source.txt",
+          "source_version": "2602.02276v1",
+          "lines": "320–352",
+          "scope": "§4.2 MoonViT-3D 与视频时空编码；§4.3 ViT Training Stage 的短暂仅更新 MLP projector 对齐。§2.2 实为 Zero-Vision SFT。"
+        }
+      ],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p005-figure-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            69.0,
+            54.59,
+            543.0,
+            316.45
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            69,
+            61,
+            543,
+            204
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p012-table-4.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            69,
+            41.64,
+            547.64,
+            706
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p015-figure-8.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            69.0,
+            54.6,
+            543.0,
+            255.47
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [
+        "figures/original-p005-figure-3.png"
+      ],
+      "article_sha256": "f08b3907b113eb29958616749889f1e54de28cd52bc6b2d89e999c4e8a6397b7"
+    }
+  ]
 }

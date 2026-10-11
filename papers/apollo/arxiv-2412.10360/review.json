@@ -53,7 +53,7 @@
     "模型配置仅支持本实验结论，不能声称全部7B每项都胜出",
     "未披露完整最终训练时长、GPU小时及峰值显存"
   ],
-  "article_sha256": "c5548294172a1edb9bbd4c29ddcf1cad5efca9cdc4d8e67deabc847376b158d1",
+  "article_sha256": "d1578988e40a285f44e1409c9e33dccc7c93f2e0f004e7f92f324bb560252f03",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -67,5 +67,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

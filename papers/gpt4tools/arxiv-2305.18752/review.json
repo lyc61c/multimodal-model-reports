@@ -48,7 +48,7 @@
     "OPT LR and final dataset proportion inconsistencies preserved",
     "GPU/time/precision not disclosed"
   ],
-  "article_sha256": "91fb26039fe04b31e0f7b5291094afe80bd687e144aac227fa5845308c832e37",
+  "article_sha256": "928e2b274312c5fd9496ff92b29ab03417acd9087e48d33244a2acfbf4b1bf93",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -62,5 +62,11 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 67）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 68）：Table 12 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 16,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

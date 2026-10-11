@@ -37,7 +37,7 @@
     "商品描述的图像不可验证信息已指出"
   ],
   "model_execution": "not_run",
-  "article_sha256": "b07650e2d9e52b10aa960ed4061bed4e1c7da883bea9f1c6acf48bc4fb8ba2e3",
+  "article_sha256": "078f060ba77dc449bd42da5f32554c2201eb02fd381c8973e87b920e6e1c4c2b",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -54,5 +54,11 @@
       "Viewed source and crop: Figure 5 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded.",
       "Viewed source and crop: Figure 9, Figure 10 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 5,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

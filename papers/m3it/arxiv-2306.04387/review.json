@@ -33,7 +33,7 @@
     "翻译筛选非逐句母语校验；GPT4不看图；三处源文数字/描述口径差异记录。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "50b3a72fd4b9eb49baffff10e738a9c1b47a4a9f4e3e49233c795064403363e7",
+  "article_sha256": "55f90424b0e44ff7ce799421f18e60009ab746f1d477d31794e7fcf184af7d56",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -50,5 +50,12 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 19,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

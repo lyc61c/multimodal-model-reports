@@ -10,5 +10,6 @@
   "document_kind": "model_release",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "dots.vlm1：从原生分辨率视觉预训练到DeepSeek-V3多模态适配"
+  "title_zh": "dots.vlm1：从原生分辨率视觉预训练到 DeepSeek-V3 多模态适配",
+  "chinese_characters": 2710
 }

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VaQuitA](../README.md)
+<!-- article-header:end -->
+
 # VaQuitA：在抽帧与特征融合两处对齐视频和问题
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -10,6 +22,8 @@
 | 定位 | 冻结视觉与语言骨干，训练视频重采样及问题条件连接模块的视频问答模型 |
 
 VaQuitA 针对“视频特征经过简单投影就交给语言模型”的方案，加入问题相关抽帧与特征交互。它处理完整视频上的问答和多轮对话，并非持续接收摄像头输入的流式系统。上游没有列出代码地址，不能用“没有代码链接”推断仓库 star 为零。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -25,6 +39,8 @@ VaQuitA 针对“视频特征经过简单投影就交给语言模型”的方案
 
 100×256=25,600 个 patch 被重采样到 356 个 latent，降低语言模型输入开销。但 CLIP 编码和重采样仍需要计算，原文未提供端到端速度或吞吐测量，压缩比不能直接当作加速倍数。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2：总体架构](figures/framework.png)
@@ -38,6 +54,8 @@ Video Perceiver 给逐帧特征加时间编码，然后展平为 $Tn\times d$。
 ![原文 Figure 3、4：数据与特征对齐](figures/alignment.png)
 
 *原文 Figure 3、4，PDF 第 4 页；同时保留相邻抽帧公式。*
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -60,6 +78,8 @@ $$
 
 注意力和前馈输出由两个可学习标量的 tanh 门控后加入残差：$M'=O_a\tanh(g_{attn})+MW_M$，$M''=\mathrm{FFN}(M')\tanh(g_{ff})+M'$。原文式 (6) 写逐头输出拼接，同时为每头 $W_O$ 标注输出维度 $d_{text}$；按字面会与残差宽度不一致，完整多头合并投影的维度说明不足。这里保留其机制，不将该符号记法当作可直接运行的实现。（第 5 页）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 论文使用已有的约 10 万条视频指令数据 [VideoInstruct-100K](https://huggingface.co/datasets/MBZUAI/VideoInstruct-100K)，没有贡献另一套新的视频标注集。其创新性数据处理主要是问题条件的训练抽帧：同一视频遇到不同问题，可以选出不同的高相关帧。（第 6 页）
@@ -68,6 +88,8 @@ $$
 
 正文明确因推理效率改用均匀抽帧，所以“训练时看关键帧”与“测试每次都检索关键帧”是不同设置。文中提及的额外测试检索示例没有包含在所核验 v1 PDF 中，不能据此补写整体检索推理收益或延迟。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 可训练参数为 Text Tokenizer、Video Perceiver 与 VQ-Former；视觉编码器、语言骨干、抽帧 CLIP 冻结。作者采用带平滑的负对数似然，让连接模块学习为冻结语言模型提供可用的视频与问题上下文。（第 5 页）
@@ -75,6 +97,8 @@ $$
 训练 3 个 epoch，学习率 2×10⁻⁵，总 batch 32，使用 8 张 A100 80GB。注意力采用 8 头、每头维度 64，Video Perceiver 为一层。作者报告推理单卡约 15GB 显存即可，但没有给出该陈述对应的完整延迟条件。（第 6 页）
 
 原文未披露 label smoothing 系数、完整优化器调度或额外对齐预训练配方，因此这里不从相近模型推测。`Please be critical` 在测试阶段加入，没有引入新训练损失，也不是自我反思循环或多轮答案修订算法。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -99,3 +123,11 @@ MSRVTT-QA 仅特征对齐时为 59.7，加入训练抽帧达到 68.5，再加提
 在该训练规模下，增加 Perceiver 深度降低了准确率；Figure 6 的另一初始化分支也出现 50.8 的单层结果，不能把主表 48.8 描述为所有消融配置中的最大值。多轮能力由 Figure 5 的两个案例展示，没有大样本多轮指标。证据支持对齐模块的价值，但尚不足以证明普遍的长视频、在线速度或交互可靠性。
 
 所有配图来自上述原论文；[来源清单](figures-manifest.json)。未在本仓库重新训练复现。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：TimeChat](../../timechat/arxiv-2312.02051/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Gemini 初代 →](../../gemini/document-044099a491e0/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

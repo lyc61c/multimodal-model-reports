@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "DeepSeek-OCR：用少量视觉token读取文档与探索光学上下文压缩",
-  "chinese_characters": 2238,
+  "title_zh": "DeepSeek-OCR：用少量视觉 token 读取文档与探索光学上下文压缩",
+  "chinese_characters": 2305,
   "figure_revision_date": "2026-10-09"
 }

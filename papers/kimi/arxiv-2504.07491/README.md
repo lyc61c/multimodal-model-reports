@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Kimi](../README.md)
+<!-- article-header:end -->
+
 # Kimi-VL：原生分辨率、长上下文与稀疏多模态推理
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **报告**：[Kimi-VL Technical Report](https://arxiv.org/abs/2504.07491)，作者为 Moonshot AI 的 **Kimi Team**，本文依据 2025 年 4 月 10 日 [v1](https://arxiv.org/pdf/2504.07491v1)。介绍标准 **Kimi-VL-A3B** 与额外后训练的 **Kimi-VL-Thinking-A3B**，不混入之后的 Kimi-VL 更新版本。
 
 模型由 400M MoonViT、投影层和 Moonlight MoE 语言模型组成，处理图像、多图、视频、文档与 GUI 截图，输出语言或代理动作文本。语言侧总约 **16B、激活 2.8B**，视觉侧另外约 **0.4B**；A3B 描述稀疏激活规模，不能理解为整个模型只需存储 3B 权重。Table 3 的总参数栏作16B量级报告，精确参数与部署显存不能由这里反推。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -21,6 +35,8 @@
 
 “原生分辨率”表示编码器接受可变 patch 网格，不等于所有图片无任何缩放限制；训练仍采用逐步放开分辨率的采样策略。本文没有完整公开固定最大像素、patch size、MoE 专家个数和 top-k 路由超参数，因此不凭其他模型配置补齐。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 3](figures/original-p003-figure-3.png)
@@ -32,6 +48,8 @@ MoonViT 从 SigLIP-SO-400M 持续训练。图像划分为 patch 后展平成一�
 原 SigLIP 绝对位置嵌入通过插值保留已有知识，2D RoPE 沿高宽编码更精细的位置，两者结合适配高分辨率。随后 2×2 pixel shuffle 把四个空间位置重排到通道，将序列数约降为四分之一，再经两层 MLP 对齐。它是空间信息重排，不是丢掉四分之三特征的随机采样。
 
 MoE 从 Moonlight 的 5.2T 纯文本、8K 上下文中间检查点继续训练，联合更新阶段混入文本与视觉。它不是先完成全部语言训练再只训练一个冻结语言模型外的视觉适配器。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -57,6 +75,8 @@ $x$ 是问题，$y$ 是答案，$z$ 是生成的推理过程；正确性奖励�
 
 优化使用增强 Muon，加入 weight decay、调整参数更新尺度并实现 ZeRO-1 分布式版本。报告描述这些改动但未推导全部矩阵更新公式，本文不补写成未经核验的数学实现。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练多模态数据包含 caption、图文交错、OCR、知识、视频、代理六类。中英文 caption 结合公开与内部来源，过滤重复和弱图文相关项，严格限制合成 caption 占比以减轻幻觉。交错数据来自教材、网页、教程等，并重排图文顺序，保留多图知识与长上下文结构。
@@ -66,6 +86,8 @@ OCR 覆盖多语言、密集布局、手写、多页文档，以及图表、几�
 代理数据在批量虚拟机中通过启发式方法收集截图—动作，形成 dense grounding 与连续轨迹；桌面、移动端、网页有不同动作空间，还加入图标知识和人工多步轨迹配合合成 CoT。视频既包括细粒度短片也包括长视频，采用 dense caption 管线并限制合成比例。报告没有公开各类全部样本量、过滤阈值和精确混合权重。
 
 SFT 非推理任务先人工构造种子数据、训练 seed model，再为多种提示采样多个回答，由标注员排序并修订最佳回答；可验证推理任务采用规则/模型验证的 rejection sampling 扩充。普通 SFT **文本 token 与图像 token 约1:1**，不是样本数各半。长 CoT 数据由带真值 QA 和 Kimi k1.5 多轨迹采样构建，奖励模型与规则过滤错误轨迹；没有披露全部推理数据规模。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -85,6 +107,8 @@ SFT 非推理任务先人工构造种子数据、训练 seed model，再为多�
 标准版 SFT 更新视觉塔、MLP、语言模型，ChatML 格式，仅对答案和特殊 token 监督，system/user 内容遮蔽。先32K训练1 epoch，LR从 $2\times10^{-5}$ 降至 $2\times10^{-6}$；再128K训练1 epoch，re-warmup至 $10^{-5}$，末尾降至 $10^{-6}$，多样本 packing 提高效率。Thinking 再用小而高质量的长CoT进行轻量SFT，然后进行上节RL。未公开所有预训练LR、batch、RL步数等细节，不能补造。
 
 工程侧结合 DP/EP/PP/CP 四维并行、ZeRO-1、选择性激活重算。作者报告优化后训练吞吐比7B稠密VLM高约60%，但未给完整同硬件复现表，因此它是该训练系统对比，不能当作所有部署环境下固定加速比例。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -118,3 +142,11 @@ GUI单步：ScreenSpot-V2 **92.8**（正文另写92.0）、ScreenSpot-Pro **34.5
 **读图：Table 4/Figure 13，PDF 第 17 页。** Thinking在MathVision full **36.8**、MathVista mini **71.3**、MMMU val **61.7**；相对标准版分别增 **15.4/2.6/4.7个百分点**。MathVision高于QVQ-72B **35.9**，但低于Qwen2.5-VL-72B **38.1**；MMMU仍低于GPT-4o **69.1**、o1 **77.3**。不能宣称激活3B全面超过大型模型。
 
 把最大思考预算从1K增至16K，MathVision **18.7→36.8**，MMMU **49.2→61.7**；MathVista 4K **70.9**、8K **70.6**、16K **71.3**，收益饱和且不严格单调。图展示推理预算变化，不是证明RL和CoT SFT各自独立贡献的组件消融；本文也没有完整MoonViT/Muon/packing开关消融表。更长推理会增加实际生成开销，因此低激活参数与低任务成本不能画等号。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Llama 4](../../llama/document-4003084812b3/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：GPT-4.1 →](../../gpt/document-32a268f7f1d8/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VPGTrans](../README.md)
+<!-- article-header:end -->
+
 # VPGTrans：把已训练的视觉提示生成器迁移到另一语言骨干
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 这里的“跨 LLM”指 OPT、Flan-T5、LLaMA 等骨干之间的迁移，包括参数规模和网络类型变化。它研究如何复用视觉语言对齐能力，节省为新语言模型训练视觉接口的成本。论文没有把这种迁移等同于跨自然语言翻译。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 问题 | 方案 | 证据边界 |
@@ -23,6 +37,8 @@
 
 在大型 BLIP-2 适配实验中，OPT 2.7B→6.7B 的报告加速为 10.7 倍，Flan-T5 XL→XXL 为 21.1 倍。这些数字描述指定训练对照，不能用于推断推理速度，也没有包含从零建立全部继承模型的历史成本。（第 3、10–11 页）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 1：视觉接口与跨骨干迁移](figures/transfer-architecture.png)
@@ -32,6 +48,8 @@
 模型由视觉提示生成器 VPG、线性投影器和冻结 LLM 组成。本文的具体实现基于视觉编码器及 BLIP 系列预训练 Q-Former：查询向量从视觉特征提取定长表示，经投影器转换为 LLM 可以读取的软提示。探索实验采用 CLIP ViT-L，扩展实验采用 ViT-G。视觉编码器保持冻结，迁移第二阶段主要更新 Q-Former 与投影器。（第 2–3、10 页）
 
 源模型与目标模型共享继承的 VPG，但投影器需要适配目标词嵌入空间。VL-LLaMA-7B 将 BLIP-2/OPT-6.7B 的 VPG 迁移到 LLaMA；VL-Vicuna 进一步采用指令微调的语言骨干并加入聊天数据，二者不应当合并为一个检查点。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -57,6 +75,8 @@ $$
 
 *Figure 6，PDF 第 7 页。第一阶段冻结 VPG；第二阶段更新 VPG 中可训练部分与投影器。*
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 探索实验使用 COCO 与 SBU 的约 140 万图文对，研究同系列大小模型迁移以及 OPT、Flan-T5 间的迁移。大型实验的投影预热仍使用 COCO/SBU，后续训练加入 Visual Genome 和 LAION-COCO 的 BLIP 合成描述。（第 3、10 页）
@@ -64,6 +84,8 @@ $$
 训练图文对让目标模型继续预测描述，复用的是源模型已有的视觉语言知识。表 4 的训练数据量是该次训练使用的图文样本口径，不代表构建继承 VPG 所需的全部原始数据。COCO 也用于训练，所以 COCO Caption 结果不能解释为没有见过该数据集的严格零样本测试。
 
 VL-Vicuna 另外使用 MiniGPT-4 提供的 3,439 条自指令数据，让模型摆脱短描述式输出。这是聊天适配步骤，与大规模迁移成本实验分开。（第 12–13 页）
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -77,6 +99,8 @@ VL-Vicuna 另外使用 MiniGPT-4 提供的 3,439 条自指令数据，让模型�
 图文阶段沿用 BLIP-2 的语言建模目标，通过正确描述的 token 似然更新视觉接口。其一般表达为 $-\sum_t\log p(y_t\mid I,y_{<t})$；这里是对训练目标的说明，并非作者新增的独立数学公式。
 
 探索对照训练 10 epochs，学习率先从 $10^{-6}$ 预热到 $10^{-4}$，再余弦下降至 $10^{-5}$；OPT 使用 FP16、有效 batch 1,728，Flan-T5 使用 BF16、batch 1,152，采用梯度累积。Flan-T5 大模型需要降低第二阶段学习率维持稳定。词转换器可在单张 A100 上 15 分钟内、低于 15GB 显存完成，**该数字仅指词转换器**。（第 3、7、10 页）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -102,3 +126,11 @@ OPT 的样本量约为对照的 10.7%，Flan-T5 约为 4.4%；GPU 小时分别�
 *Table 5，PDF 第 12 页。该表量化的是 VL-LLaMA；VL-Vicuna 的聊天效果主要见后续案例。*
 
 VL-LLaMA-7B 得到 58.1/37.5/37.4，在所列解码器模型的 VQAv2 与 GQA 上领先，但仍低于 Flan-T5-XXL 的 65.2/45.0；OKVQA 也低于迁移 OPT 的 39.8。VL-Vicuna 展示图像对话能力，同时仍出现把蛋糕、花、花瓶混淆，以及错误读取钟表时间的案例。论文支持“可低成本定制视觉接口”的结论，对开放式聊天可靠性尚没有系统量化评测。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LLaMA-Adapter V2](../../llama-adapter/arxiv-2304.15010/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：X-LLM →](../../x-llm/arxiv-2305.04160/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

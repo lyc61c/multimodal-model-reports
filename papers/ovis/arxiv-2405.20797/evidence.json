@@ -44,5 +44,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "下半页按数据用途分组，左列是类别，中间是来源，右侧是样本数与类别总量；",
+          "after": "Table 4 列出三阶段训练超参数；Table 5 按数据用途分组，列出类别、来源、样本数与类别总量；",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

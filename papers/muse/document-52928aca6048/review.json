@@ -31,5 +31,12 @@
     "官方博客缺训练细节与绝对推理预算",
     "未运行模型或独立复现"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "c68cbb732ce3ebf5840c0dea737115cfc18767c9443425fb5e8af88a64390711",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

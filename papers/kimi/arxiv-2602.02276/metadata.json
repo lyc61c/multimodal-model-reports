@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Kimi K2.5：视觉文本联合训练与并行智能体编排",
-  "chinese_characters": 3461,
+  "title_zh": "Kimi K2.5：视觉与文本联合训练，以及可学习的并行智能体编排",
+  "chinese_characters": 3529,
   "figure_revision_date": "2026-10-09"
 }

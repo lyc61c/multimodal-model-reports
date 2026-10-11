@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Chat-UniVi](../README.md)
+<!-- article-header:end -->
+
 # Chat-UniVi：用多尺度动态视觉 Token 统一图像与视频理解
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -16,6 +28,8 @@ Chat-UniVi 处理的是视觉上下文预算问题。图像问答需要保留对
 
 它的统一体现在图像和视频采用同一个视觉编码器与视觉 token 合并接口，训练时混合两种数据，推理时无需换成另一套视频模型。这里的“动态”指 token 所代表的区域及跨帧集合由输入内容决定，并非每张图像都完全没有预设数量约束；默认图像仍采用固定的三级聚类数量。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 组成 | 具体做法 | 目的 |
@@ -30,11 +44,13 @@ Chat-UniVi 处理的是视觉上下文预算问题。图像问答需要保留对
 
 需要特别注意评测口径。部分图像结果是 GPT-4 对 90 个问题的评分，视频问答使用 GPT 辅助评价，ScienceQA 另有零样本和专门微调两个配置。理解这些区别，才能判断压缩是否在特定设置下有效，而不是把所有成绩当成同一种标准准确率。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 3](figures/original-p003-figure-3.png)
 
-**读图：**上方是单图，下方是视频。视频多一步 Temporal Merging，将帧组织为事件；随后两种输入都经过三次 Spatial Merging。每一级结果均经 Projection W 送入语言模型，而非只保留最后最粗一级。图中的冻结标记对应视觉编码器，微调标记对应指令阶段的语言模型和投影。
+**读图：** 上方是单图，下方是视频。视频多一步 Temporal Merging，将帧组织为事件；随后两种输入都经过三次 Spatial Merging。每一级结果均经 Projection W 送入语言模型，而非只保留最后最粗一级。图中的冻结标记对应视觉编码器，微调标记对应指令阶段的语言模型和投影。
 
 CLIP 首先输出规则网格的 patch 特征。空间聚类根据语义距离选择中心，将其他 token 分配给最近中心，再取簇内平均，形成新的视觉 token。新 token 的视觉区域是成员区域的并集，它可以跨越不连续空间位置；论文的示意图不能解释成每个簇必然是一个完整对象，也不是利用实例分割真值监督得到的对象掩码。
 
@@ -44,8 +60,9 @@ CLIP 首先输出规则网格的 patch 特征。空间聚类根据语义距离�
 
 实际输入图像和视频帧均缩放至 224×224。该分辨率和压缩共同控制序列成本，但也可能损失小字、细微属性等信息。本文不把“语义聚类”解释成任何细节都能无损保留，也不从 token 数量直接推断墙钟加速比例；聚类本身仍有邻居距离计算开销。
 
-## 4. 核心创新与数学原理
+<a id="principles"></a>
 
+## 4. 核心创新与数学原理
 
 
 **原文公式说明：**[Eq. (1)–(4)，PDF 第 4 页](https://arxiv.org/pdf/2311.08046v1#page=4) 先定义 token 密度与到更高密度 token 的距离，再把同样算法应用到事件内的跨帧 token。密度高且远离其他高密度点的 token 被选为中心。这里距离写成平方欧氏范数，不能把 OCR 文本中的上标误认成普通下标。
@@ -80,6 +97,8 @@ $$
 
 正文没有另外提出聚类监督损失或显式时间对比损失，训练围绕视觉条件下的描述与回答进行。不能因为方法用到特征距离，就为它编写一个“对比学习目标”。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练使用 COCO 图文对和 LLaVA 筛选的 CC3M-595K。补充 Table C 分别列出约 956K 与 595K 条描述数据。它们是训练样本数，并非两者拥有同样数量的唯一图像。预训练主要让视觉投影接口学会把特征传给语言模型。
@@ -96,6 +115,8 @@ $$
 
 聚类无需对象轮廓标签，因此图像描述与视频指令就能驱动后续训练。它降低了精细区域标注需求，但也意味着簇与语义对象的对应主要来自预训练视觉特征和下游学习。论文的可视化支持部分输入中能形成有意义区域，未提供全量对象分割评测。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 第一阶段冻结 CLIP 与 Vicuna，仅训练投影矩阵 $W$。使用图像描述数据，1 epoch，batch 128，AdamW、余弦学习率调度，学习率 $2\times10^{-3}$，warmup 比例 0.03。其目标是建立视觉嵌入与语言输入空间的接口，不是让全部模型从头学习视觉概念。
@@ -106,13 +127,15 @@ ScienceQA 专门微调是另一配置：9 epochs、batch 32、学习率 $2\times
 
 空间聚类默认三级数量 64、32、16，时间聚类比例 1/16。更高数量并非一定更好，作者根据消融选择折中。补充材料比较 LoRA 与全量微调，LoRA 图像总分 75.8，完整微调 84.2，视频时序分 51.6 对 57.8；论文称 LoRA 可节约超过一半训练显存，但没有在本文给出所有设备条件下的统一绝对资源表，不能推算任意配置的成本。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 4](figures/original-p006-table-4.png)
 
 ![原文 Table 5](figures/original-p006-table-5.png)
 
-**读图：**Table 4 每个数据集都有 Accuracy 与 0–5 的 GPT Score，两者不是同一量。Table 5 的 Random、Popular、Adversarial 是 POPE 的负对象采样方式，“Yes”是回答肯定的比例，不是准确率。完整表头能避免把这些数值混合。
+**读图：** Table 4 每个数据集都有 Accuracy 与 0–5 的 GPT Score，两者不是同一量。Table 5 的 Random、Popular、Adversarial 是 POPE 的负对象采样方式，“Yes”是回答肯定的比例，不是准确率。完整表头能避免把这些数值混合。
 
 | 视频问答 | Chat-UniVi Accuracy / Score | Video-ChatGPT Accuracy / Score |
 | --- | ---: | ---: |
@@ -135,8 +158,16 @@ POPE 多尺度版本的 Random/Popular/Adversarial Accuracy 为 85.19/69.50/64.9
 
 ![原文 Figure 4](figures/original-p007-figure-4.png)
 
-**读图：**Table 6 的“Image + Video”指先图像后视频，“Image & Video”指混合；Table 7 改三级空间簇数；Table 8 改时间聚类比例。下方 Figure 4 是各 30 个图像/视频对话场景的 0–10 人工评分，不能与上方 GPT 百分制直接比较。
+**读图：** Table 6 的“Image + Video”指先图像后视频，“Image & Video”指混合；Table 7 改三级空间簇数；Table 8 改时间聚类比例。下方 Figure 4 是各 30 个图像/视频对话场景的 0–10 人工评分，不能与上方 GPT 百分制直接比较。
 
 混合训练的图像总分 84.2，而只图像训练为 81.5，先图像再视频为 50.9；混合训练视频 Correct 57.8，只图像为 43.4。这支持同时学习两种输入的价值。但只视频版本的 Detail 58.8 高于混合的 58.2，故不是每个分项都混合最佳。空间112token总分84.2优于28token81.1与224token79.8；28token的Reason95.1却高于112token93.7，再次说明最佳数量取决于指标。时间比例1/16在总体折中上较好，1/32的Context及1/8的Consistency仍有更高分项。
 
 人工图像评分 Chat-UniVi 7.11、LLaVA 5.26；视频6.32、Video-ChatGPT5.34。样本较少且为主观评价，不能据此推断所有场景优势。补充限制说明仍有幻觉、提示敏感、多视频或长序列性能下降，音频列为未来方向。最稳妥的结论是，多尺度语义聚类和混合训练能在本文预算与数据下改善统一图像视频理解；它没有证明压缩无损、无限长视频处理或全面领先。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：SPHINX](../../sphinx/arxiv-2311.07575/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Video-LLaVA →](../../video-llava/arxiv-2311.10122/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -11,7 +11,7 @@
     "26/28 dataset wording inconsistent in original",
     "Backbone pretraining contamination audit notfullydisclosed"
   ],
-  "article_sha256": "3185332ee2498c82a6bb359c1881da345c83105b17b50b4b03232041cc00c514",
+  "article_sha256": "5c77be50748ba4e606e208455a90c8439894c1222c8641f5d167fc5b1d390275",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -29,5 +29,11 @@
       "2026-10-09: Compared the original page and each crop visually; intended diagram/table, complete labels and caption retained; surrounding prose excluded. Prose-only page removal checked separately where applicable."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

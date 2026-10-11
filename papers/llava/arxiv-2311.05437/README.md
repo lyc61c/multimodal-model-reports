@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LLaVA（官方研究谱系）](../README.md)
+<!-- article-header:end -->
+
 # LLaVA-Plus：学习调用视觉工具的多模态智能体
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **LLaVA-Plus: Learning to Use Tools for Creating Multimodal Agents** 由 Shilong Liu、Hao Cheng、Haotian Liu 等提出，作者来自清华大学、Microsoft Research、UW–Madison、HKUST与IDEA Research。本介绍依据 [arXiv 2311.05437v1](https://arxiv.org/pdf/2311.05437v1)（2023-11-09，25页）。[项目页](https://llava-vl.github.io/llava-plus/)与[官方代码](https://github.com/LLaVA-VL/LLaVA-Plus-Codebase)对应本条目。
 
 LLaVA-Plus把已有LLaVA视觉语言模型作为规划器，学习选工具、写参数和综合结果，实验有7B与13B语言规模。模型能完成检测、分割、图像生成等任务，但这些能力由外部专家工具执行；不能将它整理成一个统一token模型原生预测图像或mask的报告。“端到端训练”指以生成式指令监督学习规划输出，不表示所有工具和语言模型一起反向传播训练。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -19,15 +33,19 @@ LLaVA-Plus把已有LLaVA视觉语言模型作为规划器，学习选工具、�
 
 主要技术价值是让“能看图”的模型学习使用专业能力，而不是只给文字模型一次图像caption后再让它调工具。每次调用仍受专家工具的识别错误、参数错误和多工具冲突影响，原文结论明确承认这些限制。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
 
-**读图：**①用户输入图像与指令；②助手生成工具名和参数；③执行器调用技能并返回结果；④助手结合原始图像和结果输出回复。原图展示的是系统循环，并非新增Transformer内部层。图像在会话中持续作为条件，工具返回的框、类别、OCR或检索文字也进入历史。
+**读图：** ①用户输入图像与指令；②助手生成工具名和参数；③执行器调用技能并返回结果；④助手结合原始图像和结果输出回复。原图展示的是系统循环，并非新增Transformer内部层。图像在会话中持续作为条件，工具返回的框、类别、OCR或检索文字也进入历史。
 
 输出包含三个字段。thoughts说明当前需要什么信息；actions为JSON函数调用列表，含API name与API params；value为面向用户的自然语言。最终没有待执行工具时actions为空。检测+分割可封装为Grounding DINO+SAM组合技能，Stable Diffusion类工具负责图像生成；规划器生成的是调用和生成提示，不直接计算扩散去噪。
 
 系统基于FastChat，由网页服务、模型workers和controller协调。§2.3称7B规划器与工具可以一起加载到一张80GB GPU上服务，未给出完整并发负载或吞吐；这不意味着13B配置也有同样显存预算，更不等于80GB是模型权重的精确大小。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -43,17 +61,21 @@ $$
 
 All Tools把多数视觉理解工具的输出预先加入训练和评测条件，Fly只为当前指令提供相关输出。这是不同信息与成本条件；表中All Tools更好不能单独证明“规划算法更强”。报告未提出可微工具选择器或专门数学规划损失，也没有给工具调用总延迟的定量成本模型。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Table 2](figures/original-p005-table-2.png)
 
-**读表：**COCO提供检测、分割、caption、tagging与组合样本；HierText提供OCR，InfoSeek用于检索，JourneyDB用于生成，Instruct-Pix2Pix数据用于编辑。检测13,783条、实例分割5,228条、OCR6,528条、检索4,087条是相应使用案例的统计，不能将各行直接解释成同样数量的独立图像，组合会话可能重用源图。
+**读表：** COCO提供检测、分割、caption、tagging与组合样本；HierText提供OCR，InfoSeek用于检索，JourneyDB用于生成，Instruct-Pix2Pix数据用于编辑。检测13,783条、实例分割5,228条、OCR6,528条、检索4,087条是相应使用案例的统计，不能将各行直接解释成同样数量的独立图像，组合会话可能重用源图。
 
 无额外参数的技能先用GPT-4生成多样问题，再改写预设thoughts/value，actions由已知工具确定，工具结果按固定规则整理并重复原问题。最终回复由**语言版GPT-4**结合caption、类别、框和工具结果生成，不是GPT-4逐张读取原图进行视觉标注。需要概念参数的技能从图像类别填模板，或用两个完整人工种子对话做few-shot生成更丰富调用（§2.2）。
 
 检索数据只保留答案能从检索知识提取或推导的InfoSeek子集，经ChatGPT比较答案与结果筛选；这会偏向检索确有帮助的样本（附录B）。视觉点击位置转成文字坐标，SAM或Semantic-SAM执行分割；语义布局配OpenSeeD+ControlNet，交互分割配SAM+SD inpainting。上述组合样本教模型安排操作顺序，不是自动合成一个统一视觉网络。
 
 原LLaVA-158K也转换为三字段格式。定量理解模型使用81K理解数据与原问答，demo系统采用完整技能数据。所有生成/编辑demo能力不能直接归到仅81K理解数据训练的定量checkpoint上。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -62,6 +84,8 @@ All Tools把多数视觉理解工具的输出预先加入训练和评测条件�
 该v1没有完整列出epoch、optimizer、学习率、batch size、冻结层或各模块参数更新策略，也未给训练GPU小时。因而不能把其他LLaVA版本的标准recipe直接填成Plus原文的披露。技能库复用已训练专家，论文未声称重新共同训练CLIP、SAM、扩散模型或OCR引擎。
 
 服务阶段执行actions，回填工具结果后再生成value；用户界面主要展示回复与视觉输出。若新增技能，论文建议收集对应指令与执行结果再微调，并非只把新工具名加入列表就能保证零样本掌握所有API。判断系统改善要同时考虑新增数据、额外工具证据与规划训练，不能当成纯语言模型内部能力的无条件提高。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -86,8 +110,16 @@ All Tools在这三项均高于原模型；Fly在COCO总分80.4却低于81.2，�
 
 ![原文 Table 7](figures/original-p009-table-7.png)
 
-**读表：**MMVet上作者复跑LLaVA-7B为24.1±0.0，Plus-7B All Tools27.5±0.3，提高3.4分；13B Plus35.0±0.0，对公开LLaVA-13B32.5±0.1提高2.5。7B OCR13.3→23.6、空间18.7→28.5较明显，但数学8.1→7.7略降。MM-REACT-GPT4总44.6仍更高，且它是另一工具系统，不能遗漏。
+**读表：** MMVet上作者复跑LLaVA-7B为24.1±0.0，Plus-7B All Tools27.5±0.3，提高3.4分；13B Plus35.0±0.0，对公开LLaVA-13B32.5±0.1提高2.5。7B OCR13.3→23.6、空间18.7→28.5较明显，但数学8.1→7.7略降。MM-REACT-GPT4总44.6仍更高，且它是另一工具系统，不能遗漏。
 
 VisIT-Bench包括592问、1159图、70指令族；原文表7固定于2023-09-27快照。Plus-13B Elo1203，对LLaVA1095提高108；对人工核验参考回复的胜率35.07%（134次评分）高于LLaVA18.53%（475次），不是Plus与LLaVA直接交手35.07%的胜率，也不是本文写作时的最新排名。比较匹配次数不同，仍有评测覆盖边界。
 
 附录表11在COCO caption上Plus CLIP score0.815高于BLIP-2 0.788，但CIDEr31.0远低于BLIP-2 123.5，显示更丰富回复与标准短caption匹配并不一致。表12的100张COCO验证图中检测假阳性实例90→20、受影响图片41→12，是局部实验的计数，未证明彻底消除幻觉。整体证据支持学习工具使用可以扩展系统能力，但效果依赖任务、信息预算和工具可靠性。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：NExT-Chat](../../next-chat/arxiv-2311.04498/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Monkey →](../../monkey/arxiv-2311.06607/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -83,7 +83,7 @@
     "自动事实评分器有误差",
     "模型不同组件不混成绩"
   ],
-  "article_sha256": "911b6edd3321d635e17a88c6ed4d9734816510a7ba444a02b70c3eda5292b23e",
+  "article_sha256": "c37fe4343c91c11b306a6e5255a29bc2b457a3a099b9a91a37ac41cc04bdf52b",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -97,5 +97,12 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

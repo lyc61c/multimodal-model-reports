@@ -1,8 +1,18 @@
-[返回 Qwen 家族](../README.md) · [返回仓库](../../../README.md)
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Qwen](../README.md)
+<!-- article-header:end -->
 
 # Qwen2.5-Omni：Thinker-Talker、音视频时间对齐与流式语音生成
 
 > 本文解读 **Qwen2.5-Omni Technical Report**，采用原清单链接的官方 20 页 PDF 快照，报告首页日期为 2025-03-26。来源文件哈希与图表页码保存在单篇元数据中。本文围绕报告的 7B 评测型号展开，不混入后续模型配置。
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -18,6 +28,8 @@
 
 这篇报告解决的是“看、听、说”之间的协作。模型既需要从视频画面和声音中提取关联信息，也需要在文本尚未全部生成时开始组织语音。它的输出模态是文本和语音；图像、视频和音乐的生成被列为后续方向，不应根据 Omni 名称扩大其现有输出范围。[原文摘要、§2、§6，PDF 第 1、3、12–13 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=3)
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 Qwen2.5-Omni 将整体系统分成 Thinker 与 Talker。Thinker 负责理解文本、图像、音频和视频，生成语义表示和文字；Talker 接收这些高维表示以及已采样的文字 Token，产生语音 Token，再通过语音解码链路得到波形。两者共享上下文并支持端到端训练，避免将语音输出完全降为等待整段文字完成之后的独立 TTS 调用。
@@ -25,6 +37,8 @@ Qwen2.5-Omni 将整体系统分成 Thinker 与 Talker。Thinker 负责理解文�
 输入端的关键是时间对齐：TMRoPE 给音频和视频使用共同的时间尺度，按两秒块交错组织视听特征。输出端的关键是分块处理：音频编码器采用块内注意力，语音解码的 DiT 使用有限的历史和未来块，使系统能够逐块产生声音。
 
 训练侧，报告给出三阶段预训练和 Thinker、Talker 不同的后训练路径。Talker 使用语音续接、DPO 和说话人微调，分别增强基础生成、稳定性以及声音的自然度与可控性。结果展示了联合多模态和语音理解的优势，也保留了部分视觉和纯文本任务的权衡。本文会将架构上的流式设计与实际延迟测量分开：报告解释了降低延迟的机制，但没有提供完整的统一硬件延迟曲线。[原文 §1–5](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=2)
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -44,6 +58,8 @@ Qwen2.5-Omni 将整体系统分成 Thinker 与 Talker。Thinker 负责理解文�
 | 语音解码 | 离散语音码 → Mel → 波形 | Flow-Matching DiT 和修改后的 BigVGAN，支持分块输出 |
 
 单张图像被当作两张相同帧处理，视频则动态抽帧。这里的视觉时间组织与音频表示的 40ms 粒度是不同概念；模型用时间编码把它们映射到可关联的位置，而不是要求每个视频帧都拥有一个一一对应的音频 Token。[原文 §2.2–2.4，PDF 第 4–5 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=4)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -73,6 +89,8 @@ Talker 同时读取高维语义表示和实际采样出的文字。隐藏表示�
 
 因此，该设计包含一块前瞻，不能称为完全不等待未来内容的严格因果解码。它降低的是相对于全序列处理的等待需求，真实首包时间还受输入编码、Thinker 到首个语音码、语音解码和硬件计算影响。对于长音频，原文把音频编码器的注意力改成两秒块处理，输入和输出两端共同适配流式流程。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练覆盖图文、视频文本、带声音的视频、音频文本和纯文本语料。作者将层次式任务标签替换成自然语言提示，以增强不同任务表述之间的泛化。报告具体给出了第二阶段加入的数据 Token 量，但没有公开所有阶段的完整样本总量和最终数据比例。[原文 §3，PDF 第 6 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=6)
@@ -89,6 +107,8 @@ Talker 同时读取高维语义表示和实际采样出的文字。隐藏表示�
 800B、300B、100B 合计为第二阶段额外引入的 1.2T Token，不能把它当作所有阶段的预训练总量，也不能理解为样本条数。纯文本还用于维持语言能力，但其配比没有随这组数字完整列出。语音数据中可能存在标注与发音噪声，Talker 的偏好训练就是针对这种稳定性问题；报告没有披露可直接复制的全量去重阈值和混合采样配方。
 
 音频统一重采样和 Mel 变换，视频动态帧率采样，带声音的视频按时间交错打包。预处理决定了模型所见的时间粒度及序列长度；高分辨率和更多帧会增加视觉序列成本，音频时长也会增加输入表示。它们属于不同模态的预算来源，不能只用文件字节数判断推理负担。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -109,6 +129,8 @@ $$
 $$
 
 $x$ 包含输入及回复文字，$y^+$、$y^-$ 是偏好不同的生成语音序列；$P_\theta$ 为更新模型，$P_{\mathrm{ref}}$ 为参考模型。奖励排序涉及 WER 和标点停顿错误率，因而此阶段主要约束语音内容及稳定性。随后说话人微调强化目标声音的韵律和自然度。报告没有披露 $\beta$、全部优化超参和训练硬件成本，不能由标准 DPO 名称补全这些配置。[原文 §3–4、Eq. (1)，PDF 第 6–7 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=7)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -145,3 +167,11 @@ SEED 的 test-zh、test-en、test-hard 上，Omni 的 ICL 基础模型 WER 为 1
 报告用语音化的文本指令检验端到端交互，约保留适合转成语音的 90% 指令。Omni 在这套 GSM8K 子集上为 85.4，Qwen2-Audio 为 18.4，使用文本输入的 Qwen2-7B 为 82.3。比较反映了语音指令能力的显著进步，但子集与输入模态已变化，不能把这些分数替代 Table 1 的完整纯文本结果。[原文 Table 4，PDF 第 10 页](https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf#page=10)
 
 最终，实验证据支持 Thinker-Talker 系统具备较强的联合理解和流式语音生成能力，偏好训练增强了语音稳定性。原文没有提供逐一移除 TMRoPE、时间交错或滑动窗口的完整控制消融，因此各机制的独立贡献和统一硬件下的实际首包延迟仍需要额外实验确认。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：GPT-4o 原生图像生成附录](../../gpt/document-0b8790d1de58/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Llama 4 →](../../llama/document-4003084812b3/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

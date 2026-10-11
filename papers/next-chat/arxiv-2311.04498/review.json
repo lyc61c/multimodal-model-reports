@@ -40,7 +40,7 @@
     "定位指标阈值未完整重述，不自行写IoU0.5",
     "GIoU在公式按正文明确为损失而非最大化metric"
   ],
-  "article_sha256": "7b1872723c87655b0814876cffcec73d9f471133f48d0b338ec8087282cd1055",
+  "article_sha256": "bdc8c58f53cc88e556fb698e3c6b985ccd58747af04c45c5d29c8525d8f77761",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -54,5 +54,11 @@
       "Viewed source and repaired crops: Table 2, Table 3 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
       "Viewed source and repaired crops: Figure 4, Figure 5 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 11,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

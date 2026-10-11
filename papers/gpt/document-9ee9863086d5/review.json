@@ -52,7 +52,7 @@
     "Table8正文误写语言数值；沿实际表头核验",
     "官方评测并非本仓库复现"
   ],
-  "article_sha256": "ec529224db5918cef195ecdc5bcba06341dae099ae224f3fe6bfa7acd9d74760",
+  "article_sha256": "f583a2c0c21e311a69f1f33b321da282eb727df77375bac6d8d2d2d3769fc818",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -66,5 +66,12 @@
       "Viewed source page and crop: complete GPT-4o medical/clinical Table 7, two model columns, zero/few-shot paired rows and caption retained.",
       "Tables 8/9 complete, preceding analysis removed."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 1,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

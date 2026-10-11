@@ -46,5 +46,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照统一词表、VQ-GAN 图像 token 与四个位置 token 的原例；修正四个角点为四个坐标值，避免误读八坐标；OK-VQA 21.19/26.88 与原表一致。",
+      "changes": [
+        "将区域框四个角点坐标改为四个坐标值；原例恰有四个位置 token。"
+      ],
+      "article_sha256": "0446c11262f34f83c36a235d3a696411e8fa605adc9d6910655870aed94e564c",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ]
 }

@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Kosmos](../README.md)
+<!-- article-header:end -->
+
 # KOSMOS-2：把文字指代表达连接到图像区域
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **KOSMOS-2: Grounding Multimodal Large Language Models to the World**，Zhiliang Peng、Wenhui Wang、Li Dong、Yaru Hao、Shaohan Huang、Shuming Ma、Furu Wei，Microsoft Research。[固定原文 arXiv 2306.14824v1](https://arxiv.org/abs/2306.14824v1)，2023-06-26；本文 PDF 页码按该版本。
 
 模型从 KOSMOS-1 继续训练，新增 grounding 与 referring：既可把文字描述定位到图像中的框，也可输入框后询问该区域、生成指代表达。框以离散 token 表示，输出是文字与框描述，**不是图像生成或像素分割**。对具身智能的讨论属于研究愿景，论文没有机器人动作执行实验。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -13,6 +27,8 @@
 - 将图像平面分为 **32×32** 网格，新增 1024 个位置 token，两个角点 token 表示一个框。
 - GRIT 自动构建约 91M 图像、115M 文本片段、137M 框，供模型学习词语与区域关联。
 - 约 25B token 继续训练后进行指令调优；定位、描述、常规 VQA 的评测条件分别报告，不用单一成绩概括全部能力。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -23,6 +39,8 @@
 ![原文 Figure 4](figures/original-p007-figure-4.png)
 
 **读图：Figure 4，PDF 第 7 页。** 左侧在原描述的上下文中标出“橙色安全背心”，输出背心框；右侧输入整段人物表达，输出人的框。两个任务的目标对象和语言上下文不同，不能把同一定位分数直接用于两种任务。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -38,6 +56,8 @@ $$
 
 推理时无需附加检测器生成 proposals，但训练数据构建依赖 GLIP 类 grounding 模型。因此“模型推理不接检测器”与“无检测器监督”必须分开。空间 token 解决显式指代接口问题，也不自动消除文字幻觉或复杂关系理解错误。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 3](figures/original-p004-figure-3.png)
@@ -52,11 +72,15 @@ GRIT 从 LAION-2B、COYO-700M 子集建立。spaCy 解析 caption 提取名词�
 
 继续训练另用前代的纯文本、普通图文和交错图文。指令调优加入 LLaVA-Instruct、Unnatural Instructions、FLANv2，并从 GRIT 的表达框对转换出“描述生成框”和“给框描述对象”的双向模板。附录 Table 9 给出 `What is it?`、`Describe this object` 等模板，框作为 token 输入，不是把有色框画进原图作为必需输入。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 初始化使用 KOSMOS-1 权重，新增位置词嵌入随机初始化；继续训练和指令调优**更新所有参数**。继续训练 60K 步，batch 约 419K token：文本 185K、普通与 grounded 图文 215K、交错数据 19K，总约 25B token。AdamW 的 $\beta=(0.9,0.98)$、weight decay 0.01、dropout 0.1；375 步预热至 $2\times10^{-4}$，之后线性衰减为零。256 张 V100，约一天，属于作者报告的继续训练成本，不是从零建立前代的累计成本。
 
 附录 Table 7 图文两个子类各 batch 1117；文本和交错按数据例数为 93/47，不能与上面的 token 数混为同一单位。指令调优 Table 8 为 10K 步、375 预热、学习率 $10^{-5}$，语言指令 batch 117、视觉语言 351、grounded 图文及指令 1404、普通文本 30、交错 15。原文没有充分说明指令阶段的总硬件时长等其余配置。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -84,3 +108,11 @@ R@5/10 接近 R@1 表示后续候选增加有限，不应只据此声称定位�
 **读图：Figure 5、Table 4，PDF 第 9 页。** 图中的有色框用于可视化，模型实际输入是坐标 token。RefCOCOg 用 224×224、greedy 解码，零样本 METEOR/CIDEr **12.2/60.3**，2-shot 为 13.8/62.2，4-shot 为 14.1/62.3。CIDEr 超过 SLR 59.2，但未超过 SLR+rerank 66.2，METEOR 也低于两个微调基线。
 
 普通图文和纯语言表为公平比较报告**未指令调优**结果。Table 5 的 Flickr30k CIDEr 为 66.7，高于 KOSMOS-1 65.2；VQAv2 为 45.6，低于 46.7。Table 6 BoolQ 从 56.4 到 62.0，CB 从 44.6 降至 30.4，其余有升降。论文未给出完整逐组件消融或不同网格尺寸的受控实验。证据支持把定位作为可生成的基础接口，但不支持“新增空间能力后所有任务都增强”；原文选例中的多轮、细粒度识别也不是整体可靠性证明。本文未运行或复现模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Macaw-LLM](../../macaw-llm/arxiv-2306.09093/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：MotionGPT →](../../motiongpt/arxiv-2306.14795/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

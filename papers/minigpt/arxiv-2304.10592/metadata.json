@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "MiniGPT-4：冻结视觉与语言组件，以线性接口和高质量描述实现视觉对话",
-  "chinese_characters": 2616,
+  "title_zh": "MiniGPT-4：用冻结视觉编码器与语言模型建立图像对话接口",
+  "chinese_characters": 2683,
   "figure_revision_date": "2026-10-09"
 }

@@ -6,7 +6,8 @@
     "Audio and image-generation adaptation separated from image/video pretraining; task-specific fine-tuned checkpoints not described as one universal chat model.",
     "Dataset task examples versus images/videos and inconsistent totals not conflated; constrained decoding and 24-way CLIP selection disclosed.",
     "Seen-task no-finetuning evaluation distinguished from unseen-dataset zero-shot; ActivityNet ground-truth proposals retained.",
-    "Main table counterexamples to universal superiority, curriculum task regressions and extra training for ratatouille explicitly stated."
+    "Main table counterexamples to universal superiority, curriculum task regressions and extra training for ratatouille explicitly stated.",
+    "2026-10-11 targeted content audit: 124→102 分钟的 18% 是耗时下降，不能含混说成速度增幅；显式写 22/124 和耗时比 124/102≈1.22。"
   ],
   "artifact_checks": {
     "seven_sections": true,
@@ -15,9 +16,35 @@
     "asset_hashes_match": true,
     "original_assets": 4
   },
-  "article_sha256": "1ff1e674a9e4a74d46b8796904ca522023a06eb6753d6fdd2001b58273fadc88",
+  "article_sha256": "c1ce9f1fb6b0a17e8594b5c9d105aa22bd5fdd423762269786ad6d777e946692",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "kind": "targeted_source_and_math_check",
+      "scope": "通读七部分正文。",
+      "corrections": [
+        "124→102 分钟的 18% 是耗时下降，不能含混说成速度增幅；显式写 22/124 和耗时比 124/102≈1.22。"
+      ],
+      "source_checks": [
+        {
+          "claim": "UnIVAL Table 2 每 epoch 2h04m→1h42m、avg batch 4K/3K；耗时减少与加速比区分",
+          "source_file": "source/papers/4af858ff9dbc/source.txt",
+          "source_query": "2h04m",
+          "pdf_page": 7,
+          "result": "对应主张在固定原文缓存中得到支持；范围限于此处记录。"
+        }
+      ],
+      "visual_crops_inspected": []
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

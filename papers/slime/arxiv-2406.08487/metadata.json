@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "SliME：全局混合与局部压缩的高分辨率理解",
+  "title_zh": "SliME：保留全局上下文，压缩并按问题选择局部细节",
   "source_sha256": "69526d66cffc4ef04c5a78aa62fa97980cb8bb2c0b2d3073fbc8fa18c306bde1",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1905,
+  "chinese_characters": 1970,
   "figures_manifest": "figures-manifest.json"
 }

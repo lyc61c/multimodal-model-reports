@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [RoboPoint](../README.md)
+<!-- article-header:end -->
+
 # RoboPoint：以合成空间数据训练视觉语言模型预测行动点
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 《RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for Robotics》由 Wentao Yuan、Jiafei Duan、Valts Blukis 等作者提出，机构包括华盛顿大学、NVIDIA、艾伦人工智能研究所和 Universidad Católica San Pablo。本文依据 [arXiv 2406.10721v1](https://arxiv.org/pdf/2406.10721v1)（2024 年 6 月 15 日）；项目入口为 [RoboPoint](https://robo-point.github.io/)。
 
 模型根据 RGB 图像和空间指令输出若干二维行动点，既可以指向物体，也可以指向“碗左侧的空位”等没有独立对象的区域。语言骨干是 Vicuna-v1.5-13B，视觉骨干是 CLIP ViT-L/14 336px。机器人执行还需深度图、位姿转换和运动规划，RoboPoint 不是直接生成电机控制序列的端到端策略。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -18,6 +32,8 @@
 
 额外机器人相关标签可以由模拟自动产生，但整个模型训练并非完全没有真实图像数据或人工标注来源。合成空间样本之外，VQA 与 LVIS 仍包含真实世界数据；WHERE2PLACE 评测也由人工构造。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p004-figure-2.png)
@@ -28,6 +44,8 @@ Figure 2 按上、中、下三层阅读。上层生成三维布局，渲染 RGB 
 
 它不需要在测试时先用外部检测器给图像中的全部对象画框，但训练合成样本常用彩色框标出参考对象，帮助学习关系。真实部署时能够用自然语言对象名称，是由多类训练数据共同支撑，不能把这一能力归为只有红框提示的合成数据效果。[PDF 第 3–4、13 页](https://arxiv.org/pdf/2406.10721v1#page=13)
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 预测目标是点集合 $\{(x_i,y_i)\}$，每个坐标归一化到 [0,1]。它不直接要求框覆盖完整物体，而要求输出点落在满足语言关系的区域。点表示能降低框内背景和杂物带来的歧义，尤其适用于不存在独立对象边界的空闲位置。
@@ -37,6 +55,8 @@ Figure 2 按上、中、下三层阅读。上层生成三维布局，渲染 RGB 
 二维到三维的关系可用标准反投影 $p_{cam}=d(u,v)K^{-1}[u,v,1]^T$ 理解，其中 K 是相机内参，d 是深度。此式是解释 Figure 2 执行步骤，原文没有完整列出标定、坐标转换和末端位姿策略。操作实验使用三维点加偏移计算末端位姿，再规划轨迹，不能凭一个像素点保证抓取姿态或无碰撞路径正确。[PDF 第 5、7 页](https://arxiv.org/pdf/2406.10721v1#page=7)
 
 学习采用回答 token 预测。坐标列表被当作语言序列，不是报告中新增的连续坐标回归头或显式几何一致性损失。可用负对数似然解释自回归训练，但论文未给新编号损失及额外坐标权重，因此本文不补造。一项实际限制是模型不提供点预测置信度，输出点数也不可控制，不能把列表视为带校准成功概率的规划分布。
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -55,6 +75,8 @@ Figure 2 按上、中、下三层阅读。上层生成三维布局，渲染 RGB 
 
 WHERE2PLACE 收集 100 张真实家居及办公图像，一组人写空闲区域指令，另一组人标注目标掩码；其中 30 个较难样本含训练未见关系类型。物体参考评价使用 RoboRefIt 的 750 图像子集。这样的评测减少同一人同时写指令和画区域的偏差，但样本规模有限，仍不能替代各种环境的系统测试。[PDF 第 5 页](https://arxiv.org/pdf/2406.10721v1#page=5)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 模型从 Vicuna-v1.5-13B、预训练 CLIP 图像编码器及已对齐投影器初始化。两层 MLP 先前使用 558K LAION-CC-SBU 子集的 BLIP caption 预训练，这是初始化资源，不能混成新生成的机器人指令数量。
@@ -62,6 +84,8 @@ WHERE2PLACE 收集 100 张真实家居及办公图像，一组人写空闲区域
 指令微调更新 MLP 和语言 Transformer，冻结图像编码器与 tokenizer。原文目标包含回答 token 以及划分指令与回答边界的特殊 token，所有来源共同训练。附录给出学习率 **4e−5**、**16 张 A100**、**每 GPU batch=16**，训练约 **40 小时**；在没有进一步累积说明时，每设备 batch 与完整有效 batch 口径不能自行混用。
 
 报告未给出精确优化步骤、epoch、优化器和调度的完整设置、精度、序列长度、冻结视觉模块之外的额外层级策略，因此不从 LLaVA 的相似管线自动复制这些参数。没有报告奖励模型、强化学习或真实机器人专家轨迹微调阶段。[PDF 第 3、13 页](https://arxiv.org/pdf/2406.10721v1#page=13)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -98,3 +122,11 @@ WHERE2PLACE 收集 100 张真实家居及办公图像，一组人写空闲区域
 导航在 CoppeliaSim 的三个房间场景和 YouBot 平台进行，不是全部真实移动机器人试验。七项各五次，RoboPoint 前五项均 5/5，最后两项仅 1/5，而 PIVOT 对应为 3/5、2/5。AR 例子展示棋盘和车道提示，是定性演示，不能据此推导正式自动驾驶能力或完整成功率。
 
 附录还展示 GPT-4o 更好的失败案例。模型对输出点数和置信度缺少控制，坐标建议需要外部深度与运动规划，不具备完整行动可行性保证。本文整理并核验了原图原表，没有执行机器人或重新测试模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Comparison Visual Instruction Tuning](../../comparison-visual-instruction-tuning/arxiv-2406.09240/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：EVE →](../../eve/arxiv-2406.11832/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

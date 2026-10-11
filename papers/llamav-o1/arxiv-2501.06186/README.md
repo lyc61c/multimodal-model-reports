@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LlamaV-o1](../README.md)
+<!-- article-header:end -->
+
 # LlamaV-o1：以课程学习和搜索改进逐步视觉推理
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **LlamaV-o1: Rethinking Step-by-step Visual Reasoning in LLMs** 由 Omkar Thawakar、Dinura Dissanayake 等提出，研究团队以MBZUAI为主，另有UCF、Linköping University和ANU作者。本介绍依据 [arXiv 2501.06186v1](https://arxiv.org/pdf/2501.06186v1)（2025-01-10，27页）。[官方项目](https://mbzuai-oryx.github.io/LlamaV-o1/)、[代码](https://github.com/mbzuai-oryx/LlamaV-o1)与[模型](https://huggingface.co/omkarthawakar/LlamaV-o1)均在首页列出。
 
 模型在Llama-3.2-11B-Vision-Instruct上做全参数监督微调，重点是图像问题的逐步推理，不是重新预训练视觉骨干或新增11B专家。论文同时提供VRC-Bench和参考推理链评价方法。名字中的“o1”表达研究定位，不能理解为复现某个专有模型的架构、训练数据或内部算法。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -20,6 +34,8 @@
 
 贡献集中于训练顺序、生成组织、推理搜索和评测，而不是新的视觉编码器或注意力公式。正文的平均提升有对应消融，但该v1在训练超参数与评测裁判身份上披露不足；本文按可核验的原表陈述结果。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 模型继承Llama-3.2的图像—文字条件生成能力，本报告没有给出新的视觉编码器、连接器尺寸或完整底座结构图，也未改变视觉token数量的公开说明。可核实的系统流程是：图像和问题进入已具视觉能力的11B底座，模型按课程训练获得“解题概要→问题相关描述→逻辑推理→答案”的组织能力，推理时用beam搜索候选答案序列。不要把这四种输出内容画成四个独立训练的神经网络。
@@ -28,7 +44,9 @@ PDF第9页的例子采用多轮指令：先要求说明解题方法，再生成�
 
 ![原文 Figure 3](figures/original-p005-figure-3.png)
 
-**读图：**左侧是VRC-Bench来源分布，并非模型架构；右侧将最终答案与步骤分开显示。MathVista、DynaMath、LogicVista等不同来源进入多类评测。基准及裁判是评测系统，不是语言模型推理时必须调用的外部工具。图中Llama-3.2步骤数值与表2略有不一致，本文使用表2的58.37作为基线步骤分。
+**读图：** 左侧是VRC-Bench来源分布，并非模型架构；右侧将最终答案与步骤分开显示。MathVista、DynaMath、LogicVista等不同来源进入多类评测。基准及裁判是评测系统，不是语言模型推理时必须调用的外部工具。图中Llama-3.2步骤数值与表2略有不一致，本文使用表2的58.37作为基线步骤分。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -44,6 +62,8 @@ $$
 
 Beam Search在生成过程中保留多个候选，作者以并行生成减少阶段搜索的多次调用。本报告没有给出明确的beam评分公式、长度惩罚或剪枝细节，因此不补写过程奖励模型或外部验证器。文中复杂度说法也有冲突：第11页写本文O(n)、对手O(n²)，第15页又按调用数写本文O(1)、对手O(n)。调用数量、token计算和GPU耗时不是同一个量；表5耗时随beam数增长，因此不能推导“增加beam不增加计算成本”。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 训练阶段1使用PixMo Cap-QA的18K问题相关描述样本与Geo170K来源57K几何问答；阶段2使用原LLaVA-CoT约99K样本，涵盖ShareGPT4V、ChartQA、A-OKVQA、DocVQA、PISC、CLEVR以及GeoQA+、AI2D、ScienceQA、CLEVR-Math（§4.2.2）。总结、caption、reasoning、answer组成课程目标。文中也简写初阶段只使用PixMo，本文保留详细数据段中的Geo来源，不把99K和100K称谓差异当成另一个独立数据集。
@@ -52,6 +72,8 @@ VRC-Bench另从多个现有评测数据来源选题，经GPT-4o生成步骤，�
 
 所选来源包括数学逻辑、科学、OCR、图表、文化、医学基础图像等。论文没有给出完整去重清单、所有训练与评测之间的污染审计，亦未说明人工标注者一致性指标。它提供参考链质量检查，但不能据此断言完全不存在数据重叠或裁判偏好。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 以llama-recipes进行两阶段全参数SFT，使用8张A100-80GB（§4.2.2、§5.1）。阶段1先学概要和caption，阶段2再加入细致推理与最终答案；没有报告GRPO、RLHF或偏好优化，也未报告单独过程奖励模型。生成目标可理解为条件自回归监督，但原文未明确全部token损失mask和不同子任务损失权重，本文不写未经披露的精确损失recipe。
@@ -59,6 +81,8 @@ VRC-Bench另从多个现有评测数据来源选题，经GPT-4o生成步骤，�
 正文声称epoch、学习率、optimizer、batch在附录列出，然而该v1附录A.1–A.5实际提供生成/评价提示与裁判代码，没有相应训练超参数表。故这些数值在本版本**未能核验**，不能用模型常见默认设置填上。论文亦未报告完整训练GPU小时或分阶段壁钟耗时。
 
 推理扩展实验有1、2、3、4 beams。表3的完整模型MMVet65.40与表5四beam相同；表4的课程版MMVet61.88却不同于表5单beam63.63。这是不同表格的实验配置或结果差异，原文没有明确解释，不能直接把两行合成一条无歧义的实验链。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -88,4 +112,12 @@ VRC-Bench分别评最终答案与推理步骤。表2中LlamaV-o1为56.49/68.93�
 
 ![原文 Table 5](figures/original-p015-table-5.png)
 
-**读表：**单张A100-80GB测MMVet。本文1→4 beams评分63.63→65.40，时间2.7→6.1 GPU小时；LLaVA-CoT1→4 beams为60.3→62.9、3.8→54.1 GPU小时。四beam表值比约8.9倍，但图注把对手写46.1，正文又把本文写4.2小时，均与表格不同。摘要“5倍”也未明确对应哪一统一设置，不能作为所有请求的固定速度优势。可靠结论是该报告的表格显示搜索精度改善、成本也增长，并且本文在这些设置下比阶段级搜索更省时间；具体倍率和复杂度仍须结合实现重新确认。
+**读表：** 单张A100-80GB测MMVet。本文1→4 beams评分63.63→65.40，时间2.7→6.1 GPU小时；LLaVA-CoT1→4 beams为60.3→62.9、3.8→54.1 GPU小时。四beam表值比约8.9倍，但图注把对手写46.1，正文又把本文写4.2小时，均与表格不同。摘要“5倍”也未明确对应哪一统一设置，不能作为所有请求的固定速度优势。可靠结论是该报告的表格显示搜索精度改善、成本也增长，并且本文在这些设置下比阶段级搜索更省时间；具体倍率和复杂度仍须结合实现重新确认。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：VITA-1.5](../../vita/arxiv-2501.01957/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：VideoLLaMA 3 →](../../videollama/arxiv-2501.13106/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

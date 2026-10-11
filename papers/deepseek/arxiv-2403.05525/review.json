@@ -50,7 +50,7 @@
     "Taskdevscores nottest",
     "GPUprocessingunit is8cardsnot1"
   ],
-  "article_sha256": "3a6da508998429c40f5d27acc366785a2254ed0e72bf0f243e66d4bbbf3a8796",
+  "article_sha256": "bfa6345e9a7332c3f679e9be2314233f437bf2a5421e2e2e15d05ce4c41965b9",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -64,5 +64,11 @@
       "Table 4 includes both 1B and 7B models and caption.",
       "Both comparison Tables 5 and 6 complete."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

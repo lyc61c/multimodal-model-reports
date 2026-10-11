@@ -19,5 +19,12 @@
     "Official benchmark image retained plus faithful downscaled preview",
     "No claim of independent peer review or model execution",
     "Input examples are not generated answers"
-  ]
+  ],
+  "article_sha256": "b053ffcb4d72b7051ce2b4fb76cf785eb9025432c8eddf0c1e900c9224fdb210",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

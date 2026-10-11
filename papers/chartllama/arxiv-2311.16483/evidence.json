@@ -37,5 +37,69 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "243076aca63f",
+      "path": "papers/chartllama/arxiv-2311.16483/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 130,
+          "before": "完整截图",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p007-table-2.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69.0,
+            548.11,
+            189.31
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            196.38,
+            548.12,
+            267.13
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-4.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            282.22,
+            289.36,
+            444.77
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "5b1dcb3a72164c2019f21830c88f1c66009124676698dfdd19f221f2bc6713f0"
+    }
+  ]
 }

@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Honeybee：局部视觉投影器与指令数据配方",
-  "chinese_characters": 2196,
+  "title_zh": "Honeybee：保留局部视觉信息的灵活投影器与指令数据配方",
+  "chinese_characters": 2261,
   "figure_revision_date": "2026-10-09"
 }

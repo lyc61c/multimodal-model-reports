@@ -44,7 +44,7 @@
     "No model execution or independent benchmark reproduction",
     "Figures retain original pixels, including full-page surrounding text; no recreated HTML table represented as an original image"
   ],
-  "article_sha256": "3dca0223c862f3262443794ae58601ea2044fdbd61e18e80e53416e8d6003ddf",
+  "article_sha256": "8196e0c63f69074c01a98be13429c812fa37c34a7611c7ae719cc2de58087946",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -60,5 +60,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

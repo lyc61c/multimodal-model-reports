@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Vary](../README.md)
+<!-- article-header:end -->
+
 # Vary：增加细粒度视觉编码分支，改善文档与图表理解
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 论文把视觉编码器输出的特征比作“视觉词表”：CLIP 擅长常见自然图像，但对密集文字、公式和中文图表可能压缩不足。Vary 增加一个专门训练的高分辨率分支。这里的词表是连续视觉表示的比喻，论文没有构建离散 VQ 码本，也没有通过这一方法直接扩充文本 tokenizer。（§1–3）
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 设计 | 作用 |
@@ -25,6 +39,8 @@
 
 Vary-base 在 Table 2 的 DocVQA 验证集为 78.2 ANLS、测试集为 76.3；Qwen-7B、80K 指令数据版本在 MMVet 为 36.2。不同实验涉及不同 LLM 和指令集，不能把所有最优值都归给一个没有版本区别的模型。（第 7–8 页）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2：先训练新分支，再与 CLIP 融合](figures/architecture.png)
@@ -34,6 +50,8 @@ Vary-base 在 Table 2 的 DocVQA 验证集为 78.2 ANLS、测试集为 76.3；Qw
 Vary-tiny 使用 SAM-base 预训练图像编码器初始化，1024×1024 图像输出 64×64×256 特征。两层卷积依次变成 32×32×512 和 16×16×1024，再展开成 256×1024；线性层对齐 OPT-125M。该阶段没有用于对话的文本输入分支，主要生成图像对应文本。（§3.1–3.2）
 
 Vary-base 对同一图像分别准备 1024×1024 的新分支输入和 224×224 的 CLIP-L 输入。两个编码器各输出 256×1024，独立线性层映射到 2048 维后沿通道拼接，得到 256×4096 的 LLM 输入。序列仍是 256 个视觉 token，并没有因为两分支而变成 512 个 token。LLM 可以选 Qwen-7B 或 Vicuna-7B，中文主要使用前者。（§3.3）
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -56,6 +74,8 @@ $$
 
 **自然图像“负例”不是对比学习负例。** Vary-tiny 对自然图片学习生成“这是自然图像”等通用句子，让新分支在该类图像上不过度输出密集 OCR 内容；文中称其为 negative samples，但不是 CLIP 式图文对比负样本。实际减少多少融合干扰没有单独的因果消融。（§3.2.2）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 4：文本、公式、表格和不同图表样式](figures/synthetic-data.png)
@@ -68,6 +88,8 @@ Vary-base 补充带公式、表格格式的合成文档：从 arXiv TeX 源抽�
 
 一般预训练数据另取约 4M LAION-COCO 图文；SFT 使用 LLaVA-80K 或 LLaVA-CC665K，及 DocVQA、ChartQA 训练划分。这里的问答成绩包含对应任务训练，不能称为未见过该任务的零样本能力。各阶段数据有不同用途和可能重叠，不简单相加为独立样本总量。（§3.3.2）
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 更新与冻结 | 配置 |
@@ -79,6 +101,8 @@ Vary-base 补充带公式、表格格式的合成文档：从 arXiv TeX 源抽�
 优化器 AdamW、余弦退火；Vary-tiny 把 OPT 上下文插值到 4096 token。图像 token 用 `<img>`、`</img>` 标记；Vicuna 与 Qwen 采用相应的对话格式。（§3.2.3、3.3.3、4.2）
 
 SAM 在第一阶段只是初始化，随后参与更新，不能把新分支当作原封不动的 SAM 分割服务。Vary-base 的冻结策略避免继续改写两个视觉编码器，但仍全量训练 LLM。报告没有设备数量、完整资源耗时或同等数据下的端到端测速，不能据“小 OPT”推导固定训练加速倍数。（§3–4）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -103,3 +127,11 @@ MMVet 中 Vicuna-7B、665K 版本为 32.9，高于同系列 LLaVA-1.5-7B 的 30.
 报告未单独分离高分辨率、额外文档数据、视觉初始化与融合结构的贡献；泛化到扫描噪声、复杂排版和任意图表的程度也未全面量化。应把结果理解为这套数据与双分支训练组合对已评测任务的改善。（§4、附录）
 
 **来源说明：** 本文固定依据 v1，未复现训练；原图出处和裁切坐标见 [图片清单](figures-manifest.json)。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Honeybee](../../honeybee/arxiv-2312.06742/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：SESAME →](../../see-say-and-segment-teaching-lmms-to-overcome-false-premises/arxiv-2312.08366/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -47,7 +47,7 @@
     "No high-resolution, multi-image or video specialization in v1",
     "Dataset totals rounded; unreleased-data statement describes v1 publication state"
   ],
-  "article_sha256": "76b06e7f015fcce523ca8b18c11b6e8546a7ac3b06af3003855975eb5bb75e76",
+  "article_sha256": "3deab43a98bb0949473071e2b239794a8051ff91a55dd2ddd7e281ba1fbe8a30",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -61,5 +61,36 @@
       "Viewed source and crops: Table 3 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
       "Viewed source and crops: Table 4, Table 5 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/515954506dd5/source.txt",
+        "papers/ovis/arxiv-2405.20797/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "下半页按数据用途分组，左列是类别，中间是来源，右侧是样本数与类别总量；",
+          "after": "Table 4 列出三阶段训练超参数；Table 5 按数据用途分组，列出类别、来源、样本数与类别总量；",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "76b06e7f015fcce523ca8b18c11b6e8546a7ac3b06af3003855975eb5bb75e76",
+      "article_sha256": "934b14b0129ad63c51e87c8b9ca63d67a356e12f615193101869eb6142687f47",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 19,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [SPHINX](../README.md)
+<!-- article-header:end -->
+
 # SPHINX：联合混合模型权重、视觉表示和多任务指令
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 SPHINX 用一个语言模型生成问答、描述、框、关键点等输出，探索多种能力如何共同训练。本文固定介绍首版报告；SPHINX-X 等后续模型的参数和训练规模不应倒填到本版本。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 混合对象 | 具体做法 |
@@ -22,6 +36,8 @@ SPHINX 用一个语言模型生成问答、描述、框、关键点等输出，�
 | 分辨率和尺度 | 低分辨率全图与高分辨率局部图共同作为长视觉序列 |
 
 其分割和编辑示例分别调用 SAM、LaMa、Stable Diffusion。SPHINX 本身提供语义理解和框定位，这些系统扩展不等同于自身具有原生分割头或图像生成头。（第 8–9 页）
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -37,6 +53,8 @@ CLIP 的 ViT/CNN 提供不同结构先验，DINOv2 提供自监督表征，Q-For
 
 基础模型处理 $224^2$ 全图，得到 257 个 patch/全局相关 token 与 32 个 Q-Former token，共 289。1k 版本处理 $448^2$，包含一张下采样全图和四张子图，共 $5\times289=1445$ token。2k 版本共十组、2,890 token；原文写分辨率 $762^2$、九个子图，但没有充分解释它与 $224^2$ 网格裁切如何对应，本文保留源数值，不自行改为 672。（第 12 页）
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 原文式 1 的权重合并为：
@@ -51,6 +69,8 @@ $$
 
 高分辨率分块在每个视觉编码器内保留较短序列，降低直接扩大 ViT 输入的代价；但 LLM 接收 1,445/2,890 个视觉 token 后，注意力与缓存成本仍增长。“编码器较高效”不能直接推成整个系统恒定成本。子图之间的语义关系交给 LLM 建立。（第 7–8 页）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练使用 LAION-400M、LAION-COCO，并加入 RefinedWeb 纯文本以保护语言建模。数据集名字是来源规模标识，论文没有在此给出全部实际下载成功、去重后使用数量，不能把“400M”直接当成此次训练的唯一实际样本计数。（第 9–10 页）
@@ -58,6 +78,8 @@ $$
 指令微调包含 LLaVA、ShareGPT、VQAv2、GQA、OKVQA、A-OKVQA、OCRVQA、TextCaps、COCO、LVIS、RefCOCO、VG、Flickr30k 等，转换为多轮对话。不同数据按原始大小比例采样，因此不是逐任务等权平衡。定位与姿态等任务已有相关监督，主表结果不能全部解释为未见任务零样本。（第 10 页）
 
 微调时将短边补齐成方形再缩放，减少宽高比极端时内容变形；高分辨率版本增加局部图。TextVQA 评测提示还包含参考 OCR token，读分数时应与不含 OCR 提示的方法区别。（Tables 1、3）
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -70,6 +92,8 @@ $$
 预训练 AdamW 的 $\beta=(0.9,0.95)$、weight decay 0.1，180K steps；学习率从 $5\times10^{-5}$ 余弦下降到 $5\times10^{-6}$，前 2K steps 线性预热。每批含 640 图文对和 65,536 RefinedWeb 文本 token，最初只使用 $224^2$ 单全图，不加语言任务提示。7B 报告约 32 张 A100、125 小时，13B 约两倍。（第 9–10 页）
 
 指令阶段 batch 128，最高学习率 $2\times10^{-5}$、最低 0，预热 0.03 epoch；13B 约 16 张 A100、38 小时，最大训练序列 3,072。完整的合成域单独训练日程、各来源精确数量及混合系数没有充分披露。RefinedWeb 消融显示不加入纯文本时图文损失仍下降、纯文本损失上升，支持缓解遗忘，但这不是所有语言能力的系统无退化保证。（Figure 7）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -94,3 +118,11 @@ $$
 1k 的 RefCOCO+ val 为 86.64，较强；2k 的 RefCOCO testB 为 87.07，仍低于 G-DINO-L 88.24 与 UNINEXT 91.46。基础 SPHINX 在多个划分低于 Qwen-VL，因此正文“超过 Qwen 全部分割”的说法主要适用于高分辨率结果，不能泛化到基础版。
 
 姿态、文档布局、异常检测及 SAM/扩散模型系统扩展主要展示案例，没有完整标准定量基准。ImageNet 70.8% 来自额外监督微调 1 epoch，其骨干本已预训练，不能与随机初始化视觉模型训练 300 epochs 直接作为公平效率比较。首版支持混合训练路线的可行性，对每一种混合组件的独立收益和系统可靠性仍有验证空间。（第 9、13–17 页）
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LVIS-Instruct4V](../../lvis-instruct4v/arxiv-2311.07574/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Chat-UniVi →](../../chat-univi/arxiv-2311.08046/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

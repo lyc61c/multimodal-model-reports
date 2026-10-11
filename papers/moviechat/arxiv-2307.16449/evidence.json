@@ -15,5 +15,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "属于推理配置；上半页说明问答评估，不是训练目标。",
+          "after": "属于推理配置；同页正文另述问答评估协议，并非训练目标。",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

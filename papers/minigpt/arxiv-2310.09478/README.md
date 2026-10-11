@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [MiniGPT](../README.md)
+<!-- article-header:end -->
+
 # MiniGPT-v2：用任务标识统一图像问答、描述与定位
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 《MiniGPT-v2: Large Language Model as a Unified Interface for Vision-Language Multi-task Learning》由 Jun Chen、Deyao Zhu、Xiaoqian Shen 等作者提出，来自 KAUST 与 Meta AI Research。本文依据 [arXiv 2310.09478v1](https://arxiv.org/pdf/2310.09478v1)（2023 年 10 月 14 日）；项目入口为 [MiniGPT-v2](https://minigpt-v2.github.io/)。
 
 模型采用冻结的 EVA 视觉骨干、线性投影层与 LLaMA-2-chat 7B，统一完成视觉问答、图像描述、区域描述与定位等任务。其主张是通过任务标识减少指令歧义，用文字形式输出各种结果，不必为每种任务单独部署一个输出模型。它不是图像生成模型，框坐标输出也不等同于像素分割。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -19,6 +33,8 @@
 
 第二阶段模型记为 MiniGPT-v2，第三阶段后记为 chat。两者不是所有评测上都同向改善，定位平均分从 84.29 降为 83.70，GQA 从 60.3 降为 60.1；聊天版主要改善部分问答与对话能力。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
@@ -28,6 +44,8 @@ Figure 2 下方的 EVA ViT 带雪花，表示整个训练期间冻结。绿色 c
 高分辨率输入的位置编码通过插值适配。若原视觉特征是 $v_i\in\mathbb R^d$，四个特征拼成 $\tilde v_j\in\mathbb R^{4d}$，再由线性层产生语言模型所需嵌入。空间位置数减少 75%，但不同于平均池化，四个位置的信息先保留在拼接通道，再由可训练投影学习如何组合。序列减少四倍并不意味着整体运行速度必然四倍，论文没有给出端到端解码速度实测。
 
 输入遵循 LLaMA-2 的对话格式，图像嵌入、任务标识和自然语言请求共同放入 `[INST] ... [/INST]`。纯语言指令不使用视觉任务标识。输出文字既可以是答案，也可以是对象短语和框坐标。[PDF 第 3–4 页](https://arxiv.org/pdf/2310.09478v1#page=3)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -48,6 +66,8 @@ Figure 2 下方的 EVA ViT 带雪花，表示整个训练期间冻结。绿色 c
 
 论文没有提出编号的新损失公式。按其语言模型式训练流程，监督目标可解释为 $-\sum_t\log p(y_t\mid I,q,\tau,y_{<t})$，其中 $\tau$ 是任务标识；这只是对训练机制的归纳，不是原文明确新增的数学贡献。框坐标按文字序列学习，也没有披露额外 IoU 回归损失。LoRA 对查询与值投影做低秩更新，可用 $W'=W+BA$ 理解，rank=64；本文不把该解释式当作作者独创公式。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 第一阶段混合弱标注与细粒度数据，弱标注来源包括 LAION、CC3M、SBU 和 GRIT-20M。GRIT 用于指代表达理解、区域描述与带定位描述；细粒度数据包括 COCO caption、Text Captions、RefCOCO 系列、Visual Genome，以及 GQA、VQAv2、OCR-VQA、OK-VQA、A-OKVQA。第一阶段提高弱标注来源采样比例，但报告未给出完整数值。
@@ -59,6 +79,8 @@ Figure 2 下方的 EVA ViT 带雪花，表示整个训练期间冻结。绿色 c
 Flickr30k 的带框描述筛选至少五个已定位短语的 caption，约 2.5K 样本；对象解析与定位另外构造 caption→grounded phrases 约 2.5K，以及 phrase→grounded phrase 约 3K。它们针对 GRIT 描述中定位对象较少、输出较短的问题。模型还把不同任务的单轮样本混成多轮对话，以训练上下文中切换任务的能力，但多轮总量、去重阈值和完整采样比例未披露。
 
 附录提示格式保留任务要求：VizWiz 要求单词或短语，信息不足时回答 unanswerable；VSR 判断陈述真或假；HatefulMemes 提示将图片上的文字作为问题信息。因而 HM 成绩不是可以不依赖任何文字输入提示的结论。GQA、OK-VQA、RefCOCO 等参与训练，不能把所有表中评测统一称为零样本。[PDF 第 14 页](https://arxiv.org/pdf/2310.09478v1#page=14)
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -73,6 +95,8 @@ Flickr30k 的带框描述筛选至少五个已定位短语的 caption，约 2.5K
 这些是原文提供的训练成本，不是本文重新测得。报告没有在这段配置中给出 A100 显存版本、序列长度、训练精度、warm-up 和权重衰减，不用其他 MiniGPT 版本的信息填补。
 
 第三阶段提高新指令来源比例、降低细粒度任务比例，意在增强对话同时保留任务能力。然而定位与聊天会存在权衡，应同时比较两种检查点。任务标识消融是在 4×A100、24 小时及相同步数下比较，不等同于完整三阶段训练的最终分数。[PDF 第 6、8 页](https://arxiv.org/pdf/2310.09478v1#page=6)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -102,3 +126,11 @@ Figure 3 的 a、d 分别展示区域描述和指代定位；b 把对象词组�
 CHAIR_I 衡量被描述对象层面的幻觉，CHAIR_S 衡量句子层面的幻觉，越低越好。长描述为 8.7/25.3，grounded 为 7.6/12.5，short 为 4.4/7.1；平均长度同时从 56.5 降到 18.9、10.3。较短回答提供较少内容，也有较少产生额外对象的机会，不能只看最低 CHAIR 就认为信息量相同且整体最优。
 
 作者明确承认定位不准和不存在对象的描述，附录指出某些人物框错误、例图出现实际不存在的花瓶。文章反映的是论文报告的能力与边界，没有执行模型或声称完成独立复现实验。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：PaLI-3](../../pali/arxiv-2310.09199/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Fuyu-8B →](../../fuyu/document-87ff293e66f7/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

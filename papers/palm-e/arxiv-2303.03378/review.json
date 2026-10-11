@@ -40,7 +40,7 @@
     "完整预训练超参未披露",
     "真机长任务主要定性，不将仿真成功率冒写真机"
   ],
-  "article_sha256": "15a10baa9dd47e50beb76d1cc7eccb34dcb7edc4b1071a0d2ccbc13178c53464",
+  "article_sha256": "5b673b24f229da7035c12efa107bffbf94cbe6b7eb948ae42add87896fd20295",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -57,5 +57,12 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

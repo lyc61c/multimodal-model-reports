@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [InternVL](../README.md)
+<!-- article-header:end -->
+
 # InternVL：扩展视觉骨干并逐步对齐语言模型
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 **论文**：[InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks](https://arxiv.org/abs/2312.14238)，本文依据 2023 年 12 月 21 日的 [v1 报告](https://arxiv.org/pdf/2312.14238v1)，不是后续 InternVL2/3 的训练配方。作者 Zhe Chen、Jiannan Wu、Wenhai Wang、Weijie Su 等，机构包括南京大学、上海人工智能实验室 OpenGVLab、香港大学、香港中文大学、清华大学、中国科学技术大学、商汤。
 
 原始 InternVL 是一套视觉语言基础模型：**InternViT-6B 视觉编码器 + 8B QLLaMA 语言中间件**，可以作为分类/分割骨干、图文检索模型、caption 模型，再接入 Vicuna 等解码器形成聊天系统。它关注视觉骨干与语言模型之间的参数规模、表示空间和连接能力；不能把全部检索、分割与聊天指标归给同一个单一配置。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -20,6 +34,8 @@
 
 这里的 QLLaMA 是重要的可复用中间件，规模远大于常见轻量连接器。它既编码文本，也用查询向量重组视觉表示；将它统称成一个小线性投影，会遗漏论文主要设计。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 3](figures/original-p004-figure-3.png)
@@ -31,6 +47,8 @@
 InternViT 使用标准 ViT、patch size 14，从随机初始化训练，**不是直接沿用一个 CLIP 权重的 6B 放大版**。图像 $I\in\mathbb R^{H\times W\times3}$ 输出空间特征 $F\in\mathbb R^{H/14\times W/14\times D}$，可以接密集预测头，也可池化后用于分类。最终配置由同规模架构搜索选出，作者比较深度、注意力头维度和 MLP 比例，兼顾速度与稳定性。
 
 QLLaMA 从已预训练的多语言 LLaMA 初始化，加入随机初始化的 96 个可学习查询和交叉注意力。查询读取视觉特征，把多位置信息组织成适合语言空间的表示。生成时查询特征作为 QLLaMA 的视觉前缀逐 token 生成 caption；聊天时又通过 MLP 接一个外部语言解码器。因此原始 InternVL 的中间件与最终 Vicuna 解码器是两个不同组件。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -48,6 +66,8 @@ ITC 保持图文可比表示，ITM 判断图文配对，ITG 学图像条件下�
 
 第二个创新是**按监督要求筛数据**。全局对比允许较多噪声，而生成需要可读、完整且与图像相关的 caption；先宽后严使两类训练各自使用合适数据。第三是组件组合：视觉骨干可独立承担像素级任务，对齐后的全模型可接多种 LLM，这与只发布聊天权重的工作范围不同。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 第一、二阶段来源包括 LAION-en、LAION-multi、LAION-COCO、COYO、Wukong、CC12M、CC3M、SBU。原始汇总 **6.03B** 图文对，第一阶段清洗后 **4.98B**，第二阶段再筛至 **1.03B**。LAION-COCO 的 663M caption 由 BLIP-L/14 与 CLIP 相关流程生成；不能把这些都描述为人工标注。多语言来源给文本塔提供跨语言表示训练。
@@ -57,6 +77,8 @@ ITC 保持图文可比表示，ITM 判断图文配对，ITG 学图像条件下�
 SFT 约四百万样本覆盖 caption **588K**、VQA **1.1M**、OCR **294K**、grounding **323K**、grounded caption **284K**、conversation **1.4M**。来源包括 COCO/TextCaps、VQAv2/GQA/OKVQA、ChartQA/DocVQA/InfoVQA、RefCOCO 系列、LLaVA、SVIT、VisDial、LRV-Instruction。只用各数据训练集；非对话标注转换为问答格式，SVIT 同一图像的问答合并为对话，LLaVAR 仅用 20K 高质量数据。
 
 TextCaps 训练使用 OCR token，说明本文不能概括成所有数据管线完全无 OCR 辅助。表中“seen samples”是重复抽样后的累计曝光数，区别于不同图文对的 4.98B/1.03B。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -84,6 +106,8 @@ TextCaps 训练使用 OCR token，说明本文不能概括成所有数据管线�
 SFT 有不同设置：**224 分辨率的冻结解码器适配**只训练约 64M/90M 接入参数；**336 分辨率完整微调配置**在 Table 9 列 7B/13B 可训练参数。附录说明无 QLLaMA 版先以 LGS-558K 训练 MLP，再用 LLaVA-Mix-665K 微调 LLM，各一 epoch；含 QLLaMA 版先训练 MLP、再微调 LLM，采用自建 SFT 数据且 batch 增至 512。不能统一声称 InternVL-Chat 永远冻结语言模型。
 
 检索微调另外以 364×364、batch 1024、10 epoch、峰值 $10^{-6}$、层间衰减 0.9 更新全模型；英语和中文 Flickr30k 分别微调。这些带 -FT 的结果应与 zero-shot 结果分开。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -118,3 +142,11 @@ Table 10 的 **InternVL-G 自身零样本 caption** 是 COCO **128.2**、Flickr3
 组件消融 Table 12 在较简设置中报告：相同 665K 数据与 Vicuna-7B，InternViT+MLP 的 MME **1022.3**，换成 QLLaMA **1227.5**；换约4M数据后 **1298.5**。这支持中间件与领域数据各有增益，但大数据版不是控制所有变量的单组件消融。规模搜索准确率相近，说明选择还考虑稳定性/吞吐；附录 A100 批量128图文编码测试，336输入 C 为40.1ms、G为50.4ms，G更慢。它们是编码测试，不是聊天端到端 token 吞吐。
 
 整体证据支持大视觉骨干、语言初始化中间件与渐进对齐的可复用性。其分类、检索、分割和聊天结果来自不同模式、监督与数据，读者应按任务选配置，而不是由“32 个基准”推断一个模型在所有条件全面领先。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Osprey](../../osprey/arxiv-2312.10032/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：MobileVLM →](../../mobilevlm/arxiv-2312.16886/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

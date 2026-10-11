@@ -40,7 +40,7 @@
     "私有数据非全部公开",
     "计时硬件与部分指标标识未充分披露"
   ],
-  "article_sha256": "6894633441a14a7c2909c979c512136d500a38bc6cc183d64ff174a62619079b",
+  "article_sha256": "ab725e4921e579eba9b0487b83515525dd40e8ab5d3f62a55170018c6f34b3bb",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -57,5 +57,12 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

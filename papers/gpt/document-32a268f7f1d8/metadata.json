@@ -10,5 +10,6 @@
   "document_kind": "release_blog",
   "catalogue_group": "supporting_materials",
   "article_template_version": "1.1",
-  "title_zh": "GPT-4.1：面向代码、指令遵循与长上下文的多模态模型家族"
+  "title_zh": "GPT-4.1：面向代码、指令遵循与长上下文的多模态模型家族",
+  "chinese_characters": 2896
 }

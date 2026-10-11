@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [OneLLM](../README.md)
+<!-- article-header:end -->
+
 # OneLLM：共享编码器与投影专家对齐八类输入
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 八类输入是图像、视频、音频、点云、深度图、法线图、IMU 和 fMRI。OneLLM 探索用共享 Transformer 处理不同信号，保留各模态轻量 tokenizer。它不生成八种模态，fMRI 实验也仅针对 NSD 中受试者观看场景后的信号与 caption，不是任意思想读取或医学诊断。以下页码对应 v1。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 为每种模态配一个大编码器会增加组件数量，也受制于是否存在成熟的预训练底座。OneLLM 将输入先转换成 token，再让一个冻结的 CLIP-ViT 作为共享计算引擎，用通用投影模块 UPM 聚合成固定长度表示，交给语言模型生成回答。
@@ -20,17 +34,21 @@ UPM 混合三个从图文对齐初始化的投影专家。各模态有自己的�
 
 论文在 25 个基准报告能力。其贡献更集中在统一输入接口和跨模态迁移：少数据模态的问答从联合训练受益，但高质量图像 OCR、专门音频 caption 和视频 caption 仍有差距。Table 1 的 TextVQA 为 34.0，LLaVA-1.5 为 58.2，说明支持广泛输入与精细视觉能力需要分别衡量。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
 
-**读图：**左边不同 tokenizer 输出都经过同一 Universal Encoder；中间连接模态查询 $q_m$ 与输入特征 $x_m$，三个投影专家按路由权重融合；右边丢弃输入 token，仅将查询的输出作为固定长度模态摘要送入 LLM。雪花与火焰的变化表示对齐和指令两个阶段的不同冻结范围。
+**读图：** 左边不同 tokenizer 输出都经过同一 Universal Encoder；中间连接模态查询 $q_m$ 与输入特征 $x_m$，三个投影专家按路由权重融合；右边丢弃输入 token，仅将查询的输出作为固定长度模态摘要送入 LLM。雪花与火焰的变化表示对齐和指令两个阶段的不同冻结范围。
 
 视觉共享编码器为在 LAION 上预训练的 CLIP ViT-L，语言模型为 LLaMA2-7B。UPM 有三个专家，每个含八层 Transformer、约 88M 参数，三个合计 264M；每模态有 30×1024 的可学习查询。进入 LLM 的是查询输出，因此通常每个模态贡献 30 个摘要 token，而不是直接输入所有网格、全部视频帧或音频 patch。
 
 视觉类 tokenizer 为 14×14、stride 14 的二维卷积，输出通道 1024。视频各帧平行经过编码器，再逐 token 平均；这种方式降低成本，但限制细粒度时序信息，不等同于完整时间注意力。音频先转成默认 128×1024 的谱图，再用 16×16、stride 10 的卷积。点云包含位置与颜色六维信息，经最远点采样 8192 点、KNN 分组、1×1 卷积和组内 max 处理；IMU/fMRI 使用一维卷积转换。
 
 附录部分形状无法直接按声明参数复算，例如点云 512 组与末端 1024-token 描述、IMU 的卷积参数与 391 长度、fMRI 的 8196 与 1024×8 reshape。本文保留可明确确认的信号处理路线，不把这些形状写成已验证的可运行代码。输入时多个模态的摘要都放在文字之前，音视频评测为 video tokens、audio tokens、文本提示顺序。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -46,6 +64,8 @@ $K=3$，各专家权重非负且和为一。查询与输入一起在专家 Trans
 
 逐步对齐针对数据规模不均衡。新模态加入时，从新数据与已有模态数据均衡抽样，降低遗忘；它依赖此前的数据重放，不是无需数据的零样本接口。训练属于以 caption/回答生成实现的对齐，论文没有提出新的对比式损失或信号重建目标。用标准形式 $-\sum_t\log p(y_t\mid y_{<t},\bar q_m,\mathrm{prompt})$ 可理解语言监督，但原文未明确列出所有 token 的损失掩码和各模态 loss 权重，本文不补填。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Table 9](figures/original-p010-table-9.png)
@@ -54,7 +74,7 @@ $K=3$，各专家权重非负且和为一。查询与输入一起在专家 Trans
 
 ![原文 Table 11](figures/original-p010-table-11.png)
 
-**读表：**左表区分对齐数据和指令数据，右上是训练提示，右下是评测提示。数据来源规模不能等同于每阶段唯一消费样本数；不同任务通过提示控制长描述、单词答案和选项字母。
+**读表：** 左表区分对齐数据和指令数据，右上是训练提示，右下是评测提示。数据来源规模不能等同于每阶段唯一消费样本数；不同任务通过提示控制长描述、单词答案和选项字母。
 
 | 模态 | 对齐来源与规模 | 指令规模 |
 | --- | --- | ---: |
@@ -71,6 +91,8 @@ $K=3$，各专家权重非负且和为一。查询与输入一起在专家 Trans
 
 fMRI caption 使用受试者看到的图像描述作目标，采用与引用工作相同分割；IMU 使用 Ego4D 动作叙述。这些监督覆盖有限环境，不能外推到跨受试者或任意动作。原文未给完整重复样本、泄漏检查和清洗统计。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 对齐阶段冻结 CLIP 和 LLM，训练 tokenizer 与 UPM；指令阶段反过来冻结其他组件，**全参数微调 LLM**，并非只训练 LoRA。先学好图文投影，复制初始化 UPM 专家，然后按模态规模逐步联合对齐。
@@ -84,6 +106,8 @@ fMRI caption 使用受试者看到的图像描述作目标，采用与引用工�
 
 优化器 AdamW，$\beta_1=0.9,\beta_2=0.95$，weight decay 0.1，前 2K iterations 线性 warmup。有效 batch 已计入梯度累积，不能直接视为单 GPU batch。原文对指令训练“1 epoch（96K）”与 2006K 数据、batch 512 的简单换算并不吻合，未解释采样或步数口径，本文不将它替换为推算的准确更新数。图像尺寸、视频采样帧数和音频时长未在 recipe 中充分披露，也没有墙钟成本或本仓库复现记录。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 1](figures/original-p006-table-1.png)
@@ -96,7 +120,7 @@ fMRI caption 使用受试者看到的图像描述作目标，采用与引用工�
 
 ![原文 Table 5](figures/original-p006-table-5.png)
 
-**读表：**图像表将专门视觉助手与多模态 generalist 分组；下方其他模态表有 0-shot 列，不能把训练过对应任务的专门模型与未在该基准微调的模型解释成同一数据条件。caption 的 CIDEr/SPIDEr 与问答准确率也不能混成一个平均分。
+**读表：** 图像表将专门视觉助手与多模态 generalist 分组；下方其他模态表有 0-shot 列，不能把训练过对应任务的专门模型与未在该基准微调的模型解释成同一数据条件。caption 的 CIDEr/SPIDEr 与问答准确率也不能混成一个平均分。
 
 | 任务 | OneLLM | 主要比较 |
 | --- | --- | --- |
@@ -114,8 +138,16 @@ fMRI caption 使用受试者看到的图像描述作目标，采用与引用工�
 
 ![原文 Table 7](figures/original-p007-table-7.png)
 
-**读表：**OneLLM-D/N 的实际输入应按 D 为 depth、N 为 normal 理解，表注顺序存在歧义。深度输入在 NYUv2/SUN RGB-D 为 50.9/29.0，法线输入为 46.5/21.2；灰度深度 CLIP 为 41.9/25.4，因此法线的 SUN 分数更低，不能概括所有设置都优于 CLIP。监督 ImageBind 与 Omnivore 的数据条件不同。
+**读表：** OneLLM-D/N 的实际输入应按 D 为 depth、N 为 normal 理解，表注顺序存在歧义。深度输入在 NYUv2/SUN RGB-D 为 50.9/29.0，法线输入为 46.5/21.2；灰度深度 CLIP 为 41.9/25.4，因此法线的 SUN 分数更低，不能概括所有设置都优于 CLIP。监督 ImageBind 与 Omnivore 的数据条件不同。
 
 IMU 在 2000 个保留样本的 CIDEr/ROUGE-L 为 24.9/19.5，fMRI NSD 测试为 31.7/25.1；没有竞争基线和跨受试者验证。Table 7 的三模态子集消融中，单独训练与联合训练 ClothoQA 为 37.8/57.4、MSVDQA 31.0/56.8；图像投影初始化比随机初始化提高 NoCaps 98.8→115.8，但 ClothoQA 57.6→57.4 略降。软路由比常量路由提升四项，增加专家至 5/7 个却没有一致收益。消融的 ClothoQA 57.4/MSVDQA 56.8 不等于主表 57.9/56.5，不能拼成同一最终配置。
 
 附录冻结 CLIP 的显存 46GB、解冻 74GB，解冻使 ClothoQA 57.4→62.1，却使 NoCaps 115.8→106.0，体现跨模态取舍。作者承认非图像高质量数据不足，以及高分辨率图像、长音视频的细粒度理解限制。本文未运行模型或将共享结构称作已经证明最优的架构。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Gemini 初代](../../gemini/document-044099a491e0/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Honeybee →](../../honeybee/arxiv-2312.06742/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

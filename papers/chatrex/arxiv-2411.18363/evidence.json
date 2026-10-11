@@ -37,5 +37,24 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "上方按任务列出两阶段样本数，下方检测表同时包含 P/R 与 mAP；",
+          "after": "Table 1 按任务列出两阶段样本数，Table 2 的检测结果同时包含 P/R 与 mAP；",
+          "kind": "crop_caption_clarity"
+        },
+        {
+          "before": "上方 SS/S-IoU 是区域类别语义指标，并非框坐标 IoU；下方 R@0.3 的 0.3 在原文明确是 proposal 置信度阈值，",
+          "after": "Table 5 的 SS/S-IoU 是区域类别语义指标，并非框坐标 IoU；Table 6 的 R@0.3 中，0.3 在原文明确是 proposal 置信度阈值，",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

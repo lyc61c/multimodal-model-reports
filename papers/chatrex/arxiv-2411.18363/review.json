@@ -24,7 +24,7 @@
     "No model benchmark reproduction",
     "Training schedule details partly absent"
   ],
-  "article_sha256": "4b0bc08ae95917898db2efadc43ebad1b3fab05a6d5dbff276ce3f25a88f2982",
+  "article_sha256": "3ae0133653de71f5097b7f15b3c9b1990d8c191672db51a177fe75576d5d9496",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -41,5 +41,41 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/6aa52f4e3f6d/source.txt",
+        "papers/chatrex/arxiv-2411.18363/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "上方按任务列出两阶段样本数，下方检测表同时包含 P/R 与 mAP；",
+          "after": "Table 1 按任务列出两阶段样本数，Table 2 的检测结果同时包含 P/R 与 mAP；",
+          "kind": "crop_caption_clarity"
+        },
+        {
+          "before": "上方 SS/S-IoU 是区域类别语义指标，并非框坐标 IoU；下方 R@0.3 的 0.3 在原文明确是 proposal 置信度阈值，",
+          "after": "Table 5 的 SS/S-IoU 是区域类别语义指标，并非框坐标 IoU；Table 6 的 R@0.3 中，0.3 在原文明确是 proposal 置信度阈值，",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "4b0bc08ae95917898db2efadc43ebad1b3fab05a6d5dbff276ce3f25a88f2982",
+      "article_sha256": "8342ebc70170027defc04d58838f4829a6fa2e38067fdc10c667eedcec685c12",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 13,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

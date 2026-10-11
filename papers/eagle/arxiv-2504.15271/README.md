@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Eagle](../README.md)
+<!-- article-header:end -->
+
 # Eagle 2.5：以信息保留和渐进训练增强长上下文视觉理解
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 原论文为 **Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models**，作者包括 Guo Chen、Zhiqi Li、Shihao Wang、Jindong Jiang、Guilin Liu、Zhiding Yu 等，来自 NVIDIA 与南京大学、香港理工大学、Rutgers University。本文依据 [arXiv 2504.15271v1](https://arxiv.org/pdf/2504.15271v1)，提交于 2025 年 4 月 21 日；PDF 首页日期为 4 月 22 日。
 
 论文主要实验模型为 Eagle 2.5-8B，以 Qwen2.5-7B 语言底座、SigLIP 视觉编码与连接器形成约 8B 多模态系统。它面向长视频、高分辨率图片、多页文档和一般图像问答。核心工作在长上下文后训练、输入采样与数据构建，不依赖额外的任务专用视频压缩网络。这里“长上下文”涉及输入容量和训练分布，并不能单凭最大长度推断每项任务都有效利用全部上下文。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -13,6 +27,8 @@ Eagle 2.5 的方法由三项相互配合的设计构成。Image Area Preservatio
 Eagle-Video-110K 通过长视频章节级描述/问答和短片段细节问答补充训练。章节来自人工标注的语义分段，细节问答加入时间与文字上下文锚点，以便移到完整视频时仍能找到对应事件。
 
 主结果包括无字幕 Video-MME **72.4**、有字幕 **75.7**、Perception-Test 82.0、MLVU 77.6；图像侧 OCRBench 869、DocVQA 94.1、MathVista 67.8。Video-MME 使用至多 512 帧，不能与默认 32/64 帧设置等同。它在多项长视频任务较强，但无字幕 Video-MME 仍低于原表 Qwen2.5-VL-72B 的 73.3、Gemini-1.5-Pro 的 75.0。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -28,6 +44,8 @@ Eagle-Video-110K 通过长视频章节级描述/问答和短片段细节问答�
 
 Figure 3 对一个 2,000×1,300 的图像比较两类网格。IAP 并非单纯让宽高比最接近原图，而是在避免过度缩小和形状偏差之间折中。扩大 tile 数会消耗更多编码与语言上下文，所以采样层同时承担资源分配作用。
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 原文 Equation 1 在 $r_wr_h\le N$ 的候选网格中最大化
@@ -41,6 +59,8 @@ ADS 首先计算文字长度 $L_{\rm text}$，从最大长度中扣除，得到 
 实现先在 $t=1$ 下减少时间采样，尽量接近 2 FPS 或覆盖所有文档页；若连最低采样数量都无法满足，丢弃样本。再从 12、8、6、4、2、1 中选择能容纳的最高切图配置。文字监督因此得到优先保护，但原文未具体给出所有极端长文字情形的处理，不能把“所有样本绝不截断”当作无条件保证。
 
 渐进训练则改变模型接触的长度分布。从较短预算开始，再扩到 64K、128K，让长序列能力建立在已有图像与短视频能力上。论文没有提出新的奖励优化或长序列专用数学损失；训练仍是视觉条件下的文本生成监督。ADS、IAP 的可检验意义是数据进入模型前的预算与空间信息处理。
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -56,6 +76,8 @@ Open-Data 包含视频分类、时序动作定位、视频片段定位、密集�
 
 附录提示更具体地要求，局部问题不能只用简短锚点描述就完整回答；这样减少把答案泄漏在定位提示中的风险。章节结构由人工信息提供，不是新标注者对每个生成答案逐条确认。110K 是数据集名与规模标识，报告没有在主文提供完整的唯一视频数、每种问答精确占比及全量生成标注人工错误率，本文不将其解释为所有样本均人工标注。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 Table 8 把初始化与后续训练划为五步。Stage 1 用 1.2M ALLaVA 对齐，仅训练 40M 的 MLP 连接器，批量 1,024、学习率 $2\times10^{-4}$、最大长度 4,096；Stage 1.5 用 21.6M 丰富数据训练完整模型，批量 1,024、学习率 $2\times10^{-5}$、长度 8,192。本工作实际复用 Eagle-2 的 Stage-1.5 权重，再开展长上下文扩展，不能将所有初始化训练成本归于重新从零训练 Eagle 2.5。
@@ -64,13 +86,15 @@ Stage 2/3/4 分别设长度 32,768/65,536/128K，均训练完整约 8B 模型，
 
 使用长度平衡打包保持不同输入长度的学习；Triton 融合 MLP、RMSNorm、RoPE、线性层与交叉熵以减少中间存储，并将部分隐藏状态卸载至 CPU。分布式上下文并行结合 Ulysses、Ring 相关技术，采用 zigzag Llama3 风格及 all-gather KV；还优化稀疏帧解码，并以 vLLM 进行服务与评测。报告没有统一端到端吞吐/显存节省对照，以及完整硬件、耗时和优化器细节，不能将优化方向写成已验证的固定倍数加速。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 2](figures/original-p009-table-2.png)
 
 ![原文 Table 3](figures/original-p009-table-3.png)
 
-*上部 Table 2 为视频任务，下部 Table 3 为图像任务。保留原表以核对字幕条件、数据分割与模型名称。*
+*Table 2 为视频任务，Table 3 为图像任务。保留原表以核对字幕条件、数据分割与模型名称。*
 
 视频默认 2 FPS，至少 8 帧；Video-MME 最多 512 帧，其他主表任务最多 256 帧。一般关闭视频切图，但 **Perception-Test 开启切图**，其 82.0 包含高分辨率处理。主表不是所有模型在相同帧数下重新训练、重新测试的严格受控比较。
 
@@ -96,3 +120,11 @@ CG-Bench 的 Clue/Long/Open/mIoU 为 55.8/46.6/45.6/13.4，Clue 仍低于 Claude
 Table 6 的 32K 基线无字幕 Video-MME 为 65.4，去除 IAP 后 64.9、去除 ADS 后 65.0；Perception-Test 分别为 76.3/73.3/75.5，支持细节和监督预算的作用。Table 7 中，仅 Open-Data 的直接 64K 训练为 67.9，32K→64K 为 68.1，加入 Eagle-Video-110K 后为 68.8。这些是具体消融设置，并非最终 512 帧 72.4 的同一配置。
 
 Figure 6 中 128K 检查点随着更多帧持续提高，而较短上下文配置可能饱和甚至下降，说明容量、训练长度与测试采样应配合，不能只增加输入帧。附录还有 SlideVQA test ANLS 72.7 和 MMLongBench-Doc F1 29.4，表明多页文档仍有明显改进空间。总体证据支持长视频训练与细节保留的有效性，其效果仍依赖帧预算、字幕、空间切图与数据配方。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：InternVL3](../../internvl/arxiv-2504.10479/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Skywork R1V2 →](../../skywork/arxiv-2504.16656/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

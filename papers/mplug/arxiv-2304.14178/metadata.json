@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "mPLUG-Owl：以视觉模块学习和图文联合指令训练连接LLaMA",
-  "chinese_characters": 2697,
+  "title_zh": "mPLUG-Owl：以视觉模块学习和图文联合指令训练连接 LLaMA",
+  "chinese_characters": 2762,
   "figure_revision_date": "2026-10-09"
 }

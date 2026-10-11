@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LLaMA-VID](../README.md)
+<!-- article-header:end -->
+
 # LLaMA-VID：以问题相关 token 和内容 token 压缩视频帧
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -7,6 +19,8 @@
 LLaMA-VID 针对图像、短视频和长电影输入的文本问答。核心问题是：若每帧都给 LLM 数百个视觉 token，长视频会迅速超出上下文预算。作者为每帧构建一个随问题变化的 **context token** 和一组表示画面内容的 **content tokens**；视频配置将后者压成一个，于是每帧总共两个。
 
 这不是说所有实验都仅用两个 token。图像主结果在 336 分辨率下保留 **576 个 content tokens + 1 个 context token = 577**；长电影示例还输入字幕并扩展到 64K 上下文。理解这些配置差异，是阅读本报告的前提。[原文 §3–4，PDF 第 3–6 页](https://arxiv.org/pdf/2311.17043v1#page=3)
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -22,36 +36,44 @@ LLaMA-VID 针对图像、短视频和长电影输入的文本问答。核心问�
 
 两个 token 分工不同：一个尽量回答“用户在这一帧想找什么”，另一个保留“这一帧整体有什么”。后者不依赖具体提问，前者则需要根据用户输入重新产生；因而不是一次预计算后适用于任意问题的全部视觉表示。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
 
 **原图：Figure 2、Algorithm 1，PDF 第 3 页。** 从左边帧进入视觉编码器后，特征分两路：上路与用户指令生成的 Text Query 做 Context Attention；下路经过 Pool。两个 Projector 把输出送入 LLM，虚线 content 区域表示可伸缩数量。图中“Text Decoder”是用于跨模态查询的模块，不是最后生成回答的 Vicuna。
 
-第 \(t\) 帧经过 EVA-G 产生 \(X_t\in\mathbb R^{N\times C}\)。QFormer 接收用户指令与视觉特征，输出 \(M\) 个问题相关查询 \(Q_t\in\mathbb R^{M\times C}\)。Context Attention 再用查询从视觉特征中取出相关内容，并平均成一个 context 表示。
+第 $t$ 帧经过 EVA-G 产生 $X_t\in\mathbb R^{N\times C}$。QFormer 接收用户指令与视觉特征，输出 $M$ 个问题相关查询 $Q_t\in\mathbb R^{M\times C}$。Context Attention 再用查询从视觉特征中取出相关内容，并平均成一个 context 表示。
 
-另一条路径对 \(X_t\) 的空间网格做平均池化，生成 \(n\) 个 content 表示，\(1\le n\le N\)。视频令 \(n=1\)，图像可保留全部 patch。两个独立线性投影将表示转到语言输入空间，帧 token 按时间顺序与用户文字一起进入 LLM；长电影配置还穿插字幕 token。
+另一条路径对 $X_t$ 的空间网格做平均池化，生成 $n$ 个 content 表示，$1\le n\le N$。视频令 $n=1$，图像可保留全部 patch。两个独立线性投影将表示转到语言输入空间，帧 token 按时间顺序与用户文字一起进入 LLM；长电影配置还穿插字幕 token。
 
 这种压缩发生在**视觉编码器之后、LLM 之前**，减少 LLM 的视觉序列长度，但不等于视觉骨干只看两个 patch。它也没有通过跨帧时序编码器证明每个动作细节完整保留；低帧率抽样和空间池化都可能丢失信息。[原文 §3.1–3.2，PDF 第 3–4 页](https://arxiv.org/pdf/2311.17043v1#page=3)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
 原文式 (1) 定义 context 表示：
 
-\[
-E_t=\operatorname{Mean}_{M}\!left[
-\operatorname{Softmax}_{N}(Q_tX_t^\top)X_t\right].
-\]
 
-\(Q_tX_t^\top\) 得到每个查询对每个 patch 的匹配分数，softmax 沿 patch 维归一化；每个查询获取一份视觉加权和，最后沿查询维求平均，得到 \(1\times C\) 向量。Algorithm 1 的代码还在 softmax 前除以 \(\sqrt C\)，而正文公式省略该缩放；具体实现解读应以代码为准，不能把二者写成完全相同的公式。
+$$
+E_t=\operatorname{Mean}_{M}\!\left[
+\operatorname{Softmax}_{N}(Q_tX_t^\top)X_t\right].
+$$
+
+
+$Q_tX_t^\top$ 得到每个查询对每个 patch 的匹配分数，softmax 沿 patch 维归一化；每个查询获取一份视觉加权和，最后沿查询维求平均，得到 $1\times C$ 向量。Algorithm 1 的代码还在 softmax 前除以 $\sqrt C$，而正文公式省略该缩放；具体实现解读应以代码为准，不能把二者写成完全相同的公式。
 
 相比直接把 QFormer 的多个查询输出全部交给 LLM，这里查询充当“如何汇聚原始视觉特征”的中介，最终只输出一个 context token。问题不同，查询及关注区域也可变化。注意力热图只显示匹配响应，不能自动视为模型推理因果的证明。[原文式 (1)、Algorithm 1、Figure 6，PDF 第 3、8 页](https://arxiv.org/pdf/2311.17043v1#page=3)
 
-Content 路径可概括为 \(E_t^V=P_V(\operatorname{Pool}_n(X_t))\)，context 路径为 \(E_t^T=P_T(E_t)\)，再拼接为 \([E_t^T;E_t^V]\)。这两式是本文对图和伪代码的整理，不是论文另外编号的目标。\(n=1\) 是全局平均，\(n=N\) 保留空间特征。代价与信息取舍集中在 \(n\) 的选择，而非新增一套文字损失。
+Content 路径可概括为 $E_t^V=P_V(\operatorname{Pool}_n(X_t))$，context 路径为 $E_t^T=P_T(E_t)$，再拼接为 $[E_t^T;E_t^V]$。这两式是本文对图和伪代码的整理，不是论文另外编号的目标。$n=1$ 是全局平均，$n=N$ 保留空间特征。代价与信息取舍集中在 $n$ 的选择，而非新增一套文字损失。
 
 以 224 输入、patch 14 的 256 个视觉 token 为参照，视频的 2 个 token 在**视觉输入数量**上是 1/128。但 LLM 还有问题、字幕和输出 token，且视觉编码及 QFormer 开销仍存在，所以不能把这个比例描述成已经测得的整套系统 128 倍提速。更少 token 也不是无损编码。
 
 长电影的另一必要机制是上下文扩展：附录采用位置插值将 RoPE 的原 4K 范围扩到 64K，然后进行监督微调。按 1 FPS 粗算，三小时电影约 10,800 帧，两个视觉 token/帧约 21,600 个，仍需为字幕及问答留空间；这些数是按采样率推算，真实长度随电影时长和字幕变化。[原文 §4.3、附录 B，PDF 第 7–9 页](https://arxiv.org/pdf/2311.17043v1#page=9)
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -73,14 +95,16 @@ Content 路径可概括为 \(E_t^V=P_V(\operatorname{Pool}_n(X_t))\)，context �
 
 训练长视频时，模型输入每帧视觉 token 与相应字幕，并预测问答目标。该设计同时利用画面与语言线索，论文未通过大规模字幕移除或已知电影排除实验，严格量化各自贡献。也未披露电影样本的完整测试隔离及教师数据错误率。[原文 §3.3、附录 B，PDF 第 4–5、9–11 页](https://arxiv.org/pdf/2311.17043v1#page=4)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
-三个阶段采用条件文本生成的监督学习，原文没有另设 context/content 重建或对比损失。若记模型视觉 token 序列为 \(H\)、用户提示为 \(q\)、目标回答为 \(y\)，可解释为 \(-\sum_t\log p_\theta(y_t\mid H,q,y_{<t})\)；这是对训练描述的数学归纳。
+三个阶段采用条件文本生成的监督学习，原文没有另设 context/content 重建或对比损失。若记模型视觉 token 序列为 $H$、用户提示为 $q$、目标回答为 $y$，可解释为 $-\sum_t\log p_\theta(y_t\mid H,q,y_{<t})$；这是对训练描述的数学归纳。
 
 | 配置 | 阶段 1：对齐 | 阶段 2：指令 | 阶段 3：可选长视频 |
 |---|---|---|---|
 | 全局 batch | 256 | 128 | 8 |
-| 学习率 | \(10^{-3}\) | \(2\times10^{-5}\) | \(2\times10^{-5}\) |
+| 学习率 | $10^{-3}$ | $2\times10^{-5}$ | $2\times10^{-5}$ |
 | 最大序列长度 | 2048 | 2048 | 65536 |
 | 视觉编码器 | 冻结 | 冻结 | 冻结 |
 | QFormer 文本查询模块 | 冻结 | 训练 | 再冻结以省显存 |
@@ -89,6 +113,8 @@ Content 路径可概括为 \(E_t^V=P_V(\operatorname{Pool}_n(X_t))\)，context �
 第一阶段优化视觉 token 接口、投影等可训练部分；若消融采用随机初始化的两层 BERT，则它与预训练 QFormer 的冻结设置不同。第二阶段除视觉编码器外训练各模块。第三阶段进一步固定文本查询模块并扩展语言上下文，不能把“全模块开放”照搬到长视频阶段。
 
 附录 Table 7 给出每阶段 1 epoch、AdamW、cosine 学习率、warm-up ratio 0.03、weight decay 0、DeepSpeed stage 2。视频以 **1 FPS** 抽帧，所有模型使用 **8 张 A100**。引言称可在两天内完成训练，但没有逐阶段时长、精度、显存容量和全部 AdamW 参数，本文不由显卡型号推断这些配置。[原文 §4.1、附录 A、Table 7，PDF 第 5、9 页](https://arxiv.org/pdf/2311.17043v1#page=9)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -115,3 +141,11 @@ Content 路径可概括为 \(E_t^V=P_V(\operatorname{Pool}_n(X_t))\)，context �
 压缩消融更清楚揭示取舍：224 输入的 256 content tokens、无 context 时，GQA/TextVQA 为 61.9/53.0；增加 context 变为 63.0/53.8。压到 1 context + 1 content 后则为 **55.5/49.0**，存在明显细节损失，ScienceQA-Image 却为 68.8，高于原 67.5。Context/content 单独使用的 GQA 为 54.3/53.3，结合为 55.5，说明互补而非单一路径解决全部问题。[原文 Table 4–6，PDF 第 7–8 页](https://arxiv.org/pdf/2311.17043v1#page=7)
 
 数小时电影展示证明模型可以容纳相关输入并生成回答，报告没有给这一时长下的大型独立量化基准。附录与 LLaMA2/LongLoRA 的比较还是选例，且输入信息不完全相同。Figure 8 的 Titanic 摘要自身含与后续问答冲突的票来源等叙述，表明长输入能力不等于长电影事实全部可靠。字幕、电影知识、文本合成教师与压缩视觉共同影响结果，不能只凭熟悉电影的正确回答证明每个结论源自画面。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LLMGA](../../llmga/arxiv-2311.16500/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：LL3DA →](../../ll3da/arxiv-2311.18651/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

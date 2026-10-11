@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [InternVL](../README.md)
+<!-- article-header:end -->
+
 # InternVL 2.5：复用视觉主干、清理训练数据与扩展测试时推理
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 [Expanding Performance Boundaries of Open-Source Multimodal Models with Model, Data, and Test-Time Scaling](https://arxiv.org/abs/2412.05271) 是 InternVL 2.5 系列技术报告，作者包括 Zhe Chen、Weiyun Wang、Yue Cao 等，主要来自上海人工智能实验室及合作高校、商汤研究院。本文依据 **2412.05271v1，2024 年 12 月 6 日**，不混入后来的 InternVL 3 系列。[PDF 第 1 页](https://arxiv.org/pdf/2412.05271v1#page=1)
 
 它沿用 ViT–MLP–LLM 结构，覆盖从约 1B 到 78B 的单图、多图、视频与纯文本理解模型。主要变化是视觉编码器增量学习、较大语言主干的渐进复用、更广且更干净的指令数据，以及 CoT 等测试时策略。报告没有新增音频编码通道，视频理解以采样帧和可用字幕为输入，不能从“视频基准是多模态”推断模型直接处理音轨。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -19,6 +33,8 @@
 | 测试时计算 | CoT 改善部分困难任务，报告最高设置成绩，视频也比较多种帧数。 |
 
 重点是整套训练和评测配方的提升，不能把版本差异全部归因于新架构或某一项过滤操作。[PDF 第 3–15 页](https://arxiv.org/pdf/2412.05271v1#page=3)
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -39,6 +55,8 @@
 两类视觉编码器都取 V2.5 增量版本。大编码器宽度 3,200、45 层、25 头，使用 QK-Norm 与 RMSNorm；300M 为宽度 1,024、24 层、16 头，采用 LayerNorm，无 QK-Norm。小编码器曾从大编码器进行余弦蒸馏，再结合语言模型做下一 token 增量学习。报告也列出 InternVL2.5-Pro，但未公开其完整语言主干与规模，不能擅自填入。[PDF 第 3–4 页](https://arxiv.org/pdf/2412.05271v1#page=4)
 
 多图每张图有 `Image-i` 标记，切片预算在同一样本中分配；视频每帧用 `Frame-i` 与图像标签，固定缩放到 448×448、不切多块。32 或 64 帧分别形成 8,192 或 16,384 个视觉 token，因此视频分辨率和帧数需要共同控制上下文成本。输入格式承载顺序，但报告没有给出像后续模型那样的绝对时间编码模块。[PDF 第 5–6 页](https://arxiv.org/pdf/2412.05271v1#page=5)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -64,6 +82,8 @@ token 平均使用权重 1，长回答包含更多 token，因此总贡献更大
 
 测试时 CoT 通过提示让模型逐步求解并在最后给出规范答案；多数投票则聚合多个候选最终答案。前者增加单次生成长度，后者增加多次调用，不能只以更高准确率推断成本相同。报告证明了特定题集的收益，没有提供一个在全部任务上自动选择最优思考长度的机制。[PDF 第 15 页](https://arxiv.org/pdf/2412.05271v1#page=15)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 7](figures/original-p011-figure-7.png)
@@ -79,6 +99,8 @@ token 平均使用权重 1，长回答包含更多 token，因此总贡献更大
 过滤针对少量异常回答对后训练的放大效应。纯文本分数学、代码、学科及一般领域，以 0–10 分评分，正文给出如低于 7 的示例阈值；重复检测再结合人工审查，给出如低于 3 删除的示例；规则检查过长句、成串零和大量重复行。自动标记会误杀，因此由人工复核决定删除。多模态数据中高质量学术集豁免部分重复检查，其他样本走重复与规则管线。作者明确过滤仍不能消除语言主干原始预训练中的所有噪声。[PDF 第 10–11 页](https://arxiv.org/pdf/2412.05271v1#page=10)
 
 数据集另有切片上限和重复系数：图像常用 6–36 或多图 12–36 块等配置，视频一帧一块，2.5 的视频训练采样从上一代 4–24 帧改为 8–32 帧；重复系数 $r\in(0,4]$ 控制降采样或上采样。多模态 packing 同时约束 LLM 序列长度与 ViT 图块数，打包样本之间注意力隔离、位置独立，不能把它当成增加跨样本上下文学习。[PDF 第 9–10、24 页](https://arxiv.org/pdf/2412.05271v1#page=9)
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -97,6 +119,8 @@ token 平均使用权重 1，长回答包含更多 token，因此总贡献更大
 | 最终微调 epoch | 1 | 1 | 1 |
 
 较小版本也不是完全相同配方：1B/2B 的最终阶段 4 epoch、约 176B token，4B 为 2 epoch、约 88B。78B 的 76B+44B 约 120B 是该版本对齐和微调处理量，继承语言模型与视觉编码器先前训练；与 Qwen2-VL 1.4T 的比较是不同继承链和训练设计下的报告统计，不能直接当成端到端从零训练的计算或金钱成本只需十分之一。本文没有补写训练 GPU 数或未给出的完整优化器设置。[PDF 第 7–8 页](https://arxiv.org/pdf/2412.05271v1#page=7)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -117,3 +141,11 @@ token 平均使用权重 1，长回答包含更多 token，因此总贡献更大
 视频的 Video-MME、MMBench-Video、MLVU、LongVideoBench 比较 16、32、48、64 帧后报告最大值；CG-Bench 为 32 帧。因此主表不是所有视频都按唯一帧数运行，也不能不计额外搜索成本。MMMU / MMMU-Pro 同样报告直接答与 CoT 的较高值。多数投票的定量例子明确针对旧 InternVL2-Llama3-76B，从 62.7 到 65.3；作者称 2.5 也观察到收益，但 v1 没有完整给出 2.5 的投票次数与对应最优分数，本篇不编造。[PDF 第 14–15、23–25 页](https://arxiv.org/pdf/2412.05271v1#page=14)
 
 语言保留也有取舍：17 项纯文本平均，8B 从 InternVL2 的 67.2 到 70.0，原 InternLM2.5-7B 为 69.5；但 GSM8K 77.8 仍低于语言主干 85.1。幻觉 Table 9 的 HallusionBench 78B 为 57.4，略低于 Qwen2-VL 58.1；WildVision 胜率 71.4 低于 GPT-4o 80.6。报告还发现视觉编码器线性 probing 下降而强头或全量微调相对稳定，这是表征可用性的实验观察，不足以证明任何下游任务都不存在遗忘。整体结论应是系列在多项能力上扩展了开源模型性能，同时保留评测模式、数据继承和剩余差距。[PDF 第 19–21、25–29 页](https://arxiv.org/pdf/2412.05271v1#page=25)
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：CompCap](../../compcap/arxiv-2412.05243/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：StreamChat →](../../streamchat/arxiv-2412.08646/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

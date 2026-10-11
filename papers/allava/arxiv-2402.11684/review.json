@@ -10,7 +10,7 @@
     "Self-review",
     "Table4/6/7 numerical inconsistencies explicitly noted"
   ],
-  "article_sha256": "a18fbecddd84ff4ad63a2942a2eea78de60136889cfb44056cabbff9c4a0c995",
+  "article_sha256": "f8dd7475d9f8d0ac35e1f069d1aebd37060161ef452ab3520e9d136d272dd675",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -27,5 +27,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

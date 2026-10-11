@@ -33,5 +33,97 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "上半部分是 YTTB-VQA 缩略图的长描述、短描述和问答示例；下半部分是不用 OCR tokens 的四个文本图像基准。示例中的正确回答不能替代下方的定量实验。",
+          "after": "Figure 4 展示 YTTB-VQA 缩略图的长描述、短描述和问答示例；Table 1 比较不用 OCR tokens 的四个文本图像基准。示例中的正确回答不能替代定量实验。",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ],
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "2ec13c8f3442",
+      "path": "papers/bliva/arxiv-2308.09936/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 152,
+          "before": "完整截图",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p007-table-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            52,
+            63,
+            561,
+            157
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-4.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            52,
+            162,
+            561,
+            274
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-5.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            52,
+            280,
+            561,
+            379
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p007-table-6.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            316.5,
+            392.95,
+            561.0,
+            495.95
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "64b0bb8826e06d8c07b4350241456eabba8d24f02fab2bce91052e3c46ad947e"
+    }
+  ]
 }

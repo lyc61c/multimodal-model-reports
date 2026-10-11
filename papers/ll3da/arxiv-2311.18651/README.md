@@ -1,6 +1,16 @@
-[返回模型家族](../README.md) · [返回仓库](../../../README.md)
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LL3DA](../README.md)
+<!-- article-header:end -->
 
 # LL3DA：接受点击与框提示的三维语言助手
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -16,6 +26,8 @@
 
 标题中的 Omni-3D 指多种三维理解与交互任务，不是支持任意音视频模态。LL3DA 不先从多视角图像重建视觉语言特征，而是使用预训练点云编码器与交互条件 Q-Former，把点云信息压缩成冻结语言模型可读的前缀。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 在杂乱室内场景里，“那把椅子”可能指多个物体。LL3DA 让用户点击一个空间位置或标出框，再把这类视觉提示与文字指令提前融合，取得与当前交互相关的场景信息。它不是先把整幅点云转换成固定描述再回答，而是在 32 个 learnable query 内综合场景、指令和提示，输出给语言模型。
@@ -23,6 +35,8 @@
 模型冻结 OPT-1.3B 与点云编码器，只训练约 111M 参数的桥接与交互模块。训练包含 dense caption、问答、场景描述、具身对话和文字计划，另外加入“回答并定位”“描述并定位”等辅助输出，利用文字坐标加强语言与空间关联。坐标采用场景相对的 0–255 整数，以使用原语言词表而不扩展新可学习词项。
 
 经各任务额外微调后，ScanRefer C@0.5 为 65.19，Nr3D 为 51.18；ScanQA val CIDEr 为 76.79，加入测试时点击提示后为 82.91。主 dense caption 结果的框来自 Vote2Cap-DETR，不等同于 LL3DA 自行检测框；用模型文字生成框时 ScanRefer C@0.5 降为 51.12。通用权重对 Nr3D 也明显弱于任务微调版，显示共享助手与专用模型之间仍有差距。[Sections 3–5、Appendix C](https://arxiv.org/pdf/2311.18651v1)
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -44,45 +58,57 @@
 
 Q-Former 仅加载 BERT 的文字与位置嵌入，词表 30,522、位置嵌入数 512；作者发现直接使用全部预训练 BERT 权重容易产生重复输出，因此没有整体加载。这里的 512 是交互模块位置嵌入配置，不是全文声明的 OPT 最长上下文。点云顺序不具有普通句子的语义顺序，learnable queries 提供了输出给 LLM 的固定长度有序表示，但不是对任意点采样、编码处理都证明严格数学置换不变性。[Section 3.2、Appendix E](https://arxiv.org/pdf/2311.18651v1)
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 **在压缩前融合用户交互。** 单独将视觉提示拼在 LLM 输入后，无法改变已提取的整场景前缀。LL3DA 提前将 query、点击/框特征和文字指令放进共享 self-attention，再让 query 与提示经 cross-attention 查询点云。它使“关注哪个对象”影响场景压缩过程，而不只是影响最终文字解码。注意力可用下列标准定义理解，原文没有将其列为新编号公式：
 
-\[
+
+$$
 \operatorname{Attn}(Q,K,V)=\operatorname{softmax}(QK^\top/\sqrt d)V.
-\]
+$$
+
 
 固定 32 query 限制了送入 LLM 的场景序列长度，query-to-scene 访问成本随 1,024 个场景 token 增加，而场景编码本身仍有计算开销。本文没有端到端速度曲线，不宜把固定查询数量直接等同于已证明的全模型高吞吐。
 
 **将点击转为空间位置特征。** 原文 Equation (2) 为：
 
-\[
+
+$$
 \operatorname{pos}(p)=
 [\sin(2\pi pB);\cos(2\pi pB)],\quad
 p\in\mathbb R^3,\ B\in\mathbb R^{3\times d/2}.
-\]
+$$
 
-\(p\) 在场景范围内归一化，\(B\) 可学习；正弦与余弦拼接给出 d 维表示。随后 Equation (3) 用两种独立 FFN 转换点击位置编码和框 ROI 特征。位置编码输入是连续 0–1 值，输出文字中的坐标却是离散 0–255，这两种尺度不能混用。
+
+$p$ 在场景范围内归一化，$B$ 可学习；正弦与余弦拼接给出 d 维表示。随后 Equation (3) 用两种独立 FFN 转换点击位置编码和框 ROI 特征。位置编码输入是连续 0–1 值，输出文字中的坐标却是离散 0–255，这两种尺度不能混用。
 
 **用已有文字词表表达三维空间。** 点表达为 `<loc>x,y,z</loc>`，框表达为 `<obj>cx,cy,cz,w,h,l</obj>`，后者是中心与尺寸，不能当作两个对角点。原文按输入场景边界将数值离散到无符号整数 0–255，不新增可学习坐标词。以单轴坐标为例，以下为帮助理解的线性量化示意，并非原文规定的取整代码：
 
-\[
+
+$$
 q\approx\operatorname{round}\left(255\frac{x-x_{min}}{x_{max}-x_{min}}\right),
 \quad
 x\approx x_{min}+\frac{q}{255}(x_{max}-x_{min}).
-\]
+$$
+
 
 区间被划为 255 个间隔，细节精度受场景范围与取整影响；原文未给出退化轴、越界裁剪和尺寸量化完整实现。文字标签本身由已有 tokenizer 切分，不表示每个整数都有专门单 token。
 
-**同时评价定位与文字质量。** 原文 Equation (7) 的 \(m@kIoU\) 把 caption 分数乘以定位成功条件，再对实例平均：
+**同时评价定位与文字质量。** 原文 Equation (7) 的 $m@kIoU$ 把 caption 分数乘以定位成功条件，再对实例平均：
 
-\[
+
+$$
 m@kIoU=\frac1N\sum_{i=1}^N
 m(c_i^{pred},c_i^{gt})\,
 \mathbf1[\operatorname{IoU}(b_i^{pred},b_i^{gt})\ge k].
-\]
+$$
+
 
 若框没有达到重叠阈值，该实例 caption 分数归零。C@0.5 因而是带定位门槛的 CIDEr，不是“65.19% 的对象框正确”。句子相似性高也不保证几何准确，正确理解这一指标是区分外部框与语言生成框的关键。[Section 5.2、Appendix C](https://arxiv.org/pdf/2311.18651v1)
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -108,6 +134,8 @@ m(c_i^{pred},c_i^{gt})\,
 
 该自建验证集来自 ScanNet 的原 train 场景集合，冻结场景编码器又在 ScanNet 检测任务预训练；它不应被称为模型从未见过场景几何的严格零样本评测。原文没有完整披露任务混合权重、全部点特征预处理和标签清洗阈值。[Section 4、Appendices B、D](https://arxiv.org/pdf/2311.18651v1)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 优化与输入 | 更新 / 冻结 |
@@ -118,14 +146,18 @@ m(c_i^{pred},c_i^{gt})\,
 
 原文 Equations (5)–(6) 最大化回答序列似然，实际使用回答 token 交叉熵：
 
-\[
+
+$$
 \mathcal L(\theta)=-\sum_{i=1}^{|s|}
 \log P(s_i\mid PC,I_v,I_t,s_{<i};\theta).
-\]
+$$
 
-\(PC\) 为点云，\(I_v,I_t\) 为视觉与文字交互，\(\theta\) 只涵盖可训练部分。坐标在文本输出里同样接受 token 监督，没有另设已披露的 box IoU 或控制策略奖励。
+
+$PC$ 为点云，$I_v,I_t$ 为视觉与文字交互，$\theta$ 只涵盖可训练部分。坐标在文本输出里同样接受 token 监督，没有另设已披露的 box IoU 或控制策略奖励。
 
 AdamW weight decay=0.1，总 batch=16，学习率以 cosine 从 1e-4 降到 1e-6；每 4K iterations 评测。OPT 以 float16 加载，单个训练过程使用不超过 8 张 RTX3090 24GB，作者报告在一天内完成。未披露 Adam beta、warmup、精确训练样本混合、随机种子或系统总训练成本。常规指标生成使用 beam size=4；长定性输出使用 top-k=50、top-p=0.95，附录长文本评测还禁止重复 4-gram。不同解码设置不应混成一个统一默认值。[Sections 3.2、5.1、5.4、Appendices B、E](https://arxiv.org/pdf/2311.18651v1)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -166,3 +198,11 @@ AdamW weight decay=0.1，总 batch=16，学习率以 cosine 从 1e-4 降到 1e-6
 **读表**：LLM 生成框实验以 detector vote query 的空间位置模拟点击，每场景 256 queries；这也不是无候选点提示的全自由检测。ScanNet 词表 mAP@0.5 为 32.48，对 VoteNet 31.50；但 mAP@0.25 为 48.94，对 57.17，召回也较低。ScanNet200 扩大类别后 mAP@0.5 仅 5.20，说明开放词表泛化仍有限。Table 13 的语言框 ScanRefer C@0.5=51.12，外部检测框=65.19，相差 14.07 分，明确揭示模型自身几何定位尚不及该专用器。
 
 附录 Table 10 在自建场景划分中以语言相似性评价描述、对话、计划，beam 下计划 CIDEr 为 196.78、对话 260.07，场景描述 1.32；这些量纲与参考句分布差异很大，不能按高分推断计划实际可执行。定性示例也包含冗余、错误或不合理表达。本文充分支持交互提示与辅助定位监督改善三维文字任务，却没有展示实时机器人闭环、路径执行或真实环境任务成功率。以上来自原文，本介绍未运行系统。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LLaMA-VID](../../llama-vid/arxiv-2311.17043/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：mPLUG-PaperOwl →](../../mplug/arxiv-2311.18248/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

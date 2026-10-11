@@ -29,5 +29,12 @@
     "ModifiedSWEPro and Skills78subset",
     "InternalElo benchmark notpercentage",
     "Nativecontext max notestablished byexampleconfig"
-  ]
+  ],
+  "article_sha256": "55487ee3df30a0dab304e4cac1543c491ced1a57d60ac9eefe910773a1af0735",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

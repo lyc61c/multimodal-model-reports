@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VideoLLaMA](../README.md)
+<!-- article-header:end -->
+
 # VideoLLaMA 2：用时空卷积连接器与联合训练改善视频和声音理解
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 与第一代通过 Q-Former 查询汇聚视频相比，第二代重点研究保持时空网格顺序的连接器。它引入 Spatial-Temporal Convolution（STC），在 LLM 前完成局部空间交互和时间融合。同时将音频编码器换为 BEATs，直接用音频文本训练，并增加音视频联合训练，不再只依赖第一代的 ImageBind 共享空间迁移。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 部分 | 关键设计 |
@@ -25,6 +39,8 @@
 
 在同一 7B 模型的选择题结果中，增加到 16 帧改善 EgoSchema、Perception-Test、MVBench 和 Video-MME。但开放问答 MSVD 与描述分数并非同步提升，说明更多帧主要改变可见时序证据，并不会保证所有生成质量指标增长。（PDF 第 9–11 页）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 1：STC 视频分支与 BEATs 音频分支接入 LLM](figures/architecture.png)
@@ -34,6 +50,8 @@
 视频逐帧经 CLIP 提取空间网格。STC 在降采样前后各放一个 RegStage 卷积模块，增强邻近空间特征交互；中间的 3D 卷积联合处理时间和空间，再将输出展平、投射到语言维度。它保留一个有序网格的表示路径，不通过无固定空间对应关系的学习查询重新采样。
 
 声音先由 BEATs 编码，经线性层映射到 LLM 输入空间。视觉与音频表示同提示一起输入语言解码器。音频分支并非复用上一代 Audio Q-Former；原文此处采用简单线性投射。论文支持的是音频理解和文字回答，没有相应音频生成器。（PDF 第 3–5 页）
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -60,6 +78,8 @@ $$
 
 相较第一代的共享空间迁移，本代通过真实音频文本监督学习 BEATs 特征到语言的映射。联合阶段用同步裁切的音画片段，让生成答案可以依赖两种证据；无声音的视频用全零波形补齐。这种处理统一了接口输入形式，但全零输入不等于自然环境的背景静音，也没有单独的音画时间对比损失在正文中被明确提出。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Table 2–3：实际取用的预训练子集与多任务微调数据](figures/data.png)
@@ -71,6 +91,8 @@ $$
 视觉多任务阶段按表 3 分为视频描述 23K、分类 79K、VQA 161K、指令 225K，以及图像描述 82K、VQA 198K、指令 466K，行项合计约 1.234M。来源包括 VideoChat、Kinetics、SthSthv2、NExT-QA、CLEVRER、VideoChatGPT、VTimeLLM、ShareGPT4V 和 LLaVA 等；源数据规模不等于取用后规模。
 
 音频预训练使用 WavCaps 约 400K；音频指令集合约 702K，涵盖音频描述、问题回答、音乐和声音事件分类；音视频联合阶段约 692K，包括 AVQA、音乐 AVQA、AVSD、VGGSound、VideoInstruct-100K 及 WebVid 子集。三阶段表内数量约 1.794M，四舍五入为 1.8M；重复使用来源意味着不能视为互不相交的独立音频数。（PDF 第 7–8 页）
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -92,6 +114,8 @@ $$
 不同阶段按可用模态提供条件，$\mathcal R$ 表示参与监督的文字响应。论文没有逐阶段完整披露学习率、GPU 数、所有 batch 与采样权重；本介绍不从其他论文借用训练参数。尤其要注意音频第二阶段解冻 BEATs、但不解冻 LLM，不能套用视频第二阶段的更新范围。
 
 联合训练从视频抽取匹配音轨，再裁切或补齐到音频训练的时长。其数据包含 GPT 生成的指令回答；这属于合成文字监督，并非论文实施了 DPO 或 RLHF。（PDF 第 6–8 页）
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -116,3 +140,11 @@ $$
 *来源：PDF 第 12 页。*
 
 纯音频 Clotho-AQA 为 60.60，对比 Qwen-Audio 57.90 是提高 2.70 个百分点；TUT2017 为 63.21，低于对方 64.90。音视频 MUSIC-QA 70.6、AVSSD 62.9，但 AVSD 50.9 低于 AVicuna 53.1。AVSD、AVSSD 因 GPT 评测成本随机取八分之一子集；训练数据表与基线的小时数、图文对数也不构成同条件受控效率实验。结果支持 STC 和直接音频监督的有效性，同时显示任务之间仍有明显强弱差异。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Ovis](../../ovis/arxiv-2405.20797/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：SliME →](../../slime/arxiv-2406.08487/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

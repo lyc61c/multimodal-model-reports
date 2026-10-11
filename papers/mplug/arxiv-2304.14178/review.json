@@ -39,7 +39,7 @@
     "未运行模型或代码，定性结果不能泛化为可靠agent"
   ],
   "model_execution": "not_run",
-  "article_sha256": "aa6a559261e966ea4e53b7eec302c5bff4689a703c4df76d23426c90f56499ac",
+  "article_sha256": "983632f1edf8dc1043b66d50f6247d25414ff4b11c990fbcc4aa17dc7c18385a",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -56,5 +56,11 @@
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 12,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

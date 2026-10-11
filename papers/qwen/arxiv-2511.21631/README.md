@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Qwen](../README.md)
+<!-- article-header:end -->
+
 # Qwen3-VL：DeepStack、交错位置编码与原生 256K 多模态上下文
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 A3B/A22B 表示每 token 激活规模，不等于总参数或加载显存。旗舰 MoE 总计 235B、每 token 激活 22B。模型提供原生 256K 上下文；1M 是特定位置外推实验。报告将统一视觉生成列为未来方向，当前的 SVG/HTML 代码输出不能当作像素图像生成。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 三项架构升级分别处理不同问题：**Interleaved MRoPE** 平衡时间、宽、高的旋转频率分布；**DeepStack** 把 ViT 中间层特征注入语言模型前几层；**文字时间戳**明确标记视频帧组时间，替代仅靠时间位置 ID 对齐的方式。
@@ -21,17 +35,21 @@ A3B/A22B 表示每 token 激活规模，不等于总参数或加载显存。旗�
 
 Thinking 不保证每个任务更准确。复杂数学推理常受益于更长推理，OCR、框定位和一些视频任务的 Instruct 反而更好；部署时应结合任务与输出预算比较，不能合并两者的最佳数值当成单个模型结果。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 1](figures/original-p003-figure-1.png)
 
-**读图：**不同图像产生不同长度视觉序列，视频帧组前插入文字时间戳；右侧 DeepStack 在前几个语言层添加额外视觉特征，未把三组中间特征都扩成新的上下文位置。
+**读图：** 不同图像产生不同长度视觉序列，视频帧组前插入文字时间戳；右侧 DeepStack 在前几个语言层添加额外视觉特征，未把三组中间特征都扩成新的上下文位置。
 
 视觉端采用动态分辨率继续训练的 SigLIP-2，默认 SO-400M；2B/4B 使用 Large-300M。位置编码同时采用二维 RoPE 与按输入尺寸插值的绝对位置嵌入。两层 MLP merger 将空间 2×2 特征合为一个语言维度视觉 token。
 
 DeepStack 从视觉编码器三个层级取特征，各经专门 merger 投影，直接加到语言模型**前三层对应视觉位置的隐藏状态**上。它借鉴已有 DeepStack，但使用同一 ViT 的不同深度特征，而非原方法的多尺度输入堆叠。文本和视觉 token 共同由 Qwen3 Dense 或 MoE 解码器处理。
 
 视频的每个时间 patch 前加入格式化文字，如“3.0 seconds”；训练同时使用秒数与时分秒格式。额外时间文本占用一些上下文，换取直接可读的时间条件。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -49,6 +67,8 @@ $z^{(k_l)}$ 是相应 ViT 层特征，$M_l$ 是专门 merger。该式是对结�
 
 小模型蒸馏先使用教师输出作 off-policy 监督，再在学生自己生成的序列上对齐教师与学生 logits，最小化 KL 散度。这里 KL 衡量同一上下文下预测分布差异；报告未给出方向、温度和各损失权重，不能据此提供精确蒸馏配方。推理 RL 使用 SAPO，但本报告未展开其完整数学推导。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 图像描述由专门微调的 Qwen2.5-VL-32B 结合原始网页文字重新生成；对重描述文本做语义去重，再通过视觉嵌入聚类补充稀疏概念。交错网页用领域分类器去除广告等低价值内容；书籍由 Qwen2.5-VL-7B 解析并按页拼接，超长样本保留自然页序并约束图文比例。
@@ -58,6 +78,8 @@ OCR 有约 30M 内部样本，使用专门 OCR 模型与 Qwen2.5-VL 自动修正
 定位融合公开 COCO/Objects365/OpenImages/RefCOCO 系列、Grounding DINO 与模型合成标注；点定位包含 PixMo 和专门细粒度合成。坐标采用 [0,1000] 归一化体系。3D 数据以单视图图像和指代句对应 9-DoF 框，统一虚拟相机坐标并过滤严重遮挡和错误标签；它不是由单图可靠测出任意物体真实距离的证明。
 
 STEM 视觉数据包括 1M 点定位、2M 细节问答、6M 图表描述；推理题超过 60M，另有超过 12M 图像长 CoT 样本，经历规则和模型校验。代码数据覆盖截图转 HTML/CSS、图像转 SVG、图表与公式转代码。视频采用短到长的描述合成、时空定位与按上下文预算调整抽帧；GUI 轨迹经自演化生成和人工抽查。普通工具调用轨迹可模拟函数响应，因此不能把全部合成轨迹称为真实环境执行记录。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -76,11 +98,13 @@ STEM 视觉数据包括 1M 点定位、2M 细节问答、6M 图表描述；推�
 
 视觉工具训练先用约 10K 样本训练 Qwen2.5-VL-32B 教师，再生成约 120K 多轮交互用于 Qwen3-VL；奖励考虑答案、反馈理解和调用次数，针对“一律只调一次工具”的奖励利用问题增加调用奖励。报告没有公开全部学习率、优化步数、奖励权重和每个变体后训练成本。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 2](figures/original-p015-table-2.png)
 
-**读表：**每个模型有不同思考预算列；星号来自相应技术报告，＋表示工具增强。OmniDocBench 为误差指标、越低越好，OCRBench 为原始分数。以下只取相同旗舰的两个明确配置。
+**读表：** 每个模型有不同思考预算列；星号来自相应技术报告，＋表示工具增强。OmniDocBench 为误差指标、越低越好，OCRBench 为原始分数。以下只取相同旗舰的两个明确配置。
 
 | 指标 | 235B-A22B Thinking | Instruct |
 |---|---:|---:|
@@ -105,6 +129,14 @@ Thinking 的 MathVision 高于表内 Gemini-2.5-Pro Thinking 73.3 和 GPT-5 high
 
 ![原文 Table 12](figures/original-p024-table-12.png)
 
-**读表：**DeepStack 使用内部 15B-A2B、200B token 预训练、无后训练，并非旗舰消融。平均分 74.7→76.0，InfoVQA 71.9→74.2、DocVQA 89.5→91.1，但 TextVQA 80.6→80.5。Table 11 的视觉端比较使用相同 1.7B Qwen3、1.5T token，不能拿它的数字代替最终 2B。
+**读表：** DeepStack 使用内部 15B-A2B、200B token 预训练、无后训练，并非旗舰消融。平均分 74.7→76.0，InfoVQA 71.9→74.2、DocVQA 89.5→91.1，但 TextVQA 80.6→80.5。Table 11 的视觉端比较使用相同 1.7B Qwen3、1.5T token，不能拿它的数字代替最终 2B。
 
 Figure 3 的视频插针实验在 1fps 和动态帧分辨率下，30 分钟/256K 为 100%；用 YaRN 外推至约 1M/两小时为 99.5%。这是显著目标帧检索，不代表原生 1M、完整长视频叙事都正确。本文未运行模型或独立复现训练。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Emu3.5](../../emu/arxiv-2510.26583/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Mistral 3 →](../../mistral-pixtral/document-6276d6c37ba5/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

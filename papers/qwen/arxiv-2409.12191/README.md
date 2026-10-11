@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Qwen](../README.md)
+<!-- article-header:end -->
+
 # Qwen2-VL：动态分辨率与多模态旋转位置编码
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 系列正式名称是 **Qwen2-VL-2B/7B/72B**。Table 1 的语言骨干分别约 1.5B/7.6B/72B，视觉编码器均约 675M；报告部分段落按粗略总规模写“2B/8B/72B”，不能将 8B 再当作独立版本。本文讨论该报告，不把 Qwen2.5-VL 的时间编码、窗口注意力等后续设计提前归入本代。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 Qwen2-VL 的两个关键变化是 **Naive Dynamic Resolution** 与 **M-RoPE**。前者让不同尺寸图像对应不同数量的视觉 token，避免全部图像挤入一个固定分辨率；后者在语言模型内部区分时间、高度、宽度的位置，统一表示文字、图像和视频。
@@ -19,6 +33,8 @@ Qwen2-VL 的两个关键变化是 **Naive Dynamic Resolution** 与 **M-RoPE**。
 模型沿用视觉编码器→连接模块→Qwen2 语言模型的框架。它不生成像素图像，也不是音频输入输出模型。文档、OCR、图表和视频理解是主要能力，视觉智能体则依赖预先定义的动作集合、外部工具和交互环境。
 
 “任意分辨率”表示架构可处理变化的尺寸与长宽比，实际仍要设置像素、token 和显存预算；它不意味着无限分辨率、无限视频长度或全部细节都被保留。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -28,7 +44,9 @@ Qwen2-VL 的两个关键变化是 **Naive Dynamic Resolution** 与 **M-RoPE**。
 
 ![原文 Figure 3](figures/original-p005-figure-3.png)
 
-**读图：**视频 token 的位置由时间、高、宽三元组描述。文字的三项位置 ID 相同，静态图像的时间 ID 不变、空间 ID 随 patch 改变；视频时间 ID 随帧递增。后续模态的位置从前一段最大 ID 加一开始。
+**读图：** 视频 token 的位置由时间、高、宽三元组描述。文字的三项位置 ID 相同，静态图像的时间 ID 不变、空间 ID 随 patch 改变；视频时间 ID 随帧递增。后续模态的位置从前一段最大 ID 加一开始。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -50,6 +68,8 @@ $$
 
 其中 $\mathcal T$ 为受监督文本位置。这是对原文训练说明的数学表达，报告未另列视觉重建、图像生成或 M-RoPE 专用损失。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 来源包括清洗后的网页、开源数据和合成数据，覆盖图文对、OCR、交错图文文章、VQA、视频对话和图像知识。报告称数据知识截止时间为 2023 年 6 月，但未披露各来源的精确样本量、占比与完整清洗阈值。
@@ -59,6 +79,8 @@ $$
 定位框将坐标归一化到 [0,1000)，用两个角点表示；框标记和对象引用标记关联描述与坐标。它是文本化框表示，不是分割掩码。智能体数据则明确列出允许动作和参数，例如 Tap、Home；模型结合截图选择动作，外部执行结果形成下一次观察。
 
 报告所称 1.4T token 是两个预训练阶段的累计视觉＋文本 token，不能解释成 1.4T 张图像或纯文本训练量。没有充分信息可自行补出各尺寸模型的数据分配与独立训练费用。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -72,13 +94,15 @@ $$
 
 基础设施采用数据、张量、流水线三维并行，ZeRO-1、序列并行和选择性激活检查点；72B 使用标准 1F1B 流水线。动态序列长度先广播再传递激活；视频解码成为瓶颈后采用缓存解码。视觉文件置于 OSS、文本和检查点使用 CPFS，配合 FlashAttention 和通信计算重叠。这些措施解释可变视觉序列的大规模训练实现，不构成新增模型能力的独立实验。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 2](figures/original-p009-table-2.png)
 
 ![原文 Table 3](figures/original-p009-table-3.png)
 
-**读表：**Table 2 的模型列依次包括闭源基线和 Qwen2-VL-72B/7B/2B。不同基准的满分不同，OCRBench 原始分数不能当作百分比；MME sum 也不是单一准确率。
+**读表：** Table 2 的模型列依次包括闭源基线和 Qwen2-VL-72B/7B/2B。不同基准的满分不同，OCRBench 原始分数不能当作百分比；MME sum 也不是单一准确率。
 
 | 指标与划分 | 2B | 7B | 72B | GPT-4o，原报告列 |
 |---|---:|---:|---:|---:|
@@ -104,6 +128,14 @@ $$
 
 ![原文 Figure 5](figures/original-p015-figure-5.png)
 
-**读图表：**Table 8 使用 Qwen2-1.5B＋ViT-L 的预训练模型，不是 72B 指令版。M-RoPE 让 NextQA 43.9→46.0、STAR 55.5→57.9，但 RealWorldQA 54.5→53.7、InfoVQA 50.8→50.3，不能写成每项提升。Figure 5 的 72B 中等时长 Video-MME 外推至 80K，71.1 分；它不等于所有任务正式支持 80K，上下文历史交互部分另述 32K。
+**读图表：** Table 8 使用 Qwen2-1.5B＋ViT-L 的预训练模型，不是 72B 指令版。M-RoPE 让 NextQA 43.9→46.0、STAR 55.5→57.9，但 RealWorldQA 54.5→53.7、InfoVQA 50.8→50.3，不能写成每项提升。Figure 5 的 72B 中等时长 Video-MME 外推至 80K，71.1 分；它不等于所有任务正式支持 80K，上下文历史交互部分另述 32K。
 
 Table 7 动态分辨率平均 1,924 图像 token，OCRBench 866，高于固定 3,136 token 的 786；但 InfoVQA 75.89 低于该固定设置的 77.27。证据支持细节与成本的折中，而不是越大越好。本文未运行模型或独立复现实验。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Pixtral 12B](../../mistral-pixtral/document-3ebe839c6607/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Llama 3.2 →](../../llama/document-0c6cca94a384/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

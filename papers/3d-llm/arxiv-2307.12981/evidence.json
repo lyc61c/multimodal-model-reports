@@ -41,5 +41,18 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "verification_notes": [
+    "2026-10-11 targeted content audit: Figure 2 裁图仍写页面上半部分；改为图中三条合成路径。"
+  ],
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "通读七部分正文。",
+      "corrections": [
+        "Figure 2 裁图仍写页面上半部分；改为图中三条合成路径。"
+      ],
+      "article_sha256": "d5f8cbfa01b3f702cb94b7a05579de5859c97dc62ad3fdb0bdeef942554efbfd"
+    }
+  ]
 }

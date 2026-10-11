@@ -21,7 +21,7 @@
   "remaining_limitations": [
     "Original appendix inconsistencies acknowledged; no independent model run; some schedule details unavailable in fixed report"
   ],
-  "article_sha256": "e89588730dfd9c2e6e252cacb103a6226f5c8659475fa1ff9465e80ac81775e4",
+  "article_sha256": "15974610e5cce935d245d40b8377115596958649d7b12c72432fcae11b599538",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -38,5 +38,53 @@
       "Viewed source page and repaired two crops: all Table 8 headers, result groups and caption retained; previously omitted Figure 13 restored with all four categories, model legend, axes and caption. Following prose excluded.",
       "Viewed three separate table crops on source page: Tables 18, 19 and 20 retain their own full headers, all rows, implementation columns and captions. Gaps and page footer excluded."
     ]
-  }
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照四个视觉编码器组合 CLIP/SigLIP/ConvNeXt/DINOv2；最终模型与控制实验配方有区分，修复第 42 页整页截图的旧描述。",
+      "changes": [
+        "用 Tables 18–20 和 Table 19/20 编号替代第 42 页完整截图及中间/下方指代。"
+      ],
+      "article_sha256": "e9d180876fab698ed44fd90a6413b765ebe23b2e049aa35e75f17f5b03c623b4",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 25,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "59ef5f35121a",
+      "path": "papers/cambrian-1/arxiv-2406.16860/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "针对裁图后残留公式位置指代进行视觉复核和修正；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "cropped_formula_reference",
+          "line_before": 52,
+          "before": "下方保留原始公式，便于对应符号。",
+          "after": "相应公式的解释见下文核心创新与数学原理。"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p013-figure-8.png",
+          "scope": "实际查看当前裁图，仅含 Figure 8 架构图与图注，不含原页 Equation 1；文章第四部分另有公式解释。"
+        }
+      ],
+      "visually_inspected": [
+        "figures/original-p013-figure-8.png"
+      ],
+      "article_sha256": "15974610e5cce935d245d40b8377115596958649d7b12c72432fcae11b599538"
+    }
+  ]
 }

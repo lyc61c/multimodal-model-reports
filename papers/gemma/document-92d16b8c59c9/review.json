@@ -19,5 +19,17 @@
     "官方基准HTML表无静态原图，摘录忠实Markdown并保留来源；没有伪造截图",
     "训练细节未披露，未运行权重"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "842fc57bc39ed6c99de1e8871e1870a980456baeb97c1d14a1ede8ab23c7983f",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 12,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "mobile_math_layout": {
+      "date": "2026-10-11",
+      "long_inline_equations_promoted_to_display": 1,
+      "scope": "Display layout and connective punctuation only; formula contents preserved"
+    }
+  }
 }

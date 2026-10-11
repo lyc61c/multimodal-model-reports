@@ -20,5 +20,12 @@
     "Figure AliMeeting score is transformed DER/cpWER metric",
     "Current pricing not asserted",
     "System workflows and model capabilities distinguished"
-  ]
+  ],
+  "article_sha256": "a51863b899b4faa938512c34e9d8e8fb6e68011c59f65bd8c51d4c23adcdac7f",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

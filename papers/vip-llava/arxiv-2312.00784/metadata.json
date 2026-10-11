@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "ViP-LLaVA：任意视觉提示理解",
+  "title_zh": "ViP-LLaVA：直接读懂画在图像上的箭头、圈线与涂鸦",
   "source_sha256": "0e4c5476abb36bdcfe02bcb1693e66338f20c10857f500507f2b4099596c23e4",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1451,
+  "chinese_characters": 1516,
   "figures_manifest": "figures-manifest.json"
 }

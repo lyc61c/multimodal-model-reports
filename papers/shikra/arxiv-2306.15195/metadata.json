@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "Shikra：普通数字表示的视觉指代对话",
+  "title_zh": "Shikra：把位置坐标写进视觉语言对话",
   "source_sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1686,
+  "chinese_characters": 1751,
   "figures_manifest": "figures-manifest.json"
 }

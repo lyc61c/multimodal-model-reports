@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VIP-LLaVA](../README.md)
+<!-- article-header:end -->
+
 # ViP-LLaVA：直接读懂画在图像上的箭头、圈线与涂鸦
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 模型让用户直接圈出或指向图像中的对象，再提问。标记是输入图像的一部分，模型输出文字回答；本文不以输出分割掩码为目标，也不需要额外的 ROI 特征编码器。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 要点 | 具体设计 |
@@ -24,6 +38,8 @@
 
 Base 表示完成第二阶段的模型；最终 ViP-LLaVA 追加 GPT-4V 区域对话数据。后一步提高开放式对话总分，但不是所有指标都提升，13B 的 PointQA 还有退化。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2：多层视觉特征进入语言模型](figures/architecture.png)
@@ -33,6 +49,8 @@ Base 表示完成第二阶段的模型；最终 ViP-LLaVA 追加 GPT-4V 区域�
 输入先将箭头、框、轮廓等标记叠加到原图。CLIP-336px 提取多层特征，沿特征维度拼接，经过 LayerNorm 和 MLP 映射到 Vicuna v1.5 的输入空间；视觉 token 与文本指令一起进入语言模型。浅层偏重线条和几何形状，深层偏重对象语义，使标记与被标记内容均可被读取。（第 3、5 页）
 
 这种方法无需把坐标写进语言词表，也不为每一种标记形状设计专用模块；但仍依赖用户标记清晰、视觉分辨率足够，不能把“arbitrary”理解为对任何绘画、遮挡和尺度都可靠。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -54,6 +72,8 @@ $$
 
 仅输入叠加图像的 VCR 消融为 82.47，再额外输入原图为 81.63；这是特定对照，不能证明任何提示都完全没有遮挡影响。相同数据训练的坐标格式在 Visual7W 86.36 略高于视觉提示 86.04，但 PointQA 与 ViP-Bench 较弱，因此视觉提示优势依赖任务。（Tables 10 与正文第 7 页）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 3：八种提示形状](figures/visual-prompts.png)
@@ -66,6 +86,8 @@ $$
 
 可选 GPT-4V 数据让教师同时看原图、叠加标记图、真实文字标注和系统指令，生成区域对话，共 7K 单区域、6K 多区域。训练中把教师使用的“红框”等文字引用替换为其他提示形状描述；它不是仅将坐标喂给纯文本教师。（第 4 页）
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 数据与检查点 |
@@ -77,6 +99,8 @@ $$
 前两阶段在 8 张 A100 上，7B/13B 约需 20/40 小时；第三阶段再需约 0.5/1 小时。来源版本给出训练轮数、骨干、数据和时间，但未提供每阶段完整学习率、batch、优化器及冻结清单，这里不凭 LLaVA 的惯常配方补写。（第 5 页）
 
 VCR 主表另对 Base-7B 进行目标数据微调；区域描述附录也在 RefCOCOg 上再微调 1 epoch。正文将模型称为 generalist，但数据构建已经包含 Visual7W、PointQA 等训练集，不能将相关结果统称为严格未见数据集零样本。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -93,3 +117,11 @@ VCR 主表另对 Base-7B 进行目标数据微调；区域描述附录也在 Ref
 ViP-Bench 的 303 图问对覆盖识别、OCR、知识、数学、关系、语言生成，分别测试合成紧框与人工绘制提示。7B 总分为 48.4/48.3，13B 为 48.3/48.2，均低于 GPT-4V 的 55.9/53.3；增大语言骨干未提高所有整体分数。7B 在合成提示上的数学分仅 10.0，OCR 19.4，仍有明显短板。开源模型采用 greedy decoding，temperature=0。（第 5、8 页）
 
 附录区域描述 METEOR/CIDEr 为 16.6/105.9，但来自额外任务微调。论文的实质结论是自然视觉标记可以成为有效区域接口，多层视觉表示和区域数据能改善提示理解；它尚不支持对任意手绘输入、复杂数学或精细 OCR 的普遍可靠性判断。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：VTimeLLM](../../vtimellm/arxiv-2311.18445/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：TimeChat →](../../timechat/arxiv-2312.02051/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

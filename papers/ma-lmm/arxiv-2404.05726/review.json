@@ -35,7 +35,7 @@
     "Onlineprocessing not real-time latency; Figure6 seconds noted",
     "Table11-13trainingreadtextnotselectedimage;noGPUtimeinferred"
   ],
-  "article_sha256": "f1d8cc89460b549dcac1f866f99c7214253d703678cda9deaf5256828271c4bb",
+  "article_sha256": "c0906c33c49d1169c8dd9752478986d4933328919b19d844c256a3ee44170681",
   "artifact_checks": {
     "original_assets": 13,
     "no_full_page_screenshots": true
@@ -49,5 +49,11 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 119）：Table 8, Figure 3, Table 6, Table 7, Table 9 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。拼图未完全显示的末张 Table 5 / Table 9 已额外单独打开原尺寸草图确认。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 120）：Table 10, Figure 6 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -17,7 +17,7 @@
     "original_assets": 8,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "f48adda23a37ae99b3ff162e7243dac580f22abe49e713c6b09e730b5937765a",
+  "article_sha256": "92155cd5e0c4c8b1ca410c0d599a1902324f745f75dcda87e61bc13f7807f69b",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -31,5 +31,12 @@
       "All Tables 4–6 restored to full column width.",
       "Distinct correct hyperparameter Tables 7 and 8 after repair."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

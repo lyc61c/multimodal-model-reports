@@ -34,7 +34,7 @@
     "生成答案ACC字符串匹配并非逐答案专家临床评价。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "20f18cc1b8e2ca0cdb207b24869ed7694381008a153411e83adc282cc562b55a",
+  "article_sha256": "d32ae25a2c2631b4d99435e7e36f128a7226d03bf38ede03519be04f4077d006",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -51,5 +51,11 @@
       "Viewed source and crops: Table 2, Table 3 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
       "Viewed source and crops: Figure 5 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 10,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

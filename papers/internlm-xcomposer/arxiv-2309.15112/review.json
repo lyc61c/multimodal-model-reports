@@ -43,7 +43,7 @@
     "Composition demonstrations lack quantitative quality protocol",
     "Some data and optimization details undisclosed"
   ],
-  "article_sha256": "f25856cb778da1eaf95a8ab60f2b6d206c7a2a12675565eafb8e780b0eddabc3",
+  "article_sha256": "b035451723936b201809e12edaa3dc3c94ac04d438b0125b1de2474126b01645",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -60,5 +60,135 @@
       "Figure 3 full interleaved composition pipeline and caption.",
       "Viewed source and crop after manual repair: Table 5, Table 6 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
     ]
-  }
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 3,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "content_regression_history": [
+    {
+      "date": "2026-10-11",
+      "id": "d40d5f0effb8",
+      "path": "papers/internlm-xcomposer/arxiv-2309.15112/README.md",
+      "kind": "targeted_content_regression",
+      "scope": "复核残留整页截图说明与实际独立裁图/裁切清单的对应，保留图表内容与已确认的技术结论；本轮为内容指代修正，非仅格式变更，不是全文原文复审。",
+      "issues_and_changes": [
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 44,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 71,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 95,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        },
+        {
+          "kind": "stale_full_page_caption",
+          "line_before": 146,
+          "before": "完整原页",
+          "after": "原文图表裁图"
+        }
+      ],
+      "source_checks": [],
+      "crop_manifest_checks": [
+        {
+          "path": "figures/original-p003-figure-2.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69.06,
+            548.11,
+            271.53
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p006-figure-3.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69.0,
+            548.12,
+            389.35
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p005-table-1.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            69.05,
+            560.93,
+            304.2
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p005-table-2.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            58.84,
+            316.3,
+            533.9,
+            472.73
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p008-table-5.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47,
+            69,
+            550,
+            277
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        },
+        {
+          "path": "figures/original-p008-table-6.png",
+          "method": "pdf_region_render",
+          "crop_bbox": [
+            47.11,
+            274.42,
+            549.87,
+            427.83
+          ],
+          "page_size": [
+            612.0,
+            792.0
+          ]
+        }
+      ],
+      "visually_inspected": [],
+      "article_sha256": "b035451723936b201809e12edaa3dc3c94ac04d438b0125b1de2474126b01645"
+    }
+  ]
 }

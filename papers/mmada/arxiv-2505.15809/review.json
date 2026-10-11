@@ -38,7 +38,7 @@
     "仅作者报告结果",
     "训练步数与采样描述原文存在歧义"
   ],
-  "article_sha256": "4f000007215fbf725c174240a8b4e60d4cdceedbb4c4fb86f0978f8cc6bbc4d0",
+  "article_sha256": "dac7ce01b152e79d6f0cc6dcd5cd6e0868338f5b35fc698ff5c21c137a66de24",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -55,5 +55,12 @@
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

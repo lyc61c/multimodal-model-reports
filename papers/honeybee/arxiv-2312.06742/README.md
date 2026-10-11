@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Honeybee](../README.md)
+<!-- article-header:end -->
+
 # Honeybee：保留局部视觉信息的灵活投影器与指令数据配方
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 《Honeybee: Locality-enhanced Projector for Multimodal LLM》由 Kakao Brain 的 Junbum Cha、Wooyoung Kang、Jonghwan Mun、Byungseok Roh 提出。本文依据 [arXiv 2312.06742v1](https://arxiv.org/pdf/2312.06742v1)（2023 年 12 月 11 日）；代码与模型入口为 [kakaobrain/honeybee](https://github.com/kakaobrain/honeybee)。
 
 Honeybee 是面向图像理解与文字回答的多模态模型，用 CLIP 视觉编码器连接 Vicuna 语言模型。论文聚焦两个常被合并讨论的问题：如何压缩视觉 token，同时保留空间细节；如何把多种已有视觉数据组织成有效的指令训练。它没有提出图像生成、音频建模或视频训练架构。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -17,6 +31,8 @@ Honeybee 是面向图像理解与文字回答的多模态模型，用 CLIP 视�
 | 同图多轮问答容易重复答案 | 多轮合并后去掉重复目标的样本对 |
 
 最终常规配置是 7B、224 分辨率、144 个视觉 token，以及 13B、336 分辨率、256 个视觉 token。另有增加 token 数以提高精度的配置。摘要首页的最高成绩主要来自 13B、576 token 扩展实验，不能直接归给默认 7B 模型。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -31,6 +47,8 @@ Figure 3 左侧示例说明 resampler 的注意力可能主要落在人物等显
 C-Abstractor 在池化前后各放三个 ResNet bottleneck block，包含 squeeze-excitation。自适应平均池化把二维网格变为指定尺寸，因此可选 8×8、12×12、16×16 等输出网格，token 数分别为 64、144、256。它支持的是平方数布局的灵活设置，并不表示任意无结构长度都采用同一空间排列。
 
 D-Abstractor 使用六个块，通过查询的二维参考点与学习到的采样偏移聚合视觉特征。查询初值由视觉网格的自适应池化获得，而非纯随机初始化；参考点初始均匀覆盖整张特征图，避免集中在中心。参考点、偏移和权重随后参与学习，不是永远固定的局部窗口。[PDF 第 4、6、12–13 页](https://arxiv.org/pdf/2312.06742v1#page=12)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -48,7 +66,15 @@ $$z^{l+1}=\sum_{k=1}^{K} A_k^l X_{feat}(p+\Delta o_k^l).$$
 
 p 是参考点，$\Delta o_k^l$ 是采样偏移，$A_k^l$ 是注意力权重。与对全部位置密集聚合相比，它围绕参考点取若干可学习位置。均匀参考点初始化提供图像覆盖，视觉池化查询提供与内容相关的初值。Table 9 中去掉后者 AvgN 从 69.7 降至 69.2，去掉均匀参考点初始化降至 68.7。[PDF 第 12–13 页](https://arxiv.org/pdf/2312.06742v1#page=13)
 
-语言输出仍采用原文式（1）的条件自回归分解：$p(Y\mid X_{img},X_{text})=\prod_i p(w_i\mid X_{img},X_{text},w_{<i})$。对应回答的负对数似然是这一概率模型的训练解释，论文没有另设奖励函数或一个显式强制覆盖全图的注意力损失。
+语言输出仍采用原文式（1）的条件自回归分解：
+
+$$
+p(Y\mid X_{img},X_{text})=\prod_i p(w_i\mid X_{img},X_{text},w_{<i})
+$$
+
+对应回答的负对数似然是这一概率模型的训练解释，论文没有另设奖励函数或一个显式强制覆盖全图的注意力损失。
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -65,6 +91,8 @@ Table 2 列出来源池：BlipCapFilt 与 COYO100M 合计 200M 图像描述样�
 Table 4 应先看左侧勾选的数据类型，再比较右侧指标。移除选择式 VQA 后，MMBench 从 69.2 降到 30.4，SEED 图像子集从 64.2 降到 20.8，说明回答形式训练对这类评测很重要。移除 caption 数据对 LLaVA-Bench 的影响更突出；移除视觉与纯文本指令后，其分数从 64.5 降到 26.1。不同指标反映的数据能力不同。
 
 Table 5 显示手调 per-dataset 采样 AvgN 70.6，按数据集等概率为 70.0，按任务等概率为 67.4。增加模板数量没有稳定收益：fine-single 为 70.6，fine-multi 为 70.5，multi+flip 为 69.8；fine-multi 的 MME 却更高。因此结论是当前混合语料下单模板综合表现较好，不能概括为多模板总是无效。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -91,6 +119,8 @@ Table 5 显示手调 per-dataset 采样 AvgN 70.6，按数据集等概率为 70.
 
 指令采样中 VQAv2、GQA、RefCOCO 各系列、A-OKVQA 和 LLaVA150K 各约 10.3%；OCRVQA、VG、ScienceQA 各 5.1%；VSR、ShareGPT 各 2.6%；COYO100M 为 7.7%。比例按公开表保留，四舍五入后总和可能不精确等于 100%。BlipCapFilt 未加入第二阶段主要由于资源限制，而非已证明它有负作用。小数据源比例被限制，以短设置下不超过约三轮为原则。[PDF 第 13–14 页](https://arxiv.org/pdf/2312.06742v1#page=13)
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 6](figures/original-p008-table-6.png)
@@ -112,3 +142,11 @@ Table 6 中 7B C 的 SEED 64.5 仍低于 Qwen-VL-Chat 的 65.4。7B C 增至 256
 短设置空间理解消融中，144-token C 与 D 的归一化平均为 53.5、52.9，144-token resampler 为 43.9，256-token 线性投影为 52.6。它支持局部设计的有效性，但线性比较的 token 数更大，需要保留这一实验差别。
 
 ScienceQA 测试整体准确率在 13B C、256/576 token 下为 93.19/94.39。所谓 generalist 指没有额外只针对 ScienceQA 再训练，**ScienceQA 本身已在混合指令训练数据中**，不能称对该任务零样本。Table 6 和附录 Table 14 还存在少量 D 版本细分总分差异，本文主比较固定采用 Table 6 数值。以上为论文报告与本文原图核验结果，没有重新运行模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：OneLLM](../../onellm/arxiv-2312.03700/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Vary →](../../vary/arxiv-2312.06109/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

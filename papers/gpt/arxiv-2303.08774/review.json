@@ -18,7 +18,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "d1df4ae713ca20f2d530e1b536bc75e069d77d1586d34325945a16f0bb1d4682",
+  "article_sha256": "6ef0ace229fc5654fd3875721adcac506c344225a5833dcc8186c9f2dde713bc",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -32,5 +32,11 @@
       "Full visual-input Table 3 restored, all image panels and response rows included.",
       "Both calibration panels and x=1 endpoints fully restored."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

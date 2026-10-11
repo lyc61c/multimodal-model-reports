@@ -34,7 +34,7 @@
     "Android高层69.0低于对照70.8，不写全面提升",
     "发布时间的资源计划与已开放状态分开"
   ],
-  "article_sha256": "cd2c9343252b813c888e667a2bde0a0102f5cc8d2aad2d75b83b2cc1c34da75c",
+  "article_sha256": "7075679ec763e0d961bd407810e819e037768416e9fbc4d3d502546f6445a109",
   "artifact_checks": {
     "original_assets": 3,
     "no_full_page_screenshots": true
@@ -48,5 +48,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 3,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

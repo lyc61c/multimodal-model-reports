@@ -11,7 +11,8 @@
     "Checked Table6 complementary ObjectHalBench orientation, MME/MMMU regressions and translated GPT4Turbo multilingual evaluation.",
     "Checked phone Figure6 image stage versus prefilling9.4s and decoding8.2token/s, loading included and initial64.2/64.6 difference.",
     "No model, phone benchmark or independent reproduction claimed.",
-    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
+    "2026-10-11 targeted content audit: DPO 标准解释中的 log 概率比没有括号/分式，可能被解析成 log(概率)/概率；改为显式 log\\frac。"
   ],
   "artifact_checks": {
     "seven_sections": true,
@@ -21,7 +22,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "5ef238a4aab6dfb2333816468f3b4a27039afd492bc375e4a5f3b742bae3f9bb",
+  "article_sha256": "38e487ae5185bd42ad4c64596ff63643fbe4df77f1922578c37de9e1c2fab22c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -35,5 +36,31 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "kind": "targeted_source_and_math_check",
+      "scope": "通读七部分正文。",
+      "corrections": [
+        "DPO 标准解释中的 log 概率比没有括号/分式，可能被解析成 log(概率)/概率；改为显式 log\\frac。"
+      ],
+      "source_checks": [
+        {
+          "claim": "MiniCPM-V 原文采用 DPO；区分通用损失解释和未披露 beta；复核全篇手机时延边界",
+          "source_file": "source/papers/694e2e46c3f0/source.txt",
+          "source_query": "DPO optimizes",
+          "pdf_page": 9,
+          "result": "对应主张在固定原文缓存中得到支持；范围限于此处记录。"
+        }
+      ],
+      "visual_crops_inspected": []
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

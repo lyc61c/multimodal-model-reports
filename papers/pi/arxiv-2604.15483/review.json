@@ -44,7 +44,7 @@
     "dataset size and learningrecipe incompletely disclosed",
     "unseen tasks may share related skill fragments"
   ],
-  "article_sha256": "7b41f98068c13b9883a72554d5480d0d109d688898ad6ddc6460c3bb6e8cb31c",
+  "article_sha256": "441e24dd7570ddd28e8a85eb096198268daa9a4cd940e6f6e93b2d18f709484f",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -58,5 +58,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

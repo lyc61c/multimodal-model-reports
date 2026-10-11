@@ -42,7 +42,7 @@
     "Main text/Table2 implies single setting but Table3/10 separate fine tuning; article uses explicit tables",
     "Loss weights and ADE/FDE units not invented; quoted FID not state of art across all metrics"
   ],
-  "article_sha256": "ef9163b9594e1a8efe4183fe1a4922d2bf31e18aef9ababd37cb9a5e9b62a134",
+  "article_sha256": "ba70f583f1b38008621c82de693e1fdf61021ec0375a7a6361b822aec1af78c8",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -56,5 +56,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

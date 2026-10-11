@@ -7,10 +7,11 @@
     "math": "原文GRPO命名不直接复制为新算法定义；组内优势及clip/KL解释无虚构超参",
     "images": "view_image逐张核验PDF1/7/8/18，架构/训练/记忆图和表头完整",
     "protocol": "原文帧数差异、清理后EgoLifeQA、ASR及API成本边界明确",
-    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
+    "targeted_content_audit_2026-10-11": "2026-10-11 targeted content audit: Figure 1/4、Table 2 已为裁图但仍称完整截图；修正来源说明。"
   },
   "model_execution": "not_run",
-  "article_sha256": "5c93e1355cbc294869d45ecc85bb92226bd17b7e6e526fd5d816061b14d113e4",
+  "article_sha256": "2bab258296f346c24e45a7bbb5efd352cc041426393418c3ae20c812e9ff1e6a",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -24,5 +25,33 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 48）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 49）：Figure 4 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "kind": "targeted_source_and_math_check",
+      "scope": "逐篇阅读七部分的关键起始段落/表格，检查公开方法公式与主结果摘表；并非全文逐句审计。",
+      "corrections": [
+        "Figure 1/4、Table 2 已为裁图但仍称完整截图；修正来源说明。"
+      ],
+      "source_checks": [
+        {
+          "claim": "Ego-R1 3B 主表 VideoMME/EgoSchema/EgoLife/Ego-R1 Bench 的 64.9/68.2/36.0/46.0",
+          "source_file": "source/papers/9e3cb917f6e0/source.txt",
+          "source_query": "Ego-R1 3B",
+          "pdf_page": 8,
+          "result": "对应主张在固定原文缓存中得到支持；范围限于此处记录。"
+        }
+      ],
+      "visual_crops_inspected": [
+        "original-p001-figure-1.png"
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

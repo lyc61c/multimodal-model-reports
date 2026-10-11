@@ -17,7 +17,7 @@
     "original_assets": 4,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "1cc9ad2577711d50bca3023c679515f5d68688bd9e41c58f279c3533bbb74874",
+  "article_sha256": "dc19e07e25dcbc55e7f1636649eb8809fe91a83ed27985059887847360b7c347",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -30,5 +30,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

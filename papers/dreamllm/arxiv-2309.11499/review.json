@@ -7,10 +7,11 @@
     "math": "扩散潜空间、冻结参数梯度通路、标准LM与原公式区分；CFG明确约定；未称所有图像统一离散CE",
     "images": "view_image逐张检查PDF4/7/8/26，图文创作、架构和表头完整",
     "claims": "协同改善量明确，CLIP对齐失败限于该配置，7B口径是语言骨干",
-    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+    "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
+    "targeted_content_audit_2026-10-11": "2026-10-11 targeted content audit: Figure 2/3 仍称完整截图，Figure 2 已不含页内公式；说明虚线反馈，按 §3.2/附录 C.2 定位冻结解释。"
   },
   "model_execution": "not_run",
-  "article_sha256": "37cc993bcd1503ed02afa740f9ee05066e358e912f0223f51fe3cfe70bad26d5",
+  "article_sha256": "cee71c22d0027d90e1055724ff61cbfa56f21363692c378d758d61387de58519",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -24,5 +25,33 @@
       "Three isolated complete Figure 4/5 and Table 3 crops; adjacent left-column analysis removed.",
       "Full Table 11 training recipe restored through GPU/time rows."
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "kind": "targeted_source_and_math_check",
+      "scope": "逐篇阅读七部分的关键起始段落/表格，检查公开方法公式与主结果摘表；并非全文逐句审计。",
+      "corrections": [
+        "Figure 2/3 仍称完整截图，Figure 2 已不含页内公式；说明虚线反馈，按 §3.2/附录 C.2 定位冻结解释。"
+      ],
+      "source_checks": [
+        {
+          "claim": "DreamLLM COCO FID 8.46；另核对 §3.2 和附录 C.2 的 CLIP/SD 冻结及语言阶段 II 解冻",
+          "source_file": "source/papers/659a6bf04fbf/source.txt",
+          "source_query": "8.46",
+          "pdf_page": 2,
+          "result": "对应主张在固定原文缓存中得到支持；范围限于此处记录。"
+        }
+      ],
+      "visual_crops_inspected": [
+        "original-p004-figure-2.png"
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

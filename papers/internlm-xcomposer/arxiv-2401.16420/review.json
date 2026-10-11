@@ -47,7 +47,7 @@
     "Text/table mismatch AI2D and MMMU",
     "Exact training dataset totals and hardware not disclosed"
   ],
-  "article_sha256": "934254032fc8892df45cfb554654b8f842ae2128627870b44d57e4ee4a5d137c",
+  "article_sha256": "2e2bf7683cc9893f78a9bdbe282bf4c65f6f8b18496ce8b6a2f489cd167d8470",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -61,5 +61,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

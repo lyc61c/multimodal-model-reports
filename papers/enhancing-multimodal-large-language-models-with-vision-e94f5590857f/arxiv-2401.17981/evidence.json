@@ -49,5 +49,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "full_read",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "通读介绍，对照 TFI/LAR/LAF 训练初始化及 Tables 6–11；79.0/60.5/60.1 主表与 OCR/DINO 消融区分正确，按独立表编号修正多处原页方位。",
+      "changes": [
+        "将 Figure 2/3、Table 6/7/8、Table 9/10/11 的跨页面方位说明改为各自编号与含义。"
+      ],
+      "article_sha256": "abbcb810bb7e9a3785c556f37afdd953f0eceb3dec1818bf7f491d9eb116db09",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ]
 }

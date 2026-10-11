@@ -60,7 +60,7 @@
     "Failed requests excluded by source evaluation",
     "Incorrect intermediate reasoning acknowledged by source"
   ],
-  "article_sha256": "bd89f2f2bfdb178443c35b0b953388615f3dd45c927898ec992d668911c36ec7",
+  "article_sha256": "5adda9d3104a601b22d013cdc5e502b3f1d8a4c850e209974b557646c2ca306a",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -74,5 +74,11 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 60）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 61）：Figure 6 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

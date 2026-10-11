@@ -49,7 +49,7 @@
     "KL direction and explanatory formulas not asserted as original implementation",
     "Nondegradation is not per-benchmark guarantee"
   ],
-  "article_sha256": "f4713adbf1e58bffb8467dec06fe783050116b1dfa038e79ec2d3bbbdaf4f214",
+  "article_sha256": "93e1bf981399ac19422a1354e6acf00e672454a97436def11b96940886b74df7",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -63,5 +63,36 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/3b40d0cc757b/source.txt",
+        "papers/qwen/arxiv-2509.17765/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "PDF 第 10 页上方分别比较 Instruct 和 Thinking，下方 Table 6 比较 ASR 与语音翻译。WER 越低越好，BLEU 越高越好，不能按整页“加粗最高”统一判断。",
+          "after": "原文 PDF 第 10 页的 Table 4、5 分别比较 Instruct 和 Thinking 的文本任务，Table 6 比较 ASR 与语音翻译。WER 越低越好，BLEU 越高越好，应分别按指标方向解读加粗结果。",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "f4713adbf1e58bffb8467dec06fe783050116b1dfa038e79ec2d3bbbdaf4f214",
+      "article_sha256": "b9b97306216a6fb8ff6fcd4f7fec4791f6ff1a56ab409192fe4a612e8e2fa577",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 5,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

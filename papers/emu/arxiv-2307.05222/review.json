@@ -51,7 +51,7 @@
     "FID inferior to SDv1.5",
     "Source SFT sample pool and actual sampled amounts distinguished"
   ],
-  "article_sha256": "dcc4aeb0ff006dec49d440417c077645813ffd2d0ba6a1258ace4dc508197559",
+  "article_sha256": "6dcafdab024f6b25f401193f8ff467ee764391495a268cc1a1ac1f8d5c818198",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -65,5 +65,11 @@
       "Viewed source page and crop: Table 1 image/video benchmark headers, all model rows, bold/underlined results and full evaluation-caption explanation retained.",
       "Viewed source page and right-column crop: Table 2 FID header, both model categories, all rows and full caption retained; left-column prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 20,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -42,7 +42,7 @@
     "encoder仍需全部前向，不能称完整推理低成本",
     "无视频/音频已验证能力"
   ],
-  "article_sha256": "3d25892029ffc75a3afd37ac2385e06dc328d26f0c4a1c9fe379aad98bdec644",
+  "article_sha256": "5378d5414e1e3506f46e8c0ef8fcef2f973c38666708e3356d391cc2d0cd5c04",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -56,5 +56,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

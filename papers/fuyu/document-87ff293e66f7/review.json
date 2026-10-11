@@ -15,9 +15,15 @@
     "asset_hashes_match": true,
     "original_assets": 2
   },
-  "article_sha256": "8c6bd44cc26ab91ddce5e10de6eaf3663e0773548fcbacf2b95e5bf4e536f1ed",
+  "article_sha256": "9720932d8970b2508494f2f333aa71e18b9de8901be5dfb8c3d44af9d6733ed1",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

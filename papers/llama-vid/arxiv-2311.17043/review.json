@@ -45,7 +45,7 @@
     "No quantitative independent hour-long benchmark",
     "Main equation and pseudocode scaling differ"
   ],
-  "article_sha256": "5274a9802cc000885c7abb7fd9d8b657bf7ac89f90892ef10972b4182b8eabbe",
+  "article_sha256": "a993398b8f527162a2e5987680a984fd0aa06b315d99ba91f1ed3d8c234bd129",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -59,5 +59,25 @@
       "Both Tables 2 and 3 include complete headers/results/captions.",
       "Figure 7 full movie instruction-construction diagram, caption included."
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照 context/content 双 token 架构及视频表；修复 Mean 后缺失的 left 命令反斜线，数学内容不变，根代理 MathJax 已定位缺配括号。",
+      "changes": [
+        "修复 \\operatorname{Mean}_{M}\\!left[ 为 \\operatorname{Mean}_{M}\\!\\left[；配对 right 命令，不改变计算。"
+      ],
+      "article_sha256": "3d09cca498674834c92608196a4f3f394e006eb47622d38afab054884b92bfa2",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 25,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

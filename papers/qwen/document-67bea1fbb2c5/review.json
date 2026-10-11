@@ -32,5 +32,12 @@
     "博客未公开训练内部；演示不是统一基准",
     "未运行模型"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "a639d8141e852f6fe056c8debb51f53958c863293ccc228c5b777344923ad9d8",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 5,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

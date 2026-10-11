@@ -30,5 +30,12 @@
     "评分模型和ChartQA子集口径明确，OCRBench并非全面领先",
     "正文不从有矛盾的README TP每节点说明推算训练GPU数",
     "原图为案例，无架构原图时不伪造原Figure"
-  ]
+  ],
+  "article_sha256": "564aca0edbf44948bba1d25f5dfb35a850265f597fefd412d1cb2e573a1bfe34",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 6,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

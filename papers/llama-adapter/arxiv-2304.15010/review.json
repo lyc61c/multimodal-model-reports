@@ -49,7 +49,7 @@
     "paramfractionambiguous",
     "experttext canpropagateerrors"
   ],
-  "article_sha256": "1278215ac973aa6029ed8c2c26f8312e759a586bccba7125ab4a950a465be294",
+  "article_sha256": "f8fbc216fd16b4375f077bdd4fd4d129144eade981e2fe4acb9cd2045327f8ef",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -67,5 +67,11 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 100）：Figure 8, Figure 9 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

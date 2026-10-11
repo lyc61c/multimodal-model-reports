@@ -53,7 +53,7 @@
     "大模型继承视觉与LLM训练成本",
     "本文未运行或复现模型"
   ],
-  "article_sha256": "2a76bc664e3783eacefdc9c6eb09a8749e27b87d7047e77a3a9a92244e1ccc5d",
+  "article_sha256": "75b272c4d2099b6ed4fee959941b3b623411bc01976621e55151a8fbc887b6e2",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -67,5 +67,11 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 79）：Figure 7, Figure 8 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 80）：Figure 9 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -1,8 +1,10 @@
+[项目首页](../../README.md) · [模型系列索引](../../reports/model-family-index.md)
+
 # PMC-VQA
 
-项目主体 / 机构：repo:xiaoman-zhang。快照：2026-10-08。
+[xiaoman-zhang](https://github.com/xiaoman-zhang)
 
-共收录 **1 篇论文与资料**，按发布日期排序。
+**1 篇论文与资料** · 按发布日期由早到晚排列。
 
 ## 论文列表
 

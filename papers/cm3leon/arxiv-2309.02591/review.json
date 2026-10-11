@@ -24,7 +24,7 @@
     "Main text/appendix sample counts inconsistent",
     "Some training optimizer/sampling details not disclosed"
   ],
-  "article_sha256": "4bd87ebb0230e4ef9fa5449f58b99adb24169d14ea20a05b761aeb174196a590",
+  "article_sha256": "f4abb75b3d2fefc9525fb85feaf9ec60ca7d21ed319010d5e5a0567c6c2387ed",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -41,5 +41,25 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照 256×256 图像编码成 1024 离散 token、8192 图像词表；核对 FID 4.88 的检索上下文条件并修正跨裁图指代。",
+      "changes": [
+        "将下方 Table 3/Table 1 改为明确表号，适配独立裁图。"
+      ],
+      "article_sha256": "a1d3c06ee778cbad9d9e84c699ff91c0a8cb60cb9e7408e8fa54f76a6ed90788",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 16,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

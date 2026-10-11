@@ -38,7 +38,7 @@
     "定性迁移例未独立复测"
   ],
   "model_execution": "not_run",
-  "article_sha256": "d8b024a761efd8593922c85890cdd3dffbdf0dd8cb57fd81123e868734e0d152",
+  "article_sha256": "4d880ac2b5952ab149209eb15c13479bb28f594c14b0b5ca3697ac511a7d7d06",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -55,5 +55,11 @@
       "Both dataset distribution Figures 4/5 complete legends and captions.",
       "Tables 4 and 5 complete all headers, rows and captions."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 13,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [InternVL](../README.md)
+<!-- article-header:end -->
+
 # InternVL3：联合预训练、可变视觉位置与混合偏好优化
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 原论文为 **InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models**，Jinguo Zhu、Weiyun Wang、Zhe Chen 等，上海人工智能实验室与多所高校、商汤联合团队。[固定来源 arXiv 2504.10479v1](https://arxiv.org/abs/2504.10479v1)，2025-04-14；页码指 PDF。
 
 InternVL3 是图像、视频与文本理解模型家族，覆盖约 1B–78B，输出文本及任务要求的定位等表示。重点是将纯语言与多模态数据放入同一预训练阶段，随后 SFT、混合偏好优化并可使用测试时扩展。论文称原生多模态，实际仍从已有视觉模型和**未指令微调的 base LLM**初始化，不能写成所有权重从零训练。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -14,6 +28,8 @@ InternVL3 是图像、视频与文本理解模型家族，覆盖约 1B–78B，�
 - SFT 数据由 16.3M 扩为 **21.7M**；MPO 约 300K，组合相对偏好、绝对质量及优选响应生成目标。
 - VisualPRM-8B 可选取八个候选中最好的响应，增加推理计算与额外评判模型；不等同于单次生成。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Table 1](figures/original-p004-table-1.png)
@@ -21,6 +37,8 @@ InternVL3 是图像、视频与文本理解模型家族，覆盖约 1B–78B，�
 **读图：Table 1、Equations 1–5，PDF 第 4 页。** 表明确每个变体的视觉与语言初始化。1B/2B/8B/14B 对应 InternViT-300M 与 Qwen2.5-0.5B/1.5B/7B/14B；9B 使用 InternLM3-8B。38B/78B 使用 InternViT-6B 与 Qwen2.5-32B/72B。实际总量为 0.9/1.9/8.1/9.2/15.1/38.4/78.4B，名称不是精确参数数值。
 
 随机初始化的两层 MLP 将视觉特征接入语言输入空间。pixel unshuffle 将相邻空间特征合并，token 数降至四分之一，每 tile 保留 256 个表示；它降低序列计算量，也改变可直接访问的视觉粒度。图像与视频表示作为文字生成的上下文，模型不以自回归方式预测图像本身。文章没有完整复述前代的高分辨率切图上限和视频时间表示，不能把其他版本的默认值直接填入。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -44,17 +62,23 @@ MPO（Equation 9）为 $\mathcal L=w_p\mathcal L_p+w_q\mathcal L_q+w_g\mathcal L
 
 VisualPRM 按解题步骤预测正负符号，把生成“+”的概率作为每步分数，再平均以选候选。它是过程监督的外部评判，不是模型凭多数投票必然正确；误判或多个候选共享错误仍会影响结果。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 多模态预训练继承 InternVL2.5 的描述、问答、数学、图表、OCR、文档、知识、对话和医学材料，增加 GUI、工具、3D 场景与视频。纯语言主要取自 InternLM2.5 语料并补充开放文本，以弥补多模态目标文本短、分布窄的问题。总预算固定时实验选择**语言:多模态=1:3**，不能把 150B 多模态 token 解释为 150B 图像。
 
 SFT 增加长上下文、科学图、创意写作、多模态推理等，使用 JPEG 随机压缩与多模态 packing。MPO 按 MMPR v1.2 管线从问答、科学、图表、数学、OCR 和文档产生偏好对；8B/38B/78B 的 SFT 模型生成 rollouts，各尺度使用同一约 300K 数据。VisualPRM400K 再补充 InternVL3 的 8B/38B rollouts。v1 说明开放数据清单仍在整理，没有完整来源配比、去重阈值及污染审计，不能声称全部样本已逐一可重建。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 先将已预训练 ViT 与 base LLM、随机 MLP 联合优化；随后以高质量示范做 SFT，再用 MPO 的正负响应改进推理。原生预训练明确更新**所有层**，并非只调连接器；SFT/MPO 的精确冻结清单与完整超参数本版本未充分列出，本文不推测。
 
 基础设施基于 InternEVO，针对 ViT、MLP、LLM 分别安排分片及数据、张量、序列、流水并行，动态平衡视觉与文字负载，并支持最高 32K 序列的训练。报告称相近尺度比前代加速 50%–200%，但没有逐模型完整硬件、时长与吞吐表；“框架可扩展到数千 GPU”不等于每个变体实际用了此规模。测试时 Best-of-N 与训练是独立环节。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -85,3 +109,11 @@ Table 8 的视频评测对 Video-MME、MMBench-Video、MLVU、LongVideoBench **�
 **读图：Figure 3、Table 13，PDF 第 18 页。** 前图在 InternVL2-8B 上替换预训练策略，固定架构、初始化和数据以检查策略贡献。后表 MPO 使 78B 七项平均从 50.5 到 54.6，MMMU 72.2 保持不变；8B 平均从 41.4 到 44.3。平均增加不代表每项增加，小尺度数学等仍有回退。
 
 Table 12 的 8B 预训练模型 V2PE 步长 1/4 平均 75.9，无 V2PE 为 75.2，是专门消融而非主模型最终指标。纯语言 Table 11 的 78B MMLU 86.9 高于对应 Qwen Chat 84.4，但 HumanEval 82.3 低于 87.2，MBPP 76.7 低于 86.8。GUI 表还出现“72B”命名和正文称 8B 超过 90.3、实际 81.4 的不一致，本文不据此制造优势。证据支持联合学习、偏好目标和测试时选择的价值，仍有文档、视频、定位及语言子任务不足；以上为原文报告，未复现。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：GPT-4.1](../../gpt/document-32a268f7f1d8/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Eagle 2.5 →](../../eagle/arxiv-2504.15271/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -124,7 +124,7 @@
     "No independent reviewer or model reproduction is claimed."
   ],
   "checked_at": "2026-10-08",
-  "article_sha256": "5e54aa526f177e7562ea42c5c043ca7feecfaae8f0b26ff77b96294802606da3",
+  "article_sha256": "35bdbeef474fe051cb3aac5f3f318eef66155362998ab4ed8304f7674dad11eb",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -141,5 +141,11 @@
       "Table 9 fully preserved, unrelated Table 47 belongs to another page.",
       "Table 18 includes complete two-block caption through final ChartQA note."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

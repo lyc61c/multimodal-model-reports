@@ -49,5 +49,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "PDF 第 10 页上方分别比较 Instruct 和 Thinking，下方 Table 6 比较 ASR 与语音翻译。WER 越低越好，BLEU 越高越好，不能按整页“加粗最高”统一判断。",
+          "after": "原文 PDF 第 10 页的 Table 4、5 分别比较 Instruct 和 Thinking 的文本任务，Table 6 比较 ASR 与语音翻译。WER 越低越好，BLEU 越高越好，应分别按指标方向解读加粗结果。",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

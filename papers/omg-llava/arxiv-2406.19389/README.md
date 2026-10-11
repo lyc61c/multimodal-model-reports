@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [OMG-LLaVA](../README.md)
+<!-- article-header:end -->
+
 # OMG-LLaVA：用统一分割模型连接图像、对象与像素推理
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 OMG-LLaVA 把语言理解与统一视觉感知结合起来，用一个图像编码器、一个视觉解码器和一个 LLM 支持多层次任务。名称中的 LLaVA 表明其指令训练思路，而非语言底座就是 Vicuna。其视觉组件本来支持视频全景分割，但该版本明确尚不能进行像素级时空语言推理。下文页码对应 v1 PDF。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 普通图文助手能谈论整张图，却未必能按描述返回目标掩码；增加独立 SAM 或区域编码器又会引入重复组件。OMG-LLaVA 复用 OMG-Seg 的对象查询：它们既携带分割先验，又能表示用户指定区域，还能作为掩码生成的接口。
@@ -21,17 +35,21 @@ OMG-LLaVA 把语言理解与统一视觉感知结合起来，用一个图像编�
 
 原文主要验证指代表达分割、带定位的对话生成、区域描述及原视觉模块的通用分割。冻结视觉解码器的主配置在 refCOCO/refCOCO+/refCOCOg 验证集 cIoU 为 75.6/65.6/70.7；专门微调并解冻解码器后为 78.0/69.1/72.9。两者配置不同，不能把较高数值直接用于“始终冻结”的宣传。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 3](figures/original-p005-figure-3.png)
 
-**读图：**下方 OMG-Seg 同时产生像素和对象 token，视觉投影送入 LLM；用户的区域标记替换成对应对象 token。上方输出中的对象短语后跟 `[SEG]`，其状态经 text projector 回到 OMG 解码器，形成右侧彩色掩码。图中冻结说明针对常规联合训练配置，专门分割微调另有例外。
+**读图：** 下方 OMG-Seg 同时产生像素和对象 token，视觉投影送入 LLM；用户的区域标记替换成对应对象 token。上方输出中的对象短语后跟 `[SEG]`，其状态经 text projector 回到 OMG 解码器，形成右侧彩色掩码。图中冻结说明针对常规联合训练配置，专门分割微调另有例外。
 
 图像编码器是 ConvNeXt-L 构建的 CLIP，输入 1024×1024。取 32 倍下采样的低分辨率特征，再通过 pixel shuffle 进一步使空间采样间隔达到 64，得到 16×16、256 个稠密视觉 token；对象 token 还会额外拼接，因而不能说总视觉输入永远只有 256。
 
 OMG 解码器使用 masked cross-attention 读取图像，self-attention 处理对象间关系。可学习查询负责自动发现对象，视觉提示查询负责读取指定区域。点提示沿用原支持；框提示屏蔽框外像素，掩码提示直接限定注意力区域，避免粗暴地将所有提示都转换成中心点。
 
 视觉投影由两种 MLP 分别处理像素与对象 token；提示生成的对象和自动发现的对象共用对象 MLP。另一个 text projector 将最后一层 `[SEG]` 隐藏状态变成可供冻结解码器使用的分割查询。感知先验嵌入本身没有新增可训练参数。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -47,7 +65,7 @@ $T_t$ 为文本，$T_{pv}$ 为像素中心表示，$T_{ov}$ 为对象中心表�
 
 ![原文 Figure 5](figures/original-p006-figure-5.png)
 
-**读图：**Figure 4 右侧区分点、框、掩码的注意力区域；Figure 5 先将对象查询的分割掩码及置信度结合，再给每个空间位置求对象加权表示，与原图像特征相加。前景查询也单独接到视觉序列尾部。
+**读图：** Figure 4 右侧区分点、框、掩码的注意力区域；Figure 5 先将对象查询的分割掩码及置信度结合，再给每个空间位置求对象加权表示，与原图像特征相加。前景查询也单独接到视觉序列尾部。
 
 设图像特征 $F\in\mathbb R^{HW\times C}$，对象查询 $Q\in\mathbb R^{N_q\times C}$，掩码为 $M$，对象置信度为 $S$。原文 Eq. 2/3 为 mask-score softmax 与特征融合。为明确广播和转置，可在像素位置 $p$ 写成
 
@@ -65,6 +83,8 @@ $$
 
 目的是在视觉→文本→视觉投影后保留对象信息。指令阶段 Eq. 5 为 $\mathcal L_{text}+\alpha\mathcal L_{CE}+\beta\mathcal L_{DICE}$，同时学习回答和掩码。原文未明确报告 $\alpha,\beta$ 数值及平方项聚合方式，不能补出精确权重。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 预训练沿用 LLaVA 的图文对齐数据，该文未单列样本总数。指令数据按粒度组成：LLaVA 的 665K 图像描述、推理和对话；Osprey 约 74K 区域对话；MDVP 约 200K 点提示；refCOCO、refCOCO+、refCOCOg、refClef 合计约 74K 指代分割；ADE20K 和 COCO-stuff 约 26K 语义分割；GranDf 约 200K 带掩码对话。数字是来源规模，不能在缺少去重和重采样信息时宣称唯一图像数约 1.239M。
@@ -72,6 +92,8 @@ $$
 统一格式使用 `<Image>`、`<Region>`、`[SEG]`。图像标记替换为视觉序列，区域标记替换为提示编码的对象表示，答案中的对象短语通过 `<p>…</p>` 与后续分割标记相连。附录比较固定“它是 `[SEG]`”与可变化的对象短语格式，避免只学固定回应而削弱普通聊天。
 
 文章没有新增大规模人工标注语料或完整清洗规则。推理分割演示虽表现出一定泛化，但文中明确未使用 reasoning-segmentation 专门数据；不能将这些图例写成一个未报告的 ReasonSeg 数值成绩。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -85,6 +107,8 @@ $$
 
 监督掩码的梯度能够通过冻结 OMG head 回到可训练接口与 LLM LoRA，冻结不代表这段计算不能传递梯度。测试指代分割采用固定提问；若模型没有输出 `[SEG]`，返回空掩码。纯文本回答会移除用于分割的特殊标记。原模型已有的语义、实例及视频分割能力主要通过冻结模块保留，不等于新增语言视频推理训练。
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 3](figures/original-p008-table-3.png)
@@ -95,7 +119,7 @@ $$
 
 ![原文 Table 2](figures/original-p008-table-2.png)
 
-**读表：**Table 3 区分冻结解码器的 OMG-LLaVA 与解冻并任务微调的 ft 行；Table 4 的 ft 指是否在 GranDf 微调，是另一个维度。Table 2 摘要列用了部分 ft 结果，不能把它作为唯一主配置。cIoU 为累积交并比，GCG 同时评文字与掩码。
+**读表：** Table 3 区分冻结解码器的 OMG-LLaVA 与解冻并任务微调的 ft 行；Table 4 的 ft 指是否在 GranDf 微调，是另一个维度。Table 2 摘要列用了部分 ft 结果，不能把它作为唯一主配置。cIoU 为累积交并比，GCG 同时评文字与掩码。
 
 | refCOCO 系列 cIoU | refCOCO Val/TestA/TestB | refCOCO+ Val/TestA/TestB | refCOCOg Val/Test |
 | --- | --- | --- | --- |
@@ -113,6 +137,14 @@ Table 5 更直接验证设计。简单连接基线在 refCOCO/refCOCO+/refCOCOg 
 
 ![原文 Figure 7](figures/original-p017-figure-7.png)
 
-**读图与表：**Figure 7 对照草地、沙地、沙发旁桌子和最小椅子的分割，红色或黄色区域是各模型预测；它是挑选样例。Table 8 显示采用最后层、所有层平均、所有层拼接的 refCOCOg cIoU 分别 70.0/68.7/62.3，支持使用最后层 `[SEG]`，并不支持“拼更多层一定更好”。
+**读图与表：** Figure 7 对照草地、沙地、沙发旁桌子和最小椅子的分割，红色或黄色区域是各模型预测；它是挑选样例。Table 8 显示采用最后层、所有层平均、所有层拼接的 refCOCOg cIoU 分别 70.0/68.7/62.3，支持使用最后层 `[SEG]`，并不支持“拼更多层一定更好”。
 
 附录也承认像素任务联合训练会削弱部分图像级能力，OMG-Seg 缺乏部件级多粒度分割，且没有语言驱动的像素时空推理。本文未给出该版本不存在的 MMMU、MMBench 或视频语言问答成绩，也未进行模型训练或测试复现。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LongVA](../../longva/arxiv-2406.16852/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：InternLM-XComposer-2.5 →](../../internlm-xcomposer/arxiv-2407.03320/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

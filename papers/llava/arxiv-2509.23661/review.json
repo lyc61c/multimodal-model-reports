@@ -46,7 +46,7 @@
     "budget scope incompletely itemized in report",
     "seven categories wording lists eight categories"
   ],
-  "article_sha256": "1e60dd8f5ff5c03056ac2b68e5bb7db3aabe3b17d6c66a2dfd179135386716d2",
+  "article_sha256": "d79c2278e7779d91f8fe0cf58ea85ca795c6e29a811fd1bf798c621e7da5d619",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -60,5 +60,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -23,9 +23,10 @@
   },
   "model_execution": "not_run",
   "limitations": "v1 lacks citedappendices;no modelreproductionorindependentreviewerclaimed",
-  "article_sha256": "fe2fe0f34eb753b955b1d03de3694569f0185a3e01e3ecdcb13b3b9cbb000fd7",
+  "article_sha256": "b824ba2296988b56314769ce93be5fe25df7076df2a7db641298e9591b2bc94f",
   "checks": [
-    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
+    "2026-10-11 targeted content audit: 三个分开的实验表仍用上表/中表/右下指代；改为 Table 3/4/5 与任务名。"
   ],
   "artifact_checks": {
     "original_assets": 5,
@@ -39,5 +40,34 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "kind": "targeted_source_and_math_check",
+      "scope": "逐篇阅读七部分的关键起始段落/表格，检查公开方法公式与主结果摘表；并非全文逐句审计。",
+      "corrections": [
+        "三个分开的实验表仍用上表/中表/右下指代；改为 Table 3/4/5 与任务名。"
+      ],
+      "source_checks": [
+        {
+          "claim": "GLaMM GCG test 36.8 mask recall、34.8 CIDEr 及 Table 4/5 ZS/FT 区分",
+          "source_file": "source/papers/7fa226a145bd/source.txt",
+          "source_query": "36.8",
+          "pdf_page": 9,
+          "result": "对应主张在固定原文缓存中得到支持；范围限于此处记录。"
+        }
+      ],
+      "visual_crops_inspected": [
+        "original-p009-table-4.png",
+        "original-p009-table-5.png"
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

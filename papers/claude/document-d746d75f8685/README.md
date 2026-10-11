@@ -1,8 +1,18 @@
-[返回 Claude 家族](../README.md) · [返回仓库](../../../README.md)
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Claude](../README.md)
+<!-- article-header:end -->
 
 # Claude 3：视觉输入、行为对齐与长上下文能力的模型卡解读
 
 > 本文解读 Anthropic 的 **The Claude 3 Model Family: Opus, Sonnet, Haiku**。采用官方 42 页 PDF 的本地快照，讨论的是 2024 年发布时的三个模型。材料类型为模型卡，公开重点是能力与行为评测；架构内部和完整训练配方的公开程度有限。
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -19,6 +29,8 @@
 
 Claude 3 的多模态定位主要是把图像信息加入语言任务：用户可以提供图表、文档或照片，再要求模型识别、推理并组织答案。输出仍是文本，因此“看见图像”“产生操作请求”和“工具实际完成操作”属于不同环节。模型卡将工具调用作为能力之一，却没有提供一个可由公开参数完整复建的视觉 Agent 架构。[原文 §1–2，PDF 第 1–3 页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=1)
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 Claude 3 的报告围绕三个问题展开：视觉输入能否与知识和推理结合，模型能否在帮助用户与恰当拒绝之间取得更好的行为表现，以及长上下文是否真正支持信息提取和理解。Opus 负责高难度推理，Sonnet 提供能力与速度的折中，Haiku 面向更快、更经济的任务，但三个型号都具备视觉输入能力。
@@ -26,6 +38,8 @@ Claude 3 的报告围绕三个问题展开：视觉输入能否与知识和推�
 其技术信息可以分成两个层面。训练层面，模型采用大规模预训练、人类反馈和 Constitutional AI，通过明确行为原则影响后训练；数据包括公开网络信息、第三方非公开资料、标注服务与内部生成数据。能力层面，报告展示多模态问答、图表理解、多语言、长上下文和错误拒绝等评测，强调这些能力应分别测量。
 
 报告的意义在于展示一个商业模型家族如何被系统评估。它不能支持将性能归因于某个未公开的视觉连接器，也不能把 1M Token 的研究实验直接解释为发布时的产品输入上限。模型规模与单项分数也并不严格单调：较小型号在部分图表或编程指标上可以高于更大型号，需要按测试条件阅读。[原文 §1、§2.5–2.6、§5](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=3)
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -45,6 +59,8 @@ Claude 3 的报告围绕三个问题展开：视觉输入能否与知识和推�
 | 工具接口 | 可产生工具调用所需的指令表达 | 各评测任务是否调用外部工具及具体执行配置 |
 
 同样地，输入视频帧意味着模型可以读到采样图像，并不自动证明存在专门的时间位置编码、动态帧率训练或端到端视频生成器。这些机制在该模型卡中均没有具体配置，不能用其他 VL 模型的设计替代。[原文 §2.1、§5.3，PDF 第 2、7 页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=7)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -68,6 +84,8 @@ $$
 
 对于事实正确性，报告进一步区分正确、错误和承认不知道三类输出。这个分类揭示了一个实用权衡：频繁说不知道可以降低错误率，也可能减少正确作答。训练效果应同时考察有多少问题被正确解决，以及剩余输出如何分布，不能只凭错误数降低就认定知识能力增加。[原文 §5.7，PDF 第 18–19 页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=18)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 | 数据用途 | 原文公开的信息 | 规模与处理边界 |
@@ -81,6 +99,8 @@ $$
 
 评测数据的构造相对更具体。长上下文检索实验从 30 组目标句及问题中随机选择，将其放入不同背景文档和不同位置；背景既有 Paul Graham 文章，也有维基百科、法律、金融与医学文档。每个长度和位置组合产生 20 个变化版本，降低单一目标句或文档造成的偶然性。这个实验数据构造不能反推模型预训练中使用了多少类似材料。[原文 §5.8.2，PDF 第 21 页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=21)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 环节 | 原文明确的目标与做法 | 未公开的关键配置 |
@@ -92,6 +112,8 @@ $$
 报告的自回归描述可以用一个阅读辅助目标解释：对上下文 $x$ 和目标回答 $y$，常见生成学习提高 $p_\theta(y_t\mid x,y_{<t})$。它要求模型根据已经看到的信息预测下一个 Token，文本输出的顺序性由此而来。但报告没有公开 Claude 3 的损失掩码、视觉输入的监督形式或各目标权重，因此不能把这个标准描述当成其完整训练公式。
 
 人类反馈和 Constitutional AI 则影响哪些回答在后训练中被偏好。将“参考回答怎样表达”“回答是否有事实依据”“是否应拒绝请求”视作不同信号，可以理解报告为什么单独设置多类行为评测；其具体优化如何组合这些信号仍未披露。原文只确认使用 AWS 与 GCP 硬件，以及 PyTorch、JAX、Triton 等框架，未给出可计算训练成本的硬件数量、运行时间、学习率和总算力。[原文 §1、§2.6，PDF 第 1、3 页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=3)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -124,3 +146,11 @@ Figure 14 展示 Haiku 在长至 1M Token 数据上的损失曲线，Table 6 展
 纯文本推理也有评测设置差异。Opus 的 MATH 4-shot 为 61%，使用 32 次采样的多数投票后为 73.7%；GPQA Diamond 的 0-shot CoT 为 50.4%，5-shot CoT 多数投票为 59.5%。后者动用了额外采样预算，不能与单次回答直接比较。GPQA 的部分结果还取十轮评测平均，以缓解选项排序和随机采样带来的方差。[原文 §5.1、Table 1，PDF 第 5–6 页](https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf#page=5)
 
 该模型卡支持三个结论：Claude 3 家族具有真实的图文理解和推理能力；任务与提示条件对型号比较有明显影响；行为和长上下文需要分别评价。由于缺少模块消融和架构细节，性能提升无法进一步拆解成某种视觉编码器、数据配比或特定对齐算法的独立收益。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：ASMv2](../../all-seeing/arxiv-2402.19474/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：TextMonkey →](../../monkey/arxiv-2403.04473/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

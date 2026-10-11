@@ -1,0 +1,142 @@
+{
+  "validation_date": "2026-10-11",
+  "renderer": "Local marked GFM, MathJax 3.2.2 SVG and headless Edge; approximate GitHub styling",
+  "article_math_layout_scan": {
+    "articles": 271,
+    "desktop_width": 1120,
+    "mobile_width": 375,
+    "page_overflow_count": 0,
+    "figure_mode": "Fixed-size local placeholders for this math/layout scan; original asset integrity is checked separately"
+  },
+  "sample_pages": [
+    {
+      "file": "papers/metalm/arxiv-2206.06336/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 17
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/minicpm/arxiv-2408.01800/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 12
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/deepseek/arxiv-2412.10302/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 23
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": [
+          {
+            "tag": "MJX-CONTAINER",
+            "text": "",
+            "tex": "4.5\\times10^{-4}",
+            "display": null,
+            "right": 525.625
+          },
+          {
+            "tag": "MJX-CONTAINER",
+            "text": "",
+            "tex": "2.0\\times10^{-5}",
+            "display": null,
+            "right": 525.625
+          }
+        ]
+      }
+    },
+    {
+      "file": "papers/qwen/qwen2.5-vl/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 32
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gpt/document-9ee9863086d5/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 15
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/qwen/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
+    {
+      "file": "reports/paper-reading-guide.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    },
+    {
+      "file": "reports/model-family-index.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 430,
+        "scrollWidth": 430,
+        "overflow": []
+      }
+    }
+  ],
+  "article_manifest_sha256": "fd786dbdf90d0d0e346a9ec62cfc436fbb4abbe00029f12e6b0220d0989e082a",
+  "limits": "Sample screenshots use original local assets and were visually inspected. Local previews do not verify the live GitHub renderer. Scrollable wide tables and display equations are permitted; page-level overflow is checked."
+}

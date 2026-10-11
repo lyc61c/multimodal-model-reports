@@ -40,7 +40,7 @@
     "模型未运行，没有真实速度/显存复测"
   ],
   "model_execution": "not_run",
-  "article_sha256": "6326d51cf38c76ace823a5e00577a77b2d7b217b360cdc257b0fe68291c23db2",
+  "article_sha256": "acb39dc88220188bbb53cf5942635ec6951dd97b8c4a219b9c4e796ecfaa9379",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -57,5 +57,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 15,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

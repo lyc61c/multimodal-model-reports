@@ -1,6 +1,6 @@
 {
   "paper_id": "qwen2.5-vl",
-  "article_sha256": "9f350ce4c5eff3cf09c91d5d02b9a0ebb29ee0597d1e133e9905dbc8666da61e",
+  "article_sha256": "aa111087ee230438e449b58ecb4fdf7fb6b3ba11d6640a39421c8f4d4d9448f5",
   "source_version": "2502.13923v1",
   "review_date": "2026-10-08",
   "status": "passed",
@@ -78,5 +78,11 @@
     "Author-reported results, no model execution/reproduction",
     "No current leaderboard claim",
     "Visual QA of original figure and table crops; no PDF output authored"
-  ]
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

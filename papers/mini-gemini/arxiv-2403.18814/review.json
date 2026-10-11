@@ -43,7 +43,7 @@
     "Incomplete batch/context/weights disclosure",
     "Original broad superiority claims narrowed to table results"
   ],
-  "article_sha256": "939ecec5c0d56c15a4730493a7e1fc8f764fc1cf1318e9104a9c46381355f350",
+  "article_sha256": "00e998c4557895f3136da2146f8c78330d992b8ef2e24fabdce779782474aea5",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -57,5 +57,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -17,7 +17,7 @@
     "original_assets": 8,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "00a70f69a772b6c7a8c3ebd8d2235f9dd240cd2e60e5d215ac84cfa15f863cd2",
+  "article_sha256": "ff3125a30544b5e1db877c18215717404ff12506f2c46b2e354401f8d05bca7c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -31,5 +31,12 @@
       "Viewed two distant table crops against source page: both Table 2 and Table 3 titles, all models/categories and numerical results retained, intervening prose excluded.",
       "All four Tables 9–12 present with headers and notes."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

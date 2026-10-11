@@ -30,5 +30,12 @@
     "博客仅案例，无训练配方及独立定量结果",
     "未调用模型"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "3fa1105b9d4caf921d5de11fefc0b06ed42c340cbd2c6a4aecb0edd17e239f94",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 5,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

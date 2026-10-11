@@ -10,7 +10,7 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "OpenUni：轻量查询连接理解与图像生成",
-  "chinese_characters": 2658,
+  "title_zh": "OpenUni：用轻量查询与连接器衔接视觉语言模型和图像生成模型",
+  "chinese_characters": 2723,
   "figure_revision_date": "2026-10-09"
 }

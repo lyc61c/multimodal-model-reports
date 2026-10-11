@@ -1,8 +1,18 @@
-[返回 LISA 家族](../README.md) · [返回项目](../../../README.md)
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LISA](../README.md)
+<!-- article-header:end -->
 
 # LISA：用分割token把语言推理连接到像素掩码
 
 > 固定版本为 [arXiv:2308.00692v1](https://arxiv.org/abs/2308.00692v1)。图表来自原 PDF 页面；原文公式保留编号对应，补充解释不冒充新增实验。
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -19,6 +29,8 @@
 
 LISA 同时继承多模态语言模型的文字生成与像素输出能力。它是分割助手，不是单纯把框坐标写成文本的定位模型，也不是独立的机器人控制器。任务中的“推理”指查询可能不直接说出对象名称，例如要求找到“用于调整电视频道的东西”；模型需结合视觉和常识确定遥控器，再分出其像素区域。[原文 §1、§3](https://arxiv.org/pdf/2308.00692v1#page=2)
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 常规指代分割给“穿蓝色衣服的人”这样的显式描述；LISA 提出的 reasoning segmentation 接收“能让幼儿安全玩耍的区域”之类隐式问题。困难分为两步：理解用户意图，确定画面中的目标；把该目标表达为精细掩码。仅有强分割器不一定能理解常识查询，仅有语言模型也不天然会输出逐像素结构。
@@ -28,6 +40,8 @@ LISA 将这两类能力通过 `<SEG>` 连接。语言模型输出回答时生成
 论文使用常规语义分割、显式指代分割和 VQA 数据训练，已经能在新建 ReasonSeg 基准上做未见过任务形式的迁移；再加入仅 239 条推理分割训练例，性能进一步提升。因此要把不含 ReasonSeg 训练的 LISA 与标为 `(ft)` 的版本分开读：后者已经接触推理任务，不再属于同样的零样本条件。
 
 效果也有边界。该方法通过既有语言、视觉与分割预训练能力产生掩码，并未证明所有自然语言问题都存在唯一目标或所有回答理由正确。ReasonSeg 只有 1,218 对样本，报告显示验证集和测试集分数差异，评测结论须保留切分和任务范围。[原文 §3–5](https://arxiv.org/pdf/2308.00692v1#page=7)
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -45,6 +59,8 @@ $$h_{\mathrm{seg}}=\gamma(\widehat h_{\mathrm{seg}}),\qquad f=F_{\mathrm{enc}}(x
 $F$ 是多模态语言模型，$\widehat h_{\mathrm{seg}}$ 是生成 `<SEG>` 时的隐藏表示，$\gamma$ 是投影 MLP，$f$ 是像素解码所用图像特征，$F_{\mathrm{dec}}$ 是分割 decoder，$\widehat M$ 是预测二值掩码。文字输出是离散 token，但隐藏表示是连续特征，这个连续桥梁使分割监督能够训练相关语言适配与投影模块。
 
 默认模型用 SAM ViT-H 骨干，掩码 decoder 遵循 SAM 结构。报告指出可以替换 Mask2Former 等骨干，并给出实际对照，因此框架的语义条件接口不依赖唯一一种视觉 backbone。这里的“可替换”并不意味着任意分割器不用重新适配就具有同等结果。[原文 §4.1、§5.1、Table 3](https://arxiv.org/pdf/2308.00692v1#page=8)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -66,6 +82,8 @@ $p$ 为像素，$\epsilon$ 防止分母为零。原文没有在编号式中展�
 
 LoRA 在大部分语言权重保持固定的基础上加入低秩增量，可用标准解释 $W'=W+BA$。$A,B$ 可训练，秩小于完整矩阵维度，减少更新参数。论文没有在正文指定完整的秩、缩放系数和所有注入层，本文不擅自给出。它的主要价值是在既有 LLaVA 能力上添加分割，而不将语言模型全部从头重训。[原文 §4.2、第 6 页](https://arxiv.org/pdf/2308.00692v1#page=6)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 4](figures/original-p006-figure-4.png)
@@ -81,6 +99,8 @@ ReasonSeg 从 OpenImages 与 ScanNetv2 图像构建复杂隐含指令及高质�
 作者明确排除在 refCOCO(+/g) 验证集出现的 COCO 图像，减少训练评测泄漏。该做法有明确范围，不能升级为已完成所有基础模型预训练数据的全面去重。论文没有完整报告各训练来源最终混合比例、数据累计 token 或每类 mask 数量，本文保留其来源和已披露分割。
 
 数据设计最关键的区别是：显式描述直接点出目标，ReasonSeg 的问题要求先推理目标类别或用途。将两者统一到“对话中产生 `<SEG>`”的输出格式后，可以用普通分割数据训练接口，再检测复杂意图理解是否迁移。这个过程不会自动解决查询含糊、多合理目标或不可回答情况，v1 也没有提供覆盖这些边界的完整单独评测。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -99,6 +119,8 @@ ReasonSeg 从 OpenImages 与 ScanNetv2 图像构建复杂隐含指令及高质�
 有效 batch 160 是由设备、微批和累计步数乘积得到的解读，不是原文额外列出的测量。报告还给投影通道配置，但未完整展开 token embedding 到 mask prompt 的每个形状方向，复现时需使用对应代码，不能仅凭通道列表调换顺序。
 
 主版本在常规分割与 VQA 联合资料上学习；`(ft)` 再纳入 239 条 ReasonSeg 训练例及指令改写。论文没有给出所有阶段的训练总时长、消耗电量或完整成本账单。它与其它框架的 GPU/epoch 比较只能按原文分别记录，不能将不同硬件、不同数据和任务设置直接算作公平效率比。[原文 §4.1–5.1，第 4–7 页](https://arxiv.org/pdf/2308.00692v1#page=6)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -136,3 +158,11 @@ $$\mathrm{gIoU}=\frac1n\sum_i\frac{|P_i\cap G_i|}{|P_i\cup G_i|},\qquad
 Table 3 中默认冻结 SAM 的 val gIoU/cIoU 为 44.4/46.0，SAM 加 LoRA 为 41.5/37.3，Mask2Former-Swin-L 为 42.4/38.8；在这组设置下，更新 SAM 并不自动改善效果。表内 `(ft)` 指 ReasonSeg 任务微调，不能误解为只有这一行才训练 decoder。Table 4 的预训练、MLP 和指令改写对照显示，不用 SAM 预训练时 35.9/44.6；采用预训练与 MLP但不改写时 50.7/51.1；加改写后 52.9/54.0，说明已有分割能力和指令多样性都有贡献。
 
 数据 Table 5 还有一个需要审慎阅读的细节：正文把“未用语义分割”指向 Exp.4，但图中 Exp.4 仍勾选 PartSeg，完全不含三类语义资料的是 Exp.5，其 gIoU/cIoU 为 30.4/20.4。本文按表格区分，不复制原文编号冲突。实验最终支持“让语言语义条件驱动已有分割decoder可处理隐式查询”，同时仍有目标理解错误、数据规模小和任务条件差异。本文没有实际运行模型或复现训练。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：MovieChat](../../moviechat/arxiv-2307.16449/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：All-Seeing →](../../all-seeing/arxiv-2308.01907/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -51,7 +51,7 @@
     "WebSRCbestincludesextractedtext",
     "Languageonlynewinstructionsmixedwithmultimodaldata"
   ],
-  "article_sha256": "579509896acf53381ed6ccd64ba247f9f12b94a180ac59ac45d65195da0b556b",
+  "article_sha256": "6b5acab26fa1f68a8f02f0c5adfdac06c034726f26b92d59eca027cb2168dd76",
   "artifact_checks": {
     "original_assets": 9,
     "no_full_page_screenshots": true
@@ -65,5 +65,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Otter](../README.md)
+<!-- article-header:end -->
+
 # OtterHD：从 Fuyu 出发研究高分辨率与动态图像输入
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -12,6 +24,8 @@
 
 虽然属于 Otter 项目，本篇 OtterHD 的底座是 Fuyu，而不是早期 Otter-9B 使用的 OpenFlamingo。它接受图像和文字、输出文字，不是视频音频生成模型。8B 为模型命名；原文介绍底层 Persimmon 的独立输入输出嵌入使发布权重约 9.3B，推理规模类似嵌入共享的 8B，不能把名称当作精确权重计数。以下页码对应 v1。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 OtterHD 研究的是提高输入分辨率能否增强小物体、细文字和复杂场景的理解，以及一个模型能否在推理时灵活改变分辨率。Fuyu 没有独立的预训练视觉编码器，图像 patch 线性映射后与文字由同一个 decoder-only Transformer 处理，因此没有固定 ViT 位置表造成的同类分辨率接口约束。
@@ -19,6 +33,8 @@ OtterHD 研究的是提高输入分辨率能否增强小物体、细文字和复
 作者用约 370K 指令问答，分别训练固定 512、固定 1024 和动态分辨率模型，新增 283 题的 MagnifierBench。动态训练、原图分辨率测试的选择题/自由回答为 42.7/39.9；Fuyu 为 29.3/15.2。它明显改善这个细节基准，但并未全面超过专门视觉助手：例如 MM-Vet 26.3 低于表中 LLaVA-1.5 的 30.5。
 
 设计重点是输入与训练分布，不是新的图像编码器或数学推理损失。扩大图像还会增加序列、显存和注意力成本，而且固定分辨率训练的模型并不一定在更大图像上更好。
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -30,9 +46,11 @@ OtterHD 研究的是提高输入分辨率能否增强小物体、细文字和复
 
 ![原文 Table 1](figures/original-p003-table-1.png)
 
-**读图：**上方以《清明上河图》局部展示复杂图像的描述和计数，下方记录模型训练、评测分辨率及结果。此页没有新的网络结构图；原文的架构描述主要是文字，不能把演示绘图称为架构图。Table 1 的 Original 指使用各图自身分辨率而不重新缩放，其他行则按指定方形尺寸测试。
+**读图：** 上方以《清明上河图》局部展示复杂图像的描述和计数，下方记录模型训练、评测分辨率及结果。此页没有新的网络结构图；原文的架构描述主要是文字，不能把演示绘图称为架构图。Table 1 的 Original 指使用各图自身分辨率而不重新缩放，其他行则按指定方形尺寸测试。
 
 OtterHD 没有额外 CLIP 编码器、Q-Former 或多窗口 LoRA，也没有把高分辨率图像压缩到固定 256 个视觉 token。输入分辨率提高直接增加 patch 数，空间布局通过 raster 序列和换行信息进入共享 Transformer。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -48,6 +66,8 @@ $$
 
 动态训练在 448、512、768、1024 中均匀采样目标分辨率，学习不同图像 token 比例。第 4.1 节的集合误写成 418，4.2 节及实验图采用 448，本文按后者解释并保留版本差异。论文未使用随机裁剪，增加分辨率也不会凭空恢复原图不存在的真实细节。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 指令来源包括 LLaVA-DD/CR、VQAv2、GQA、OKVQA、OCRVQA、A-OKVQA、COCO-GOI、COCO-Caption、TextQA、RefCOCO、COCO-ITM、ImageNet 与 LLaVA-RLHF。附录 Table 3 总计 371,017 个问答对：例如 LLaVA-DD/CR 53,240、ImageNet 与 LLaVA-RLHF 各 50,000、GQA 30,000、A-OKVQA 34,112。原文合并成 dataloader 后均匀抽样，未报告复杂新增标注或清洗统计。
@@ -58,9 +78,11 @@ $$
 
 ![原文 Figure 3](figures/original-p005-figure-3.png)
 
-**读图：**Figure 3 分别测试小物体位置、计数和颜色，每题有选项答案和自由答案两种格式；Figure 2 的 tokens/s 包括图像与文字，是训练吞吐。细节基准不只考 OCR，也不等于通用图像能力。
+**读图：** Figure 3 分别测试小物体位置、计数和颜色，每题有选项答案和自由答案两种格式；Figure 2 的 tokens/s 包括图像与文字，是训练吞吐。细节基准不只考 OCR，也不等于通用图像能力。
 
 MagnifierBench 从 PVSG 视频选复杂帧，参考约占画面 1% 的物体尺度，人工放大检查并写干扰选项，再剔除大目标或靠常识容易猜中的题。最终 166 张图、283 QA：EpicKitchen 108 图/172 QA，Ego4D 38 图/80 QA，VidOR 20 图/31 QA。多数前两类图约 1920×1080，VidOR 通常 640×480。规模较小且偏家庭杂物场景，原文未提供置信区间。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -69,6 +91,8 @@ OtterHD 直接从 Fuyu 指令微调，采用文本生成监督，原文没有新
 训练使用 PyTorch、Transformers、FlashAttention-2 与 fused 算子，8 张 A100。AdamW 学习率 $10^{-5}$、weight decay 0.1、cosine、warmup ratio 0.03、DeepSpeed ZeRO-2。附录 Table 4 区分全参 batch 64、3 epochs 与 LoRA batch 128、6 epochs；正文统一 batch64 的概述不能覆盖 LoRA 设置。峰值每 GPU 显存约 72GB/70GB。
 
 作者报告全参约 3 小时/epoch，LoRA 约 1 小时/epoch；附录还有基于 150K LLaVA 数据、1 epoch 的受控比较，不能直接把这些成本与主表 370K 模型混为同一训练。Figure 2 在 512 下基础 HF 315.9 tokens/s/GPU，优化全参 2178.5、LoRA 3751；1024 下为 892.5/1872.9，分辨率代价明显。这些是作者 30 分钟窗口的平均训练吞吐，不是聊天输出速度。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -87,12 +111,20 @@ MagnifierBench 选择题要求直接输出字母，采用严格正确选项匹�
 
 ![原文 Table 2](figures/original-p007-table-2.png)
 
-**读图：**左轴为 MagBench 准确率，右轴为 token 比例。动态训练在 448/512/1024/1440 测试约 30.1/32.4/39.7/42.3；512 固定训练在 1440 仅 27.5，低于 512 测试的约 32.4。图中 1440 是未见过的训练分辨率，但该图按指定尺寸评测，与 Table 1 原图评测 42.7 不是同一配置。它证明的是该实验中的预算泛化，并非任意大图无上限支持。
+**读图：** 左轴为 MagBench 准确率，右轴为 token 比例。动态训练在 448/512/1024/1440 测试约 30.1/32.4/39.7/42.3；512 固定训练在 1440 仅 27.5，低于 512 测试的约 32.4。图中 1440 是未见过的训练分辨率，但该图按指定尺寸评测，与 Table 1 原图评测 42.7 不是同一配置。它证明的是该实验中的预算泛化，并非任意大图无上限支持。
 
 ![原文 Figure 9](figures/original-p012-figure-9.png)
 
 ![原文 Table 5](figures/original-p012-table-5.png)
 
-**读图与表：**150K、1 epoch 下全参 MagBench/MM-Vet 为 32.6/24.0，LoRA 为 29.9/22.1。右图 LoRA 吞吐较高，左图却是全参训练损失更接近零，不能照正文概括写成 LoRA 损失更低。低训练损失也不自动证明更好的泛化，表中成绩才是对应评价。
+**读图与表：** 150K、1 epoch 下全参 MagBench/MM-Vet 为 32.6/24.0，LoRA 为 29.9/22.1。右图 LoRA 吞吐较高，左图却是全参训练损失更接近零，不能照正文概括写成 LoRA 损失更低。低训练损失也不自动证明更好的泛化，表中成绩才是对应评价。
 
 Figure 10 还展示给选项时答对、自由问答时答错及反向情况，说明两种协议具有互补价值。论文缺少更大规模细节评测、重复实验、GPT-4 判别一致性与动态训练之外的充分机制消融；本文未执行模型或复现实验。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：mPLUG-Owl2](../../mplug/arxiv-2311.04257/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：NExT-Chat →](../../next-chat/arxiv-2311.04498/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

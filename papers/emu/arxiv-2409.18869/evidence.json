@@ -16,5 +16,29 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "PDF 第 5 页上部是视觉码本与重建指标，右下 Table 3 是 Transformer 配置；两者属于不同模块。",
+          "after": "PDF 第 5 页：Table 1 给出视觉 tokenizer 配置，Table 2 给出视频重建指标，Table 3 给出 Transformer 配置。视觉分词器与主干属于不同模块。",
+          "kind": "crop_caption_clarity"
+        },
+        {
+          "before": "页首 Table 7 对比原提示与重写提示，中部 Table 8 是 DPG-Bench，下方明确说明视频后处理与评测。",
+          "after": "Table 7 对比 GenEval、T2I-CompBench 结果及提示重写设置，Table 8 比较 DPG-Bench。视频后处理与评测另见原文附录 B.2。",
+          "kind": "crop_caption_clarity"
+        },
+        {
+          "before": "上部 Table 5 是 VBench，下部 Table 6 是理解。",
+          "after": "Table 5 比较 VBench 视频生成结果，Table 6 比较多模态理解结果。",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

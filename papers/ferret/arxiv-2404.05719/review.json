@@ -8,7 +8,8 @@
     "Verified GPT-4 advanced annotations are text-only; iPhone-only advanced training and small Android advanced test are distinguished.",
     "Table 2 Android anyres advanced mean 71.7 conflicts with Table 3 70.1 and component arithmetic 71.05; discrepancy explicitly retained.",
     "GPT-4V subset/Set-of-Mark protocol, GPT relative scores above 100, iPhone Find Text exception, task regressions and absence of closed-loop success measurement are explicitly recorded.",
-    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
+    "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
+    "2026-10-11 targeted content audit: Figure 2 说明误称含论文正文；改为实际保留的网络连接。未重复添加已经存在的训练时长。"
   ],
   "artifact_checks": {
     "seven_sections": true,
@@ -18,7 +19,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "3563f9fcc291a99a89550884a97753bd005b355242fa1272ae3e9e47dc4b4663",
+  "article_sha256": "a4e711a5f80522b519ac5e36e2a76732058210f7f691b16c5de17aa96759d08a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -32,5 +33,33 @@
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 56）：Table 2 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。",
       "已逐项目检原页与最终裁剪图（qa1v4/qa1v5 对照图，序号 57）：Figure 5, Table 3 均为本文对应原页实际需要的图表；已核对完整子图、边缘文字、坐标和图例、表头与数据行、脚注及保留的原图注，未混入相邻正文。同页多目标均分别保留，自动引用解析中的跨页引用与误识别已结合原页排除。"
     ]
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "kind": "targeted_source_and_math_check",
+      "scope": "逐篇阅读七部分的关键起始段落/表格，检查公开方法公式与主结果摘表；并非全文逐句审计。",
+      "corrections": [
+        "Figure 2 说明误称含论文正文；改为实际保留的网络连接。未重复添加已经存在的训练时长。"
+      ],
+      "source_checks": [
+        {
+          "claim": "Ferret-UI 250K 训练混合；decoder/projector 更新、vision 冻结；base 1 天/anyres 约 3 天",
+          "source_file": "source/papers/3b84e8a511a7/source.txt",
+          "source_query": "250K samples",
+          "pdf_page": 10,
+          "result": "对应主张在固定原文缓存中得到支持；范围限于此处记录。"
+        }
+      ],
+      "visual_crops_inspected": [
+        "original-p005-figure-2.png"
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

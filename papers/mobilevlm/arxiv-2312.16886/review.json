@@ -39,7 +39,7 @@
     "未运行模型或手机端测试"
   ],
   "model_execution": "not_run",
-  "article_sha256": "0b1be80747decc72346179c72a03ed0b7d844ec0d1deb3eb9d4671fab57dfd31",
+  "article_sha256": "38487ff6639bbe805f6852dd78e145b327b007177157c112190ec4824ee8325f",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -57,5 +57,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 13,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

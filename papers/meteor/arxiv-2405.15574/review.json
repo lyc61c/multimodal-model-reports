@@ -57,7 +57,7 @@
     "no systematic failurecase study",
     "no detailed annotation labor accounting"
   ],
-  "article_sha256": "bffa9e0d3e673579bfa954aa4d97771f7f88d1815d4b818cb9f5a7d3886affcc",
+  "article_sha256": "e120f1d74ce81b67a812e5be589248648e89742aa65b3f493216863aa7684928",
   "artifact_checks": {
     "original_assets": 3,
     "no_full_page_screenshots": true
@@ -71,5 +71,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

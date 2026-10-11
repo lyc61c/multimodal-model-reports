@@ -31,7 +31,7 @@
     "MMLU正文增加2.4与表值增加2.0有冲突，按表保留",
     "第一阶段epoch和完整优化器等未披露"
   ],
-  "article_sha256": "357550e018c4ee58110034dc9d92a7a099b2a809d3c1836679d29dfa330f2eaa",
+  "article_sha256": "132759d1727dc6e45d020e24118d80a45d09b36cd9ce5d85ff123eec7ca68885",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -45,5 +45,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

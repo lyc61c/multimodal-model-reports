@@ -46,7 +46,7 @@
     "GPTmetricrankingaggregationnotdefined",
     "pointcloudcoordinatespromptinconsistent"
   ],
-  "article_sha256": "2d32e8b16d89f62a28b0f36681eae6d240bc8187eaa1c964042ac7b840a9c69d",
+  "article_sha256": "49bf0bacb0baff477e40b1bd666b3912ea08c0cfe5195cc8981026773fd1c43c",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -64,5 +64,25 @@
       "Viewed source and crop after manual repair: Table 2, Table 3, Table 4 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_3",
+      "article_read_mode": "targeted_review",
+      "source_review_mode": "targeted_primary_source_check",
+      "scope": "对照图像/点云投影与各自 LoRA、共享 LLM；CIFAR10 34.5 与检测 4.82 表项未混为统一准确率；修正完整原页的过时描述。",
+      "changes": [
+        "删除保留完整原页的过时表述，分别说明模型框架和零样本表。"
+      ],
+      "article_sha256": "0982be4db6634523cfe94680a8863d1322775f859831fcae0cf582dce45538c9",
+      "limitation": "未逐句核验该篇全部实验数值、数学推导和原文全页；本次记录仅覆盖明确列出的针对性核对，不代表复现实验。"
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 9,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

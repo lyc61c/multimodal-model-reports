@@ -129,7 +129,7 @@
     "相对LLM评分和准确率区分，组合ScienceQA成绩单列"
   ],
   "checked_at": "2026-10-08",
-  "article_sha256": "9a4ab217497c59c2a9e87943e544eee72f68dd029495aa23ef0bf39190f7db32",
+  "article_sha256": "e2f67ebcd09c3c4b781409256a9701dbb1cf2b3306d2d34df93eec3e4e035ac6",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -146,5 +146,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 8,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

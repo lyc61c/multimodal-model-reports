@@ -32,7 +32,7 @@
     "正文中文分数增益减法有误，本文依据表中数值",
     "原图为整页截图，保留脚注和表头"
   ],
-  "article_sha256": "b6a0f6588718594b8aef9cb5078e59f30b714ade5b18891ceca9d9b277729322",
+  "article_sha256": "1d56c04dc6edac793b715fca4b8b6f4918893f55b40c6f93a6100cc1334ab6ea",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -46,5 +46,36 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/ffb5962a4615/source.txt",
+        "papers/llava/arxiv-2310.03744/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "左下是训练表，右下两表分别是数据格式与评测格式，不能把评测提示当额外训练数据。",
+          "after": "Table 5 给出训练超参数，Table 6 比较回答格式提示，Table 7 列出指令训练数据及其格式，Table 8 列出评测格式；不能把评测提示当额外训练数据。",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "b6a0f6588718594b8aef9cb5078e59f30b714ade5b18891ceca9d9b277729322",
+      "article_sha256": "5538ce15ec363702a2f573699be34bb4d5f4c9b62f0a4dfe7383ea2f111883a5",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

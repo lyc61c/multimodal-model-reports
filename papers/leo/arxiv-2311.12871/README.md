@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LEO](../README.md)
+<!-- article-header:end -->
+
 # LEO：以对象为中心连接三维理解、语言与具身动作
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 [An Embodied Generalist Agent in 3D World](https://arxiv.org/abs/2311.12871) 由 Jiangyong Huang、Silong Yong、Xiaojian Ma、Xiongkun Linghu 等提出，主要机构为 BIGAI，并包括北京大学、卡内基梅隆大学与清华大学。本文固定依据 **2311.12871v1，2023 年 11 月 18 日**。模型名称 **LEO**，以 Vicuna-7B 为基础，是把三维场景理解与具身动作任务共同表述为序列预测的通用智能体。[PDF 第 1–4 页](https://arxiv.org/pdf/2311.12871v1#page=1)
 
 输入包括对象点云、可选第一视角图片及语言指令，输出可以是描述、问答、对话、文本计划，也可以是导航或桌面操作的动作码。这里“通用”指一个共享模型覆盖报告所列任务，不意味着已经在任意真实场景、任意机器人上获得可靠执行能力。动作实验主要位于 Habitat 导航与 CLIPort 桌面操作环境。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -20,6 +34,8 @@
 
 LEO 的优势在于三维对象结构与语言模型之间的接口简单：不用把全部点送进语言模型，也不为每项任务设计单独输出头。不过它依赖对象提案和几何信息，智能体的可访问三维场景条件应与仅用相机的策略区别理解。[PDF 第 2–4、25–27 页](https://arxiv.org/pdf/2311.12871v1#page=2)
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 1](figures/original-p002-figure-1.png)
@@ -31,6 +47,8 @@ LEO 的优势在于三维对象结构与语言模型之间的接口简单：不�
 三维表示不能只包含物体类别。模型需要知道两个对象间的距离和方向，也需要知道智能体位于哪里。embodiment token 是一个可学习的特殊“自身对象”，与普通对象共同参与空间注意力；导航使用 GPS 与 compass 所提供的位置、朝向，旋转以 Fourier 特征再线性映射。描述指定对象时，则把自身位置设为被指对象盒内选取的位置。这样“左边的椅子”不再只是无参照的语言关系。
 
 语言词表为 SentencePiece 的约 32K 子词。动作使用其中低频 token：导航有前进、右转、左转、停止；CLIPort 分别用 320 个 x 位置码、160 个 y 位置码、36 个 z 轴旋转码。**516 是分量码的数量之和，不是只有 516 种完整姿态，也不是任意七自由度机械臂控制接口。** 输出这些码后，系统映射回任务规定的动作命令。[PDF 第 21–22、27 页](https://arxiv.org/pdf/2311.12871v1#page=22)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -58,6 +76,8 @@ $$\mathcal L=-\sum_{b,t}\log p_\theta
 
 数据侧的 O-CoT 要求生成模型先列出有关对象标签与 ID，再作答。例如计数问题先列出各个 blanket 实例，减少凭语言习惯直接猜数字。**这些 thought 在清洗后移除**，因此它主要提高教师生成数据的可核验性，不是要求 LEO 部署时输出显式长思维链。[PDF 第 5–6、18–20 页](https://arxiv.org/pdf/2311.12871v1#page=5)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 2](figures/original-p005-figure-2.png)
@@ -78,6 +98,8 @@ $$\mathcal L=-\sum_{b,t}\log p_\theta
 
 导航示范采用 MP3D 训练划分的 57 个场景，生成较少探索噪声的最短路径。模型每步看到当前二维和三维输入、指令与过去 **4 个动作**，预测下一个动作；没有递归状态记录完整观察历史。这一条件帮助解释最短路径训练与人类探索轨迹训练的差别。[PDF 第 30 页](https://arxiv.org/pdf/2311.12871v1#page=30)
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 第一阶段 LEO-align 用对象与场景描述建立三维视觉语言接口；第二阶段 LEO-instruct 加入 QA、对话、计划、导航及操作。两阶段共用模型和响应交叉熵，不为动作独立增加一套策略网络。冻结 PointNet++ 与预训练 LLM，训练二维编码器、Spatial Transformer 与 LoRA 等可训练接口，总可训练参数约 142M。[PDF 第 4 页](https://arxiv.org/pdf/2311.12871v1#page=4)
@@ -93,6 +115,8 @@ $$\mathcal L=-\sum_{b,t}\log p_\theta
 | 精度 / 梯度范数 | bfloat16 / 5.0 | 同左 |
 
 推理采用 5 beams，最大输出 256 token；附录还把最大上下文设为 256，过长从左侧截断，保留最右侧部分。重复惩罚 3.0、长度惩罚 1、温度 1、top-p 0.9。此处是报告实际设置，不应按后来长上下文模型的默认值替换，也不能因 beam search 同时写了 top-p 就自行认定其运行某种采样实现。动作码最后还原成任务命令。[PDF 第 27–28 页](https://arxiv.org/pdf/2311.12871v1#page=27)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -113,3 +137,11 @@ CLIPort 中 separating-piles 的 seen/unseen 平均奖励为 98.8/75.2，packing
 **Figure 4 的读法。** 左图逐任务对比不对齐、少量数据、仅 ScanNet、去动作与全任务模型；星号标记对齐阶段任务，不能把所有柱子都当独立新测试。右图横轴是训练 token 量，纵轴是测试损失，随数据增加整体下降。13B 未对齐曲线反而高于 7B 未对齐，说明本实验没有证明仅放大主干就能改善三维能力。
 
 消融使用真实对象提案，以隔离分割误差；主理解比较使用 Mask3D，因此协议和数值不能直接拼成一张无条件总榜。加入跨领域语言任务有收益，但动作混合也会使某些理解分数下降；附录 NoAct 与 Full 的 SQA3D 分别 54.1、51.5，体现领域竞争。未见导航目标的成功率仅 11.1，使用较多探索的人类轨迹训练后 MP3D seen 为 7.1，作者将其与缺乏递归记忆联系。对话和计划主要是 held-out 示例及内部指标，没有统一公开外部榜单或完整计划执行成功率。LEO 更适合作为三维语言动作统一接口的早期证据，而不是现实通用具身能力已解决的结论。[PDF 第 9、29–30 页](https://arxiv.org/pdf/2311.12871v1#page=9)
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Video-LLaVA](../../video-llava/arxiv-2311.10122/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：LION →](../../lion/arxiv-2311.11860/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -48,7 +48,7 @@
     "8M approximate differs table sum",
     "own audio testbed annotation protocol incomplete"
   ],
-  "article_sha256": "b481e18a68cf80fb718acca4515fb1f7f29488b1be223e08c842f9b20d9c1548",
+  "article_sha256": "088ec2c61f213fe22b44d3b69bc0800399228045b005c6e72667d82f354a8707",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -62,5 +62,11 @@
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 9,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

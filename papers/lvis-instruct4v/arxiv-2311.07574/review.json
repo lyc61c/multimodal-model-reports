@@ -36,7 +36,7 @@
     "MMVet正文3.6%与表不一致，按表2.0分记录",
     "未在本报告列出的LR/GPU/context等不从基线记忆补造"
   ],
-  "article_sha256": "cbe901d61a2af46346742d9d365f14d36750a0315c399270812c23b5b6693a51",
+  "article_sha256": "d2d27854898efa946d803e7a5d82292d2a58b7caf0e06c026a645a50ce426d47",
   "artifact_checks": {
     "original_assets": 5,
     "no_full_page_screenshots": true
@@ -50,5 +50,11 @@
       "Viewed fresh repaired source/crop contact: Table 2, Table 3 complete; full table rows, headers, figure panels and captions preserved without prose or section headings.",
       "Viewed source and crop: source contains body/formulas or a long prompt algorithm only; no required model diagram or results table; drop confirmed."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

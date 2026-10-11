@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="600" viewBox="0 0 640 600" role="img" aria-labelledby="title description">
+  <title id="title">多模态大模型内容概览</title>
+  <desc id="description">图像、视频、音频、语音、文本与指令，连接到多模态模型的理解、推理与生成能力。阅读主题为架构、原理、数据、训练与实验。</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0c162c"/><stop offset="1" stop-color="#152741"/></linearGradient>
+    <linearGradient id="core" x2="1" y2="1"><stop stop-color="#5b8cfa"/><stop offset=".5" stop-color="#a68aff"/><stop offset="1" stop-color="#50d5c8"/></linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#a2b5d7" opacity=".12"/></pattern>
+  </defs>
+  <rect width="640" height="600" rx="24" fill="url(#bg)"/>
+  <rect width="640" height="600" rx="24" fill="url(#dots)"/>
+  <g font-family="'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-serif" text-anchor="middle">
+    <text x="320" y="48" font-size="15" letter-spacing="2" fill="#8cadd8">MULTIMODAL MODEL REPORTS</text>
+    <text x="320" y="103" font-size="40" font-weight="700" fill="#f4f7ff">多模态大模型</text>
+    <text x="320" y="143" font-size="25" fill="#bac9df">从多模态感知，到理解与生成</text>
+    <g fill="none" stroke-width="2">
+      <path d="M120 232V246Q120 264 140 264H300Q320 264 320 280" stroke="#6599ed"/>
+      <path d="M320 232V280" stroke="#aa95ee"/>
+      <path d="M520 232V246Q520 264 500 264H340Q320 264 320 280" stroke="#5ac9bb"/>
+      <path d="M320 410V424Q320 440 300 440H140Q120 440 120 456" stroke="#6599ed"/>
+      <path d="M320 410V456" stroke="#aa95ee"/>
+      <path d="M320 410V424Q320 440 340 440H500Q520 440 520 456" stroke="#5ac9bb"/>
+    </g>
+    <rect x="30" y="174" width="180" height="58" rx="14" fill="#172c47" stroke="#31567f"/>
+    <rect x="230" y="174" width="180" height="58" rx="14" fill="#232b49" stroke="#4e4875"/>
+    <rect x="430" y="174" width="180" height="58" rx="14" fill="#14323e" stroke="#29655f"/>
+    <g fill="#e5edff" font-size="25" font-weight="600">
+      <text x="120" y="212">图像 · 视频</text><text x="320" y="212">音频 · 语音</text><text x="520" y="212">文本 · 指令</text>
+    </g>
+    <rect x="160" y="280" width="320" height="130" rx="22" fill="#132039" stroke="url(#core)" stroke-width="2"/>
+    <g fill="none" stroke="url(#core)" stroke-width="2.5" stroke-linejoin="round">
+      <path d="m221 312 26 15v30l-26 15-26-15v-30Z"/>
+      <path d="m195 327 26 15 26-15 M221 342v30"/>
+    </g>
+    <text x="356" y="350" font-size="34" font-weight="700" fill="#f3f6ff">多模态模型</text>
+    <text x="320" y="388" font-size="17" letter-spacing="1" fill="#9bafd2">MULTIMODAL MODELS</text>
+    <rect x="30" y="456" width="180" height="58" rx="14" fill="#172c47" stroke="#31567f"/>
+    <rect x="230" y="456" width="180" height="58" rx="14" fill="#232b49" stroke="#4e4875"/>
+    <rect x="430" y="456" width="180" height="58" rx="14" fill="#14323e" stroke="#29655f"/>
+    <g font-size="30" font-weight="700"><text x="120" y="496" fill="#91bbff">理解</text><text x="320" y="496" fill="#c8b5ff">推理</text><text x="520" y="496" fill="#79ddcf">生成</text></g>
+    <path d="M30 544H610" stroke="#344660"/>
+    <text x="320" y="579" font-size="23" fill="#c6d5eb">架构 · 原理 · 数据 · 训练 · 实验</text>
+  </g>
+</svg>

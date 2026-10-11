@@ -60,7 +60,7 @@
     "原始视频ATE最好，文字动作RPE更低",
     "实际硬件通信储存不因固定激活FLOPs而消失"
   ],
-  "article_sha256": "1f2a46b09220d81d77d5d2258241ad01f21f80c2350dfeb9978dc41b2ec4276a",
+  "article_sha256": "55fb90832500139321ca62dfff5489270217f9961157297822b4a4173b28d3d7",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -74,5 +74,11 @@
       "Viewed source page and crop: all architecture-ablation bars, axes, category names, values and Figure 21 caption retained.",
       "Viewed source page and crop: all eight scaling panels, legends, axes and complete Figure 23 caption retained; Figure 24 excluded as unreferenced."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

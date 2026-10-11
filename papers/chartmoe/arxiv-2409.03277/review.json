@@ -41,7 +41,7 @@
     "GPUhours do not imply trainingcardcount",
     "Gate renormalization and auxiliaryloss notdisclosed"
   ],
-  "article_sha256": "84024f9eb473c480afc98ec55b6173de61ac7a48d3612e3cbbb8b43d582329a4",
+  "article_sha256": "99bb94c169dbfb100fd4341b10edfef5dbe5b5624a44561a4be4b2c2b0d89ea0",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -55,5 +55,11 @@
       "Viewed source page and crop: Table 2 ChartQA comparisons retain all metric-group headers, model rows and final highlighted results, including full caption.",
       "Three separate full regions: Tables 7/8 and Figure 6; repaired Figure 6 no longer includes adjacent table rows."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

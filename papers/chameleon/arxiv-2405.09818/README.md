@@ -1,8 +1,18 @@
-[返回 Chameleon 家族](../README.md) · [返回项目](../../../README.md)
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Chameleon](../README.md)
+<!-- article-header:end -->
 
 # Chameleon：将图像和文字统一为离散token的早期融合模型
 
 > 对应 **Chameleon: Mixed-Modal Early-Fusion Foundation Models**，固定 [arXiv:2405.09818v1](https://arxiv.org/abs/2405.09818v1)。本文介绍报告中的完整理解与生成系统，不据此推断后续某个公开checkpoint的实际开放功能。
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -19,6 +29,8 @@
 
 核心定位是完整多模态文档建模。模型可读图讲解，再生成配图并接着写文字；图像生成和文字生成共同依赖同一因果Transformer，而不由外接文生图模型处理每个图片请求。图像tokenizer/de-tokenizer仍是专门组件，所以“统一模型”不能被解释为直接把原始像素当字词，或不需要图像解码器。[原文 §1–2.1](https://arxiv.org/pdf/2405.09818v1#page=4)
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 早期融合将两类token从骨干起点放入同一表示和注意力结构，从零训练共享模型。相比只把连续视觉特征作为文字回答的条件，它还学习预测后续图像code，可以自然延续图文交错序列。代价是每张图需1024自回归步骤，且离散图像压缩的重建上限会影响理解；报告特别指出密集文字图片难以重建，OCR能力受限。
@@ -26,6 +38,8 @@
 关键工程贡献是训练稳定性。图像和文字分布熵不同，共享权重训练时发现表示norm缓慢上升，可能晚期才出现发散。作者组合QK-Norm、输出z-loss、7B的dropout与34B的norm重排，完成9.2T累计训练token。不能把所有规模统一写成“dropout解决发散”：34B预训练反而不用dropout。
 
 模型在文字与图像描述任务上有较强成绩，也可做图文生成，但VQAv2仍落后于部分后融合助手。人工评测针对必须带图片的长回答，对照含GPT4V/Gemini＋DALL-E3组合；结论是这一任务的偏好，不能变成总体理解或OCR超越GPT4V。报告中有偏好率统计不一致，本文按原始计数解释。[原文 §2.3、§4–5](https://arxiv.org/pdf/2405.09818v1#page=13)
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -38,6 +52,8 @@
 生成可自由在模态间切换，模态受限任务则对词表进行mask，如生成图片期间屏蔽不属图像code的候选。图像是固定1024code块，文字是变长，因此推理需要检测图像开始标记、管理块并调用de-tokenizer。报告基于PyTorch/xformers实现流式文字/图片，非流式图片块可融合控制减少逐步CPU检查，实际仍是自回归token生成，不是扩散去噪。
 
 4096上下文意味着单图1024code已占约四分之一窗口，额外标记与文字进一步占空间。系统支持交错顺序，不等于能把任意长度文档无损塞进窗口。固定图像分辨率与code容量也限制小文字、复杂细节和长图形信息。[原文 §2.1、§2.4](https://arxiv.org/pdf/2405.09818v1#page=8)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -57,6 +73,8 @@ $$\mathcal L_z=10^{-5}(\log Z)^2.$$
 
 34B的残差更新改为 $h=x+\operatorname{Norm}_{att}(\operatorname{Att}(x))$，$o=h+\operatorname{Norm}_{ffn}(\operatorname{FFN}(h))$；LLaMA2对照则在Att/FFN之前归一化。区别是残差分支输出的尺度受约束，不是删掉残差连接。SwiGLU乘性结构可能进一步放大norm，使这项配置在大模型有用。作者随后发现7B也可用重排无dropout稳定，但主训练表7B仍为0.1，不能用事后发现替代实际训练配置。[原文 §2.3](https://arxiv.org/pdf/2405.09818v1#page=7)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 图像tokenizer仅用许可图像训练，含人脸图像比例加倍，以改善人像生成。骨干图文预训练另含公开和许可图文，图像resize/center crop至512。二者资料范围不能混同为全部预训练图像均属于同一许可集。
@@ -68,6 +86,8 @@ Table1基础资料为4.4T，正文各类近似值算术相加约4.8T，没有给
 SFT按六类组织：文字1.6M、代码14.1K、视觉聊天15.6K、图像生成64.3K、交错生成16.9K、安全95.3K。图片生成从许可集筛审美评分至少6，并选接近512方图的高分样本；视觉聊天与交错资料由第三方高质量采集，不含Meta用户资料。安全资料来自既有文字/代码、安全合成、人工图像prompt和混合prompt扩展。不同模态配对必须平衡，否则模型会学到无条件多出图或不出图的先验；报告未列完整采样比例。
 
 SFT输入图片用border padding保留信息，答案图片center crop重视觉质量，两者处理目的不同。不能把所有图片都说成center crop。数据样本数、图片数、token数原表各自有统计，不按一条对话一张图假设。[原文 §3、Table3](https://arxiv.org/pdf/2405.09818v1#page=9)
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -86,6 +106,8 @@ AdamW β1/β2=0.9/0.95、epsilon=$10^{-5}$，weight decay0.1、global clipping1�
 SFT使用cosine、初始 $10^{-5}$、weight decay0.1、batch128、序列4096，pack多个prompt/answer并以标记分隔，只对答案token计loss；dropout0.05，保留z-loss。文章没有说全程冻结34B或仅训练LoRA，也没有提供SFT总step/epoch和完整模块冻结表，不补造配置。预训练与SFT的dropout和schedule需分别陈述。
 
 这套报告对齐主要是监督微调，安全拒答也来自SFT；RLHF/RLAIF作为可能进一步提高的工作提及，不能写为已经执行的最后训练阶段。单任务SFT、multitask任务微调和一般Chameleon-SFT并非同一评测设置。[原文 §3.2、§5.2](https://arxiv.org/pdf/2405.09818v1#page=16)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -110,3 +132,11 @@ SFT使用cosine、初始 $10^{-5}$、weight decay0.1、batch128、序列4096，p
 偏好分定义wins＋0.5ties。对Gemini+总体原始41.5%/34.5%/24.0%，计算约58.8%，附录Table11总体也58.8%；主文却称60.4%，该值实际对应441个混合输入子集。本文保留并说明这个冲突，不能将60.4%说成无条件总体胜率。对GPT4V+总体35.8/31.6/32.6，折算51.6%；其中直接胜出只是35.8%。Tie计半分不是统计显著性检验。
 
 该人工集基本不覆盖OCR、图表，亦非真实在线日志；多人完全一致只有约28–35%，部分问题可靠性有限。安全Table5的34B众包20K unsafe约0.1%，内部445轮red team为1.6%，不能转化为所有请求安全保证；正文误写30B，按表34B保留。论文没有在该v1给统一标准文生图FID/GenEval成绩，不补造图像生成排行榜。本文未运行模型，所有图表与数字来自固定原文。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：GPT-4o](../../gpt/document-9ee9863086d5/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Libra →](../../libra/arxiv-2405.10140/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Llama](../README.md)
+<!-- article-header:end -->
+
 # Llama 3：大规模稠密语言模型与组合式视觉、语音扩展
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -15,6 +27,8 @@
 
 405B 旗舰语言模型使用 15.6T 文本 token 与约 $3.8\times10^{25}$ FLOPs 预训练。对于多模态扩展，视觉使用跨注意力注入图像特征，语音使用映射后的连续嵌入进入语言模型。作者强调模块化开发与保留文字能力；相应代价是额外编码器、适配器参数和独立数据流程。本文以原文当时的实验状态介绍，未把后续 Llama 产品能力反推到此版本。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 主线 | 机制与意义 |
@@ -27,6 +41,8 @@
 | 语音 | Conformer 与适配器形成输入嵌入；文字归一化和韵律模块负责输出 |
 
 旗舰语言模型在 HumanEval 的 pass@1 为 89.0；实验性 Llama 3-V 405B 在 MMMU validation+CoT 为 64.5，ChartQA test+CoT 为 85.8；70B 视频版本 PerceptionTest 为 60.8。语音接口在 FLEURS 的 34 语言评测中达到 8.2 的错误率口径，部分语言使用字符错误率。它们评估的对象、拆分和指标不同，不应拼成一个统一“多模态总分”。[PDF 第 3、61–67 页](https://arxiv.org/pdf/2407.21783v1#page=61)
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -48,6 +64,8 @@
 
 语音编码器为约 1B 参数、24 层 Conformer，80 维 mel 特征先以 stride 4 压缩到 40ms；约 100M 适配器再用卷积压缩至 80ms，并经 Transformer 和线性层映射到语言嵌入维度。语音输出实验只用 Llama 3 8B 的第 16 层隐藏状态增强文本归一化和韵律预测，声学模型与 WaveRNN 声码器最终合成声音。[PDF 第 64–68 页](https://arxiv.org/pdf/2407.21783v1#page=64)
 
+<a id="principles"></a>
+
 ## 4. 核心创新与数学原理
 
 **GQA 减少缓存而保持多个查询头。** 若 $h_q$ 为查询头数、$h_{kv}$ 为 KV 头数，每组查询共享一组 K/V。为解释此机制，可写 $A_j=\operatorname{softmax}(Q_jK_{g(j)}^\top/\sqrt d+M)V_{g(j)}$。这是标准注意力的解释式，原文贡献是其具体配置及规模化实践。缓存主要随 KV 头数增长，因此 405B 的 128 个查询头无需各自保留独立的 128 份 K/V；计算仍是因果自注意力，不能称为线性注意力。
@@ -56,11 +74,25 @@
 
 报告进一步建立训练算力→下游正确答案负对数似然→准确率的两段关系，后一步使用 sigmoid 拟合并加入 Llama 2 实验。这样比直接把语言建模损失下降等同于能力提升更明确；但其成功案例主要是特定任务与数据配方，不能将系数当作所有多模态模型的通用定律。
 
-**组合式视觉读取。** 用解释式 $\operatorname{CrossAttn}(H,V)=\operatorname{softmax}((HW_Q)(VW_K)^\top/\sqrt d)VW_V$ 可理解视觉适配器：文字隐藏状态 $H$ 提问，视觉特征 $V$ 提供信息。冻结语言权重使文字路径得到保护，视觉编码器及新跨注意力学习如何满足该骨干的特征需求。多层特征缓解语义抽象和位置精度的矛盾；它没有提供生成图像的解码器。
+**组合式视觉读取。** 视觉适配器可用以下解释式理解：
 
-**拒绝采样与 DPO 的作用不同。** 奖励模型先筛选回答，再用标准目标 token 交叉熵进行 SFT。为解释 DPO，可用标准式 $\mathcal L_{\mathrm{DPO}}=-\mathbb E\log\sigma(\beta[\log\frac{\pi_\theta(y^+\mid x)}{\pi_{\mathrm{ref}}(y^+\mid x)}-\log\frac{\pi_\theta(y^-\mid x)}{\pi_{\mathrm{ref}}(y^-\mid x)}])$。该式是所用 DPO 的通用数学表达，原文还明确修改格式 token 的参与方式，并添加 chosen 序列 NLL 正则。视觉 DPO 另采用每隔若干步 EMA 更新 reference，不能把语言 DPO 与视觉 DPO 的细节完全合并。[PDF 第 16、60 页](https://arxiv.org/pdf/2407.21783v1#page=16)
+$$
+\operatorname{CrossAttn}(H,V)=\operatorname{softmax}((HW_Q)(VW_K)^\top/\sqrt d)VW_V
+$$
+
+文字隐藏状态 $H$ 提问，视觉特征 $V$ 提供信息。冻结语言权重使文字路径得到保护，视觉编码器及新跨注意力学习如何满足该骨干的特征需求。多层特征缓解语义抽象和位置精度的矛盾；它没有提供生成图像的解码器。
+
+**拒绝采样与 DPO 的作用不同。** 奖励模型先筛选回答，再用标准目标 token 交叉熵进行 SFT。为解释 DPO，可用以下标准式：
+
+$$
+\mathcal L_{\mathrm{DPO}}=-\mathbb E\log\sigma(\beta[\log\frac{\pi_\theta(y^+\mid x)}{\pi_{\mathrm{ref}}(y^+\mid x)}-\log\frac{\pi_\theta(y^-\mid x)}{\pi_{\mathrm{ref}}(y^-\mid x)}])
+$$
+
+该式是所用 DPO 的通用数学表达，原文还明确修改格式 token 的参与方式，并添加 chosen 序列 NLL 正则。视觉 DPO 另采用每隔若干步 EMA 更新 reference，不能把语言 DPO 与视觉 DPO 的细节完全合并。[PDF 第 16、60 页](https://arxiv.org/pdf/2407.21783v1#page=16)
 
 **语音自监督与输出流式化。** BEST-RQ 对 mel 输入遮挡并预测固定随机量化目标；随机投影和码本不被训练，编码器学的是从上下文恢复被遮挡的声学类别。语音生成则用有限前瞻与因果 mask，让 phone 级特征和 token 级隐藏状态在不同速率下对齐。两者目标不同，报告没有使用一个统一音频 token 生成损失覆盖整个接口。
+
+<a id="data"></a>
 
 ## 5. 数据构建与处理
 
@@ -75,6 +107,8 @@
 视频过滤文字质量、语言、叠加文字、图文及视频文本对齐和低运动片段。原文没有按美学或分辨率再次筛视频；平均 21 秒，超过 99% 不到一分钟。这说明训练分布以短片段为主，即使评测含更长视频，也不应称其训练覆盖任意长时序。
 
 语音编码器用约 15M 小时无标注录音预训练，VAD 阈值大于 0.7。ASR 有 230K 小时、34 语言人工转写，AST 有 90K 小时双向翻译，包含合成数据；口语对话使用 ASR 子集中的 60K 小时生成回答，另从文字 SFT 数据合成 25K 小时语音。这些来源可能属于不同子集和扩展，不能简单相加为去重后的总小时数。TTS 韵律训练使用 50K 小时专业录音，文本归一化使用 55K 样本。[PDF 第 63–64 页](https://arxiv.org/pdf/2407.21783v1#page=63)
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -100,6 +134,8 @@
 
 视觉后训练另含奖励模型、DPO、拒绝采样与小规模质量微调。最终答案正确并不足够，作者还过滤容易出现错误解释的样本，用奖励模型选择多个优质推理。语音韵律模块独立训练，冻结 Llama 3 8B，用 1M 更新、batch 1024、LR $9\times10^{-4}$。这些精细流程揭示了组合模型的优势与工程成本，但报告并未给出完整多模态训练总算力或适配器全部超参数。[PDF 第 58–66 页](https://arxiv.org/pdf/2407.21783v1#page=58)
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 语言模型结果区分 base 与 instruct；代码评测采用 pass@1，HumanEval 405B 为 $89.0\pm4.8$，HumanEval+ 为 $82.3\pm5.8$。MMLU 5-shot 为 87.3，0-shot CoT 为 88.6，不能把两种设置合并。报告为部分简单均值指标提供 95% 置信区间，也承认这主要刻画有限样本误差，不能涵盖全部评测波动。[PDF 第 29、35–39 页](https://arxiv.org/pdf/2407.21783v1#page=29)
@@ -124,3 +160,11 @@
 语音评测使用 greedy decoding 与 Whisper 文本归一化。70B 接口在 MLS English 错误率 4.4、LibriSpeech test-other 3.1、VoxPopuli 5.7、FLEURS 8.2；中日韩泰使用字符错误率。翻译的 FLEURS 33 语言→英语 BLEU 为 33.7，CoVoST2 的 15 语言子集为 38.8。不能据此称它所有语言方向都同等可靠。文本归一化在三个 token 前瞻下从不使用 Llama 嵌入的 73.6% 提升到 90.7%；韵律人评相对流式 phone-only 基线获 60.0% 偏好，与非流式基线相比为 63.6%。[PDF 第 66–69 页](https://arxiv.org/pdf/2407.21783v1#page=66)
 
 报告还检查数据污染、对抗题、人工偏好与系统防护。8-gram 污染检测无法可靠估计所有基准，部分数据集存在明显污染相关增益；对抗数学与问答仍显著弱于普通题。Llama Guard 3 能减少违规，但增加误拒绝，不能将其系统结果视为原始模型独立表现。人评也有标注偏好与背景带来的局限。本文没有独立复现实验；原文的冻结边界、接口参数、任务协议与发布状态，比把不同指标统一排序更能解释其多模态设计的实际意义。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：VILA²](../../vila/arxiv-2407.17453/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：MiniCPM-V →](../../minicpm/arxiv-2408.01800/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

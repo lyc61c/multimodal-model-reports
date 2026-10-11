@@ -39,7 +39,7 @@
     "未执行模型或验证原始脚本"
   ],
   "model_execution": "not_run",
-  "article_sha256": "db423f0740fd543375c242d3f3cc0ed8b313c497849ff5ae9785209f3192e3e5",
+  "article_sha256": "d46d4c9eea632850d22b6a12c07d387a5eae329f2cdbb5e0ec396eeb6041e41d",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -56,5 +56,11 @@
       "Viewed source and repaired crops: Table 4, Table 5 all required panels/rows and complete captions preserved; axes, legends, headers and example text intact; no surrounding paragraphs.",
       "Viewed source and crop: Figure 7 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

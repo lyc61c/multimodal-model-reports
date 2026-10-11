@@ -38,7 +38,7 @@
     "未运行教师或学生，未验证训练源码"
   ],
   "model_execution": "not_run",
-  "article_sha256": "949d20e504125f7158c4186d125605c6f98f6b3269fc5dc96a1bc4e5f910b88e",
+  "article_sha256": "efb7bf6d9b2c64a5133ebabe594408e73a7f83e5f251632dd8b4c33a5515d31a",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -56,5 +56,11 @@
       "Viewed source and crop: Table 10, Table 11 complete, including headings, panel labels, axes/legends where present, all table rows and full captions; surrounding prose excluded."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 11,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

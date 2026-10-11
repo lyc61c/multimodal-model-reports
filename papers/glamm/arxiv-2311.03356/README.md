@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [GLaMM](../README.md)
+<!-- article-header:end -->
+
 # GLaMM：让回答中的短语对应图像里的像素掩码
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,6 +25,8 @@
 
 GLaMM 的重要变化是把“描述物体”和“指出物体的像素范围”放在同一回答中。它不仅输出检测框，也能把物体部件、属性短语、背景stuff等绑定到mask。语言主干为Vicuna-7B，基于LLaVA-1.1构建；完整系统还包含视觉与分割模块，不能只按7B理解全部参数量。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 贡献 | 具体内容 |
@@ -26,6 +40,8 @@ GLaMM 的重要变化是把“描述物体”和“指出物体的像素范围�
 
 “7.5M概念”包含标签与描述性表达，不能直接视作750万互斥类别。810M是区域注释数，11M是图像数；同图有很多区域和不同层级注释。论文提供了大规模数据构建方法，但本v1的训练超参和损失组合披露有限，介绍中明确保留这一边界。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p004-figure-2.png)
@@ -37,6 +53,8 @@ GLaMM 的重要变化是把“描述物体”和“指出物体的像素范围�
 LLM负责生成自然语言以及`<p>`、`</p>`、`<SEG>`标记；grounding image encoder用预训练SAM提取分割空间特征；pixel decoder采用SAM decoder式结构。LLM末层中`<SEG>`位置的隐状态经language-to-prompt投影后，成为分割decoder的语义prompt。于是一个回答中的多个分割标记能够分别对应不同掩码。
 
 region encoder是**输入框→区域理解**，pixel decoder是**生成语义→输出mask**，二者方向不同。普通整图描述或自动GCG不要求用户提前为每个对象框选区域；需要精确询问局部时可提供可选框。报告也展示多轮交互，例如先问一辆车的区域描述，再追问车的型号。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -60,6 +78,8 @@ $$\operatorname{Recall}_{mask}=\frac{\sum_{(i,j)\in\mathcal A}\mathbf1[\operator
 
 这是对第3.2节评估规则的整理，不是原文编号公式。IoU采用标准交并比$|M\cap G|/|M\cup G|$，$\mathcal A$为一对一配对。该指标同时要求空间和语义正确，但BERT相似度阈值本身也会影响评分，不能把它当作完全无偏的人类语义判断。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 4](figures/original-p006-figure-4.png)
@@ -74,6 +94,8 @@ Level4根据scene graph生成地标历史、交互提示等额外常识；它不
 
 GranD-f重新利用RefCOCOg约24K、PSG约31K、Flickr30K约158K样本。GPT4将既有表达/关系和COCO等caption融合，同时保留短语与区域的原映射；Flickr的框用HQ-SAM转mask。另约1000个样本由标注员将表达匹配到SAM真值mask。保留原映射可以避免重配错位，但不能保证GPT4新增描述或HQ-SAM边界零误差。报告称总体约214K，留2.6K验证和5K测试；第3.2节验证数写2.5K，存在小幅口径差异。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 训练先在大规模自动GranD-p上预训练，学习区域、语言与分割语义的对齐，再在高质量GranD-f上为GCG微调。第5节给出这一顺序，区域描述和指代表达分割还分别报告了ZS与任务FT结果。这里ZS应理解为未对当前评测任务额外微调，不能扩展为模型从未接触过相关概念或原始图像分布。
@@ -81,6 +103,8 @@ GranD-f重新利用RefCOCOg约24K、PSG约31K、Flickr30K约158K样本。GPT4将
 GLaMM需要两种监督：文字/结构标记要形成正确序列，分割decoder要得到与短语对应的区域。这是任务要求层面的说明；本v1没有详细列出联合损失项与权重，也没有公开在正文中的BCE/Dice组合、学习率、batch、epoch、optimizer、LoRA rank、冻结模块表或总GPU时间。虽然论文说端到端训练，并不意味着五个模块的每一参数都已确认全量更新。不能沿用LISA、SAM或后续版本的配方来填这些空白。
 
 当前14页v1多次引用Appendix A/C与后续Figure9–14，但所选PDF在参考文献后结束，没有这些附录实体。因此本文使用已读到的第3–5节，不将未出现的附录当成已核验来源。复现级训练细节需要另行核对官方代码或新版，本文没有声称已做该复现。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -90,7 +114,7 @@ GLaMM需要两种监督：文字/结构标记要形成正确序列，分割decod
 
 ![原文 Table 5](figures/original-p009-table-5.png)
 
-*原文Tables3–5，PDF第9页。上表是新任务GCG，中表同时列ZS和FT，右下是区域描述；同一模型在不同设置下差距明显，不应把FT数值标成零样本成绩。*
+*原文Tables3–5，PDF第9页。Table 3 是新任务 GCG，Table 4 同时列 ZS 和 FT 的分割结果，Table 5 是区域描述；同一模型在不同设置下差距明显，不应把FT数值标成零样本成绩。*
 
 | GCG test，Table3 | GLaMM | 适配GCG的LISA* | Kosmos2 |
 |---|---:|---:|---:|
@@ -107,3 +131,11 @@ Table4的RefCOCO val：GLaMM ZS54.7、FT78.3，LISA-7B ZS74.1、FT74.9；RefCOCO
 区域caption Table5：VisualGenome FT METEOR18.6/CIDEr157.8，GPT4RoI17.4/145.2；GLaMM ZS17.0/127.0。RefCOCOg FT16.2/105.0，ZS15.7/104.0。整图caption Table6标零样本，Flickr30K CIDEr95.3/SPICE18.8，但NoCap CIDEr106.8低于BLIP2的121.6、InstructBLIP123.1。GranD-f包含重组的Flickr30K数据，v1未给足训练/评测图像拆分细节，故保留作者ZS标签，同时不宣称严格证明与该数据域完全无接触。
 
 LLaVA-Bench的GPT4评判分63.3，与LLaVA1.5的63.4接近，支持增加落地能力后仍保留一定普通对话能力，不能据此证明所有语言推理无退化。整体贡献是可输出短语与像素共同表示的统一接口和数据流水线；新GCG测试仍有约36.8的mask recall，离可靠完整落地有明显差距。所有数值来自报告，本文未运行模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：CoVLM](../../covlm/arxiv-2311.03354/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：mPLUG-Owl2 →](../../mplug/arxiv-2311.04257/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

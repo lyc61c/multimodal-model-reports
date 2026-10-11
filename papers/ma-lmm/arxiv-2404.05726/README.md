@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [MA-LMM](../README.md)
+<!-- article-header:end -->
+
 # MA-LMM：用视觉与查询记忆库处理长视频
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 《MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understanding》由 Bo He、Hengduo Li、Young Kyun Jang 等作者完成，机构包括马里兰大学、Meta 和中佛罗里达大学。本文依据 [arXiv 2404.05726v1](https://arxiv.org/pdf/2404.05726v1)（2024 年 4 月 8 日）；项目入口为 [MA-LMM](https://boheumd.github.io/MA-LMM/)。
 
 它面向视频理解，用顺序读帧和可压缩记忆库替代把所有帧 token 同时交给语言模型。主要骨干是 EVA-CLIP ViT-G/14、InstructBLIP 预训练 Q-Former、冻结的 Vicuna-7B。研究涉及长视频分类、问答、描述与动作预测；主结果包含各下游数据集上的训练，不宜描述成单一零样本聊天检查点完成所有任务。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -18,6 +32,8 @@
 
 记忆长度固定意味着显存需求受控，不意味着视频信息无损保留或处理时间固定。模型仍需顺序处理所采样的每帧，极长视频会累积明显耗时。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p003-figure-2.png)
@@ -27,6 +43,8 @@ Figure 2 左侧蓝色库保存视觉特征，绿色库保存查询；中间的 c
 每帧编码得到 $v_t\in\mathbb R^{P\times C}$，时间位置嵌入加入后为 $f_t=v_t+PE(t)$，对应原文式（1）。视觉库在压缩前为 $F_t=\operatorname{Concat}(f_1,\ldots,f_t)$。所有 Q-Former cross-attention 层共享这组原始视觉特征。
 
 每层查询的抽象程度不同，因此 query memory 并不是一个所有层共享的静态表；每个 self-attention 层有自己的查询记忆库。当前查询与历史查询交互，再从视觉特征中读取有用信息。最后时刻的 Q-Former 输出经连接层送给语言模型，视觉输入从 T 帧各 32 个查询、总计 32T，变成最终 32 个查询。这些是连续视觉嵌入，不能理解成已生成的 32 个自然语言单词。[PDF 第 3–5 页](https://arxiv.org/pdf/2404.05726v1#page=4)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -44,6 +62,8 @@ i 表示同一空间位置；不同空间位置可能选择不同时间相邻对
 
 与 FIFO 丢弃最旧内容相比，MBC 尝试让早期信息经过合并继续存在。平均操作仍可能损失罕见细节、细微运动和精确事件时间，因此“保留历史”指持续维护压缩摘要，不能当作严格无损记忆定理。某些条目被多次合并时，原文也没有提供完整重建所有原帧的方法。[PDF 第 4、12 页](https://arxiv.org/pdf/2404.05726v1#page=12)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 研究使用既有下游视频数据，并没有披露一套全新百万级聊天指令集。LVU 含约 30K 段、来自约 3K 部电影的视频，时长一至三分钟，评价七个分类任务，包括关系、说话方式、场景、导演、类型、编剧与年份。模型直接生成标签文字，回归任务没有纳入这组比较。
@@ -53,6 +73,8 @@ Breakfast 有 1712 个早餐准备视频，平均约 2.7 分钟；COIN 有 11,82
 问答使用 MSRVTT-QA、MSVD-QA、ActivityNet-QA，前两者多为十至十五秒，后者平均约两分钟。描述使用 MSRVTT、MSVD、YouCook2。在线动作预测使用 EpicKitchens-100，覆盖约 700 个烹饪长视频、100 小时，涉及 97 个动词、300 个名词和 3807 类动作。
 
 数据中的问题、标签或 caption 转成文字目标。附录给出分类、问答、描述提示，例如问电影的某项类别，或以“Question: ... Short Answer:”约束简短回答。报告没有完整给出跨数据集统一混合比例、独立指令生成量和过滤阈值，因此不把每项数据集训练误写成某套统一 SFT 语料。[PDF 第 5、12–13 页](https://arxiv.org/pdf/2404.05726v1#page=13)
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -72,6 +94,8 @@ V 是视频，$w_i$ 为真实目标文字。视觉编码器与语言模型冻结
 共同使用 224 图像分辨率、AdamW β=(0.9,0.999)、权重衰减 0.05、余弦学习率衰减；解码 beam size=5。报告所有实验使用 4 张 A100，没有进一步给出显存规格、训练精度、完整步数或 GPU 小时，本文不从 epoch 推导未公开的精确成本。
 
 另有不训练的 off-the-shelf 实验：把记忆机制加入既有模型后直接评价。它证明机制可以在未重新训练时带来改善，但分数明显低于数据集训练结果，不能把两者混为同一种部署能力。[PDF 第 5、7、13 页](https://arxiv.org/pdf/2404.05726v1#page=7)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -116,3 +140,11 @@ FIFO 同样是 100 帧和 32 个嵌入，LVU 为 61.3，MBC 为 63.0；Breakfast
 ![原文 Figure 6](figures/original-p012-figure-6.png)
 
 token 级相对整帧压缩的 Breakfast 准确率为 93.0 对 86.5，反映细粒度保留的价值。Figure 6 横轴为帧数、纵轴为秒，MA-LMM 随帧数仍大致线性变慢，100 帧时图中耗时接近千秒量级；它没有证明达到实时帧率。作者也明确指出极长视频的时间成本，并把分层处理和更强视频预训练列为后续方向。本文仅整理原文及检查所选原图，未运行模型。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Ferret-UI](../../ferret/arxiv-2404.05719/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：InternLM-XComposer2-4KHD →](../../internlm-xcomposer/arxiv-2404.06512/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

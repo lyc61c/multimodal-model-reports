@@ -16,5 +16,19 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "caption_clarity_revisions": [
+    {
+      "date": "2026-10-11",
+      "source_version_unchanged": true,
+      "source": "cached original source.txt and existing figure/table file names",
+      "changes": [
+        {
+          "before": "上方对比同一组真实素材的布局，下方 content-aware 表才提供定量证据。",
+          "after": "Figure 5 对比同一组真实素材的布局，Table 3 的 content-aware 结果提供定量证据。",
+          "kind": "crop_caption_clarity"
+        }
+      ]
+    }
+  ]
 }

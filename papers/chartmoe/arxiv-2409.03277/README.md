@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [ChartMoE](../README.md)
+<!-- article-header:end -->
+
 # ChartMoE：用表格、JSON 与代码对齐初始化图表专家连接器
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -7,6 +19,8 @@
 ChartMoE 是基于 InternLM-XComposer2 的图表理解模型。它保留视觉编码器和语言模型，把连接两者的普通投影器换成由不同结构化任务初始化的专家连接器。模型处理图表问答、数据提取、事实核验，以及根据指令生成可执行绘图代码；代码由外部绘图库渲染，并非模型直接生成图像像素。
 
 它针对的困难是：图表中的数字、图例、颜色、线条和空间布局彼此关联，仅把图像描述成自然语言容易丢失这些约束。论文希望让表格、JSON 和代码这三种表示成为视觉特征进入语言模型时的不同解释路径。（PDF 第 1–4 页）
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -22,6 +36,8 @@ ChartMoE 是基于 InternLM-XComposer2 的图表理解模型。它保留视觉�
 
 数值问答的最高分包含 Program-of-Thoughts（PoT）：模型生成 Python 程序，再由执行器计算答案。它反映模型与工具组成的系统能力。另一个阅读要点是，论文修改了 ChartQA 的答案处理和容差评测，不能脱离这一口径直接比较外部排行榜。（PDF 第 5–7 页）
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p004-figure-2.png)
@@ -31,6 +47,8 @@ ChartMoE 是基于 InternLM-XComposer2 的图表理解模型。它保留视觉�
 视觉编码器先输出网格特征。普通模型对每个视觉 token 使用同一个 MLP；ChartMoE 对同一 token 计算路由分数，选择两个专家，再把输出加权相加。得到的视觉序列与文本指令拼接，交给语言模型生成回复。整个过程保留 1,225 个视觉位置，没有通过 MoE 把序列长度压缩为更少 token。
 
 三个新专家分别训练图表到 CSV 表格、图表到 JSON 属性、图表到 Matplotlib 代码的转换。表格侧重数值，JSON 还包含颜色、字体、线型等属性，代码同时要求表达数据和绘图操作。第四个专家保留基座连接器，为原有视觉语言能力提供入口。各专家的结构相同，但参数通过不同目标形成差异；路由器随后学习如何组合它们。（PDF 第 3–4 页）
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -55,6 +73,8 @@ $$
 
 专家并非可以直接当成独立最优问答模型。Table 8 中，仅完成结构化对齐的单连接器，直接 ChartQA 分数低于原始连接器；再经问答微调后才提升。Table 7 强制只使用某一专家也会损失完整协作效果。结构化任务提供的是适合后续学习的表示，而不是立即替代问答训练。（PDF 第 9 页）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Table 1](figures/original-p005-table-1.png)
@@ -68,6 +88,8 @@ $$
 这一路线的价值在于：生成图、表、属性和代码拥有可追踪的关联。它并不等于对所有原始图表做像素级逆向恢复；采样属性会改变风格，代码可运行也不保证所有语义标签完全正确。论文的数据生成流程应按这些实际保证来理解。（PDF 第 4–5 页）
 
 Table 1 分列 ChartQA 18.3K、PlotQA 157K 和 ChartY 763.6K，合计约 938.9K 四元组；三类对齐任务展开为约 2.8M 样本。实际连接器对齐使用表格 500K、JSON 200K、代码 100K。第二阶段使用 MMC-Instruction 中人工核验的 410K 高质量样本，覆盖问答、推理、摘要、转换和提取。第三阶段使用 ChartQA 与 ChartGemma；表中列 ChartQA 28.3K、重复两次，ChartGemma 163.2K，并记总量 220.8K。该总量与按表中四舍五入分项计算的 219.8K 不完全相符，本文保留原表口径，不人为修正成精确样本数。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -85,6 +107,8 @@ Table 1 分列 ChartQA 18.3K、PlotQA 157K 和 ChartY 763.6K，合计约 938.9K 
 
 上述 GPU 小时是设备时间累计，不能推成单卡墙钟耗时。原文说模型推理可以放在一张 A100-40G 上，但没有据此披露训练卡数；后两阶段的精确训练轮数、总步数和上下文长度也不应凭基座习惯补全。PoT 推理时，模型生成提取数字、运算和返回结果的程序，由 Python 执行器完成计算。（PDF 第 5–6 页）
 
+<a id="experiments"></a>
+
 ## 7. 实验设置与主要结果
 
 ![原文 Table 2](figures/original-p006-table-2.png)
@@ -96,3 +120,11 @@ ChartQA 测试包括 1,250 个 Human 与 1,250 个 Augmented 问题。作者修�
 在 ChartBench 上，作者不使用其数据训练，也不接入 PoT，因为许多问题需要提取图中未显式标出的数值。基座总分 48.41，ChartMoE 为 51.67；饼图与箱线图等个别类别仍下降。ChartFC、ChartCheck T1/T2 的事实核验分数分别为 74.73、78.87、79.20，基座对应 65.93、72.04、70.44。这些结果支持图表理解与核验能力的改善，不能推广成对所有领域幻觉的保证。（PDF 第 7–8 页）
 
 训练消融也应按阶段理解：Table 6 从基座加 ChartQA 的 75.68，依次加入对齐、MoE、高质量知识数据和 ChartGemma，得到 77.20、78.76、79.04、81.20。它说明表示初始化、专家组合与数据都贡献增益；与 Table 2 的原始基座 72.00 不属于同一训练条件。本文依照论文核验结果，未下载权重运行模型，也未重新执行评测。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：LongLLaVA](../../longllava/arxiv-2409.02889/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Pixtral 12B →](../../mistral-pixtral/document-3ebe839c6607/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

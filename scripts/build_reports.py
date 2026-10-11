@@ -5,6 +5,8 @@ import hashlib
 import json
 import os
 import re
+import tempfile
+import time
 import urllib.parse
 from collections import Counter, defaultdict
 from datetime import date
@@ -23,7 +25,23 @@ def write(name, text):
     previous = target.read_bytes() if target.exists() else b""
     newline = "\r\n" if previous.count(b"\r\n") > previous.count(b"\n") / 2 else "\n"
     content = (text.rstrip() + "\n").replace("\r\n", "\n")
-    target.write_bytes(content.replace("\n", newline).encode("utf-8"))
+    encoded = content.replace("\n", newline).encode("utf-8")
+    if encoded == previous:
+        return
+    with tempfile.NamedTemporaryFile(dir=target.parent, prefix=".report-", suffix=".tmp", delete=False) as stream:
+        temporary = Path(stream.name)
+        stream.write(encoded)
+    try:
+        for attempt in range(5):
+            try:
+                os.replace(temporary, target)
+                break
+            except OSError as error:
+                if error.errno not in (13, 22) or attempt == 4:
+                    raise
+                time.sleep(0.05 * (attempt + 1))
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def dump(name, value):
@@ -32,6 +50,14 @@ def dump(name, value):
 
 def escape(value):
     return str(value or "—").replace("|", "\\|").replace("\n", " ")
+
+
+def organization_label(value):
+    """Display repository owners as owners, without guessing affiliations."""
+    if value.startswith("repo:"):
+        owner = value.removeprefix("repo:")
+        return f'[{escape(owner)}](https://github.com/{urllib.parse.quote(owner, safe="-_")})'
+    return "论文作者" if value == "authors" else escape(value)
 
 
 def family_for(entry, mapping):
@@ -107,13 +133,28 @@ def completed_articles():
 
 
 def article_table(articles, directory, family_names=None):
-    lines = ["| 发表 / 发布日期 | " + ("模型家族 | " if family_names is not None else "") + "逐篇介绍 | 原文版本 |",
-             "|---|" + ("---|" if family_names is not None else "") + "---|---|"]
+    lines = ["| 发表 / 发布日期 | " + ("模型系列 | " if family_names is not None else "") + "逐篇介绍 |",
+             "|---|" + ("---|" if family_names is not None else "") + "---|"]
     for article in articles:
         relative = Path(os.path.relpath(article["path"], directory)).as_posix()
         url = urllib.parse.quote(relative, safe="/.-_")
         prefix = f' {escape(family_names.get(article["family_slug"], article["family_slug"]))} |' if family_names is not None else ""
-        lines.append(f'| {article["date"]} |{prefix} [{escape(article["title"])}]({url}) | {escape(article["source_version"])} |')
+        lines.append(f'| {article["date"]} |{prefix} [{escape(article["title"])}]({url}) |')
+    return "\n".join(lines)
+
+
+def reading_guide(articles, family_names):
+    years = defaultdict(list)
+    for article in articles:
+        years[article["date"][:4]].append(article)
+    jumps = " · ".join(f'[{year}（{len(items)} 篇）](#year-{year})' for year, items in sorted(years.items()))
+    lines = ["# 逐篇论文详解", "",
+             f"**{len(articles)} 篇中文介绍** · 按发表 / 发布日期由早到晚排列。", "",
+             jumps, "", "[按模型系列浏览](model-family-index.md) · [项目首页](../README.md)"]
+    for year, items in sorted(years.items()):
+        lines += ["", f'<a id="year-{year}"></a>', "", f"## {year} · {len(items)} 篇", "",
+                  article_table(items, ROOT / "reports", family_names)]
+    lines += ["", "[返回顶部](#逐篇论文详解) · [项目首页](../README.md)"]
     return "\n".join(lines)
 
 
@@ -273,9 +314,9 @@ def main():
     for name, items in retained_groups.items():
         exemplar = items[0]
         directory = ROOT / "papers" / exemplar["family_slug"]
-        organizations = "；".join(dict.fromkeys(item["organization"] for item in items))
-        body = (f"# {name}\n\n项目主体 / 机构：{escape(organizations)}。快照：{snapshot['snapshot_date']}。\n\n"
-                f"共收录 **{len(items)} 篇论文与资料**，按发布日期排序。\n\n## 论文列表\n\n"
+        organizations = "；".join(organization_label(value) for value in dict.fromkeys(item["organization"] for item in items))
+        body = (f"[项目首页](../../README.md) · [模型系列索引](../../reports/model-family-index.md)\n\n# {name}\n\n"
+                f"{organizations}\n\n**{len(items)} 篇论文与资料** · 按发布日期由早到晚排列。\n\n## 论文列表\n\n"
                 + family_paper_table(items, introductions, directory)
                 + "\n\n[返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)")
         write(f"papers/{exemplar['family_slug']}/README.md", body)
@@ -295,35 +336,40 @@ def main():
         original_assets += len(assets)
 
     # Keep complete directories one click away from a compact project homepage.
-    family_index = ["| 模型系列 | 项目主体 / 机构 | 论文数量 |", "|---|---|---:|"]
+    letter_groups = defaultdict(list)
     for name in sorted(retained_groups, key=str.casefold):
-        items = retained_groups[name]
-        exemplar = items[0]
-        organizations = "；".join(dict.fromkeys(item["organization"] for item in items))
-        family_index.append(f'| [{escape(name)}](../papers/{exemplar["family_slug"]}/README.md) | '
-                            f'{escape(organizations)} | {len(items)} |')
-    write("reports/model-family-index.md", f"# 模型家族完整索引\n\n"
-          f"共收录 **{len(retained_groups)} 个模型系列、{sum(map(len, retained_groups.values()))} 篇论文与资料**。按系列名称排序，点击系列查看版本与逐篇介绍。\n\n"
-          "论文数量按该系列筛选后保留的全部资料去重统计，包含论文、技术报告、模型卡与补充资料；"
-          "已排除条目不计入数量，也不按介绍完成状态拆分。"
-          "[全部中文详解](paper-reading-guide.md) · [全部资料与整理状态](article-index.md)\n\n"
-          + "\n".join(family_index) + "\n\n[返回项目首页](../README.md)")
-    write("reports/paper-reading-guide.md", f"# 逐篇论文详解\n\n"
-          f"共 **{len(articles)} 篇**中文介绍，按发表 / 发布日期由早到晚排列。每篇结合原文图表解释模型设计、数据、训练与实验。\n\n"
-          "本页包含模型论文、技术报告、模型卡及保留的补充资料；文献的实际定位在各篇开头说明。"
-          "[按模型家族浏览](model-family-index.md) · [查看全部保留资料与整理状态](article-index.md)\n\n"
-          + article_table(articles, ROOT / "reports", family_names) + "\n\n[返回项目首页](../README.md)")
+        letter = name[0].upper()
+        letter_groups[letter if "A" <= letter <= "Z" else "0–9" if letter.isdigit() else "其他"].append(name)
+    anchors = {letter: "series-" + ("0-9" if letter == "0–9" else "other" if letter == "其他" else letter.lower()) for letter in letter_groups}
+    family_index = ["# 模型系列索引", "",
+                    f"**{len(retained_groups)} 个模型系列 · {sum(map(len, retained_groups.values()))} 篇论文与资料**", "",
+                    " · ".join(f'[{letter}](#{anchors[letter]})' for letter in sorted(letter_groups)), "",
+                    "[按发表时间阅读](paper-reading-guide.md) · [项目首页](../README.md)"]
+    for letter in sorted(letter_groups):
+        family_index += ["", f'<a id="{anchors[letter]}"></a>', "", f"## {letter}", "",
+                         "| 模型系列 | 项目主体 / 机构 | 论文数量 |", "|---|---|---:|"]
+        for name in letter_groups[letter]:
+            items = retained_groups[name]
+            exemplar = items[0]
+            organizations = "；".join(organization_label(value) for value in dict.fromkeys(item["organization"] for item in items))
+            family_index.append(f'| [{escape(name)}](../papers/{exemplar["family_slug"]}/README.md) | {organizations} | {len(items)} |')
+    family_index += ["", "[返回顶部](#模型系列索引) · [项目首页](../README.md)"]
+    write("reports/model-family-index.md", "\n".join(family_index))
+    write("reports/paper-reading-guide.md", reading_guide(articles, family_names))
 
     by_slug = {items[0]["family_slug"]: name for name, items in retained_groups.items()}
     featured_slugs = ["qwen", "deepseek", "internvl", "minicpm", "llava", "kimi", "glm", "seed",
                       "gemini", "gpt", "claude", "llama", "blip", "emu", "mplug", "videollama",
                       "vita", "vila", "internlm-xcomposer", "mimo"]
-    featured_links = [f'[{escape(by_slug[slug])}](papers/{slug}/README.md)'
+    short_names = {"minicpm": "MiniCPM", "llava": "LLaVA", "glm": "GLM", "blip": "BLIP", "vila": "VILA", "internlm-xcomposer": "XComposer"}
+    featured_links = [f'[{escape(short_names.get(slug, by_slug[slug]))}](papers/{slug}/README.md)'
                       for slug in featured_slugs if slug in by_slug]
-    featured = ["| 模型系列 | 模型系列 | 模型系列 | 模型系列 |", "|---|---|---|---|"]
-    for offset in range(0, len(featured_links), 4):
-        cells = featured_links[offset:offset + 4]
-        featured.append("| " + " | ".join(cells + ["—"] * (4 - len(cells))) + " |")
+    featured_columns = 3
+    featured = ["| " + " | ".join(["模型系列"] * featured_columns) + " |",
+                "|" + "---|" * featured_columns]
+    for offset in range(0, len(featured_links), featured_columns):
+        cells = featured_links[offset:offset + featured_columns]
+        featured.append("| " + " | ".join(cells + ["—"] * (featured_columns - len(cells))) + " |")
 
     readme = f"""<div align="center">
 
@@ -339,17 +385,16 @@ def main():
 
 [开始阅读](reports/paper-reading-guide.md) · [模型系列](reports/model-family-index.md)
 
-![多模态大模型概览：图像、视频、音频与文本，以及理解、推理与生成能力](assets/multimodal-overview.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/multimodal-overview-mobile.svg">
+  <img src="assets/multimodal-overview.svg" alt="多模态大模型概览：图像、视频、音频与文本，以及理解、推理与生成能力" width="1280">
+</picture>
 
 </div>
 
 ---
 
 聚焦多模态大模型的整体架构、核心原理、数据与训练，结合原文图表解读实验结果。支持按论文阅读，也可按模型系列比较不同版本。
-
-| 中文详解 | 模型系列 | 原文图表 |
-|:---:|:---:|:---:|
-| **{len(articles)} 篇** | **{len(retained_groups)} 个** | **{original_assets:,} 个** |
 
 ## 阅读导航
 
@@ -358,7 +403,7 @@ def main():
 | 按发表时间阅读中文详解（由早到晚） | [全部 {len(articles)} 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
 | 按模型系列比较不同版本 | [{len(retained_groups)} 个模型系列完整索引 →](reports/model-family-index.md) |
 
-## 模型家族索引
+## 模型系列
 
 点击下方系列查看论文列表，更多系列见[完整索引](reports/model-family-index.md)。
 
@@ -367,6 +412,8 @@ def main():
 <a id="论文图文介绍"></a>
 
 ## 逐篇论文详解
+
+[按发表时间阅读全部 {len(articles)} 篇 →](reports/paper-reading-guide.md)
 
 每篇详解包含以下七部分：
 

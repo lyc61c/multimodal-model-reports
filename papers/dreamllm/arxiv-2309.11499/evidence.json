@@ -46,5 +46,18 @@
     "date": "2026-10-09",
     "method": "Original PDF region extraction",
     "unchanged_source_versions": true
-  }
+  },
+  "verification_notes": [
+    "2026-10-11 targeted content audit: Figure 2/3 仍称完整截图，Figure 2 已不含页内公式；说明虚线反馈，按 §3.2/附录 C.2 定位冻结解释。"
+  ],
+  "content_review_history": [
+    {
+      "date": "2026-10-11",
+      "scope": "逐篇阅读七部分的关键起始段落/表格，检查公开方法公式与主结果摘表；并非全文逐句审计。",
+      "corrections": [
+        "Figure 2/3 仍称完整截图，Figure 2 已不含页内公式；说明虚线反馈，按 §3.2/附录 C.2 定位冻结解释。"
+      ],
+      "article_sha256": "3d3cc3c35e91a38cd10fe07384173f79e6a34f7f38463535061cbc2046cd3535"
+    }
+  ]
 }

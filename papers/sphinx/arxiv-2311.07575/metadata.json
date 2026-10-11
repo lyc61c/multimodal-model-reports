@@ -10,10 +10,10 @@
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
   "article_template_version": "1.1",
-  "title_zh": "SPHINX：权重、任务与视觉表示混合",
+  "title_zh": "SPHINX：联合混合模型权重、视觉表示和多任务指令",
   "source_sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1562,
+  "chinese_characters": 1627,
   "figures_manifest": "figures-manifest.json"
 }

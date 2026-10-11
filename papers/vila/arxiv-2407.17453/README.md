@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [VILA / NVILA](../README.md)
+<!-- article-header:end -->
+
 # VILA²：用模型重写训练数据，再以专家知识突破自增强瓶颈
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -16,6 +28,8 @@ VILA² 把模型放进数据构建循环：先训练一个 VLM，用它把原来
 
 文中 $\mathrm{VILA}_i$ 或 VILA 的轮次上标表示第 $i$ 轮自增强模型；**VILA²** 是整个“VILA 增强 VILA”方法的名称，不等同于只进行第二轮增强。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 | 观察 | 方法 | 实验支持 |
@@ -26,6 +40,8 @@ VILA² 把模型放进数据构建循环：先训练一个 VLM，用它把原来
 | 专家能力需要回流到通用模型 | 将专家输出整理为多轮 QA，与原描述合并训练 | Figure 3、Table 4 |
 
 最终 8B 模型的 TextVQA 为 73.4、MM-Vet 为 50.0；40B 在 MMMU test 的综合分数为 47.9。更有说服力的机制证据来自同一实验块的消融：全量预训练配置加入三类专家标注后，TextVQA 从 66.7 到 70.9，MM-Vet 从 42.6 到 44.7，但 POPE 从 86.5 略降到 86.4。（Table 4–6）
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -42,6 +58,8 @@ VILA² 把模型放进数据构建循环：先训练一个 VLM，用它把原来
 *来源：v1，PDF 第 5 页，Figure 3。空间专家描述关系，定位专家输出带边界框的描述，OCR 专家识别图中文字。*
 
 三类专家承担离线数据生成任务。最终通用模型消费其标注，不要求每次推理都同时调用三套专家；论文也没有把这些专家设计成逐 token 路由的 MoE 层。“专家增强”主要指训练数据和知识迁移机制。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -75,6 +93,8 @@ $$
 
 这是对自回归监督的解释，原文没有提出此编号公式，也没有给出本介绍之外的新损失权重。知识传递通过合成文本和 QA 完成，不是教师概率分布的 KL 蒸馏；GPT-4V、Gemini 的描述质量判断用于分析，不应写成训练奖励模型或 RLAIF。（§2.2、Figure 2–3）
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 ![原文 Figure 5：空间、定位和 OCR 专家的数据构建](figures/specialist-data.png)
@@ -97,6 +117,8 @@ $$
 
 重标注过程减少了持续调用商业 VLM 的需求，但训练配方本身包含 ShareGPT4V、TextOCR-GPT4V 等公开合成数据。不能把“自有模型负责增强”推广为完全没有商业模型生成数据。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 | 阶段 | 小模型流程 | 学习率 |
@@ -111,6 +133,8 @@ $$
 定位专家先训练短描述，再在长描述阶段混合 Shikra GPT-4、Visual7W、LLaVA-SFT 和 ShareGPT4V 等数据，保留指令遵循和描述能力。随后专家标注被追加至 COYO 原文字，构成下一轮通用模型的预训练监督。主要结果中的三类专家都基于 8B 模型。（§3、§3.3）
 
 40B 使用已有检查点做较经济的增强训练。v1 对其数据配方的描述存在差异：§3.3 写 3.75M 重标注 COYO 与 200K 描述数据；附录 A.4.2 写 7.5M COYO，由原描述、自增强描述、空间专家描述各 2.5M 组成，并省去成本高的完整预训练阶段。两处未充分说明对应关系，本介绍保留差异，不合并成一个可直接复现的精确配方。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -142,3 +166,11 @@ Table 5 的 VILA²-8B 在 VQAv2 / ScienceQA-IMG / TextVQA / MMBench / MM-Vet 上
 MMMU test 的 VILA²-8B 为 38.3，40B 为 47.9；GPT-4V 为 55.7，SenseChat-V 为 50.3。论文所称开源类别最佳限于当时表中收集的结果，不能当作当前排行榜结论，也不能与 Table 4 的较小 SFT 配方下 35.8 混用。
 
 描述质量分析由 GPT-4V 和 Gemini-1.0-Pro 对 5,000 个 COYO 样本进行判断，偏好评价可能受到判分模型影响；定性样例显示部分幻觉在迭代中被移除，但无法保证所有合成标注都正确。重标注和多轮重训也需要算力，论文的“free lunch”强调复用图片资源，并非计算免费。本仓库整理原文结果，没有重新训练或复现实验。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：SlowFast-LLaVA](../../slowfast-llava/arxiv-2407.15841/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Llama 3 →](../../llama/arxiv-2407.21783/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

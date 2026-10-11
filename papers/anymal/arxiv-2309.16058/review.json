@@ -11,7 +11,7 @@
     "Body/appendix token ranges differ",
     "AudioCaps zero-shot label needs dataset-split interpretation"
   ],
-  "article_sha256": "168c0c8507288633526cdd03e2bc5694b6ecb5be0ae74b3ac950d2f6e217f6e7",
+  "article_sha256": "b2350cc64dc7d34027fb8dc1e4908be437bbb3154e6ba66032b34ad4ecba25ec",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -28,5 +28,11 @@
       "Both audio/video Tables 5 and 6 complete with captions."
     ],
     "caption_wording_updated_for_cropped_assets": true
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

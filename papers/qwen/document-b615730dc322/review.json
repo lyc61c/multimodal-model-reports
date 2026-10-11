@@ -16,9 +16,20 @@
     "asset_hashes_match": true,
     "original_assets": 4
   },
-  "article_sha256": "52565f3083413a2e4531b80fcee48161a8620b6a4ad300b590e2e84ea9357a51",
+  "article_sha256": "22446ce713c4d02eabeb4b9234d021597b9de22928d48b925778652445353135",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
-  ]
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "mobile_math_layout": {
+      "date": "2026-10-11",
+      "long_inline_equations_promoted_to_display": 1,
+      "scope": "Display layout and connective punctuation only; formula contents preserved"
+    }
+  }
 }

@@ -24,5 +24,12 @@
     "未调用API或运行评测；自身逐源核验。",
     "全文技术披露有限，模型厂商结果无误差条或独立复现；不添加未披露配方。"
   ],
-  "model_execution": "not_run"
+  "model_execution": "not_run",
+  "article_sha256": "f533b4173efe482cb313b5dab0343c39e1c10c7f173f247c589c37a65e2bac21",
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 7,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  }
 }

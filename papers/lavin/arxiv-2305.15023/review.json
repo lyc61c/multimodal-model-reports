@@ -20,7 +20,7 @@
     "original_assets": 8,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "2b0f6c70d5b18625a1c500fabf313f81c4fdf090994bb924c4c9b153a62b4c25",
+  "article_sha256": "a29be84f770f8b6cb65ecce5fb329613c741f5aa16f8d6d199ba57a1d831d847",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -34,5 +34,36 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "targeted_content_audits": [
+    {
+      "date": "2026-10-11",
+      "reviewer": "content_audit_2",
+      "mode": "targeted_source_check_and_caption_revision",
+      "source_files": [
+        "source/papers/93a3f7533997/source.txt",
+        "papers/lavin/arxiv-2305.15023/figures-manifest.json"
+      ],
+      "changes": [
+        {
+          "before": "下方Figure 5是案例，",
+          "after": "Figure 5 展示案例，",
+          "kind": "crop_caption_clarity"
+        }
+      ],
+      "previous_article_sha256": "2b0f6c70d5b18625a1c500fabf313f81c4fdf090994bb924c4c9b153a62b4c25",
+      "article_sha256": "8d6df9563c5bb89ab9509a41452bc471ca50ec4287e6fbcc81e44fe4081c9aaf",
+      "model_executed": false,
+      "limitations": [
+        "This audit checked selected architecture, training, experiment passages and crop captions; it is not a new full-paper mathematical or numerical replication.",
+        "Existing prior source-reading and visual-review records are preserved; no new visual crop validation is claimed."
+      ]
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

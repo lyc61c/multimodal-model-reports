@@ -33,7 +33,7 @@
     "专家噪声鲁棒无方差，不能宣称部署任意热插拔；COCO属于预训，零样本非图像未见。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "726d6946264d1144f8b85981e81da588bb3983fbc71cfc2be97cf562d0853153",
+  "article_sha256": "01720f8d3d8d2bfcb1268d953aa299e455fb4b0f8498d3a1f732e5fe9eb8d919",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -50,5 +50,12 @@
       " Independent last12 source/crop visual recheck: Prismer Table 5: all seven architecture/training ablation groups and complete caption preserved.",
       " Independent last12 source/crop visual recheck: Prismer Table 6 repaired y0=202; preceding paragraph ends y192.10, top table rule is y205.04. Re-rendered and visually checked full header, nine parameter rows and full caption; no body prose."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 19,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
+    "strong_emphasis": "Unicode punctuation spacing outside code"
   }
 }

@@ -41,7 +41,7 @@
     "组合例出现输入不支持细节，不把创作等同感知事实",
     "只核对PDF音频标注，未试听音频"
   ],
-  "article_sha256": "175f5cb7c112851a881f21a5c0d9b6404593b977d909f6dd11a18bf982893bd6",
+  "article_sha256": "cf5e4a1ad0677d5f8988aadf41d6987aaa5caefdebeb3b07afc70b0d2e3e52e2",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -55,5 +55,11 @@
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked.",
       "2026-10-09: Compared original page and every selected crop visually; complete model diagrams, table columns, chart panels and source captions retained; adjacent body text excluded. Hand-adjusted crops were rerendered and rechecked."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 14,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

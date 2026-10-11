@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [Baichuan](../README.md)
+<!-- article-header:end -->
+
 # Baichuan-Omni-1.5：以语义声学双目标连接看、听与说
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -6,11 +18,15 @@
 
 该模型以7B语言骨干支持文本、图像、视频和音频输入，输出文本及语音；7B是实验表指定的**LLM参数量**，不是所有视觉、语音模块相加的总量。相较纯视觉语言模型，它重点解决语音输入、语义理解和声音生成的联合建模，并通过跨模态数据减少加入音频后对视觉与纯文本能力的影响。报告还构建OpenAudioBench与OpenMM-Medical评测。它不提供图像/视频生成接口，也没有把自然环境声音的完善理解作为已经解决的能力。〔PDF第1–3、6、11、17页〕
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 方案围绕三个问题组织：用动态视觉编码处理不同图片形状；用12.5Hz、8层RVQ音频tokenizer同时保留文字语义和声学信息；先分别对齐视觉与音频，再训练跨模态交互及指令跟随。语音输出由LLM交替预测文本与音频码，经过flow-matching声学解码器与vocoder恢复波形。
 
 结果并非所有模态全面领先。MMBench英文85.6、中文83.6，MMMU验证集53.9；ChartQA84.9和OCRBench84.0低于MiniCPM-o 2.6的87.6/89.7；无字幕Video-MME60.1低于GPT-4o-mini63.6及MiniCPM-o63.4。OmniBench原图加原音频42.9高于MiniCPM-o40.5，但原图加转录47.9低于其53.2。系统的优势在于较完整的输入输出闭环及某些任务，不能从“支持更多模态”直接推出每一模态质量更高。〔Table 7–9、12，PDF第12–16页〕
+
+<a id="architecture"></a>
 
 ## 3. 整体架构
 
@@ -21,6 +37,8 @@ Figure 2从下向上显示四种输入：图片和视频帧进入视觉编码器
 视觉分支沿用Qwen2-VL的NaViT式动态分辨率编码，再通过两层MLP projector做2×2压缩；编码器的精确参数数目、patch配置不在本报告重新披露，本文不从其他版本填入。音频分支由Whisper Large Encoder抽取Mel特征，残差卷积降低帧率，8层RVQ产生离散码。输出Audio Head是3层depth Transformer加8个分类头，匹配一个音频帧的多层码，不宜把8层码误写成8倍LLM时间步。〔PDF第6–8页〕
 
 tokenizer训练时同时把离散表示交给音频decoder重建Mel谱、交给冻结的预训练LLM预测转录。前者保留声学，后者约束语义。声学decoder与Whisper Encoder结构对称并用多尺度Mel损失。为提升听感，最终采用flow matching U-Net，包含一个下采样、一个上采样和12个中间块，在24kHz音频上训练Mel生成，随后用HiFi-GAN转波形。12.5Hz是tokenizer的时间帧率，24kHz是输出音频采样率，两者不能混为一谈。〔Figure 4，PDF第6–7页〕
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -41,6 +59,8 @@ h为Whisper及下采样后的帧特征，码本向量修正前一级剩余误差
 
 Figure 1的雷达图还对指标做了 `x_norm=(x-x_min+10)/(x_max-x_min+10)` 归一化。它反映选定对手和指标范围，不是把不同任务统一成了一个客观能力单位；阅读结论应优先看原表的具体分数和评价协议。〔PDF第1页〕
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 摘要称约500B规模的多模态数据，但正文混用样本、小时和token表述；第3.3.1节甚至写“300 billion image-text samples”。Table 1按M条统计、跨模态部分明确按token统计，缺乏统一单位对照。因此本文不将500B或300B解释为独立图像张数，也不据此计算总训练token的精确分配。
@@ -50,6 +70,8 @@ Table 1合计公开71.3M、内部238.2M条，**包括150.7M纯文本条目**。�
 Table 3音频共887K小时，按任务分为ASR185K、AQA21K、语音翻译15K、音文交错393K、TTS51K、交错TTS142K、纯音频80K小时；这些是任务数据统计，不保证互不重叠。跨模态合成将图文中的句子分段，随机四分之一用内部TTS替换为音频，使用44种声线，让模型结合视觉补全余下描述；视频则提取原有音轨。该交互数据明确为100B token，不能再未经说明与摘要总量相加。〔PDF第5–6页〕
 
 SFT约17M对：文本400K、图像16M、视频100K、音频282K、图像音频60K。图像任务分配为GeneralQA32.26%、OCR26.51%、图表9.04%、数学10.31%、时空2.63%、描述8.23%、医学11.02%；低质量回答用GPT重写并人工检查。视频按任务、难度、正确性和画质平衡。音频SFT由文本指令筛选，使用10,000种音色合成问答，按自然停顿分段，并用ASR输出与原文比对；声音合成错误和ASR困难样本分别回收为TTS、ASR数据。预训练的44声线与SFT的10,000音色属于不同步骤。〔Table 4–5，PDF第9–10页〕
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -70,6 +92,8 @@ Figure 5中的火焰表示更新、雪花表示冻结。阶段设计从图文对
 第3.3.3节说Omni预训练训练“全部参数”，但Figure 5的Stage 3仍将视觉encoder、音频encoder和RVQ画为冻结。故不能把该阶段精确复现成“所有模块解冻”；报告版本本身的描述需要实现资料进一步确认。音频tokenizer的独立双目标预训练也不能等同于此处LLM音文预训练。〔PDF第7–9页〕
 
 报告给出了模块更新范围和部分学习率，但没有完整公开optimizer、batch size、每段步数/epoch、损失加权及生成解码配置。SFT与自回归码预测是已说明的训练方向，未报告RLHF/RLVR阶段，也不能用其多任务对齐路线推断不存在的强化学习算法。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -99,3 +123,11 @@ OmniBench原图加音频42.9、caption加音频37.7、原图加转录47.9、capt
 医学Table 13的OpenMM-Medical83.8高于Qwen2-VL-72B80.7，但GMAI-MMB-VAL49.9低于其50.7，原文“两项最好”的描述与表格不符。OpenMM-Medical来自42个公开医学数据集、88,996张图像，配成多选VQA；这类分数说明该测试集的图像问答能力，不能直接推出临床诊断有效性或实时咨询可靠性。〔PDF第16页〕
 
 纯文本Table 6的MMLU72.2、CMMLU75.5、AGIEval54.4、C-Eval73.1较旧版65.3/72.2/47.7/68.9改善，支持多模态后仍保留语言能力，但未给同一骨干训练前后严格消融以分离数据配比贡献。可支持的结论是：多阶段对齐与离散语义声学表示构成了较完整的全模态模型，优势和剩余差距都应按任务、输入帧预算、输出模式和判分尺度解释。〔PDF第11、17页〕
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：VideoLLaMA 3](../../videollama/arxiv-2501.13106/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Qwen2.5-VL →](../../qwen/qwen2.5-vl/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

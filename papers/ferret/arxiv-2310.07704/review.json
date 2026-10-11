@@ -54,7 +54,7 @@
     "95Kincludespositiveandnegative",
     "Explicit CE masks and full optimizer settings not disclosed"
   ],
-  "article_sha256": "e423a684f8a6ab8a374b14ed5b6ca4515f41925b837e366c87e2359021043d3f",
+  "article_sha256": "fa40d45ee8c8f341d3336c839909ef3942b578b71568f762cd5e0ee75dfb1742",
   "artifact_checks": {
     "original_assets": 7,
     "no_full_page_screenshots": true
@@ -68,5 +68,11 @@
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded.",
       "2026-10-09: Visually compared selected crops with the source page; complete intended figures/tables, axes, labels, columns and caption retained; unrelated body prose excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 15,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

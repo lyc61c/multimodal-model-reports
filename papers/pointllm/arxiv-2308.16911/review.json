@@ -42,7 +42,7 @@
     "Humanwin on200objects2judgesnotuniversalhuman superiority",
     "No impliedpointcloudgeneration or roboticscontrol"
   ],
-  "article_sha256": "17f73a04fbc018776647772d2325946209b99ccd05b83f2b8ff28883111febf4",
+  "article_sha256": "3d7df14a4de7a9c0575db7506a2c9cb85dfc037a6d9254acc092be610c147768",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true
@@ -56,5 +56,11 @@
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation.",
       "Actually compared the original PDF page and selected crops in QA3 contact sheets, including a complete second pass and targeted detailed checks after corrections. Complete referenced figure/table bodies, column and row headers, legends and necessary footnotes are retained. Surrounding prose and running headers removed. English captions omitted for body-only crops where the README retains the original label/source/explanation."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

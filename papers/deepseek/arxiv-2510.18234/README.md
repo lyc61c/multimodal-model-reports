@@ -1,4 +1,16 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [DeepSeek](../README.md)
+<!-- article-header:end -->
+
 # DeepSeek-OCR：用少量视觉 token 读取文档与探索光学上下文压缩
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
@@ -13,23 +25,29 @@
 
 DeepSeek-OCR 研究一个具体问题：文档内容若先以图像表示，能否用远少于文本 token 的视觉 token 恢复文字？模型主要服务于文档数据生产，没有经过独立 SFT 聊天阶段，不能把它等同于通用视觉聊天助手。570M 是解码器的激活参数口径，不是包含视觉编码器在内的全部模型规模。
 
+<a id="overview"></a>
+
 ## 2. 快速概览
 
 设计核心是串联的 DeepEncoder：高分辨率图像先经以窗口注意力为主的 SAM，再通过卷积缩短 token 序列，最后交给 CLIP 的全局注意力整合语义。低分辨率 Tiny、Small 模式仅产生 64、100 个视觉 token；复杂文档可采用多个局部视图加全局视图。
 
 Fox 的 100 页英文文档实验中，100 个视觉 token 对约 900–1000 文本 token 的解码 precision 为 96.8%；64 个视觉 token 对 1200–1300 文本 token 时为 59.1%。这支持有损视觉表征能承载大量文字，但不能证明通用对话上下文可无损缩短十倍。报告结论明确将文本图像交错预训练和 needle-in-a-haystack 等上下文测试留给后续工作。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 3](figures/original-p005-figure-3.png)
 
-*原文 Figure 3，PDF 第 5 页完整截图。读取方向为 SAM → 卷积压缩 → CLIP → MoE 解码器；图中的 16× 指视觉 token 数减少，而不是每个空间方向缩小 16 倍。*
+*原文 Figure 3，PDF 第 5 页原文图表裁图。读取方向为 SAM → 卷积压缩 → CLIP → MoE 解码器；图中的 16× 指视觉 token 数减少，而不是每个空间方向缩小 16 倍。*
 
 SAM-base 约 80M，patch size 为 16，承担细粒度视觉感知。CLIP-large 约 300M，承担后续全局特征整合；其原始图像 patch embedding 被移除，因为输入已经是前一模块的特征。两者之间使用两层卷积，kernel 3、stride 2、padding 1，特征通道从 256 扩展到 1024。每层空间边长缩小 2 倍，两层合计 4 倍，面积和 token 数合计缩小 16 倍。
 
 1024×1024 图像先形成 64×64=4096 个 patch，再压缩成 16×16=256 个 token，随后才进入 CLIP 全局注意力。SAM 被描述为“以窗口注意力为主”，不能据此删去所有全局交互、宣称整个编码器严格线性。串联设计便于将不同模块分配到流水线训练阶段，也不同于两套编码器各自输出后再融合的并联方案。
 
 语言解码器有 12 层，每 token 激活 64 个 routed experts 中的 6 个，以及 2 个 shared experts。它根据视觉序列与提示自回归输出文字、坐标、Markdown、HTML 表格、SMILES 或几何结构。Deep parsing 会在文档解析后，对其中图片再次调用模型，属于二次解析流程；不能把包含二次调用的全部图表内容理解为一次前向就同时完成。
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -53,6 +71,8 @@ $$
 
 卷积压缩的计算意义可作如下解释：若进入全局注意力的序列由 $n$ 缩为 $n/16$，同维度的 token 两两交互项由 $n^2$ 降为 $(n/16)^2$，对应该项约 256 倍减少。此处是本文对结构的局部运算量推导，未计 SAM、卷积、投影、前馈和解码器生成，不能当作系统实测 256 倍加速。OCR 输出仍需逐 token 生成，视觉输入短不意味着较长输出也被消除。
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 | 类型 | 原文数据引擎 |
@@ -73,6 +93,8 @@ $$
 
 Tiny/Small 直接缩放到 512/640 正方形，以避免小预算用于空白；Base/Large 采用 1024/1280 的保持比例 padding。Gundam 使用 $n$ 个 640 局部块加 1024 全局视图，输出 $100n+256$ token，通常 $n=2\ldots9$；原图宽高均小于 640 时 $n=0$，退化为 Base。Gundam-M 使用 1024 局部块加 1280 全局视图，预算为 $256n+400$，通过后续继续训练获得，不与其他五种模式从一开始完全共同训练。
 
+<a id="training"></a>
+
 ## 6. 训练流程与目标
 
 先独立训练 DeepEncoder，接上一个小语言模型进行下一 token 预测，使用 OCR 1.0、OCR 2.0 与 LAION 抽取的 100M 通用数据。训练 2 epochs，batch 1280，序列长度 4096，AdamW、余弦退火、学习率 $5\times10^{-5}$。
@@ -86,6 +108,8 @@ $$
 $$
 
 这是本文对原文训练框架的标准解释，报告没有额外定义独立的图像重建损失或强化学习奖励。即使训练采用带目标文本的监督，这也不等于报告中的独立聊天 SFT 阶段；作者明确说没有该阶段，部分能力要用 completion prompt 激活。
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -115,3 +139,11 @@ Small 以少于 GOT 的 token 得到更低 ED，Gundam 对 MinerU2.0 也有整�
 文档类别差异明显：Tiny 的新闻报纸 ED 0.94，Gundam 为 0.122，Gundam-M 为 0.099；幻灯片 Tiny 为 0.116、Gundam 为 0.085，所需预算较低。报告声称单张 A100-40G 可生产每日 200K+ 页，160 卡约 33M 页，这是作者生产吞吐描述，未给出覆盖全部模式、输出长度与精度条件的受控延迟表。
 
 “遗忘”设计是将更老文字渲染为更低清晰度图像的研究设想。当前实证集中在 OCR 恢复和文档解析，没有证明跨轮对话推理、无限上下文或无成本显存节省。本文根据固定技术报告及原图进行核验，未运行模型或复现生产吞吐。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：OmniVinci](../../omnivinci/arxiv-2510.15870/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：VITA-E →](../../vita/arxiv-2510.21817/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->

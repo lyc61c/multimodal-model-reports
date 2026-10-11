@@ -21,7 +21,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "ebc877cefba989ce9c4aa29c29cc91cb884aace2ac11f4bace86b8df3b054206",
+  "article_sha256": "6298b213c70a1f813a7c20285bc61493d4e40e24401a5fade13065243f8cb242",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -35,5 +35,11 @@
       " Independent last12 source/crop visual recheck: Seed1.5-VL Table 6: all public benchmark categories, column headers, final All-Angles Bench row, two footnotes and full caption preserved.",
       " Independent last12 source/crop visual recheck: Seed1.5-VL Tables 7 and 8: both full video and GUI benchmark tables, all final rows, notes and captions preserved; page number excluded."
     ]
+  },
+  "formatting_revision": {
+    "date": "2026-10-11",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   }
 }

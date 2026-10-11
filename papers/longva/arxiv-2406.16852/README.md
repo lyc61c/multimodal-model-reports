@@ -1,10 +1,24 @@
+<!-- article-header:start -->
+[项目首页](../../../README.md) › [模型系列](../../../reports/model-family-index.md) › [LongVA](../README.md)
+<!-- article-header:end -->
+
 # LongVA：把语言模型的长上下文能力迁移到长视频
+
+<!-- article-toc:start -->
+<a id="article-toc"></a>
+
+**本篇目录** · [论文定位](#paper-info) · [快速概览](#overview) · [整体架构](#architecture) · [核心原理](#principles) · [数据构建](#data) · [训练流程](#training) · [实验结果](#experiments)
+<!-- article-toc:end -->
+
+<a id="paper-info"></a>
 
 ## 1. 论文信息与模型定位
 
 《Long Context Transfer from Language to Vision》提出 Long Video Assistant（LongVA），由 Peiyuan Zhang、Kaichen Zhang、Bo Li 等作者完成，机构包括 LMMs-Lab、南洋理工大学及新加坡科技设计大学。本文依据 [arXiv 2406.16852v1](https://arxiv.org/pdf/2406.16852v1)（2024 年 6 月 24 日）；代码为 [EvolvingLMMs-Lab/LongVA](https://github.com/EvolvingLMMs-Lab/LongVA)。
 
 LongVA 的问题是：视觉 token 很长时，瓶颈是否也来自语言骨干的上下文长度？作者先只用文字扩展 Qwen2-7B-Instruct，再用图像数据对齐视觉，测试时输入长视频。主模型用这个设计研究“训练短视觉输入、测试长视觉输入”的迁移；另外的 LongVA-DPO 使用视频相关偏好数据，需与主模型区分。
+
+<a id="overview"></a>
 
 ## 2. 快速概览
 
@@ -19,6 +33,8 @@ LongVA 的问题是：视觉 token 很长时，瓶颈是否也来自语言骨干
 
 论文的“超过 200K 视觉 token”和约 2000 帧能力主要来自合成检索实验，真实 Video-MME 的分析最高使用 384 帧。检索成功、完整视频推理和实用生成速度属于不同评价问题，不能互相替代。
 
+<a id="architecture"></a>
+
 ## 3. 整体架构
 
 ![原文 Figure 2](figures/original-p005-figure-2.png)
@@ -28,6 +44,8 @@ Figure 2 上半是图像：拆成 336×336 网格，每格编码为 576 个特�
 AnyRes 通常在局部网格之前加入缩小的整体图，并把各网格合为大特征图后跨边界展平。UniRes 移除整体基准图，在每个网格内按栅格顺序展平，对图像和视频都应用 2×2 平均池化。这样网格边界与帧边界有一致表示，避免训练时图像展平规则与测试时视频帧串联规则差异过大。
 
 单图最高允许 49 个网格，更大的图像先缩放。N 帧视频被视为尺寸为 $336\times(336N)$ 的扩展图像，有 N 个网格。视觉编码和投影后生成 $144N$ 个视觉 token，与问题文字一起输入长上下文 Qwen2。主文未单独披露新的时间编码模块；顺序信息来自序列排列，不能由“视频理解”反推已经加入时间戳嵌入。[PDF 第 4、17 页](https://arxiv.org/pdf/2406.16852v1#page=17)
+
+<a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
@@ -39,6 +57,8 @@ RoPE 把位置关系编码为旋转。为解释增大 base 的作用，可写常
 
 V-NIAH 采用一次前向评估而非完整在线生成。预存帧嵌入后，将视觉、问题和正确答案串联，在正确答案条件前缀下检查答案区每个位置的最大 logit token 是否一致。可用 $\forall t,\ \arg\max p(w_t\mid V,q,w_{<t}^{*})=w_t^{*}$ 表示这个判定，这是对原文流程的解释式。它避免 KV cache 的大量存储，但属于有正确答案前缀的 token 级检验，不能当作已测得数千帧输入后的自由生成延迟。[PDF 第 3–7 页](https://arxiv.org/pdf/2406.16852v1#page=5)
 
+<a id="data"></a>
+
 ## 5. 数据构建与处理
 
 长文本训练采用 SlimPajama，增加超过 4096 token 文档的采样，同时保留领域混合比例；多个文档以 BOS 分隔拼成单一长序列。报告给出总训练量约 900M token，另给约一百万 token 的 batch、1000 步；这些是公开概略配置，本文不强行把它们算成精确一致的总量，也不以此推导独立文档数。
@@ -48,6 +68,8 @@ V-NIAH 采用一次前向评估而非完整在线生成。预存帧嵌入后，�
 V-NIAH 使用五个针帧：便签大学名、婚礼气球颜色、瓶上剂量文字、反常识动物科学家、地标上的玩具熊。针帧来自已有 VQA 或生成图像，置入长背景视频的不同位置，按 1 FPS 抽帧。部分反常识构造减少仅靠语言常识猜答案的机会，但已有 VQA 来源不意味着全部测试内容都严格没有公开训练接触。[PDF 第 5、15–16 页](https://arxiv.org/pdf/2406.16852v1#page=16)
 
 文字 NIAH 则把随机城市关联七位数字插入 Paul Graham 文章，改变长度和深度，并加入三或五个干扰城市；每个位置与长度重复五次。它检验精确读取长上下文的能力，不衡量跨整部视频的因果叙事理解。
+
+<a id="training"></a>
 
 ## 6. 训练流程与目标
 
@@ -63,6 +85,8 @@ V-NIAH 使用五个针帧：便签大学名、婚礼气球颜色、瓶上剂量�
 报告没有完整重列视觉两阶段的冻结模块、优化器、batch、学习率、步骤数和精度，因此只保留“遵循 LLaVA-1.6 两阶段”的来源描述，不把其他论文配置自动当成本模型确认值。上下文继续训练沿用语言序列学习，视觉对齐采用回答预测流程，论文没有提出新的专门长视频损失。
 
 额外 LongVA-DPO 在 LLaVA-Hound-DPO 上做轻量偏好优化，改善开放视频回答的评判分数。它属于另一个检查点，含视频偏好训练信息；“完全无视频训练”应限定用于研究迁移的基础 LongVA。报告没有提供该 DPO 的完整超参或新增数据条数。[PDF 第 3–5、8 页](https://arxiv.org/pdf/2406.16852v1#page=8)
+
+<a id="experiments"></a>
 
 ## 7. 实验设置与主要结果
 
@@ -93,3 +117,11 @@ Figure 4 横轴为总帧数，纵轴是针帧的相对位置，绿色较高、�
 短视频 NeXTQA 的多选分从 8 帧 50.78 增到 64 帧 68.27，但 ActivityNetQA 从 32 帧 2.80 到 64 帧 2.84 的增益较小，开放描述指标不稳定。LongVA-DPO 在 32 帧下 Video-DD 为 3.58，基础模型为 3.19；这是带额外偏好训练的结果。报告认为回答形式会影响 GPT 判分，这是作者解释，不是已经单独证实模型推理完全不变。
 
 图像比较中 UniRes 的 InfoVQA 为 49.4，高于 AnyRes 的 43.3；AI2D 为 70.7，低于 73.1，ChartQA 为 70.4，低于 74.4。Figure 5 显示 InfoVQA 有更多高分辨率图，UniRes 的 49 网格上限有机会保留更多局部信息；较小图像却可能主要承受池化的细节损失。结果展现图像细节与长序列能力的权衡。以上来自论文原图原表核验，没有运行模型，也没有据检索实验声称实测实时长视频服务。
+
+<!-- article-footer:start -->
+---
+
+[← 上一篇：Cambrian-1](../../cambrian-1/arxiv-2406.16860/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：OMG-LLaVA →](../../omg-llava/arxiv-2406.19389/README.md)
+
+[返回本篇目录](#article-toc) · [返回模型系列](../README.md)
+<!-- article-footer:end -->
