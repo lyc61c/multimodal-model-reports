@@ -53,10 +53,11 @@
     "大模型继承视觉与LLM训练成本",
     "本文未运行或复现模型"
   ],
-  "article_sha256": "a410136fb1b5a17e5e40a874366391f4c49f61d7d275fa90ad08e425bc3d405e",
+  "article_sha256": "4a17558efcf77bf992368623b95ba92f63bce502518bfea33ebf4b6e7533cd17",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3329
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -89,5 +90,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2412.05271v1",
+        "version": "2412.05271v1",
+        "sha256": "2880c45a397a893d5519df37e6a6c0df8b3a7733e03fba036818b3dd9e4f690c"
+      },
+      "source_locators": [
+        "PDF p5 §3.1; p8 §3.3–3.4; current article testing analysis located to p15"
+      ],
+      "changes": [
+        "Explained numbered media budget, numerical square-weight example and transferable component boundary"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "4a17558efcf77bf992368623b95ba92f63bce502518bfea33ebf4b6e7533cd17",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

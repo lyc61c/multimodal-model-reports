@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2303.02506v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Prismer：利用独立视觉专家的输出构建视觉语言模型",
-  "chinese_characters": 2674,
+  "chinese_characters": 3201,
   "figure_revision_date": "2026-10-09"
 }

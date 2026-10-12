@@ -39,10 +39,11 @@
     "Taskadapted checkpoints differ",
     "No GPUor contextlength disclosed"
   ],
-  "article_sha256": "2f405784a6ac0eeca11b40d7c64908528cd089365b38aa2b9d8c9b93b6410cfe",
+  "article_sha256": "b10911b174fce20c8fee884f5a92133a1e533befce06a03e3f576cf9be9c7786",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2766
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -87,5 +88,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2402.04236v1",
+        "version": "2402.04236v1",
+        "sha256": "08c49cc05b67c4418d337830c6e980a9b1d731d0e1e85c4fbc8300568bce7796"
+      },
+      "source_locators": [
+        "PDF pp.3–4, §2.2–2.3.1, Eq2–3 (latexit assets omitted from text inspection)"
+      ],
+      "changes": [
+        "说明占位依赖与图像级多轮转换",
+        "解释历史KV的尺度联系与截断遗忘",
+        "区分离线答案筛选与在线推理目标"
+      ],
+      "disclosure_boundary": "不补写缓存阈值；离线工具标注不一律称作在线外部调用。",
+      "article_sha256": "b10911b174fce20c8fee884f5a92133a1e533befce06a03e3f576cf9be9c7786",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

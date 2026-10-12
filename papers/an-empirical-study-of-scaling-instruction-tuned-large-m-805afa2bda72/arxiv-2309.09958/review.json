@@ -31,10 +31,11 @@
     "MMLU正文增加2.4与表值增加2.0有冲突，按表保留",
     "第一阶段epoch和完整优化器等未披露"
   ],
-  "article_sha256": "ea2b285bfc0c4ed8e440e5f6f54838aad5b116f7e47a7bbad8f404ff4772ec78",
+  "article_sha256": "f4f207954bfa8ffef4f73846a858f98308eb135490d49b1dcac436886e2c1818",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3335
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -100,5 +101,43 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2309.09958v1",
+        "version": "2309.09958v1",
+        "sha256": "52b9cef0bd060cdd32110fa8393ce90a92a28c92584a4f5482083ca55acd427e"
+      },
+      "source_locators": [
+        {
+          "cache": "source.txt",
+          "start": 3241,
+          "end": 6787,
+          "locator": "§2 Experiment Setup，PDF2；结合原有§3.2表格解释"
+        }
+      ],
+      "changes": [
+        {
+          "heading": "4.1 规模研究：先建立可比较的视觉接入接口",
+          "new_explanation": "本研究把视觉连接方式保持为线性投影，主要改变语言规模、输入分辨率、语言数据混合和微调方式。这样的接口有助于将结构变化与训练选择区分开；但65B语言调优数据由作者另行处理，不能把33B到65B的全部差异解释成唯一的参数规模效应。[§2，PDF 第2页](https://arxiv.org/pdf/2309.09958v1#page=2)。"
+        },
+        {
+          "heading": "4.2 低秩适配：容量与更新尺度需要同时配置",
+          "new_explanation": "LoRA 的 rank 改变增量矩阵能表达的方向数，alpha 则改变这些方向在前向中的幅度。原文超参搜索发现较大的 alpha 或等价的学习率调整对效果重要，最终使用 alpha=2r；因此固定学习率但任意改变缩放规则，会把“低秩容量是否足够”与“更新是否太弱”混在一起。QLoRA的基础权重量化进一步改变显存成本，不能将其成本差仅归给rank。[§2，PDF 第2页](https://arxiv.org/pdf/2309.09958v1#page=2)。"
+        },
+        {
+          "heading": "4.3 成本与性能：比较时固定数据和训练口径",
+          "new_explanation": "全量微调与适配器实验的总batch并不相同：原文全量设置为512，LoRA/QLoRA为64，使用节点数也随33B/65B变化。它们体现可运行配方下的成本与性能，而不是严格固定每一硬件和batch因素后的纯算法加速比。分辨率实验则改变送入语言端的视觉信息密度，说明扩大语言骨干之外仍有独立的视觉瓶颈。[§2、§3.2，PDF 第2、4–5页](https://arxiv.org/pdf/2309.09958v1#page=4)。"
+        }
+      ],
+      "disclosure_boundary": "非新架构论文；不补视觉重采样器或未披露量化逐层配置。",
+      "article_sha256": "f4f207954bfa8ffef4f73846a858f98308eb135490d49b1dcac436886e2c1818",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -24,13 +24,14 @@
   },
   "model_execution": "not_run",
   "limitations": "Self-review only; no reproduction or independent benchmark validation",
-  "article_sha256": "b33e9d7fd62a21d3800923aee46358cc186c419fc9d736839dbecb710d43ca08",
+  "article_sha256": "d67eb8fbdd23acc850d097383e7364f83d2aebe5c3f87f89fba8c0a36f7e12a7",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2867
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -79,5 +80,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2407.14177v1",
+        "version": "2407.14177v1",
+        "sha256": "35b3231e8f75990c6fa823b4a525acad0466e7c00fa3c911d2f07affb497ebc9"
+      },
+      "source_locators": [
+        "v1 §2，第3–4页；原有MoE说明保留"
+      ],
+      "changes": [
+        "节省来自路径分离：长视觉序列主要形成交叉注意力的键值，而语言主干只处理media及文字位置。提高图像分辨率会增长视觉KV和交叉乘积，但不会以相同方式增长语言侧全部FFN位置数。这个分析支持高分辨率接口设计，同时仍需计入视觉骨干、不同深度特征以及每层融合的实际开销。",
+        "16个学习token不是在输入前一次性取得完整图像摘要；它们在层层门控交互中持续更新。图像归属掩码避免一幅图的media查询无条件读取另一幅图，而零视觉向量让无相关图像的位置拥有空选项。视频caption放宽到全部帧是任务特定变化，不能反推普通多图序列也默认具有相同访问范围。",
+        "MoE位于新增融合FFN，增加的是把视觉条件转换成语言更新的容量；原语言Transformer仍沿已有参数路径工作。稀疏路由专家和始终参与的world expert承担不同角色，因此激活专家数量不能直接换算成全系统激活参数比例。对这种结构的成本比较应报告融合模块和主干各自开销。"
+      ],
+      "disclosure_boundary": "未新增门初始化和MoE负载平衡细节；每图16media token非整图信息总长度。",
+      "article_sha256": "d67eb8fbdd23acc850d097383e7364f83d2aebe5c3f87f89fba8c0a36f7e12a7",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

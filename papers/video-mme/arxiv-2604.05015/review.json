@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 6
+    "original_assets": 6,
+    "chinese_characters": 2593
   },
-  "article_sha256": "c21ccf73cfb832b33e82a63d5cea65990faab26c83f0d42d0e27628367b8c8e5",
+  "article_sha256": "baaf059055e9e54f55e496b229051387e24302dec6462390487779e8eb35c59e",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -42,5 +43,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2604.05015v1",
+        "version": "2604.05015v1",
+        "sha256": "f805eaaae0089f2979b83d97215aca52bf05a4ed459aeb931e7db34e9d5b59b1"
+      },
+      "source_locators": [
+        "PDF pp.4–5 §3.2–3.3 Eqs1–2; existing implementation supplement retained"
+      ],
+      "changes": [
+        "解释先分组平方再平均与错题分布",
+        "补依赖结构与评分所需数据",
+        "限定外部一致性评分不证明隐藏推理忠实"
+      ],
+      "disclosure_boundary": "数据集报告只列功能组件，不虚构模型网络。",
+      "article_sha256": "baaf059055e9e54f55e496b229051387e24302dec6462390487779e8eb35c59e",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

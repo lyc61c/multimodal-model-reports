@@ -24,7 +24,7 @@
     "官方演示非独立成功率评测"
   ],
   "model_execution": "not_run",
-  "article_sha256": "fa36210b26bce01f9088791833414690f2c7a803462afe6c0139dd090c0416d7",
+  "article_sha256": "0f55745063192745f8e04818d2d85ae73c74a95c5ca440b3eebf09ff354adceb",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -76,5 +76,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "842fc7adc3b7911e5e00f7611a176324b16ea5f90d7f12b64184a999d3150024"
+      },
+      "source_locators": [
+        "official cached blog reasoning scores / benchmark table / Code-based animation / system synthesis demos"
+      ],
+      "changes": [
+        "四功能模块表；展开得分单位、工具条件与代码渲染机制"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "0f55745063192745f8e04818d2d85ae73c74a95c5ca440b3eebf09ff354adceb",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

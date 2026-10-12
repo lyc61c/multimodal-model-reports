@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2212.10773v1",
   "document_kind": "dataset_and_method",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MultiInstruct：以多任务指令微调改善多模态零样本泛化",
-  "chinese_characters": 3291,
+  "chinese_characters": 3846,
   "figure_revision_date": "2026-10-09"
 }

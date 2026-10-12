@@ -10,14 +10,15 @@
     "Self-review, not an independent second-model review",
     "All benchmark values are authors' reported results"
   ],
-  "article_sha256": "d45ed5079ebabaabb586b7d27bf9a55d6f84c006f700eaae6e84f4451d37c468",
+  "article_sha256": "9b151fca1fc589678499f560378c5d609705dd61ad993d863906da50ec96f033",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
     "2026-10-11 targeted content audit: Figure 2 裁图仍写页面上半部分；改为图中三条合成路径。"
   ],
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3406
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -75,5 +76,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2307.12981v1",
+        "version": "2307.12981v1",
+        "sha256": "8068ae47e37c3cd00cea59b62d144bef2a84fd58ff5b5d10cd8c744000efd749"
+      },
+      "source_locators": [
+        "v1 §4.1–4.3.2，PDF 第5–6页"
+      ],
+      "changes": [
+        "Neural Field 路线的监督对象是射线上聚合出的三维特征与对应二维像素特征，使用 MSE 对齐，而不是直接让语言回答损失推断每个体素的几何。深度可靠时可直接反投影，缺少深度时才需要神经场拟合；因此三条路线的差别首先是可获得的几何监督，而非语言主干容量。",
+        "这里可迁移的是“特征维度固定、序列长度可变”的读取接口。二维 Patch 展平后与三维点都形成向量集合，查询模块可沿输入长度轴做注意力归一化；但它不会仅凭这个接口知道点的相邻关系。后续位置编码补上空间坐标，三维语言数据再教会模型如何把压缩表示用于场景任务。",
+        "输出位置词表还改变了训练参数边界：原文明确解冻新增位置 Token 在输入和输出 embedding 中的权重，使模型既能读位置提示，也能在生成端选择位置代码。这与仅给点特征附加坐标不同；后者让网络看见位置，前者才提供可监督的离散定位输出接口。"
+      ],
+      "disclosure_boundary": "Three construction methods are alternatives; no invented unified query count, voxel resolution or navigation controller.",
+      "article_sha256": "9b151fca1fc589678499f560378c5d609705dd61ad993d863906da50ec96f033",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

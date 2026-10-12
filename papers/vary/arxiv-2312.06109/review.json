@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2275
   },
-  "article_sha256": "a4c75f76008ad4aac1686b4e81d204557f88ee6ac0c49ac8c8baa78801ef29e5",
+  "article_sha256": "0c6bb2fbda6908d2d2e869c1cc1082f68aa9637eac87d81ea3bc1c096d0b5ea5",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -57,5 +58,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.06109v1",
+        "version": "2312.06109v1",
+        "sha256": "ef816e719f2163ff0d1e114868f1857ac2bca98d34b819d74f1c1e9c9420f4f5"
+      },
+      "source_locators": [
+        "PDF p4–5 §3.1–3.3 / Figures2–3"
+      ],
+      "changes": [
+        "五模块表；区分连续词表、压缩监督与生成负例"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "0c6bb2fbda6908d2d2e869c1cc1082f68aa9637eac87d81ea3bc1c096d0b5ea5",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

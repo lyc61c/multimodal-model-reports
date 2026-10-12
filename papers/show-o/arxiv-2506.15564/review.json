@@ -13,33 +13,70 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2137
   },
-  "article_sha256": "d05b6c2687883e4167e31f62267a1fb78024ed3e8bcc470d8c885dd2e202d242",
+  "article_sha256": "dc9fae42e0c7d499fded8d7ad81f3209bd14d40905245d4f17c4b422ec334272",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 17,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 17,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2506.15564v1",
+        "version": "2506.15564v1",
+        "sha256": "12ac0764723ecde3e80007c8c696dfaffc613fdb807ddd06895324ebeb57a434"
+      },
+      "source_locators": [
+        "source.txt chars10705–18104: §3.1–3.2 complete, Figure1 Eq1–4 Table2, PDF3–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 同一潜变量空间覆盖干净理解与带噪生成",
+          "new_explanation": "理解使用干净视觉条件，生成则从噪声经不同时间点恢复潜变量；两者共享VAE空间，避免再附一套完整图像生成系统。流头接收时间调制并预测连续速度，文字头仍逐token生成，统一主干并没有把两类输出改成同一种离散分类。[原文 §3.1 Overall Framework / Flow Head、式 (1)、(4)](https://arxiv.org/pdf/2506.15564v1#page=5)"
+        },
+        {
+          "heading": "4.2 双路视觉表示兼顾语义与低层信息",
+          "new_explanation": "只保留语义特征可能丢失生成所需纹理，只保留VAE潜变量又不易直接支持高层理解。S先从有噪或干净潜变量学习接近SigLIP语义，P提供低层路径，再按对应位置融合，使空间/时间关系不靠任意序列拼接重新猜测。原文蒸馏式的非正余弦处理仍未说明，不据机制推断完整可执行损失。[原文 §3.1 Unified Visual Representation、式 (2)–(3)](https://arxiv.org/pdf/2506.15564v1#page=4)"
+        },
+        {
+          "heading": "4.3 分头联合目标与分阶段解冻控制适配范围",
+          "new_explanation": "阶段一在预蒸馏S之后训练P、STF与流头，先建立视觉生成接口；阶段二更新除VAE外的全模型，联合适配理解和生成。扩展到7B时复用小模型流头并以轻量MLP对齐宽度，体现生成头与语言主干的模块边界。混合目标共享上下文，仍需消融评估不同任务间的取舍。[原文 §3.2 Training Recipe / Table 2，PDF 第 5 页](https://arxiv.org/pdf/2506.15564v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "保留蒸馏公式实现边界；不新增LFM精确积分形式或主模型消融归因。",
+      "article_sha256": "dc9fae42e0c7d499fded8d7ad81f3209bd14d40905245d4f17c4b422ec334272",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

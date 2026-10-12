@@ -11,13 +11,14 @@
     "Emergence curves not isolated causal proof",
     "LLM judges and prompt-rewriting conditions retained"
   ],
-  "article_sha256": "a7fd90488518f5c59748d80f3536394ffd74af106eb3e66fc1aa2ed8bbdbdf50",
+  "article_sha256": "9a2cf07b1fda7830358d20f79a7970ad3cd140111598a558c66bd352ca197002",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3491
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -51,5 +52,47 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2505.14683v1",
+        "version": "2505.14683v1",
+        "sha256": "25aa8e2f05b4c9fbac9b46ee254a81b767834e7b4c1ac9e48026a27f08a3dd57"
+      },
+      "source_locators": [
+        {
+          "cache": "source.txt",
+          "start": 12996,
+          "end": 18150,
+          "locator": "§2.2–2.4，PDF4–6"
+        }
+      ],
+      "changes": [
+        {
+          "heading": "4.1 MoT：分开参数，又保留跨模态注意力",
+          "new_explanation": "每类token首先用自身专家产生Q/K/V，随后进入同一注意力计算，因此不同专家并不是互不相见的两条网络。该分工让生成端可以调整适合连续latent的投影与FFN，而文字及ViT端保留语言理解初始化；同时跨模态条件仍可在每一层交流。其代价是复制参数带来的总模型容量增加，不能用单一“共享骨干”概括存储成本。[§2.2、§2.4，PDF 第4–6页](https://arxiv.org/pdf/2505.14683v1#page=5)。"
+        },
+        {
+          "heading": "4.2 连续图像生成：时间条件与干净缓存各司其职",
+          "new_explanation": "扩散时间嵌入直接加入VAE token的初始隐藏状态，没有另用AdaLN改写每层归一化。生成过程中的带噪表示用于预测速度；一张图像完成后，后续上下文读取其干净VAE和ViT表示，而不是缓存某次中间噪声状态。这样既能复用KV缓存，又避免后续文本或图像把不完整的噪声结果当成已知事实。[§2.2–2.3，PDF 第5页](https://arxiv.org/pdf/2505.14683v1#page=5)。"
+        },
+        {
+          "heading": "4.3 联合优化：损失权重与数据比例相互耦合",
+          "new_explanation": "理解任务的离散词预测与图像速度回归使用不同的输出空间，直接比较两项损失的原始数值没有统一单位。给MSE更高权重，是控制联合训练方向的一项手段；图像样本占比、每张图的latent位置数量和学习率同样改变梯度贡献。原文把架构消融与训练超参分开报告，阅读时也应避免把某一损失下降直接等同于全部下游任务提高。[§4、§4.1–4.2](https://arxiv.org/pdf/2505.14683v1#page=8)。"
+        },
+        {
+          "heading": "4.4 双视觉条件：语义与像素线索互补",
+          "new_explanation": "同一先前图像同时提供ViT和干净VAE表示，解决的是两种条件信息的互补问题；它不要求二者token一一配对。多图训练进一步允许每张图使用独立噪声等级，并随机把连续图像组成同噪声、组内全注意力的集合。跨图一致性因此来自条件可见范围和联合训练，而不是简单把所有图像拼成一个固定分辨率大图。[§2.3，PDF 第5页](https://arxiv.org/pdf/2505.14683v1#page=5)。"
+        }
+      ],
+      "disclosure_boundary": "区分标准交错推理与diffusion-forcing训练，不硬补采样器或梯度贡献比例。",
+      "article_sha256": "9a2cf07b1fda7830358d20f79a7970ad3cd140111598a558c66bd352ca197002",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

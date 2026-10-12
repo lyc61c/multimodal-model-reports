@@ -9,8 +9,8 @@
   "source_url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf",
   "document_kind": "system_card",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "GPT-4V 系统卡：图像输入带来的能力、失误与部署评估",
-  "chinese_characters": 3321,
+  "chinese_characters": 3853,
   "figure_revision_date": "2026-10-09"
 }

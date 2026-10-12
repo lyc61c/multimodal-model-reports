@@ -21,7 +21,7 @@
     "Current pricing not asserted",
     "System workflows and model capabilities distinguished"
   ],
-  "article_sha256": "775b0fcdbc1bbb31fd64a6ecd84d9127590ea8f93b36bf28d33c8bf1e32576b4",
+  "article_sha256": "91917bcc06f411143644ee90468992f88c54b59794c1044944acb1c6bf9f1ae3",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -40,5 +40,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "22dc43a511a68cda2f22b57d3e8fb4e9ad42257e5fcbd0bf6ba8dc7fb357530c"
+      },
+      "source_locators": [
+        "cached official draft; Agentic Long-Form Audio-Visual Understanding; captioning Schema; Qwen-Live Harness"
+      ],
+      "changes": [
+        "五模块表；补观察粒度、时间层级校验及运行时状态分工"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "91917bcc06f411143644ee90468992f88c54b59794c1044944acb1c6bf9f1ae3",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -16,9 +16,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2702
   },
-  "article_sha256": "5ff57271eb12cb175d2867aab7a0c32b04ef19c169b4ef3e131917067132cfd3",
+  "article_sha256": "92301d6954ca26745d94414101f51d6fc2ec129943e32642451d2cf968578093",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -44,5 +45,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2210.03094v1",
+        "version": "2210.03094v1",
+        "sha256": "064a3ae604f96373964f89a0b38ff5f022a2dc523a2404633820585398c0cd4c"
+      },
+      "source_locators": [
+        "PDF pp.4–5 §3–4 and p.35 Appendix C.1.5/Pseudocode1"
+      ],
+      "changes": [
+        "解释每层重新读提示与时间自回归",
+        "补框/外观互补及假阳性增强范围",
+        "区分离线离散学习与连续闭环执行"
+      ],
+      "disclosure_boundary": "不把独立动作头误写逐分量自回归或在线RL。",
+      "article_sha256": "92301d6954ca26745d94414101f51d6fc2ec129943e32642451d2cf968578093",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

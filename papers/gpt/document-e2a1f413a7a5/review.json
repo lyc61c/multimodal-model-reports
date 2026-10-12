@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2757
   },
-  "article_sha256": "f1a674289944dab3aac924796fc428a42ada266f6363b48a0495d17cbef2c4e0",
+  "article_sha256": "b4eae9191accdce26307eac2ef56d705a290076b3722e2cb09d3d5fc55ede57e",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -73,5 +74,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://openai.com/index/introducing-gpt-5-2/?output=1",
+        "version": "official-release-2026-10-08",
+        "sha256": "00878d3f62ec28f0b1c045fa5b449ca1efd918b85a02eb097ae71f87f842a091"
+      },
+      "source_locators": [
+        "official release Vision / detailed results; tool handoff examples; Responses compact; xhigh"
+      ],
+      "changes": [
+        "四功能模块表；补视觉预算、指标分母及工具压缩闭环"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "b4eae9191accdce26307eac2ef56d705a290076b3722e2cb09d3d5fc55ede57e",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

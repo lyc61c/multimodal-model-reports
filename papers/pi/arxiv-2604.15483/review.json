@@ -44,10 +44,11 @@
     "dataset size and learningrecipe incompletely disclosed",
     "unseen tasks may share related skill fragments"
   ],
-  "article_sha256": "3985c0b8b80a04e98ef5629a0cbc5d979cad6ea5c023fde841e6b81f5d277ef2",
+  "article_sha256": "1b0d9c572e9faf163d4bbb6fb7cd0cfbfb986e623a8343195b67cc802439f888",
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3606
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -80,5 +81,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2604.15483v1",
+        "version": "2604.15483v1",
+        "sha256": "a1bcd510437860c37d6216f38eb3e0b1733879c8e777f6f287013d885b90d904"
+      },
+      "source_locators": [
+        "PDF pp.6–7 §VI-B/C, §VII, Algorithm1"
+      ],
+      "changes": [
+        "补860M动作专家与执行子chunk",
+        "补25/75未来目标采样及生成图混合",
+        "展开异步4秒刷新和最新观察逻辑",
+        "区分RTC与CFG作用"
+      ],
+      "disclosure_boundary": "不将5B当全部系统；knowledge insulation沿原文保留。",
+      "article_sha256": "1b0d9c572e9faf163d4bbb6fb7cd0cfbfb986e623a8343195b67cc802439f888",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

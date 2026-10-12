@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2407
   },
-  "article_sha256": "69470fddbfcf77fbf8ae8594b61a31f6e5a0afa808ecee1dca1ab6ebb91e790b",
+  "article_sha256": "db3ed613b7b9d7b5e42c6545d986e06608bd55ba2f5962b3c7949117daf6dc6d",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -59,5 +60,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2406.07476v1",
+        "version": "2406.07476v1",
+        "sha256": "87ce24e74652c7c242fa1bdb6160fe158eb2e738e5eb6a46ea13c70a0521000a"
+      },
+      "source_locators": [
+        "PDF p3–4 architecture / STC / Table1; existing audio training discussion retained"
+      ],
+      "changes": [
+        "四模块表；三节说明局部融合、音画条件与实验预算"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "db3ed613b7b9d7b5e42c6545d986e06608bd55ba2f5962b3c7949117daf6dc6d",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

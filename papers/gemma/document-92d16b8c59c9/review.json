@@ -20,7 +20,7 @@
     "训练细节未披露，未运行权重"
   ],
   "model_execution": "not_run",
-  "article_sha256": "cf886f9bb0b58518db7d3345550c695aab9f51e0524f40831f870de49c3f1671",
+  "article_sha256": "a81442b60989b31347a03061b80b2493a2431db60b8768fa6ff24bda77ce8939",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -77,5 +77,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://deepmind.google/models/gemma/gemma-4/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "d31baf890b317b2565e0913f67cd490f9ba4ab90a1da5a6db334201af724b000"
+      },
+      "source_locators": [
+        "model-card.txt lines302–399 Models Overview / Dense / PLE / MoE; primary landing page inspected and lacked architectural detail"
+      ],
+      "changes": [
+        "补各规格局部窗口数与非全局窗口边界",
+        "细化PLE存储与稠密计算区别",
+        "区分稀疏专家选择与整网参数口径",
+        "解释encoder-free与token预算不可混算"
+      ],
+      "disclosure_boundary": "使用本地model-card.txt补充源；精确融合方式、pRoPE公式未披露。",
+      "article_sha256": "a81442b60989b31347a03061b80b2493a2431db60b8768fa6ff24bda77ce8939",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

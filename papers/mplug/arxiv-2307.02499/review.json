@@ -38,10 +38,11 @@
     "Figure5原文称JSON但原图形式存在重复键未引用值，未声称合法可解析",
     "颜色证据框为作者标注不是模型attention或定位输出"
   ],
-  "article_sha256": "bcecb7a3a6b76877dc06b12134e074002443c23c148c421a94e3d6278c0617cb",
+  "article_sha256": "ab6dd7a66fc2cfdecb99cec00741fa685b2c514a43bdd08e86412916b9ccc802",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3107
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -107,5 +108,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2307.02499v1",
+        "version": "2307.02499v1",
+        "sha256": "cdcc79ed706ebf4e7fddf706318a272a4570594dcd6a79fce94a3549d2c21ef2"
+      },
+      "source_locators": [
+        "source.txt chars8502–13480: §3.1–3.3 complete, PDF3–4"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 统一生成接口保留任务的可判定边界",
+          "new_explanation": "统一并不等于把全部标签改成任意长描述。信息抽取明确询问字段，缺失字段使用None，区分“文档中没有该值”与错误地编造一个值；表格推断把判断限制为Yes/No。输出约束来自任务转换与监督形式，原文没有为各任务增加独立分类头。[原文 §3.3，PDF 第 4 页](https://arxiv.org/pdf/2307.02499v1#page=4)"
+        },
+        {
+          "heading": "4.2 先适配文档接口，再在固定接口上恢复通用交互",
+          "new_explanation": "阶段一仅用文档域任务训练abstractor与LoRA；阶段二冻结abstractor，只调整LoRA，并混合文档、纯文本与通用视觉语言指令。这样后一阶段改变的是语言侧响应分布，视觉接口本身不会继续随混合数据漂移。原文的两阶段轮次和通用数据上采样属于训练配方，不能视为结构必需条件。[原文 §3.2，PDF 第 3–4 页](https://arxiv.org/pdf/2307.02499v1#page=4)"
+        },
+        {
+          "heading": "4.3 移除外部OCR接口仍依赖文字与布局学习",
+          "new_explanation": "页面像素经视觉编码和abstractor进入生成模型，文字读取、位置关系和任务回答由同一条件生成路径承担。缺少外部OCR并不会消除小字辨认与分辨率限制，也不证明所有训练标签均与OCR无关。该名称描述部署输入路径，需与训练监督来源分开理解。[原文 §3.1–3.3，PDF 第 3–4 页](https://arxiv.org/pdf/2307.02499v1#page=3)"
+        }
+      ],
+      "disclosure_boundary": "不从mPLUG-Owl其它版本反推骨干、rank或分辨率；保留通式非原创的标注。",
+      "article_sha256": "ab6dd7a66fc2cfdecb99cec00741fa685b2c514a43bdd08e86412916b9ccc802",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

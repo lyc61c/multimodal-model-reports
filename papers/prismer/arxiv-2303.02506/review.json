@@ -33,13 +33,14 @@
     "专家噪声鲁棒无方差，不能宣称部署任意热插拔；COCO属于预训，零样本非图像未见。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "79787f78b642cb1e372404e9c0bf95bb8b107b44a573fc3cd8d83c0dd37eeb20",
+  "article_sha256": "ab28e45b9bd605bd9656e62b272e11f95419d7d5c4c8e8dcf1a83e259c1c49a4",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3201
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -75,5 +76,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2303.02506v1",
+        "version": "2303.02506v1",
+        "sha256": "e306de8afb3c781405afdf04434bd45bf76fe8a3b9e229579223bed1abf1dd23"
+      },
+      "source_locators": [
+        "source.txt chars15869–24250: §3.2–3.3 complete with Table1 and Figure3, §3.4 objective opening, PDF6–8; existing Table2/5 variants retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 空间标签接口允许异构专家互补",
+          "new_explanation": "专家无需共享内部网络，只需把预测映射为图像对齐张量。检测框重叠位置还可借深度专家确定标签；实例嵌入帮助区分同类别不同对象。RGB原路径继续提供未经专家标签抽象的视觉内容，降低统一模型完全依赖错误预测的风险，但不构成自动纠错保证。[原文 §3.2–3.3、Table 1，PDF 第 6–7 页](https://arxiv.org/pdf/2303.02506v1#page=7)"
+        },
+        {
+          "heading": "4.2 重采样固定下游预算而不固定上游成本",
+          "new_explanation": "增加专家首先增加辅助输入长度，Resampler用同一组latent读取这些特征并压到固定输出。其KV同时包含输入与latent，让查询之间的当前状态也参与后续聚合；再与RGB拼接进入视觉骨干。下游预算可稳定，上游专家推理与聚合仍增长，需分别衡量收益与成本。[原文 §3.3 Experts Resampler / Figure 3](https://arxiv.org/pdf/2303.02506v1#page=8)"
+        },
+        {
+          "heading": "4.3 近恒等初始化连接冻结领域知识",
+          "new_explanation": "视觉和语言骨干原本各自预训练，新Adaptor从接近恒等开始，配合语言交叉注意力逐渐学习视觉条件化。它调整逐层隐藏状态，而LoRA调整权重增量，不能仅因参数较少就混称同一方法。专家标签仅为输入条件，文本预测梯度不会通过额外深度或分割监督重训黑盒专家。[原文 §3.3 Lightweight Adaptor、§3.4，PDF 第 8 页](https://arxiv.org/pdf/2303.02506v1#page=8)"
+        }
+      ],
+      "disclosure_boundary": "保留默认Adaptor维度1的边界；新表保存原四变体全部规模，专家冻结不等同整体无梯度。",
+      "article_sha256": "ab28e45b9bd605bd9656e62b272e11f95419d7d5c4c8e8dcf1a83e259c1c49a4",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

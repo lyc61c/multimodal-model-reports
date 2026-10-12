@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2409.12191v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Qwen2-VL：动态分辨率与多模态旋转位置编码",
   "source_sha256": "df31f2fb46b6237ec6f26c418dcc34e59816102f5d1618d564b258ce437fd543",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2096,
+  "chinese_characters": 2593,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

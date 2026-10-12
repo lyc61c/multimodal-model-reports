@@ -44,13 +44,14 @@
     "No model execution or independent benchmark reproduction",
     "Figures retain original pixels, including full-page surrounding text; no recreated HTML table represented as an original image"
   ],
-  "article_sha256": "a938d3b6556953abba893bccda64e8e245c17c0120ff3b36feb6856d06bf8d36",
+  "article_sha256": "8bb96445537c9440a9f99feda8f0d11b8b977c649726cf08d4409ef671d3dcaa",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4944
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -112,5 +113,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://openai.com/index/gpt-6-astra/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895"
+      },
+      "source_locators": [
+        "system card HealthBench length adjustment near Table6; Figure22 retained; release-source long-running tasks / asynchronous clarifications / cross-window notes"
+      ],
+      "changes": [
+        "五功能模块表；四节细化验证、外部记忆、监控指标及长度校正"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "8bb96445537c9440a9f99feda8f0d11b8b977c649726cf08d4409ef671d3dcaa",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

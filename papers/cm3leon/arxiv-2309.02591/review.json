@@ -24,13 +24,14 @@
     "Main text/appendix sample counts inconsistent",
     "Some training optimizer/sampling details not disclosed"
   ],
-  "article_sha256": "9ccd08710c27fdfa5db82b2b6470e7efc04ac658cd1dcc1fe1efe09622d16d58",
+  "article_sha256": "6ac684d6395af0bbcb44fa3f6d81257607f43524ce9480cb2a41eca13b421728",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 8,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3676
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -109,5 +110,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2309.02591v1",
+        "version": "2309.02591v1",
+        "sha256": "9466fda32dc44dccb19f1ef3fb4abdd0ae6c20d960bcaf94a5d28e88d568b680"
+      },
+      "source_locators": [
+        "v1 §2.1–2.3，第3–4页；§3.1，第5页"
+      ],
+      "changes": [
+        "检索上下文是额外条件，不是另一个输出通道。训练随机选取检索样例并限制过高相似度，且对查询做token dropout，以减少复制和近重复上下文。取消末尾目标对的额外loss加权，则让无检索提示也保持训练意义：统一模型需要既能利用样例，又不把检索结果当成每次生成的必要前提。",
+        "这里的“无条件”准确说是去掉文字条件，并不意味着完全没有已生成视觉历史。两条流在当前解码步对同一候选token提供不同logits，强化的是文字条件带来的相对变化。由于CM3见过mask提示，这种运行方式与训练接口相容；增大引导系数仍可能影响多样性，不能据公式推出越大越好。",
+        "CD-K先限定可信候选，再在候选内偏好有条件相对无条件更支持的token；CLIP重排则发生在完整样例生成后，比较的是最终图像与提示的一致性。两者作用于不同时间尺度。报告发现CD-K与CFG样例互补，混合候选继续改善FID，说明最终成绩还依赖候选数量和选择过程，不能仅归因于参数规模。"
+      ],
+      "disclosure_boundary": "离散图像码与CLIP检索嵌入不同；不把普通因果损失展开当原创；解码阈值不简化为top-k。",
+      "article_sha256": "6ac684d6395af0bbcb44fa3f6d81257607f43524ce9480cb2a41eca13b421728",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

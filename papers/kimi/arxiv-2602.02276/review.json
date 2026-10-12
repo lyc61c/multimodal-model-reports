@@ -47,13 +47,14 @@
     "Swarm latency doesnotestablishequalcompute",
     "Reference API failure affectsvisioncomparison"
   ],
-  "article_sha256": "4d87e2745960e1b19122528ceab93368c08203e0711fd4be15a734cd8cb0e524",
+  "article_sha256": "068d72e87fbaf1bcc35239532f169bc5bccb3b936f9b4f3b02eb59c259cdf4c2",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4170
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -260,5 +261,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2602.02276v1",
+        "version": "2602.02276v1",
+        "sha256": "06811e2d0e7a68cfc4e6b081963f4efcc84f5c05a376ed62b05440978db264e9"
+      },
+      "source_locators": [
+        "PDF pp.6–8, §4.1–4.3, Table3; current §3–4 in full"
+      ],
+      "changes": [
+        "补小Moonlight到1T骨干两步视觉对齐",
+        "明确视觉塔仅captionCE区别KimiVL",
+        "解释四帧池化之前时空交互",
+        "细化编排者优化边界"
+      ],
+      "disclosure_boundary": "不把初始化SigLIP误写为本阶段保留对比损失；PARL原奖励保留。",
+      "article_sha256": "068d72e87fbaf1bcc35239532f169bc5bccb3b936f9b4f3b02eb59c259cdf4c2",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

@@ -47,10 +47,11 @@
     "No high-resolution, multi-image or video specialization in v1",
     "Dataset totals rounded; unreleased-data statement describes v1 publication state"
   ],
-  "article_sha256": "f71db8915f1d6c58cbaebe761b81604e004d9d225155af26e064d19e594febad",
+  "article_sha256": "b1f4932826780086a3fc66181bad9180fd0675497a0de95c05380d0d91425fab",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3080
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -88,11 +89,11 @@
     }
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 38,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -106,18 +107,54 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 19,
-      "operatorname_replacements": 1,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 1
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2405.20797v1",
+        "version": "2405.20797v1",
+        "sha256": "940327062b75576a264c41ad774b53e9052a4a67cbee1f9f6582ad5f61309c96"
+      },
+      "source_locators": [
+        "source.txt chars14186–20941: §3.1–3.4 complete, Eq1–4 and three-stage trainable parameters, PDF4–6; AppendixE prior figure statistics retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 概率视觉词解决patch的多义表达",
+          "new_explanation": "文字token通常已经由词表索引确定，图像patch却可能同时含颜色、纹理、轮廓和文字。Ovis先将视觉特征与一组可学习视觉原型比较，再用softmax分配参与程度；这引入了与文字嵌入查表相近的中间结构，而不是强迫图像使用原有语言词表。[原文 §3.1–3.2、式 (2)](https://arxiv.org/pdf/2405.20797v1#page=5)"
+        },
+        {
+          "heading": "4.2 概率分配与嵌入基底由同一语言目标协同学习",
+          "new_explanation": "视觉head决定组合系数，独立嵌入表决定送入语言空间的基向量。两者通过最终文本损失共同更新，因此不需要人为标注每个patch应选哪个视觉词。原文的期望表示描述确定的加权和，不能据“采样”解释把实际前向改写为单词随机选择。[原文 §3.3–3.4、式 (3)–(4)](https://arxiv.org/pdf/2405.20797v1#page=6)"
+        },
+        {
+          "heading": "4.3 统计稀疏与计算稀疏需要分开",
+          "new_explanation": "较少概率超过阈值说明组合权重集中，支持多个视觉词共同表达且强弱不均的解释；softmax本身仍对完整词表归一化。原文训练逐步解冻视觉侧及语言侧以学习这些组合，没有另加图像重建或硬码本分配目标，因此不能从阈值统计推导实际稀疏算子或加速倍数。[原文 §3.4、附录 E](https://arxiv.org/pdf/2405.20797v1#page=21)"
+        }
+      ],
+      "disclosure_boundary": "不把概率单纯形说成硬离散码；不由阈值概率统计宣称稀疏部署。",
+      "article_sha256": "b1f4932826780086a3fc66181bad9180fd0675497a0de95c05380d0d91425fab",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

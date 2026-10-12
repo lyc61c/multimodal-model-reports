@@ -43,10 +43,11 @@
     "No loss numbering invented; equations labeled mechanism explanation",
     "Appendix14-21 read text captions; only selectedFigure3 image visuallychecked"
   ],
-  "article_sha256": "71d87a71dd819f9008b2a79a02d80b0c7e5035279c1272c9fc12d99e26afa302",
+  "article_sha256": "2b44c561a12990fc4ae2411396ef8d7b6a0ea0f5f3ee373465d15938b42ab22f",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2857
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -79,5 +80,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2310.09478v1",
+        "version": "2310.09478v1",
+        "sha256": "ab46fd743aee41d80184cc3350231c0838d1abaf122dec7459895d16cb440bfa"
+      },
+      "source_locators": [
+        "v1 §3，PDF第3–5页"
+      ],
+      "changes": [
+        "相同对象描述在REC中应得到框，在REG中则由给定框得到短语；用任务标识把这两个方向分开，可以让共享主干复用视觉证据又不混淆目标。标识提供的是监督条件，真正的边界与对象对应仍需数据学习；标识出现本身不保证预测框正确。",
+        "坐标与对象短语共享解码词表，因而定位结果能放进同一轮对话，下一问也能引用已有区域。但离散整数限制可表达的位置精度，且四个数的顺序和括号协议属于任务正确性的一部分。检测任务还要求先解析文字中的对象再定位，不能把生成若干框等同于完整开放词汇检测评测。",
+        "三阶段的区别还在采样分布：首先提高弱标注图文数据权重建立广泛关联，第二阶段去掉LAION和GRIT等弱监督来源、集中细粒度任务，第三阶段保留这些任务但降低其采样比例，增加多模态和纯语言指令。这样对话适配不会完全替换定位监督；收益来自任务与样本比重共同变化，不能只归因于LoRA参数化。"
+      ],
+      "disclosure_boundary": "不补坐标取整规则或IoU损失；任务token不是六独立网络；LoRA式为解释。",
+      "article_sha256": "2b44c561a12990fc4ae2411396ef8d7b6a0ea0f5f3ee373465d15938b42ab22f",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

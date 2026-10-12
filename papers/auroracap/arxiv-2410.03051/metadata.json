@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2410.03051v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "AuroraCap：以 Token 合并提高视频详细描述效率",
   "source_sha256": "4c2bc6f27411ad8854e4d375653eb980808b15b401b3a58e1e6a3627647ff55e",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3032,
+  "chinese_characters": 3481,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

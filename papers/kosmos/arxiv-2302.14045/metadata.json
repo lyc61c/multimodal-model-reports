@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2302.14045v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Kosmos-1：把视觉感知接入通用语言接口",
-  "chinese_characters": 2538,
+  "chinese_characters": 3058,
   "figure_revision_date": "2026-10-09"
 }

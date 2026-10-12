@@ -49,10 +49,11 @@
     "KL direction and explanatory formulas not asserted as original implementation",
     "Nondegradation is not per-benchmark guarantee"
   ],
-  "article_sha256": "a46ce70ae0a291ba28353e89ba8ef04bf27bde11186c136c1cc06316c5e84582",
+  "article_sha256": "6029b0d0b673d392b969f8733addb2e241567dbd4473097afaa3faa87863a02a",
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3186
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -113,5 +114,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2509.17765v1",
+        "version": "2509.17765v1",
+        "sha256": "4608d7f5d0694dd09a66144dac921797e161331d92b5eef133615bec392ec928"
+      },
+      "source_locators": [
+        "PDF p4–5 §2.2–2.5; current component Table1/2 retained"
+      ],
+      "changes": [
+        "Expanded audio/video time scale, large-main/small-residual codec split and pipeline dependency"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "6029b0d0b673d392b969f8733addb2e241567dbd4473097afaa3faa87863a02a",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

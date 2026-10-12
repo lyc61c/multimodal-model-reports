@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2322
   },
-  "article_sha256": "28ba9b9076349ec9ad2f1df025832a8b22d265274b0e4e030ef9aee3ce008490",
+  "article_sha256": "02a1f9fb6ce1e96b0559278ca90aec3e3684604aeea7b437603017406be1cb33",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -65,5 +66,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2307.16184v1",
+        "version": "2307.16184v1",
+        "sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01"
+      },
+      "source_locators": [
+        "source.txt chars18306–25800: §4.1–4.5 through curriculum/task-balancing comparison, PDF5–7; chars44129–48700: weight interpolation and Ratatouille Scenario1, PDF12–13"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 统一输出语法保留模态专属输入",
+          "new_explanation": "CNN负责从各模态提取适合序列处理的特征，共享编码器再做双向交互，解码器把任务提示转为目标序列。统一的是处理与输出接口，不是取消所有视觉或音频模块。坐标用token分类、匹配用Yes/No文字，评价仍可使用IoU或分类准确率，训练目标与评价指标须分开。[原文 §4.1–4.4，PDF 第 5–6 页](https://arxiv.org/pdf/2307.16184v1#page=6)"
+        },
+        {
+          "heading": "4.2 训练顺序与批次采样分别控制初始化和梯度占比",
+          "new_explanation": "课程先在图文上建立共享接口，再加入视频并保留原任务，减少一次处理全部模态的预算；任务平衡则避免大数据集按数量支配每批更新。原文将课程的训练时间写为同GPU上的每epoch比较，不能直接解释成全项目训练时长；两种改进也没有新增解析损失。[原文 §4.5、Table 2–3，PDF 第 6–7 页](https://arxiv.org/pdf/2307.16184v1#page=7)"
+        },
+        {
+          "heading": "4.3 共享初始化使任务权重插值具有可比较基础",
+          "new_explanation": "插值对象是同一架构、同一预训练初始化后分别微调的参数，而不是将任意模型功能相加。系数沿任务能力之间选择折中，Ratatouille进一步先经辅助任务再适配目标再平均，付出额外训练换取合并后的表现。部署只用一套权重，省去多模型集成调用，但训练成本不会因此消失。[原文 Interpolation of UnIVAL Models / Scenario 1，PDF 第 12–13 页](https://arxiv.org/pdf/2307.16184v1#page=12)"
+        }
+      ],
+      "disclosure_boundary": "保留后续音频/文生图适配边界；不由共享结构保证任意权重平均有效。",
+      "article_sha256": "02a1f9fb6ce1e96b0559278ca90aec3e3684604aeea7b437603017406be1cb33",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

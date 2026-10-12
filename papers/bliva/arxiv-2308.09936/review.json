@@ -19,13 +19,14 @@
   "remaining_limitations": [
     "Original v1 inconsistencies are retained and explained; no independent benchmark reproduction"
   ],
-  "article_sha256": "d84749c6baf47182824aa22e3b2440bf242c6b1dc8cf070d2962bd14c47f514b",
+  "article_sha256": "bb8cf8eea567f985e65a5ad2669ace211318dbc421b9908b7903232060f4630d",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3840
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -163,5 +164,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2308.09936v1",
+        "version": "2308.09936v1",
+        "sha256": "9905721ba593b517636d26707b165fb777e484ce222d8ec1c37c26f520c3b821"
+      },
+      "source_locators": [
+        "PDF pp.1–4, Method/Architecture Overview, Two stages Training Scheme, Figures1–3"
+      ],
+      "changes": [
+        "明确双接口共享视觉塔而非两个编码器",
+        "细化新patch投影先对齐再联合指令训练",
+        "解释候选排序与自由生成的评测含义"
+      ],
+      "disclosure_boundary": "不补造查询数、beam数或候选长度归一化；保留原消融口径。",
+      "article_sha256": "bb8cf8eea567f985e65a5ad2669ace211318dbc421b9908b7903232060f4630d",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

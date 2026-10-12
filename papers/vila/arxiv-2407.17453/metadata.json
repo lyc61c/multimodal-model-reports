@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2407.17453v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VILA²：用模型重写训练数据，再以专家知识突破自增强瓶颈",
   "source_sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2910,
+  "chinese_characters": 3378,
   "figures_manifest": "figures-manifest.json"
 }

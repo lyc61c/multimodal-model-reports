@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2311.11860v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LION：用区域训练与图像标签补足双层视觉知识",
-  "chinese_characters": 2622,
+  "chinese_characters": 3151,
   "figure_revision_date": "2026-10-09"
 }

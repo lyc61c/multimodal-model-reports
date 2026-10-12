@@ -9,7 +9,7 @@
   "source_url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/README.md",
   "document_kind": "model_release",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VisualGLM-6B：以 Q-Former 连接视觉表征与中英双语 ChatGLM",
-  "chinese_characters": 2581
+  "chinese_characters": 3169
 }

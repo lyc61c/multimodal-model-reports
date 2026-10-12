@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 3165
   },
-  "article_sha256": "17af2523d0940c81ca8857095743ac08b9c139f06c4f9d713b3469e32cf2c1ee",
+  "article_sha256": "90e4c43d9f8eb6067402af41354473b27653a785f91e20835b495ef2d02d2bfa",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -59,5 +60,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2412.04468v1",
+        "version": "2412.04468v1",
+        "sha256": "66fa0a0ec59c291e5f8205d30d02741d759428bc95ccb46450251d6bdedf76ff"
+      },
+      "source_locators": [
+        "PDF pp.4–6 §2.1–2.2.1, Tables1–3, Eq1, temporal averaging footnote"
+      ],
+      "changes": [
+        "补VEP对压缩表示适应及信息损失",
+        "解释DeltaLoss相对差异和分子集选择",
+        "澄清视觉成本与瓶颈转移"
+      ],
+      "disclosure_boundary": "不新增概率归一化或未披露筛选细则。",
+      "article_sha256": "90e4c43d9f8eb6067402af41354473b27653a785f91e20835b495ef2d02d2bfa",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

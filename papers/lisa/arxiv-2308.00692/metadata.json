@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2308.00692v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LISA：用分割token把语言推理连接到像素掩码",
-  "chinese_characters": 2995,
+  "chinese_characters": 3515,
   "figure_revision_date": "2026-10-09"
 }

@@ -33,7 +33,7 @@
     "未运行模型"
   ],
   "model_execution": "not_run",
-  "article_sha256": "bf68f3d39e3161f7e0581370c559c8b3bb8381b4fe5c63a804c244f2ad493664",
+  "article_sha256": "101fa0dd8901866eef8fa1fa0d0ac60ae458d65e1fca5239f2a5336edd446d9b",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -82,5 +82,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://qwen.ai/blog?id=qwen3.6",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "e8c7a1293a2c5dd5f7eec579c665225a8e13e625c06365140b2a31f6bcf49edb"
+      },
+      "source_locators": [
+        "Agent capabilities; API preserve_thinking; WideSearch / HLE evaluation notes"
+      ],
+      "changes": [
+        "接口模块表；展开执行反馈、历史预算与相对评分"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "101fa0dd8901866eef8fa1fa0d0ac60ae458d65e1fca5239f2a5336edd446d9b",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

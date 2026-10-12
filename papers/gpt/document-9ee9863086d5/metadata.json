@@ -9,8 +9,8 @@
   "source_url": "https://cdn.openai.com/gpt-4o-system-card.pdf",
   "document_kind": "release_blog",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "GPT-4o：端到端多模态交互与语音系统评估",
-  "chinese_characters": 3879,
+  "chinese_characters": 4343,
   "figure_revision_date": "2026-10-09"
 }

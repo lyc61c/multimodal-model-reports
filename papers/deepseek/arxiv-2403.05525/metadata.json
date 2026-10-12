@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2403.05525v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "DeepSeek-VL：双视觉编码器与保留语言能力的联合预训练",
-  "chinese_characters": 2212,
+  "chinese_characters": 2782,
   "figure_revision_date": "2026-10-09"
 }

@@ -15,19 +15,20 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2687
   },
-  "article_sha256": "71efaf68e7177c61ff08023d2cd9ebc1f72f444658d6513d3fcf256c4819154b",
+  "article_sha256": "6ea5818426435a717d9a13b2fd9f2f2139a12be0d0062f43ce1c44e5c03265d9",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 10,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -51,18 +52,54 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 10,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.08366v1",
+        "version": "2312.08366v1",
+        "sha256": "0c9b79138e75ee0f195c96d9967c370bb8315109f417836d8d0f3429c5f72b3f"
+      },
+      "source_locators": [
+        "source.txt chars16702–23900: §4 complete and §5 implementation opening, Figure4/Table2–3, PDF4–6"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 分割请求首先需要检验前提",
+          "new_explanation": "传统指代分割常默认目标存在，训练也鼓励收到请求后立即输出掩码。本文让有效请求、可纠正错误和无合理替代的错误分别产生不同回复，使“没有分割输出”也成为正确行为。判断以语言响应实现，统一模型没有为真假请求单独增加分类分支。[原文 §4、Figure 4，PDF 第 5–6 页](https://arxiv.org/pdf/2312.08366v1#page=6)"
+        },
+        {
+          "heading": "4.2 保留语言判断并学习像素出口",
+          "new_explanation": "LISA式分割适配可能削弱原有解释和纠正能力，SESAME因此把VQA与分割数据共同训练。文字损失约束回答内容与是否触发，掩码损失约束被触发时的像素结果；掩码重叠正确不意味着拒绝也正确，评测分别报告See、Say与Segment才有意义。[原文 §4–5、Table 2，PDF 第 5–6 页](https://arxiv.org/pdf/2312.08366v1#page=5)"
+        },
+        {
+          "heading": "4.3 相关负例与随机负例提供不同停止信号",
+          "new_explanation": "FP数据里的错误描述仍与原目标相关，适合学习给出可用修正；随机不存在的COCO对象则教模型没有依据时直接拒绝。两种负例混合避免形成“每个错误都要换个属性”的捷径，VQA再补充无需分割的交互。原文7:2:1数据混合与FP内9:1正负比例是具体训练配置，不等于一般场景最优比例。[原文 §4、§5.2，PDF 第 5–7 页](https://arxiv.org/pdf/2312.08366v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "新表明确级联与统一是两方案而非串联全部模块；不补LISA连接器参数。",
+      "article_sha256": "6ea5818426435a717d9a13b2fd9f2f2139a12be0d0062f43ce1c44e5c03265d9",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -75,10 +75,11 @@
     "部分闭源对照API失败，空值非0",
     "内部评价非独立复现"
   ],
-  "article_sha256": "d17e1852864d52cd9949a68595862d87f66afc64b624678e87a777c391e1221e",
+  "article_sha256": "ba0756fda85b0fa7e141ad3d0e91bc610dc74306c87b8cef4cecd027043cff40",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3964
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -111,5 +112,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2606.19348v1",
+        "version": "2606.19348v1",
+        "sha256": "55b2d72f772ac00de2e470b3ee08443c648d971c7f57c52d6202895665e5978d"
+      },
+      "source_locators": [
+        "PDF p7,9,12,14,33; §2.1–2.4, §5.1–5.2"
+      ],
+      "changes": [
+        "Separated CSA compression/indexing cost, HCA channel weights, Muon variables and multi-teacher versus expert layers"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "ba0756fda85b0fa7e141ad3d0e91bc610dc74306c87b8cef4cecd027043cff40",
+      "module_rows": 6,
+      "principle_subsections": 5,
+      "model_executed": false
+    }
+  ]
 }

@@ -48,13 +48,14 @@
     "epoch-stepcountsamplingunclear",
     "crossmodeldifferentbones/data"
   ],
-  "article_sha256": "f4abe26984e82094b320ba86cc0f0438b3612fd663e086d2f8b2c7761eaf243c",
+  "article_sha256": "c99c3250c621005012801eeb67fef137ab5b2923398bde6d5d85d1fbd06a5da4",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 9,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3151
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -90,5 +91,42 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.11860v1",
+        "version": "2311.11860v1",
+        "sha256": "0b4d518b44dc0b1c55368a8e17b46006bff6fd902377841e3ac7fe870a1aac77"
+      },
+      "source_locators": [
+        "source.txt chars13889–24050: §3.1.2–3.2 complete, Eq1–5, PDF3–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 将模态对齐冲突与回答格式冲突分阶段处理",
+          "new_explanation": "整图自然语言与区域坐标格式的差异会影响同一语言状态，区域路径也需要额外视觉对齐。前两阶段分别学习 Q-Former/整图 adapter 与 aggregator/区域 adapter，第三阶段再混合；因此不是只给统一数据集增加一个任务标签。并联 adapter 保留原 FFN 通路，使任务增量不必覆盖全部语言权重。[原文 §3.1.2，PDF 第 3–4 页](https://arxiv.org/pdf/2311.11860v1#page=4)"
+        },
+        {
+          "heading": "4.2 任务通道调制与 token 稀疏路由的区别",
+          "new_explanation": "调制向量在 token 维共享、在隐藏通道逐项改变两 adapter 的贡献，可同时保留两条分支。它依据整图或区域任务类型定义，不能从 router 一词推导出每个 token 动态 Top-k 分派。通道级组合让两种任务知识共同参与，却也不提供可直接解释为概率的专家权重。[原文 §3.1.2、式 (3)，PDF 第 4 页](https://arxiv.org/pdf/2311.11860v1#page=4)"
+        },
+        {
+          "heading": "4.3 逐层语义聚合不等于框内特征裁剪",
+          "new_explanation": "第一个 block 用较高两层特征交互，第二个再读更浅层细节；这种顺序把细粒度信息逐步接入语义表示。区域任务通过坐标监督教模型使用这些信息，架构本身没有按指定框执行 RoIAlign。应区分“服务区域定位的多层特征”与“只来自某框内部的区域向量”。[原文 §3.1.3、式 (4)–(5)，PDF 第 4–5 页](https://arxiv.org/pdf/2311.11860v1#page=5)"
+        },
+        {
+          "heading": "4.4 标签证据提供补充而不是替换视觉判断",
+          "new_explanation": "RAM 以不同视觉任务提供离散标签，软提示模板明确允许部分使用，使模型有机会忽略与当前图或问题不符的标签。可学习向量由任务目标间接优化，并没有逐标签置信度校准或真值过滤器。因而标签与视觉特征冲突时，如何取舍仍依赖模型学习，不能把提示文字当成消除错误证据的硬规则。[原文 §3.2、Figure 4，PDF 第 5 页](https://arxiv.org/pdf/2311.11860v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "不把adapter视为LoRA，不把任务向量改写成TopK概率。",
+      "article_sha256": "c99c3250c621005012801eeb67fef137ab5b2923398bde6d5d85d1fbd06a5da4",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

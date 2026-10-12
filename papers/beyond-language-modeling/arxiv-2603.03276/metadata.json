@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2603.03276v1",
   "document_kind": "analysis_paper",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Beyond Language Modeling：从零统一预训练中的视觉表示、MoE与缩放不对称",
-  "chinese_characters": 2916,
+  "chinese_characters": 3597,
   "figure_revision_date": "2026-10-09"
 }

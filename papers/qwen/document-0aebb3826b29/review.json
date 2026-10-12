@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 1
+    "original_assets": 1,
+    "chinese_characters": 2745
   },
-  "article_sha256": "25a11ad7e6374dea96e6d2d506e32b26c4cc140d45528dbdd3cbdc0097270baa",
+  "article_sha256": "fec5b33aa68fdbdd43f2c52f87352ea77c17946a3ba4c94fbbaf1d01a2734e52",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -42,6 +43,28 @@
         }
       ],
       "article_sha256": "2fd230feeb6781dd6481c85a41367575587f47a6d0eddaa5a2db8d6553e16752",
+      "model_executed": false
+    }
+  ],
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://raw.githubusercontent.com/QwenLM/Qwen-MM-Plugins/main/README.md",
+        "version": "official-readme-2026-10-08",
+        "sha256": "0c02bc9996efc709d71d92925068dba5ba9b931ab5a6ca2634040d8ad5cdc759"
+      },
+      "source_locators": [
+        "cached official README architecture / install / capabilities / video-spatio / edu-agent"
+      ],
+      "changes": [
+        "插件功能表；解释媒体证据保留、工作流分层与无状态计算边界"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "fec5b33aa68fdbdd43f2c52f87352ea77c17946a3ba4c94fbbaf1d01a2734e52",
+      "module_rows": 5,
+      "principle_subsections": 3,
       "model_executed": false
     }
   ]

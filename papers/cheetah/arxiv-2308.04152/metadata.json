@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2308.04152v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Cheetah：让语言模型在中间层控制视觉信息重新提取",
   "source_sha256": "6bb72713a53e6a200d460bd080005a6cb39fd712d0a3ac97a74ce64feef1eead",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3280,
+  "chinese_characters": 3865,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

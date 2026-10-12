@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2311.04257v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "mPLUG-Owl2：以模态专属 K/V 与共享模块促进协作",
   "source_sha256": "d66e9113f03aaf43e8e0ae0840fe9380a2e2083a15c462b649877e0d77112b06",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1920,
+  "chinese_characters": 2512,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2481
   },
-  "article_sha256": "66869393dcac0f839f82c833f30492e60728b56d8c6883f952174f06d1518294",
+  "article_sha256": "b7a75ddbad8b3b6c2a608fd293e9925ff5f9f29171f9c65ebd1c4a2eea5f5e5d",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -92,5 +93,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "ba18d03f42cf988dad6116cee36c4d640fac0e481e9906011ec7536b8b51990c"
+      },
+      "source_locators": [
+        "Cached blog Introduction/Limitations/Math demo; geometric example already algebraically checked in article"
+      ],
+      "changes": [
+        "Expanded visual variable binding, scale cancellation and long-reasoning drift"
+      ],
+      "disclosure_boundary": "Preview release does not disclose training loss or revised network topology",
+      "article_sha256": "b7a75ddbad8b3b6c2a608fd293e9925ff5f9f29171f9c65ebd1c4a2eea5f5e5d",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

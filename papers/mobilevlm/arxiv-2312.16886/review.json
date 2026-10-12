@@ -39,13 +39,14 @@
     "未运行模型或手机端测试"
   ],
   "model_execution": "not_run",
-  "article_sha256": "86d7a658ccd55a4514351322db48b0e9e62e44722c12db0834dea8dc144c79d0",
+  "article_sha256": "f203566e01f381240d469697ce5dcaf7e58cd46fb2fb88f99ffe83f8836842b5",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3162
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -93,5 +94,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.16886v1",
+        "version": "2312.16886v1",
+        "sha256": "7c9accc83bec0f756c8acbdd48af35d0965afdb2c0ac4fb72f21b642d3cbbeb8"
+      },
+      "source_locators": [
+        "source.txt chars17474–20360: §3.4 complete, Eq3/Fig1–2, PDF4–5; current §3 architecture configs read"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 压缩后的连续视觉前缀保持语言生成接口",
+          "new_explanation": "图像先语义编码再投影，语言端看到的是144个连续向量与文字嵌入共同构成的条件。图像不是先被写成OCR文本，也不以离散视觉词表作为预测目标；统一发生在语言输入空间，最终输出仍是文字。这限定了本篇适用的理解任务及其压缩评价口径。[原文 §3.1–3.4，PDF 第 4–5 页](https://arxiv.org/pdf/2312.16886v1#page=5)"
+        },
+        {
+          "heading": "4.2 先增加局部表达再下采样缓和细节损失",
+          "new_explanation": "作者观察单独stride2降采样会伤害OCR，因此先以更强局部块增强特征，再减小网格。stride1残差避免初步变换完全覆盖输入，stride2块承担真正长度缩减；LayerNorm不依赖batch统计，适应训练批次变化。其移动友好性来自已有高效卷积算子，不应泛化为任何设备必得相同速度。[原文 §3.4、式 (3)、Figure 2，PDF 第 4–5 页](https://arxiv.org/pdf/2312.16886v1#page=5)"
+        },
+        {
+          "heading": "4.3 编码前缩图与编码后压缩的信息条件不同",
+          "new_explanation": "两条路径即使输出同为144位置，缩图先丢掉部分像素证据，LDP则先用高分辨率CLIP抽取再学习汇聚。保留更多初始特征提供改善机会，却仍受最终瓶颈限制；局部卷积和池化无法保证所有细小字符都被保存。比较压缩方案应保持输入和语言长度口径，避免只看位置数。[原文 §3.4设计动机与原有比较解读](https://arxiv.org/pdf/2312.16886v1#page=4)"
+        }
+      ],
+      "disclosure_boundary": "保留原图Dv/Dt差异说明，复杂度不换算成实测16倍/81倍。",
+      "article_sha256": "f203566e01f381240d469697ce5dcaf7e58cd46fb2fb88f99ffe83f8836842b5",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

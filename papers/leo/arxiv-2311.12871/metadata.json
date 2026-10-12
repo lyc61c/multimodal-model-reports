@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2311.12871v1",
   "document_kind": "embodied_model_report",
   "catalogue_group": "scope_review",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LEO：以对象为中心连接三维理解、语言与具身动作",
-  "chinese_characters": 2950,
+  "chinese_characters": 3535,
   "figure_revision_date": "2026-10-09"
 }

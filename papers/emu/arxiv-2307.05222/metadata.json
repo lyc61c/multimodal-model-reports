@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2307.05222v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Emu：交错多模态序列的生成预训练",
-  "chinese_characters": 2477,
+  "chinese_characters": 3054,
   "figure_revision_date": "2026-10-09"
 }

@@ -50,13 +50,14 @@
     "pointinvarianceexplanationnotformalproof",
     "multipleexperimentalsettingspreserved"
   ],
-  "article_sha256": "5b1c8a4285326426143606a77738c40418736efae6a386aa33a8d69b466972b3",
+  "article_sha256": "6750fb07a1859f3be28f58c774931d0b3a385a13fb0cf1e080693af60a449d42",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 12,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3366
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -103,5 +104,42 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.18651v1",
+        "version": "2311.18651v1",
+        "sha256": "92fe337cb8f6f95f176c6e0e6800f0f3f8dac53202c3562d111ab7b6eda73375"
+      },
+      "source_locators": [
+        "source.txt chars13077–16598: §3.2 complete, Eq1–4, PDF3–4; existing §3.1 coordinate protocol/§5.2 Eq7 preserved"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 查询压缩由语言与视觉提示共同调节",
+          "new_explanation": "MMT 中不仅查询能读场景，视觉提示也参与 cross-attention；共享 self-attention 又让文字、提示和查询相互影响。固定 32 输出因此是当前交互下的场景摘要，而非每个问题都共用的不变向量。冻结场景和语言专家后，可训练交互模块承担模态间对齐与选择职责。[原文 §3.2，PDF 第 3–4 页](https://arxiv.org/pdf/2311.18651v1#page=4)"
+        },
+        {
+          "heading": "4.2 点提示和框提示分别提供位置与对象内容",
+          "new_explanation": "点击只有三维位置，通过周期特征扩充可学习空间表示；框提示则读取检测 ROI 的视觉内容。两者用独立 FFN 映射成同样长度，不表示语义来源相同。统一的 8 token 接口让交互 Transformer 接收不同提示，但框路径仍依赖其预训练检测表示质量。[原文 §3.2、式 (2)–(3)，PDF 第 4 页](https://arxiv.org/pdf/2311.18651v1#page=4)"
+        },
+        {
+          "heading": "4.3 输入空间特征与输出数字协议保持分工",
+          "new_explanation": "位置编码提供连续输入，响应数字协议则将预测结果映射回场景坐标；前者为理解条件，后者为可读输出。冻结语言 embedding 也意味着坐标不是新训练一套专属词表向量，而由已有分词器表达。量化精度与场景范围绑定，尤其大场景不能把一个整数间隔当作固定厘米误差。[原文 §3.1–3.2，PDF 第 3–4 页](https://arxiv.org/pdf/2311.18651v1#page=4)"
+        },
+        {
+          "heading": "4.4 联合指标避免脱离目标位置比较描述",
+          "new_explanation": "若模型为错误对象生成流畅描述，单看 CIDEr 可能夸大结果；定位门槛先检查预测框是否覆盖目标，再计 caption 分数。这个评估约束不能反推训练中另有 IoU 回归目标；本文依旧保留标准响应监督与原评测定义的区别。[原文评估式 (7)，见本节原有出处](https://arxiv.org/pdf/2311.18651v1)"
+        }
+      ],
+      "disclosure_boundary": "不把512位置嵌入当OPT最长长度，不增加检测/几何loss。",
+      "article_sha256": "6750fb07a1859f3be28f58c774931d0b3a385a13fb0cf1e080693af60a449d42",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

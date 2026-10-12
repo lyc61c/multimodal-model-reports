@@ -47,10 +47,11 @@
     "No exact GPU count/lr/batch/epochs in article",
     "GPT4 teacher is text-only and synthetic labels may contain hallucinations"
   ],
-  "article_sha256": "ba3a5cf5cba9b8c46ebd3a5c5bee3eceb3341a95adcb83013f4a5cbb53a89792",
+  "article_sha256": "8f155f0c6672a06c22fdc1d308195c88d6722bd055753d89decaa6dc75089fd4",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3410
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -100,5 +101,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2306.17107v1",
+        "version": "2306.17107v1",
+        "sha256": "323237faf75f70d4e52653a8133e7fba234c80f4bd51f4a2fd9e35f91cb5260a"
+      },
+      "source_locators": [
+        "v1 §3–4，PDF第4–6页"
+      ],
+      "changes": [
+        "作者对OCR预标注先把图像短边缩到384，避免工具从超高清原图读出学生视觉入口根本看不清的小字。这个处理降低标签与输入可见性的错配，但384与学生224/336仍不是严格同一分辨率，也不能保证所有字符都可读。随后用问答训练选择相关文字，区分转录能力和按问题作答。",
+        "双OCR结果向教师提供文字内容，遮字再修补后的BLIP-2描述补充非文字场景；这种设计减少caption反复复述文字造成的信息重复。教师对图片的认识因此仍受工具覆盖限制，尤其修补伪影可能影响对象描述。生成回答需要同时忠实于OCR与场景线索，而不是把两个工具结果视作无误真值。",
+        "原评测以正确字符串是否出现在回答中计分，完整抄写也可能碰到目标词；这让答案选择错误被部分掩盖。Figure4专门比较这种长转录与真正回答作者姓名的区别。因此应结合回复是否聚焦问题看待表中OCR收益，不能只以包含式准确率断言模型已可靠执行所有文字指令。"
+      ],
+      "disclosure_boundary": "OCR工具只离线造数据；不补字符框损失；冻结CLIP能力有边界。",
+      "article_sha256": "8f155f0c6672a06c22fdc1d308195c88d6722bd055753d89decaa6dc75089fd4",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

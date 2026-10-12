@@ -9,7 +9,7 @@
   "source_url": "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/",
   "document_kind": "release_blog",
   "catalogue_group": "scope_review",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "世界动作模型：从视频预训练到机器人控制的设计空间",
-  "chinese_characters": 3595
+  "chinese_characters": 4257
 }

@@ -30,7 +30,7 @@
     "内部/合作方案例不泛化且未复现",
     "共享基础智能不证明同权重"
   ],
-  "article_sha256": "995a41cdcacd1ca0ff387e6b7f66e818c5bcf5495f7a044066878211cdfce4c4",
+  "article_sha256": "5bb75525b8635ac2d9cfad6238461039dc3af3bdc21123e360aea18a262cd1e9",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -82,5 +82,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "285ee76eb4106edf513f0cae3ff5c9888c32ffd279e356cc4f60f2d617e57fd3"
+      },
+      "source_locators": [
+        "official cached blog shared foundational intelligence / recursive refinement / long-horizon / Pareto repair comparison"
+      ],
+      "changes": [
+        "四功能模块表；扩展任务成本、Pareto 与训练/推理循环区别"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "5bb75525b8635ac2d9cfad6238461039dc3af3bdc21123e360aea18a262cd1e9",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

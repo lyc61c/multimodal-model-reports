@@ -98,10 +98,11 @@
     "Experimental visual/audio weights were not broadly released with this report",
     "Self-review only; no model or benchmark execution"
   ],
-  "article_sha256": "54ecf0767c45f632e0caf11a6f0bf8e3133619f082037ea7bc5f8b2d329a3d5c",
+  "article_sha256": "a897cf06ba20293e14c768303857e6a2d5b245a52a9058f50303d71e6bed77a1",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4616
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -150,5 +151,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2407.21783v1",
+        "version": "2407.21783v1",
+        "sha256": "d7df3d6f537f025037f32ebe13198e3ea5500ea3e0967abdcceb80e31262d386"
+      },
+      "source_locators": [
+        "PDF pp.56–57, §7.1–7.3; current §§3–4 with text/audio references in full"
+      ],
+      "changes": [
+        "补224预训练与336tile适配分辨率阶段区别",
+        "区分图像/视频适配位置",
+        "解释GQA查询数与缓存关系",
+        "细化视觉语音接口差异"
+      ],
+      "disclosure_boundary": "本轮实际源阅读集中视觉§7.2，不宣称重核全部音频配置。",
+      "article_sha256": "a897cf06ba20293e14c768303857e6a2d5b245a52a9058f50303d71e6bed77a1",
+      "module_rows": 6,
+      "principle_subsections": 5,
+      "model_executed": false
+    }
+  ]
 }

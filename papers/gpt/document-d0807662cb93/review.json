@@ -83,10 +83,11 @@
     "自动事实评分器有误差",
     "模型不同组件不混成绩"
   ],
-  "article_sha256": "47b9f221840bd42bb546bf865e626e8e8ff1ebedb66e1b2d0815c534d7b1738a",
+  "article_sha256": "8b2583181120ddbb9534df27088f112a6c1088ffa14f3fb7d3df3ef5359e458a",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4276
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -146,5 +147,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+        "version": "official-system-card-2025-08-13; release-2025-08-07",
+        "sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459"
+      },
+      "source_locators": [
+        "system card Overview real-time routing; reasoning training; safe-completions and deception evaluations"
+      ],
+      "changes": [
+        "五模块表；四节展开系统路由、轨迹训练与执行诚实"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "8b2583181120ddbb9534df27088f112a6c1088ffa14f3fb7d3df3ef5359e458a",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

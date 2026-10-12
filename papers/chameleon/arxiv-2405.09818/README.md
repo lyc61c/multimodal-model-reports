@@ -53,13 +53,31 @@
 
 4096上下文意味着单图1024code已占约四分之一窗口，额外标记与文字进一步占空间。系统支持交错顺序，不等于能把任意长度文档无损塞进窗口。固定图像分辨率与code容量也限制小文字、复杂细节和长图形信息。[原文 §2.1、§2.4](https://arxiv.org/pdf/2405.09818v1#page=8)
 
+| 模块 | 输入与输出 | 公开机制 |
+|---|---|---|
+| 图像量化器 | 512×512 图像 → 1024 个离散 code | 单独训练的图像 tokenizer；8192 项 codebook，压缩后不再直接输入像素 |
+| 统一嵌入 | 文字与图像 code → 同一序列 | 65536 总词表包含图像 code；图像起止标记划定模态块 |
+| 因果 Transformer | 交错嵌入 → 下一 token logits | 7B/34B 从头联合训练；QK-Norm 与 z-loss 稳定混合模态训练 |
+| 模态约束与解码 | 图像 token 块 → 像素；文字 token → 文本 | 按任务屏蔽不允许的词表项，图像 de-tokenizer 恢复图像 |
+
+
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
+### 4.1 统一词表与双向图文条件生成
+
 统一离散序列 $`s_1,\ldots,s_T`$ 的生成可用机制说明式 $`\mathcal L_{AR}=-\sum_t\log p_\theta(s_t\mid s_{\lt t})`$ 表达：文字和视觉code都在同一词表预测，区别于文字CE＋视觉连续回归两目标。原文未给完整预训练loss编号式，本文用它解释token建模，不额外宣称新的视觉对比或像素重构目标。图像tokenizer的训练是单独环节，其压缩错误无法通过语言预测完全恢复。
 
+65536 是包含图像条目的总词表，不能再与 8192 相加。图文对训练有一半把图像放在文字之前，另一半反过来：同一自回归目标因序列顺序不同，分别学习看图生成文字与根据文字生成图像。两种方向共享 Transformer，并没有各建一套条件生成网络；图像量化器的重建能力仍是独立瓶颈。[原文 §2.1–2.2，PDF 第 4–5 页](https://arxiv.org/pdf/2405.09818v1#page=4)
+
+### 4.2 QK-Norm 控制注意力中的尺度竞争
+
 attention logits通常含 $`QK^\top/\sqrt d`$。QK-Norm在query与key上用layer norm，直接约束进入attention softmax的表示尺度，减轻norm不受控增长；它与最后词表softmax的logit漂移不同，不能只做QK-Norm就认为全部问题解决。
+
+Q 和 K 的尺度共同决定点积幅度，幅度过大时 softmax 更接近只取少数位置。对这两个向量归一化，约束的是信息读取的数值条件，而不是把文字与图像内容归一成同一语义。它发生在 attention 内部，后续 FFN 或词表输出仍可能放大表示，因此报告组合了不同位置的稳定措施。[原文 §2.3，PDF 第 6–7 页](https://arxiv.org/pdf/2405.09818v1#page=6)
+
+### 4.3 z-loss 与残差归一化分别处理什么
 
 词表softmax具有平移不变性：$`\mathrm{softmax}(z+c)=\mathrm{softmax}(z)`$。概率可保持近似不变而logits共同漂移，数值范围仍可能出问题。原文进一步正则化分区函数 $`Z=\sum_i e^{z_i}`$，增加
 
@@ -74,6 +92,9 @@ attention logits通常含 $`QK^\top/\sqrt d`$。QK-Norm在query与key上用layer
 *来源：原文Figure6与§2.3，PDF第7页，[原页](https://arxiv.org/pdf/2405.09818v1#page=7)。曲线横轴步数、纵轴训练loss；左图只显示前600K步，不是全部训练。右图同时说明dropout与norm重排的组合并不自动稳定。*
 
 34B的残差更新改为 $`h=x+\mathrm{Norm}_{att}(\mathrm{Att}(x))`$，$`o=h+\mathrm{Norm}_{ffn}(\mathrm{FFN}(h))`$；LLaMA2对照则在Att/FFN之前归一化。区别是残差分支输出的尺度受约束，不是删掉残差连接。SwiGLU乘性结构可能进一步放大norm，使这项配置在大模型有用。作者随后发现7B也可用重排无dropout稳定，但主训练表7B仍为0.1，不能用事后发现替代实际训练配置。[原文 §2.3](https://arxiv.org/pdf/2405.09818v1#page=7)
+
+对所有输出 logits 加常数 $`c`$，分区函数变成 $`Z\,e^c`$，因而 $`\log Z`$ 变成 $`\log Z+c`$。交叉熵对这个共同平移不敏感，z-loss 却会改变，这正是它能够约束无用数值漂移的原因。残差重排则约束进入残差相加的分支输出，作用位置与 z-loss 不同；二者不能互相代替。[原文 §2.3、Figure 6，PDF 第 7 页](https://arxiv.org/pdf/2405.09818v1#page=7)
+
 
 <a id="data"></a>
 

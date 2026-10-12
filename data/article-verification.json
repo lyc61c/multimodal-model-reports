@@ -13,6 +13,10 @@
       "status": "complete",
       "destination": "papers/3d-llm/arxiv-2307.12981",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -21,6 +25,10 @@
       "status": "complete",
       "destination": "papers/all-seeing/arxiv-2308.01907",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -29,6 +37,10 @@
       "status": "complete",
       "destination": "papers/all-seeing/arxiv-2402.19474",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -37,6 +49,10 @@
       "status": "complete",
       "destination": "papers/allava/arxiv-2402.11684",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -45,6 +61,10 @@
       "status": "complete",
       "destination": "papers/an-empirical-study-of-scaling-instruction-tuned-large-m-805afa2bda72/arxiv-2309.09958",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -53,6 +73,10 @@
       "status": "complete",
       "destination": "papers/anygpt/arxiv-2402.12226",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -61,6 +85,10 @@
       "status": "complete",
       "destination": "papers/anymal/arxiv-2309.16058",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -69,6 +97,10 @@
       "status": "complete",
       "destination": "papers/apollo/arxiv-2412.10360",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -77,6 +109,10 @@
       "status": "complete",
       "destination": "papers/auroracap/arxiv-2410.03051",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 1
     },
@@ -85,6 +121,10 @@
       "status": "complete",
       "destination": "papers/bagel/arxiv-2505.14683",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -93,6 +133,10 @@
       "status": "complete",
       "destination": "papers/baichuan/document-165201d8355a",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -101,6 +145,10 @@
       "status": "complete",
       "destination": "papers/beyond-language-modeling/arxiv-2603.03276",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -109,6 +157,10 @@
       "status": "complete",
       "destination": "papers/blip/arxiv-2301.12597",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -117,6 +169,10 @@
       "status": "complete",
       "destination": "papers/blip/arxiv-2305.06500",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -125,6 +181,10 @@
       "status": "complete",
       "destination": "papers/blip/arxiv-2408.08872",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -133,6 +193,10 @@
       "status": "complete",
       "destination": "papers/blip3-o/arxiv-2505.09568",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -141,6 +205,10 @@
       "status": "complete",
       "destination": "papers/bliva/arxiv-2308.09936",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -149,6 +217,10 @@
       "status": "complete",
       "destination": "papers/brave/arxiv-2404.07204",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -157,6 +229,10 @@
       "status": "complete",
       "destination": "papers/bubogpt/arxiv-2307.08581",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -165,6 +241,10 @@
       "status": "complete",
       "destination": "papers/cambrian-1/arxiv-2406.16860",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -173,6 +253,10 @@
       "status": "complete",
       "destination": "papers/chameleon/arxiv-2405.09818",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -181,6 +265,10 @@
       "status": "complete",
       "destination": "papers/chartassistant/arxiv-2401.02384",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -189,6 +277,10 @@
       "status": "complete",
       "destination": "papers/chartllama/arxiv-2311.16483",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 1
     },
@@ -197,6 +289,10 @@
       "status": "complete",
       "destination": "papers/chartmoe/arxiv-2409.03277",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -205,6 +301,10 @@
       "status": "complete",
       "destination": "papers/chat-univi/arxiv-2311.08046",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -213,6 +313,10 @@
       "status": "complete",
       "destination": "papers/chatrex/arxiv-2411.18363",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -221,6 +325,10 @@
       "status": "complete",
       "destination": "papers/chatspot/arxiv-2307.09474",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -229,6 +337,10 @@
       "status": "complete",
       "destination": "papers/cheetah/arxiv-2308.04152",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -237,6 +349,10 @@
       "status": "complete",
       "destination": "papers/claude/document-d746d75f8685",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 6,
       "derived_assets": 1
     },
@@ -245,6 +361,10 @@
       "status": "complete",
       "destination": "papers/cm3leon/arxiv-2309.02591",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 1
     },
@@ -253,6 +373,10 @@
       "status": "complete",
       "destination": "papers/cogcom/arxiv-2402.04236",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -261,6 +385,10 @@
       "status": "complete",
       "destination": "papers/cogvlm/arxiv-2311.03079",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -269,6 +397,10 @@
       "status": "complete",
       "destination": "papers/cogvlm/arxiv-2312.08914",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -277,6 +409,10 @@
       "status": "complete",
       "destination": "papers/comparison-visual-instruction-tuning/arxiv-2406.09240",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -285,6 +421,10 @@
       "status": "complete",
       "destination": "papers/compcap/arxiv-2412.05243",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -293,6 +433,10 @@
       "status": "complete",
       "destination": "papers/convllava/arxiv-2405.15738",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -301,6 +445,10 @@
       "status": "complete",
       "destination": "papers/cosmos/arxiv-2606.02800",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -309,6 +457,10 @@
       "status": "complete",
       "destination": "papers/covlm/arxiv-2311.03354",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -317,6 +469,10 @@
       "status": "complete",
       "destination": "papers/cumo/arxiv-2405.05949",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -325,6 +481,10 @@
       "status": "complete",
       "destination": "papers/deepseek/arxiv-2403.05525",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -333,6 +493,10 @@
       "status": "complete",
       "destination": "papers/deepseek/arxiv-2412.10302",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -341,6 +505,10 @@
       "status": "complete",
       "destination": "papers/deepseek/arxiv-2510.18234",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -349,6 +517,10 @@
       "status": "complete",
       "destination": "papers/deepseek/document-536ef2604f4a",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -357,6 +529,10 @@
       "status": "complete",
       "destination": "papers/deepseek/document-08e9e69bb6bb",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 5
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -365,6 +541,10 @@
       "status": "complete",
       "destination": "papers/deepseek/document-ddf539694eca",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 2,
       "derived_assets": 0
     },
@@ -373,6 +553,10 @@
       "status": "complete",
       "destination": "papers/deepseek/document-6648a6adbc11",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 2,
       "derived_assets": 1
     },
@@ -381,6 +565,10 @@
       "status": "complete",
       "destination": "papers/denseworld-1m/arxiv-2506.24102",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -389,6 +577,10 @@
       "status": "complete",
       "destination": "papers/detgpt/arxiv-2305.14167",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 0
     },
@@ -397,6 +589,10 @@
       "status": "complete",
       "destination": "papers/dots/document-bdf40c9e7783",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 1
     },
@@ -405,6 +601,10 @@
       "status": "complete",
       "destination": "papers/dreamllm/arxiv-2309.11499",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -413,6 +613,10 @@
       "status": "complete",
       "destination": "papers/eagle/arxiv-2408.15998",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -421,6 +625,10 @@
       "status": "complete",
       "destination": "papers/eagle/arxiv-2504.15271",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -429,6 +637,10 @@
       "status": "complete",
       "destination": "papers/ego-r1/arxiv-2506.13654",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -437,6 +649,10 @@
       "status": "complete",
       "destination": "papers/emu/arxiv-2307.05222",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -445,6 +661,10 @@
       "status": "complete",
       "destination": "papers/emu/arxiv-2409.18869",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -453,6 +673,10 @@
       "status": "complete",
       "destination": "papers/emu/arxiv-2510.26583",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -461,6 +685,10 @@
       "status": "complete",
       "destination": "papers/enhancing-multimodal-large-language-models-with-vision-e94f5590857f/arxiv-2401.17981",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 10,
       "derived_assets": 0
     },
@@ -469,6 +697,10 @@
       "status": "complete",
       "destination": "papers/eve/arxiv-2406.11832",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -477,6 +709,10 @@
       "status": "complete",
       "destination": "papers/evlm/arxiv-2407.14177",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -485,6 +721,10 @@
       "status": "complete",
       "destination": "papers/ferret/arxiv-2310.07704",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -493,6 +733,10 @@
       "status": "complete",
       "destination": "papers/ferret/arxiv-2404.05719",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -501,6 +745,10 @@
       "status": "complete",
       "destination": "papers/fuyu/document-87ff293e66f7",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 2,
       "derived_assets": 0
     },
@@ -509,6 +757,10 @@
       "status": "complete",
       "destination": "papers/gemini/document-044099a491e0",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -517,6 +769,10 @@
       "status": "complete",
       "destination": "papers/gemini/document-1855460a9712",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 4
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -525,6 +781,10 @@
       "status": "complete",
       "destination": "papers/gemini/document-8c1dda86c921",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -533,6 +793,10 @@
       "status": "complete",
       "destination": "papers/gemini/document-7cca3ca5d4d3",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 2,
       "derived_assets": 1
     },
@@ -541,6 +805,10 @@
       "status": "complete",
       "destination": "papers/gemini/document-390f20b2fe8b",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -549,6 +817,10 @@
       "status": "complete",
       "destination": "papers/gemini/document-a07676c13763",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 1
     },
@@ -557,6 +829,10 @@
       "status": "complete",
       "destination": "papers/gemma/document-92d16b8c59c9",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 1,
       "derived_assets": 1
     },
@@ -565,6 +841,10 @@
       "status": "complete",
       "destination": "papers/glamm/arxiv-2311.03356",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -573,6 +853,10 @@
       "status": "complete",
       "destination": "papers/glm/document-4d81507404ce",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 2,
       "derived_assets": 1
     },
@@ -581,6 +865,10 @@
       "status": "complete",
       "destination": "papers/glm/arxiv-2507.01006",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -589,6 +877,10 @@
       "status": "complete",
       "destination": "papers/glm/document-e213666dcb0d",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 2
+      },
       "assets": 1,
       "derived_assets": 1
     },
@@ -597,6 +889,10 @@
       "status": "complete",
       "destination": "papers/gpt/arxiv-2303.08774",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -605,6 +901,10 @@
       "status": "complete",
       "destination": "papers/gpt/document-5cd14e1ea9af",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -613,6 +913,10 @@
       "status": "complete",
       "destination": "papers/gpt/document-9ee9863086d5",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 4
+      },
       "assets": 7,
       "derived_assets": 1
     },
@@ -621,6 +925,10 @@
       "status": "complete",
       "destination": "papers/gpt/document-0b8790d1de58",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 1
     },
@@ -629,6 +937,10 @@
       "status": "complete",
       "destination": "papers/gpt/document-32a268f7f1d8",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 1
     },
@@ -637,6 +949,10 @@
       "status": "complete",
       "destination": "papers/gpt/document-d0807662cb93",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 6,
       "derived_assets": 1
     },
@@ -645,6 +961,10 @@
       "status": "complete",
       "destination": "papers/gpt/document-e2a1f413a7a5",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -653,6 +973,10 @@
       "status": "complete",
       "destination": "papers/gpt/document-0d9109ba3678",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -661,6 +985,10 @@
       "status": "complete",
       "destination": "papers/gpt4roi/arxiv-2307.03601",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -669,6 +997,10 @@
       "status": "complete",
       "destination": "papers/gpt4tools/arxiv-2305.18752",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -677,6 +1009,10 @@
       "status": "complete",
       "destination": "papers/graphist/arxiv-2404.14368",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -685,6 +1021,10 @@
       "status": "complete",
       "destination": "papers/groundhog/arxiv-2402.16846",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 12,
       "derived_assets": 0
     },
@@ -693,6 +1033,10 @@
       "status": "complete",
       "destination": "papers/honeybee/arxiv-2312.06742",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 0
     },
@@ -701,6 +1045,10 @@
       "status": "complete",
       "destination": "papers/imagebind-llm/arxiv-2309.03905",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -709,6 +1057,10 @@
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2309.15112",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -717,6 +1069,10 @@
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2401.16420",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -725,6 +1081,10 @@
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2404.06512",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 0
     },
@@ -733,6 +1093,10 @@
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2407.03320",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -741,6 +1105,10 @@
       "status": "complete",
       "destination": "papers/internlm-xcomposer/arxiv-2412.09596",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -749,6 +1117,10 @@
       "status": "complete",
       "destination": "papers/internvl/arxiv-2312.14238",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 10,
       "derived_assets": 0
     },
@@ -757,6 +1129,10 @@
       "status": "complete",
       "destination": "papers/internvl/arxiv-2404.16821",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -765,6 +1141,10 @@
       "status": "complete",
       "destination": "papers/internvl/arxiv-2412.05271",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -773,6 +1153,10 @@
       "status": "complete",
       "destination": "papers/internvl/arxiv-2504.10479",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -781,6 +1165,10 @@
       "status": "complete",
       "destination": "papers/internvl/arxiv-2508.18265",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -789,6 +1177,10 @@
       "status": "complete",
       "destination": "papers/internvl/arxiv-2603.09877",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 7,
       "derived_assets": 1
     },
@@ -797,6 +1189,10 @@
       "status": "complete",
       "destination": "papers/kimi/arxiv-2504.07491",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -805,6 +1201,10 @@
       "status": "complete",
       "destination": "papers/kimi/arxiv-2602.02276",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -813,6 +1213,10 @@
       "status": "complete",
       "destination": "papers/kimi/document-eb106a710a29",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 5
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -821,6 +1225,10 @@
       "status": "complete",
       "destination": "papers/kosmos/arxiv-2302.14045",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 1
     },
@@ -829,6 +1237,10 @@
       "status": "complete",
       "destination": "papers/kosmos/arxiv-2306.14824",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 1
     },
@@ -837,6 +1249,10 @@
       "status": "complete",
       "destination": "papers/lamm/arxiv-2306.06687",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -845,6 +1261,10 @@
       "status": "complete",
       "destination": "papers/languagebind/arxiv-2310.01852",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -853,6 +1273,10 @@
       "status": "complete",
       "destination": "papers/lavin/arxiv-2305.15023",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -861,6 +1285,10 @@
       "status": "complete",
       "destination": "papers/lavit/arxiv-2309.04669",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -869,6 +1297,10 @@
       "status": "complete",
       "destination": "papers/leo/arxiv-2311.12871",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -877,6 +1309,10 @@
       "status": "complete",
       "destination": "papers/libra/arxiv-2405.10140",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -885,6 +1321,10 @@
       "status": "complete",
       "destination": "papers/lion/arxiv-2311.11860",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 9,
       "derived_assets": 0
     },
@@ -893,6 +1333,10 @@
       "status": "complete",
       "destination": "papers/lisa/arxiv-2308.00692",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -901,6 +1345,10 @@
       "status": "complete",
       "destination": "papers/lita/arxiv-2403.19046",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -909,6 +1357,10 @@
       "status": "complete",
       "destination": "papers/ll3da/arxiv-2311.18651",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 12,
       "derived_assets": 0
     },
@@ -917,6 +1369,10 @@
       "status": "complete",
       "destination": "papers/llama/arxiv-2407.21783",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 5
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -925,6 +1381,10 @@
       "status": "complete",
       "destination": "papers/llama/document-0c6cca94a384",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -933,6 +1393,10 @@
       "status": "complete",
       "destination": "papers/llama/document-4003084812b3",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -941,6 +1405,10 @@
       "status": "complete",
       "destination": "papers/llama-adapter/arxiv-2303.16199",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -949,6 +1417,10 @@
       "status": "complete",
       "destination": "papers/llama-adapter/arxiv-2304.15010",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -957,6 +1429,10 @@
       "status": "complete",
       "destination": "papers/llama-vid/arxiv-2311.17043",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -965,6 +1441,10 @@
       "status": "complete",
       "destination": "papers/llamav-o1/arxiv-2501.06186",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 1
     },
@@ -973,6 +1453,10 @@
       "status": "complete",
       "destination": "papers/llava/arxiv-2304.08485",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -981,6 +1465,10 @@
       "status": "complete",
       "destination": "papers/llava/arxiv-2310.03744",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -989,6 +1477,10 @@
       "status": "complete",
       "destination": "papers/llava/arxiv-2311.05437",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 1
     },
@@ -997,6 +1489,10 @@
       "status": "complete",
       "destination": "papers/llava/document-86e88fe4b1ec",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 0
     },
@@ -1005,6 +1501,10 @@
       "status": "complete",
       "destination": "papers/llava/arxiv-2408.03326",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1013,6 +1513,10 @@
       "status": "complete",
       "destination": "papers/llava/arxiv-2509.23661",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1021,6 +1525,10 @@
       "status": "complete",
       "destination": "papers/llava-med/arxiv-2306.00890",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 1
     },
@@ -1029,6 +1537,10 @@
       "status": "complete",
       "destination": "papers/llava-mod/arxiv-2408.15881",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1037,6 +1549,10 @@
       "status": "complete",
       "destination": "papers/llavar/arxiv-2306.17107",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1045,6 +1561,10 @@
       "status": "complete",
       "destination": "papers/llmga/arxiv-2311.16500",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -1053,6 +1573,10 @@
       "status": "complete",
       "destination": "papers/longllava/arxiv-2409.02889",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1061,6 +1585,10 @@
       "status": "complete",
       "destination": "papers/longva/arxiv-2406.16852",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1069,6 +1597,10 @@
       "status": "complete",
       "destination": "papers/longvu/arxiv-2410.17434",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1077,6 +1609,10 @@
       "status": "complete",
       "destination": "papers/ltu/arxiv-2305.10790",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1085,6 +1621,10 @@
       "status": "complete",
       "destination": "papers/lvis-instruct4v/arxiv-2311.07574",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1093,6 +1633,10 @@
       "status": "complete",
       "destination": "papers/lynx/arxiv-2307.02469",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1101,6 +1645,10 @@
       "status": "complete",
       "destination": "papers/m3it/arxiv-2306.04387",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 1
     },
@@ -1109,6 +1657,10 @@
       "status": "complete",
       "destination": "papers/ma-lmm/arxiv-2404.05726",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 13,
       "derived_assets": 0
     },
@@ -1117,6 +1669,10 @@
       "status": "complete",
       "destination": "papers/macaw-llm/arxiv-2306.09093",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1125,6 +1681,10 @@
       "status": "complete",
       "destination": "papers/metalm/arxiv-2206.06336",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1133,6 +1693,10 @@
       "status": "complete",
       "destination": "papers/meteor/arxiv-2405.15574",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 0
     },
@@ -1141,6 +1705,10 @@
       "status": "complete",
       "destination": "papers/mimo/arxiv-2506.03569",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1149,6 +1717,10 @@
       "status": "complete",
       "destination": "papers/mimo/document-1ccf04ffaeaa",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 0,
       "derived_assets": 1
     },
@@ -1157,6 +1729,10 @@
       "status": "complete",
       "destination": "papers/mimo/document-bc763cf700ef",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 1,
       "derived_assets": 0
     },
@@ -1165,6 +1741,10 @@
       "status": "complete",
       "destination": "papers/minedojo/arxiv-2206.08853",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1173,6 +1753,10 @@
       "status": "complete",
       "destination": "papers/mini-gemini/arxiv-2403.18814",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1181,6 +1765,10 @@
       "status": "complete",
       "destination": "papers/minicpm/arxiv-2408.01800",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1189,6 +1777,10 @@
       "status": "complete",
       "destination": "papers/minicpm/document-5679fdac7d01",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1197,6 +1789,10 @@
       "status": "complete",
       "destination": "papers/minicpm/document-9be303a31d11",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 0
     },
@@ -1205,6 +1801,10 @@
       "status": "complete",
       "destination": "papers/minigpt/arxiv-2304.10592",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 2
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1213,6 +1813,10 @@
       "status": "complete",
       "destination": "papers/minigpt/arxiv-2310.09478",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1221,6 +1825,10 @@
       "status": "complete",
       "destination": "papers/mistral-pixtral/document-3ebe839c6607",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1229,6 +1837,10 @@
       "status": "complete",
       "destination": "papers/mistral-pixtral/document-6276d6c37ba5",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 1
     },
@@ -1237,6 +1849,10 @@
       "status": "complete",
       "destination": "papers/mm1/arxiv-2403.09611",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1245,6 +1861,10 @@
       "status": "complete",
       "destination": "papers/mmada/arxiv-2505.15809",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1253,6 +1873,10 @@
       "status": "complete",
       "destination": "papers/mmsearch-r1/arxiv-2506.20670",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 2
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1261,6 +1885,10 @@
       "status": "complete",
       "destination": "papers/moai/arxiv-2403.07508",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1269,6 +1897,10 @@
       "status": "complete",
       "destination": "papers/mobilevlm/arxiv-2312.16886",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1277,6 +1909,10 @@
       "status": "complete",
       "destination": "papers/mobilevlm/arxiv-2402.03766",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -1285,6 +1921,10 @@
       "status": "complete",
       "destination": "papers/modality-integration-rate/arxiv-2410.07167",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1293,6 +1933,10 @@
       "status": "complete",
       "destination": "papers/moe-llava/arxiv-2401.15947",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1301,6 +1945,10 @@
       "status": "complete",
       "destination": "papers/molmo/arxiv-2409.17146",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 0
     },
@@ -1309,6 +1957,10 @@
       "status": "complete",
       "destination": "papers/monkey/arxiv-2311.06607",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1317,6 +1969,10 @@
       "status": "complete",
       "destination": "papers/monkey/arxiv-2403.04473",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 10,
       "derived_assets": 0
     },
@@ -1325,6 +1981,10 @@
       "status": "complete",
       "destination": "papers/motiongpt/arxiv-2306.14795",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1333,6 +1993,10 @@
       "status": "complete",
       "destination": "papers/moviechat/arxiv-2307.16449",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1341,6 +2005,10 @@
       "status": "complete",
       "destination": "papers/mplug/arxiv-2304.14178",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1349,6 +2017,10 @@
       "status": "complete",
       "destination": "papers/mplug/arxiv-2307.02499",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 1
     },
@@ -1357,6 +2029,10 @@
       "status": "complete",
       "destination": "papers/mplug/arxiv-2311.04257",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 0
     },
@@ -1365,6 +2041,10 @@
       "status": "complete",
       "destination": "papers/mplug/arxiv-2311.18248",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1373,6 +2053,10 @@
       "status": "complete",
       "destination": "papers/mplug/arxiv-2408.04840",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1381,6 +2065,10 @@
       "status": "complete",
       "destination": "papers/mqt-llava/arxiv-2405.19315",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 2
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1389,6 +2077,10 @@
       "status": "complete",
       "destination": "papers/multiinstruct/arxiv-2212.10773",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 1
     },
@@ -1397,6 +2089,10 @@
       "status": "complete",
       "destination": "papers/multimodal-foundation-survey/arxiv-2309.10020",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1405,6 +2101,10 @@
       "status": "complete",
       "destination": "papers/multimodal-gpt/arxiv-2305.04790",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 2
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1413,6 +2113,10 @@
       "status": "complete",
       "destination": "papers/multimodal-reasoning-survey/arxiv-2505.04921",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1421,6 +2125,10 @@
       "status": "complete",
       "destination": "papers/muse/document-52928aca6048",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -1429,6 +2137,10 @@
       "status": "complete",
       "destination": "papers/next-chat/arxiv-2311.04498",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1437,6 +2149,10 @@
       "status": "complete",
       "destination": "papers/next-gpt/arxiv-2309.05519",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 12,
       "derived_assets": 0
     },
@@ -1445,6 +2161,10 @@
       "status": "complete",
       "destination": "papers/next-omni/arxiv-2510.13721",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1453,6 +2173,10 @@
       "status": "complete",
       "destination": "papers/nexus-o/arxiv-2503.01879",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1461,6 +2185,10 @@
       "status": "complete",
       "destination": "papers/omg-llava/arxiv-2406.19389",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 0
     },
@@ -1469,6 +2197,10 @@
       "status": "complete",
       "destination": "papers/omni-diffusion/arxiv-2603.06577",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 5
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -1477,6 +2209,10 @@
       "status": "complete",
       "destination": "papers/omnivinci/arxiv-2510.15870",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1485,6 +2221,10 @@
       "status": "complete",
       "destination": "papers/onellm/arxiv-2312.03700",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 11,
       "derived_assets": 0
     },
@@ -1493,6 +2233,10 @@
       "status": "complete",
       "destination": "papers/openuni/arxiv-2505.23661",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 6,
       "derived_assets": 1
     },
@@ -1501,6 +2245,10 @@
       "status": "complete",
       "destination": "papers/osprey/arxiv-2312.10032",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 4
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -1509,6 +2257,10 @@
       "status": "complete",
       "destination": "papers/otter/arxiv-2311.04219",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 1
     },
@@ -1517,6 +2269,10 @@
       "status": "complete",
       "destination": "papers/otter-398569/arxiv-2306.05425",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1525,6 +2281,10 @@
       "status": "complete",
       "destination": "papers/ovis/arxiv-2405.20797",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1533,6 +2293,10 @@
       "status": "complete",
       "destination": "papers/pali/arxiv-2310.09199",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1541,6 +2305,10 @@
       "status": "complete",
       "destination": "papers/palm-e/arxiv-2303.03378",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 5
+      },
       "assets": 10,
       "derived_assets": 0
     },
@@ -1549,6 +2317,10 @@
       "status": "complete",
       "destination": "papers/pandagpt/arxiv-2305.16355",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1557,6 +2329,10 @@
       "status": "complete",
       "destination": "papers/pengi/arxiv-2305.11834",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -1565,6 +2341,10 @@
       "status": "complete",
       "destination": "papers/phi/arxiv-2503.01743",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1573,6 +2353,10 @@
       "status": "complete",
       "destination": "papers/pi/arxiv-2604.15483",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1581,6 +2365,10 @@
       "status": "complete",
       "destination": "papers/pixel-aligned-language-models/arxiv-2312.09237",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -1589,6 +2377,10 @@
       "status": "complete",
       "destination": "papers/pmc-vqa/arxiv-2305.10415",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1597,6 +2389,10 @@
       "status": "complete",
       "destination": "papers/pointllm/arxiv-2308.16911",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1605,6 +2401,10 @@
       "status": "complete",
       "destination": "papers/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-wor-28acd80eab47/document-28acd80eab47",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1613,6 +2413,10 @@
       "status": "complete",
       "destination": "papers/prismatic/arxiv-2402.07865",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1621,6 +2425,10 @@
       "status": "complete",
       "destination": "papers/prismer/arxiv-2303.02506",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1629,6 +2437,10 @@
       "status": "complete",
       "destination": "papers/qwen/arxiv-2308.12966",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1637,6 +2449,10 @@
       "status": "complete",
       "destination": "papers/qwen/arxiv-2409.12191",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 1
     },
@@ -1645,6 +2461,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-b615730dc322",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -1653,6 +2473,10 @@
       "status": "complete",
       "destination": "papers/qwen/qwen2.5-vl",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1661,6 +2485,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-1093f7b31e5b",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1669,6 +2497,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-244376c2123a",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -1677,6 +2509,10 @@
       "status": "complete",
       "destination": "papers/qwen/arxiv-2509.17765",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1685,6 +2521,10 @@
       "status": "complete",
       "destination": "papers/qwen/arxiv-2511.21631",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 5
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1693,6 +2533,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-7cdfed4ac9e5",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
       "assets": 3,
       "derived_assets": 1
     },
@@ -1701,6 +2545,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-54010b187750",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1709,6 +2557,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-67bea1fbb2c5",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -1717,6 +2569,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-e122aca8cc58",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 2,
       "derived_assets": 1
     },
@@ -1725,6 +2581,10 @@
       "status": "complete",
       "destination": "papers/qwen/arxiv-2606.17030",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -1733,6 +2593,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-0aebb3826b29",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 1,
       "derived_assets": 0
     },
@@ -1741,6 +2605,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-ebaf67f69f80",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 3,
       "derived_assets": 1
     },
@@ -1749,6 +2617,10 @@
       "status": "complete",
       "destination": "papers/qwen/document-2ea7273632dc",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 0
     },
@@ -1757,6 +2629,10 @@
       "status": "complete",
       "destination": "papers/robopoint/arxiv-2406.10721",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 9,
       "derived_assets": 0
     },
@@ -1765,6 +2641,10 @@
       "status": "complete",
       "destination": "papers/salmonn/arxiv-2310.13289",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1773,6 +2653,10 @@
       "status": "complete",
       "destination": "papers/salmonn/arxiv-2406.15704",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -1781,6 +2665,10 @@
       "status": "complete",
       "destination": "papers/see-say-and-segment-teaching-lmms-to-overcome-false-premises/arxiv-2312.08366",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1789,6 +2677,10 @@
       "status": "complete",
       "destination": "papers/seed/arxiv-2505.07062",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1797,6 +2689,10 @@
       "status": "complete",
       "destination": "papers/seed/document-6cb43357175b",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 7,
       "derived_assets": 1
     },
@@ -1805,6 +2701,10 @@
       "status": "complete",
       "destination": "papers/seed/arxiv-2607.00248",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
       "assets": 4,
       "derived_assets": 1
     },
@@ -1813,6 +2713,10 @@
       "status": "complete",
       "destination": "papers/sharegpt4v/arxiv-2311.12793",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1821,6 +2725,10 @@
       "status": "complete",
       "destination": "papers/shikra/arxiv-2306.15195",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1829,6 +2737,10 @@
       "status": "complete",
       "destination": "papers/show-o/arxiv-2506.15564",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1837,6 +2749,10 @@
       "status": "complete",
       "destination": "papers/skywork/arxiv-2504.16656",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1845,6 +2761,10 @@
       "status": "complete",
       "destination": "papers/slime/arxiv-2406.08487",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1853,6 +2773,10 @@
       "status": "complete",
       "destination": "papers/slowfast-llava/arxiv-2407.15841",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 2
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1861,6 +2785,10 @@
       "status": "complete",
       "destination": "papers/spatialvlm/arxiv-2401.12168",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1869,6 +2797,10 @@
       "status": "complete",
       "destination": "papers/sphinx/arxiv-2311.07575",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1877,6 +2809,10 @@
       "status": "complete",
       "destination": "papers/step/document-26d59ba3132d",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -1885,6 +2821,10 @@
       "status": "complete",
       "destination": "papers/streamchat/arxiv-2412.08646",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1893,6 +2833,10 @@
       "status": "complete",
       "destination": "papers/svit/arxiv-2307.04087",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1901,6 +2845,10 @@
       "status": "complete",
       "destination": "papers/thyme/arxiv-2508.11630",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1909,6 +2857,10 @@
       "status": "complete",
       "destination": "papers/timechat/arxiv-2312.02051",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1917,6 +2869,10 @@
       "status": "complete",
       "destination": "papers/timemarker/arxiv-2411.18211",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1931,6 +2887,10 @@
       "status": "complete",
       "destination": "papers/unigen/arxiv-2505.14682",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1939,6 +2899,10 @@
       "status": "complete",
       "destination": "papers/unival/arxiv-2307.16184",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1947,6 +2911,10 @@
       "status": "complete",
       "destination": "papers/vaquita/arxiv-2312.02310",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1955,6 +2923,10 @@
       "status": "complete",
       "destination": "papers/vary/arxiv-2312.06109",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1963,6 +2935,10 @@
       "status": "complete",
       "destination": "papers/video-chatgpt/arxiv-2306.05424",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -1971,6 +2947,10 @@
       "status": "complete",
       "destination": "papers/video-llava/arxiv-2311.10122",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1979,6 +2959,10 @@
       "status": "complete",
       "destination": "papers/video-mme/arxiv-2604.05015",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -1987,6 +2971,10 @@
       "status": "complete",
       "destination": "papers/videochat/arxiv-2305.06355",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -1995,6 +2983,10 @@
       "status": "complete",
       "destination": "papers/videochat/arxiv-2607.14935",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 8,
       "derived_assets": 0
     },
@@ -2003,6 +2995,10 @@
       "status": "complete",
       "destination": "papers/videollama/arxiv-2306.02858",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 3,
       "derived_assets": 0
     },
@@ -2011,6 +3007,10 @@
       "status": "complete",
       "destination": "papers/videollama/arxiv-2406.07476",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -2019,6 +3019,10 @@
       "status": "complete",
       "destination": "papers/videollama/arxiv-2501.13106",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -2027,6 +3031,10 @@
       "status": "complete",
       "destination": "papers/videollm-online/arxiv-2406.11816",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -2035,6 +3043,10 @@
       "status": "complete",
       "destination": "papers/vila/arxiv-2312.07533",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -2043,6 +3055,10 @@
       "status": "complete",
       "destination": "papers/vila/arxiv-2407.17453",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -2051,6 +3067,10 @@
       "status": "complete",
       "destination": "papers/vila/arxiv-2412.04468",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -2059,6 +3079,10 @@
       "status": "complete",
       "destination": "papers/vima/arxiv-2210.03094",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -2067,6 +3091,10 @@
       "status": "complete",
       "destination": "papers/vip-llava/arxiv-2312.00784",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -2075,6 +3103,10 @@
       "status": "complete",
       "destination": "papers/viscpm/arxiv-2308.12038",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -2083,6 +3115,10 @@
       "status": "complete",
       "destination": "papers/visionllm/arxiv-2305.11175",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -2091,6 +3127,10 @@
       "status": "complete",
       "destination": "papers/vita/arxiv-2408.05211",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -2099,6 +3139,10 @@
       "status": "complete",
       "destination": "papers/vita/arxiv-2501.01957",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -2107,6 +3151,10 @@
       "status": "complete",
       "destination": "papers/vita/arxiv-2502.05177",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 1
     },
@@ -2115,6 +3163,10 @@
       "status": "complete",
       "destination": "papers/vita/arxiv-2505.03739",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -2123,6 +3175,10 @@
       "status": "complete",
       "destination": "papers/vita/arxiv-2510.09607",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -2131,6 +3187,10 @@
       "status": "complete",
       "destination": "papers/vita/arxiv-2510.21817",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -2139,6 +3199,10 @@
       "status": "complete",
       "destination": "papers/vita/document-3a7f77dffb3b",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 6,
       "derived_assets": 0
     },
@@ -2147,6 +3211,10 @@
       "status": "complete",
       "destination": "papers/vitron/document-f588b0cc5a2b",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
       "assets": 7,
       "derived_assets": 0
     },
@@ -2155,6 +3223,10 @@
       "status": "complete",
       "destination": "papers/vpgtrans/arxiv-2305.01278",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 5,
       "derived_assets": 0
     },
@@ -2163,6 +3235,10 @@
       "status": "complete",
       "destination": "papers/vtimellm/arxiv-2311.18445",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 4,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -2171,6 +3247,10 @@
       "status": "complete",
       "destination": "papers/x-llm/arxiv-2305.04160",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     },
@@ -2179,6 +3259,10 @@
       "status": "complete",
       "destination": "papers/yi/document-5991ef3fff72",
       "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 3
+      },
       "assets": 4,
       "derived_assets": 0
     }

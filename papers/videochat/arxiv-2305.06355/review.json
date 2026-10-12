@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2807
   },
-  "article_sha256": "2c331c6f75ca61d839e9e971d00f99e7424b914bc89519ee28103f4b35da1b59",
+  "article_sha256": "85282ddf1017de41ad93005642e141e24cfad80cc9c73c890aaa22b56aae94f6",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -45,5 +46,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.06355v1",
+        "version": "2305.06355v1",
+        "sha256": "adc35c44a4703211edb1fa41f1d66a41b914b6e5f549efc523f716cde246acbe"
+      },
+      "source_locators": [
+        "PDF pp.4–5 §3.1–3.2.1, Tables1–2"
+      ],
+      "changes": [
+        "澄清Text/Embed不是串行双分支",
+        "区分GMHRA时序建模和查询压缩",
+        "补冻结多数基础参数与时序模板职责"
+      ],
+      "disclosure_boundary": "未新增完整query数，文字与嵌入接口均保留信息损失边界。",
+      "article_sha256": "85282ddf1017de41ad93005642e141e24cfad80cc9c73c890aaa22b56aae94f6",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

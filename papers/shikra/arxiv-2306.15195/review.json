@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2510
   },
-  "article_sha256": "03317896c71ca8bdd85d5a0426d22e15f6a2932e1fb0d90499a46ceae9b3a37b",
+  "article_sha256": "6851f84d36a75cfbd50e4a5aa9f96c7876aa2436497bb35d07288bca632c30ab",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -75,5 +76,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2306.15195v1",
+        "version": "2306.15195v1",
+        "sha256": "8b3965fa277211db7de5b55215750760ad6f6c4bb30d95c868532e85734ef2f4"
+      },
+      "source_locators": [
+        "source.txt chars15150–21450: §5.1–5.3 through task prompt variations, Table1–2, PDF4–6"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 普通数值把位置嵌入自然对话语法",
+          "new_explanation": "坐标可出现在句中任何位置并充当指代成分，因而能与属性、动作和对象关系交替表达。归一化减少图像尺寸变化对数值尺度的影响，三位小数是表达精度选择；数字经过普通语言tokenizer，坐标长度和舍入误差仍存在。无需新增坐标词表不等于无需位置标注训练。[原文 §5.1–5.2，PDF 第 4–5 页](https://arxiv.org/pdf/2306.15195v1#page=5)"
+        },
+        {
+          "heading": "4.2 统一文字目标学习视觉与位置的对应",
+          "new_explanation": "语言模型同时看到整图视觉序列和指代数字，以答案中的文字与数值学习对应关系。模型没有额外裁图、区域池化或专用回归损失，因此不能假定输入框内的视觉特征被硬隔离。高质量位置对话通过已有标注构造，GPT-4教师当时只读取描述与框，不直接看图。[原文 §5.1、§5.3.2，PDF 第 5 页](https://arxiv.org/pdf/2306.15195v1#page=5)"
+        },
+        {
+          "heading": "4.3 位置推理消融检验表示而非单独增加推理提示",
+          "new_explanation": "两组实验各自重新训练受控模型：CLEVR检验推理链是否含指点，RefCOCO等检验位置是普通数字还是新增词表。它们支持特定监督及表示选择的可行性，不能把结果写成主模型在相同权重下换一句提示就得到的提升，也不能外推为数值表示必然更精确。[原文 Table 1–2，PDF 第 6 页](https://arxiv.org/pdf/2306.15195v1#page=6)"
+        }
+      ],
+      "disclosure_boundary": "不由数字精度推导定位准确度；保留教师只读文字及受控模型区别。",
+      "article_sha256": "6851f84d36a75cfbd50e4a5aa9f96c7876aa2436497bb35d07288bca632c30ab",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

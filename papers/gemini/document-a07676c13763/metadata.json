@@ -9,11 +9,11 @@
   "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
   "document_kind": "release_blog",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Gemini 4 Argon：面向长程专业任务的推理模型",
   "source_sha256": "cf2ecb2c2a5b8aca96928e2af37db3f25e24695d59406fbd51942a43c5c1864d",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2059,
+  "chinese_characters": 2583,
   "figures_manifest": "figures-manifest.json"
 }

@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2404
   },
-  "article_sha256": "ba1068b3fad9619ea442df680810740437c39a1f1ee80d74d450b101424154d4",
+  "article_sha256": "bee2a5c652c6648900a1dce1f27f2413025bcc9c3fc1fdc5230174b248145f63",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -76,5 +77,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.12793v1",
+        "version": "2311.12793v1",
+        "sha256": "6cc60440ac9096e494c8b5ea84de0ba9d58b4403e68205c5603014612e9d23ef"
+      },
+      "source_locators": [
+        "PDF pp.5–6 §3.3,§4.1–4.3, Tables2–3, Figure4"
+      ],
+      "changes": [
+        "解释细粒度字幕监督与教师幻觉边界",
+        "补统一指令扩展及人评样本范围",
+        "澄清预训练解冻和SFT冻结及23K替换"
+      ],
+      "disclosure_boundary": "不把教师描述蒸馏写成logit KL；不将人评偏好等同事实正确率。",
+      "article_sha256": "bee2a5c652c6648900a1dce1f27f2413025bcc9c3fc1fdc5230174b248145f63",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

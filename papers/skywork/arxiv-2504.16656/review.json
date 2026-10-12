@@ -17,9 +17,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2968
   },
-  "article_sha256": "9c3cb328444de9754026a1310aa2446ca18e7a69ad39ecea36292edd4c3a9a27",
+  "article_sha256": "74a0f72fd5a5eca157573b71fc9c91cac9e70431d5d057d5f542188651518e32",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -75,5 +76,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2504.16656v1",
+        "version": "2504.16656v1",
+        "sha256": "527263ab26162650d6d1d2f882e968d3f18119db4ceca3960296ba9f75e3f6f5"
+      },
+      "source_locators": [
+        "PDF pp.4–5 §3.1–3.3; retained existing Table4 ablation"
+      ],
+      "changes": [
+        "区分优势绝对值和成功回放",
+        "解释混合偏好/规则职责与冲突",
+        "限定adapter-only瓶颈诊断及旧策略重采样缺项"
+      ],
+      "disclosure_boundary": "不移植InternVL同名MPO；缓存校正未披露仍明确。",
+      "article_sha256": "74a0f72fd5a5eca157573b71fc9c91cac9e70431d5d057d5f542188651518e32",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

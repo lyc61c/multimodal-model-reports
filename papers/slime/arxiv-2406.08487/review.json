@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2463
   },
-  "article_sha256": "36cf706ab8e1c722fc6f6196ab0472baa2cbff716cd1415cae55872d1db3410d",
+  "article_sha256": "85029bc6634f31dce0bb2e4903d37ad3d7dcdba30456141f4bca73d5a6513251",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -57,5 +58,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2406.08487v1",
+        "version": "2406.08487v1",
+        "sha256": "69526d66cffc4ef04c5a78aa62fa97980cb8bb2c0b2d3073fbc8fa18c306bde1"
+      },
+      "source_locators": [
+        "PDF pp.3–5 §2.1–2.3, Figure2"
+      ],
+      "changes": [
+        "补切图有效分辨率优先规则",
+        "解释噪声防止MLP早期垄断与动态阈值长度",
+        "说明第二阶段剥离全局捷径"
+      ],
+      "disclosure_boundary": "不把query-former等同BLIP2预训练模块；不把简化收敛推广完整网络。",
+      "article_sha256": "85029bc6634f31dce0bb2e4903d37ad3d7dcdba30456141f4bca73d5a6513251",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

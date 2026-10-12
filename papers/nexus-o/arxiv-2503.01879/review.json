@@ -48,10 +48,11 @@
     "8M approximate differs table sum",
     "own audio testbed annotation protocol incomplete"
   ],
-  "article_sha256": "5a106173fa493e6a9897003e8bbcdd29db1103a7735cb0bfaa47d96d69a65b35",
+  "article_sha256": "51a1d2a4e9e4be77c276b87da1ee5d2b0c743c1bbe6e35be90d5934023c339a8",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3178
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -102,5 +103,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2503.01879v1",
+        "version": "2503.01879v1",
+        "sha256": "b4bc0b5a5d64e9b4d6d61550b6599b8c0d331e0c66a6f10a4a429b2403953a9f"
+      },
+      "source_locators": [
+        "PDF p.5 §3.1, Figure2; current kernel analysis with AppendixB references retained"
+      ],
+      "changes": [
+        "细化5向量合并与声学编码成本",
+        "解释主LLM与六层decoder分工",
+        "明确分析拼接核与主干融合核不同"
+      ],
+      "disclosure_boundary": "音频生成超参未给；不新增同步损失。",
+      "article_sha256": "51a1d2a4e9e4be77c276b87da1ee5d2b0c743c1bbe6e35be90d5934023c339a8",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

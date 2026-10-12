@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2310.03744v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LLaVA-1.5：用简单连接器与可复核数据建立强基线",
-  "chinese_characters": 2551,
+  "chinese_characters": 3025,
   "figure_revision_date": "2026-10-09"
 }

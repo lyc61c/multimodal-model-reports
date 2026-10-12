@@ -9,12 +9,12 @@
   "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
   "document_kind": "technical_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Gemini 2.5：原生多模态、思考预算与长上下文",
   "source_sha256": "d10cf3e99841b6411901de4a1fb8538a3cd9aab3cc84880941811d8dd7e86a1a",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2172,
+  "chinese_characters": 2660,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

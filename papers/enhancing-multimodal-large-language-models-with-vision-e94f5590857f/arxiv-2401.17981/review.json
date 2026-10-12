@@ -42,10 +42,11 @@
     "Tables/prose contain repeated-score and universal-superiority inconsistencies",
     "No quantitative open-set replacement full benchmarks or runtime costs"
   ],
-  "article_sha256": "824736369a50418f2f16881ee02a8f4515329cd4f8e6e5d19980eed0d305c75d",
+  "article_sha256": "d13524fcc63d1dae7572c3a6a734eb1f52fc88526a882c9137768169ce4f386e",
   "artifact_checks": {
     "original_assets": 10,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3076
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -103,5 +104,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2401.17981v1",
+        "version": "2401.17981v1",
+        "sha256": "407ca0a1f66789672bcc8e2d5013d6174a2ea49ab8a56d6f57179195d13f0ad4"
+      },
+      "source_locators": [
+        "v1 §3.2–3.3，PDF第3–4页；§3.4，第5页"
+      ],
+      "changes": [
+        "同类别实例被放在一段描述中，共享类别名并分别列位置，减少重复字符串占用；OCR则保留识别文本及中心。该压缩提高工具结果的可读性，也删除了框尺寸和形状。因此它适合补充计数、对象名称和文字，但不能完整替代像素特征中携带的细节、重叠关系与边界。",
+        "TFI直接测试现有模型能否读懂新证据，LAR让检测文字从对齐初期就出现，LAF则先保留已学会的图像接口再引入工具。这种比较控制的是注入时机和权重起点，不只是是否增加训练步数。文字证据通常更易读取，若缺少对原视觉能力的约束，模型可能更多依赖工具，解释了为何还应观察移除工具后的表现。",
+        "归一化中的参考最小和最大值随比较方法集合而定，同一原始分数在加入更强或更弱基线后可能得到不同归一化值。因此跨论文或跨版本比较应优先回到各基准原始成绩，而不是直接相减两个归一化均值。该指标用于本次受控比较的汇总，并不定义模型的固定能力单位。"
+      ],
+      "disclosure_boundary": "检测文本不是ROI特征；LAR不是随机初始化整个LLM；不把综合分数当绝对尺度。",
+      "article_sha256": "d13524fcc63d1dae7572c3a6a734eb1f52fc88526a882c9137768169ce4f386e",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

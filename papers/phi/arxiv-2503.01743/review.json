@@ -33,13 +33,14 @@
     "榜首固定2025-01-14；闭源prompt/输出解析影响成绩；音频摘要容量对比不匹配。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "145f63b00cd1d6e8af6328a05ae2dba31d07cec18b537b4262cfa3afbb02a9b5",
+  "article_sha256": "e94877748264b6999660a7f3317afdce41d3ee561f753750c3577b3a1ed5ab07",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3666
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -72,5 +73,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2503.01743v1",
+        "version": "2503.01743v1",
+        "sha256": "e13bf559aee1a1e1295c068b2c99d3cb71e82a65a76bf988ce77755806a86c81"
+      },
+      "source_locators": [
+        "PDF pp.4–5 §2.2.1–2.2.2, Figure1"
+      ],
+      "changes": [
+        "补视觉/音频LoRA实际数亿参数",
+        "区分部分RoPE维度与KV头数",
+        "细化小图裁切和不同音频任务长度"
+      ],
+      "disclosure_boundary": "不推视觉LoRA rank或merging倍率；分阶段冻结保留。",
+      "article_sha256": "e94877748264b6999660a7f3317afdce41d3ee561f753750c3577b3a1ed5ab07",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

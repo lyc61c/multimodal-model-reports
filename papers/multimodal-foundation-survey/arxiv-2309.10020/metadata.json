@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2309.10020v1",
   "document_kind": "survey",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Multimodal Foundation Models：从视觉专用模型到通用多模态助手",
-  "chinese_characters": 4444,
+  "chinese_characters": 5209,
   "figure_revision_date": "2026-10-09"
 }

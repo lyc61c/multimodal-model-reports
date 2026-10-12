@@ -40,13 +40,14 @@
     "完整预训练超参未披露",
     "真机长任务主要定性，不将仿真成功率冒写真机"
   ],
-  "article_sha256": "5541ddcfc2457c96dd3a9d991d0c2288b0d426e4497b7f4e0426b5e878f1f76e",
+  "article_sha256": "a0328493144fc62d9fcf6ca34fc187bf64dd2155889db2f4f833d9a353604d70",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 10,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4142
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -59,25 +60,69 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 8,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2303.03378v1",
+        "version": "2303.03378v1",
+        "sha256": "535cc3c7fe1ae7428b9ac7d6a3738a0529975aadc372b2229ea0cb2ce724576a"
+      },
+      "source_locators": [
+        "source.txt chars18254–28200: §3 complete and §4 through OSRT/entity referrals opening, PDF3–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 动态观测插入复用语言模型的序列接口",
+          "new_explanation": "一次观测通常产生多个向量，可以与其它观测和文字交错，因而“前后两张图发生了什么”可在同一前缀内表达。观测绕过离散词表并复用原位置编码，避免先把所有传感器内容转换成文字；代价是编码器必须学习对语言生成有用的连续接口。[原文 §3 Multi-modal sentences、式 (3)，PDF 第 4 页](https://arxiv.org/pdf/2303.03378v1#page=4)"
+        },
+        {
+          "heading": "4.2 以文字目标统一问答与高层规划",
+          "new_explanation": "同一预测头可输出描述或技能名称，任务区别来自条件与训练答案，不是增加了一个连续控制回归头。技能执行由既有低层策略承担，规划的可用技能依训练与提示学习，原文没有额外机制把输出强制限制在合法技能表内。因此语言流畅与物理可执行仍需分别评价。[原文 §3 Embodying the output](https://arxiv.org/pdf/2303.03378v1#page=4)"
+        },
+        {
+          "heading": "4.3 固定语言参数仍能训练观测接口",
+          "new_explanation": "训练目标对观测嵌入的敏感性由语言计算图给出，参数冻结只禁止权重更新，不会自动使这个敏感性消失。不同感知对照还可能固定OSRT等上游模块而只学投影，需按实验配置辨别。下面的链式法则仅解释梯度流，不把所有版本统一成同一种冻结策略。[原文 §3–4；原有训练配置说明](https://arxiv.org/pdf/2303.03378v1#page=5)"
+        },
+        {
+          "heading": "4.4 对象编号把连续实体与符号技能连接",
+          "new_explanation": "网格特征的排列不是对象列表，OSRT或实例掩码路线先把实体分开，再为对象嵌入加可引用编号。OSRT的一个slot还可展开为多个语言位置，不能按“对象数等于token数”计算预算。编号只有在输入、输出和执行器保持同一绑定时才有效，模型未因此自动解决实例追踪。[原文 §4 Object-centric representations / Entity referrals](https://arxiv.org/pdf/2303.03378v1#page=5)"
+        },
+        {
+          "heading": "4.5 共享训练的收益与代价必须分开验证",
+          "new_explanation": "通用图文与机器人任务共用语言接口，允许语义知识参与规划；同时，若语言权重更新，原语言行为也可能变化。文中的冻结、数据混合与规模对照用于检验这个平衡。闭环新观察能帮助重规划，却不能弥补所有低层技能失败或误感知。[原文 §3 control loop；原有迁移与遗忘实验解读](https://arxiv.org/pdf/2303.03378v1#page=4)"
+        }
+      ],
+      "disclosure_boundary": "不把高层文字当连续动作；保留真值掩码/OSRT及各配置冻结区别。",
+      "article_sha256": "a0328493144fc62d9fcf6ca34fc187bf64dd2155889db2f4f833d9a353604d70",
+      "module_rows": 5,
+      "principle_subsections": 5,
+      "model_executed": false
+    }
+  ]
 }

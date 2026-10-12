@@ -40,13 +40,14 @@
     "模型未运行，没有真实速度/显存复测"
   ],
   "model_execution": "not_run",
-  "article_sha256": "da75c486fbe1b9727b72c72f99f674a5069428293766fb7025966cea8b2b62b4",
+  "article_sha256": "4956bbba91e676d8721a45d4f082eff56bf083651bae4ee36ad619c8158a0585",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3112
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -92,5 +93,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2401.15947v1",
+        "version": "2401.15947v1",
+        "sha256": "c6367e72a2ab791899e5e0ebf3085ab50f1fcbd11580401ecc16234a6fae1bbb"
+      },
+      "source_locators": [
+        "PDF p.4 §3.3–3.4, Figure3, Eq6–7"
+      ],
+      "changes": [
+        "补每token每层路由与请求覆盖全部权重",
+        "解释专家增加仅FFN容量",
+        "分清负载正则与课程起点作用"
+      ],
+      "disclosure_boundary": "保留StageI/II原文矛盾；不声称dispatcher细节代码核验。",
+      "article_sha256": "4956bbba91e676d8721a45d4f082eff56bf083651bae4ee36ad619c8158a0585",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

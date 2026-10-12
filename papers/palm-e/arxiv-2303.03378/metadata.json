@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2303.03378v1",
   "document_kind": "embodied_model_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "PaLM-E：把连续感知与机器人状态嵌入语言模型",
-  "chinese_characters": 3308,
+  "chinese_characters": 4142,
   "figure_revision_date": "2026-10-09"
 }

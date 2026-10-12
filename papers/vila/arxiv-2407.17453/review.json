@@ -17,9 +17,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 3378
   },
-  "article_sha256": "928cc15067e02d800eb1b47a5168726c328aad13f9b554f977ee9403e79d4419",
+  "article_sha256": "98ccfe0d6f36eb64ee2c875015c6dcce8f1a06b4399263ba2ef549017eba2cc2",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -69,5 +70,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2407.17453v1",
+        "version": "2407.17453v1",
+        "sha256": "bcccc36a617d4fcf330fa5e70c3fc8ddd91310d9e674dbd65ba39814d5a55c1b"
+      },
+      "source_locators": [
+        "PDF pp.3–4 §2.1–2.2, p.6 §3 and specialist prompt paragraph, Tables1–2"
+      ],
+      "changes": [
+        "补图像来源受控及监督改变范围",
+        "解释Long-v3置信约束和提示风格混合",
+        "明确专家离线QA传播非在线MoE"
+      ],
+      "disclosure_boundary": "不将每轮多模态重训解释成全部基础参数随机初始化。",
+      "article_sha256": "98ccfe0d6f36eb64ee2c875015c6dcce8f1a06b4399263ba2ef549017eba2cc2",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

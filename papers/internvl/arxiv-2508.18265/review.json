@@ -46,13 +46,14 @@
     "Missing fulloptimizerreward/routinghyperparameters",
     "Deployment totalvisualhardware notspecified; no perrequestlatencyclaim"
   ],
-  "article_sha256": "4d419d75883976aa076e113df328ee5d0e06c92fe98edde864876240a189d7ba",
+  "article_sha256": "6210e0bfa4fd42627c0fc3b9b30cc22874e309c0daca68e7611f1a0ccabc01a5",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3226
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -156,5 +157,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2508.18265v1",
+        "version": "2508.18265v1",
+        "sha256": "026111368090f83532b0eb21dff717f498f1a233807c45ca3b395cce693449cf"
+      },
+      "source_locators": [
+        "PDF p5–6 §2.3; Eq3–9"
+      ],
+      "changes": [
+        "Explained offline/online state distributions, length-normalized ratios and representation-before-routing rationale"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "6210e0bfa4fd42627c0fc3b9b30cc22874e309c0daca68e7611f1a0ccabc01a5",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

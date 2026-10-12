@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2505.14682v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "UniGen：统一图像理解与生成，并通过自验证筛选候选图像",
   "source_sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1802,
+  "chinese_characters": 2360,
   "figures_manifest": "figures-manifest.json"
 }

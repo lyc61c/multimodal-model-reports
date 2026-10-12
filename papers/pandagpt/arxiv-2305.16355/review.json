@@ -41,10 +41,11 @@
     "组合例出现输入不支持细节，不把创作等同感知事实",
     "只核对PDF音频标注，未试听音频"
   ],
-  "article_sha256": "afe0c8fd7430cfdf3f66052875293a310380a54f6bc2d9e2280954a0859253d7",
+  "article_sha256": "b817f14e0548adfe46930acd6c939e586557051d281f94a2150bc807b7a3ee7f",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2768
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -57,25 +58,61 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 28,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 14,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.16355v1",
+        "version": "2305.16355v1",
+        "sha256": "44551a79376e23537b6a73132c5f37d2ef5a6cbb747ccfce044c8ab91212e377"
+      },
+      "source_locators": [
+        "source.txt chars6329–10650: §3 complete, §4 capabilities and §5 limitations items1–4, PDF2–4"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 图像指令适配如何迁移到其它模态",
+          "new_explanation": "训练没有给每种感知模态分别收集指令，而是依赖冻结ImageBind把它们放在相近语义空间，再让一个桥梁学习语言接口。音频等迁移能力因此继承上游对齐质量，不能把未训练模态的定性示例写成新增跨模态监督。原文也把补充其它模态配对训练列为改进方向。[原文 §3、§5，PDF 第 2–4 页](https://arxiv.org/pdf/2305.16355v1#page=3)"
+        },
+        {
+          "heading": "4.2 嵌入相加支持紧凑组合但损失细粒度结构",
+          "new_explanation": "共享表示使多种条件可以在嵌入层合并，但相加不会保留各来源的独立位置和时间轴。两个输入语义冲突时，单一向量与线性桥梁也没有显式工具去指定逐区域对应关系。下式仅在严格线性假设下成立；报告本身未完整公开足以验证该假设的桥梁细节。[原文 §4 multimodal arithmetic、§5 单向量局限](https://arxiv.org/pdf/2305.16355v1#page=4)"
+        },
+        {
+          "heading": "4.3 低参数更新学习对话行为而不改全部基础权重",
+          "new_explanation": "线性桥梁调整感知输入空间，注意力LoRA调整Vicuna使用条件与遵循指令的行为；两者共同由系统回答监督。用户话语提供上下文而不是目标，减少把指令本身复述当作训练收益。原式的概率乘积需按最大化似然而非最小化“loss”理解，下文保留这一数学边界。[原文 §3、Equation (1)](https://arxiv.org/pdf/2305.16355v1#page=3)"
+        }
+      ],
+      "disclosure_boundary": "不将示例视为全模态量化验证；不补LoRA rank或桥梁归一化。",
+      "article_sha256": "b817f14e0548adfe46930acd6c939e586557051d281f94a2150bc807b7a3ee7f",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2509.17765v1",
   "document_kind": "technical_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Qwen3-Omni：双 MoE、时间对齐与逐帧流式语音",
-  "chinese_characters": 2714,
+  "chinese_characters": 3186,
   "figure_revision_date": "2026-10-09"
 }

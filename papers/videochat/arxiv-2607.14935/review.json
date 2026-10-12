@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 8
+    "original_assets": 8,
+    "chinese_characters": 2741
   },
-  "article_sha256": "02071aecd1dad89e741d9b665d8be27cb352ef3b22ce1ae49c2a49edd0523cf1",
+  "article_sha256": "6f69ce9d9ffff00959293dc0333b4d194f4d5bf9f93b80b4248a4ac650fbf418",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -45,5 +46,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2607.14935v1",
+        "version": "2607.14935v1",
+        "sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b"
+      },
+      "source_locators": [
+        "PDF pp.4–5 §2.2–2.3, p.14 §4.4, Figures2–3/9"
+      ],
+      "changes": [
+        "解释局部位置重复与LLM跨块时间",
+        "补压缩前attention成本和预算一步滞后",
+        "说明状态mask只改监督不删上下文"
+      ],
+      "disclosure_boundary": "16倍是默认输出序列压缩近似，不等于端到端16倍加速。",
+      "article_sha256": "6f69ce9d9ffff00959293dc0333b4d194f4d5bf9f93b80b4248a4ac650fbf418",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

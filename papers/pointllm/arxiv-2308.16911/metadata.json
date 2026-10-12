@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2308.16911v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "PointLLM：让语言模型直接理解带颜色的三维物体点云",
-  "chinese_characters": 2291,
+  "chinese_characters": 2762,
   "figure_revision_date": "2026-10-09"
 }

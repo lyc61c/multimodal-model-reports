@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 3
+    "original_assets": 3,
+    "chinese_characters": 2583
   },
-  "article_sha256": "b6c889aaa59d641b7176008d1ca700d1458ee161081e618eaec9e5cb4e788adc",
+  "article_sha256": "53a88b6c50c06b104325b98236960f0fe5c9b393c494676cfc8f4b92bb1085d1",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -69,5 +70,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "cf2ecb2c2a5b8aca96928e2af37db3f25e24695d59406fbd51942a43c5c1864d"
+      },
+      "source_locators": [
+        "cached official blog long trajectory / compiler and performance workflow / monitoring and isolation"
+      ],
+      "changes": [
+        "四功能模块表；展开验证驱动优化、指标方向与监控控制"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "53a88b6c50c06b104325b98236960f0fe5c9b393c494676cfc8f4b92bb1085d1",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

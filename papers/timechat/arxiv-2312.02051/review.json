@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 6
+    "original_assets": 6,
+    "chinese_characters": 2484
   },
-  "article_sha256": "79771bf68bc21fdd080b05517cadf483145e66a51b612453373552d684df1132",
+  "article_sha256": "fe11ca90b42582bc9bd44782ea5fa673fe010881b60d8c0ffc62604fd7e2f04a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -57,5 +58,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.02051v1",
+        "version": "2312.02051v1",
+        "sha256": "9d582dde0f5413a8f79342e3d48cb22997d16b44a5406a26e89767f42e855a61"
+      },
+      "source_locators": [
+        "source.txt chars13477–19132: §3.1 complete, Eq1–3, PDF3–4; existing appendix width/default sampling retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 先绑定时间再做跨帧聚合",
+          "new_explanation": "image Q-Former沿用指令条件化结构，却把条件改为每帧时间。这样进入video Q-Former前，帧摘要已经包含时刻线索；后者只读取窗口内帧token，不另外再接一份时间描述。两级职责分别是帧内语义—时间绑定与帧间关系聚合，不能把两个查询模块合写成一次全视频压缩。[原文 §3.1.2–3.1.3，PDF 第 4 页](https://arxiv.org/pdf/2312.02051v1#page=4)"
+        },
+        {
+          "heading": "4.2 用步幅把语言预算与输入帧数联系起来",
+          "new_explanation": "整段固定查询数会随帧数增长而加重压缩，滑窗则为新增帧分配新增窗口输出。步幅决定输出增长速度与相邻窗口重复覆盖程度；常数压缩率仅在固定配置及相应边界假设下成立。它不会按视频秒数自动增帧，固定96帧采样仍可能漏掉短事件。[原文 §3.1.3、式 (1)–(2)](https://arxiv.org/pdf/2312.02051v1#page=4)"
+        },
+        {
+          "heading": "4.3 文字监督共享任务接口而非专用连续回归",
+          "new_explanation": "语言侧把窗口视觉序列与问题、可选转写共同作为条件，以答案token损失学习事件区间和评分。TimeChat复用已有第一阶段视觉语言对齐检查点，本研究重点执行指令训练，不是从头重做所有预训练。输出时间需要解析和校验，不能由语言概率直接视为校准后的连续时间置信度。[原文 §3.1.4、式 (3)](https://arxiv.org/pdf/2312.02051v1#page=4)"
+        }
+      ],
+      "disclosure_boundary": "保留固定96帧与可变输出预算区别；不增加未公开边界补齐规则。",
+      "article_sha256": "fe11ca90b42582bc9bd44782ea5fa673fe010881b60d8c0ffc62604fd7e2f04a",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

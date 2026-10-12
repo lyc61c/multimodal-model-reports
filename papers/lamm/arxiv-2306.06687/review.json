@@ -46,13 +46,14 @@
     "GPTmetricrankingaggregationnotdefined",
     "pointcloudcoordinatespromptinconsistent"
   ],
-  "article_sha256": "a9cabcbf6742029690a1e09c8908ae8e87a4b2dda57cb380f485097edc4e577b",
+  "article_sha256": "c1faa89a4943440f22ad166dae87bee40900cad216600ab8584857454120c4f6",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3610
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -103,5 +104,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2306.06687v1",
+        "version": "2306.06687v1",
+        "sha256": "e234cf37bbb1415ea547a1ab99586b75fc3cac0da4629d3ec01ff9c243682758"
+      },
+      "source_locators": [
+        "PDF p.6, §5.1–5.2, Figure3, Table1"
+      ],
+      "changes": [
+        "解释相同token数不同模态语义",
+        "说明解析协议对计数与定位的约束",
+        "补粗定位和mAP不可替代的原因"
+      ],
+      "disclosure_boundary": "保留原任务图；不新增图像点云联合融合证据。",
+      "article_sha256": "c1faa89a4943440f22ad166dae87bee40900cad216600ab8584857454120c4f6",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2520
   },
-  "article_sha256": "c64e0d68f331dd2b0703e8a9d639c0cde527d13429d012cf13c16a43015bc6c2",
+  "article_sha256": "578e99e5155b6494fcb6a720c4b3e7374ad48f0d86c73af77a3f96595da47fd1",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -53,5 +54,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2406.11816v1",
+        "version": "2406.11816v1",
+        "sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd"
+      },
+      "source_locators": [
+        "PDF pp.6–7 §3.3–3.4/§4.1 Eq5, footnotes3–5"
+      ],
+      "changes": [
+        "解释共享词表EOS和最后帧token监督",
+        "澄清EOS阈值方向",
+        "分开7B实验单CLS与8B demo十token容量"
+      ],
+      "disclosure_boundary": "不把FIFO并行误写为每个生成词都看到最新帧。",
+      "article_sha256": "578e99e5155b6494fcb6a720c4b3e7374ad48f0d86c73af77a3f96595da47fd1",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

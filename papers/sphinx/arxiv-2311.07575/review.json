@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2185
   },
-  "article_sha256": "1b9a15c8af9c8ee371312c756e28a15033d0a6a4269b740bcc16e5b2cfd7378a",
+  "article_sha256": "493308f6767e902ff7349ab3f5ac0dc4bfd6f37d62114a8a5133a6a9e9de3b84",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -42,5 +43,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.07575v1",
+        "version": "2311.07575v1",
+        "sha256": "48c9e9a0951f7083af668d2c31865df71e25fddeed151a0896671ebc3e645926"
+      },
+      "source_locators": [
+        "PDF pp.5–6 §3.1, Eq1, Figure3"
+      ],
+      "changes": [
+        "解释连续检查点插值无需双模型在线运行",
+        "区分任务指令和共享输出评价",
+        "澄清通道/序列拼接成本及全局摘要非替代patch"
+      ],
+      "disclosure_boundary": "不把权重混合写成MoE路由；保留原文高分辨率规格歧义。",
+      "article_sha256": "493308f6767e902ff7349ab3f5ac0dc4bfd6f37d62114a8a5133a6a9e9de3b84",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

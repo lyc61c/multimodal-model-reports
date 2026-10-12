@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 6
+    "original_assets": 6,
+    "chinese_characters": 2637
   },
-  "article_sha256": "affa0f43f303d7d4dcc764a6d1ea1c1cc0a43470272d107f3247e14a717fb0cc",
+  "article_sha256": "ddf3460d95b369a780496d38209a7b82433e7d5eda3de8fe93a11e59e98242c7",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -45,5 +46,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2508.11630v1",
+        "version": "2508.11630v1",
+        "sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8"
+      },
+      "source_locators": [
+        "PDF pp.4,7,10 §2.1,§3.1–3.2,§4.2–4.3; retained reward definition"
+      ],
+      "changes": [
+        "解释最后轮监督避免模仿人为中间错误",
+        "补文本探索与代码贪心共存机制",
+        "区分环境mask、格式奖励与末尾一致性检查"
+      ],
+      "disclosure_boundary": "不将沙箱自动修正或低温采样当作严格代码正确性保证。",
+      "article_sha256": "ddf3460d95b369a780496d38209a7b82433e7d5eda3de8fe93a11e59e98242c7",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

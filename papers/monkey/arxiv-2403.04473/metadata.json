@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2403.04473v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "TextMonkey：高分辨率文档理解、视觉 token 压缩与文字定位",
-  "chinese_characters": 2750,
+  "chinese_characters": 3431,
   "figure_revision_date": "2026-10-09"
 }

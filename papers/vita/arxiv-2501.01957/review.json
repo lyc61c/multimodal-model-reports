@@ -16,9 +16,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 6
+    "original_assets": 6,
+    "chinese_characters": 2473
   },
-  "article_sha256": "b3da56d36951ab140a1fdccb16056d781e5308917f04a7c08e5f575b529b27b3",
+  "article_sha256": "f243dec22ea61c9e17304f1a0238a74bb445fc08d0060944906bb3330853807d",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -47,5 +48,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2501.01957v1",
+        "version": "2501.01957v1",
+        "sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4"
+      },
+      "source_locators": [
+        "PDF pp.3–5 §3.1–3.3.2 and p.7 §3.3.3/Table2"
+      ],
+      "changes": [
+        "补冻结输出阶段与实际能力评测关系",
+        "区分CTC声学预训练和LLM接口",
+        "解释codec encoder训练用/decoder推理用及NAR文本嵌入"
+      ],
+      "disclosure_boundary": "保留音频帧率、参数统计、110K/11K小时原文口径边界。",
+      "article_sha256": "f243dec22ea61c9e17304f1a0238a74bb445fc08d0060944906bb3330853807d",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

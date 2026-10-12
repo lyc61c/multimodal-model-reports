@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2695
   },
-  "article_sha256": "50a265808c09c1481f0a5af8c1ed52b84796419b5e4f623a9b220a6e58224a6b",
+  "article_sha256": "a5094e0d45caf73bd8a02e02aa45f80be1fc6d56b4bdbd8ff33f5b4ba158988a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -27,5 +28,27 @@
     "math_delimiters_converted": 0,
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
     "strong_emphasis": "Unicode punctuation spacing outside code"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://qwen.ai/api/v2/article/?language=en-US&path=qwen3.5-omni&type=qwen_ai",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "b46f812b180720787429a4ac6d70b88aee7ad835263d70d67db9352ddd9082d7"
+      },
+      "source_locators": [
+        "official source Architecture / ARIA / real-time interaction"
+      ],
+      "changes": [
+        "新增五模块表；解释不等速对齐、残差量化与话轮/工具分工"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "a5094e0d45caf73bd8a02e02aa45f80be1fc6d56b4bdbd8ff33f5b4ba158988a",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -36,10 +36,11 @@
     "Figure1雷达MMMU43.1与Table9的43.8不同，以Table9为准",
     "通道拼接公式和生成目标是解释式，非新损失；所有指标非单调改善"
   ],
-  "article_sha256": "2fcc76e92a5230958cb0cf19e0b4c3f54723738bb07f53a92c193fc32851b163",
+  "article_sha256": "d20817fe8e63ca82fe6a3032b2b09f0161ab33a84e78290f63e3d4965f4a36bd",
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3134
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -88,5 +89,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2408.15998v1",
+        "version": "2408.15998v1",
+        "sha256": "c7c4305669566560ce9981ee1c8ac28392b63b633242b9fbea7283f134b2ed41"
+      },
+      "source_locators": [
+        "source.txt chars18777–27576: §2.4–2.6 complete, Figure3/Table4–6, PDF5–7"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 先对齐空间再合并通道的后端预算",
+          "new_explanation": "序列拼接保留多路各自的 token 身份，但随专家数增加语言上下文；通道拼接把多路信息放在同一空间位置，后续 projector 负责选取组合。后者要求先统一网格，因此不是任意异构序列都可直接无代价相加。论文比较的注入方案还受低分辨率查询的表征支配，这只是作者对实验的解释，不能作为所有跨注意力融合的普遍结论。[原文 §2.4、Figure 2、Table 4，PDF 第 5–6 页](https://arxiv.org/pdf/2408.15998v1#page=6)"
+        },
+        {
+          "heading": "4.2 增量选择检查组合收益而非孤立能力",
+          "new_explanation": "搜索保留当前最佳组合，再逐一尝试新视觉骨干，下一轮从胜出组合出发。这样的控制使新增能力要经联合模型验证：某个分割或 OCR 编码器在独立任务上强，不保证其表示已适合语言问答；也可能与已有来源重复。贪心过程节省组合搜索，却不能排除先弱后强的互补组合。[原文 §2.6，PDF 第 7 页](https://arxiv.org/pdf/2408.15998v1#page=7)"
+        },
+        {
+          "heading": "4.3 预对齐先处理表征差异再训练联合接口",
+          "new_explanation": "独立预对齐阶段为每个专家配自己的 projector，冻结共同 Vicuna-7B、更新视觉专家与接口；合并后只训练联合 projector，最后在 SFT 中更新整体。第一步的作用不是简单统一维度，而是让各路视觉表征接受同一语言任务监督，再交给联合接口处理剩余差异。三步更新范围不同，不能把预对齐误写成全程冻结视觉端。[原文 §2.5、Figure 3，PDF 第 6–7 页](https://arxiv.org/pdf/2408.15998v1#page=7)"
+        }
+      ],
+      "disclosure_boundary": "保留已有各项退化结果，未声称所有融合或指标一致提升。",
+      "article_sha256": "d20817fe8e63ca82fe6a3032b2b09f0161ab33a84e78290f63e3d4965f4a36bd",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

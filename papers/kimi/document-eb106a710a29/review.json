@@ -63,10 +63,11 @@
     "Total pretraining tokens, full cluster GPU count and aggregate training cost are not disclosed",
     "Self-review against the source; model or benchmarks were not rerun"
   ],
-  "article_sha256": "19dc91eb247f1860c224d0fb08e6c97fa47a7edba8ec5e0c29686bdb8adbffca",
+  "article_sha256": "64b985a8ff02a66601c2ffc9d39fd63eede2386797cf5657ccd727681ed5fc11",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4112
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -102,5 +103,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c"
+      },
+      "source_locators": [
+        "PDF pp.3–5, §2–2.1, Eq1/5/6; pp.9–10 §2.4–2.5; existing detailed §2.2–2.3 retained"
+      ],
+      "changes": [
+        "补全秩输出门与遗忘门职责区分",
+        "解释16token tile不是记忆窗口",
+        "说明AttnRes与token注意力轴不同",
+        "补27层0.4B视觉塔初始化对照"
+      ],
+      "disclosure_boundary": "已有K3详细公式保留；本轮未重验全部附录路由推导。",
+      "article_sha256": "64b985a8ff02a66601c2ffc9d39fd63eede2386797cf5657ccd727681ed5fc11",
+      "module_rows": 6,
+      "principle_subsections": 5,
+      "model_executed": false
+    }
+  ]
 }

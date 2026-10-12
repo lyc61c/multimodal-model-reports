@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2306.14795v1",
   "document_kind": "application_model_paper",
   "catalogue_group": "scope_review",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MotionGPT：把人体动作作为另一种语言进行理解与生成",
-  "chinese_characters": 2495,
+  "chinese_characters": 3061,
   "figure_revision_date": "2026-10-09"
 }

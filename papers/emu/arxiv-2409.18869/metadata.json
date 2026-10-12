@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2409.18869v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Emu3：以离散 token 的自回归预测统一文字、图像与视频",
   "source_sha256": "a70a5cebb7aeb2cfc8a210149dc4bae7f10fd08337c16fcb4b10d3b2a55d4983",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2595,
+  "chinese_characters": 3109,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

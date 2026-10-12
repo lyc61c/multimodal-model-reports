@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2504.07491v1",
   "document_kind": "technical_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Kimi-VL：原生分辨率、长上下文与稀疏多模态推理",
   "source_sha256": "842c364bf976186e60bfa1e98b8687d771594b4bc1a45e73645fb2f468274f6d",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2368,
+  "chinese_characters": 2857,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

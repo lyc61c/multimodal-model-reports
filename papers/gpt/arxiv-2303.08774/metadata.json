@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2303.08774v1",
   "document_kind": "technical_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "GPT-4：图文输入、可预测扩展与反馈对齐",
   "source_sha256": "053056a10114d22e4c47b6b5be25e54c320b5f1beeae7466e8638dac0f5f5f66",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2329,
+  "chinese_characters": 2795,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -16,17 +16,19 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 0
+    "original_assets": 0,
+    "chinese_characters": 2958
   },
-  "article_sha256": "6b7cdac4dcdf7b560b41525e68b95bf5156fa57d4f0b5853c13224f434f373d3",
+  "article_sha256": "d1780ad9fd5beaac3948d0c97432465c0517c3422a0bf48c5e2d2f4093db50b0",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
@@ -58,5 +60,56 @@
     "origin": "self_drawn",
     "manifest": "derived-figures-manifest.json",
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
-  }
+  },
+  "github_math_revision": {
+    "date": "2026-10-12",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://mimo.xiaomi.com/mimo-v2-omni",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "a949d4080c2aee458de5ca93d186de888f2779533a3211614c3cafeed878449f"
+      },
+      "source_locators": [
+        "source.txt chars0–6500: overview/perception claims; last3500chars: content creation OpenClaw demo and WhatNext"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 共同建模的公开目标与未知内部实现",
+          "new_explanation": "官网明确把当前内容、未来事件和应采取动作放入共同学习过程，但未给出三者如何转换为监督标签。可以确认任务层的联合意图，不能进一步认定存在显式世界状态转移网络或独立策略头。自绘图只展示编码、共享推理与输出接口，避免把营销措辞具体化成未知算子。[固定官网 Perception and Agency in One Model](https://mimo.xiaomi.com/mimo-v2-omni)"
+        },
+        {
+          "heading": "4.2 多模态共同条件仍需要独立验证跨模态贡献",
+          "new_explanation": "声音能补充视觉未见事件，视觉能帮助区分说话者或场景，统一输入接口使这些证据可共同成为回答条件。官网没有公开同步策略和同预算消融，因而结果只能支持所报告系统在相应任务上的表现，不能从单一模型名称推出各模态间无干扰或没有额外编码成本。[固定官网 Perception: Image, Video, Audio, and Beyond](https://mimo.xiaomi.com/mimo-v2-omni)"
+        },
+        {
+          "heading": "4.3 工具执行反馈让计划可以修正但成功不只来自模型",
+          "new_explanation": "演示中字体错误与网页输入不标准触发重新诊断、修改和再执行，体现观察反馈影响下一步动作。模型负责解释状态及选动作，OpenClaw提供浏览器、终端和文件执行；最终成功同时依赖工具可靠性、权限及环境状态。个别案例展示恢复路径，不能当作任意网站任务的成功率。[固定官网 OpenClaw demos](https://mimo.xiaomi.com/mimo-v2-omni)"
+        }
+      ],
+      "disclosure_boundary": "不补世界模型或RL公式，不把官网示例当控制安全性或通用成功率。",
+      "article_sha256": "d1780ad9fd5beaac3948d0c97432465c0517c3422a0bf48c5e2d2f4093db50b0",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

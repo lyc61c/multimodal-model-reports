@@ -11,10 +11,11 @@
     "targeted_content_audit_2026-10-11": "2026-10-11 targeted content audit: Figure 2 配图已裁切而说明仍称完整截图；修正文案。"
   },
   "model_execution": "not_run",
-  "article_sha256": "f67bef047ac99b0461e0e72dc2620d1fecba0252d2cf183e536e943f32474275",
+  "article_sha256": "17110ceb892770cdb4da11bd2eb54ac2a8b268d96daa41c0ab2ddb1e23fe338f",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2497
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -48,11 +49,11 @@
     }
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 16,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -66,18 +67,54 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 16,
-      "operatorname_replacements": 5,
-      "vertical_bar_replacements": 2,
-      "display_fence_conversions": 3,
-      "inline_angle_replacements": 0
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2405.05949v1",
+        "version": "2405.05949v1",
+        "sha256": "38d7b7e83a70074136b1908f1d67b7fad1d154b3e23f663a702736b6654e589b"
+      },
+      "source_locators": [
+        "source.txt chars 7151–15876: background ending and §3.1–3.3 through stage3, PDF3–4; existing Eq5 explanation preserved"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 按 token 扩展非线性容量并保留接口",
+          "new_explanation": "CuMo 在两个位置增加专家：CLIP block 的 MLP 决定视觉特征如何变换，连接器 MLP 决定它们如何进入语言空间。两个位置都保留各自原输出通道，故不需要重写后续 attention 接口。语言端若采用 Mixtral，则使用已有预训练专家；这和从 Mistral 复制出语言专家是两条不同实验路径。[原文 §3.1–3.2，PDF 第 3–4 页](https://arxiv.org/pdf/2405.05949v1#page=4)"
+        },
+        {
+          "heading": "4.2 先预热再复制：减少同时改变多个模块的冲击",
+          "new_explanation": "第一阶段只训练连接器建立模态接口，第二阶段以高质量 caption 解冻全模型，使视觉、接口与语言相互适应；第三阶段才将对应稠密 MLP 复制到专家并学习路由。这个次序让专家继承已适应当前多模态分布的映射，而不是直接使用未经联合预热的初值。复制起点稳定与后续专家分化是两个阶段，不能仅凭参数数量宣称立即获得能力。[原文 §3.3、Figure 3–4，PDF 第 3–4 页](https://arxiv.org/pdf/2405.05949v1#page=4)"
+        },
+        {
+          "heading": "4.3 语言监督与路由稳定性各自约束什么",
+          "new_explanation": "语言损失回答“输出是否符合目标”，路由辅助项回答“专家使用是否失衡、路由数值是否稳定”，两者不能互相替代。增加专家会增加存储参数，Top-2 仅限制单 token 的专家调用；视觉注意力、语言注意力以及多尺度编码仍有成本。因此评价稀疏扩容应同时看激活计算、总参数和多尺度配置。[原文 §3.1–3.3，式 (1)–(5)，PDF 第 3–5 页](https://arxiv.org/pdf/2405.05949v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "不擅自修正原式3的二次softmax，不新增ST-MoE辅助项公式或未披露S2像素配置。",
+      "article_sha256": "17110ceb892770cdb4da11bd2eb54ac2a8b268d96daa41c0ab2ddb1e23fe338f",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

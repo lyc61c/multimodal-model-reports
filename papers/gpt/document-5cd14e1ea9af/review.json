@@ -34,13 +34,14 @@
     "内部测试数据、规模和置信区间未完整公开；医学仅整理原文评估无诊断建议。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "851fa96745e48896face2993bf73838dc27b7bfb7dc6885e36951a5930451e4d",
+  "article_sha256": "dc0029162f0fdcc3c37c5da527dbc931bd21684bfebe5a14be23fbed53d0a08d",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3853
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -105,5 +106,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "f5a5a731482b3029e6a998377f7fc693f309c211a0672617c44bec5a076dcf5d"
+      },
+      "source_locators": [
+        "§1; §2.4.1–2.4.2; image-synonym evaluation; OCR mitigation"
+      ],
+      "changes": [
+        "五功能模块表；四节明确条件预测、语义增强与行为指标"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "dc0029162f0fdcc3c37c5da527dbc931bd21684bfebe5a14be23fbed53d0a08d",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

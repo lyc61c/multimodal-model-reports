@@ -46,10 +46,11 @@
     "Automatic reference and judge both Mixtral",
     "Only two-imagecomparison validated"
   ],
-  "article_sha256": "6b8c8bad1999065336c2ccf29c541cfebeef86ef7324cb54c5bde8919ef4754c",
+  "article_sha256": "e5a9cd57ee08fc206989e9313e3b4f5f42f02b51c4cc5c5d8d42f4f40cfa49e9",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2598
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -110,5 +111,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2406.09240v1",
+        "version": "2406.09240v1",
+        "sha256": "7e360ace45990f3fdb1db564f54f041bea7a08a5bd87db43ce0405b864460b91"
+      },
+      "source_locators": [
+        "PDF p.5, §3.1–3.3, Eq1–2; current §§3–4 in full"
+      ],
+      "changes": [
+        "解释双图顺序与有方向比较",
+        "说明随机caption选择如何约束图像绑定",
+        "区分Phase2视觉重标注与文字摘要复用"
+      ],
+      "disclosure_boundary": "不新增对称距离、跨图注意力模块或对比损失。",
+      "article_sha256": "e5a9cd57ee08fc206989e9313e3b4f5f42f02b51c4cc5c5d8d42f4f40cfa49e9",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

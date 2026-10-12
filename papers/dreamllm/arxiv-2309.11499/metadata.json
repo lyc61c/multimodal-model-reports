@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2309.11499v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "DreamLLM：联合学习图像理解、图像生成与交错图文创作",
-  "chinese_characters": 2327,
+  "chinese_characters": 2924,
   "figure_revision_date": "2026-10-09"
 }

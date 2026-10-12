@@ -20,9 +20,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 4258
   },
-  "article_sha256": "dea3811b04c210fd10ac67837c7de37e6f1a7f505577b4adda860a1ef4c44632",
+  "article_sha256": "aae42fa244074e31134ced829d3a153a5c3f813026b45cc94737efa542b71d4d",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -78,5 +79,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2607.00248v1",
+        "version": "2607.00248v1",
+        "sha256": "1449a46c4ebcdf4c6e00c863d15cdf6418ee75cfa8d1de91453cbf62d1f4a441"
+      },
+      "source_locators": [
+        "PDF pp.14–15 §4.3 Tables9–10; existing domain-specific case calculations retained"
+      ],
+      "changes": [
+        "补Tracking位置轨迹分解",
+        "区分输入重采样和输出结构化证据",
+        "解释一致性指标及外部验证的不同证明范围"
+      ],
+      "disclosure_boundary": "模型卡主要披露能力、提示和工具案例，不补网络层数或训练损失。",
+      "article_sha256": "aae42fa244074e31134ced829d3a153a5c3f813026b45cc94737efa542b71d4d",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

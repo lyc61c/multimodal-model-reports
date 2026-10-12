@@ -60,10 +60,11 @@
     "原始视频ATE最好，文字动作RPE更低",
     "实际硬件通信储存不因固定激活FLOPs而消失"
   ],
-  "article_sha256": "5df7b511a62d766dc06f222de5d0b8dd7447ec3a94fae4711bb9d7dd1c5492db",
+  "article_sha256": "18f04d6d43a489e6136958e97459c3757a782702b7ac041005d7ecca3cb8e8bd",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3597
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -96,5 +97,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2603.03276v1",
+        "version": "2603.03276v1",
+        "sha256": "440b629770a36bd5b9d02894a622f2f780af80ead2c0fc1aa4677b8873b5bdae"
+      },
+      "source_locators": [
+        "PDF pp.3–4, §1–2.1; original §§3–4 source-linked Eq1–4/§6/§7/E.8 retained"
+      ],
+      "changes": [
+        "区分帧内噪声时刻与序列因果时间",
+        "解释相同token预算并不控制通道和预训练语义",
+        "解释模态选择率归一化与硬分工差异"
+      ],
+      "disclosure_boundary": "研究模型与消融配置分开；不将外推规模写为实训。",
+      "article_sha256": "18f04d6d43a489e6136958e97459c3757a782702b7ac041005d7ecca3cb8e8bd",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

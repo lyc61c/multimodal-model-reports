@@ -40,10 +40,11 @@
     "定位指标阈值未完整重述，不自行写IoU0.5",
     "GIoU在公式按正文明确为损失而非最大化metric"
   ],
-  "article_sha256": "d79bd9e0a265b4b6a19ba3f5cf1e6795b4c9197f76ae6a4e4aa2e6c20cd6acdf",
+  "article_sha256": "87e95f83f2d42f653d8285e84d118d8e2304ef322dfae0b7badf3f11a0b7c33f",
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2738
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -76,5 +77,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.04498v1",
+        "version": "2311.04498v1",
+        "sha256": "0893588fa30f7d5b22cefb89765602740fde1b18f130c316b40502603e99f83d"
+      },
+      "source_locators": [
+        "v1 §3.1–3.3、Eq.1–4，PDF第3–4页"
+      ],
+      "changes": [
+        "模型先决定在文字中何时产生trigger，再用该位置隐状态解码框，因而“要定位哪个对象”由上下文语言表征决定，“坐标怎样连续变化”交给回归器。相比将每个数拆成多个文本token，这减少位置序列长度，但引入独立参数和几何监督；两种表示的成本应同时比较。",
+        "第一条循环从真实框出发，确保输入位置编码还能被框解码器还原；第二条从模型trigger状态出发，要求预测框再编码后接近原状态。前者约束坐标保真，后者约束两个接口在模型实际使用的表示上兼容。四维框是低维瓶颈，因此循环鼓励可用几何表示，并不要求承载全部语言语义。",
+        "SAM同时得到原图、trigger衍生的提示以及预测框的提示，前者表达对象语义，后者给出粗空间范围，mask头再恢复细致边界。这样先学定位再轻量扩展到分割，避免让LLM生成巨量像素token。它仍可能受预测框偏差影响，原图进入SAM也不能补证语言端是否指错对象。"
+      ],
+      "disclosure_boundary": "trigger隐藏状态连续接口；不把SAM写成文本逐像素输出；几何循环非语义无损。",
+      "article_sha256": "87e95f83f2d42f653d8285e84d118d8e2304ef322dfae0b7badf3f11a0b7c33f",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

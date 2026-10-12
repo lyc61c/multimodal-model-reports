@@ -34,10 +34,11 @@
     "Android高层69.0低于对照70.8，不写全面提升",
     "发布时间的资源计划与已开放状态分开"
   ],
-  "article_sha256": "22f429e4babe9581df5ea2b61d8fe07e45e18f5d65f0d186eb8bb95387c600c5",
+  "article_sha256": "32acef125475dd6977f9c2a189ab3720a2c8d5080f39a70b63a4b19ad9951090",
   "artifact_checks": {
     "original_assets": 3,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3186
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -84,5 +85,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2409.17146v1",
+        "version": "2409.17146v1",
+        "sha256": "d3a9650763523cc200b40ceca50722940c42741c6c2efcae3c7ebb17ed2d4839"
+      },
+      "source_locators": [
+        "v1 §2–3，PDF第2–4页"
+      ],
+      "changes": [
+        "标注问题明确要求对象数量、位置、图中文字、背景和细节，而不只是延长描述。三份口述转写在可用时各自整理，并再生成一个汇总描述，训练可使用这四种表达作为自然语言增广。视觉事实的初始来源是人，语言LLM负责规范和归纳；录音凭据增强可追溯性，但仍需防止转写或整理把不确定观察改成确定事实。",
+        "PixMo-Points要求标注员指出描述对象的每个实例，并补充目标不存在的数据。穷尽性使点集可同时支持定位和计数：遗漏实例会直接造成少计，重复点会造成多计，输出坐标因此比单一数字更便于检查。另一支数据把文字标注点交给语言LLM组织解释，让回答在适当时引用这些位置；这仍不同于证明所有生成点都经过独立视觉验证。",
+        "连接器随机初始化后，密集caption同时给视觉端和语言端提供监督，第二阶段再切换到问答、文档、指点等任务混合，避免只以极短标签适配一个接口。不同LLM版本沿用同类数据和训练流程但学习率不同，因此架构家族比较仍包含底座与优化选择的共同影响。报告强调数据质量和配方的组合，不支持把成功单独归功于取消冻结。"
+      ],
+      "disclosure_boundary": "不补池化/坐标细则；点数解释非新损失；人工视觉来源仍有LLM辅助加工。",
+      "article_sha256": "32acef125475dd6977f9c2a189ab3720a2c8d5080f39a70b63a4b19ad9951090",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

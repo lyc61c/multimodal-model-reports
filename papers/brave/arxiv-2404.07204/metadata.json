@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2404.07204v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "BRAVE：以多编码器查询Transformer拓宽视觉表示",
-  "chinese_characters": 2103,
+  "chinese_characters": 2726,
   "figure_revision_date": "2026-10-09"
 }

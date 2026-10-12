@@ -39,10 +39,11 @@
     "OCR bounding boxes exist in dataset but not used in model training",
     "Caption corpus and training token counts distinguished"
   ],
-  "article_sha256": "6af37c5104145d97ec32f03bc8d20f409a7b5d27cf7928dc8e56f2f61b0fd31a",
+  "article_sha256": "b6f54654052924245e43c67e8cd78044c5f2ade10f86724d3b91367b7fdb589d",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4070
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -89,5 +90,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2408.08872v1",
+        "version": "2408.08872v1",
+        "sha256": "84b6f26df7878661a8f1cfec1855cd0b512a7b40e8d43b4349b5a61de02dcb3e"
+      },
+      "source_locators": [
+        "v1 §2、§3，PDF 第3–4页；§7.2，第12页"
+      ],
+      "changes": [
+        "Perceiver 的职责是把视觉编码器输出转换成语言主干能够消费的有限序列；压缩发生在视觉进入 LLM 之前。预训练时冻结视觉编码器，而 sampler 和语言模型参与适配，因此训练既调整“保留哪些视觉信息”，也调整“怎样根据这些信息续写”。这与仅训练一个投影、始终冻结语言模型的设置不同，不能把两者的可训练参数范围混为一谈。",
+        "逐块处理还带来两个不同尺度的输入：局部块提供小字与细部，缩小整图提供布局上下文。独立采样并不自动知道块间关系，后续语言主干需要结合这些视觉组进行整合。另一项容易混淆的扩展是多图微调：它让模型处理来自不同图像的交错上下文，解决跨图指令遵循；切分同一张高分辨率图并不能替代这种训练。",
+        "作者将数据组织和监督密度视为与架构同等重要的选择：自然图文交错语料保留上下文结构，单图与多图指令数据再规定回答任务。所谓目标简化意味着这些阶段可以共享文字自回归接口，并不意味着每种训练数据提供相同信号；图中文字转录、自然描述和跨图推理分别约束不同的条件生成行为。"
+      ],
+      "disclosure_boundary": "未补未公开sampler层数；简化注意力和文字损失仍明确为解释式；区分预训练、SFT与偏好后训练。",
+      "article_sha256": "b6f54654052924245e43c67e8cd78044c5f2ade10f86724d3b91367b7fdb589d",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

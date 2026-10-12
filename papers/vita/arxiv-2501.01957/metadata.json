@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2501.01957v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VITA-1.5：逐步引入视觉、语音理解与语音生成",
   "source_sha256": "ea6641578498e153159610ad80c033fff58d9cc311582e10280ccb9c754d29e4",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1968,
+  "chinese_characters": 2473,
   "figures_manifest": "figures-manifest.json"
 }

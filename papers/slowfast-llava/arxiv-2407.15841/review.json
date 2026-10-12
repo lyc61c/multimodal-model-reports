@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2168
   },
-  "article_sha256": "2ded6f9a09355fc0f08765b3d1234a77ed5a3cedfa74cb1951ddf8a02c0d1bcf",
+  "article_sha256": "de271a6ab7ba680120b8c1e898ad2a364bd3432dc5cf3075ebe70083c7e9c3be",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -53,5 +54,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2407.15841v1",
+        "version": "2407.15841v1",
+        "sha256": "74018b6f36906b0d96d1e1598ac00cbf257d869a871998a3ff9ed7b94b4f569b"
+      },
+      "source_locators": [
+        "PDF pp.3–4 §3–3.2, Eq1, footnotes1/3; existing budget ablation retained"
+      ],
+      "changes": [
+        "澄清两路分辨率是token网格不是原像素",
+        "解释projector后聚合与提示协议",
+        "限定时间覆盖及视觉编码节省范围"
+      ],
+      "disclosure_boundary": "没有新增学习型运动模块或动态注意力机制。",
+      "article_sha256": "de271a6ab7ba680120b8c1e898ad2a364bd3432dc5cf3075ebe70083c7e9c3be",
+      "module_rows": 5,
+      "principle_subsections": 2,
+      "model_executed": false
+    }
+  ]
 }

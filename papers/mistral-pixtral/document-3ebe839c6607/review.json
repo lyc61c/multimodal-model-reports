@@ -13,9 +13,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 3635
   },
-  "article_sha256": "4e6996e1569e6ce7ab722a4090cc8b26a597ff765eaba418be93586258b8aee9",
+  "article_sha256": "2103f496320814f5f3564b1c5afc1c74e86f68c273a130d00eac422036e33588",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -55,5 +56,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://mistral.ai/news/pixtral-12b/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "bca3e11c3e9ce80ebee25d0e65b72f08df8f55cd4ae6630103093b93d4f73256"
+      },
+      "source_locators": [
+        "官方固定发布页 Architecture、Instruction following、Performance"
+      ],
+      "changes": [
+        "128K是整条上下文预算，要同时容纳文字、各图的视觉序列以及生成内容。保留高分辨率能增加局部线索，但多图输入也会累计消耗这个预算，因此“支持任意数量图片”应理解为受上下文容量约束的接口能力。行边界保留长宽结构，不能单独证明图像空间关系已被完整理解。",
+        "两张表合并的示例显示，解码器可以同时利用不同图像中的互补字段，以及文字指令指定的合并方式。这样无需先强制为每图生成一段描述再拼接，避免中间文字摘要遗漏字段；代价是视觉表示本身占用上下文，感知错误仍可能传到最终答案。该发布型号描述的是图文输入、文字输出，不能由统一解码器推断其具有图像生成头。",
+        "发布页说明使用共同评测框架和相同提示重测模型，并先核对GPT-4o、Claude3.5等公开结果。共同提示减少了提示和评分设置的差异，但未必是每个模型各自最优的提示。因此表格支持该受控设置下的比较，指令遵循指标也应与感知准确率并读，而不应混成一个全任务能力结论。"
+      ],
+      "disclosure_boundary": "未披露连接层参数、完整loss mask；patch计数为图示解释；不宣称图像生成。",
+      "article_sha256": "2103f496320814f5f3564b1c5afc1c74e86f68c273a130d00eac422036e33588",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

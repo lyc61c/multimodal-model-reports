@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2307.04087v1",
   "document_kind": "dataset_or_benchmark",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "SVIT：用密集人工标注扩展视觉指令数据",
   "source_sha256": "8865ad6b7cc6f61322c4e11d131e3a46437018a66742c1b121d0ea41655c7501",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1974,
+  "chinese_characters": 2422,
   "figures_manifest": "figures-manifest.json"
 }

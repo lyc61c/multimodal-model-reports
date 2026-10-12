@@ -38,13 +38,14 @@
     "仅作者报告结果",
     "训练步数与采样描述原文存在歧义"
   ],
-  "article_sha256": "75e5cfa428a5f53f6cff708e5871fb3f0cd61769a1b55093974a10556fd53838",
+  "article_sha256": "36b957f02c308d24b539da1e09e811d3cf4790387120f70e5ee037f2ab5d62b0",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3679
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -77,5 +78,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2505.15809v1",
+        "version": "2505.15809v1",
+        "sha256": "86727233fe096ba4db0579447d66f52d7015c0af76f8321be0fb54410bae883c"
+      },
+      "source_locators": [
+        "v1 §2.1–2.3，PDF第4–6页"
+      ],
+      "changes": [
+        "损坏过程决定哪些位置需要学习，网络则利用其余可见token共同恢复被遮位置；这与左到右模型只能利用前缀的条件结构不同。统一目标解决的是文本和视觉码的预测形式一致，视觉内容仍依赖图像码本提供可还原的离散表示。时间权重和掩码比例一起改变不同难度恢复任务的贡献，不能把所有时间点看成完全相同的分类样本。",
+        "作者把文本推理、多模态推理、知识驱动文生图都整理成“推理过程—最终结果”的统一格式，再混合微调。干净prompt避免模型把学习容量用来猜用户条件，响应中的推理与结果则共同接受掩码恢复。这个冷启动为后续奖励优化提供可采样的任务格式；验证器筛选降低错误轨迹比例，但不构成推理链忠实性的证明。",
+        "固定同一份旧策略响应，再更换掩码条件，可以把“候选答案的质量比较”与“从不同去噪阶段学习该答案”分开。若每次更新都重采样完整答案，候选内容与噪声条件会同时变化，难以保持同一代理评估对象。该设计以较少前向估计覆盖不同恢复阶段，但局部掩码分数仍带近似性质，不能据此消除正文中对数分数记号的歧义。"
+      ],
+      "disclosure_boundary": "保留原文概率比记号问题；不声称严格无偏；不补tokenizer层数。",
+      "article_sha256": "36b957f02c308d24b539da1e09e811d3cf4790387120f70e5ee037f2ab5d62b0",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

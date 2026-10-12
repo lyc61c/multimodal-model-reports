@@ -48,10 +48,11 @@
     "MMVet broad prose contradicted by table",
     "Not lossless long-memory or native audio model"
   ],
-  "article_sha256": "0911475efed11e05deaf56b697646186dd93c7afefeaa9801b604aefd1803896",
+  "article_sha256": "985f1caa4566e6a853f83d30a11f67aed95cd2d484d9a5862f46d28f3294a45f",
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3060
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -64,11 +65,11 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 12,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -82,18 +83,54 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 6,
-      "operatorname_replacements": 1,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2408.04840v1",
+        "version": "2408.04840v1",
+        "sha256": "5aa7f11234f4f2ff1612218cf892f3fef55e8460012b168d8bc7b4d7c24637bf"
+      },
+      "source_locators": [
+        "source.txt chars7748–16367: §2.1–2.2 complete, Figure2/3 and Eq1–2, PDF3–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 稀疏交互层复用语言计算",
+          "new_explanation": "标准拼接把每个视觉patch计入语言自注意力序列，长图像序列会快速消耗上下文。本文将视觉特征放在旁路，仅在少数层让文字读取它们；既有Q和LayerNorm可复用，视觉KV从语言KV初始化。这样减少新增参数与文字序列占用，但不会消除保存和读取视觉特征的成本。[原文 §2.1–2.2，PDF 第 3–4 页](https://arxiv.org/pdf/2408.04840v1#page=4)"
+        },
+        {
+          "heading": "4.2 交错位置与可见性共同约束多图因果关系",
+          "new_explanation": "只有图像次序而没有文字位置，难以区分同一张图位于哪轮说明附近；MI-RoPE把占位符位置赋给该图patch，掩码再禁止文字读取后来的图片。二者分别解决位置标识与信息泄漏问题。它保留视觉编码器已有空间信息，却没有在语言侧重新定义每个patch的二维坐标。[原文 §2.2 Visual Position Modeling、Figure 3(c)](https://arxiv.org/pdf/2408.04840v1#page=5)"
+        },
+        {
+          "heading": "4.3 让视觉补充量随当前文字语义变化",
+          "new_explanation": "与整层只有一个固定缩放系数相比，门控直接由文字自注意力状态产生，使不同token、不同通道能够使用不同混合比例。门是逐元素权重，不是一次选择某张图的离散路由；多图选择首先仍由交叉注意力与掩码完成。下式是v1公开的门控写法，其未展开部分保持原有披露边界。[原文 §2.2 Adaptive Gating、式 (1)–(2)](https://arxiv.org/pdf/2408.04840v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "保持裁块计数与门控参数披露的不确定性，不把视觉旁路等同零成本。",
+      "article_sha256": "985f1caa4566e6a853f83d30a11f67aed95cd2d484d9a5862f46d28f3294a45f",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

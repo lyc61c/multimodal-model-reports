@@ -9,11 +9,11 @@
   "source_url": "https://huggingface.co/adept/fuyu-8b/raw/main/README.md",
   "document_kind": "release_blog",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Fuyu-8B：直接读取图像块的数字代理基础模型",
   "source_sha256": "8f8beb8b0174e9b661ef5bc795e0342747d0069a590b41167e636172c177c6ff",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1861,
+  "chinese_characters": 2385,
   "figures_manifest": "figures-manifest.json"
 }

@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2311.05437v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LLaVA-Plus：学习调用视觉工具的多模态智能体",
   "source_sha256": "c9586e6cc381ba58bd4a8206ebff32995d89d82588f527674570693c497ed85f",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2459,
+  "chinese_characters": 3036,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

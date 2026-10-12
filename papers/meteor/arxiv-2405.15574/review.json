@@ -57,10 +57,11 @@
     "no systematic failurecase study",
     "no detailed annotation labor accounting"
   ],
-  "article_sha256": "75e6e72d4dad07018a04c61611ee27b32ca51870952ab285f7c5a1b6a4131969",
+  "article_sha256": "90b66cea1f6f8a57973f6341eaed3202ff5833f113a24d400c59985921df969b",
   "artifact_checks": {
     "original_assets": 3,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2900
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -107,5 +108,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2405.15574v1",
+        "version": "2405.15574v1",
+        "sha256": "43a993c12270bf8cfd88aa325c9ae8c2f65fe080091c328a0fcd33058068438f"
+      },
+      "source_locators": [
+        "v1 §3，PDF第4–6页"
+      ],
+      "changes": [
+        "解释平均长度显著超过最终答案，辅助Mamba吸收解释监督，让主LLM不必在在线回答中逐字生成全部rationale。系统并未删除推理任务，只是把部分信息搬到隐藏表示路径；主干仍要从图像、问题和辅助态组织答案，因此不能用辅助模块的线性特性描述整套系统。",
+        "第一阶段每个标记连接后面的解释片段，第二阶段只保留标记位置对应的辅助特征，迫使系统在缺少解释文字时利用已学表示。两阶段的输入条件有意不同，第二阶段正是为缩小这种差异，而非在推理时秘密调用教师解释API。分段位置稳定有助于各辅助位置承担不同信息，但不能保证每个位置对应一个正确逻辑步骤。",
+        "有无解释条件的匹配表示更相近，说明辅助态带有与目标解释关联的信息；它不是逐步推理准确率，也没有检查全部可能的答案捷径。rationale构造先用自动分数过滤再人工判断，改善监督质量的同时仍可能继承教师错误，因此表示验证应与最终任务评测共同阅读。"
+      ],
+      "disclosure_boundary": "推理不输入教师解释；隐藏token非可审计自然语言CoT；无联合目标系数。",
+      "article_sha256": "90b66cea1f6f8a57973f6341eaed3202ff5833f113a24d400c59985921df969b",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

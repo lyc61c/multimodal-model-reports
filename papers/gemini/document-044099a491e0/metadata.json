@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2312.11805v1",
   "document_kind": "technical_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Gemini 初代：从联合多模态预训练到分层部署的模型家族",
   "source_sha256": "f3c5b175d26159b92891b32380515ec1036f4ffe2862e19d7277fd165e0d9663",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3254,
+  "chinese_characters": 3779,
   "figures_manifest": "figures-manifest.json"
 }

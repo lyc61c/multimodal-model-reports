@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2311.03356v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "GLaMM：让回答中的短语对应图像里的像素掩码",
-  "chinese_characters": 2355,
+  "chinese_characters": 2885,
   "figure_revision_date": "2026-10-09"
 }

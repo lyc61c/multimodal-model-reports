@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 6
+    "original_assets": 6,
+    "chinese_characters": 2332
   },
-  "article_sha256": "6de5fb3616f5e8b008c60f929b934860a327aedcff5e7da81c985102deb82119",
+  "article_sha256": "74d4f8192fc2300a7b65db8e6dee6bcf44075c10e17104a90a6a7962422ff94e",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -59,5 +60,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2411.18211v1",
+        "version": "2411.18211v1",
+        "sha256": "abeda0cb0cd163ca973f0dfaba9ed8ae23c6815937aa73534112cefe1c26a43d"
+      },
+      "source_locators": [
+        "PDF pp.3–5 §3.1–3.4, Figure3, Algorithm1"
+      ],
+      "changes": [
+        "解释时间输入/答案共用文本空间",
+        "澄清动态抽样不依据事件内容",
+        "说明空间池化阈值与时间身份权衡"
+      ],
+      "disclosure_boundary": "派生token数量仍标为推导，不补未公开事件选择器。",
+      "article_sha256": "74d4f8192fc2300a7b65db8e6dee6bcf44075c10e17104a90a6a7962422ff94e",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

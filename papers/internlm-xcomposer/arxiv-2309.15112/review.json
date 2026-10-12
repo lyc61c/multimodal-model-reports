@@ -43,13 +43,14 @@
     "Composition demonstrations lack quantitative quality protocol",
     "Some data and optimization details undisclosed"
   ],
-  "article_sha256": "7dc7f127c0d742d0420c2ca7bc9efd35edd4fc9d95a3c69e522a30d5d92dc007",
+  "article_sha256": "17247f6244106b5d317af3e9a68cbc84f14c3e5924be463270b6b4b4609a7c13",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3233
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -237,5 +238,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2309.15112v1",
+        "version": "2309.15112v1",
+        "sha256": "2671b2f2eb6220142381908615eb36d5af963c9890dde59ebba8b2584aad9443"
+      },
+      "source_locators": [
+        "v1 §3.1–3.3，PDF第4–6页"
+      ],
+      "changes": [
+        "视觉编码器冻结后，sampler需要在有限64个位置中选择对语言任务有用的信息；预训练还更新InternLM，使主干学会读取这些向量。SFT再冻结原主干而调LoRA和sampler，说明两个阶段分别承担建立多模态接口与学习回答行为的职责，不能用一个统一“只训练适配器”描述全过程。",
+        "先写文字再预测位置与图注，将文章结构和图片检索条件连接起来。图注不仅描述上一段关键词，还需要符合全篇主题及该插图位置的作用；教师看到文章及原插图位置，提供这种面向文章的监督。段落索引提供可执行的位置引用，而不是让模型直接排版最终HTML。",
+        "相似度召回负责快速缩小图库，模型选择则额外看候选图片与已使用图片，避免只按局部文本挑出重复或不协调的图。两级机制意味着召回漏掉的合适图片无法被后一级选回；同时选择了相关图片也不能保证文章文字事实完全正确。文章生成、图片选择和事实可靠性需要分别评价。",
+        "LoRA应用于注意力Q/K/V和前馈层，sampler另用学习率训练；这比单独修改输入投影提供更深入的适配路径。冻结原权重限制了直接覆盖，却不会阻止增量改变网络输出，因此“保留”是训练设计意图，还需纯文字及多模态评测共同检验。"
+      ],
+      "disclosure_boundary": "检索图片非像素生成；64查询不保证无损；保留不同阶段训练范围。",
+      "article_sha256": "17247f6244106b5d317af3e9a68cbc84f14c3e5924be463270b6b4b4609a7c13",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

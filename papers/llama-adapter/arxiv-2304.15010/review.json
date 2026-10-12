@@ -49,13 +49,14 @@
     "paramfractionambiguous",
     "experttext canpropagateerrors"
   ],
-  "article_sha256": "5e37f8a560ae05cdf9fe9e0884dec6709db130a1658cff1c395b4675d23a989b",
+  "article_sha256": "56cc4deb453dfba85c1b7f2c79cd5bf18ceee080c26ea385767792a3d3aec41e",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3278
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -92,5 +93,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2304.15010v1",
+        "version": "2304.15010v1",
+        "sha256": "2e3e51e30b1cc43c82f4903c5e7f6f0fe061a255ee8e64bc4af3e9b954ba726a"
+      },
+      "source_locators": [
+        "PDF pp.4–5, §3–4.2, Figure2, Eq1–2"
+      ],
+      "changes": [
+        "解释轻量全层调制表达边界",
+        "补V1caption覆盖指令提示的动机",
+        "补500K/50K不平衡与参数分组作用"
+      ],
+      "disclosure_boundary": "可选LoRA不写成默认；首层和31层沿实际7B配置。",
+      "article_sha256": "56cc4deb453dfba85c1b7f2c79cd5bf18ceee080c26ea385767792a3d3aec41e",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

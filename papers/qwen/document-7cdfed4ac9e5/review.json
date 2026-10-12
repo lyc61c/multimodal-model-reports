@@ -20,7 +20,7 @@
     "No claim of independent peer review or model execution",
     "Input examples are not generated answers"
   ],
-  "article_sha256": "eab8719291072fcb2d8931caa78b6c7341f075bde5b2774d5c1aabe9483caf41",
+  "article_sha256": "bfa1101c7fa4a9ba4a51cbf69509c9caaf568a1ec8176923bcdecb67892bd5d0",
   "formatting_revision": {
     "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -102,5 +102,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/README.md",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "bda4b24e975f65ac677985306ddbad33362e65064637660654c8bb7dea7edf50"
+      },
+      "source_locators": [
+        "fixed config; Transformers v5.2.0 torch_recurrent_gated_delta_rule / Qwen3_5MoeSparseMoeBlock / decoder layer"
+      ],
+      "changes": [
+        "模块表明确六条实际张量路径；补充 delta 误差修正、独立共享门与融合/工具边界"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "bfa1101c7fa4a9ba4a51cbf69509c9caaf568a1ec8176923bcdecb67892bd5d0",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

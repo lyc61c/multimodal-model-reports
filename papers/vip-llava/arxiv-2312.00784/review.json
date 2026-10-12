@@ -13,9 +13,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2088
   },
-  "article_sha256": "8caccdd7ad39ae059be819cb03853865156d37dd252be13cda8ff5c62e0e82bd",
+  "article_sha256": "e1f1d9667b7920fd48f3ecc2c09ebcd6ee361e1942ccaacbd6f791806d2417f8",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -57,5 +58,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.00784v1",
+        "version": "2312.00784v1",
+        "sha256": "0e4c5476abb36bdcfe02bcb1693e66338f20c10857f500507f2b4099596c23e4"
+      },
+      "source_locators": [
+        "PDF p3 §3.1 / Eq1–2; existing comparative ablations retained"
+      ],
+      "changes": [
+        "四模块表；三节解释像素条件、融合监督及接口折中"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "e1f1d9667b7920fd48f3ecc2c09ebcd6ee361e1942ccaacbd6f791806d2417f8",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

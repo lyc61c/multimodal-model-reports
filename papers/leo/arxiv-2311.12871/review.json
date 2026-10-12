@@ -53,10 +53,11 @@
     "主表与消融对象提案协议不同不可混比",
     "未执行真实机器人或独立复现"
   ],
-  "article_sha256": "62d594378f456a63177cedbc412c5c6c004db25119f91e48a8ef5ed75d44259a",
+  "article_sha256": "27ea0bafafadafa89e2a2380592315eb5c69d81d9650d598f2aa1840d4cd8952",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3535
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -92,5 +93,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.12871v1",
+        "version": "2311.12871v1",
+        "sha256": "1f289b1cb06e6f09a862c2af4dc2302b60237590e53af529fd3d16e7b3c32b2f"
+      },
+      "source_locators": [
+        "source.txt chars12116–16376: §2.1–2.3 complete, PDF3–4; existing AppendixD/O-CoT facts preserved without new numeric claim"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 对象中心表示需要关系和自身参照",
+          "new_explanation": "单独对象特征主要描述“是什么”，空间网络把对象之间及对象与自身的关系加入后，语言端才有条件理解相对方位。输入对象来自提案，若提案漏掉目标，后续空间注意力也无法凭关系恢复缺失点云。embodiment token 提供任务参照，而不是凭空增加一个真实可操作物体。[原文 §2.1–2.2，PDF 第 3 页；附录 D.2](https://arxiv.org/pdf/2311.12871v1#page=3)"
+        },
+        {
+          "heading": "4.2 动作离散化让行为进入响应序列",
+          "new_explanation": "把连续控制分量离散成任务规定的码，再映射到低频文字 token，主干便可用同一响应预测接口学习文字和动作。代价是控制分辨率受离散网格限制，而且不同环境动作定义不同；模型输出必须经任务映射才能执行。监督动作示范和自然语言计划共享格式，不意味着两者具有相同的环境成功率。[原文 §2.1–2.3，PDF 第 3–4 页](https://arxiv.org/pdf/2311.12871v1#page=4)"
+        },
+        {
+          "heading": "4.3 教师对象核查与部署响应目标分离",
+          "new_explanation": "对象标签及 ID 使教师在回答前显式关联场景实例，便于发现计数或引用错误；清洗移除 thought 后，学生目标仍是最终回答。这种数据构造可改善监督依据，却不是让 LEO 在推理时执行同一教师检查程序。模型的空间表示、教师数据质量和环境动作执行仍是不同误差来源。[原文 §3.3；原有 O-CoT 流程与附录示例](https://arxiv.org/pdf/2311.12871v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "不改附录空间attention公式疑义，动作空间仍明确任务限定。",
+      "article_sha256": "27ea0bafafadafa89e2a2380592315eb5c69d81d9650d598f2aa1840d4cd8952",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

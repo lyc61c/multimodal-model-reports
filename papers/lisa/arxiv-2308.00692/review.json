@@ -35,10 +35,11 @@
     "Not uniformly SOTA across RefCOCO+ splits",
     "Projection channel order not inferred from list"
   ],
-  "article_sha256": "b88e12e672728971b5e11dc7a7bdd2346f983841354f9784769cfd73c3f897a8",
+  "article_sha256": "3ab2573edd02b3985ba8d20fffc47491c510c0cb05a871e4c9d8c9d29626a36a",
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3515
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -71,5 +72,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2308.00692v1",
+        "version": "2308.00692v1",
+        "sha256": "3d06c7a843996062c0f55a50acf800cb0c411fff08306630aae9b7e32cdbcce4"
+      },
+      "source_locators": [
+        "PDF pp.5–6, §4.1–4.2, Eq2–4, Figure4"
+      ],
+      "changes": [
+        "细化SEG语义条件与像素特征分工",
+        "说明有掩码与无掩码样本监督不同",
+        "区分零样本ReasonSeg与239对微调"
+      ],
+      "disclosure_boundary": "原文MLP通道顺序未据常见实现重写；不新增LoRA秩。",
+      "article_sha256": "3ab2573edd02b3985ba8d20fffc47491c510c0cb05a871e4c9d8c9d29626a36a",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

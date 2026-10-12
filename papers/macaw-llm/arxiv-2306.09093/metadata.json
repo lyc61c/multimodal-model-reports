@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2306.09093v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Macaw-LLM：通过词嵌入空间连接图像、音频与视频",
   "source_sha256": "4b35322fb44d042fb6eba7b2b9c5e76b9ef7f18f84885c2c53c5034c0a6c7836",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2128,
+  "chinese_characters": 2611,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

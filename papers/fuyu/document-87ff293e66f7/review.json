@@ -13,9 +13,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 2
+    "original_assets": 2,
+    "chinese_characters": 2385
   },
-  "article_sha256": "5169eea394b18aec885cfdaa4de49f6d45434c06c8bd08c8f35bb4231d7f68da",
+  "article_sha256": "cae549aa5bb4ee51477a6a43ab74eba6f2258ca3566b3c720ae47dffaa61eda4",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -41,5 +42,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://huggingface.co/adept/fuyu-8b/raw/main/README.md",
+        "version": "official-model-card-2026-10-08",
+        "sha256": "8f8beb8b0174e9b661ef5bc795e0342747d0069a590b41167e636172c177c6ff"
+      },
+      "source_locators": [
+        "固定官方模型卡 Model、How to Use、Direct Use"
+      ],
+      "changes": [
+        "线性层只负责把像素块变成与文字兼容的向量，独立视觉编码器原本承担的空间和语义建模被转交给因果decoder。因而结构简化与训练任务选择紧密相关：模型卡强调它是base发布，详细描述或多模态聊天通常仍需任务微调，不能把架构可输入图像等同为已完成所有对话对齐。",
+        "换行token说明相邻序列位置何时属于新的一行，使相同宽度图片的行结构可以被区分。模型卡还解释SPEAKER是图像patch嵌入的占位token，出现在返回上下文中并不代表模型把图像当说话人文字读取；回答起始另有控制token。阅读示例代码时应区分输入占位、结构边界与真正生成的答案。",
+        "因果图像序列没有先经过双向ViT，所以早期patch不能借后续patch更新自身表示；后面的文字则可以读取此前全部图像块。支持任意尺寸指不必为高低分辨率设计两套固定入口，较大图片仍扩大前缀和缓存。模型卡给出的是整体设计与表现，没有提供足以单独归因各项选择的完整消融。"
+      ],
+      "disclosure_boundary": "不反推层数patch尺寸；8B为base非聊天后训练；接口解释公式非官方编号式。",
+      "article_sha256": "cae549aa5bb4ee51477a6a43ab74eba6f2258ca3566b3c720ae47dffaa61eda4",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

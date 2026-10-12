@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2309.03905v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "ImageBind-LLM：借用共享嵌入空间的多模态指令模型",
   "source_sha256": "5bd45edeaa2441f751a78f8c964caa4cdbccced4dbaab0a00e762f2237b1b1a1",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2163,
+  "chinese_characters": 2717,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -16,9 +16,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2782
   },
-  "article_sha256": "2d5ed37972c4fef7969de96c366615d01eda99f301b3c4d82a5b7577695dba91",
+  "article_sha256": "624de0d6f5f23fedc32f47a692e8703c9f819b988323e222a6bcaed2baf99481",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -66,5 +67,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2501.13106v1",
+        "version": "2501.13106v1",
+        "sha256": "47f698ffaf94fe77b1b1c833dc286cefd26be0d4188f2aa7ab9613fc09cadafa"
+      },
+      "source_locators": [
+        "PDF p4–5 §2.1–2.3 / Figures3–4"
+      ],
+      "changes": [
+        "四模块表；三节区分位置适配、像素冗余代理与视觉中心训练"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "624de0d6f5f23fedc32f47a692e8703c9f819b988323e222a6bcaed2baf99481",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

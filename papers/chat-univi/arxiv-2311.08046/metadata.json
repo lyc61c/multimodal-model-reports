@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2311.08046v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Chat-UniVi：用多尺度动态视觉 Token 统一图像与视频理解",
   "source_sha256": "9dcafd3f63cbb903f2c622f85e0ee972ff8257667340af8fba844ee1beabc7ed",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3346,
+  "chinese_characters": 3983,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

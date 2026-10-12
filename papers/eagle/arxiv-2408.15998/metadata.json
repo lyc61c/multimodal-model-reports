@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2408.15998v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "EAGLE：多视觉编码器如何组合，才能真正改善多模态理解",
-  "chinese_characters": 2539,
+  "chinese_characters": 3134,
   "figure_revision_date": "2026-10-09"
 }

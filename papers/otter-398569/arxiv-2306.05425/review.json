@@ -34,13 +34,14 @@
     "生成错误和来源交叉、训练细节与评价投票规模缺项明确说明。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "f7bb6d2c6293954365a4633abe99146959f37661bb3e475c8500dcd8db1cebf8",
+  "article_sha256": "106537f26321db6bdcc8c6d26751a5fb21f60ead514303d878e54a2942ea51e9",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3644
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -105,5 +106,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2306.05425v1",
+        "version": "2306.05425v1",
+        "sha256": "570cc7bda7a340972d3d74f30de647039f3edca3fce42f992bca5ca7bf894579"
+      },
+      "source_locators": [
+        "PDF pp.8–9 §4.1–4.2, Table2 and input templates"
+      ],
+      "changes": [
+        "补完整示例回答的作用",
+        "区分shot条件长度与在线参数更新",
+        "细化LA/SD/OtterE任务行为边界"
+      ],
+      "disclosure_boundary": "不借OpenFlamingo其他版本补组件数量或冻结范围。",
+      "article_sha256": "106537f26321db6bdcc8c6d26751a5fb21f60ead514303d878e54a2942ea51e9",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

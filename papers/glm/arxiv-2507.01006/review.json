@@ -60,10 +60,11 @@
     "Failed requests excluded by source evaluation",
     "Incorrect intermediate reasoning acknowledged by source"
   ],
-  "article_sha256": "c89fa9c5d875b25746122697f558c8e011e2ac1c988a98ad971b700d83fa8b37",
+  "article_sha256": "fbb95f05d1e15f334632ef9270c9f12171cbd48a35123cde28e0a6d0f79eade0",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3960
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -76,11 +77,11 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 16,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -101,18 +102,58 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 8,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 4,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2507.01006v1",
+        "version": "2507.01006v1",
+        "sha256": "27ab745c4b00d30ea781f190c823b0351a5cce466ea483cf3cf9093860c2c6d6"
+      },
+      "source_locators": [
+        "source.txt chars9041–11505: §2 complete, PDF3–4; chars40291–45400: §5.3–5.3.1 through sampling expansion, PDF11–12"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 继承绝对位置知识与引入动态几何",
+          "new_explanation": "插值位置表保留初始化视觉模型已学到的位置语义，二维 RoPE 为不同网格的相对关系提供另一条路径；两者并存而非替换。视频还以 3D 卷积减少时间位置数量，再把真实时间字符串放到语言上下文。前者控制视觉计算，后者表达采样间隔，压缩倍率与时间语义不应混为一个超参数。[原文 §2、式 (1)–(2)，PDF 第 3–4 页](https://arxiv.org/pdf/2507.01006v1#page=4)"
+        },
+        {
+          "heading": "4.2 按当前能力选择有区分度的 rollout",
+          "new_explanation": "同一题的组内回答若奖励相同，相对优势便无法区分哪些轨迹更好；RLCS 因而让难度随模型能力在线变化，而非训练前固定“从易到难”的一次排序。领域试验先估计提升潜力和所需 token，再决定混合比例；在线难度调整作用于该训练分布。过难样本的下调是当前有效性选择，不能推出它们永久无价值。[原文 §5.3，PDF 第 11–12 页](https://arxiv.org/pdf/2507.01006v1#page=12)"
+        },
+        {
+          "heading": "4.3 预估超采样量稳定有效批次",
+          "new_explanation": "EMA 先估计下一轮需要多少候选，再统一并行 rollout，和不断追加抽样直到够数的流程不同。无效组越多，所需候选越多；这提高有效批次稳定性，却不能消除生成本身的成本。公式在无效率逼近一时发散，实际极端保护未披露，因此它应作为作者说明的控制规则阅读。[原文 §5.3.1，PDF 第 12 页](https://arxiv.org/pdf/2507.01006v1#page=12)"
+        },
+        {
+          "heading": "4.4 验证语义比单一数字奖励更重要",
+          "new_explanation": "不同任务需要不同等价关系：数学允许数值等价，OCR 关注字符串，定位关注几何，GUI 还关注动作。一个验证器的捷径若被模型利用，其错误梯度会通过共享参数影响别的领域；Figure 5 因此提供了多域训练中奖励上涨而能力下降的反例。奖励曲线必须与独立任务评测一起读取。[原文 §5.2–5.3、Figure 5，PDF 第 10–12 页](https://arxiv.org/pdf/2507.01006v1#page=10)"
+        }
+      ],
+      "disclosure_boundary": "不追加未披露GRPO参数；有效梯度说法限定原文去KL/熵设置。",
+      "article_sha256": "fbb95f05d1e15f334632ef9270c9f12171cbd48a35123cde28e0a6d0f79eade0",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

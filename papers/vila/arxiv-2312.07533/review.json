@@ -16,9 +16,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 3467
   },
-  "article_sha256": "a3382f9c4223b818e261d7fcd62683bf97bbfe2c4826bdd4008c9dbed1dc8bce",
+  "article_sha256": "9ca2ffbd4194def1df89a5dee9e53605e68b5884ec9a0f662f5545deca42c4f2",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -60,5 +61,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.07533v1",
+        "version": "2312.07533v1",
+        "sha256": "f5e8cc885acc841369923d4d9dee3297fad155e9137643ef20e391431b10d32c"
+      },
+      "source_locators": [
+        "PDF pp.3–4 §3.1–3.2, Tables1–3, Figures4–5; retained Table4 restoration"
+      ],
+      "changes": [
+        "补投影容量与更新位置消融逻辑",
+        "解释同源拆分造成条件错配",
+        "限定文本恢复指标范围"
+      ],
+      "disclosure_boundary": "深层相似度是相关证据，不当作独立优化目标。",
+      "article_sha256": "9ca2ffbd4194def1df89a5dee9e53605e68b5884ec9a0f662f5545deca42c4f2",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

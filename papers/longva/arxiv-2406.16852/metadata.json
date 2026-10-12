@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2406.16852v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LongVA：把语言模型的长上下文能力迁移到长视频",
-  "chinese_characters": 2276,
+  "chinese_characters": 2846,
   "figure_revision_date": "2026-10-09"
 }

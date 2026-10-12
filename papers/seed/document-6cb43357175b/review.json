@@ -85,13 +85,14 @@
     "token效率不自动推出FLOPs延迟或价格优势"
   ],
   "checked_at": "2026-10-08",
-  "article_sha256": "1d9ce213efab9db88a6a63b7ddb2bf677730114d8cdc180d4215483c52b56ca2",
+  "article_sha256": "785f09c6da521e94010fa5fb8cea9615c55cd46251555b7e4830b856e43a9251",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4902
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -154,5 +155,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3"
+      },
+      "source_locators": [
+        "PDF pp.8–9,17–19; Figures6–8, Table6"
+      ],
+      "changes": [
+        "解释GUI澄清分支与122步轨迹边界",
+        "区分VideoCut窗口定位和采样密度",
+        "分开能力分数与额外观察成本"
+      ],
+      "disclosure_boundary": "闭源模型只展开公开交互机制，不补视觉token数量、路由或内部规划器。",
+      "article_sha256": "785f09c6da521e94010fa5fb8cea9615c55cd46251555b7e4830b856e43a9251",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

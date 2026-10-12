@@ -21,13 +21,14 @@
   "remaining_limitations": [
     "Original appendix inconsistencies acknowledged; no independent model run; some schedule details unavailable in fixed report"
   ],
-  "article_sha256": "36cc6327e386998c71ff0a9795404b4575f77dac9b992d6a7a6c02228d5f8e04",
+  "article_sha256": "83cd3ec350ee87b5df747f882073674d5c75780de57792a15451b53653a23d79",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4278
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -113,5 +114,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2406.16860v1",
+        "version": "2406.16860v1",
+        "sha256": "ac2897832e9bdf389274e1fb7ddc8255e0102f70af9dd577b02751bd3461e417"
+      },
+      "source_locators": [
+        "v1 §4，第12–14页；Appendix C.2–C.3，第30–31页"
+      ],
+      "changes": [
+        "每种编码器有自己的键和值投影，使不同通道来源先转换到可比较的注意力空间；query 投影共享，随后才在 token 轴合并候选。这意味着四个编码器并非简单等权平均，某个局部查询能够根据内容重新分配各来源的权重。空间范围相同也不表示特征完全相同：语言监督与自监督编码器保留的信息不同，SVA负责选择和融合这种差异。",
+        "“局部”限定的是连接器读取原始视觉特征的范围，而不是把整个语言模型也改成局部注意力。进入 LLM 的视觉 token 仍能与其他位置和文字交互，因此区域间关系可以在主干中整合。这样的拆分让接口优先保留空间对应，同时将跨区域推理交给后续主干；其收益需要连同四路编码计算和多次聚合开销一起评估。",
+        "初始连接器使用更深的聚合配置，而插入 LLM 中的聚合器采用较小的深度和组数，以控制重复读取的成本。与一次前缀压缩相比，这条路径在推理前向过程中需要保留可供后续访问的视觉特征；增加的是上下文相关的再读取能力，不是无成本地扩大输入。多个查询组分别聚合后拼接，也不能当成简单增加同一注意力层的头数。",
+        "宏平均之前还需要保证题目本身可判定。Appendix C.2 对计数漏标、同类物体多实例导致的相对位置歧义进行人工修改或剔除；否则一个准确的视觉判断也可能被错误答案惩罚。这个清理与子任务等权是两层不同控制：前者改善标签可靠性，后者控制数据来源的权重，二者都不能替代对各子任务成绩的分别查看。"
+      ],
+      "disclosure_boundary": "注意力复杂度为接口解释推导而非端到端实测；不把二维图片中的3D标注问答说成点云输入；保留AppendixF尺寸勘误。",
+      "article_sha256": "83cd3ec350ee87b5df747f882073674d5c75780de57792a15451b53653a23d79",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

@@ -40,13 +40,14 @@
     "原评估缺匹配/聚合完整细节，未复测"
   ],
   "model_execution": "not_run",
-  "article_sha256": "e2cac3422f4d7dc06fc406bb0ae36353fa2e3189dfc20477eab5ef3a6d6d578e",
+  "article_sha256": "3291e5611e0d93a3d7e56e0716c522e6d60e9055f2be8571e5adf2c10ae4d936",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3436
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -93,5 +94,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.18248v1",
+        "version": "2311.18248v1",
+        "sha256": "58f209815a53cc375005a6a494dfcc750ff7332159bdedb781bfd23554272921"
+      },
+      "source_locators": [
+        "source.txt chars15133–17300: §3.3 task definitions and Figure2, PDF3–4; chars25944–29050: §4.1–4.2 complete, PDF6"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 以不同条件分别约束证据、背景与讨论目标",
+          "new_explanation": "前文解释任务背景，提纲指明要展开的分析点，图表及LaTeX承载可引用证据。这些条件可互补，也会造成捷径：只凭提纲扩写而忽略图表。为降低这一问题，作者在分析训练中加入移除提纲的样本，要求模型仍从图表与上下文形成讨论；这不是保证每句话都经视觉核验的额外损失。[原文 §3.3、§4.2，PDF 第 4、6 页](https://arxiv.org/pdf/2311.18248v1#page=6)"
+        },
+        {
+          "heading": "4.2 分块保留细节后再按块压缩",
+          "new_explanation": "四块分别经视觉编码及查询聚合，每块64个输出再进入语言上下文，不能把整张图的预算误写为64。编码器冻结而abstractor与语言LoRA更新，使训练重点落在视觉信息的语言接口和科学段落表达。对于LaTeX表格，结构和数值可以直接由文字路径提供，模型对图像表格与文字表格的读取难度并不相同。[原文 §4.1–4.2，PDF 第 6 页](https://arxiv.org/pdf/2311.18248v1#page=6)"
+        },
+        {
+          "heading": "4.3 把文字细节与讨论要点结合但保留评审边界",
+          "new_explanation": "科学讨论包含专名、数值和趋势解释，单靠n-gram相似可能奖励表面相像却方向错误的段落，单靠语义评分又可能忽略术语细节。CIDErGPT以乘积要求两类证据同时成立；任一因子为零便否决组合分。然而语义比较仍以参考文字为依据，并不额外建立“回答—原图”的事实验证路径。[原文 §3.3、Figure 3，PDF 第 4–5 页](https://arxiv.org/pdf/2311.18248v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "CIDErGPT通式与聚合边界保留；不把无提纲样本当成专门事实校验目标。",
+      "article_sha256": "3291e5611e0d93a3d7e56e0716c522e6d60e9055f2be8571e5adf2c10ae4d936",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

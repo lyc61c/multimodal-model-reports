@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2306.04387v1",
   "document_kind": "dataset_or_benchmark",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "M3IT 与 Ying-VLM：多任务、多语言的视觉指令数据",
-  "chinese_characters": 3208,
+  "chinese_characters": 3745,
   "figure_revision_date": "2026-10-09"
 }

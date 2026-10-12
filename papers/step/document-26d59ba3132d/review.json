@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2734
   },
-  "article_sha256": "a3c1b7466ad2d2f19be8ce40c4179dcced000256e6a742e7db4c8a7e08f6b58f",
+  "article_sha256": "0cfa40a8c83bdf25b3c7b803cc87e7cbf7d8034eb2fb1222edd21e579633bc56",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -92,5 +93,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2507.19427v1",
+        "version": "2507.19427v1",
+        "sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb"
+      },
+      "source_locators": [
+        "PDF pp.2–4 §1–3.2, Table1, footnote3; existing cost equations retained"
+      ],
+      "changes": [
+        "解释MFA秩维与视觉压缩区别",
+        "澄清跨全层TPOT及prefill假设",
+        "补AFD与EP互补而非替代"
+      ],
+      "disclosure_boundary": "未新增视觉编码内部结构；原有补充公开配置保留但不冒称系统论文披露。",
+      "article_sha256": "0cfa40a8c83bdf25b3c7b803cc87e7cbf7d8034eb2fb1222edd21e579633bc56",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

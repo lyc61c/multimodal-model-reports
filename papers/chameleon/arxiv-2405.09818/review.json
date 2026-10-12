@@ -49,10 +49,11 @@
     "原文未披露SFT全部冻结/步数和统一图像生成评分",
     "报告完整系统不等同后续公开checkpoint功能"
   ],
-  "article_sha256": "5f2f2a04ad7f71157ccabff523612bf89654bf84727a9d13d9ad2800a1fd83b2",
+  "article_sha256": "a015c786c9a44b37a84c3b93352c2ed9d6f5f56b5aeb0b65b6ca541c42609f00",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3035
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -96,5 +97,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2405.09818v1",
+        "version": "2405.09818v1",
+        "sha256": "60cc0caec7637ebd490e927f861500a9e191582f5babf1686d08ac454201ab6c"
+      },
+      "source_locators": [
+        "PDF pp.4–7, §2.1–2.3, Figure6"
+      ],
+      "changes": [
+        "说明65536词表包含图像条目与50%图文顺序训练",
+        "推导z-loss对共同logit平移的响应",
+        "区分QK归一化与残差分支归一化作用位置"
+      ],
+      "disclosure_boundary": "不将单独tokenizer重建训练写成联合Transformer像素损失。",
+      "article_sha256": "a015c786c9a44b37a84c3b93352c2ed9d6f5f56b5aeb0b65b6ca541c42609f00",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

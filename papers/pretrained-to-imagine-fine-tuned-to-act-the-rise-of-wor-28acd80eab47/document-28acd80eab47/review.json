@@ -21,7 +21,7 @@
     "跨论文榜单和算力口径不构成严格受控比较",
     "网页原文部分alt图号与正文不一致"
   ],
-  "article_sha256": "730af8092308c388a3ba15ed60547d6bc6e140c68c2ad73d263b5c1e6a19ec00",
+  "article_sha256": "d79fd592d8f3f5185a4c5942a05018c1625139b6d279c3cea681aaeab1a9819c",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -43,5 +43,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "21ed0ba3ae028d9a289056fa6ffb39fc01c96c8b04476bbb80b31ac909e1ff35"
+      },
+      "source_locators": [
+        "source.txt chars21200–27300: design axes, Figure8 and inverse dynamics/UniPi/LingBot-VA comparison; chars38198–40600: Being-H0.7 posterior/prior and Table3; chars46343–49200: practical considerations and 6NT estimate"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 预测未来与推断动作之间存在可执行性缺口",
+          "new_explanation": "语言到视觉变化可借视频预训练知识完成，逆动力学再处理“如何实现变化”。两个模块边界也带来风险：合理的未来画面未必满足当前机器人形态和技能约束。联合预测让动作与视频在同一生成过程中交换条件，仅表征路线则改变部署边界，省去生成未来；三者不能只按是否使用视频主干分类。[固定原文 Paradigm: What the model predicts / Figure 8–11](https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/)"
+        },
+        {
+          "heading": "4.2 未来信息只允许出现在训练后验中",
+          "new_explanation": "Being-H0.7以冻结V-JEPA2.1与Perceiver压缩未来观测，先验用学习查询从可用上下文预测对应状态。推理删除后验，防止依赖尚未发生的真实未来。这里潜变量承载计划而非逐电机动作，动作仍由条件策略产生；不需要把潜变量逐帧解码为RGB才能使用它。[固定原文 Latent actions/plans / Being-H0.7 / Figure 20](https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/)"
+        },
+        {
+          "heading": "4.3 样本效率与计算效率属于不同预算",
+          "new_explanation": "预训练视频先验可以降低机器人样本需求，长视频token和联合去噪却增加训练及部署成本。作者将算力式定位为密集Transformer核心的粗略下界，并把视频预训练与动作适配分阶段比较；不应把继承的预训练资源漏掉后宣称总成本更低。MoT保留模态专属权重共享注意力，也不能按稀疏MoE的激活参数口径估算。[固定原文 Figure 8 / Practical considerations / The cost of the video prior](https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/)"
+        }
+      ],
+      "disclosure_boundary": "本篇为方法分类文章，表中路线不串成单一模型；不补统一KL、潜在动作语义或算力精确预算。",
+      "article_sha256": "d79fd592d8f3f5185a4c5942a05018c1625139b6d279c3cea681aaeab1a9819c",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

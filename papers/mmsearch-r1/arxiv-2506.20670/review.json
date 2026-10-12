@@ -53,10 +53,11 @@
     "search penalty config mapping not explicitly specified",
     "no experiment reproduction or independent peer review"
   ],
-  "article_sha256": "49a4f45e384b5d08e24d4a41084be5f7d00dd465857a3d16923f36038a0f4f5c",
+  "article_sha256": "ab405e7cb5815c870d010d703f934df8145d7a8ade972e6da1504d171e290cb1",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3342
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -90,5 +91,28 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2506.20670v1",
+        "version": "2506.20670v1",
+        "sha256": "a14afe80e982962d1fae878ae00b26de848fd52c8c831200bf1d7e74f50f8438"
+      },
+      "source_locators": [
+        "v1 §2–3、§4.1、Figure6，PDF第3–6、18页"
+      ],
+      "changes": [
+        "搜索平衡不是先验人工规定每题必须走哪种工具。作者用初步训练模型对每题采样8条轨迹：有无搜索都答错的题被删除，任何无搜索正确轨迹出现就标为search-free，其他题再按成功搜索类型区分。这使“需要搜索”成为相对于该模型和采样过程的操作性标签，而不是问题永恒不变的属性；模型已有知识变化后，这个边界也可能移动。",
+        "在一次rollout中，模型生成动作后由环境补入检索文本，再继续生成下一轮，因而上下文包含两种作者不同的token。遮掉环境反馈的损失，是避免把网页和摘要器输出当成策略要逐字模仿的动作；它们仍可作为后续动作的条件。最终奖励只能比较整条轨迹，不能精确告诉优化器哪句中间推理或哪条网页证据正确，错误证据与简短答案匹配仍需另外评估。"
+      ],
+      "disclosure_boundary": "工具不是内层网络；不自行推导惩罚倍率；检索内容不作策略生成监督。",
+      "article_sha256": "ab405e7cb5815c870d010d703f934df8145d7a8ade972e6da1504d171e290cb1",
+      "module_rows": 5,
+      "principle_subsections": 2,
+      "model_executed": false
+    }
+  ]
 }

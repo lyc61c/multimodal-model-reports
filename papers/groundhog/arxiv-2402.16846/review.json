@@ -26,13 +26,14 @@
   },
   "model_execution": "not_run",
   "limitations": "Selfreview,noindependentmodelrun;severalv1internaldescriptiondifferencesretained",
-  "article_sha256": "ccbb7c3aa6b362680aefb160946eac502f5a95d892664a26ce61d76541eb5e78",
+  "article_sha256": "8fe1b30eae4bb9da71f36556e8cee34b23b2855e58db580ab5be4e43e73aa608",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 12,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2835
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -76,5 +77,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2402.16846v1",
+        "version": "2402.16846v1",
+        "sha256": "e3f7ffd3237e6ddba5e4a363475f162b1b06f8da747dd9db8798f4798adf3001"
+      },
+      "source_locators": [
+        "v1 §2.1–2.3，PDF第3–4页"
+      ],
+      "changes": [
+        "模型把同一候选同时用于输入表征和输出检索，使“读到哪个实体”与“选中哪个mask”具有可追踪的接口。用户空间提示也先转成mask，再经过同一提取器替换PTR，因此无需另训练一套点、框专用视觉编码。代价是输出精细度依赖提案集合，而不是语言端直接回归任意像素边界。",
+        "proposal既不能过粗，也不能碎到失去语义实体。多个独立对象可以经max组合成“这两只狗”，但一个覆盖两个人的粗mask无法被同一个检索分数拆开。第2.3节由此同时要求原子性和跨粒度覆盖；提升语言理解并不能单独修复候选集合缺失的部件或文字区域。",
+        "投影监督只规定横纵方向的覆盖，许多不同内部形状可以拥有相同投影。因此混合box与mask数据时，必须区分“可学到目标范围”和“有直接边界真值”。原文把实体选择与已有proposal合并，正好允许利用这两类监督；但不能据损失写法宣称框标注已经提供像素级精度。"
+      ],
+      "disclosure_boundary": "保留Sum/averaged原文差异；输出只能选择合并候选，不增造mask decoder。",
+      "article_sha256": "8fe1b30eae4bb9da71f36556e8cee34b23b2855e58db580ab5be4e43e73aa608",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

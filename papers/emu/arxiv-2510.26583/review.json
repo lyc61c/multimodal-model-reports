@@ -24,13 +24,14 @@
   },
   "model_execution": "not_run",
   "limitations": "No independent benchmark reproduction or external cross-model review claimed",
-  "article_sha256": "ae0fb3ef71f8b480eb9d0e9786232746b30e8e5637c6b426fda58cb4052700a8",
+  "article_sha256": "c2616cf7e9b280822992c00bb78608a30da975713a37e18a8d06c33ddc8837b2",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3173
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -66,5 +67,42 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2510.26583v1",
+        "version": "2510.26583v1",
+        "sha256": "68c26d4edc2591f12111c2daca0e2f8edc8c09afe769bae3acd4ea846e004365"
+      },
+      "source_locators": [
+        "source.txt chars20248–24636: §2.2–2.3/Figure4, PDF5–6; chars72544–75403: §4.3.1 complete/Figure9, PDF15–17"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 大码本与语义蒸馏提高统一接口的容量",
+          "new_explanation": "IBQ 扩大码本与 tokenizer 宽度，同时把 SigLIP 特征蒸馏加在重建 decoder 的中间输出上。这样视觉码既承载可重建细节，也接受语义表示监督；SigLIP 是 tokenizer 训练的指导信号，不能据此在推理结构中再画一条独立 SigLIP 输入主干。码本和主干词表增大也带来 embedding 参数与存储开销。[原文 §2.2–2.3，PDF 第 5–6 页](https://arxiv.org/pdf/2510.26583v1#page=6)"
+        },
+        {
+          "heading": "4.2 减少视觉位置与减少串行步骤是两类加速",
+          "new_explanation": "16× 空间下采样减少需表示的网格位置；DiDA 则在既定位置数上减少逐码串行依赖。扩散像素 decoder 的四步蒸馏发生在码已生成之后，不能将它的 50→4 步与 DiDA 混成同一个加速倍数。评价端到端速度需要分别统计码预测、像素重建和可选视频插帧。[原文 §2.3、§4.3.1，PDF 第 6、15–17 页](https://arxiv.org/pdf/2510.26583v1#page=16)"
+        },
+        {
+          "heading": "4.3 交错序列中隔离干净答案与带噪副本",
+          "new_explanation": "带噪图像能读取此前的干净文字和图像，以保持跨模态条件；同图带噪位置互相读取，才能并行协调整幅图；干净序列仍按原因果模式传播，避免将未来答案注入文本学习。这个掩码同时承担信息利用和泄漏隔离，模型并不是把整段图文全部改成双向 attention。[原文 §4.3.1、Figure 9，PDF 第 16–17 页](https://arxiv.org/pdf/2510.26583v1#page=16)"
+        },
+        {
+          "heading": "4.4 多奖励优化与并行适配的先后职责",
+          "new_explanation": "报告 Figure 4 先以 NTP 预训练和 SFT 建立模型，再进行多任务 RL，最后用自蒸馏数据做 DiDA 适配。RL 调整输出偏好，DiDA 改变图像码推理方式，两者的训练角色不同；若只观察奖励曲线，无法判断并行采样是否还保持所有场景的质量。此处保留通常 GRPO 解释，不把归一化公式当作报告公开的确切实现。[原文 Figure 4、§4.3.1，PDF 第 6、16–17 页](https://arxiv.org/pdf/2510.26583v1#page=6)"
+        }
+      ],
+      "disclosure_boundary": "未补未知离散噪声核、推理步数、GRPO参数；SigLIP蒸馏不伪装推理分支。",
+      "article_sha256": "c2616cf7e9b280822992c00bb78608a30da975713a37e18a8d06c33ddc8837b2",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

@@ -51,10 +51,11 @@
     "FID inferior to SDv1.5",
     "Source SFT sample pool and actual sampled amounts distinguished"
   ],
-  "article_sha256": "a97968527517982a96377d70ed4613c1c9065439dcf8176e3a0d9597fe4416dc",
+  "article_sha256": "fa9c76f2b0a75e6c6f6e38114b12bf914d43676babe8eed18fc17824944872d4",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3054
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -90,5 +91,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2307.05222v1",
+        "version": "2307.05222v1",
+        "sha256": "e82e6b33158f3633269810ecc77aa901de5d75253d4144f53ce37d1f9cceaec1"
+      },
+      "source_locators": [
+        "source.txt chars8618–14888: §2.1–2.3 complete, PDF3–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 在潜在空间构造顺序而非逐像素预测",
+          "new_explanation": "因果查询之间限制依赖方向，但每个查询通过 cross-attention 仍可访问该图完整 EVA 特征。因此“因果”约束作用于潜在向量序列，不是只让第一个向量看左上角像素。这样得到可被主干逐项预测的表示；收益在统一序列接口，代价是还需要学习把连续向量重新转成图像的解码器。[原文 §2.1、式 (1)，PDF 第 3–4 页](https://arxiv.org/pdf/2307.05222v1#page=4)"
+        },
+        {
+          "heading": "4.2 离散分类与连续回归共享历史但不共享输出分布",
+          "new_explanation": "同一主干提供上下文，目标位置决定使用哪个输出头：词表概率适合离散文字，连续回归适合视觉嵌入。两者的数值尺度和归一化未完整披露，不能据概念性联合似然直接比较各模态梯度大小。视觉目标是编码后的向量而非像素，主干预测误差与扩散解码误差也应分开理解。[原文 §2.2、Figure 2，PDF 第 4–5 页](https://arxiv.org/pdf/2307.05222v1#page=5)"
+        },
+        {
+          "heading": "4.3 用序列补全切换任务与输出模态",
+          "new_explanation": "示例图文对、当前输入和末尾目标标记共同构成任务条件；追加 IMG 标记后，主干先生成定长视觉嵌入，再交给图像解码器。因此 in-context 示例改变的是当次条件分布，而不是模型参数。相同接口支持不同补全，但最终像素质量仍受视觉表示、回归主干和扩散解码三环节共同限制。[原文 §2.3，PDF 第 5 页](https://arxiv.org/pdf/2307.05222v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "N仍为未明确值；不将潜在因果顺序称为现实因果推断，不编损失权重。",
+      "article_sha256": "fa9c76f2b0a75e6c6f6e38114b12bf914d43676babe8eed18fc17824944872d4",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

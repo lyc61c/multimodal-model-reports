@@ -38,13 +38,14 @@
     "patchgrid/CLAP汇总记载缺陷保留"
   ],
   "model_execution": "not_run",
-  "article_sha256": "7e202f6614e717f03a41ae4b9633f68fef7fd9dc53c85dfd5f24e19e43d38063",
+  "article_sha256": "3d10ad13d97c739ab3a6bf0275119e2325a78cae62b8301c99252442d393484a",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3311
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -80,5 +81,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.10790v1",
+        "version": "2305.10790v1",
+        "sha256": "2f35ba5ba4fffaa06d9caf0189258017efb4611825cbaf2436abb2b0da60fba6"
+      },
+      "source_locators": [
+        "PDF pp.2–3 §2 Model Architecture, Eq1; current course description retained"
+      ],
+      "changes": [
+        "补32音频位置与事件类别数区别",
+        "明确LoRA仅Q/K与参数口径",
+        "解释闭合监督使开放回答依赖声音"
+      ],
+      "disclosure_boundary": "源64×16算术矛盾保持原审查纠正，不重新复述。",
+      "article_sha256": "3d10ad13d97c739ab3a6bf0275119e2325a78cae62b8301c99252442d393484a",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

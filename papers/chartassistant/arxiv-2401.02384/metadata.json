@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2401.02384v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "ChartAssistant：先学图表到表格，再统一图表问答与推理",
   "source_sha256": "8bfce7b9e808ce7c5f97da99a454a2c7bc35cc426ad355b6cf7e44f3862d0965",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3621,
+  "chinese_characters": 4236,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -47,10 +47,11 @@
     "Text/table mismatch AI2D and MMMU",
     "Exact training dataset totals and hardware not disclosed"
   ],
-  "article_sha256": "0bf618d1124b28ca4adba585248af21d5de6f3449090966e84bedd4f50fa6a44",
+  "article_sha256": "a03057cf85cb38f6beff0dd250df7acb826a690467f3bbf87f3c6d3668971943",
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3924
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -96,5 +97,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2401.16420v1",
+        "version": "2401.16420v1",
+        "sha256": "f1d2675be14978b825b735fc242b0bfb1b27f1987c1376c5eaa69ed97e162b7c"
+      },
+      "source_locators": [
+        "v1 §3.1–3.3，PDF第3–4页"
+      ],
+      "changes": [
+        "同一层的原权重服务两种token，只有视觉位置叠加低秩增量，既避免为图像复制整套语言网络，也不强迫视觉表示完全沿用文字变换。这个作用范围由输入位置的模态决定，不是一个学习式专家路由器；rank控制新增参数容量，不表示压缩后视觉token的数量。",
+        "预训练阶段同时调整ViT和PLoRA，视觉前端与语言层内的适配可以协同变化，语言主路保持固定。进入SFT后主干也参与更新，因此前一阶段对文字主路的参数保护不能直接外推到最终模型。论文使用纯文字数据维持原能力，是对这种训练边界的额外控制。",
+        "“认出一个人”和“认出爱因斯坦并讨论知识”需要不同监督，概念数据的文字只部分对应图像，因此作者使用更开放的提示而非要求逐项描述。OCR、定位和图表又通过专项数据强化。三类目标规定数据与问题形式，不能因为名称不同就虚构三套独立loss或专用输出头。"
+      ],
+      "disclosure_boundary": "不补投影尺寸；视觉位置专用低秩支路不等于文字输出与视觉隔离。",
+      "article_sha256": "a03057cf85cb38f6beff0dd250df7acb826a690467f3bbf87f3c6d3668971943",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

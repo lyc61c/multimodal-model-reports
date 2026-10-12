@@ -28,7 +28,7 @@
     "旧TextVQA星号训练图像接触口径与新版本不同",
     "示例交通时间源自常识而非实时调用"
   ],
-  "article_sha256": "960f60986dc0b841f48eb135e0cbc12513f2a07399e4bb4a1e47ae6342922188",
+  "article_sha256": "e9e0e24a3d1e7e35bcaeec7fa327ccdbf8745ae11c337b3e3bb00eb4389d034c",
   "formatting_revision": {
     "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -66,5 +66,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://llava-vl.github.io/blog/2024-01-30-llava-next/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "23029ba42dcf6bba3b006770a839f44e76b52763b600d8780ab2d9712d7c886e"
+      },
+      "source_locators": [
+        "固定官方博客 Detailed Technical Improvement、Model Card"
+      ],
+      "changes": [
+        "局部视图保留单块内的有效像素密度，全局缩图给出块之间的布局。它复用已有视觉入口，成本随块数增加，而不是要求原编码器一次处理整个大画布。最多四局部块也表明该发布版有明确预算边界，不能用后续LLaVA版本的更大网格覆盖本篇设置。",
+        "移除TextCaps针对的是开发评测中训练图像重叠的问题，不是认为caption数据没有价值。DocVQA与SynthDoG-EN继续补文字读取，ChartQA、DVQA和AI2D扩展图表及图解理解。数据变更同时影响任务覆盖和评测解释，所以OCR收益不能全部归给AnyRes。",
+        "用户指令数据强调真实请求多样性及高质量回答，语言底座负责把所见内容组织成有用输出，AnyRes提供更细视觉证据。模型卡还区分连接器训练和第二阶段全模型训练，说明最终能力来自组合配方。不同规模的连接器参数随主干维度改变，不能仅用“7B/34B”名称比较全部组件成本。"
+      ],
+      "disclosure_boundary": "不补博客未确认视觉检查点；AnyRes解释不声称确切拼接顺序；无三变量全消融。",
+      "article_sha256": "e9e0e24a3d1e7e35bcaeec7fa327ccdbf8745ae11c337b3e3bb00eb4389d034c",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

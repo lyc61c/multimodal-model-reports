@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2307.16184v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "UnIVAL：以统一序列任务连接图像、视频、音频与语言",
   "source_sha256": "19507116a94052b4e3fd4036de6c3d7c640474288c7dc5e801cedaf4f0839b01",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1762,
+  "chinese_characters": 2322,
   "figures_manifest": "figures-manifest.json"
 }

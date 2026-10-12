@@ -44,10 +44,11 @@
     "v1 Figure1 caption statistics conflict with detailed tables; use Tables1/4",
     "No complete module freeze/GPU/cost recipe disclosed"
   ],
-  "article_sha256": "4e9a583c72789714a41b4d47c1f5c27fc1bccd4a7f00ac3819718f3b56e9710a",
+  "article_sha256": "bfc1d8a06aaf1270b665a998951183b9d891df25d6653238ea014cc190c7bc98",
   "artifact_checks": {
     "original_assets": 8,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4063
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -81,5 +82,43 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2308.01907v1",
+        "version": "2308.01907v1",
+        "sha256": "7ca5ad22bbb3f20b0d1b70e93be34539a36b10e6214bed26a86989ca990f617c"
+      },
+      "source_locators": [
+        {
+          "cache": "source.txt",
+          "start": 40272,
+          "end": 44659,
+          "locator": "§4.2–4.3，PDF 11–12；§3.2算法1结合现有介绍核对"
+        }
+      ],
+      "changes": [
+        {
+          "heading": "4.1 区域条件查询：在压缩前指定关注对象",
+          "new_explanation": "区域查询并不是检测器最后输出的类别向量，而是参与后续跨注意力的输入。先用区域外观初始化，再允许它读取整图，意味着定位约束与上下文利用可以同时存在。每增加一个区域就增加一组 G 个查询；因此查询组数决定语言侧视觉提示长度，不能只根据整图分辨率估计多区域推理预算。[§4.2，PDF 第11页](https://arxiv.org/pdf/2308.01907v1#page=11)。"
+        },
+        {
+          "heading": "4.2 任务提示与 align：同一解码器的两种读出",
+          "new_explanation": "生成提示告诉语言模型“继续写回答”，判别提示则把最后的 align 位置当作整个条件序列的读出位置。后者利用因果解码器对前文的汇总能力，不等于对所有视觉 token 直接求平均。图像分支和文字分支共享判别提示，使两种读出接受同一任务约束；生成分支保留独立提示，避免把匹配与续写混为一种输出接口。[§4.3，PDF 第12页](https://arxiv.org/pdf/2308.01907v1#page=12)。"
+        },
+        {
+          "heading": "4.3 区域合并：位置去重与语义累积分别处理",
+          "new_explanation": "一个区域可能被闭集检测器命名为通用类别，也可能被 grounding 模型赋予更细的自然语言名称。区域合并把几何重合与语义互补分开处理：重复位置不重复计入，而其标签仍可进入后续区域文字匹配。代价是 IoU 阈值会影响近邻实例是否被误合并；它并不能保证互相遮挡、框形状不同的两个对象一定被正确区分。[§3.2，算法1](https://arxiv.org/pdf/2308.01907v1#page=6)。"
+        }
+      ],
+      "disclosure_boundary": "掩码与点到RoI的具体实现未展开；不补参数或推断定量增益。",
+      "article_sha256": "bfc1d8a06aaf1270b665a998951183b9d891df25d6653238ea014cc190c7bc98",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -15,24 +15,20 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2680
   },
-  "article_sha256": "74167e01a4d34ea97a6a4ab6f37c02e29912b33b6339441de93955703df50d37",
+  "article_sha256": "df4368627db0af5df077cda69ae18023720f89eee042d2f765a3f1f9e8b941b3",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 7,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "mobile_math_layout": {
-      "date": "2026-10-11",
-      "long_inline_equations_promoted_to_display": 1,
-      "scope": "Display layout and connective punctuation only; formula contents preserved"
-    },
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -57,18 +53,54 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 7,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.11175v1",
+        "version": "2305.11175v1",
+        "sha256": "e54d0b3c5e32c73b924d71ee8ac41351c0933a20f7b1be44aa092e17f622fca6"
+      },
+      "source_locators": [
+        "source.txt chars18720–26501: §3.2–3.4 complete, category/location token interfaces and Figure4, PDF5–7; existing §4.1 encoder configuration retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 任务指令同时定义视觉关注与输出语义",
+          "new_explanation": "指令先通过BERT影响视觉特征，让图像查询提取任务所需内容，再在解码端声明类别名称与专用索引的映射。同一个类别token可以在不同任务指令中指向不同名字；这种可定制接口依赖模型正确理解当前集合，不是永久绑定所有类别的固定检测头。[原文 §3.2–3.4，PDF 第 5–6 页](https://arxiv.org/pdf/2305.11175v1#page=6)"
+        },
+        {
+          "heading": "4.2 位置token围绕图像查询基准表达偏移",
+          "new_explanation": "tokenizer为每个图像token提供位置，解码器再预测相对于该基准的量化偏移，把连续定位改成有限类别选择。检测用两个角点，轮廓用更多边界点，两种任务共享输出语法却具有不同长度与近似误差。更密边界点可表达复杂形状，但增加槽位和计算，不能等同完整像素概率图。[原文 §3.2–3.4、位置词表](https://arxiv.org/pdf/2305.11175v1#page=6)"
+        },
+        {
+          "heading": "4.3 格式作为查询改变感知任务的解码方式",
+          "new_explanation": "类别与坐标槽位先由任务格式确定，再作为查询交给同一解码器产生结果，因此感知输出无需像长文本那样逐字串行。caption则用字符串起始符启动语言生成。统一交叉熵只说明目标类型相容，不表示两类任务拥有相同因果上下文或延迟；原文也未给足以量化固定加速倍数的测速。[原文 §3.4、Figure 4，PDF 第 7 页](https://arxiv.org/pdf/2305.11175v1#page=7)"
+        }
+      ],
+      "disclosure_boundary": "不将tokenizer位置当最终检测，不把多边形分割当像素解码；不补裁剪舍入或FPS。",
+      "article_sha256": "df4368627db0af5df077cda69ae18023720f89eee042d2f765a3f1f9e8b941b3",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

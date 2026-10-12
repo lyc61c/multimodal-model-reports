@@ -14,33 +14,70 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 6
+    "original_assets": 6,
+    "chinese_characters": 2360
   },
-  "article_sha256": "55e6afe2d5edbf0069eede4b20384a0f030e4139c36f63f37ce7dd9415b063ec",
+  "article_sha256": "2fdfee9efd0595d631647f9b86184f2c866a48eea9302f9a6ca5620f7bb2fb11",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 13,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 13,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 3,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2505.14682v1",
+        "version": "2505.14682v1",
+        "sha256": "4975b33c412c14f297aca6e7c65ffbcf7cce8b175ea3fb09709d6e08395f5843"
+      },
+      "source_locators": [
+        "source.txt chars7317–13802: §3.1–3.3 complete; chars13802–19774: §3.4–3.5 through OV/RV/CoT-V comparisons, Eq1–2, PDF3–6"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 先对齐离散视觉再接连续理解入口",
+          "new_explanation": "预训练更新生成投影与LLM，并以同一生成编码器做图像到文字任务，使离散码与语言先建立关联；SFT才接入连续理解路径，更新两类投影与语言侧。阶段差异说明双编码器不能无区别套用到全部训练过程，纯文字训练同时约束语言能力保持。[原文 §3.1–3.3，PDF 第 3–4 页](https://arxiv.org/pdf/2505.14682v1#page=4)"
+        },
+        {
+          "heading": "4.2 偏好标签由提示一致性而非唯一美学分决定",
+          "new_explanation": "短提示用GenEval选最高与最低候选，中长提示由Qwen2.5-VL-7B分解细粒度问题并按一致性挑选。DPO因此学习的是这些评价器所定义的相对偏好，不能直接等同所有人类审美或所有构图标准。生成候选来自SFT模型，参考策略也固定为SFT，需与后续自评筛选区分。[原文 §3.4 Preference Dataset / DPO Training，PDF 第 4–5 页](https://arxiv.org/pdf/2505.14682v1#page=5)"
+        },
+        {
+          "heading": "4.3 自评分解把二元筛选变成部分符合排序",
+          "new_explanation": "整体Yes/No容易把不同错误程度候选打成同分，固定规则又难覆盖自由提示；CoT-V让模型生成原子问题及回答，平均yes比例形成排序。其收益依赖条件覆盖及视觉判断可靠性：遗漏数量或关系会高估候选。此步骤增加候选生成和验证计算，只选择已有图像，不修复错误。[原文 §3.5、式 (2)、Figure 4](https://arxiv.org/pdf/2505.14682v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "不补掩码整图概率估计或DPO beta；保持训练教师与推理自评的区别。",
+      "article_sha256": "2fdfee9efd0595d631647f9b86184f2c866a48eea9302f9a6ca5620f7bb2fb11",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

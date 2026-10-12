@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2307.08581v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "BuboGPT：以语言为桥梁，将图像、声音与视觉区域联系起来",
   "source_sha256": "c63bb2b4dbd7a228604df22d993389893098dd4c050bb0f17582efee7c8ee23c",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3457,
+  "chinese_characters": 4082,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -129,13 +129,14 @@
     "相对LLM评分和准确率区分，组合ScienceQA成绩单列"
   ],
   "checked_at": "2026-10-08",
-  "article_sha256": "53e04d066b4854ca03c39328d0692d785a7339fb77ea643afefb32e76294594e",
+  "article_sha256": "c7f4de3cedaf31361f1c5d2a92dbc780ec565701814a9d9b70627d5ed70b320a",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 5209
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -171,5 +172,42 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2309.10020v1",
+        "version": "2309.10020v1",
+        "sha256": "b02c45e2cc34a15bdc3e05c958e2871440ba24da895b3a184a1ce573a4c11bbd"
+      },
+      "source_locators": [
+        "source.txt chars198800–212500: §4.3.1 dense decoding through §4.3.2 unified learning, PDF52–56; chars294800–299800: §6.2 tools/planning/execution and start§6.3, PDF79–81; existing §2.4/§4.2 formulas retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 开放概念集合与定位监督是两种能力",
+          "new_explanation": "综述的比较框架可沿“监督粒度”阅读：图文对比学习先把整图与描述对齐，区域检测、像素分割则要求更细的对应关系。推理时替换类别文本能够开放候选概念，却不能自动产生精确区域边界；这解释了开放词汇识别与开放词汇定位需要分别报告结果。[原文 §4.2；第3节所列视觉预训练路线](https://arxiv.org/pdf/2309.10020v1#page=44)"
+        },
+        {
+          "heading": "4.2 统一掩码框架中的目标决定学到什么",
+          "new_explanation": "相同的“遮住再预测”可以要求恢复像素、离散码或教师特征，难度与归纳偏置不同。比较时应同时说明目标生成器和解码器：若目标本身由语义教师提供，模型受到的监督已不仅是原始像素。下式用于组织这种差别，不能据公式外形把不同方法视为同一种训练配方。[原文 §2.4.2，PDF 第 19–23 页](https://arxiv.org/pdf/2309.10020v1#page=20)"
+        },
+        {
+          "heading": "4.3 统一I/O与统一功能给出不同的共享边界",
+          "new_explanation": "Unified-IO先为任务学习VQ-VAE，再联合训练序列模型；共享生成目标仍依赖任务特定的视觉码。X-Decoder则保持掩码与语义嵌入的异质输出，用潜在查询和文字查询共享解码器。前者统一输出序列接口，后者统一产生任务结果的功能，不能只凭“单模型”断定内部组件完全相同。[原文 §4.3.1–4.3.2，PDF 第 52–55 页](https://arxiv.org/pdf/2309.10020v1#page=55)"
+        },
+        {
+          "heading": "4.4 控制生成与调用工具改变不同计算位置",
+          "new_explanation": "修改扩散注意力、学习条件分支、训练概念嵌入都作用于生成路径；工具代理则把操作计划翻译为外部可执行调用，再读取观察继续回答。综述将工具、规划、执行分别讨论，指出功能来自整个调用链。因而代理能生成图像，不能直接证明作为规划器的语言权重也学会了像素生成。[原文 §6.2–6.3，PDF 第 79–81 页](https://arxiv.org/pdf/2309.10020v1#page=80)"
+        }
+      ],
+      "disclosure_boundary": "综述表中各行属于被比较路线，绝不构造一套作者新网络；目标公式沿用解释性标注。",
+      "article_sha256": "c7f4de3cedaf31361f1c5d2a92dbc780ec565701814a9d9b70627d5ed70b320a",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2305.18752v1",
   "document_kind": "tool_use_method",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "GPT4Tools：通过自指令数据教开源语言模型调用视觉工具",
-  "chinese_characters": 2694,
+  "chinese_characters": 3197,
   "figure_revision_date": "2026-10-09"
 }

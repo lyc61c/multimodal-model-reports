@@ -9,12 +9,12 @@
   "source_url": "https://raw.githubusercontent.com/QwenLM/Qwen2.5-Omni/main/assets/Qwen2.5_Omni.pdf",
   "document_kind": "technical_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Qwen2.5-Omni：Thinker-Talker、音视频时间对齐与流式语音生成",
   "source_sha256": "e0c9e0042ad20bc0c95cbbfc96f63f4ff1f28727c5b32973e7fd597557b6b15f",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3611,
+  "chinese_characters": 3921,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

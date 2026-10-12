@@ -32,10 +32,11 @@
     "正文中文分数增益减法有误，本文依据表中数值",
     "原图为整页截图，保留脚注和表头"
   ],
-  "article_sha256": "da6ab00f6e12040fa1a967095a213a2f19aee2e8f1434d202bf2d502e0ef41a7",
+  "article_sha256": "481ac2473504bcbb9d93749cd2e6c6dc5f796848f5f8dd7fb020cc9b9137a416",
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3025
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -96,5 +97,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2310.03744v1",
+        "version": "2310.03744v1",
+        "sha256": "a608fb3785614605ee07fe0e85d612a09cc40af2ea343e6fd69a48cf505421e7"
+      },
+      "source_locators": [
+        "v1 §2–4，PDF第2–4页"
+      ],
+      "changes": [
+        "MLP改变视觉通道表达，但token数由图像网格决定；与resampler相比它参数结构简单、学习接口直接。报告明确承认保留全patch会增加训练迭代时间，并把高效、易收敛的resampler作为未来方向。因此这里的高数据效率不能直接等同于最低推理计算量。",
+        "若问题没有说明输出形式，短词标签可能让模型把整个回答习惯收缩成简答。训练时追加“单词或短语”或“选项字母”等要求，将长度和格式变成可控条件，避免为自然会话重新改写所有VQA数据。论文把语言主干参与微调也视为关键，不仅依赖视觉前缀控制输出行为。",
+        "表中数据、格式、连接器、分辨率和语言底座按顺序叠加，揭示不同基准对不同环节的敏感性；它不等于每个变量都在全部组合下独立比较。文字识别需要视觉细节，自然对话还依赖语言底座，因此应结合指标变化理解收益，而不能用最终总提升反推某一模块贡献。"
+      ],
+      "disclosure_boundary": "不加未披露激活/尺寸；递增表不作全因子因果归因。",
+      "article_sha256": "481ac2473504bcbb9d93749cd2e6c6dc5f796848f5f8dd7fb020cc9b9137a416",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

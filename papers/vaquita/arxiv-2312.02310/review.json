@@ -14,19 +14,20 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2391
   },
-  "article_sha256": "52600e039e0a011d3b9efc52ca091e0004aeaf6b90b20b08739925bf7d060889",
+  "article_sha256": "477781e099cc0100e457e1c4f7ff31c85f4863f706dd0a826da917158de83786",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 17,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -42,18 +43,54 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 17,
-      "operatorname_replacements": 1,
-      "vertical_bar_replacements": 4,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.02310v1",
+        "version": "2312.02310v1",
+        "sha256": "fda9f2d3d31a8f10e0749244fb3438eccd128f8bafc156b1bef4f7c768ef4079"
+      },
+      "source_locators": [
+        "source.txt chars12433–22100: §3.1–3.3 complete, Figure3/4 and Eq1–10, PDF3–5; original implementation dimensions retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 覆盖与相关性在训练采样中共同保留",
+          "new_explanation": "完全按相似度选帧可能忽略问题所需的过程背景，完全均匀又可能错过关键短片段，因此训练将两者混合。CLIP相似度是冻结模型给出的检索信号，并非下游回答损失优化出来的选帧策略。默认测试退回均匀采样，所以最终回答仍需靠VQ-Former形成问题相关表征。[原文 §3.1、Figure 3](https://arxiv.org/pdf/2312.02310v1#page=4)"
+        },
+        {
+          "heading": "4.2 先压缩视频再由视频位置读取问题",
+          "new_explanation": "Perceiver用固定latent读取大量时空patch，建立可用语言预算；VQ-Former随后以视频latent查询问题文字，为每个视频位置补充当前问题条件。这个方向与“问题query从视频检索答案”不同，原文前段方向矛盾已在下文保留证据。固定latent不减少此前CLIP逐帧编码成本，也不保证所有瞬时动作被保留。[原文 §3.2.1–3.2.2、式 (2)–(5)](https://arxiv.org/pdf/2312.02310v1#page=5)"
+        },
+        {
+          "heading": "4.3 门控残差调节新条件的注入量",
+          "new_explanation": "tanh把可学习标量映射到有界区间，再缩放交叉注意力和前馈增量；残差中的线性变换负责视频宽度到语言宽度的对齐。其目的在于稳定新接口的学习，而非离散选择是否看视频。语言与视觉骨干冻结，端到端表示损失仍能经固定骨干计算约束新模块，但多头合并维度须保持原文披露边界。[原文 §3.2.2–3.3、式 (7)–(10)](https://arxiv.org/pdf/2312.02310v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "保留公式/前段方向冲突、多头维度不足及测试采样区别，不补可运行权重形状。",
+      "article_sha256": "477781e099cc0100e457e1c4f7ff31c85f4863f706dd0a826da917158de83786",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

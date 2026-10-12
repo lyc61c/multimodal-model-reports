@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2402.03766v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MobileVLM V2：以轻量投影、数据扩充和联合训练改善移动端视觉语言模型",
-  "chinese_characters": 2184,
+  "chinese_characters": 2749,
   "figure_revision_date": "2026-10-09"
 }

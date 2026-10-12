@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2305.06355v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VideoChat：从视频文本化到视频嵌入的早期多轮对话系统",
   "source_sha256": "adc35c44a4703211edb1fa41f1d66a41b914b6e5f549efc523f716cde246acbe",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2324,
+  "chinese_characters": 2807,
   "figures_manifest": "figures-manifest.json"
 }

@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2309.15112v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "InternLM-XComposer：把图像理解接入双语语言模型，再完成图文文章编排",
-  "chinese_characters": 2644,
+  "chinese_characters": 3233,
   "figure_revision_date": "2026-10-09"
 }

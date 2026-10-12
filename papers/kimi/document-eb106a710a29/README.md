@@ -49,11 +49,23 @@ KDA 使用固定大小递归状态处理历史，全局 MLA 则保留逐 token �
 
 视觉编码器从头训练，采用 RMSNorm、移除线性及注意力投影 bias。图像和视频共享参数，注意力分成帧内空间与帧间时间处理，另有时间池化压缩视频 token。视觉特征先做 2×2 下采样，再经轻量 MLP 进入语言主干。报告没有单列冻结语言模型的视觉对齐阶段，而是从训练开始联合优化语言与视觉。[PDF 第 9–12 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=9)。
 
+| 模块 | 输入与输出 | 公开机制 |
+|---|---|---|
+| MoonViT-V2 | 图像/视频 → 原生分辨率视觉表征 | 27 层约 0.4B，从头 NTP 训练；空间/时间注意力分解，参数共享 |
+| 压缩与投影 | 时空视觉网格 → 语言嵌入 | 时间池化与 2×2 pixel shuffle，轻量 MLP 接入共享流 |
+| 混合 token 注意力 | 序列 → KDA 状态与 MLA 全局读取 | 3 KDA 后 1 Gated MLA，末尾额外 MLA；NoPE 用于 MLA |
+| AttnRes 深度读取 | 早期层/块输出 → 当前层输入 | 最多 12 层一块，共 8 块；选择表示而非跳过后续执行 |
+| Stable LatentMoE | 隐藏状态 → 稀疏通道变换 | 896 路由专家取 16；半宽潜空间专家，加全宽共享路径 |
+| 解码与工具反馈 | 同一图文上下文 → 代码、回答及后续观察 | 渲染结果可回填同一模型；不是外部视觉模型接力 |
+
+
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
-**KDA：具有逐通道遗忘的 delta 递归。** 原文式（1）为
+### 4.1 KDA 的逐通道遗忘与 delta 写入
+
+原文式（1）为
 
 
 ```math
@@ -64,7 +76,11 @@ S_t=(I-\beta_tk_tk_t^\top)\mathrm{Diag}(\alpha_t)S_{t-1}
 
 $`S_t`$ 是 key×value 状态，$`\alpha_t`$ 是每个 key 通道的保留率，$`\beta_t`$ 控制写入强度。状态先衰减，再通过 delta 项减少当前 key 方向的旧关联，最后写入当前 value；它不同于仅把所有 $`kv^\top`$ 累加。query/key 经短卷积、Swish 与 L2 归一化，输出又经过归一化和输入相关的全秩门控。该递归可以按块转换为块内并行、块间传递状态的计算。[PDF 第 4–5 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=4)。
 
-**有下界的衰减，让硬件矩阵计算可行。** K3 将 log-decay 改为原文式（5）
+遗忘先作用于旧状态，再用当前 key 方向修正写入，因此保留率与写入强度是两个控制量。KDA 输出还经过输入相关的全秩 gate，这个输出门调节送往后续层的通道，并不替代状态中的遗忘门；二者分别控制记忆更新与本次读取结果。[原文 §2.1.1、Eq. (1)、(6)，PDF 第 4–5 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=4)
+
+### 4.2 衰减下界与块并行数值范围
+
+K3 将 log-decay 改为原文式（5）
 
 
 ```math
@@ -79,7 +95,11 @@ g_t^h=-5\,\mathrm{Sigmoid}(e^{A_h}z_t^h),\qquad
 
 **如何读图：** 左侧灰线是此前无下界的负 Softplus，红线被限制在 -5 到 0；右侧橙色对角块原本走特殊 position-pair 路径，K3 可将因果对角和非对角块都变为蓝色的 Tensor Core 路径。改善的是块计算的数值范围与执行方式，没有保证每个实际输入都同样快。
 
-**AttnRes：沿网络深度选择信息。** 普通残差把历史不断加到一个状态，AttnRes 为层 $`l`$ 设置可学习伪 query $`w_l`$，以归一化后的早期表示作为 key：
+给单步 log-decay 设置下界并未停止遗忘：随着块数增加，历史贡献仍能继续衰减。限制的是 16-token tile 内做等价缩放时的数值动态范围，从而允许对角块也使用矩阵计算。这是递归公式与硬件实现的配合，不能理解成只保留最近 16 个 token。[原文 §2.1.1、Eq. (5)，PDF 第 5 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=5)
+
+### 4.3 AttnRes 在深度维选择已有表示
+
+普通残差把历史不断加到一个状态，AttnRes 为层 $`l`$ 设置可学习伪 query $`w_l`$，以归一化后的早期表示作为 key：
 
 
 ```math
@@ -92,11 +112,19 @@ h_l=\sum_i\alpha_{i\to l}v_i.
 
 这来自原文式（8–9），注意力发生在**层表示之间**。完整形式需保存所有层输出；Block 形式把块内输出求和，仅跨块选择，使保存与通信由 $`O(Ld)`$ 降为 $`O(Nd)`$。K3 每块最多 12 层、共 8 个计算块，Embedding 也作为可选源；不是给每个 token 任意跳过执行后续层。[PDF 第 6 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=6)。
 
-**Stable LatentMoE：稀疏宽度扩展需要数值与负载控制。** 路由专家在半宽潜空间运算，聚合后 RMSNorm 再升维，降低每次路由通信与权重流量。SiTU-GLU 对 SwiGLU 的 gate 与 up 两个线性因子使用 $`\beta\tanh(z/\beta)`$ 平滑限幅，仍保留 Sigmoid 门控；$`\beta_1=4,\beta_2=25`$，所以每个输出坐标绝对值不超过 100。这个上界针对激活函数输出，不是整个模型隐藏状态或最终 logits 上界。[PDF 第 7–8、43 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=7)。
+token 位置仍沿序列由 KDA/MLA 处理，AttnRes 则对同一位置来自不同深度的表示分配权重，两种注意力的轴不同。块内求和减少保存单层输出的费用，代价是跨块选择只能访问已聚合结果，无法再分别挑选那个块内每一层。[原文 §2.2、Eq. (8)–(9)，PDF 第 6 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=6)
+
+### 4.4 潜空间专家与路由均衡各控制什么
+
+路由专家在半宽潜空间运算，聚合后 RMSNorm 再升维，降低每次路由通信与权重流量。SiTU-GLU 对 SwiGLU 的 gate 与 up 两个线性因子使用 $`\beta\tanh(z/\beta)`$ 平滑限幅，仍保留 Sigmoid 门控；$`\beta_1=4,\beta_2=25`$，所以每个输出坐标绝对值不超过 100。这个上界针对激活函数输出，不是整个模型隐藏状态或最终 logits 上界。[PDF 第 7–8、43 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=7)。
 
 Quantile Balancing 进一步用各专家分数相对 token top-(k+1) 门槛的分位数更新路由 bias，目标负载为 $`mk/n`$。bias 只影响选专家，不加入最终混合权重；当前批统计只在下一训练步生效，推理时 bias 冻结。大规模实现统计全局直方图，而非平均每张卡的分位数。它和 MoonEP 的运行时均衡不同：MoonEP 动态复制/迁移专家以均衡设备执行负载，并不要求当前路由数据已经严格均衡。[PDF 第 8–9、19–20、43–46 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=8)。
 
-**多教师蒸馏：不同预算的策略进入一个学生。** 三领域、三预算产生九个完整教师；学生采样轨迹后，使用对应教师给出密集 token 奖励。原文式（15）核心为
+专家潜空间降维节省专家运算与通信，而 Quantile Balancing 调整选中频率，MoonEP 调整设备执行分布，三者作用对象不同。路由均匀不保证硬件负载均匀，因为专家所在设备和请求并发仍会变化；运行时复制专家也不意味着改变模型给 token 的混合权重。[原文 §2.3、§5，PDF 第 7–9、19–20 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=7)
+
+### 4.5 多教师信号与原生视觉的训练连接
+
+三领域、三预算产生九个完整教师；学生采样轨迹后，使用对应教师给出密集 token 奖励。原文式（15）核心为
 
 
 ```math
@@ -107,6 +135,9 @@ r_{opd}=\mathrm{clip}\left(
 
 
 教师由领域 $`d`$ 与预算 $`e`$ 决定，sg 表示不通过奖励项反传。报告采用这个截断 token 信号接入 RL，而非宣称对全部词表精确计算 KL；更细的 top-k 蒸馏在其测试中没有明确收益。$`R_{\max}`$ 及教师采样配比未公布。[PDF 第 13–14 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=13)。
+
+MoonViT-V2 从头训练并不等于整个语言主干也不使用已有能力。报告选择视觉塔初始化方式的依据是联合优化中的梯度稳定性，并在 Figure 6 与 SigLIP 初始化对照；27 层、约 0.4B 的塔通过 NTP 直接适配主干需求，视觉表征监督不再需要独立对比预训练作为前提。[原文 §2.4、Figure 6，PDF 第 9–10 页](https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/k3_tech_report.pdf#page=9)
+
 
 <a id="data"></a>
 

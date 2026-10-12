@@ -16,9 +16,10 @@
     "local_links_resolve": true,
     "asset_hashes_match": true,
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3348
   },
-  "article_sha256": "ae6c13f6f29d5a2c0cdb63bc1ba2c88078bcc9ec7c060030e91aef8ff7fe6304",
+  "article_sha256": "de17651080e9dfac72f1c8fa2aff4b6f9ab9542a2cd6f807d9e52edce7fc4d3c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -82,5 +83,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2412.10302v1",
+        "version": "2412.10302v1",
+        "sha256": "cff2bd0ad1656769d7447f0e3cf3a1885902333894f123bdac27fce05c97459e"
+      },
+      "source_locators": [
+        "PDF p3–6; architecture §2 and Table1"
+      ],
+      "changes": [
+        "Expanded padding choice, grid-wide newline placement, expert bias role and Tiny MHA distinction"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "de17651080e9dfac72f1c8fa2aff4b6f9ab9542a2cd6f807d9e52edce7fc4d3c",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

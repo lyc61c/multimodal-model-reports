@@ -45,10 +45,11 @@
     "Main scores use task-specific text sources, not one universally best source",
     "No GPU/time/precision disclosed"
   ],
-  "article_sha256": "a8ea3c097d1823ac2685fecd58724846be21b36a0ed6035d04ea95adeaede0c6",
+  "article_sha256": "2ec244d5eb11a800b9e4bf3e3cd352681458cc99c755895a7dcb241d6dc3fb9e",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3453
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -61,11 +62,11 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 34,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -90,18 +91,54 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 17,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2310.01852v1",
+        "version": "2310.01852v1",
+        "sha256": "b49420a24110d9729b9c4b8bb6ca74a0019b70e4c76b375877dd08d51f9c6994"
+      },
+      "source_locators": [
+        "source.txt chars12864–17135: §3.1–3.2 complete, PDF4–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 固定语言参照支持新增编码器接入",
+          "new_explanation": "各模态分别对齐语言，而不要求先把所有传感器共同送进一个网络。公共文本参照保持固定，使新增编码器可学习进入已存在的语义坐标系；batch 内的其它配对文字构成竞争项，监督的是语义匹配。它不直接约束不同传感器的尺度、像素或时间同步，因此不能据共享嵌入空间推断物理测量已经校准。[原文 §3.1 Modality extending、§3.2、式 (3)，PDF 第 4–5 页](https://arxiv.org/pdf/2310.01852v1#page=5)"
+        },
+        {
+          "heading": "4.2 只编码可见位置而不重建遮蔽像素",
+          "new_explanation": "位置嵌入按原 patch 索引加入可见序列，遮蔽减少输入数量但不把剩余 token 当作重新排列的连续小图。最终仍以语言对比目标学习全局特征，原文借用 MAE 的可见 token 处理方式，不等于借用了 MAE 完整重建任务。压缩程度过高也可能遗漏决定语义的局部信号。[原文 §3.1 Patch masking、式 (1)，PDF 第 4 页](https://arxiv.org/pdf/2310.01852v1#page=4)"
+        },
+        {
+          "heading": "4.3 预处理复用形状接口与 LoRA 适配表征",
+          "new_explanation": "把深度图或频谱重复三通道只解决输入形状兼容，并没有赋予它自然 RGB 的统计特性。LoRA 在固定主权重上学习模态差异，再接受共同文字目标指导；输入适配与语义适配是两层不同工作。长音频只读取前中后片段，整体表示不保留每个时刻的逐帧输出，因此适合语义检索而不能直接当时间定位结果。[原文 §3.1，PDF 第 4–5 页](https://arxiv.org/pdf/2310.01852v1#page=4)"
+        }
+      ],
+      "disclosure_boundary": "保留ViT命名与rank文字矛盾；不把Video-LLaVA接入结构迁移到本篇。",
+      "article_sha256": "2ec244d5eb11a800b9e4bf3e3cd352681458cc99c755895a7dcb241d6dc3fb9e",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -13,19 +13,20 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 3
+    "original_assets": 3,
+    "chinese_characters": 2999
   },
-  "article_sha256": "f5963a1ebbeee20bb85b6f888af091fd23a06ab9da1e05b6311f84d4a829f4c7",
+  "article_sha256": "322ed606803f70c09fa8ae6043cf9786011ad7c85e2f38dbbba33ea973f050fa",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -58,18 +59,45 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 8,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "7a896d60ba5a28372a56dca006fb53cc88f762ec29217956fd69d7d9fc7befb5"
+      },
+      "source_locators": [
+        "官方固定发布页 Mistral Large3、Ministral3、Deployment"
+      ],
+      "changes": [
+        "模型规模和后训练变体是两个不同维度。固定发布页中的Large3提供base与instruct，reasoning版本当时仍为后续计划；Ministral3三个规模则各有三种变体。因而解释该页成绩时需要辨明具体检查点，不能因为同属Mistral3就把reasoning的长推理行为自动套给所有已发布权重。",
+        "稀疏激活主要控制每token参与计算的参数，低比特权重则主要压缩完整模型的存储需求，两者解决的问题不同。部署仍要让全部专家权重可访问，并承担专家分配与通信开销。发布页提供单节点运行示例，但没有足够测量把激活比例直接转换成吞吐、首token延迟或量化后的多模态精度损失。",
+        "页面把instruct模型较短的输出和reasoning模型用更长推理提高正确率分别展示。这体现的是检查点与输出预算的选择，而非短答案天然更准确。比较图中的点应按同一任务和具体变体解释；若输入长度、硬件或批处理不同，仅凭输出token数不能推导服务延迟排名。"
+      ],
+      "disclosure_boundary": "公开接口示意不代表内部网络；不补专家数/Topk/视觉器；通用MoE及内存式仅解释。",
+      "article_sha256": "322ed606803f70c09fa8ae6043cf9786011ad7c85e2f38dbbba33ea973f050fa",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

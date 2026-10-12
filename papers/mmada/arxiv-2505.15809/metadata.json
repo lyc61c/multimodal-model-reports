@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2505.15809v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MMaDA：用统一离散扩散完成语言推理、视觉理解与图像生成",
-  "chinese_characters": 3040,
+  "chinese_characters": 3679,
   "figure_revision_date": "2026-10-09"
 }

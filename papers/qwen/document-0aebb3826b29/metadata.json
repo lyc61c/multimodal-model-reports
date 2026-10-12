@@ -9,11 +9,11 @@
   "source_url": "https://raw.githubusercontent.com/QwenLM/Qwen-MM-Plugins/main/README.md",
   "document_kind": "tool_or_platform",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Qwen-MM-Plugins：面向多模态代理的技能与工具插件",
   "source_sha256": "0c02bc9996efc709d71d92925068dba5ba9b931ab5a6ca2634040d8ad5cdc759",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2201,
+  "chinese_characters": 2745,
   "figures_manifest": "figures-manifest.json"
 }

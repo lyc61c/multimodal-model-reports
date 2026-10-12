@@ -32,13 +32,14 @@
     "敏感度数学定义存在原文矛盾，报告数值按作者口径保留。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "200d1ac283347c8dd429f240c8381d4bcd8e5f2287b3b388d77d7bb781fc6fa6",
+  "article_sha256": "934b4499f3c7218a563e65cdbe2f6ef6f9706d20c36174fe9897e8a1b8813644",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3846
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -118,5 +119,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2212.10773v1",
+        "version": "2212.10773v1",
+        "sha256": "3badd3133f372de90dd56f803557c03538978957a2974fc0f7f64b855946dc7b"
+      },
+      "source_locators": [
+        "v1 §3.2–3.3、§4–5，PDF第4–6页"
+      ],
+      "changes": [
+        "模板质量由两位专家独立编写、交叉评审再共同去重，而非简单自动改写。每种模板必须仅凭文字就能辨明任务和输入输出，图片作为独立输入不强塞进占位符。这把句式多样性与任务定义一致性结合，减少模型因模板含混学到冲突监督的风险。",
+        "作者限制每个训练任务最多10,000实例，缓解大任务支配混合训练；同时将较简单、接近OFA预训练的任务用于学习，更复杂任务用于未见评估。这样的任务层划分不同于仅把同一数据集随机分训练测试，结论应限定为已定义任务集合上的迁移，而不能推断所有新任务都能零样本解决。",
+        "同一任务固定测试样本，只更换五套等义指令，再同时报告均值、最大值和波动，有助于区分能力提高与偶然碰到有利提示。最大值反映可达到的表现，均值更接近随机表达时的预期；二者不能互换。打印公式的倒数疑义使敏感度标量需谨慎复现，但不妨碍直接查看五次成绩的分散程度。"
+      ],
+      "disclosure_boundary": "数据集主要贡献；不补OFA内部细则；保留敏感度公式和说明矛盾。",
+      "article_sha256": "934b4499f3c7218a563e65cdbe2f6ef6f9706d20c36174fe9897e8a1b8813644",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -10,13 +10,14 @@
     "Self-review",
     "Table4/6/7 numerical inconsistencies explicitly noted"
   ],
-  "article_sha256": "b8d6410e767a1cb30368474c4da5c2b271d9ef2dcb8b1e52eca3aee1fd144a90",
+  "article_sha256": "9a905a86e8ad0cb5b52dd51fbeabe6de9d12fec1208ead315d2c0d90b0cf7c35",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3203
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -72,5 +73,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2402.11684v1",
+        "version": "2402.11684v1",
+        "sha256": "c19cd6f0a9fbb6268f93bb01dfe60be7182db0d345543fe8147a038af2ab172a"
+      },
+      "source_locators": [
+        "PDF pp.3–7, §2, §3.2–3.3, §4.1, Figure2, Table2"
+      ],
+      "changes": [
+        "区分教师会话中间描述与学生在线输入",
+        "解释Vision-FLAN与LAION两种指令合成路径",
+        "说明LM可训练时纯文本混合的作用"
+      ],
+      "disclosure_boundary": "不补写projector层宽或视觉token数量；生成分解是解读式。",
+      "article_sha256": "9a905a86e8ad0cb5b52dd51fbeabe6de9d12fec1208ead315d2c0d90b0cf7c35",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

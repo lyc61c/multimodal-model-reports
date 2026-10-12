@@ -13,33 +13,70 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 3
+    "original_assets": 3,
+    "chinese_characters": 2922
   },
-  "article_sha256": "b272ed34c7039bde0b44cfc8e5e532dca4eebf7e5ed997606cce2e9fb447f3ec",
+  "article_sha256": "6cc146a3f5e8966a53b3927b04ec58027f094b50a6c556a3feae4631c1b5e155",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 6,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 6,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
       "display_fence_conversions": 0,
-      "inline_angle_replacements": 1
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://huggingface.co/openbmb/MiniCPM-o-4_5",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "bd8bbd77551b2c762746089bb39c8605fd67b5e00e5337e441d52fafe1304be8"
+      },
+      "source_locators": [
+        "source.txt chars0–6000: model initialization families and9B; chars6027–7900 ModelArchitecture; targeted as_duplex17850 and streaming_prefill19583 surrounding code"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 并行感知通过时间片进入因果计算",
+          "new_explanation": "TDM按共同时间轴组织信息，模型仍依序处理时间片，却可在发声期间接收新输入，因此“自回归”与“全双工”并不冲突。模型卡仅说明毫秒对齐和周期片，未给精确掩码或片长；不能把1Hz开口判断误当作所有音频/视觉编码的更新频率。[固定模型卡 Model Architecture](https://huggingface.co/openbmb/MiniCPM-o-4_5)"
+        },
+        {
+          "heading": "4.2 语言内容、语音码和连续波形的三级接口",
+          "new_explanation": "文字与隐状态共同约束语音token，连续解码器再把码变成可播放声音；这比只把最终文字送给独立TTS提供更密的条件通路。输出25Hz是语音码节奏，播放缓存和波形分块还会影响实际等待。参考音频提供音色，文字system prompt提供角色，两种条件不应混为同一个声音标签。[固定模型卡 Model Architecture/Configurable Speech Modeling](https://huggingface.co/openbmb/MiniCPM-o-4_5)"
+        },
+        {
+          "heading": "4.3 静默与轮次结束是连续交互状态",
+          "new_explanation": "每块调用先加入新音视频，再尝试生成；is_listen说明该块继续听，end_of_turn说明当前说话轮结束。静默不等于停止感知，轮次结束也不等于结束整个会话。这样的状态接口有利于实现主动提醒和打断，但何时开口的训练标签和奖励没有公开，不能用外部轮次算法代替模型事实。[固定模型卡 Duplex Omni Mode 示例](https://huggingface.co/openbmb/MiniCPM-o-4_5)"
+        }
+      ],
+      "disclosure_boundary": "TDM概念式/flow未知边界保留，不迁移旧版音频配置。",
+      "article_sha256": "6cc146a3f5e8966a53b3927b04ec58027f094b50a6c556a3feae4631c1b5e155",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

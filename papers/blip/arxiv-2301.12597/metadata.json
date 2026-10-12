@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2301.12597v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "BLIP-2：以 Q-Former 连接冻结视觉编码器和语言模型",
   "source_sha256": "0a4b93c402a6b8b0d2c5f438bbae31d447b17324b71c3e4fb6dab53e0e389bc5",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3200,
+  "chinese_characters": 3625,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

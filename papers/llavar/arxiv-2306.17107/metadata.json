@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2306.17107v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LLaVAR：用 OCR 数据与合成对话增强文字密集图像理解",
-  "chinese_characters": 2909,
+  "chinese_characters": 3410,
   "figure_revision_date": "2026-10-09"
 }

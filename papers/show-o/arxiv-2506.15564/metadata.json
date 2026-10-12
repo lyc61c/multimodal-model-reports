@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2506.15564v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Show-o2：在连续视觉潜空间统一理解与生成",
   "source_sha256": "12ac0764723ecde3e80007c8c696dfaffc613fdb807ddd06895324ebeb57a434",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1595,
+  "chinese_characters": 2137,
   "figures_manifest": "figures-manifest.json"
 }

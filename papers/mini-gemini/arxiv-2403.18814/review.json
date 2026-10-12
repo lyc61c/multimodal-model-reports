@@ -43,10 +43,11 @@
     "Incomplete batch/context/weights disclosure",
     "Original broad superiority claims narrowed to table results"
   ],
-  "article_sha256": "ddbb17736959072ebbad79bbc7f495f518546e32d6f2f17323eaff680430722e",
+  "article_sha256": "8097a2eb1c96e8373025c7da97b57c38f7c108dc1f91dcc6009b82268341b5d2",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3011
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -90,5 +91,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2403.18814v1",
+        "version": "2403.18814v1",
+        "sha256": "c1b5a35ef191564dd8f3482144a0ed0e7549bcab176b359ede285b7619defbec"
+      },
+      "source_locators": [
+        "v1 §3.1–3.3，PDF第4–5页"
+      ],
+      "changes": [
+        "低分辨率ViT给每个查询较大范围的语义上下文，高分辨率CNN则给对应区域更密候选。局部匹配不是让全部HR特征互相竞争一个全局摘要，而是给每个LR位置补细节。空间对应依赖两路的缩放与窗口组织，若目标已在HR入口中不可辨认，注意力也不能凭空创造其文字。",
+        "固定N配置仅增加每个查询可读取的高分辨率证据，后续LLM的视觉位置数不变；HD配置则同时增加查询数，允许更多区域独立表达。这是两种不同容量扩展，前者多付视觉计算，后者还多付语言长序列成本。比较576与2880结果时需要保留这条区别。",
+        "语言模型把含图像和对话的请求改写为扩散模型适用的描述，训练目标仍是提示文字。13K生成指令包括简单重述和利用上下文构造提示，不要求反传SDXL像素损失。这个接口方便复用生成器，但最终图像对对象数量、布局和文字的遵循还取决于外部模型。"
+      ],
+      "disclosure_boundary": "固定N与HD5N区分；SDXL为外部像素生成；不补原文未列缩放项。",
+      "article_sha256": "8097a2eb1c96e8373025c7da97b57c38f7c108dc1f91dcc6009b82268341b5d2",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

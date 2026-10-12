@@ -47,13 +47,14 @@
     "no v1 imagegeneration evaluation",
     "noend-to-endthroughputorselectorcontrolledablation"
   ],
-  "article_sha256": "afd6ce3217e40628840381f09af63cf59db39634539f9ba33c43364f1ad3590a",
+  "article_sha256": "8784dd88cd522d8a9b85155fe71b42e8efab93d08d727f8612f72c8274ff2663",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3153
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -90,5 +91,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2309.04669v1",
+        "version": "2309.04669v1",
+        "sha256": "1b02977920d6b43062a95df5365a2236cb9183f3625f4c963b424a3d7abc8f15"
+      },
+      "source_locators": [
+        "source.txt chars14133–21272: §3.1–3.2 complete, Eq1–5, PDF4–6"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 保留位置控制长度而合并补回被舍弃语义",
+          "new_explanation": "选择器决定输出哪些位置，merger 再把未保留位置的相似内容压入保留表示；因此决策不是简单裁掉一批 patch。因果 self-attention 让保留序列具备可逐项建模的依赖，cross-attention 承担跨组汇聚。两者解决不同问题，仍不能保证舍弃组全部细节均可恢复。[原文 §3.1 Token Selector/Merger、式 (1)–(2)，PDF 第 4–5 页](https://arxiv.org/pdf/2309.04669v1#page=5)"
+        },
+        {
+          "heading": "4.2 语义重建和保留率正则共同学习瓶颈",
+          "new_explanation": "若只惩罚保留数量，选择器可过度删除；若只要求语义重建，又可能保留几乎全部位置。式 (4) 把两项结合，用目标均值约束平均容量，让 selector 与 merger 共同承受语义恢复误差。decoder 重建全部原视觉位置，提供被舍弃内容仍需被解释的训练信号，但监督空间是 ViT 特征而非像素。[原文 §3.1 Vector Quantized and Training、式 (3)–(4)，PDF 第 5 页](https://arxiv.org/pdf/2309.04669v1#page=5)"
+        },
+        {
+          "heading": "4.3 避免输入量化损失同时获得统一分类目标",
+          "new_explanation": "量化 ID 为视觉位置提供有限类别监督，连续 merger 特征则保留量化前细节供主干读取。这种非对称接口不同于“视觉输入输出全是码本 embedding”的完全离散路径。多个图文对打包为交错序列后，同一主干可据前面示例继续补全，tokenizer 的重建 decoder 不再进入该语言预训练路径。[原文 §3.2、式 (5)，PDF 第 5–6 页](https://arxiv.org/pdf/2309.04669v1#page=6)"
+        }
+      ],
+      "disclosure_boundary": "保留Eq2乘法mask数学疑义及解释性修正标签；未虚构量化更新细节。",
+      "article_sha256": "8784dd88cd522d8a9b85155fe71b42e8efab93d08d727f8612f72c8274ff2663",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

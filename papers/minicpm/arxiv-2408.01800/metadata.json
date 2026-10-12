@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2408.01800v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MiniCPM-V：面向端侧的高分辨率视觉语言模型",
   "source_sha256": "5e12b613e832101c217d4990828b8cc584175026eac30d35f799afef79da4e1f",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1931,
+  "chinese_characters": 2482,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2312.14238v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "InternVL：扩展视觉骨干并逐步对齐语言模型",
   "source_sha256": "9c1b09946f5e357f77f5ba2d5395a6d5e53d6f95eecec93b03fbd3205c136768",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2319,
+  "chinese_characters": 2912,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

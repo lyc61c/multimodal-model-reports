@@ -134,13 +134,14 @@
     "No current-ranking claim, independent review or executed model reproduction."
   ],
   "checked_at": "2026-10-08",
-  "article_sha256": "75627cf1d2a9365595c97af90d1e508b6cc0773d9b06de33f994fc1da4e181a8",
+  "article_sha256": "15e36f2658e8451258d0d4e863213ce0c8fbaed414cfd66a598f3de69f63341a",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4840
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -173,5 +174,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2606.02800v1",
+        "version": "2606.02800v1",
+        "sha256": "710be95169d6cdbb463936a0d200b2ea4130d127e2ca34abc0ce45e2b1e9c737"
+      },
+      "source_locators": [
+        "v1 §2.1–2.4，PDF第7–8、11–12页"
+      ],
+      "changes": [
+        "两塔共享的是注意力运算所允许的信息通道，而非所有参数。每层都分别产生AR与DM的Q/K/V，DM才在键值轴合并两条流；因此改变噪声状态不会改变Reasoner的隐藏态。缓存成立依赖固定的AR条件，若文字提示或理解视觉发生变化，应重新计算对应条件，不能把旧缓存无条件跨请求复用。",
+        "前向、逆向和policy任务的关键差别是哪些量保持干净、哪些量需要被去噪：已知动作可约束未来视频，已知前后视频可约束动作，两者同时带噪则联合预测。图4将动作放在相邻视觉状态之间，明确它描述哪次状态转移；不能把任意同时间戳的动作向量与视频帧随意配对。",
+        "序列拼接顺序和位置坐标承担不同职责：前者区分AR、干净条件和生成目标，后者对齐真实时间。视频还有高宽坐标，而音频和动作仅以时间参与位置关系。这样同步信号不必具有相等token数量；时间对齐也不能替代正确的数据同步标注或动作状态对应。",
+        "原文刻意绕开PID等底层控制器细节，用相对位姿表达跨领域可比较的运动。抓取状态使用当前值，是因为它描述操作状态而非必须发生的位移；对它同样取差会丢失“持续闭合”这类信息。领域投影保留输入尺寸差异，因此统一接口并不意味着相机、车辆和双臂机器人拥有相同动作自由度。"
+      ],
+      "disclosure_boundary": "保留规格表；双塔不是稀疏MoE；音视频训练损失原有内容保留，未新增未知系数。",
+      "article_sha256": "15e36f2658e8451258d0d4e863213ce0c8fbaed414cfd66a598f3de69f63341a",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

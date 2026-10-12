@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2409.02889v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LongLLaVA：用 Mamba、注意力与视觉压缩扩展多图上下文",
-  "chinese_characters": 2901,
+  "chinese_characters": 3383,
   "figure_revision_date": "2026-10-09"
 }

@@ -35,10 +35,11 @@
     "Onlineprocessing not real-time latency; Figure6 seconds noted",
     "Table11-13trainingreadtextnotselectedimage;noGPUtimeinferred"
   ],
-  "article_sha256": "2eb3a44204cd2389a028583684396891851509339f3825e9043d91f834a4c3b2",
+  "article_sha256": "cbac4a0e1333c8265e95b54caf4b456b075230594957dffab7860f42b67fbad6",
   "artifact_checks": {
     "original_assets": 13,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2679
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -87,5 +88,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2404.05726v1",
+        "version": "2404.05726v1",
+        "sha256": "faa651bfbe1ee11d2aa37d698dfc0c89da47e3f2aca99d51bd767b5d0c404bc8"
+      },
+      "source_locators": [
+        "source.txt chars13084–19066: §3.2–3.3 complete, Eq2–8, PDF3–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 感知记忆与处理状态在不同注意力层读取",
+          "new_explanation": "视觉库保留原始帧特征，查询库保留已经经过当前层处理的语义状态；前者帮助重新检查感知证据，后者帮助延续历史理解。查询在不同层表征不同，必须逐层维护；把所有层共用同一个查询表会抹去这个设计区别。它们服务视觉汇总，不是语言生成的文本KV缓存。[原文 §3.2、式 (2)–(4)，PDF 第 4 页](https://arxiv.org/pdf/2404.05726v1#page=4)"
+        },
+        {
+          "heading": "4.2 按空间位置合并时间冗余而非删除整帧",
+          "new_explanation": "静态背景位置可能最适合合并早期相邻帧，运动物体位置则可能保留这些帧，因而不同空间列选中的时间对可以不同。这种 token 级规则更细，但合并后的时间槽不应再被理解为一张完整原始帧。平均保持了摘要却混合细节，尤其精确动作时刻仍可能损失。[原文 §3.2 MBC、式 (5)–(7)，PDF 第 4 页](https://arxiv.org/pdf/2404.05726v1#page=4)"
+        },
+        {
+          "heading": "4.3 固定语言前缀把长期信息压力放在记忆更新",
+          "new_explanation": "最终只有32查询进入LLM，长视频不会按帧数量直接扩大语言视觉前缀；相应地，模型必须在每次Q-Former更新和记忆合并中保留之后可能需要的信息。固定长度是预算约束，不是长期无损保证。若早期罕见事件被多次平均削弱，最后语言解码也无法重新访问已丢细节。[原文 §3.2–3.3，PDF 第 4–5 页](https://arxiv.org/pdf/2404.05726v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "不假定memory平均带计数权重或无损重建；分层query与共享visual保持区别。",
+      "article_sha256": "cbac4a0e1333c8265e95b54caf4b456b075230594957dffab7860f42b67fbad6",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

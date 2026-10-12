@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2309.05519v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "NExT-GPT：以语言模型连接四种模态的理解与生成",
   "source_sha256": "6cc77240128d6b426042f7cc75e3654dae6409c82d95e1e32ca6964d075d8fa5",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2289,
+  "chinese_characters": 2770,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

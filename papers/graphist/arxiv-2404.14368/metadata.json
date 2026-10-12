@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2404.14368v1",
   "document_kind": "application_model_paper",
   "catalogue_group": "scope_review",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Graphist：从无序素材生成分层平面设计",
   "source_sha256": "3ea94b407b400cebcfda7ccba32f78b576be2bcc2a999538afa462b99391b73a",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2055,
+  "chinese_characters": 2589,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2300
   },
-  "article_sha256": "cbc6f648e129691567d01b50cd5bbd4572644793f6f032471e26f8aef0b0779d",
+  "article_sha256": "a5e7e320bbed8b60db7b82d5e50f49d945c0dc40e8df1ce26e1bf0b1d2f830a6",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -45,5 +46,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2306.05424v1",
+        "version": "2306.05424v1",
+        "sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5"
+      },
+      "source_locators": [
+        "source.txt chars11076–14106: §3.1–3.2 complete, Eq1–2, PDF3–4; existing five-dimension evaluation retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 两种边缘汇总代替完整时空网格",
+          "new_explanation": "原始T×N位置压成N+T，成本优势来自不再向语言模型传递每一帧每个patch。两路分别保留空间索引或帧索引，却都丢弃另一轴的对应关系；因此难以仅凭这些边缘平均恢复某个对象的完整运动轨迹。线性接口不会重新创造池化已经消失的细节。[原文 §3.1、式 (1)–(2)，PDF 第 3–4 页](https://arxiv.org/pdf/2306.05424v1#page=4)"
+        },
+        {
+          "heading": "4.2 固定骨干把学习重点放在视频条件接口",
+          "new_explanation": "模型沿用已有语言生成目标，问题可覆盖描述、时间、空间或创意内容，回答监督只更新共享线性投影。这个设计训练参数少，却把可表达信息限制在冻结编码器与池化表示中；更复杂答案并不自动意味着内部多了视频时序推理模块。[原文 §3.2 Video Instruction Tuning](https://arxiv.org/pdf/2306.05424v1#page=4)"
+        },
+        {
+          "heading": "4.3 生成质量的维度评价仍须受输入证据约束",
+          "new_explanation": "细节丰富与事实正确可能冲突，时间理解也不能单靠流畅地使用“先、后”来判定。分维度评价让这些性质可以分别观察，但评审主要依赖参考文字与提示，不能替代逐帧核实。尤其池化表示丢失局部时空关联时，应结合错误案例判断评分是否覆盖这一瓶颈。[原文 §3.1机制；原有开放式评价说明](https://arxiv.org/pdf/2306.05424v1#page=7)"
+        }
+      ],
+      "disclosure_boundary": "不把池化当完整运动建模；保留原变量命名与张量轴的区别。",
+      "article_sha256": "a5e7e320bbed8b60db7b82d5e50f49d945c0dc40e8df1ce26e1bf0b1d2f830a6",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

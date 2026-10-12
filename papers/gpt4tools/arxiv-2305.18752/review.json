@@ -48,10 +48,11 @@
     "OPT LR and final dataset proportion inconsistencies preserved",
     "GPU/time/precision not disclosed"
   ],
-  "article_sha256": "7e0ea8a7c35c4b737aabbb4729f7c7333fdfb46dc149dd9ddc9282075c3d279e",
+  "article_sha256": "f0b06583153d70a437f8eb0b4259262c1116acd4976139e62627f4a3a26cabb5",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3197
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -87,5 +88,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.18752v1",
+        "version": "2305.18752v1",
+        "sha256": "dc790291ecbd9a890c6c8b95b8f63b214835eb94718e95334ded34edcc5cb63e"
+      },
+      "source_locators": [
+        "PDF pp.4–5, §3.1, Eq1, Figure3; current §3–4 in full"
+      ],
+      "changes": [
+        "解释图像语境与工具协议两种约束",
+        "补跨步输出路径的依赖机制",
+        "说明不用工具负样本与最终视觉质量边界"
+      ],
+      "disclosure_boundary": "不新增工具选择分类头或视觉工具联合微调。",
+      "article_sha256": "f0b06583153d70a437f8eb0b4259262c1116acd4976139e62627f4a3a26cabb5",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

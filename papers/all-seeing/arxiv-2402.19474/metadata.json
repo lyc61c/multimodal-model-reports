@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2402.19474v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "ASMv2：把对象、关系与位置统一为关系对话",
   "source_sha256": "037cd68ba0ec73617b05448b2ed0c2e430f5ac2ffb3f9c1e8c8c464f77657192",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3558,
+  "chinese_characters": 3953,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

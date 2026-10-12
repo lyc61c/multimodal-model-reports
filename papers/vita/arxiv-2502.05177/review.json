@@ -16,9 +16,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2573
   },
-  "article_sha256": "ab2e73c860e14b35191b7580953f7336e1670c30eac3f961eb12379420334b54",
+  "article_sha256": "e6f808fc1dcc4fc43fcee2fd5a4052925573351d177f2580cd2a4dbcffb1216a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -74,5 +75,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2502.05177v1",
+        "version": "2502.05177v1",
+        "sha256": "05f85d8f986ef66b8b7be98a5c6b6567fe388252c3cd2c9cb03b95f6b25cb866"
+      },
+      "source_locators": [
+        "PDF pp.3,5 §3.1/3.3–3.4, Tables1/3"
+      ],
+      "changes": [
+        "解释输出头位置mask不减少全部骨干成本",
+        "区分视觉并行和语言上下文并行",
+        "补各阶段掩码如何改变可见范围"
+      ],
+      "disclosure_boundary": "不把完整注意力并行宣称无限实测容量或视觉无压缩。",
+      "article_sha256": "e6f808fc1dcc4fc43fcee2fd5a4052925573351d177f2580cd2a4dbcffb1216a",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

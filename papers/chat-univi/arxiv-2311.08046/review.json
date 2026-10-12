@@ -15,9 +15,10 @@
     "local_links_resolve": true,
     "asset_hashes_match": true,
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3983
   },
-  "article_sha256": "a1991365f0665cad1c8cc17790bfa7589fb73a8437f85f5d3be243fcda153d2d",
+  "article_sha256": "f0d6c2c6f316056c3f011791d6fe86d4d5cd1ade57c3b352794417bb1f321d22",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -56,5 +57,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.08046v1",
+        "version": "2311.08046v1",
+        "sha256": "9dcafd3f63cbb903f2c622f85e0ee972ff8257667340af8fba844ee1beabc7ed"
+      },
+      "source_locators": [
+        "source.txt chars 12388–17776: §3.1 complete, Eq.1–4 and multi-scale, PDF4"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 密度峰值选择兼顾代表性与覆盖",
+          "new_explanation": "只取最高密度点，容易把多个中心集中到同一大区域；只看距离又可能选到孤立噪声。密度与分离度相乘把这两个要求放在同一评分中，随后以簇均值表示成员。这个均值不是可训练的加权汇聚，原始成员的细微差别会被压缩；因此该方法是在语言端预算与视觉细节之间作选择，而非无损压缩。[原文 §3.1、式 (1)–(2)，PDF 第 4 页](https://arxiv.org/pdf/2311.08046v1#page=4)"
+        },
+        {
+          "heading": "4.2 先分事件再跨帧合并的条件范围",
+          "new_explanation": "时间合并先决定哪些帧允许共同参与空间压缩，相当于给第二层聚类限定候选集合。若直接把全视频 token 放在同一集合，重复背景和相似动作可能掩盖顺序；按事件组织后，模型在事件内合并相似特征，再按事件顺序读取。这个顺序由聚类与拼接规则构成，不能解读为模型额外预测了一套动作时间标注。[原文 §3.1、式 (3)–(4)，PDF 第 4 页](https://arxiv.org/pdf/2311.08046v1#page=4)"
+        },
+        {
+          "heading": "4.3 逐级聚合与全部尺度保留",
+          "new_explanation": "三级合并是串行细化：较粗特征来自上一层的簇均值，因此层级之间并非三个独立编码器。把每级结果一起送入 LLM，可让语言注意力同时访问细粒度和粗粒度摘要，也意味着预算要统计各级之和，不能只报最末一级长度。投影矩阵解决通道接口，聚类解决长度，两者职责不同。[原文 §3.1 Multi-scale Representation，PDF 第 4 页](https://arxiv.org/pdf/2311.08046v1#page=4)"
+        }
+      ],
+      "disclosure_boundary": "不假定事件时间连续或带真值，不补未知复杂度加速数字。",
+      "article_sha256": "f0d6c2c6f316056c3f011791d6fe86d4d5cd1ade57c3b352794417bb1f321d22",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

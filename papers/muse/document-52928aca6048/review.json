@@ -32,13 +32,13 @@
     "未运行模型或独立复现"
   ],
   "model_execution": "not_run",
-  "article_sha256": "60fcea62c439a2cfd13eacde7a7926a982db5c57e0dfd524803be351592afe6d",
+  "article_sha256": "29cb239d0c9cfee16bc3748ab506e2c47284a7cef894866553b056a642b326e3",
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 16,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -71,15 +71,54 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 8,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "8329cfe99b9d0c0db041aacab6ec422f5fb489cf5bb4876fadecfd8727fc19a2"
+      },
+      "source_locators": [
+        "source.txt chars0–9050: complete fixed official blog snapshot; Capabilities, Applications, Scaling Axes and Test-Time Reasoning"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 用等性能比较区分算力效率与模型规模",
+          "new_explanation": "博客将架构、优化和数据整理作为共同改进，再在小模型阶梯上拟合趋势。因此图示“节省计算”对应达到某个保留集代码预测水平所需训练计算，无法单独分解出任一组件的贡献。比较同一纵轴水平有意义，直接把倍数迁移为生产模型参数量或推理价格没有公开依据。[固定发布页 Scaling Axes / Pre-Training](https://ai.meta.com/blog/introducing-muse-spark-msl/)"
+        },
+        {
+          "heading": "4.2 正确率奖励与思考代价改变策略行为",
+          "new_explanation": "RL步数、回答长度与推理时计算是三个不同口径。博客描述先延长思考、在惩罚下压缩、再延长取得提升的过程，反映策略在预算约束下重新分配生成长度；没有公开足以判断删去了哪些具体推理步骤的轨迹。训练集pass指标与保留集准确率还需分别看，不能仅用训练曲线证明泛化。[固定发布页 Reinforcement Learning / Test-Time Reasoning](https://ai.meta.com/blog/introducing-muse-spark-msl/)"
+        },
+        {
+          "heading": "4.3 并行扩展用总工作量换取较小等待增长",
+          "new_explanation": "多Agent同时工作可以增加探索分支而避免完全串行的等待，但还需协作与汇总。原图给出准确率—延迟关系，未给总token和分支间通信，所以只能说明该设置下的性能与延迟权衡；不能区分收益来自独立探索、互相纠错还是汇总器能力。[固定发布页 Test-Time Reasoning / Contemplating mode](https://ai.meta.com/blog/introducing-muse-spark-msl/)"
+        }
+      ],
+      "disclosure_boundary": "保持闭源功能表；不补网络、RL损失、visual CoT表示或Agent协议。",
+      "article_sha256": "29cb239d0c9cfee16bc3748ab506e2c47284a7cef894866553b056a642b326e3",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

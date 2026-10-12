@@ -30,13 +30,13 @@
     "样例非准确率测量，不把CogVLM成绩归到VisualGLM",
     "数学式均为通用解释而非原文公式"
   ],
-  "article_sha256": "5cdbdaa6281322cc3fcfd31ad56470585f0b8f51321eb1182a38bc3b30e1a8d7",
+  "article_sha256": "7824c088673fb6da5a6fabf3df00b006cdaec9e2b15c05b7c857bc33b42be0e2",
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 16,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -69,18 +69,54 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 8,
-      "operatorname_replacements": 1,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 1
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://raw.githubusercontent.com/zai-org/VisualGLM-6B/main/README.md",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "cfd9fa322e5a3fd92eb4331a7cda00c5d8e58236de6123a1026706429606fed6"
+      },
+      "source_locators": [
+        "source.txt chars0–6000: introduction, inference/HF/SAT cache, fine-tuning examples"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 桥接模块负责模态接口而语言模型负责续写",
+          "new_explanation": "图像表征进入 Q-Former 后成为语言生成的条件，问题和历史则规定当前应回答什么。将两者分开有助于理解多轮示例：模型可以复用同一图像条件，仍需为新问题重新进行语言计算。缓存视觉表示并不会缓存所有未来回答，也不能证明模型每轮都重新观察了原图细节。[官方固定 README“介绍”“使用／模型推理”](https://github.com/zai-org/VisualGLM-6B#使用)"
+        },
+        {
+          "heading": "4.2 数据数量与语言优化权重的区别",
+          "new_explanation": "中文 30M、英文 300M 是图文对数量，原文另外说明中英文权重相同。因此样本量相差十倍不能直接推出英文梯度贡献为十倍；语言权重应在训练采样或损失组织中理解，但具体实现未公开。后续长视觉问答训练改善回答形式，README 的“符合人类偏好”描述不等于已采用 RLHF 或 DPO。[官方固定 README“介绍”](https://github.com/zai-org/VisualGLM-6B#介绍)"
+        },
+        {
+          "heading": "4.3 小样本适配改变有限参数而非重做预训练",
+          "new_explanation": "20 张背景问答的示例说明如何用特定任务数据调整语言侧低秩参数；rank 和层范围是该示例选择，不是全模型始终存在的固定结构。量化主要压低语言权重存储，视觉侧及推理中间状态仍占资源，因此部署显存和微调显存应按各自精度、方法和配置阅读。[官方固定 README“模型微调”](https://github.com/zai-org/VisualGLM-6B#模型微调)"
+        }
+      ],
+      "disclosure_boundary": "保留视觉骨干未知，通用attention和LoRA公式明确为解释；不把人类偏好表述推断成RL。",
+      "article_sha256": "7824c088673fb6da5a6fabf3df00b006cdaec9e2b15c05b7c857bc33b42be0e2",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

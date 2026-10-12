@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2244
   },
-  "article_sha256": "37536c38fb875c9c20003fc24e41b60b0afbda0bb82b3384b75401fac7767b09",
+  "article_sha256": "a00a2909da1c28d7c7edcbe0826d0980ba6042fa42acd4bb1a3919c9ad491dcf",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -67,5 +68,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.04160v1",
+        "version": "2305.04160v1",
+        "sha256": "9e82c2b236b4d1ffd297f896e2c8bc0d99f83073e603141d6bfb66c5c8b1b27d"
+      },
+      "source_locators": [
+        "PDF p4 §3 / §3.1; existing appendix configuration and training retained"
+      ],
+      "changes": [
+        "五模块表；三节详解连续接口、积分触发及答案监督"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "a00a2909da1c28d7c7edcbe0826d0980ba6042fa42acd4bb1a3919c9ad491dcf",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

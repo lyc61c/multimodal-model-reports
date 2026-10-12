@@ -11,10 +11,11 @@
     "targeted_content_audit_2026-10-11": "2026-10-11 targeted content audit: Figure 2/3 仍称完整截图，Figure 2 已不含页内公式；说明虚线反馈，按 §3.2/附录 C.2 定位冻结解释。"
   },
   "model_execution": "not_run",
-  "article_sha256": "e7998ecd50a3ff84842e500aa25667b453ada3575c6830c246709a604ad226b5",
+  "article_sha256": "f89c059149128a14c7f157cf106457063039c20df51edeaa87160a8dc3157c40",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2924
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -72,5 +73,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2309.11499v1",
+        "version": "2309.11499v1",
+        "sha256": "78d7fd6da9924b6b3e7b9735cbbcfd165f8b15f946da3ad6cfc3f293aaa97102"
+      },
+      "source_locators": [
+        "source.txt chars12871–18545: §3 architecture, §3.1 Eq3–6/Figure2, PDF3–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 图像位置预测与图像条件学习分开完成",
+          "new_explanation": "预测 dream 标记回答“文档下一处是否需要图片”，随后追加的查询回答“这幅图片应满足怎样的历史语义”。标记由词表生成，查询则是连续可学习输入；将两者分开，使交错结构学习不必把整幅图像硬压入一个离散词 ID。查询能够读取此前图文，但因果约束不允许读取尚未出现的后续内容。[原文 §3.1 Interleaved Structure Learning、式 (3)，PDF 第 4 页](https://arxiv.org/pdf/2309.11499v1#page=4)"
+        },
+        {
+          "heading": "4.2 冻结扩散模型如何指导语言条件",
+          "new_explanation": "去噪器参数冻结只阻止对其权重更新，并不截断对条件输入的导数。训练用真实目标图像加噪后计算预测误差，误差沿 condition projector、query 隐藏状态回到可训练主干，因此语言侧学习生成模型能够使用的条件。它避免先把目标强制拟合成某个冻结 CLIP 语义向量，但生成细节仍受预训练 SD 的表达范围限制。[原文 §3.1、式 (4)–(5)，PDF 第 4 页](https://arxiv.org/pdf/2309.11499v1#page=4)"
+        },
+        {
+          "heading": "4.3 统一因果组织与生成后的视觉反馈",
+          "new_explanation": "联合目标强调同一历史中可轮流出现文字与图像；实际两种输出使用不同监督和解码器。推理中将已生成图像重新送回视觉端尤其关键：后续文字条件包含实际合成结果，而不只是原始请求或 dream queries。反馈让交错续写有可感知依据，但不意味着扩散图像必然满足全部历史条件。[原文 Figure 2 与 §3.1，PDF 第 4–5 页](https://arxiv.org/pdf/2309.11499v1#page=4)"
+        }
+      ],
+      "disclosure_boundary": "保留原有CFG约定差异；不将score distillation误写成像素优化，不补不存在离散图像词表。",
+      "article_sha256": "f89c059149128a14c7f157cf106457063039c20df51edeaa87160a8dc3157c40",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

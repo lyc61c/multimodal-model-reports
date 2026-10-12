@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2309.09958v1",
   "document_kind": "analysis_with_model_release",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "大规模视觉指令微调：LLaVA 的 33B、65B 与参数高效训练研究",
-  "chinese_characters": 2801,
+  "chinese_characters": 3335,
   "figure_revision_date": "2026-10-09"
 }

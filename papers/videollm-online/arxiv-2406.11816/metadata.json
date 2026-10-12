@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2406.11816v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VideoLLM-online：让视频语言模型学会何时说话、何时等待",
   "source_sha256": "d3076aef869cc468c15f606a554b2908daf873e9793bc9799f4a5eeb7ca471dd",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1978,
+  "chinese_characters": 2520,
   "figures_manifest": "figures-manifest.json"
 }

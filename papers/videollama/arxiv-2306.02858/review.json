@@ -13,9 +13,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 3
+    "original_assets": 3,
+    "chinese_characters": 2640
   },
-  "article_sha256": "b92dc228b7ddf3537307f87b59dec519230406139caead88855e52de2b3d20ef",
+  "article_sha256": "10c294576033449f07068df2afd42c48ec3ea20a0abdf1a76f7bd613498749f9",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -66,5 +67,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2306.02858v1",
+        "version": "2306.02858v1",
+        "sha256": "9ab4f06ce8f41ac4956496283b6894d609421d0250d7d86be8722edbd234768f"
+      },
+      "source_locators": [
+        "PDF p3–4 §2.1.1–2.1.2; §2.2 separate branch training"
+      ],
+      "changes": [
+        "五模块表；扩展双层查询压缩、迁移条件与融合边界"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "10c294576033449f07068df2afd42c48ec3ea20a0abdf1a76f7bd613498749f9",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

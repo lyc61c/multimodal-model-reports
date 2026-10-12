@@ -42,10 +42,11 @@
     "Main text/Table2 implies single setting but Table3/10 separate fine tuning; article uses explicit tables",
     "Loss weights and ADE/FDE units not invented; quoted FID not state of art across all metrics"
   ],
-  "article_sha256": "d1f53d970bfab1ca6590871ff55662e7d8e007ece13a8431525fb3f142a953f8",
+  "article_sha256": "9ab7c5f30525eec85842822fdb017900190b907b463981426192b84f3aa209c8",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3061
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -81,5 +82,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2306.14795v1",
+        "version": "2306.14795v1",
+        "sha256": "cd91d264f888a65cd1c208e658310fe3dccd448ecc53066f7037f67b301e1019"
+      },
+      "source_locators": [
+        "v1 §3.1–3.3，PDF第4–5页"
+      ],
+      "changes": [
+        "时间压缩与码本量化解决两个问题：前者减少序列长度，后者把连续运动映射为可由语言模型分类预测的类别。码本容量决定可区分的局部运动模式，解码器把索引序列还原为完整帧；因此语言生成成功还需要重建器保留足够运动细节，不能只凭token预测准确率判断动作流畅度。",
+        "T5编码器先处理源序列，解码器在源条件与自身前缀下逐步预测目标。文字到动作、动作到文字和动作补全改变的是源/目标组成，不需要为每种方向换一套主模型。动作词表与码本保持索引对应，生成出的类别才可还原；扩词表建立接口，跨模态语义仍需配对数据学习。",
+        "原文先独立训练动作分词器并在后续阶段保持不变，避免语言学习时动作索引的含义同时漂移。随后动作—语言预训练建立结构与对应，指令阶段再指定用户所需方向。这个顺序把运动重建与语言接口适配分开，收益不能解释成仅凭已有T5文字词汇就自动理解连续人体运动。"
+      ],
+      "disclosure_boundary": "不补损失权重；压缩率主配置；不是动作扩散架构。",
+      "article_sha256": "9ab7c5f30525eec85842822fdb017900190b907b463981426192b84f3aa209c8",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

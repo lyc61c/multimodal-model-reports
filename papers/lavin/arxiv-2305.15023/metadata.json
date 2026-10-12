@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2305.15023v1",
   "document_kind": "training_method",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LaVIN：按输入模态路由的低成本视觉语言适配",
   "source_sha256": "4b71c5d58e5c7540f3008bdb21f87b2f69f2236c00d3c380732c25f27db9c0f6",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2051,
+  "chinese_characters": 2552,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

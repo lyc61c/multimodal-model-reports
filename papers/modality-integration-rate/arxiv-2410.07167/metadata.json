@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2410.07167v1",
   "document_kind": "analysis_paper",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Modality Integration Rate：从层间分布差异判断多模态对齐",
   "source_sha256": "c6e10749efa002a543b49cf7b2ff5cc7bbbcf2d2e339c92fb12a28fa91278363",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2505,
+  "chinese_characters": 3047,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

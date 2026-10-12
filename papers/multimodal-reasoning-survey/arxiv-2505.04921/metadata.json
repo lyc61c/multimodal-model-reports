@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2505.04921v1",
   "document_kind": "survey",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "感知、推理、思考与规划：大规模多模态推理模型研究路线综述",
   "source_sha256": "3dcb5ea38b2b18ee8af8554ab3b812aac14b1f12e538474d11f5e548693ad629",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 4299,
+  "chinese_characters": 4915,
   "figures_manifest": "figures-manifest.json"
 }

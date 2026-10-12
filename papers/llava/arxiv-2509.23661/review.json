@@ -46,10 +46,11 @@
     "budget scope incompletely itemized in report",
     "seven categories wording lists eight categories"
   ],
-  "article_sha256": "b2c256d3b36a2e62abeb7da4e59fd03b9a07383cb1b70a2c87c5b7c8b3ebb10a",
+  "article_sha256": "72472f5f7e043b344764f191e92aa24dfb466679394245d6e771d555a11cae94",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3299
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -82,5 +83,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2509.23661v1",
+        "version": "2509.23661v1",
+        "sha256": "44ab4aad68de364da86076d4c2d9df6e96f253b92dfb406945bdb65f4b1ad70a"
+      },
+      "source_locators": [
+        "v1 §2–3.1，第3–5页；§4.1，第6页"
+      ],
+      "changes": [
+        "区域预训练强化对象和文字局部表示，保留CLS则继续提供整图概括；两者分别服务细粒度与全局语义。下游模型复用这份视觉资产，再通过投影及联合训练接入Qwen3，并非在每次推理时执行区域聚类。本文公开的是架构采用与上游规模，完整聚类损失需要查被引用工作，不能借名称补出未列公式。",
+        "先用图像嵌入得到概念归属，再按稀有程度采样，最后重新生成中英文caption，顺序把采样决策与原始caption质量部分解耦。对于无caption或短caption图片，这比词面词表匹配更可用；但概念来自预训练特征，错误匹配会进入采样权重，所以需要保留后续有效性过滤与去重。",
+        "投影阶段先建立语言可读接口，中期85M数据再全参数学习知识，指令阶段继续全参数训练回答行为。四patch合并始终改变每幅图进入LLM的表示长度，packing则改变训练槽位利用率；阶段规模和利用率是不同维度，不能把训练框架的吞吐收益解释成模型丢弃了同等比例视觉内容。"
+      ],
+      "disclosure_boundary": "不补RICE上游完整loss；无公开k/概念合权；packing不是语义压缩。",
+      "article_sha256": "72472f5f7e043b344764f191e92aa24dfb466679394245d6e771d555a11cae94",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

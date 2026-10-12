@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2410.17434v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LongVU：在有限上下文中自适应压缩长视频",
   "source_sha256": "cf891d1bfd79e3648eea6dd853054ab172d618ff1e2aeed44e33fb5d261bc761",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1905,
+  "chinese_characters": 2446,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

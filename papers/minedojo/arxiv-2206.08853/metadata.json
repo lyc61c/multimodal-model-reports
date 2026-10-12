@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2206.08853v1",
   "document_kind": "embodied_platform",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MineDojo：用网络规模的多模态知识训练 Minecraft 具身智能体",
-  "chinese_characters": 3007,
+  "chinese_characters": 3583,
   "figure_revision_date": "2026-10-09"
 }

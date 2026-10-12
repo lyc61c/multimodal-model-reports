@@ -37,10 +37,11 @@
     "Some VQA decline and navigation failures retained",
     "No undisclosedepochs/precision/optimizerfilledfromLLaVA"
   ],
-  "article_sha256": "cf34c17b0d1e19d5de21b36ff40fe1e7ddaee13b0cd4a8efa0c23f46d5770dde",
+  "article_sha256": "c4de045e69fbb7ef9b00a38daad40edb90d798fb2b7c6155157becbcd4fd4c3c",
   "artifact_checks": {
     "original_assets": 9,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2985
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -81,5 +82,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2406.10721v1",
+        "version": "2406.10721v1",
+        "sha256": "ae9e8476d63b82ccfa922905e6b410dc9ef302cd0618e11b79f10e06a5c8a1ed"
+      },
+      "source_locators": [
+        "PDF p.3 §3 problem formulation/instruction tuning/data mix"
+      ],
+      "changes": [
+        "解释空位为何适合点而非框",
+        "区分合成彩框与测试检测依赖",
+        "补感知准确与控制成功分解"
+      ],
+      "disclosure_boundary": "不新增标定矩阵值或机器人位姿公式。",
+      "article_sha256": "c4de045e69fbb7ef9b00a38daad40edb90d798fb2b7c6155157becbcd4fd4c3c",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

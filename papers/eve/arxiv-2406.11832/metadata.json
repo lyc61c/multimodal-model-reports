@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2406.11832v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "EVE：用语言底座预对齐和视觉特征监督构建无深层视觉编码器模型",
   "source_sha256": "8c33cd6479f33e0b8e13596fd3da02d9a7c21ce0eb3054cea6db5434fe84c765",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2405,
+  "chinese_characters": 2956,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2408.15881v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LLaVA-MoD：通过稀疏专家与渐进蒸馏训练小型视觉语言模型",
-  "chinese_characters": 2680,
+  "chinese_characters": 3165,
   "figure_revision_date": "2026-10-09"
 }

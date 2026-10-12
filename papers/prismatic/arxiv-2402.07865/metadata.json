@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2402.07865v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Prismatic VLMs：用控制变量实验探索视觉语言模型的设计空间",
   "source_sha256": "7027cf1a9560a0643686546f0a6de8b6aeaf017d67410c0d6dafb99126eb57f0",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1798,
+  "chinese_characters": 2295,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

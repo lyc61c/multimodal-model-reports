@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2401.15947v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MoE-LLaVA：先学习图文理解，再扩展为稀疏专家模型",
-  "chinese_characters": 2668,
+  "chinese_characters": 3112,
   "figure_revision_date": "2026-10-09"
 }

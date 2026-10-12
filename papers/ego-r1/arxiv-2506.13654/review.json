@@ -11,10 +11,11 @@
     "targeted_content_audit_2026-10-11": "2026-10-11 targeted content audit: Figure 1/4、Table 2 已为裁图但仍称完整截图；修正来源说明。"
   },
   "model_execution": "not_run",
-  "article_sha256": "9e085e595809d4b254728e77261a7ae91dc27a298ea84db62d9ba81a5793020c",
+  "article_sha256": "d9a9d551cf9678625631ecfc9bdeffc99f6cf5a8cfd64d4f679d3fbeee8b7747",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3081
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -72,5 +73,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2506.13654v1",
+        "version": "2506.13654v1",
+        "sha256": "a783d05057585e0c41c42461a52e647af7d450dc4830f91ebb1316a0877df937"
+      },
+      "source_locators": [
+        "v1 §3.2–4.1，第4–5页；§5.1–5.2，第7页"
+      ],
+      "changes": [
+        "层级记忆先缩小时间范围，Video-LLM检查一段动态过程，单帧VLM再核对可读文字或对象属性，形成从粗到细的可用路径。代理也可以依据当前观察改变下一次调用，并不要求每题固定顺序访问全部工具。任务只允许使用查询时间之前的视频，因此参数中的时间约束同时定义证据的可用边界。",
+        "SFT把工具调用与环境返回组织成多轮会话，先建立可执行的行为格式；RL阶段则真实执行调用，观察反过来影响后续生成。训练轨迹在得到最终答案或达到步数上限时结束，所以一次rollout的长度可以随策略而变化。模拟模板中的正确调用格式与真实环境中能否找到答案，是两个需要衔接的学习目标。",
+        "同一问题的多条轨迹用相对奖励形成优势，鼓励比组内其他轨迹更有效的行为；但终点正确并不能唯一确定中间哪一步贡献最大。论文没有给每次检索标注独立真值奖励，因而不能把组内优势解释成逐工具的精确贡献估计。工具错误、日志遗漏和策略选择仍可能在同一终点奖励里交织。"
+      ],
+      "disclosure_boundary": "不虚构向量检索实现、逐步奖励或成本惩罚；工具观察来自环境。",
+      "article_sha256": "d9a9d551cf9678625631ecfc9bdeffc99f6cf5a8cfd64d4f679d3fbeee8b7747",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

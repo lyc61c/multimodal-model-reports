@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2305.16355v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "PandaGPT：通过共享嵌入空间迁移图文指令跟随能力",
-  "chinese_characters": 2228,
+  "chinese_characters": 2768,
   "figure_revision_date": "2026-10-09"
 }

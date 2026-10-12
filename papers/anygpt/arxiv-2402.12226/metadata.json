@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2402.12226v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "AnyGPT：用离散序列统一图像、语音、音乐与文字",
   "source_sha256": "c1ba08b255aff58e993db469c46a0419befa9fd89ea6856d0c15a05b3aedfedf",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3330,
+  "chinese_characters": 3756,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -18,9 +18,10 @@
     "local_links_resolve": true,
     "asset_hashes_match": true,
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2739
   },
-  "article_sha256": "bd58da24975d85873a7d53093205ddc25e1355659c061ae67edb3034c64733c0",
+  "article_sha256": "8a350afa0d4efa12097473360875cca3f6fde576d7c53cdbcc72e5ccc73e77e5",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -69,5 +70,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2403.19046v1",
+        "version": "2403.19046v1",
+        "sha256": "1a7fc7ff2115d6b361e3304a8e934a963d261c95516b2396b9b60db444493cca"
+      },
+      "source_locators": [
+        "PDF pp.3–4, §3.1–3.4, Figure2"
+      ],
+      "changes": [
+        "解释相对时间为何需要外部时长逆映射",
+        "补两种池化损失与互补",
+        "补densecaption排序和短答提示控制"
+      ],
+      "disclosure_boundary": "不把时间token和采样帧混为相同输入位置。",
+      "article_sha256": "8a350afa0d4efa12097473360875cca3f6fde576d7c53cdbcc72e5ccc73e77e5",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

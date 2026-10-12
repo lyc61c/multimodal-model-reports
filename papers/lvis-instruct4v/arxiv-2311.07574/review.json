@@ -36,10 +36,11 @@
     "MMVet正文3.6%与表不一致，按表2.0分记录",
     "未在本报告列出的LR/GPU/context等不从基线记忆补造"
   ],
-  "article_sha256": "53cafb8b5e9657718405370911e81065954da4dfe8ebb65a388b3dfcab71f642",
+  "article_sha256": "517ab4a23f6c1c66c729ffd0d23ba2e7433af1a90ba90b6f6eb21473eea4fe2c",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2945
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -102,5 +103,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.07574v1",
+        "version": "2311.07574v1",
+        "sha256": "91654f3d076593185d45fd0ad81fdec6ee4dbb155f2e824ac3f28ce3e3f973eb"
+      },
+      "source_locators": [
+        "v1 §3–4.1，PDF第3–4页"
+      ],
+      "changes": [
+        "LVIS与COCO使用相关图像来源但具有不同细粒度类别体系，教师既利用框及类别，也能查看标注未完整表达的外观和布局。因此变化主要在监督生成条件，而不是给学生追加LVIS检测标签。学生仍需从原图学会这些细节，教师更丰富的回答不保证学生固定视觉入口都能同样读出。",
+        "一幅图生成对话和描述两类监督，分别训练按问题回答与整合对象关系。框组要求教师综合场景而非逐框列词，提供更密集的关系语言；反事实约束尝试减少不存在对象的编造。提示只是生成规则，是否真正满足还取决于教师，不能把规则文本本身当成数据逐条质检结果。",
+        "统计按指令总数归一，回答更长会带来更多可计数词，位置或颜色词出现也不说明其视觉描述正确。Figure4证明新监督包含更多这类线索，学生的实际收益仍需模型基准另行验证。沿用基线架构和训练设置，有助于观察数据差异，但混合的其他基准数据也属于最终训练条件。"
+      ],
+      "disclosure_boundary": "无新增骨干；教师上线不必参与；词汇密度不当正确率。",
+      "article_sha256": "517ab4a23f6c1c66c729ffd0d23ba2e7433af1a90ba90b6f6eb21473eea4fe2c",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

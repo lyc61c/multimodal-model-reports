@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2605.06765v1",
   "document_kind": "model_release",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VITA-QinYu：在统一语音模型中学习角色扮演与歌唱表达",
   "source_sha256": "df4b0f43276b9da90e04946e4f85b1c5c60695c3cd3562153159139c8b500891",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2804,
+  "chinese_characters": 3331,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

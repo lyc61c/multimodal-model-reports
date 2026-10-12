@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2412.08646v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "StreamChat：回答生成过程中持续更新视频上下文",
   "source_sha256": "e3533fffe48330b32a302f36c170433ad737ad87052280b74e896228d062b034",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2126,
+  "chinese_characters": 2662,
   "figures_manifest": "figures-manifest.json"
 }

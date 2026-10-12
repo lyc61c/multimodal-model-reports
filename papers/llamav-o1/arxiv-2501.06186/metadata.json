@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2501.06186v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LlamaV-o1：以课程学习和搜索改进逐步视觉推理",
   "source_sha256": "02e72a82e11143ae3df9d86c6c5a7802189131709dbfcfe9cfd106e15e5e35c5",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2219,
+  "chinese_characters": 2823,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

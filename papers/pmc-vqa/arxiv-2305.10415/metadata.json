@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2305.10415v1",
   "document_kind": "dataset_and_model",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "PMC-VQA：从医学论文图注构建视觉问答数据，并训练 MedVInT",
-  "chinese_characters": 3213,
+  "chinese_characters": 3765,
   "figure_revision_date": "2026-10-09"
 }

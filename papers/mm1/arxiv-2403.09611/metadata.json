@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2403.09611v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MM1：用系统消融建立多模态预训练配方",
   "source_sha256": "e166a7d7245be1cc71b394f0e5e669cd63f627d5b5f69a481d5c986f045f7a77",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2470,
+  "chinese_characters": 3107,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

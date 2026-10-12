@@ -19,9 +19,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 3469
   },
-  "article_sha256": "29d5a08c2dc5333f16bbcbfe96b2866106cdc7dd2c3c894e5c01284522db39b7",
+  "article_sha256": "7dbc5eeeebe01edb458dde52a4b155a1566f65a68303d341f021fc72a3f4af12",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -47,5 +48,43 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "491a6fd21597b73c1a806e5d49f40167501a262f67ce20f49d8c2aab25edb203"
+      },
+      "source_locators": [
+        {
+          "cache": "source.txt",
+          "start": 17926,
+          "end": 24150,
+          "locator": "§3.2.1–3.3.2，PDF6–8"
+        }
+      ],
+      "changes": [
+        {
+          "heading": "4.1 音频离散化：语义对齐不等于去掉声学细节",
+          "new_explanation": "量化器的同一组码同时服务两个监督端：冻结语言模型读取它们预测转录，音频解码器读取它们重建Mel。冻结语言模型使语义对齐主要通过音频侧学习进入已有文字空间，重建分支则约束不能只留下转录所需信息。多层残差码承担对同一时间帧的逐级补偿，所以增加码层与增加音频时长是不同的计算维度。[§3.2.2，PDF 第6–7页](https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf#page=7)。"
+        },
+        {
+          "heading": "4.2 交错生成：时间推进与码层预测分开组织",
+          "new_explanation": "语言模型通过模态切换标记决定当前生成文字还是音频相关表示，再由独立音频头处理同一帧的多层码。depth Transformer针对码层的依赖，语言上下文针对随时间推进的内容依赖；把二者区分开，才能理解8个分类头为何不等于把每段声音展开成8倍时间步。音频embedding与head先学习、主干后开放，也降低随机新模块直接扰动语言空间的风险。[§3.3.2，PDF 第7–8页](https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf#page=7)。"
+        },
+        {
+          "heading": "4.3 连续声音解码：量化码到波形的两个还原阶段",
+          "new_explanation": "离散音频码并不是可直接播放的振幅样本。flow matching先在条件码约束下还原连续Mel结构，HiFi-GAN再把谱表示转换成波形。因而语义码是否准确、Mel生成是否自然、vocoder是否保真是不同误差来源；语言端答案正确不能自动保证发音、韵律和音色都正确。报告给出的24kHz属于这一波形端的训练口径。[§3.2.2，PDF 第7页](https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf#page=7)。"
+        }
+      ],
+      "disclosure_boundary": "不补码本大小、RVQ损失权重、flow求解器或首包毫秒数。",
+      "article_sha256": "7dbc5eeeebe01edb458dde52a4b155a1566f65a68303d341f021fc72a3f4af12",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

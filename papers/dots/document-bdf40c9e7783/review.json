@@ -31,7 +31,7 @@
     "正文不从有矛盾的README TP每节点说明推算训练GPU数",
     "原图为案例，无架构原图时不伪造原Figure"
   ],
-  "article_sha256": "6a16379c8f8fee077eb707ba128f54e134cf83ff727e6f6c5083cd2ac0ff0210",
+  "article_sha256": "a32bf20a78671a359db5cecf01cfc741f7be6854df9ea75e5bfcc4e494cda053",
   "formatting_revision": {
     "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -92,5 +92,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://github.com/rednote-hilab/dots.vlm1",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "18d4a276c152e12bcad64abf407fa8e1cbc967f0c27581437c85fb7e78e36528"
+      },
+      "source_locators": [
+        "source.txt chars3000–4573: release overview; tmp/dots-vlm1-architecture-blog.md Methods§3.1–3.3 complete, cached SHA b113f8c5f230618c9eea95029e1283da2a9cf5af7f23aba5387a519d98c25386"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 先学感知再扩分辨率的双监督路线",
+          "new_explanation": "官方把视觉编码器训练拆成两个阶段：224×224 上从随机初始化学习，再逐步接触 1M 和 10M 像素输入。前一阶段同时使用文字预测和纯视觉 patch 生成，后一阶段增加 OCR、grounding 与视频来源。因此动态分辨率能力伴随分辨率扩展训练，而非仅给固定分辨率编码器换一个位置编码就自然获得。[固定博客 Methods §3.2](https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/blog.md)"
+        },
+        {
+          "heading": "4.2 跨模态翻译与融合提供不同条件",
+          "new_explanation": "翻译数据把图像中可表达的信息转为离散序列，例如数值、文字、坐标与描述；融合数据则保留文字与视觉交错的上下文，要求下一 token 利用两种来源。网页重写服务于后者：既清理图片，也清理没有视觉依据的文字，减少模型靠松散邻文完成训练目标的机会。这里区分的是监督组织，官方没有给出两类损失的配比或独立预测头。[固定博客 Methods §3.3](https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/blog.md)"
+        },
+        {
+          "heading": "4.3 版面恢复的条件与尚未披露的计算细节",
+          "new_explanation": "PDF 先由解析模型变成交错图文，还会把整页渲染成图像并选择性遮挡文字块，利用剩余布局和上下文恢复内容。前一条路径保留文档顺序，后一条路径让视觉版面成为预测依据，两者可以在数据上互补。但博客未交代像素和 token 掩码同步方式，不能进一步推导具体 attention mask 或将其称为本篇新型扩散目标。[固定博客 Methods §3.3，PDF data](https://raw.githubusercontent.com/studio-dots-ai/dots.vlm1/main/assets/blog.md)"
+        }
+      ],
+      "disclosure_boundary": "严格保持MLP、patch、NPG参数化未知；dots.ocr表行明确为训练数据组件。",
+      "article_sha256": "a32bf20a78671a359db5cecf01cfc741f7be6854df9ea75e5bfcc4e494cda053",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

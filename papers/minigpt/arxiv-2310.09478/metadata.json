@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2310.09478v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MiniGPT-v2：用任务标识统一图像问答、描述与定位",
-  "chinese_characters": 2326,
+  "chinese_characters": 2857,
   "figure_revision_date": "2026-10-09"
 }

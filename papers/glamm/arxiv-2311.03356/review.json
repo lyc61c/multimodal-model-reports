@@ -23,14 +23,15 @@
   },
   "model_execution": "not_run",
   "limitations": "v1 lacks citedappendices;no modelreproductionorindependentreviewerclaimed",
-  "article_sha256": "0cbb7760dff8da9bc70246e51d4e5d2875cbd447b58f1aa65e854c25ee09ca97",
+  "article_sha256": "6884a833dce067918b188d635ee49b1b5b2859cc107c347d279b36be6d96dbc6",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged.",
     "2026-10-11 targeted content audit: 三个分开的实验表仍用上表/中表/右下指代；改为 Table 3/4/5 与任务名。"
   ],
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2885
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -88,5 +89,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.03356v1",
+        "version": "2311.03356v1",
+        "sha256": "50432114aa813b1956667023863f4db6c4fac62a9934f7b53c226db0dcc05fe3"
+      },
+      "source_locators": [
+        "source.txt chars15965–23500: §3.1 complete and §3.2 through mask-recall beginning, PDF4–5"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 全局语境与可选区域提示共享语言接口",
+          "new_explanation": "全图 token 提供场景，RoI token 提供用户指定的局部信息；共享 V-L 投影让两者进入同一语言维度，但不说明其视觉内容完全可替代。区域路径首先从多个 CLIP 层构造金字塔，再做 RoIAlign，利用不同层级的空间与语义信息。没有区域输入时，模型仍可依靠全图路径完成自动 grounded caption。[原文 §3.1 Scene/Region-Level Understanding，PDF 第 4 页](https://arxiv.org/pdf/2311.03356v1#page=4)"
+        },
+        {
+          "heading": "4.2 语言决定分割对象而空间编码器保留形状",
+          "new_explanation": "SEG 的最后层表示已经受前文短语和对话影响，L-P 投影把它转成 decoder 能读的语义条件；SAM 图像编码器单独提供密集空间信息。把这两路分开，语言主干不必直接输出每个像素，也让同一图像特征可服务不同短语提示。输入 RoI 理解和输出 pixel grounding 因此不能合并成一个方向相同的模块。[原文 §3.1 Pixel-Level Grounding，PDF 第 4–5 页](https://arxiv.org/pdf/2311.03356v1#page=5)"
+        },
+        {
+          "heading": "4.3 短语与 mask 绑定是联合输出的核心约束",
+          "new_explanation": "GCG 要求完整句子保持可读，同时将对象、部件和属性短语与对应 mask 配对。p/SEG 标记规定配对位置，但仍可能出现句子正确而 mask 错、mask 正确而短语错的情况。论文因此并列评测 caption、mask AP/IoU 和区域 recall，而不是用单一文字分数代表视觉落地能力。[原文 §3.2 GCG Output Representation/Evaluation Criteria，PDF 第 5 页](https://arxiv.org/pdf/2311.03356v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "保留原文CLIP型号而不擅改，不补未披露mask训练loss/阈值。",
+      "article_sha256": "6884a833dce067918b188d635ee49b1b5b2859cc107c347d279b36be6d96dbc6",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

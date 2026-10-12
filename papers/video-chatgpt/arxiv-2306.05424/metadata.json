@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2306.05424v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Video-ChatGPT：时空池化、视频指令数据与对话评价",
   "source_sha256": "f36e0fbe3496ad985285fe677ab1ce09dd98cb869f12d32966e094087ec75de5",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1761,
+  "chinese_characters": 2300,
   "figures_manifest": "figures-manifest.json"
 }

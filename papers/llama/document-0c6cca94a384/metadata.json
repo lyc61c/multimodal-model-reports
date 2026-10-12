@@ -9,11 +9,11 @@
   "source_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
   "document_kind": "release_blog",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Llama 3.2：冻结语言骨干的视觉扩展与轻量模型",
   "source_sha256": "e546c91ada37d80195ede500d527799409ef96d552d7412761f2f58a44865c81",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2373,
+  "chinese_characters": 2866,
   "figures_manifest": "figures-manifest.json"
 }

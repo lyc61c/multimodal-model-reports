@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2407.03320v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "InternLM-XComposer-2.5：统一处理高分辨率图片、视频和长篇图文交互",
-  "chinese_characters": 2697,
+  "chinese_characters": 3213,
   "figure_revision_date": "2026-10-09"
 }

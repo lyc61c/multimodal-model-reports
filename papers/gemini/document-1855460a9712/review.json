@@ -124,13 +124,14 @@
     "No independent reviewer or model reproduction is claimed."
   ],
   "checked_at": "2026-10-08",
-  "article_sha256": "fea3f6ee980bc6d8dd8db0ef27d2c05c166ae5f4b1c0dad4f7ef8d9855cfe533",
+  "article_sha256": "2b123523644a8f3e9c119c9268c1fcafdc1b1d06159478be79cbc128367c8ce2",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4738
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -186,5 +187,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0"
+      },
+      "source_locators": [
+        "PDF p5–6 §3.1–3.2; existing Figure7 / Figure11 / Kalamang source-grounded discussions retained"
+      ],
+      "changes": [
+        "四模块表；四个编号机制小节；补 NLL、检索、临时学习与蒸馏各自边界"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "2b123523644a8f3e9c119c9268c1fcafdc1b1d06159478be79cbc128367c8ce2",
+      "module_rows": 4,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

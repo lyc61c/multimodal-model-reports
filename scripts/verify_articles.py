@@ -5,6 +5,7 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
 from paper_sources import ROOT, PLAN, dump, read
+from verify_article_structure import structure_issues
 
 expected=['论文信息与模型定位','快速概览','整体架构','核心创新与数学原理','数据构建与处理','训练流程与目标','实验设置与主要结果']
 results=[]
@@ -22,6 +23,12 @@ for entry in read(PLAN)['entries']:
             headings=re.findall(r'^## \d[.、] ?([^\n]+)$',body,re.M)
             if headings!=expected:
                 row['issues'].append('Seven-section headings differ')
+            structure_errors, structure_metrics = structure_issues(body)
+            row['issues'].extend(structure_errors)
+            row['reading_structure'] = {
+                'module_rows': structure_metrics['module_rows'],
+                'principle_subsections': len(structure_metrics['principle_subsections']),
+            }
             if re.search(r'TODO|TBD|待填写|\ufffd',body):
                 row['issues'].append('Placeholder or invalid character')
             if len(re.findall(r'[\u4e00-\u9fff]',body))<500:

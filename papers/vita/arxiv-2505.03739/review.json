@@ -16,9 +16,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 6
+    "original_assets": 6,
+    "chinese_characters": 2473
   },
-  "article_sha256": "739091f730b87c17bc6b70ac82df144bec8b92e7871c4c5477e04bde81ba7bac",
+  "article_sha256": "b2e05594dbbe1bf55d7ce20ee6631734d05639703290c88350590703eec2e05a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -47,5 +48,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2505.03739v1",
+        "version": "2505.03739v1",
+        "sha256": "d3e905d57f5ff92052e709e1889ff46ee61a5ed469bad0a469e6cbe466441011"
+      },
+      "source_locators": [
+        "PDF pp.5–6 §3.2 Eqs1–3/Figure2, p.9 §3.4–4.1/Table3"
+      ],
+      "changes": [
+        "补级联条件与共享头不等同分布",
+        "解释Turbo/Vanilla质量代价",
+        "区分首token与首块及不同训练模式"
+      ],
+      "disclosure_boundary": "不声称严格推测解码验证或零墙钟延迟。",
+      "article_sha256": "b2e05594dbbe1bf55d7ce20ee6631734d05639703290c88350590703eec2e05a",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

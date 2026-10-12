@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2508.11630v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Thyme：通过可执行代码操作图像并辅助多模态推理",
   "source_sha256": "8337ca713bc04cc0ee027277d0a838464e0f3c46935fed49c8f26e66d267f5e8",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2053,
+  "chinese_characters": 2637,
   "figures_manifest": "figures-manifest.json"
 }

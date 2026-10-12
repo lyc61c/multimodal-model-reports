@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2406.19389v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "OMG-LLaVA：用统一分割模型连接图像、对象与像素推理",
   "source_sha256": "45942c3da5dc7770d98083f752bb3542e359b93aa2c3579772193bfe0e905b51",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2212,
+  "chinese_characters": 2828,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

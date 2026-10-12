@@ -29,7 +29,7 @@
     "未运行模型"
   ],
   "model_execution": "not_run",
-  "article_sha256": "8345255731de4ceb681d8528421920eef7ac4b248e091b9566f1b71d38ccbcd2",
+  "article_sha256": "3718a4b22dd82a66ec182d76c941533c16c976317177be395ea941d94ae02090",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -78,5 +78,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://qwen.ai/blog?id=qwen3.8",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "52991dde8e6dae7867c89656d4b31728a7d1342c34a6343c5521d01e238946c9"
+      },
+      "source_locators": [
+        "cached source environment axes / Universal Reward System / online balancer / RecreationBench protocol"
+      ],
+      "changes": [
+        "五模块表；展开环境分布、异构反馈与黑盒重建闭环"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "3718a4b22dd82a66ec182d76c941533c16c976317177be395ea941d94ae02090",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2310.13289v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "SALMONN：双音频编码器与少样本激活微调",
   "source_sha256": "eb8cb0f2594d83a30b9f0b6776135ff27f905b4235177916c13147f4dd979a8f",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2191,
+  "chinese_characters": 2661,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

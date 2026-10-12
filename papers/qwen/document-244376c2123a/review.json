@@ -31,7 +31,7 @@
     "未调用模型"
   ],
   "model_execution": "not_run",
-  "article_sha256": "a27bade15b888c06f3b268ee9913a6810cd6d18c942b959b2d2acdb7421c0900",
+  "article_sha256": "93f59f2aba84967f0733eeca65b6467e329bbc05c5a2bce4ab7c8cc35ee9f352",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -98,5 +98,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://qwenlm.github.io/blog/qwen-vlo/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "da266385996395d713db6db9949603707e345304e21393cc683bc13a96226b45"
+      },
+      "source_locators": [
+        "Cached blog Introduction/The Creative Process/From Understanding to Creation/Shiba Inu demo"
+      ],
+      "changes": [
+        "Expanded interface versus parameter sharing and edit/identity tradeoffs"
+      ],
+      "disclosure_boundary": "Release blog does not disclose generation topology or training equations",
+      "article_sha256": "93f59f2aba84967f0733eeca65b6467e329bbc05c5a2bce4ab7c8cc35ee9f352",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

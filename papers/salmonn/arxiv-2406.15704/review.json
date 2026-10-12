@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 7
+    "original_assets": 7,
+    "chinese_characters": 2630
   },
-  "article_sha256": "8bd0f57eacb058b150945ec7604e7e52cdbfa902ac79f9a049e056283965872d",
+  "article_sha256": "fd7e25cf00329e5ba264a9e112f7f95f0f2ff86367d1739424d48bedc3683007",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -53,5 +54,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2406.15704v1",
+        "version": "2406.15704v1",
+        "sha256": "7d7d9b6a34b4569e07717731ec77272d883b102d043d7acfcd353c915e30a85a"
+      },
+      "source_locators": [
+        "PDF pp.3–4 §3.1–3.3, Eq1–6, Figures1–3"
+      ],
+      "changes": [
+        "补等长度多尺度相加机制",
+        "解释query差异与事件身份不同",
+        "区分同步网格与语义配对"
+      ],
+      "disclosure_boundary": "不将局部因果模块扩写为完整流式系统。",
+      "article_sha256": "fd7e25cf00329e5ba264a9e112f7f95f0f2ff86367d1739424d48bedc3683007",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

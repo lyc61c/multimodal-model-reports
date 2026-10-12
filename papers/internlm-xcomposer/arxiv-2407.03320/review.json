@@ -43,13 +43,14 @@
     "No quantitative article/DPO ablation",
     "No independent96K reliability plot"
   ],
-  "article_sha256": "41c855c5030598c39b3a0fc542577eed78337191628a7f7c99b07781148a8e26",
+  "article_sha256": "b41b84ec38c41085079ae3f5a13162e3cac7475602490ec2a04ad33cf4d9756b",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3213
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -250,5 +251,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2407.03320v1",
+        "version": "2407.03320v1",
+        "sha256": "a05001af4d9f547f34a047ac87e3a8c80bc77ad5a4208a73e1abddbb40c91540"
+      },
+      "source_locators": [
+        "v1 §3.1–3.4，PDF第6–7页；原有§3.6 DPO保留"
+      ],
+      "changes": [
+        "缩放后的尺寸需求与最大块数同时限制网格，避免小图被无条件放大到满预算。预训练H=12与SFT H=24改变了局部细节容量；SFT又降低LLM相对更新速度，试图在保留语言能力与学习视觉信息之间折中。因此输入扩展和参数适配是一起调整的，不能把成绩变化全部当成某个切图公式的效果。",
+        "多图用序列中的图像索引，视频则把帧号写进拼图，两者分别告诉模型“哪张图”和“哪一帧”。视频路径没有另设3D编码器，但仍保留顺序线索；事件若落在采样帧之间则不会因编号而自动恢复。演示中的语音转写和合成是外部工具链，也不应与这一视觉主干的输入模态混写。",
+        "偏好对比较完整文章，优化对象包含结构、内容和回答稳定性，而非逐位置独立分类。公式里的参考策略提供相对概率基准，数据筛选奖励模型提供偏好样本，这两种角色不同；前者出现在DPO目标，后者参与准备训练材料。保留这个区别才能准确理解“不需要在线奖励模型优化”的范围。"
+      ],
+      "disclosure_boundary": "400为合并表示非原始patch；帧编号非绝对时间编码；DPO数据奖励模型与优化区分。",
+      "article_sha256": "b41b84ec38c41085079ae3f5a13162e3cac7475602490ec2a04ad33cf4d9756b",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

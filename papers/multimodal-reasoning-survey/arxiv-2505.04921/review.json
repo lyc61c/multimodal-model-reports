@@ -17,9 +17,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 4915
   },
-  "article_sha256": "82d252e17721293d0d5cff40246f3f51a211017be6650d38c2e6407465429a6b",
+  "article_sha256": "c3da4732f88d5daa5d3f70daeb4ace4a7e25e01e493d2a712e3b5a1a1b837205",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -48,5 +49,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2505.04921v1",
+        "version": "2505.04921v1",
+        "sha256": "3dcb5ea38b2b18ee8af8554ab3b812aac14b1f12e538474d11f5e548693ad629"
+      },
+      "source_locators": [
+        "source.txt chars73776–85685: §3.3.2–3.3.3 complete with Tables4–6, PDF17–19; chars100232–105529: Table8 and §4.3 opening, PDF24–25"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 推理载体决定能否重新取得感知证据",
+          "new_explanation": "语言链先把视觉证据压成文字后再操作，跨模态链则可重新裁图、读取工具输出或生成视觉中间状态，改变后续步骤可获得的信息。区别不只是链条长短，而是中间状态是否包含新的观察入口；新入口也会带入工具与定位错误，因此可读过程仍需独立验证。[原文 §3.2–3.3、Table 4](https://arxiv.org/pdf/2505.04921v1#page=17)"
+        },
+        {
+          "heading": "4.2 轨迹学习与推理时选择不能合并比较",
+          "new_explanation": "多阶段Summary/Caption/Thinking/Answer为模型提供结构化监督，搜索则在生成过程中分配额外计算并依赖评分器。完整候选采样、部分序列束搜索和树状扩展保留的信息不同，成绩相近也可能具有不同调用成本。综述列出的O1方法横跨这些选择，应同时看训练数据与推理预算。[原文 §3.3.2、Table 5，PDF 第 17–18 页](https://arxiv.org/pdf/2505.04921v1#page=18)"
+        },
+        {
+          "heading": "4.3 奖励来源约束了能够优化的行为",
+          "new_explanation": "偏好对可比较整体回答，规则奖励可检查最终答案、框位置或格式；它们对中间视觉证据的覆盖并不相同。组内相对优势需要奖励差异才有学习信号，任务只奖励最终选项时并不会直接验证每一步观察。原文Table 6同时列出多种策略算法与规则/奖励模型，说明R1是研究路线而非单一GRPO实现。[原文 §3.3.3、Table 6，PDF 第 18–19 页](https://arxiv.org/pdf/2505.04921v1#page=19)"
+        }
+      ],
+      "disclosure_boundary": "分类与前瞻不冒充作者实现；保留正文/表格算法名称差异及通用公式标注。",
+      "article_sha256": "c3da4732f88d5daa5d3f70daeb4ace4a7e25e01e493d2a712e3b5a1a1b837205",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

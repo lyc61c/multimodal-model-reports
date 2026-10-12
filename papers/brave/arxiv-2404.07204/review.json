@@ -42,10 +42,11 @@
     "encoder仍需全部前向，不能称完整推理低成本",
     "无视频/音频已验证能力"
   ],
-  "article_sha256": "c2d4f523387de6aaa577b424a3bb73244fa963449e388f6ada89074388130e1a",
+  "article_sha256": "2e37ca3813c534e91ef7bfe6823a3031b95b14a25fe30a649a993be55ca29f80",
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2726
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -58,11 +59,11 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 3,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -76,18 +77,54 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 3,
-      "operatorname_replacements": 2,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 1
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2404.07204v1",
+        "version": "2404.07204v1",
+        "sha256": "ce8494a7acd5305ee385741303834f915949493691f0c5eff04304a9343854be"
+      },
+      "source_locators": [
+        "source.txt chars 16982–22503: §3 Overview/Architecture/Pre-training, PDF 6–8"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 异构视觉特征如何进入同一查询空间",
+          "new_explanation": "多编码器的困难不仅是维度不同，还包括 patch 网格与训练目标不同。BRAVE 在投影之后沿序列轴拼接，因此每个查询可以从全部来源选择信息，而无需把某一路的第几个 patch 强行对应到另一路同位置。没有来源 embedding 则意味着模型靠特征本身学习选择，结构上不预设哪一路应负责哪种任务。[原文 §3、Figure 2，PDF 第 6–8 页](https://arxiv.org/pdf/2404.07204v1#page=7)"
+        },
+        {
+          "heading": "4.2 任务条件压缩与单阶段桥接预训练",
+          "new_explanation": "MEQ-Former 的文字输入在 caption 任务中是描述提示，在 VQA 中是问题；它参与查询的自注意力交互，再影响查询读取哪些视觉信息。压缩瓶颈因而兼具容量控制与任务选择作用。预训练只优化桥接模块而冻结两侧大模型，使梯度集中学习视觉到语言的接口；下游可选择更新 LM，不能把预训练冻结状态推广到所有结果。[原文 §3，PDF 第 7–8 页](https://arxiv.org/pdf/2404.07204v1#page=8)"
+        },
+        {
+          "heading": "4.3 编码器遮蔽与互补性的可检验边界",
+          "new_explanation": "20% 随机遮蔽以“某编码器的一整组特征”为单位，训练时会出现部分来源不可用的情况，迫使桥接器不要只依赖最容易拟合的一路。这是一种来源级正则化，其作用不同于把更多特征直接堆入 LLM；增加编码器仍增加编码成本，压缩只是限制后续语言端看到的长度。是否形成互补，应与单编码器和独立桥接 ensemble 在相同评测设置下比较。[原文 §3 与 §4.4](https://arxiv.org/pdf/2404.07204v1#page=8)"
+        }
+      ],
+      "disclosure_boundary": "不把桥接器 attention 成本等同全系统成本，不把下游可选解冻写为始终冻结。",
+      "article_sha256": "2e37ca3813c534e91ef7bfe6823a3031b95b14a25fe30a649a993be55ca29f80",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

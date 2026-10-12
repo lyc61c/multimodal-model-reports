@@ -13,17 +13,19 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 1
+    "original_assets": 1,
+    "chinese_characters": 2378
   },
-  "article_sha256": "7e6f79413b8cc514e0ea0dc5e977374bb67581ef05a69638fb1e7a2f93d4873c",
+  "article_sha256": "d7097a1aec1d6f9826b0b064dc465caf988240cc072933aad34bce5e71fdf7bd",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
@@ -54,5 +56,52 @@
     "origin": "self_drawn",
     "manifest": "derived-figures-manifest.json",
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
-  }
+  },
+  "github_math_revision": {
+    "date": "2026-10-12",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md",
+        "version": "official-model-card-2026-10-08",
+        "sha256": "e6c5d41400e28f5a89418a0d15b09b9c113314a7553d40d7d4a8a72fcdb87d02"
+      },
+      "source_locators": [
+        "source.txt chars0–7428: complete fixed modelcard; relevant Introduction/Note/Footnotes read"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 混合机制针对不同成本环节而披露有限",
+          "new_explanation": "稀疏与线性注意力针对上下文关联计算，mHC 针对连接与扩展效率，部分参数激活针对单次计算所用容量。它们可以共同降低服务成本，但总参数、激活参数和注意力状态不是同一资源口径；模型卡也没有提供能逐项分离收益的消融。组件表因此按公开功能组织，避免把名词组合补成未公布的层图。[固定模型卡 Introduction](https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md)"
+        },
+        {
+          "heading": "4.2 思考预算与上下文管理共同影响可复现结果",
+          "new_explanation": "思考档位改变输出计算预算，评测脚注还分别规定最大生成长度、上下文长度和任务运行框架。比如 HLE with tools 用 300K 上下文并有 context management，不能把这一运行条件等同于所有请求的默认长度。聊天模板的 clear_thinking 另控制对话思考状态处理，不应与低/高思考档位混作同一个开关。[固定模型卡 Note/Footnotes](https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md)"
+        }
+      ],
+      "disclosure_boundary": "闭源层级与训练损失不补公式，mHC只解释公开职责，不迁移GLM5其它报告内部结构。",
+      "article_sha256": "d7097a1aec1d6f9826b0b064dc465caf988240cc072933aad34bce5e71fdf7bd",
+      "module_rows": 5,
+      "principle_subsections": 2,
+      "model_executed": false
+    }
+  ]
 }

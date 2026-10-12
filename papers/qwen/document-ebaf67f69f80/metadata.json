@@ -9,7 +9,7 @@
   "source_url": "https://qwen.ai/blog?id=qwen3.8",
   "document_kind": "release_blog",
   "catalogue_group": "scope_review",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Qwen3.8-Max：超大规模模型、真实工作强化学习与视觉反馈 Agent",
-  "chinese_characters": 2748
+  "chinese_characters": 3239
 }

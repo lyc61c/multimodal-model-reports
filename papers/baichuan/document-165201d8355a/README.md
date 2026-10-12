@@ -38,9 +38,23 @@ Figure 2从下向上显示四种输入：图片和视频帧进入视觉编码器
 
 tokenizer训练时同时把离散表示交给音频decoder重建Mel谱、交给冻结的预训练LLM预测转录。前者保留声学，后者约束语义。声学decoder与Whisper Encoder结构对称并用多尺度Mel损失。为提升听感，最终采用flow matching U-Net，包含一个下采样、一个上采样和12个中间块，在24kHz音频上训练Mel生成，随后用HiFi-GAN转波形。12.5Hz是tokenizer的时间帧率，24kHz是输出音频采样率，两者不能混为一谈。〔Figure 4，PDF第6–7页〕
 
+| 模块 | 输入与输出 | 公开机制 |
+|---|---|---|
+| 动态视觉编码器与projector | 图像/视频帧 → 压缩视觉表示 | Qwen2-VL式NaViT，两层MLP按2×2压缩空间特征 |
+| Whisper及残差卷积 | Mel特征 → 低帧率音频特征 | Whisper Large提取高层语义，卷积下采样后进入量化器 |
+| 8层RVQ | 每帧连续特征 → 多层离散码 | 12.5Hz时间帧率；量化器同时接受转录与Mel重建约束 |
+| LLM与独立Audio Head | 交错模态上下文 → 文字及音频码 | 特殊标记切换模态；3层depth Transformer和8个分类头输出多层码 |
+| flow matching与HiFi-GAN | 音频码 → Mel → 24kHz波形 | U-Net条件流生成Mel，vocoder重建声音；不把采样率当token帧率 |
+
+[模块依据：§3.2–3.3，PDF 第6–8页](https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf#page=6)。
+
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
+
+### 4.1 音频离散化：语义对齐不等于去掉声学细节
+
+量化器的同一组码同时服务两个监督端：冻结语言模型读取它们预测转录，音频解码器读取它们重建Mel。冻结语言模型使语义对齐主要通过音频侧学习进入已有文字空间，重建分支则约束不能只留下转录所需信息。多层残差码承担对同一时间帧的逐级补偿，所以增加码层与增加音频时长是不同的计算维度。[§3.2.2，PDF 第6–7页](https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf#page=7)。
 
 **残差量化兼顾语义与声学。** 一帧特征逐层量化其未被表示的残差，8层码合起来逼近原特征。以下为RVQ机制的**解释性表达**，报告未给出此公式或每层码本大小：
 
@@ -53,7 +67,15 @@ r^{(\ell)}=r^{(\ell-1)}-c^{(\ell)},\quad
 
 h为Whisper及下采样后的帧特征，码本向量修正前一级剩余误差。转录预测推动这些码携带词义，Mel重建推动它保留声音细节。原文没有公布这两类损失的权重、量化器更新方法或commitment loss配置，不能据标准RVQ实现补写超参。〔PDF第7页〕
 
+### 4.2 交错生成：时间推进与码层预测分开组织
+
+语言模型通过模态切换标记决定当前生成文字还是音频相关表示，再由独立音频头处理同一帧的多层码。depth Transformer针对码层的依赖，语言上下文针对随时间推进的内容依赖；把二者区分开，才能理解8个分类头为何不等于把每段声音展开成8倍时间步。音频embedding与head先学习、主干后开放，也降低随机新模块直接扰动语言空间的风险。[§3.3.2，PDF 第7–8页](https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf#page=7)。
+
 **文字与声音交错，减少模态割裂。** 输入交错文本与音频，让模型在同一上下文中学习二者的语义对应；输出则交替生成对应文本段和音频码。训练时先仅学习音频embedding/head，再开放语言骨干，同时保留图像及纯文本数据。这是对模态冲突的训练设计，原文没有提供完整同预算实验来逐项证明交错比例、音频头和阶段顺序各贡献多少。
+
+### 4.3 连续声音解码：量化码到波形的两个还原阶段
+
+离散音频码并不是可直接播放的振幅样本。flow matching先在条件码约束下还原连续Mel结构，HiFi-GAN再把谱表示转换成波形。因而语义码是否准确、Mel生成是否自然、vocoder是否保真是不同误差来源；语言端答案正确不能自动保证发音、韵律和音色都正确。报告给出的24kHz属于这一波形端的训练口径。[§3.2.2，PDF 第7页](https://raw.githubusercontent.com/baichuan-inc/Baichuan-Omni-1.5/main/baichuan_omni_1_5.pdf#page=7)。
 
 **flow matching恢复连续声音表征。** 该模块学习条件速度场，把噪声连续变换为目标Mel谱，再由vocoder生成波形。可用 `dx_t/dt = vθ(x_t,t,c)` 理解其连续生成过程，c为音频码等条件；这只是方法解释，不是作者披露的精确概率路径、噪声插值或求解器设置。报告未给出步数及端到端首音延迟，不能把“实时交互”的描述换成确定毫秒值。〔PDF第7页〕
 

@@ -9,8 +9,8 @@
   "source_url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Kimi K3：混合递归注意力、原生视觉与百万上下文 agent 训练",
-  "chinese_characters": 3459,
+  "chinese_characters": 4112,
   "figure_revision_date": "2026-10-09"
 }

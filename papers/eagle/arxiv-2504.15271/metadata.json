@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2504.15271v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Eagle 2.5：以信息保留和渐进训练增强长上下文视觉理解",
   "source_sha256": "281119e779a37087fec3ab830d19876d9c9a20b03d6ad9169ee396d7cc6e6401",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2372,
+  "chinese_characters": 2944,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

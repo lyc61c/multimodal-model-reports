@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2411.18363v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "ChatRex：先产生候选框，再让语言模型选择对象并解释场景",
-  "chinese_characters": 3189,
+  "chinese_characters": 3748,
   "figure_revision_date": "2026-10-09"
 }

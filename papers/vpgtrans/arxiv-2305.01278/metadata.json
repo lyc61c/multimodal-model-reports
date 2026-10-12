@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2305.01278v1",
   "document_kind": "training_method",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VPGTrans：把已训练的视觉提示生成器迁移到另一语言骨干",
   "source_sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2015,
+  "chinese_characters": 2447,
   "figures_manifest": "figures-manifest.json"
 }

@@ -1,12 +1,12 @@
 {
   "status": "passed",
   "engine": "MathJax 3.2.2 base+ams with operatorname excluded",
-  "equations": 2855,
+  "equations": 2880,
   "failures": [],
-  "gfm_protected_inline_expressions_preserved": 2355,
+  "gfm_protected_inline_expressions_preserved": 2380,
   "gfm_display_expressions_preserved": 500,
   "gfm_failures": [],
-  "html_roundtrip_expressions_preserved": 2855,
+  "html_roundtrip_expressions_preserved": 2880,
   "html_failures": [],
   "regression_fixture": {
     "article": "papers/gemini/document-1855460a9712/README.md",
@@ -15,6 +15,6 @@
     "expected_error": "Extra open brace or missing close brace",
     "known_failure_detected": true
   },
-  "article_manifest_sha256": "68a90f7dfa2ae325411726207fec5dd8c1a50ead01f743b148a28dc10a51ca73",
+  "article_manifest_sha256": "513aa950a3214cc0c102aa2ce6dc6a2541813f68eebeee918c91803009f0829c",
   "scope": "All inline and fenced display TeX is compared with the full GFM token stream, tested for HTML roundtrip preservation, then compiled. A negative Gemini fixture must reproduce the exact brace error. This is not a live GitHub frontend check or a scientific correctness review."
 }

@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2508.18265v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "InternVL 3.5：级联强化学习与自适应视觉压缩",
-  "chinese_characters": 2747,
+  "chinese_characters": 3226,
   "figure_revision_date": "2026-10-09"
 }

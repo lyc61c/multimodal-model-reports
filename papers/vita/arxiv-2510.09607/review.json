@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 6
+    "original_assets": 6,
+    "chinese_characters": 2677
   },
-  "article_sha256": "6cbefb095c919ec968f16d96800c3ae4adde4fb5196af8580d478b6aadea061c",
+  "article_sha256": "6c376fd16915fecc6ca2ae34e4886b40ee788cefc73cb082f59b68546f23475a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -60,5 +61,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2510.09607v1",
+        "version": "2510.09607v1",
+        "sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed"
+      },
+      "source_locators": [
+        "PDF pp.4–6 §3.1–3.3, Eqs1–3, Figure3"
+      ],
+      "changes": [
+        "解释相同输入的表示对齐与30M更新范围",
+        "澄清复用decoder第二阶段可更新",
+        "补共享query不同位置及13步训练与3未来动作区别"
+      ],
+      "disclosure_boundary": "教师为离线监督，不新增在线蒸馏或动作词表量化。",
+      "article_sha256": "6c376fd16915fecc6ca2ae34e4886b40ee788cefc73cb082f59b68546f23475a",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

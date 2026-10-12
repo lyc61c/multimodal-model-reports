@@ -30,7 +30,7 @@
     "InternalElo benchmark notpercentage",
     "Nativecontext max notestablished byexampleconfig"
   ],
-  "article_sha256": "66dd38c3f18f4373f445f738b0b58045e5152421c0a9a4799ebea0b6563bbad7",
+  "article_sha256": "f27391b5749c44cf674e5e6d3632b7629dc7c69c83559c671dae8bc4372fe051",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -66,5 +66,27 @@
     "origin": "self_drawn",
     "manifest": "derived-figures-manifest.json",
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "dd0e62f5254a31df0bdbe09952bda8e4eab3d6efcb800104546d36191605a163"
+      },
+      "source_locators": [
+        "Introduction; Vision Language; API Usage; SWE-bench scaffold and context notes"
+      ],
+      "changes": [
+        "四模块表；细化计算成本、模式预算和工具反馈"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "f27391b5749c44cf674e5e6d3632b7629dc7c69c83559c671dae8bc4372fe051",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

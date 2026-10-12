@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2311.04219v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "OtterHD：从 Fuyu 出发研究高分辨率与动态图像输入",
   "source_sha256": "df2c31ae09ffe763d5a1f5bd7d474787261500dc639c313c70a172d55cfe3b23",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1998,
+  "chinese_characters": 2430,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

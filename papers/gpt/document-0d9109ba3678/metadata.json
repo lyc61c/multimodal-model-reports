@@ -9,7 +9,7 @@
   "source_url": "https://openai.com/index/gpt-6-astra/",
   "document_kind": "release_blog",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "GPT-6 Astra：面向视觉交互与长期任务的通用模型",
   "source_sha256": "5ff36e32c873bf12c606024ab750e9a9e7ca1b21c0b00a7479f876303226584a",
   "supplemental_sources": [
@@ -22,6 +22,6 @@
       "pdf_pages": 175
     }
   ],
-  "chinese_characters": 4391,
+  "chinese_characters": 4944,
   "figure_revision_date": "2026-10-09"
 }

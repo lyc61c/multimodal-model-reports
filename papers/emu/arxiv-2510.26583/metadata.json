@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2510.26583v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Emu3.5：用统一离散序列学习图文世界，并适配并行图像生成",
-  "chinese_characters": 2503,
+  "chinese_characters": 3173,
   "figure_revision_date": "2026-10-09"
 }

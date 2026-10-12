@@ -9,7 +9,7 @@
   "source_url": "https://github.com/rednote-hilab/dots.vlm1",
   "document_kind": "model_release",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "dots.vlm1：从原生分辨率视觉预训练到 DeepSeek-V3 多模态适配",
-  "chinese_characters": 2761
+  "chinese_characters": 3334
 }

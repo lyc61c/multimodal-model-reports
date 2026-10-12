@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2406.10721v1",
   "document_kind": "embodied_model_report",
   "catalogue_group": "scope_review",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "RoboPoint：以合成空间数据训练视觉语言模型预测行动点",
-  "chinese_characters": 2494,
+  "chinese_characters": 2985,
   "figure_revision_date": "2026-10-09"
 }

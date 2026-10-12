@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2407.21783v1",
   "document_kind": "technical_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Llama 3：大规模稠密语言模型与组合式视觉、语音扩展",
-  "chinese_characters": 3934,
+  "chinese_characters": 4616,
   "figure_revision_date": "2026-10-09"
 }

@@ -13,9 +13,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2447
   },
-  "article_sha256": "617eb1b91672ac5f0306e07173132a3ccdfa258e026e1aea9a516f04f187e8a3",
+  "article_sha256": "021bce0fe06c322b9ade623828dfd18e99fb25d66e727b7e353df0c230b9a26c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -63,5 +64,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.01278v1",
+        "version": "2305.01278v1",
+        "sha256": "79ef30c12c06b7b4b335a4465066e008ee10d0efb58e4559c59c4c139512f065"
+      },
+      "source_locators": [
+        "PDF p6–7 §3.1–3.2 / Eq1–2 / Figure6"
+      ],
+      "changes": [
+        "五模块表；三节详解预热、软提示分布与组合勘误"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "021bce0fe06c322b9ade623828dfd18e99fb25d66e727b7e353df0c230b9a26c",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

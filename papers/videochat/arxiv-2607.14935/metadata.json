@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2607.14935v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VideoChat3：从视觉编码端建模时间，兼顾离线与流式视频理解",
   "source_sha256": "a6071730b73e55617c7cfbabddc955e101973d8d5fc4e16cfce7d6166e95947b",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2182,
+  "chinese_characters": 2741,
   "figures_manifest": "figures-manifest.json"
 }

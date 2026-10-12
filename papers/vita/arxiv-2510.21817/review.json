@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 7
+    "original_assets": 7,
+    "chinese_characters": 2676
   },
-  "article_sha256": "b5d18915e70ebd48bb7652792cc8b7238d3850297bafa089415034c4a98d31a0",
+  "article_sha256": "287070672e46a1647bb728fd321f87eb10ff97600bb17d3e3619d270cd129608",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -63,5 +64,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2510.21817v1",
+        "version": "2510.21817v1",
+        "sha256": "42b869fc06a6f05d65d624ed6f22eb27c5ad29cc0c503ba8cb347e77d50268ca"
+      },
+      "source_locators": [
+        "PDF pp.4–7 §3.1–3.3, Table1, Figures3–4"
+      ],
+      "changes": [
+        "补控制token合成标注对应执行事件",
+        "解释冻结动作专家与投影头适配范围",
+        "区分并行问答、任务抢占、HALT和逆栈回撤"
+      ],
+      "disclosure_boundary": "未补扩散目标/步数，不把系统并发等同一次模型前向。",
+      "article_sha256": "287070672e46a1647bb728fd321f87eb10ff97600bb17d3e3619d270cd129608",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

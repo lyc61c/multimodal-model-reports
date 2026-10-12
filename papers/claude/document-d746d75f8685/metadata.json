@@ -9,12 +9,12 @@
   "source_url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
   "document_kind": "model_card",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Claude 3：视觉输入、行为对齐与长上下文能力的模型卡解读",
   "source_sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 3503,
+  "chinese_characters": 4105,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

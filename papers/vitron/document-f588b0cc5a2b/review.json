@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 7
+    "original_assets": 7,
+    "chinese_characters": 2716
   },
-  "article_sha256": "2e80f84c8158fa9e8769b02379fa48f7ad5fb05f5eeabde463789d8031e5623b",
+  "article_sha256": "d7f812baa273b886a7e06dc7ae32088e9ef1928c17e0a9675df328abfe68aa71",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -53,5 +54,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://haofei.vip/downloads/papers/Skywork_Vitron_2024.pdf",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "c073c77ace71b7631e7aece9bf19e00602a99d3325198819d8ebce38b3cda671"
+      },
+      "source_locators": [
+        "PDF pp.5–7 §3–4.3, Figure3, Tables2–4; existing Appendix B.1 losses retained"
+      ],
+      "changes": [
+        "解释模块名/连续条件/区域三种职责",
+        "区分前端和解码侧投影",
+        "补对抗共享与私有特征的信息边界"
+      ],
+      "disclosure_boundary": "损失符号问题保留，未增造各项联合权重或万能后端接口。",
+      "article_sha256": "d7f812baa273b886a7e06dc7ae32088e9ef1928c17e0a9675df328abfe68aa71",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

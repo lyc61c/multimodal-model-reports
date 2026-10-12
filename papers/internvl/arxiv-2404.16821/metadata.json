@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2404.16821v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "InternVL 1.5：用大视觉骨干、动态分块和双语数据改善多模态理解",
-  "chinese_characters": 2424,
+  "chinese_characters": 2872,
   "figure_revision_date": "2026-10-09"
 }

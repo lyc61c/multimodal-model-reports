@@ -17,9 +17,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 3779
   },
-  "article_sha256": "36b9d19bbd603fb9996e96385f3560773a6095fd15e5005d03990c9038503158",
+  "article_sha256": "c312655747d2d5ab6844b70cf269667a48c8b2336e527690b9842693d98de362",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -59,5 +60,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.11805v1",
+        "version": "2312.11805v1",
+        "sha256": "f3c5b175d26159b92891b32380515ec1036f4ffe2862e19d7277fd165e0d9663"
+      },
+      "source_locators": [
+        "PDF §2 p3–4; uncertainty-routing description and §9.1; §3 infrastructure"
+      ],
+      "changes": [
+        "五模块表；补交错语义、路由回退条件及 goodput 与效率区别"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "c312655747d2d5ab6844b70cf269667a48c8b2336e527690b9842693d98de362",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

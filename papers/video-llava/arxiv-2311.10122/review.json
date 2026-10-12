@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2563
   },
-  "article_sha256": "46c181bacfd0b25a17edb8cdf4f99e0e5c5839c56ff47a71b065f9f5d802534a",
+  "article_sha256": "36e55b6c2b60f6551b61c8467800f8c9120ae5aacc53658de2f9136d05ac3872",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -67,5 +68,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.10122v1",
+        "version": "2311.10122v1",
+        "sha256": "01393283c0f6922c86ac7d17f108dd40d89cec185568d8bb2af282cc1ce84f22"
+      },
+      "source_locators": [
+        "PDF pp.3–4 §3.1–3.2, Eqs1–3, Figure3"
+      ],
+      "changes": [
+        "解释共享投影的预对齐假设",
+        "区分同目标形式与不同阶段参数语境",
+        "补图像视频同批梯度机制"
+      ],
+      "disclosure_boundary": "不把复用LanguageBind当成本文新距离损失或同一个视觉编码器。",
+      "article_sha256": "36e55b6c2b60f6551b61c8467800f8c9120ae5aacc53658de2f9136d05ac3872",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

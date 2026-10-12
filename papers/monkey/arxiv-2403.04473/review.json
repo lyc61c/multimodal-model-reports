@@ -39,13 +39,14 @@
     "未运行模型、动作或JSON解析"
   ],
   "model_execution": "not_run",
-  "article_sha256": "5103a09a7cf6dec149efcc21d265d8824027b49ec145a336a0eb2556eae548d9",
+  "article_sha256": "4f0b356ff9b20d2f9dac679e4e7383398763cc896437d218ff41f2ceda391f35",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 10,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3431
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -92,5 +93,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2403.04473v1",
+        "version": "2403.04473v1",
+        "sha256": "00950dba0cc29e79e8b07b7659a7a06ab32727a8a6f3269baf5b031c2124d1d6"
+      },
+      "source_locators": [
+        "v1 §3.1–3.2、Algorithm1，PDF第3–4页"
+      ],
+      "changes": [
+        "文档中一句文字或表格行常跨过裁块边界，仅提高每块清晰度仍会割裂连续内容。移位层在保持局部计算的同时，让相邻窗口交换信息，再由后续层传播。全局缩略图提供页面轮廓，但不能替代局部字形；因此全局分支和跨窗层解决的是不同尺度的关联。",
+        "预训练CLIP已经形成视觉特征，直接插入随机变换可能在训练早期破坏这些表示。将新增两层分支的末端置零，使训练从接近原有特征路径开始，再逐渐学习跨窗补充。这里的稳定性是新增路径的初始化动机，不代表整个视觉主干从零训练或最终变换一直为零。",
+        "两级压缩先把每视图网格映射到语言空间，再在这些摘要中估计相似度，所以筛选不是直接判断原始像素是否重复。按原序重排选中查询保持已有组织，随后以全量特征作K/V，使未选位置仍有路径影响输出。这在压缩和证据保留间折中，但重复纹理可能含任务关键细节，纯相似度仍非问题相关选择器。",
+        "文字和框成对输出能帮助检查回答引用哪个区域，尤其在多列或相似字段文档中减少只给字符串时的歧义。但这些框由同一模型产生，并非外部验证；识字错误和定位错误可能同时出现。因此位置协议增加可审查性，而不能自动把读文档任务变成可证明正确的检索过程。"
+      ],
+      "disclosure_boundary": "不指定未披露shift/rank；相似性独特非答案因果重要性；数量与比例分开。",
+      "article_sha256": "4f0b356ff9b20d2f9dac679e4e7383398763cc896437d218ff41f2ceda391f35",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

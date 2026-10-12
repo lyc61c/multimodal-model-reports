@@ -49,13 +49,14 @@
     "noequalpixelGPTcomparison",
     "CoTlearningcurveconditionambiguous"
   ],
-  "article_sha256": "d17a8348bf09995c9ff45dba629eb0adb7ba6694df9c8cf3b491e3db05587377",
+  "article_sha256": "92899fcb0d665bb2e57eadda65991c8e1236265493a8d487b36945be47bea717",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3550
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -91,5 +92,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2304.08485v1",
+        "version": "2304.08485v1",
+        "sha256": "0d5be40caf852d51a0e2636619fafc5b910788af9584fdc392abc652787560ed"
+      },
+      "source_locators": [
+        "v1 §3–4.2，PDF第4–5页"
+      ],
+      "changes": [
+        "教师通过已有caption和框读取图像的文字化背景，学生却从CLIP特征学习同样的回答，因此学生必须把视觉证据与教师语言绑定。教师没有直接看见原图全部细节，复杂推理也可能超出给定标注；这些答案是合成监督，不是逐像素证实的事实标签。",
+        "第一阶段的短描述把映射W训练成冻结语言模型可读的接口，再进入复杂指令学习。原文将这比作兼容的视觉tokenizer，但其输出仍是连续向量，不是把patch映射成自然语言词ID。保持简易接口也让作者能够较快迭代数据方法，复杂连接器属于留待研究的选择。",
+        "后续问题不重复插图，但因果历史仍包含最初视觉输入，所以每轮答案共享图像条件。第一轮随机将图像放在问题前后，减轻固定格式依赖；这不是为每轮重新编码图像。只在助手目标上计算损失，则把用户输入和回答责任区分开，同时学习回答结束位置。",
+        "第二阶段完整更新语言模型，才能让它改变如何使用视觉证据及如何解释更复杂的请求。会话、详细描述和复杂推理提供不同长度和风格的监督，不是三个独立网络。ScienceQA另用对应数据设置，因此不能把聊天训练的样本规模直接当成每项下游实验的唯一训练条件。"
+      ],
+      "disclosure_boundary": "不反推v1分辨率；teacher符号输入不是student推理输入。",
+      "article_sha256": "92899fcb0d665bb2e57eadda65991c8e1236265493a8d487b36945be47bea717",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

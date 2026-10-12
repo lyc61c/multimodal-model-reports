@@ -9,11 +9,11 @@
   "source_url": "https://qwen.ai/api/v2/article/?language=en-US&path=qwen3.5-omni&type=qwen_ai",
   "document_kind": "release_blog",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Qwen3.5-Omni：Hybrid MoE、ARIA 与实时音视频交互",
   "source_sha256": "b46f812b180720787429a4ac6d70b88aee7ad835263d70d67db9352ddd9082d7",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2223,
+  "chinese_characters": 2695,
   "figures_manifest": "figures-manifest.json"
 }

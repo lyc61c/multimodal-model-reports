@@ -10,10 +10,11 @@
     "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "model_execution": "not_run",
-  "article_sha256": "790f9e817aedc700e62a10fee6995e6b4d4199f1c1fcc1b682bc44b823cdd43c",
+  "article_sha256": "7a58f34e5bce0192a83ff71782447df5827396b37927f3d5e98f6a1666fc56d8",
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2858
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -85,5 +86,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2510.18234v1",
+        "version": "2510.18234v1",
+        "sha256": "a7297788968f8ad9ed21bcd273110814e4889efbbc99bfea86dca12205797a90"
+      },
+      "source_locators": [
+        "PDF p4–6 §2.2–3.2.2"
+      ],
+      "changes": [
+        "Explained compression question, resolution tradeoffs, and ordering of local perception/compression/global attention"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "7a58f34e5bce0192a83ff71782447df5827396b37927f3d5e98f6a1666fc56d8",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -39,10 +39,11 @@
     "No universal smartphone latency claim; no per-size training time or undisclosed precision inferred",
     "Table7 and appendix read as text; selected tables 3-6 visually checked"
   ],
-  "article_sha256": "c9cfdcca939fd5e20e1f75385688f6fab886707b494ef07abb5f73891a9ca9d4",
+  "article_sha256": "b37a975a48fb71814dee72903c6ee502f21f0ca0804a50d49b6c2d7bc03b3dab",
   "artifact_checks": {
     "original_assets": 8,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2749
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -55,11 +56,11 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 3,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -75,18 +76,54 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 3,
-      "operatorname_replacements": 5,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 1
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2402.03766v1",
+        "version": "2402.03766v1",
+        "sha256": "a391edddee6005c29ddc999e4fe62941f8a8249057af7fe5c30e58cd688bf878"
+      },
+      "source_locators": [
+        "source.txt chars12329–17959: §3.3–3.4 complete, PDF3–4"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 把通道对齐、空间压缩与位置恢复分开",
+          "new_explanation": "LDPv2将三个问题放在不同操作中：PW解决视觉与语言隐空间不一致，平均池化控制序列预算，PEG补充压缩网格的局部空间线索。池化前先变换通道，池化后才做位置增强，因此位置模块处理的是12×12而非24×24网格。各项职责可从式（3）的运算顺序直接看出。[原文 §3.3，PDF 第 3–4 页](https://arxiv.org/pdf/2402.03766v1#page=4)"
+        },
+        {
+          "heading": "4.2 条件位置编码的收益要与完整投影器分开衡量",
+          "new_explanation": "PEG的深度卷积逐通道读取邻域，用当前内容生成位置偏置；它不等同于为每个网格位置存一份与图像无关的向量。更小的位置模块允许把参数预算集中在通道对齐上，但压缩可能丢失细小目标，仍需结合任务消融判断。下列三组参数量分别属于位置模块、完整投影器和模型整体，口径不能互换。[原文 §3.3、Table 7](https://arxiv.org/pdf/2402.03766v1#page=8)"
+        },
+        {
+          "heading": "4.3 两阶段持续更新语言主干",
+          "new_explanation": "相较只在预训练阶段调整连接器的做法，本文在预训练与多任务指令训练阶段都更新语言模型和LDPv2，并始终冻结视觉编码器。这样图文预训练已经能够改变语言侧对视觉条件的利用方式，第二阶段再适配问题与答案分布；不能把性能提升全部归给投影器结构。数据与训练策略的变化也是比较旧版时必须控制的变量。[原文 §3.4，PDF 第 4 页](https://arxiv.org/pdf/2402.03766v1#page=4)"
+        }
+      ],
+      "disclosure_boundary": "参数减少的百分比不推广到整个模型；不由压缩率推导端到端倍速。",
+      "article_sha256": "b37a975a48fb71814dee72903c6ee502f21f0ca0804a50d49b6c2d7bc03b3dab",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -1,0 +1,2008 @@
+{
+  "date": "2026-10-12",
+  "articles_reviewed": 57,
+  "focused_primary_source_crosschecks": 11,
+  "other_reading": "9 articles: new sections and existing training section internal consistency; 37 articles: module tables, subsection headings and disclosure boundaries only.",
+  "limits": "This independent review covers the stated claims and passages only. It is not a full-paper factual review of 57 or 271 articles, nor experiment reproduction. Original reviewer scope, findings and snapshot hashes are retained below.",
+  "dispositions": [
+    {
+      "path": "papers/deepseek/document-536ef2604f4a/README.md",
+      "finding": "Figure 5 caption used the old wording PDF 第 7 页原页.",
+      "action": "Caption changed to PDF 第 7 页图表区域; the existing cropped figure was retained.",
+      "status": "fixed"
+    },
+    {
+      "path": "papers/deepseek/arxiv-2403.05525/README.md",
+      "finding": "Final formula validation found a carriage-return escape in a newly added inline distribution variable.",
+      "action": "Replaced the two distribution variables with explicit guarded TeX using mathrm. Re-ran all 2,880 formula checks and synchronized final metadata and hashes.",
+      "status": "fixed"
+    }
+  ],
+  "reviewer_reports": [
+    {
+      "version": 1,
+      "date": "2026-10-12",
+      "reviewer": "content_audit_1",
+      "scope": "tmp/structure-expansion-batch-2.json entries[76:90]；重点5篇固定缓存方法段定向复核，其余9篇新增§3/4及旧训练段内部一致性阅读。",
+      "read_only_articles": true,
+      "articles_reviewed": 14,
+      "source_cross_checked_articles": 5,
+      "internal_consistency_only_articles": 9,
+      "confirmed_issues": 0,
+      "structure_issue_count": 0,
+      "module_rows": 61,
+      "numbered_principle_subsections": 43,
+      "limits": [
+        "没有修改README、metadata、review、evidence或脚本，没有提交或发布。",
+        "针对新增内容及指定方法点，不构成全文原文复审；其余9篇明确仅为内部一致性阅读。",
+        "结构脚本结果仅证明表格/小节形式通过，不替代上述人工阅读。"
+      ],
+      "entries": [
+        {
+          "batch_index": 76,
+          "id": "7dd657f0b348",
+          "title": "Osprey: Pixel Understanding with Visual Instruction Tuning",
+          "path": "papers/osprey/arxiv-2312.10032/README.md",
+          "article_sha256": "d439b9ce560caf84e83f6507b5cc17e5ccd6eb247e3ed65f75f4ed2f8b50fea9",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 41,
+              "end_line": 62
+            },
+            {
+              "section": 4,
+              "start_line": 62,
+              "end_line": 104
+            },
+            {
+              "section": 6,
+              "start_line": 124,
+              "end_line": 140
+            }
+          ],
+          "source_version": "2312.10032v1",
+          "source_cache": "source/papers/7dd657f0b348/source.txt",
+          "source_reads": [],
+          "checks": [
+            "整图 res4 路径与四级区域池化职责分开；mask/position 为两个区域嵌入，表格与公式一致。",
+            "新增章节对 sigma 为 MLP 的解释与现有式(2)一致；未把位置分支误作分割输出头。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 掩码池化与多尺度区域语义",
+              "### 4.2 区域语义与几何分开编码",
+              "### 4.3 卷积视觉路径与分辨率成本",
+              "### 4.4 难负例与短回答约束"
+            ],
+            "subsection_chinese_characters": [
+              247,
+              172,
+              122,
+              193
+            ],
+            "architecture_characters": 1008,
+            "principles_characters": 1396
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "d439b9ce560caf84e83f6507b5cc17e5ccd6eb247e3ed65f75f4ed2f8b50fea9"
+        },
+        {
+          "batch_index": 77,
+          "id": "bf191b32aa7d",
+          "title": "PaLI-3 Vision Language Models: Smaller, Faster, Stronger",
+          "path": "papers/pali/arxiv-2310.09199/README.md",
+          "article_sha256": "9f061a11fef3159a3f08501593d9b627637d3dd2083bff8bc780f30d75c704b0",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 40,
+              "end_line": 61
+            },
+            {
+              "section": 4,
+              "start_line": 61,
+              "end_line": 93
+            },
+            {
+              "section": 6,
+              "start_line": 105,
+              "end_line": 120
+            }
+          ],
+          "source_version": "2310.09199v1",
+          "source_cache": "source/papers/bf191b32aa7d/source.txt",
+          "source_reads": [],
+          "checks": [
+            "SigLIP、投影、UL2 encoder/decoder 的输入输出顺序一致；128码本与16掩码token未混淆。",
+            "新增阶段性分辨率适配解释与§6冻结顺序一致；SigLIP形式标注为一般解释，未把消融收益单独归因于sigmoid。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 SigLIP：逐对匹配而非批内归一化",
+              "### 4.2 统一序列出口与离散掩码",
+              "### 4.3 分辨率提升与阶段性适配"
+            ],
+            "subsection_chinese_characters": [
+              377,
+              154,
+              91
+            ],
+            "architecture_characters": 1001,
+            "principles_characters": 1382
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "9f061a11fef3159a3f08501593d9b627637d3dd2083bff8bc780f30d75c704b0"
+        },
+        {
+          "batch_index": 78,
+          "id": "82948b475ada",
+          "title": "Prismatic VLMs: Investigating the Design Space of Visually-Conditioned Language Models",
+          "path": "papers/prismatic/arxiv-2402.07865/README.md",
+          "article_sha256": "6dc454b9c4e0594f2174cf82345a5ad40071cbefe2b7e2c1d5936939fbee6ad8",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 37,
+              "end_line": 57
+            },
+            {
+              "section": 4,
+              "start_line": 57,
+              "end_line": 89
+            },
+            {
+              "section": 6,
+              "start_line": 99,
+              "end_line": 109
+            }
+          ],
+          "source_version": "2402.07865v1",
+          "source_cache": "source/papers/82948b475ada/source.txt",
+          "source_reads": [],
+          "checks": [
+            "双视觉编码器按通道拼接与逐位置MLP一致；未把视觉token数与通道宽度混淆。",
+            "单阶段优化解释与§6冻结视觉端、更新投影器和语言模型一致；统计阈值说明没有与旧段落相反断言。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 5,
+            "principle_subsections": [
+              "### 4.1 视觉前缀与通道融合",
+              "### 4.2 单步实验与跨任务统计比较",
+              "### 4.3 优化流程简化与结论迁移范围"
+            ],
+            "subsection_chinese_characters": [
+              195,
+              234,
+              119
+            ],
+            "architecture_characters": 789,
+            "principles_characters": 1109
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "6dc454b9c4e0594f2174cf82345a5ad40071cbefe2b7e2c1d5936939fbee6ad8"
+        },
+        {
+          "batch_index": 79,
+          "id": "fa8d772918c0",
+          "title": "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
+          "path": "papers/spatialvlm/arxiv-2401.12168/README.md",
+          "article_sha256": "47deaf51f7555579d008ed58c6941d39d904dcb7a451772e66ca61f900971078",
+          "review_kind": "fixed-source method cross-check and section 3/4 internal consistency",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 44,
+              "end_line": 75
+            },
+            {
+              "section": 4,
+              "start_line": 75,
+              "end_line": 103
+            }
+          ],
+          "source_version": "2401.12168v1",
+          "source_cache": "source/papers/fa8d772918c0/source.txt",
+          "source_reads": [
+            {
+              "locator": "§3.1–3.3，PDF第4–7页",
+              "text_character_range": [
+                13359,
+                23862
+              ],
+              "purpose": "离线标注/几何构建、直接VLM和外部LLM多步系统的职责边界"
+            },
+            {
+              "locator": "附录A.2，PDF第20–22页",
+              "text_character_range": [
+                65000,
+                70080
+              ],
+              "purpose": "DBSCAN去噪、RANSAC水平面规范化及失败时跳过依赖规范化的问题"
+            }
+          ],
+          "checks": [
+            "固定源文§3.3明确direct spatial reasoning只以图像和问题输出文本，不调用外部工具；README将ZoeDepth/点云构建限定在离线数据管线，符合原文。",
+            "外部LLM协调的多步问答与直接VLM分开；PaLM-E替换PaLM为PaLM2-S，未套用基线参数量。",
+            "附录A.2支持DBSCAN去噪、水平面RANSAC规范化以及失败后跳过高度类问答；解释性投影/距离公式未被称作论文新目标。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 从深度与视场估计构造米制监督",
+              "### 4.2 水平面标准化与可靠题型筛选",
+              "### 4.3 数值文字监督与多跳组合"
+            ],
+            "subsection_chinese_characters": [
+              190,
+              190,
+              152
+            ],
+            "architecture_characters": 1284,
+            "principles_characters": 935
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "未全文重审原论文、重算实验或核验所有数据/超参数。",
+          "article_sha256_after_disposition": "47deaf51f7555579d008ed58c6941d39d904dcb7a451772e66ca61f900971078"
+        },
+        {
+          "batch_index": 80,
+          "id": "6ad14948aa28",
+          "title": "SVIT: Scaling up Visual Instruction Tuning",
+          "path": "papers/svit/arxiv-2307.04087/README.md",
+          "article_sha256": "4c0c199b09872a1340acc61d8d90c97c390609e7b111b4a1d36d68f9e63ac5a2",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 44,
+              "end_line": 65
+            },
+            {
+              "section": 4,
+              "start_line": 65,
+              "end_line": 93
+            },
+            {
+              "section": 6,
+              "start_line": 113,
+              "end_line": 123
+            }
+          ],
+          "source_version": "2307.04087v1",
+          "source_cache": "source/papers/6ad14948aa28/source.txt",
+          "source_reads": [],
+          "checks": [
+            "GPT-4教师只读文本标注，原图重新配对用于学生训练；表格和旧图注一致。",
+            "三类提示及过滤机制的新增解释未把格式通过等同事实验证，也未把SVIT称作新学生架构。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 文本标注作为视觉监督的代理",
+              "### 4.2 三类任务分配不同监督密度",
+              "### 4.3 格式筛选与事实正确性的区别"
+            ],
+            "subsection_chinese_characters": [
+              204,
+              152,
+              182
+            ],
+            "architecture_characters": 737,
+            "principles_characters": 924
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "4c0c199b09872a1340acc61d8d90c97c390609e7b111b4a1d36d68f9e63ac5a2"
+        },
+        {
+          "batch_index": 81,
+          "id": "e7d5fa625fde",
+          "title": "Vary: Scaling up the Vision Vocabulary for Large Vision-Language Models",
+          "path": "papers/vary/arxiv-2312.06109/README.md",
+          "article_sha256": "0c6bb2fbda6908d2d2e869c1cc1082f68aa9637eac87d81ea3bc1c096d0b5ea5",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 44,
+              "end_line": 64
+            },
+            {
+              "section": 4,
+              "start_line": 64,
+              "end_line": 99
+            },
+            {
+              "section": 6,
+              "start_line": 113,
+              "end_line": 127
+            }
+          ],
+          "source_version": "2312.06109v1",
+          "source_cache": "source/papers/e7d5fa625fde/source.txt",
+          "source_reads": [],
+          "checks": [
+            "tiny学习新增视觉分支、base冻结双视觉编码器的职责与§6一致。",
+            "两路各2048通道拼成4096，位置数256；新增连续视觉词表解释与原有维度式一致。",
+            "自然图像通用句负样本没有被解释成CLIP对比负样本。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 5,
+            "principle_subsections": [
+              "### 4.1 连续视觉容量与通道融合",
+              "### 4.2 密集文字监督与固定 token 压缩",
+              "### 4.3 通用句目标约束新分支行为"
+            ],
+            "subsection_chinese_characters": [
+              146,
+              184,
+              162
+            ],
+            "architecture_characters": 883,
+            "principles_characters": 1055
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "0c6bb2fbda6908d2d2e869c1cc1082f68aa9637eac87d81ea3bc1c096d0b5ea5"
+        },
+        {
+          "batch_index": 82,
+          "id": "cabdd815635d",
+          "title": "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding",
+          "path": "papers/videollama/arxiv-2306.02858/README.md",
+          "article_sha256": "10c294576033449f07068df2afd42c48ec3ea20a0abdf1a76f7bd613498749f9",
+          "review_kind": "fixed-source method cross-check and section 3/4 internal consistency",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 44,
+              "end_line": 66
+            },
+            {
+              "section": 4,
+              "start_line": 66,
+              "end_line": 104
+            }
+          ],
+          "source_version": "2306.02858v1",
+          "source_cache": "source/papers/cabdd815635d/source.txt",
+          "source_reads": [
+            {
+              "locator": "§2.1.1–2.2.2，PDF第3–5页",
+              "text_character_range": [
+                8632,
+                15384
+              ],
+              "purpose": "双Q-Former视觉路径、ImageBind音频路径、冻结范围与视觉文本训练音频接口"
+            }
+          ],
+          "checks": [
+            "固定源文§2.1支持冻结EVA-CLIP和预训练image Q-Former，再由新增Video Q-Former压缩帧特征。",
+            "音频为2秒片段、128mel、ImageBind、Audio Q-Former和线性投影，与表格一致。",
+            "§2.2明确分支分开训练且音频接口只用视觉文本对，未把本代写成实际音频监督或显式跨模态对比训练。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 5,
+            "principle_subsections": [
+              "### 4.1 从逐帧特征到固定长度视频提示",
+              "### 4.2 音频输入与视觉监督之间的迁移",
+              "### 4.3 两分支的结合边界"
+            ],
+            "subsection_chinese_characters": [
+              236,
+              237,
+              197
+            ],
+            "architecture_characters": 1142,
+            "principles_characters": 1196
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "未全文重审原论文、重算实验或核验所有数据/超参数。",
+          "article_sha256_after_disposition": "10c294576033449f07068df2afd42c48ec3ea20a0abdf1a76f7bd613498749f9"
+        },
+        {
+          "batch_index": 83,
+          "id": "f1c390102dd0",
+          "title": "VideoLLaMA 2: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMs",
+          "path": "papers/videollama/arxiv-2406.07476/README.md",
+          "article_sha256": "db3ed613b7b9d7b5e42c6545d986e06608bd55ba2f5962b3c7949117daf6dc6d",
+          "review_kind": "fixed-source method cross-check and section 3/4 internal consistency",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 44,
+              "end_line": 65
+            },
+            {
+              "section": 4,
+              "start_line": 65,
+              "end_line": 102
+            }
+          ],
+          "source_version": "2406.07476v1",
+          "source_cache": "source/papers/f1c390102dd0/source.txt",
+          "source_reads": [
+            {
+              "locator": "§2.1、Figure1–2、Table1、Algorithm1，PDF第2–5页",
+              "text_character_range": [
+                6514,
+                15353
+              ],
+              "purpose": "STC计算顺序、8帧压缩计数与BEATs接口"
+            },
+            {
+              "locator": "§3.2–3.3，PDF第7–8页",
+              "text_character_range": [
+                19054,
+                24497
+              ],
+              "purpose": "实际音频监督和音视频联合样本同步"
+            }
+          ],
+          "checks": [
+            "§2.1、Figure2和Algorithm1支持RegStage→3D下采样→RegStage→MLP的STC路径，与第一代Q-Former区分。",
+            "Table1的8帧设定支持4608→576计数；该计数只绑定此研究设定，未冒充所有视频的固定预算。",
+            "音频路径BEATs加线性层；§3.2实际音频监督、§3.3同步截音及无声零波形与新增解释一致。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 在送入语言模型前融合时空信息",
+              "### 4.2 音频学习与联合学习",
+              "### 4.3 token 预算与受控消融的含义"
+            ],
+            "subsection_chinese_characters": [
+              345,
+              224,
+              96
+            ],
+            "architecture_characters": 1006,
+            "principles_characters": 1414
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "未全文重审原论文、重算实验或核验所有数据/超参数。",
+          "article_sha256_after_disposition": "db3ed613b7b9d7b5e42c6545d986e06608bd55ba2f5962b3c7949117daf6dc6d"
+        },
+        {
+          "batch_index": 84,
+          "id": "68c32964bf01",
+          "title": "VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding",
+          "path": "papers/videollama/arxiv-2501.13106/README.md",
+          "article_sha256": "624de0d6f5f23fedc32f47a692e8703c9f819b988323e222a6bcaed2baf99481",
+          "review_kind": "fixed-source method cross-check and section 3/4 internal consistency",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 45,
+              "end_line": 66
+            },
+            {
+              "section": 4,
+              "start_line": 66,
+              "end_line": 108
+            }
+          ],
+          "source_version": "2501.13106v1",
+          "source_cache": "source/papers/68c32964bf01/source.txt",
+          "source_reads": [
+            {
+              "locator": "§2.1–2.2，PDF第4–5页",
+              "text_character_range": [
+                11893,
+                14930
+              ],
+              "purpose": "AVT位置编码替换、双线性空间降采样与像素L1差异剪枝"
+            },
+            {
+              "locator": "§3开头与§3.1，PDF第6–7页",
+              "text_character_range": [
+                17105,
+                19105
+              ],
+              "purpose": "四组件和SigLIP/Qwen2.5主干；本范围是相关词命中上下文读取"
+            },
+            {
+              "locator": "§3.1 Data Format",
+              "text_character_range": [
+                20809,
+                22052
+              ],
+              "purpose": "时间戳与视频/流式token组织"
+            },
+            {
+              "locator": "§3.3 Implementation Details，PDF第11页",
+              "text_character_range": [
+                36239,
+                38742
+              ],
+              "purpose": "两层MLP、阈值与空间下采样位置"
+            },
+            {
+              "locator": "Figure4，PDF第5页",
+              "asset": "papers/videollama/arxiv-2501.13106/figures/pruning.png",
+              "purpose": "目视确认首帧和后续变化patch的剪枝示意"
+            }
+          ],
+          "checks": [
+            "§2.1支持绝对位置嵌入换2D-RoPE的AVT；§3及§3.3支持SigLIP、MLP和Qwen2.5接口。",
+            "§2.2、Figure4支持像素空间邻帧L1阈值剪枝；与特征注意力剪枝区别清楚。",
+            "§3.3支持视觉编码后双线性2倍空间降采样，阈值0.1；文章对未展开的距离归一化/归约细节保持边界。",
+            "已目视读取本地原文Figure4裁图，首帧保留、后续按变化剪枝的图示与README解释一致。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 二维位置编码与动态 token 数",
+              "### 4.2 根据像素变化剪去视频冗余",
+              "### 4.3 图像预训练与视频表示的衔接"
+            ],
+            "subsection_chinese_characters": [
+              232,
+              328,
+              96
+            ],
+            "architecture_characters": 877,
+            "principles_characters": 1176
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "未全文重审原论文、重算实验或核验所有数据/超参数。",
+          "article_sha256_after_disposition": "624de0d6f5f23fedc32f47a692e8703c9f819b988323e222a6bcaed2baf99481"
+        },
+        {
+          "batch_index": 85,
+          "id": "a0d99f32668c",
+          "title": "Making Large Multimodal Models Understand Arbitrary Visual Prompts",
+          "path": "papers/vip-llava/arxiv-2312.00784/README.md",
+          "article_sha256": "e1f1d9667b7920fd48f3ecc2c09ebcd6ee361e1942ccaacbd6f791806d2417f8",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 43,
+              "end_line": 64
+            },
+            {
+              "section": 4,
+              "start_line": 64,
+              "end_line": 98
+            },
+            {
+              "section": 6,
+              "start_line": 112,
+              "end_line": 126
+            }
+          ],
+          "source_version": "2312.00784v1",
+          "source_cache": "source/papers/a0d99f32668c/source.txt",
+          "source_reads": [],
+          "checks": [
+            "叠加标记图作为唯一视觉入口、多层特征按通道拼接与原有架构描述一致。",
+            "alpha混合仅标记区、通道融合不增加位置数；答案监督与无额外定位损失的说明相容。",
+            "不同任务消融排序未被强化为视觉提示在所有任务均优于坐标提示。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 像素提示与外观随机化",
+              "### 4.2 多层融合与答案监督",
+              "### 4.3 视觉标记与坐标提示的适用条件"
+            ],
+            "subsection_chinese_characters": [
+              168,
+              165,
+              179
+            ],
+            "architecture_characters": 877,
+            "principles_characters": 1090
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "e1f1d9667b7920fd48f3ecc2c09ebcd6ee361e1942ccaacbd6f791806d2417f8"
+        },
+        {
+          "batch_index": 86,
+          "id": "d08b52bb40c6",
+          "title": "Large Multilingual Models Pivot Zero-Shot Multimodal Learning across Languages",
+          "path": "papers/viscpm/arxiv-2308.12038/README.md",
+          "article_sha256": "f1963f6911eb4aaac8792d3515bb4e6308dec06b82ee3807882af9fcc8740161",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 41,
+              "end_line": 66
+            },
+            {
+              "section": 4,
+              "start_line": 66,
+              "end_line": 100
+            },
+            {
+              "section": 6,
+              "start_line": 110,
+              "end_line": 120
+            }
+          ],
+          "source_version": "2308.12038v1",
+          "source_cache": "source/papers/d08b52bb40c6/source.txt",
+          "source_reads": [],
+          "checks": [
+            "Chat理解路径与Paint扩散路径分开，未把两者写成单次请求自动往返。",
+            "新增模块表中transblock、交叉注意力更新范围与既有§3/4描述一致；beam3和DDPM50与§6一致。",
+            "跨语言近似表示明确为方法假设，未额外声称对齐损失或任意语言等价保证。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 以多语言语义空间作为枢纽",
+              "### 4.2 理解能力迁移与回答语言校准",
+              "### 4.3 冻结语言条件下的扩散迁移"
+            ],
+            "subsection_chinese_characters": [
+              188,
+              172,
+              208
+            ],
+            "architecture_characters": 1209,
+            "principles_characters": 1149
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "f1963f6911eb4aaac8792d3515bb4e6308dec06b82ee3807882af9fcc8740161"
+        },
+        {
+          "batch_index": 87,
+          "id": "0d9927d7fce6",
+          "title": "Transfer Visual Prompt Generator across LLMs",
+          "path": "papers/vpgtrans/arxiv-2305.01278/README.md",
+          "article_sha256": "021bce0fe06c322b9ade623828dfd18e99fb25d66e727b7e353df0c230b9a26c",
+          "review_kind": "fixed-source method cross-check and section 3/4 internal consistency",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 42,
+              "end_line": 64
+            },
+            {
+              "section": 4,
+              "start_line": 64,
+              "end_line": 102
+            }
+          ],
+          "source_version": "2305.01278v1",
+          "source_cache": "source/papers/0d9927d7fce6/source.txt",
+          "source_reads": [
+            {
+              "locator": "§3.1–3.2、Figure6、Eq1–2，PDF第5–7页",
+              "text_character_range": [
+                16333,
+                25954
+              ],
+              "purpose": "投影器预热、词映射初始化、明确区分打印式和维度一致的组合方向"
+            }
+          ],
+          "checks": [
+            "原文§3.1支持随机投影器初始梯度误导VPG、先冻结VPG预热投影器再联合微调。",
+            "原文定义fs为视觉到源语言，gw为源语言到目标语言；打印Eq2却写fs(gw(v))。在README声明的列向量约定下，ft(v)=gw(fs(v))及Wt=WwWs、bt=Wwbs+bw正确。",
+            "README明确将组合方向称作本文按映射角色的勘误，未冒充原文原式；词映射仅初始化且不能替代预热的界限与§3.2一致。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 5,
+            "principle_subsections": [
+              "### 4.1 先稳定接口，再适配视觉查询",
+              "### 4.2 共享 token 转换与软提示分布差异",
+              "### 4.3 线性映射组合的方向与维度"
+            ],
+            "subsection_chinese_characters": [
+              157,
+              222,
+              242
+            ],
+            "architecture_characters": 1117,
+            "principles_characters": 1201
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "未全文重审原论文、重算实验或核验所有数据/超参数。",
+          "article_sha256_after_disposition": "021bce0fe06c322b9ade623828dfd18e99fb25d66e727b7e353df0c230b9a26c"
+        },
+        {
+          "batch_index": 88,
+          "id": "e364433c1393",
+          "title": "VTimeLLM: Empower LLM to Grasp Video Moments",
+          "path": "papers/vtimellm/arxiv-2311.18445/README.md",
+          "article_sha256": "c30b417b9135dd2ac85f02737745a93e7280aff54e9d1a78375d06c9348f10c1",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 46,
+              "end_line": 67
+            },
+            {
+              "section": 4,
+              "start_line": 67,
+              "end_line": 98
+            },
+            {
+              "section": 6,
+              "start_line": 112,
+              "end_line": 132
+            }
+          ],
+          "source_version": "2311.18445v1",
+          "source_cache": "source/papers/e364433c1393/source.txt",
+          "source_reads": [],
+          "checks": [
+            "100帧CLS对应100视觉token，时间关系交给语言模型，与旧流程/公式一致。",
+            "00–99输出为索引；映射到秒的式子已标近似解释并保留取整未知边界。",
+            "第二阶段LoRA合并后新训第三阶段LoRA，与§6表格一致，没有两个独立基础模型或新增IoU头的矛盾。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 4,
+            "principle_subsections": [
+              "### 4.1 每帧全局表示与序列建模",
+              "### 4.2 离散边界与视频长度归一化",
+              "### 4.3 边界感知课程与对话适配"
+            ],
+            "subsection_chinese_characters": [
+              178,
+              234,
+              169
+            ],
+            "architecture_characters": 974,
+            "principles_characters": 1072
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "c30b417b9135dd2ac85f02737745a93e7280aff54e9d1a78375d06c9348f10c1"
+        },
+        {
+          "batch_index": 89,
+          "id": "31a81e153f28",
+          "title": "X-LLM: Bootstrapping Advanced Large Language Models by Treating Multi-Modalities as Foreign Languages",
+          "path": "papers/x-llm/arxiv-2305.04160/README.md",
+          "article_sha256": "a00a2909da1c28d7c7edcbe0826d0980ba6042fa42acd4bb1a3919c9ad491dcf",
+          "review_kind": "section 3/4 internal consistency, with section 6 parameter/training cross-read",
+          "article_read_scope": [
+            {
+              "section": 3,
+              "start_line": 42,
+              "end_line": 64
+            },
+            {
+              "section": 4,
+              "start_line": 64,
+              "end_line": 92
+            },
+            {
+              "section": 6,
+              "start_line": 102,
+              "end_line": 122
+            }
+          ],
+          "source_version": "2305.04160v1",
+          "source_cache": "source/papers/31a81e153f28/source.txt",
+          "source_reads": [],
+          "checks": [
+            "图像32查询、视频32T串联和语音CIF→Transformer→线性Adapter顺序在新增表与原有段落一致。",
+            "统一为连续嵌入，未将外语比喻误解成中间可读文本；Adapter改变宽度不压缩时间位置。",
+            "联合指令训练说明与§6只训练I/V/S Adapter并不矛盾，冻结ChatGLM未被误写成全量LLM训练。"
+          ],
+          "findings": [],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 5,
+            "principle_subsections": [
+              "### 4.1 连续接口统一与逐帧视频串联",
+              "### 4.2 CIF：声学帧到语言粒度的压缩",
+              "### 4.3 文本目标与分阶段对齐"
+            ],
+            "subsection_chinese_characters": [
+              160,
+              200,
+              227
+            ],
+            "architecture_characters": 1178,
+            "principles_characters": 1004
+          },
+          "status": "no_confirmed_issue_in_reviewed_scope",
+          "limits": "本轮未重新读取该篇源文；此项只检查新旧段落和第6节的内部一致性，不代表源文事实复审。",
+          "article_sha256_after_disposition": "a00a2909da1c28d7c7edcbe0826d0980ba6042fa42acd4bb1a3919c9ad491dcf"
+        }
+      ]
+    },
+    {
+      "review_date": "2026-10-12",
+      "reviewer": "content_audit_2",
+      "target_batch": "tmp/structure-expansion-batch-root.json entries[0:43]",
+      "scope_summary": {
+        "articles": 43,
+        "focused_source_crosscheck": 6,
+        "table_heading_disclosure_reading": 37,
+        "substantive_discrepancies_in_checked_claims": 0,
+        "minor_presentation_findings": 1
+      },
+      "limitations": "仅按每篇实际记录范围复核；未对43篇做全文原文事实审计、权重运行或实验复现。正文与元数据均未修改。",
+      "entries": [
+        {
+          "id": "e8e055db30fe",
+          "path": "papers/deepseek/arxiv-2403.05525/README.md",
+          "article_sha256_at_review": "9ed94583411e7d9f9e2aed2d35ff5065bd7413e9e9c673a352c0c2bffafe83a2",
+          "source_version": "2403.05525v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "d96af757a1ee974d7a2bb8360b0a1185a1d5fb3879412694d416c86970f8348f"
+        },
+        {
+          "id": "1bd54f613caa",
+          "path": "papers/deepseek/arxiv-2412.10302/README.md",
+          "article_sha256_at_review": "de17651080e9dfac72f1c8fa2aff4b6f9ab9542a2cd6f807d9e52edce7fc4d3c",
+          "source_version": "2412.10302v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "de17651080e9dfac72f1c8fa2aff4b6f9ab9542a2cd6f807d9e52edce7fc4d3c"
+        },
+        {
+          "id": "c352e12407c2",
+          "path": "papers/deepseek/arxiv-2510.18234/README.md",
+          "article_sha256_at_review": "7a58f34e5bce0192a83ff71782447df5827396b37927f3d5e98f6a1666fc56d8",
+          "source_version": "2510.18234v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "7a58f34e5bce0192a83ff71782447df5827396b37927f3d5e98f6a1666fc56d8"
+        },
+        {
+          "id": "536ef2604f4a",
+          "path": "papers/deepseek/document-536ef2604f4a/README.md",
+          "article_sha256_at_review": "10def71e9059556cebb65732a2456f216e6f023f79a263eb84f4a9c662e7fbae",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "focused_source_crosscheck",
+          "article_read_scope": "完整阅读当前第3/4节；仅对下列声明与原文位置作独立核对，不声称全文所有事实已审计。",
+          "source_locators": [
+            "§3.1–3.3，PDF第5–7页，Figure3–5、Eq1–2"
+          ],
+          "claims_checked": [
+            "SAM及卷积16倍token压缩、896宽度",
+            "Qwen2-0.5B初始化及[V;Q]分块可见性",
+            "只保留查询输出、n=m与256+144k计数",
+            "mBART交叉注意力未收敛属于作者局部实验，未推广为普遍结论"
+          ],
+          "findings": [
+            {
+              "severity": "minor",
+              "path": "papers/deepseek/document-536ef2604f4a/README.md",
+              "line": 77,
+              "issue": "Figure5图注残留PDF第7页原页表述，实际引用为图表裁图。",
+              "recommendation": "将原页改成图表区域；正文事实无须改动。"
+            }
+          ],
+          "not_verified": [
+            "未加载模型或核验推理代码",
+            "未重算实验评测"
+          ],
+          "article_sha256_after_disposition": "10def71e9059556cebb65732a2456f216e6f023f79a263eb84f4a9c662e7fbae"
+        },
+        {
+          "id": "08e9e69bb6bb",
+          "path": "papers/deepseek/document-08e9e69bb6bb/README.md",
+          "article_sha256_at_review": "ba0756fda85b0fa7e141ad3d0e91bc610dc74306c87b8cef4cecd027043cff40",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "ba0756fda85b0fa7e141ad3d0e91bc610dc74306c87b8cef4cecd027043cff40"
+        },
+        {
+          "id": "ddf539694eca",
+          "path": "papers/deepseek/document-ddf539694eca/README.md",
+          "article_sha256_at_review": "d8af565a7a1a18ec7168fafb1ed9dfe9bf673d2a298476fdb41aedb9cea19240",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "d8af565a7a1a18ec7168fafb1ed9dfe9bf673d2a298476fdb41aedb9cea19240"
+        },
+        {
+          "id": "6648a6adbc11",
+          "path": "papers/deepseek/document-6648a6adbc11/README.md",
+          "article_sha256_at_review": "5b1eeb0c019a9611d1308aa4e568ab35cf36c33b304d58cb56f7fbba13521d55",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "5b1eeb0c019a9611d1308aa4e568ab35cf36c33b304d58cb56f7fbba13521d55"
+        },
+        {
+          "id": "044099a491e0",
+          "path": "papers/gemini/document-044099a491e0/README.md",
+          "article_sha256_at_review": "c312655747d2d5ab6844b70cf269667a48c8b2336e527690b9842693d98de362",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "c312655747d2d5ab6844b70cf269667a48c8b2336e527690b9842693d98de362"
+        },
+        {
+          "id": "1855460a9712",
+          "path": "papers/gemini/document-1855460a9712/README.md",
+          "article_sha256_at_review": "2b123523644a8f3e9c119c9268c1fcafdc1b1d06159478be79cbc128367c8ce2",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "focused_source_crosscheck",
+          "article_read_scope": "完整阅读当前第3/4节；仅对下列声明与原文位置作独立核对，不声称全文所有事实已审计。",
+          "source_locators": [
+            "§3.1–3.3，PDF第5–6页",
+            "Figure7及§5.2.1.1，PDF第10–11页",
+            "多针与MRCR，PDF第14–16页",
+            "§12.1 Model Card，PDF第105页",
+            "Kalamang相关段落关键词定向读取（含500页语法书、词表、平行句材料）"
+          ],
+          "claims_checked": [
+            "Pro为稀疏MoE、Flash为稠密decoder与在线蒸馏",
+            "字符延迟单位及最优请求统计口径",
+            "累计NLL、幂律拟合与研究窗口/服务窗口的区别",
+            "多针100条召回与MRCR字符串相似度口径；2月版Pro脚注",
+            "上下文学习未更新参数的解释符合任务设置"
+          ],
+          "findings": [],
+          "not_verified": [
+            "未复核Flash-8B第45页的全部初步结果",
+            "未对整份报告所有实验逐项重算",
+            "未证明全报告中绝无未披露参数字段"
+          ],
+          "article_sha256_after_disposition": "2b123523644a8f3e9c119c9268c1fcafdc1b1d06159478be79cbc128367c8ce2"
+        },
+        {
+          "id": "8c1dda86c921",
+          "path": "papers/gemini/document-8c1dda86c921/README.md",
+          "article_sha256_at_review": "f0972d06e696d4120c1a492eba2146c124655621b8900c3e14d4bdf7cfa5695a",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "f0972d06e696d4120c1a492eba2146c124655621b8900c3e14d4bdf7cfa5695a"
+        },
+        {
+          "id": "7cca3ca5d4d3",
+          "path": "papers/gemini/document-7cca3ca5d4d3/README.md",
+          "article_sha256_at_review": "0f55745063192745f8e04818d2d85ae73c74a95c5ca440b3eebf09ff354adceb",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "0f55745063192745f8e04818d2d85ae73c74a95c5ca440b3eebf09ff354adceb"
+        },
+        {
+          "id": "390f20b2fe8b",
+          "path": "papers/gemini/document-390f20b2fe8b/README.md",
+          "article_sha256_at_review": "5bb75525b8635ac2d9cfad6238461039dc3af3bdc21123e360aea18a262cd1e9",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "5bb75525b8635ac2d9cfad6238461039dc3af3bdc21123e360aea18a262cd1e9"
+        },
+        {
+          "id": "a07676c13763",
+          "path": "papers/gemini/document-a07676c13763/README.md",
+          "article_sha256_at_review": "53a88b6c50c06b104325b98236960f0fe5c9b393c494676cfc8f4b92bb1085d1",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "53a88b6c50c06b104325b98236960f0fe5c9b393c494676cfc8f4b92bb1085d1"
+        },
+        {
+          "id": "c14c2ea07b95",
+          "path": "papers/gpt/arxiv-2303.08774/README.md",
+          "article_sha256_at_review": "792a46676abd57adb047d9e2ac9d62ac87d2bd1a9ede83dcd7b97aa0ca9574a2",
+          "source_version": "2303.08774v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "792a46676abd57adb047d9e2ac9d62ac87d2bd1a9ede83dcd7b97aa0ca9574a2"
+        },
+        {
+          "id": "5cd14e1ea9af",
+          "path": "papers/gpt/document-5cd14e1ea9af/README.md",
+          "article_sha256_at_review": "dc0029162f0fdcc3c37c5da527dbc931bd21684bfebe5a14be23fbed53d0a08d",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "dc0029162f0fdcc3c37c5da527dbc931bd21684bfebe5a14be23fbed53d0a08d"
+        },
+        {
+          "id": "9ee9863086d5",
+          "path": "papers/gpt/document-9ee9863086d5/README.md",
+          "article_sha256_at_review": "1623010e579606daf8c055942ac46bbeddfeae15a7eba63ec5ae7be48edb12d0",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "1623010e579606daf8c055942ac46bbeddfeae15a7eba63ec5ae7be48edb12d0"
+        },
+        {
+          "id": "0b8790d1de58",
+          "path": "papers/gpt/document-0b8790d1de58/README.md",
+          "article_sha256_at_review": "519bb76d19cf306418d90a9d088a94e26cb0c9e0a4378db3f538b4b7c69cedf4",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "519bb76d19cf306418d90a9d088a94e26cb0c9e0a4378db3f538b4b7c69cedf4"
+        },
+        {
+          "id": "32a268f7f1d8",
+          "path": "papers/gpt/document-32a268f7f1d8/README.md",
+          "article_sha256_at_review": "2a8a294ed70f19a0beaf91d4c76c1c680b19020bb06026777f3fdbeff75583e8",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "e100e427ce0f39e3fe44db84a51ac21f5c11d9c2c08e2d232ad4748281efd505"
+        },
+        {
+          "id": "d0807662cb93",
+          "path": "papers/gpt/document-d0807662cb93/README.md",
+          "article_sha256_at_review": "8b2583181120ddbb9534df27088f112a6c1088ffa14f3fb7d3df3ef5359e458a",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "8b2583181120ddbb9534df27088f112a6c1088ffa14f3fb7d3df3ef5359e458a"
+        },
+        {
+          "id": "e2a1f413a7a5",
+          "path": "papers/gpt/document-e2a1f413a7a5/README.md",
+          "article_sha256_at_review": "b4eae9191accdce26307eac2ef56d705a290076b3722e2cb09d3d5fc55ede57e",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "b4eae9191accdce26307eac2ef56d705a290076b3722e2cb09d3d5fc55ede57e"
+        },
+        {
+          "id": "0d9109ba3678",
+          "path": "papers/gpt/document-0d9109ba3678/README.md",
+          "article_sha256_at_review": "8bb96445537c9440a9f99feda8f0d11b8b977c649726cf08d4409ef671d3dcaa",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "focused_source_crosscheck",
+          "article_read_scope": "完整阅读当前第3/4节；仅对下列声明与原文位置作独立核对，不声称全文所有事实已审计。",
+          "source_locators": [
+            "系统卡§6.1，PDF第20–21页、Table6",
+            "系统卡§9.1，PDF第51–52页、Figure22",
+            "系统卡§8.2.1 Auto-review段落定向读取（PDF第25页）",
+            "系统卡§10.2，PDF第106–107页",
+            "固定release.txt长期任务/异步澄清/跨窗口笔记/监控段落"
+          ],
+          "claims_checked": [
+            "跨窗口笔记与历史检索为运行框架能力，未补造模型位置编码",
+            "异步澄清对独立工作继续推进的公开说明",
+            "监控对象、观察范围及Astra与Sol的不同结果方向",
+            "HealthBench长度校正规则、3185字符/68.2原始分到64.7",
+            "接口与工具闭环公式明确为通用解释，未伪称原文架构或训练目标"
+          ],
+          "findings": [],
+          "not_verified": [
+            "未独立查看职业网站原图像素或重放演示",
+            "未重算跨环境cross-fit监控聚合指标",
+            "未验证文章中所有基准或应用案例"
+          ],
+          "article_sha256_after_disposition": "8bb96445537c9440a9f99feda8f0d11b8b977c649726cf08d4409ef671d3dcaa"
+        },
+        {
+          "id": "4c5b6e3fdc3c",
+          "path": "papers/internvl/arxiv-2312.14238/README.md",
+          "article_sha256_at_review": "09b78ccd799cfb571b5b28e9da51b009f0730ce413c8191981d80f5c37cc72e3",
+          "source_version": "2312.14238v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "09b78ccd799cfb571b5b28e9da51b009f0730ce413c8191981d80f5c37cc72e3"
+        },
+        {
+          "id": "85233c027ab7",
+          "path": "papers/internvl/arxiv-2404.16821/README.md",
+          "article_sha256_at_review": "702567a385ba67e49e099a7ae1773ef6aa9d3878c4d2dd57d2100e6161468fd5",
+          "source_version": "2404.16821v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "702567a385ba67e49e099a7ae1773ef6aa9d3878c4d2dd57d2100e6161468fd5"
+        },
+        {
+          "id": "c698100db08f",
+          "path": "papers/internvl/arxiv-2412.05271/README.md",
+          "article_sha256_at_review": "4a17558efcf77bf992368623b95ba92f63bce502518bfea33ebf4b6e7533cd17",
+          "source_version": "2412.05271v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "4a17558efcf77bf992368623b95ba92f63bce502518bfea33ebf4b6e7533cd17"
+        },
+        {
+          "id": "c93332aa16ea",
+          "path": "papers/internvl/arxiv-2504.10479/README.md",
+          "article_sha256_at_review": "f00044ab0e7a372275be27cbb4c57a65344b8a8d4a60638ed3a9677b620bc760",
+          "source_version": "2504.10479v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "f00044ab0e7a372275be27cbb4c57a65344b8a8d4a60638ed3a9677b620bc760"
+        },
+        {
+          "id": "3d5274c82d6d",
+          "path": "papers/internvl/arxiv-2508.18265/README.md",
+          "article_sha256_at_review": "6210e0bfa4fd42627c0fc3b9b30cc22874e309c0daca68e7611f1a0ccabc01a5",
+          "source_version": "2508.18265v1",
+          "review_type": "focused_source_crosscheck",
+          "article_read_scope": "完整阅读当前第3/4节；仅对下列声明与原文位置作独立核对，不声称全文所有事实已审计。",
+          "source_locators": [
+            "§2.1–2.5，PDF第3–8页、Table1、Figure2–4",
+            "Eq3–9，PDF第5–6页"
+          ],
+          "claims_checked": [
+            "ViT先编码1024视觉位置，再选256/64语言侧分支",
+            "型号、初始化与总/激活参数区分",
+            "MPO离线暖启动后GSPO在线更新且无reference-model约束",
+            "GSPO几何平均概率比及最大化代理目标的方向",
+            "ViCO教师固定256、同图随机压缩率、ViR冻结范围与历史百分位阈值",
+            "DvD单向BF16/TCP及可选RDMA、跨请求流水并行与单请求依赖边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "未执行路由或训练代码",
+            "未对全部评测和速度结论重测"
+          ],
+          "article_sha256_after_disposition": "6210e0bfa4fd42627c0fc3b9b30cc22874e309c0daca68e7611f1a0ccabc01a5"
+        },
+        {
+          "id": "4213cab70d10",
+          "path": "papers/internvl/arxiv-2603.09877/README.md",
+          "article_sha256_at_review": "c32abadb7f8cd5179fef06bb1fb54600d069d88bacf7903557f65ab8ec655e72",
+          "source_version": "2603.09877v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "c32abadb7f8cd5179fef06bb1fb54600d069d88bacf7903557f65ab8ec655e72"
+        },
+        {
+          "id": "1b338ecffdda",
+          "path": "papers/qwen/arxiv-2308.12966/README.md",
+          "article_sha256_at_review": "c2972ea349c5048b0743376f5b9a265280da34e24948a9fb1fc4b47e75b02f6f",
+          "source_version": "2308.12966v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "c2972ea349c5048b0743376f5b9a265280da34e24948a9fb1fc4b47e75b02f6f"
+        },
+        {
+          "id": "32bc63503a35",
+          "path": "papers/qwen/arxiv-2409.12191/README.md",
+          "article_sha256_at_review": "41728f4e61cd83f21602f5500e308fb8ba3170cb8380f77f424d4d6b5d349e04",
+          "source_version": "2409.12191v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "41728f4e61cd83f21602f5500e308fb8ba3170cb8380f77f424d4d6b5d349e04"
+        },
+        {
+          "id": "b615730dc322",
+          "path": "papers/qwen/document-b615730dc322/README.md",
+          "article_sha256_at_review": "b7a75ddbad8b3b6c2a608fd293e9925ff5f9f29171f9c65ebd1c4a2eea5f5e5d",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "b7a75ddbad8b3b6c2a608fd293e9925ff5f9f29171f9c65ebd1c4a2eea5f5e5d"
+        },
+        {
+          "id": "365932f60cc3",
+          "path": "papers/qwen/qwen2.5-vl/README.md",
+          "article_sha256_at_review": "e5ad7a2e33dfead5b441521134958145ae294f0a237dc8b3c1ab0c06c3d24647",
+          "source_version": "2502.13923v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "e5ad7a2e33dfead5b441521134958145ae294f0a237dc8b3c1ab0c06c3d24647"
+        },
+        {
+          "id": "1093f7b31e5b",
+          "path": "papers/qwen/document-1093f7b31e5b/README.md",
+          "article_sha256_at_review": "05f76c269f16759adf70160e74f81645ded1d1bc0c9a63a5a1ccd80974c3ab99",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "05f76c269f16759adf70160e74f81645ded1d1bc0c9a63a5a1ccd80974c3ab99"
+        },
+        {
+          "id": "244376c2123a",
+          "path": "papers/qwen/document-244376c2123a/README.md",
+          "article_sha256_at_review": "93f59f2aba84967f0733eeca65b6467e329bbc05c5a2bce4ab7c8cc35ee9f352",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "93f59f2aba84967f0733eeca65b6467e329bbc05c5a2bce4ab7c8cc35ee9f352"
+        },
+        {
+          "id": "3b40d0cc757b",
+          "path": "papers/qwen/arxiv-2509.17765/README.md",
+          "article_sha256_at_review": "6029b0d0b673d392b969f8733addb2e241567dbd4473097afaa3faa87863a02a",
+          "source_version": "2509.17765v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "6029b0d0b673d392b969f8733addb2e241567dbd4473097afaa3faa87863a02a"
+        },
+        {
+          "id": "f0c46ccf05fd",
+          "path": "papers/qwen/arxiv-2511.21631/README.md",
+          "article_sha256_at_review": "7f2fabe3311510f04482f6310805c2c4ef3968134663363a0b62e27bbedeea6b",
+          "source_version": "2511.21631v1",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "7f2fabe3311510f04482f6310805c2c4ef3968134663363a0b62e27bbedeea6b"
+        },
+        {
+          "id": "7cdfed4ac9e5",
+          "path": "papers/qwen/document-7cdfed4ac9e5/README.md",
+          "article_sha256_at_review": "bfa1101c7fa4a9ba4a51cbf69509c9caaf568a1ec8176923bcdecb67892bd5d0",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "focused_source_crosscheck",
+          "article_read_scope": "完整阅读当前第3/4节；仅对下列声明与原文位置作独立核对，不声称全文所有事实已审计。",
+          "source_locators": [
+            "固定revision 8472618112abcbd45acbcdc58436aff4233c23f7 config.json全文",
+            "Transformers v5.2.0 modeling_qwen3_5_moe.py：torch_recurrent_gated_delta_rule（约404–443行）",
+            "同文件GatedDeltaNet初始化及forward（约446–625行）",
+            "同文件Attention、TopKRouter、SparseMoeBlock、DecoderLayer（约714–940行）",
+            "同文件VisionPatchMerger及VisionModel位置/forward（约1040–1053、1180–1358行）",
+            "processing_qwen3_vl.py网格占位符展开（约127–135行）",
+            "image_processing_qwen2_vl_fast.py时间patch与预处理相关关键词上下文"
+          ],
+          "claims_checked": [
+            "60层3:1混合、视觉27层/1152宽及merger4096维",
+            "递推状态转置方向、先衰减再误差修正、query缩放与L2归一化",
+            "16个Q/K头复制给64个value头、核4因果卷积",
+            "512选10再归一化及sigmoid门控共享专家",
+            "完整注意力32Q/2KV、256头维及输出门",
+            "图像网格/占位替换路径与448示例计数",
+            "MTP层数不等于预测位置数、实现配置不等于完整训练配方的披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "没有加载或运行权重",
+            "未独立追踪所有推理引擎的MTP实现",
+            "未复现训练或核验官方视觉参数统计口径"
+          ],
+          "article_sha256_after_disposition": "bfa1101c7fa4a9ba4a51cbf69509c9caaf568a1ec8176923bcdecb67892bd5d0"
+        },
+        {
+          "id": "54010b187750",
+          "path": "papers/qwen/document-54010b187750/README.md",
+          "article_sha256_at_review": "a5094e0d45caf73bd8a02e02aa45f80be1fc6d56b4bdbd8ff33f5b4ba158988a",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "a5094e0d45caf73bd8a02e02aa45f80be1fc6d56b4bdbd8ff33f5b4ba158988a"
+        },
+        {
+          "id": "67bea1fbb2c5",
+          "path": "papers/qwen/document-67bea1fbb2c5/README.md",
+          "article_sha256_at_review": "101fa0dd8901866eef8fa1fa0d0ac60ae458d65e1fca5239f2a5336edd446d9b",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "101fa0dd8901866eef8fa1fa0d0ac60ae458d65e1fca5239f2a5336edd446d9b"
+        },
+        {
+          "id": "e122aca8cc58",
+          "path": "papers/qwen/document-e122aca8cc58/README.md",
+          "article_sha256_at_review": "f27391b5749c44cf674e5e6d3632b7629dc7c69c83559c671dae8bc4372fe051",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "f27391b5749c44cf674e5e6d3632b7629dc7c69c83559c671dae8bc4372fe051"
+        },
+        {
+          "id": "6f94cf51e082",
+          "path": "papers/qwen/arxiv-2606.17030/README.md",
+          "article_sha256_at_review": "b028949c6d973990a466806e87bde58edc7546d8f0b34358658cd3170dce47ab",
+          "source_version": "2606.17030v1",
+          "review_type": "focused_source_crosscheck",
+          "article_read_scope": "完整阅读当前第3/4节；仅对下列声明与原文位置作独立核对，不声称全文所有事实已审计。",
+          "source_locators": [
+            "§2.3.2多视角拼接，PDF第9页",
+            "§3.1–3.3，PDF第10–12页、Figure3–4"
+          ],
+          "claims_checked": [
+            "冻结7B条件编码器、20B/60层双流MMDiT、24×128头及VAE分项规模",
+            "3D RoPE的16/56/56非均匀分配",
+            "Scene2Robot三段条件、t=0干净段和直接损失遮罩",
+            "多视角水平拼接不等于显式相机标定或物理约束",
+            "流匹配式标注为通用解释；采样反方向与干净条件不承担直接损失的逻辑一致"
+          ],
+          "findings": [],
+          "not_verified": [
+            "未对训练章节的log-normal参数化进行独立全文追踪",
+            "未执行生成或验证机器人控制效果"
+          ],
+          "article_sha256_after_disposition": "b028949c6d973990a466806e87bde58edc7546d8f0b34358658cd3170dce47ab"
+        },
+        {
+          "id": "0aebb3826b29",
+          "path": "papers/qwen/document-0aebb3826b29/README.md",
+          "article_sha256_at_review": "fec5b33aa68fdbdd43f2c52f87352ea77c17946a3ba4c94fbbaf1d01a2734e52",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "fec5b33aa68fdbdd43f2c52f87352ea77c17946a3ba4c94fbbaf1d01a2734e52"
+        },
+        {
+          "id": "ebaf67f69f80",
+          "path": "papers/qwen/document-ebaf67f69f80/README.md",
+          "article_sha256_at_review": "3718a4b22dd82a66ec182d76c941533c16c976317177be395ea941d94ae02090",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "3718a4b22dd82a66ec182d76c941533c16c976317177be395ea941d94ae02090"
+        },
+        {
+          "id": "2ea7273632dc",
+          "path": "papers/qwen/document-2ea7273632dc/README.md",
+          "article_sha256_at_review": "91917bcc06f411143644ee90468992f88c54b59794c1044944acb1c6bf9f1ae3",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "review_type": "table_heading_disclosure_reading",
+          "article_read_scope": "实际阅读第3节新增模块表、全部4.x小标题，以及第3/4节明确未公开/未披露/未知/解释公式等边界段落。未逐段通读所有论证。",
+          "source_locators": [],
+          "claims_checked": [
+            "模块表输入输出与公开机制的表达及内部一致性",
+            "小标题是否与解释对象相符",
+            "闭源及概念公式是否明确披露边界"
+          ],
+          "findings": [],
+          "not_verified": [
+            "本轮未独立回查该篇固定源",
+            "未核对所有数值、公式、训练配置及原图像素"
+          ],
+          "article_sha256_after_disposition": "91917bcc06f411143644ee90468992f88c54b59794c1044944acb1c6bf9f1ae3"
+        }
+      ]
+    }
+  ],
+  "final_article_hashes": [
+    {
+      "path": "papers/osprey/arxiv-2312.10032/README.md",
+      "article_sha256": "d439b9ce560caf84e83f6507b5cc17e5ccd6eb247e3ed65f75f4ed2f8b50fea9"
+    },
+    {
+      "path": "papers/pali/arxiv-2310.09199/README.md",
+      "article_sha256": "9f061a11fef3159a3f08501593d9b627637d3dd2083bff8bc780f30d75c704b0"
+    },
+    {
+      "path": "papers/prismatic/arxiv-2402.07865/README.md",
+      "article_sha256": "6dc454b9c4e0594f2174cf82345a5ad40071cbefe2b7e2c1d5936939fbee6ad8"
+    },
+    {
+      "path": "papers/spatialvlm/arxiv-2401.12168/README.md",
+      "article_sha256": "47deaf51f7555579d008ed58c6941d39d904dcb7a451772e66ca61f900971078"
+    },
+    {
+      "path": "papers/svit/arxiv-2307.04087/README.md",
+      "article_sha256": "4c0c199b09872a1340acc61d8d90c97c390609e7b111b4a1d36d68f9e63ac5a2"
+    },
+    {
+      "path": "papers/vary/arxiv-2312.06109/README.md",
+      "article_sha256": "0c6bb2fbda6908d2d2e869c1cc1082f68aa9637eac87d81ea3bc1c096d0b5ea5"
+    },
+    {
+      "path": "papers/videollama/arxiv-2306.02858/README.md",
+      "article_sha256": "10c294576033449f07068df2afd42c48ec3ea20a0abdf1a76f7bd613498749f9"
+    },
+    {
+      "path": "papers/videollama/arxiv-2406.07476/README.md",
+      "article_sha256": "db3ed613b7b9d7b5e42c6545d986e06608bd55ba2f5962b3c7949117daf6dc6d"
+    },
+    {
+      "path": "papers/videollama/arxiv-2501.13106/README.md",
+      "article_sha256": "624de0d6f5f23fedc32f47a692e8703c9f819b988323e222a6bcaed2baf99481"
+    },
+    {
+      "path": "papers/vip-llava/arxiv-2312.00784/README.md",
+      "article_sha256": "e1f1d9667b7920fd48f3ecc2c09ebcd6ee361e1942ccaacbd6f791806d2417f8"
+    },
+    {
+      "path": "papers/viscpm/arxiv-2308.12038/README.md",
+      "article_sha256": "f1963f6911eb4aaac8792d3515bb4e6308dec06b82ee3807882af9fcc8740161"
+    },
+    {
+      "path": "papers/vpgtrans/arxiv-2305.01278/README.md",
+      "article_sha256": "021bce0fe06c322b9ade623828dfd18e99fb25d66e727b7e353df0c230b9a26c"
+    },
+    {
+      "path": "papers/vtimellm/arxiv-2311.18445/README.md",
+      "article_sha256": "c30b417b9135dd2ac85f02737745a93e7280aff54e9d1a78375d06c9348f10c1"
+    },
+    {
+      "path": "papers/x-llm/arxiv-2305.04160/README.md",
+      "article_sha256": "a00a2909da1c28d7c7edcbe0826d0980ba6042fa42acd4bb1a3919c9ad491dcf"
+    },
+    {
+      "path": "papers/deepseek/arxiv-2403.05525/README.md",
+      "article_sha256": "d96af757a1ee974d7a2bb8360b0a1185a1d5fb3879412694d416c86970f8348f"
+    },
+    {
+      "path": "papers/deepseek/arxiv-2412.10302/README.md",
+      "article_sha256": "de17651080e9dfac72f1c8fa2aff4b6f9ab9542a2cd6f807d9e52edce7fc4d3c"
+    },
+    {
+      "path": "papers/deepseek/arxiv-2510.18234/README.md",
+      "article_sha256": "7a58f34e5bce0192a83ff71782447df5827396b37927f3d5e98f6a1666fc56d8"
+    },
+    {
+      "path": "papers/deepseek/document-536ef2604f4a/README.md",
+      "article_sha256": "10def71e9059556cebb65732a2456f216e6f023f79a263eb84f4a9c662e7fbae"
+    },
+    {
+      "path": "papers/deepseek/document-08e9e69bb6bb/README.md",
+      "article_sha256": "ba0756fda85b0fa7e141ad3d0e91bc610dc74306c87b8cef4cecd027043cff40"
+    },
+    {
+      "path": "papers/deepseek/document-ddf539694eca/README.md",
+      "article_sha256": "d8af565a7a1a18ec7168fafb1ed9dfe9bf673d2a298476fdb41aedb9cea19240"
+    },
+    {
+      "path": "papers/deepseek/document-6648a6adbc11/README.md",
+      "article_sha256": "5b1eeb0c019a9611d1308aa4e568ab35cf36c33b304d58cb56f7fbba13521d55"
+    },
+    {
+      "path": "papers/gemini/document-044099a491e0/README.md",
+      "article_sha256": "c312655747d2d5ab6844b70cf269667a48c8b2336e527690b9842693d98de362"
+    },
+    {
+      "path": "papers/gemini/document-1855460a9712/README.md",
+      "article_sha256": "2b123523644a8f3e9c119c9268c1fcafdc1b1d06159478be79cbc128367c8ce2"
+    },
+    {
+      "path": "papers/gemini/document-8c1dda86c921/README.md",
+      "article_sha256": "f0972d06e696d4120c1a492eba2146c124655621b8900c3e14d4bdf7cfa5695a"
+    },
+    {
+      "path": "papers/gemini/document-7cca3ca5d4d3/README.md",
+      "article_sha256": "0f55745063192745f8e04818d2d85ae73c74a95c5ca440b3eebf09ff354adceb"
+    },
+    {
+      "path": "papers/gemini/document-390f20b2fe8b/README.md",
+      "article_sha256": "5bb75525b8635ac2d9cfad6238461039dc3af3bdc21123e360aea18a262cd1e9"
+    },
+    {
+      "path": "papers/gemini/document-a07676c13763/README.md",
+      "article_sha256": "53a88b6c50c06b104325b98236960f0fe5c9b393c494676cfc8f4b92bb1085d1"
+    },
+    {
+      "path": "papers/gpt/arxiv-2303.08774/README.md",
+      "article_sha256": "792a46676abd57adb047d9e2ac9d62ac87d2bd1a9ede83dcd7b97aa0ca9574a2"
+    },
+    {
+      "path": "papers/gpt/document-5cd14e1ea9af/README.md",
+      "article_sha256": "dc0029162f0fdcc3c37c5da527dbc931bd21684bfebe5a14be23fbed53d0a08d"
+    },
+    {
+      "path": "papers/gpt/document-9ee9863086d5/README.md",
+      "article_sha256": "1623010e579606daf8c055942ac46bbeddfeae15a7eba63ec5ae7be48edb12d0"
+    },
+    {
+      "path": "papers/gpt/document-0b8790d1de58/README.md",
+      "article_sha256": "519bb76d19cf306418d90a9d088a94e26cb0c9e0a4378db3f538b4b7c69cedf4"
+    },
+    {
+      "path": "papers/gpt/document-32a268f7f1d8/README.md",
+      "article_sha256": "e100e427ce0f39e3fe44db84a51ac21f5c11d9c2c08e2d232ad4748281efd505"
+    },
+    {
+      "path": "papers/gpt/document-d0807662cb93/README.md",
+      "article_sha256": "8b2583181120ddbb9534df27088f112a6c1088ffa14f3fb7d3df3ef5359e458a"
+    },
+    {
+      "path": "papers/gpt/document-e2a1f413a7a5/README.md",
+      "article_sha256": "b4eae9191accdce26307eac2ef56d705a290076b3722e2cb09d3d5fc55ede57e"
+    },
+    {
+      "path": "papers/gpt/document-0d9109ba3678/README.md",
+      "article_sha256": "8bb96445537c9440a9f99feda8f0d11b8b977c649726cf08d4409ef671d3dcaa"
+    },
+    {
+      "path": "papers/internvl/arxiv-2312.14238/README.md",
+      "article_sha256": "09b78ccd799cfb571b5b28e9da51b009f0730ce413c8191981d80f5c37cc72e3"
+    },
+    {
+      "path": "papers/internvl/arxiv-2404.16821/README.md",
+      "article_sha256": "702567a385ba67e49e099a7ae1773ef6aa9d3878c4d2dd57d2100e6161468fd5"
+    },
+    {
+      "path": "papers/internvl/arxiv-2412.05271/README.md",
+      "article_sha256": "4a17558efcf77bf992368623b95ba92f63bce502518bfea33ebf4b6e7533cd17"
+    },
+    {
+      "path": "papers/internvl/arxiv-2504.10479/README.md",
+      "article_sha256": "f00044ab0e7a372275be27cbb4c57a65344b8a8d4a60638ed3a9677b620bc760"
+    },
+    {
+      "path": "papers/internvl/arxiv-2508.18265/README.md",
+      "article_sha256": "6210e0bfa4fd42627c0fc3b9b30cc22874e309c0daca68e7611f1a0ccabc01a5"
+    },
+    {
+      "path": "papers/internvl/arxiv-2603.09877/README.md",
+      "article_sha256": "c32abadb7f8cd5179fef06bb1fb54600d069d88bacf7903557f65ab8ec655e72"
+    },
+    {
+      "path": "papers/qwen/arxiv-2308.12966/README.md",
+      "article_sha256": "c2972ea349c5048b0743376f5b9a265280da34e24948a9fb1fc4b47e75b02f6f"
+    },
+    {
+      "path": "papers/qwen/arxiv-2409.12191/README.md",
+      "article_sha256": "41728f4e61cd83f21602f5500e308fb8ba3170cb8380f77f424d4d6b5d349e04"
+    },
+    {
+      "path": "papers/qwen/document-b615730dc322/README.md",
+      "article_sha256": "b7a75ddbad8b3b6c2a608fd293e9925ff5f9f29171f9c65ebd1c4a2eea5f5e5d"
+    },
+    {
+      "path": "papers/qwen/qwen2.5-vl/README.md",
+      "article_sha256": "e5ad7a2e33dfead5b441521134958145ae294f0a237dc8b3c1ab0c06c3d24647"
+    },
+    {
+      "path": "papers/qwen/document-1093f7b31e5b/README.md",
+      "article_sha256": "05f76c269f16759adf70160e74f81645ded1d1bc0c9a63a5a1ccd80974c3ab99"
+    },
+    {
+      "path": "papers/qwen/document-244376c2123a/README.md",
+      "article_sha256": "93f59f2aba84967f0733eeca65b6467e329bbc05c5a2bce4ab7c8cc35ee9f352"
+    },
+    {
+      "path": "papers/qwen/arxiv-2509.17765/README.md",
+      "article_sha256": "6029b0d0b673d392b969f8733addb2e241567dbd4473097afaa3faa87863a02a"
+    },
+    {
+      "path": "papers/qwen/arxiv-2511.21631/README.md",
+      "article_sha256": "7f2fabe3311510f04482f6310805c2c4ef3968134663363a0b62e27bbedeea6b"
+    },
+    {
+      "path": "papers/qwen/document-7cdfed4ac9e5/README.md",
+      "article_sha256": "bfa1101c7fa4a9ba4a51cbf69509c9caaf568a1ec8176923bcdecb67892bd5d0"
+    },
+    {
+      "path": "papers/qwen/document-54010b187750/README.md",
+      "article_sha256": "a5094e0d45caf73bd8a02e02aa45f80be1fc6d56b4bdbd8ff33f5b4ba158988a"
+    },
+    {
+      "path": "papers/qwen/document-67bea1fbb2c5/README.md",
+      "article_sha256": "101fa0dd8901866eef8fa1fa0d0ac60ae458d65e1fca5239f2a5336edd446d9b"
+    },
+    {
+      "path": "papers/qwen/document-e122aca8cc58/README.md",
+      "article_sha256": "f27391b5749c44cf674e5e6d3632b7629dc7c69c83559c671dae8bc4372fe051"
+    },
+    {
+      "path": "papers/qwen/arxiv-2606.17030/README.md",
+      "article_sha256": "b028949c6d973990a466806e87bde58edc7546d8f0b34358658cd3170dce47ab"
+    },
+    {
+      "path": "papers/qwen/document-0aebb3826b29/README.md",
+      "article_sha256": "fec5b33aa68fdbdd43f2c52f87352ea77c17946a3ba4c94fbbaf1d01a2734e52"
+    },
+    {
+      "path": "papers/qwen/document-ebaf67f69f80/README.md",
+      "article_sha256": "3718a4b22dd82a66ec182d76c941533c16c976317177be395ea941d94ae02090"
+    },
+    {
+      "path": "papers/qwen/document-2ea7273632dc/README.md",
+      "article_sha256": "91917bcc06f411143644ee90468992f88c54b59794c1044944acb1c6bf9f1ae3"
+    }
+  ]
+}

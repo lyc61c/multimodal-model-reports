@@ -25,7 +25,7 @@
     "全文技术披露有限，模型厂商结果无误差条或独立复现；不添加未披露配方。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "d3925c74d5ac5a78e6effb56e702339032f366e68723074751a7090e71a9a9d2",
+  "article_sha256": "5b1eeb0c019a9611d1308aa4e568ab35cf36c33b304d58cb56f7fbba13521d55",
   "formatting_revision": {
     "date": "2026-10-11",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
@@ -74,5 +74,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://api-docs.deepseek.com/news/news260821/",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "56babe7f597f37b31c4440174272d4090f32056902c76e3984be3d54d5864de8"
+      },
+      "source_locators": [
+        "Cached release page: Multimodality / Multimodal API support / Files API"
+      ],
+      "changes": [
+        "Expanded disclosed application data flow, file reuse versus billing and evaluation budget distinction"
+      ],
+      "disclosure_boundary": "Closed-source experimental release; no encoder topology or new algorithm disclosed",
+      "article_sha256": "5b1eeb0c019a9611d1308aa4e568ab35cf36c33b304d58cb56f7fbba13521d55",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "paper_id": "qwen2.5-vl",
-  "article_sha256": "9448d333eb271b05a87fe51dceb5b213f5067eff314656a32c9a7dc91c54bb79",
+  "article_sha256": "e5ad7a2e33dfead5b441521134958145ae294f0a237dc8b3c1ab0c06c3d24647",
   "source_version": "2502.13923v1",
   "review_date": "2026-10-08",
   "status": "passed",
@@ -42,7 +42,7 @@
     "local_links_resolve": true,
     "all_seven_assets_match_manifest_hashes": true,
     "source_pdf_matches_manifest_hash": true,
-    "chinese_characters": 5563,
+    "chinese_characters": 5926,
     "png_dimensions": {
       "figures/fig-01-architecture.png": [
         1892,
@@ -121,5 +121,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2502.13923v1",
+        "version": "2502.13923v1",
+        "sha256": "399a28f6ed79f4ece29cca93993fceb56fc304b1d779e49392aec05aff45aba5"
+      },
+      "source_locators": [
+        "Exact cached 2502.13923v1 PDF p4–5; Figure1 already explained in article"
+      ],
+      "changes": [
+        "Unified module table; distinguished ViT/local-window saving from merger saving and temporal sampling limits"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "e5ad7a2e33dfead5b441521134958145ae294f0a237dc8b3c1ab0c06c3d24647",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

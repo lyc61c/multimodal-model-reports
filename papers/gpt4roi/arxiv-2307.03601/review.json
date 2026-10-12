@@ -24,13 +24,14 @@
   },
   "model_execution": "not_run",
   "limitations": "No numericalevaluationprovidedinv1;noindependentreproductionclaimed",
-  "article_sha256": "2c6d7e6c5f7d6908b73c562356a7870478329981e1b6da0b45028641b3da50a1",
+  "article_sha256": "e00fed51b3a82b634d89acfc6ce37d42cdfa687fef1a40b7a23a93a726ebb8e1",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2934
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -65,5 +66,38 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2307.03601v1",
+        "version": "2307.03601v1",
+        "sha256": "43ed75357884618a59514e1eb2346ef94f1199a021dac84f60b7fc98dbbd347f"
+      },
+      "source_locators": [
+        "source.txt chars11437–19100: §3.1–3.2/§4–4.2 method and update scopes, PDF4–7"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 多深度局部特征作为可引用的语义输入",
+          "new_explanation": "框坐标决定在哪里采样，RoI 特征决定该位置是什么。四层金字塔让区域表示同时获得不同深度信息，坐标加入和 scale shuffle 保持其空间与尺度联系；最后融合为语言可用 embedding。该过程读取已有框，不承担定位新框的主要任务，因此与“输出框坐标”的 grounding 模型方向不同。[原文 §3.1，PDF 第 4–5 页](https://arxiv.org/pdf/2307.03601v1#page=5)"
+        },
+        {
+          "heading": "4.2 占位替换保留多区域比较与全局上下文",
+          "new_explanation": "普通区域名称留在词序列中，视觉占位替换为对应区域特征，使回答仍能用 region 名称指代对象。每个问题还加入整图前缀，避免只看局部后失去场景关系。多框比较因此可在一次语言上下文内完成；编号与框的对齐若出错，语言格式正确也无法挽救语义引用。[原文 §3.2、Figure 3，PDF 第 5 页](https://arxiv.org/pdf/2307.03601v1#page=5)"
+        },
+        {
+          "heading": "4.3 从短区域属性到复杂关系的分阶段适配",
+          "new_explanation": "第一阶段以类别、颜色、位置等短表达，只训练新增区域提取器，固定既有图像接口和语言能力；第二阶段再更新区域提取器、整图 projector 和 LM，用关系、动作及常识监督学习组合。回答掩码让问题与视觉输入提供条件而不被当作目标复述，两个阶段均属于监督学习。[原文 §4、§4.1–4.2，PDF 第 5–7 页](https://arxiv.org/pdf/2307.03601v1#page=7)"
+        }
+      ],
+      "disclosure_boundary": "原文region编号不一致处保留；Fuse内部与RoI最终展开未补未知规格。",
+      "article_sha256": "e00fed51b3a82b634d89acfc6ce37d42cdfa687fef1a40b7a23a93a726ebb8e1",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

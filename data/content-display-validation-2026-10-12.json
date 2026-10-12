@@ -1,0 +1,273 @@
+{
+  "date": "2026-10-12",
+  "status": "passed",
+  "article_manifest_sha256": "513aa950a3214cc0c102aa2ce6dc6a2541813f68eebeee918c91803009f0829c",
+  "full_scan": {
+    "articles": 271,
+    "desktop_width": 1120,
+    "mobile_width": 375,
+    "page_horizontal_overflow": 0,
+    "image_mode": "placeholder images; all local asset links checked separately by check_repository.py"
+  },
+  "real_asset_samples": {
+    "pages": 15,
+    "desktop_width": 1120,
+    "mobile_width": 430,
+    "broken_images": 0,
+    "page_horizontal_overflow": 0,
+    "details": [
+      {
+        "file": "papers/qwen/document-7cdfed4ac9e5/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 29
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/internlm-xcomposer/arxiv-2309.15112/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 8
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/internvl/arxiv-2404.16821/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 11
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/metalm/arxiv-2206.06336/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 17
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/minicpm/arxiv-2408.01800/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 12
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/deepseek/arxiv-2412.10302/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 24
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": [
+            {
+              "tag": "MJX-CONTAINER",
+              "text": "",
+              "tex": "4.5\\times10^{-4}",
+              "display": null,
+              "right": 525.625
+            },
+            {
+              "tag": "MJX-CONTAINER",
+              "text": "",
+              "tex": "2.0\\times10^{-5}",
+              "display": null,
+              "right": 525.625
+            }
+          ]
+        }
+      },
+      {
+        "file": "papers/qwen/qwen2.5-vl/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 32
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/gpt/document-9ee9863086d5/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 15
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/gemini/document-1855460a9712/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 8
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/qwen/document-1093f7b31e5b/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 9
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/chartmoe/arxiv-2409.03277/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 9
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/moai/arxiv-2403.07508/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 16
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "papers/qwen/README.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 0
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "reports/paper-reading-guide.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 0
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      },
+      {
+        "file": "reports/model-family-index.md",
+        "desktop": {
+          "width": 1120,
+          "scrollWidth": 1120,
+          "brokenImages": 0,
+          "math": 0
+        },
+        "mobile": {
+          "width": 430,
+          "scrollWidth": 430,
+          "overflow": []
+        }
+      }
+    ]
+  },
+  "visually_inspected": [
+    {
+      "screenshot": "tmp/qa-0-modules.png",
+      "sha256": "2a00450d99ea8b57bd7974feb51de74c81c1e29b1b777b4dce349f23085cf4d5"
+    },
+    {
+      "screenshot": "tmp/qa-8-math.png",
+      "sha256": "2b550c77954c2b91035b487c6676c03c6581b40fc4ef27c38791f895e6b0d2e2"
+    },
+    {
+      "screenshot": "tmp/qa-10-modules.png",
+      "sha256": "fc91203af6ef6079615bd2b113c63728a134a1d6d0b1b0cae63ae0d6d9244d64"
+    },
+    {
+      "screenshot": "tmp/qa-0-mobile.png",
+      "sha256": "93c7e8c4f1fc4c08a38619cb3b7a1f9e282f1921ce8df6b6f82c7f899e8da457"
+    }
+  ],
+  "visual_findings": "Qwen3.5 and ChartMoE module tables are legible; Gemini1.5 subsection formulas and original figure render correctly; Qwen3.5 mobile headings and text wrap within the page. DeepSeek-VL2 has two wide inline formulas within a horizontally scrollable table; the document itself does not overflow.",
+  "formula_browser_result": {
+    "articles": 271,
+    "expressions": 2880,
+    "rendered": 2880,
+    "preserved": 2880,
+    "errors": 0
+  },
+  "limits": "Local GFM-style HTML and Edge/MathJax rendering, with automated geometry checks. Sample screenshots do not establish every page visual detail. This is not a live authenticated GitHub frontend check."
+}

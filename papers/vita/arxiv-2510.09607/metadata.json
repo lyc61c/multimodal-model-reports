@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2510.09607v1",
   "document_kind": "embodied_model_report",
   "catalogue_group": "scope_review",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VITA-VLA：通过小型动作专家蒸馏，让视觉语言模型学习机器人控制",
   "source_sha256": "a15901f3052ee244ad8aa09c0efd562df578a81294b2cbd7a57acabca52161ed",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2156,
+  "chinese_characters": 2677,
   "figures_manifest": "figures-manifest.json"
 }

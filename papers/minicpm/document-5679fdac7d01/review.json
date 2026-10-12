@@ -42,10 +42,11 @@
     "正文未充分披露SFT和RL冻结配置",
     "未执行模型和独立复现"
   ],
-  "article_sha256": "bff5e425d8e7a7b8d5ec4820061add9dab5269916ff97a55c3fa67586fcd6bb2",
+  "article_sha256": "50e4894ab1d14b202de2ebddfed0ea21e60d31610a004d47d22311c7f6a92642",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3520
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -58,25 +59,61 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 19,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 19,
-      "operatorname_replacements": 1,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 3,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2509.18154v1",
+        "version": "2509.18154v1",
+        "sha256": "f2a65508089fcecf4cf3169806976265dc1f8174854eb18907203e412b2f8d04"
+      },
+      "source_locators": [
+        "source.txt chars9822–13508: §2.1.1 complete, PDF3–4; chars17441–21248: §2.2.3 complete, PDF5–6; existing §2.4 Eq1 retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 包内联合压缩利用帧冗余且保留时间条件",
+          "new_explanation": "单帧独立压缩无法直接利用相邻帧重复内容，3D查询则同时读取同包多帧，使固定输出预算在空间和时间上共同分配。包间仍按序拼接，整段视频并未压成与时长完全无关的一个摘要。训练随机包大小和帧率，帮助适配不同采样条件；压缩高低仍需按任务所需运动细节权衡。[原文 §2.1.1，PDF 第 3–4 页](https://arxiv.org/pdf/2509.18154v1#page=4)"
+        },
+        {
+          "heading": "4.2 用可见度改变同一恢复目标的难度",
+          "new_explanation": "低扰动可从字形读出，中等扰动需要残存线索加上下文，完全遮挡则只能靠其它区域及已学知识。目标始终是原始文本，但可用证据随扰动变化，避免把不可辨认样本仍当作普通视觉OCR。完全遮挡可能产生多解，本文据此把能力理解为上下文恢复而非“看见被遮像素”。[原文 §2.2.3，PDF 第 5–6 页](https://arxiv.org/pdf/2509.18154v1#page=6)"
+        },
+        {
+          "heading": "4.3 客观规则与归一化偏好评分联合使用",
+          "new_explanation": "准确、格式和重复项约束可直接检查的行为，奖励模型补充开放回答质量，并以同题样本做归一化。长推理只评价最终答案，避免偏好模型对陌生长链文风的误判；这也意味着奖励不能直接证明每个中间步骤可靠。各奖励应按原文组合而非套用带KL的默认GRPO描述。[原文 §2.4、式 (1)，PDF 第 8 页](https://arxiv.org/pdf/2509.18154v1#page=8)"
+        }
+      ],
+      "disclosure_boundary": "未补查询维度或旧版骨干，包内/码本/模型间压缩口径继续区分。",
+      "article_sha256": "50e4894ab1d14b202de2ebddfed0ea21e60d31610a004d47d22311c7f6a92642",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

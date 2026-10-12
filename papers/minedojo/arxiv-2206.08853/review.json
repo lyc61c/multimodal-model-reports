@@ -34,13 +34,14 @@
     "没有在全部开放任务或机器人上验证；没有独立校准集披露。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "438d58e3f52e1cffbb1a8c541f188ab9bf1dc7e7a258905eda4c56410d88226b",
+  "article_sha256": "b980505050aabe05a98e572fa2d521f076db30725db9b2bb9a6fba38f94e39d8",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3583
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -53,25 +54,61 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 22,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 11,
-      "operatorname_replacements": 1,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 3,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2206.08853v1",
+        "version": "2206.08853v1",
+        "sha256": "2c026e7b6147e97bb531f309fbc97816eadfec4eac9731a33534f9727ce1020b"
+      },
+      "source_locators": [
+        "source.txt chars29531–33100: §5.1 and §5.2 beginning, PDF7–8; chars102202–107550: AppendixE.1–E.3 complete, PDF29–31"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 从弱字幕语义学奖励而非直接学控制动作",
+          "new_explanation": "互联网视频提供行为与描述配对，却不包含仿真动作按键，所以MineCLIP先学习目标匹配，策略再在环境中用匹配奖励试错。16帧窗口捕捉近期行为，逐帧特征可缓存重叠部分；这降低奖励查询的重复编码，与策略只看当前帧的输入设计不同。[原文 §5.1–5.2，PDF 第 7–8 页](https://arxiv.org/pdf/2206.08853v1#page=7)"
+        },
+        {
+          "heading": "4.2 候选目标与时间转换改变行为激励",
+          "new_explanation": "匹配概率是在正目标和一组负描述中得到，负目标的选择影响相对区分，不是与候选集合无关的绝对成功概率。DIRECT奖励持续看到目标的状态，DELTA则看相邻时刻改善；静物任务若只奖励可见，可能停在原地凝视。因此奖励语义不仅由预训练模型决定，也由后处理和候选提示共同决定。[原文附录 E.1，PDF 第 29–30 页](https://arxiv.org/pdf/2206.08853v1#page=29)"
+        },
+        {
+          "heading": "4.3 昂贵奖励下复用自己的有效轨迹",
+          "new_explanation": "PPO收集当前策略经验，自我模仿再把成功或高回报轨迹作为监督样本，减少每次更新都必须新查询奖励模型的压力。缓冲优先采成功轨迹，未成功但回报较高的轨迹也可较低概率进入。复用的是智能体自身行为，不能把YouTube字幕训练误称为有动作标签的直接行为克隆。[原文附录 E.2–E.3，PDF 第 30 页](https://arxiv.org/pdf/2206.08853v1#page=30)"
+        }
+      ],
+      "disclosure_boundary": "保留任务限定/特权观测区别，DELTA不称势函数策略不变定理。",
+      "article_sha256": "b980505050aabe05a98e572fa2d521f076db30725db9b2bb9a6fba38f94e39d8",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

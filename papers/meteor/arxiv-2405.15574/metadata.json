@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2405.15574v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Meteor：用Mamba与遍历标记压缩多方面推理依据",
-  "chinese_characters": 2383,
+  "chinese_characters": 2900,
   "figure_revision_date": "2026-10-09"
 }

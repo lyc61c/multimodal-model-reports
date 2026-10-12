@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2305.04160v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "X-LLM：把图像、视频和语音映射成语言模型可读的软表示",
   "source_sha256": "9e82c2b236b4d1ffd297f896e2c8bc0d99f83073e603141d6bfb66c5c8b1b27d",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1824,
+  "chinese_characters": 2244,
   "figures_manifest": "figures-manifest.json"
 }

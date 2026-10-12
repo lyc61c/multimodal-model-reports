@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2312.06742v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Honeybee：保留局部视觉信息的灵活投影器与指令数据配方",
-  "chinese_characters": 2261,
+  "chinese_characters": 2762,
   "figure_revision_date": "2026-10-09"
 }

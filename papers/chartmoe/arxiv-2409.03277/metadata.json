@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2409.03277v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "ChartMoE：用表格、JSON 与代码对齐初始化图表专家连接器",
-  "chinese_characters": 2454,
+  "chinese_characters": 3055,
   "figure_revision_date": "2026-10-09"
 }

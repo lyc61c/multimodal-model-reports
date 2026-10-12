@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2309.04669v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LaVIT：动态视觉 token 与统一图文下一 token 预测",
-  "chinese_characters": 2751,
+  "chinese_characters": 3153,
   "figure_revision_date": "2026-10-09"
 }

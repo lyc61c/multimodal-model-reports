@@ -19,9 +19,10 @@
     "local_links_resolve": true,
     "asset_hashes_match": true,
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2823
   },
-  "article_sha256": "d3339390a1d680863c9f98ebeb23197f5ac3c5646cc3c784e7b3bab6bf4a4438",
+  "article_sha256": "7548f687e1eaa078e01b06683458fb3a6e589752297268e4f1265c31971c58f2",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -37,11 +38,11 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 1,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -74,18 +75,54 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 1,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2501.06186v1",
+        "version": "2501.06186v1",
+        "sha256": "02e72a82e11143ae3df9d86c6c5a7802189131709dbfcfe9cfd106e15e5e35c5"
+      },
+      "source_locators": [
+        "source.txt chars33749–42300: §4.1–4.2.2 beginning and complete §4.2.1 example, PDF7–10; chars46324–48450: §4.2.3 beginning, PDF10–11"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 从相关视觉描述到推导的监督链",
+          "new_explanation": "训练示例先要求说明如何解题，再描述问题相关内容，再据 caption 推理并给最终答案。相关 caption 把感知信息显式化，便于检查读取了哪些标签或数值；但若这一环读错，后续推理仍可在错误前提下自洽。课程示范强化的是输出组织与监督路径，不能证明语言步骤等同内部思维过程。[原文 §4.1、§4.2.1，PDF 第 7–9 页](https://arxiv.org/pdf/2501.06186v1#page=9)"
+        },
+        {
+          "heading": "4.2 答案和步骤分开评价暴露不同失败",
+          "new_explanation": "最终值正确可能来自偶然猜测，步骤完整也可能含错误数值或冗余，因此评测同时看终答案和多属性参考链匹配。裁判依据自然语言语义评分，存在其它正确解法与裁判偏好带来的不确定性。属性平均只是汇总操作，不构成对每步逻辑有效性的符号证明。[原文 §3.2；本节保留原属性评分出处](https://arxiv.org/pdf/2501.06186v1#page=7)"
+        },
+        {
+          "heading": "4.3 并行候选降低调用串行性但仍增加搜索计算",
+          "new_explanation": "作者放宽严格阶段输出格式，意图减少逐阶段多次调用的负担；beam 候选本身仍需维护分支和计算 token。调用数的阶数、每条链长度与硬件耗时属于不同层次，原文相互冲突的复杂度说法不能代替实测。报告也未披露过程奖励模型，不能补画一个验证器来解释候选选择。[原文 §4.2.3，PDF 第 10–11 页](https://arxiv.org/pdf/2501.06186v1#page=11)"
+        }
+      ],
+      "disclosure_boundary": "步骤裁判与模型内部过程严格区分；复杂度冲突与未披露搜索评分均保留。",
+      "article_sha256": "7548f687e1eaa078e01b06683458fb3a6e589752297268e4f1265c31971c58f2",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

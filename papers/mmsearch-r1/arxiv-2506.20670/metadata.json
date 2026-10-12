@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2506.20670v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MMSearch-R1：让视觉语言模型学习何时搜索、搜索什么",
-  "chinese_characters": 2870,
+  "chinese_characters": 3342,
   "figure_revision_date": "2026-10-09"
 }

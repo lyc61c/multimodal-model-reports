@@ -10,10 +10,11 @@
     "figure_region_revision": "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   },
   "model_execution": "not_run",
-  "article_sha256": "f7d5634ca08466216bf762637fca8fab846c04157ea8bf4b66197b008178e510",
+  "article_sha256": "569307aeaada3b52a98536631a85758f33719aa5476700eddc37e336e47673be",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2982
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -60,5 +61,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2312.08914v1",
+        "version": "2312.08914v1",
+        "sha256": "979c3d916ad7d502b1eeea5553c15fb78543681e14b0178e833035ddef76c97b"
+      },
+      "source_locators": [
+        "PDF p.4, §3.1, Figure2, Eq1–4; existing GUI training description retained"
+      ],
+      "changes": [
+        "补充分层交叉投影与共享图像记忆区别",
+        "解释注意力矩阵两轴与文字长度影响",
+        "区分可见细节、行动监督与外部执行"
+      ],
+      "disclosure_boundary": "未新增GUI策略内部网络或统一动作语法。",
+      "article_sha256": "569307aeaada3b52a98536631a85758f33719aa5476700eddc37e336e47673be",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -9,12 +9,12 @@
   "source_url": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-OCR-2/main/DeepSeek_OCR2_paper.pdf",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "DeepSeek-OCR 2：以 Visual Causal Flow 改善文档阅读顺序",
   "source_sha256": "fc39a9de46743676a1d88191f6dda34697b9017e4b49321b98a22e713bec4c6a",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2984,
+  "chinese_characters": 3484,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

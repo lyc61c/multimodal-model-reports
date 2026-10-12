@@ -34,13 +34,14 @@
     "生成答案ACC字符串匹配并非逐答案专家临床评价。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "08074edc51778f5148ca81720c928d56c24f96720efb4ceca5fe0e9490b967e4",
+  "article_sha256": "3b6d71b1338904c6a19b453100d3c562a52838ca4b58003c28d818c5a753730b",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3765
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -76,5 +77,42 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.10415v1",
+        "version": "2305.10415v1",
+        "sha256": "bc0033d2d3813f73d42d9e75b3198de552493e54acdb91e8e4ba8636a2bd8610"
+      },
+      "source_locators": [
+        "source.txt chars10427–13919: §2.2 complete, TE/TD mechanisms, PDF3–4; chars13919–18300: §3 data source, caption QA generation and text-only filter opening, PDF4–5; existing second filter details retained"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 生成任务扩大答案接口但仍需区分输入模式",
+          "new_explanation": "blank模式生成答案内容，选择题模式同时提供候选并输出字母，后者带有额外语义信息。统一生成接口允许超出固定训练答案词表，却不意味着选择题成绩等同于开放问答能力；更不能由网络图推断已有临床决策验证。[原文 §2.2.1–2.2.2，PDF 第 4 页](https://arxiv.org/pdf/2305.10415v1#page=4)"
+        },
+        {
+          "heading": "4.2 TE的槽位预测与TD的因果生成具有不同条件",
+          "new_explanation": "TE先对问题双向编码，再用新解码器恢复答案槽；TD则复用已有生成模型，逐词依赖此前答案。两者都输出文字，但训练可见信息与初始化不同。将语言模型改成完整注意力的编码器也不等于保留其原始因果生成路径，需按变体解释公式。[原文 §2.2 Architecture](https://arxiv.org/pdf/2305.10415v1#page=4)"
+        },
+        {
+          "heading": "4.3 查询接口压缩可变视觉长度并适配生成空间",
+          "new_explanation": "TE先池化为一个向量，TD以多个学习查询读取空间特征，给语言模型保留更丰富条件的机会；固定输出预算并不保证视觉细节无损。TD还用caption预训练缓解视觉空间与文本解码器输入失配，之后再学习医学问答的答案形式。[原文 §2.2.2 MedVInT-TD](https://arxiv.org/pdf/2305.10415v1#page=4)"
+        },
+        {
+          "heading": "4.4 图注生成题目与图像可答性需要额外约束",
+          "new_explanation": "ChatGPT的题目来自图注，图注可能包含不可见的实验背景，问题也可能只依赖医学常识。作者先用纯文字问答模型排除可不看图回答的题目，再针对视觉可答性筛选；这说明规模扩展与视觉依据不是同一个目标。复合图保持较高复杂度，也让子图对应与文字读取更重要。[原文 §3 Source Data / Question-Answer Generation / Data Filtering](https://arxiv.org/pdf/2305.10415v1#page=5)"
+        }
+      ],
+      "disclosure_boundary": "不补查询数、槽位策略或冻结状态；重构表保留两变体全部已有配置。",
+      "article_sha256": "3b6d71b1338904c6a19b453100d3c562a52838ca4b58003c28d818c5a753730b",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

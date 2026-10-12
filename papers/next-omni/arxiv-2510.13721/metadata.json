@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2510.13721v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "NExT-OMNI：用离散流统一全模态理解、生成与检索",
-  "chinese_characters": 2921,
+  "chinese_characters": 3631,
   "figure_revision_date": "2026-10-09"
 }

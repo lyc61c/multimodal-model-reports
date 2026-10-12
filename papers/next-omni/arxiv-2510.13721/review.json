@@ -40,13 +40,14 @@
     "私有数据非全部公开",
     "计时硬件与部分指标标识未充分披露"
   ],
-  "article_sha256": "cdc3b10948244f8a6d53b2a5ba3fbcbbb77661563b2b95789b4f68d1ec6c007f",
+  "article_sha256": "f5885ab7e7491de65f3cac6ccd6ada2028e84c3a0875f9c5e4fabea8a06f5889",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3631
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -79,5 +80,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2510.13721v1",
+        "version": "2510.13721v1",
+        "sha256": "3ef1c8aafa2ef30245532f08a4084879e791489c67ccb2cc78d5b8d5af6c47cc"
+      },
+      "source_locators": [
+        "v1 §2.1–2.4，PDF第3–6页"
+      ],
+      "changes": [
+        "视觉侧用句子级对比强调图像主题，音频侧用token级caption预测保留描述序列，而重建支路分别约束像素与声音细节。两种语义粒度并不相同，统一的是后续可处理的离散状态形式。主干输入保留码本代表向量，使理解阶段也能利用量化空间已有的语义和细节结构，而非重新学习任意编号的含义。",
+        "主网络输出各位置终点类别的预测，而采样器据此构造当前状态到候选状态的转移率，所以分类器与时间推进承担不同职责。多模态位置在共享双向上下文中互相提供条件，图像或音频的类别最终仍须由对应解码器还原。并行更新改善生成路径，却不意味着一次分类即可消除全部跨模态不一致。",
+        "作者在DFM阶段继续使用前端重建目标，避免主干只优化高层语义后丢掉生成所需的低层细节；GradNorm用梯度贡献调节各项权重。训练计算还采用单批次单模态任务、跨批次交错并累积梯度，解决各模态负载不同的问题。这是实现联合训练的调度方式，并不代表不同模态永不在输入上下文中融合。",
+        "固定长度去噪容易给短答案分配过大预算，也可能截断需要更长的回答。按EOS置信度逐块扩展把长度决策和后续多步修正分开；缓存则利用相邻去噪步特征变化较小的现象减少重复计算。它们都有近似性，不能把某个配置的加速比例直接外推到任意音视频长度或批处理场景。"
+      ],
+      "disclosure_boundary": "single encoder为每模态统一；不否认局部ARhead；不新增DFM端点数值处理。",
+      "article_sha256": "f5885ab7e7491de65f3cac6ccd6ada2028e84c3a0875f9c5e4fabea8a06f5889",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

@@ -16,9 +16,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2804
   },
-  "article_sha256": "daeff28fdccf9996bd04675e006024a7841c6d7743593f68108c78729faf3e73",
+  "article_sha256": "56e4cd95d6bf791fd050170d30e7eaf3f7512135ab86b72c832598c52a8f5a6a",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -58,5 +59,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2408.05211v1",
+        "version": "2408.05211v1",
+        "sha256": "7b6c9aa00d912c0cdd094dffcfa05c51213d8b90816c15725cddb809178ea675"
+      },
+      "source_locators": [
+        "PDF pp.4,6–7 §3.1–3.4.1, Table2"
+      ],
+      "changes": [
+        "补长度匹配负例语义判断",
+        "解释训练有回答但推理状态终止",
+        "澄清双实例资源与空间块/时间帧混淆"
+      ],
+      "disclosure_boundary": "初代外部TTS及双实例部署不写成原生全双工codec生成。",
+      "article_sha256": "56e4cd95d6bf791fd050170d30e7eaf3f7512135ab86b72c832598c52a8f5a6a",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

@@ -19,9 +19,10 @@
     "local_links_resolve": true,
     "asset_hashes_match": true,
     "original_assets": 5,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2690
   },
-  "article_sha256": "e13da4d64d6fe5fd2b2eb066e956eb093cb692bb94a98f8076472760840f6a9a",
+  "article_sha256": "00d72c28b242d05040b36fc6f2d20a388d867ff0ebdeef23844be6ff16361dda",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -37,25 +38,61 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 10,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 10,
-      "operatorname_replacements": 2,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 1
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2506.03569v1",
+        "version": "2506.03569v1",
+        "sha256": "676d89ee25c162da0b51c4c4e4bb9037481f7fc515fc74617160bbd8fda0bb18"
+      },
+      "source_locators": [
+        "source.txt chars9732–11000: §2.1/Table1 beginning, PDF5–6; chars26040–32700: §3.2–3.3 complete and evaluation beginning, PDF10–12"
+      ],
+      "changes": [
+        {
+          "heading": "4.1 可验证目标与偏好模型共享优化但保留语义",
+          "new_explanation": "MORL 把规则题和开放偏好题放进同一训练系统，规则检查最终可验证对象，奖励模型检查难以直接判等的回答。文字和多模态奖励模型分别从相应MiMo主干初始化，偏好对由高级VLM排序；这提供不同反馈来源，却不能把全部偏好视为人工真值。[原文 §3.2–3.3、Figure 3，PDF 第 10–12 页](https://arxiv.org/pdf/2506.03569v1#page=11)"
+        },
+        {
+          "heading": "4.2 组内优势比较同题轨迹而非跨题原始分数",
+          "new_explanation": "同一个问题的奖励均值和标准差给出相对参照，各token共享回答级优势。奖励归一化让服务接口尺度统一，组内标准化再关注当前题的相对差异；两者作用不同。组内结果完全相同时数值处理未公开，不能凭通常GRPO实现补出报告未给的epsilon或过滤规则。[原文 §3.3、式 (2)，PDF 第 11 页](https://arxiv.org/pdf/2506.03569v1#page=11)"
+        },
+        {
+          "heading": "4.3 单步在线更新与奖励服务的系统分工",
+          "new_explanation": "每轮由当前策略采样后只更新一次，减少重复使用旧策略轨迹的分布偏移；作者据此移除clipped surrogate，并另移除KL。奖励路由器只选择评分函数，不是按奖励挑选模型专家的MoE router。服务化方便不同奖励模型并行部署，但原式缺少可直接执行的概率梯度项这一披露问题仍须保留。[原文 §3.3 On-Policy RL/RaaS，PDF 第 11–12 页](https://arxiv.org/pdf/2506.03569v1#page=12)"
+        }
+      ],
+      "disclosure_boundary": "保留原式1缺项，不编实现可复现参数；奖励router与网络MoE分开。",
+      "article_sha256": "00d72c28b242d05040b36fc6f2d20a388d867ff0ebdeef23844be6ff16361dda",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

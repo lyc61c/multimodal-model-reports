@@ -17,9 +17,10 @@
     "local_links_resolve": true,
     "asset_hashes_match": true,
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4105
   },
-  "article_sha256": "259ab6746668d0e238a18e361c5016d744a53d4eca9e8f5064a916f7235f7cba",
+  "article_sha256": "922aecf210c6ae92ae78d00860bd0796cf5d2c46331d1194a4b64580b710e5ed",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -76,5 +77,30 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "a96214e5d495dec76f6120891233aa97a73386b35b065a6709840b07588ed118"
+      },
+      "source_locators": [
+        "固定模型卡 §2.1–2.6，第2–3页；§4.1，第4页；§5.4、§5.7，第11、18页"
+      ],
+      "changes": [
+        "报告区分了训练与部署两个层面：原则和反馈改变模型产生回答的倾向，运行时分类器则监测输入输出，并可触发更谨慎的指令或阻断。后者是服务链路的一部分，不能反推成视觉骨干内部的一层安全网络。模型卡披露了这些功能分工，但没有给出可复现的Claude 3强化学习优化式。",
+        "两类拒绝测试回答的问题不同：有害请求是否得到适当拒绝，无害请求是否被错误阻止。原则训练追求的是区分情境，而不是把单一拒绝率调到最高或最低。XSTest专门暴露含敏感词但本应回答的提示，因此在该集合中下降的拒绝率有明确的可用性意义，不能外推为整个安全策略强度的单轴变化。",
+        "Elo转换把相对评分变成比较概率；其中400是该评价模型的尺度参数，分数差而非绝对分数决定结果。因此不同任务集合、基线或评审标准产生的Elo值不能不加校准地拼成一张跨系统排行榜。这一节讨论的是如何读报告已有的偏好结果，并没有把偏好胜率假设成公开的训练奖励。",
+        "模型卡对“不知道”的定义更严格：回答不应包含与参考矛盾的信息，也不应同时回答部分问题再被简单视为完全弃答。Easy-Medium QA用于检查是否在简单问题上过度退缩，100Q Hard则专门增加知识边界的压力。组合观察这些集合，才能区分知识增加与更保守的作答策略；单一错误率不能完成这种区分。"
+      ],
+      "disclosure_boundary": "闭源内部编码器、融合、参数量未披露；不补奖励模型公式；Elo保留原解释且明确是评价。",
+      "article_sha256": "922aecf210c6ae92ae78d00860bd0796cf5d2c46331d1194a4b64580b710e5ed",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "model_executed": false
+    }
+  ]
 }

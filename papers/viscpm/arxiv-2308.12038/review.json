@@ -15,9 +15,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 5
+    "original_assets": 5,
+    "chinese_characters": 2364
   },
-  "article_sha256": "f275097ac88d8d316a4f8e4c923499bb8689ff814a6bf0e76574bbe418b761e6",
+  "article_sha256": "f1963f6911eb4aaac8792d3515bb4e6308dec06b82ee3807882af9fcc8740161",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -65,5 +66,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2308.12038v1",
+        "version": "2308.12038v1",
+        "sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c"
+      },
+      "source_locators": [
+        "PDF p4–5 §3.1–3.3; existing implementation details and freeze scopes retained"
+      ],
+      "changes": [
+        "四模块表；三节区分语义迁移、回答校准及生成适配"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "f1963f6911eb4aaac8792d3515bb4e6308dec06b82ee3807882af9fcc8740161",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -49,10 +49,11 @@
     "Defaulttrainingparams referenced notfullyenumerated",
     "SCMuserstudy noquantitativevote table"
   ],
-  "article_sha256": "b1996e66c52e500d296fe85b774f31d204960924a2e4f2bb65de96e9814c2e2a",
+  "article_sha256": "af1876ff6c0d5bdade92811b1597794d3ceb34a253b6436836dfc1375aaea361",
   "artifact_checks": {
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2803
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -82,5 +83,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2506.24102v1",
+        "version": "2506.24102v1",
+        "sha256": "09e2477a6eeac1e98bf84472a0f9e8ca3f8ab97c32849d80953d00524feb54f4"
+      },
+      "source_locators": [
+        "v1 §3.1–4.2，PDF第5–7页"
+      ],
+      "changes": [
+        "裁剪解决“这个对象长什么样”，ID掩码解决“它在整图中究竟是哪一个”。在相邻相似实例很多时，只有裁剪特征仍可能匹配错对象；把对应ID写入原图patch则提供直接空间绑定。两种路径不是冗余重复：前者提高对象细节可见度，后者保留它与场景位置的关联。",
+        "APE与SAM先取并集，目标是补漏；合并和面积NMS再减少“完整人物/上半身”等重复，最后重新生成点提示修复碎片掩码。这些步骤分别处理不同错误，不能用一次置信度排序替代全部流程。精修选择最高置信的SAM候选也只发生在去重之后，而不是把整个流水线改成按置信度保留对象。",
+        "大模型流水线先标注600k图像，DRC与SCM再学习对象级和场景级两种映射，继续生成其余400k。对象级核查有利于减少单对象误述，场景级分图合并则针对密集场景遗漏次要对象；这是不同粒度的质量与成本折中。小模型加速并不让教师标注自动变成人工真值，错误仍可能随监督继承。"
+      ],
+      "disclosure_boundary": "数据集标注系统与最终模型区分；解释式非原文Eq；面积筛选不保证全部部件保留。",
+      "article_sha256": "af1876ff6c0d5bdade92811b1597794d3ceb34a253b6436836dfc1375aaea361",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

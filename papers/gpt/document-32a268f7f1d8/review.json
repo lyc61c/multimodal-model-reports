@@ -30,13 +30,13 @@
     "官方成绩未独立复测"
   ],
   "model_execution": "not_run",
-  "article_sha256": "64ee33c235e9467f758afee999908af21438c344390aa865c2dbe158d6b198f8",
+  "article_sha256": "e100e427ce0f39e3fe44db84a51ac21f5c11d9c2c08e2d232ad4748281efd505",
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 8,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -69,18 +69,43 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 4,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://openai.com/index/gpt-4-1/",
+        "version": "official-release-2026-10-08",
+        "sha256": "c6bccc9b75b39a44b72fa4e51420db79a6e850c107d4929e2d77b5144778dbe4"
+      },
+      "source_locators": [
+        "official release OpenAI-MRCR / Graphwalks / coding editing formats"
+      ],
+      "changes": [
+        "四模块表；规范已有三级标题编号；补消歧、BFS集合与编辑约束"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "e100e427ce0f39e3fe44db84a51ac21f5c11d9c2c08e2d232ad4748281efd505",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

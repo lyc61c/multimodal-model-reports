@@ -11,13 +11,14 @@
     "26/28 dataset wording inconsistent in original",
     "Backbone pretraining contamination audit notfullydisclosed"
   ],
-  "article_sha256": "98568e16e141add06f08252d72438bf76029918cfbee74bfccd46bad659b1e44",
+  "article_sha256": "0891357971083368364713e6d063cc3ef00cb2386f6e24bc69679d685d214a94",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 4,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3221
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -54,5 +55,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2305.06500v1",
+        "version": "2305.06500v1",
+        "sha256": "d8aba0cfd36bff5934ac29a9b767025af5b761fa8961b84531fec10229032607"
+      },
+      "source_locators": [
+        "v1 §2.3–2.6，PDF 第5–6页"
+      ],
+      "changes": [
+        "指令进入 Q-Former 是为了决定该保留哪些图像信息，进入 LLM 则是为了决定怎样使用已经压缩的信息回答。前一条路径改善输入证据，后一条路径约束输出行为；若问题只在压缩完成后才出现，LLM 无法恢复连接器已经丢掉的小区域信息。这一动机也解释了冻结 ViT 仍能实现任务相关读取：变化的是查询的汇聚权重。",
+        "若选中数据集后在集内均匀抽样，某条样本被抽到的概率还要除以该集大小，即与 1/√Sd 成正比。这是由原文选集概率推得的条件性解释：小数据集的单样本会更频繁重复，但整集仍比大集获得更少总更新。手工调权随后改变这种关系，因此复现不能只抄平方根式而忽略特定任务权重。",
+        "二元任务扩大 yes/true 与 no/false 等标签集合，是为了减少模型把概率分散到同义表述而受到的惩罚。它依赖已知标签空间，不能直接移植成开放式描述的正确性判断。视频问答又增加了逐帧查询拼接，输入证据预算已改变；因此跨任务读分数时，要同时看候选约束与视觉输入协议。"
+      ],
+      "disclosure_boundary": "Instruction influences Q-Former queries, not direct text cross-attention to all pixels; derived per-example sampling only under uniform within-dataset assumption.",
+      "article_sha256": "0891357971083368364713e6d063cc3ef00cb2386f6e24bc69679d685d214a94",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

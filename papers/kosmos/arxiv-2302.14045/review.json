@@ -51,10 +51,11 @@
     "WebSRCbestincludesextractedtext",
     "Languageonlynewinstructionsmixedwithmultimodaldata"
   ],
-  "article_sha256": "8434278f6393a8a07e2d04dcc3ba9b1ba8a96afa372ac81184957657998c99df",
+  "article_sha256": "2394e16934ed8e371b24c6ff8d5ebf5794575df9ef0f7c0f07db113a6f6f86e7",
   "artifact_checks": {
     "original_assets": 9,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3058
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -119,5 +120,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2302.14045v1",
+        "version": "2302.14045v1",
+        "sha256": "a942e77ee8c56bfead4d16c51ca951de266db7b53d1bdcdf09fd024549c3af97"
+      },
+      "source_locators": [
+        "v1 §2.1–2.3，PDF第5–6页"
+      ],
+      "changes": [
+        "图像可以出现在交错文档中的多个位置，连续向量参与因果上下文，但训练目标只覆盖离散位置。因此模型学习“根据图片继续写文字”，并不需要把CLIP表示变成离散图像词表。统一的是任务输出接口，视觉生成、动作执行等能力不能仅因语言模型能表达指令就算作已实现。",
+        "示例通过同一图文序列给出输入到答案的对应，模型参数不随测试样例更新。更多示例同时消耗文本与视觉上下文预算，可能挤压待测问题可用长度；因此few-shot数量是条件设置，不是直接增加训练数据。报告中的随机示例策略也不能写成检索增强最优示例。",
+        "两步路径把感知转换成可阅读文字，便于后续问题使用已有语言推理，但描述中遗漏的属性可能成为瓶颈。Raven的候选评分则保留图像候选并读取Yes概率，与先生成图像描述再回答是不同协议。两种方法都属于测试时输入组织，不能当作新增训练损失或独立推理网络。"
+      ],
+      "disclosure_boundary": "只输出文字；不给引用组件补未展开推导；rationale不是忠实内部过程证明。",
+      "article_sha256": "2394e16934ed8e371b24c6ff8d5ebf5794575df9ef0f7c0f07db113a6f6f86e7",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

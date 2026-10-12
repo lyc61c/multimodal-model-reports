@@ -41,7 +41,7 @@ MoAI 的动机是，通用视觉编码器可能漏读文字、对象位置和关
 
 ![原文 Figure 3](figures/original-p006-figure-3.png)
 
-**Figure 3，PDF 第 6 页。** 图左是原图经冻结 Vision 和两层 GELU MLP 进入 MLM；中间是四类 CV 输出经过 verbalization、冻结 word embedding 和可训练 Compressor；右边是语言指令。冰与火分别表示冻结和训练，新增辅助 token、Compressor、Mixer 是主要学习部分。辅助信息并不是简单附加一个长文字提示后交给 LLM，而是在中间层被专门注意力模块读取。
+**Figure 3，PDF 第 6 页。** 图左是原图经冻结 Vision 和两层 GELU MLP 进入 MLM；中间辅助路径同时包含四类 CV 结果的文字清单，以及 panoptic map 经 Vision/MLP 保留的空间表示；二者经各自嵌入后进入可训练 Compressor；右边是语言指令。冰与火分别表示冻结和训练，新增辅助 token、Compressor、Mixer 是主要学习部分。辅助信息并不是简单附加一个长文字提示后交给 LLM，而是在中间层被专门注意力模块读取。
 
 四个外部模型分别是 Mask2Former（Swin-B/4，106M）、OWLv2（CLIP-B/16，154M）、panoptic SGG（ResNet-50，44M）与 PaddleOCRv2（18M）。分割给出固定类别的物体及背景，开放世界检测补充遗漏对象，SGG 给对象关系，OCR 提供中英文文字。
 
@@ -49,13 +49,25 @@ Compressor 用固定 64 个可学习 token 收集辅助证据，输出通道维 
 
 对每个 Mixer，视觉分支有“视觉读辅助”“视觉读语言”“视觉读自身”三个专家，语言分支有“语言读辅助”“语言读视觉”“语言读自身”三个专家。专家结果经门控混合，再交给原 Transformer decoder block。
 
-基础视觉语言路径具体使用 **CLIP-L/14 → 两层线性层加 GELU → InternLM-7B**。辅助专家的输出先被文字化，再经语言侧嵌入和 Compressor 形成辅助 token；它们没有替换 CLIP 原有的图像网格。一次推理因此同时保留“原图视觉特征”“用户问题”“专家辅助信息”三种来源，Mixer 在选定语言层中学习它们的交换与组合，最后仍由 InternLM 输出文本。外部专家承担实际前处理，不能把这部分计算视为压成 64 个向量后便无需执行。（§3.1，PDF 第6页）
+基础视觉语言路径具体使用 **CLIP-L/14 → 两层线性层加 GELU → InternLM-7B**。辅助专家的类别、框、关系和 OCR 结果先文字化并查语言嵌入；全景分割图另经 Vision/MLP 形成空间表示，两路拼接后由 Compressor 形成辅助 token；它们没有替换 CLIP 原有的图像网格。一次推理因此同时保留“原图视觉特征”“用户问题”“专家辅助信息”三种来源，Mixer 在选定语言层中学习它们的交换与组合，最后仍由 InternLM 输出文本。外部专家承担实际前处理，不能把这部分计算视为压成 64 个向量后便无需执行。（§3.1，PDF 第6页）
+
+| 模块 | 输入与输出 | 公开机制 |
+|---|---|---|
+| 主视觉语言路径 | 原图与问题 → CLIP特征/文字嵌入 | CLIP-L/14、两层GELU MLP、InternLM-7B冻结基础路径 |
+| 外部感知专家 | 图像 → 分割、检测、关系、OCR | 四个CV模型提供不同证据，仍需实际执行前向 |
+| 辅助信息嵌入 | 文字化结果及分割图 → 辅助token | 文本查词嵌入；panoptic map另经Vision/MLP保留空间，再与标签框拼接 |
+| Compressor | 变长辅助序列、64查询 → 64辅助token | Perceiver式读取，宽度4096，任务梯度学习压缩 |
+| Mixer | 视觉/语言状态、辅助token → 混合状态 | 索引7/15/23/31插入；两模态各三个attention专家，独立门控 |
+| 解码器 | 混合状态 → 文字回答 | 原Transformer继续计算，不输出CV模型原生像素结果 |
+
 
 <a id="principles"></a>
 
 ## 4. 核心创新与数学原理
 
-**压缩变长感知描述。** 原文 Equation 1 写为：
+### 4.1 辅助证据不只来自文字清单
+
+原文 Equation 1 写为：
 
 ```math
 A=\mathrm{MoAI\!\!-Compressor}([A_{PS},A_{OWOD},A_{SGG},A_{OCR}],A_{input}).
@@ -63,7 +75,11 @@ A=\mathrm{MoAI\!\!-Compressor}([A_{PS},A_{OWOD},A_{SGG},A_{OCR}],A_{input}).
 
 四组输入来自不同感知任务，长度随图像变化；$`A_{input}`$ 提供固定查询，最终 $`A\in\mathbb R^{4096\times64}`$。固定长度减少语言模型不断读取长检测清单的代价，同时也可能丢掉细节，因此需要后续任务损失训练压缩器。
 
-**显式角色的注意力专家。** Equation 3 中，视觉分支读取辅助信息为 $`I_{AUX}^{(l)}=CA(q=I^{(l)},k=A,v=A)`$，读取语言则把 key/value 换成 $`L^{(l)}`$；语言分支对称构造，另有各自 self-attention。专家负责的信息通道事先明确，门控再学习何时使用何种信息。
+全景分割除序列化类别和框，还把panoptic map经视觉编码与MLP得到局部辅助token，再与清单嵌入拼接。这样空间图和语言标签同时进入Compressor，避免将其误写成全部专家输出都只剩字符串。固定64查询压缩这些不同来源，不能保证每一条OCR文本都被完整保留。[原文 §3.1、Figure 4、Eq. (1)，PDF 第 7–8 页](https://arxiv.org/pdf/2403.07508v1#page=7)
+
+### 4.2 Mixer 专家按信息来源分工
+
+Equation 3 中，视觉分支读取辅助信息为 $`I_{AUX}^{(l)}=CA(q=I^{(l)},k=A,v=A)`$，读取语言则把 key/value 换成 $`L^{(l)}`$；语言分支对称构造，另有各自 self-attention。专家负责的信息通道事先明确，门控再学习何时使用何种信息。
 
 按照 Equation 5，视觉门控为：
 
@@ -76,7 +92,14 @@ A=\mathrm{MoAI\!\!-Compressor}([A_{PS},A_{OWOD},A_{SGG},A_{OCR}],A_{input}).
 
 语言门控独立计算 $`[w_{AUX},w_{IMG},w_{SELF}]`$，没有参数共享。softmax 沿三专家维归一化，每个 token 可有不同权重；这些权重是可学习的融合比例，不能当作经过校准的事实可信度。表中最佳 $`k=3`$ 表示三个分支全参与，不是每 token 只激活一个专家的稀疏路由。
 
-**低秩参数化。** 注意力投影写成 $`W=W_AW_B`$，$`W_A\in\mathbb R^{d\times r}`$、$`W_B\in\mathbb R^{r\times d}`$，$`d=4096,r=64`$。原文明确分解的是 **$`W`$ 本身，而非常规 LoRA 的增量 $`\Delta W`$**。将 $`d^2`$ 参数变成 $`2dr`$ 减少投影开销；输入 query 与专家输出有残差相加，以减小对冻结 decoder 的扰动。完整系统依然需要运行四个 CV 模型，低秩并不意味着整体推理免费。
+视觉读语言、语言读视觉、各自读辅助的计算方向预先规定，门控只决定已有分支的贡献。它没有把四个外部CV模型变成token级可选FFN专家；默认k3也意味着三种读取都参与。门控低权重不证明外部事实错误，高权重同样不是可信度校准。[原文 §3.2、Eq. (3)–(5)](https://arxiv.org/pdf/2403.07508v1#page=9)
+
+### 4.3 低秩新投影与冻结底座的关系
+
+注意力投影写成 $`W=W_AW_B`$，$`W_A\in\mathbb R^{d\times r}`$、$`W_B\in\mathbb R^{r\times d}`$，$`d=4096,r=64`$。原文明确分解的是 **$`W`$ 本身，而非常规 LoRA 的增量 $`\Delta W`$**。将 $`d^2`$ 参数变成 $`2dr`$ 减少投影开销；输入 query 与专家输出有残差相加，以减小对冻结 decoder 的扰动。完整系统依然需要运行四个 CV 模型，低秩并不意味着整体推理免费。
+
+投影本身分解为两个小矩阵，使新增Mixer能以较少参数建立多路读取。原InternLM继续在每个选定层之后处理融合状态，外部专家又在输入前运行；低秩减少的是新增投影部分，不能将压缩输出长度当作全部系统的运算量。[原文 §3、Implementation Details](https://arxiv.org/pdf/2403.07508v1#page=10)
+
 
 <a id="data"></a>
 

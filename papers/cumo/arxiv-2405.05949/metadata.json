@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2405.05949v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "CuMo：从稠密检查点扩展视觉编码器和连接器专家",
-  "chinese_characters": 1905,
+  "chinese_characters": 2497,
   "figure_revision_date": "2026-10-09"
 }

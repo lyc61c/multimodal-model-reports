@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2503.01743v1",
   "document_kind": "technical_report",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "Phi-4-Mini 与 Phi-4-Multimodal：用模态 LoRA 保留语言骨干",
-  "chinese_characters": 3233,
+  "chinese_characters": 3666,
   "figure_revision_date": "2026-10-09"
 }

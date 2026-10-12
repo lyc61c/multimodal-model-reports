@@ -9,12 +9,12 @@
   "source_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf",
   "document_kind": "system_card",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "GPT-4o 原生图像生成附录：生成能力与安全评测",
   "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2458,
+  "chinese_characters": 2954,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

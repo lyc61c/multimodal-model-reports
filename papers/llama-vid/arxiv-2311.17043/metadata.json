@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2311.17043v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "LLaMA-VID：以问题相关 token 和内容 token 压缩视频帧",
-  "chinese_characters": 2615,
+  "chinese_characters": 3117,
   "figure_revision_date": "2026-10-09"
 }

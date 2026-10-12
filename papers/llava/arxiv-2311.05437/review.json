@@ -19,9 +19,10 @@
     "local_links_resolve": true,
     "asset_hashes_match": true,
     "original_assets": 6,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 3036
   },
-  "article_sha256": "beea1e7ee0b8105540cf953b2ece00749db14afefcbf1e8f2629e137ac86f5db",
+  "article_sha256": "678b8e5177317ba6b899e43ee1387e6de0a038448150b821d12570a9c3c46295",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -90,5 +91,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.05437v1",
+        "version": "2311.05437v1",
+        "sha256": "c9586e6cc381ba58bd4a8206ebff32995d89d82588f527674570693c497ed85f"
+      },
+      "source_locators": [
+        "v1 §2.1–2.2，PDF第3–4页"
+      ],
+      "changes": [
+        "新增样本把“请求工具”和“利用结果回答”放在同一因果序列，只有助手生成部分成为标签。工具输出由专用系统提供，规划器学习如何使用证据而非复制工具内部计算。这样可以新增技能而不改主干输出层，但新技能仍需要可用API格式及相应示例，不能从统一接口推出零成本扩展所有工具。",
+        "actions为空是明确的不调用决策，有调用时参数则应包含工具需要的类别或提示。value可以说明执行前状态，也可以承载最终回答，服务端因此必须结合调用状态解释字段。自然语言thoughts便于检查规划，但不是运行时执行器会自动验证的逻辑证明；语法正确也不足以保证工具选对。",
+        "预先拿到大量工具结果减少了查找证据的难度，却增加执行成本；按需路径则必须先决定需要哪个技能。这两种条件下的成绩同时受到信息覆盖和规划质量影响。只有在工具预算及可用输出一致时，才能更直接比较调用策略，而报告没有给出将所有延迟折算为统一成本的优化目标。"
+      ],
+      "disclosure_boundary": "工具执行结果不是训练目标；规划器非扩散器；不补工具选择RL。",
+      "article_sha256": "678b8e5177317ba6b899e43ee1387e6de0a038448150b821d12570a9c3c46295",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

@@ -23,13 +23,14 @@
     "GPT rubric details vary between main text and appendix",
     "No independent benchmark run"
   ],
-  "article_sha256": "8fc711c392197a407d455492a5865fd9d8272359c2d01f39dfbdb4957c9b787c",
+  "article_sha256": "ad432c30faef47b0b005f80b17a65bd5634f011fc58d6280ec0f192dbc0faaec",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
   "artifact_checks": {
     "original_assets": 9,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 4258
   },
   "figure_revision": {
     "date": "2026-10-09",
@@ -159,5 +160,29 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2311.16483v1",
+        "version": "2311.16483v1",
+        "sha256": "a3d947e6ba338d2de546f49ddb5ad4da45a3137b27dab1459dfac24d64790a37"
+      },
+      "source_locators": [
+        "v1 §3.1–3.3、§4.1–4.2，第5–6页；Appendix A，第11页"
+      ],
+      "changes": [
+        "代码构建时要求把数据直接写在程序内，避免依赖外部文件，绘图库文档与已成功生成的代码又作为提示条件。这样一个样本同时具有表格、可运行程序和渲染图像，既能监督图像到数据，也能监督图像到程序。程序执行成功只验证了运行条件，数据是否忠实、轴标签是否齐全仍需要另外检查。",
+        "第一阶段生成的主题、趋势和行列约束让数据具有可提问的结构，第二阶段记录视觉样式，第三阶段再结合两类描述和原始数值制造问答或编辑指令。若只有图像截图，精确数值与修改前后关系往往难以恢复；保存这些生成条件使同一幅图能支持多个训练任务。但这种便利来自离线标签建设，推理时仍由学生模型根据图像和用户要求直接生成。",
+        "模型复用LLaVA-1.5的OCR和通用接口，领域学习主要通过投影及语言侧适配发生；论文贡献不能等同为新增视觉网络。生成评价则将数据、坐标轴、颜色、类型、标题等维度分开打分后平均，因此一张“外观相似”的图仍可能因数值错而失分。代码正确、图形相似与算术精确是不同要求，下面保留的舍入反例正说明需要分别核查。"
+      ],
+      "disclosure_boundary": "解释式不是新增原文公式；最终LoRA参数未知；工具渲染与模型直接图像生成区分。",
+      "article_sha256": "ad432c30faef47b0b005f80b17a65bd5634f011fc58d6280ec0f192dbc0faaec",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

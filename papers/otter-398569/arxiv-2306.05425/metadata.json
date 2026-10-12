@@ -9,8 +9,8 @@
   "source_url": "https://arxiv.org/pdf/2306.05425v1",
   "document_kind": "dataset_or_benchmark",
   "catalogue_group": "supporting_materials",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MIMIC-IT：为多模态指令加入可参考的图文与视频上下文",
-  "chinese_characters": 3181,
+  "chinese_characters": 3644,
   "figure_revision_date": "2026-10-09"
 }

@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2504.10479v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "InternVL3：联合预训练、可变视觉位置与混合偏好优化",
   "source_sha256": "71fb503c0f9140aec1d554c7fca16747bd7614e645c057a32829ddbea2f3363b",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1790,
+  "chinese_characters": 2432,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

@@ -14,9 +14,10 @@
     "no_placeholders": true,
     "local_links_resolve": true,
     "asset_hashes_match": true,
-    "original_assets": 4
+    "original_assets": 4,
+    "chinese_characters": 2422
   },
-  "article_sha256": "c9722e996e32455283e05fdc3ce4673c7caad70324d1cd4fe5a139974829fb61",
+  "article_sha256": "4c0c199b09872a1340acc61d8d90c97c390609e7b111b4a1d36d68f9e63ac5a2",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -42,5 +43,27 @@
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://arxiv.org/pdf/2307.04087v1",
+        "version": "2307.04087v1",
+        "sha256": "8865ad6b7cc6f61322c4e11d131e3a46437018a66742c1b121d0ea41655c7501"
+      },
+      "source_locators": [
+        "PDF p3–4 §3.1–3.3 / Figure1"
+      ],
+      "changes": [
+        "四流程模块表；逐项解释教师信息边界、任务覆盖与过滤能力"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "4c0c199b09872a1340acc61d8d90c97c390609e7b111b4a1d36d68f9e63ac5a2",
+      "module_rows": 4,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

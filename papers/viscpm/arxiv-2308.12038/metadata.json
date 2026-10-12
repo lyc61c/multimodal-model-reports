@@ -9,11 +9,11 @@
   "source_url": "https://arxiv.org/pdf/2308.12038v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "VisCPM：以多语言模型为桥梁迁移视觉能力",
   "source_sha256": "00812217d4d7a369258b9d3114516b93887c331cbc3788b6c6a691334749e08c",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 1936,
+  "chinese_characters": 2364,
   "figures_manifest": "figures-manifest.json"
 }

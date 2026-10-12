@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2305.04790v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MultiModal-GPT：在 OpenFlamingo 上联合训练图文与纯文本指令",
   "source_sha256": "24caf214308bd65c6c36b3f219a024b33a005082a6ca598cb9b9eaf48eb8bea8",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2223,
+  "chinese_characters": 2576,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }

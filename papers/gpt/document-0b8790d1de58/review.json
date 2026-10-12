@@ -17,9 +17,10 @@
     "local_links_resolve": true,
     "asset_hashes_match": true,
     "original_assets": 7,
-    "no_full_page_screenshots": true
+    "no_full_page_screenshots": true,
+    "chinese_characters": 2954
   },
-  "article_sha256": "05c2082a440c69b0dd0c28eea0838271bf432d03d25a8dd4ce4bdd0db5bbf065",
+  "article_sha256": "519bb76d19cf306418d90a9d088a94e26cb0c9e0a4378db3f538b4b7c69cedf4",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -68,5 +69,27 @@
     "origin": "self_drawn",
     "manifest": "derived-figures-manifest.json",
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
-  }
+  },
+  "content_structure_revision_history": [
+    {
+      "date": "2026-10-12",
+      "scope": "Expansion of sections 3 and 4 against recorded fixed-source method passages; not a full-paper or all-results re-review.",
+      "source": {
+        "url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf",
+        "version": "official-source-snapshot-2026-10-08",
+        "sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29"
+      },
+      "source_locators": [
+        "§2 autoregressive image generation; prompt/output blocking; heterogeneity and Shannon entropy discussion"
+      ],
+      "changes": [
+        "五功能模块表；详细区分阻断时机、双目标与集合级指标"
+      ],
+      "disclosure_boundary": "Fixed cited source; no model reproduction",
+      "article_sha256": "519bb76d19cf306418d90a9d088a94e26cb0c9e0a4378db3f538b4b7c69cedf4",
+      "module_rows": 5,
+      "principle_subsections": 3,
+      "model_executed": false
+    }
+  ]
 }

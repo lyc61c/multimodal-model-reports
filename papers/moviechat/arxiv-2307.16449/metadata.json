@@ -9,12 +9,12 @@
   "source_url": "https://arxiv.org/pdf/2307.16449v1",
   "document_kind": "model_paper",
   "catalogue_group": "model_catalogue",
-  "article_template_version": "1.1",
+  "article_template_version": "1.4",
   "title_zh": "MovieChat：把密集视频 token 转成短期与长期记忆",
   "source_sha256": "d60d57dab10fa960d89a4ab91aa23a9d7835ca8448bdfc2a7a9d2fba0b7b08f6",
   "article_language": "zh-CN",
   "authored_at": "2026-10-08",
-  "chinese_characters": 2071,
+  "chinese_characters": 2525,
   "figures_manifest": "figures-manifest.json",
   "figure_revision_date": "2026-10-09"
 }
