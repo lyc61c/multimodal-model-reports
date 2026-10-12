@@ -18,7 +18,7 @@
     "original_assets": 5,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "7ac195dd2ad3f0a782d306ee1fae02fd1a65242a2b4673833c7590658e38722e",
+  "article_sha256": "25a2b5ed1f6c338c63b29fd4fa2f5b4af6b8ebfc03095017ffa1bb1e6fcd0055",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -35,23 +35,26 @@
     "caption_wording_updated_for_cropped_assets": true
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 29,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 29,
-      "operatorname_replacements": 2,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 3,
-      "inline_angle_replacements": 1
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 1
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

@@ -32,7 +32,7 @@
     "敏感度数学定义存在原文矛盾，报告数值按作者口径保留。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "8fcd75605e80827d05adbdbae075b23e5a1c3fca2e8178f6adeb7e88adf3fdfa",
+  "article_sha256": "200d1ac283347c8dd429f240c8381d4bcd8e5f2287b3b388d77d7bb781fc6fa6",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -65,11 +65,11 @@
     }
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 32,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -102,16 +102,19 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 16,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 2,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 1,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

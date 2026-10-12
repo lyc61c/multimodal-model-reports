@@ -61,7 +61,7 @@ z_i=Q(\hat z_i)=\arg\min_{z_k\in Z}\Vert \hat z_i-z_k\Vert _2.
 动作与文字合并为 $`V=V_t\cup V_m`$。给定输入序列 $`x_s`$，T5 自回归预测目标序列，原文式（2）为：
 
 ```math
-\mathcal L_{LM}=-\sum_i\log p_\theta(x_t^i\mid x_t^{<i},x_s).
+\mathcal L_{LM}=-\sum_i\log p_\theta(x_t^i\mid x_t^{\lt i},x_s).
 ```
 
 该目标不区分“当前词是动作还是文字”，二者都属于扩展词表。任务区别来自输入指令和目标序列的组成。预训练中的片段恢复随机遮蔽约 15% 输入 token，并用 sentinel 标记各个缺失片段；模型预测被移除的内容。与直接输入描述、预测动作的监督翻译结合后，模型同时学习序列内部结构和跨模态对应。

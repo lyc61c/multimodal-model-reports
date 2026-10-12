@@ -125,7 +125,7 @@ B_m\in\mathbb R^{d_{out}\times32}.
 
 ```math
 \mathcal L_{ans}=-\sum_{t\in\mathcal A}
-\log p_\theta(y_t\mid V,Q,y_{<t}).
+\log p_\theta(y_t\mid V,Q,y_{\lt t}).
 ```
 
 

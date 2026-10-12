@@ -33,7 +33,7 @@
     "专家噪声鲁棒无方差，不能宣称部署任意热插拔；COCO属于预训，零样本非图像未见。"
   ],
   "model_execution": "not_run",
-  "article_sha256": "73bd0fd82d89902204a376739315ea4e3f1314cc4ae1adaa963080695be67300",
+  "article_sha256": "79787f78b642cb1e372404e9c0bf95bb8b107b44a573fc3cd8d83c0dd37eeb20",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -52,23 +52,26 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 38,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 19,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 1,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

@@ -137,7 +137,7 @@ $`\hat x_i`$ 为合并后的特征，$`c_j`$ 为代码本向量。原文将 $`l_
 
 ```math
 \mathcal L_{LM}=-\sum_{y\in\mathcal D}\sum_{i=1}^{S}
-\log P_\theta(y_i\mid y_{<i}).
+\log P_\theta(y_i\mid y_{\lt i}).
 ```
 
 

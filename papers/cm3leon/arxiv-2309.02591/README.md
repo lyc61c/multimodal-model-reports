@@ -77,7 +77,7 @@ CM3 将双向补全需求改写成单向因果生成。例如原序列为 `a cha
 
 
 ```math
-\mathcal L_{\mathrm{CM3}}=-\sum_t\log p_\theta(\tilde x_t\mid \tilde x_{<t}).
+\mathcal L_{\mathrm{CM3}}=-\sum_t\log p_\theta(\tilde x_t\mid \tilde x_{\lt t}).
 ```
 
 

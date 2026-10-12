@@ -61,7 +61,7 @@ GPT4Tools 是文字语言模型的**多模态工具控制器**。它没有为 Vi
 
 ```math
 p(X_r\mid X_C,X_{\rm inst})
-=\prod_{i=1}^{L}p_\theta(x_i\mid X_C,X_{\rm inst},x_{<i}).
+=\prod_{i=1}^{L}p_\theta(x_i\mid X_C,X_{\rm inst},x_{\lt i}).
 ```
 
 
@@ -76,7 +76,7 @@ p(X_r\mid X_C,X_{\rm inst})
 SR=\frac1N\sum_i
 \mathbf1(\text{decision correct})\,
 \mathbf1(\text{tool correct})\,
-\mathbf1(\eta_i>0.5).
+\mathbf1(\eta_i\gt 0.5).
 ```
 
 

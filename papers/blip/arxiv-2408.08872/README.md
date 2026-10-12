@@ -81,7 +81,7 @@ Z\approx\mathrm{softmax}\!\left(\frac{(QW_Q)(XW_K)^\top}{\sqrt{d_k}}\right)XW_V,
 第三是**文字预测目标与监督有效性**。将交错序列记为 $`s`$，文字位置集合为 $`\mathcal T`$，标准条件生成损失的辅助写法为：
 
 ```math
-\mathcal L_{\mathrm{text}}=-\sum_{t\in\mathcal T}\log p_\theta(s_t\mid s_{<t}).
+\mathcal L_{\mathrm{text}}=-\sum_{t\in\mathcal T}\log p_\theta(s_t\mid s_{\lt t}).
 ```
 
 视觉表示参与前缀上下文，但不要求模型预测下一个视觉码。因此这是视觉理解预训练，不能从“单一自回归损失”推导出模型已经具备图像生成。训练对 OCR 描述删除“the text”等填充语，减少容易预测的模板 token；作者认为这可能避免稀释有效文字识别监督，但明确是解释性假设，不是被单独证明的损失分解定理。

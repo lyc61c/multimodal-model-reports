@@ -141,9 +141,11 @@ def math_expressions(body):
 def normalize_math_details(body):
     """Use GitHub's protected inline syntax and deployment-compatible named operators."""
     statistics = {"delimiter_conversions": 0, "operatorname_replacements": 0, "vertical_bar_replacements": 0,
-                  "display_fence_conversions": 0, "inline_angle_replacements": 0}
+                  "display_fence_conversions": 0, "inline_angle_replacements": 0,
+                  "display_angle_replacements": 0, "literal_token_replacements": 0,
+                  "physical_row_wraps_normalized": 0}
 
-    def compatible_tex(tex):
+    def compatible_tex(tex, display=False):
         if re.search(r"\\operatorname\*", tex):
             raise ValueError("Starred operators need an explicit limits-layout review")
         tex, count = re.subn(r"\\operatorname(?=\s*\{)", lambda _: r"\mathrm", tex)
@@ -156,12 +158,42 @@ def normalize_math_details(body):
         statistics["vertical_bar_replacements"] += count
         tex, count = re.subn(r"(?<!\\)\|", lambda _: r"\vert ", tex)
         statistics["vertical_bar_replacements"] += count
+        # Literal text macros cannot interpret math-mode relation commands. Preserve
+        # the one published special token with ordinary, monospaced math characters.
+        token = r"\texttt{<tor>}"
+        statistics["literal_token_replacements"] += tex.count(token)
+        tex = tex.replace(token, r"\mathtt{\mathord{\lt}tor\mathord{\gt}}")
+        for match in re.finditer(r"\\(?:text(?:tt|rm|normal|sf|bf|it|sl|sc)?|mbox)\s*\{", tex):
+            depth, index = 1, match.end()
+            start = index
+            while index < len(tex) and depth:
+                if tex[index] == "\\":
+                    index += 2
+                    continue
+                depth += (tex[index] == "{") - (tex[index] == "}")
+                index += 1
+            if re.search(r"[<>]", tex[start:index - 1]):
+                raise ValueError("Literal angle brackets in text need an explicit math-safe transcription")
+        # A subsequent HTML parse can truncate x_{<t} to x_{, leaving an open group.
+        # Protect display math as well as inline math; preserve escaped TeX controls.
+        def relation(match):
+            slashes, symbol = match.groups()
+            if len(slashes) % 2:
+                return match[0]
+            statistics["display_angle_replacements" if display else "inline_angle_replacements"] += 1
+            return slashes + (r"\lt " if symbol == "<" else r"\gt ")
+        tex = re.sub(r"(\\*)([<>])", relation, tex)
+        if display:
+            # Keep the TeX row separator, but remove the physical line break that
+            # GitHub can protect with an additional (visible) control-space slash.
+            tex, count = re.subn(r"(?<!\\)\\\\[ \t]*\n[ \t]*", lambda _: "\\\\ ", tex)
+            statistics["physical_row_wraps_normalized"] += count
         return tex
 
     def prose(text):
         def expression(match):
             kind = match.lastgroup
-            tex = compatible_tex(match[kind])
+            tex = compatible_tex(match[kind], display=kind in {"display", "legacy_display"})
             if kind in {"display", "legacy_display"}:
                 statistics["delimiter_conversions"] += 1
                 statistics["display_fence_conversions"] += 1
@@ -173,10 +205,6 @@ def normalize_math_details(body):
                 return prefix + "```math\n" + tex.strip() + "\n```" + suffix
             if "\n" in tex or "`" in tex:
                 raise ValueError("Inline math requires a single line without a literal backtick")
-            # GitHub's protected inline code can double-encode HTML angle brackets.
-            # TeX relation names avoid leaking entities such as &lt; into MathJax.
-            statistics["inline_angle_replacements"] += tex.count("<") + tex.count(">")
-            tex = tex.replace("<", r"\lt ").replace(">", r"\gt ")
             if kind != "guarded":
                 statistics["delimiter_conversions"] += 1
             return "$`" + tex.strip() + "`$"
@@ -188,7 +216,7 @@ def normalize_math_details(body):
             parts.append(prose(segment))
         elif fenced_math(segment) is not None:
             lines = segment.splitlines(keepends=True)
-            parts.append(lines[0] + compatible_tex("".join(lines[1:-1])) + lines[-1])
+            parts.append(lines[0] + compatible_tex("".join(lines[1:-1]), display=True) + lines[-1])
         else:
             parts.append(segment)
     return "".join(parts), statistics

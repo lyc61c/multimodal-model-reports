@@ -104,7 +104,7 @@ Tiny/Small 直接缩放到 512/640 正方形，以避免小预算用于空白；
 下一 token 目标可用标准形式说明：
 
 ```math
-\mathcal L=-\sum_t\log p_\theta(y_t\mid E(I),p,y_{<t}),
+\mathcal L=-\sum_t\log p_\theta(y_t\mid E(I),p,y_{\lt t}),
 ```
 
 这是本文对原文训练框架的标准解释，报告没有额外定义独立的图像重建损失或强化学习奖励。即使训练采用带目标文本的监督，这也不等于报告中的独立聊天 SFT 阶段；作者明确说没有该阶段，部分能力要用 completion prompt 激活。

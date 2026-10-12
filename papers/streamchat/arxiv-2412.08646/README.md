@@ -61,7 +61,7 @@
 **在解码步更新视觉条件。** 用 $`V_{\le\tau_k}`$ 表示第 $`k`$ 个回答 token 生成时已到达的视觉窗口，可将生成过程解释为：
 
 ```math
-p(y_k\mid y_{<k},Q,V_{\le\tau_k}),\qquad
+p(y_k\mid y_{\lt k},Q,V_{\le\tau_k}),\qquad
 \tau_{k+1}\ge\tau_k.
 ```
 

@@ -53,7 +53,7 @@ Pengi 把声音描述、音频问答、声音事件分类、情绪和音乐属�
 
 ```math
 p=[m_1(a_\phi(x));m_2(g_\psi(t))],\qquad
-\mathcal L=-\sum_{j=1}^{\vert y\vert }\log P_\theta(y_j\mid p,y_{<j}).
+\mathcal L=-\sum_{j=1}^{\vert y\vert }\log P_\theta(y_j\mid p,y_{\lt j}).
 ```
 
 分号表示前缀序列拼接，$`y`$ 是目标答案。被优化的是音频编码器与映射器参数；$`\theta,\psi`$ 在 Pengi 训练中固定。损失施加于答案词，而不是要求前缀向量对应某个可读词。这让不同任务共享同一生成机制，但不会自动提供可靠的数值回归或分类校准。

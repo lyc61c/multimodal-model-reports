@@ -1,0 +1,1919 @@
+{
+  "date": "2026-10-12",
+  "base_commit": "8b2d8638bad6b4b36bb7abd152fa341c7d980c89",
+  "scope": "HTML-sensitive math transcription and row-break formatting; article prose, original figures, and mathematical relations preserved",
+  "articles_checked": 271,
+  "articles_updated": 116,
+  "expressions_updated": 127,
+  "changes": {
+    "delimiter_conversions": 0,
+    "operatorname_replacements": 0,
+    "vertical_bar_replacements": 0,
+    "display_fence_conversions": 0,
+    "inline_angle_replacements": 0,
+    "display_angle_replacements": 139,
+    "literal_token_replacements": 1,
+    "physical_row_wraps_normalized": 12
+  },
+  "reported_page": "papers/gemini/document-1855460a9712/README.md",
+  "prior_html_roundtrip_reproduction": {
+    "expressions_changed_and_failed": 105,
+    "articles": 101,
+    "errors": {
+      "Extra open brace or missing close brace": 103,
+      "Missing close brace": 2
+    },
+    "scope": "Local HTML reparsing of published TeX, not proof of GitHub client internals"
+  },
+  "regression_fixture": {
+    "article": "papers/gemini/document-1855460a9712/README.md",
+    "original_tex": "\\overline{\\mathcal L}(n)=-\\frac{1}{n}\\sum_{t=1}^{n}\\log p_\\theta(x_t\\mid x_{<t}).",
+    "truncated_tex": "\\overline{\\mathcal L}(n)=-\\frac{1}{n}\\sum_{t=1}^{n}\\log p_\\theta(x_t\\mid x_{",
+    "expected_error": "Extra open brace or missing close brace",
+    "known_failure_detected": true
+  },
+  "current_validation": {
+    "source_and_gfm": "data/github-math-verification.json",
+    "gfm_html_and_mathjax": "data/math-validation.json",
+    "browser_dom_and_rendering": "data/browser-math-validation.json",
+    "articles": 271,
+    "expressions": 2855,
+    "html_preserved": 2855,
+    "browser_rendered": 2855,
+    "failures": 0,
+    "article_manifest_sha256": "68a90f7dfa2ae325411726207fec5dd8c1a50ead01f743b148a28dc10a51ca73"
+  },
+  "layout_check": {
+    "pages": 271,
+    "widths": [
+      1120,
+      375
+    ],
+    "page_overflow_failures": 0
+  },
+  "literal_token_transcription": {
+    "article": "papers/meteor/arxiv-2405.15574/README.md",
+    "before": "\\texttt{<tor>}",
+    "after": "\\mathtt{\\mathord{\\lt}tor\\mathord{\\gt}}",
+    "meaning": "Same literal <tor> token; monospaced letters and ordinary boundary symbols. Glyph widths can differ from text mode."
+  },
+  "reference": "https://docs.mathjax.org/en/latest/input/tex/html.html",
+  "articles": [
+    {
+      "article": "papers/multiinstruct/arxiv-2212.10773/README.md",
+      "before_sha256": "8fcd75605e80827d05adbdbae075b23e5a1c3fca2e8178f6adeb7e88adf3fdfa",
+      "after_sha256": "200d1ac283347c8dd429f240c8381d4bcd8e5f2287b3b388d77d7bb781fc6fa6",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/kosmos/arxiv-2302.14045/README.md",
+      "before_sha256": "d51a636d776e5b13ebb6ba3c5c70d3e59dd4ecf90f4f7c55d6c6d270f6c6a4c1",
+      "after_sha256": "8434278f6393a8a07e2d04dcc3ba9b1ba8a96afa372ac81184957657998c99df",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/prismer/arxiv-2303.02506/README.md",
+      "before_sha256": "73bd0fd82d89902204a376739315ea4e3f1314cc4ae1adaa963080695be67300",
+      "after_sha256": "79787f78b642cb1e372404e9c0bf95bb8b107b44a573fc3cd8d83c0dd37eeb20",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/gpt/arxiv-2303.08774/README.md",
+      "before_sha256": "138eb47b7e2781c69af2ca29de1ad53fcfca8f0f86f81fcbbfc946186e0c5117",
+      "after_sha256": "b7720d4806b180ca42f2544dc4f657292c25c4c31a1d2aef9a7dd616b8716454",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llava/arxiv-2304.08485/README.md",
+      "before_sha256": "d3ae29d9aef368fd6023e8202a3d0d98a3f51dd9d4bd67ce940d90d2f3123ac2",
+      "after_sha256": "d17a8348bf09995c9ff45dba629eb0adb7ba6694df9c8cf3b491e3db05587377",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/minigpt/arxiv-2304.10592/README.md",
+      "before_sha256": "5812e5f9ae3eabe032e6a345b0d14d82d7201a72068a5d3dcb08a965e9eeb226",
+      "after_sha256": "b6c02cd36d1714e62e6d8ea1bdded1431af84e15c799a220c0a54f0e47e316d1",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/mplug/arxiv-2304.14178/README.md",
+      "before_sha256": "21202be5740718a3151700781a4a3dbfcd9ffe1a094e9c7a261c06d25f53fb67",
+      "after_sha256": "62dc8e7acbb5719f9de9a0d0aac353fe4effb474af23349cb60c21f9e3b8a694",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llama-adapter/arxiv-2304.15010/README.md",
+      "before_sha256": "b82e0ede5a3d54d3e27fd7b51c54489687cbab0ee1b0bee3088ed0493aa90c4d",
+      "after_sha256": "5e37f8a560ae05cdf9fe9e0884dec6709db130a1658cff1c395b4675d23a989b",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/x-llm/arxiv-2305.04160/README.md",
+      "before_sha256": "180cb00ba95f15ad5a94d56e0283c6c7978c3463e57ab40ef4977c6efcad1939",
+      "after_sha256": "37536c38fb875c9c20003fc24e41b60b0afbda0bb82b3384b75401fac7767b09",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/multimodal-gpt/arxiv-2305.04790/README.md",
+      "before_sha256": "11206a3853123a80660827458463d71bac6e34d221f131e990e337c7df8a98b3",
+      "after_sha256": "fb96469c07e907c25e6b5dc99cef490ff44359f54de577a119c93392aca87497",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/videochat/arxiv-2305.06355/README.md",
+      "before_sha256": "9eebd8c8ebfd9ded26a6a538d9670d650123ff02f305ae5e99908ab05504deeb",
+      "after_sha256": "2c331c6f75ca61d839e9e971d00f99e7424b914bc89519ee28103f4b35da1b59",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/blip/arxiv-2305.06500/README.md",
+      "before_sha256": "4de6952e745d0367f04d0cacbb4cff5775ce386e7ec78c136608044d44f6e156",
+      "after_sha256": "98568e16e141add06f08252d72438bf76029918cfbee74bfccd46bad659b1e44",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/pmc-vqa/arxiv-2305.10415/README.md",
+      "before_sha256": "183db038d39832d37779fe0aab869878eb6ff98bc0cef1a723de9659583b5bbb",
+      "after_sha256": "08074edc51778f5148ca81720c928d56c24f96720efb4ceca5fe0e9490b967e4",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/ltu/arxiv-2305.10790/README.md",
+      "before_sha256": "f4e2df0019abe61a0e6ec27cd167da9d9f9211e44c32a76545c54a228cc22c51",
+      "after_sha256": "7e202f6614e717f03a41ae4b9633f68fef7fd9dc53c85dfd5f24e19e43d38063",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/pengi/arxiv-2305.11834/README.md",
+      "before_sha256": "ecdfb72b58dbcc5379423704049ee9e4b1b1e42b993681d852b0799502d0871d",
+      "after_sha256": "e06aef870584ecc2b0873990b461781956618ab8ae68371efd4e7edffb20b5a1",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/detgpt/arxiv-2305.14167/README.md",
+      "before_sha256": "2c663923bc5175f7dc6e1b5b9cfcba26a7ae28f762a206823d7e0b241974f625",
+      "after_sha256": "7e4a9f2e6232ba27690c08357f3c7a84bacb18a88921a9d5d0a32509fda5ef75",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/gpt4tools/arxiv-2305.18752/README.md",
+      "before_sha256": "5f4c04dc120f6df81cec65e0dd27024fcec2c96ec65bc90a70037d3a16e8b5dc",
+      "after_sha256": "7e0ea8a7c35c4b737aabbb4729f7c7333fdfb46dc149dd9ddc9282075c3d279e",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llava-med/arxiv-2306.00890/README.md",
+      "before_sha256": "79af40afbf9416045e88de767f48e636bee04e9518188dc800c821051e5c39d5",
+      "after_sha256": "1aeecf2553b192908ace895e68722f12d78705d67e0428ecc59f13574d80eee7",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/videollama/arxiv-2306.02858/README.md",
+      "before_sha256": "947794ffbe27fe3e5e4929880a970885012bf98e111ed927da5a1252f1564003",
+      "after_sha256": "b92dc228b7ddf3537307f87b59dec519230406139caead88855e52de2b3d20ef",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/m3it/arxiv-2306.04387/README.md",
+      "before_sha256": "477cabdfdf3ff23978860633a943c7b7999af745aee14add2d703f5e83ff3d75",
+      "after_sha256": "bf8964e7bf07966ce5481e244ebf63f4185193fd7917076ec7f73c766fb90b67",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/otter-398569/arxiv-2306.05425/README.md",
+      "before_sha256": "70b37df22ecdc5ce7c598961268617c41012322b43b952fbb93d4980ac111498",
+      "after_sha256": "f7bb6d2c6293954365a4633abe99146959f37661bb3e475c8500dcd8db1cebf8",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/video-chatgpt/arxiv-2306.05424/README.md",
+      "before_sha256": "66499b951503ce39278d9d6f12ea6ed9a3c780173b30a49bf7e17dba5ce855af",
+      "after_sha256": "cbc6f648e129691567d01b50cd5bbd4572644793f6f032471e26f8aef0b0779d",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/lamm/arxiv-2306.06687/README.md",
+      "before_sha256": "1ed112ecbd889ab43556493a7230e3c3924a96ee1b6495bd51ed75990755eaf3",
+      "after_sha256": "a9cabcbf6742029690a1e09c8908ae8e87a4b2dda57cb380f485097edc4e577b",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/kosmos/arxiv-2306.14824/README.md",
+      "before_sha256": "abcaa498d8ea915507daa5c775107f8867b0e5807b5e40dc999084d079def3bd",
+      "after_sha256": "053fe589e8db1bd4d33c1df81fe627baac2f722af606afa11b5b48a15656154e",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/motiongpt/arxiv-2306.14795/README.md",
+      "before_sha256": "7281d745b8008a2d18d4396f3ef74cfcece3a21d8240bceb2a203da707721f96",
+      "after_sha256": "d1f53d970bfab1ca6590871ff55662e7d8e007ece13a8431525fb3f142a953f8",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/shikra/arxiv-2306.15195/README.md",
+      "before_sha256": "c43d40b67e30454677e12d90bda6257fac25abd99f9ada505b71ee4a98fe70a7",
+      "after_sha256": "03317896c71ca8bdd85d5a0426d22e15f6a2932e1fb0d90499a46ceae9b3a37b",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llavar/arxiv-2306.17107/README.md",
+      "before_sha256": "48287a52755b5bcf65ffda63ac0bd543432be0c16588d8ca39005ce693ef1b7e",
+      "after_sha256": "ba3a5cf5cba9b8c46ebd3a5c5bee3eceb3341a95adcb83013f4a5cbb53a89792",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/mplug/arxiv-2307.02499/README.md",
+      "before_sha256": "eeda30271c49e11b177d67930ba8bb2a8f2512201de8ab81a0d7a08f879e7144",
+      "after_sha256": "bcecb7a3a6b76877dc06b12134e074002443c23c148c421a94e3d6278c0617cb",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/lynx/arxiv-2307.02469/README.md",
+      "before_sha256": "ce9a1a3b232c71f0afb6bb179f9b539918d90ea56e37032ba5f0a93d6535c590",
+      "after_sha256": "3e20696712bb99fd54204cf0c93236da26bbb2eb478e2a65fea5aab657eefbd5",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/gpt4roi/arxiv-2307.03601/README.md",
+      "before_sha256": "5e36eba285765f3913278952b1bc55634f149b2902c573791de31c44f5e50c47",
+      "after_sha256": "2c6d7e6c5f7d6908b73c562356a7870478329981e1b6da0b45028641b3da50a1",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/emu/arxiv-2307.05222/README.md",
+      "before_sha256": "cdfcf6786371243a44a0fdf50122013ca1985d8f73713fdb8c5f9619882b2d8f",
+      "after_sha256": "a97968527517982a96377d70ed4613c1c9065439dcf8176e3a0d9597fe4416dc",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/chatspot/arxiv-2307.09474/README.md",
+      "before_sha256": "071a3faaea28de1d190b8daca2766571064c4a1f9fe5e6af1a7800f68dc68837",
+      "after_sha256": "d387362f11f7835f1013b4286eda9315002bd9902b17e818333c59e38eeda0e9",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/3d-llm/arxiv-2307.12981/README.md",
+      "before_sha256": "db0b8dbd5272dc8a72deb4365569b04104d1017d53dc5a29ace3008ead5785e5",
+      "after_sha256": "d45ed5079ebabaabb586b7d27bf9a55d6f84c006f700eaae6e84f4451d37c468",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/unival/arxiv-2307.16184/README.md",
+      "before_sha256": "794a7b1905ef63ca30ac40632581abf2c83dd710b032dca9f6fadd029ffcd644",
+      "after_sha256": "28ba9b9076349ec9ad2f1df025832a8b22d265274b0e4e030ef9aee3ce008490",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/bliva/arxiv-2308.09936/README.md",
+      "before_sha256": "cb517c2f75170ae90573a2b9a83892fd85302f0dea346a53ac1c539e6f00986a",
+      "after_sha256": "d84749c6baf47182824aa22e3b2440bf242c6b1dc8cf070d2962bd14c47f514b",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/pointllm/arxiv-2308.16911/README.md",
+      "before_sha256": "f3cf80bcacbea7d38fdce4786ce20c0ca6029ba9b3e79bcc0e616a9719df4cc5",
+      "after_sha256": "df60051a48d7bb83a1ab2249f8ee89cfdf6b7c329216520ccf4e58bd6b8c0e9a",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/cm3leon/arxiv-2309.02591/README.md",
+      "before_sha256": "1383fae21e00580894a90c4a5bd9a6bd39259d09ac2111ff4df1785934c42a14",
+      "after_sha256": "9ccd08710c27fdfa5db82b2b6470e7efc04ac658cd1dcc1fe1efe09622d16d58",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/imagebind-llm/arxiv-2309.03905/README.md",
+      "before_sha256": "8be2381970697e37bae79735b50d0e0a2a1d9c312d4a9643d5491e99d71054b4",
+      "after_sha256": "6d732d59c63c97d222618850082b54b242d4aee7260f38d451fea3e19147b575",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/lavit/arxiv-2309.04669/README.md",
+      "before_sha256": "2538ffff64cb1513b07d5e08562006cffbb056c55699f51758b4de69dadb3183",
+      "after_sha256": "afd6ce3217e40628840381f09af63cf59db39634539f9ba33c43364f1ad3590a",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/next-gpt/arxiv-2309.05519/README.md",
+      "before_sha256": "b33052ad73cc4bc54a62ae6060d50f743d257baf30655056e7d64779605757bd",
+      "after_sha256": "bfdde5952d39deece9375bb37ec7ed38007bcab9b71c0ba4e3ade614b56bf094",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/an-empirical-study-of-scaling-instruction-tuned-large-m-805afa2bda72/arxiv-2309.09958/README.md",
+      "before_sha256": "d274c2a530f78d6bae9a05a459fee82b2127602af8892cec1cd372966877fe09",
+      "after_sha256": "ea2b285bfc0c4ed8e440e5f6f54838aad5b116f7e47a7bbad8f404ff4772ec78",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/multimodal-foundation-survey/arxiv-2309.10020/README.md",
+      "before_sha256": "f3121055c0b4bda55194eb3e66cc129fc6d83c86cfa3657b171173745b839e93",
+      "after_sha256": "53e04d066b4854ca03c39328d0692d785a7339fb77ea643afefb32e76294594e",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/dreamllm/arxiv-2309.11499/README.md",
+      "before_sha256": "724939d9475a49f36caa3b8e039321ec5d76869ad19aa578baf9ca0f0468485a",
+      "after_sha256": "e7998ecd50a3ff84842e500aa25667b453ada3575c6830c246709a604ad226b5",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/gpt/document-5cd14e1ea9af/README.md",
+      "before_sha256": "75a9feb92709ef28c3051c43a6e8788d7a48b600d4e8b6cd00d6e048c56de563",
+      "after_sha256": "851fa96745e48896face2993bf73838dc27b7bfb7dc6885e36951a5930451e4d",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/internlm-xcomposer/arxiv-2309.15112/README.md",
+      "before_sha256": "f1a2866370973afd709719ae7a90adbd74138c0619288ced8a8dfcfc05a556ad",
+      "after_sha256": "7dc7f127c0d742d0420c2ca7bc9efd35edd4fc9d95a3c69e522a30d5d92dc007",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llava/arxiv-2310.03744/README.md",
+      "before_sha256": "0297a4bd8388f6143bb1d5fe70b68bf90c671b196064ff8d3cb014728ae57285",
+      "after_sha256": "da6ab00f6e12040fa1a967095a213a2f19aee2e8f1434d202bf2d502e0ef41a7",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/glamm/arxiv-2311.03356/README.md",
+      "before_sha256": "3c6c50b3df012b0b709f0357bfcaec4419b3327b83b7236a253b69310ac86991",
+      "after_sha256": "0cbb7760dff8da9bc70246e51d4e5d2875cbd447b58f1aa65e854c25ee09ca97",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llava/arxiv-2311.05437/README.md",
+      "before_sha256": "745a70a7b5848b078861b5a5a34252bc4ff5e16c479d8d5319ed73ab6951da9d",
+      "after_sha256": "beea1e7ee0b8105540cf953b2ece00749db14afefcbf1e8f2629e137ac86f5db",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/chat-univi/arxiv-2311.08046/README.md",
+      "before_sha256": "9f1039d8d446ea8595a4959b29fd8a5864740993567c63cfd5211cf50f3acfa6",
+      "after_sha256": "a1991365f0665cad1c8cc17790bfa7589fb73a8437f85f5d3be243fcda153d2d",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 1
+      }
+    },
+    {
+      "article": "papers/video-llava/arxiv-2311.10122/README.md",
+      "before_sha256": "cf7209b9f78eedbbb49896b579580614c6fdd8ec0b67a3c4970c849fb6e7142d",
+      "after_sha256": "46c181bacfd0b25a17edb8cdf4f99e0e5c5839c56ff47a71b065f9f5d802534a",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/leo/arxiv-2311.12871/README.md",
+      "before_sha256": "0391fc5f773a1b6badb4eb4860af89b2a7669ab9f8dd7b44a09e7639c0cd53b9",
+      "after_sha256": "62d594378f456a63177cedbc412c5c6c004db25119f91e48a8ef5ed75d44259a",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/lion/arxiv-2311.11860/README.md",
+      "before_sha256": "8a5dbcaa25a16d21e12e0d79534de56d9a2dff5bacf7762bbee6b0cd3fa53138",
+      "after_sha256": "f4abe26984e82094b320ba86cc0f0438b3612fd663e086d2f8b2c7761eaf243c",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/sharegpt4v/arxiv-2311.12793/README.md",
+      "before_sha256": "b677b635d2029f3cfc7ab468596edec5261af60e8e1ea2dbea1eb152bc4121f2",
+      "after_sha256": "ba1068b3fad9619ea442df680810740437c39a1f1ee80d74d450b101424154d4",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/chartllama/arxiv-2311.16483/README.md",
+      "before_sha256": "b35b4b51cb0a166f48e02651ade24337d1b769eba95a2e373b5448f6426f1976",
+      "after_sha256": "8fc711c392197a407d455492a5865fd9d8272359c2d01f39dfbdb4957c9b787c",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llmga/arxiv-2311.16500/README.md",
+      "before_sha256": "d0ede100c83484b1156fe1983495af7adf579b5e2b698d631f478b2f9ad7fe76",
+      "after_sha256": "45aa22c41b76c0dd7340381cb6cfd4df87624827ac37494a6c189d0ea2d4f31a",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/ll3da/arxiv-2311.18651/README.md",
+      "before_sha256": "740f91b88367556a31751705c5ab4e8fad616df65ed24f6926bc653fede69fb6",
+      "after_sha256": "5b1c8a4285326426143606a77738c40418736efae6a386aa33a8d69b466972b3",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/mplug/arxiv-2311.18248/README.md",
+      "before_sha256": "cfd2f512ee6fbfec3864ccb184d9cb7bb0837d5c470f8212f4c5f8bef072a1d0",
+      "after_sha256": "e2cac3422f4d7dc06fc406bb0ae36353fa2e3189dfc20477eab5ef3a6d6d578e",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vtimellm/arxiv-2311.18445/README.md",
+      "before_sha256": "3e719dd2537f8c8283a960c5c0c17c74a33eaecfc912b42acb7760e8cd0d538d",
+      "after_sha256": "e49a6ca3c0db28a231cf246a9097361e5d9b96901d74a8d4343b61aafe810388",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vip-llava/arxiv-2312.00784/README.md",
+      "before_sha256": "bbe1c8fe4719d4ff647aa4901bc79e98cba86b6f4d24397f49fb4b3729e97639",
+      "after_sha256": "8caccdd7ad39ae059be819cb03853865156d37dd252be13cda8ff5c62e0e82bd",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/timechat/arxiv-2312.02051/README.md",
+      "before_sha256": "3a52172d5a9628c0c850435f809f88b7d272733174390517cbb764825741eb09",
+      "after_sha256": "79771bf68bc21fdd080b05517cadf483145e66a51b612453373552d684df1132",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/gemini/document-044099a491e0/README.md",
+      "before_sha256": "8c277710d0c988d4baaffd15a025d90097b2e3e091b4fd6606528d3a3982aa14",
+      "after_sha256": "36b9d19bbd603fb9996e96385f3560773a6095fd15e5005d03990c9038503158",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 1
+      }
+    },
+    {
+      "article": "papers/honeybee/arxiv-2312.06742/README.md",
+      "before_sha256": "6fcffa2cec8f87ad21b6f1f000de1a41d2f0757c2a527e45195ef24b6e5531b6",
+      "after_sha256": "2e1b3d48de0b58a488c91fb0e7c7db0ae6874c671f1a5f839aa710d50e4a851a",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vary/arxiv-2312.06109/README.md",
+      "before_sha256": "d023c2f75a6c6cfed0b17a14dc77c9fce3607845871f946d0c53d416eeebc5ef",
+      "after_sha256": "a4c75f76008ad4aac1686b4e81d204557f88ee6ac0c49ac8c8baa78801ef29e5",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vila/arxiv-2312.07533/README.md",
+      "before_sha256": "7da79a07b56e425ac07f195d39a5da3340a48b23e9ae3002f56ff8c6f2802ce2",
+      "after_sha256": "a3382f9c4223b818e261d7fcd62683bf97bbfe2c4826bdd4008c9dbed1dc8bce",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/cogvlm/arxiv-2312.08914/README.md",
+      "before_sha256": "f5f275d61bb364cc78ae1878aa706c96cda91d147bc8c51a58f89cb061e2e719",
+      "after_sha256": "f7d5634ca08466216bf762637fca8fab846c04157ea8bf4b66197b008178e510",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/pixel-aligned-language-models/arxiv-2312.09237/README.md",
+      "before_sha256": "649524adbeb1bda5df0b49f03c7b03b5f86cf596cdae11ff9c3dba3029da5886",
+      "after_sha256": "c3a03c58eb05c8009441663480e1bf0dea4440800249105932cf1d9b98596299",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/mobilevlm/arxiv-2312.16886/README.md",
+      "before_sha256": "e3ca5393419ea99c80da1c51f828090f5ffbc1462ffe5f9ed9b52ba068d2b08c",
+      "after_sha256": "86d7a658ccd55a4514351322db48b0e9e62e44722c12db0834dea8dc144c79d0",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/chartassistant/arxiv-2401.02384/README.md",
+      "before_sha256": "55bd2ce2c700cf741007b97cdf9436af3aa7c91a5fca41bfa68721b2e364e7f5",
+      "after_sha256": "c50b398aee8eb707f231ca1a0a594dd95e2cb132eca4d0a4aeb7a338bd207bdc",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/yi/document-5991ef3fff72/README.md",
+      "before_sha256": "46b40b0a36ca06f2bd2eb9dac768f1051eb29472ba3b567c713ec553e87aa868",
+      "after_sha256": "439a4577a1d61adc8abfb0f37f033933a27a62af6daa51f9b91446df90e41991",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llava/document-86e88fe4b1ec/README.md",
+      "before_sha256": "e861b54cb1dbd7ca58f99a7165420f4238c597b806ae09c16cd2c429ed097097",
+      "after_sha256": "960f60986dc0b841f48eb135e0cbc12513f2a07399e4bb4a1e47ae6342922188",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/gemini/document-1855460a9712/README.md",
+      "before_sha256": "590a68e35acfc4bf1664ffc619dff48929b05eba29f00930fd4495a9cd4b5afd",
+      "after_sha256": "fea3f6ee980bc6d8dd8db0ef27d2c05c166ae5f4b1c0dad4f7ef8d9855cfe533",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/allava/arxiv-2402.11684/README.md",
+      "before_sha256": "41b6f219e7940c64d5878173788b696378e49034cda8cb275ccefd7b51b9bb54",
+      "after_sha256": "b8d6410e767a1cb30368474c4da5c2b271d9ef2dcb8b1e52eca3aee1fd144a90",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/anygpt/arxiv-2402.12226/README.md",
+      "before_sha256": "5aa8dbb5db599de98c7b16748c9ecaa6c7e3a5eff59f97c19620763b6c93e329",
+      "after_sha256": "0724a2588cc481b074ff04e3fdbcefd80d5f890d78f4efd287a6e3393454ed75",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/monkey/arxiv-2403.04473/README.md",
+      "before_sha256": "bc049224c9233d9fb13be2347a8d73eecd4388fa66963a873fb21fd366c5b602",
+      "after_sha256": "5103a09a7cf6dec149efcc21d265d8824027b49ec145a336a0eb2556eae548d9",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/ferret/arxiv-2404.05719/README.md",
+      "before_sha256": "fe70e42fab3465c2dcced438074994ea043e4a024f40ba2653e511b4ff50a08d",
+      "after_sha256": "a238cc81b8a2dffe47864847b385cc7b5330e3312211e4d012f016798971b1f2",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/ma-lmm/arxiv-2404.05726/README.md",
+      "before_sha256": "762028dcf69b73a43d5b89501c799d92dd20b4e01191c7552c090ae5b0711d22",
+      "after_sha256": "2eb3a44204cd2389a028583684396891851509339f3825e9043d91f834a4c3b2",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/internvl/arxiv-2404.16821/README.md",
+      "before_sha256": "7a52b913130aa633cbc2a5853fb671d1d92967aadcdc182fb0aafc195eca6116",
+      "after_sha256": "f18ab3995d2aac37030c86083ca390595c9177a5d94082190a20bdd2351279c2",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/gpt/document-9ee9863086d5/README.md",
+      "before_sha256": "e10944efbe9223a90ac6959e1ed629a7d0f168526f4d654067af8d366a79d386",
+      "after_sha256": "bb7f825a55285ca217e2e30b96aa8f8c8580ce723207fe546b44453921e00fbc",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/convllava/arxiv-2405.15738/README.md",
+      "before_sha256": "1bf599d233423b39f9c13897fdd335beaf13c5580c5cd74531e1d98acf10799d",
+      "after_sha256": "42c70f1a9e15e25cb3589881e4a4e12448baa56bdab9525fae1e825977df4b6d",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/meteor/arxiv-2405.15574/README.md",
+      "before_sha256": "29de2e15c5093955ec6a0df7f1dc0aac97705bb22f1541c23ade591fb4e3c0f5",
+      "after_sha256": "75e6e72d4dad07018a04c61611ee27b32ca51870952ab285f7c5a1b6a4131969",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 1,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/videollama/arxiv-2406.07476/README.md",
+      "before_sha256": "f5b55cd0eff0715d085efb5eb34baaa73d6ac948e9f41833ab662504eed95531",
+      "after_sha256": "69470fddbfcf77fbf8ae8594b61a31f6e5a0afa808ecee1dca1ab6ebb91e790b",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/slime/arxiv-2406.08487/README.md",
+      "before_sha256": "c064c754145c5f5e10ac36d3aafc7102becbb887617559f2885633605534703a",
+      "after_sha256": "36cf706ab8e1c722fc6f6196ab0472baa2cbff716cd1415cae55872d1db3410d",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/comparison-visual-instruction-tuning/arxiv-2406.09240/README.md",
+      "before_sha256": "0f7ad074613497d8725516445db11fc30ff70394ac7b4ea5d8ce0d164e9c6eb0",
+      "after_sha256": "6b8c8bad1999065336c2ccf29c541cfebeef86ef7324cb54c5bde8919ef4754c",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vila/arxiv-2407.17453/README.md",
+      "before_sha256": "7bc1812ac852401f18f803009cbaf536473adca392ba3e489b68b60485f3fdeb",
+      "after_sha256": "928cc15067e02d800eb1b47a5168726c328aad13f9b554f977ee9403e79d4419",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/llava/arxiv-2408.03326/README.md",
+      "before_sha256": "d09a6016ab64b859811633dd4ee2213d72f1ef2fdf24262aa265c569ddc5d705",
+      "after_sha256": "675071347e530c2a1f739109c0d5d90393a6502d798bccb01434ed6f91b10e62",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 3,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vita/arxiv-2408.05211/README.md",
+      "before_sha256": "d86fdeea97d838721452ae77d7031b137a6c4d10b5934a39587ebdfe68e95693",
+      "after_sha256": "daeff28fdccf9996bd04675e006024a7841c6d7743593f68108c78729faf3e73",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/blip/arxiv-2408.08872/README.md",
+      "before_sha256": "cdad50680b01c4ccd74ef159a72301393be1adcd36de7f3a33af678f29e8d5b7",
+      "after_sha256": "6af37c5104145d97ec32f03bc8d20f409a7b5d27cf7928dc8e56f2f61b0fd31a",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/eagle/arxiv-2408.15998/README.md",
+      "before_sha256": "281fd2145657bc8cbf244ad9682984b2aae98810c14f34359b4e6ed15c90ca23",
+      "after_sha256": "2fcc76e92a5230958cb0cf19e0b4c3f54723738bb07f53a92c193fc32851b163",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/longllava/arxiv-2409.02889/README.md",
+      "before_sha256": "1608599f2e9e3cded14bbfa7f3210a1eadb99ac5fb6149807c6453544e7e6b5c",
+      "after_sha256": "00aeed3f71c869a9f5b8c182ecbe48ef38e165de35aede15a02021623f265e47",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/mistral-pixtral/document-3ebe839c6607/README.md",
+      "before_sha256": "e46e4812d1ccca50de63967ce22f08a683aa1a58680bd2b1c5e504356d4ab3d9",
+      "after_sha256": "4e6996e1569e6ce7ab722a4090cc8b26a597ff765eaba418be93586258b8aee9",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/qwen/arxiv-2409.12191/README.md",
+      "before_sha256": "511b9d9d1e9166a018a11c48b4025987609f3cf331fcf2059bc9485dcbcc3f7b",
+      "after_sha256": "811f6804117113cad6f286ce067dc43f233d52957b56120e110547bdc721b8a6",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/molmo/arxiv-2409.17146/README.md",
+      "before_sha256": "81b437dff053abab520cb6b68f0570a14eeb9676aa14946000362aabfffc6856",
+      "after_sha256": "22f429e4babe9581df5ea2b61d8fe07e45e18f5d65f0d186eb8bb95387c600c5",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/timemarker/arxiv-2411.18211/README.md",
+      "before_sha256": "05d7e3690c72c09d047939c3b5b3ad595de129e0436b350d879d10b488014b0c",
+      "after_sha256": "6de5fb3616f5e8b008c60f929b934860a327aedcff5e7da81c985102deb82119",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 3,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 3
+      }
+    },
+    {
+      "article": "papers/vila/arxiv-2412.04468/README.md",
+      "before_sha256": "9a0fa71111b1d9fc4a8e0664c430074cee1732d34a5bc873e481c269d9a94bdd",
+      "after_sha256": "17af2523d0940c81ca8857095743ac08b9c139f06c4f9d713b3469e32cf2c1ee",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/streamchat/arxiv-2412.08646/README.md",
+      "before_sha256": "7dad97655b427b37f9e4a1f16b5a32eef526adeff8ded9b9134d3724a750b684",
+      "after_sha256": "57fb162625ab7ba8f970847b621476896f597a44c7608d16f2af3cf4520d672f",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vita/arxiv-2501.01957/README.md",
+      "before_sha256": "dabc7c4c814001930c7d39796a84a338b4712519091db4d96b41864c45c094df",
+      "after_sha256": "b3da56d36951ab140a1fdccb16056d781e5308917f04a7c08e5f575b529b27b3",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/videollama/arxiv-2501.13106/README.md",
+      "before_sha256": "da89b01dc681c0fcb177e886272190df5eb640c2ee04baac0deef79295d1e2ee",
+      "after_sha256": "2d5ed37972c4fef7969de96c366615d01eda99f301b3c4d82a5b7577695dba91",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/qwen/qwen2.5-vl/README.md",
+      "before_sha256": "3363188089b8d779bde53a7df7fbeeccd8c03accfd5232767e85e1f68605d018",
+      "after_sha256": "9448d333eb271b05a87fe51dceb5b213f5067eff314656a32c9a7dc91c54bb79",
+      "expressions_updated": 2,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 1
+      }
+    },
+    {
+      "article": "papers/internvl/arxiv-2504.10479/README.md",
+      "before_sha256": "ca92ea88258d0e0bbd26012aa14e96730226a1cf811832f824e9d14434c2f9e7",
+      "after_sha256": "b24c26480ef88d422be92d3ed0867246820dc6a49ea73a1c33de6e9898bfe9f5",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vita/arxiv-2505.03739/README.md",
+      "before_sha256": "e374468d7c8b54ff08b86e3010eb03c4cdb4f7f1c6ec99a2b4662130db975f3b",
+      "after_sha256": "739091f730b87c17bc6b70ac82df144bec8b92e7871c4c5477e04bde81ba7bac",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/multimodal-reasoning-survey/arxiv-2505.04921/README.md",
+      "before_sha256": "fa990c155967570f84701c7f23d18f953089d0d94f71f4a6ca2348f518816629",
+      "after_sha256": "82d252e17721293d0d5cff40246f3f51a211017be6650d38c2e6407465429a6b",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/seed/arxiv-2505.07062/README.md",
+      "before_sha256": "ab71280434e7b9ef9f851364c9d780758ba2b8e165f49e18df317b0291e0451b",
+      "after_sha256": "46dfa5bc4f2a31122f930d605d587ea1822bd50cbebf4684fbcd7ae16579965b",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 0,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 1
+      }
+    },
+    {
+      "article": "papers/ego-r1/arxiv-2506.13654/README.md",
+      "before_sha256": "47a8f49b0979b79f33a03a5f60266f0bc019b4415d5ef475557ec2d636a8743f",
+      "after_sha256": "9e085e595809d4b254728e77261a7ae91dc27a298ea84db62d9ba81a5793020c",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/step/document-26d59ba3132d/README.md",
+      "before_sha256": "4df2a56c75d09f6f6b7d225d617f240ecfefa970e36265f23617d39064771d32",
+      "after_sha256": "a3c1b7466ad2d2f19be8ce40c4179dcced000256e6a742e7db4c8a7e08f6b58f",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/dots/document-bdf40c9e7783/README.md",
+      "before_sha256": "e2d38f924a28f1ad391313bd1216a72ba5cd060286c82b967811d13464de22c2",
+      "after_sha256": "6a16379c8f8fee077eb707ba128f54e134cf83ff727e6f6c5083cd2ac0ff0210",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/thyme/arxiv-2508.11630/README.md",
+      "before_sha256": "be3ca69bb23265acb751fa4ca8b1b643b6ff433995701fb1c493eabf80384795",
+      "after_sha256": "affa0f43f303d7d4dcc764a6d1ea1c1cc0a43470272d107f3247e14a717fb0cc",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/internvl/arxiv-2508.18265/README.md",
+      "before_sha256": "3d2a7cdeca42ef72f3e15db1dfdee287c4edb34606f749dd0ad205ea34e694a5",
+      "after_sha256": "4d419d75883976aa076e113df328ee5d0e06c92fe98edde864876240a189d7ba",
+      "expressions_updated": 3,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 5,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/qwen/arxiv-2509.17765/README.md",
+      "before_sha256": "b3eb4b068ed0e28027ea03ee2d1f88b5b5622fd5adf1709dab3b817a097f314d",
+      "after_sha256": "a46ce70ae0a291ba28353e89ba8ef04bf27bde11186c136c1cc06316c5e84582",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 4,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/deepseek/arxiv-2510.18234/README.md",
+      "before_sha256": "7d6a4f97f726ecd46760d8c870ce7680c5a6c616e53868770f025760cdb4da76",
+      "after_sha256": "790f9e817aedc700e62a10fee6995e6b4d4199f1c1fcc1b682bc44b823cdd43c",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/vita/arxiv-2510.21817/README.md",
+      "before_sha256": "081c03fd543626bfb9dbe7ac1e123f7d6e2c41f4f83de7290b688959f899a349",
+      "after_sha256": "b5d18915e70ebd48bb7652792cc8b7238d3850297bafa089415034c4a98d31a0",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/emu/arxiv-2510.26583/README.md",
+      "before_sha256": "dcffb391120604c809c2f8d466137ce3ed9d82a9572e124b58195e1461807d57",
+      "after_sha256": "ae0fb3ef71f8b480eb9d0e9786232746b30e8e5637c6b426fda58cb4052700a8",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/deepseek/document-536ef2604f4a/README.md",
+      "before_sha256": "7ac195dd2ad3f0a782d306ee1fae02fd1a65242a2b4673833c7590658e38722e",
+      "after_sha256": "25a2b5ed1f6c338c63b29fd4fa2f5b4af6b8ebfc03095017ffa1bb1e6fcd0055",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 0,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 1
+      }
+    },
+    {
+      "article": "papers/qwen/document-7cdfed4ac9e5/README.md",
+      "before_sha256": "366a13c9f0d118d999b5daa147114f75c327850edf1569564fb19797f9956c33",
+      "after_sha256": "eab8719291072fcb2d8931caa78b6c7341f075bde5b2774d5c1aabe9483caf41",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 0,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 3
+      }
+    },
+    {
+      "article": "papers/vita/document-3a7f77dffb3b/README.md",
+      "before_sha256": "52b04692dafef3a33da020806041fa39c0f4f5ea3b381377b01b96993e2c1eec",
+      "after_sha256": "b165227628215536bc5557d61257e0e74c9700423415e99a865f1eeef1b07f8c",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 1
+      }
+    },
+    {
+      "article": "papers/videochat/arxiv-2607.14935/README.md",
+      "before_sha256": "56288b7f46c96d1027bd8eab19097dc4ec96ebb81e8859a7be755205272e3093",
+      "after_sha256": "02071aecd1dad89e741d9b665d8be27cb352ef3b22ce1ae49c2a49edd0523cf1",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 1,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    },
+    {
+      "article": "papers/kimi/document-eb106a710a29/README.md",
+      "before_sha256": "40965ffd3488b5baa6ffc52b13b049bfde2d6a6fb143ff240950832ca5265b15",
+      "after_sha256": "19dc91eb247f1860c224d0fb08e6c97fa47a7edba8ec5e0c29686bdb8adbffca",
+      "expressions_updated": 1,
+      "changes": {
+        "delimiter_conversions": 0,
+        "operatorname_replacements": 0,
+        "vertical_bar_replacements": 0,
+        "display_fence_conversions": 0,
+        "inline_angle_replacements": 0,
+        "display_angle_replacements": 2,
+        "literal_token_replacements": 0,
+        "physical_row_wraps_normalized": 0
+      }
+    }
+  ]
+}

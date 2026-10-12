@@ -96,7 +96,7 @@ Z=\mathrm{Join}\bigl(P(E(I_g)),P(E(I_1)),\ldots,P(E(I_K))\bigr)
 
 
 ```math
-\mathcal L=-\sum_t\log p_\theta(y_t\mid y_{<t},Z,q),
+\mathcal L=-\sum_t\log p_\theta(y_t\mid y_{\lt t},Z,q),
 ```
 
 

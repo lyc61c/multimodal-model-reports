@@ -70,7 +70,7 @@ Text 路径在 NVIDIA A10 上将 10 秒视频以 1 FPS 文本化约需 2 秒；�
 $`E`$ 可代表文本描述或连续嵌入，体现两条系统路径共用的任务接口。原文式（2）将第 $`t`$ 轮回答写为：
 
 ```math
-W_t^a=f_{\mathrm{llm}}(E\mid W^q_{\le t},W^a_{<t}).
+W_t^a=f_{\mathrm{llm}}(E\mid W^q_{\le t},W^a_{\lt t}).
 ```
 
 这里的 $`t`$ 是**对话轮次**，不是生成 token 的索引；模型依据截至当前的问题及历史回答解释视频。文字化接口便于组合已有工具，嵌入接口则可保留感知模型尚未用文字表达的细节。（第 3 页）
@@ -110,7 +110,7 @@ W_t^a=f_{\mathrm{llm}}(E\mid W^q_{\le t},W^a_{<t}).
 回答生成可以用常见的条件语言建模目标解释：
 
 ```math
-\mathcal L_{\mathrm{LM}}=-\sum_{k\in\mathcal A}\log p_\theta(y_k\mid E,\mathrm{instruction},y_{<k}),
+\mathcal L_{\mathrm{LM}}=-\sum_{k\in\mathcal A}\log p_\theta(y_k\mid E,\mathrm{instruction},y_{\lt k}),
 ```
 
 其中 $`\mathcal A`$ 表示回答位置。这是对描述/回答监督的数学说明；报告没有独立列出新的损失公式、详细 mask 实现、学习率、批量大小或完整训练算力，不能据此还原全部复现实验配置。Text 路径主要依靠已有感知工具和提示组装，不应与 Embed 的上述对齐训练混为一谈。

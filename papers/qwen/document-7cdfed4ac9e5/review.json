@@ -20,13 +20,13 @@
     "No claim of independent peer review or model execution",
     "Input examples are not generated answers"
   ],
-  "article_sha256": "366a13c9f0d118d999b5daa147114f75c327850edf1569564fb19797f9956c33",
+  "article_sha256": "eab8719291072fcb2d8931caa78b6c7341f075bde5b2774d5c1aabe9483caf41",
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 34,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision": {
     "date": "2026-10-11",
@@ -86,16 +86,19 @@
     }
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 26,
-      "operatorname_replacements": 5,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 1
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 3
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

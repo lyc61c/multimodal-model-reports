@@ -115,7 +115,7 @@ Figure 2 显示原 ViT 编码层冻结，新增移位层、Image Resampler、Tok
 
 
 ```math
-\max_\theta\sum_{t=1}^{M}\log p_\theta(y_t\mid I,Q,y_{<t}),
+\max_\theta\sum_{t=1}^{M}\log p_\theta(y_t\mid I,Q,y_{\lt t}),
 \quad\text{等价于最小化其负值。}
 ```
 

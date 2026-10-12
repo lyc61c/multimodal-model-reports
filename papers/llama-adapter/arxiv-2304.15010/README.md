@@ -124,7 +124,7 @@ $`W`$ 是冻结预训练矩阵，$`b,s`$ 是新参数。初始化时输出与原
 
 
 ```math
-\mathcal L=-\sum_t\log P_\theta(y_t\mid I,Q,C,y_{<t}).
+\mathcal L=-\sum_t\log P_\theta(y_t\mid I,Q,C,y_{\lt t}).
 ```
 
 

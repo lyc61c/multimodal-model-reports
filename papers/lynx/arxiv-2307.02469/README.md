@@ -54,8 +54,8 @@ w_v=\Phi(\phi_v(x),w_v^q),
 式 1 的条件生成可以写成：
 
 ```math
-p(y\mid w_v,w_l)=\prod_t p(y_t\mid w_v,w_l,y_{<t}),\qquad
-\mathcal L=-\sum_t\log p(y_t\mid w_v,w_l,y_{<t}).
+p(y\mid w_v,w_l)=\prod_t p(y_t\mid w_v,w_l,y_{\lt t}),\qquad
+\mathcal L=-\sum_t\log p(y_t\mid w_v,w_l,y_{\lt t}).
 ```
 
 适配器根据 Figure 2 可重述为 $`h'=h+W_{\rm up}\mathrm{SiLU}(W_{\rm down}\mathrm{LN}(h))`$；这是对原图运算的表达，不是论文新增的编号公式。训练学习的是词序列分布，因此网页中的碎片、HTML 残留或不自然文本有机会直接污染输出风格。作者据此解释高质量文本的重要性，但没有给出数据噪声与性能之间的普遍定理。

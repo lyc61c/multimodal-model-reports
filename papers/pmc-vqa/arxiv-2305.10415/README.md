@@ -78,7 +78,7 @@ TD 保留因果语言模型的生成能力，通过可学习查询将可变数�
 
 ```math
 \mathcal L_{\rm AR}=-\sum_{t=1}^{L_a}
-\log p_\theta(a_t\mid I,q,a_{<t}).
+\log p_\theta(a_t\mid I,q,a_{\lt t}).
 ```
 
 

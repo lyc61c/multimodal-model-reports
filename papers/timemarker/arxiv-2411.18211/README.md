@@ -62,8 +62,7 @@ AnyLength 同时控制帧数和每帧 token 数。短于 8 秒的视频按 2 fps
 **动态抽帧。** 设视频长度为 $`D`$ 秒，最大帧数为 $`M`$，原文规则为：
 
 ```math
-f(D)=\begin{cases}2,&D<8,\\
-1/\lceil D/M\rceil,&D\ge8.\end{cases}
+f(D)=\begin{cases}2,&D\lt 8,\\ 1/\lceil D/M\rceil,&D\ge8.\end{cases}
 ```
 
 长视频的帧率由时长与容量决定，而不是固定每个视频输入相同数目。PT2 设 $`M=64`$，SFT 设 $`M=128`$。（第 4、6 页）
@@ -71,9 +70,7 @@ f(D)=\begin{cases}2,&D<8,\\
 **帧数越多，每帧保留的空间 token 越少。** 对投影特征 $`F\in\mathbb R^{h\times w\times d}`$，Algorithm 1 使用以下池化核：
 
 ```math
-(k_h,k_w)=\begin{cases}(2,2),&N\le M/4,\\
-(4,2),&M/4<N\le M/2,\\
-(4,4),&N>M/2.\end{cases}
+(k_h,k_w)=\begin{cases}(2,2),&N\le M/4,\\ (4,2),&M/4\lt N\le M/2,\\ (4,4),&N\gt M/2.\end{cases}
 ```
 
 以 24×24 patch 网格说明，三档每帧约 144、72、36 token，视觉总量约受 $`36M`$ 限制，SFT 时约 4608。该数是由网格和池化规则推导的解释，不包含文字时间戳与问题开销，也不是原文实测延迟。更强池化会损失小字与细小动作的空间信息。（§3.3）

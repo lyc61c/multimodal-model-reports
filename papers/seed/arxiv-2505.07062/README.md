@@ -57,8 +57,7 @@ SeedViT使用14×14 patch、2D RoPE、27层Transformer、1280维隐藏表示和2
 
 ```math
 R(x,y)=\begin{cases}
-R_{\mathrm{RM}}(x,\mathrm{solution}(y)),&\text{一般任务},\\
-R_{\mathrm{verifier}}(x,\mathrm{solution}(y)),&\text{可验证任务}.
+R_{\mathrm{RM}}(x,\mathrm{solution}(y)),&\text{一般任务},\\ R_{\mathrm{verifier}}(x,\mathrm{solution}(y)),&\text{可验证任务}.
 \end{cases}
 ```
 

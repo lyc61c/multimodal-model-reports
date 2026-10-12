@@ -118,7 +118,7 @@ held-out既包括同类任务但新数据集，也包括整个任务类别未参
 初始化来自BLIP-2检查点；Vicuna因原BLIP-2未包含此语言骨干，先按BLIP-2方式进行相应预训练。随后混合held-in任务做指令学习，只更新Q-Former，冻结ViT与LLM。监督目标为输出参考回答的语言建模损失，可用标准解读式：
 
 ```math
-\mathcal L=-\sum_t\log p_\theta(y_t\mid Z_s,s,y_{<t}).
+\mathcal L=-\sum_t\log p_\theta(y_t\mid Z_s,s,y_{\lt t}).
 ```
 
 θ主要对应可训练Q-Former参数；冻结LLM仍向soft prompt传递梯度。FlanT5具有encoder-decoder结构，这个条件概率式概括输出生成目标，不把它改成Vicuna的内部decoder-only实现。论文没有为这一步新增RL奖励或DPO目标。[§2.6](https://arxiv.org/pdf/2305.06500v1#page=6)

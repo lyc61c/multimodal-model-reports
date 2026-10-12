@@ -109,7 +109,7 @@ C_{direct}=O((L_{hi}+T)^2\cdot4096).
 两阶段学习率均为 $`2\times10^{-5}`$，500 步 warmup，余弦衰减，weight decay 0.05，dropout 0.1，Adam $`\beta=(0.9,0.95)`$、$`\epsilon=10^{-5}`$。作为自回归模型，其任务可用标准监督目标解释：
 
 ```math
-\mathcal L=-\sum_t\log p_\theta(y_t\mid I,q,h,y_{<t}),
+\mathcal L=-\sum_t\log p_\theta(y_t\mid I,q,h,y_{\lt t}),
 ```
 
 其中 $`I`$ 为截图、$`q`$ 为任务、$`h`$ 为历史。该式是本文对语言生成训练的标准表达，不是报告额外定义的新损失。坐标、计划、动作类型和待输入文字都通过目标序列学习；正文没有披露 GUI 强化学习、在线环境奖励或独立坐标回归损失，不能自行添加。

@@ -68,7 +68,7 @@ LTU 将 Audio Spectrogram Transformer（AST）的声音感知与 Vicuna 版本 L
 
 
 ```math
-\mathcal L=-\sum_t\log P(x_t\mid x_{<t},A).
+\mathcal L=-\sum_t\log P(x_t\mid x_{\lt t},A).
 ```
 
 

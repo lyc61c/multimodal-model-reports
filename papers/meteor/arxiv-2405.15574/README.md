@@ -60,9 +60,9 @@ Meteor研究如何利用教师生成的长解释增强视觉问答，同时避�
 
 
 ```math
-\mathcal L_R=-\sum_t\log p(R_t\mid I,Q,R_{<t},\texttt{<tor>}),
+\mathcal L_R=-\sum_t\log p(R_t\mid I,Q,R_{\lt t},\mathtt{\mathord{\lt}tor\mathord{\gt}}),
 \qquad
-\mathcal L_A=-\sum_t\log p(A_t\mid I,Q,Z_{\rm tor},A_{<t}).
+\mathcal L_A=-\sum_t\log p(A_t\mid I,Q,Z_{\rm tor},A_{\lt t}).
 ```
 
 

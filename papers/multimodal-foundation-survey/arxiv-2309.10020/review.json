@@ -129,7 +129,7 @@
     "相对LLM评分和准确率区分，组合ScienceQA成绩单列"
   ],
   "checked_at": "2026-10-08",
-  "article_sha256": "f3121055c0b4bda55194eb3e66cc129fc6d83c86cfa3657b171173745b839e93",
+  "article_sha256": "53e04d066b4854ca03c39328d0692d785a7339fb77ea643afefb32e76294594e",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -148,23 +148,26 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 20,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 12,
-      "operatorname_replacements": 3,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 4,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 1,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

@@ -79,7 +79,7 @@ F(x,y)=\sum_{i,j}F(i,j)\max(0,1-\vert x-i\vert )\max(0,1-\vert y-j\vert )
 语言损失只监督回答和停止字符串`###`。按第4节描述整理为：
 
 ```math
-\mathcal L=-\sum_t m_t\log p_\theta(y_t\mid y_{<t},I,\{r_b\}),\qquad m_t=\mathbf1[t\text{ 位于回答或停止串}].
+\mathcal L=-\sum_t m_t\log p_\theta(y_t\mid y_{\lt t},I,\{r_b\}),\qquad m_t=\mathbf1[t\text{ 位于回答或停止串}].
 ```
 
 这是标准next-token损失的解释式。问题和视觉占位符是条件，未作为全部待预测文本算损失。第二阶段仍为监督微调，原文没有强化学习、DPO或显式区域对比损失，不能由“推理能力”反推其使用RL。

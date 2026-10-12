@@ -62,7 +62,7 @@ Section 3.1 将连续图像位置量化为网格位置。对尺寸 $`W\times H`$
 训练仅对离散文本和位置 token 做下一 token 预测，图像连续嵌入作为上下文。可将原文目标解释为：
 
 ```math
-\mathcal L=-\sum_{i\in\mathrm{Text}\cup\mathrm{Location}}\log p_\theta(z_i\mid z_{<i},I).
+\mathcal L=-\sum_{i\in\mathrm{Text}\cup\mathrm{Location}}\log p_\theta(z_i\mid z_{\lt i},I).
 ```
 
 这是对 Section 3.2 的自回归目标的数学表达，原文未另设 IoU 回归、框匹配或 mask 损失。坐标格式变成语言序列，使“描述到框”和“框到描述”共享生成机制；同时格式错误也成为实际失败，如只生成一个角点会被计错。

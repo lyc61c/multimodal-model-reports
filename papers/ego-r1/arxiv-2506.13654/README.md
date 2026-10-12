@@ -57,7 +57,7 @@ Ego-R1 是多模型工具系统。3B 指负责调度的语言模型，不包含 
 原文式 (1) 将工具链表示为 $`C=(S_0,\ldots,S_n)`$，$`S_i=(T_i^{th},T_i^{to},o_i)`$，分别为推理文本、工具调用和返回观察。按任务语义，可作如下政策解释：
 
 ```math
-a_i\sim\pi_\theta(\cdot\mid q,o_{<i},a_{<i}),\qquad
+a_i\sim\pi_\theta(\cdot\mid q,o_{\lt i},a_{\lt i}),\qquad
 o_i=\mathrm{Tool}(a_i).
 ```
 

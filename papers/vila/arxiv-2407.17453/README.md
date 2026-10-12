@@ -98,7 +98,7 @@ Table 3 中，轮次推进也没有让每项基准单调上升。例如 MMMU 从
 
 ```math
 \mathcal L_{\mathrm{QA}}=-\sum_{t\in\mathrm{Answer}}
-\log p_\theta(y_t\mid I,q,y_{<t}).
+\log p_\theta(y_t\mid I,q,y_{\lt t}).
 ```
 
 这是对自回归监督的解释，原文没有提出此编号公式，也没有给出本介绍之外的新损失权重。知识传递通过合成文本和 QA 完成，不是教师概率分布的 KL 蒸馏；GPT-4V、Gemini 的描述质量判断用于分析，不应写成训练奖励模型或 RLAIF。（§2.2、Figure 2–3）

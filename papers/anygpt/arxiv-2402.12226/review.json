@@ -18,7 +18,7 @@
     "original_assets": 7,
     "no_full_page_screenshots": true
   },
-  "article_sha256": "5aa8dbb5db599de98c7b16748c9ecaa6c7e3a5eff59f97c19620763b6c93e329",
+  "article_sha256": "0724a2588cc481b074ff04e3fdbcefd80d5f890d78f4efd287a6e3393454ed75",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -34,11 +34,11 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 6,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -52,16 +52,19 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 6,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 1,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 1,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

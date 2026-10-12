@@ -80,7 +80,7 @@ b_{t+1}=\begin{cases}448^2,&s_t=\mathrm{Standby},\\224^2,&s_t\in\{\mathrm{Silenc
 直接训练全部状态 token 会被大量 Silence 主导，只训练转换又容易学到状态模式捷径。论文令转换集合为 $`\mathcal T`$，从延续集合抽取 $`\widetilde{\mathcal C}`$，满足 $`\vert \widetilde{\mathcal C}\vert =\vert \mathcal T\vert`$，采用：
 
 ```math
-\mathcal L_{\mathrm{state}}=-\frac{1}{\sum_t m_t}\sum_t m_t\log p_\theta(s_t\mid V_{\le t},y_{<t}),\qquad m_t=\mathbf1[t\in\mathcal T\cup\widetilde{\mathcal C}].
+\mathcal L_{\mathrm{state}}=-\frac{1}{\sum_t m_t}\sum_t m_t\log p_\theta(s_t\mid V_{\le t},y_{\lt t}),\qquad m_t=\mathbf1[t\in\mathcal T\cup\widetilde{\mathcal C}].
 ```
 
 答案文本另用下一 token 预测损失。文中的 Silence:Standby:Response≈2:2:1 是典型循环的有效监督比例，不是任意视频的固定标签分布。训练预算由上一真实状态控制，推理预算由预测状态控制，错误状态仍可能造成偏差累积。

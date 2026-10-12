@@ -103,7 +103,7 @@ z_i=f(v_i^{\mathrm{cls}}),\quad i=1,\ldots,100.
 目标是答案 token 的自回归似然：
 
 ```math
-\mathcal L=-\sum_{k\in\mathcal A}\log p_\theta(y_k\mid Z,Q,\mathrm{history},y_{<k}).
+\mathcal L=-\sum_{k\in\mathcal A}\log p_\theta(y_k\mid Z,Q,\mathrm{history},y_{\lt k}).
 ```
 
 原文明确后两阶段只在问答中的答案位置计算损失。该公式是文字训练描述的展开；它同时学习描述词与边界数字，没有独立优化连续定位误差。冻结基础 LLM 与使用 LoRA 更新并不矛盾，真正可训练的是适配器参数。

@@ -73,7 +73,7 @@ p 是参考点，$`\Delta o_k^l`$ 是采样偏移，$`A_k^l`$ 是注意力权重
 语言输出仍采用原文式（1）的条件自回归分解：
 
 ```math
-p(Y\mid X_{img},X_{text})=\prod_i p(w_i\mid X_{img},X_{text},w_{<i})
+p(Y\mid X_{img},X_{text})=\prod_i p(w_i\mid X_{img},X_{text},w_{\lt i})
 ```
 
 对应回答的负对数似然是这一概率模型的训练解释，论文没有另设奖励函数或一个显式强制覆盖全图的注意力损失。

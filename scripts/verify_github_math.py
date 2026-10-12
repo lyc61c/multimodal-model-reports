@@ -34,8 +34,10 @@ def main():
                 issues.append({"article": relative, "problem": "Restricted/custom math macro", "tex": expression["tex"][:120]})
             if "|" in expression["tex"]:
                 issues.append({"article": relative, "problem": "Literal pipe can collide with a GFM table", "tex": expression["tex"][:120]})
-            if not expression["display"] and re.search(r"[<>]|&(?:lt|gt|amp);", expression["tex"]):
-                issues.append({"article": relative, "problem": "Inline math can acquire HTML entities; use TeX relation commands", "tex": expression["tex"][:120]})
+            if re.search(r"(?<!\\)[<>]|&(?:lt|gt|amp);", expression["tex"]):
+                issues.append({"article": relative, "problem": "Math can be truncated by HTML parsing; use TeX relation commands in inline AND display math", "tex": expression["tex"][:120]})
+            if expression["display"] and re.search(r"(?<!\\)\\\\[ \t]*\n", expression["tex"]):
+                issues.append({"article": relative, "problem": "Physical newline after a TeX row break can gain a control space on GitHub", "tex": expression["tex"][:120]})
         for segment, is_code in markdown_segments(body):
             if is_code:
                 continue

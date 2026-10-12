@@ -11,7 +11,7 @@
     "targeted_content_audit_2026-10-11": "2026-10-11 targeted content audit: Figure 1/4、Table 2 已为裁图但仍称完整截图；修正来源说明。"
   },
   "model_execution": "not_run",
-  "article_sha256": "47a8f49b0979b79f33a03a5f60266f0bc019b4415d5ef475557ec2d636a8743f",
+  "article_sha256": "9e085e595809d4b254728e77261a7ae91dc27a298ea84db62d9ba81a5793020c",
   "artifact_checks": {
     "original_assets": 4,
     "no_full_page_screenshots": true
@@ -49,23 +49,26 @@
     }
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 6,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 6,
-      "operatorname_replacements": 3,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 2,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 2,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

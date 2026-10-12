@@ -131,8 +131,7 @@ $`q_t,q_h,q_w`$ 表示分配给不同位置分量的特征，$`R`$ 表示相应�
 ```math
 R_\omega(p)=
 \begin{bmatrix}
-\cos(p\omega)&-\sin(p\omega)\\
-\sin(p\omega)&\cos(p\omega)
+\cos(p\omega)&-\sin(p\omega)\\ \sin(p\omega)&\cos(p\omega)
 \end{bmatrix}.
 ```
 
@@ -201,7 +200,7 @@ SFT 清洗先用从 Qwen2-VL-72B 派生的 Qwen2-VL-Instag，将问答分为 **8
 为说明这些目标，可以采用以下**标准数学表达作为阅读辅助；它们不是该报告给出的公式或完整实现配方**。对视觉输入与指令构成的上下文 $`x`$、目标回答 $`y`$，常见监督生成目标为：
 
 ```math
-\mathcal L_{\mathrm{SFT}}=-\mathbb E_{(x,y)}\sum_{t=1}^{\vert y\vert }\log p_\theta(y_t\mid x,y_{<t}).
+\mathcal L_{\mathrm{SFT}}=-\mathbb E_{(x,y)}\sum_{t=1}^{\vert y\vert }\log p_\theta(y_t\mid x,y_{\lt t}).
 ```
 
 它让模型在看到图像、视频和指令后，提高参考回答逐 token 的概率。这里强调回答区间；论文未给出具体标签掩码规则，不能由此反推官方对各 token 的损失处理。

@@ -55,7 +55,7 @@ anyres 选择与截图长宽比更接近的 **1×2 或 2×1 网格**。竖屏沿
 论文没有提出新的 UI 专用损失公式。训练可用条件自回归目标解释：
 
 ```math
-\mathcal L_{\mathrm{AR}}=-\sum_t\log p_\theta(y_t\mid y_{<t},I,q,r),
+\mathcal L_{\mathrm{AR}}=-\sum_t\log p_\theta(y_t\mid y_{\lt t},I,q,r),
 ```
 
 其中 $`I`$ 为截图，$`q`$ 为指令，$`r`$ 为可选区域提示，$`y`$ 是回答或定位序列。这是对论文指令微调方式的解释，不是原文新增的数学贡献。定位评测使用交并比，$`\mathrm{IoU}(B,\hat B)=\vert B\cap\hat B\vert /\vert B\cup\hat B\vert`$，严格 **大于 0.5** 才算正确。

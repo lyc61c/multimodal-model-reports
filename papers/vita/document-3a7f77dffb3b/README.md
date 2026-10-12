@@ -84,8 +84,7 @@ S=[Y_{0:n-1},Z_{0:m-1},Y_{n:2n-1},Z_{m:2m-1},\ldots].
 ```math
 \mathcal L=-\sum_{i,t}\ell_{i,t},\qquad
 \ell_t=\begin{cases}
-\log p(Y_t\mid X,S_{<t}),&\text{文字位置},\\
-\frac1J\sum_{j=0}^{J-1}\log p(Z_t^{(j)}\mid X,S_{<t}),&\text{音频位置}.
+\log p(Y_t\mid X,S_{\lt t}),&\text{文字位置},\\ \frac1J\sum_{j=0}^{J-1}\log p(Z_t^{(j)}\mid X,S_{\lt t}),&\text{音频位置}.
 \end{cases}
 ```
 

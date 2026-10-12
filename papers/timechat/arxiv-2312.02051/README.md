@@ -113,7 +113,7 @@ TimeIT 指令训练为 3 epochs、batch 32，在单台八张 V100 32GB 机器进
 原文式（3）的目标为回答的条件语言建模：
 
 ```math
-\mathcal L=-\sum_{i=1}^{L_T}\log P_\theta(x_i\mid X_v,X_q,X_{a,<i}).
+\mathcal L=-\sum_{i=1}^{L_T}\log P_\theta(x_i\mid X_v,X_q,X_{a,\lt i}).
 ```
 
 $`X_v`$ 是视频 token，$`X_q`$ 是用户指令及可选文字，$`X_{a,\lt i}`$ 是先前答案。时间戳数字也作为答案 token 学习，没有为定位任务另加 IoU 损失。下游监督微调和正文的零样本主实验是不同训练设置，结果须分别阅读。

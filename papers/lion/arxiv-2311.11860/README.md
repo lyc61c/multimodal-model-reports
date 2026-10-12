@@ -139,7 +139,7 @@ B(X;Y)=\mathrm{FFN}(\mathrm{XAttn}(\mathrm{Attn}(X),Y)).
 
 
 ```math
-\mathcal L=-\sum_t\log P_\theta(y_t\mid V,Q,\text{tags},y_{<t}).
+\mathcal L=-\sum_t\log P_\theta(y_t\mid V,Q,\text{tags},y_{\lt t}).
 ```
 
 

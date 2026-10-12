@@ -127,7 +127,7 @@ OCR 监督包含文本及框坐标，Laion-OCR 筛选约 3M 清晰文字图片�
 生成式监督可用解释性条件负对数似然表示：
 
 ```math
-\mathcal L=-\sum_{t\in\mathcal A}\log p_\theta(y_t\mid y_{<t},V,q).
+\mathcal L=-\sum_{t\in\mathcal A}\log p_\theta(y_t\mid y_{\lt t},V,q).
 ```
 
 报告没有展开所有任务的损失配权、优化器和 batch 配方，不能据这条通用表达式声称有完整可复现训练细节。重描述使用模型生成标签，但正文未提出教师 logits KL、DPO 或强化学习奖励作为本代目标。

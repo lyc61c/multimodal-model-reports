@@ -122,7 +122,7 @@ B_{\mathrm{MoE}}\ge\frac{F_{\max}}{2S B_{\max}}.
 首版系统论文没有完整给出预训练、视觉接入、SFT、强化学习的阶段安排、GPU 总量或优化器设置。正文提及推理加速可以降低 RL 训练成本，但不是披露了一套可以直接复现的 RL 目标。自回归生成本身可用下式解释：
 
 ```math
-p_\theta(y\mid V,q)=\prod_t p_\theta(y_t\mid y_{<t},V,q).
+p_\theta(y\mid V,q)=\prod_t p_\theta(y_t\mid y_{\lt t},V,q).
 ```
 
 它表达文本在视觉和提示条件下生成，不足以据此补全原文未公开的训练损失、偏好目标或任务权重。本条目的重点可复查流程是部署：attention、FFN、通信三阶段预算各约 16.6ms，总目标 TPOT 50ms；三组微批错开运行，用 direct RDMA 重叠通信与计算。4K FP8 实测配置使用 2A2F、32 张 GPU、总 batch 6144、三个 2048 微批。

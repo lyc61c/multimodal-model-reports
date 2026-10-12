@@ -97,7 +97,7 @@ GPT-4o 将多模态输入和输出纳入一个端到端模型，减少上述串�
 
 
 ```math
-\mathcal L_{AR}=-\sum_t\log p_\theta(z_t\mid z_{<t},c),
+\mathcal L_{AR}=-\sum_t\log p_\theta(z_t\mid z_{\lt t},c),
 ```
 
 

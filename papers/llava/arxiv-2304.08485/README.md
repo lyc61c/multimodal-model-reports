@@ -77,7 +77,7 @@ Z_v=g(X_v),\qquad H_v=WZ_v.
 
 ```math
 p(X_a\mid X_v,X_{instruct})=
-\prod_{i=1}^{L}p_\theta(x_i\mid X_v,X_{instruct,<i},X_{a,<i}).
+\prod_{i=1}^{L}p_\theta(x_i\mid X_v,X_{instruct,\lt i},X_{a,\lt i}).
 ```
 
 

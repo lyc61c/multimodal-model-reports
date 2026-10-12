@@ -71,7 +71,7 @@ $`C`$ 是训练计算量，$`c`$ 是随着计算增加也无法消除的拟合�
 Section 3.2 对 HumanEval 子集拟合：
 
 ```math
--\mathbb E_{P}[\log(\mathrm{pass\_rate}(C))]=\alpha C^{-k},\quad\alpha,k>0.
+-\mathbb E_{P}[\log(\mathrm{pass\_rate}(C))]=\alpha C^{-k},\quad\alpha,k\gt 0.
 ```
 
 左侧是题目成功率的负平均对数，不是通常 pass@1 的线性平均。为能估计对数，只取在足够大采样预算下每个小模型至少解决过一次的问题；最难的 15 题被排除，其余按难度分桶。Figure 2 展示其中 23 题，不能将“预测准确”扩大到全部能力或每一道题。

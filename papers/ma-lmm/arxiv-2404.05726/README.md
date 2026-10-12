@@ -87,7 +87,7 @@ Breakfast 有 1712 个早餐准备视频，平均约 2.7 分钟；COIN 有 11,82
 原文式（8）为目标文字的平均交叉熵：
 
 ```math
-\mathcal L=-\frac1S\sum_{i=1}^{S}\log P(w_i\mid w_{<i},V).
+\mathcal L=-\frac1S\sum_{i=1}^{S}\log P(w_i\mid w_{\lt i},V).
 ```
 
 V 是视频，$`w_i`$ 为真实目标文字。视觉编码器与语言模型冻结，学习主要集中在 Q-Former 及图中的连接层。不同下游任务通过目标序列和提示表达，报告没有额外的记忆重建损失或强化学习目标。

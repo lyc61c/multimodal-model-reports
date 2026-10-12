@@ -53,7 +53,7 @@
 设图像全局特征为 $`F_I\in\mathbb R^{1\times C_I}`$，先通过 $`w_0\in\mathbb R^{C_I\times C}`$ 得到 $`F_I^0=F_Iw_0`$。原式（1）省略归一化步骤，三个 FFN 模块采用：
 
 ```math
-F_I^{i+1}=F_I^i+\big(F_I^iw_2\odot\mathrm{SiLU}(F_I^iw_1)\big)w_3,\qquad 0\le i<3.
+F_I^{i+1}=F_I^i+\big(F_I^iw_2\odot\mathrm{SiLU}(F_I^iw_1)\big)w_3,\qquad 0\le i\lt 3.
 ```
 
 其中 $`w_1,w_2\in\mathbb R^{C\times C_h}`$，$`w_3\in\mathbb R^{C_h\times C}`$；实际模块还含 RMSNorm。门控乘法决定哪些投影维度通过，残差保留原特征。得到 $`T_I`$ 后，原式（2）对语言 token 采用 $`T^j=T_W^j+g_{zero}T_I`$。初始 $`g_{zero}=0`$，新增条件在训练开头不改变原语言表示，随后逐渐学会引入视觉信息。这个设计解释了稳定接入的动机，不能据此推断模型消除了幻觉。

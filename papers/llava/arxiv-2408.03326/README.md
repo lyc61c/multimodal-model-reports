@@ -77,7 +77,7 @@ Figure 2 上部先将高分辨率图像切成较多局部裁块，再在编码�
 
 ```math
 L=(ab+1)T,\qquad
-T_{\mathrm{new}}=\begin{cases}\tau/(ab+1),&L>\tau,\\T,&L\leq\tau.\end{cases}
+T_{\mathrm{new}}=\begin{cases}\tau/(ab+1),&L\gt \tau,\\T,&L\leq\tau.\end{cases}
 ```
 
 
@@ -132,7 +132,7 @@ Figure 3 给出三个上限：单图 7290，多图 $`12\times729=8748`$，视频
 
 
 ```math
-\mathcal L=-\sum_{i\in\mathrm{answer}}\log p(x_i\mid X_v,X_{q,<i},X_{a,<i}).
+\mathcal L=-\sum_{i\in\mathrm{answer}}\log p(x_i\mid X_v,X_{q,\lt i},X_{a,\lt i}).
 ```
 
 

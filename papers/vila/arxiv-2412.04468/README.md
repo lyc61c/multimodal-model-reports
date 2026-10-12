@@ -128,7 +128,7 @@ D'=\bigcup_i\mathrm{Top}_{k_i}\{s(x):x\in D_i\}.
 常规答案生成目标可概括为条件负对数似然：
 
 ```math
-\mathcal L=-\sum_{t\in\mathcal A}\log p_\theta(y_t\mid y_{<t},V,q).
+\mathcal L=-\sum_{t\in\mathcal A}\log p_\theta(y_t\mid y_{\lt t},V,q).
 ```
 
 这是对自回归训练的解释，正文未逐项提供所有数据集的掩码和配权。时间定位扩展另加入离散时间 token，采用平滑交叉熵。不能把该任务专用设置描述为所有普通问答训练的统一额外目标。

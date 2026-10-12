@@ -63,7 +63,7 @@ mPLUG-Owl 的定位是图像条件下的文字生成与多轮对话。它选择�
 
 
 ```math
-p(Y\mid I,T)=\prod_{t=1}^{M}p(y_t\mid Z,T,y_{<t}).
+p(Y\mid I,T)=\prod_{t=1}^{M}p(y_t\mid Z,T,y_{\lt t}).
 ```
 
 

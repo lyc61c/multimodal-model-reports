@@ -2,13 +2,12 @@
 
 Run with ``python -m unittest discover -s scripts -p test_math_formatting.py -v``.
 Fixtures retain the TeX that GitHub's Markdown stage previously changed. These
-tests check source preservation and the observed HTML-escaping boundary; the
-separate MathJax verifier is responsible for actually compiling TeX.
+tests check source preservation, HTML escaping and a second HTML parse boundary;
+the separate MathJax verifier is responsible for actually compiling TeX.
 """
 from __future__ import annotations
 
 import html
-import re
 import unittest
 from html.parser import HTMLParser
 
@@ -40,29 +39,48 @@ def observed_github_inline_text(tex):
     return "".join(parser.parts)
 
 
+def reparsed_html_text(tex):
+    """Model assigning decoded TeX to HTML, without executing any markup."""
+    parser = _MathText()
+    parser.feed("<div>" + tex + "</div>")
+    parser.close()
+    return "".join(parser.parts)
+
+
 class DisplayMathRegressionTests(unittest.TestCase):
-    def assert_fenced(self, tex, source=None):
+    def assert_fenced(self, tex, source=None, expected=None):
         source = "$$\n" + tex + "\n$$\n" if source is None else source
+        expected = tex if expected is None else expected
         normalized, _ = normalize_math_details(source)
         self.assertNotIn("$$", normalized)
         self.assertRegex(normalized, r"(?m)^```math\s*$")
         self.assertEqual(
             list(math_expressions(normalized)),
-            [{"tex": tex.strip(), "display": True, "delimiter": "math_fence"}],
+            [{"tex": expected.strip(), "display": True, "delimiter": "math_fence"}],
         )
+        self.assertEqual(reparsed_html_text(expected), expected)
         self.assertEqual(normalize_math_details(normalized)[0], normalized)
         return normalized
 
     def test_sets_and_negative_thin_space_are_literal(self):
         # SliME set braces and Qwen2.5-VL's \! were consumed as Markdown escapes.
         cases = [
-            r"k=\min\left\{r:\sum_{i=1}^{r}p_i>\gamma\right\}.",
-            r"\mathrm{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V.",
-            r"\{x_i:x_i<0\}\subseteq\mathcal X,\qquad x\ne y.",
+            (
+                r"k=\min\left\{r:\sum_{i=1}^{r}p_i>\gamma\right\}.",
+                r"k=\min\left\{r:\sum_{i=1}^{r}p_i\gt \gamma\right\}.",
+            ),
+            (
+                r"\mathrm{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V.",
+                r"\mathrm{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V.",
+            ),
+            (
+                r"\{x_i:x_i<0\}\subseteq\mathcal X,\qquad x\ne y.",
+                r"\{x_i:x_i\lt 0\}\subseteq\mathcal X,\qquad x\ne y.",
+            ),
         ]
-        for tex in cases:
+        for tex, expected in cases:
             with self.subTest(tex=tex):
-                self.assert_fenced(tex)
+                self.assert_fenced(tex, expected=expected)
 
     def test_palm_e_cases_preserve_row_break_and_optional_spacing(self):
         # papers/palm-e/arxiv-2303.03378/README.md, section 4.
@@ -80,7 +98,12 @@ class DisplayMathRegressionTests(unittest.TestCase):
             r"\cos(p\omega)&-\sin(p\omega)\\" + "\n"
             r"\sin(p\omega)&\cos(p\omega)" + "\n\\end{bmatrix}."
         )
-        self.assert_fenced(tex)
+        expected = (
+            "R_\\omega(p)=\n\\begin{bmatrix}\n"
+            r"\cos(p\omega)&-\sin(p\omega)\\ "
+            r"\sin(p\omega)&\cos(p\omega)" + "\n\\end{bmatrix}."
+        )
+        self.assert_fenced(tex, expected=expected)
 
     def test_stars_and_underscores_do_not_become_emphasis(self):
         for tex in (
@@ -97,46 +120,96 @@ class DisplayMathRegressionTests(unittest.TestCase):
         # papers/leo/arxiv-2311.12871/README.md, section 4.
         cases = [
             (
-                r"\omega_{ij}=\frac{\sigma(\omega^s_{ij})\exp(\omega^o_{ij})}"
-                + "\n" + r"{\sum_l\sigma(\omega^s_{il})\exp(\omega^o_{il})}."
+                (
+                    r"\omega_{ij}=\frac{\sigma(\omega^s_{ij})\exp(\omega^o_{ij})}"
+                    + "\n" + r"{\sum_l\sigma(\omega^s_{il})\exp(\omega^o_{il})}."
+                ),
+                (
+                    r"\omega_{ij}=\frac{\sigma(\omega^s_{ij})\exp(\omega^o_{ij})}"
+                    + "\n" + r"{\sum_l\sigma(\omega^s_{il})\exp(\omega^o_{il})}."
+                ),
             ),
             (
-                r"\mathcal L=-\sum_{b,t}\log p_\theta" + "\n"
-                r"(s_{\mathrm{res}}^{(b,t)}\mid "
-                r"s_{\mathrm{res}}^{(b,<t)},s_{\mathrm{prefix}}^{(b)})."
+                (
+                    r"\mathcal L=-\sum_{b,t}\log p_\theta" + "\n"
+                    r"(s_{\mathrm{res}}^{(b,t)}\mid "
+                    r"s_{\mathrm{res}}^{(b,<t)},s_{\mathrm{prefix}}^{(b)})."
+                ),
+                (
+                    r"\mathcal L=-\sum_{b,t}\log p_\theta" + "\n"
+                    r"(s_{\mathrm{res}}^{(b,t)}\mid "
+                    r"s_{\mathrm{res}}^{(b,\lt t)},s_{\mathrm{prefix}}^{(b)})."
+                ),
             ),
         ]
-        for tex in cases:
+        for tex, expected in cases:
             with self.subTest(tex=tex):
-                self.assert_fenced(tex, "$$" + tex + "$$")
+                self.assert_fenced(tex, "$$" + tex + "$$", expected=expected)
 
     def test_parentheses_and_square_brackets_survive(self):
         tex = r"p(w_{n+1:L}\mid X_{1:n})=\prod_{l=n+1}^{L}p(w_l\mid X_{1:n},w_{n+1:l-1})."
         self.assert_fenced(tex)
         self.assert_fenced(r"z=\mathrm{MLP}\!\left([x_{1,1};x_{1,2}]\right).")
 
-    def test_display_angle_brackets_and_text_tokens_are_unchanged(self):
-        # Meteor uses literal <tor> inside \texttt. Fenced TeX needs no inline fix.
+    def test_display_comparisons_and_literal_token_use_html_safe_macros(self):
+        # Meteor's literal token needs a special rewrite, rather than macros
+        # inside \texttt that the base MathJax package would display literally.
         tex = (
             r"\mathcal L_R=-\sum_t\log p(R_t\mid I,Q,R_{<t},\texttt{<tor>}),"
             "\n" + r"S<-0.5,\quad n>1."
         )
-        result = self.assert_fenced(tex)
-        self.assertIn(r"\texttt{<tor>}", result)
-        self.assertNotIn(r"\lt", result)
-        self.assertNotIn(r"\gt", result)
+        expected = (
+            r"\mathcal L_R=-\sum_t\log p(R_t\mid I,Q,R_{\lt t},"
+            r"\mathtt{\mathord{\lt}tor\mathord{\gt}}),"
+            "\n" + r"S\lt -0.5,\quad n\gt 1."
+        )
+        result = self.assert_fenced(tex, expected=expected)
+        self.assertIn(r"\mathtt{\mathord{\lt}tor\mathord{\gt}}", result)
+        self.assertNotRegex(result, r"[<>]")
 
     def test_legacy_display_uses_math_fence(self):
         tex = r"\left\{x:x>0\right\}"
-        self.assert_fenced(tex, "\\[\n" + tex + "\n\\]\n")
+        self.assert_fenced(tex, "\\[\n" + tex + "\n\\]\n", expected=r"\left\{x:x\gt 0\right\}")
 
     def test_existing_math_fences_remain_idempotent(self):
         for marker in ("```", "~~~", "````"):
             source = marker + "math\n" + r"x_{<t}+\!y_*" + "\n" + marker + "\n"
+            expected = marker + "math\n" + r"x_{\lt t}+\!y_*" + "\n" + marker + "\n"
             with self.subTest(marker=marker):
                 normalized, _ = normalize_math_details(source)
-                self.assertEqual(normalized, source)
-                self.assertEqual(list(math_expressions(normalized))[0]["tex"], r"x_{<t}+\!y_*")
+                self.assertEqual(normalized, expected)
+                self.assertEqual(normalize_math_details(normalized)[0], normalized)
+                self.assertEqual(list(math_expressions(normalized))[0]["tex"], r"x_{\lt t}+\!y_*")
+
+    def test_gemini_15_exact_formula_survives_second_html_parse(self):
+        # papers/gemini/document-1855460a9712/README.md, section 4.
+        # Independently compiling the truncated payload with MathJax base+ams
+        # produces exactly "Extra open brace or missing close brace".
+        original = r"\overline{\mathcal L}(n)=-\frac{1}{n}\sum_{t=1}^{n}\log p_\theta(x_t\mid x_{<t})."
+        truncated = r"\overline{\mathcal L}(n)=-\frac{1}{n}\sum_{t=1}^{n}\log p_\theta(x_t\mid x_{"
+        expected = r"\overline{\mathcal L}(n)=-\frac{1}{n}\sum_{t=1}^{n}\log p_\theta(x_t\mid x_{\lt t})."
+        self.assertEqual(reparsed_html_text(original), truncated)
+        self.assertEqual(truncated.count("{") - truncated.count("}"), 1)
+        normalized = self.assert_fenced(original, expected=expected)
+        payload = list(math_expressions(normalized))[0]["tex"]
+        self.assertEqual(reparsed_html_text(payload), expected)
+        self.assertEqual(payload.count("{"), payload.count("}"))
+
+    def test_tex_row_break_before_physical_newline_uses_space(self):
+        tex = (
+            r"\begin{aligned}a&=b\\" + "\n"
+            r"c&=d\\" + "\n"
+            r"e&=f\end{aligned}"
+        )
+        expected = r"\begin{aligned}a&=b\\ c&=d\\ e&=f\end{aligned}"
+        self.assert_fenced(tex, expected=expected)
+
+    def test_unreviewed_text_angle_brackets_raise_instead_of_changing_literal(self):
+        for tex in (r"\text{a<b}", r"\texttt{<other>}", r"\textrm{x>y}"):
+            for source in ("$`" + tex + "`$", "```math\n" + tex + "\n```\n"):
+                with self.subTest(source=source):
+                    with self.assertRaises(ValueError):
+                        normalize_math_details(source)
 
     def test_display_boundaries_do_not_merge_with_surrounding_prose(self):
         tex = r"\{x\}"

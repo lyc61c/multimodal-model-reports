@@ -67,7 +67,7 @@ F_{\rm new}W_n+b_n\big),\quad H\in\mathbb R^{256\times4096}.
 **用生成目标学习密集内容。** 新分支通过预测 OCR 全文和图表结构，学习把较长、较密的内容压进固定 token 数。可概括为：
 
 ```math
-\mathcal L_{\rm AR}=-\sum_t\log p_\theta(y_t\mid y_{<t},H).
+\mathcal L_{\rm AR}=-\sum_t\log p_\theta(y_t\mid y_{\lt t},H).
 ```
 
 这是对原文自回归训练的数学说明，论文没有额外定义一种“词表扩展损失”。文档里的文字或图表数据作为监督目标；图表字典与 Markdown 让监督包含数字、结构和公式。（§3.2–3.3）

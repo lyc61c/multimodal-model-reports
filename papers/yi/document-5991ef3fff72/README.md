@@ -67,7 +67,7 @@ Yi-VL 是 Yi 语言模型的视觉扩展分支。技术报告还包含语言预�
 
 ```math
 V=E_\psi(I),\qquad Z=P_\phi(V),\qquad
-p(y\mid I,x)=\prod_t p_{\theta,\phi,\psi}(y_t\mid Z,x,y_{<t}).
+p(y\mid I,x)=\prod_t p_{\theta,\phi,\psi}(y_t\mid Z,x,y_{\lt t}).
 ```
 
 这是对原图的数学重述，不是报告新增的编号公式。前两阶段固定 $`\theta`$，更新 $`\psi,\phi`$；最后阶段同时更新三组参数。这样，视觉侧能在保持语言基础能力作为参照的情况下学习对齐，而最终联合训练又让语言主干适应图像条件回答。

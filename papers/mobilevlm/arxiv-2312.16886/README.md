@@ -67,7 +67,7 @@ MobileLLaMA 1.4B 是 24 层、隐藏维度 2048、16 个注意力头；2.7B 是 
 
 ```math
 f=F_{\rm enc}(X_v),\qquad H_v=P(f),\qquad
-p(Y\mid H_v,H_q)=\prod_{i=1}^{L}p(y_i\mid H_v,H_q,y_{<i}).
+p(Y\mid H_v,H_q)=\prod_{i=1}^{L}p(y_i\mid H_v,H_q,y_{\lt i}).
 ```
 
 

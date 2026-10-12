@@ -68,7 +68,7 @@ Q-Former 已承担将视觉网格整合为较紧凑表示的作用，因此 Mini
 ```math
 Z=Q_{\mathrm{frozen}}(V_{\mathrm{frozen}}(I)),\qquad
 H_v=ZW+b,\qquad
-P(Y\mid I,Q)=\prod_tP_{\mathrm{Vicuna}}(y_t\mid H_v,Q,y_{<t}).
+P(Y\mid I,Q)=\prod_tP_{\mathrm{Vicuna}}(y_t\mid H_v,Q,y_{\lt t}).
 ```
 
 
@@ -104,7 +104,7 @@ $`Z`$ 是视觉组件输出，$`W,b`$ 为可训练投影参数，$`H_v`$ 成为�
 
 
 ```math
-\mathcal L_{\mathrm{answer}}=-\sum_{t\in Y}\log P(y_t\mid H_v,Q,y_{<t}).
+\mathcal L_{\mathrm{answer}}=-\sum_{t\in Y}\log P(y_t\mid H_v,Q,y_{\lt t}).
 ```
 
 

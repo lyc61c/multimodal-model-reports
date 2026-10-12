@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "engine": "Headless Microsoft Edge DOM + MathJax 3.2.2 tex-svg base+ams",
+  "articles": 271,
+  "expressions": 2855,
+  "article_manifest_sha256": "68a90f7dfa2ae325411726207fec5dd8c1a50ead01f743b148a28dc10a51ca73",
+  "rendered": 2855,
+  "preserved": 2855,
+  "failures": [],
+  "differences": [],
+  "regression": {
+    "original_tex": "\\overline{\\mathcal L}(n)=-\\frac{1}{n}\\sum_{t=1}^{n}\\log p_\\theta(x_t\\mid x_{<t}).",
+    "truncated_tex": "\\overline{\\mathcal L}(n)=-\\frac{1}{n}\\sum_{t=1}^{n}\\log p_\\theta(x_t\\mid x_{",
+    "error": "Extra open brace or missing close brace",
+    "known_failure_detected": true
+  },
+  "input_source": "Current article TeX export",
+  "published_ref": null,
+  "scope": "Local browser regression of HTML parsing followed by MathJax rendering, including an exact negative Gemini fixture. This is not a live authenticated GitHub frontend check."
+}

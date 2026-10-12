@@ -60,7 +60,7 @@ Figure 2 位于 PDF 第 3 页。自下而上阅读：视觉编码器和 AuT 将�
 
 
 ```math
-p(c_t\mid C_{<t},X)=p(c_{t,0}\mid C_{<t},X)\prod_{k=1}^{K-1}p(c_{t,k}\mid c_{t,<k},C_{<t},X).
+p(c_t\mid C_{\lt t},X)=p(c_{t,0}\mid C_{\lt t},X)\prod_{k=1}^{K-1}p(c_{t,k}\mid c_{t,\lt k},C_{\lt t},X).
 ```
 
 

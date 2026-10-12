@@ -110,7 +110,7 @@ Z=\mathrm{Proj}\left(\mathrm{RegStage}_2\left(
 
 ```math
 \mathcal L_{\mathrm{text}}=-\sum_{t\in\mathcal R}
-\log p_\theta(y_t\mid y_{<t},P_V,P_A,q).
+\log p_\theta(y_t\mid y_{\lt t},P_V,P_A,q).
 ```
 
 不同阶段按可用模态提供条件，$`\mathcal R`$ 表示参与监督的文字响应。论文没有逐阶段完整披露学习率、GPU 数、所有 batch 与采样权重；本介绍不从其他论文借用训练参数。尤其要注意音频第二阶段解冻 BEATs、但不解冻 LLM，不能套用视频第二阶段的更新范围。

@@ -63,7 +63,7 @@ LLaVA-Plus把已有LLaVA视觉语言模型作为规划器，学习选工具、�
 新增训练信号是“技能对话”。原文式(2)把一次交互整理为用户图像和问题、助手工具调用、工具结果作为后续输入、助手最终回复。损失只覆盖助手生成的子序列，既学习调用，也学习答案及停止时机。将原文文字目标写成紧凑表达为：
 
 ```math
-\mathcal L=-\sum_{t\in\mathcal A}\log p_\theta(y_t\mid I_q,\text{dialogue}_{<t}),
+\mathcal L=-\sum_{t\in\mathcal A}\log p_\theta(y_t\mid I_q,\text{dialogue}_{\lt t}),
 ```
 
 其中 $`\mathcal A`$ 代表工具请求与最终回复的助手token位置，不包括工具执行结果。这是§2.1自回归监督的表达，不是论文另外引入的强化学习奖励公式。工具输出是条件数据，不能说对SAM mask或扩散图像的像素误差直接优化LLaVA。

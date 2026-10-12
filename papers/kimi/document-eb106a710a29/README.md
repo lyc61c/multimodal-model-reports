@@ -101,8 +101,8 @@ Quantile Balancing 进一步用各专家分数相对 token top-(k+1) 门槛的�
 
 ```math
 r_{opd}=\mathrm{clip}\left(
-\mathrm{sg}\left[\log\frac{\pi_{teacher}^{(d,e)}(y_t\mid x,y_{<t})}
-{\pi_\theta(y_t\mid e,x,y_{<t})}\right],-R_{\max},R_{\max}\right).
+\mathrm{sg}\left[\log\frac{\pi_{teacher}^{(d,e)}(y_t\mid x,y_{\lt t})}
+{\pi_\theta(y_t\mid e,x,y_{\lt t})}\right],-R_{\max},R_{\max}\right).
 ```
 
 

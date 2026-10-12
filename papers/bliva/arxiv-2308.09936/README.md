@@ -86,7 +86,7 @@ X_{\mathrm{LLM}}=[\mathrm{Embed}(s);Z_q;Z_p].
 
 ```math
 \mathcal L_{\mathrm{LM}}
-=-\sum_{t=1}^{T}\log p_\theta(y_t\mid y_{<t},s,Z_q,Z_p).
+=-\sum_{t=1}^{T}\log p_\theta(y_t\mid y_{\lt t},s,Z_q,Z_p).
 ```
 
 

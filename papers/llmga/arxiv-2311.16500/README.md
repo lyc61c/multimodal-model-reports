@@ -46,7 +46,7 @@
 语言阶段采用自回归目标（原文式 4）：
 
 ```math
-\mathcal L_{\rm MLLM}=-\sum_i\log p_\theta(y_i\mid y_{<i},T_{\rm in},I_{\rm in}).
+\mathcal L_{\rm MLLM}=-\sum_i\log p_\theta(y_i\mid y_{\lt i},T_{\rm in},I_{\rm in}).
 ```
 
 普通回答和生成提示都在同一输出序列中学习。显式语言接口让下一轮可以修改描述中的对象、属性与关系，而不用完全依赖隐藏生成嵌入。作者认为这种接口能减轻多轮嵌入误差累积；这是设计解释与实验观察，并非经过证明的无误差性质。

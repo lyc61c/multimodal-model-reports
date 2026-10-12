@@ -65,7 +65,7 @@ $`z`$ 是目标图像的扩散潜变量，$`\epsilon`$ 为加入的噪声，$`\e
 理解端使用下一文字 token 的语言建模目标，原文式 (1) 条件包含此前文字与视觉序列。报告式 (6) 从概念上写出统一因果目标：
 
 ```math
-\mathcal L_{joint}=-\mathbb E_t\log p_\Theta(x_t\mid x_{<t}).
+\mathcal L_{joint}=-\mathbb E_t\log p_\Theta(x_t\mid x_{\lt t}).
 ```
 
 $`x_t`$ 可代表文字或图像内容；实际训练文字采用交叉熵、图像采用上述扩散噪声预测，不是把所有图像当作离散词表 token 直接做同一个 softmax。原文对扩散目标与最大似然的关系依赖“预训练 SD 是最优 score function”等假设，这属于建模解释，不能当作有限模型已经精确学习全部真实联合分布的证明。

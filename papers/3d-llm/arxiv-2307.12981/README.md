@@ -108,7 +108,7 @@ q 是均匀量化函数，b 对应六个位置 token。原图示例回答只给�
 训练先构建可输入的三维特征，再将现成 VLM 的输入从二维特征换成三维特征，用混合三维语言任务继续训练；随后针对 held-out 下游任务微调。输出描述、回答或位置 token 均使用标准语言建模损失。其解读式为：
 
 ```math
-\mathcal L=-\sum_t\log p_\theta(y_t\mid F_{3D},s,y_{<t}),
+\mathcal L=-\sum_t\log p_\theta(y_t\mid F_{3D},s,y_{\lt t}),
 ```
 
 s 是任务提示，F3D 是场景表示，y 是目标文本/位置序列。对 FlanT5 骨干应按其条件生成结构理解，此式概括输出 token 概率，不表示它被替换为纯 decoder-only 网络。[§5](https://arxiv.org/pdf/2307.12981v1#page=7)

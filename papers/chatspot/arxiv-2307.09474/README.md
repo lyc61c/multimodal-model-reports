@@ -111,7 +111,7 @@ MGVLID 有约 120 万图像、300 万问答，包含 11 个来源，作者说留
 报告没有给出独立训练损失编号公式。作为阅读辅助，标准自回归监督目标可写为：
 
 ```math
-\mathcal L_{\mathrm{AR}}=-\sum_t\log p_\theta(y_t\mid V,\Phi(R_t),X_{\mathrm{instruct}},y_{<t}).
+\mathcal L_{\mathrm{AR}}=-\sum_t\log p_\theta(y_t\mid V,\Phi(R_t),X_{\mathrm{instruct}},y_{\lt t}).
 ```
 
 它使模型在图像、区域坐标和问题条件下生成参考答案；式中的逐 token 展开只是常见机制解释，不代表本文公开了官方标签掩码、样本损失权重或全部实现。这个目标无需另设固定 COCO 类别分类头，多个任务共享语言生成接口。但评测时仍需将自由回答转成标准标签或判断包含标准答案，这是第七节的评价协议。

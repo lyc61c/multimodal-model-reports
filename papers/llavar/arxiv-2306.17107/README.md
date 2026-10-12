@@ -62,7 +62,7 @@ CLIP 的 patch 为 14，因此两种方形输入对应 16×16 与 24×24 的网�
 
 
 ```math
-\mathcal L=-\sum_t\log p_D(a_t\mid H,q,a_{<t}).
+\mathcal L=-\sum_t\log p_D(a_t\mid H,q,a_{\lt t}).
 ```
 
 

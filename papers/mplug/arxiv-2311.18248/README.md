@@ -64,7 +64,7 @@ LaTeX 表格作为文字直接进入语言路径，不需要先生成表格截�
 
 
 ```math
-p(A\mid C,D,O,I)=\prod_t p(a_t\mid C,D,O,I,a_{<t}),
+p(A\mid C,D,O,I)=\prod_t p(a_t\mid C,D,O,I,a_{\lt t}),
 ```
 
 

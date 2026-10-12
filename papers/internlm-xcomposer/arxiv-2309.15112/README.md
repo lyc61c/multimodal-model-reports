@@ -110,7 +110,7 @@ Table 1 汇总英文约 506 亿、中文约 171 亿文本 token，图像约 11 �
 
 
 ```math
-\mathcal L_{\rm NTP}=-\sum_{t\in\mathcal S}\log p_\theta(y_t\mid y_{<t},I),
+\mathcal L_{\rm NTP}=-\sum_{t\in\mathcal S}\log p_\theta(y_t\mid y_{\lt t},I),
 ```
 
 

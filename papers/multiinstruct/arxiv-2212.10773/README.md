@@ -67,7 +67,7 @@ OFA 的 Transformer 编码器接收填入具体数据的任务指令，以及可
 ```math
 \mathcal L_{\rm IT}(\theta)=
 \mathbb E_{t,(x,y),\,i\sim\mathrm{Uniform}(I_t)}
-\left[-\sum_{j=1}^{\vert y\vert }\log p_\theta(y_j\mid y_{<j},x,i)\right].
+\left[-\sum_{j=1}^{\vert y\vert }\log p_\theta(y_j\mid y_{\lt j},x,i)\right].
 ```
 
 

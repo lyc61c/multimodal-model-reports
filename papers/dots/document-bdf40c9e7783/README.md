@@ -60,7 +60,7 @@ NTP 可用通用条件似然解释：
 
 
 ```math
-\mathcal L_{\mathrm{NTP}}=-\sum_t\log p_\theta(y_t\mid y_{<t},I).
+\mathcal L_{\mathrm{NTP}}=-\sum_t\log p_\theta(y_t\mid y_{\lt t},I).
 ```
 
 

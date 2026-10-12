@@ -125,7 +125,7 @@ MMC4-core 原计划约 30M 图像，因为链接失效实际得到约 25M。Tabl
 自回归目标可以用标准负对数似然表达：
 
 ```math
-\mathcal L_{\mathrm{AR}}=-\sum_{j\in\mathcal S}\log p_\theta(t_j\mid t_{<j},Z).
+\mathcal L_{\mathrm{AR}}=-\sum_{j\in\mathcal S}\log p_\theta(t_j\mid t_{\lt j},Z).
 ```
 
 $`\mathcal S`$ 表示对应阶段实际监督的文本位置；公式帮助理解文本生成目标，并非论文编号公式。原文没有充分列出每个阶段的逐 token 损失掩码、损失权重和优化器超参数，不能把这里的抽象表达当成可直接复制的训练实现。论文也没有报告 RLHF 或 DPO 阶段。（§2）

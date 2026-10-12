@@ -78,8 +78,7 @@ CLIP 首先输出规则网格的 patch 特征。空间聚类根据语义距离�
 
 ```math
 \delta_i=\begin{cases}
-\min_{j:\rho_j>\rho_i}\Vert z_j-z_i\Vert ^2,&\exists j:\rho_j>\rho_i,\\
-\max_j\Vert z_j-z_i\Vert ^2,&\text{否则}.
+\min_{j:\rho_j\gt \rho_i}\Vert z_j-z_i\Vert ^2,&\exists j:\rho_j\gt \rho_i,\\ \max_j\Vert z_j-z_i\Vert ^2,&\text{否则}.
 \end{cases}
 ```
 

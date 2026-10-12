@@ -62,7 +62,7 @@ Nano-1 与 Nano-2 的 1.8B、3.25B 参数和 4-bit 部署是端侧设计信息�
 **联合序列建模。** 图像中的文字、布局，音频的声学信息和视频中的时间关系可以成为后续语言生成的条件。用下面的解释性表达概括这一思想：
 
 ```math
-p_\theta(y\mid x)=\prod_{t=1}^{T}p_\theta(y_t\mid y_{<t},z(x)),\qquad
+p_\theta(y\mid x)=\prod_{t=1}^{T}p_\theta(y_t\mid y_{\lt t},z(x)),\qquad
 z(x)=\mathrm{Interleave}(z_{\rm text},z_{\rm image},z_{\rm audio},z_{\rm video}).
 ```
 
@@ -72,8 +72,7 @@ z(x)=\mathrm{Interleave}(z_{\rm text},z_{\rm image},z_{\rm audio},z_{\rm video})
 
 ```math
 c=\max_a\frac{1}{K}\sum_{k=1}^{K}\mathbf{1}[a_k=a],\qquad
-\hat a=\begin{cases}\mathrm{mode}(a_1,\ldots,a_K),&c>\tau,\\
-a_{\rm greedy},&c\leq\tau.\end{cases}
+\hat a=\begin{cases}\mathrm{mode}(a_1,\ldots,a_K),&c\gt \tau,\\ a_{\rm greedy},&c\leq\tau.\end{cases}
 ```
 
 $`c`$ 是样本一致性，不是经过校准的正确概率；$`\tau`$ 由各模型的验证集表现优化，不能将测试集用于选阈值。此处公式表达 §9.1 的文字算法，原文未给出统一阈值或上述编号公式。（PDF 第 46 页）

@@ -67,7 +67,7 @@ z_{1:N}=\mathrm{CausalTransformer}(g(I),e_{1:N}).
 
 
 ```math
-\mathcal L= -\sum_{i\in\mathcal T}\log p_\theta(u_i\mid u_{<i})
+\mathcal L= -\sum_{i\in\mathcal T}\log p_\theta(u_i\mid u_{\lt i})
  +\lambda\sum_{i\in\mathcal V}\Vert \hat z_i-z_i\Vert _2^2.
 ```
 

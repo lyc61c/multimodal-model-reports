@@ -66,7 +66,7 @@
 原文没有编号损失公式。为说明其机制，设模态编码器为 $`E_k`$、输入投影为 $`P_k`$，caption 为 $`c`$，输入对齐可用标准语言生成损失表示：
 
 ```math
-\mathcal L_{in}=-\sum_t\log p_\theta(c_t\mid c_{<t},P_k(E_k(x))).
+\mathcal L_{in}=-\sum_t\log p_\theta(c_t\mid c_{\lt t},P_k(E_k(x))).
 ```
 
 输出端设 LLM 信号隐藏状态为 $`H_k`$、输出投影为 $`O_k`$、冻结的扩散文本条件编码器为 $`T_k`$，原文采用最小化欧氏距离的表示对齐：

@@ -115,7 +115,7 @@ GPT-3.5 再依据丰富描述生成详细描述、摘要、问答、创意任务
 目标为最大化回答 token 的自回归似然，可写为：
 
 ```math
-\mathcal L=-\sum_{k\in\mathcal A}\log p_\theta(y_k\mid Q_v,Q_t,y_{<k}).
+\mathcal L=-\sum_{k\in\mathcal A}\log p_\theta(y_k\mid Q_v,Q_t,y_{\lt k}).
 ```
 
 这里 $`\theta`$ 是可训练投影参数，$`\mathcal A`$ 是答案位置。这是对原文训练描述的展开，模型没有提出独立的池化损失、对比学习目标或 RLHF 阶段。正文也未完整列出抽帧数等全部配置，不能自行补成统一的复现方案。

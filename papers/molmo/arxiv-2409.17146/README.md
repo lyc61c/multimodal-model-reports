@@ -92,7 +92,7 @@ AskModelAnything 的语言 LLM 没有直接看图，但作者自己的第一阶�
 
 
 ```math
-\mathcal L=-\sum_t\log p_\theta(y_t\mid y_{<t},I,q).
+\mathcal L=-\sum_t\log p_\theta(y_t\mid y_{\lt t},I,q).
 ```
 
 

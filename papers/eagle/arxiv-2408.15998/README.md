@@ -95,7 +95,7 @@ Pre-Alignment 的三阶段冻结关系则明确为：第一阶段，各编码器
 
 
 ```math
-\mathcal L_{\mathrm{text}}=-\sum_t\log p_\theta(y_t\mid y_{<t},x_{\mathrm{image}},x_{\mathrm{instruction}}).
+\mathcal L_{\mathrm{text}}=-\sum_t\log p_\theta(y_t\mid y_{\lt t},x_{\mathrm{image}},x_{\mathrm{instruction}}).
 ```
 
 

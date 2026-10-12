@@ -126,7 +126,7 @@ SubImage 从前一单图阶段抽样，经过 padding 和分割，生成 336×33
 
 
 ```math
-\mathcal L_{\mathrm{SFT}}=-\sum_t\log p(y_t\mid y_{<t},X_v,X_q).
+\mathcal L_{\mathrm{SFT}}=-\sum_t\log p(y_t\mid y_{\lt t},X_v,X_q).
 ```
 
 

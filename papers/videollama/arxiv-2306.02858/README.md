@@ -106,7 +106,7 @@ P_A=\mathrm{QFormer}_A(Q_A,[a_1+u_1;\ldots;a_M+u_M])W_A.
 描述与答案生成可以用常规条件语言建模目标解释：
 
 ```math
-\mathcal L_{\mathrm{gen}}=-\sum_t\log p_{\theta}(y_t\mid y_{<t},P,q).
+\mathcal L_{\mathrm{gen}}=-\sum_t\log p_{\theta}(y_t\mid y_{\lt t},P,q).
 ```
 
 该式用于说明生成式监督，首版并未列出显式训练损失公式、所有 token 掩码与权重。感知骨干和 LLM 冻结，梯度仍可通过冻结 LLM 传回提示接口；“冻结”指不更新其权重，不能理解为无需经过该模型计算。作者指出预训练后指令遵循能力下降，因此用高质量指令微调恢复交互能力。论文没有充分披露 batch size、训练轮数、GPU 总量、学习率与所有查询数；这些缺失参数不从后代模型补入。（PDF 第 4–5 页）

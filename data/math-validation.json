@@ -6,6 +6,15 @@
   "gfm_protected_inline_expressions_preserved": 2355,
   "gfm_display_expressions_preserved": 500,
   "gfm_failures": [],
-  "article_manifest_sha256": "18701f99865bc48c70c6bc4ab3428601db0dba9e7948126c34b88631bcf68530",
-  "scope": "All inline and fenced display TeX is compared with the full GFM token stream; the resulting parser payloads are compiled. This is not a live GitHub browser check or a scientific correctness review."
+  "html_roundtrip_expressions_preserved": 2855,
+  "html_failures": [],
+  "regression_fixture": {
+    "article": "papers/gemini/document-1855460a9712/README.md",
+    "original_tex": "\\overline{\\mathcal L}(n)=-\\frac{1}{n}\\sum_{t=1}^{n}\\log p_\\theta(x_t\\mid x_{<t}).",
+    "truncated_tex": "\\overline{\\mathcal L}(n)=-\\frac{1}{n}\\sum_{t=1}^{n}\\log p_\\theta(x_t\\mid x_{",
+    "expected_error": "Extra open brace or missing close brace",
+    "known_failure_detected": true
+  },
+  "article_manifest_sha256": "68a90f7dfa2ae325411726207fec5dd8c1a50ead01f743b148a28dc10a51ca73",
+  "scope": "All inline and fenced display TeX is compared with the full GFM token stream, tested for HTML roundtrip preservation, then compiled. A negative Gemini fixture must reproduce the exact brace error. This is not a live GitHub frontend check or a scientific correctness review."
 }

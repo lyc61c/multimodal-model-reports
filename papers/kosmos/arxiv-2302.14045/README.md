@@ -63,7 +63,7 @@ Figure 1 位于 PDF 第 1 页。中间的 embedding 层将感知输入接入语�
 
 
 ```math
-\mathcal L=-\sum_{t\in\mathcal D}\log p_\theta(u_t\mid u_{<t}),
+\mathcal L=-\sum_{t\in\mathcal D}\log p_\theta(u_t\mid u_{\lt t}),
 ```
 
 

@@ -84,13 +84,13 @@ N_{\mathrm{seq}}=hw+(h-1)+1=hw+h.
 博客明确说明，模型在交错图文数据上学习预测后续文本。令 $`c`$ 表示包含文本与视觉表示的上下文，目标文本为 $`y_{1:T}`$，其自回归分解可以写为
 
 ```math
-p_\theta(y\mid c)=\prod_{t=1}^{T}p_\theta(y_t\mid c,y_{<t}).
+p_\theta(y\mid c)=\prod_{t=1}^{T}p_\theta(y_t\mid c,y_{\lt t}).
 ```
 
 相应的解释性负对数似然为
 
 ```math
-\mathcal L_{\mathrm{text}}=-\sum_t \log p_\theta(y_t\mid c,y_{<t}).
+\mathcal L_{\mathrm{text}}=-\sum_t \log p_\theta(y_t\mid c,y_{\lt t}).
 ```
 
 这两个式子是对已披露“预测下一个文本 token”目标的数学重述。博客没有说明所有训练阶段的 loss mask、额外辅助项、图像重建目标或偏好优化算法；本文不把这些未公开项补入实际训练配方。

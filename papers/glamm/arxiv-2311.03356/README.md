@@ -79,7 +79,7 @@ GCG回答格式例如`<p>一个人</p><SEG>坐在<p>长椅</p><SEG>上`。语言
 报告提出的mask recall先对预测与真值掩码做一对一匹配，要求IoU大于.5，再要求对应短语BERT相似度大于.5，满足两项才算TP。按正文规则记号化为：
 
 ```math
-\mathrm{Recall}_{mask}=\frac{\sum_{(i,j)\in\mathcal A}\mathbf1[\mathrm{IoU}(M_i,G_j)>.5]\mathbf1[\mathrm{BERTSim}(p_i,q_j)>.5]}{\vert G\vert }.
+\mathrm{Recall}_{mask}=\frac{\sum_{(i,j)\in\mathcal A}\mathbf1[\mathrm{IoU}(M_i,G_j)\gt .5]\mathbf1[\mathrm{BERTSim}(p_i,q_j)\gt .5]}{\vert G\vert }.
 ```
 
 这是对第3.2节评估规则的整理，不是原文编号公式。IoU采用标准交并比$`\vert M\cap G\vert /\vert M\cup G\vert`$，$`\mathcal A`$为一对一配对。该指标同时要求空间和语义正确，但BERT相似度阈值本身也会影响评分，不能把它当作完全无偏的人类语义判断。

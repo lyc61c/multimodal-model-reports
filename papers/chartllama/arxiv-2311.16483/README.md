@@ -81,7 +81,7 @@ ChartLlama 的“生成图表”主要是**生成绘图程序后执行绘制**�
 
 ```math
 \mathcal L_{\mathrm{SFT}}
-=-\sum_t\log p_\theta(y_t\mid y_{<t},I,s),
+=-\sum_t\log p_\theta(y_t\mid y_{\lt t},I,s),
 ```
 
 

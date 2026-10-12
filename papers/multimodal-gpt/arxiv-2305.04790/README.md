@@ -61,7 +61,7 @@ h=W_0x+BAx,\qquad A\in\mathbb R^{r\times d_{in}},\quad B\in\mathbb R^{d_{out}\ti
 语言与视觉指令共享“指令—输入—回答”的结构，图文序列额外包含图像标记。生成损失只作用于回答及结束符。用 $`R`$ 表示这些监督位置，可写出对应的标准目标：
 
 ```math
-\mathcal L=-\sum_{t\in R}\log p_\theta(y_t\mid y_{<t},\mathrm{instruction},\mathrm{image}).
+\mathcal L=-\sum_{t\in R}\log p_\theta(y_t\mid y_{\lt t},\mathrm{instruction},\mathrm{image}).
 ```
 
 纯文本样本没有图像条件；图文样本通过冻结视觉底座与可训练解码器适配器使用图像。提示、问题和输入字段不作为需要复述的目标。统一格式使两类样本遵循相似的生成习惯，多轮图文样本则在同一序列里连续包含多个问答。这是联合监督，不涉及图像重建、对比损失、强化学习或偏好排序目标。

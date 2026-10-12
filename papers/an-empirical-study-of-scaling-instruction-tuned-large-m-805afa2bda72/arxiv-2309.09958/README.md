@@ -69,7 +69,7 @@
 本篇没有新型数学目标或缩放方程，其贡献来自控制与比较训练选择。用说明式可把视觉接入写成 $`z_i=W_v x_i`$，把回答训练写成
 
 ```math
-\mathcal L_{\rm answer}=-\sum_t\log p_\theta(y_t\mid Z,q,y_{<t}).
+\mathcal L_{\rm answer}=-\sum_t\log p_\theta(y_t\mid Z,q,y_{\lt t}).
 ```
 
 这只是沿用框架的机制解释，原文没有给它独立公式编号或完整 token masking 规则。第一阶段重点学习 $`W_v`$ 让视觉条件可被语言端解释；第二阶段同时更新连接器，并以全量或适配器方式调整语言端。

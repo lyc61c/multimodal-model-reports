@@ -78,7 +78,7 @@ Query 来自 latent，key／value 来自**辅助特征与 latent 的拼接**，�
 
 
 ```math
-\mathcal L=-\sum_{t=1}^{T}\log p(y_t\mid y_{<t},z).
+\mathcal L=-\sum_{t=1}^{T}\log p(y_t\mid y_{\lt t},z).
 ```
 
 

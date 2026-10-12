@@ -56,7 +56,7 @@ Point-BERT 按 ULIP-2 的思路把点云表示与 CLIP 相关空间对齐。原 
 对原文第 5 页的负对数似然描述，可用下式明确监督掩码：
 
 ```math
-\mathcal L=-\sum_{t\in\mathcal R}\log p_\theta(w_t\mid P,\text{instruction},w_{<t}),
+\mathcal L=-\sum_{t\in\mathcal R}\log p_\theta(w_t\mid P,\text{instruction},w_{\lt t}),
 ```
 
 其中 $`\mathcal R`$ 只包含助理回答和 `</s>`。这是对原文训练文字的解释式，论文没有把它列为新编号损失。用户指令、点云占位嵌入不计入文字预测损失。第一阶段通过固定语言模型来学习投影器，第二阶段开放语言模型，以适应复杂问答。

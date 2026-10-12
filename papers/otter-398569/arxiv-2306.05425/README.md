@@ -83,7 +83,7 @@ d_q=(I_q,R_q,X_q,C_\psi(I_q,X_q)),\qquad d_q\sim D_{\rm MIMIC\text{-}IT}.
 
 
 ```math
-\mathcal L=-\sum_t\log p_\theta(r_{q,t}\mid I_q,X_q,C_q,r_{q,<t}).
+\mathcal L=-\sum_t\log p_\theta(r_{q,t}\mid I_q,X_q,C_q,r_{q,\lt t}).
 ```
 
 

@@ -58,10 +58,7 @@
 
 ```math
 \begin{aligned}
-\bar S_t &= \exp(g_t)S_{t-1},\\
-\delta_t &= \beta_t\bigl(v_t-\bar S_t^\top k_t\bigr),\\
-S_t &= \bar S_t+k_t\delta_t^\top,\\
-o_t &= S_t^\top q_t.
+\bar S_t &= \exp(g_t)S_{t-1},\\ \delta_t &= \beta_t\bigl(v_t-\bar S_t^\top k_t\bigr),\\ S_t &= \bar S_t+k_t\delta_t^\top,\\ o_t &= S_t^\top q_t.
 \end{aligned}
 ```
 

@@ -77,7 +77,7 @@ DvD 把 ViT、MLP 及 Flash 的 ViR 放在视觉服务器，LLM 放在语言服�
 ```math
 \hat A_i=\frac{r(x,y_i)-\mathrm{mean}_j r(x,y_j)}{\mathrm{std}_j r(x,y_j)},\qquad
 s_i(\theta)=\left[\frac{\pi_\theta(y_i\mid x)}{\pi_{old}(y_i\mid x)}\right]^{1/\vert y_i\vert }
-=\exp\!\left(\frac1{\vert y_i\vert }\sum_t\log\frac{\pi_\theta(y_{i,t}\mid x,y_{i,<t})}{\pi_{old}(y_{i,t}\mid x,y_{i,<t})}\right).
+=\exp\!\left(\frac1{\vert y_i\vert }\sum_t\log\frac{\pi_\theta(y_{i,t}\mid x,y_{i,\lt t})}{\pi_{old}(y_{i,t}\mid x,y_{i,\lt t})}\right).
 ```
 
 
@@ -97,7 +97,7 @@ J_{GSPO}=\mathbb E\!\left[\frac1G\sum_i
 
 ```math
 \mathcal L_{ViCO}=\mathbb E_\xi\frac1N\sum_i
-D_{KL}\big[\pi_{ref}(\cdot\mid y_{<i},I)\;\Vert \;\pi_\theta(\cdot\mid y_{<i},I_\xi)\big],
+D_{KL}\big[\pi_{ref}(\cdot\mid y_{\lt i},I)\;\Vert \;\pi_\theta(\cdot\mid y_{\lt i},I_\xi)\big],
 \qquad \xi\in\{1/4,1/16\}.
 ```
 
@@ -128,7 +128,7 @@ ViCO 一致性阶段复用 SFT 类型数据，路由训练采用富含 OCR/VQA �
 
 
 ```math
-\ell_i=-\log p_\theta(x_i\mid x_{<i}),\qquad
+\ell_i=-\log p_\theta(x_i\mid x_{\lt i}),\qquad
 \ell_i'=\frac{w_i}{\sum_jw_j}\ell_i,\quad w_i=N^{-1/2}.
 ```
 

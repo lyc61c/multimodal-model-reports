@@ -37,6 +37,7 @@ const currentHash=crypto.createHash('sha256').update(currentManifest.sort().join
 if(currentManifest.length!==input.validation.articles || currentHash!==input.validation.article_manifest_sha256)
   throw Error('Article files changed after TeX export; regenerate the math manifest before rendering');
 const failures = [], gfmFailures = [], artifacts = [], byArticle = new Map();
+const htmlFailures = [];
 for (const expression of input.expressions) {
   if (!byArticle.has(expression.article)) byArticle.set(expression.article,[]);
   byArticle.get(expression.article).push(expression);
@@ -58,6 +59,11 @@ function collectMath(tokens, result) {
   }
 }
 let guardedPreserved = 0, displayPreserved = 0;
+let htmlPreserved = 0;
+function htmlText(tex) {
+  const html = adaptor.parse('<html><body><div>' + tex + '</div></body></html>', 'text/html');
+  return adaptor.textContent(adaptor.body(html));
+}
 for(const [article,expressions] of byArticle) {
   const body = fs.readFileSync(path.join(root,article),'utf8').replaceAll('\r\n','\n');
   const actual = [];
@@ -74,23 +80,41 @@ for(const [article,expressions] of byArticle) {
   for(const expression of actual) {
     try {
       if (/\\operatorname\b/.test(expression.tex)) throw Error('operatorname is not permitted in this compatibility profile');
-      const svg = adaptor.outerHTML(document.convert(expression.tex,{display:expression.display}));
+      // Test the DOM boundary too: e.g. x_{<t} can become x_{ if reused as HTML.
+      const domTex = htmlText(expression.tex);
+      if(domTex!==expression.tex) {
+        htmlFailures.push({article,tex:expression.tex,dom_tex:domTex});
+        throw Error('TeX changed after HTML parsing');
+      }
+      htmlPreserved++;
+      const svg = adaptor.outerHTML(document.convert(domTex,{display:expression.display}));
       const error = svg.match(/data-mjx-error="([^"]+)"/);
       if(error || svg.includes('data-mml-node="merror"')) throw Error(error?.[1]||'MathJax merror');
       artifacts.push({article,...expression,svg});
     } catch(error) {failures.push({article,tex:expression.tex,error:error.message});}
   }
 }
+// A validator must reject the exact previously missed failure, not only pass new input.
+const geminiFixture=String.raw`\overline{\mathcal L}(n)=-\frac{1}{n}\sum_{t=1}^{n}\log p_\theta(x_t\mid x_{<t}).`;
+const truncatedFixture=htmlText(geminiFixture);
+const negativeSvg=adaptor.outerHTML(document.convert(truncatedFixture,{display:true}));
+const negativeDetected=truncatedFixture!==geminiFixture && negativeSvg.includes('Extra open brace or missing close brace');
+if(!negativeDetected) throw Error('Gemini HTML-truncation regression did not reproduce the known brace error');
 const result = {
-  status:failures.length||gfmFailures.length?'failed':'passed',
+  status:failures.length||gfmFailures.length||htmlFailures.length?'failed':'passed',
   engine:'MathJax 3.2.2 base+ams with operatorname excluded',
   equations:input.expressions.length,
   failures,
   gfm_protected_inline_expressions_preserved:guardedPreserved,
   gfm_display_expressions_preserved:displayPreserved,
   gfm_failures:gfmFailures,
+  html_roundtrip_expressions_preserved:htmlPreserved,
+  html_failures:htmlFailures,
+  regression_fixture:{article:'papers/gemini/document-1855460a9712/README.md',
+    original_tex:geminiFixture,truncated_tex:truncatedFixture,
+    expected_error:'Extra open brace or missing close brace',known_failure_detected:negativeDetected},
   article_manifest_sha256:input.validation.article_manifest_sha256,
-  scope:'All inline and fenced display TeX is compared with the full GFM token stream; the resulting parser payloads are compiled. This is not a live GitHub browser check or a scientific correctness review.'
+  scope:'All inline and fenced display TeX is compared with the full GFM token stream, tested for HTML roundtrip preservation, then compiled. A negative Gemini fixture must reproduce the exact brace error. This is not a live GitHub frontend check or a scientific correctness review.'
 };
 fs.writeFileSync(path.join(root,'data/math-validation.json'),JSON.stringify(result,null,2)+'\n');
 fs.writeFileSync(path.join(root,'tmp/math-rendered.json'),JSON.stringify(artifacts));

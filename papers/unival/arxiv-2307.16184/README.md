@@ -60,7 +60,7 @@ UnIVAL 将描述、问答、定位和匹配等任务统一成序列生成，并�
 统一交叉熵可以写成：
 
 ```math
-\mathcal L_{\mathrm{CE}}=-\sum_t\log p_\theta(y_t\mid x,q,y_{<t}),
+\mathcal L_{\mathrm{CE}}=-\sum_t\log p_\theta(y_t\mid x,q,y_{\lt t}),
 ```
 
 其中 $`x`$ 是模态输入，$`q`$ 是任务提示，$`y`$ 可以是回答、描述、坐标或图像码序列。这是对正文条件预测目标的展开说明。匹配任务也生成 Yes/No，而非增加另一个分类头；定位训练仍是 token 分类损失，并非直接优化 IoU。

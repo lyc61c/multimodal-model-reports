@@ -149,7 +149,7 @@ m(c_i^{pred},c_i^{gt})\,
 
 ```math
 \mathcal L(\theta)=-\sum_{i=1}^{\vert s\vert }
-\log P(s_i\mid PC,I_v,I_t,s_{<i};\theta).
+\log P(s_i\mid PC,I_v,I_t,s_{\lt i};\theta).
 ```
 
 

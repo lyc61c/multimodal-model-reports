@@ -71,7 +71,7 @@ f_{ij}=[\Vert c_i-c_j\Vert _2,\sin\theta_h,\cos\theta_h,
 
 ```math
 \mathcal L=-\sum_{b,t}\log p_\theta
-(s_{\mathrm{res}}^{(b,t)}\mid s_{\mathrm{res}}^{(b,<t)},s_{\mathrm{prefix}}^{(b)}).
+(s_{\mathrm{res}}^{(b,t)}\mid s_{\mathrm{res}}^{(b,\lt t)},s_{\mathrm{prefix}}^{(b)}).
 ```
 
 模型对响应 token 进行前缀语言建模。对话与动作因此使用同一交叉熵学习机制；动作示范是监督标签，报告没有对 LEO 做强化学习或流匹配训练。LoRA 则用低秩增量适配冻结主干：可解释为 $`W'=W+BA`$，原权重不更新，较小的 $`A,B`$ 负责模态与任务变化。报告设 rank 和 $`\alpha`$ 都为 16、dropout 为 0，应用到注意力投影与 MLP 投影。[PDF 第 4、27 页](https://arxiv.org/pdf/2311.12871v1#page=4)

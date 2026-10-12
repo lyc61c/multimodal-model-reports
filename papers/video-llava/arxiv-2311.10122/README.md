@@ -71,8 +71,8 @@ $`f_V`$ 根据输入调用图像或视频编码器，$`f_P`$ 是共享投影，$
 **用同一生成目标学习描述和指令。** 论文式（2）使用条件生成的乘积形式。按标准自回归含义展开，可表示为：
 
 ```math
-p_\theta(Y\mid Z_V,Z_T)=\prod_{i=1}^{\vert Y\vert }p_\theta(y_i\mid Z_V,Z_T,y_{<i}),\qquad
-\mathcal L=-\sum_i\log p_\theta(y_i\mid Z_V,Z_T,y_{<i}).
+p_\theta(Y\mid Z_V,Z_T)=\prod_{i=1}^{\vert Y\vert }p_\theta(y_i\mid Z_V,Z_T,y_{\lt i}),\qquad
+\mathcal L=-\sum_i\log p_\theta(y_i\mid Z_V,Z_T,y_{\lt i}).
 ```
 
 以上写法用于说明回答生成中视觉条件、问题和已生成答案的关系。多轮指令进一步加入前面的问题与回答；原文式（3）是对会话串接的描述，文字明确说包含所有此前轮次。（第 4 页）

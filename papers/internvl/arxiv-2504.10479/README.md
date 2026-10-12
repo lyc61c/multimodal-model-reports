@@ -63,7 +63,7 @@ p_1=0,\qquad p_i=p_{i-1}+\begin{cases}1,&x_i\in\mathrm{Text}\\\delta,&x_i\in\mat
 联合预训练的 Equations 6–7 只计算文本目标：
 
 ```math
-\mathcal L=-\sum_{i:x_i\in\mathrm{Text}}w_i\log p_\theta(x_i\mid x_{<i}),\qquad w_i=l^{-1/2}.
+\mathcal L=-\sum_{i:x_i\in\mathrm{Text}}w_i\log p_\theta(x_i\mid x_{\lt i}),\qquad w_i=l^{-1/2}.
 ```
 
 $`l`$ 是该样本需要计算损失的 token 数。square averaging 使样本总权重约随 $`\sqrt l`$ 增长，介于逐 token 平均与逐样本平均之间，以缓和长短响应的偏置。虽然视觉不成为预测目标，文本误差仍传到视觉主干。

@@ -78,7 +78,7 @@ Hearing 状态下，VLM 根据图像与用户指令生成结构化字符串。�
 原文将高层输出写为 $`S_t=(c_t,L_t^{\mathrm{robot}},C_t^{\mathrm{robot}})`$：分别是控制 token、口头回复与内部动作命令。模型学习 $`\pi_{\mathrm{VLM}}(S_t\mid I_t,L_t^{\mathrm{user}})`$；若不需要行动，内部命令为空。可用下式**解释**结构化 SFT：
 
 ```math
-\mathcal L_{\mathrm{control}}=-\sum_k\log p_\theta(S_{t,k}\mid I_t,L_t^{\mathrm{user}},S_{t,<k}).
+\mathcal L_{\mathrm{control}}=-\sum_k\log p_\theta(S_{t,k}\mid I_t,L_t^{\mathrm{user}},S_{t,\lt k}).
 ```
 
 这不是原文给出的独立新损失公式，而是说明特殊 token 与文本共同参与序列预测。论文的动作接口为：

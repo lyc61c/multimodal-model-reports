@@ -70,7 +70,7 @@ GPT-4V 是 GPT-4 的视觉输入能力。报告说明其训练完成于 2022 年
 
 
 ```math
-\mathcal L_{\rm LM}=-\sum_t\log p_\theta(y_t\mid y_{<t},x,I).
+\mathcal L_{\rm LM}=-\sum_t\log p_\theta(y_t\mid y_{\lt t},x,I).
 ```
 
 

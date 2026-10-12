@@ -73,7 +73,7 @@ M-RoPE 将旋转嵌入通道分成时间、高度、宽度三部分，并分别�
 训练的基本目标是文本 next-token prediction：虽然总预算计入图像和文本 token，**只有文本 token 接受监督**。可用条件负对数似然理解其目标：
 
 ```math
-\mathcal L_{\rm text}=-\sum_{i\in\mathcal T}\log p_\theta(y_i\mid y_{<i},\text{visual inputs}),
+\mathcal L_{\rm text}=-\sum_{i\in\mathcal T}\log p_\theta(y_i\mid y_{\lt i},\text{visual inputs}),
 ```
 
 其中 $`\mathcal T`$ 为受监督文本位置。这是对原文训练说明的数学表达，报告未另列视觉重建、图像生成或 M-RoPE 专用损失。

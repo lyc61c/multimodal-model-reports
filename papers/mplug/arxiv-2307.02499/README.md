@@ -73,7 +73,7 @@ Section 3.1 披露三个模块：视觉基础模型提取图片特征；**visual
 
 
 ```math
-\mathcal L=-\sum_t\log p_{\theta,\Delta\theta}(y_t\mid y_{<t},z,q)
+\mathcal L=-\sum_t\log p_{\theta,\Delta\theta}(y_t\mid y_{\lt t},z,q)
 ```
 
 

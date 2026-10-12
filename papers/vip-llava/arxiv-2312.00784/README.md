@@ -67,7 +67,7 @@ Base 表示完成第二阶段的模型；最终 ViP-LLaVA 追加 GPT-4V 区域�
 原文式 2 的答案似然分解为：
 
 ```math
-p(X_a\mid\hat X_v,X_q)=\prod_{i=1}^{L}p_\theta(x_i\mid\hat X_v,X_q,X_{a,<i}).
+p(X_a\mid\hat X_v,X_q)=\prod_{i=1}^{L}p_\theta(x_i\mid\hat X_v,X_q,X_{a,\lt i}).
 ```
 
 最大化似然等价于答案 token 的负对数似然训练。没有单独的提示定位损失，区域对应关系通过“标记图像—问题—答案”训练获得。多层特征消融在 Base-7B 上使 Visual7W 82.44→86.04、PointQA 70.23→70.86、VCR Q→A 84.64→87.66，支持特征融合的价值。（Table 4）

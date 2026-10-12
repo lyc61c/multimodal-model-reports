@@ -66,7 +66,7 @@ Ying-VLM 使用 **BLIP2-OPT-2.7B 的视觉编码器及 Q-Former**提取图像特
 
 ```math
 \mathcal L=-\mathbb E_{(I,s,q,y)}
-\sum_{j=1}^{\vert y\vert }\log p_\theta(y_j\mid y_{<j},z(I),s,q),
+\sum_{j=1}^{\vert y\vert }\log p_\theta(y_j\mid y_{\lt j},z(I),s,q),
 ```
 
 

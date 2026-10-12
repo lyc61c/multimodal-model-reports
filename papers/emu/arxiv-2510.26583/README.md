@@ -62,7 +62,7 @@ Emu3.5 把图像编码为离散 token，与语言放进同一个 Transformer，�
 **统一 NTP 的价值在于共同预测空间。** 以下是第 3.2 节损失描述的记号化解释，原文没有给这条编号公式：
 
 ```math
-\mathcal L_{\mathrm{NTP}}=-\sum_i w_i\log p_\theta(s_i\mid s_{<i}),\qquad w_i=\begin{cases}0.5,&s_i\text{ 为视觉码}\;\\1,&s_i\text{ 为文本}\end{cases}.
+\mathcal L_{\mathrm{NTP}}=-\sum_i w_i\log p_\theta(s_i\mid s_{\lt i}),\qquad w_i=\begin{cases}0.5,&s_i\text{ 为视觉码}\;\\1,&s_i\text{ 为文本}\end{cases}.
 ```
 
 视觉序列通常远长于说明文字，减小视觉损失权重能够调节两种模态的梯度贡献。它不会减少视觉 token 数，也不是“把一张图变成半个样本”。不同 SFT 阶段权重另有变化。

@@ -110,7 +110,7 @@ Table 1a 将预训练数据分为图像描述 53.9%、检测/定位 5.2%、大�
 
 
 ```math
-\mathcal L_{CE}=-\sum_{t\in\mathcal A}\log p_\theta(y_t\mid y_{<t},Z_{image},q),
+\mathcal L_{CE}=-\sum_{t\in\mathcal A}\log p_\theta(y_t\mid y_{\lt t},Z_{image},q),
 ```
 
 

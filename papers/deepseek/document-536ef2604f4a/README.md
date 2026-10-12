@@ -73,8 +73,7 @@
 
 ```math
 M=\begin{bmatrix}
-\mathbf 1_{m\times m}&\mathbf 0_{m\times n}\\
-\mathbf 1_{n\times m}&\mathrm{LowerTri}(n)
+\mathbf 1_{m\times m}&\mathbf 0_{m\times n}\\ \mathbf 1_{n\times m}&\mathrm{LowerTri}(n)
 \end{bmatrix},\qquad n=m.
 ```
 

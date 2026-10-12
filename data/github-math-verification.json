@@ -6,7 +6,7 @@
     "guarded": 2355,
     "math_fence": 500
   },
-  "article_manifest_sha256": "18701f99865bc48c70c6bc4ab3428601db0dba9e7948126c34b88631bcf68530",
+  "article_manifest_sha256": "68a90f7dfa2ae325411726207fec5dd8c1a50ead01f743b148a28dc10a51ca73",
   "issues": [],
   "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
   "limits": "Syntax/macro checks precede Markdown and engine validation. This is not a complete GitHub macro whitelist or a mathematical proof check."

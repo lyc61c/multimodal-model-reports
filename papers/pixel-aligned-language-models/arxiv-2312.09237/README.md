@@ -73,7 +73,7 @@ w_i=\mathrm{argmax}(Wh_i),\qquad p_i=\mathrm{MLP}(h_i).
 原文式 (4) 联合文本与位置监督：
 
 ```math
-\mathcal L=\frac1n\sum_{i=1}^{n}\left[\mathrm{CE}(L(f_l,w_{<i}),w_i)+\lambda\lVert\hat p_i-p_i\rVert_1\right],\qquad\lambda=0.1.
+\mathcal L=\frac1n\sum_{i=1}^{n}\left[\mathrm{CE}(L(f_l,w_{\lt i}),w_i)+\lambda\lVert\hat p_i-p_i\rVert_1\right],\qquad\lambda=0.1.
 ```
 
 文本交叉熵使用 0.1 标签平滑。位置头与词表头并行，坐标不反馈到文本自回归链。作者称附加开销小，但报告没有提供系统性的延迟或吞吐数字。
