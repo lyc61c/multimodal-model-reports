@@ -187,7 +187,7 @@ LIBERO-10 适配每个检查点 500 rollouts，MT-init 在 500 步为 24.6% 而 
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：π0.7](../../pi/arxiv-2604.15483/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：世界动作模型 →](../../pretrained-to-imagine-fine-tuned-to-act-the-rise-of-wor-28acd80eab47/document-28acd80eab47/README.md)
+[← 上一篇：SenseNova-U1](../../sensenova/arxiv-2605.12500/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：世界动作模型 →](../../pretrained-to-imagine-fine-tuned-to-act-the-rise-of-wor-28acd80eab47/document-28acd80eab47/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

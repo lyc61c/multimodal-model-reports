@@ -179,11 +179,18 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--revision-date")
+    parser.add_argument("--ids", help="Only render the comma-separated paper IDs; omit for all plans")
     args = parser.parse_args()
     if args.write and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args.revision_date or ""):
         parser.error("--write requires --revision-date YYYY-MM-DD")
     changed = []
     plans = sorted(ROOT.glob("papers/*/*/architecture-diagram.json"))
+    if args.ids:
+        selected = set(args.ids.split(","))
+        plans = [path for path in plans if json.loads(path.read_text(encoding="utf-8-sig")).get("paper_id") in selected]
+        found = {json.loads(path.read_text(encoding="utf-8-sig"))["paper_id"] for path in plans}
+        if selected - found:
+            parser.error("No architecture plan for IDs: " + ",".join(sorted(selected - found)))
     for path in plans:
         folder = path.parent
         plan = json.loads(path.read_text(encoding="utf-8-sig"))

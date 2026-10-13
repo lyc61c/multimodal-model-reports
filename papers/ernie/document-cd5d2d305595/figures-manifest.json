@@ -1,0 +1,79 @@
+{
+  "paper_id": "cd5d2d305595",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "7ab20ebf5cb908779d6e334aa8894ccc66f799eda51677e56d9b832b0cc383a6",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 1: ERNIE 4.5 architecture",
+      "pdf_page": 6,
+      "source_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf#page=6",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "7ab20ebf5cb908779d6e334aa8894ccc66f799eda51677e56d9b832b0cc383a6",
+      "asset_sha256": "22ac3f2ff95166b77bfe6f94242c34eddc2ab8433c3dbf3bb8ee77b210f11abb",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          70,
+          530,
+          570
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/post-training.png",
+      "original_label": "Figure 5: VLM post-training",
+      "pdf_page": 17,
+      "source_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf#page=17",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "7ab20ebf5cb908779d6e334aa8894ccc66f799eda51677e56d9b832b0cc383a6",
+      "asset_sha256": "f3c9ad2d796671c5b5632ddc79cdbcdfb42b803f3485e138c7a84793494ee2cf",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          67,
+          530,
+          149
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/non-thinking-results.png",
+      "original_label": "Table 7: Non-thinking VLM evaluation",
+      "pdf_page": 40,
+      "source_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf#page=40",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "7ab20ebf5cb908779d6e334aa8894ccc66f799eda51677e56d9b832b0cc383a6",
+      "asset_sha256": "622bdce2f0437465da6e54cdda43195c6e19406f493a6d189a42b1c0426b3146",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          68,
+          530,
+          398
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

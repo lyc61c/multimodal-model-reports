@@ -1,0 +1,20 @@
+{
+  "paper_id": "448cf5cdfd37",
+  "catalogue_entry_id": "448cf5cdfd37",
+  "family_slug": "sensenova",
+  "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2609.11929v1",
+  "source_url": "https://arxiv.org/pdf/2609.11929v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "SenseNova-U1.5：空间解码、原生4K与多专家能力蒸馏",
+  "source_sha256": "4a55b4f75e2c4d7ba245cf2f070efc1b993126c41cce559ac7b6a69a476a74aa",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-09-10",
+  "chinese_characters": 2634,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,22 @@
+{
+  "paper_id": "76e3de9b2ed3",
+  "source_url": "https://arxiv.org/pdf/2508.11737v1",
+  "source_version": "2508.11737v1",
+  "source_sha256": "a5c8146196b48f24350fb81803c96face4ba1b42e46bdfa2a76ecc7e72d50978",
+  "verification_notes": [
+    {
+      "scope": "实际读取固定v1的§2–4及Tables1–8，PDF第3–9页；首页日期单独核对。",
+      "verified": "VT概率分布→VET加权嵌入→Qwen3路径，五阶段冻结范围和像素范围均逐段核对。"
+    },
+    {
+      "scope": "Figure2、Table3原图及裁图视觉检查。",
+      "verified": "只保留架构/表格区域；未使用整页截图。"
+    },
+    {
+      "scope": "主要实验表与数学表述。",
+      "verified": "区分OCRBench/v2、视频有无字幕、作者复测星号；加权嵌入公式标注为说明性记号。",
+      "limits": "没有通读全部定性示例附录，没有模型执行或实验复现；未公开训练超参保持未知。"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

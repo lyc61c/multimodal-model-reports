@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "paper_id": "42bb90895c3a",
+  "kind": "public_interface",
+  "title": "GPT-5.6：公开任务与交互接口",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "图文任务与工作上下文",
+      "kind": "input",
+      "row": 0,
+      "col": 0,
+      "lines": [
+        "图像、文字、历史结果"
+      ],
+      "span": 1
+    },
+    {
+      "id": "budget",
+      "title": "模型档位与推理预算",
+      "kind": "input",
+      "row": 0,
+      "col": 1,
+      "lines": [
+        "Sol / Terra / Luna",
+        "预算与模型选择分开"
+      ],
+      "span": 1
+    },
+    {
+      "id": "model",
+      "title": "GPT-5.6 推理模型",
+      "kind": "unknown",
+      "row": 1,
+      "col": 0,
+      "lines": [
+        "视觉编码和融合未披露",
+        "三档网络关系未公开"
+      ],
+      "span": 2
+    },
+    {
+      "id": "program",
+      "title": "程序化工具调用",
+      "kind": "bridge",
+      "row": 2,
+      "col": 0,
+      "lines": [
+        "轻量程序处理与筛选中间结果"
+      ],
+      "span": 1
+    },
+    {
+      "id": "parallel",
+      "title": "可选并行代理配置",
+      "kind": "bridge",
+      "row": 2,
+      "col": 1,
+      "lines": [
+        "ultra 默认四代理",
+        "不代表主干四个专家"
+      ],
+      "span": 1
+    },
+    {
+      "id": "result",
+      "title": "外部执行、汇总与新观测",
+      "kind": "output",
+      "row": 3,
+      "col": 0,
+      "lines": [
+        "工具与计算机环境落实动作",
+        "结果进入后续任务条件"
+      ],
+      "span": 2
+    },
+    {
+      "id": "answer",
+      "title": "工作产物或回答",
+      "kind": "output",
+      "row": 4,
+      "col": 0,
+      "lines": [
+        "文本 / 代码 / 文件"
+      ],
+      "span": 1
+    },
+    {
+      "id": "checks",
+      "title": "运行时检查",
+      "kind": "bridge",
+      "row": 4,
+      "col": 1,
+      "lines": [
+        "Sol/Terra 激活检查",
+        "对话与跨轮次模式检查"
+      ],
+      "span": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model"
+    },
+    {
+      "from": "budget",
+      "to": "model"
+    },
+    {
+      "from": "model",
+      "to": "program"
+    },
+    {
+      "from": "model",
+      "to": "parallel"
+    },
+    {
+      "from": "program",
+      "to": "result"
+    },
+    {
+      "from": "parallel",
+      "to": "result"
+    },
+    {
+      "from": "result",
+      "to": "answer"
+    },
+    {
+      "from": "model",
+      "to": "checks",
+      "style": "dashed",
+      "entry_side": "right"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf",
+      "locator": "系统卡第1、3.2–3.4节；官方博客 Efficient by default / Scaling safety",
+      "version": "official-source-snapshot-2026-10-13"
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6/",
+      "locator": "Official release blog: public model capabilities and workflow interfaces"
+    }
+  ],
+  "notes": [
+    "自绘，非原文图；仅归纳公开功能接口，不代表网络逐层架构。",
+    "方框的图上位置不表示组件的确切执行时序；运行检查可跨多个环节。",
+    "视觉/声学编码、参数量与训练损失未披露；未据一般模型结构补造。"
+  ]
+}

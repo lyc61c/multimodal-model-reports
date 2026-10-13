@@ -1,0 +1,20 @@
+{
+  "paper_id": "c7a2cc906589",
+  "catalogue_entry_id": "c7a2cc906589",
+  "family_slug": "gemma",
+  "title": "Introducing Gemma 3n: The developer guide",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+  "document_kind": "release_blog",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Gemma 3n：MatFormer、分层嵌入与端侧多模态理解",
+  "source_sha256": "f0466fb94598b0923ed3817d7d9f13a0c138836ad5e1ecc596a03a117f694937",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-06-26",
+  "chinese_characters": 2845,
+  "figures_manifest": "figures-manifest.json"
+}

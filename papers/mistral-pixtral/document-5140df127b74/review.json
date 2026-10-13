@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "完整阅读官方博客正文、固定HF卡Model Card/Key Features/Metrics/系统提示；params.json和官方固定commit的vision_encoder.py全文、transformer.py融合相关段、args.py默认值实际核对。",
+    "核对patch16、视觉40层1408宽、语言88层12288宽、96Q/8KV，MLP无偏置；vision block-diagonal按图隔离，语言主干跨图融合；该配置不启用2×2合并，未套用Small3.1机制。",
+    "核对Metrics与官方图全部主模型结果、measured/reported区别、三种闭源对照固定版本；明确MMMU/ChartQA/AI2D非全面领先。",
+    "训练语料/冻结/优化配方未披露，保持边界；已记录模型当前deprecated历史状态。",
+    "已视觉查看两张官方图：完整条形图/图例/不同指标尺度，以及详细表所有行列/measured-reported标签与版本脚注。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 7,
+    "principle_subsections": 3,
+    "original_assets": 2,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "4365374473dfccad9e113eae64812ab97f028286369a54e2aa8b9f4e9056d6ce",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

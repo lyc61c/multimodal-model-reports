@@ -17,17 +17,17 @@
     "original_assets": 7,
     "chinese_characters": 2630
   },
-  "article_sha256": "fd7e25cf00329e5ba264a9e112f7f95f0f2ff86367d1739424d48bedc3683007",
+  "article_sha256": "f7e2f1310c2e8999c02ce6e7bb66ce2f286e41989604916be20a03b76a074667",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-13",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 5,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_reviews": [
     {
@@ -41,16 +41,19 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-13",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 5,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 4,
-      "display_fence_conversions": 3,
-      "inline_angle_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

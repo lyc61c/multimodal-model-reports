@@ -138,7 +138,7 @@ LVBench、Chartography 和长上下文图遍历给出多模态/长程能力的�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Qwen3.8-Omni-Flash](../../qwen/document-2ea7273632dc/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026)
+[← 上一篇：GPT-6.1 Sol](../../gpt/document-0e63abfcb13e/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：MiniCPM-V 4.7 →](../../minicpm/document-fd34dfc57d84/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

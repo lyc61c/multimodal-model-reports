@@ -4,6 +4,7 @@
   "checks": {
     "complete_source_coverage": true,
     "unique_document_ids": true,
+    "official_supplemental_entries_validated": 34,
     "exact_star_decisions_and_no_zero_for_missing": true,
     "statistics_match_entries": true,
     "third_party_gpt_names_separate": true,
@@ -13,5 +14,8 @@
   },
   "entries": 301,
   "main_model_entries": 199,
-  "model_families": 145
+  "model_families": 145,
+  "supplemental_entries": 34,
+  "collection_entries": 335,
+  "collection_retained_entries": 306
 }

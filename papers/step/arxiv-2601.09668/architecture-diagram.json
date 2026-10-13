@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "paper_id": "86d1cc655950",
+  "title": "STEP3-VL-10B推理路径",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "img",
+      "title": "原图",
+      "lines": [
+        "全局728×728",
+        "局部504×504"
+      ],
+      "row": 0,
+      "col": 0,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "问题与历史",
+      "lines": [
+        "文字token"
+      ],
+      "row": 0,
+      "col": 1,
+      "kind": "input"
+    },
+    {
+      "id": "pe",
+      "title": "PE-lang 1.8B",
+      "lines": [
+        "编码全局和局部裁片"
+      ],
+      "row": 1,
+      "col": 0,
+      "kind": "encoder"
+    },
+    {
+      "id": "proj",
+      "title": "压缩projector",
+      "lines": [
+        "两个stride-2层",
+        "视觉位置数缩至1/16"
+      ],
+      "row": 2,
+      "col": 0,
+      "kind": "bridge"
+    },
+    {
+      "id": "seq",
+      "title": "联合输入序列",
+      "lines": [
+        "视觉行追加换行标记",
+        "标准1D RoPE"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "Qwen3-8B",
+      "lines": [
+        "SeRe：逐token生成",
+        "PaCoRe：另综合16路消息"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "思考与回答",
+      "lines": [
+        "输出文字"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "img",
+      "to": "pe",
+      "style": "solid"
+    },
+    {
+      "from": "pe",
+      "to": "proj",
+      "style": "solid"
+    },
+    {
+      "from": "proj",
+      "to": "seq",
+      "style": "solid"
+    },
+    {
+      "from": "text",
+      "to": "seq",
+      "style": "solid"
+    },
+    {
+      "from": "seq",
+      "to": "llm",
+      "style": "solid"
+    },
+    {
+      "from": "llm",
+      "to": "out",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据公开方法自绘，非原文图。",
+    "PaCoRe为外层采样再综合，非额外网络。",
+    "训练全参预训；RL冻结视觉编码器。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2601.09668v1",
+      "locator": "§2.1 p4；§3.2.4 p10；§4.1 p12",
+      "note": "编码器、裁片、压缩与序列组织及两种推理模式"
+    }
+  ]
+}

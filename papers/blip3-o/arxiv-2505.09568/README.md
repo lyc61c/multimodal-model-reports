@@ -179,7 +179,7 @@ Table 1 还报告 4B/8B 的 SEED-Bench 为 73.8/77.5，RealWorldQA 为 60.4/69.0
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Seed1.5-VL](../../seed/arxiv-2505.07062/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：UniGen →](../../unigen/arxiv-2505.14682/README.md)
+[← 上一篇：Aya Vision](../../aya-vision/arxiv-2505.08751/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：UniGen →](../../unigen/arxiv-2505.14682/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

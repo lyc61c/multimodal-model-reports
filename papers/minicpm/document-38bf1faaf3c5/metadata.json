@@ -1,0 +1,20 @@
+{
+  "paper_id": "38bf1faaf3c5",
+  "catalogue_entry_id": "38bf1faaf3c5",
+  "family_slug": "minicpm",
+  "title": "MiniCPM-o 2.6: A GPT-4o Level MLLM for Vision, Speech and Multimodal Live Streaming on Your Phone",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+  "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_o2dot6_en.md",
+  "document_kind": "release_blog",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "MiniCPM-o 2.6：把视觉、声音与语音输出接入流式语言骨干",
+  "source_sha256": "5f11251f79e84aedca7b4e78cf14db62720f6380031bf0ba9077e75e91dc20e6",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-01-24",
+  "chinese_characters": 2314,
+  "figures_manifest": "figures-manifest.json"
+}

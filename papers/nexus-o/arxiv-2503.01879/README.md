@@ -144,7 +144,7 @@ CoVoST2中译英23.17、英译中40.21 BLEU，略高于Qwen2-Audio-Instruct的22
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Phi-4-Mini 与 Phi-4-Multimodal](../../phi/arxiv-2503.01743/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：GPT-4o 原生图像生成附录 →](../../gpt/document-0b8790d1de58/README.md)
+[← 上一篇：Phi-4-Mini 与 Phi-4-Multimodal](../../phi/arxiv-2503.01743/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Mistral Small 3.1 →](../../mistral-pixtral/document-652708f323d7/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

@@ -1,0 +1,15 @@
+{
+  "paper_id": "f4eeb8422c62",
+  "source_url": "https://arxiv.org/pdf/2601.10611v4",
+  "source_version": "2601.10611v4",
+  "source_sha256": "cd91ee503386ca16469381f560c229246fd6762bd992b4bc687601d6a25fe8fe",
+  "verification_notes": [
+    "实际读取固定2601.10611v4 PDF1–15正文，PDF27–30架构/训练附录、PDF33–34人工评测、PDF46–48限制；未声称通读全部58页。",
+    "核对SigLIP2、倒数3/9层特征、均值查询注意力池化、图像2×2/视频3×3、双向仅视觉、message tree跨样本和答案分支隔离；所有训练参数可更新而非冻结视觉。",
+    "实际目视PDF7权重公式4/sqrt(n)，防文本抽取4√n歧义；区分视频描述0.1、指点0.2、其余启发式权重与全设备平均loss-token归一化。",
+    "核对固定v4 Table3/5/6/7正文所有结果；Table5 Gemini3Pro J&F=44.6与摘要41.1不一致，正文明确采用表格值；PointBench v4修订值67.7/68.7/66.5并注明旧版评测bug。",
+    "核对no proprietary VLM与使用closed text LLM/closed-data SigLIP2边界、各采集原始数量和过滤后message tree数量区别、字幕为文字非原始音频端到端模型。",
+    "实际查看原PDF6/9/13及最终Figure2–3/Table8/Table3裁区，架构图/注意力矩阵/完整图表注/所有表头行列保留，不含整页正文。"
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

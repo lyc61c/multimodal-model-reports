@@ -1,0 +1,32 @@
+{
+  "paper_id": "92907841db82",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "75130eefef08af5b37eb356f59ccfbe64985d54cb3184be2568db9fe287841f5",
+  "assets": [
+    {
+      "asset_path": "figures/original-benchmark-table.png",
+      "original_label": "Table 2.3.A: capability evaluation summary and footnotes",
+      "pdf_page": 18,
+      "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf#page=18",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "75130eefef08af5b37eb356f59ccfbe64985d54cb3184be2568db9fe287841f5",
+      "asset_sha256": "10fc41debb951716aa7f958d050bbdf2049535c150291824397e2428d0ac5c90",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          65,
+          68,
+          550,
+          720
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original table region rendered from fixed official PDF, with headers and required caption/footnotes; no synthetic alteration.",
+        "visual_review": "Actually viewed rendered source page and resulting cropped table pixels; headers, all selected rows and required captions/footnotes preserved; surrounding paragraphs excluded."
+      }
+    }
+  ]
+}

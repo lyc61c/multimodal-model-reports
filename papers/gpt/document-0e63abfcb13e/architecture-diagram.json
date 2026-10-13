@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "paper_id": "0e63abfcb13e",
+  "kind": "public_interface",
+  "title": "GPT-6.1 Sol：公开任务与交互接口",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "图像、文字与工作资料",
+      "kind": "input",
+      "row": 0,
+      "col": 0,
+      "lines": [
+        "截图 / 文档证据",
+        "当前任务与历史观测"
+      ],
+      "span": 1
+    },
+    {
+      "id": "context",
+      "title": "工具定义与任务策略",
+      "kind": "input",
+      "row": 0,
+      "col": 1,
+      "lines": [
+        "可用工具及运行约束"
+      ],
+      "span": 1
+    },
+    {
+      "id": "model",
+      "title": "GPT-6.1 Sol 推理模型",
+      "kind": "unknown",
+      "row": 1,
+      "col": 0,
+      "lines": [
+        "公开多模态推理接口",
+        "视觉编码与融合层未披露"
+      ],
+      "span": 2
+    },
+    {
+      "id": "action",
+      "title": "动作 / 工具请求",
+      "kind": "bridge",
+      "row": 2,
+      "col": 0,
+      "lines": [
+        "选择操作并交给外部环境"
+      ],
+      "span": 1
+    },
+    {
+      "id": "answer",
+      "title": "文本 / 代码回答",
+      "kind": "output",
+      "row": 2,
+      "col": 1,
+      "lines": [
+        "可在此结束当前任务"
+      ],
+      "span": 1
+    },
+    {
+      "id": "environment",
+      "title": "外部执行与新观测",
+      "kind": "output",
+      "row": 3,
+      "col": 0,
+      "lines": [
+        "实际页面或工具结果"
+      ],
+      "span": 1
+    },
+    {
+      "id": "next",
+      "title": "下一步任务上下文",
+      "kind": "input",
+      "row": 3,
+      "col": 1,
+      "lines": [
+        "后续调用继续读取反馈"
+      ],
+      "span": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "model"
+    },
+    {
+      "from": "context",
+      "to": "model"
+    },
+    {
+      "from": "model",
+      "to": "action"
+    },
+    {
+      "from": "model",
+      "to": "answer"
+    },
+    {
+      "from": "action",
+      "to": "environment"
+    },
+    {
+      "from": "environment",
+      "to": "next"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "locator": "补充系统卡第1–2、3.2、7.4–7.5节；发布博客复杂PDF与计算机操作评测",
+      "version": "official-source-snapshot-2026-10-13"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "locator": "Official release blog: public model capabilities and workflow interfaces"
+    }
+  ],
+  "notes": [
+    "自绘，非原文图；仅归纳公开功能接口，不代表网络逐层架构。",
+    "方框的图上位置不表示组件的确切执行时序；运行检查可跨多个环节。",
+    "视觉/声学编码、参数量与训练损失未披露；未据一般模型结构补造。"
+  ]
+}

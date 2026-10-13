@@ -1,0 +1,14 @@
+{
+  "paper_id": "42bb90895c3a",
+  "source_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "aa8073bcfa15449167c64aab7c520c2d0c71e33220f64dff62baa0f2118e7e8b",
+  "verification_notes": [
+    "Actually read system-card PDF pages 2–3, 6, 10–11, 14 and 68; inspected the official release blog through web extraction for programmatic calling, multi-agent setup and selected main result rows. No original blog HTML byte cache is claimed; primary report bytes are verified.",
+    "Visually checked the section3.2 image-safety table and section3.3 avoidance/correctness table crops; scores, headers and all rows retained.",
+    "Kept Sol/Terra activation-classifier disclosure separate from Luna, and distinguished model tiers, reasoning effort and multi-agent ultra.",
+    "Performance comparisons use the official main result table; OSWorld2.0 is not numerically mixed with earlier OSWorld-Verified.",
+    "RL direction is disclosed, specific losses and training parameters are not. No model execution or experiment reproduction."
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

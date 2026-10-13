@@ -1,0 +1,20 @@
+{
+  "paper_id": "cd5d2d305595",
+  "catalogue_entry_id": "cd5d2d305595",
+  "family_slug": "ernie",
+  "title": "ERNIE 4.5 Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "ERNIE 4.5：模态隔离专家与统一图像视频理解",
+  "source_sha256": "7ab20ebf5cb908779d6e334aa8894ccc66f799eda51677e56d9b832b0cc383a6",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-06-29",
+  "chinese_characters": 2539,
+  "figures_manifest": "figures-manifest.json"
+}

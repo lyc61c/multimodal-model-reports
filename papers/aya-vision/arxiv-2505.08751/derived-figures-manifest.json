@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "paper_id": "fbed0d7612b3",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "ee50132372e960e0ff3aa5ef8e6b4067c28390ea29679e6df2db9e2803ec3d35",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2505.08751v1#page=12",
+          "locator": "§4.1 PDF12–13; Appendix B PDF39–40",
+          "note": "切图、视觉编码、2×2降采样、连接器、tile标签与语言骨干"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2505.08751v1#page=11",
+          "locator": "§3.2 Eq1; §7.1 PDF21–22",
+          "note": "合并语言参数而非双模型在线调用"
+        }
+      ],
+      "scope": "依据固定报告公开组件自绘，非原文图。；训练后仅语言参数合并；视觉编码器与连接器继承多模态模型。；tile数量上限含12局部块，缩略图另计。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

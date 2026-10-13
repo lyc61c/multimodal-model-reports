@@ -1,0 +1,23 @@
+{
+  "paper_id": "fd34dfc57d84",
+  "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot7_en.md",
+  "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+  "source_sha256": "b51bab4d8ec654e1c452a4fba582d011393fa1e76ad9a32597d5a31f377616dc",
+  "verification_notes": [
+    {
+      "scope": "固定官方guide的Introduction、On-Device Capability and Efficiency、Evaluation、Advanced Parameters、Acknowledgements和模型列表。",
+      "verified": "LES预取与原路由不变、量化/DSpark的独立职责、视觉早期压缩和两种规模逐段核对。"
+    },
+    {
+      "scope": "三幅官方原图与最终缩小图。",
+      "verified": "目视五任务平均定义、Instruct/Thinking图例、4×/16×和所有所引结果；区分OCRBench尺度及OmniDocBench版本。",
+      "retrieval": "固定官方commit图片经CDN取得，原字节与SHA保留。"
+    },
+    {
+      "scope": "披露边界与自绘计划。",
+      "verified": "没有假造专家数、语言层配置和基础训练loss；手机速度只作为指定配置的作者报告。",
+      "limits": "未复现LES/量化/投机采样，没有完整独立训练报告。"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

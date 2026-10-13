@@ -23,17 +23,17 @@
     "original_assets": 4,
     "chinese_characters": 4258
   },
-  "article_sha256": "aae42fa244074e31134ced829d3a153a5c3f813026b45cc94737efa542b71d4d",
+  "article_sha256": "167b4e43e5a4f69c02038d89ad46da6266f62d37e82dc8b1af928b2b63e731f9",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-13",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 3,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -66,16 +66,19 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-13",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 3,
-      "operatorname_replacements": 1,
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
       "vertical_bar_replacements": 0,
-      "display_fence_conversions": 3,
-      "inline_angle_replacements": 0
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

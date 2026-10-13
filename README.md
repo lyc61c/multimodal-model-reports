@@ -6,9 +6,9 @@
 
 多模态大模型的中文图文详解 · 架构 · 原理 · 数据 · 训练 · 实验
 
-[![Introductions](https://img.shields.io/badge/Introductions-271-2563eb?style=flat-square)](reports/paper-reading-guide.md)
-[![Series](https://img.shields.io/badge/Model_series-183-7c3aed?style=flat-square)](reports/model-family-index.md)
-[![Figures](https://img.shields.io/badge/Original_figures-1516-0f766e?style=flat-square)](reports/paper-reading-guide.md)
+[![Introductions](https://img.shields.io/badge/Introductions-305-2563eb?style=flat-square)](reports/paper-reading-guide.md)
+[![Series](https://img.shields.io/badge/Model_series-191-7c3aed?style=flat-square)](reports/model-family-index.md)
+[![Figures](https://img.shields.io/badge/Original_figures-1588-0f766e?style=flat-square)](reports/paper-reading-guide.md)
 
 [开始阅读](reports/paper-reading-guide.md) · [模型系列](reports/model-family-index.md)
 
@@ -27,8 +27,8 @@
 
 | 阅读方式 | 入口 |
 |---|---|
-| 按发表时间阅读中文详解（由早到晚） | [全部 271 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
-| 按模型系列比较不同版本 | [183 个模型系列完整索引 →](reports/model-family-index.md) |
+| 按发表时间阅读中文详解（由早到晚） | [全部 305 篇逐篇论文详解 →](reports/paper-reading-guide.md) |
+| 按模型系列比较不同版本 | [191 个模型系列完整索引 →](reports/model-family-index.md) |
 
 ## 模型系列
 
@@ -40,15 +40,18 @@
 | [MiniCPM](papers/minicpm/README.md) | [LLaVA](papers/llava/README.md) | [Kimi](papers/kimi/README.md) |
 | [GLM](papers/glm/README.md) | [Seed](papers/seed/README.md) | [Gemini](papers/gemini/README.md) |
 | [GPT](papers/gpt/README.md) | [Claude](papers/claude/README.md) | [Llama](papers/llama/README.md) |
+| [Gemma](papers/gemma/README.md) | [PaliGemma](papers/paligemma/README.md) | [Mistral / Pixtral](papers/mistral-pixtral/README.md) |
+| [ERNIE](papers/ernie/README.md) | [Hunyuan](papers/hunyuan/README.md) | [SenseNova](papers/sensenova/README.md) |
+| [Molmo](papers/molmo/README.md) | [Aya Vision](papers/aya-vision/README.md) | [Nemotron](papers/nemotron/README.md) |
 | [BLIP](papers/blip/README.md) | [Emu](papers/emu/README.md) | [mPLUG](papers/mplug/README.md) |
 | [VideoLLaMA](papers/videollama/README.md) | [VITA](papers/vita/README.md) | [VILA](papers/vila/README.md) |
-| [XComposer](papers/internlm-xcomposer/README.md) | [MiMo](papers/mimo/README.md) | — |
+| [XComposer](papers/internlm-xcomposer/README.md) | [MiMo](papers/mimo/README.md) | [FastVLM](papers/fastvlm/README.md) |
 
 <a id="论文图文介绍"></a>
 
 ## 逐篇论文详解
 
-[按发表时间阅读全部 271 篇 →](reports/paper-reading-guide.md)
+[按发表时间阅读全部 305 篇 →](reports/paper-reading-guide.md)
 
 每篇详解包含以下七部分：
 

@@ -185,7 +185,7 @@ NVILA-Lite-8B 的 MMMU val 为 50.7，反而高于完整 8B 的 49.9。报告所
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：TimeMarker](../../timemarker/arxiv-2411.18211/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：CompCap →](../../compcap/arxiv-2412.05243/README.md)
+[← 上一篇：PaliGemma 2](../../paligemma/arxiv-2412.03555/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：CompCap →](../../compcap/arxiv-2412.05243/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1291" viewBox="0 0 720 1291" role="img" aria-labelledby="title desc">
+<title id="title">GLM-4.6V（自绘，非原文图）</title>
+<desc id="desc">自绘，组件据公开实现；具体层数随checkpoint。；Flash为另一版本，不套用本图MoE模块。；外部工具执行属于运行时，不是模型内部网络。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1289" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">GLM-4.6V</text>
+<path d="M191,230 V263 H191 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M529,230 V263 H529 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M684,349 H702 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,746 V779 H360 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,918 V951 H360 V984" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像 / 视频块</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">processor与网格参数</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字与工具结果</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">问题、历史和视觉观察</text>
+<rect x="36" y="296" width="310" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="191" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">视觉Transformer</text>
+<text x="191" y="362" text-anchor="middle" font-size="20" fill="#475569">Conv3d patch嵌入</text>
+<text x="191" y="387" text-anchor="middle" font-size="20" fill="#475569">位置编码与视觉注意力</text>
+<rect x="374" y="296" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="529" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字嵌入</text>
+<text x="529" y="362" text-anchor="middle" font-size="20" fill="#475569">视觉占位同步准备</text>
+<rect x="36" y="468" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">空间合并与merger</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">Conv2d压缩空间</text>
+<text x="191" y="559" text-anchor="middle" font-size="20" fill="#475569">归一化、投影与门控MLP</text>
+<rect x="36" y="640" width="648" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">占位替换</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">视觉特征写入对应位置</text>
+<text x="360" y="731" text-anchor="middle" font-size="20" fill="#475569">核对token与特征数量</text>
+<rect x="36" y="812" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="847" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">GLM MoE骨干</text>
+<text x="360" y="878" text-anchor="middle" font-size="20" fill="#475569">稀疏路由 + 共享专家</text>
+<text x="360" y="903" text-anchor="middle" font-size="20" fill="#475569">本图对应大型MoE版本</text>
+<rect x="36" y="984" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="1019" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字 / 工具调用</text>
+<text x="360" y="1050" text-anchor="middle" font-size="20" fill="#475569">工具返回可再次成为条件</text>
+<line x1="36" y1="1138" x2="684" y2="1138" stroke="#e2e8f0"/>
+<text x="36" y="1165" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1196" font-size="17" fill="#64748b">自绘，组件据公开实现；具体层数随checkpoint。</text>
+<text x="36" y="1221" font-size="17" fill="#64748b">Flash为另一版本，不套用本图MoE模块。</text>
+<text x="36" y="1246" font-size="17" fill="#64748b">外部工具执行属于运行时，不是模型内部网络。</text>
+</g></svg>

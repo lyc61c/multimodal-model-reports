@@ -1,0 +1,20 @@
+{
+  "paper_id": "fd34dfc57d84",
+  "catalogue_entry_id": "fd34dfc57d84",
+  "family_slug": "minicpm",
+  "title": "MiniCPM-V 4.7",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+  "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot7_en.md",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "MiniCPM-V 4.7：用专家预取和视觉早期压缩推进端侧MoE",
+  "source_sha256": "b51bab4d8ec654e1c452a4fba582d011393fa1e76ad9a32597d5a31f377616dc",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-10-12",
+  "chinese_characters": 2385,
+  "figures_manifest": "figures-manifest.json"
+}

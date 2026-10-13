@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "paper_id": "fd34dfc57d84",
+  "title": "MiniCPM-V 4.7",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图像 / 视频帧",
+      "lines": [
+        "切片、主帧与子帧网格"
+      ],
+      "row": 0,
+      "col": 0,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "文字条件",
+      "lines": [
+        "问题与历史"
+      ],
+      "row": 0,
+      "col": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "视觉编码路径",
+      "lines": [
+        "ViT内早期压缩",
+        "4× / 16×位置预算"
+      ],
+      "row": 1,
+      "col": 0,
+      "kind": "encoder"
+    },
+    {
+      "id": "embed",
+      "title": "文字嵌入",
+      "lines": [
+        "语言输入接口"
+      ],
+      "row": 1,
+      "col": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "join",
+      "title": "多模态接口",
+      "lines": [
+        "精确连接参数本页未列"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "moe",
+      "title": "35B-A3B MoE",
+      "lines": [
+        "原token级路由",
+        "LES只预取与调度"
+      ],
+      "row": 3,
+      "col": 0,
+      "kind": "backbone"
+    },
+    {
+      "id": "small",
+      "title": "1B发布版本",
+      "lines": [
+        "评测图完整模型1.3B"
+      ],
+      "row": 3,
+      "col": 1,
+      "kind": "backbone"
+    },
+    {
+      "id": "answer",
+      "title": "文字输出",
+      "lines": [
+        "模型版本按部署选择"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "image",
+      "to": "vision",
+      "style": "solid"
+    },
+    {
+      "from": "text",
+      "to": "embed",
+      "style": "solid"
+    },
+    {
+      "from": "vision",
+      "to": "join",
+      "style": "solid"
+    },
+    {
+      "from": "embed",
+      "to": "join",
+      "style": "solid"
+    },
+    {
+      "from": "join",
+      "to": "moe",
+      "style": "solid"
+    },
+    {
+      "from": "join",
+      "to": "small",
+      "style": "solid"
+    },
+    {
+      "from": "moe",
+      "to": "answer",
+      "style": "solid"
+    },
+    {
+      "from": "small",
+      "to": "answer",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "自绘，仅示意已公开接口与版本分工。",
+    "LES不删去实际路由选择的专家。",
+    "两条骨干是可选版本，不是同时推理。"
+  ],
+  "sources": [
+    {
+      "url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot7_en.md",
+      "locator": "Introduction / On-Device Capability and Efficiency / Advanced Parameters",
+      "note": "支持早期压缩、LES职责及模型变体；未知参数不补造。"
+    }
+  ]
+}

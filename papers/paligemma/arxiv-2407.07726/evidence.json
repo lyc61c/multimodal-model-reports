@@ -1,0 +1,14 @@
+{
+  "paper_id": "e3fc1ad19951",
+  "source_url": "https://arxiv.org/pdf/2407.07726v2",
+  "source_version": "2407.07726v2",
+  "source_sha256": "aec6edd6b712597647d5e6e10850039d6415620163f45bb64f71d89718e6bb2f",
+  "verification_notes": [
+    "实际读取固定v2 PDF架构/训练/消融正文；重点PDF2–4、6–13，另读第1页与第14页结论；未声称完整附录审计。",
+    "核对Figure2按目标位置组织的严格先前suffix可见关系，公式解释性转写使用j小于i；区分视觉主干读问题与SigLIP编码本身不读问题。",
+    "核对1B/50M/10M训练样本、256/1024/4096视觉token、文字128/512不含图像、定位1024/分割码本128和float32训练/bf16推理。",
+    "核对Table1结果、验证选参/重训流程、默认100M消融口径、连接器线性77.2 vs MLP77.1、少样本最佳种子选择限制。",
+    "已视觉查看Figure1架构全图与图注、Figure2全部行列/图注、Table1完整表注/表头/全部任务行；裁图仅含图表区域，不含周围论文正文。"
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "实际阅读固定2511.03929v1 PDF第1–14页正文：架构、全部训练阶段、数据构建、视觉/文本评测、reasoning预算、EVS、图像处理消融和量化；未通读其余参考文献或附录，未执行模型。",
+    "核对§2的c-RADIOv2-VLM-H、512/patch16/1024→256、最多12局部块另加缩略图；2fps/128帧、长视频均匀采样与EVS删除静态patch分开；语言层型比例/状态维度未补造。",
+    "核对Stage0仅连接器，Stage1后全解冻；16K→49K→代码恢复→311296长文本训练，服务128K与训练最大长度分开；Table6恢复并非所有文本项完全恢复。",
+    "核对思考开关的生成长度/温度、视觉得分与文本运行次数；DocVQA val/test、OCRBench百分制与Table8原始分数明确分开。",
+    "核对Figure4 BF16 EVS60%原数63.6/66.0/2458ms/75tok每秒、90%精度回退，以及FP8独立基线；2.21倍为此条件的算术比，不外推设备。",
+    "核对FP8混合训练保留BF16模块、1024校准样本、PTQ/QAD区别和最终输出logit匹配；不推定完整KL系数或硬件总成本。",
+    "实际查看PDF第2/10/12页像素选择裁图，随后逐张查看3张180DPI最终裁图：架构全部箭头/组件、Table6完整行列与caption、EVS两种精度表及图例/轴/硬件条件全部保留，未发布整页截图。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 7,
+    "principle_subsections": 5,
+    "original_assets": 3,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "17e9385f2294ea90010c0e3847e963ad67841351871cecc1491d4d7f9c60ba41",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

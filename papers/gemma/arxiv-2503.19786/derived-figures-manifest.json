@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "paper_id": "aa88a8d81e68",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "8ecb267563bc9160a40a2e51747c535dd9709b68654c3bdb3f06e1c50e1d3f7a",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2503.19786v1",
+          "locator": "§2–2.1，PDF2；§5.5，PDF8",
+          "note": "支持视觉组件、池化、交错注意力与上下文"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2503.19786v1",
+          "locator": "§3，PDF4",
+          "note": "支持IT终止格式"
+        }
+      ],
+      "scope": "自绘，非原文图；概括4B/12B/27B视觉型号，1B仅文本。；每个额外裁块增加视觉表示；图中不推定未披露投影层尺寸。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -151,7 +151,7 @@ VisIT-Bench包括592问、1159图、70指令族；原文表7固定于2023-09-27�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：NExT-Chat](../../next-chat/arxiv-2311.04498/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Monkey →](../../monkey/arxiv-2311.06607/README.md)
+[← 上一篇：NExT-Chat](../../next-chat/arxiv-2311.04498/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：Florence-2 →](../../florence/arxiv-2311.06242/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

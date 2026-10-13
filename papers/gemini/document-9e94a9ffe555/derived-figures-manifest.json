@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "9e94a9ffe555",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "ff2233011a2ba6e89bd6a96a1dced097ef75de702b6250fd6456ad87250ab2aa",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+          "locator": "PDF pp.2–3 Model Information/Model Data",
+          "note": "支持输入、输出、模型定位与披露边界"
+        }
+      ],
+      "scope": "根据公开资料自绘，非原文图；仅展示功能接口，方框不是逐层网络；未公开的视觉编码、融合与参数不作推断",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

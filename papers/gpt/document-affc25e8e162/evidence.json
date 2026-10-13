@@ -1,0 +1,14 @@
+{
+  "paper_id": "affc25e8e162",
+  "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "e1d430988982bb6617c19db37bec03cbefba1771657d5ab57743dbfc53e7aa50",
+  "verification_notes": [
+    "Actually read system-card PDF pages 4–6 and 9–11 (model/training and vision/agent sections), plus cached official release blog sections on vision, computer use, tool search and experiment conditions; not a full 38-page appendix review.",
+    "Checked original Table5 and separately cropped Table7/8; all rows and headers visually inspected. Enlarged Table7 crop bottom to retain the full wrapped row and bottom rule.",
+    "Distinguished original/high pixel budgets from an undisclosed image preprocessing implementation; the scaling equations are explicitly labeled explanatory constraints.",
+    "Checked MMMU-Pro xhigh versus OmniDocBench none, different browser/desktop observation interfaces, and MCP Atlas same-model configuration comparison.",
+    "No proprietary architecture, parameter count, PPO/GRPO recipe or model execution is claimed."
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

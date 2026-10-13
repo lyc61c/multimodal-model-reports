@@ -1,0 +1,20 @@
+{
+  "paper_id": "a03900c8f0b9",
+  "catalogue_entry_id": "a03900c8f0b9",
+  "family_slug": "nemotron",
+  "title": "NVIDIA Nemotron Nano V2 VL",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2511.03929v1",
+  "source_url": "https://arxiv.org/pdf/2511.03929v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Nemotron Nano V2 VL：动态切图、能力恢复与高效长视频理解",
+  "source_sha256": "f32f3d4deec25fcddd5716e3f82d1a74209bdd1fa0bb9c490a2f94ef07339d78",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-11-06",
+  "chinese_characters": 3047,
+  "figures_manifest": "figures-manifest.json"
+}

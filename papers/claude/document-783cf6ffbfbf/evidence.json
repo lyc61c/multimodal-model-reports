@@ -1,0 +1,60 @@
+{
+  "paper_id": "783cf6ffbfbf",
+  "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "7311c9c6bbb16d012f1c12c7418b05949fcf7ae3e30d2c40f22050074b2a7378",
+  "verification_notes": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "7311c9c6bbb16d012f1c12c7418b05949fcf7ae3e30d2c40f22050074b2a7378",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        11,
+        12,
+        173,
+        174,
+        199,
+        200,
+        205,
+        206
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Training data,knowledgeJune2026,text output and production fallback distinction",
+      "locator": "PDF pp.11–12 §§1.1/1.4–1.5"
+    },
+    {
+      "claim": "Chartography100tasks64.4/89,grading expert ranges and updated judge",
+      "locator": "PDF pp.199–200 §8.13.1"
+    },
+    {
+      "claim": "OSWorld108tasks500stepspartial81.8/strict48.7,all screenshots+100Kcompaction",
+      "locator": "PDF pp.205–206 §8.13.3"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-benchmark-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5",
+      "scope": "Introduction,cost/speed and capability table footnotes; customer quotes excluded"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

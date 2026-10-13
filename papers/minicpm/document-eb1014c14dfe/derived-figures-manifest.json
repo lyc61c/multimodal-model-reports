@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "eb1014c14dfe",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "93e196849de36161cb76be874138e55c55c673caa3ea7d27749196ed81bf2366",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+          "locator": "Introduction / Advanced Parameters",
+          "note": "支持组件名称、压缩开关和输入组织；未知细部保留边界。"
+        }
+      ],
+      "scope": "自绘，仅表示公开输入与连接职责。；组件内部插层与连接宽度未在指南列出。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 
 OpenAI
 
-**8 篇论文与资料** · 按发布日期由早到晚排列。
+**12 篇论文与资料** · 按发布日期由早到晚排列。
 
 ## 论文列表
 
@@ -17,6 +17,10 @@ OpenAI
 | Introducing GPT-4.1 in the API | 2025-04-14 | [阅读全文](document-32a268f7f1d8/README.md) | [原文](https://openai.com/index/gpt-4-1/) |
 | Introducing GPT-5 | 2025-08-07 | [阅读全文](document-d0807662cb93/README.md) | [原文](https://openai.com/index/introducing-gpt-5/) |
 | Introducing GPT-5.2 | 2025-12-11 | [阅读全文](document-e2a1f413a7a5/README.md) | [原文](https://openai.com/index/introducing-gpt-5-2/) |
+| GPT-5.4 Thinking System Card | 2026-03-05 | [阅读全文](document-affc25e8e162/README.md) | [原文](https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf) |
+| GPT-Live System Card | 2026-07-08 | [阅读全文](document-3e6d0908a22e/README.md) | [原文](https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf) |
+| GPT-5.6 System Card | 2026-07-09 | [阅读全文](document-42bb90895c3a/README.md) | [原文](https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf) |
 | GPT-6 Astra: A new generation of intelligence | 2026-09-04 | [阅读全文](document-0d9109ba3678/README.md) | [原文](https://openai.com/index/gpt-6-astra/) |
+| Addendum to GPT-6 Astra System Card: GPT-6.1 Sol | 2026-09-29 | [阅读全文](document-0e63abfcb13e/README.md) | [原文](https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf) |
 
 [返回系列索引](../../reports/model-family-index.md) · [返回项目首页](../../README.md)

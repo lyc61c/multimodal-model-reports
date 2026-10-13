@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "paper_id": "c7a2cc906589",
+  "title": "Gemma 3n 多模态输入与弹性主干",
+  "kind": "architecture",
+  "columns": 3,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图像或视频帧",
+      "lines": [
+        "256 / 512 / 768输入"
+      ],
+      "row": 0,
+      "col": 0,
+      "kind": "input"
+    },
+    {
+      "id": "audio",
+      "title": "声音输入",
+      "lines": [
+        "单声道音频"
+      ],
+      "row": 0,
+      "col": 1,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "文字提示",
+      "lines": [
+        "对话与任务指令"
+      ],
+      "row": 0,
+      "col": 2,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "MobileNet-V5",
+      "lines": [
+        "300M视觉编码",
+        "多尺度融合适配",
+        "每图256个token"
+      ],
+      "row": 1,
+      "col": 0,
+      "kind": "encoder"
+    },
+    {
+      "id": "sound",
+      "title": "USM音频编码",
+      "lines": [
+        "每160ms一个表示",
+        "发布实现≤30秒片段"
+      ],
+      "row": 1,
+      "col": 1,
+      "kind": "encoder"
+    },
+    {
+      "id": "token",
+      "title": "文本表示",
+      "lines": [
+        "配套tokenizer与模板"
+      ],
+      "row": 1,
+      "col": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "lm",
+      "title": "MatFormer语言主干",
+      "lines": [
+        "E4B内嵌E2B",
+        "PLE减少常驻参数",
+        "上层复用中间层KV"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 3,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "文字输出",
+      "lines": [
+        "回答 / 转写 / 翻译",
+        "总上下文32K"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 3,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "image",
+      "to": "vision"
+    },
+    {
+      "from": "audio",
+      "to": "sound"
+    },
+    {
+      "from": "text",
+      "to": "token"
+    },
+    {
+      "from": "vision",
+      "to": "lm"
+    },
+    {
+      "from": "sound",
+      "to": "lm"
+    },
+    {
+      "from": "token",
+      "to": "lm"
+    },
+    {
+      "from": "lm",
+      "to": "out"
+    }
+  ],
+  "notes": [
+    "自绘，非原文图；仅概括公开模块，未填写gated配置与未公开投影尺寸。",
+    "图像/音频/视频为输入模态，公开版本只产生文字。"
+  ],
+  "sources": [
+    {
+      "url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+      "locator": "MatFormer / PLE / KV sharing / Audio / MobileNet-V5",
+      "note": "支持编码器、弹性主干和复用机制"
+    },
+    {
+      "url": "https://huggingface.co/google/gemma-3n-E4B-it/blob/c1221e9c62e34a43ab7ffacd1be0ea71f126ef10/README.md",
+      "locator": "Inputs and outputs",
+      "note": "支持每图/每秒token和32K上下文"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "paper_id": "aa88a8d81e68",
+  "catalogue_entry_id": "aa88a8d81e68",
+  "family_slug": "gemma",
+  "title": "Gemma 3 Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2503.19786v1",
+  "source_url": "https://arxiv.org/pdf/2503.19786v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Gemma 3：冻结视觉编码器、局部注意力与长上下文",
+  "source_sha256": "b2793d288d6672f8d6a03f65370bb4a48d607f54937a22fc7d9f727435795305",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-03-25",
+  "chinese_characters": 3157,
+  "figures_manifest": "figures-manifest.json"
+}

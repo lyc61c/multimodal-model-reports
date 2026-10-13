@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "paper_id": "51404279a064",
+  "title": "GLM-4.6V",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图像 / 视频块",
+      "lines": [
+        "processor与网格参数"
+      ],
+      "row": 0,
+      "col": 0,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "文字与工具结果",
+      "lines": [
+        "问题、历史和视觉观察"
+      ],
+      "row": 0,
+      "col": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vit",
+      "title": "视觉Transformer",
+      "lines": [
+        "Conv3d patch嵌入",
+        "位置编码与视觉注意力"
+      ],
+      "row": 1,
+      "col": 0,
+      "kind": "encoder"
+    },
+    {
+      "id": "embed",
+      "title": "文字嵌入",
+      "lines": [
+        "视觉占位同步准备"
+      ],
+      "row": 1,
+      "col": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "merge",
+      "title": "空间合并与merger",
+      "lines": [
+        "Conv2d压缩空间",
+        "归一化、投影与门控MLP"
+      ],
+      "row": 2,
+      "col": 0,
+      "kind": "bridge"
+    },
+    {
+      "id": "joint",
+      "title": "占位替换",
+      "lines": [
+        "视觉特征写入对应位置",
+        "核对token与特征数量"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "GLM MoE骨干",
+      "lines": [
+        "稀疏路由 + 共享专家",
+        "本图对应大型MoE版本"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "output",
+      "title": "文字 / 工具调用",
+      "lines": [
+        "工具返回可再次成为条件"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "image",
+      "to": "vit",
+      "style": "solid"
+    },
+    {
+      "from": "vit",
+      "to": "merge",
+      "style": "solid"
+    },
+    {
+      "from": "merge",
+      "to": "joint",
+      "style": "solid"
+    },
+    {
+      "from": "text",
+      "to": "embed",
+      "style": "solid"
+    },
+    {
+      "from": "embed",
+      "to": "joint",
+      "style": "solid"
+    },
+    {
+      "from": "joint",
+      "to": "llm",
+      "style": "solid"
+    },
+    {
+      "from": "llm",
+      "to": "output",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "自绘，组件据公开实现；具体层数随checkpoint。",
+    "Flash为另一版本，不套用本图MoE模块。",
+    "外部工具执行属于运行时，不是模型内部网络。"
+  ],
+  "sources": [
+    {
+      "url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/README.md",
+      "locator": "Model Implementation Code / GLM-4.6V Model Overview",
+      "note": "实现入口、模型规模与工具接口。"
+    },
+    {
+      "url": "https://github.com/huggingface/transformers/blob/v5.0.0rc0/src/transformers/models/glm4v_moe/modeling_glm4v_moe.py",
+      "locator": "L653–703、L916–1027、L1348–1513、L378–490",
+      "note": "视觉编码、空间合并、占位替换及共享/路由专家。"
+    }
+  ]
+}

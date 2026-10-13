@@ -144,7 +144,7 @@ Table 10 显示视频 SFT 前后，SQA-IMG **95.44→83.94**、MMVP **51.33→32
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Modality Integration Rate](../../modality-integration-rate/arxiv-2410.07167/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：ChatRex →](../../chatrex/arxiv-2411.18363/README.md)
+[← 上一篇：Modality Integration Rate](../../modality-integration-rate/arxiv-2410.07167/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Pixtral Large →](../../mistral-pixtral/document-5140df127b74/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

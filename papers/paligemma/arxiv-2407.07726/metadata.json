@@ -1,0 +1,20 @@
+{
+  "paper_id": "e3fc1ad19951",
+  "catalogue_entry_id": "e3fc1ad19951",
+  "family_slug": "paligemma",
+  "title": "PaliGemma: A versatile 3B VLM for transfer",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2407.07726v2",
+  "source_url": "https://arxiv.org/pdf/2407.07726v2",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "PaliGemma：Prefix-LM、全参数预训练与通用视觉迁移",
+  "source_sha256": "aec6edd6b712597647d5e6e10850039d6415620163f45bb64f71d89718e6bb2f",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2024-07-10",
+  "chinese_characters": 2975,
+  "figures_manifest": "figures-manifest.json"
+}

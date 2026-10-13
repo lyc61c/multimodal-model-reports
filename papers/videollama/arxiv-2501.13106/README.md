@@ -181,7 +181,7 @@ OCR 监督包含文本及框坐标，Laion-OCR 筛选约 3M 清晰文字图片�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：LlamaV-o1](../../llamav-o1/arxiv-2501.06186/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Baichuan-Omni-1.5 →](../../baichuan/document-165201d8355a/README.md)
+[← 上一篇：LlamaV-o1](../../llamav-o1/arxiv-2501.06186/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：MiniCPM-o 2.6 →](../../minicpm/document-38bf1faaf3c5/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

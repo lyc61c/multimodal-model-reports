@@ -162,7 +162,7 @@ Table 6 比较采样步数：图像 CLIP 在 1,024/50/15 步为 32.8/32.0/31.7�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：UniGen](../../unigen/arxiv-2505.14682/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：BAGEL →](../../bagel/arxiv-2505.14683/README.md)
+[← 上一篇：UniGen](../../unigen/arxiv-2505.14682/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Claude 4 →](../../claude/document-28803263c0f6/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

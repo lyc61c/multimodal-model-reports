@@ -83,7 +83,7 @@
     "自动事实评分器有误差",
     "模型不同组件不混成绩"
   ],
-  "article_sha256": "8b2583181120ddbb9534df27088f112a6c1088ffa14f3fb7d3df3ef5359e458a",
+  "article_sha256": "d59d6850c0d5a89afaa898d59d7eedc74accdb53cf285f3516d21effa0cdad28",
   "artifact_checks": {
     "original_assets": 6,
     "no_full_page_screenshots": true,
@@ -100,11 +100,11 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-13",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
-    "math_delimiters_converted": 6,
-    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter",
-    "strong_emphasis": "Unicode punctuation spacing outside code"
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
     {
@@ -137,13 +137,19 @@
     "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
   },
   "github_math_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-13",
     "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
     "changes": {
-      "delimiter_conversions": 6,
+      "delimiter_conversions": 0,
       "operatorname_replacements": 0,
-      "vertical_bar_replacements": 0
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
     },
     "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
     "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"

@@ -19,7 +19,7 @@
     "no_full_page_screenshots": true,
     "chinese_characters": 3109
   },
-  "article_sha256": "5b75e13d2f4956b7f724041a9a3cc02aa54098e86dc7e7837458be72d8eaa016",
+  "article_sha256": "1703f73f4f59892b85832e0a9dab103f0adab2878621f5f0c2d5262e214821b9",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -70,7 +70,7 @@
     }
   ],
   "formatting_revision": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
     "strong_emphasis": "Unicode punctuation spacing outside code",
@@ -88,7 +88,7 @@
     }
   ],
   "github_math_revision": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",

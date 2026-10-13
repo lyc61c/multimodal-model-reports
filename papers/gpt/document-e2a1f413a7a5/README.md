@@ -152,7 +152,7 @@ Tau2 的 Telecom 设置额外提供了一条通用系统指导；Airline 子集�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Mistral 3](../../mistral-pixtral/document-6276d6c37ba5/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Seed1.8 →](../../seed/document-6cb43357175b/README.md)
+[← 上一篇：GLM-4.6V](../../glm/document-51404279a064/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Gemini 3 Flash →](../../gemini/document-9e94a9ffe555/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

@@ -1,0 +1,79 @@
+{
+  "paper_id": "448cf5cdfd37",
+  "source_version": "2609.11929v1",
+  "source_pdf_sha256": "4a55b4f75e2c4d7ba245cf2f070efc1b993126c41cce559ac7b6a69a476a74aa",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 3: SenseNova-U1.5 architecture",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2609.11929v1#page=7",
+      "source_version": "2609.11929v1",
+      "source_sha256": "4a55b4f75e2c4d7ba245cf2f070efc1b993126c41cce559ac7b6a69a476a74aa",
+      "asset_sha256": "6bd44a44d9723ba83308c2b770f85674396aaf16acd9fc76c7947bb3d9859c3d",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          75,
+          550,
+          350
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/expert-distillation.png",
+      "original_label": "Figure 4: Expert RL and on-policy distillation",
+      "pdf_page": 10,
+      "source_url": "https://arxiv.org/pdf/2609.11929v1#page=10",
+      "source_version": "2609.11929v1",
+      "source_sha256": "4a55b4f75e2c4d7ba245cf2f070efc1b993126c41cce559ac7b6a69a476a74aa",
+      "asset_sha256": "a071ab2a9a502af770465cd862587751eae901dac7f5c41064c86c44b60aa5a4",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          75,
+          550,
+          275
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/editing-results.png",
+      "original_label": "Table 16: ImgEdit evaluation",
+      "pdf_page": 22,
+      "source_url": "https://arxiv.org/pdf/2609.11929v1#page=22",
+      "source_version": "2609.11929v1",
+      "source_sha256": "4a55b4f75e2c4d7ba245cf2f070efc1b993126c41cce559ac7b6a69a476a74aa",
+      "asset_sha256": "27080bc38fae2672c006214d89ed2b254e8cc92d2dd1bfe9cb045b1517143f60",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          75,
+          550,
+          326
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

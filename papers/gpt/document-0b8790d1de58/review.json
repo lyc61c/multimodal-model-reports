@@ -20,7 +20,7 @@
     "no_full_page_screenshots": true,
     "chinese_characters": 2954
   },
-  "article_sha256": "519bb76d19cf306418d90a9d088a94e26cb0c9e0a4378db3f538b4b7c69cedf4",
+  "article_sha256": "2e0eb0a18762c086db861ac104ed9cc07575c4ae52118d241c6134176d4cf67c",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
@@ -35,9 +35,10 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-11",
+    "date": "2026-10-13",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "architecture_revision_history": [
@@ -91,5 +92,23 @@
       "principle_subsections": 3,
       "model_executed": false
     }
-  ]
+  ],
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
 }

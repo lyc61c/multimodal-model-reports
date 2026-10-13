@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "paper_id": "fd75097b0235",
+  "title": "Gemini 3 Pro公开接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "公开输入",
+      "lines": [
+        "文字、图片、音频、视频",
+        "最多1M token上下文"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "core",
+      "title": "多模态推理模型",
+      "lines": [
+        "原生多模态稀疏MoE",
+        "视觉编码与路由配置未知"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "output",
+      "title": "公开输出",
+      "lines": [
+        "文字最多64K token",
+        "Deep Think为可选推理设置"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "core",
+      "style": "solid"
+    },
+    {
+      "from": "core",
+      "to": "output",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据公开资料自绘，非原文图",
+    "仅展示功能接口，方框不是逐层网络",
+    "未公开的视觉编码、融合与参数不作推断"
+  ],
+  "sources": [
+    {
+      "url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+      "locator": "PDF pp.2–3 Model Information/Architecture",
+      "note": "支持输入、输出、模型定位与披露边界"
+    }
+  ]
+}

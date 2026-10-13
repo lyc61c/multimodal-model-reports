@@ -1,0 +1,32 @@
+{
+  "paper_id": "783cf6ffbfbf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "7311c9c6bbb16d012f1c12c7418b05949fcf7ae3e30d2c40f22050074b2a7378",
+  "assets": [
+    {
+      "asset_path": "figures/original-benchmark-table.png",
+      "original_label": "Table 8.1.A: capability evaluation summary",
+      "pdf_page": 174,
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card#page=174",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "7311c9c6bbb16d012f1c12c7418b05949fcf7ae3e30d2c40f22050074b2a7378",
+      "asset_sha256": "706dd4f6b129e92eb587ea44ba0cc58ec671417a3aaebc07f58016016eead4dd",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          65,
+          140,
+          550,
+          675
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original table region rendered from fixed official PDF, with headers and required caption/footnotes; no synthetic alteration.",
+        "visual_review": "Actually viewed rendered source page and resulting cropped table pixels; headers, all selected rows and required captions/footnotes preserved; surrounding paragraphs excluded."
+      }
+    }
+  ]
+}

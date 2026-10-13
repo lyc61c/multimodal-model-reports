@@ -1,0 +1,79 @@
+{
+  "paper_id": "f799e9065399",
+  "source_version": "2605.12500v1",
+  "source_pdf_sha256": "d17a6184d1a909d2f6ce0eb3401c3a18e5daea0de3dba30b0a119d95e1da2d63",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 4: Native NEO-unify architecture",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2605.12500v1#page=7",
+      "source_version": "2605.12500v1",
+      "source_sha256": "d17a6184d1a909d2f6ce0eb3401c3a18e5daea0de3dba30b0a119d95e1da2d63",
+      "asset_sha256": "33bcd4e4fed155ce2ec2f68e8c53d252823cb324f782320feb41673977945204",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          76,
+          550,
+          310
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/understanding-results.png",
+      "original_label": "Table 3: Multimodal understanding",
+      "pdf_page": 16,
+      "source_url": "https://arxiv.org/pdf/2605.12500v1#page=16",
+      "source_version": "2605.12500v1",
+      "source_sha256": "d17a6184d1a909d2f6ce0eb3401c3a18e5daea0de3dba30b0a119d95e1da2d63",
+      "asset_sha256": "d75660e894e8d6aaf4d47af170cc1a41f46d26df2238f63185c001b2c16c2604",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          82,
+          550,
+          393
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/geneval-results.png",
+      "original_label": "Table 5: GenEval",
+      "pdf_page": 18,
+      "source_url": "https://arxiv.org/pdf/2605.12500v1#page=18",
+      "source_version": "2605.12500v1",
+      "source_sha256": "d17a6184d1a909d2f6ce0eb3401c3a18e5daea0de3dba30b0a119d95e1da2d63",
+      "asset_sha256": "80bb902c64cf3a4c351810f273b564fcc2a69c3c3d2b179606c1b63c8221c023",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          75,
+          550,
+          450
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "paper_id": "783cf6ffbfbf",
+  "title": "Claude Opus 5.5公开接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "公开输入",
+      "lines": [
+        "图像/屏幕与文字目标",
+        "工具反馈及交互历史"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "core",
+      "title": "多模态推理模型",
+      "lines": [
+        "Opus 5.5 与思考预算",
+        "内部视觉编码融合未公开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "output",
+      "title": "公开输出",
+      "lines": [
+        "文本回答或工具请求",
+        "生产防护可触发型号回退"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "core",
+      "style": "solid"
+    },
+    {
+      "from": "core",
+      "to": "output",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据公开资料自绘，非原文图",
+    "仅展示功能接口，方框不是逐层网络",
+    "未公开的视觉编码、融合与参数不作推断"
+  ],
+  "sources": [
+    {
+      "url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+      "locator": "PDF pp.11–12 §§1.1/1.4–1.5",
+      "note": "支持输入、输出、模型定位与披露边界"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "paper_id": "652708f323d7",
+  "source_url": "https://mistral.ai/news/mistral-small-3-1/",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "982fccf995e0a73e09e76e690da636d5b6fa229c8310d6ac1591aa1a3a85a88b",
+  "verification_notes": [
+    "完整阅读官方发布博客正文；固定HF模型卡Key Features/Benchmarks/模板/部署建议、config/preprocessor字段，Transformersv4.50.0 Mistral3PatchMerger/MultiModalProjector/get_image_features/forward已实际核对。",
+    "核对视觉24层1024宽patch14、2×2 unfold合并4096→1024、MLP1024→5120→5120、语言40层32Q/8KV、128K及量化后单卡条件。",
+    "核对原表所有视觉数值、Base与Instruct、MM-MT-Bench模型卡7.3与博客0–100尺度差异；GPQA图为文字成绩/特定4H100 batch16而非视觉精度。",
+    "训练数据/冻结/SFT偏好阶段未披露，正文明确，不从推理代码反推训练配方。",
+    "已视觉查看官方GPQA效率图，保留坐标/型号标签和4H100 batch16/API图注。"
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction.",
+  "additional_sources": [
+    {
+      "url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/resolve/68faf511d618ef198fef186659617cfd2eb8e33a/README.md",
+      "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+      "sha256": "68effd5695d7053fa8153feedaaae529ce10bd6481f86dad76374a59de3592e6",
+      "cache_path": "source/papers/652708f323d7/supplemental/source.md",
+      "locator": "source.md"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/resolve/68faf511d618ef198fef186659617cfd2eb8e33a/config.json",
+      "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+      "sha256": "ce3ec410cac74da358f786c574b73b6624c50c8bb876bcb628f06500fe07adcc",
+      "cache_path": "source/papers/652708f323d7/supplemental/config.json",
+      "locator": "config.json"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/resolve/68faf511d618ef198fef186659617cfd2eb8e33a/params.json",
+      "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+      "sha256": "23febf6d98a78f896149ab08733356d5b99e71b2e7e4c3caddfa4f48cda87885",
+      "cache_path": "source/papers/652708f323d7/supplemental/params.json",
+      "locator": "params.json"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/resolve/68faf511d618ef198fef186659617cfd2eb8e33a/preprocessor_config.json",
+      "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+      "sha256": "0f1a312ed75c86bccdf65333b5b43507f597028d895dbb9cf9f16be9f87b52f1",
+      "cache_path": "source/papers/652708f323d7/supplemental/preprocessor_config.json",
+      "locator": "preprocessor_config.json"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/resolve/68faf511d618ef198fef186659617cfd2eb8e33a/processor_config.json",
+      "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+      "sha256": "4ceef0d0cbf062ffd522d85fcbf5248c2db8659c589afcc47b2f26810e7d9a58",
+      "cache_path": "source/papers/652708f323d7/supplemental/processor_config.json",
+      "locator": "processor_config.json"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/resolve/68faf511d618ef198fef186659617cfd2eb8e33a/tokenizer_config.json",
+      "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+      "sha256": "85d2cc5ea2cddee01ddd36fe98a2eed62d85e78c8b049ea93ee0b2ae4c2c8e5e",
+      "cache_path": "source/papers/652708f323d7/supplemental/tokenizer_config.json",
+      "locator": "tokenizer_config.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.50.0/src/transformers/models/mistral3/modeling_mistral3.py",
+      "revision": "v4.50.0",
+      "sha256": "30a22c9ec702dd55bec8ac55b6a8af27717de20e9407103e91384cd310b3cee9",
+      "cache_path": "source/papers/652708f323d7/supplemental/modeling_mistral3-v4.50.0.py",
+      "locator": "modeling_mistral3-v4.50.0.py"
+    }
+  ]
+}

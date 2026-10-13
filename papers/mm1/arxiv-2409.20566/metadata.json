@@ -1,0 +1,20 @@
+{
+  "paper_id": "19d0dc679a0e",
+  "catalogue_entry_id": "19d0dc679a0e",
+  "family_slug": "mm1",
+  "title": "MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2409.20566v1",
+  "source_url": "https://arxiv.org/pdf/2409.20566v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "MM1.5：数据配比、动态切图与细粒度视觉理解",
+  "source_sha256": "6db6fcdfaa493c217bb606fd28de23f01399bd0b8d51f63291755511a99b00f8",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2024-09-30",
+  "chinese_characters": 3334,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,76 @@
+{
+  "paper_id": "eb1014c14dfe",
+  "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+  "source_document_sha256": "1342b9e318a339218c784f56e31c9b37ea12447e64821aac07e9169290f3fbe1",
+  "assets": [
+    {
+      "asset_path": "figures/instruct-results.png",
+      "original_label": "Overall Performance (Instruct)",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "source_sha256": "1342b9e318a339218c784f56e31c9b37ea12447e64821aac07e9169290f3fbe1",
+      "asset_sha256": "731c44c3d206096bcfd5d0b21ae48e577eda167a5a0be4c70c774d1a17c73c1d",
+      "original_asset_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/instruct.png",
+      "original_image_sha256": "1cc4790fd2d274e2588e74d7343bdc04678fdf299b38673943c7aa6918599622",
+      "retrieval_url": "https://cdn.jsdelivr.net/gh/OpenBMB/MiniCPM-V@1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/instruct.png",
+      "processing": {
+        "method": "official_image_resize",
+        "original_size": [
+          4214,
+          6318
+        ],
+        "output_size": [
+          3000,
+          4498
+        ],
+        "note": "Original standalone official figure/table retained in full, with all headings/labels; reduced display resolution when needed. Immutable GitHub commit files retrieved through CDN; original bytes preserved in reading cache."
+      }
+    },
+    {
+      "asset_path": "figures/throughput.png",
+      "original_label": "High-Concurrency Throughput",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "source_sha256": "1342b9e318a339218c784f56e31c9b37ea12447e64821aac07e9169290f3fbe1",
+      "asset_sha256": "91a68e48ac6ccf1d9bb0cf21bf98df567248284df3b927c75daec5c44ffccffa",
+      "original_asset_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/throughput.png",
+      "original_image_sha256": "91a68e48ac6ccf1d9bb0cf21bf98df567248284df3b927c75daec5c44ffccffa",
+      "retrieval_url": "https://cdn.jsdelivr.net/gh/OpenBMB/MiniCPM-V@1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/throughput.png",
+      "processing": {
+        "method": "official_image_copy",
+        "original_size": [
+          1437,
+          1135
+        ],
+        "output_size": [
+          1437,
+          1135
+        ],
+        "note": "Original standalone official figure/table retained in full, with all headings/labels; reduced display resolution when needed. Immutable GitHub commit files retrieved through CDN; original bytes preserved in reading cache."
+      }
+    },
+    {
+      "asset_path": "figures/ttft.png",
+      "original_label": "Single Request TTFT",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "source_sha256": "1342b9e318a339218c784f56e31c9b37ea12447e64821aac07e9169290f3fbe1",
+      "asset_sha256": "4335ef9252863c66a656095e8eb2888895730166790f0d743a193f9518555228",
+      "original_asset_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/ttft.png",
+      "original_image_sha256": "4335ef9252863c66a656095e8eb2888895730166790f0d743a193f9518555228",
+      "retrieval_url": "https://cdn.jsdelivr.net/gh/OpenBMB/MiniCPM-V@1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/ttft.png",
+      "processing": {
+        "method": "official_image_copy",
+        "original_size": [
+          1357,
+          1043
+        ],
+        "output_size": [
+          1357,
+          1043
+        ],
+        "note": "Original standalone official figure/table retained in full, with all headings/labels; reduced display resolution when needed. Immutable GitHub commit files retrieved through CDN; original bytes preserved in reading cache."
+      }
+    }
+  ]
+}

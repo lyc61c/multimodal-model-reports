@@ -1,0 +1,20 @@
+{
+  "paper_id": "76e3de9b2ed3",
+  "catalogue_entry_id": "76e3de9b2ed3",
+  "family_slug": "ovis",
+  "title": "Ovis2.5 Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2508.11737v1",
+  "source_url": "https://arxiv.org/pdf/2508.11737v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Ovis2.5：原生分辨率视觉与可切换的深度推理",
+  "source_sha256": "a5c8146196b48f24350fb81803c96face4ba1b42e46bdfa2a76ecc7e72d50978",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-08-15",
+  "chinese_characters": 2343,
+  "figures_manifest": "figures-manifest.json"
+}

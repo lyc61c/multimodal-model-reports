@@ -1,0 +1,32 @@
+{
+  "paper_id": "28803263c0f6",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+  "assets": [
+    {
+      "asset_path": "figures/original-benchmark-table.png",
+      "original_label": "Table 3.2.A: computer-use prompt-injection evaluation",
+      "pdf_page": 20,
+      "source_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf#page=20",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+      "asset_sha256": "784e70f332ebddb4f27562ceff2086ac0f4cac1b4915b8777f4a7d0179e27de1",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          265,
+          545,
+          435
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original table region rendered from fixed official PDF, with headers and required caption/footnotes; no synthetic alteration.",
+        "visual_review": "Actually viewed rendered source page and resulting cropped table pixels; headers, all selected rows and required captions/footnotes preserved; surrounding paragraphs excluded."
+      }
+    }
+  ]
+}

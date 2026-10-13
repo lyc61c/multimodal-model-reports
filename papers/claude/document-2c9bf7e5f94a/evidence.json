@@ -1,0 +1,61 @@
+{
+  "paper_id": "2c9bf7e5f94a",
+  "source_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "82947a46fc2d1b9a1d69501ef973fc3c5b328b703b9a17bd8a143c2672f8a1a6",
+  "verification_notes": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "82947a46fc2d1b9a1d69501ef973fc3c5b328b703b9a17bd8a143c2672f8a1a6",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        22
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Hybrid reasoning, RL-trained extended thinking, proprietary data and filtering",
+      "locator": "PDF pp.3,6–7 §§1.1–1.4/2"
+    },
+    {
+      "claim": "Computer use prompt injection176 tasks74/88 and0.5%false positives",
+      "locator": "PDF pp.12–13 §4"
+    },
+    {
+      "claim": "CoT clue-conditional score,0.30MMLU/0.19GPQA",
+      "locator": "PDF pp.15,17 §5.1/Table3"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-faithfulness-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "scope": "Modes,128K budget and SWE-bench/TAU-bench scaffolding appendix; excluded promotional quotes/footer"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

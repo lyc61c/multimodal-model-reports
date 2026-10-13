@@ -17,6 +17,8 @@ import urllib.request
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
+from datetime import date
+from supplemental_catalogue import load_supplemental_entries
 
 ROOT = Path(__file__).resolve().parents[1]
 PLAN = ROOT / "data/article-plan.json"
@@ -39,12 +41,27 @@ def arxiv_id(url):
     return match.group(1).removesuffix(".pdf") if match else None
 
 
-def prepare():
-    entries = read(ROOT / "data/catalogue.json")["entries"]
+def prepare(snapshot_date=None):
+    catalogue = read(ROOT / "data/catalogue.json")
+    upstream_entries = catalogue["entries"]
+    supplemental = load_supplemental_entries(upstream_entries, ROOT)
+    entries = upstream_entries + supplemental
+    prior_plan = read(PLAN) if PLAN.exists() else {}
+    prior_rows = {row["id"]: row for row in prior_plan.get("entries", [])}
+    retained_ids = {entry["id"] for entry in entries if entry["catalogue_group"] != "excluded_low_star"}
+    removed = sorted(set(prior_rows) - retained_ids)
+    if removed:
+        raise ValueError(f"Refuse to silently remove existing article-plan entries: {removed}")
+    capture_date = snapshot_date or date.today().isoformat()
+    date.fromisoformat(capture_date)
     rows = []
     arxiv_count = 0
     for entry in sorted(entries, key=lambda e: (e["family_slug"], e["date"], e["title"])):
         if entry["catalogue_group"] == "excluded_low_star":
+            continue
+        if entry["id"] in prior_rows:
+            # Preserve recovered source versions, custom destinations and ownership.
+            rows.append(dict(prior_rows[entry["id"]]))
             continue
         aid = arxiv_id(entry.get("paper_url"))
         if aid:
@@ -54,20 +71,24 @@ def prepare():
             arxiv_count += 1
             source_url = "https://arxiv.org/pdf/" + version
         else:
-            version = "official-source-snapshot-2026-10-08"
+            version = "official-source-snapshot-" + capture_date
             paper_slug = "document-" + entry["id"]
             owner = "root"
             source_url = entry.get("paper_url") or entry.get("github_code_url")
         if aid and aid.split("v")[0] == "2502.13923":
             paper_slug, owner = "qwen2.5-vl", "existing"
-        destination = f"papers/{entry['family_slug']}/{paper_slug}"
+        version = entry.get("source_version") or version
+        source_url = entry.get("source_url") or source_url
+        destination = entry.get("destination") or f"papers/{entry['family_slug']}/{paper_slug}"
         row = {"id": entry["id"], "title": entry["title"], "family": entry["family"],
                "family_slug": entry["family_slug"], "organization": entry["organization"],
                "date": entry["date"], "paper_url": entry.get("paper_url"),
                "github_code_url": entry.get("github_code_url"), "repo": entry.get("repo"),
                "catalogue_group": entry["catalogue_group"], "document_kind": entry["scope"]["kind"],
                "source_url": source_url, "source_version": version, "arxiv_id": aid,
-               "destination": destination, "owner": owner}
+               "destination": destination, "owner": entry.get("owner") or owner}
+        if entry.get("provenance"):
+            row["provenance"] = entry["provenance"]
         rows.append(row)
         target = ROOT / destination
         target.mkdir(parents=True, exist_ok=True)
@@ -78,7 +99,12 @@ def prepare():
                 "article_file": "README.md", "article_status": "planned", "source_version": version,
                 "source_url": source_url, "document_kind": row["document_kind"],
                 "catalogue_group": row["catalogue_group"], "article_template_version": "1.1"})
-    dump(PLAN, {"snapshot_date": "2026-10-08", "scope": "All 272 entries surviving the original star filter", "entries": rows})
+    updated_plan = {**prior_plan,
+                    "snapshot_date": prior_plan.get("snapshot_date") or catalogue["metadata"]["snapshot_date"],
+                    "scope": "Retained upstream entries and reviewed official additions",
+                    "upstream_retained_entries": len(retained_ids) - len(supplemental),
+                    "supplemental_entries": len(supplemental), "entries": rows}
+    dump(PLAN, updated_plan)
     print(json.dumps({"total": len(rows), "owners": dict(Counter(r["owner"] for r in rows)),
                       "groups": dict(Counter(r["catalogue_group"] for r in rows))}, ensure_ascii=True))
 
@@ -141,7 +167,7 @@ def fetch(row, retry=False):
     folder.mkdir(parents=True, exist_ok=True)
     url = public_url(row.get("source_url"))
     result = {"id": row["id"], "title": row["title"], "source_url": row.get("source_url"),
-              "request_url": url, "source_version": row["source_version"], "observed_at": "2026-10-08"}
+              "request_url": url, "source_version": row["source_version"], "observed_at": date.today().isoformat()}
     try:
         if not url:
             raise ValueError("Upstream provides no source URL")
@@ -159,9 +185,16 @@ def fetch(row, retry=False):
             (folder / "source.txt").write_text("\n\n".join(f"===== PDF PAGE {i + 1} =====\n{text}" for i, text in enumerate(pages)), encoding="utf-8")
             dump(folder / "pages.json", [{"pdf_page": i + 1, "text": text} for i, text in enumerate(pages)])
             result.update({"kind": "pdf", "pages": len(pages), "text_characters": sum(map(len, pages))})
+        elif urllib.parse.urlsplit(url).path.endswith(".md") and "text/html" not in result["content_type"]:
+            # Keep official model guides as their original Markdown bytes.
+            # A decoded reading copy must not be labelled an original HTML response.
+            plain = data.decode("utf-8-sig")
+            (folder / "source.md").write_bytes(data)
+            (folder / "source.txt").write_text(plain, encoding="utf-8")
+            result.update({"kind": "markdown", "text_characters": len(plain)})
         else:
             html = data.decode("utf-8", errors="replace")
-            (folder / "source.html").write_text(html, encoding="utf-8")
+            (folder / "source.html").write_bytes(data)
             parser = PageParser()
             parser.feed(html)
             plain = re.sub(r"[ \t]+", " ", "".join(parser.text))
@@ -242,7 +275,8 @@ def assets(args):
 def main():
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="command", required=True)
-    sub.add_parser("prepare")
+    prepare_parser = sub.add_parser("prepare")
+    prepare_parser.add_argument("--snapshot-date", help="Capture label for newly planned non-versioned sources; existing plan records are preserved")
     fetch_parser = sub.add_parser("fetch")
     fetch_parser.add_argument("--owner")
     fetch_parser.add_argument("--ids")
@@ -256,7 +290,7 @@ def main():
     asset_parser.add_argument("--specs", required=True, help="JSON array of explicit page, label, bbox and optional filename for each figure/table")
     asset_parser.add_argument("--dpi", type=int, default=180)
     args = parser.parse_args()
-    {"prepare": lambda: prepare(), "fetch": lambda: fetch_many(args), "assets": lambda: assets(args)}[args.command]()
+    {"prepare": lambda: prepare(args.snapshot_date), "fetch": lambda: fetch_many(args), "assets": lambda: assets(args)}[args.command]()
 
 
 if __name__ == "__main__":

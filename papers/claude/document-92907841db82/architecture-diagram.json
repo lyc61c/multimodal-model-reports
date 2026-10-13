@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "paper_id": "92907841db82",
+  "title": "Claude Opus 4.6公开接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "公开输入",
+      "lines": [
+        "图片/屏幕与文字任务",
+        "工具结果及长上下文"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "core",
+      "title": "多模态推理模型",
+      "lines": [
+        "自适应思考与effort",
+        "内部视觉编码融合未公开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "output",
+      "title": "公开输出",
+      "lines": [
+        "文字与可选工具请求",
+        "外部执行后再观察"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "core",
+      "style": "solid"
+    },
+    {
+      "from": "core",
+      "to": "output",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据公开资料自绘，非原文图",
+    "仅展示功能接口，方框不是逐层网络",
+    "未公开的视觉编码、融合与参数不作推断"
+  ],
+  "sources": [
+    {
+      "url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+      "locator": "PDF pp.10–11 §1.1",
+      "note": "支持输入、输出、模型定位与披露边界"
+    }
+  ]
+}

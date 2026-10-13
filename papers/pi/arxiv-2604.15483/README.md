@@ -147,7 +147,7 @@ $`o`$含图像和机器人状态，$`C_t`$含多种提示。作者指出流匹�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：DeepSeek-V4](../../deepseek/document-08e9e69bb6bb/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Cosmos 3 →](../../cosmos/arxiv-2606.02800/README.md)
+[← 上一篇：DeepSeek-V4](../../deepseek/document-08e9e69bb6bb/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：MiniCPM-V 4.6 →](../../minicpm/document-eb1014c14dfe/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

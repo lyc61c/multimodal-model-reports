@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "86d1cc655950",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "d343173fd3f7246d62719e9b262d0f22f525ba6a88c92760e0fa3c9020212ded",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2601.09668v1",
+          "locator": "§2.1 p4；§3.2.4 p10；§4.1 p12",
+          "note": "编码器、裁片、压缩与序列组织及两种推理模式"
+        }
+      ],
+      "scope": "根据公开方法自绘，非原文图。；PaCoRe为外层采样再综合，非额外网络。；训练全参预训；RL冻结视觉编码器。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

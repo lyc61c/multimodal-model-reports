@@ -1,0 +1,22 @@
+{
+  "paper_id": "652708f323d7",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "assets": [
+    {
+      "asset_path": "figures/official-efficiency-benchmark.webp",
+      "original_label": "Perf Gpqa Diamond Mistral",
+      "source_url": "https://mistral.ai/news/mistral-small-3-1/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "982fccf995e0a73e09e76e690da636d5b6fa229c8310d6ac1591aa1a3a85a88b",
+      "asset_sha256": "30b641330a9d2ff1ebc40c8b6c3408bfb3fc27d2c52c5c6667696e8f3f410255",
+      "processing": {
+        "method": "official_web_asset_download",
+        "note": "Original image bytes downloaded from the image URL embedded in the official blog; no PDF page rendering or redraw.",
+        "visual_review": "已视觉查看官方GPQA效率图，保留坐标/型号标签和4H100 batch16/API图注。"
+      },
+      "image_url": "https://mistral.ai/_astro/1977a3f1-eae3-4eed-b2c7-e1701c4692ed_pmVY6.webp?dpl=6accf0d261fecbe6ba702f4d",
+      "image_final_url": "https://mistral.ai/_astro/1977a3f1-eae3-4eed-b2c7-e1701c4692ed_pmVY6.webp?dpl=6accf0d261fecbe6ba702f4d",
+      "image_sha256": "30b641330a9d2ff1ebc40c8b6c3408bfb3fc27d2c52c5c6667696e8f3f410255"
+    }
+  ]
+}

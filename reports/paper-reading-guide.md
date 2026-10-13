@@ -1,8 +1,8 @@
 # 逐篇论文详解
 
-**271 篇中文介绍** · 按发表 / 发布日期由早到晚排列。
+**305 篇中文介绍** · 按发表 / 发布日期由早到晚排列。
 
-[2022（4 篇）](#year-2022) · [2023（104 篇）](#year-2023) · [2024（79 篇）](#year-2024) · [2025（50 篇）](#year-2025) · [2026（34 篇）](#year-2026)
+[2022（4 篇）](#year-2022) · [2023（105 篇）](#year-2023) · [2024（86 篇）](#year-2024) · [2025（64 篇）](#year-2025) · [2026（46 篇）](#year-2026)
 
 [按模型系列浏览](model-family-index.md) · [项目首页](../README.md)
 
@@ -19,7 +19,7 @@
 
 <a id="year-2023"></a>
 
-## 2023 · 104 篇
+## 2023 · 105 篇
 
 | 发表 / 发布日期 | 模型系列 | 逐篇介绍 |
 |---|---|---|
@@ -99,6 +99,7 @@
 | 2023-11-07 | Otter | [OtterHD：从 Fuyu 出发研究高分辨率与动态图像输入](../papers/otter/arxiv-2311.04219/README.md) |
 | 2023-11-08 | NExT-Chat | [NExT-Chat：以位置嵌入统一对话、框定位与分割](../papers/next-chat/arxiv-2311.04498/README.md) |
 | 2023-11-09 | LLaVA（官方研究谱系） | [LLaVA-Plus：学习调用视觉工具的多模态智能体](../papers/llava/arxiv-2311.05437/README.md) |
+| 2023-11-10 | Florence | [Florence-2：把视觉任务统一为文本与位置序列](../papers/florence/arxiv-2311.06242/README.md) |
 | 2023-11-11 | Monkey / TextMonkey | [Monkey：让高分辨率图像与细粒度描述共同发挥作用](../papers/monkey/arxiv-2311.06607/README.md) |
 | 2023-11-13 | LVIS-INSTRUCT4V | [LVIS-Instruct4V：让数据生成模型真正看图，改善细粒度视觉指令监督](../papers/lvis-instruct4v/arxiv-2311.07574/README.md) |
 | 2023-11-13 | SPHINX | [SPHINX：联合混合模型权重、视觉表示和多任务指令](../papers/sphinx/arxiv-2311.07575/README.md) |
@@ -130,7 +131,7 @@
 
 <a id="year-2024"></a>
 
-## 2024 · 79 篇
+## 2024 · 86 篇
 
 | 发表 / 发布日期 | 模型系列 | 逐篇介绍 |
 |---|---|---|
@@ -177,11 +178,13 @@
 | 2024-06-15 | RoboPoint | [RoboPoint：以合成空间数据训练视觉语言模型预测行动点](../papers/robopoint/arxiv-2406.10721/README.md) |
 | 2024-06-17 | EVE | [EVE：用语言底座预对齐和视觉特征监督构建无深层视觉编码器模型](../papers/eve/arxiv-2406.11832/README.md) |
 | 2024-06-17 | VideoLLM-online | [VideoLLM-online：让视频语言模型学会何时说话、何时等待](../papers/videollm-online/arxiv-2406.11816/README.md) |
+| 2024-06-20 | Claude | [Claude 3.5 Sonnet：视觉图表理解、长上下文与代理编码](../papers/claude/document-380e510956a2/README.md) |
 | 2024-06-22 | SALMONN | [video-SALMONN：用多时间分辨率连接视觉、语音和声音](../papers/salmonn/arxiv-2406.15704/README.md) |
 | 2024-06-24 | Cambrian-1 | [Cambrian-1：用空间视觉聚合器连接多种视觉表征与语言模型](../papers/cambrian-1/arxiv-2406.16860/README.md) |
 | 2024-06-24 | LongVA | [LongVA：把语言模型的长上下文能力迁移到长视频](../papers/longva/arxiv-2406.16852/README.md) |
 | 2024-06-27 | OMG-LLaVA | [OMG-LLaVA：用统一分割模型连接图像、对象与像素推理](../papers/omg-llava/arxiv-2406.19389/README.md) |
 | 2024-07-03 | InternLM-XComposer | [InternLM-XComposer-2.5：统一处理高分辨率图片、视频和长篇图文交互](../papers/internlm-xcomposer/arxiv-2407.03320/README.md) |
+| 2024-07-10 | PaliGemma | [PaliGemma：Prefix-LM、全参数预训练与通用视觉迁移](../papers/paligemma/arxiv-2407.07726/README.md) |
 | 2024-07-19 | EVLM | [EVLM：用分层视觉特征和门控交叉注意力降低视觉理解成本](../papers/evlm/arxiv-2407.14177/README.md) |
 | 2024-07-22 | SlowFast-LLaVA | [SlowFast-LLaVA：在固定 token 预算内兼顾空间细节和时间覆盖](../papers/slowfast-llava/arxiv-2407.15841/README.md) |
 | 2024-07-24 | VILA / NVILA | [VILA²：用模型重写训练数据，再以专家知识突破自增强瓶颈](../papers/vila/arxiv-2407.17453/README.md) |
@@ -200,34 +203,43 @@
 | 2024-09-25 | Llama | [Llama 3.2：冻结语言骨干的视觉扩展与轻量模型](../papers/llama/document-0c6cca94a384/README.md) |
 | 2024-09-25 | Molmo | [Molmo 与 PixMo：以人工密集描述和二维指点建设开放多模态模型](../papers/molmo/arxiv-2409.17146/README.md) |
 | 2024-09-27 | Emu | [Emu3：以离散 token 的自回归预测统一文字、图像与视频](../papers/emu/arxiv-2409.18869/README.md) |
+| 2024-09-30 | MM1 | [MM1.5：数据配比、动态切图与细粒度视觉理解](../papers/mm1/arxiv-2409.20566/README.md) |
 | 2024-10-04 | AuroraCap | [AuroraCap：以 Token 合并提高视频详细描述效率](../papers/auroracap/arxiv-2410.03051/README.md) |
 | 2024-10-09 | Modality-Integration-Rate | [Modality Integration Rate：从层间分布差异判断多模态对齐](../papers/modality-integration-rate/arxiv-2410.07167/README.md) |
 | 2024-10-22 | LongVU | [LongVU：在有限上下文中自适应压缩长视频](../papers/longvu/arxiv-2410.17434/README.md) |
+| 2024-11-18 | Mistral / Pixtral | [Pixtral Large：大型视觉编码器与多图长上下文](../papers/mistral-pixtral/document-5140df127b74/README.md) |
 | 2024-11-27 | ChatRex | [ChatRex：先产生候选框，再让语言模型选择对象并解释场景](../papers/chatrex/arxiv-2411.18363/README.md) |
 | 2024-11-27 | TimeMarker | [TimeMarker：用文字时间戳与自适应压缩统一长短视频理解](../papers/timemarker/arxiv-2411.18211/README.md) |
+| 2024-12-04 | PaliGemma | [PaliGemma 2：模型规模、图像分辨率与任务迁移](../papers/paligemma/arxiv-2412.03555/README.md) |
 | 2024-12-05 | VILA / NVILA | [NVILA：兼顾效果与全流程效率的视觉语言模型](../papers/vila/arxiv-2412.04468/README.md) |
 | 2024-12-06 | CompCap | [CompCap：用可控合成图像与复合描述增强多模态理解](../papers/compcap/arxiv-2412.05243/README.md) |
 | 2024-12-06 | InternVL | [InternVL 2.5：复用视觉主干、清理训练数据与扩展测试时推理](../papers/internvl/arxiv-2412.05271/README.md) |
+| 2024-12-11 | Gemini | [Gemini 2.0 Flash：稀疏多模态、流式接口与工具使用](../papers/gemini/document-222ef6a5de3d/README.md) |
 | 2024-12-11 | StreamChat | [StreamChat：回答生成过程中持续更新视频上下文](../papers/streamchat/arxiv-2412.08646/README.md) |
 | 2024-12-12 | InternLM-XComposer | [InternLM-XComposer2.5-OmniLive：把流式感知、长记忆与推理解耦](../papers/internlm-xcomposer/arxiv-2412.09596/README.md) |
 | 2024-12-13 | Apollo | [Apollo：用视频设计实验建立高效长视频理解模型](../papers/apollo/arxiv-2412.10360/README.md) |
 | 2024-12-13 | DeepSeek | [DeepSeek-VL2：结合动态切图与稀疏专家的视觉语言模型](../papers/deepseek/arxiv-2412.10302/README.md) |
+| 2024-12-17 | FastVLM | [FastVLM：高分辨率混合视觉编码与首 token 延迟优化](../papers/fastvlm/arxiv-2412.13303/README.md) |
 | 2024-12-25 | Qwen | [QVQ-72B-Preview：以长程推理增强视觉解题](../papers/qwen/document-b615730dc322/README.md) |
 
 <a id="year-2025"></a>
 
-## 2025 · 50 篇
+## 2025 · 64 篇
 
 | 发表 / 发布日期 | 模型系列 | 逐篇介绍 |
 |---|---|---|
 | 2025-01-03 | VITA | [VITA-1.5：逐步引入视觉、语音理解与语音生成](../papers/vita/arxiv-2501.01957/README.md) |
 | 2025-01-10 | LlamaV-o1 | [LlamaV-o1：以课程学习和搜索改进逐步视觉推理](../papers/llamav-o1/arxiv-2501.06186/README.md) |
 | 2025-01-22 | VideoLLaMA | [VideoLLaMA 3：以图像能力为基础的视频理解模型](../papers/videollama/arxiv-2501.13106/README.md) |
+| 2025-01-24 | MiniCPM-V / MiniCPM-o | [MiniCPM-o 2.6：把视觉、声音与语音输出接入流式语言骨干](../papers/minicpm/document-38bf1faaf3c5/README.md) |
 | 2025-01-26 | Baichuan | [Baichuan-Omni-1.5：以语义声学双目标连接看、听与说](../papers/baichuan/document-165201d8355a/README.md) |
 | 2025-02-19 | Qwen | [Qwen2.5-VL：动态分辨率、窗口注意力与绝对时间编码](../papers/qwen/qwen2.5-vl/README.md) |
 | 2025-02-19 | VITA | [Long-VITA：百万 token 的多模态上下文训练与分布式推理](../papers/vita/arxiv-2502.05177/README.md) |
+| 2025-02-24 | Claude | [Claude 3.7 Sonnet：混合推理、思考预算与视觉代理](../papers/claude/document-2c9bf7e5f94a/README.md) |
 | 2025-03-03 | Phi | [Phi-4-Mini 与 Phi-4-Multimodal：用模态 LoRA 保留语言骨干](../papers/phi/arxiv-2503.01743/README.md) |
 | 2025-03-07 | Nexus-O | [Nexus-O：在视觉语言基座上加入语音理解与生成](../papers/nexus-o/arxiv-2503.01879/README.md) |
+| 2025-03-17 | Mistral / Pixtral | [Mistral Small 3.1：视觉 token 合并与 24B 长上下文模型](../papers/mistral-pixtral/document-652708f323d7/README.md) |
+| 2025-03-25 | Gemma | [Gemma 3：冻结视觉编码器、局部注意力与长上下文](../papers/gemma/arxiv-2503.19786/README.md) |
 | 2025-03-25 | GPT | [GPT-4o 原生图像生成附录：生成能力与安全评测](../papers/gpt/document-0b8790d1de58/README.md) |
 | 2025-03-26 | Qwen | [Qwen2.5-Omni：Thinker-Talker、音视频时间对齐与流式语音生成](../papers/qwen/document-1093f7b31e5b/README.md) |
 | 2025-04-05 | Llama | [Llama 4：原生多模态 MoE、长上下文与在线强化学习](../papers/llama/document-4003084812b3/README.md) |
@@ -239,9 +251,11 @@
 | 2025-05-06 | VITA | [VITA-Audio：用跨模态多 token 预测加速流式语音](../papers/vita/arxiv-2505.03739/README.md) |
 | 2025-05-08 | Large Multimodal Reasoning Survey | [感知、推理、思考与规划：大规模多模态推理模型研究路线综述](../papers/multimodal-reasoning-survey/arxiv-2505.04921/README.md) |
 | 2025-05-11 | Seed | [Seed1.5-VL：以原生分辨率视觉与混合强化学习连接感知和推理](../papers/seed/arxiv-2505.07062/README.md) |
+| 2025-05-13 | Aya Vision | [Aya Vision：多语视觉指令数据与跨模态模型合并](../papers/aya-vision/arxiv-2505.08751/README.md) |
 | 2025-05-14 | BLIP3-o | [BLIP3-o：以连续 CLIP 特征与 Flow Matching 统一图像理解和生成](../papers/blip3-o/arxiv-2505.09568/README.md) |
 | 2025-05-20 | UniGen | [UniGen：统一图像理解与生成，并通过自验证筛选候选图像](../papers/unigen/arxiv-2505.14682/README.md) |
 | 2025-05-21 | MMaDA | [MMaDA：用统一离散扩散完成语言推理、视觉理解与图像生成](../papers/mmada/arxiv-2505.15809/README.md) |
+| 2025-05-22 | Claude | [Claude 4：交错思考与工具、文件记忆及双模型家族](../papers/claude/document-28803263c0f6/README.md) |
 | 2025-05-23 | BAGEL | [BAGEL：以共享注意力连接多模态理解与连续视觉生成](../papers/bagel/arxiv-2505.14683/README.md) |
 | 2025-05-29 | OpenUni | [OpenUni：用轻量查询与连接器衔接视觉语言模型和图像生成模型](../papers/openuni/arxiv-2505.23661/README.md) |
 | 2025-06-04 | MiMo | [MiMo-VL：长推理预训练与混合在线强化学习](../papers/mimo/arxiv-2506.03569/README.md) |
@@ -249,12 +263,15 @@
 | 2025-06-17 | Gemini | [Gemini 2.5：原生多模态、思考预算与长上下文](../papers/gemini/document-8c1dda86c921/README.md) |
 | 2025-06-18 | Show-o | [Show-o2：在连续视觉潜空间统一理解与生成](../papers/show-o/arxiv-2506.15564/README.md) |
 | 2025-06-25 | MMSearch-R1 | [MMSearch-R1：让视觉语言模型学习何时搜索、搜索什么](../papers/mmsearch-r1/arxiv-2506.20670/README.md) |
+| 2025-06-26 | Gemma | [Gemma 3n：MatFormer、分层嵌入与端侧多模态理解](../papers/gemma/document-c7a2cc906589/README.md) |
 | 2025-06-26 | Qwen | [Qwen VLo：统一视觉理解、图像生成与指令编辑](../papers/qwen/document-244376c2123a/README.md) |
+| 2025-06-29 | ERNIE | [ERNIE 4.5：模态隔离专家与统一图像视频理解](../papers/ernie/document-cd5d2d305595/README.md) |
 | 2025-06-30 | DenseWorld-1M | [DenseWorld-1M：从像素掩码到对象细节与场景关系的密集描述](../papers/denseworld-1m/arxiv-2506.24102/README.md) |
 | 2025-07-02 | GLM / VisualGLM | [GLM-4.1V-Thinking：原生分辨率视觉基础与跨领域课程强化学习](../papers/glm/arxiv-2507.01006/README.md) |
 | 2025-07-31 | Step | [Step3：通过模型与系统协同设计降低解码成本](../papers/step/document-26d59ba3132d/README.md) |
 | 2025-08-06 | dots | [dots.vlm1：从原生分辨率视觉预训练到 DeepSeek-V3 多模态适配](../papers/dots/document-bdf40c9e7783/README.md) |
 | 2025-08-07 | GPT | [GPT-5：模型路由、强化学习推理与输出导向训练](../papers/gpt/document-d0807662cb93/README.md) |
+| 2025-08-15 | Ovis | [Ovis2.5：原生分辨率视觉与可切换的深度推理](../papers/ovis/arxiv-2508.11737/README.md) |
 | 2025-08-18 | Thyme | [Thyme：通过可执行代码操作图像并辅助多模态推理](../papers/thyme/arxiv-2508.11630/README.md) |
 | 2025-08-26 | MiniCPM-V / MiniCPM-o | [MiniCPM-V 4.5：视频压缩、文档恢复与长短推理联合学习](../papers/minicpm/document-5679fdac7d01/README.md) |
 | 2025-08-27 | InternVL | [InternVL 3.5：级联强化学习与自适应视觉压缩](../papers/internvl/arxiv-2508.18265/README.md) |
@@ -266,23 +283,32 @@
 | 2025-10-21 | DeepSeek | [DeepSeek-OCR：用少量视觉 token 读取文档与探索光学上下文压缩](../papers/deepseek/arxiv-2510.18234/README.md) |
 | 2025-10-21 | VITA | [VITA-E：支持同时观察、聆听、说话和行动的具身交互系统](../papers/vita/arxiv-2510.21817/README.md) |
 | 2025-10-30 | Emu | [Emu3.5：用统一离散序列学习图文世界，并适配并行图像生成](../papers/emu/arxiv-2510.26583/README.md) |
+| 2025-11-06 | Nemotron | [Nemotron Nano V2 VL：动态切图、能力恢复与高效长视频理解](../papers/nemotron/arxiv-2511.03929/README.md) |
+| 2025-11-18 | Gemini | [Gemini 3 Pro：原生多模态MoE与测试时推理](../papers/gemini/document-fd75097b0235/README.md) |
+| 2025-11-24 | Hunyuan | [HunyuanOCR：以约1B参数统一文字定位、文档解析与文本理解](../papers/hunyuan/arxiv-2511.19575/README.md) |
 | 2025-11-26 | Qwen | [Qwen3-VL：DeepStack、交错位置编码与原生 256K 多模态上下文](../papers/qwen/arxiv-2511.21631/README.md) |
 | 2025-12-02 | Mistral / Pixtral | [Mistral 3：稀疏大模型与端侧多模态模型的联合发布](../papers/mistral-pixtral/document-6276d6c37ba5/README.md) |
+| 2025-12-08 | GLM / VisualGLM | [GLM-4.6V：128K多模态上下文与原生视觉工具调用](../papers/glm/document-51404279a064/README.md) |
 | 2025-12-11 | GPT | [GPT-5.2：视觉理解、长上下文与工具工作流的升级](../papers/gpt/document-e2a1f413a7a5/README.md) |
+| 2025-12-17 | Gemini | [Gemini 3 Flash：基于Pro的多模态推理与速度取舍](../papers/gemini/document-9e94a9ffe555/README.md) |
 | 2025-12-18 | Seed | [Seed1.8：面向真实任务的视觉感知、推理与多步执行](../papers/seed/document-6cb43357175b/README.md) |
 
 <a id="year-2026"></a>
 
-## 2026 · 34 篇
+## 2026 · 46 篇
 
 | 发表 / 发布日期 | 模型系列 | 逐篇介绍 |
 |---|---|---|
+| 2026-01-14 | Step | [STEP3-VL-10B：紧凑视觉骨干与并行协调推理](../papers/step/arxiv-2601.09668/README.md) |
+| 2026-01-15 | Molmo | [Molmo2：视频理解、时空指点与对象跟踪](../papers/molmo/arxiv-2601.10611/README.md) |
 | 2026-01-27 | DeepSeek | [DeepSeek-OCR 2：以 Visual Causal Flow 改善文档阅读顺序](../papers/deepseek/document-536ef2604f4a/README.md) |
 | 2026-02-02 | Kimi | [Kimi K2.5：视觉与文本联合训练，以及可学习的并行智能体编排](../papers/kimi/arxiv-2602.02276/README.md) |
+| 2026-02-05 | Claude | [Claude Opus 4.6：自适应思考、视觉再观察与长任务](../papers/claude/document-92907841db82/README.md) |
 | 2026-02-06 | MiniCPM-V / MiniCPM-o | [MiniCPM-o 4.5：以时间片组织全双工多模态交互](../papers/minicpm/document-9be303a31d11/README.md) |
 | 2026-02-16 | Qwen | [Qwen3.5：原生多模态、线性注意力与稀疏专家](../papers/qwen/document-7cdfed4ac9e5/README.md) |
 | 2026-02-19 | Gemini | [Gemini 3.1 Pro：复杂推理与应用构建能力的官方发布说明](../papers/gemini/document-7cca3ca5d4d3/README.md) |
 | 2026-03-03 | Beyond Language Modeling | [Beyond Language Modeling：从零统一预训练中的视觉表示、MoE与缩放不对称](../papers/beyond-language-modeling/arxiv-2603.03276/README.md) |
+| 2026-03-05 | GPT | [GPT-5.4：高分辨率感知、计算机操作与按需工具检索](../papers/gpt/document-affc25e8e162/README.md) |
 | 2026-03-06 | Omni-Diffusion | [Omni-Diffusion：以掩码离散扩散统一图像、文字与语音](../papers/omni-diffusion/arxiv-2603.06577/README.md) |
 | 2026-03-10 | InternVL | [InternVL-U：共享语义上下文与双流图像生成的统一模型](../papers/internvl/arxiv-2603.09877/README.md) |
 | 2026-03-18 | MiMo | [MiMo-V2-Omni：统一感知与代理行动的全模态模型](../papers/mimo/document-1ccf04ffaeaa/README.md) |
@@ -296,10 +322,14 @@
 | 2026-04-22 | Qwen | [Qwen3.6-27B：面向代码智能体的 27B 稠密多模态模型](../papers/qwen/document-e122aca8cc58/README.md) |
 | 2026-04-24 | DeepSeek | [DeepSeek-V4：压缩混合注意力与百万 token 推理](../papers/deepseek/document-08e9e69bb6bb/README.md) |
 | 2026-04-24 | π / Pi | [π0.7：用多模态上下文引导通用机器人策略](../papers/pi/arxiv-2604.15483/README.md) |
+| 2026-05-11 | MiniCPM-V / MiniCPM-o | [MiniCPM-V 4.6：面向端侧的1.3B视觉模型与双压缩倍率](../papers/minicpm/document-eb1014c14dfe/README.md) |
+| 2026-05-12 | SenseNova | [SenseNova-U1：以原生像素连接理解、生成与交错推理](../papers/sensenova/arxiv-2605.12500/README.md) |
 | 2026-06-05 | Cosmos | [Cosmos 3：以双路径 Transformer 统一理解、世界生成与动作预测](../papers/cosmos/arxiv-2606.02800/README.md) |
 | 2026-06-15 | Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models | [世界动作模型：从视频预训练到机器人控制的设计空间](../papers/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-wor-28acd80eab47/document-28acd80eab47/README.md) |
 | 2026-06-15 | Qwen | [Qwen-RobotWorld：用语言条件视频生成统一具身世界建模](../papers/qwen/arxiv-2606.17030/README.md) |
 | 2026-06-30 | Seed | [Seed2.0：面向真实复杂任务的多模态模型卡与工作流评测](../papers/seed/arxiv-2607.00248/README.md) |
+| 2026-07-08 | GPT | [GPT-Live：全双工语音交互、连续响应与模型委派](../papers/gpt/document-3e6d0908a22e/README.md) |
+| 2026-07-09 | GPT | [GPT-5.6：三档多模态推理、程序化工具调用与代理效率](../papers/gpt/document-42bb90895c3a/README.md) |
 | 2026-07-16 | VideoChat | [VideoChat3：从视觉编码端建模时间，兼顾离线与流式视频理解](../papers/videochat/arxiv-2607.14935/README.md) |
 | 2026-07-27 | Kimi | [Kimi K3：混合递归注意力、原生视觉与百万上下文 agent 训练](../papers/kimi/document-eb106a710a29/README.md) |
 | 2026-08-11 | Qwen | [Qwen-MM-Plugins：面向多模态代理的技能与工具插件](../papers/qwen/document-0aebb3826b29/README.md) |
@@ -309,7 +339,11 @@
 | 2026-08-26 | GLM / VisualGLM | [GLM-5.3-Flash：稀疏与线性注意力结合的原生多模态模型](../papers/glm/document-e213666dcb0d/README.md) |
 | 2026-09-02 | Gemini | [Gemini 3.8 Flash 与 Flash Cyber：长程 agent 与安全专项评测](../papers/gemini/document-390f20b2fe8b/README.md) |
 | 2026-09-04 | GPT | [GPT-6 Astra：面向视觉交互与长期任务的通用模型](../papers/gpt/document-0d9109ba3678/README.md) |
+| 2026-09-10 | SenseNova | [SenseNova-U1.5：空间解码、原生4K与多专家能力蒸馏](../papers/sensenova/arxiv-2609.11929/README.md) |
 | 2026-09-18 | Qwen | [Qwen3.8-Omni-Flash：从视听理解到工具执行与实时交互](../papers/qwen/document-2ea7273632dc/README.md) |
+| 2026-09-22 | Claude | [Claude Opus 5.5：视觉工具协作、长任务评测与效率](../papers/claude/document-783cf6ffbfbf/README.md) |
+| 2026-09-29 | GPT | [GPT-6.1 Sol：面向视觉工作流的能力、成本与代理可靠性](../papers/gpt/document-0e63abfcb13e/README.md) |
 | 2026-09-30 | Gemini | [Gemini 4 Argon：面向长程专业任务的推理模型](../papers/gemini/document-a07676c13763/README.md) |
+| 2026-10-12 | MiniCPM-V / MiniCPM-o | [MiniCPM-V 4.7：用专家预取和视觉早期压缩推进端侧MoE](../papers/minicpm/document-fd34dfc57d84/README.md) |
 
 [返回顶部](#逐篇论文详解) · [项目首页](../README.md)

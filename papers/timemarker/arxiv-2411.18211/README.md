@@ -158,7 +158,7 @@ Charades-STA 未使用该数据集的定位标注训练，R@1@0.3/0.5/0.7 为 73
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：ChatRex](../../chatrex/arxiv-2411.18363/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：NVILA →](../../vila/arxiv-2412.04468/README.md)
+[← 上一篇：ChatRex](../../chatrex/arxiv-2411.18363/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：PaliGemma 2 →](../../paligemma/arxiv-2412.03555/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

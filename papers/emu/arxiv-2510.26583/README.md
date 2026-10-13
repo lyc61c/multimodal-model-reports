@@ -170,7 +170,7 @@ DiDA 的 GenEval 与 AR 都是 .86，DPG 88.26→87.46，GEdit7.59→7.56。扩�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：VITA-E](../../vita/arxiv-2510.21817/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Qwen3-VL →](../../qwen/arxiv-2511.21631/README.md)
+[← 上一篇：VITA-E](../../vita/arxiv-2510.21817/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Nemotron Nano V2 VL →](../../nemotron/arxiv-2511.03929/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

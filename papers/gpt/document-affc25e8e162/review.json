@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "Actually read system-card PDF pages 4–6 and 9–11 (model/training and vision/agent sections), plus cached official release blog sections on vision, computer use, tool search and experiment conditions; not a full 38-page appendix review.",
+    "Checked original Table5 and separately cropped Table7/8; all rows and headers visually inspected. Enlarged Table7 crop bottom to retain the full wrapped row and bottom rule.",
+    "Distinguished original/high pixel budgets from an undisclosed image preprocessing implementation; the scaling equations are explicitly labeled explanatory constraints.",
+    "Checked MMMU-Pro xhigh versus OmniDocBench none, different browser/desktop observation interfaces, and MCP Atlas same-model configuration comparison.",
+    "No proprietary architecture, parameter count, PPO/GRPO recipe or model execution is claimed."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 4,
+    "original_assets": 3,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "aecd65bdee15b6054e8bf5ddb937e2e410c8303f3a2d61ab96846fcbc067a1a8",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  },
+  "mobile_layout_revision": {
+    "date": "2026-10-13",
+    "scope": "375px scan found11px body overflow from a long inline resizing bound; move the same explanatory bound to a display math fence. No model claims changed."
+  }
+}

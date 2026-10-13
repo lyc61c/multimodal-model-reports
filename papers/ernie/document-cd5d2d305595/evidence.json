@@ -1,0 +1,22 @@
+{
+  "paper_id": "cd5d2d305595",
+  "source_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "7ab20ebf5cb908779d6e334aa8894ccc66f799eda51677e56d9b832b0cc383a6",
+  "verification_notes": [
+    {
+      "scope": "针对性读取固定官方PDF第4–13、17–18、19页VLM RL段以及39–41页；检查Figure1/5、Tables2/3/7/8与Eq1–3。",
+      "verified": "异构路由、空间/时间压缩、像素时间戳、router解耦正交化和文字损失分母逐项核对。"
+    },
+    {
+      "scope": "规模与训练口径对照。",
+      "verified": "Table2共享专家大模型—/小模型2；正文初始8K与Table3 4096差异保留；47%MFU不转移为VL效率。"
+    },
+    {
+      "scope": "Figure1/5和Table7原图裁取并视觉核对。",
+      "verified": "保留图注、表头和完整方法区域，不含整页截图。",
+      "limits": "未全文复审72页的纯文本后训练/部署附录；未执行训练或评测。"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

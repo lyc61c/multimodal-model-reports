@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "28803263c0f6",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "4cc0ff01aab155fc86d13a79d49af979346f244c0f6297238d5f87ad2f9d58c9",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+          "locator": "PDF pp.6–7 §1.1",
+          "note": "支持输入、输出、模型定位与披露边界"
+        }
+      ],
+      "scope": "根据公开资料自绘，非原文图；仅展示功能接口，方框不是逐层网络；未公开的视觉编码、融合与参数不作推断",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

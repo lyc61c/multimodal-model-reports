@@ -1,0 +1,27 @@
+{
+  "paper_id": "9e94a9ffe555",
+  "catalogue_entry_id": "9e94a9ffe555",
+  "family_slug": "gemini",
+  "title": "Gemini 3 Flash Model Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+  "document_kind": "model_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8"
+    }
+  ],
+  "title_zh": "Gemini 3 Flash：基于Pro的多模态推理与速度取舍",
+  "source_sha256": "b2800104a47322d76d80a72bfb128ba7f0bacffc419ae9bb630eae289c761ba0",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-12-17",
+  "chinese_characters": 1659,
+  "figures_manifest": "figures-manifest.json"
+}

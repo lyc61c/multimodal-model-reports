@@ -165,7 +165,7 @@ RoPE负责让同时间的视觉与文字位置接近，mask负责禁止读取尚
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：InternVL 2.5](../../internvl/arxiv-2412.05271/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：InternLM-XComposer2.5-OmniLive →](../../internlm-xcomposer/arxiv-2412.09596/README.md)
+[← 上一篇：Gemini 2.0 Flash](../../gemini/document-222ef6a5de3d/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：InternLM-XComposer2.5-OmniLive →](../../internlm-xcomposer/arxiv-2412.09596/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

@@ -1,0 +1,27 @@
+{
+  "paper_id": "380e510956a2",
+  "catalogue_entry_id": "380e510956a2",
+  "family_slug": "claude",
+  "title": "Claude 3.5 Sonnet Model Card Addendum",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+  "document_kind": "model_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "02cf167704119bbdf744efdbe37d023e88f83a6459be5e79569bd15ec4c2c910"
+    }
+  ],
+  "title_zh": "Claude 3.5 Sonnet：视觉图表理解、长上下文与代理编码",
+  "source_sha256": "ac396c7f155dcbfb33ceb342b48647e330ca518c01c7f508001d6aad93257a03",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2024-06-20",
+  "chinese_characters": 2056,
+  "figures_manifest": "figures-manifest.json"
+}

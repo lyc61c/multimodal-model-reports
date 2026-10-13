@@ -159,7 +159,7 @@ VQA结果另在Cambrian-7M训练一轮，视觉冻结，64GPU、约1M token全�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Gemini 3.1 Pro](../../gemini/document-7cca3ca5d4d3/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Omni-Diffusion →](../../omni-diffusion/arxiv-2603.06577/README.md)
+[← 上一篇：Gemini 3.1 Pro](../../gemini/document-7cca3ca5d4d3/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：GPT-5.4 →](../../gpt/document-affc25e8e162/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

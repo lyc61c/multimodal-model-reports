@@ -17,20 +17,20 @@
     "original_assets": 5,
     "chinese_characters": 2662
   },
-  "article_sha256": "e8ac481ea336975f36b486cb33cb15d539b6961c1115ab3ce7b70ddf28d82157",
+  "article_sha256": "9f8986d8af2c59bc5b9440b0253edea0fe6d9b352fd3de80a693255cab6dad63",
   "limitations": [
     "Author-reported evidence; no model reproduction",
     "Descriptions fixed to the cited source snapshot"
   ],
   "formatting_revision": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
     "strong_emphasis": "Unicode punctuation spacing outside code",
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
@@ -40,7 +40,7 @@
       "vertical_bar_replacements": 0,
       "display_fence_conversions": 0,
       "inline_angle_replacements": 0,
-      "display_angle_replacements": 1,
+      "display_angle_replacements": 0,
       "literal_token_replacements": 0,
       "physical_row_wraps_normalized": 0
     },

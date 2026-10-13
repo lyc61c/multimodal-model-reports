@@ -1,0 +1,82 @@
+{
+  "paper_id": "19d0dc679a0e",
+  "source_version": "2409.20566v1",
+  "source_pdf_sha256": "6db6fcdfaa493c217bb606fd28de23f01399bd0b8d51f63291755511a99b00f8",
+  "assets": [
+    {
+      "asset_path": "figures/original-p002-figure-1.png",
+      "original_label": "Figure 1: MM1.5 architecture",
+      "pdf_page": 2,
+      "source_url": "https://arxiv.org/pdf/2409.20566v1#page=2",
+      "source_version": "2409.20566v1",
+      "source_sha256": "6db6fcdfaa493c217bb606fd28de23f01399bd0b8d51f63291755511a99b00f8",
+      "asset_sha256": "09f72bd82cd7229d9384d0fc5a8c27d812ab99045ec65eb3345b8a042b077585",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          105,
+          70,
+          507,
+          350
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded",
+        "visual_review": "Actually viewed original page and final crop with view_image; complete figure/table region, labels/headers/axes/necessary caption retained; surrounding page prose excluded."
+      }
+    },
+    {
+      "asset_path": "figures/original-p013-table-1.png",
+      "original_label": "Table 1: Resolution and image token ablations",
+      "pdf_page": 13,
+      "source_url": "https://arxiv.org/pdf/2409.20566v1#page=13",
+      "source_version": "2409.20566v1",
+      "source_sha256": "6db6fcdfaa493c217bb606fd28de23f01399bd0b8d51f63291755511a99b00f8",
+      "asset_sha256": "71389ae0e028a106c8069a7df173fdad1a54a910a13742b28c27afcc53504d0a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          106,
+          70,
+          508,
+          202
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded",
+        "visual_review": "Actually viewed original page and final crop with view_image; complete figure/table region, labels/headers/axes/necessary caption retained; surrounding page prose excluded."
+      }
+    },
+    {
+      "asset_path": "figures/original-p017-table-6.png",
+      "original_label": "Table 6: Text-rich benchmark results",
+      "pdf_page": 17,
+      "source_url": "https://arxiv.org/pdf/2409.20566v1#page=17",
+      "source_version": "2409.20566v1",
+      "source_sha256": "6db6fcdfaa493c217bb606fd28de23f01399bd0b8d51f63291755511a99b00f8",
+      "asset_sha256": "d006206415ea7f7a0949d557c5ec1ede4cb0fa437b12fd6e62b6f09cd9be9a47",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          106,
+          70,
+          508,
+          464
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded",
+        "visual_review": "Actually viewed original page and final crop with view_image; complete figure/table region, labels/headers/axes/necessary caption retained; surrounding page prose excluded."
+      }
+    }
+  ]
+}

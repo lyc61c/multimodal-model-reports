@@ -1,0 +1,55 @@
+{
+  "paper_id": "86d1cc655950",
+  "source_version": "2601.09668v1",
+  "source_pdf_sha256": "275790c48e9821cfbcf073e83c050936a8b82783ec428fc71090a37b7ab544bf",
+  "assets": [
+    {
+      "asset_path": "figures/rl-dynamics.png",
+      "original_label": "Figure 2: RLVR dynamics",
+      "pdf_page": 18,
+      "source_url": "https://arxiv.org/pdf/2601.09668v1#page=18",
+      "source_version": "2601.09668v1",
+      "source_sha256": "275790c48e9821cfbcf073e83c050936a8b82783ec428fc71090a37b7ab544bf",
+      "asset_sha256": "2d50f9d8eea2e76545278d6d90ec0b6073d0d311f439b661b90110f97e0a11dc",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          84,
+          530,
+          268
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/reasoning-results.png",
+      "original_label": "Table 3: Sequential and parallel reasoning",
+      "pdf_page": 15,
+      "source_url": "https://arxiv.org/pdf/2601.09668v1#page=15",
+      "source_version": "2601.09668v1",
+      "source_sha256": "275790c48e9821cfbcf073e83c050936a8b82783ec428fc71090a37b7ab544bf",
+      "asset_sha256": "3e303aebc8f5044cb7a0d14a349ae3b6968b0a9dba04b65dcd9d18508ee9c87a",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          84,
+          530,
+          760
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

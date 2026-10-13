@@ -182,7 +182,7 @@ VDCScore 列按五类描述平均，VDD、CIDEr 和 BLEU 的汇总在原表另�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Emu3](../../emu/arxiv-2409.18869/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Modality Integration Rate →](../../modality-integration-rate/arxiv-2410.07167/README.md)
+[← 上一篇：MM1.5](../../mm1/arxiv-2409.20566/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Modality Integration Rate →](../../modality-integration-rate/arxiv-2410.07167/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

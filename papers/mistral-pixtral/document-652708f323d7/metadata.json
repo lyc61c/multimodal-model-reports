@@ -1,0 +1,20 @@
+{
+  "paper_id": "652708f323d7",
+  "catalogue_entry_id": "652708f323d7",
+  "family_slug": "mistral-pixtral",
+  "title": "Mistral Small 3.1",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://mistral.ai/news/mistral-small-3-1/",
+  "document_kind": "release_blog",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Mistral Small 3.1：视觉 token 合并与 24B 长上下文模型",
+  "source_sha256": "982fccf995e0a73e09e76e690da636d5b6fa229c8310d6ac1591aa1a3a85a88b",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-03-17",
+  "chinese_characters": 2300,
+  "figures_manifest": "figures-manifest.json"
+}

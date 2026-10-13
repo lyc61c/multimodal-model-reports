@@ -1,0 +1,23 @@
+{
+  "paper_id": "eb1014c14dfe",
+  "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+  "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+  "source_sha256": "1342b9e318a339218c784f56e31c9b37ea12447e64821aac07e9169290f3fbe1",
+  "verification_notes": [
+    {
+      "scope": "固定官方guide的Introduction、Usages、Advanced Parameters、Model Zoo和完整Instruct结果图/效率两图。",
+      "verified": "1.3B完整模型与0.8B底座区分；双端downsample_mode、主帧/子帧和切片参数逐条核对。"
+    },
+    {
+      "scope": "三张官方独立原图及缩小后的最终图片。",
+      "verified": "目视全部任务行、图例和脚注；记录RTX4090/vLLM/16×，高并发与单请求条件分开。",
+      "retrieval": "固定官方commit图片经CDN取得，原字节与SHA保留。"
+    },
+    {
+      "scope": "数据与训练披露。",
+      "verified": "未编造训练规模、CE或RL目标；自绘plan只表达公开接口并标出未知细部。",
+      "limits": "没有模型运行或速度复现；独立完整本代训练报告未核实。"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

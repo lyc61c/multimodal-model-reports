@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    {
+      "scope": "固定官方guide的Introduction、On-Device Capability and Efficiency、Evaluation、Advanced Parameters、Acknowledgements和模型列表。",
+      "verified": "LES预取与原路由不变、量化/DSpark的独立职责、视觉早期压缩和两种规模逐段核对。"
+    },
+    {
+      "scope": "三幅官方原图与最终缩小图。",
+      "verified": "目视五任务平均定义、Instruct/Thinking图例、4×/16×和所有所引结果；区分OCRBench尺度及OmniDocBench版本。",
+      "retrieval": "固定官方commit图片经CDN取得，原字节与SHA保留。"
+    },
+    {
+      "scope": "披露边界与自绘计划。",
+      "verified": "没有假造专家数、语言层配置和基础训练loss；手机速度只作为指定配置的作者报告。",
+      "limits": "未复现LES/量化/投机采样，没有完整独立训练报告。"
+    }
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 4,
+    "original_assets": 3,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "619913914a3deede47af2ca77d66857774534b358efdfa24e33af8e68fec5cb6",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

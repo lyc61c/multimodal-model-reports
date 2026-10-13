@@ -1,0 +1,14 @@
+{
+  "paper_id": "1bb20f4fc0ff",
+  "source_url": "https://arxiv.org/pdf/2311.06242v1",
+  "source_version": "2311.06242v1",
+  "source_sha256": "403d820e5ea7a1d7e2f95d4b2facef3ea37e2a5f12354a8a50164b10a057708a",
+  "verification_notes": [
+    "实际读取固定2311.06242v1 PDF1–13正文及PDF20附录A/B/C；核对§3表示/维度/损失、§4数据引擎、§6三种评测与Table15配置；未声称通读全部35页。",
+    "核对B/L总参数232M/771M、DaViT四阶段宽度、编码器/解码器6/12层及768/1024维、UniCL/BART初始化；1000坐标bin不冒充视觉token数。",
+    "实际核对Table4/5/6各实验口径，发现§6.3正文140.0与81.5和Table5 L行143.3与73.5不一致，正文明确采用表格行列并披露差异。",
+    "核对126M图像与500M/1.3B/3.6B标注层次、AzureOCR/DINO/GroundingDINO/SAM教师、72M有效样本消融的权衡；骨干迁移和完整模型结果分开。",
+    "视觉查看原PDF3/5/10及最终Figure2/3和Table5裁图，完整箭头/提示/输出/表头/各行/图表注保留；Table5外部OCR三角脚注完整。"
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

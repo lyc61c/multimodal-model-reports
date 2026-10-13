@@ -1,0 +1,55 @@
+{
+  "paper_id": "76e3de9b2ed3",
+  "source_version": "2508.11737v1",
+  "source_pdf_sha256": "a5c8146196b48f24350fb81803c96face4ba1b42e46bdfa2a76ecc7e72d50978",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2: The overall architecture of Ovis2.5",
+      "pdf_page": 3,
+      "source_url": "https://arxiv.org/pdf/2508.11737v1#page=3",
+      "source_version": "2508.11737v1",
+      "source_sha256": "a5c8146196b48f24350fb81803c96face4ba1b42e46bdfa2a76ecc7e72d50978",
+      "asset_sha256": "ea3f5758e937855914f2c5cdd4d5d9c0d8bdc93ee539b426da9a8fd0051f16ca",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          100,
+          525,
+          598
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/opencompass-results.png",
+      "original_label": "Table 3: OpenCompass results of Ovis2.5-9B",
+      "pdf_page": 7,
+      "source_url": "https://arxiv.org/pdf/2508.11737v1#page=7",
+      "source_version": "2508.11737v1",
+      "source_sha256": "a5c8146196b48f24350fb81803c96face4ba1b42e46bdfa2a76ecc7e72d50978",
+      "asset_sha256": "84d4105bac53518c2fa937e9e82eb8414e6c3d8aae5804c5ef38b4ba84be74e0",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          68,
+          527,
+          248
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

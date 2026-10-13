@@ -145,7 +145,7 @@ Emu3 原生生成 5 秒、24 FPS 视频。经前述后处理的 VBench 总分为
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Molmo 与 PixMo](../../molmo/arxiv-2409.17146/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：AuroraCap →](../../auroracap/arxiv-2410.03051/README.md)
+[← 上一篇：Molmo 与 PixMo](../../molmo/arxiv-2409.17146/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：MM1.5 →](../../mm1/arxiv-2409.20566/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

@@ -1,0 +1,55 @@
+{
+  "paper_id": "0e63abfcb13e",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "1ae4ad6f0e2425a0f85623d3ccfc2a747c13611432a504ef0a7b5f4228789884",
+  "assets": [
+    {
+      "asset_path": "figures/original-p007-table-4.png",
+      "original_label": "Table 4: Image input evaluations",
+      "pdf_page": 7,
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf#page=7",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "1ae4ad6f0e2425a0f85623d3ccfc2a747c13611432a504ef0a7b5f4228789884",
+      "asset_sha256": "af217972b1176f83d13eb350e620d68780d73859b42f835b9dd25fb3b102f0f2",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 170,
+        "crop_bbox": [
+          65,
+          494,
+          545,
+          604
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/original-p018-figure-10.png",
+      "original_label": "Figure 10: Broken Search Tool",
+      "pdf_page": 18,
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf#page=18",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "1ae4ad6f0e2425a0f85623d3ccfc2a747c13611432a504ef0a7b5f4228789884",
+      "asset_sha256": "0a4813b814126306bbb7c360260c223b5a2fd713c9e874c723ddc7bb994f3405",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 170,
+        "crop_bbox": [
+          65,
+          96,
+          545,
+          373
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

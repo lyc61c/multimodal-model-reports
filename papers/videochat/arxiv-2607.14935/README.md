@@ -177,7 +177,7 @@ OL617K 含 617,183 实例，来自 StreamForest、Streamo、Seeker 等。模型�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Seed2.0](../../seed/arxiv-2607.00248/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Kimi K3 →](../../kimi/document-eb106a710a29/README.md)
+[← 上一篇：GPT-5.6](../../gpt/document-42bb90895c3a/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Kimi K3 →](../../kimi/document-eb106a710a29/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

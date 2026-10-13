@@ -186,7 +186,7 @@ Table 3 显示阅读顺序九类均改善，但文字识别仍有退化：Book �
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Seed1.8](../../seed/document-6cb43357175b/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Kimi K2.5 →](../../kimi/arxiv-2602.02276/README.md)
+[← 上一篇：Molmo2](../../molmo/arxiv-2601.10611/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Kimi K2.5 →](../../kimi/arxiv-2602.02276/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

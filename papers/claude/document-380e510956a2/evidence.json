@@ -1,0 +1,54 @@
+{
+  "paper_id": "380e510956a2",
+  "source_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "ac396c7f155dcbfb33ceb342b48647e330ca518c01c7f508001d6aad93257a03",
+  "verification_notes": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "ac396c7f155dcbfb33ceb342b48647e330ca518c01c7f508001d6aad93257a03",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Official addendum describes visual processing and multimodal evaluation; no network parameters supplied",
+      "locator": "PDF pp.1–3, Tables1–3"
+    },
+    {
+      "claim": "0-shot visual scores and CoT qualifiers; ANLS vs relaxed accuracy units",
+      "locator": "PDF p.2 Table2"
+    },
+    {
+      "claim": "Hidden-test sandboxed agentic coding64/38; 200K retrieval99.7; human preference61",
+      "locator": "PDF pp.1,3–5"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-benchmark-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+      "scope": "Launch description,200K context,Artifacts boundary and fine-tuning feedback paragraphs; page footer excluded"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

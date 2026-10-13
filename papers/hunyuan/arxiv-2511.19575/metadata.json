@@ -1,0 +1,20 @@
+{
+  "paper_id": "52e049b1bc3a",
+  "catalogue_entry_id": "52e049b1bc3a",
+  "family_slug": "hunyuan",
+  "title": "HunyuanOCR Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2511.19575v1",
+  "source_url": "https://arxiv.org/pdf/2511.19575v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "HunyuanOCR：以约1B参数统一文字定位、文档解析与文本理解",
+  "source_sha256": "44e92e446215734ee7c20fcf2cfef6ad997be55d5f91c120dbf95675cee9628a",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-11-24",
+  "chinese_characters": 2526,
+  "figures_manifest": "figures-manifest.json"
+}

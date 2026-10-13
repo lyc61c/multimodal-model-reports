@@ -1,0 +1,27 @@
+{
+  "paper_id": "783cf6ffbfbf",
+  "catalogue_entry_id": "783cf6ffbfbf",
+  "family_slug": "claude",
+  "title": "Claude Opus 5.5 System Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://www.anthropic.com/claude-opus-5-5",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "1155449a0b5e801dd0245fcab223ee801243914c464fd0360edbf39b4273d76e"
+    }
+  ],
+  "title_zh": "Claude Opus 5.5：视觉工具协作、长任务评测与效率",
+  "source_sha256": "7311c9c6bbb16d012f1c12c7418b05949fcf7ae3e30d2c40f22050074b2a7378",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-09-22",
+  "chinese_characters": 1939,
+  "figures_manifest": "figures-manifest.json"
+}

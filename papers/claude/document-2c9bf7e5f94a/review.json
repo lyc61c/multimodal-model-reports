@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "82947a46fc2d1b9a1d69501ef973fc3c5b328b703b9a17bd8a143c2672f8a1a6",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        22
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Hybrid reasoning, RL-trained extended thinking, proprietary data and filtering",
+      "locator": "PDF pp.3,6–7 §§1.1–1.4/2"
+    },
+    {
+      "claim": "Computer use prompt injection176 tasks74/88 and0.5%false positives",
+      "locator": "PDF pp.12–13 §4"
+    },
+    {
+      "claim": "CoT clue-conditional score,0.30MMLU/0.19GPQA",
+      "locator": "PDF pp.15,17 §5.1/Table3"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-faithfulness-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "scope": "Modes,128K budget and SWE-bench/TAU-bench scaffolding appendix; excluded promotional quotes/footer"
+    }
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 3,
+    "original_assets": 1,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "8729d8a4071ee3b9cb98890b914f052b7a37910d162b8f6bf95bc25721dab60d",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

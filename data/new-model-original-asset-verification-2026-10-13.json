@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-13",
+  "status": "passed",
+  "assets": 8,
+  "scope": "Original CDN-delivered image bytes independently matched against authenticated GitHub Git Tree API blob SHAs at the declared immutable official commits. No repository mutation.",
+  "entries": [
+    {
+      "source_url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/resources/bench_46v.jpeg",
+      "commit": "f093b70998bec336acbc00d1a545e05893e3c9fa",
+      "path": "resources/bench_46v.jpeg",
+      "github_tree_blob_sha": "50d03dfa531adc483ec9912555f7ebe718e61fe2",
+      "computed_git_blob_sha": "50d03dfa531adc483ec9912555f7ebe718e61fe2",
+      "asset_sha256": "8ce205c218a2a9815698117c662b3fda8bbb48f33fb966d588232be0ef7fae7e",
+      "bytes": 8026410,
+      "status": "matched"
+    },
+    {
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpm-o-26-framework-v2.png",
+      "commit": "1d6b7d68379974af0375cfdb903613d630da34aa",
+      "path": "assets/minicpm-o-26-framework-v2.png",
+      "github_tree_blob_sha": "bd9a825d02de2b9856e6a0c8e868fd60e4b7720c",
+      "computed_git_blob_sha": "bd9a825d02de2b9856e6a0c8e868fd60e4b7720c",
+      "asset_sha256": "23ffa6e89ece98bf4fd773676a921f141d3728255a613167e167073a9af99a01",
+      "bytes": 1114689,
+      "status": "matched"
+    },
+    {
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/instruct.png",
+      "commit": "1d6b7d68379974af0375cfdb903613d630da34aa",
+      "path": "assets/minicpmv4.6/instruct.png",
+      "github_tree_blob_sha": "164b96f643e6987de8b6d8c59498cef65d2b5e4b",
+      "computed_git_blob_sha": "164b96f643e6987de8b6d8c59498cef65d2b5e4b",
+      "asset_sha256": "1cc4790fd2d274e2588e74d7343bdc04678fdf299b38673943c7aa6918599622",
+      "bytes": 3425942,
+      "status": "matched"
+    },
+    {
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/throughput.png",
+      "commit": "1d6b7d68379974af0375cfdb903613d630da34aa",
+      "path": "assets/minicpmv4.6/throughput.png",
+      "github_tree_blob_sha": "989358221e3c70f71bab8d2c9020a445464e5834",
+      "computed_git_blob_sha": "989358221e3c70f71bab8d2c9020a445464e5834",
+      "asset_sha256": "91a68e48ac6ccf1d9bb0cf21bf98df567248284df3b927c75daec5c44ffccffa",
+      "bytes": 336529,
+      "status": "matched"
+    },
+    {
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.6/ttft.png",
+      "commit": "1d6b7d68379974af0375cfdb903613d630da34aa",
+      "path": "assets/minicpmv4.6/ttft.png",
+      "github_tree_blob_sha": "1f0cc6c69d38c4c3f57743b588a9ad49070bfd08",
+      "computed_git_blob_sha": "1f0cc6c69d38c4c3f57743b588a9ad49070bfd08",
+      "asset_sha256": "4335ef9252863c66a656095e8eb2888895730166790f0d743a193f9518555228",
+      "bytes": 179011,
+      "status": "matched"
+    },
+    {
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.7/overall_performance_1b_instruct.png",
+      "commit": "1d6b7d68379974af0375cfdb903613d630da34aa",
+      "path": "assets/minicpmv4.7/overall_performance_1b_instruct.png",
+      "github_tree_blob_sha": "17c48e6cf0b6e8017b3d9b7c07ff1bfd8457758e",
+      "computed_git_blob_sha": "17c48e6cf0b6e8017b3d9b7c07ff1bfd8457758e",
+      "asset_sha256": "0556fbc045a6353b27948c5e2eac0d7877c2b57078e1ba29d667b83e055ede5c",
+      "bytes": 1455791,
+      "status": "matched"
+    },
+    {
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.7/overall_performance_35ba3b_instruct.png",
+      "commit": "1d6b7d68379974af0375cfdb903613d630da34aa",
+      "path": "assets/minicpmv4.7/overall_performance_35ba3b_instruct.png",
+      "github_tree_blob_sha": "64a6fe63414d08a5bb3d3e3665bd6948b843b83f",
+      "computed_git_blob_sha": "64a6fe63414d08a5bb3d3e3665bd6948b843b83f",
+      "asset_sha256": "0d90331f7e81184d10fe527c3b9d9bf2e0d0d2dee567f980cd25d43447687b43",
+      "bytes": 1487809,
+      "status": "matched"
+    },
+    {
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/assets/minicpmv4.7/performance_efficiency_frontier.png",
+      "commit": "1d6b7d68379974af0375cfdb903613d630da34aa",
+      "path": "assets/minicpmv4.7/performance_efficiency_frontier.png",
+      "github_tree_blob_sha": "3905ffd2cdba618ad91ea0b56067319b0dd39bbf",
+      "computed_git_blob_sha": "3905ffd2cdba618ad91ea0b56067319b0dd39bbf",
+      "asset_sha256": "e2b7fc281ed6a4f3422bd7304f8ed02898bd7fa558d209fe9a399626f72ed2c8",
+      "bytes": 1930098,
+      "status": "matched"
+    }
+  ]
+}

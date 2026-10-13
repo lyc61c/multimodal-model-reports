@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    {
+      "scope": "针对性读取固定v1 PDF第6–12、13页数据段、14–16、18–20页及29页统一评测/消融引入。",
+      "verified": "原生双支路的参数解耦/注意力遮罩、两种规模与分支参数、Eq1–6流匹配/噪声/CFG、Table2阶段及RL/DMD冻结边界。"
+    },
+    {
+      "scope": "Figures4与Tables3/5原图及最终裁图视觉核对。",
+      "verified": "三种架构对比、理解表帧数星号与生成分支参数说明完整保留，不放整页论文。"
+    },
+    {
+      "scope": "实验数值与披露边界。",
+      "verified": "区分8B/A3B、OCRBench/v2、2K生成后1K评测、Qwen星号128帧；U1 MLP不误写为U1.5 PixelShuffle。",
+      "limits": "未全文阅读43页全部定性示例/附录，也未执行训练或评测；近无损不作严格可逆保证。"
+    }
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 5,
+    "original_assets": 3,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "aacf109bfe5937c4502260c3848cbfb0ca7d3f667a6c1ade42f61b83d4e500c7",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

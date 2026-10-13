@@ -1,0 +1,14 @@
+{
+  "paper_id": "3e6d0908a22e",
+  "source_url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d",
+  "verification_notes": [
+    "Actually read all 7 PDF pages, including the August4 evaluation-configuration correction and appendix; not merely the abbreviated HTML card.",
+    "Visually inspected corrected Table1/2 crops: preserved four model columns and all category rows. Reported the emotional-reliance and mini sexual-content regressions.",
+    "Full-duplex behavior is not replaced with an assumed ASR-to-LLM-to-TTS pipeline; audio representation, codec and chunk size remain undisclosed.",
+    "Distinguished delegated deployment evaluations from the standalone voice model and distinguished evaluation transcription from inference architecture.",
+    "Conceptual time-state and score formulas are marked as explanatory, not reported training objectives. No model execution."
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "75130eefef08af5b37eb356f59ccfbe64985d54cb3184be2568db9fe287841f5",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        17,
+        18,
+        22,
+        34,
+        35,
+        36
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Adaptive thinking and four effort levels; data cutoffMay2025 and posttrainingRLHF/RLAIF",
+      "locator": "PDF pp.10–11 §1.1"
+    },
+    {
+      "claim": "MMMU-Pro73.9/77.3,FigQA58/78.3,CharXiv68.5/77.4 with/without crop",
+      "locator": "PDF pp.34–36 §2.19"
+    },
+    {
+      "claim": "OSWorld-Verified72.7,1080p100steps;max/highMCP59.5/62.7",
+      "locator": "PDF pp.18,22 Table2.3.A/§2.8"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-benchmark-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "scope": "Opening capability description and API features for adaptive thinking,compaction,1M beta; customer quotes not used"
+    }
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 3,
+    "original_assets": 1,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "e43a6e5403f2887d2ebcad6c9615329a32172402933a411f22c7a670b0799b36",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

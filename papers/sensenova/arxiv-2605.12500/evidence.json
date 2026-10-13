@@ -1,0 +1,22 @@
+{
+  "paper_id": "f799e9065399",
+  "source_url": "https://arxiv.org/pdf/2605.12500v1",
+  "source_version": "2605.12500v1",
+  "source_sha256": "d17a6184d1a909d2f6ce0eb3401c3a18e5daea0de3dba30b0a119d95e1da2d63",
+  "verification_notes": [
+    {
+      "scope": "针对性读取固定v1 PDF第6–12、13页数据段、14–16、18–20页及29页统一评测/消融引入。",
+      "verified": "原生双支路的参数解耦/注意力遮罩、两种规模与分支参数、Eq1–6流匹配/噪声/CFG、Table2阶段及RL/DMD冻结边界。"
+    },
+    {
+      "scope": "Figures4与Tables3/5原图及最终裁图视觉核对。",
+      "verified": "三种架构对比、理解表帧数星号与生成分支参数说明完整保留，不放整页论文。"
+    },
+    {
+      "scope": "实验数值与披露边界。",
+      "verified": "区分8B/A3B、OCRBench/v2、2K生成后1K评测、Qwen星号128帧；U1 MLP不误写为U1.5 PixelShuffle。",
+      "limits": "未全文阅读43页全部定性示例/附录，也未执行训练或评测；近无损不作严格可逆保证。"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

@@ -1,0 +1,27 @@
+{
+  "paper_id": "2c9bf7e5f94a",
+  "catalogue_entry_id": "2c9bf7e5f94a",
+  "family_slug": "claude",
+  "title": "Claude 3.7 Sonnet System Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "56f2878b10ca01305feb51fac07a5832c49da2b0ff4b75928cc0226e34685735"
+    }
+  ],
+  "title_zh": "Claude 3.7 Sonnet：混合推理、思考预算与视觉代理",
+  "source_sha256": "82947a46fc2d1b9a1d69501ef973fc3c5b328b703b9a17bd8a143c2672f8a1a6",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-02-24",
+  "chinese_characters": 2113,
+  "figures_manifest": "figures-manifest.json"
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "fd34dfc57d84",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "894c688c5a9387a2a02ed76cea4bae7b6e14faadf5e5b13598e4ff81c0abd208",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot7_en.md",
+          "locator": "Introduction / On-Device Capability and Efficiency / Advanced Parameters",
+          "note": "支持早期压缩、LES职责及模型变体；未知参数不补造。"
+        }
+      ],
+      "scope": "自绘，仅示意已公开接口与版本分工。；LES不删去实际路由选择的专家。；两条骨干是可选版本，不是同时推理。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

@@ -139,7 +139,7 @@ DRC 在 RefCOCOg 区域描述得到 CIDEr 116.6、METEOR 16.9；对比 Osprey �
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Qwen VLo](../../qwen/document-244376c2123a/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：GLM-4.1V-Thinking →](../../glm/arxiv-2507.01006/README.md)
+[← 上一篇：ERNIE 4.5](../../ernie/document-cd5d2d305595/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：GLM-4.1V-Thinking →](../../glm/arxiv-2507.01006/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

@@ -1,0 +1,30 @@
+{
+  "paper_id": "51404279a064",
+  "source_version": "git:f093b70998bec336acbc00d1a545e05893e3c9fa",
+  "source_document_sha256": "f81ad4ea063f5eaa96ada6aa759ea8c79315791e8e29ca2aed57dbe4c3808994",
+  "assets": [
+    {
+      "asset_path": "figures/benchmark-results.jpeg",
+      "original_label": "GLM-4.6V Benchmarks",
+      "source_url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/README.md",
+      "source_version": "git:f093b70998bec336acbc00d1a545e05893e3c9fa",
+      "source_sha256": "f81ad4ea063f5eaa96ada6aa759ea8c79315791e8e29ca2aed57dbe4c3808994",
+      "asset_sha256": "ac3eef62bac398e2cbf0c1c7d7cd62c81c21de867e74adc86cbc0e1165873b4c",
+      "original_asset_url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/resources/bench_46v.jpeg",
+      "original_image_sha256": "8ce205c218a2a9815698117c662b3fda8bbb48f33fb966d588232be0ef7fae7e",
+      "retrieval_url": "https://cdn.jsdelivr.net/gh/zai-org/GLM-V@f093b70998bec336acbc00d1a545e05893e3c9fa/resources/bench_46v.jpeg",
+      "processing": {
+        "method": "official_image_resize",
+        "original_size": [
+          10101,
+          7371
+        ],
+        "output_size": [
+          3000,
+          2189
+        ],
+        "note": "Original standalone official figure/table retained in full, with all headings/labels; reduced display resolution when needed. Immutable GitHub commit files retrieved through CDN; original bytes preserved in reading cache."
+      }
+    }
+  ]
+}

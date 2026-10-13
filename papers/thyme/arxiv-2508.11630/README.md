@@ -166,7 +166,7 @@ Outcome+Format 的平均为 63.59，加一致性奖励为 65.68，Process reward
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：GPT-5](../../gpt/document-d0807662cb93/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：MiniCPM-V 4.5 →](../../minicpm/document-5679fdac7d01/README.md)
+[← 上一篇：Ovis2.5](../../ovis/arxiv-2508.11737/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：MiniCPM-V 4.5 →](../../minicpm/document-5679fdac7d01/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

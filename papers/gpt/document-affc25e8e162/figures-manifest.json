@@ -1,0 +1,79 @@
+{
+  "paper_id": "affc25e8e162",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "e1d430988982bb6617c19db37bec03cbefba1771657d5ab57743dbfc53e7aa50",
+  "assets": [
+    {
+      "asset_path": "figures/original-p009-table-5.png",
+      "original_label": "Table 5: Image input evaluations",
+      "pdf_page": 9,
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf#page=9",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "e1d430988982bb6617c19db37bec03cbefba1771657d5ab57743dbfc53e7aa50",
+      "asset_sha256": "59508274dd1ac441f2a0608afc0a6fcf0c183a957c3bfa5b5ae649a50a0a287c",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 170,
+        "crop_bbox": [
+          60,
+          315,
+          535,
+          474
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/original-p010-table-7.png",
+      "original_label": "Table 7: Destructive action avoidance",
+      "pdf_page": 10,
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf#page=10",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "e1d430988982bb6617c19db37bec03cbefba1771657d5ab57743dbfc53e7aa50",
+      "asset_sha256": "1424cdece7084faebc6a67d685b8426230204e4f0ea66869af1434204e4a7ad8",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 170,
+        "crop_bbox": [
+          60,
+          418,
+          535,
+          506
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/original-p010-table-8.png",
+      "original_label": "Table 8: Perfect reversion and user work preservation",
+      "pdf_page": 10,
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf#page=10",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "e1d430988982bb6617c19db37bec03cbefba1771657d5ab57743dbfc53e7aa50",
+      "asset_sha256": "7f0047c54393d4ec8812c9f1c11c1f286a9555e795ee55e48b917d950f129eb2",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 170,
+        "crop_bbox": [
+          60,
+          622,
+          535,
+          711
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

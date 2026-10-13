@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "3e6d0908a22e",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "668116dd895e4c77d929952ae2dc1cf27d205ba8f2af3ebebb5d1defa59bf536",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+          "locator": "系统卡第1、2、5节，PDF第2–3、6页",
+          "version": "official-source-snapshot-2026-10-13"
+        }
+      ],
+      "scope": "自绘，非原文图；仅归纳公开功能接口，不代表网络逐层架构。；方框的图上位置不表示组件的确切执行时序；运行检查可跨多个环节。；视觉/声学编码、参数量与训练损失未披露；未据一般模型结构补造。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

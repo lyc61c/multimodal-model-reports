@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "实际阅读固定PDF第1–10页；核对§2架构、§2.2教师抽样蒸馏、§2.3量化、§3后训练及§5全部消融。未声称通读后续附录或复现实验。",
+    "核对Table1参数分项、视觉冻结、896输入/256 token/4×4池化、局部:全局5:1与1024窗口；第三节未臆造连接器维度。",
+    "核对Table6五组结果、Table3内存、Table8 P&S结果；正文/表注IT与PT口径差异明确保留；Elo注明不含视觉。",
+    "已视觉查看三张裁图：Figure6曲线/坐标/图注，Table6全列/表注，Table8表头/全部行/完整图注；修复初稿Table8裁切边缘。",
+    "KV缓存量级、平均池化公式与教师置零归一化转写明确标注为阅读解释，非论文原创公式。",
+    "后续独立复核逐格比对PDF第6页Table6原图，纠正12B IT的GPQA Diamond抄录39.6→40.9；本介绍五行三列结果其余14项均与原图一致。原图未修改。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 7,
+    "principle_subsections": 4,
+    "original_assets": 3,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "682c82f51f1eab4e7f329bd8f911341f7a408216567a0d99ec6e8023ee42b81e",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "corrections": [
+    {
+      "date": "2026-10-13",
+      "issue": "GPQA Diamond 12B IT value transcription",
+      "before": "39.6",
+      "after": "40.9",
+      "locator": "PDF6 Table6",
+      "article_before_sha256": "de3b3c1cc34dc06178c9ac414010bb81e0ff02b1ff33c4f819f2a66bc6b96f89",
+      "article_after_sha256": "d03fbd72b617daa5ce85750ea461338171b96e7e8a4ed38fd9823facb17ac9d2"
+    }
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

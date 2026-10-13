@@ -162,7 +162,7 @@ Figure 3 的视频插针实验在 1fps 和动态帧分辨率下，30 分钟/256K
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Emu3.5](../../emu/arxiv-2510.26583/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Mistral 3 →](../../mistral-pixtral/document-6276d6c37ba5/README.md)
+[← 上一篇：HunyuanOCR](../../hunyuan/arxiv-2511.19575/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Mistral 3 →](../../mistral-pixtral/document-6276d6c37ba5/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

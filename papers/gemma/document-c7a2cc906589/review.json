@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "实际完整阅读官方技术博客正文（What’s new至MobileNet-V5及发布实现边界），另阅读固定HF模型卡的Model Information、Model Data、Implementation、Evaluation；未读取gated401配置或运行权重。",
+    "核对MatFormer35/30层原图、8192–16384 FFN选择、E2B/E4B总参数/有效参数区别、动态运行时切换尚非发布实现。",
+    "核对PLE原图5.44B/1.91B及可选模态加载范围、KV sharing 2x为prefill、MobileNet13x为特定Pixel EdgeTPU编码器性能。",
+    "模型卡图像256token/音频6.25token每秒/32K总上下文/11T混合token与140语言、评测PT/IT/shot口径均已核对；公开训练配方不足之处明确。",
+    "已视觉查看两张完整官方模型机制图及脚注，原始图片无重新绘制；整体模型schema只含公开输入输出/编码/主干组件。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 7,
+    "principle_subsections": 4,
+    "original_assets": 2,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "5f07ed10a2cd9fc9df1b1798032df1429aa0193c0eb51ced0d52964ae66c7211",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

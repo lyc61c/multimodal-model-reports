@@ -1,0 +1,14 @@
+{
+  "paper_id": "0e63abfcb13e",
+  "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "1ae4ad6f0e2425a0f85623d3ccfc2a747c13611432a504ef0a7b5f4228789884",
+  "verification_notes": [
+    "Actually read PDF pages4,7,18 and46 and inspected the official release blog through web extraction for cost positioning and selected capability comparisons; no original blog HTML byte cache is claimed.",
+    "Visually checked Table4 and Figure10 original crops, including the lower-is-better axis and model labels.",
+    "Verified 2.08% versus4.92% in PDF Figure10, distinct from rounded blog figures; Astra remains lower at1.50%.",
+    "Kept same types of data/training separate from identical data, weights or distillation; kept model price ratio separate from task total cost.",
+    "Preserved the newer/harder realistic-work-environment evaluation caveat; no model execution or full48-page factual re-review."
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

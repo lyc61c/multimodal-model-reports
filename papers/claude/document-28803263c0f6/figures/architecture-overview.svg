@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="775" viewBox="0 0 720 775" role="img" aria-labelledby="title desc">
+<title id="title">Claude 4公开接口（自绘，非原文图）</title>
+<desc id="desc">根据公开资料自绘，非原文图；仅展示功能接口，方框不是逐层网络；未公开的视觉编码、融合与参数不作推断</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="773" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 公开接口示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Claude 4公开接口</text>
+<path d="M360,230 V263 H360 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,402 V435 H360 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="648" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="360" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">公开输入</text>
+<text x="360" y="190" text-anchor="middle" font-size="20" fill="#475569">图像/屏幕与文字目标</text>
+<text x="360" y="215" text-anchor="middle" font-size="20" fill="#475569">工具可返回外部观察</text>
+<rect x="36" y="296" width="648" height="106" rx="14" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="360" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">多模态推理模型</text>
+<text x="360" y="362" text-anchor="middle" font-size="20" fill="#475569">Opus 4 或 Sonnet 4</text>
+<text x="360" y="387" text-anchor="middle" font-size="20" fill="#475569">标准/扩展，内部融合未知</text>
+<rect x="36" y="468" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">公开输出</text>
+<text x="360" y="534" text-anchor="middle" font-size="20" fill="#475569">文本或工具请求</text>
+<text x="360" y="559" text-anchor="middle" font-size="20" fill="#475569">长思考可经独立模型摘要</text>
+<line x1="36" y1="622" x2="684" y2="622" stroke="#e2e8f0"/>
+<text x="36" y="649" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="680" font-size="17" fill="#64748b">根据公开资料自绘，非原文图</text>
+<text x="36" y="705" font-size="17" fill="#64748b">仅展示功能接口，方框不是逐层网络</text>
+<text x="36" y="730" font-size="17" fill="#64748b">未公开的视觉编码、融合与参数不作推断</text>
+</g></svg>

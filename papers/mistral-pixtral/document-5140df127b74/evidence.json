@@ -1,0 +1,51 @@
+{
+  "paper_id": "5140df127b74",
+  "source_url": "https://mistral.ai/news/pixtral-large/",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "548019d5edd62e90e05c80761d2b9896c5525ebb365b9f34318a4c11f26bfdbc",
+  "verification_notes": [
+    "完整阅读官方博客正文、固定HF卡Model Card/Key Features/Metrics/系统提示；params.json和官方固定commit的vision_encoder.py全文、transformer.py融合相关段、args.py默认值实际核对。",
+    "核对patch16、视觉40层1408宽、语言88层12288宽、96Q/8KV，MLP无偏置；vision block-diagonal按图隔离，语言主干跨图融合；该配置不启用2×2合并，未套用Small3.1机制。",
+    "核对Metrics与官方图全部主模型结果、measured/reported区别、三种闭源对照固定版本；明确MMMU/ChartQA/AI2D非全面领先。",
+    "训练语料/冻结/优化配方未披露，保持边界；已记录模型当前deprecated历史状态。",
+    "已视觉查看两张官方图：完整条形图/图例/不同指标尺度，以及详细表所有行列/measured-reported标签与版本脚注。"
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction.",
+  "additional_sources": [
+    {
+      "url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411/resolve/c1e51f6f11974a1199685d35c62f5a425c2d001e/README.md",
+      "revision": "c1e51f6f11974a1199685d35c62f5a425c2d001e",
+      "sha256": "e600fa5e386424933849b99f5161650be6695640de0cc161704459907a95ba40",
+      "cache_path": "source/papers/5140df127b74/supplemental/source.md",
+      "locator": "source.md"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411/resolve/c1e51f6f11974a1199685d35c62f5a425c2d001e/params.json",
+      "revision": "c1e51f6f11974a1199685d35c62f5a425c2d001e",
+      "sha256": "9357018b97a53f92123a0517ebde05bacc1f2215b186d727f2fb3f1114468c7b",
+      "cache_path": "source/papers/5140df127b74/supplemental/params.json",
+      "locator": "params.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mistralai/mistral-inference/9eaeb91c17450e09021b6065a1d5cc69876507c8/src/mistral_inference/vision_encoder.py",
+      "revision": "9eaeb91c17450e09021b6065a1d5cc69876507c8",
+      "sha256": "9aad2ce9857b24d8e9e3a14de6ef884ac85e4d42b28ea0884b7c310f6dce963f",
+      "cache_path": "source/papers/5140df127b74/supplemental/vision_encoder.py",
+      "locator": "vision_encoder.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mistralai/mistral-inference/9eaeb91c17450e09021b6065a1d5cc69876507c8/src/mistral_inference/transformer.py",
+      "revision": "9eaeb91c17450e09021b6065a1d5cc69876507c8",
+      "sha256": "509497cfce7f91febe6c39f5c65039ad8f7250eccced0560f0c57cd473b7cf45",
+      "cache_path": "source/papers/5140df127b74/supplemental/transformer.py",
+      "locator": "transformer.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mistralai/mistral-inference/9eaeb91c17450e09021b6065a1d5cc69876507c8/src/mistral_inference/args.py",
+      "revision": "9eaeb91c17450e09021b6065a1d5cc69876507c8",
+      "sha256": "64a186c82f9d649f3ba4cf12228ab2e787b5f762d301bde774fdc7612067a907",
+      "cache_path": "source/papers/5140df127b74/supplemental/args.py",
+      "locator": "args.py"
+    }
+  ]
+}

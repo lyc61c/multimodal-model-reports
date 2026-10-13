@@ -154,7 +154,7 @@ Table 4 中写实人物总体 precision/recall 为 **0.905/0.99**，成年人 **
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Nexus-O](../../nexus-o/arxiv-2503.01879/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Qwen2.5-Omni →](../../qwen/document-1093f7b31e5b/README.md)
+[← 上一篇：Gemma 3](../../gemma/arxiv-2503.19786/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Qwen2.5-Omni →](../../qwen/document-1093f7b31e5b/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

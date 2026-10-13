@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "实际阅读固定2409.20566v1 PDF第1–23页正文（含第4页原样例）：架构、数据/分辨率完整消融、最终配方、主结果及Video/UI专项；未精读后续参考文献和任务附录，不声称全部50页事实复核。",
+    "核对内部CLIP/C-Abstractor/decoder-only、最终672每视图144token、网格4–9加概览、image index及overview after；少于3图才启用切图，视频24帧无切图。未补造连接器层数/坐标量化或已开放权重。",
+    "核对Eq1候选集合和不下采样约束；无法覆盖原图才最小化分辨率损失。Table1视觉分辨率与token数两条控制变量、Table2最低网格改变导致grounding74→24.5均与固定源一致。",
+    "核对最终预训练50:10:40、OCR45M无额外合成caption、SFT80:10:10；相对alpha与全体SFT份额区分；7M自描述仅研究尝试，未误列为最终使用。",
+    "核对最终200K/30K/23K步及SFT2e-5，与§3.1快速消融batch256/AdaFactor/1e-5/一epoch分开；全程编码器和LLM解冻，未臆造偏好RL。",
+    "核对64专家top2、每隔两层语言FFN、0.01负载均衡/0.001routerz；型号标签不等同总存储参数且未假设计算为全模型2/64。",
+    "核对Tables5–6/9同规模前后主要分数及MM-Vet回退；Video训练free/SFT、24帧及GPT评分口径分开；UI理解与自主操作成功率分开。",
+    "实际查看PDF第2/13/17页选择裁图，并逐张查看3张180DPI最终裁图：原架构、Table1全部7行/表注、Table6全部型号/列/脚注完整，未包含整页论文文字。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 7,
+    "principle_subsections": 5,
+    "original_assets": 3,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "8e2e686ec7763d4561e0e56dd14adf87ce77aaa2992fccfc480dad2e2b346ed5",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

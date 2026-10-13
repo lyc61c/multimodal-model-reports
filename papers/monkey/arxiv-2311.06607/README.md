@@ -152,7 +152,7 @@ Table 4 将方形输入从 672 / 784 / 896 增大，DeepForm **31.3→38.9→40.
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：LLaVA-Plus](../../llava/arxiv-2311.05437/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：LVIS-Instruct4V →](../../lvis-instruct4v/arxiv-2311.07574/README.md)
+[← 上一篇：Florence-2](../../florence/arxiv-2311.06242/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2023) · [下一篇：LVIS-Instruct4V →](../../lvis-instruct4v/arxiv-2311.07574/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

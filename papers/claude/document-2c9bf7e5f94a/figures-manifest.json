@@ -1,0 +1,32 @@
+{
+  "paper_id": "2c9bf7e5f94a",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "82947a46fc2d1b9a1d69501ef973fc3c5b328b703b9a17bd8a143c2672f8a1a6",
+  "assets": [
+    {
+      "asset_path": "figures/original-faithfulness-table.png",
+      "original_label": "Table 3: clue-based faithfulness evaluation",
+      "pdf_page": 17,
+      "source_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf#page=17",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "82947a46fc2d1b9a1d69501ef973fc3c5b328b703b9a17bd8a143c2672f8a1a6",
+      "asset_sha256": "009313aa58a5ef4c5ae4b78d552b1305c1ed0162e10f580a4b4a66c9ce1580f2",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          65,
+          544,
+          360
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original table region rendered from fixed official PDF, with headers and required caption/footnotes; no synthetic alteration.",
+        "visual_review": "Actually viewed rendered source page and resulting cropped table pixels; headers, all selected rows and required captions/footnotes preserved; surrounding paragraphs excluded."
+      }
+    }
+  ]
+}

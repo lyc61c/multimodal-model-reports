@@ -1,0 +1,32 @@
+{
+  "paper_id": "222ef6a5de3d",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "b1575ae4e9dcbc6aef722adab208b9798d26dc39eb2fb63fc7d04bd47b9bd597",
+  "assets": [
+    {
+      "asset_path": "figures/original-benchmark-table.png",
+      "original_label": "Evaluation benchmark table: Gemini 2.0 Flash GA",
+      "pdf_page": 4,
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf#page=4",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "b1575ae4e9dcbc6aef722adab208b9798d26dc39eb2fb63fc7d04bd47b9bd597",
+      "asset_sha256": "98b31f0d93458305153f81e55fb271a5863d3ac295a975ecce80d235a33a9a2e",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          66,
+          185,
+          565,
+          720
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original table region rendered from fixed official PDF, with headers and required caption/footnotes; no synthetic alteration.",
+        "visual_review": "Actually viewed rendered source page and resulting cropped table pixels; headers, all selected rows and required captions/footnotes preserved; surrounding paragraphs excluded."
+      }
+    }
+  ]
+}

@@ -188,7 +188,7 @@ Table 11中Pro的BrowseComp-zh 82.4、MM-BrowseComp48.8和HLE-VL39.2体现检索
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Qwen-RobotWorld](../../qwen/arxiv-2606.17030/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：VideoChat3 →](../../videochat/arxiv-2607.14935/README.md)
+[← 上一篇：Qwen-RobotWorld](../../qwen/arxiv-2606.17030/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：GPT-Live →](../../gpt/document-3e6d0908a22e/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

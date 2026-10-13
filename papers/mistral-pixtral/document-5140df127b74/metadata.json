@@ -1,0 +1,20 @@
+{
+  "paper_id": "5140df127b74",
+  "catalogue_entry_id": "5140df127b74",
+  "family_slug": "mistral-pixtral",
+  "title": "Pixtral Large",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://mistral.ai/news/pixtral-large/",
+  "document_kind": "release_blog",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Pixtral Large：大型视觉编码器与多图长上下文",
+  "source_sha256": "548019d5edd62e90e05c80761d2b9896c5525ebb365b9f34318a4c11f26bfdbc",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2024-11-18",
+  "chinese_characters": 2279,
+  "figures_manifest": "figures-manifest.json"
+}

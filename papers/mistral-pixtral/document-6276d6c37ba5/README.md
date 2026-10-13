@@ -164,7 +164,7 @@ Ministral 3 则对每个规模发布三种变体。base 适合观察基础模型
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Qwen3-VL](../../qwen/arxiv-2511.21631/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：GPT-5.2 →](../../gpt/document-e2a1f413a7a5/README.md)
+[← 上一篇：Qwen3-VL](../../qwen/arxiv-2511.21631/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：GLM-4.6V →](../../glm/document-51404279a064/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

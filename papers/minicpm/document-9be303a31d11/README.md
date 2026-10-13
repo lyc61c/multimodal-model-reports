@@ -141,7 +141,7 @@ Thinking 在 MMMU 上增加 2.6，但 TextVQA、DocVQA 与 MM-Vet 下降，不�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Kimi K2.5](../../kimi/arxiv-2602.02276/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Qwen3.5 →](../../qwen/document-7cdfed4ac9e5/README.md)
+[← 上一篇：Claude Opus 4.6](../../claude/document-92907841db82/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Qwen3.5 →](../../qwen/document-7cdfed4ac9e5/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

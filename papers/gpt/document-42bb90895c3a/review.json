@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "Actually read system-card PDF pages 2–3, 6, 10–11, 14 and 68; inspected the official release blog through web extraction for programmatic calling, multi-agent setup and selected main result rows. No original blog HTML byte cache is claimed; primary report bytes are verified.",
+    "Visually checked the section3.2 image-safety table and section3.3 avoidance/correctness table crops; scores, headers and all rows retained.",
+    "Kept Sol/Terra activation-classifier disclosure separate from Luna, and distinguished model tiers, reasoning effort and multi-agent ultra.",
+    "Performance comparisons use the official main result table; OSWorld2.0 is not numerically mixed with earlier OSWorld-Verified.",
+    "RL direction is disclosed, specific losses and training parameters are not. No model execution or experiment reproduction."
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 5,
+    "original_assets": 2,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "9572bbe79d219acc31dd3fb3e94cc510b88150e572cdb48e2c1427ccaad2b034",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

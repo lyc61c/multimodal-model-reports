@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Model dependency,1M/64K,DeepThink and sparseMoE",
+      "locator": "PDF pp.2–3 Model Information/Architecture"
+    },
+    {
+      "claim": "Training sources including controlled user data,synthetic,multistepRL and TPU/JAX",
+      "locator": "PDF pp.3–4,9 Model Data/Implementation/Mitigations"
+    },
+    {
+      "claim": "Visual scores andMRCRv2 values; image table read visually",
+      "locator": "PDF p.5 Evaluation embedded table; rendered crop viewed"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-benchmark-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://blog.google/products/gemini/gemini-3/",
+      "scope": "Official release heading/date and opening model positioning, not product popularity statistics"
+    }
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 3,
+    "original_assets": 1,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "a0d25cc5abd090de53188d7dc56bec15fb5d54ccaf2a0755e8fd3d5f4ed36608",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "public_interface",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

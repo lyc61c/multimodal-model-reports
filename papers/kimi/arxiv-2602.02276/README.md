@@ -198,7 +198,7 @@ Figure 11 的 24 小时、32 段视频分析依靠多个视觉子智能体分段
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：DeepSeek-OCR 2](../../deepseek/document-536ef2604f4a/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：MiniCPM-o 4.5 →](../../minicpm/document-9be303a31d11/README.md)
+[← 上一篇：DeepSeek-OCR 2](../../deepseek/document-536ef2604f4a/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Claude Opus 4.6 →](../../claude/document-92907841db82/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

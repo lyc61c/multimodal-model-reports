@@ -1,0 +1,38 @@
+{
+  "paper_id": "5140df127b74",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "assets": [
+    {
+      "asset_path": "figures/official-benchmark-summary.webp",
+      "original_label": "Benchmark summary",
+      "source_url": "https://mistral.ai/news/pixtral-large/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "548019d5edd62e90e05c80761d2b9896c5525ebb365b9f34318a4c11f26bfdbc",
+      "asset_sha256": "116755efdd8a631e79112ea06be0c2eed03b9f98010ebbe40ef251e95fbfe930",
+      "processing": {
+        "method": "official_web_asset_download",
+        "note": "Original image bytes downloaded from the image URL embedded in the official blog; no PDF page rendering or redraw.",
+        "visual_review": "已视觉查看两张官方图：完整条形图/图例/不同指标尺度，以及详细表所有行列/measured-reported标签与版本脚注。"
+      },
+      "image_url": "https://mistral.ai/_astro/90e79bdb-19ae-4fa7-8829-19a86e231427_Z2rs54A.webp?dpl=6accf0d261fecbe6ba702f4d",
+      "image_final_url": "https://mistral.ai/_astro/90e79bdb-19ae-4fa7-8829-19a86e231427_Z2rs54A.webp?dpl=6accf0d261fecbe6ba702f4d",
+      "image_sha256": "116755efdd8a631e79112ea06be0c2eed03b9f98010ebbe40ef251e95fbfe930"
+    },
+    {
+      "asset_path": "figures/official-detailed-benchmarks.webp",
+      "original_label": "Detailed benchmarks",
+      "source_url": "https://mistral.ai/news/pixtral-large/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "548019d5edd62e90e05c80761d2b9896c5525ebb365b9f34318a4c11f26bfdbc",
+      "asset_sha256": "60aa1433275e6bc4c77d9e594da42f9a65b01458f440d8c2720831c96ad7bcc6",
+      "processing": {
+        "method": "official_web_asset_download",
+        "note": "Original image bytes downloaded from the image URL embedded in the official blog; no PDF page rendering or redraw.",
+        "visual_review": "已视觉查看两张官方图：完整条形图/图例/不同指标尺度，以及详细表所有行列/measured-reported标签与版本脚注。"
+      },
+      "image_url": "https://mistral.ai/_astro/974f4542-0742-4674-b26c-a25285575eca_1NeHYo.webp?dpl=6accf0d261fecbe6ba702f4d",
+      "image_final_url": "https://mistral.ai/_astro/974f4542-0742-4674-b26c-a25285575eca_1NeHYo.webp?dpl=6accf0d261fecbe6ba702f4d",
+      "image_sha256": "60aa1433275e6bc4c77d9e594da42f9a65b01458f440d8c2720831c96ad7bcc6"
+    }
+  ]
+}

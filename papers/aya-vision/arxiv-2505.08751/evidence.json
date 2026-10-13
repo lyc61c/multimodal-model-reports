@@ -1,0 +1,15 @@
+{
+  "paper_id": "fbed0d7612b3",
+  "source_url": "https://arxiv.org/pdf/2505.08751v1",
+  "source_version": "2505.08751v1",
+  "source_sha256": "d42974ddc7916f9b3d8ed061ed31ce5ef43f4b07fce0b36642a6b6b25e30fe8b",
+  "verification_notes": [
+    "实际读取固定2505.08751v1 PDF1–25正文及PDF39–41附录B/C；核对数据、合并、架构、训练、结果及消融；未声称通读全部76页。",
+    "核对§4.1 patch14-384初始化名与Table6实际364输入的区别、12局部tile另加缩略图、2×2通道堆叠、最大2197/3328视觉token；不以1000等通用数量代填。",
+    "核对Eq1仅语言主干插值、视觉路径继承、最终alpha0.4与LoRA实验alpha0.5不同；视觉编码器在对齐与SFT均冻结。",
+    "核对2.29M/5M/6M池与3.5M/3.4M/3.7M暴露次数、2.75M打包序列、35/31/34比例，COMET绝对0.0838与相对11.24%，偏好胜负平/学术准确率明确区分。",
+    "核对Figure6/7全部正文所引胜率与Table4对应数值；49.2/48.5不足50也明确显示；不把最佳开放生成宣称等同全部学术测试领先。",
+    "实际查看PDF6/16/21与最终Figure3/9、Table4原文区域，修正初裁上缘，图标题/完整图注/坐标/图例/所有表头行列均保留；自绘schema独立校验通过。"
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

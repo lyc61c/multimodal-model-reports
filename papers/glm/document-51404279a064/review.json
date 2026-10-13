@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    {
+      "scope": "发行日固定README的Project Updates、Model Implementation Code、GLM-4.6V Overview、Remaining Issues和完整Benchmarks图。",
+      "verified": "12/08日期、128K训练、原生视觉工具输入/返回，以及与4.1V/4.5V章节的版本边界。"
+    },
+    {
+      "scope": "README指向的Transformers v5.0.0rc0公开实现，L378–490、653–703、916–1027、1348–1513。",
+      "verified": "Conv3d patch、Conv2d下采样与MLP、占位替换、sigmoid路由选择偏置和共享专家；不把配置默认值冒充checkpoint参数。"
+    },
+    {
+      "scope": "原始评测图与最终缩小图。",
+      "verified": "目视全部对照列与所引数值；指出RefCOCO/WebVoyager退步与OCRBench持平。",
+      "retrieval": "固定官方commit图片经CDN取得，原字节与SHA保留。"
+    },
+    {
+      "scope": "数据和训练披露。",
+      "verified": "没有补造4.6V独立RLCS/数据量或loss；自绘图不套用Flash。",
+      "limits": "仅定向读取公开实现，不代表运行checkpoint、完整代码审计或实验复现。"
+    },
+    {
+      "scope": "说明性交互记号复查。",
+      "verified": "上下文更新用按序追加而非集合并，避免丢失轨迹顺序；仍明确其为一般接口解读。"
+    }
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 4,
+    "original_assets": 1,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "6883694ee3d0116c8df27c7150c99842690fd9aa3a69d8058501f248ba0f81fa",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

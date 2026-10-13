@@ -1,0 +1,20 @@
+{
+  "paper_id": "86d1cc655950",
+  "catalogue_entry_id": "86d1cc655950",
+  "family_slug": "step",
+  "title": "STEP3-VL-10B Technical Report",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2601.09668v1",
+  "source_url": "https://arxiv.org/pdf/2601.09668v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "STEP3-VL-10B：紧凑视觉骨干与并行协调推理",
+  "source_sha256": "275790c48e9821cfbcf073e83c050936a8b82783ec428fc71090a37b7ab544bf",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-01-14",
+  "chinese_characters": 2226,
+  "figures_manifest": "figures-manifest.json"
+}

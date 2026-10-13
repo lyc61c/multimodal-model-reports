@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "paper_id": "affc25e8e162",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "497ccf941ad063b19af70630b1f597256200a31928e1f5213725809178d64796",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf",
+          "locator": "系统卡第2、3.5、3.7–3.8节；官方博客 Computer use and vision / Tool search",
+          "version": "official-source-snapshot-2026-10-13"
+        },
+        {
+          "url": "https://openai.com/index/introducing-gpt-5-4/",
+          "locator": "Official release blog: public model capabilities and workflow interfaces"
+        }
+      ],
+      "scope": "自绘，非原文图；仅归纳公开功能接口，不代表网络逐层架构。；方框的图上位置不表示组件的确切执行时序；运行检查可跨多个环节。；视觉/声学编码、参数量与训练损失未披露；未据一般模型结构补造。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

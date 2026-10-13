@@ -1,0 +1,38 @@
+{
+  "paper_id": "c7a2cc906589",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "assets": [
+    {
+      "asset_path": "figures/official-matformer.jpg",
+      "original_label": "MatFormer in Nano V3",
+      "source_url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "f0466fb94598b0923ed3817d7d9f13a0c138836ad5e1ecc596a03a117f694937",
+      "asset_sha256": "85d414079fb04187a63df46e42391dd376ee7f213a8b4f7885047edbb131b2bd",
+      "processing": {
+        "method": "official_web_asset_download",
+        "note": "Original image bytes downloaded from the image URL embedded in the official blog; no PDF page rendering or redraw.",
+        "visual_review": "Viewed both final official images: MatFormer complete layer/FFN paths and 35/30 layer legend; PLE full parameter blocks, 5.44B/1.91B loading scope and optional-modal footnote intact."
+      },
+      "image_url": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/image1_3h2xBRA.original.jpg",
+      "image_final_url": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/image1_3h2xBRA.original.jpg",
+      "image_sha256": "85d414079fb04187a63df46e42391dd376ee7f213a8b4f7885047edbb131b2bd"
+    },
+    {
+      "asset_path": "figures/official-ple.jpg",
+      "original_label": "Per-Layer Embeddings",
+      "source_url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "f0466fb94598b0923ed3817d7d9f13a0c138836ad5e1ecc596a03a117f694937",
+      "asset_sha256": "0f22e230f32c987d7a34116bc3e7446e9d11dc59fbb393d511008077338644f5",
+      "processing": {
+        "method": "official_web_asset_download",
+        "note": "Original image bytes downloaded from the image URL embedded in the official blog; no PDF page rendering or redraw.",
+        "visual_review": "Viewed both final official images: MatFormer complete layer/FFN paths and 35/30 layer legend; PLE full parameter blocks, 5.44B/1.91B loading scope and optional-modal footnote intact."
+      },
+      "image_url": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/image6_BdtLmLG.original.jpg",
+      "image_final_url": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/image6_BdtLmLG.original.jpg",
+      "image_sha256": "0f22e230f32c987d7a34116bc3e7446e9d11dc59fbb393d511008077338644f5"
+    }
+  ]
+}

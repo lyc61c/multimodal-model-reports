@@ -1,6 +1,6 @@
 # 模型系列索引
 
-**183 个模型系列 · 272 篇论文与资料**
+**191 个模型系列 · 306 篇论文与资料**
 
 [0–9](#series-0-9) · [A](#series-a) · [B](#series-b) · [C](#series-c) · [D](#series-d) · [E](#series-e) · [F](#series-f) · [G](#series-g) · [H](#series-h) · [I](#series-i) · [K](#series-k) · [L](#series-l) · [M](#series-m) · [N](#series-n) · [O](#series-o) · [P](#series-p) · [Q](#series-q) · [R](#series-r) · [S](#series-s) · [T](#series-t) · [U](#series-u) · [V](#series-v) · [X](#series-x) · [Y](#series-y) · [其他](#series-other)
 
@@ -27,6 +27,7 @@
 | [AnyMAL](../papers/anymal/README.md) | Meta | 1 |
 | [Apollo](../papers/apollo/README.md) | Meta GenAI / Stanford 联合研究 | 1 |
 | [AuroraCap](../papers/auroracap/README.md) | [rese1f](https://github.com/rese1f) | 1 |
+| [Aya Vision](../papers/aya-vision/README.md) | Cohere Labs | 1 |
 
 <a id="series-b"></a>
 
@@ -58,7 +59,7 @@
 | [ChatRex](../papers/chatrex/README.md) | [IDEA-Research](https://github.com/IDEA-Research) | 1 |
 | [ChatSpot](../papers/chatspot/README.md) | 论文作者 | 1 |
 | [Cheetah](../papers/cheetah/README.md) | [DCDmllm](https://github.com/DCDmllm) | 1 |
-| [Claude](../papers/claude/README.md) | Anthropic | 1 |
+| [Claude](../papers/claude/README.md) | Anthropic | 6 |
 | [CM3Leon](../papers/cm3leon/README.md) | Meta | 1 |
 | [CogCoM](../papers/cogcom/README.md) | 清华 THUDM 研究团队 | 1 |
 | [CogVLM / CogAgent](../papers/cogvlm/README.md) | 智谱 / Z.ai / THUDM 的 GLM 团队 | 2 |
@@ -91,6 +92,7 @@
 | [Ego-R1](../papers/ego-r1/README.md) | [egolife-ai](https://github.com/egolife-ai) | 1 |
 | [Emu](../papers/emu/README.md) | 北京智源研究院（BAAI） | 3 |
 | [Enhancing Multimodal Large Language Models with Vision Detection Models: An Empirical Study](../papers/enhancing-multimodal-large-language-models-with-vision-e94f5590857f/README.md) | 论文作者 | 1 |
+| [ERNIE](../papers/ernie/README.md) | 百度 | 1 |
 | [EVE](../papers/eve/README.md) | 北京智源研究院（BAAI） | 1 |
 | [EVLM](../papers/evlm/README.md) | 论文作者 | 1 |
 
@@ -100,7 +102,9 @@
 
 | 模型系列 | 项目主体 / 机构 | 论文数量 |
 |---|---|---:|
+| [FastVLM](../papers/fastvlm/README.md) | Apple | 1 |
 | [Ferret](../papers/ferret/README.md) | Apple | 2 |
+| [Florence](../papers/florence/README.md) | Microsoft | 1 |
 | [Fuyu](../papers/fuyu/README.md) | Adept | 1 |
 
 <a id="series-g"></a>
@@ -109,11 +113,11 @@
 
 | 模型系列 | 项目主体 / 机构 | 论文数量 |
 |---|---|---:|
-| [Gemini](../papers/gemini/README.md) | Google / Google DeepMind | 6 |
-| [Gemma](../papers/gemma/README.md) | Google / Google DeepMind | 1 |
+| [Gemini](../papers/gemini/README.md) | Google / Google DeepMind；Google DeepMind | 9 |
+| [Gemma](../papers/gemma/README.md) | Google / Google DeepMind；Google DeepMind | 3 |
 | [GLaMM](../papers/glamm/README.md) | MBZUAI Oryx 研究团队 | 1 |
-| [GLM / VisualGLM](../papers/glm/README.md) | 智谱 / Z.ai / THUDM 的 GLM 团队 | 3 |
-| [GPT](../papers/gpt/README.md) | OpenAI | 8 |
+| [GLM / VisualGLM](../papers/glm/README.md) | 智谱 / Z.ai / THUDM 的 GLM 团队；智谱AI | 4 |
+| [GPT](../papers/gpt/README.md) | OpenAI | 12 |
 | [GPT4RoI](../papers/gpt4roi/README.md) | [jshilong](https://github.com/jshilong) | 1 |
 | [GPT4Tools](../papers/gpt4tools/README.md) | [StevenGrove](https://github.com/StevenGrove) | 1 |
 | [Graphist](../papers/graphist/README.md) | [graphic-design-ai](https://github.com/graphic-design-ai) | 1 |
@@ -126,6 +130,7 @@
 | 模型系列 | 项目主体 / 机构 | 论文数量 |
 |---|---|---:|
 | [Honeybee](../papers/honeybee/README.md) | Kakao Brain | 1 |
+| [Hunyuan](../papers/hunyuan/README.md) | 腾讯混元 | 1 |
 
 <a id="series-i"></a>
 
@@ -193,17 +198,17 @@
 | [MiMo](../papers/mimo/README.md) | 小米 MiMo 团队 | 3 |
 | [MineDojo](../papers/minedojo/README.md) | [MineDojo](https://github.com/MineDojo) | 1 |
 | [Mini-Gemini](../papers/mini-gemini/README.md) | DVLab 研究团队 | 1 |
-| [MiniCPM-V / MiniCPM-o](../papers/minicpm/README.md) | OpenBMB / ModelBest（面壁智能）/ 清华 THUNLP | 3 |
+| [MiniCPM-V / MiniCPM-o](../papers/minicpm/README.md) | OpenBMB / ModelBest（面壁智能）/ 清华 THUNLP；OpenBMB / 清华大学 / 面壁智能 | 6 |
 | [MiniGPT](../papers/minigpt/README.md) | Vision-CAIR 研究团队 | 2 |
-| [Mistral / Pixtral](../papers/mistral-pixtral/README.md) | Mistral AI | 2 |
-| [MM1](../papers/mm1/README.md) | Apple | 1 |
+| [Mistral / Pixtral](../papers/mistral-pixtral/README.md) | Mistral AI | 4 |
+| [MM1](../papers/mm1/README.md) | Apple | 2 |
 | [MMaDA](../papers/mmada/README.md) | [Gen-Verse](https://github.com/Gen-Verse) | 1 |
 | [MMSearch-R1](../papers/mmsearch-r1/README.md) | EvolvingLMMs Lab / LLaVA-OneVision 研究团队 | 1 |
 | [MoAI](../papers/moai/README.md) | [ByungKwanLee](https://github.com/ByungKwanLee) | 1 |
 | [MobileVLM](../papers/mobilevlm/README.md) | 美团 AutoML 团队 | 2 |
 | [Modality-Integration-Rate](../papers/modality-integration-rate/README.md) | [shikiw](https://github.com/shikiw) | 1 |
 | [MoE-LLaVA](../papers/moe-llava/README.md) | PKU-YuanGroup 研究团队 | 1 |
-| [Molmo](../papers/molmo/README.md) | Allen Institute for AI（Ai2） | 1 |
+| [Molmo](../papers/molmo/README.md) | Allen Institute for AI（Ai2）；Allen Institute for AI (Ai2) | 2 |
 | [Monkey / TextMonkey](../papers/monkey/README.md) | [Yuliang-Liu](https://github.com/Yuliang-Liu) | 2 |
 | [MotionGPT](../papers/motiongpt/README.md) | [OpenMotionLab](https://github.com/OpenMotionLab) | 1 |
 | [MovieChat](../papers/moviechat/README.md) | [rese1f](https://github.com/rese1f) | 1 |
@@ -220,6 +225,7 @@
 
 | 模型系列 | 项目主体 / 机构 | 论文数量 |
 |---|---|---:|
+| [Nemotron](../papers/nemotron/README.md) | NVIDIA | 1 |
 | [NExT-Chat](../papers/next-chat/README.md) | [NExT-ChatV](https://github.com/NExT-ChatV) | 1 |
 | [NExT-GPT](../papers/next-gpt/README.md) | [NExT-GPT](https://github.com/NExT-GPT) | 1 |
 | [NExT-OMNI](../papers/next-omni/README.md) | 论文作者 | 1 |
@@ -239,7 +245,7 @@
 | [Osprey](../papers/osprey/README.md) | [CircleRadon](https://github.com/CircleRadon) | 1 |
 | [Otter](../papers/otter/README.md) | [Luodian](https://github.com/Luodian) | 1 |
 | [Otter / MIMIC-IT](../papers/otter-398569/README.md) | [Luodian](https://github.com/Luodian) | 1 |
-| [Ovis](../papers/ovis/README.md) | 阿里巴巴 Ovis 团队 | 1 |
+| [Ovis](../papers/ovis/README.md) | 阿里巴巴 Ovis 团队；阿里国际数字商业集团 | 2 |
 
 <a id="series-p"></a>
 
@@ -248,6 +254,7 @@
 | 模型系列 | 项目主体 / 机构 | 论文数量 |
 |---|---|---:|
 | [PaLI](../papers/pali/README.md) | Google / Google DeepMind | 1 |
+| [PaliGemma](../papers/paligemma/README.md) | Google DeepMind | 2 |
 | [PaLM-E](../papers/palm-e/README.md) | Google / Google DeepMind | 1 |
 | [PandaGPT](../papers/pandagpt/README.md) | [yxuansu](https://github.com/yxuansu) | 1 |
 | [Pengi](../papers/pengi/README.md) | Microsoft Research | 1 |
@@ -284,6 +291,7 @@
 | [SALMONN](../papers/salmonn/README.md) | 字节跳动研究团队 | 2 |
 | [See, Say, and Segment: Teaching LMMs to Overcome False Premises](../papers/see-say-and-segment-teaching-lmms-to-overcome-false-premises/README.md) | 论文作者 | 1 |
 | [Seed](../papers/seed/README.md) | 字节跳动 Seed | 3 |
+| [SenseNova](../papers/sensenova/README.md) | 商汤科技 | 2 |
 | [ShareGPT4V](../papers/sharegpt4v/README.md) | InternLM-XComposer 研究团队 | 1 |
 | [Shikra](../papers/shikra/README.md) | [shikras](https://github.com/shikras) | 1 |
 | [Show-o](../papers/show-o/README.md) | [showlab](https://github.com/showlab) | 1 |
@@ -292,7 +300,7 @@
 | [SlowFast-LLaVA](../papers/slowfast-llava/README.md) | 论文作者 | 1 |
 | [SpatialVLM](../papers/spatialvlm/README.md) | Google / Google DeepMind | 1 |
 | [SPHINX](../papers/sphinx/README.md) | [Alpha-VLLM](https://github.com/Alpha-VLLM) | 1 |
-| [Step](../papers/step/README.md) | StepFun（阶跃星辰） | 1 |
+| [Step](../papers/step/README.md) | StepFun（阶跃星辰）；阶跃星辰 | 2 |
 | [StreamChat](../papers/streamchat/README.md) | 论文作者 | 1 |
 | [SVIT](../papers/svit/README.md) | 北京智源研究院（BAAI） | 1 |
 

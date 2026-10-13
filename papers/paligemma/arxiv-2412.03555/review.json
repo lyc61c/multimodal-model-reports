@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "实际阅读固定PDF第1–9页；核对架构、§3阶段训练、§4.1规模/分辨率/学习率消融、§4.2–4.8专业任务与协议。未声称阅读全文附录。",
+    "核对patch14与256/1024/4096 token、全参数联合训练、1B/50M/10M阶段样本；模型名与实际参数3.0/9.7/27.7B明确区分。",
+    "Table2–7数值、OCR真阳性条件、VSR zeroshot划分不等于零样本模型、DOCCI使用train/test/qual_dev流程实际核对并明确。",
+    "原文预训练无商业VLM标注与医学迁移使用Gemini1.5Pro属于不同范围，正文明确而不矛盾。",
+    "已视觉查看Figure1完整架构/图例/图注、Figure3全图/坐标/任务图例/完整图注、Table2全行列/表注；修复初稿Figure3图注下缘。",
+    "独立复核发现并修正：Table2图注末行原裁底202pt截断；扩至218pt并实际查看新图，protocol of HierText [57].完整可见。原论文和表值未改。",
+    "独立复核补充：第二代固定v1 PDF2 §3明确沿用建模，结合上一代固定2407.07726v2 PDF3 §3.1/Figure2，说明图文前缀双向、答案suffix因果；双向发生于语言主干而非SigLIP直接读问题。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 6,
+    "principle_subsections": 4,
+    "original_assets": 3,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "094fcc7035b7bcd559cf6312cd059a185ff0bee95f81f5158ac5c51cfb3a89dd",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "independent_review_corrections": [
+    {
+      "date": "2026-10-13",
+      "findings": [
+        "独立复核发现并修正：Table2图注末行原裁底202pt截断；扩至218pt并实际查看新图，protocol of HierText [57].完整可见。原论文和表值未改。",
+        "独立复核补充：第二代固定v1 PDF2 §3明确沿用建模，结合上一代固定2407.07726v2 PDF3 §3.1/Figure2，说明图文前缀双向、答案suffix因果；双向发生于语言主干而非SigLIP直接读问题。"
+      ],
+      "before_article_sha256": "fadb60e1541a4549ca83c759d5ea50f1b9dd83be94d0e9de8ea34b7edb8aa509",
+      "after_article_sha256": "75b013ba1d520dacb6f563b995d41c6c24c98f7df245a45c9d7479b489bd3649"
+    }
+  ],
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

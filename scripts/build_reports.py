@@ -11,6 +11,7 @@ import urllib.parse
 from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
+from supplemental_catalogue import load_supplemental_entries
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -300,15 +301,17 @@ def main():
     write("reports/supporting-materials.md", "# 补充材料与非模型文献\n\n" + intro + f"\n\n共 **{len(supplements)}** 篇，包含方法、数据、评测、综述、工具和发布资料。它们不进入模型技术报告主目录，但保留供项目后续参考；Star 筛选结果仍逐项显示。\n\n" + table(supplements))
     write("reports/scope-review.md", "# 纳入范围待审\n\n" + intro + f"\n\n共 **{len(review)}** 篇。包括是否属于多模态大模型、是否纳入具身与世界模型、材料是否足够构成模型报告等边界。具体依据见下表。\n\n" + table(review) + "\n\n" + "\n".join(f'- **{escape(x["title"])}**：{escape(x["scope"].get("note"))}' for x in review))
 
+    # Preserve the upstream audit above; additions only enter the reading collection.
+    display_entries = entries + load_supplemental_entries(entries, ROOT)
     # Create one concise reading list per surviving family, including singletons.
     articles = completed_articles()
-    progress = article_progress(entries)
+    progress = article_progress(display_entries)
     introductions = {row["id"]: row for row in progress["entries"]} if progress else {}
     articles_by_family = defaultdict(list)
     for article in articles:
         articles_by_family[article["family_slug"]].append(article)
     retained_groups = defaultdict(list)
-    for item in entries:
+    for item in display_entries:
         if item["catalogue_group"] != "excluded_low_star":
             retained_groups[item["family"]].append(item)
     for name, items in retained_groups.items():
@@ -359,9 +362,10 @@ def main():
 
     by_slug = {items[0]["family_slug"]: name for name, items in retained_groups.items()}
     featured_slugs = ["qwen", "deepseek", "internvl", "minicpm", "llava", "kimi", "glm", "seed",
-                      "gemini", "gpt", "claude", "llama", "blip", "emu", "mplug", "videollama",
-                      "vita", "vila", "internlm-xcomposer", "mimo"]
-    short_names = {"minicpm": "MiniCPM", "llava": "LLaVA", "glm": "GLM", "blip": "BLIP", "vila": "VILA", "internlm-xcomposer": "XComposer"}
+                      "gemini", "gpt", "claude", "llama", "gemma", "paligemma", "mistral-pixtral",
+                      "ernie", "hunyuan", "sensenova", "molmo", "aya-vision", "nemotron", "blip", "emu",
+                      "mplug", "videollama", "vita", "vila", "internlm-xcomposer", "mimo", "fastvlm"]
+    short_names = {"minicpm": "MiniCPM", "llava": "LLaVA", "glm": "GLM", "blip": "BLIP", "vila": "VILA", "internlm-xcomposer": "XComposer", "mistral-pixtral": "Mistral / Pixtral"}
     featured_links = [f'[{escape(short_names.get(slug, by_slug[slug]))}](papers/{slug}/README.md)'
                       for slug in featured_slugs if slug in by_slug]
     featured_columns = 3

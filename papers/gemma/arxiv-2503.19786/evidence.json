@@ -1,0 +1,15 @@
+{
+  "paper_id": "aa88a8d81e68",
+  "source_url": "https://arxiv.org/pdf/2503.19786v1",
+  "source_version": "2503.19786v1",
+  "source_sha256": "b2793d288d6672f8d6a03f65370bb4a48d607f54937a22fc7d9f727435795305",
+  "verification_notes": [
+    "实际阅读固定PDF第1–10页；核对§2架构、§2.2教师抽样蒸馏、§2.3量化、§3后训练及§5全部消融。未声称通读后续附录或复现实验。",
+    "核对Table1参数分项、视觉冻结、896输入/256 token/4×4池化、局部:全局5:1与1024窗口；第三节未臆造连接器维度。",
+    "核对Table6五组结果、Table3内存、Table8 P&S结果；正文/表注IT与PT口径差异明确保留；Elo注明不含视觉。",
+    "已视觉查看三张裁图：Figure6曲线/坐标/图注，Table6全列/表注，Table8表头/全部行/完整图注；修复初稿Table8裁切边缘。",
+    "KV缓存量级、平均池化公式与教师置零归一化转写明确标注为阅读解释，非论文原创公式。",
+    "后续独立复核逐格比对PDF第6页Table6原图，纠正12B IT的GPQA Diamond抄录39.6→40.9；本介绍五行三列结果其余14项均与原图一致。原图未修改。"
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

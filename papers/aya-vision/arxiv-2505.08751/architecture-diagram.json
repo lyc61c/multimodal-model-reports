@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "paper_id": "fbed0d7612b3",
+  "title": "Aya Vision：一次视觉推理路径",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "图像与文字",
+      "lines": [
+        "单图或多图",
+        "23种语言提示"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "tile",
+      "title": "自适应切图",
+      "lines": [
+        "至多12局部块",
+        "另加全局缩略图"
+      ],
+      "row": 1,
+      "col": 0,
+      "kind": "encoder"
+    },
+    {
+      "id": "text",
+      "title": "提示嵌入",
+      "lines": [
+        "多语文字token"
+      ],
+      "row": 1,
+      "col": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "SigLIP 2",
+      "lines": [
+        "约400M视觉编码器",
+        "每幅输入独立提取特征"
+      ],
+      "row": 2,
+      "col": 0,
+      "kind": "encoder"
+    },
+    {
+      "id": "bridge",
+      "title": "视觉语言连接器",
+      "lines": [
+        "2×2空间特征通道拼接",
+        "两层SwiGLU MLP"
+      ],
+      "row": 3,
+      "col": 0,
+      "kind": "bridge"
+    },
+    {
+      "id": "tokens",
+      "title": "图文序列",
+      "lines": [
+        "图像起止标记",
+        "局部/全局tile文字标签"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "bridge"
+    },
+    {
+      "id": "llm",
+      "title": "多语语言主干",
+      "lines": [
+        "8B或32B",
+        "部署前完成语言权重合并"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "文字回复",
+      "lines": [
+        "多语视觉理解与交互"
+      ],
+      "row": 6,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "tile"
+    },
+    {
+      "from": "input",
+      "to": "text"
+    },
+    {
+      "from": "tile",
+      "to": "vision"
+    },
+    {
+      "from": "vision",
+      "to": "bridge"
+    },
+    {
+      "from": "bridge",
+      "to": "tokens"
+    },
+    {
+      "from": "text",
+      "to": "tokens"
+    },
+    {
+      "from": "tokens",
+      "to": "llm"
+    },
+    {
+      "from": "llm",
+      "to": "out"
+    }
+  ],
+  "notes": [
+    "依据固定报告公开组件自绘，非原文图。",
+    "训练后仅语言参数合并；视觉编码器与连接器继承多模态模型。",
+    "tile数量上限含12局部块，缩略图另计。"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2505.08751v1#page=12",
+      "locator": "§4.1 PDF12–13; Appendix B PDF39–40",
+      "note": "切图、视觉编码、2×2降采样、连接器、tile标签与语言骨干"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2505.08751v1#page=11",
+      "locator": "§3.2 Eq1; §7.1 PDF21–22",
+      "note": "合并语言参数而非双模型在线调用"
+    }
+  ]
+}

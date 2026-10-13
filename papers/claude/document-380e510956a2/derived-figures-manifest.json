@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "paper_id": "380e510956a2",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "9364f467cf5839a86e20b69264321b71e54310d7ea8a1eac2764f0f3aec698b0",
+      "origin": "self_drawn",
+      "kind": "public_interface",
+      "sources": [
+        {
+          "url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+          "locator": "PDF pp.1–3, Tables1–3",
+          "note": "支持输入、输出、模型定位与披露边界"
+        }
+      ],
+      "scope": "根据公开资料自绘，非原文图；仅展示功能接口，方框不是逐层网络；未公开的视觉编码、融合与参数不作推断",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

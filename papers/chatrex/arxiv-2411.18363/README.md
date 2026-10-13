@@ -192,7 +192,7 @@ UPN 先进行自己的检测训练：粗粒度来源含 O365、OpenImages、Bamb
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：LongVU](../../longvu/arxiv-2410.17434/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：TimeMarker →](../../timemarker/arxiv-2411.18211/README.md)
+[← 上一篇：Pixtral Large](../../mistral-pixtral/document-5140df127b74/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：TimeMarker →](../../timemarker/arxiv-2411.18211/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

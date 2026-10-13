@@ -1,0 +1,22 @@
+{
+  "paper_id": "52e049b1bc3a",
+  "source_url": "https://arxiv.org/pdf/2511.19575v1",
+  "source_version": "2511.19575v1",
+  "source_sha256": "44e92e446215734ee7c20fcf2cfef6ad997be55d5f91c120dbf95675cee9628a",
+  "verification_notes": [
+    {
+      "scope": "固定v1首页、§1及§3–6，PDF第3–13页；读取Table1–6和Eq1。",
+      "verified": "三组件架构、XD-RoPE四子空间、坐标0–1000、四阶段token/冻结范围与任务奖励逐段核对。"
+    },
+    {
+      "scope": "Figure2、Table4和对应裁区。",
+      "verified": "原文布局已目视；仅输出架构与表格区域，不使用整页截图。"
+    },
+    {
+      "scope": "实验指标与披露边界。",
+      "verified": "区分text向下与overall向上、130+语言训练和14+源语言翻译、内部与公开基准；没有混用1.5新技术。",
+      "limits": "未通读所有定性附录；没有模型运行或复现实验，未知超参数未补写。"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

@@ -1,0 +1,851 @@
+{
+  "date": "2026-10-13",
+  "status": "passed",
+  "engine": "Headless Microsoft Edge,marked GFM,MathJax3.2.2 SVG",
+  "article_manifest_sha256": "d94280b024b3d8cd6f6d5e5f50bf2cfcb07d64845bf2d3001adced5aece8c87a",
+  "full_scan": {
+    "articles": 305,
+    "desktop_width": 1120,
+    "mobile_width": 375,
+    "body_overflows": 0,
+    "image_mode": "Placeholder assets; verifies all article text/table/math geometry, not pixel readability"
+  },
+  "actual_asset_pages": {
+    "pages": 39,
+    "new_introductions": 34,
+    "navigation_pages": 5,
+    "desktop_width": 1120,
+    "mobile_width": 375,
+    "broken_images": 0,
+    "body_overflows": 0,
+    "image_mode": "Actual local original images and self-drawn SVGs,including responsive homepage picture source"
+  },
+  "actual_pixel_inspections_by_root": [
+    "Homepage desktop and375px mobile",
+    "ERNIE,PaliGemma2,Gemma3 architecture tables and adjoining principles",
+    "GPT5.4,GPT5.6,GPTLive,GPT6.1Sol,Gemma3n,GLM4.6V,MiniCPM-V4.7 self-drawn diagram screenshots"
+  ],
+  "diagram_geometry": {
+    "date": "2026-10-13",
+    "diagrams": 21,
+    "issues": [],
+    "entries": [
+      {
+        "id": "380e510956a2",
+        "path": "papers/claude/document-380e510956a2/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 775,
+        "texts": 15,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "2c9bf7e5f94a",
+        "path": "papers/claude/document-2c9bf7e5f94a/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 775,
+        "texts": 15,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "28803263c0f6",
+        "path": "papers/claude/document-28803263c0f6/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 775,
+        "texts": 15,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "92907841db82",
+        "path": "papers/claude/document-92907841db82/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 775,
+        "texts": 15,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "783cf6ffbfbf",
+        "path": "papers/claude/document-783cf6ffbfbf/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 775,
+        "texts": 15,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "222ef6a5de3d",
+        "path": "papers/gemini/document-222ef6a5de3d/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 775,
+        "texts": 15,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "fd75097b0235",
+        "path": "papers/gemini/document-fd75097b0235/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 775,
+        "texts": 15,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "9e94a9ffe555",
+        "path": "papers/gemini/document-9e94a9ffe555/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 775,
+        "texts": 15,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "affc25e8e162",
+        "path": "papers/gpt/document-affc25e8e162/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 947,
+        "texts": 22,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "42bb90895c3a",
+        "path": "papers/gpt/document-42bb90895c3a/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1119,
+        "texts": 28,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "3e6d0908a22e",
+        "path": "papers/gpt/document-3e6d0908a22e/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1119,
+        "texts": 24,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "0e63abfcb13e",
+        "path": "papers/gpt/document-0e63abfcb13e/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 947,
+        "texts": 22,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "86d1cc655950",
+        "path": "papers/step/arxiv-2601.09668/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1291,
+        "texts": 24,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "51404279a064",
+        "path": "papers/glm/document-51404279a064/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1291,
+        "texts": 26,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "eb1014c14dfe",
+        "path": "papers/minicpm/document-eb1014c14dfe/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1266,
+        "texts": 21,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "fd34dfc57d84",
+        "path": "papers/minicpm/document-fd34dfc57d84/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1119,
+        "texts": 24,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "aa88a8d81e68",
+        "path": "papers/gemma/arxiv-2503.19786/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1119,
+        "texts": 24,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "c7a2cc906589",
+        "path": "papers/gemma/document-c7a2cc906589/figures/architecture-overview.svg",
+        "width": 992,
+        "height": 972,
+        "texts": 27,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "5140df127b74",
+        "path": "papers/mistral-pixtral/document-5140df127b74/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1119,
+        "texts": 22,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "652708f323d7",
+        "path": "papers/mistral-pixtral/document-652708f323d7/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1119,
+        "texts": 22,
+        "clipped": [],
+        "overlaps": []
+      },
+      {
+        "id": "fbed0d7612b3",
+        "path": "papers/aya-vision/arxiv-2505.08751/figures/architecture-overview.svg",
+        "width": 720,
+        "height": 1463,
+        "texts": 28,
+        "clipped": [],
+        "overlaps": []
+      }
+    ]
+  },
+  "sample_page_metrics": [
+    {
+      "file": "papers/claude/document-380e510956a2/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/claude/document-2c9bf7e5f94a/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 8
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/claude/document-28803263c0f6/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/claude/document-92907841db82/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/claude/document-783cf6ffbfbf/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 4
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gemini/document-222ef6a5de3d/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 4
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gemini/document-fd75097b0235/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gemini/document-9e94a9ffe555/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gpt/document-affc25e8e162/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 11
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gpt/document-42bb90895c3a/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 14
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gpt/document-3e6d0908a22e/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 8
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gpt/document-0e63abfcb13e/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 4
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/ernie/document-cd5d2d305595/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 10
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/hunyuan/arxiv-2511.19575/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 10
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/ovis/arxiv-2508.11737/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 12
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/step/arxiv-2601.09668/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 9
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/sensenova/arxiv-2609.11929/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 18
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/minicpm/document-38bf1faaf3c5/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 10
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": [
+          {
+            "tag": "CODE",
+            "text": "1d6b7d68379974af0375cfdb903613d630da34aa",
+            "tex": "",
+            "display": null,
+            "right": 386.96875
+          }
+        ]
+      }
+    },
+    {
+      "file": "papers/glm/document-51404279a064/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 11
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": [
+          {
+            "tag": "CODE",
+            "text": "f093b70998bec336acbc00d1a545e05893e3c9fa",
+            "tex": "",
+            "display": null,
+            "right": 386.96875
+          }
+        ]
+      }
+    },
+    {
+      "file": "papers/sensenova/arxiv-2605.12500/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 11
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/minicpm/document-eb1014c14dfe/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 4
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": [
+          {
+            "tag": "CODE",
+            "text": "1d6b7d68379974af0375cfdb903613d630da34aa",
+            "tex": "",
+            "display": null,
+            "right": 386.96875
+          }
+        ]
+      }
+    },
+    {
+      "file": "papers/minicpm/document-fd34dfc57d84/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 5
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": [
+          {
+            "tag": "CODE",
+            "text": "1d6b7d68379974af0375cfdb903613d630da34aa",
+            "tex": "",
+            "display": null,
+            "right": 386.96875
+          }
+        ]
+      }
+    },
+    {
+      "file": "papers/paligemma/arxiv-2407.07726/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 3
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/paligemma/arxiv-2412.03555/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 4
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gemma/arxiv-2503.19786/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 11
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/gemma/document-c7a2cc906589/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 3
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/mistral-pixtral/document-5140df127b74/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 3
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/mistral-pixtral/document-652708f323d7/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 6
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/florence/arxiv-2311.06242/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 10
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/aya-vision/arxiv-2505.08751/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 5
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/fastvlm/arxiv-2412.13303/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 5
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/molmo/arxiv-2601.10611/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 10
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/nemotron/arxiv-2511.03929/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 5
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/mm1/arxiv-2409.20566/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 17
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/ernie/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "papers/paligemma/README.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "reports/paper-reading-guide.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    },
+    {
+      "file": "reports/model-family-index.md",
+      "desktop": {
+        "width": 1120,
+        "scrollWidth": 1120,
+        "brokenImages": 0,
+        "math": 0
+      },
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375,
+        "brokenImages": 0,
+        "overflow": []
+      }
+    }
+  ],
+  "fixes": [
+    {
+      "path": "papers/gpt/document-affc25e8e162/README.md",
+      "issue": "11px375px mobile overflow from long inline resizing bound",
+      "resolution": "Display math fence; final scan has0 body overflow"
+    }
+  ],
+  "limits": "Local rendering and scoped pixel inspection. This is not a live authenticated GitHub frontend screenshot audit; hosted HTML/math payloads are checked separately after publication."
+}

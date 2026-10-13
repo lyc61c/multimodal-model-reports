@@ -166,7 +166,7 @@ AVG-6 汇总六个不使用 LLM 裁判的客观基准，不能当作单一任务
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Qwen2.5-VL](../../qwen/qwen2.5-vl/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Phi-4-Mini 与 Phi-4-Multimodal →](../../phi/arxiv-2503.01743/README.md)
+[← 上一篇：Qwen2.5-VL](../../qwen/qwen2.5-vl/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Claude 3.7 Sonnet →](../../claude/document-2c9bf7e5f94a/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

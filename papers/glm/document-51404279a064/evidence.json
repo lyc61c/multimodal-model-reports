@@ -1,0 +1,31 @@
+{
+  "paper_id": "51404279a064",
+  "source_url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/README.md",
+  "source_version": "git:f093b70998bec336acbc00d1a545e05893e3c9fa",
+  "source_sha256": "f81ad4ea063f5eaa96ada6aa759ea8c79315791e8e29ca2aed57dbe4c3808994",
+  "verification_notes": [
+    {
+      "scope": "发行日固定README的Project Updates、Model Implementation Code、GLM-4.6V Overview、Remaining Issues和完整Benchmarks图。",
+      "verified": "12/08日期、128K训练、原生视觉工具输入/返回，以及与4.1V/4.5V章节的版本边界。"
+    },
+    {
+      "scope": "README指向的Transformers v5.0.0rc0公开实现，L378–490、653–703、916–1027、1348–1513。",
+      "verified": "Conv3d patch、Conv2d下采样与MLP、占位替换、sigmoid路由选择偏置和共享专家；不把配置默认值冒充checkpoint参数。"
+    },
+    {
+      "scope": "原始评测图与最终缩小图。",
+      "verified": "目视全部对照列与所引数值；指出RefCOCO/WebVoyager退步与OCRBench持平。",
+      "retrieval": "固定官方commit图片经CDN取得，原字节与SHA保留。"
+    },
+    {
+      "scope": "数据和训练披露。",
+      "verified": "没有补造4.6V独立RLCS/数据量或loss；自绘图不套用Flash。",
+      "limits": "仅定向读取公开实现，不代表运行checkpoint、完整代码审计或实验复现。"
+    },
+    {
+      "scope": "说明性交互记号复查。",
+      "verified": "上下文更新用按序追加而非集合并，避免丢失轨迹顺序；仍明确其为一般接口解读。"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

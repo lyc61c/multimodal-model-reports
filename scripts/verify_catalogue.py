@@ -3,6 +3,7 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+from supplemental_catalogue import load_supplemental_entries
 
 ROOT = Path(__file__).resolve().parents[1]
 catalogue = json.loads((ROOT / "data/catalogue.json").read_text(encoding="utf-8"))
@@ -16,6 +17,8 @@ assert sum(len(e["source_sections"]) for e in entries) == snapshot["raw_rows"]
 checks["complete_source_coverage"] = True
 assert len({e["id"] for e in entries}) == len(entries)
 checks["unique_document_ids"] = True
+supplemental = load_supplemental_entries(entries, ROOT)
+checks["official_supplemental_entries_validated"] = len(supplemental)
 
 threshold = snapshot["threshold"]
 for entry in entries:
@@ -66,6 +69,8 @@ if isinstance(observations, dict):
     checks["independent_foundation_repositories_matched"] = verified_count
 
 result = {"status": "passed", "snapshot_date": snapshot["snapshot_date"], "checks": checks,
-          "entries": len(entries), "main_model_entries": stats["main_model_entries"], "model_families": stats["main_families"]}
+          "entries": len(entries), "main_model_entries": stats["main_model_entries"], "model_families": stats["main_families"],
+          "supplemental_entries": len(supplemental), "collection_entries": len(entries) + len(supplemental),
+          "collection_retained_entries": sum(entry["catalogue_group"] != "excluded_low_star" for entry in entries) + len(supplemental)}
 (ROOT / "data/validation.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(json.dumps(result, ensure_ascii=False, indent=2))

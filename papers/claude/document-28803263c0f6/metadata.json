@@ -1,0 +1,27 @@
+{
+  "paper_id": "28803263c0f6",
+  "catalogue_entry_id": "28803263c0f6",
+  "family_slug": "claude",
+  "title": "Claude 4 System Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://www.anthropic.com/news/claude-4",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "ce31abf67931f45a647e85e1de521d7d941ed977a1d5171e5a298c6df26dbbf8"
+    }
+  ],
+  "title_zh": "Claude 4：交错思考与工具、文件记忆及双模型家族",
+  "source_sha256": "c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-05-22",
+  "chinese_characters": 1965,
+  "figures_manifest": "figures-manifest.json"
+}

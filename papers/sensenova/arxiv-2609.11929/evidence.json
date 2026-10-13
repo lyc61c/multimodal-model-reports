@@ -1,0 +1,22 @@
+{
+  "paper_id": "448cf5cdfd37",
+  "source_url": "https://arxiv.org/pdf/2609.11929v1",
+  "source_version": "2609.11929v1",
+  "source_sha256": "4a55b4f75e2c4d7ba245cf2f070efc1b993126c41cce559ac7b6a69a476a74aa",
+  "verification_notes": [
+    {
+      "scope": "实际读取固定v1首页及第6–18、22–23、25–26页，覆盖§3–4方法/训练/数据和主要理解/生成/编辑/交错表。",
+      "verified": "4K条件、PixelShuffle2/2/8、LPIPS、四专家差异、Eq7/10 OCR与最弱项奖励、学生轨迹OPD逐项核对。"
+    },
+    {
+      "scope": "Table2与Tables3–7/16–17/23对照。",
+      "verified": "保留SFT比例合计1.10和8196原值；PE明确提示增强；U1.5非全面提升，GaU/部分理解退步保留；U1 DMD数字不移植为本代OPD。"
+    },
+    {
+      "scope": "Figure3/4及Table16原图和裁图视觉检查。",
+      "verified": "保留解码器细节、专家训练全链路、完整编辑表头/注；不使用整页论文。",
+      "limits": "没有全文复审35页全部定性附录、没有训练/评测复现；代码开放承诺未当作全套已发布事实。"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

@@ -1,0 +1,20 @@
+{
+  "paper_id": "f4eeb8422c62",
+  "catalogue_entry_id": "f4eeb8422c62",
+  "family_slug": "molmo",
+  "title": "Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2601.10611v4",
+  "source_url": "https://arxiv.org/pdf/2601.10611v4",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Molmo2：视频理解、时空指点与对象跟踪",
+  "source_sha256": "cd91ee503386ca16469381f560c229246fd6762bd992b4bc687601d6a25fe8fe",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-01-15",
+  "chinese_characters": 2901,
+  "figures_manifest": "figures-manifest.json"
+}

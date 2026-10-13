@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="992" height="972" viewBox="0 0 992 972" role="img" aria-labelledby="title desc">
+<title id="title">Gemma 3n 多模态输入与弹性主干（自绘，非原文图）</title>
+<desc id="desc">自绘，非原文图；仅概括公开模块，未填写gated配置与未公开投影尺寸。；图像/音频/视频为输入模态，公开版本只产生文字。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="990" height="970" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="496.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Gemma 3n 多模态输入与弹性主干</text>
+<path d="M180,230 V263 H180 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M496,230 V269.25 H496 V308.5" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M812,230 V269.25 H812 V308.5" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M180,427 V460 H496 V493" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M496,414.5 V453.75 H496 V493" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M812,414.5 V453.75 H496 V493" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M496,624 V657 H496 V690" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="288" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="180" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像或视频帧</text>
+<text x="180" y="190" text-anchor="middle" font-size="20" fill="#475569">256 / 512 / 768输入</text>
+<rect x="352" y="124" width="288" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="496" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">声音输入</text>
+<text x="496" y="190" text-anchor="middle" font-size="20" fill="#475569">单声道音频</text>
+<rect x="668" y="124" width="288" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="812" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字提示</text>
+<text x="812" y="190" text-anchor="middle" font-size="20" fill="#475569">对话与任务指令</text>
+<rect x="36" y="296" width="288" height="131" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="180" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">MobileNet-V5</text>
+<text x="180" y="362" text-anchor="middle" font-size="20" fill="#475569">300M视觉编码</text>
+<text x="180" y="387" text-anchor="middle" font-size="20" fill="#475569">多尺度融合适配</text>
+<text x="180" y="412" text-anchor="middle" font-size="20" fill="#475569">每图256个token</text>
+<rect x="352" y="308.5" width="288" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="496" y="343.5" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">USM音频编码</text>
+<text x="496" y="374.5" text-anchor="middle" font-size="20" fill="#475569">每160ms一个表示</text>
+<text x="496" y="399.5" text-anchor="middle" font-size="20" fill="#475569">发布实现≤30秒片段</text>
+<rect x="668" y="308.5" width="288" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="812" y="343.5" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文本表示</text>
+<text x="812" y="374.5" text-anchor="middle" font-size="20" fill="#475569">配套tokenizer与模板</text>
+<rect x="36" y="493" width="920" height="131" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="496" y="528" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">MatFormer语言主干</text>
+<text x="496" y="559" text-anchor="middle" font-size="20" fill="#475569">E4B内嵌E2B</text>
+<text x="496" y="584" text-anchor="middle" font-size="20" fill="#475569">PLE减少常驻参数</text>
+<text x="496" y="609" text-anchor="middle" font-size="20" fill="#475569">上层复用中间层KV</text>
+<rect x="36" y="690" width="920" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="496" y="725" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字输出</text>
+<text x="496" y="756" text-anchor="middle" font-size="20" fill="#475569">回答 / 转写 / 翻译</text>
+<text x="496" y="781" text-anchor="middle" font-size="20" fill="#475569">总上下文32K</text>
+<line x1="36" y1="844" x2="956" y2="844" stroke="#e2e8f0"/>
+<text x="36" y="871" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="902" font-size="17" fill="#64748b">自绘，非原文图；仅概括公开模块，未填写gated配置与未公开投影尺寸。</text>
+<text x="36" y="927" font-size="17" fill="#64748b">图像/音频/视频为输入模态，公开版本只产生文字。</text>
+</g></svg>

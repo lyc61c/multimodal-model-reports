@@ -180,7 +180,7 @@ Design2Code 平均为 85.1，GPT-4V 为 84.8；差 0.3 分，没有公开显著�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：OMG-LLaVA](../../omg-llava/arxiv-2406.19389/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：EVLM →](../../evlm/arxiv-2407.14177/README.md)
+[← 上一篇：OMG-LLaVA](../../omg-llava/arxiv-2406.19389/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：PaliGemma →](../../paligemma/arxiv-2407.07726/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

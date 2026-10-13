@@ -149,7 +149,7 @@ OmniBench原图加音频42.9、caption加音频37.7、原图加转录47.9、capt
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：VideoLLaMA 3](../../videollama/arxiv-2501.13106/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Qwen2.5-VL →](../../qwen/qwen2.5-vl/README.md)
+[← 上一篇：MiniCPM-o 2.6](../../minicpm/document-38bf1faaf3c5/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Qwen2.5-VL →](../../qwen/qwen2.5-vl/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

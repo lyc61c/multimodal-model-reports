@@ -1,0 +1,20 @@
+{
+  "paper_id": "0e63abfcb13e",
+  "catalogue_entry_id": "0e63abfcb13e",
+  "family_slug": "gpt",
+  "title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "GPT-6.1 Sol：面向视觉工作流的能力、成本与代理可靠性",
+  "source_sha256": "1ae4ad6f0e2425a0f85623d3ccfc2a747c13611432a504ef0a7b5f4228789884",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-09-29",
+  "chinese_characters": 3249,
+  "figures_manifest": "figures-manifest.json"
+}

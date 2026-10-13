@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "paper_id": "c7a2cc906589",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "9d82847017b13ad7aa68a9b9197b245e43f5ccf22980d236bae472c0e350f269",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+          "locator": "MatFormer / PLE / KV sharing / Audio / MobileNet-V5",
+          "note": "支持编码器、弹性主干和复用机制"
+        },
+        {
+          "url": "https://huggingface.co/google/gemma-3n-E4B-it/blob/c1221e9c62e34a43ab7ffacd1be0ea71f126ef10/README.md",
+          "locator": "Inputs and outputs",
+          "note": "支持每图/每秒token和32K上下文"
+        }
+      ],
+      "scope": "自绘，非原文图；仅概括公开模块，未填写gated配置与未公开投影尺寸。；图像/音频/视频为输入模态，公开版本只产生文字。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

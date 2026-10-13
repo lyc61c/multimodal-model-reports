@@ -153,7 +153,7 @@ GUI采用推理模式：ScreenSpot-V2 95.2，ScreenSpot-Pro 60.9；WebVoyager 87
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：感知、推理、思考与规划](../../multimodal-reasoning-survey/arxiv-2505.04921/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：BLIP3-o →](../../blip3-o/arxiv-2505.09568/README.md)
+[← 上一篇：感知、推理、思考与规划](../../multimodal-reasoning-survey/arxiv-2505.04921/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Aya Vision →](../../aya-vision/arxiv-2505.08751/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

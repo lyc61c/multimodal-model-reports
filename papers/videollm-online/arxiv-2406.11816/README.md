@@ -147,7 +147,7 @@ COIN 中，7B 的步骤识别、任务识别、下一步预测、程序预测、
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：EVE](../../eve/arxiv-2406.11832/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：video-SALMONN →](../../salmonn/arxiv-2406.15704/README.md)
+[← 上一篇：EVE](../../eve/arxiv-2406.11832/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：Claude 3.5 Sonnet →](../../claude/document-380e510956a2/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

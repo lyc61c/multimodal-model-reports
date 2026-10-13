@@ -1,0 +1,55 @@
+{
+  "paper_id": "42bb90895c3a",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "aa8073bcfa15449167c64aab7c520c2d0c71e33220f64dff62baa0f2118e7e8b",
+  "assets": [
+    {
+      "asset_path": "figures/original-p010-vision-table.png",
+      "original_label": "Section 3.2: Image input evaluations",
+      "pdf_page": 10,
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf#page=10",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "aa8073bcfa15449167c64aab7c520c2d0c71e33220f64dff62baa0f2118e7e8b",
+      "asset_sha256": "dd4b61c73bcee48c95ad2156b0c9fe778c1118c16fa28494d3ca5bf220612b54",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 170,
+        "crop_bbox": [
+          70,
+          470,
+          545,
+          586
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/original-p011-avoidance-table.png",
+      "original_label": "Section 3.3: Avoidance and task correctness",
+      "pdf_page": 11,
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf#page=11",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "aa8073bcfa15449167c64aab7c520c2d0c71e33220f64dff62baa0f2118e7e8b",
+      "asset_sha256": "9f049c8ebc0998d1639928c0098869a8596257fd8b64b4626f245e9e822abcd0",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 170,
+        "crop_bbox": [
+          70,
+          268,
+          545,
+          338
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

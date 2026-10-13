@@ -1,6 +1,6 @@
 # 全部保留资料的图文介绍
 
-本轮范围共 **272 条**，沿用七部分模板。状态以逐篇元数据为准，待获取原文的说明页不计为完整技术介绍。
+本轮范围共 **306 条**，沿用七部分模板。状态以逐篇元数据为准，待获取原文的说明页不计为完整技术介绍。
 
 | 家族 | 文献与阅读入口 | 文献类型 | 整理状态 |
 |---|---|---|---|
@@ -13,6 +13,7 @@
 | AnyMAL | [AnyMAL: An Efficient and Scalable Any-Modality Augmented Language Model](../papers/anymal/arxiv-2309.16058/README.md) | model_paper | 已完成 |
 | Apollo | [Apollo: An Exploration of Video Understanding in Large Multimodal Models](../papers/apollo/arxiv-2412.10360/README.md) | model_paper | 已完成 |
 | AuroraCap | [AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark](../papers/auroracap/arxiv-2410.03051/README.md) | model_paper | 已完成 |
+| Aya Vision | [Aya Vision: Advancing the Frontier of Multilingual Multimodality](../papers/aya-vision/arxiv-2505.08751/README.md) | technical_report | 已完成 |
 | BAGEL | [Emerging Properties in Unified Multimodal Pretraining](../papers/bagel/arxiv-2505.14683/README.md) | model_paper | 已完成 |
 | Baichuan | [Baichuan-Omni-1.5 Technical Report](../papers/baichuan/document-165201d8355a/README.md) | technical_report | 已完成 |
 | Beyond Language Modeling | [Beyond Language Modeling: An Exploration of Multimodal Pretraining](../papers/beyond-language-modeling/arxiv-2603.03276/README.md) | analysis_paper | 已完成 |
@@ -33,6 +34,11 @@
 | ChatSpot | [ChatSpot: Bootstrapping Multimodal LLMs via Precise Referring Instruction Tuning](../papers/chatspot/arxiv-2307.09474/README.md) | model_paper | 已完成 |
 | Cheetah | [Fine-tuning Multimodal LLMs to Follow Zero-shot Demonstrative Instructions](../papers/cheetah/arxiv-2308.04152/README.md) | model_paper | 已完成 |
 | Claude | [The Claude 3 Model Family: Opus, Sonnet, Haiku](../papers/claude/document-d746d75f8685/README.md) | model_card | 已完成 |
+| Claude | [Claude 3.5 Sonnet Model Card Addendum](../papers/claude/document-380e510956a2/README.md) | model_card | 已完成 |
+| Claude | [Claude 3.7 Sonnet System Card](../papers/claude/document-2c9bf7e5f94a/README.md) | system_card | 已完成 |
+| Claude | [Claude 4 System Card](../papers/claude/document-28803263c0f6/README.md) | system_card | 已完成 |
+| Claude | [Claude Opus 4.6 System Card](../papers/claude/document-92907841db82/README.md) | system_card | 已完成 |
+| Claude | [Claude Opus 5.5 System Card](../papers/claude/document-783cf6ffbfbf/README.md) | system_card | 已完成 |
 | CM3Leon | [Scaling Autoregressive Multi-Modal Models: Pretraining and Instruction Tuning](../papers/cm3leon/arxiv-2309.02591/README.md) | model_paper | 已完成 |
 | CogCoM | [CogCoM: Train Large Vision-Language Models Diving into Details through Chain of Manipulations](../papers/cogcom/arxiv-2402.04236/README.md) | model_paper | 已完成 |
 | CogVLM / CogAgent | [CogVLM: Visual Expert For Large Language Models](../papers/cogvlm/arxiv-2311.03079/README.md) | model_paper | 已完成 |
@@ -61,21 +67,30 @@
 | Emu | [Emu3: Next-Token Prediction is All You Need](../papers/emu/arxiv-2409.18869/README.md) | model_paper | 已完成 |
 | Emu | [Emu3.5: Native Multimodal Models are World Learners](../papers/emu/arxiv-2510.26583/README.md) | model_paper | 已完成 |
 | Enhancing Multimodal Large Language Models with Vision Detection Models: An Empirical Study | [Enhancing Multimodal Large Language Models with Vision Detection Models: An Empirical Study](../papers/enhancing-multimodal-large-language-models-with-vision-e94f5590857f/arxiv-2401.17981/README.md) | analysis_paper | 已完成 |
+| ERNIE | [ERNIE 4.5 Technical Report](../papers/ernie/document-cd5d2d305595/README.md) | technical_report | 已完成 |
 | EVE | [Unveiling Encoder-Free Vision-Language Models](../papers/eve/arxiv-2406.11832/README.md) | model_paper | 已完成 |
 | EVLM | [EVLM: An Efficient Vision-Language Model for Visual Understanding](../papers/evlm/arxiv-2407.14177/README.md) | model_paper | 已完成 |
+| FastVLM | [FastVLM: Efficient Vision Encoding for Vision Language Models](../papers/fastvlm/arxiv-2412.13303/README.md) | technical_report | 已完成 |
 | Ferret | [Ferret: Refer and Ground Anything Anywhere at Any Granularity](../papers/ferret/arxiv-2310.07704/README.md) | model_paper | 已完成 |
 | Ferret | [Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs](../papers/ferret/arxiv-2404.05719/README.md) | model_paper | 已完成 |
+| Florence | [Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks](../papers/florence/arxiv-2311.06242/README.md) | technical_report | 已完成 |
 | Fuyu | [Fuyu-8B: A Multimodal Architecture for AI Agents](../papers/fuyu/document-87ff293e66f7/README.md) | release_blog | 已完成 |
 | Gemini | [Gemini: A Family of Highly Capable Multimodal Models](../papers/gemini/document-044099a491e0/README.md) | technical_report | 已完成 |
 | Gemini | [Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context](../papers/gemini/document-1855460a9712/README.md) | technical_report | 已完成 |
+| Gemini | [Gemini 2.0 Flash Model Card](../papers/gemini/document-222ef6a5de3d/README.md) | model_card | 已完成 |
 | Gemini | [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](../papers/gemini/document-8c1dda86c921/README.md) | technical_report | 已完成 |
+| Gemini | [Gemini 3 Pro Model Card](../papers/gemini/document-fd75097b0235/README.md) | model_card | 已完成 |
+| Gemini | [Gemini 3 Flash Model Card](../papers/gemini/document-9e94a9ffe555/README.md) | model_card | 已完成 |
 | Gemini | [Gemini 3.1 Pro: A smarter model for your most complex tasks](../papers/gemini/document-7cca3ca5d4d3/README.md) | release_blog | 已完成 |
 | Gemini | [Introducing Gemini 3.8 Flash and 3.8 Flash Cyber](../papers/gemini/document-390f20b2fe8b/README.md) | release_blog | 已完成 |
 | Gemini | [Gemini 4 Argon: our next era of frontier intelligence](../papers/gemini/document-a07676c13763/README.md) | release_blog | 已完成 |
+| Gemma | [Gemma 3 Technical Report](../papers/gemma/arxiv-2503.19786/README.md) | technical_report | 已完成 |
+| Gemma | [Introducing Gemma 3n: The developer guide](../papers/gemma/document-c7a2cc906589/README.md) | release_blog | 已完成 |
 | Gemma | [Gemma 4: Byte for byte, the most capable open models](../papers/gemma/document-92d16b8c59c9/README.md) | release_blog | 已完成 |
 | GLaMM | [GLaMM: Pixel Grounding Large Multimodal Model](../papers/glamm/arxiv-2311.03356/README.md) | model_paper | 已完成 |
 | GLM / VisualGLM | [VisualGLM-6B](../papers/glm/document-4d81507404ce/README.md) | model_release | 已完成 |
 | GLM / VisualGLM | [GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning](../papers/glm/arxiv-2507.01006/README.md) | model_paper | 已完成 |
+| GLM / VisualGLM | [GLM-4.6V](../papers/glm/document-51404279a064/README.md) | release_blog | 已完成 |
 | GLM / VisualGLM | [GLM-5.3-Flash: Frontier Intelligence, Flash Cost](../papers/glm/document-e213666dcb0d/README.md) | release_blog | 已完成 |
 | GPT | [GPT-4 Technical Report](../papers/gpt/arxiv-2303.08774/README.md) | technical_report | 已完成 |
 | GPT | [GPT-4V(ision) System Card](../papers/gpt/document-5cd14e1ea9af/README.md) | system_card | 已完成 |
@@ -84,12 +99,17 @@
 | GPT | [Introducing GPT-4.1 in the API](../papers/gpt/document-32a268f7f1d8/README.md) | release_blog | 已完成 |
 | GPT | [Introducing GPT-5](../papers/gpt/document-d0807662cb93/README.md) | release_blog | 已完成 |
 | GPT | [Introducing GPT-5.2](../papers/gpt/document-e2a1f413a7a5/README.md) | release_blog | 已完成 |
+| GPT | [GPT-5.4 Thinking System Card](../papers/gpt/document-affc25e8e162/README.md) | system_card | 已完成 |
+| GPT | [GPT-Live System Card](../papers/gpt/document-3e6d0908a22e/README.md) | system_card | 已完成 |
+| GPT | [GPT-5.6 System Card](../papers/gpt/document-42bb90895c3a/README.md) | system_card | 已完成 |
 | GPT | [GPT-6 Astra: A new generation of intelligence](../papers/gpt/document-0d9109ba3678/README.md) | release_blog | 已完成 |
+| GPT | [Addendum to GPT-6 Astra System Card: GPT-6.1 Sol](../papers/gpt/document-0e63abfcb13e/README.md) | system_card | 已完成 |
 | GPT4RoI | [GPT4RoI: Instruction Tuning Large Language Model on Region-of-Interest](../papers/gpt4roi/arxiv-2307.03601/README.md) | model_paper | 已完成 |
 | GPT4Tools | [GPT4Tools: Teaching Large Language Model to Use Tools via Self-instruction](../papers/gpt4tools/arxiv-2305.18752/README.md) | tool_use_method | 已完成 |
 | Graphist | [Graphic Design with Large Multimodal Model](../papers/graphist/arxiv-2404.14368/README.md) | application_model_paper | 已完成 |
 | GROUNDHOG | [GROUNDHOG: Grounding Large Language Models to Holistic Segmentation](../papers/groundhog/arxiv-2402.16846/README.md) | model_paper | 已完成 |
 | Honeybee | [Honeybee: Locality-enhanced Projector for Multimodal LLM](../papers/honeybee/arxiv-2312.06742/README.md) | model_paper | 已完成 |
+| Hunyuan | [HunyuanOCR Technical Report](../papers/hunyuan/arxiv-2511.19575/README.md) | technical_report | 已完成 |
 | ImageBind-LLM | [ImageBind-LLM: Multi-modality Instruction Tuning](../papers/imagebind-llm/arxiv-2309.03905/README.md) | model_paper | 已完成 |
 | InternLM-XComposer | [InternLM-XComposer: A Vision-Language Large Model for Advanced Text-image Comprehension and Composition](../papers/internlm-xcomposer/arxiv-2309.15112/README.md) | model_paper | 已完成 |
 | InternLM-XComposer | [InternLM-XComposer2: Mastering Free-form Text-Image Composition and Comprehension in Vision-Language Large Model](../papers/internlm-xcomposer/arxiv-2401.16420/README.md) | model_paper | 已完成 |
@@ -151,13 +171,19 @@
 | MineDojo | [MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge](../papers/minedojo/arxiv-2206.08853/README.md) | embodied_platform | 已完成 |
 | Mini-Gemini | [Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models](../papers/mini-gemini/arxiv-2403.18814/README.md) | model_paper | 已完成 |
 | MiniCPM-V / MiniCPM-o | [MiniCPM-V: A GPT-4V Level MLLM on Your Phone](../papers/minicpm/arxiv-2408.01800/README.md) | model_paper | 已完成 |
+| MiniCPM-V / MiniCPM-o | [MiniCPM-o 2.6: A GPT-4o Level MLLM for Vision, Speech and Multimodal Live Streaming on Your Phone](../papers/minicpm/document-38bf1faaf3c5/README.md) | release_blog | 已完成 |
 | MiniCPM-V / MiniCPM-o | [MiniCPM-V 4.5: A GPT-4o Level MLLM for Single Image, Multi Image and Video Understanding on Your Phone](../papers/minicpm/document-5679fdac7d01/README.md) | model_release | 已完成 |
 | MiniCPM-V / MiniCPM-o | [MiniCPM-o 4.5](../papers/minicpm/document-9be303a31d11/README.md) | model_release | 已完成 |
+| MiniCPM-V / MiniCPM-o | [MiniCPM-V 4.6](../papers/minicpm/document-eb1014c14dfe/README.md) | technical_report | 已完成 |
+| MiniCPM-V / MiniCPM-o | [MiniCPM-V 4.7](../papers/minicpm/document-fd34dfc57d84/README.md) | technical_report | 已完成 |
 | MiniGPT | [MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models](../papers/minigpt/arxiv-2304.10592/README.md) | model_paper | 已完成 |
 | MiniGPT | [MiniGPT-v2: large language model as a unified interface for vision-language multi-task learning](../papers/minigpt/arxiv-2310.09478/README.md) | model_paper | 已完成 |
 | Mistral / Pixtral | [Pixtral-12B](../papers/mistral-pixtral/document-3ebe839c6607/README.md) | release_blog | 已完成 |
+| Mistral / Pixtral | [Pixtral Large](../papers/mistral-pixtral/document-5140df127b74/README.md) | release_blog | 已完成 |
+| Mistral / Pixtral | [Mistral Small 3.1](../papers/mistral-pixtral/document-652708f323d7/README.md) | release_blog | 已完成 |
 | Mistral / Pixtral | [Introducing Mistral 3](../papers/mistral-pixtral/document-6276d6c37ba5/README.md) | release_blog | 已完成 |
 | MM1 | [MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training](../papers/mm1/arxiv-2403.09611/README.md) | model_paper | 已完成 |
+| MM1 | [MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning](../papers/mm1/arxiv-2409.20566/README.md) | technical_report | 已完成 |
 | MMaDA | [MMaDA: Multimodal Large Diffusion Language Models](../papers/mmada/arxiv-2505.15809/README.md) | model_paper | 已完成 |
 | MMSearch-R1 | [MMSearch-R1: Incentivizing LMMs to Search](../papers/mmsearch-r1/arxiv-2506.20670/README.md) | model_paper | 已完成 |
 | MoAI | [MoAI: Mixture of All Intelligence for Large Language and Vision Models](../papers/moai/arxiv-2403.07508/README.md) | model_paper | 已完成 |
@@ -166,6 +192,7 @@
 | Modality-Integration-Rate | [Deciphering Cross-Modal Alignment in Large Vision-Language Models with Modality Integration Rate](../papers/modality-integration-rate/arxiv-2410.07167/README.md) | analysis_paper | 已完成 |
 | MoE-LLaVA | [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](../papers/moe-llava/arxiv-2401.15947/README.md) | model_paper | 已完成 |
 | Molmo | [Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models](../papers/molmo/arxiv-2409.17146/README.md) | model_paper | 已完成 |
+| Molmo | [Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding](../papers/molmo/arxiv-2601.10611/README.md) | technical_report | 已完成 |
 | Monkey / TextMonkey | [Monkey: Image Resolution and Text Label Are Important Things for Large Multi-modal Models](../papers/monkey/arxiv-2311.06607/README.md) | model_paper | 已完成 |
 | Monkey / TextMonkey | [TextMonkey: An OCR-Free Large Multimodal Model for Understanding Document](../papers/monkey/arxiv-2403.04473/README.md) | model_paper | 已完成 |
 | MotionGPT | [MotionGPT: Human Motion as a Foreign Language](../papers/motiongpt/arxiv-2306.14795/README.md) | application_model_paper | 已完成 |
@@ -181,6 +208,7 @@
 | MultiModal-GPT | [MultiModal-GPT: A Vision and Language Model for Dialogue with Humans](../papers/multimodal-gpt/arxiv-2305.04790/README.md) | model_paper | 已完成 |
 | Large Multimodal Reasoning Survey | [Perception, Reason, Think, and Plan: A Survey on Large Multimodal Reasoning Models](../papers/multimodal-reasoning-survey/arxiv-2505.04921/README.md) | survey | 已完成 |
 | Muse | [Introducing Muse Spark: Scaling Towards Personal Superintelligence](../papers/muse/document-52928aca6048/README.md) | release_blog | 已完成 |
+| Nemotron | [NVIDIA Nemotron Nano V2 VL](../papers/nemotron/arxiv-2511.03929/README.md) | technical_report | 已完成 |
 | NExT-Chat | [NExT-Chat: An LMM for Chat, Detection and Segmentation](../papers/next-chat/arxiv-2311.04498/README.md) | model_paper | 已完成 |
 | NExT-GPT | [NExT-GPT: Any-to-Any Multimodal LLM](../papers/next-gpt/arxiv-2309.05519/README.md) | model_paper | 已完成 |
 | NExT-OMNI | [NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching](../papers/next-omni/arxiv-2510.13721/README.md) | model_paper | 已完成 |
@@ -194,7 +222,10 @@
 | Otter | [OtterHD: A High-Resolution Multi-modality Model](../papers/otter/arxiv-2311.04219/README.md) | model_paper | 已完成 |
 | Otter / MIMIC-IT | [MIMIC-IT: Multi-Modal In-Context Instruction Tuning](../papers/otter-398569/arxiv-2306.05425/README.md) | dataset_or_benchmark | 已完成 |
 | Ovis | [Ovis: Structural Embedding Alignment for Multimodal Large Language Model](../papers/ovis/arxiv-2405.20797/README.md) | model_paper | 已完成 |
+| Ovis | [Ovis2.5 Technical Report](../papers/ovis/arxiv-2508.11737/README.md) | technical_report | 已完成 |
 | PaLI | [PaLI-3 Vision Language Models: Smaller, Faster, Stronger](../papers/pali/arxiv-2310.09199/README.md) | model_paper | 已完成 |
+| PaliGemma | [PaliGemma: A versatile 3B VLM for transfer](../papers/paligemma/arxiv-2407.07726/README.md) | technical_report | 已完成 |
+| PaliGemma | [PaliGemma 2: A Family of Versatile VLMs for Transfer](../papers/paligemma/arxiv-2412.03555/README.md) | technical_report | 已完成 |
 | PaLM-E | [PaLM-E: An Embodied Multimodal Language Model](../papers/palm-e/arxiv-2303.03378/README.md) | embodied_model_report | 已完成 |
 | PandaGPT | [PandaGPT: One Model To Instruction-Follow Them All](../papers/pandagpt/arxiv-2305.16355/README.md) | model_paper | 已完成 |
 | Pengi | [Pengi: An Audio Language Model for Audio Tasks](../papers/pengi/arxiv-2305.11834/README.md) | model_paper | 已完成 |
@@ -229,6 +260,8 @@
 | Seed | [Seed1.5-VL Technical Report](../papers/seed/arxiv-2505.07062/README.md) | technical_report | 已完成 |
 | Seed | [Seed1.8 Model Card: Towards Generalized Real-World Agency](../papers/seed/document-6cb43357175b/README.md) | model_card | 已完成 |
 | Seed | [Seed2.0 Model Card: Towards Intelligence Frontier for Real-World Complexity](../papers/seed/arxiv-2607.00248/README.md) | model_card | 已完成 |
+| SenseNova | [SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture](../papers/sensenova/arxiv-2605.12500/README.md) | technical_report | 已完成 |
+| SenseNova | [SenseNova-U1.5: Towards Native Unified Visual Intelligence](../papers/sensenova/arxiv-2609.11929/README.md) | technical_report | 已完成 |
 | ShareGPT4V | [ShareGPT4V: Improving Large Multi-Modal Models with Better Captions](../papers/sharegpt4v/arxiv-2311.12793/README.md) | model_paper | 已完成 |
 | Shikra | [Shikra: Unleashing Multimodal LLM's Referential Dialogue Magic](../papers/shikra/arxiv-2306.15195/README.md) | model_paper | 已完成 |
 | Show-o | [Show-o2: Improved Native Unified Multimodal Models](../papers/show-o/arxiv-2506.15564/README.md) | model_paper | 已完成 |
@@ -238,6 +271,7 @@
 | SpatialVLM | [SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities](../papers/spatialvlm/arxiv-2401.12168/README.md) | model_paper | 已完成 |
 | SPHINX | [SPHINX: The Joint Mixing of Weights, Tasks, and Visual Embeddings for Multi-modal Large Language Models](../papers/sphinx/arxiv-2311.07575/README.md) | model_paper | 已完成 |
 | Step | [Step3: Cost-Effective Multimodal Intelligence](../papers/step/document-26d59ba3132d/README.md) | release_blog | 已完成 |
+| Step | [STEP3-VL-10B Technical Report](../papers/step/arxiv-2601.09668/README.md) | technical_report | 已完成 |
 | StreamChat | [StreamChat: Chatting with Streaming Video](../papers/streamchat/arxiv-2412.08646/README.md) | model_paper | 已完成 |
 | SVIT | [SVIT: Scaling up Visual Instruction Tuning](../papers/svit/arxiv-2307.04087/README.md) | dataset_or_benchmark | 已完成 |
 | Thyme | [Thyme: Think Beyond Images](../papers/thyme/arxiv-2508.11630/README.md) | model_paper | 已完成 |

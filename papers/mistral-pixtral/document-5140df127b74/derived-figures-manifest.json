@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "paper_id": "5140df127b74",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "27b8a47a766ce9923e01d42f7a4c4169b655a830acaf3a5494da9a1edab24812",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411/resolve/c1e51f6f11974a1199685d35c62f5a425c2d001e/README.md",
+          "locator": "Key Features / Metrics",
+          "note": "支持模型规模、上下文与模态"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411/resolve/c1e51f6f11974a1199685d35c62f5a425c2d001e/params.json",
+          "locator": "vision_encoder / language args",
+          "note": "支持公开层数、宽度和注意力头"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mistralai/mistral-inference/9eaeb91c17450e09021b6065a1d5cc69876507c8/src/mistral_inference/vision_encoder.py",
+          "locator": "视觉编码、连接器与图文融合",
+          "note": "支持模块输入输出计算"
+        }
+      ],
+      "scope": "自绘，非原文图；只画固定公开配置/实现中的推理模块。；训练数据、冻结次序和训练目标配方未公开，不由推理结构反推。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

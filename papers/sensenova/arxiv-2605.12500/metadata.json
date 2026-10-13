@@ -1,0 +1,20 @@
+{
+  "paper_id": "f799e9065399",
+  "catalogue_entry_id": "f799e9065399",
+  "family_slug": "sensenova",
+  "title": "SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2605.12500v1",
+  "source_url": "https://arxiv.org/pdf/2605.12500v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "SenseNova-U1：以原生像素连接理解、生成与交错推理",
+  "source_sha256": "d17a6184d1a909d2f6ce0eb3401c3a18e5daea0de3dba30b0a119d95e1da2d63",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-05-12",
+  "chinese_characters": 2554,
+  "figures_manifest": "figures-manifest.json"
+}

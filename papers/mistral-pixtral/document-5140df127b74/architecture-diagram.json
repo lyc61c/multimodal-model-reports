@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "paper_id": "5140df127b74",
+  "title": "Pixtral Large 多图理解路径",
+  "kind": "architecture",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图像输入",
+      "lines": [
+        "配套processor处理"
+      ],
+      "row": 0,
+      "col": 0,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "文字提示",
+      "lines": [
+        "tokenizer与对话模板"
+      ],
+      "row": 0,
+      "col": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "视觉Transformer",
+      "lines": [
+        "40层 / 宽1408 / patch16",
+        "按图独立视觉编码"
+      ],
+      "row": 1,
+      "col": 0,
+      "kind": "encoder"
+    },
+    {
+      "id": "adapter",
+      "title": "视觉语言连接",
+      "lines": [
+        "两层MLP + GeLU",
+        "映射至12288维"
+      ],
+      "row": 2,
+      "col": 0,
+      "kind": "bridge"
+    },
+    {
+      "id": "lm",
+      "title": "语言主干",
+      "lines": [
+        "图像位置填入连续特征",
+        "88层 / 96Q与8KV",
+        "128K图文上下文"
+      ],
+      "row": 3,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "out",
+      "title": "文字输出",
+      "lines": [
+        "自回归回答",
+        "公开版本不生成图像"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "image",
+      "to": "vision"
+    },
+    {
+      "from": "vision",
+      "to": "adapter"
+    },
+    {
+      "from": "adapter",
+      "to": "lm"
+    },
+    {
+      "from": "text",
+      "to": "lm",
+      "entry_side": "right"
+    },
+    {
+      "from": "lm",
+      "to": "out"
+    }
+  ],
+  "notes": [
+    "自绘，非原文图；只画固定公开配置/实现中的推理模块。",
+    "训练数据、冻结次序和训练目标配方未公开，不由推理结构反推。"
+  ],
+  "sources": [
+    {
+      "url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411/resolve/c1e51f6f11974a1199685d35c62f5a425c2d001e/README.md",
+      "locator": "Key Features / Metrics",
+      "note": "支持模型规模、上下文与模态"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411/resolve/c1e51f6f11974a1199685d35c62f5a425c2d001e/params.json",
+      "locator": "vision_encoder / language args",
+      "note": "支持公开层数、宽度和注意力头"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mistralai/mistral-inference/9eaeb91c17450e09021b6065a1d5cc69876507c8/src/mistral_inference/vision_encoder.py",
+      "locator": "视觉编码、连接器与图文融合",
+      "note": "支持模块输入输出计算"
+    }
+  ]
+}

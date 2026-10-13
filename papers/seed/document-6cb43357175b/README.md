@@ -214,7 +214,7 @@ Avg@10/8 标注不能改写成从 10/8 个答案取最好结果的 Pass@10/8；�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：GPT-5.2](../../gpt/document-e2a1f413a7a5/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：DeepSeek-OCR 2 →](../../deepseek/document-536ef2604f4a/README.md)
+[← 上一篇：Gemini 3 Flash](../../gemini/document-9e94a9ffe555/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：STEP3-VL-10B →](../../step/arxiv-2601.09668/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

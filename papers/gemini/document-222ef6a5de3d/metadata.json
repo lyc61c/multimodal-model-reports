@@ -1,0 +1,27 @@
+{
+  "paper_id": "222ef6a5de3d",
+  "catalogue_entry_id": "222ef6a5de3d",
+  "family_slug": "gemini",
+  "title": "Gemini 2.0 Flash Model Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+  "document_kind": "model_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "393511b29c4ea611b9fb5a6e9c61c9d57939519ccfcedeca166898fcac3cd499"
+    }
+  ],
+  "title_zh": "Gemini 2.0 Flash：稀疏多模态、流式接口与工具使用",
+  "source_sha256": "b1575ae4e9dcbc6aef722adab208b9798d26dc39eb2fb63fc7d04bd47b9bd597",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2024-12-11",
+  "chinese_characters": 1731,
+  "figures_manifest": "figures-manifest.json"
+}

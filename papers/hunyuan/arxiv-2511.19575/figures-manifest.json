@@ -1,0 +1,55 @@
+{
+  "paper_id": "52e049b1bc3a",
+  "source_version": "2511.19575v1",
+  "source_pdf_sha256": "44e92e446215734ee7c20fcf2cfef6ad997be55d5f91c120dbf95675cee9628a",
+  "assets": [
+    {
+      "asset_path": "figures/architecture.png",
+      "original_label": "Figure 2: HunyuanOCR architecture",
+      "pdf_page": 5,
+      "source_url": "https://arxiv.org/pdf/2511.19575v1#page=5",
+      "source_version": "2511.19575v1",
+      "source_sha256": "44e92e446215734ee7c20fcf2cfef6ad997be55d5f91c120dbf95675cee9628a",
+      "asset_sha256": "cd8386a23c3e7e792b9f13cc2ebf29d750f8b4dcb212d8e6771e93d67df0e5d9",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          300,
+          525,
+          670
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    },
+    {
+      "asset_path": "figures/parsing-results.png",
+      "original_label": "Table 4: Document parsing results",
+      "pdf_page": 12,
+      "source_url": "https://arxiv.org/pdf/2511.19575v1#page=12",
+      "source_version": "2511.19575v1",
+      "source_sha256": "44e92e446215734ee7c20fcf2cfef6ad997be55d5f91c120dbf95675cee9628a",
+      "asset_sha256": "344a3987f14354ffe4e2998bff8e85171fe45be5115b1cd5b7005b315ca88e95",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          68,
+          525,
+          230
+        ],
+        "page_size": [
+          595.276,
+          841.89
+        ],
+        "note": "Original figure/table region rendered from the fixed PDF; surrounding prose excluded"
+      }
+    }
+  ]
+}

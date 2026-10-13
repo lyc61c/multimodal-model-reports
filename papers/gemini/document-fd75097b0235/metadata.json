@@ -1,0 +1,27 @@
+{
+  "paper_id": "fd75097b0235",
+  "catalogue_entry_id": "fd75097b0235",
+  "family_slug": "gemini",
+  "title": "Gemini 3 Pro Model Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+  "document_kind": "model_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://blog.google/products/gemini/gemini-3/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "a0a9cc2bf1287360dc96212f3908c2bf5727f1464d55c00eb44828ae0c1fb226"
+    }
+  ],
+  "title_zh": "Gemini 3 Pro：原生多模态MoE与测试时推理",
+  "source_sha256": "9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-11-18",
+  "chinese_characters": 1851,
+  "figures_manifest": "figures-manifest.json"
+}

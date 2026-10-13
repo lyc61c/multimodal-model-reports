@@ -83,7 +83,7 @@ def verify_source_object(cache, record, statistics, basename="source"):
     if record.get("status", "fetched") != "fetched":
         raise ValueError(f"Source cache status is not fetched: {basename}.json")
     kind = record.get("kind", "html" if basename == "release" else None)
-    if kind not in ("pdf", "html"):
+    if kind not in ("pdf", "html", "markdown"):
         raise ValueError(f"Unsupported source cache kind: {kind}")
     if record.get("content_sha256"):
         if kind != "html" or basename != "source":
@@ -106,7 +106,8 @@ def verify_source_object(cache, record, statistics, basename="source"):
         statistics["api_json_with_verified_html_derivative"] += 1
         statistics["derived_html_" + derived_representation] += 1
     else:
-        original, representation = verified_bytes(cache / f"{basename}.{kind}", record.get("sha256"),
+        extension = "md" if kind == "markdown" else kind
+        original, representation = verified_bytes(cache / f"{basename}.{extension}", record.get("sha256"),
                                                    record.get("bytes"), allow_windows_text=kind == "html")
         statistics[kind + "_" + representation] += 1
     statistics["original_source_objects_verified"] += 1

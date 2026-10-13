@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "paper_id": "222ef6a5de3d",
+  "title": "Gemini 2.0 Flash公开接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "公开输入",
+      "lines": [
+        "文字、图像、音频、视频",
+        "上下文最多1,048,576 token"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "core",
+      "title": "多模态推理模型",
+      "lines": [
+        "稀疏MoE Transformer",
+        "编码融合与专家配置未公开"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "output",
+      "title": "公开输出",
+      "lines": [
+        "文本最多8,192 token",
+        "图像/TTS实验范围另行标注"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "core",
+      "style": "solid"
+    },
+    {
+      "from": "core",
+      "to": "output",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据公开资料自绘，非原文图",
+    "仅展示功能接口，方框不是逐层网络",
+    "未公开的视觉编码、融合与参数不作推断"
+  ],
+  "sources": [
+    {
+      "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "locator": "PDF p.2 Model Information",
+      "note": "支持输入、输出、模型定位与披露边界"
+    }
+  ]
+}

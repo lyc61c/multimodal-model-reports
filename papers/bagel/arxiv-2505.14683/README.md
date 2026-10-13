@@ -171,7 +171,7 @@ GenEval中的位置条件无改写仅0.64，低于Janus-Pro0.79；总体分数�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：MMaDA](../../mmada/arxiv-2505.15809/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：OpenUni →](../../openuni/arxiv-2505.23661/README.md)
+[← 上一篇：Claude 4](../../claude/document-28803263c0f6/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：OpenUni →](../../openuni/arxiv-2505.23661/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

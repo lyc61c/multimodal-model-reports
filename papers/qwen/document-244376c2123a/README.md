@@ -140,7 +140,7 @@ Qwen VLo 的关键变化是输出能力：不仅用文字解释图像，还能�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：MMSearch-R1](../../mmsearch-r1/arxiv-2506.20670/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：DenseWorld-1M →](../../denseworld-1m/arxiv-2506.24102/README.md)
+[← 上一篇：Gemma 3n](../../gemma/document-c7a2cc906589/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：ERNIE 4.5 →](../../ernie/document-cd5d2d305595/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

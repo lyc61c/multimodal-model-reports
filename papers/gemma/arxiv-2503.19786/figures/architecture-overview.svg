@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1119" viewBox="0 0 720 1119" role="img" aria-labelledby="title desc">
+<title id="title">Gemma 3 图文输入与交错注意力（自绘，非原文图）</title>
+<desc id="desc">自绘，非原文图；概括4B/12B/27B视觉型号，1B仅文本。；每个额外裁块增加视觉表示；图中不推定未披露投影层尺寸。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1117" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Gemma 3 图文输入与交错注意力</text>
+<path d="M191,230 V263 H191 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M684,177 H702 V705.5 H684" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,771 V804 H360 V837" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像输入</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">原图与可选P&amp;S裁块</text>
+<text x="191" y="215" text-anchor="middle" font-size="20" fill="#475569">每视图896×896</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字提示</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">SentencePiece tokenizer</text>
+<text x="529" y="215" text-anchor="middle" font-size="20" fill="#475569">离散token嵌入</text>
+<rect x="36" y="296" width="310" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="191" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">SigLIP 视觉编码</text>
+<text x="191" y="362" text-anchor="middle" font-size="20" fill="#475569">约400M ViT</text>
+<text x="191" y="387" text-anchor="middle" font-size="20" fill="#475569">语言训练时冻结</text>
+<rect x="36" y="468" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">视觉压缩</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">4×4平均池化</text>
+<text x="191" y="559" text-anchor="middle" font-size="20" fill="#475569">每视图256个向量</text>
+<rect x="36" y="640" width="648" height="131" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">Gemma 3 语言主干</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">图文soft/hard token上下文</text>
+<text x="360" y="731" text-anchor="middle" font-size="20" fill="#475569">5个局部层 + 1个全局层</text>
+<text x="360" y="756" text-anchor="middle" font-size="20" fill="#475569">局部窗口1024 / 全局128K</text>
+<rect x="36" y="837" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="872" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字回答</text>
+<text x="360" y="903" text-anchor="middle" font-size="20" fill="#475569">自回归下一token预测</text>
+<text x="360" y="928" text-anchor="middle" font-size="20" fill="#475569">IT版本以end_of_turn结束</text>
+<line x1="36" y1="991" x2="684" y2="991" stroke="#e2e8f0"/>
+<text x="36" y="1018" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1049" font-size="17" fill="#64748b">自绘，非原文图；概括4B/12B/27B视觉型号，1B仅文本。</text>
+<text x="36" y="1074" font-size="17" fill="#64748b">每个额外裁块增加视觉表示；图中不推定未披露投影层尺寸。</text>
+</g></svg>

@@ -1,0 +1,32 @@
+{
+  "paper_id": "9e94a9ffe555",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_pdf_sha256": "b2800104a47322d76d80a72bfb128ba7f0bacffc419ae9bb630eae289c761ba0",
+  "assets": [
+    {
+      "asset_path": "figures/original-benchmark-table.png",
+      "original_label": "Evaluation benchmark table: December 2025 results",
+      "pdf_page": 4,
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/#page=4",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "b2800104a47322d76d80a72bfb128ba7f0bacffc419ae9bb630eae289c761ba0",
+      "asset_sha256": "0d0f425e25f392c539ead0a1fcef59ea8278e7216b4fa2a4369e25e8eede09c4",
+      "processing": {
+        "method": "pdf_region_render",
+        "dpi": 180,
+        "crop_bbox": [
+          70,
+          269,
+          532,
+          746
+        ],
+        "page_size": [
+          612,
+          792
+        ],
+        "note": "Original table region rendered from fixed official PDF, with headers and required caption/footnotes; no synthetic alteration.",
+        "visual_review": "Actually viewed rendered source page and resulting cropped table pixels; headers, all selected rows and required captions/footnotes preserved; surrounding paragraphs excluded."
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "paper_id": "a03900c8f0b9",
+  "source_url": "https://arxiv.org/pdf/2511.03929v1",
+  "source_version": "2511.03929v1",
+  "source_sha256": "f32f3d4deec25fcddd5716e3f82d1a74209bdd1fa0bb9c490a2f94ef07339d78",
+  "verification_notes": [
+    "实际阅读固定2511.03929v1 PDF第1–14页正文：架构、全部训练阶段、数据构建、视觉/文本评测、reasoning预算、EVS、图像处理消融和量化；未通读其余参考文献或附录，未执行模型。",
+    "核对§2的c-RADIOv2-VLM-H、512/patch16/1024→256、最多12局部块另加缩略图；2fps/128帧、长视频均匀采样与EVS删除静态patch分开；语言层型比例/状态维度未补造。",
+    "核对Stage0仅连接器，Stage1后全解冻；16K→49K→代码恢复→311296长文本训练，服务128K与训练最大长度分开；Table6恢复并非所有文本项完全恢复。",
+    "核对思考开关的生成长度/温度、视觉得分与文本运行次数；DocVQA val/test、OCRBench百分制与Table8原始分数明确分开。",
+    "核对Figure4 BF16 EVS60%原数63.6/66.0/2458ms/75tok每秒、90%精度回退，以及FP8独立基线；2.21倍为此条件的算术比，不外推设备。",
+    "核对FP8混合训练保留BF16模块、1024校准样本、PTQ/QAD区别和最终输出logit匹配；不推定完整KL系数或硬件总成本。",
+    "实际查看PDF第2/10/12页像素选择裁图，随后逐张查看3张180DPI最终裁图：架构全部箭头/组件、Table6完整行列与caption、EVS两种精度表及图例/轴/硬件条件全部保留，未发布整页截图。"
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

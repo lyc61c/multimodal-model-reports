@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    {
+      "scope": "固定v1首页、§1及§3–6，PDF第3–13页；读取Table1–6和Eq1。",
+      "verified": "三组件架构、XD-RoPE四子空间、坐标0–1000、四阶段token/冻结范围与任务奖励逐段核对。"
+    },
+    {
+      "scope": "Figure2、Table4和对应裁区。",
+      "verified": "原文布局已目视；仅输出架构与表格区域，不使用整页截图。"
+    },
+    {
+      "scope": "实验指标与披露边界。",
+      "verified": "区分text向下与overall向上、130+语言训练和14+源语言翻译、内部与公开基准；没有混用1.5新技术。",
+      "limits": "未通读所有定性附录；没有模型运行或复现实验，未知超参数未补写。"
+    }
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 5,
+    "principle_subsections": 4,
+    "original_assets": 2,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "effa708f1043ae07ad603de6e6d47c58b50041fcae631cc52db09ddc1bd7f2f7",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

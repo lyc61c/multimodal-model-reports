@@ -1,0 +1,20 @@
+{
+  "paper_id": "1bb20f4fc0ff",
+  "catalogue_entry_id": "1bb20f4fc0ff",
+  "family_slug": "florence",
+  "title": "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2311.06242v1",
+  "source_url": "https://arxiv.org/pdf/2311.06242v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Florence-2：把视觉任务统一为文本与位置序列",
+  "source_sha256": "403d820e5ea7a1d7e2f95d4b2facef3ea37e2a5f12354a8a50164b10a057708a",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2023-11-10",
+  "chinese_characters": 2449,
+  "figures_manifest": "figures-manifest.json"
+}

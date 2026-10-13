@@ -1,0 +1,20 @@
+{
+  "paper_id": "42bb90895c3a",
+  "catalogue_entry_id": "42bb90895c3a",
+  "family_slug": "gpt",
+  "title": "GPT-5.6 System Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "GPT-5.6：三档多模态推理、程序化工具调用与代理效率",
+  "source_sha256": "aa8073bcfa15449167c64aab7c520c2d0c71e33220f64dff62baa0f2118e7e8b",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-07-09",
+  "chinese_characters": 3428,
+  "figures_manifest": "figures-manifest.json"
+}

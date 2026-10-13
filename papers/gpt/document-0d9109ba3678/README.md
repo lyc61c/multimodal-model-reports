@@ -202,7 +202,7 @@ Astra 的三个值为 1.1%、7.3%、8.5%，Sol 为 4.2%、22.4%、27.0%，表明
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Gemini 3.8 Flash 与 Flash Cyber](../../gemini/document-390f20b2fe8b/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Qwen3.8-Omni-Flash →](../../qwen/document-2ea7273632dc/README.md)
+[← 上一篇：Gemini 3.8 Flash 与 Flash Cyber](../../gemini/document-390f20b2fe8b/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：SenseNova-U1.5 →](../../sensenova/arxiv-2609.11929/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

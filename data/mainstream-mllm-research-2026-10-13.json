@@ -1,0 +1,2506 @@
+{
+  "date": "2026-10-13",
+  "scope": "Representative missing mainstream MLLM official reports, model cards and technical blogs. Historical minor versions are not claimed to be exhaustively covered.",
+  "baseline": {
+    "retained_entries": 272,
+    "complete_introductions": 271,
+    "families": 183
+  },
+  "selected_count": 34,
+  "selection": "Deduplicated against existing canonical documents and releases; prioritized substantive architecture/training information, multimodal capability and official evidence. Dedicated official repositories below100 stars remain excluded. Shared framework stars are not counted as model-specific popularity; official releases without a dedicated repository remain not_assessable.",
+  "selected": [
+    {
+      "id": "380e510956a2",
+      "title": "Claude 3.5 Sonnet Model Card Addendum",
+      "family": "Claude",
+      "date": "2024-06-20",
+      "source_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/claude/document-380e510956a2",
+      "technical_value": "视觉推理、图表与文档理解的代际升级，原文分离视觉、文本和代理编码评测。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "2c9bf7e5f94a",
+      "title": "Claude 3.7 Sonnet System Card",
+      "family": "Claude",
+      "date": "2025-02-24",
+      "source_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/claude/document-2c9bf7e5f94a",
+      "technical_value": "同一模型的标准回答与扩展思考、预算控制及视觉代理评测。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "28803263c0f6",
+      "title": "Claude 4 System Card",
+      "family": "Claude",
+      "date": "2025-05-22",
+      "source_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/claude/document-28803263c0f6",
+      "technical_value": "双模型家族、交错思考与工具调用、长任务记忆和视觉计算机操作。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "92907841db82",
+      "title": "Claude Opus 4.6 System Card",
+      "family": "Claude",
+      "date": "2026-02-05",
+      "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/claude/document-92907841db82",
+      "technical_value": "自适应思考、长上下文与复杂视觉工作流的能力和边界。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "783cf6ffbfbf",
+      "title": "Claude Opus 5.5 System Card",
+      "family": "Claude",
+      "date": "2026-09-22",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/claude/document-783cf6ffbfbf",
+      "technical_value": "最新Opus发布的视觉图表评测、计算效率及长代理任务，区分模型与系统组件。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "222ef6a5de3d",
+      "title": "Gemini 2.0 Flash Model Card",
+      "family": "Gemini",
+      "date": "2024-12-11",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/gemini/document-222ef6a5de3d",
+      "technical_value": "低延迟原生多模态输入、工具使用与原生输出研究路径，区分实验功能与公开端点。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "fd75097b0235",
+      "title": "Gemini 3 Pro Model Card",
+      "family": "Gemini",
+      "date": "2025-11-18",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/gemini/document-fd75097b0235",
+      "technical_value": "多模态推理及代理能力，训练资料和长上下文规格按官方卡披露。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "9e94a9ffe555",
+      "title": "Gemini 3 Flash Model Card",
+      "family": "Gemini",
+      "date": "2025-12-17",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/gemini/document-9e94a9ffe555",
+      "technical_value": "多模态理解与速度/成本取舍，按思考预算和评测条件分析效果。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "affc25e8e162",
+      "title": "GPT-5.4 Thinking System Card",
+      "family": "GPT",
+      "date": "2026-03-05",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/gpt/document-affc25e8e162",
+      "technical_value": "高分辨率视觉、原生计算机操作与工具检索，需要区分产品机制与网络细节。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "42bb90895c3a",
+      "title": "GPT-5.6 System Card",
+      "family": "GPT",
+      "date": "2026-07-09",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/gpt/document-42bb90895c3a",
+      "technical_value": "Sol/Terra/Luna分档、视觉和代理评测及监控/训练公开信息。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "3e6d0908a22e",
+      "title": "GPT-Live System Card",
+      "family": "GPT",
+      "date": "2026-07-08",
+      "source_url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/gpt/document-3e6d0908a22e",
+      "technical_value": "全双工语音、连续倾听与发声、模型委派和流式系统边界。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "0e63abfcb13e",
+      "title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+      "family": "GPT",
+      "date": "2026-09-29",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/gpt/document-0e63abfcb13e",
+      "technical_value": "最新Sol后续版本，视觉评测、效率定位和继承Astra训练/保障体系的公开边界。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "cd5d2d305595",
+      "title": "ERNIE 4.5 Technical Report",
+      "family": "ERNIE",
+      "date": "2025-06-29",
+      "source_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/ernie/document-cd5d2d305595",
+      "technical_value": [
+        "原生多模态MoE家族，文本/图像/视频输入；视觉语言版本424B总参/47B激活。",
+        "可研究异构专家共享、图文联合训练以及视觉分辨率处理。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 7736,
+        "source_url": "https://github.com/PaddlePaddle/ERNIE",
+        "observed_at_utc": "2026-10-13T09:13:36.243521+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "52e049b1bc3a",
+      "title": "HunyuanOCR Technical Report",
+      "family": "Hunyuan",
+      "date": "2025-11-24",
+      "source_url": "https://arxiv.org/pdf/2511.19575v1",
+      "source_version": "2511.19575v1",
+      "destination": "papers/hunyuan/arxiv-2511.19575",
+      "technical_value": [
+        "约1B OCR专用VLM；SigLIP-v2-400M初始化Native ViT、Adaptive MLP、Hunyuan-0.5B。",
+        "XD-RoPE分文本/高/宽/时间子空间；多任务端到端数据和RL训练。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 2040,
+        "source_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+        "observed_at_utc": "2026-10-13T09:13:36.232516+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "76e3de9b2ed3",
+      "title": "Ovis2.5 Technical Report",
+      "family": "Ovis",
+      "date": "2025-08-15",
+      "source_url": "https://arxiv.org/pdf/2508.11737v1",
+      "source_version": "2508.11737v1",
+      "destination": "papers/ovis/arxiv-2508.11737",
+      "technical_value": [
+        "NaViT从SigLIP2初始化、原生分辨率与RoPE，保留VT概率视觉词及VET加权嵌入。",
+        "Qwen3骨干；三阶段预训练、全参DPO和仅LLM的GRPO组成五阶段课程。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 1532,
+        "source_url": "https://github.com/ATH-MaaS/Ovis",
+        "observed_at_utc": "2026-10-13T09:13:36.481299+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "86d1cc655950",
+      "title": "STEP3-VL-10B Technical Report",
+      "family": "Step",
+      "date": "2026-01-14",
+      "source_url": "https://arxiv.org/pdf/2601.09668v1",
+      "source_version": "2601.09668v1",
+      "destination": "papers/step/arxiv-2601.09668",
+      "technical_value": [
+        "语言对齐Perception Encoder与Qwen3-8B，1.2T多模态token全解冻预训练。",
+        "大规模RL与PaCoRe测试时并行假设生成/综合；应分清SeRe和PaCoRe结果。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 412,
+        "source_url": "https://github.com/stepfun-ai/Step3-VL-10B",
+        "observed_at_utc": "2026-10-13T09:13:36.258523+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "448cf5cdfd37",
+      "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
+      "family": "SenseNova",
+      "date": "2026-09-10",
+      "source_url": "https://arxiv.org/pdf/2609.11929v1",
+      "source_version": "2609.11929v1",
+      "destination": "papers/sensenova/arxiv-2609.11929",
+      "technical_value": [
+        "8B-MoT、无外部视觉编码器和VAE的原生统一理解/生成模型。",
+        "32×32像素token，空间耦合Pixel Shuffle解码；四专家RL与多专家on-policy蒸馏。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 6916,
+        "source_url": "https://github.com/OpenSenseNova/SenseNova-U1",
+        "observed_at_utc": "2026-10-13T09:13:36.251023+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "38bf1faaf3c5",
+      "title": "MiniCPM-o 2.6: A GPT-4o Level MLLM for Vision, Speech and Multimodal Live Streaming on Your Phone",
+      "family": "MiniCPM-V / MiniCPM-o",
+      "date": "2025-01-24",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_o2dot6_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "destination": "papers/minicpm/document-38bf1faaf3c5",
+      "technical_value": [
+        "SigLIP400M、Whisper-medium300M、ChatTTS200M和Qwen2.5-7B，总约8B。",
+        "端到端输入/输出接口、TDM时分复用流式处理、音频系统提示控制声音。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 26587,
+        "source_url": "https://github.com/OpenBMB/MiniCPM-V",
+        "observed_at_utc": "2026-10-13T09:13:36.239521+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "51404279a064",
+      "title": "GLM-4.6V",
+      "family": "GLM / VisualGLM",
+      "date": "2025-12-08",
+      "source_url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/README.md",
+      "source_version": "git:f093b70998bec336acbc00d1a545e05893e3c9fa",
+      "destination": "papers/glm/document-51404279a064",
+      "technical_value": [
+        "128K训练上下文与原生多模态Function Calling；106B级MoE及9B Flash不同形态。",
+        "图像可作工具输入，图表/截图作为工具输出返回推理上下文。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 2397,
+        "source_url": "https://github.com/zai-org/GLM-V",
+        "observed_at_utc": "2026-10-13T09:13:36.861408+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "f799e9065399",
+      "title": "SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture",
+      "family": "SenseNova",
+      "date": "2026-05-12",
+      "source_url": "https://arxiv.org/pdf/2605.12500v1",
+      "source_version": "2605.12500v1",
+      "destination": "papers/sensenova/arxiv-2605.12500",
+      "technical_value": [
+        "NEO-unify像素/文字统一建模；8B-MoT和30B-A3B-MoT理解底座两种变体。",
+        "轻量编码/解码接口与联合理解、生成、交错图文训练，是U1.5独立前作。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 6916,
+        "source_url": "https://github.com/OpenSenseNova/SenseNova-U1",
+        "observed_at_utc": "2026-10-13T09:13:36.251023+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "eb1014c14dfe",
+      "title": "MiniCPM-V 4.6",
+      "family": "MiniCPM-V / MiniCPM-o",
+      "date": "2026-05-11",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "destination": "papers/minicpm/document-eb1014c14dfe",
+      "technical_value": [
+        "SigLIP2-400M和Qwen3.5-0.8B，小型图像/多图/视频模型。",
+        "混合4×/16×视觉token压缩；基于LLaVA-UHDv4的视觉效率，支持移动端。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 26587,
+        "source_url": "https://github.com/OpenBMB/MiniCPM-V",
+        "observed_at_utc": "2026-10-13T09:13:36.239521+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "fd34dfc57d84",
+      "title": "MiniCPM-V 4.7",
+      "family": "MiniCPM-V / MiniCPM-o",
+      "date": "2026-10-12",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot7_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "destination": "papers/minicpm/document-fd34dfc57d84",
+      "technical_value": [
+        "35B-A3B MoE与1B版本；视觉理解和端侧效率同步提升。",
+        "4×/16×压缩、主/子帧stack_frames视频组织、DSpark投机解码草稿模型。"
+      ],
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 26587,
+        "source_url": "https://github.com/OpenBMB/MiniCPM-V",
+        "observed_at_utc": "2026-10-13T09:13:36.239521+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "e3fc1ad19951",
+      "title": "PaliGemma: A versatile 3B VLM for transfer",
+      "family": "PaliGemma",
+      "date": "2024-07-10",
+      "source_url": "https://arxiv.org/pdf/2407.07726v2",
+      "source_version": "2407.07726v2",
+      "destination": "papers/paligemma/arxiv-2407.07726",
+      "technical_value": "SigLIP + Gemma 的迁移型基座；prefix attention、定位/分割 token、全参数联合训练与连接器/冻结策略消融。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "136ad0bf6010",
+      "title": "PaliGemma 2: A Family of Versatile VLMs for Transfer",
+      "family": "PaliGemma",
+      "date": "2024-12-04",
+      "source_url": "https://arxiv.org/pdf/2412.03555v1",
+      "source_version": "2412.03555v1",
+      "destination": "papers/paligemma/arxiv-2412.03555",
+      "technical_value": "统一研究 3B/10B/28B 与 224/448/896 分辨率的迁移规律；表格结构、分子结构、乐谱与医学图像等任务扩展。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "aa88a8d81e68",
+      "title": "Gemma 3 Technical Report",
+      "family": "Gemma",
+      "date": "2025-03-25",
+      "source_url": "https://arxiv.org/pdf/2503.19786v1",
+      "source_version": "2503.19786v1",
+      "destination": "papers/gemma/arxiv-2503.19786",
+      "technical_value": "4B/12B/27B 视觉模型；局部/全局注意力比例控制 KV 内存，冻结 SigLIP、视觉 token 压缩与推理时 Pan & Scan。1B 版本仅文本。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "c7a2cc906589",
+      "title": "Introducing Gemma 3n: The developer guide",
+      "family": "Gemma",
+      "date": "2025-06-26",
+      "source_url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/gemma/document-c7a2cc906589",
+      "technical_value": "端侧图像/视频/音频输入；MatFormer 嵌套子网、PLE、KV sharing、MobileNet-V5 与 USM 音频编码。区别有效参数量与总参数量。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "5140df127b74",
+      "title": "Pixtral Large",
+      "family": "Mistral / Pixtral",
+      "date": "2024-11-18",
+      "source_url": "https://mistral.ai/news/pixtral-large/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/mistral-pixtral/document-5140df127b74",
+      "technical_value": "124B 视觉语言模型，123B 解码器 + 1B 视觉编码器，128K 多图上下文；公开模型配置可补真实组件细节。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "652708f323d7",
+      "title": "Mistral Small 3.1",
+      "family": "Mistral / Pixtral",
+      "date": "2025-03-17",
+      "source_url": "https://mistral.ai/news/mistral-small-3-1/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "destination": "papers/mistral-pixtral/document-652708f323d7",
+      "technical_value": "24B 开放权重视觉/文本模型，128K 上下文；base/instruct 公开，可结合固定配置讲清 Pixtral 视觉编码与语言主干。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "1bb20f4fc0ff",
+      "title": "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks",
+      "family": "Florence",
+      "date": "2023-11-10",
+      "source_url": "https://arxiv.org/pdf/2311.06242v1",
+      "source_version": "2311.06242v1",
+      "destination": "papers/florence/arxiv-2311.06242",
+      "technical_value": "任务提示统一 captioning/detection/grounding/segmentation 的序列到序列视觉基座；FLD-5B 数据引擎与空间 token。并非通用大语言聊天主干。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "fbed0d7612b3",
+      "title": "Aya Vision: Advancing the Frontier of Multilingual Multimodality",
+      "family": "Aya Vision",
+      "date": "2025-05-13",
+      "source_url": "https://arxiv.org/pdf/2505.08751v1",
+      "source_version": "2505.08751v1",
+      "destination": "papers/aya-vision/arxiv-2505.08751",
+      "technical_value": "23 语言、8B/32B；重描述/过滤/翻译/重写合成数据，以及跨模态权重合并修复语言能力遗忘。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "63ad52ff7529",
+      "title": "FastVLM: Efficient Vision Encoding for Vision Language Models",
+      "family": "FastVLM",
+      "date": "2024-12-17",
+      "source_url": "https://arxiv.org/pdf/2412.13303v2",
+      "source_version": "2412.13303v2",
+      "destination": "papers/fastvlm/arxiv-2412.13303",
+      "technical_value": "FastViT-HD 混合编码器同时降低视觉编码时间与视觉 token 数；分析 TTFT 分解、分辨率与 LLM 尺寸的准确率/延迟权衡。",
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 7424,
+        "source_url": "https://github.com/apple-aiml-research/ml-fastvlm",
+        "observed_at_utc": "2026-10-13T09:15:08.875521+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "f4eeb8422c62",
+      "title": "Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding",
+      "family": "Molmo",
+      "date": "2026-01-15",
+      "source_url": "https://arxiv.org/pdf/2601.10611v4",
+      "source_version": "2601.10611v4",
+      "destination": "papers/molmo/arxiv-2601.10611",
+      "technical_value": "视频理解/指点/跟踪；新视频与多图公开数据，视频 3×3/图像 2×2 pooling、消息树打包与 token 加权训练。",
+      "star_decision": "passes_star",
+      "star_observation": {
+        "stars": 742,
+        "source_url": "https://github.com/allenai/molmo2",
+        "observed_at_utc": "2026-10-13T09:15:08.875521+00:00",
+        "scope": "Official dedicated model/family implementation repository; distinct from a shared framework."
+      }
+    },
+    {
+      "id": "a03900c8f0b9",
+      "title": "NVIDIA Nemotron Nano V2 VL",
+      "family": "Nemotron",
+      "date": "2025-11-06",
+      "source_url": "https://arxiv.org/pdf/2511.03929v1",
+      "source_version": "2511.03929v1",
+      "destination": "papers/nemotron/arxiv-2511.03929",
+      "technical_value": "12B 混合 Mamba/Transformer 视觉语言模型；动态切图/压缩、长文档与视频训练、文本能力恢复、推理预算与高效视频采样。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    },
+    {
+      "id": "19d0dc679a0e",
+      "title": "MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning",
+      "family": "MM1",
+      "date": "2024-09-30",
+      "source_url": "https://arxiv.org/pdf/2409.20566v1",
+      "source_version": "2409.20566v1",
+      "destination": "papers/mm1/arxiv-2409.20566",
+      "technical_value": "数据配比、视觉分辨率与位置感知数据的系统消融；文本密集图、指代定位、多图推理及 Video/UI 专项模型。未确认开放权重，不标成开源模型。",
+      "star_decision": "not_assessable",
+      "star_observation": null
+    }
+  ],
+  "research_notes": {
+    "cn": {
+      "version": 1,
+      "research_date": "2026-10-13",
+      "article_plan_entries_checked": 272,
+      "scope": "主流中国/亚洲厂商MLLM官方技术报告、技术博客和模型卡；先对article-plan去重，再在线核查官方来源。",
+      "selected_count": 10,
+      "entries": [
+        {
+          "slug": "ernie45",
+          "title": "ERNIE 4.5 Technical Report",
+          "family": "ERNIE",
+          "date": "2025-06-29",
+          "document_kind": "official_report",
+          "source_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "arxiv_id": null,
+          "paper_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf",
+          "github_code_url": "https://github.com/PaddlePaddle/ERNIE",
+          "model_card_url": "https://huggingface.co/baidu/ERNIE-4.5-VL-424B-A47B-Base",
+          "github_stars_display": "7.7k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "官方PDF首页标注日期；官方Publication页链接该报告。",
+          "technical_information": [
+            "原生多模态MoE家族，文本/图像/视频输入；视觉语言版本424B总参/47B激活。",
+            "可研究异构专家共享、图文联合训练以及视觉分辨率处理。"
+          ],
+          "original_figure_availability": [
+            "官方PDF可得，已下载原字节；图表页及裁区将在成文阶段逐页核验。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf",
+            "https://github.com/PaddlePaddle/ERNIE",
+            "https://huggingface.co/baidu/ERNIE-4.5-VL-424B-A47B-Base"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/ernie45",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/ernie45/pages.json",
+              "sha256": "1144f055caf13ea7f803357f7b82246e926f376db4aabcc246b515a6e3034b80",
+              "bytes": 275470
+            },
+            {
+              "path": "tmp/new-mllm-cn/ernie45/source.pdf",
+              "sha256": "7ab20ebf5cb908779d6e334aa8894ccc66f799eda51677e56d9b832b0cc383a6",
+              "bytes": 27270608
+            }
+          ],
+          "github_snapshot": {
+            "stars": 7736,
+            "url": "https://github.com/PaddlePaddle/ERNIE",
+            "observed_at_utc": "2026-10-13T09:13:36.243521+00:00",
+            "requested_url": "https://github.com/PaddlePaddle/ERNIE",
+            "api_url": "https://api.github.com/repos/PaddlePaddle/ERNIE",
+            "api_resolved_url": "https://api.github.com/repos/PaddlePaddle/ERNIE",
+            "canonical_repository": "PaddlePaddle/ERNIE",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "ernie",
+          "completion": {
+            "id": "cd5d2d305595",
+            "article_path": "papers/ernie/document-cd5d2d305595/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/cd5d2d305595/source.json",
+            "actual_checks": "tmp/new-mllm-cn/ernie45/checks.json"
+          }
+        },
+        {
+          "slug": "hunyuanocr",
+          "title": "HunyuanOCR Technical Report",
+          "family": "Hunyuan",
+          "date": "2025-11-24",
+          "document_kind": "arxiv_report",
+          "source_url": "https://arxiv.org/pdf/2511.19575v1",
+          "source_version": "2511.19575v1",
+          "arxiv_id": "2511.19575",
+          "paper_url": "https://arxiv.org/pdf/2511.19575v1",
+          "github_code_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+          "model_card_url": "https://huggingface.co/tencent/HunyuanOCR",
+          "github_stars_display": "2.0k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "arXiv v1提交日期2025-11-24；官方repo记录2025-11-25开源代码/权重。 PDF首页另印2025-11-26，属于文档页眉日期，与v1提交日期分开记录。",
+          "technical_information": [
+            "约1B OCR专用VLM；SigLIP-v2-400M初始化Native ViT、Adaptive MLP、Hunyuan-0.5B。",
+            "XD-RoPE分文本/高/宽/时间子空间；多任务端到端数据和RL训练。"
+          ],
+          "original_figure_availability": [
+            "原文Figure2架构已在arXiv HTML确认；PDF原字节已下载。",
+            "需要固定v1.0来源，当前repo main已升级到1.5，不能串版本。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://arxiv.org/pdf/2511.19575v1",
+            "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+            "https://huggingface.co/tencent/HunyuanOCR"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/hunyuanocr",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/hunyuanocr/pages.json",
+              "sha256": "2c9bbd2243f428447b47407fe267bc9b9ea6f71d0a3144522d452123d3f041f5",
+              "bytes": 121918
+            },
+            {
+              "path": "tmp/new-mllm-cn/hunyuanocr/source.pdf",
+              "sha256": "44e92e446215734ee7c20fcf2cfef6ad997be55d5f91c120dbf95675cee9628a",
+              "bytes": 34153023
+            }
+          ],
+          "github_snapshot": {
+            "stars": 2040,
+            "url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+            "observed_at_utc": "2026-10-13T09:13:36.232516+00:00",
+            "requested_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+            "api_url": "https://api.github.com/repos/Tencent-Hunyuan/HunyuanOCR",
+            "api_resolved_url": "https://api.github.com/repos/Tencent-Hunyuan/HunyuanOCR",
+            "canonical_repository": "Tencent-Hunyuan/HunyuanOCR",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "hunyuan",
+          "completion": {
+            "id": "52e049b1bc3a",
+            "article_path": "papers/hunyuan/arxiv-2511.19575/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/52e049b1bc3a/source.json",
+            "actual_checks": "tmp/new-mllm-cn/hunyuanocr/checks.json"
+          }
+        },
+        {
+          "slug": "ovis25",
+          "title": "Ovis2.5 Technical Report",
+          "family": "Ovis",
+          "date": "2025-08-15",
+          "document_kind": "arxiv_report",
+          "source_url": "https://arxiv.org/pdf/2508.11737v1",
+          "source_version": "2508.11737v1",
+          "arxiv_id": "2508.11737",
+          "paper_url": "https://arxiv.org/pdf/2508.11737v1",
+          "github_code_url": "https://github.com/ATH-MaaS/Ovis",
+          "model_card_url": "https://huggingface.co/AIDC-AI/Ovis2.5-9B",
+          "github_stars_display": "1.5k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "arXiv v1提交日期2025-08-15。 PDF首页另印2025-08-19；登记日期使用明确的arXiv v1提交日期。",
+          "technical_information": [
+            "NaViT从SigLIP2初始化、原生分辨率与RoPE，保留VT概率视觉词及VET加权嵌入。",
+            "Qwen3骨干；三阶段预训练、全参DPO和仅LLM的GRPO组成五阶段课程。"
+          ],
+          "original_figure_availability": [
+            "Figure2架构、Table1训练阶段、Tables2–3整体结果均已在HTML确认。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://arxiv.org/pdf/2508.11737v1",
+            "https://github.com/ATH-MaaS/Ovis",
+            "https://huggingface.co/AIDC-AI/Ovis2.5-9B"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/ovis25",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/ovis25/pages.json",
+              "sha256": "dfbc7d413eb2b3491d457c26884a56e597ceadd8ec8ae7fd6fe855077912fc10",
+              "bytes": 77416
+            },
+            {
+              "path": "tmp/new-mllm-cn/ovis25/source.pdf",
+              "sha256": "a5c8146196b48f24350fb81803c96face4ba1b42e46bdfa2a76ecc7e72d50978",
+              "bytes": 16901960
+            }
+          ],
+          "github_snapshot": {
+            "stars": 1532,
+            "url": "https://github.com/ATH-MaaS/Ovis",
+            "observed_at_utc": "2026-10-13T09:13:36.481299+00:00",
+            "requested_url": "https://github.com/ATH-MaaS/Ovis",
+            "api_url": "https://api.github.com/repos/ATH-MaaS/Ovis",
+            "api_resolved_url": "https://api.github.com/repos/ATH-MaaS/Ovis",
+            "canonical_repository": "ATH-MaaS/Ovis",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "ovis",
+          "completion": {
+            "id": "76e3de9b2ed3",
+            "article_path": "papers/ovis/arxiv-2508.11737/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/76e3de9b2ed3/source.json",
+            "actual_checks": "tmp/new-mllm-cn/ovis25/checks.json"
+          }
+        },
+        {
+          "slug": "step3vl10b",
+          "title": "STEP3-VL-10B Technical Report",
+          "family": "Step",
+          "date": "2026-01-14",
+          "document_kind": "arxiv_report",
+          "source_url": "https://arxiv.org/pdf/2601.09668v1",
+          "source_version": "2601.09668v1",
+          "arxiv_id": "2601.09668",
+          "paper_url": "https://arxiv.org/pdf/2601.09668v1",
+          "github_code_url": "https://github.com/stepfun-ai/Step3-VL-10B",
+          "model_card_url": "https://huggingface.co/stepfun-ai/Step3-VL-10B",
+          "github_stars_display": "412",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "arXiv v1提交日期2026-01-14。",
+          "technical_information": [
+            "语言对齐Perception Encoder与Qwen3-8B，1.2T多模态token全解冻预训练。",
+            "大规模RL与PaCoRe测试时并行假设生成/综合；应分清SeRe和PaCoRe结果。"
+          ],
+          "original_figure_availability": [
+            "PDF已下载；Figure2–3 RL动态、方法及消融表均可获得。",
+            "官方HF卡披露部分Qwen3VL基线指标待更正，正文应保留该限制并固定v1表格。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://arxiv.org/pdf/2601.09668v1",
+            "https://github.com/stepfun-ai/Step3-VL-10B",
+            "https://huggingface.co/stepfun-ai/Step3-VL-10B"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/step3vl10b",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/step3vl10b/pages.json",
+              "sha256": "8d6ef2724757eff6c8b1cfd1f3500f32641084325224430d78e0f30c9dc76073",
+              "bytes": 129423
+            },
+            {
+              "path": "tmp/new-mllm-cn/step3vl10b/source.pdf",
+              "sha256": "275790c48e9821cfbcf073e83c050936a8b82783ec428fc71090a37b7ab544bf",
+              "bytes": 3272744
+            }
+          ],
+          "github_snapshot": {
+            "stars": 412,
+            "url": "https://github.com/stepfun-ai/Step3-VL-10B",
+            "observed_at_utc": "2026-10-13T09:13:36.258523+00:00",
+            "requested_url": "https://github.com/stepfun-ai/Step3-VL-10B",
+            "api_url": "https://api.github.com/repos/stepfun-ai/Step3-VL-10B",
+            "api_resolved_url": "https://api.github.com/repos/stepfun-ai/Step3-VL-10B",
+            "canonical_repository": "stepfun-ai/Step3-VL-10B",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "step",
+          "completion": {
+            "id": "86d1cc655950",
+            "article_path": "papers/step/arxiv-2601.09668/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/86d1cc655950/source.json",
+            "actual_checks": "tmp/new-mllm-cn/step3vl10b/checks.json"
+          }
+        },
+        {
+          "slug": "sensenovau15",
+          "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
+          "family": "SenseNova",
+          "date": "2026-09-10",
+          "document_kind": "arxiv_report",
+          "source_url": "https://arxiv.org/pdf/2609.11929v1",
+          "source_version": "2609.11929v1",
+          "arxiv_id": "2609.11929",
+          "paper_url": "https://arxiv.org/pdf/2609.11929v1",
+          "github_code_url": "https://github.com/OpenSenseNova/SenseNova-U1",
+          "model_card_url": "https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT",
+          "github_stars_display": "6.9k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "arXiv v1日期9/10；官方repo报告发布新闻9/11；厂商新闻9/17，按不同事件分开。",
+          "technical_information": [
+            "8B-MoT、无外部视觉编码器和VAE的原生统一理解/生成模型。",
+            "32×32像素token，空间耦合Pixel Shuffle解码；四专家RL与多专家on-policy蒸馏。"
+          ],
+          "original_figure_availability": [
+            "Figure3架构、Figure4后训练、Figure5数据构成、Table1配置均已在HTML确认。",
+            "PDF已下载原字节，可裁图保留必要图例。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://arxiv.org/pdf/2609.11929v1",
+            "https://github.com/OpenSenseNova/SenseNova-U1",
+            "https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/sensenovau15",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/sensenovau15/pages.json",
+              "sha256": "1f9133d0928966fa05f68c5d8bac214290853a2fcdd6dc87a812cb78c17fddf9",
+              "bytes": 135255
+            },
+            {
+              "path": "tmp/new-mllm-cn/sensenovau15/source.pdf",
+              "sha256": "4a55b4f75e2c4d7ba245cf2f070efc1b993126c41cce559ac7b6a69a476a74aa",
+              "bytes": 28862643
+            }
+          ],
+          "github_snapshot": {
+            "stars": 6916,
+            "url": "https://github.com/OpenSenseNova/SenseNova-U1",
+            "observed_at_utc": "2026-10-13T09:13:36.251023+00:00",
+            "requested_url": "https://github.com/OpenSenseNova/SenseNova-U1",
+            "api_url": "https://api.github.com/repos/OpenSenseNova/SenseNova-U1",
+            "api_resolved_url": "https://api.github.com/repos/OpenSenseNova/SenseNova-U1",
+            "canonical_repository": "OpenSenseNova/SenseNova-U1",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "sensenova",
+          "completion": {
+            "id": "448cf5cdfd37",
+            "article_path": "papers/sensenova/arxiv-2609.11929/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/448cf5cdfd37/source.json",
+            "actual_checks": "tmp/new-mllm-cn/sensenovau15/checks.json"
+          }
+        },
+        {
+          "slug": "minicpmo26",
+          "title": "MiniCPM-o 2.6: A GPT-4o Level MLLM for Vision, Speech and Multimodal Live Streaming on Your Phone",
+          "family": "MiniCPM-V / MiniCPM-o",
+          "date": "2025-01-24",
+          "document_kind": "official_technical_blog_and_model_card",
+          "source_url": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "arxiv_id": null,
+          "paper_url": null,
+          "github_code_url": "https://github.com/OpenBMB/MiniCPM-V",
+          "model_card_url": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+          "github_stars_display": "26.6k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "官方HF模型卡News明确2025-01-24发布technical report，指向Notion Technical Blog。",
+          "technical_information": [
+            "SigLIP400M、Whisper-medium300M、ChatTTS200M和Qwen2.5-7B，总约8B。",
+            "端到端输入/输出接口、TDM时分复用流式处理、音频系统提示控制声音。"
+          ],
+          "original_figure_availability": [
+            "官方HF模型卡包含架构图与评测图；docs/minicpm_o2dot6_en.md为可读官方技术说明。",
+            "尚未核实独立PDF/arXiv，不应把引用的2408.01800当成本代新报告。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+            "https://github.com/OpenBMB/MiniCPM-V",
+            "https://huggingface.co/openbmb/MiniCPM-o-2_6"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/minicpmo26",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/minicpmo26/official-guide.md",
+              "sha256": "5f11251f79e84aedca7b4e78cf14db62720f6380031bf0ba9077e75e91dc20e6",
+              "bytes": 31283
+            },
+            {
+              "path": "tmp/new-mllm-cn/minicpmo26/official-guide.md.provenance.json",
+              "sha256": "90b0902ce05bd3d3f9dcd69de490a7bfd76983326d3e4be8d1e7a1ea7a121474",
+              "bytes": 432
+            }
+          ],
+          "github_snapshot": {
+            "stars": 26587,
+            "url": "https://github.com/OpenBMB/MiniCPM-V",
+            "observed_at_utc": "2026-10-13T09:13:36.239521+00:00",
+            "requested_url": "https://github.com/OpenBMB/MiniCPM-V",
+            "api_url": "https://api.github.com/repos/OpenBMB/MiniCPM-V",
+            "api_resolved_url": "https://api.github.com/repos/OpenBMB/MiniCPM-V",
+            "canonical_repository": "OpenBMB/MiniCPM-V",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "minicpm",
+          "fixed_official_document": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_o2dot6_en.md",
+          "technical_blog_url": "https://openbmb.notion.site/MiniCPM-o-2-6-A-GPT-4o-Level-MLLM-for-Vision-Speech-and-Multimodal-Live-Streaming-on-Your-Phone-185ede1b7a558042b5d5e45e6b237da9",
+          "cache_note": "HF直连超时；固定官方GitHub guide已通过GitHub Contents API成功保存原始Markdown字节。",
+          "completion": {
+            "id": "38bf1faaf3c5",
+            "article_path": "papers/minicpm/document-38bf1faaf3c5/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/38bf1faaf3c5/source.json",
+            "actual_checks": "tmp/new-mllm-cn/minicpmo26/checks.json"
+          }
+        },
+        {
+          "slug": "glm46v",
+          "title": "GLM-4.6V",
+          "family": "GLM / VisualGLM",
+          "date": "2025-12-08",
+          "document_kind": "official_model_card_and_blog",
+          "source_url": "https://huggingface.co/zai-org/GLM-4.6V",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "arxiv_id": null,
+          "paper_url": null,
+          "github_code_url": "https://github.com/zai-org/GLM-V",
+          "model_card_url": "https://huggingface.co/zai-org/GLM-4.6V",
+          "github_stars_display": "2.4k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "官方repo固定发布commit f093b70998bec336acbc00d1a545e05893e3c9fa的News明确2025/12/08；该commit作者日期2025-12-08T12:17:52Z。",
+          "technical_information": [
+            "128K训练上下文与原生多模态Function Calling；106B级MoE及9B Flash不同形态。",
+            "图像可作工具输入，图表/截图作为工具输出返回推理上下文。"
+          ],
+          "original_figure_availability": [
+            "官方模型卡及docs.z.ai有整体评测图；内部架构需依据配置/实现辅助，不假造未披露RL配方。",
+            "引用2507.01006与已有GLM4.1V报告相同；登记官方4.6V模型卡/博客的新版本增量，不能重复登记该arXiv。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://huggingface.co/zai-org/GLM-4.6V",
+            "https://github.com/zai-org/GLM-V",
+            "https://huggingface.co/zai-org/GLM-4.6V"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/glm46v",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/glm46v/official-readme.md",
+              "sha256": "f518aecf28e2a4166b537a8db59797a67fd5e0d8b3d698751898d40b8aa3ad7d",
+              "bytes": 18412
+            },
+            {
+              "path": "tmp/new-mllm-cn/glm46v/official-readme.md.provenance.json",
+              "sha256": "1fcbf7aae837f1af77dce21f1f109fe41fd3631c272cf9d38c8e1e5a1f4566e0",
+              "bytes": 392
+            },
+            {
+              "path": "tmp/new-mllm-cn/glm46v/release-commit.json",
+              "sha256": "19b40c72eb75ebb39a52ee1863242c8845eb49f62a2ce03da08d6db7f5b423c6",
+              "bytes": 3333
+            },
+            {
+              "path": "tmp/new-mllm-cn/glm46v/release-readme.md",
+              "sha256": "f81ad4ea063f5eaa96ada6aa759ea8c79315791e8e29ca2aed57dbe4c3808994",
+              "bytes": 18897
+            }
+          ],
+          "github_snapshot": {
+            "stars": 2397,
+            "url": "https://github.com/zai-org/GLM-V",
+            "observed_at_utc": "2026-10-13T09:13:36.861408+00:00",
+            "requested_url": "https://github.com/zai-org/GLM-V",
+            "api_url": "https://api.github.com/repos/zai-org/GLM-V",
+            "api_resolved_url": "https://api.github.com/repos/zai-org/GLM-V",
+            "canonical_repository": "zai-org/GLM-V",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "glm",
+          "fixed_official_document": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/README.md",
+          "cache_note": "HF直连超时；发行日官方README已通过GitHub Contents API下载原始字节，与官方模型卡共同作为资料。",
+          "completion": {
+            "id": "51404279a064",
+            "article_path": "papers/glm/document-51404279a064/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/51404279a064/source.json",
+            "actual_checks": "tmp/new-mllm-cn/glm46v/checks.json"
+          }
+        },
+        {
+          "slug": "sensenovau1",
+          "title": "SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture",
+          "family": "SenseNova",
+          "date": "2026-05-12",
+          "document_kind": "arxiv_report",
+          "source_url": "https://arxiv.org/pdf/2605.12500v1",
+          "source_version": "2605.12500v1",
+          "arxiv_id": "2605.12500",
+          "paper_url": "https://arxiv.org/pdf/2605.12500v1",
+          "github_code_url": "https://github.com/OpenSenseNova/SenseNova-U1",
+          "model_card_url": "https://huggingface.co/sensenova/SenseNova-U1-8B-MoT",
+          "github_stars_display": "6.9k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "arXiv v1提交5/12；官方repo本地报告发布5/10，日期事件应分开。",
+          "technical_information": [
+            "NEO-unify像素/文字统一建模；8B-MoT和30B-A3B-MoT理解底座两种变体。",
+            "轻量编码/解码接口与联合理解、生成、交错图文训练，是U1.5独立前作。"
+          ],
+          "original_figure_availability": [
+            "Figure3总体架构已在arXiv HTML确认；官方repo有独立SenseNOVA_U1.pdf。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://arxiv.org/pdf/2605.12500v1",
+            "https://github.com/OpenSenseNova/SenseNova-U1",
+            "https://huggingface.co/sensenova/SenseNova-U1-8B-MoT"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/sensenovau1",
+          "cached_files": [],
+          "github_snapshot": {
+            "stars": 6916,
+            "url": "https://github.com/OpenSenseNova/SenseNova-U1",
+            "observed_at_utc": "2026-10-13T09:13:36.251023+00:00",
+            "requested_url": "https://github.com/OpenSenseNova/SenseNova-U1",
+            "api_url": "https://api.github.com/repos/OpenSenseNova/SenseNova-U1",
+            "api_resolved_url": "https://api.github.com/repos/OpenSenseNova/SenseNova-U1",
+            "canonical_repository": "OpenSenseNova/SenseNova-U1",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "sensenova",
+          "completion": {
+            "id": "f799e9065399",
+            "article_path": "papers/sensenova/arxiv-2605.12500/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/f799e9065399/source.json",
+            "actual_checks": "tmp/new-mllm-cn/sensenovau1/checks.json"
+          }
+        },
+        {
+          "slug": "minicpmv46",
+          "title": "MiniCPM-V 4.6",
+          "family": "MiniCPM-V / MiniCPM-o",
+          "date": "2026-05-11",
+          "document_kind": "official_model_guide",
+          "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/main/docs/minicpm_v4dot6_en.md",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "arxiv_id": null,
+          "paper_url": null,
+          "github_code_url": "https://github.com/OpenBMB/MiniCPM-V",
+          "model_card_url": "https://huggingface.co/openbmb/MiniCPM-V-4.6",
+          "github_stars_display": "26.6k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "官方主README Latest updates明确2026-05-11发布。",
+          "technical_information": [
+            "SigLIP2-400M和Qwen3.5-0.8B，小型图像/多图/视频模型。",
+            "混合4×/16×视觉token压缩；基于LLaVA-UHDv4的视觉效率，支持移动端。"
+          ],
+          "original_figure_availability": [
+            "独立官方guide已下载原字节，包含评测/效率图片资源。",
+            "不把LLaVA-UHDv4论文当成MiniCPM-V4.6独立报告；训练配方未披露处明确说明。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://github.com/OpenBMB/MiniCPM-V/blob/main/docs/minicpm_v4dot6_en.md",
+            "https://github.com/OpenBMB/MiniCPM-V",
+            "https://huggingface.co/openbmb/MiniCPM-V-4.6"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/minicpmv46",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/minicpmv46/source.md",
+              "sha256": "1342b9e318a339218c784f56e31c9b37ea12447e64821aac07e9169290f3fbe1",
+              "bytes": 16603
+            },
+            {
+              "path": "tmp/new-mllm-cn/minicpmv46/source.md.provenance.json",
+              "sha256": "301a2f7a8c89a3f770c6fc5938d5cc282c95a530f6c26024d4bed001152a7224",
+              "bytes": 432
+            }
+          ],
+          "github_snapshot": {
+            "stars": 26587,
+            "url": "https://github.com/OpenBMB/MiniCPM-V",
+            "observed_at_utc": "2026-10-13T09:13:36.239521+00:00",
+            "requested_url": "https://github.com/OpenBMB/MiniCPM-V",
+            "api_url": "https://api.github.com/repos/OpenBMB/MiniCPM-V",
+            "api_resolved_url": "https://api.github.com/repos/OpenBMB/MiniCPM-V",
+            "canonical_repository": "OpenBMB/MiniCPM-V",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "minicpm",
+          "fixed_official_document": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+          "completion": {
+            "id": "eb1014c14dfe",
+            "article_path": "papers/minicpm/document-eb1014c14dfe/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/eb1014c14dfe/source.json",
+            "actual_checks": "tmp/new-mllm-cn/minicpmv46/checks.json"
+          }
+        },
+        {
+          "slug": "minicpmv47",
+          "title": "MiniCPM-V 4.7",
+          "family": "MiniCPM-V / MiniCPM-o",
+          "date": "2026-10-12",
+          "document_kind": "official_model_guide",
+          "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/main/docs/minicpm_v4dot7_en.md",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "arxiv_id": null,
+          "paper_url": null,
+          "github_code_url": "https://github.com/OpenBMB/MiniCPM-V",
+          "model_card_url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+          "github_stars_display": "26.6k",
+          "github_stars_checked_at": "2026-10-13",
+          "date_evidence": "官方主README Latest updates明确2026-10-12刚发布。",
+          "technical_information": [
+            "35B-A3B MoE与1B版本；视觉理解和端侧效率同步提升。",
+            "4×/16×压缩、主/子帧stack_frames视频组织、DSpark投机解码草稿模型。"
+          ],
+          "original_figure_availability": [
+            "独立官方guide公开评测和效率图及使用参数；需下载后逐图核验。",
+            "当前未核实独立PDF/arXiv；不把两种骨干混写成同一结构。"
+          ],
+          "priority": "selected_for_current_batch",
+          "duplicate_status": "not_in_article_plan_272_entries",
+          "official_evidence_urls": [
+            "https://github.com/OpenBMB/MiniCPM-V/blob/main/docs/minicpm_v4dot7_en.md",
+            "https://github.com/OpenBMB/MiniCPM-V",
+            "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+          ],
+          "cache_dir": "tmp/new-mllm-cn/minicpmv47",
+          "cached_files": [
+            {
+              "path": "tmp/new-mllm-cn/minicpmv47/source.md",
+              "sha256": "b51bab4d8ec654e1c452a4fba582d011393fa1e76ad9a32597d5a31f377616dc",
+              "bytes": 23041
+            },
+            {
+              "path": "tmp/new-mllm-cn/minicpmv47/source.md.provenance.json",
+              "sha256": "bfe95d5d70315954a3d46e7cbb4d317e3b72a5956c9734e84848db73d495e7f6",
+              "bytes": 432
+            }
+          ],
+          "github_snapshot": {
+            "stars": 26587,
+            "url": "https://github.com/OpenBMB/MiniCPM-V",
+            "observed_at_utc": "2026-10-13T09:13:36.239521+00:00",
+            "requested_url": "https://github.com/OpenBMB/MiniCPM-V",
+            "api_url": "https://api.github.com/repos/OpenBMB/MiniCPM-V",
+            "api_resolved_url": "https://api.github.com/repos/OpenBMB/MiniCPM-V",
+            "canonical_repository": "OpenBMB/MiniCPM-V",
+            "repo_scope": "official model-family repository, not a general framework"
+          },
+          "family_slug": "minicpm",
+          "fixed_official_document": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot7_en.md",
+          "completion": {
+            "id": "fd34dfc57d84",
+            "article_path": "papers/minicpm/document-fd34dfc57d84/README.md",
+            "status": "complete",
+            "source_cache": "source/papers/fd34dfc57d84/source.json",
+            "actual_checks": "tmp/new-mllm-cn/minicpmv47/checks.json"
+          }
+        }
+      ],
+      "reserve_candidates": [
+        {
+          "title": "PaddleOCR-VL-1.6: Expanding the Frontier of Document Parsing with Under-Optimized Region Refinement and Progressive Post-Training",
+          "date": "2026-06-02",
+          "source_url": "https://arxiv.org/abs/2606.03264",
+          "github_code_url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "reason": "官方独立报告；0.9B文档VLM的区域定向数据优化、渐进后训练与RL，适合后续补充。"
+        },
+        {
+          "title": "HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better",
+          "date": "2026-07-07",
+          "source_url": "https://arxiv.org/abs/2607.04884",
+          "github_code_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+          "reason": "官方repo当天发布；独立报告，DFlash投机解码与Agentic Data Flow。不能将其细节写入1.0报告。"
+        },
+        {
+          "title": "Scaling Spatial Intelligence with Multimodal Foundation Models",
+          "date": "2025-11-17",
+          "source_url": "https://arxiv.org/abs/2511.13719",
+          "github_code_url": "https://github.com/OpenSenseNova/SenseNova-SI",
+          "reason": "SenseNova-SI；空间理解专门训练，v4报告对应模型v1.1，需要固定版本。"
+        },
+        {
+          "title": "SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning",
+          "date": "2025-12-30",
+          "source_url": "https://arxiv.org/abs/2512.24330",
+          "github_code_url": "https://github.com/OpenSenseNova/SenseNova-MARS",
+          "reason": "多模态搜索/推理RL训练增量，后续专题候选。"
+        },
+        {
+          "title": "ERNIE 5.0: A 2.4 Trillion-Parameter Unified Multimodal Foundation Model",
+          "date": "2026-02-06",
+          "source_url": "https://ernie.baidu.com/blog/",
+          "reason": "官方blog索引明确标题/日期与原生文字图像视频音频自回归统一；下一批应进一步核实独立报告URL。"
+        }
+      ],
+      "excluded_or_deferred": [
+        {
+          "name": "GLM-4.5V",
+          "reason": "2507.01006是已收录GLM-4.1V报告的后续版本；本轮不作为独立论文重复新增。",
+          "existing_id": "ee7e46a385e1",
+          "official_source": "https://arxiv.org/abs/2507.01006"
+        },
+        {
+          "name": "Hunyuan-Vision-1.5",
+          "reason": "官方repo仍写Paper & Weights are coming；本次未找到已发布完整报告，且显示94 stars。不能把路线图当已发布技术报告。",
+          "official_source": "https://github.com/Tencent-Hunyuan/HunyuanVision"
+        },
+        {
+          "name": "MiniCPM-V4.5 / MiniCPM-o4.5正式arXiv",
+          "reason": "仓库已登记同版本官方模型资料；2509.18154、2604.27393是可升级/补充既有条目的正式报告，不先重复建同版本文章。",
+          "official_source": "https://github.com/OpenBMB/MiniCPM-V/blob/main/docs/project_en.md"
+        },
+        {
+          "name": "Qwen / InternVL / Kimi / Seed / MiMo已登记版本",
+          "reason": "核对现有版本见already_present；本轮未确认比已收录版本更新且有独立技术增量的未收录报告，不臆造新版本。"
+        }
+      ],
+      "already_present": [
+        {
+          "id": "4d81507404ce",
+          "title": "VisualGLM-6B",
+          "family": "GLM / VisualGLM",
+          "source_url": "https://github.com/THUDM/VisualGLM-6B",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/glm/document-4d81507404ce"
+        },
+        {
+          "id": "ee7e46a385e1",
+          "title": "GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning",
+          "family": "GLM / VisualGLM",
+          "source_url": "https://arxiv.org/pdf/2507.01006v1",
+          "source_version": "2507.01006v1",
+          "destination": "papers/glm/arxiv-2507.01006"
+        },
+        {
+          "id": "e213666dcb0d",
+          "title": "GLM-5.3-Flash: Frontier Intelligence, Flash Cost",
+          "family": "GLM / VisualGLM",
+          "source_url": "https://z.ai/blog/glm-5.3-flash",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/glm/document-e213666dcb0d"
+        },
+        {
+          "id": "4c5b6e3fdc3c",
+          "title": "InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks",
+          "family": "InternVL",
+          "source_url": "https://arxiv.org/pdf/2312.14238v1",
+          "source_version": "2312.14238v1",
+          "destination": "papers/internvl/arxiv-2312.14238"
+        },
+        {
+          "id": "85233c027ab7",
+          "title": "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites",
+          "family": "InternVL",
+          "source_url": "https://arxiv.org/pdf/2404.16821v1",
+          "source_version": "2404.16821v1",
+          "destination": "papers/internvl/arxiv-2404.16821"
+        },
+        {
+          "id": "c698100db08f",
+          "title": "Expanding Performance Boundaries of Open-Source Multimodal Models with Model, Data, and Test-Time Scaling",
+          "family": "InternVL",
+          "source_url": "https://arxiv.org/pdf/2412.05271v1",
+          "source_version": "2412.05271v1",
+          "destination": "papers/internvl/arxiv-2412.05271"
+        },
+        {
+          "id": "c93332aa16ea",
+          "title": "InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models",
+          "family": "InternVL",
+          "source_url": "https://arxiv.org/pdf/2504.10479v1",
+          "source_version": "2504.10479v1",
+          "destination": "papers/internvl/arxiv-2504.10479"
+        },
+        {
+          "id": "3d5274c82d6d",
+          "title": "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency",
+          "family": "InternVL",
+          "source_url": "https://arxiv.org/pdf/2508.18265v1",
+          "source_version": "2508.18265v1",
+          "destination": "papers/internvl/arxiv-2508.18265"
+        },
+        {
+          "id": "4213cab70d10",
+          "title": "InternVL-U: Democratizing Unified Multimodal Models for Understanding, Reasoning, Generation and Editing",
+          "family": "InternVL",
+          "source_url": "https://arxiv.org/pdf/2603.09877v1",
+          "source_version": "2603.09877v1",
+          "destination": "papers/internvl/arxiv-2603.09877"
+        },
+        {
+          "id": "b4ed240e59d1",
+          "title": "Kimi-VL Technical Report",
+          "family": "Kimi",
+          "source_url": "https://arxiv.org/pdf/2504.07491v1",
+          "source_version": "2504.07491v1",
+          "destination": "papers/kimi/arxiv-2504.07491"
+        },
+        {
+          "id": "783b062a88f0",
+          "title": "Kimi K2.5: Visual Agentic Intelligence",
+          "family": "Kimi",
+          "source_url": "https://arxiv.org/pdf/2602.02276v1",
+          "source_version": "2602.02276v1",
+          "destination": "papers/kimi/arxiv-2602.02276"
+        },
+        {
+          "id": "eb106a710a29",
+          "title": "Kimi K3: Open Frontier Intelligence",
+          "family": "Kimi",
+          "source_url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/kimi/document-eb106a710a29"
+        },
+        {
+          "id": "cfe0bfb02a66",
+          "title": "MiMo-VL Technical Report",
+          "family": "MiMo",
+          "source_url": "https://arxiv.org/pdf/2506.03569v1",
+          "source_version": "2506.03569v1",
+          "destination": "papers/mimo/arxiv-2506.03569"
+        },
+        {
+          "id": "1ccf04ffaeaa",
+          "title": "Xiaomi MiMo-V2-Omni",
+          "family": "MiMo",
+          "source_url": "https://mimo.xiaomi.com/mimo-v2-omni",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/mimo/document-1ccf04ffaeaa"
+        },
+        {
+          "id": "bc763cf700ef",
+          "title": "Xiaomi MiMo-V2.5",
+          "family": "MiMo",
+          "source_url": "https://mimo.xiaomi.com/mimo-v2-5",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/mimo/document-bc763cf700ef"
+        },
+        {
+          "id": "694e2e46c3f0",
+          "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+          "family": "MiniCPM-V / MiniCPM-o",
+          "source_url": "https://arxiv.org/pdf/2408.01800v1",
+          "source_version": "2408.01800v1",
+          "destination": "papers/minicpm/arxiv-2408.01800"
+        },
+        {
+          "id": "5679fdac7d01",
+          "title": "MiniCPM-V 4.5: A GPT-4o Level MLLM for Single Image, Multi Image and Video Understanding on Your Phone",
+          "family": "MiniCPM-V / MiniCPM-o",
+          "source_url": "https://github.com/OpenBMB/MiniCPM-o",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/minicpm/document-5679fdac7d01"
+        },
+        {
+          "id": "9be303a31d11",
+          "title": "MiniCPM-o 4.5",
+          "family": "MiniCPM-V / MiniCPM-o",
+          "source_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/minicpm/document-9be303a31d11"
+        },
+        {
+          "id": "515954506dd5",
+          "title": "Ovis: Structural Embedding Alignment for Multimodal Large Language Model",
+          "family": "Ovis",
+          "source_url": "https://arxiv.org/pdf/2405.20797v1",
+          "source_version": "2405.20797v1",
+          "destination": "papers/ovis/arxiv-2405.20797"
+        },
+        {
+          "id": "1b338ecffdda",
+          "title": "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities",
+          "family": "Qwen",
+          "source_url": "https://arxiv.org/pdf/2308.12966v1",
+          "source_version": "2308.12966v1",
+          "destination": "papers/qwen/arxiv-2308.12966"
+        },
+        {
+          "id": "32bc63503a35",
+          "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+          "family": "Qwen",
+          "source_url": "https://arxiv.org/pdf/2409.12191v1",
+          "source_version": "2409.12191v1",
+          "destination": "papers/qwen/arxiv-2409.12191"
+        },
+        {
+          "id": "b615730dc322",
+          "title": "QVQ: To See the World with Wisdom",
+          "family": "Qwen",
+          "source_url": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-b615730dc322"
+        },
+        {
+          "id": "365932f60cc3",
+          "title": "Qwen2.5-VL Technical Report",
+          "family": "Qwen",
+          "source_url": "https://arxiv.org/pdf/2502.13923v1",
+          "source_version": "2502.13923v1",
+          "destination": "papers/qwen/qwen2.5-vl"
+        },
+        {
+          "id": "1093f7b31e5b",
+          "title": "Qwen2.5-Omni Technical Report",
+          "family": "Qwen",
+          "source_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/assets/Qwen2.5_Omni.pdf",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-1093f7b31e5b"
+        },
+        {
+          "id": "244376c2123a",
+          "title": "Qwen VLo: From \"Understanding\" the World to \"Depicting\" It",
+          "family": "Qwen",
+          "source_url": "https://qwenlm.github.io/blog/qwen-vlo/",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-244376c2123a"
+        },
+        {
+          "id": "3b40d0cc757b",
+          "title": "Qwen3-Omni Technical Report",
+          "family": "Qwen",
+          "source_url": "https://arxiv.org/pdf/2509.17765v1",
+          "source_version": "2509.17765v1",
+          "destination": "papers/qwen/arxiv-2509.17765"
+        },
+        {
+          "id": "f0c46ccf05fd",
+          "title": "Qwen3-VL Technical Report",
+          "family": "Qwen",
+          "source_url": "https://arxiv.org/pdf/2511.21631v1",
+          "source_version": "2511.21631v1",
+          "destination": "papers/qwen/arxiv-2511.21631"
+        },
+        {
+          "id": "7cdfed4ac9e5",
+          "title": "Qwen3.5: Towards Native Multimodal Agents",
+          "family": "Qwen",
+          "source_url": "https://qwen.ai/blog?id=qwen3.5",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-7cdfed4ac9e5"
+        },
+        {
+          "id": "54010b187750",
+          "title": "Qwen3.5-Omni: Scaling Up, Toward Native Omni-Modal AGI",
+          "family": "Qwen",
+          "source_url": "https://qwen.ai/blog?id=qwen3.5-omni",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-54010b187750"
+        },
+        {
+          "id": "67bea1fbb2c5",
+          "title": "Qwen3.6-Plus: Towards Real World Agents",
+          "family": "Qwen",
+          "source_url": "https://qwen.ai/blog?id=qwen3.6",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-67bea1fbb2c5"
+        },
+        {
+          "id": "e122aca8cc58",
+          "title": "Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model",
+          "family": "Qwen",
+          "source_url": "https://qwen.ai/blog?id=qwen3.6-27b",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-e122aca8cc58"
+        },
+        {
+          "id": "6f94cf51e082",
+          "title": "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation",
+          "family": "Qwen",
+          "source_url": "https://arxiv.org/pdf/2606.17030v1",
+          "source_version": "2606.17030v1",
+          "destination": "papers/qwen/arxiv-2606.17030"
+        },
+        {
+          "id": "0aebb3826b29",
+          "title": "Qwen-MM-Plugins",
+          "family": "Qwen",
+          "source_url": "https://github.com/QwenLM/Qwen-MM-Plugins/tree/main/cookbooks",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-0aebb3826b29"
+        },
+        {
+          "id": "ebaf67f69f80",
+          "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+          "family": "Qwen",
+          "source_url": "https://qwen.ai/blog?id=qwen3.8",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-ebaf67f69f80"
+        },
+        {
+          "id": "2ea7273632dc",
+          "title": "Qwen3.8-Omni-Flash: Omni Senses. Agentic Delivery.",
+          "family": "Qwen",
+          "source_url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/qwen/document-2ea7273632dc"
+        },
+        {
+          "id": "45ba78abafbb",
+          "title": "Seed1.5-VL Technical Report",
+          "family": "Seed",
+          "source_url": "https://arxiv.org/pdf/2505.07062v1",
+          "source_version": "2505.07062v1",
+          "destination": "papers/seed/arxiv-2505.07062"
+        },
+        {
+          "id": "6cb43357175b",
+          "title": "Seed1.8 Model Card: Towards Generalized Real-World Agency",
+          "family": "Seed",
+          "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/seed/document-6cb43357175b"
+        },
+        {
+          "id": "188b7c797733",
+          "title": "Seed2.0 Model Card: Towards Intelligence Frontier for Real-World Complexity",
+          "family": "Seed",
+          "source_url": "https://arxiv.org/pdf/2607.00248v1",
+          "source_version": "2607.00248v1",
+          "destination": "papers/seed/arxiv-2607.00248"
+        },
+        {
+          "id": "26d59ba3132d",
+          "title": "Step3: Cost-Effective Multimodal Intelligence",
+          "family": "Step",
+          "source_url": "https://stepfun.ai/research/step3",
+          "source_version": "official-source-snapshot-2026-10-08",
+          "destination": "papers/step/document-26d59ba3132d"
+        }
+      ],
+      "limitations": [
+        "候选发现时的github_stars_display是初始页面rounded显示，保留为历史观察；最终精确整数计数、canonical repo与带时区观察时刻见各条github_snapshot。未改变旧历史筛选记录。",
+        "10篇主体源缓存均已完成：6份固定PDF原字节、4份固定commit官方Markdown原字节；source/papers/<id>/source.json记录SHA256与输入载体。未把转换HTML当作原始响应。",
+        "10篇七节介绍与23张原始图表已经完成，逐图裁取/缩放和来源检查范围见各篇review/evidence；8张CDN取得原图已由root以官方commit树git blob SHA独立核对。",
+        "采用定向方法段、训练配方与主要实验表读取，不声称全文附录逐字复审或训练/评测复现；闭源/短版发行说明未公开内部细节保持未知。",
+        "MiniCPM-o2.6的Notion技术博客访问受阻，主体使用固定官方guide与模型卡公开证据，不冒充新的arXiv论文；GLM4.6V不重复登记4.1V/4.5V共用arXiv。"
+      ]
+    },
+    "global": {
+      "researched_at": "2026-10-13",
+      "researcher": "content_audit_2",
+      "scope": "海外开放多模态模型及Apple官方技术报告（MM1.5未确认开放权重）；排除由root研究的OpenAI/Anthropic/Gemini",
+      "dedup_plan_sha256": "d1ad5a421575c41fecaa98941cd8e5c25a4bd8650eee346d8d58bdf6e7eb8a66",
+      "recommended_count": 12,
+      "priority_candidates": [
+        {
+          "slug": "paligemma",
+          "title": "PaliGemma: A versatile 3B VLM for transfer",
+          "family": "PaliGemma",
+          "organization": "Google DeepMind",
+          "date": "2024-07-10",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": "2024-05-14",
+          "source_url": "https://arxiv.org/pdf/2407.07726v2",
+          "source_version": "2407.07726v2",
+          "document_kind": "model_report",
+          "arxiv_id": "2407.07726",
+          "official_blog_url": "https://ai.google.dev/gemma/docs/paligemma/model-card",
+          "github_code_url": "https://github.com/google-research/big_vision",
+          "repo": "google-research/big_vision",
+          "model_card_url": "https://huggingface.co/google/paligemma-3b-pt-224",
+          "technical_value": "SigLIP + Gemma 的迁移型基座；prefix attention、定位/分割 token、全参数联合训练与连接器/冻结策略消融。",
+          "original_figures": "原文 Figure 1 架构图、训练与迁移消融图表，可由固定 PDF 裁图。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": {
+            "repo": "google-research/big_vision",
+            "stars": 3546,
+            "url": "https://github.com/google-research/big_vision",
+            "default_branch": "main"
+          },
+          "star_basis": "共享官方实现/训练框架星数，不是单模型独立星数",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2407.07726v2",
+            "https://ai.google.dev/gemma/docs/paligemma/model-card",
+            "https://huggingface.co/google/paligemma-3b-pt-224"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "paligemma2",
+          "title": "PaliGemma 2: A Family of Versatile VLMs for Transfer",
+          "family": "PaliGemma",
+          "organization": "Google DeepMind",
+          "date": "2024-12-04",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": "2024-12-05",
+          "source_url": "https://arxiv.org/pdf/2412.03555v1",
+          "source_version": "2412.03555v1",
+          "document_kind": "model_report",
+          "arxiv_id": "2412.03555",
+          "official_blog_url": "https://developers.googleblog.com/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/",
+          "github_code_url": "https://github.com/google-research/big_vision",
+          "repo": "google-research/big_vision",
+          "model_card_url": "https://ai.google.dev/gemma/docs/paligemma/model-card-2",
+          "technical_value": "统一研究 3B/10B/28B 与 224/448/896 分辨率的迁移规律；表格结构、分子结构、乐谱与医学图像等任务扩展。",
+          "original_figures": "原文 Figure 1 架构图，Table 1 尺寸/成本和任务结果表，均可裁图。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": {
+            "repo": "google-research/big_vision",
+            "stars": 3546,
+            "url": "https://github.com/google-research/big_vision",
+            "default_branch": "main"
+          },
+          "star_basis": "共享官方实现/训练框架星数，不是单模型独立星数",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2412.03555v1",
+            "https://developers.googleblog.com/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/",
+            "https://ai.google.dev/gemma/docs/paligemma/model-card-2"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "gemma3",
+          "title": "Gemma 3 Technical Report",
+          "family": "Gemma",
+          "organization": "Google DeepMind",
+          "date": "2025-03-25",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": "2025-03-12",
+          "source_url": "https://arxiv.org/pdf/2503.19786v1",
+          "source_version": "2503.19786v1",
+          "document_kind": "model_report",
+          "arxiv_id": "2503.19786",
+          "official_blog_url": "https://ai.google.dev/gemma/docs/core",
+          "github_code_url": "https://github.com/google-deepmind/gemma",
+          "repo": "google-deepmind/gemma",
+          "model_card_url": "https://huggingface.co/google/gemma-3-27b-it",
+          "technical_value": "4B/12B/27B 视觉模型；局部/全局注意力比例控制 KV 内存，冻结 SigLIP、视觉 token 压缩与推理时 Pan & Scan。1B 版本仅文本。",
+          "original_figures": "正式报告有注意力/KV 内存消融图、Pan & Scan 结果表；整体架构可基于公开组件补示意图。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": {
+            "repo": "google-deepmind/gemma",
+            "stars": 5789,
+            "url": "https://github.com/google-deepmind/gemma",
+            "default_branch": "main"
+          },
+          "star_basis": "共享官方实现/训练框架星数，不是单模型独立星数",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2503.19786v1",
+            "https://ai.google.dev/gemma/docs/core",
+            "https://huggingface.co/google/gemma-3-27b-it"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "gemma3n",
+          "title": "Introducing Gemma 3n: The developer guide",
+          "family": "Gemma",
+          "organization": "Google DeepMind",
+          "date": "2025-06-26",
+          "date_basis": "官方技术博客发布日期",
+          "model_release_date": "2025-06-26",
+          "source_url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "official_technical_blog",
+          "arxiv_id": null,
+          "official_blog_url": null,
+          "github_code_url": "https://github.com/google-deepmind/gemma",
+          "repo": "google-deepmind/gemma",
+          "model_card_url": "https://ai.google.dev/gemma/docs/gemma-3n/model_card",
+          "technical_value": "端侧图像/视频/音频输入；MatFormer 嵌套子网、PLE、KV sharing、MobileNet-V5 与 USM 音频编码。区别有效参数量与总参数量。",
+          "original_figures": "官方博客有 MatFormer 与 PLE 静态机制图，可直接获取图片；model card 给输入 token 与评测表。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": {
+            "repo": "google-deepmind/gemma",
+            "stars": 5789,
+            "url": "https://github.com/google-deepmind/gemma",
+            "default_branch": "main"
+          },
+          "star_basis": "共享官方实现/训练框架星数，不是单模型独立星数",
+          "date_notes": "发布日与当前抓取日分别记录；抓取快照不代表模型发布日期。",
+          "source_evidence_urls": [
+            "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+            "https://ai.google.dev/gemma/docs/gemma-3n/model_card"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "pixtral-large",
+          "title": "Pixtral Large",
+          "family": "Mistral / Pixtral",
+          "organization": "Mistral AI",
+          "date": "2024-11-18",
+          "date_basis": "官方技术博客发布日期",
+          "model_release_date": "2024-11-18",
+          "source_url": "https://mistral.ai/news/pixtral-large/",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "official_technical_blog",
+          "arxiv_id": null,
+          "official_blog_url": null,
+          "github_code_url": "https://github.com/mistralai/mistral-inference",
+          "repo": "mistralai/mistral-inference",
+          "model_card_url": "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411",
+          "technical_value": "124B 视觉语言模型，123B 解码器 + 1B 视觉编码器，128K 多图上下文；公开模型配置可补真实组件细节。",
+          "original_figures": "官方博客提供静态基准图与 OCR/图表案例；需自绘架构，不能把 Pixtral 12B 图当成本模型原图。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": {
+            "repo": "mistralai/mistral-inference",
+            "stars": 10822,
+            "url": "https://github.com/mistralai/mistral-inference",
+            "default_branch": "main"
+          },
+          "star_basis": "共享官方实现/训练框架星数，不是单模型独立星数",
+          "date_notes": "发布日与当前抓取日分别记录；抓取快照不代表模型发布日期。",
+          "source_evidence_urls": [
+            "https://mistral.ai/news/pixtral-large/",
+            "https://huggingface.co/mistralai/Pixtral-Large-Instruct-2411"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "mistral-small3.1",
+          "title": "Mistral Small 3.1",
+          "family": "Mistral / Pixtral",
+          "organization": "Mistral AI",
+          "date": "2025-03-17",
+          "date_basis": "官方技术博客发布日期",
+          "model_release_date": "2025-03-17",
+          "source_url": "https://mistral.ai/news/mistral-small-3-1/",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "official_technical_blog",
+          "arxiv_id": null,
+          "official_blog_url": null,
+          "github_code_url": null,
+          "repo": null,
+          "model_card_url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+          "technical_value": "24B 开放权重视觉/文本模型，128K 上下文；base/instruct 公开，可结合固定配置讲清 Pixtral 视觉编码与语言主干。",
+          "original_figures": "博客有多模态/长上下文基准图，HF card 有真实结果表；架构需依据公开配置自绘。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": null,
+          "star_basis": "官方模型卡发布；未确认独立官方 GitHub，star 不可判",
+          "date_notes": "发布日与当前抓取日分别记录；抓取快照不代表模型发布日期。",
+          "source_evidence_urls": [
+            "https://mistral.ai/news/mistral-small-3-1/",
+            "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "florence2",
+          "title": "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks",
+          "family": "Florence",
+          "organization": "Microsoft",
+          "date": "2023-11-10",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": "2024-06-19",
+          "source_url": "https://arxiv.org/pdf/2311.06242v1",
+          "source_version": "2311.06242v1",
+          "document_kind": "model_report",
+          "arxiv_id": "2311.06242",
+          "official_blog_url": "https://www.microsoft.com/en-us/research/publication/florence-2-advancing-a-unified-representation-for-a-variety-of-vision-tasks/",
+          "github_code_url": null,
+          "repo": null,
+          "model_card_url": "https://huggingface.co/microsoft/Florence-2-large",
+          "technical_value": "任务提示统一 captioning/detection/grounding/segmentation 的序列到序列视觉基座；FLD-5B 数据引擎与空间 token。并非通用大语言聊天主干。",
+          "original_figures": "原文有统一任务/模型流程、数据引擎与结果表，PDF 可裁图；CVPR 2024 版本也公开。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": null,
+          "star_basis": "官方模型卡发布；未确认独立官方 GitHub，star 不可判",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2311.06242v1",
+            "https://www.microsoft.com/en-us/research/publication/florence-2-advancing-a-unified-representation-for-a-variety-of-vision-tasks/",
+            "https://huggingface.co/microsoft/Florence-2-large"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "aya-vision",
+          "title": "Aya Vision: Advancing the Frontier of Multilingual Multimodality",
+          "family": "Aya Vision",
+          "organization": "Cohere Labs",
+          "date": "2025-05-13",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": "2025-03-04",
+          "source_url": "https://arxiv.org/pdf/2505.08751v1",
+          "source_version": "2505.08751v1",
+          "document_kind": "model_report",
+          "arxiv_id": "2505.08751",
+          "official_blog_url": "https://cohere.com/blog/aya-vision",
+          "github_code_url": null,
+          "repo": null,
+          "model_card_url": "https://huggingface.co/CohereLabs/aya-vision-8B",
+          "technical_value": "23 语言、8B/32B；重描述/过滤/翻译/重写合成数据，以及跨模态权重合并修复语言能力遗忘。",
+          "original_figures": "Figure 3 数据管线与合并/性能消融图表公开；架构由 §4 公开组件另绘。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": null,
+          "star_basis": "官方模型卡发布；未确认独立官方 GitHub，star 不可判",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2505.08751v1",
+            "https://cohere.com/blog/aya-vision",
+            "https://huggingface.co/CohereLabs/aya-vision-8B"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "fastvlm",
+          "title": "FastVLM: Efficient Vision Encoding for Vision Language Models",
+          "family": "FastVLM",
+          "organization": "Apple",
+          "date": "2024-12-17",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": "2025-05-15",
+          "source_url": "https://arxiv.org/pdf/2412.13303v2",
+          "source_version": "2412.13303v2",
+          "document_kind": "model_report",
+          "arxiv_id": "2412.13303",
+          "official_blog_url": "https://machinelearning.apple.com/research/fast-vision-language-models",
+          "github_code_url": "https://github.com/apple-aiml-research/ml-fastvlm",
+          "repo": "apple-aiml-research/ml-fastvlm",
+          "model_card_url": "https://huggingface.co/apple/FastVLM-0.5B",
+          "technical_value": "FastViT-HD 混合编码器同时降低视觉编码时间与视觉 token 数；分析 TTFT 分解、分辨率与 LLM 尺寸的准确率/延迟权衡。",
+          "original_figures": "固定 v2/CVPR 2025 PDF 含完整模型/编码器架构图与 latency 图，官方 Apple 博客也有静态图。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": {
+            "repo": "apple-aiml-research/ml-fastvlm",
+            "stars": 7424,
+            "url": "https://github.com/apple-aiml-research/ml-fastvlm",
+            "default_branch": "main"
+          },
+          "star_basis": "模型专属仓库星数",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2412.13303v2",
+            "https://machinelearning.apple.com/research/fast-vision-language-models",
+            "https://huggingface.co/apple/FastVLM-0.5B"
+          ],
+          "model_specific_github_star_assessment": "pass"
+        },
+        {
+          "slug": "molmo2",
+          "title": "Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding",
+          "family": "Molmo",
+          "organization": "Allen Institute for AI (Ai2)",
+          "date": "2026-01-15",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": null,
+          "source_url": "https://arxiv.org/pdf/2601.10611v4",
+          "source_version": "2601.10611v4",
+          "document_kind": "model_report",
+          "arxiv_id": "2601.10611",
+          "official_blog_url": "https://allenai.org/blog/molmo2",
+          "github_code_url": "https://github.com/allenai/molmo2",
+          "repo": "allenai/molmo2",
+          "model_card_url": "https://huggingface.co/allenai/Molmo2-8B",
+          "technical_value": "视频理解/指点/跟踪；新视频与多图公开数据，视频 3×3/图像 2×2 pooling、消息树打包与 token 加权训练。",
+          "original_figures": "Figure 2 模型图、Figure 3 打包注意力图以及数据/grounding 结果图公开可裁。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": {
+            "repo": "allenai/molmo2",
+            "stars": 742,
+            "url": "https://github.com/allenai/molmo2",
+            "default_branch": "main"
+          },
+          "star_basis": "模型专属仓库星数",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2601.10611v4",
+            "https://allenai.org/blog/molmo2",
+            "https://huggingface.co/allenai/Molmo2-8B"
+          ],
+          "model_specific_github_star_assessment": "pass"
+        },
+        {
+          "slug": "nemotron-nano-v2-vl",
+          "title": "NVIDIA Nemotron Nano V2 VL",
+          "family": "Nemotron",
+          "organization": "NVIDIA",
+          "date": "2025-11-06",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": null,
+          "source_url": "https://arxiv.org/pdf/2511.03929v1",
+          "source_version": "2511.03929v1",
+          "document_kind": "model_report",
+          "arxiv_id": "2511.03929",
+          "official_blog_url": "https://research.nvidia.com/labs/adlr/files/NVIDIA-Nemotron-Nano-V2-VL-report.pdf",
+          "github_code_url": "https://github.com/NVIDIA/Megatron-LM",
+          "repo": "NVIDIA/Megatron-LM",
+          "model_card_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16",
+          "technical_value": "12B 混合 Mamba/Transformer 视觉语言模型；动态切图/压缩、长文档与视频训练、文本能力恢复、推理预算与高效视频采样。",
+          "original_figures": "Figure 1 模型处理图、Figure 2 训练阶段及量化/效率图表，PDF 可裁。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": {
+            "repo": "NVIDIA/Megatron-LM",
+            "stars": 18129,
+            "url": "https://github.com/NVIDIA/Megatron-LM",
+            "default_branch": "main"
+          },
+          "star_basis": "共享官方实现/训练框架星数，不是单模型独立星数",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2511.03929v1",
+            "https://research.nvidia.com/labs/adlr/files/NVIDIA-Nemotron-Nano-V2-VL-report.pdf",
+            "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        },
+        {
+          "slug": "mm1.5",
+          "title": "MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning",
+          "family": "MM1",
+          "organization": "Apple",
+          "date": "2024-09-30",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": null,
+          "source_url": "https://arxiv.org/pdf/2409.20566v1",
+          "source_version": "2409.20566v1",
+          "document_kind": "model_report",
+          "arxiv_id": "2409.20566",
+          "official_blog_url": "https://machinelearning.apple.com/research/mm15-methods-analysis-insights",
+          "github_code_url": null,
+          "repo": null,
+          "model_card_url": null,
+          "technical_value": "数据配比、视觉分辨率与位置感知数据的系统消融；文本密集图、指代定位、多图推理及 Video/UI 专项模型。未确认开放权重，不标成开源模型。",
+          "original_figures": "报告公开模型/数据机制图、定位与分辨率消融图表，可固定PDF裁图。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "P1",
+          "github_snapshot": null,
+          "star_basis": "官方模型卡发布；未确认独立官方 GitHub，star 不可判",
+          "date_notes": "以 arXiv 首次提交日期排序，固定较新报告版本用于写作。",
+          "source_evidence_urls": [
+            "https://arxiv.org/pdf/2409.20566v1",
+            "https://machinelearning.apple.com/research/mm15-methods-analysis-insights"
+          ],
+          "model_specific_github_star_assessment": "not_assessable"
+        }
+      ],
+      "already_existing": [
+        {
+          "id": "9393822c356b",
+          "title": "Ferret: Refer and Ground Anything Anywhere at Any Granularity",
+          "family": "Ferret",
+          "date": "2023-10-11",
+          "source_url": "https://arxiv.org/pdf/2310.07704v1",
+          "source_version": "2310.07704v1"
+        },
+        {
+          "id": "3b84e8a511a7",
+          "title": "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs",
+          "family": "Ferret",
+          "date": "2024-04-08",
+          "source_url": "https://arxiv.org/pdf/2404.05719v1",
+          "source_version": "2404.05719v1"
+        },
+        {
+          "id": "92d16b8c59c9",
+          "title": "Gemma 4: Byte for byte, the most capable open models",
+          "family": "Gemma",
+          "date": "2026-04-02",
+          "source_url": "https://deepmind.google/models/gemma/gemma-4/",
+          "source_version": "official-source-snapshot-2026-10-08"
+        },
+        {
+          "id": "de3cebb4c28b",
+          "title": "The Llama 3 Herd of Models",
+          "family": "Llama",
+          "date": "2024-07-31",
+          "source_url": "https://arxiv.org/pdf/2407.21783v1",
+          "source_version": "2407.21783v1"
+        },
+        {
+          "id": "0c6cca94a384",
+          "title": "Llama 3.2: Revolutionizing edge AI and vision with open, customizable models",
+          "family": "Llama",
+          "date": "2024-09-25",
+          "source_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+          "source_version": "official-source-snapshot-2026-10-08"
+        },
+        {
+          "id": "4003084812b3",
+          "title": "The Llama 4 herd: The beginning of a new era of natively multimodal AI innovation",
+          "family": "Llama",
+          "date": "2025-04-05",
+          "source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+          "source_version": "official-source-snapshot-2026-10-08"
+        },
+        {
+          "id": "3ebe839c6607",
+          "title": "Pixtral-12B",
+          "family": "Mistral / Pixtral",
+          "date": "2024-09-17",
+          "source_url": "https://mistral.ai/news/pixtral-12b/",
+          "source_version": "official-source-snapshot-2026-10-08"
+        },
+        {
+          "id": "6276d6c37ba5",
+          "title": "Introducing Mistral 3",
+          "family": "Mistral / Pixtral",
+          "date": "2025-12-02",
+          "source_url": "https://mistral.ai/news/mistral-3",
+          "source_version": "official-source-snapshot-2026-10-08"
+        },
+        {
+          "id": "bf65e963e9a4",
+          "title": "MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training",
+          "family": "MM1",
+          "date": "2024-03-14",
+          "source_url": "https://arxiv.org/pdf/2403.09611v1",
+          "source_version": "2403.09611v1"
+        },
+        {
+          "id": "16bdceae9f46",
+          "title": "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models",
+          "family": "Molmo",
+          "date": "2024-09-25",
+          "source_url": "https://arxiv.org/pdf/2409.17146v1",
+          "source_version": "2409.17146v1"
+        },
+        {
+          "id": "14ecd062f291",
+          "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs",
+          "family": "Phi",
+          "date": "2025-03-03",
+          "source_url": "https://arxiv.org/pdf/2503.01743v1",
+          "source_version": "2503.01743v1"
+        },
+        {
+          "id": "1acc7b9da68d",
+          "title": "VILA: On Pre-training for Visual Language Models",
+          "family": "VILA / NVILA",
+          "date": "2023-12-13",
+          "source_url": "https://arxiv.org/pdf/2312.07533v1",
+          "source_version": "2312.07533v1"
+        },
+        {
+          "id": "1d245a12f207",
+          "title": "VILA^2: VILA Augmented VILA",
+          "family": "VILA / NVILA",
+          "date": "2024-07-24",
+          "source_url": "https://arxiv.org/pdf/2407.17453v1",
+          "source_version": "2407.17453v1"
+        },
+        {
+          "id": "1773ce2a23e8",
+          "title": "NVILA: Efficient Frontier Visual Language Models",
+          "family": "VILA / NVILA",
+          "date": "2024-12-05",
+          "source_url": "https://arxiv.org/pdf/2412.04468v1",
+          "source_version": "2412.04468v1"
+        }
+      ],
+      "other_candidates_and_exclusions": [
+        {
+          "slug": "phi4-reasoning-vision",
+          "title": "Phi-4-reasoning-vision-15B Technical Report",
+          "family": "Phi",
+          "organization": "Microsoft",
+          "date": "2026-03-04",
+          "date_basis": "报告首次提交日期",
+          "model_release_date": "2026-03-04",
+          "source_url": "https://arxiv.org/pdf/2603.03975v1",
+          "source_version": "2603.03975v1",
+          "document_kind": "model_report",
+          "arxiv_id": "2603.03975",
+          "official_blog_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/03/Phi-4-reasoning-vision-15B-Tech-Report.pdf",
+          "github_code_url": "https://github.com/microsoft/Phi-4-reasoning-vision-15B",
+          "repo": "microsoft/Phi-4-reasoning-vision-15B",
+          "model_card_url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+          "technical_value": "15B、SigLIP-2 动态分辨率与 Phi-4-Reasoning，中期融合；5B 消融解释分辨率选择、数据质量、reasoning/non-reasoning 混训与 GUI grounding。",
+          "original_figures": "Figure 3 真实架构图、Figure 4 数据构成、Table 1/2/3 编码/训练消融和结果均公开。",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries",
+            "method": "title/family/arXiv/source URL inspection"
+          },
+          "priority": "deferred_low_star",
+          "decision": "exclude_this_round_low_star",
+          "reason": "专属官方 GitHub 当前67星，沿用用户小于100星筛选偏好；保留调查，不本轮收录。"
+        },
+        {
+          "title": "Gemma 4 Technical Report",
+          "date": "2026-07-02",
+          "source_url": "https://arxiv.org/abs/2607.02770",
+          "decision": "supplement_existing",
+          "reason": "已有Gemma4发布页92d16b8c59c9；正式报告应补进现有文章来源，不另建重复模型。arXiv 首次2026-07-02，当前v2为2026-07-24。"
+        },
+        {
+          "title": "Mistral Small 3.2",
+          "source_url": "https://docs.mistral.ai/models/mistral-small-3-2-25-06",
+          "decision": "P2",
+          "reason": "是3.1小更新，先写首代视觉机制。"
+        },
+        {
+          "title": "Ministral 3",
+          "source_url": "https://arxiv.org/abs/2601.08584",
+          "decision": "covered_release_followup",
+          "reason": "已有Introducing Mistral 3发布页；报告可作该文章补充或未来同系列独立报告，须先读取再定。",
+          "date": "2026-01-13"
+        },
+        {
+          "title": "Tiny Aya Vision",
+          "source_url": "https://labscommunity.cohere.com/blog/2026/tiny-aya-vision/",
+          "decision": "defer",
+          "reason": "Cohere社区探索，页面称模型权重/代码待发布；不当成已正式开放的厂家新代模型。"
+        },
+        {
+          "title": "Nemotron-Labs-Diffusion: A Tri-Mode Language Model Unifying Autoregressive, Diffusion, and Hybrid Generation",
+          "source_url": "https://research.nvidia.com/publication/2026-05_nemotron-labs-diffusion-tri-mode-language-model-unifying-autoregressive",
+          "decision": "P2",
+          "reason": "2026官方研究，有VLM版本；需另读技术报告确认视觉训练与公开权重范围，当前仅官方搜索结果确认。"
+        },
+        {
+          "title": "The Llama 4 Herd: Architecture, Training, Evaluation, and Deployment Notes",
+          "source_url": "https://arxiv.org/abs/2601.11659",
+          "decision": "exclude_unverified_officiality",
+          "reason": "搜索摘要为公开资料汇编，未确认Meta作者/官方背书；不用近似官方标题替代已收录原厂博客。"
+        },
+        {
+          "title": "Gemma 1 / Gemma 2 / Tiny Aya / Nemotron 3 Nano-Super-Ultra",
+          "decision": "exclude_text_only_from_current_scope",
+          "reason": "不因同厂家或同模型名自动归入视觉语言主模型；当前已核实材料不足以证明对应报告是MLLM技术报告。"
+        }
+      ],
+      "limits": [
+        "该研究文件记录候选发现阶段的官方web来源、日期、仓库星数和技术价值初查，不代表76/58等长报告已全文审计。",
+        "后续10篇成文已固定原始PDF/官方HTML字节，并读取与文章主张相关正文/附录/模型卡/代码；逐篇实际范围与补充源revision/SHA见tmp/new-global-authoring-notes.json及文章evidence/review。",
+        "Nemotron NanoV2VL与MM1.5在source缓存完成后交给content_audit_3独立成文，其最终复核不能由本代理初查记录替代。",
+        "官方专属repo低于100星的Phi4reasoningvision不本轮收录；官方无专属repo不借共享框架/第三方星数替代。",
+        "原先默认sandbox对3个博客下载失败；已通过escalated官方GET取得原始HTML并注册，HF固定模型卡仅作补充；Gemma3n gated config未取得、未据此推断内部配置。"
+      ],
+      "authoring_status": {
+        "content_audit_2_completed_ids": [
+          "e3fc1ad19951",
+          "136ad0bf6010",
+          "aa88a8d81e68",
+          "c7a2cc906589",
+          "5140df127b74",
+          "652708f323d7",
+          "1bb20f4fc0ff",
+          "fbed0d7612b3",
+          "63ad52ff7529",
+          "f4eeb8422c62"
+        ],
+        "fixed_source_notes": "tmp/new-global-authoring-notes.json",
+        "delegated_ids": [
+          "19d0dc679a0e",
+          "a03900c8f0b9"
+        ]
+      }
+    },
+    "root": {
+      "researched_at": "2026-10-13",
+      "scope": "Missing representative OpenAI, Anthropic and Gemini releases; not a claim to exhaust all historical minor versions.",
+      "priority_candidates": [
+        {
+          "slug": "claude3.5",
+          "title": "Claude 3.5 Sonnet Model Card Addendum",
+          "family": "Claude",
+          "family_slug": "claude",
+          "organization": "Anthropic",
+          "date": "2024-06-20",
+          "date_basis": "Claude 3 family combined model card explicitly records the June 20, 2024 addendum; announcement may display June 21 in localized date rendering.",
+          "source_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+          "paper_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "视觉推理、图表与文档理解的代际升级，原文分离视觉、文本和代理编码评测。",
+          "cache_folder": "tmp/new-mllm-root/claude3.5",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "claude3.7",
+          "title": "Claude 3.7 Sonnet System Card",
+          "family": "Claude",
+          "family_slug": "claude",
+          "organization": "Anthropic",
+          "date": "2025-02-24",
+          "date_basis": "Official announcement date; cached report is the separate 3.7 system card.",
+          "source_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+          "paper_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "同一模型的标准回答与扩展思考、预算控制及视觉代理评测。",
+          "cache_folder": "tmp/new-mllm-root/claude3.7",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "claude4",
+          "title": "Claude 4 System Card",
+          "family": "Claude",
+          "family_slug": "claude",
+          "organization": "Anthropic",
+          "date": "2025-05-22",
+          "date_basis": "Official launch of Claude Opus 4 and Sonnet 4; adopted report may include later corrections.",
+          "source_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+          "paper_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://www.anthropic.com/news/claude-4",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "双模型家族、交错思考与工具调用、长任务记忆和视觉计算机操作。",
+          "cache_folder": "tmp/new-mllm-root/claude4",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "claude4.6",
+          "title": "Claude Opus 4.6 System Card",
+          "family": "Claude",
+          "family_slug": "claude",
+          "organization": "Anthropic",
+          "date": "2026-02-05",
+          "date_basis": "Official launch date, with fixed system-card bytes observed October 13.",
+          "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+          "paper_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://www.anthropic.com/news/claude-opus-4-6",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "自适应思考、长上下文与复杂视觉工作流的能力和边界。",
+          "cache_folder": "tmp/new-mllm-root/claude4.6",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "claude5.5card",
+          "title": "Claude Opus 5.5 System Card",
+          "family": "Claude",
+          "family_slug": "claude",
+          "organization": "Anthropic",
+          "date": "2026-09-22",
+          "date_basis": "Official announcement displays September 22, 2026.",
+          "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+          "paper_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://www.anthropic.com/claude-opus-5-5",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "最新Opus发布的视觉图表评测、计算效率及长代理任务，区分模型与系统组件。",
+          "cache_folder": "tmp/new-mllm-root/claude5.5card",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "gemini2flash",
+          "title": "Gemini 2.0 Flash Model Card",
+          "family": "Gemini",
+          "family_slug": "gemini",
+          "organization": "Google DeepMind",
+          "date": "2024-12-11",
+          "date_basis": "Official experimental model launch date; adopted model card is the later public version, not the launch-day card.",
+          "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+          "paper_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "低延迟原生多模态输入、工具使用与原生输出研究路径，区分实验功能与公开端点。",
+          "cache_folder": "tmp/new-mllm-root/gemini2flash",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "gemini3pro",
+          "title": "Gemini 3 Pro Model Card",
+          "family": "Gemini",
+          "family_slug": "gemini",
+          "organization": "Google DeepMind",
+          "date": "2025-11-18",
+          "date_basis": "Official announcement date; adopted PDF card identified as May 2026 revision on official index.",
+          "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+          "paper_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://blog.google/products/gemini/gemini-3/",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "多模态推理及代理能力，训练资料和长上下文规格按官方卡披露。",
+          "cache_folder": "tmp/new-mllm-root/gemini3pro",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "gemini3flash",
+          "title": "Gemini 3 Flash Model Card",
+          "family": "Gemini",
+          "family_slug": "gemini",
+          "organization": "Google DeepMind",
+          "date": "2025-12-17",
+          "date_basis": "Official announcement date and December 2025 model-card publication label.",
+          "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+          "paper_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://blog.google/products/gemini/gemini-3-flash/",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "多模态理解与速度/成本取舍，按思考预算和评测条件分析效果。",
+          "cache_folder": "tmp/new-mllm-root/gemini3flash",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "gpt5.4",
+          "title": "GPT-5.4 Thinking System Card",
+          "family": "GPT",
+          "family_slug": "gpt",
+          "organization": "OpenAI",
+          "date": "2026-03-05",
+          "date_basis": "Official system-card and announcement publication dates both March 5, 2026.",
+          "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf",
+          "paper_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://openai.com/index/introducing-gpt-5-4/",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "高分辨率视觉、原生计算机操作与工具检索，需要区分产品机制与网络细节。",
+          "cache_folder": "tmp/new-mllm-root/gpt5.4",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "gpt5.6",
+          "title": "GPT-5.6 System Card",
+          "family": "GPT",
+          "family_slug": "gpt",
+          "organization": "OpenAI",
+          "date": "2026-07-09",
+          "date_basis": "Official system card Published July 9, 2026; adopted latest dated byte snapshot.",
+          "source_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf",
+          "paper_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://deploymentsafety.openai.com/gpt-5-6",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "Sol/Terra/Luna分档、视觉和代理评测及监控/训练公开信息。",
+          "cache_folder": "tmp/new-mllm-root/gpt5.6",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "gptlive",
+          "title": "GPT-Live System Card",
+          "family": "GPT",
+          "family_slug": "gpt",
+          "organization": "OpenAI",
+          "date": "2026-07-08",
+          "date_basis": "Official system card Published July 8, 2026.",
+          "source_url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+          "paper_url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://deploymentsafety.openai.com/gpt-live",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "全双工语音、连续倾听与发声、模型委派和流式系统边界。",
+          "cache_folder": "tmp/new-mllm-root/gptlive",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        },
+        {
+          "slug": "gpt6.1",
+          "title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+          "family": "GPT",
+          "family_slug": "gpt",
+          "organization": "OpenAI",
+          "date": "2026-09-29",
+          "date_basis": "Official system card Published September 29, 2026.",
+          "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+          "paper_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "document_kind": "technical_report",
+          "arxiv_id": null,
+          "official_blog_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+          "repo": null,
+          "github_code_url": null,
+          "technical_value": "最新Sol后续版本，视觉评测、效率定位和继承Astra训练/保障体系的公开边界。",
+          "cache_folder": "tmp/new-mllm-root/gpt6.1",
+          "original_figures": "Fixed official PDF figure/table regions, or original blog chart; supplement a labeled public-interface SVG if no architecture diagram is disclosed.",
+          "deduplication": {
+            "status": "missing",
+            "checked_against": "data/article-plan.json, 272 entries"
+          },
+          "priority": "P1"
+        }
+      ],
+      "excluded": [
+        {
+          "model": "Gemini Omni Flash",
+          "reason": "Public release currently focuses on conditional video generation; excluded from this MLLM understanding-focused expansion rather than assuming an undisclosed language-model architecture."
+        },
+        {
+          "model": "GPT-4o System Card as separate entry",
+          "reason": "Same model already introduced from official launch blog; the system card is suitable as a supplementary source, not a second model release entry."
+        }
+      ]
+    }
+  },
+  "limits": "Research records establish the selection and located official evidence. Article evidence/review files state the actual source-reading and visual-check scope; neither catalogue shape checks nor author notes imply experimental reproduction."
+}

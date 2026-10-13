@@ -1,0 +1,20 @@
+{
+  "paper_id": "51404279a064",
+  "catalogue_entry_id": "51404279a064",
+  "family_slug": "glm",
+  "title": "GLM-4.6V",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "git:f093b70998bec336acbc00d1a545e05893e3c9fa",
+  "source_url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/README.md",
+  "document_kind": "release_blog",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "GLM-4.6V：128K多模态上下文与原生视觉工具调用",
+  "source_sha256": "f81ad4ea063f5eaa96ada6aa759ea8c79315791e8e29ca2aed57dbe4c3808994",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-12-08",
+  "chinese_characters": 2350,
+  "figures_manifest": "figures-manifest.json"
+}

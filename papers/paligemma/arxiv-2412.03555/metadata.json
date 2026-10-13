@@ -1,0 +1,20 @@
+{
+  "paper_id": "136ad0bf6010",
+  "catalogue_entry_id": "136ad0bf6010",
+  "family_slug": "paligemma",
+  "title": "PaliGemma 2: A Family of Versatile VLMs for Transfer",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2412.03555v1",
+  "source_url": "https://arxiv.org/pdf/2412.03555v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "PaliGemma 2：模型规模、图像分辨率与任务迁移",
+  "source_sha256": "4edfa3741ad3f6be5bfec1c495dfdc82efc362809384697ebd7c6a20bcbde6b4",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2024-12-04",
+  "chinese_characters": 2897,
+  "figures_manifest": "figures-manifest.json"
+}

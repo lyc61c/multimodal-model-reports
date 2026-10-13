@@ -180,7 +180,7 @@ speech-to-image 则以 Blip3o-Pretrain-JourneyDB 的流畅描述和图像构建�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Beyond Language Modeling](../../beyond-language-modeling/arxiv-2603.03276/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：InternVL-U →](../../internvl/arxiv-2603.09877/README.md)
+[← 上一篇：GPT-5.4](../../gpt/document-affc25e8e162/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：InternVL-U →](../../internvl/arxiv-2603.09877/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

@@ -120,7 +120,7 @@ Realtime API 是生产观测而非 Qwen3-Omni 的理论组件和：6 秒音频�
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：GPT-6 Astra](../../gpt/document-0d9109ba3678/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Gemini 4 Argon →](../../gemini/document-a07676c13763/README.md)
+[← 上一篇：SenseNova-U1.5](../../sensenova/arxiv-2609.11929/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2026) · [下一篇：Claude Opus 5.5 →](../../claude/document-783cf6ffbfbf/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

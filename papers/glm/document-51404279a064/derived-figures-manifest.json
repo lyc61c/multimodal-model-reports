@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "paper_id": "51404279a064",
+  "assets": [
+    {
+      "asset_path": "figures/architecture-overview.svg",
+      "asset_sha256": "927710b577b40c68c5f852e5c3744f3fe1c1ebf3cff5d028a4129c512eb4f324",
+      "origin": "self_drawn",
+      "kind": "architecture",
+      "sources": [
+        {
+          "url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/README.md",
+          "locator": "Model Implementation Code / GLM-4.6V Model Overview",
+          "note": "实现入口、模型规模与工具接口。"
+        },
+        {
+          "url": "https://github.com/huggingface/transformers/blob/v5.0.0rc0/src/transformers/models/glm4v_moe/modeling_glm4v_moe.py",
+          "locator": "L653–703、L916–1027、L1348–1513、L378–490",
+          "note": "视觉编码、空间合并、占位替换及共享/路由专家。"
+        }
+      ],
+      "scope": "自绘，组件据公开实现；具体层数随checkpoint。；Flash为另一版本，不套用本图MoE模块。；外部工具执行属于运行时，不是模型内部网络。",
+      "review": {
+        "date": "2026-10-13",
+        "status": "structurally_checked",
+        "scope": "Source-grounded plan, labelled origin, XML bounds and local links; visual QA is recorded separately"
+      }
+    }
+  ]
+}

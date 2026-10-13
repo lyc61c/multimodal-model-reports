@@ -159,7 +159,7 @@ SQA 根据真实语音转写合成问答，SQQA 把文本查询用内部 TTS 转
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Long-VITA](../../vita/arxiv-2502.05177/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Nexus-O →](../../nexus-o/arxiv-2503.01879/README.md)
+[← 上一篇：Claude 3.7 Sonnet](../../claude/document-2c9bf7e5f94a/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Nexus-O →](../../nexus-o/arxiv-2503.01879/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

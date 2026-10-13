@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    "实际读取固定2505.08751v1 PDF1–25正文及PDF39–41附录B/C；核对数据、合并、架构、训练、结果及消融；未声称通读全部76页。",
+    "核对§4.1 patch14-384初始化名与Table6实际364输入的区别、12局部tile另加缩略图、2×2通道堆叠、最大2197/3328视觉token；不以1000等通用数量代填。",
+    "核对Eq1仅语言主干插值、视觉路径继承、最终alpha0.4与LoRA实验alpha0.5不同；视觉编码器在对齐与SFT均冻结。",
+    "核对2.29M/5M/6M池与3.5M/3.4M/3.7M暴露次数、2.75M打包序列、35/31/34比例，COMET绝对0.0838与相对11.24%，偏好胜负平/学术准确率明确区分。",
+    "核对Figure6/7全部正文所引胜率与Table4对应数值；49.2/48.5不足50也明确显示；不把最佳开放生成宣称等同全部学术测试领先。",
+    "实际查看PDF6/16/21与最终Figure3/9、Table4原文区域，修正初裁上缘，图标题/完整图注/坐标/图例/所有表头行列均保留；自绘schema独立校验通过。"
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 7,
+    "principle_subsections": 4,
+    "original_assets": 3,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "b5a8947855d246bf3dc4c6fd357cb1e960a8598ca4e6e5efc9ffeb7b91fb9f7b",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "derived_architecture_revision": {
+    "date": "2026-10-13",
+    "kind": "architecture",
+    "origin": "self_drawn",
+    "manifest": "derived-figures-manifest.json",
+    "scope": "Diagram added from the explicitly cited architecture plan; original assets retained"
+  },
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

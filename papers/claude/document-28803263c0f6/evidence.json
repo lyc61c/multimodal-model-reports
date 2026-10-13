@@ -1,0 +1,58 @@
+{
+  "paper_id": "28803263c0f6",
+  "source_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+  "verification_notes": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        19,
+        20,
+        74,
+        75,
+        106
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Two hybrid models,visual analysis,training data and separate thinking summarizer",
+      "locator": "PDF pp.6–7 §1.1"
+    },
+    {
+      "claim": "Computer-use prevention71/89,69/86 with around600scenarios",
+      "locator": "PDF pp.19–20 §3/Table3.2.A"
+    },
+    {
+      "claim": "Reward hacking reductions67/69 and environment/hidden test mitigations",
+      "locator": "PDF pp.74–75 §6"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-benchmark-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://www.anthropic.com/news/claude-4",
+      "scope": "Model improvements,tool interleaving,file memory and benchmark methodology appendix, not all customer quotes"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

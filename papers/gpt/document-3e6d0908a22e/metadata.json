@@ -1,0 +1,20 @@
+{
+  "paper_id": "3e6d0908a22e",
+  "catalogue_entry_id": "3e6d0908a22e",
+  "family_slug": "gpt",
+  "title": "GPT-Live System Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "GPT-Live：全双工语音交互、连续响应与模型委派",
+  "source_sha256": "8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-07-08",
+  "chinese_characters": 3121,
+  "figures_manifest": "figures-manifest.json"
+}

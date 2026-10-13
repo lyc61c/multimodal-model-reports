@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "review_kind": "author_source_check",
+  "review_date": "2026-10-13",
+  "checks": [
+    {
+      "scope": "实际读取固定v1的§2–4及Tables1–8，PDF第3–9页；首页日期单独核对。",
+      "verified": "VT概率分布→VET加权嵌入→Qwen3路径，五阶段冻结范围和像素范围均逐段核对。"
+    },
+    {
+      "scope": "Figure2、Table3原图及裁图视觉检查。",
+      "verified": "只保留架构/表格区域；未使用整页截图。"
+    },
+    {
+      "scope": "主要实验表与数学表述。",
+      "verified": "区分OCRBench/v2、视频有无字幕、作者复测星号；加权嵌入公式标注为说明性记号。",
+      "limits": "没有通读全部定性示例附录，没有模型执行或实验复现；未公开训练超参保持未知。"
+    }
+  ],
+  "artifact_checks": {
+    "seven_sections": true,
+    "module_rows": 5,
+    "principle_subsections": 4,
+    "original_assets": 2,
+    "no_placeholders": true,
+    "asset_hashes_match": true
+  },
+  "article_sha256": "5aeb532ff4766cbf36b5c104221c6cb3b47ca9510f2b502bb47191df264045c5",
+  "limitations": [
+    "Source-reading scope is explicitly recorded; not all report appendices are necessarily reviewed.",
+    "No model execution or independent experiment reproduction."
+  ],
+  "formatting_revision": {
+    "date": "2026-10-13",
+    "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
+    "math_delimiters_converted": 0,
+    "strong_emphasis": "Unicode punctuation spacing outside code",
+    "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
+  },
+  "github_math_revision": {
+    "date": "2026-10-13",
+    "inline_syntax": "$`TeX`$",
+    "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
+    "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",
+    "changes": {
+      "delimiter_conversions": 0,
+      "operatorname_replacements": 0,
+      "vertical_bar_replacements": 0,
+      "display_fence_conversions": 0,
+      "inline_angle_replacements": 0,
+      "display_angle_replacements": 0,
+      "literal_token_replacements": 0,
+      "physical_row_wraps_normalized": 0
+    },
+    "scope": "GitHub delimiter/macro compatibility; function names and mathematical values retained",
+    "reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions"
+  }
+}

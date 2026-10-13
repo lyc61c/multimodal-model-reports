@@ -1,0 +1,61 @@
+{
+  "paper_id": "92907841db82",
+  "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "75130eefef08af5b37eb356f59ccfbe64985d54cb3184be2568db9fe287841f5",
+  "verification_notes": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "75130eefef08af5b37eb356f59ccfbe64985d54cb3184be2568db9fe287841f5",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        17,
+        18,
+        22,
+        34,
+        35,
+        36
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Adaptive thinking and four effort levels; data cutoffMay2025 and posttrainingRLHF/RLAIF",
+      "locator": "PDF pp.10–11 §1.1"
+    },
+    {
+      "claim": "MMMU-Pro73.9/77.3,FigQA58/78.3,CharXiv68.5/77.4 with/without crop",
+      "locator": "PDF pp.34–36 §2.19"
+    },
+    {
+      "claim": "OSWorld-Verified72.7,1080p100steps;max/highMCP59.5/62.7",
+      "locator": "PDF pp.18,22 Table2.3.A/§2.8"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-benchmark-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "scope": "Opening capability description and API features for adaptive thinking,compaction,1M beta; customer quotes not used"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

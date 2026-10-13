@@ -1,8 +1,8 @@
 {
-  "articles": 271,
+  "articles": 305,
   "articles_with_issues": 0,
-  "module_rows": 1325,
-  "principle_subsections": 855,
+  "module_rows": 1534,
+  "principle_subsections": 989,
   "limits": "Checks structure and table syntax only. It does not establish technical accuracy, novelty or source support.",
   "entries": [
     {
@@ -160,7 +160,7 @@
     {
       "id": "7c5f11db06d6",
       "path": "papers/auroracap/arxiv-2410.03051/README.md",
-      "article_sha256": "6ff665cb75b5d0c1a39091f25694174bc4a4e04c54dd536d23600309f725138c",
+      "article_sha256": "70f21d381e9cd6522315387e250621e577a9fac073ce9a6097a9dda5e61cf7ac",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 二分匹配与比例注意力如何共同压缩",
@@ -177,9 +177,30 @@
       "issues": []
     },
     {
+      "id": "fbed0d7612b3",
+      "path": "papers/aya-vision/arxiv-2505.08751/README.md",
+      "article_sha256": "b5a8947855d246bf3dc4c6fd357cb1e960a8598ca4e6e5efc9ffeb7b91fb9f7b",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 以真值为锚点重写：改变回复风格而不改变任务答案",
+        "### 4.2 翻译再改写：用上下文修复 translationese",
+        "### 4.3 跨模态合并：在参数空间恢复语言能力",
+        "### 4.4 语言比例与数据类型：翻译量增加存在权衡"
+      ],
+      "subsection_chinese_characters": [
+        183,
+        188,
+        249,
+        162
+      ],
+      "architecture_characters": 1428,
+      "principles_characters": 1866,
+      "issues": []
+    },
+    {
       "id": "08e2182e1746",
       "path": "papers/bagel/arxiv-2505.14683/README.md",
-      "article_sha256": "9a2cf07b1fda7830358d20f79a7970ad3cd140111598a558c66bd352ca197002",
+      "article_sha256": "7569b51a61d96b62d7fe34a26dc310093cd9e2d325dfa78e242a2c3f9bad94ac",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 MoT：分开参数，又保留跨模态注意力",
@@ -200,7 +221,7 @@
     {
       "id": "165201d8355a",
       "path": "papers/baichuan/document-165201d8355a/README.md",
-      "article_sha256": "7dbc5eeeebe01edb458dde52a4b155a1566f65a68303d341f021fc72a3f4af12",
+      "article_sha256": "13da8efd357c89aec2994bb7a25237dc94cd79ee7627a53b6cbfa5deef44b5b3",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 音频离散化：语义对齐不等于去掉声学细节",
@@ -219,7 +240,7 @@
     {
       "id": "0343cb473d18",
       "path": "papers/beyond-language-modeling/arxiv-2603.03276/README.md",
-      "article_sha256": "18f04d6d43a489e6136958e97459c3757a782702b7ac041005d7ecca3cb8e8bd",
+      "article_sha256": "25701fc95b72a994fe82dae78733330962ad6755a640ecc5837846d83963a1e7",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 离散文字与连续帧的两种预测目标",
@@ -297,7 +318,7 @@
     {
       "id": "49419f245339",
       "path": "papers/blip3-o/arxiv-2505.09568/README.md",
-      "article_sha256": "f6b931bbc5375400a097a5e9ead0bbe61ca4f4d879068bc3d96f3cba1e751639",
+      "article_sha256": "50b716fbcc0ba907c800265975066f7dffcb4dc777e71bf1e78c149c5b6c135a",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 从确定回归到语义特征分布",
@@ -489,7 +510,7 @@
     {
       "id": "6aa52f4e3f6d",
       "path": "papers/chatrex/arxiv-2411.18363/README.md",
-      "article_sha256": "f898dd3dbf67938e5e2992d4806356700e5792bf78f00c36796f4ebde30ac9a5",
+      "article_sha256": "b85a7b1ab0b9f7dec139ded1871af78cc87376bb72a3ae0c1bf5a2cd9279f6f5",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 粒度 prompt 解决前景定义冲突",
@@ -562,6 +583,101 @@
       ],
       "architecture_characters": 1595,
       "principles_characters": 2604,
+      "issues": []
+    },
+    {
+      "id": "380e510956a2",
+      "path": "papers/claude/document-380e510956a2/README.md",
+      "article_sha256": "f5d60c66b589d861a621e40c09e1f648b6411e94d02f117e2090dcbe71ba9846",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 视觉提升由任务协议界定",
+        "### 4.2 代理编码考察反馈利用，而非一次生成",
+        "### 4.3 检索窗口与上下文理解分开测量"
+      ],
+      "subsection_chinese_characters": [
+        151,
+        195,
+        164
+      ],
+      "architecture_characters": 925,
+      "principles_characters": 1239,
+      "issues": []
+    },
+    {
+      "id": "2c9bf7e5f94a",
+      "path": "papers/claude/document-2c9bf7e5f94a/README.md",
+      "article_sha256": "8729d8a4071ee3b9cb98890b914f052b7a37910d162b8f6bf95bc25721dab60d",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 推理预算改变测试时计算",
+        "### 4.2 思考忠实性用干预而非主观连贯性检验",
+        "### 4.3 偏好构造同时考虑帮助性与违规"
+      ],
+      "subsection_chinese_characters": [
+        188,
+        157,
+        182
+      ],
+      "architecture_characters": 912,
+      "principles_characters": 1253,
+      "issues": []
+    },
+    {
+      "id": "28803263c0f6",
+      "path": "papers/claude/document-28803263c0f6/README.md",
+      "article_sha256": "fca323558a29566ccbeeb3d597fab4bc5785ee9c41b21aa2ba5ea3c7facc1839",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 工具结果成为下一阶段推理的证据",
+        "### 4.2 文件记忆压缩任务历史，摘要压缩展示",
+        "### 4.3 抑制奖励捷径需要同时改环境和反馈"
+      ],
+      "subsection_chinese_characters": [
+        131,
+        134,
+        185
+      ],
+      "architecture_characters": 973,
+      "principles_characters": 1025,
+      "issues": []
+    },
+    {
+      "id": "92907841db82",
+      "path": "papers/claude/document-92907841db82/README.md",
+      "article_sha256": "e43a6e5403f2887d2ebcad6c9615329a32172402933a411f22c7a670b0799b36",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 自适应思考与effort形成任务相关预算",
+        "### 4.2 再观察把感知瓶颈与推理瓶颈分开",
+        "### 4.3 长窗口、压缩与操作成功使用不同指标"
+      ],
+      "subsection_chinese_characters": [
+        94,
+        143,
+        154
+      ],
+      "architecture_characters": 999,
+      "principles_characters": 980,
+      "issues": []
+    },
+    {
+      "id": "783cf6ffbfbf",
+      "path": "papers/claude/document-783cf6ffbfbf/README.md",
+      "article_sha256": "371a43ce5c67feb772fb9969c3479a66abd375498e5abb97f5af78439f97c5a2",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 视觉再观察与专家范围评分",
+        "### 4.2 部分完成与严格成功的数学差别",
+        "### 4.3 单模型能力、生产系统与经济效率分开"
+      ],
+      "subsection_chinese_characters": [
+        166,
+        162,
+        185
+      ],
+      "architecture_characters": 998,
+      "principles_characters": 1303,
       "issues": []
     },
     {
@@ -700,7 +816,7 @@
     {
       "id": "dd2d1990e567",
       "path": "papers/cosmos/arxiv-2606.02800/README.md",
-      "article_sha256": "15e36f2658e8451258d0d4e863213ce0c8fbaed414cfd66a598f3de69f63341a",
+      "article_sha256": "105517372033d62bcab1e52342ed9dfd02f7a3e52a9aa3aa6a5a35cda0148811",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 非对称双塔注意力与条件复用",
@@ -778,7 +894,7 @@
     {
       "id": "1bd54f613caa",
       "path": "papers/deepseek/arxiv-2412.10302/README.md",
-      "article_sha256": "de17651080e9dfac72f1c8fa2aff4b6f9ab9542a2cd6f807d9e52edce7fc4d3c",
+      "article_sha256": "365e9971b3d58c8d5d0c0bfd2d2c2fa305be3a4d38eb9678d892c16100a4ad2e",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 动态切图：为宽高比选择局部观察预算",
@@ -818,7 +934,7 @@
     {
       "id": "536ef2604f4a",
       "path": "papers/deepseek/document-536ef2604f4a/README.md",
-      "article_sha256": "10def71e9059556cebb65732a2456f216e6f023f79a263eb84f4a9c662e7fbae",
+      "article_sha256": "774e8be4007d180561dba8663f44ffd65714be6b446c3d688929b00302238a10",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 一张图中的两种注意力规则",
@@ -898,7 +1014,7 @@
     {
       "id": "54e8efcf3e7e",
       "path": "papers/denseworld-1m/arxiv-2506.24102/README.md",
-      "article_sha256": "af1876ff6c0d5bdade92811b1597794d3ceb34a253b6436836dfc1375aaea361",
+      "article_sha256": "ace06423a64e8e91851241c0b1b41881bfaaf13bf153592fb2e8d4b3c625ca23",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 裁剪引用与ID早期融合的互补",
@@ -1050,7 +1166,7 @@
     {
       "id": "017aa9c6b44d",
       "path": "papers/emu/arxiv-2409.18869/README.md",
-      "article_sha256": "5b75e13d2f4956b7f724041a9a3cc02aa54098e86dc7e7837458be72d8eaa016",
+      "article_sha256": "1703f73f4f59892b85832e0a9dab103f0adab2878621f5f0c2d5262e214821b9",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 统一词表之前先学习视觉压缩",
@@ -1069,7 +1185,7 @@
     {
       "id": "256dc49b7c06",
       "path": "papers/emu/arxiv-2510.26583/README.md",
-      "article_sha256": "c2616cf7e9b280822992c00bb78608a30da975713a37e18a8d06c33ddc8837b2",
+      "article_sha256": "2f92cebcdd3de67462c66caf9b216ad55018a8d89d05953a7502feb0aefb9c9d",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 大码本与语义蒸馏提高统一接口的容量",
@@ -1107,6 +1223,29 @@
       "issues": []
     },
     {
+      "id": "cd5d2d305595",
+      "path": "papers/ernie/document-cd5d2d305595/README.md",
+      "article_sha256": "efdd99a40443761c1241279796eba9bb46f7e367b5e08feaa9818a6e58140d35",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 隔离路由与可共享的跨模态信息",
+        "### 4.2 空间与时间压缩，以及位置可辨识性",
+        "### 4.3 Router权向量正交化",
+        "### 4.4 Token平衡损失保留文字监督、改变归一化",
+        "### 4.5 思考/非思考融合与可验证视觉推理"
+      ],
+      "subsection_chinese_characters": [
+        157,
+        141,
+        119,
+        132,
+        215
+      ],
+      "architecture_characters": 1025,
+      "principles_characters": 2028,
+      "issues": []
+    },
+    {
       "id": "85842e4c40d6",
       "path": "papers/eve/arxiv-2406.11832/README.md",
       "article_sha256": "94d231fe01898ccb3b30c90fc9e619fb384303b3736ce5c9d629f34df07e960a",
@@ -1128,7 +1267,7 @@
     {
       "id": "c609f22c00f9",
       "path": "papers/evlm/arxiv-2407.14177/README.md",
-      "article_sha256": "d67eb8fbdd23acc850d097383e7364f83d2aebe5c3f87f89fba8c0a36f7e12a7",
+      "article_sha256": "548e4f741185531d3ea1bd3859c8e65f65435f91bfbff3c2c32a6a00e8f080a8",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 视觉读取与语言主序列的计算拆分",
@@ -1142,6 +1281,27 @@
       ],
       "architecture_characters": 1182,
       "principles_characters": 1883,
+      "issues": []
+    },
+    {
+      "id": "63ad52ff7529",
+      "path": "papers/fastvlm/arxiv-2412.13303/README.md",
+      "article_sha256": "6345c67f7066aa192e82eeb4ad523891be2c084a3be3f05836292e7b2aaf3146",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 以 TTFT 分解确定瓶颈，而非只数视觉 token",
+        "### 4.2 第五阶段与早期卷积：把自注意力留给较小网格",
+        "### 4.3 多尺度特征：压缩序列时保留不同层级的信息",
+        "### 4.4 静态高分辨率与切图：分块更多未必更快更准确"
+      ],
+      "subsection_chinese_characters": [
+        274,
+        242,
+        145,
+        168
+      ],
+      "architecture_characters": 896,
+      "principles_characters": 1926,
       "issues": []
     },
     {
@@ -1180,6 +1340,27 @@
       ],
       "architecture_characters": 978,
       "principles_characters": 1358,
+      "issues": []
+    },
+    {
+      "id": "1bb20f4fc0ff",
+      "path": "papers/florence/arxiv-2311.06242/README.md",
+      "article_sha256": "4c37ad676bb912a3865baf7dbdf35153cf323b7d4dac87773fd2e09fdd62f097",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 位置词表：让空间结果进入同一个生成接口",
+        "### 4.2 统一目标：同一种损失学习不同粒度监督",
+        "### 4.3 数据引擎：从专用教师走向可扩展的统一标注",
+        "### 4.4 多粒度预训练：图像描述不能替代区域与像素监督"
+      ],
+      "subsection_chinese_characters": [
+        161,
+        153,
+        232,
+        157
+      ],
+      "architecture_characters": 1145,
+      "principles_characters": 1573,
       "issues": []
     },
     {
@@ -1242,6 +1423,25 @@
       "issues": []
     },
     {
+      "id": "222ef6a5de3d",
+      "path": "papers/gemini/document-222ef6a5de3d/README.md",
+      "article_sha256": "c29ee572434d72638dba267e55d4cb29b0e20644fcccc1d25b473b66e60cd9f5",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 稀疏激活解耦存储容量与每token计算",
+        "### 4.2 原生多模态、生成研究与稳定接口有不同范围",
+        "### 4.3 实时观察与工具反馈扩展证据"
+      ],
+      "subsection_chinese_characters": [
+        129,
+        171,
+        118
+      ],
+      "architecture_characters": 1125,
+      "principles_characters": 1061,
+      "issues": []
+    },
+    {
       "id": "8c1dda86c921",
       "path": "papers/gemini/document-8c1dda86c921/README.md",
       "article_sha256": "f0972d06e696d4120c1a492eba2146c124655621b8900c3e14d4bdf7cfa5695a",
@@ -1258,6 +1458,44 @@
       ],
       "architecture_characters": 1104,
       "principles_characters": 1069,
+      "issues": []
+    },
+    {
+      "id": "fd75097b0235",
+      "path": "papers/gemini/document-fd75097b0235/README.md",
+      "article_sha256": "a0d25cc5abd090de53188d7dc56bec15fb5d54ccaf2a0755e8fd3d5f4ed36608",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 原生多模态与稀疏容量解决不同问题",
+        "### 4.2 Deep Think、工具与图文推理不可混为一个开关",
+        "### 4.3 长窗口容量与多证据检索精度不同"
+      ],
+      "subsection_chinese_characters": [
+        119,
+        157,
+        133
+      ],
+      "architecture_characters": 928,
+      "principles_characters": 926,
+      "issues": []
+    },
+    {
+      "id": "9e94a9ffe555",
+      "path": "papers/gemini/document-9e94a9ffe555/README.md",
+      "article_sha256": "6bfeb92cb028894e7d6c86e4673551dd3a2ea0f1cbbf0502871bda2377fc905a",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 模型依赖不等于披露知识迁移算法",
+        "### 4.2 可调思考使“快”具有任务条件",
+        "### 4.3 相近综合分可能掩盖任务差异"
+      ],
+      "subsection_chinese_characters": [
+        88,
+        154,
+        94
+      ],
+      "architecture_characters": 923,
+      "principles_characters": 956,
       "issues": []
     },
     {
@@ -1301,7 +1539,7 @@
     {
       "id": "a07676c13763",
       "path": "papers/gemini/document-a07676c13763/README.md",
-      "article_sha256": "53a88b6c50c06b104325b98236960f0fe5c9b393c494676cfc8f4b92bb1085d1",
+      "article_sha256": "095a8080cb3451b0526c546b4d81e0fbddc277505196f6cb028e93b263155335",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 长轨迹工程：方案、执行和测量",
@@ -1315,6 +1553,48 @@
       ],
       "architecture_characters": 945,
       "principles_characters": 921,
+      "issues": []
+    },
+    {
+      "id": "aa88a8d81e68",
+      "path": "papers/gemma/arxiv-2503.19786/README.md",
+      "article_sha256": "682c82f51f1eab4e7f329bd8f911341f7a408216567a0d99ec6e8023ee42b81e",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 五局部一全局：让长上下文的缓存只在部分层增长",
+        "### 4.2 高分辨率编码与平均池化：在细节和序列成本之间分工",
+        "### 4.3 Pan & Scan：用多个视图恢复整图缩放丢失的细节",
+        "### 4.4 稀疏教师分布蒸馏与量化感知微调"
+      ],
+      "subsection_chinese_characters": [
+        339,
+        195,
+        266,
+        279
+      ],
+      "architecture_characters": 1281,
+      "principles_characters": 2343,
+      "issues": []
+    },
+    {
+      "id": "c7a2cc906589",
+      "path": "papers/gemma/document-c7a2cc906589/README.md",
+      "article_sha256": "5f07ed10a2cd9fc9df1b1798032df1429aa0193c0eb51ced0d52964ae66c7211",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 MatFormer：联合训练嵌套子网，而非推理时随意删除参数",
+        "### 4.2 PLE：把参数容量与加速器常驻内存拆开",
+        "### 4.3 KV sharing：让上层复用中间层的历史表示",
+        "### 4.4 多模态低 token 表示：控制输入预算仍要保留模态差异"
+      ],
+      "subsection_chinese_characters": [
+        273,
+        288,
+        165,
+        228
+      ],
+      "architecture_characters": 1383,
+      "principles_characters": 2159,
       "issues": []
     },
     {
@@ -1398,6 +1678,27 @@
       "issues": []
     },
     {
+      "id": "51404279a064",
+      "path": "papers/glm/document-51404279a064/README.md",
+      "article_sha256": "6883694ee3d0116c8df27c7150c99842690fd9aa3a69d8058501f248ba0f81fa",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 稀疏路由与共享专家的互补",
+        "### 4.2 视觉网格压缩与占位一致性",
+        "### 4.3 原生工具调用把视觉信息留在闭环中",
+        "### 4.4 128K上下文扩展能力范围，也增加输入预算要求"
+      ],
+      "subsection_chinese_characters": [
+        223,
+        171,
+        162,
+        156
+      ],
+      "architecture_characters": 1643,
+      "principles_characters": 1762,
+      "issues": []
+    },
+    {
       "id": "e213666dcb0d",
       "path": "papers/glm/document-e213666dcb0d/README.md",
       "article_sha256": "d7097a1aec1d6f9826b0b064dc465caf988240cc072933aad34bce5e71fdf7bd",
@@ -1478,7 +1779,7 @@
     {
       "id": "0b8790d1de58",
       "path": "papers/gpt/document-0b8790d1de58/README.md",
-      "article_sha256": "519bb76d19cf306418d90a9d088a94e26cb0c9e0a4378db3f538b4b7c69cedf4",
+      "article_sha256": "2e0eb0a18762c086db861ac104ed9cc07575c4ae52118d241c6134176d4cf67c",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 生成前后控制与上下文推理监控",
@@ -1516,7 +1817,7 @@
     {
       "id": "d0807662cb93",
       "path": "papers/gpt/document-d0807662cb93/README.md",
-      "article_sha256": "8b2583181120ddbb9534df27088f112a6c1088ffa14f3fb7d3df3ef5359e458a",
+      "article_sha256": "d59d6850c0d5a89afaa898d59d7eedc74accdb53cf285f3516d21effa0cdad28",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 系统路由：按任务分配计算",
@@ -1537,7 +1838,7 @@
     {
       "id": "e2a1f413a7a5",
       "path": "papers/gpt/document-e2a1f413a7a5/README.md",
-      "article_sha256": "b4eae9191accdce26307eac2ef56d705a290076b3722e2cb09d3d5fc55ede57e",
+      "article_sha256": "53f889c56e576e6e45b519f3a9ee772a20fca345037417c4b7784a37fcc6dc97",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 视觉改进：错误率与百分点",
@@ -1554,9 +1855,74 @@
       "issues": []
     },
     {
+      "id": "affc25e8e162",
+      "path": "papers/gpt/document-affc25e8e162/README.md",
+      "article_sha256": "aecd65bdee15b6054e8bf5ddb937e2e410c8303f3a2d61ab96846fcbc067a1a8",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 扩大视觉输入预算：保留定位所需的细节",
+        "### 4.2 视觉操作闭环：动作必须经过环境反馈检验",
+        "### 4.3 Tool search：减少工具定义占据的上下文",
+        "### 4.4 保留用户工作：区分任务完成与正确回退"
+      ],
+      "subsection_chinese_characters": [
+        241,
+        257,
+        246,
+        238
+      ],
+      "architecture_characters": 1186,
+      "principles_characters": 1984,
+      "issues": []
+    },
+    {
+      "id": "3e6d0908a22e",
+      "path": "papers/gpt/document-3e6d0908a22e/README.md",
+      "article_sha256": "000ccd1f3335e3dfd1942d7709766658642442130f388bac0aaac8106bf11d6c",
+      "module_rows": 5,
+      "principle_subsections": [
+        "### 4.1 全双工：在时间上同时组织倾听与响应",
+        "### 4.2 模型委派：区分语音主模型与完整体验",
+        "### 4.3 连续系统检查：约束作用于正在展开的对话",
+        "### 4.4 两类语音评测：定向挑战集与真实发生率不同"
+      ],
+      "subsection_chinese_characters": [
+        260,
+        286,
+        214,
+        180
+      ],
+      "architecture_characters": 850,
+      "principles_characters": 1522,
+      "issues": []
+    },
+    {
+      "id": "42bb90895c3a",
+      "path": "papers/gpt/document-42bb90895c3a/README.md",
+      "article_sha256": "9572bbe79d219acc31dd3fb3e94cc510b88150e572cdb48e2c1427ccaad2b034",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 模型档位与思考预算是两条不同的扩展轴",
+        "### 4.2 程序化工具调用：让程序处理大量中间结果",
+        "### 4.3 并行代理：墙钟时间与总计算量分开看",
+        "### 4.4 将操作正确性纳入训练：避免“不出错但不完成”",
+        "### 4.5 激活检查与推理检查：主模型之外的系统机制"
+      ],
+      "subsection_chinese_characters": [
+        239,
+        285,
+        198,
+        175,
+        198
+      ],
+      "architecture_characters": 1120,
+      "principles_characters": 1998,
+      "issues": []
+    },
+    {
       "id": "0d9109ba3678",
       "path": "papers/gpt/document-0d9109ba3678/README.md",
-      "article_sha256": "8bb96445537c9440a9f99feda8f0d11b8b977c649726cf08d4409ef671d3dcaa",
+      "article_sha256": "44b3a1a138cbe58aabdfa6cef1ba9802a911e369a8fdf0cd1dc27fed141d4869",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 感知、决策与可执行验证",
@@ -1572,6 +1938,27 @@
       ],
       "architecture_characters": 1576,
       "principles_characters": 1766,
+      "issues": []
+    },
+    {
+      "id": "0e63abfcb13e",
+      "path": "papers/gpt/document-0e63abfcb13e/README.md",
+      "article_sha256": "3179837548c6eaf95d223e22d799f91c94a746317bfb6f6e339d933f37f69161",
+      "module_rows": 5,
+      "principle_subsections": [
+        "### 4.1 能力与成本一起比较：区分 token 单价和任务总成本",
+        "### 4.2 视觉专业工作流：保留证据与操作的关联",
+        "### 4.3 搜索失效时说明限制：把证据缺失纳入评价",
+        "### 4.4 在现实应用中约束代理：正确目标还需要正确边界"
+      ],
+      "subsection_chinese_characters": [
+        294,
+        255,
+        254,
+        236
+      ],
+      "architecture_characters": 1023,
+      "principles_characters": 1953,
       "issues": []
     },
     {
@@ -1670,6 +2057,27 @@
       "issues": []
     },
     {
+      "id": "52e049b1bc3a",
+      "path": "papers/hunyuan/arxiv-2511.19575/README.md",
+      "article_sha256": "effa708f1043ae07ad603de6e6d47c58b50041fcae631cc52db09ddc1bd7f2f7",
+      "module_rows": 5,
+      "principle_subsections": [
+        "### 4.1 原生分辨率与压缩接口各自承担不同任务",
+        "### 4.2 XD-RoPE与结构化空间输出",
+        "### 4.3 任务适配奖励：同时约束内容与格式",
+        "### 4.4 GRPO把任务评分转成策略更新"
+      ],
+      "subsection_chinese_characters": [
+        183,
+        171,
+        203,
+        151
+      ],
+      "architecture_characters": 918,
+      "principles_characters": 1715,
+      "issues": []
+    },
+    {
       "id": "d90de9cbd1b4",
       "path": "papers/imagebind-llm/arxiv-2309.03905/README.md",
       "article_sha256": "642b8b0818ea77bb138a136126d9add333813c2863bd7fa3f2815b7e72acc9d1",
@@ -1750,7 +2158,7 @@
     {
       "id": "4ce7489403d3",
       "path": "papers/internlm-xcomposer/arxiv-2407.03320/README.md",
-      "article_sha256": "b41b84ec38c41085079ae3f5a13162e3cac7475602490ec2a04ad33cf4d9756b",
+      "article_sha256": "74f9bb945d20b0e2088659efc93312a61729055c07f7c26cda29e2b78afc7b05",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 尺寸需求与图块预算的双重约束",
@@ -1826,7 +2234,7 @@
     {
       "id": "c698100db08f",
       "path": "papers/internvl/arxiv-2412.05271/README.md",
-      "article_sha256": "4a17558efcf77bf992368623b95ba92f63bce502518bfea33ebf4b6e7533cd17",
+      "article_sha256": "32fb1e00ecac8f73913002fdb53e918729e6d3000d455f3d047001136185fb40",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 动态输入预算：从单图扩展到多图与视频",
@@ -1927,7 +2335,7 @@
     {
       "id": "783b062a88f0",
       "path": "papers/kimi/arxiv-2602.02276/README.md",
-      "article_sha256": "068d72e87fbaf1bcc35239532f169bc5bccb3b936f9b4f3b02eb59c259cdf4c2",
+      "article_sha256": "67497df26ff57a18126795e490df6100bd8f8d6b6a806592822115b17f45241f",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 融合时点实验如何控制预算",
@@ -2380,7 +2788,7 @@
     {
       "id": "84a7abb884a3",
       "path": "papers/llava/arxiv-2311.05437/README.md",
-      "article_sha256": "678b8e5177317ba6b899e43ee1387e6de0a038448150b821d12570a9c3c46295",
+      "article_sha256": "5bfabcac3dd12382b900333e3e33f8f29d52be543de6381d438b3acca84eced4",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 技能对话的监督位置",
@@ -2570,7 +2978,7 @@
     {
       "id": "9b2b1ee3cca4",
       "path": "papers/longvu/arxiv-2410.17434/README.md",
-      "article_sha256": "cedef5c89797f9676c9aae5aa4c13a64864934aa31028488fdad92d8dc7c43bf",
+      "article_sha256": "be0663b7f977a8a6b45348432c7f6557cd535e9c975fc681490362014b404ddd",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 先去帧再运行第二视觉编码器",
@@ -2853,6 +3261,27 @@
       "issues": []
     },
     {
+      "id": "38bf1faaf3c5",
+      "path": "papers/minicpm/document-38bf1faaf3c5/README.md",
+      "article_sha256": "1bdbba9528d054dd5cb2cd34281356897e22c9fe654ca9a23a5c0777e20dfcf4",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 TDM：把并行感知转换成可持续的序列条件",
+        "### 4.2 文字、隐藏状态与语音生成的分工",
+        "### 4.3 高视觉token密度控制语言端成本",
+        "### 4.4 端到端CE声明与后训练披露边界"
+      ],
+      "subsection_chinese_characters": [
+        198,
+        153,
+        115,
+        131
+      ],
+      "architecture_characters": 1012,
+      "principles_characters": 1591,
+      "issues": []
+    },
+    {
       "id": "5679fdac7d01",
       "path": "papers/minicpm/document-5679fdac7d01/README.md",
       "article_sha256": "50e4894ab1d14b202de2ebddfed0ea21e60d31610a004d47d22311c7f6a92642",
@@ -2874,7 +3303,7 @@
     {
       "id": "9be303a31d11",
       "path": "papers/minicpm/document-9be303a31d11/README.md",
-      "article_sha256": "6cc146a3f5e8966a53b3927b04ec58027f094b50a6c556a3feae4631c1b5e155",
+      "article_sha256": "ba5d736664b9a59433c754268c573a01815cf187cc24901ac359aae9e824c2cf",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 并行感知通过时间片进入因果计算",
@@ -2888,6 +3317,48 @@
       ],
       "architecture_characters": 1168,
       "principles_characters": 1293,
+      "issues": []
+    },
+    {
+      "id": "eb1014c14dfe",
+      "path": "papers/minicpm/document-eb1014c14dfe/README.md",
+      "article_sha256": "f013fd0f7369244627028ef7b2abdaae2577669d447ccc193f3700a9ae4cf304",
+      "module_rows": 5,
+      "principle_subsections": [
+        "### 4.1 4× / 16×压缩改变的是视觉位置预算",
+        "### 4.2 主帧与子帧堆叠的两种时间预算",
+        "### 4.3 切片预算与图像身份标记",
+        "### 4.4 服务吞吐与单请求首token延迟分别衡量不同瓶颈"
+      ],
+      "subsection_chinese_characters": [
+        193,
+        159,
+        169,
+        95
+      ],
+      "architecture_characters": 1119,
+      "principles_characters": 1651,
+      "issues": []
+    },
+    {
+      "id": "fd34dfc57d84",
+      "path": "papers/minicpm/document-fd34dfc57d84/README.md",
+      "article_sha256": "619913914a3deede47af2ca77d66857774534b358efdfa24e33af8e68fec5cb6",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 LES：预测加载需求，保留实际路由",
+        "### 4.2 量化、投机解码与调度互补",
+        "### 4.3 ViT内早期压缩与语言侧预算",
+        "### 4.4 视频时间覆盖与图像预算协同"
+      ],
+      "subsection_chinese_characters": [
+        241,
+        160,
+        151,
+        150
+      ],
+      "architecture_characters": 1384,
+      "principles_characters": 1693,
       "issues": []
     },
     {
@@ -2946,9 +3417,47 @@
       "issues": []
     },
     {
+      "id": "5140df127b74",
+      "path": "papers/mistral-pixtral/document-5140df127b74/README.md",
+      "article_sha256": "4365374473dfccad9e113eae64812ab97f028286369a54e2aa8b9f4e9056d6ce",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 二维位置与分图注意力：先提取每张图自己的结构",
+        "### 4.2 两层适配器与图像占位：把连续视觉表示接入语言空间",
+        "### 4.3 多图预算与 GQA：容量来自序列空间，也受缓存成本约束"
+      ],
+      "subsection_chinese_characters": [
+        231,
+        220,
+        209
+      ],
+      "architecture_characters": 1589,
+      "principles_characters": 1703,
+      "issues": []
+    },
+    {
+      "id": "652708f323d7",
+      "path": "papers/mistral-pixtral/document-652708f323d7/README.md",
+      "article_sha256": "bfc78b73a643299aafdc40ed2031ae93eb1d9dde5fa169eb9a1bdd763f03f834",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 先编码再合并：减少进入语言模型的视觉序列",
+        "### 4.2 非线性投影与占位替换：保持图像和文字序列对齐",
+        "### 4.3 GQA 与 128K：长上下文预算还要包含视觉 token"
+      ],
+      "subsection_chinese_characters": [
+        209,
+        226,
+        180
+      ],
+      "architecture_characters": 1614,
+      "principles_characters": 1633,
+      "issues": []
+    },
+    {
       "id": "6276d6c37ba5",
       "path": "papers/mistral-pixtral/document-6276d6c37ba5/README.md",
-      "article_sha256": "322ed606803f70c09fa8ae6043cf9786011ad7c85e2f38dbbba33ea973f050fa",
+      "article_sha256": "1024fd5a8f76f6bacae762238c8e14ada5fd92ce74d7a9e1020030a5224d6fcb",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 稀疏参数容量与逐 token 计算",
@@ -2986,9 +3495,32 @@
       "issues": []
     },
     {
+      "id": "19d0dc679a0e",
+      "path": "papers/mm1/arxiv-2409.20566/README.md",
+      "article_sha256": "8e2e686ec7763d4561e0e56dd14adf87ce77aaa2992fccfc480dad2e2b346ed5",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 动态网格：同时避免无效补边和过度缩小",
+        "### 4.2 子图顺序与定位：输入组织会改变可见信息",
+        "### 4.3 数据采样权重：先比较能力，再决定全局配方",
+        "### 4.4 高分辨率持续预训练：OCR数据是否有用取决于可见细节",
+        "### 4.5 MoE与专项微调：增加容量和改变任务分布是两种方法"
+      ],
+      "subsection_chinese_characters": [
+        305,
+        278,
+        220,
+        243,
+        176
+      ],
+      "architecture_characters": 983,
+      "principles_characters": 2876,
+      "issues": []
+    },
+    {
       "id": "b2f9a2e04391",
       "path": "papers/mmada/arxiv-2505.15809/README.md",
-      "article_sha256": "36b957f02c308d24b539da1e09e811d3cf4790387120f70e5ee037f2ab5d62b0",
+      "article_sha256": "8d559147c5d1faa52a3e11111d80af9ff1126f335aa23a25f9ecee2c6ff24059",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 统一离散恢复目标与条件上下文",
@@ -3007,7 +3539,7 @@
     {
       "id": "314d5fc9e979",
       "path": "papers/mmsearch-r1/arxiv-2506.20670/README.md",
-      "article_sha256": "ab405e7cb5815c870d010d703f934df8145d7a8ade972e6da1504d171e290cb1",
+      "article_sha256": "b175534e11405c50f55bd6a12ba2fe0b589f9b7a433ce6cd121699a871893c5d",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 搜索成本与训练样本共同塑造决策",
@@ -3136,9 +3668,32 @@
       "issues": []
     },
     {
+      "id": "f4eeb8422c62",
+      "path": "papers/molmo/arxiv-2601.10611/README.md",
+      "article_sha256": "ce1c42739730bdb6b85b3c390f06cc9b67c03b67d12394ee8e96619c77e8ad7e",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 图像/视频不同池化粒度：在细节与帧数间分配预算",
+        "### 4.2 视觉双向注意与 message tree：共享输入，隔离答案",
+        "### 4.3 token 加权：避免长输出吞没短答案的学习信号",
+        "### 4.4 紧凑坐标与对象 ID：把指点、计数和跟踪连起来",
+        "### 4.5 同时打包裁块与语言序列：减少两端 padding"
+      ],
+      "subsection_chinese_characters": [
+        155,
+        218,
+        257,
+        165,
+        164
+      ],
+      "architecture_characters": 1182,
+      "principles_characters": 2263,
+      "issues": []
+    },
+    {
       "id": "694f3d557578",
       "path": "papers/monkey/arxiv-2311.06607/README.md",
-      "article_sha256": "d9acd5c6da65186a24f95e0648f83dbc6ab5b25ce42bbd40bca8e8084a5e8a17",
+      "article_sha256": "c022fb925b80c043572341c8d3eaf8ec6fa462d07e4d9247c77248f94a86b347",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 局部可见性与全局结构互补",
@@ -3423,6 +3978,29 @@
       "issues": []
     },
     {
+      "id": "a03900c8f0b9",
+      "path": "papers/nemotron/arxiv-2511.03929/README.md",
+      "article_sha256": "17e9385f2294ea90010c0e3847e963ad67841351871cecc1491d4d7f9c60ba41",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 动态切图与空间压缩：先保留细节，再控制语言序列",
+        "### 4.2 代码与长上下文恢复：针对不同遗忘分别补训练",
+        "### 4.3 思考预算：限制过长轨迹不等于统一增加能力",
+        "### 4.4 EVS：删除时间冗余，而非简单少抽视频帧",
+        "### 4.5 FP8训练与QAD：区分训练量化、部署校准和恢复"
+      ],
+      "subsection_chinese_characters": [
+        207,
+        199,
+        162,
+        203,
+        205
+      ],
+      "architecture_characters": 973,
+      "principles_characters": 2435,
+      "issues": []
+    },
+    {
       "id": "9f624d5a9663",
       "path": "papers/next-chat/arxiv-2311.04498/README.md",
       "article_sha256": "87e95f83f2d42f653d8285e84d118d8e2304ef322dfae0b7badf3f11a0b7c33f",
@@ -3484,7 +4062,7 @@
     {
       "id": "35036f86d753",
       "path": "papers/nexus-o/arxiv-2503.01879/README.md",
-      "article_sha256": "51a1d2a4e9e4be77c276b87da1ee5d2b0c743c1bbe6e35be90d5934023c339a8",
+      "article_sha256": "ceea3195f0e6754e4485ffae00c8ec8b15a41e9e765e886c7425d323d2735b92",
       "module_rows": 6,
       "principle_subsections": [
         "### 4.1 新增音频接口接入已有视觉语言空间",
@@ -3522,7 +4100,7 @@
     {
       "id": "1dfedbb1e043",
       "path": "papers/omni-diffusion/arxiv-2603.06577/README.md",
-      "article_sha256": "f696b78bc0ec5190609957942dc4f187657a5b8038c54206b98024734d49436e",
+      "article_sha256": "13aa0816683bce722b798024dccdf29f0bbd45b714b952f9b375bcee72d95ff7",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 共享恢复目标与实际模态接口的区别",
@@ -3680,6 +4258,27 @@
       "issues": []
     },
     {
+      "id": "76e3de9b2ed3",
+      "path": "papers/ovis/arxiv-2508.11737/README.md",
+      "article_sha256": "5aeb532ff4766cbf36b5c104221c6cb3b47ca9510f2b502bb47191df264045c5",
+      "module_rows": 5,
+      "principle_subsections": [
+        "### 4.1 从连续 patch 特征到概率视觉词",
+        "### 4.2 原生分辨率与位置编码的渐进适配",
+        "### 4.3 反思数据、偏好对齐与可验证强化学习",
+        "### 4.4 变长样本 packing 与混合并行"
+      ],
+      "subsection_chinese_characters": [
+        162,
+        182,
+        238,
+        130
+      ],
+      "architecture_characters": 914,
+      "principles_characters": 1468,
+      "issues": []
+    },
+    {
       "id": "bf191b32aa7d",
       "path": "papers/pali/arxiv-2310.09199/README.md",
       "article_sha256": "9f061a11fef3159a3f08501593d9b627637d3dd2083bff8bc780f30d75c704b0",
@@ -3696,6 +4295,48 @@
       ],
       "architecture_characters": 1001,
       "principles_characters": 1382,
+      "issues": []
+    },
+    {
+      "id": "e3fc1ad19951",
+      "path": "papers/paligemma/arxiv-2407.07726/README.md",
+      "article_sha256": "9317ed8924993a83d517375a3f52ef91556bbff08e91a433c9e8b5ff45a4d3b5",
+      "module_rows": 7,
+      "principle_subsections": [
+        "### 4.1 Prefix-LM：让输入共同推理，同时保持输出因果性",
+        "### 4.2 全参数更新与慢速视觉预热：保护初始化，继续学习空间关系",
+        "### 4.3 坐标与掩码离散化：把空间输出放进生成词表",
+        "### 4.4 高分辨率的收益：输入信息与模型序列容量都在变化"
+      ],
+      "subsection_chinese_characters": [
+        265,
+        285,
+        213,
+        223
+      ],
+      "architecture_characters": 1002,
+      "principles_characters": 2018,
+      "issues": []
+    },
+    {
+      "id": "136ad0bf6010",
+      "path": "papers/paligemma/arxiv-2412.03555/README.md",
+      "article_sha256": "094fcc7035b7bcd559cf6312cd059a185ff0bee95f81f5158ac5c51cfb3a89dd",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 控制变量比较：扩大语言模型还是增加图像细节",
+        "### 4.2 分阶段提升分辨率：避免全程支付最高视觉成本",
+        "### 4.3 将空间与专业任务转成可生成的结构序列",
+        "### 4.4 迁移学习率与规模：更大的模型需要重新调节更新幅度"
+      ],
+      "subsection_chinese_characters": [
+        227,
+        208,
+        252,
+        198
+      ],
+      "architecture_characters": 1093,
+      "principles_characters": 2053,
       "issues": []
     },
     {
@@ -3762,7 +4403,7 @@
     {
       "id": "14ecd062f291",
       "path": "papers/phi/arxiv-2503.01743/README.md",
-      "article_sha256": "e94877748264b6999660a7f3317afdce41d3ee561f753750c3577b3a1ed5ab07",
+      "article_sha256": "68efcdb906ca5832f46a71f4817c095bf1ab86737064880d1a4b25211d9634c5",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 独立低秩分支减少模态更新干扰",
@@ -3781,7 +4422,7 @@
     {
       "id": "1a94548cd5cc",
       "path": "papers/pi/arxiv-2604.15483/README.md",
-      "article_sha256": "1b0d9c572e9faf163d4bbb6fb7cd0cfbfb986e623a8343195b67cc802439f888",
+      "article_sha256": "c8599241fd1052c5c409094b330dd9883a1835cd9eb4accda6f9612385abbfb3",
       "module_rows": 6,
       "principle_subsections": [
         "### 4.1 质量条件把混合轨迹分成可选择行为",
@@ -3956,7 +4597,7 @@
     {
       "id": "b615730dc322",
       "path": "papers/qwen/document-b615730dc322/README.md",
-      "article_sha256": "b7a75ddbad8b3b6c2a608fd293e9925ff5f9f29171f9c65ebd1c4a2eea5f5e5d",
+      "article_sha256": "e9a618d14f3e79ab1e5bbc86382af7130e361b12888dade4957fbb68bd309b8f",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 从视觉表格到数学变量：读取正确条件",
@@ -4013,7 +4654,7 @@
     {
       "id": "244376c2123a",
       "path": "papers/qwen/document-244376c2123a/README.md",
-      "article_sha256": "93f59f2aba84967f0733eeca65b6467e329bbc05c5a2bce4ab7c8cc35ee9f352",
+      "article_sha256": "163955db6012b198d646708720785e9b7b0813dfb6ed05b2d55eb9928a44a537",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 理解与创作：用不同条件分布表达任务",
@@ -4051,7 +4692,7 @@
     {
       "id": "f0c46ccf05fd",
       "path": "papers/qwen/arxiv-2511.21631/README.md",
-      "article_sha256": "7f2fabe3311510f04482f6310805c2c4ef3968134663363a0b62e27bbedeea6b",
+      "article_sha256": "270b3ed56a1c464ff6a4acbf200e449ea8cc69cc1303e6c1adbda33a28c8c900",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 交错MRoPE：让各时空轴覆盖不同频段",
@@ -4211,7 +4852,7 @@
     {
       "id": "2ea7273632dc",
       "path": "papers/qwen/document-2ea7273632dc/README.md",
-      "article_sha256": "91917bcc06f411143644ee90468992f88c54b59794c1044944acb1c6bf9f1ae3",
+      "article_sha256": "733d465e5bbc5d9ba658ee465a24bf6d2c2c0c29f5f7372ef06162056e9a9bc6",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 按问题分配长视频观察预算",
@@ -4268,7 +4909,7 @@
     {
       "id": "ca69d196c301",
       "path": "papers/salmonn/arxiv-2406.15704/README.md",
-      "article_sha256": "fd7e25cf00329e5ba264a9e112f7f95f0f2ff86367d1739424d48bedc3683007",
+      "article_sha256": "f7e2f1310c2e8999c02ce6e7bb66ce2f286e41989604916be20a03b76a074667",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 等总长度融合避免简单堆叠多尺度",
@@ -4306,7 +4947,7 @@
     {
       "id": "45ba78abafbb",
       "path": "papers/seed/arxiv-2505.07062/README.md",
-      "article_sha256": "c50d1f71a8cffe3d0b0dba3808234b04dae71f754b5dfaa15a16e93c992a910f",
+      "article_sha256": "364430c299b46000592388b199436d04a0ead9d679186cfe5d38a6a3128cb41c",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 视觉预训练监督不同层次信息",
@@ -4325,7 +4966,7 @@
     {
       "id": "6cb43357175b",
       "path": "papers/seed/document-6cb43357175b/README.md",
-      "article_sha256": "785f09c6da521e94010fa5fb8cea9615c55cd46251555b7e4830b856e43a9251",
+      "article_sha256": "ddfa44cc72d5f05bdfa4160fbf597c08c8669cfb9597dfe4a903d2759fa34bdf",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 以环境反馈修正动作",
@@ -4346,7 +4987,7 @@
     {
       "id": "188b7c797733",
       "path": "papers/seed/arxiv-2607.00248/README.md",
-      "article_sha256": "aae42fa244074e31134ced829d3a153a5c3f813026b45cc94737efa542b71d4d",
+      "article_sha256": "167b4e43e5a4f69c02038d89ad46da6266f62d37e82dc8b1af928b2b63e731f9",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 轨迹证据与局部回放",
@@ -4362,6 +5003,52 @@
       ],
       "architecture_characters": 1440,
       "principles_characters": 1968,
+      "issues": []
+    },
+    {
+      "id": "f799e9065399",
+      "path": "papers/sensenova/arxiv-2605.12500/README.md",
+      "article_sha256": "aacf109bfe5937c4502260c3848cbfb0ca7d3f667a6c1ade42f61b83d4e500c7",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 同序列交互与支路参数解耦",
+        "### 4.2 直接像素的x预测与速度损失",
+        "### 4.3 分辨率自适应噪声与双条件引导",
+        "### 4.4 图像RL以任务奖励交替优化",
+        "### 4.5 通过分布匹配蒸馏缩短生成路径"
+      ],
+      "subsection_chinese_characters": [
+        191,
+        141,
+        174,
+        183,
+        135
+      ],
+      "architecture_characters": 994,
+      "principles_characters": 1970,
+      "issues": []
+    },
+    {
+      "id": "448cf5cdfd37",
+      "path": "papers/sensenova/arxiv-2609.11929/README.md",
+      "article_sha256": "6b8237c32134d64ecc301d7eeb505a659bd27434469dfa848f29ff41ecb48ead",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 从独立patch到空间耦合重建",
+        "### 4.2 4K噪声条件、流匹配与感知监督",
+        "### 4.3 四专家按任务优化，奖励保留不同语义",
+        "### 4.4 编辑奖励盯住最薄弱的一项",
+        "### 4.5 学生自身轨迹上的多专家速度蒸馏"
+      ],
+      "subsection_chinese_characters": [
+        153,
+        138,
+        181,
+        194,
+        239
+      ],
+      "architecture_characters": 891,
+      "principles_characters": 2652,
       "issues": []
     },
     {
@@ -4534,9 +5221,32 @@
       "issues": []
     },
     {
+      "id": "86d1cc655950",
+      "path": "papers/step/arxiv-2601.09668/README.md",
+      "article_sha256": "69661275434405378df69a35b2522fffce4e141fbf2742f128eab5c98fdc17ee",
+      "module_rows": 6,
+      "principle_subsections": [
+        "### 4.1 语言预对齐前端和压缩接口",
+        "### 4.2 PPO、价值估计与视觉任务奖励",
+        "### 4.3 可检验、视觉相关、难度适中的RL样本",
+        "### 4.4 并行协调推理不是多数投票",
+        "### 4.5 更长文字并非视觉RL收益的唯一来源"
+      ],
+      "subsection_chinese_characters": [
+        124,
+        176,
+        170,
+        179,
+        156
+      ],
+      "architecture_characters": 943,
+      "principles_characters": 2032,
+      "issues": []
+    },
+    {
       "id": "f074a90123d2",
       "path": "papers/streamchat/arxiv-2412.08646/README.md",
-      "article_sha256": "e8ac481ea336975f36b486cb33cb15d539b6961c1115ab3ce7b70ddf28d82157",
+      "article_sha256": "9f8986d8af2c59bc5b9440b0253edea0fe6d9b352fd3de80a693255cab6dad63",
       "module_rows": 6,
       "principle_subsections": [
         "### 4.1 解码中的动态视觉条件",
@@ -4574,7 +5284,7 @@
     {
       "id": "534b58b82f31",
       "path": "papers/thyme/arxiv-2508.11630/README.md",
-      "article_sha256": "ddf3460d95b369a780496d38209a7b82433e7d5eda3de8fe93a11e59e98242c7",
+      "article_sha256": "cda45461468e33e18594f188ab6dcb6a0aa15ea76b9c0329c9e53744a242b2ce",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 模型输出与环境观察分离",
@@ -4612,7 +5322,7 @@
     {
       "id": "474539d7100c",
       "path": "papers/timemarker/arxiv-2411.18211/README.md",
-      "article_sha256": "74d4f8192fc2300a7b65db8e6dee6bcf44075c10e17104a90a6a7962422ff94e",
+      "article_sha256": "57baae955bc2164a03420b84a19e5c92fbbf579559f0d645e8fd730258968f83",
       "module_rows": 5,
       "principle_subsections": [
         "### 4.1 同一文字接口连接输入和时间答案",
@@ -4783,7 +5493,7 @@
     {
       "id": "6527e8551a9d",
       "path": "papers/videochat/arxiv-2607.14935/README.md",
-      "article_sha256": "6f69ce9d9ffff00959293dc0333b4d194f4d5bf9f93b80b4248a4ac650fbf418",
+      "article_sha256": "42d97ddc047ebafd9584629f752699701df77754db83e93c47b295a24b8aa16c",
       "module_rows": 6,
       "principle_subsections": [
         "### 4.1 先交互后压缩与局部时间索引",
@@ -4840,7 +5550,7 @@
     {
       "id": "68c32964bf01",
       "path": "papers/videollama/arxiv-2501.13106/README.md",
-      "article_sha256": "624de0d6f5f23fedc32f47a692e8703c9f819b988323e222a6bcaed2baf99481",
+      "article_sha256": "f4b0fda3bc700685d12a7ec558a53d22edb06bea7147574d064694b950910392",
       "module_rows": 4,
       "principle_subsections": [
         "### 4.1 二维位置编码与动态 token 数",
@@ -4859,7 +5569,7 @@
     {
       "id": "cecc6a20b4b8",
       "path": "papers/videollm-online/arxiv-2406.11816/README.md",
-      "article_sha256": "578e99e5155b6494fcb6a720c4b3e7374ad48f0d86c73af77a3f96595da47fd1",
+      "article_sha256": "7b89c97247981543f2f272a9d9bddb53acb58ff7496f4c8251473ff7a46de01a",
       "module_rows": 6,
       "principle_subsections": [
         "### 4.1 静默监督与回答监督共享生成头",
@@ -4916,7 +5626,7 @@
     {
       "id": "1773ce2a23e8",
       "path": "papers/vila/arxiv-2412.04468/README.md",
-      "article_sha256": "90e4c43d9f8eb6067402af41354473b27653a785f91e20835b495ef2d02d2bfa",
+      "article_sha256": "ba86d29fa70d1706273ee84c5011c93ae38399b4b7e35470706b5956c1165b39",
       "module_rows": 6,
       "principle_subsections": [
         "### 4.1 扩展证据与压缩后优化",
@@ -5051,7 +5761,7 @@
     {
       "id": "14aa0b2943d0",
       "path": "papers/vita/arxiv-2502.05177/README.md",
-      "article_sha256": "e6f808fc1dcc4fc43fcee2fd5a4052925573351d177f2580cd2a4dbcffb1216a",
+      "article_sha256": "3663734ab212bb8c3b5534529a966d0e9e584fccc2fb1650f8e01f9b1a0659ec",
       "module_rows": 6,
       "principle_subsections": [
         "### 4.1 输出头节省与骨干成本分开计算",

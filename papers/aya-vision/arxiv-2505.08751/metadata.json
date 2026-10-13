@@ -1,0 +1,20 @@
+{
+  "paper_id": "fbed0d7612b3",
+  "catalogue_entry_id": "fbed0d7612b3",
+  "family_slug": "aya-vision",
+  "title": "Aya Vision: Advancing the Frontier of Multilingual Multimodality",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "2505.08751v1",
+  "source_url": "https://arxiv.org/pdf/2505.08751v1",
+  "document_kind": "technical_report",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "title_zh": "Aya Vision：多语视觉指令数据与跨模态模型合并",
+  "source_sha256": "d42974ddc7916f9b3d8ed061ed31ce5ef43f4b07fce0b36642a6b6b25e30fe8b",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2025-05-13",
+  "chinese_characters": 2530,
+  "figures_manifest": "figures-manifest.json"
+}

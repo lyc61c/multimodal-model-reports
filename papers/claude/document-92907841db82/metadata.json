@@ -1,0 +1,27 @@
+{
+  "paper_id": "92907841db82",
+  "catalogue_entry_id": "92907841db82",
+  "family_slug": "claude",
+  "title": "Claude Opus 4.6 System Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "78763157dc24d7bd364b72dda9710001578c41ccb7bec890045e59e8b20d87d5"
+    }
+  ],
+  "title_zh": "Claude Opus 4.6：自适应思考、视觉再观察与长任务",
+  "source_sha256": "75130eefef08af5b37eb356f59ccfbe64985d54cb3184be2568db9fe287841f5",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-02-05",
+  "chinese_characters": 1761,
+  "figures_manifest": "figures-manifest.json"
+}

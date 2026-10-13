@@ -1,0 +1,1514 @@
+{
+  "date": "2026-10-13",
+  "status": "passed_with_disclosure_limits",
+  "new_introductions": 34,
+  "complete_introductions": 305,
+  "retained_documents": 306,
+  "model_series": 191,
+  "new_original_assets": 72,
+  "new_self_drawn_diagrams": 21,
+  "all_math_expressions": 3115,
+  "source_roles": "All34 primary sources and9 declared supplemental source objects verified against cached original bytes; baseline source checks also passed.",
+  "regression_checks": {
+    "supplemental_integration": {
+      "status": "passed",
+      "checks": [
+        {
+          "check": "Empty additions retain generated report bytes after newline normalization, holding the intentionally expanded homepage highlights constant",
+          "passed": true,
+          "outputs": 201
+        },
+        {
+          "check": "No-repository official document accepted without invented upstream rows",
+          "passed": true
+        },
+        {
+          "check": "Exact >=100-Star repository accepted",
+          "passed": true
+        },
+        {
+          "check": "Reject future publication",
+          "passed": true
+        },
+        {
+          "check": "Reject low stars",
+          "passed": true
+        },
+        {
+          "check": "Reject missing date locator",
+          "passed": true
+        },
+        {
+          "check": "Reject fake upstream row",
+          "passed": true
+        },
+        {
+          "check": "Reject bad id",
+          "passed": true
+        },
+        {
+          "check": "Reject invalid destination",
+          "passed": true
+        },
+        {
+          "check": "Reject missing version",
+          "passed": true
+        },
+        {
+          "check": "Reject duplicated document/id against upstream",
+          "passed": true
+        },
+        {
+          "check": "Incremental prepare preserves old rows, recovered sources, destination, owner and existing metadata",
+          "passed": true
+        },
+        {
+          "check": "New complete document enters homepage, family count/list and chronological guide; historical catalogue/screening remain upstream-only",
+          "passed": true
+        },
+        {
+          "check": "Changed Python sources compile",
+          "passed": true
+        }
+      ],
+      "limits": "Isolated local fixtures and captured rendering; no article/source fact verification, no network fetch."
+    },
+    "math_formatting_unit_tests": {
+      "tests": 20,
+      "status": "passed"
+    },
+    "markdown_source_integrity": {
+      "checks": 3,
+      "status": "passed",
+      "scope": "Original-byte identity,tamper rejection,newline-transform rejection"
+    }
+  },
+  "new_articles": [
+    {
+      "id": "380e510956a2",
+      "title": "Claude 3.5 Sonnet Model Card Addendum",
+      "path": "papers/claude/document-380e510956a2/README.md",
+      "article_sha256": "f5d60c66b589d861a621e40c09e1f648b6411e94d02f117e2090dcbe71ba9846",
+      "source_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/claude/document-380e510956a2/evidence.json",
+      "author_review_record": "papers/claude/document-380e510956a2/review.json"
+    },
+    {
+      "id": "2c9bf7e5f94a",
+      "title": "Claude 3.7 Sonnet System Card",
+      "path": "papers/claude/document-2c9bf7e5f94a/README.md",
+      "article_sha256": "8729d8a4071ee3b9cb98890b914f052b7a37910d162b8f6bf95bc25721dab60d",
+      "source_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/claude/document-2c9bf7e5f94a/evidence.json",
+      "author_review_record": "papers/claude/document-2c9bf7e5f94a/review.json"
+    },
+    {
+      "id": "28803263c0f6",
+      "title": "Claude 4 System Card",
+      "path": "papers/claude/document-28803263c0f6/README.md",
+      "article_sha256": "fca323558a29566ccbeeb3d597fab4bc5785ee9c41b21aa2ba5ea3c7facc1839",
+      "source_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/claude/document-28803263c0f6/evidence.json",
+      "author_review_record": "papers/claude/document-28803263c0f6/review.json"
+    },
+    {
+      "id": "92907841db82",
+      "title": "Claude Opus 4.6 System Card",
+      "path": "papers/claude/document-92907841db82/README.md",
+      "article_sha256": "e43a6e5403f2887d2ebcad6c9615329a32172402933a411f22c7a670b0799b36",
+      "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/claude/document-92907841db82/evidence.json",
+      "author_review_record": "papers/claude/document-92907841db82/review.json"
+    },
+    {
+      "id": "783cf6ffbfbf",
+      "title": "Claude Opus 5.5 System Card",
+      "path": "papers/claude/document-783cf6ffbfbf/README.md",
+      "article_sha256": "371a43ce5c67feb772fb9969c3479a66abd375498e5abb97f5af78439f97c5a2",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/claude/document-783cf6ffbfbf/evidence.json",
+      "author_review_record": "papers/claude/document-783cf6ffbfbf/review.json"
+    },
+    {
+      "id": "222ef6a5de3d",
+      "title": "Gemini 2.0 Flash Model Card",
+      "path": "papers/gemini/document-222ef6a5de3d/README.md",
+      "article_sha256": "c29ee572434d72638dba267e55d4cb29b0e20644fcccc1d25b473b66e60cd9f5",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gemini/document-222ef6a5de3d/evidence.json",
+      "author_review_record": "papers/gemini/document-222ef6a5de3d/review.json"
+    },
+    {
+      "id": "fd75097b0235",
+      "title": "Gemini 3 Pro Model Card",
+      "path": "papers/gemini/document-fd75097b0235/README.md",
+      "article_sha256": "a0d25cc5abd090de53188d7dc56bec15fb5d54ccaf2a0755e8fd3d5f4ed36608",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gemini/document-fd75097b0235/evidence.json",
+      "author_review_record": "papers/gemini/document-fd75097b0235/review.json"
+    },
+    {
+      "id": "9e94a9ffe555",
+      "title": "Gemini 3 Flash Model Card",
+      "path": "papers/gemini/document-9e94a9ffe555/README.md",
+      "article_sha256": "6bfeb92cb028894e7d6c86e4673551dd3a2ea0f1cbbf0502871bda2377fc905a",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gemini/document-9e94a9ffe555/evidence.json",
+      "author_review_record": "papers/gemini/document-9e94a9ffe555/review.json"
+    },
+    {
+      "id": "affc25e8e162",
+      "title": "GPT-5.4 Thinking System Card",
+      "path": "papers/gpt/document-affc25e8e162/README.md",
+      "article_sha256": "aecd65bdee15b6054e8bf5ddb937e2e410c8303f3a2d61ab96846fcbc067a1a8",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gpt/document-affc25e8e162/evidence.json",
+      "author_review_record": "papers/gpt/document-affc25e8e162/review.json"
+    },
+    {
+      "id": "42bb90895c3a",
+      "title": "GPT-5.6 System Card",
+      "path": "papers/gpt/document-42bb90895c3a/README.md",
+      "article_sha256": "9572bbe79d219acc31dd3fb3e94cc510b88150e572cdb48e2c1427ccaad2b034",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 5,
+      "original_assets": 2,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gpt/document-42bb90895c3a/evidence.json",
+      "author_review_record": "papers/gpt/document-42bb90895c3a/review.json"
+    },
+    {
+      "id": "3e6d0908a22e",
+      "title": "GPT-Live System Card",
+      "path": "papers/gpt/document-3e6d0908a22e/README.md",
+      "article_sha256": "000ccd1f3335e3dfd1942d7709766658642442130f388bac0aaac8106bf11d6c",
+      "source_url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "original_assets": 2,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gpt/document-3e6d0908a22e/evidence.json",
+      "author_review_record": "papers/gpt/document-3e6d0908a22e/review.json"
+    },
+    {
+      "id": "0e63abfcb13e",
+      "title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+      "path": "papers/gpt/document-0e63abfcb13e/README.md",
+      "article_sha256": "3179837548c6eaf95d223e22d799f91c94a746317bfb6f6e339d933f37f69161",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/gpt-6-1-sol.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "original_assets": 2,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gpt/document-0e63abfcb13e/evidence.json",
+      "author_review_record": "papers/gpt/document-0e63abfcb13e/review.json"
+    },
+    {
+      "id": "cd5d2d305595",
+      "title": "ERNIE 4.5 Technical Report",
+      "path": "papers/ernie/document-cd5d2d305595/README.md",
+      "article_sha256": "efdd99a40443761c1241279796eba9bb46f7e367b5e08feaa9818a6e58140d35",
+      "source_url": "https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 6,
+      "principle_subsections": 5,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/ernie/document-cd5d2d305595/evidence.json",
+      "author_review_record": "papers/ernie/document-cd5d2d305595/review.json"
+    },
+    {
+      "id": "52e049b1bc3a",
+      "title": "HunyuanOCR Technical Report",
+      "path": "papers/hunyuan/arxiv-2511.19575/README.md",
+      "article_sha256": "effa708f1043ae07ad603de6e6d47c58b50041fcae631cc52db09ddc1bd7f2f7",
+      "source_url": "https://arxiv.org/pdf/2511.19575v1",
+      "source_version": "2511.19575v1",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "original_assets": 2,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/hunyuan/arxiv-2511.19575/evidence.json",
+      "author_review_record": "papers/hunyuan/arxiv-2511.19575/review.json"
+    },
+    {
+      "id": "76e3de9b2ed3",
+      "title": "Ovis2.5 Technical Report",
+      "path": "papers/ovis/arxiv-2508.11737/README.md",
+      "article_sha256": "5aeb532ff4766cbf36b5c104221c6cb3b47ca9510f2b502bb47191df264045c5",
+      "source_url": "https://arxiv.org/pdf/2508.11737v1",
+      "source_version": "2508.11737v1",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "original_assets": 2,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/ovis/arxiv-2508.11737/evidence.json",
+      "author_review_record": "papers/ovis/arxiv-2508.11737/review.json"
+    },
+    {
+      "id": "86d1cc655950",
+      "title": "STEP3-VL-10B Technical Report",
+      "path": "papers/step/arxiv-2601.09668/README.md",
+      "article_sha256": "69661275434405378df69a35b2522fffce4e141fbf2742f128eab5c98fdc17ee",
+      "source_url": "https://arxiv.org/pdf/2601.09668v1",
+      "source_version": "2601.09668v1",
+      "module_rows": 6,
+      "principle_subsections": 5,
+      "original_assets": 2,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/step/arxiv-2601.09668/evidence.json",
+      "author_review_record": "papers/step/arxiv-2601.09668/review.json"
+    },
+    {
+      "id": "448cf5cdfd37",
+      "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence",
+      "path": "papers/sensenova/arxiv-2609.11929/README.md",
+      "article_sha256": "6b8237c32134d64ecc301d7eeb505a659bd27434469dfa848f29ff41ecb48ead",
+      "source_url": "https://arxiv.org/pdf/2609.11929v1",
+      "source_version": "2609.11929v1",
+      "module_rows": 6,
+      "principle_subsections": 5,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/sensenova/arxiv-2609.11929/evidence.json",
+      "author_review_record": "papers/sensenova/arxiv-2609.11929/review.json"
+    },
+    {
+      "id": "38bf1faaf3c5",
+      "title": "MiniCPM-o 2.6: A GPT-4o Level MLLM for Vision, Speech and Multimodal Live Streaming on Your Phone",
+      "path": "papers/minicpm/document-38bf1faaf3c5/README.md",
+      "article_sha256": "1bdbba9528d054dd5cb2cd34281356897e22c9fe654ca9a23a5c0777e20dfcf4",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_o2dot6_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "original_assets": 1,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/minicpm/document-38bf1faaf3c5/evidence.json",
+      "author_review_record": "papers/minicpm/document-38bf1faaf3c5/review.json"
+    },
+    {
+      "id": "51404279a064",
+      "title": "GLM-4.6V",
+      "path": "papers/glm/document-51404279a064/README.md",
+      "article_sha256": "6883694ee3d0116c8df27c7150c99842690fd9aa3a69d8058501f248ba0f81fa",
+      "source_url": "https://github.com/zai-org/GLM-V/blob/f093b70998bec336acbc00d1a545e05893e3c9fa/README.md",
+      "source_version": "git:f093b70998bec336acbc00d1a545e05893e3c9fa",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/glm/document-51404279a064/evidence.json",
+      "author_review_record": "papers/glm/document-51404279a064/review.json"
+    },
+    {
+      "id": "f799e9065399",
+      "title": "SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture",
+      "path": "papers/sensenova/arxiv-2605.12500/README.md",
+      "article_sha256": "aacf109bfe5937c4502260c3848cbfb0ca7d3f667a6c1ade42f61b83d4e500c7",
+      "source_url": "https://arxiv.org/pdf/2605.12500v1",
+      "source_version": "2605.12500v1",
+      "module_rows": 6,
+      "principle_subsections": 5,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/sensenova/arxiv-2605.12500/evidence.json",
+      "author_review_record": "papers/sensenova/arxiv-2605.12500/review.json"
+    },
+    {
+      "id": "eb1014c14dfe",
+      "title": "MiniCPM-V 4.6",
+      "path": "papers/minicpm/document-eb1014c14dfe/README.md",
+      "article_sha256": "f013fd0f7369244627028ef7b2abdaae2577669d447ccc193f3700a9ae4cf304",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "module_rows": 5,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/minicpm/document-eb1014c14dfe/evidence.json",
+      "author_review_record": "papers/minicpm/document-eb1014c14dfe/review.json"
+    },
+    {
+      "id": "fd34dfc57d84",
+      "title": "MiniCPM-V 4.7",
+      "path": "papers/minicpm/document-fd34dfc57d84/README.md",
+      "article_sha256": "619913914a3deede47af2ca77d66857774534b358efdfa24e33af8e68fec5cb6",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot7_en.md",
+      "source_version": "git:1d6b7d68379974af0375cfdb903613d630da34aa",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/minicpm/document-fd34dfc57d84/evidence.json",
+      "author_review_record": "papers/minicpm/document-fd34dfc57d84/review.json"
+    },
+    {
+      "id": "e3fc1ad19951",
+      "title": "PaliGemma: A versatile 3B VLM for transfer",
+      "path": "papers/paligemma/arxiv-2407.07726/README.md",
+      "article_sha256": "9317ed8924993a83d517375a3f52ef91556bbff08e91a433c9e8b5ff45a4d3b5",
+      "source_url": "https://arxiv.org/pdf/2407.07726v2",
+      "source_version": "2407.07726v2",
+      "module_rows": 7,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/paligemma/arxiv-2407.07726/evidence.json",
+      "author_review_record": "papers/paligemma/arxiv-2407.07726/review.json"
+    },
+    {
+      "id": "136ad0bf6010",
+      "title": "PaliGemma 2: A Family of Versatile VLMs for Transfer",
+      "path": "papers/paligemma/arxiv-2412.03555/README.md",
+      "article_sha256": "094fcc7035b7bcd559cf6312cd059a185ff0bee95f81f5158ac5c51cfb3a89dd",
+      "source_url": "https://arxiv.org/pdf/2412.03555v1",
+      "source_version": "2412.03555v1",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/paligemma/arxiv-2412.03555/evidence.json",
+      "author_review_record": "papers/paligemma/arxiv-2412.03555/review.json"
+    },
+    {
+      "id": "aa88a8d81e68",
+      "title": "Gemma 3 Technical Report",
+      "path": "papers/gemma/arxiv-2503.19786/README.md",
+      "article_sha256": "682c82f51f1eab4e7f329bd8f911341f7a408216567a0d99ec6e8023ee42b81e",
+      "source_url": "https://arxiv.org/pdf/2503.19786v1",
+      "source_version": "2503.19786v1",
+      "module_rows": 7,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gemma/arxiv-2503.19786/evidence.json",
+      "author_review_record": "papers/gemma/arxiv-2503.19786/review.json"
+    },
+    {
+      "id": "c7a2cc906589",
+      "title": "Introducing Gemma 3n: The developer guide",
+      "path": "papers/gemma/document-c7a2cc906589/README.md",
+      "article_sha256": "5f07ed10a2cd9fc9df1b1798032df1429aa0193c0eb51ced0d52964ae66c7211",
+      "source_url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 7,
+      "principle_subsections": 4,
+      "original_assets": 2,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/gemma/document-c7a2cc906589/evidence.json",
+      "author_review_record": "papers/gemma/document-c7a2cc906589/review.json"
+    },
+    {
+      "id": "5140df127b74",
+      "title": "Pixtral Large",
+      "path": "papers/mistral-pixtral/document-5140df127b74/README.md",
+      "article_sha256": "4365374473dfccad9e113eae64812ab97f028286369a54e2aa8b9f4e9056d6ce",
+      "source_url": "https://mistral.ai/news/pixtral-large/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 7,
+      "principle_subsections": 3,
+      "original_assets": 2,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/mistral-pixtral/document-5140df127b74/evidence.json",
+      "author_review_record": "papers/mistral-pixtral/document-5140df127b74/review.json"
+    },
+    {
+      "id": "652708f323d7",
+      "title": "Mistral Small 3.1",
+      "path": "papers/mistral-pixtral/document-652708f323d7/README.md",
+      "article_sha256": "bfc78b73a643299aafdc40ed2031ae93eb1d9dde5fa169eb9a1bdd763f03f834",
+      "source_url": "https://mistral.ai/news/mistral-small-3-1/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "module_rows": 7,
+      "principle_subsections": 3,
+      "original_assets": 1,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/mistral-pixtral/document-652708f323d7/evidence.json",
+      "author_review_record": "papers/mistral-pixtral/document-652708f323d7/review.json"
+    },
+    {
+      "id": "1bb20f4fc0ff",
+      "title": "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks",
+      "path": "papers/florence/arxiv-2311.06242/README.md",
+      "article_sha256": "4c37ad676bb912a3865baf7dbdf35153cf323b7d4dac87773fd2e09fdd62f097",
+      "source_url": "https://arxiv.org/pdf/2311.06242v1",
+      "source_version": "2311.06242v1",
+      "module_rows": 6,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/florence/arxiv-2311.06242/evidence.json",
+      "author_review_record": "papers/florence/arxiv-2311.06242/review.json"
+    },
+    {
+      "id": "fbed0d7612b3",
+      "title": "Aya Vision: Advancing the Frontier of Multilingual Multimodality",
+      "path": "papers/aya-vision/arxiv-2505.08751/README.md",
+      "article_sha256": "b5a8947855d246bf3dc4c6fd357cb1e960a8598ca4e6e5efc9ffeb7b91fb9f7b",
+      "source_url": "https://arxiv.org/pdf/2505.08751v1",
+      "source_version": "2505.08751v1",
+      "module_rows": 7,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 1,
+      "evidence_record": "papers/aya-vision/arxiv-2505.08751/evidence.json",
+      "author_review_record": "papers/aya-vision/arxiv-2505.08751/review.json"
+    },
+    {
+      "id": "63ad52ff7529",
+      "title": "FastVLM: Efficient Vision Encoding for Vision Language Models",
+      "path": "papers/fastvlm/arxiv-2412.13303/README.md",
+      "article_sha256": "6345c67f7066aa192e82eeb4ad523891be2c084a3be3f05836292e7b2aaf3146",
+      "source_url": "https://arxiv.org/pdf/2412.13303v2",
+      "source_version": "2412.13303v2",
+      "module_rows": 7,
+      "principle_subsections": 4,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/fastvlm/arxiv-2412.13303/evidence.json",
+      "author_review_record": "papers/fastvlm/arxiv-2412.13303/review.json"
+    },
+    {
+      "id": "f4eeb8422c62",
+      "title": "Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding",
+      "path": "papers/molmo/arxiv-2601.10611/README.md",
+      "article_sha256": "ce1c42739730bdb6b85b3c390f06cc9b67c03b67d12394ee8e96619c77e8ad7e",
+      "source_url": "https://arxiv.org/pdf/2601.10611v4",
+      "source_version": "2601.10611v4",
+      "module_rows": 7,
+      "principle_subsections": 5,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/molmo/arxiv-2601.10611/evidence.json",
+      "author_review_record": "papers/molmo/arxiv-2601.10611/review.json"
+    },
+    {
+      "id": "a03900c8f0b9",
+      "title": "NVIDIA Nemotron Nano V2 VL",
+      "path": "papers/nemotron/arxiv-2511.03929/README.md",
+      "article_sha256": "17e9385f2294ea90010c0e3847e963ad67841351871cecc1491d4d7f9c60ba41",
+      "source_url": "https://arxiv.org/pdf/2511.03929v1",
+      "source_version": "2511.03929v1",
+      "module_rows": 7,
+      "principle_subsections": 5,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/nemotron/arxiv-2511.03929/evidence.json",
+      "author_review_record": "papers/nemotron/arxiv-2511.03929/review.json"
+    },
+    {
+      "id": "19d0dc679a0e",
+      "title": "MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning",
+      "path": "papers/mm1/arxiv-2409.20566/README.md",
+      "article_sha256": "8e2e686ec7763d4561e0e56dd14adf87ce77aaa2992fccfc480dad2e2b346ed5",
+      "source_url": "https://arxiv.org/pdf/2409.20566v1",
+      "source_version": "2409.20566v1",
+      "module_rows": 7,
+      "principle_subsections": 5,
+      "original_assets": 3,
+      "self_drawn_assets": 0,
+      "evidence_record": "papers/mm1/arxiv-2409.20566/evidence.json",
+      "author_review_record": "papers/mm1/arxiv-2409.20566/review.json"
+    }
+  ],
+  "independent_source_reviews": {
+    "gpt_four": {
+      "review_date": "2026-10-13",
+      "reviewer": "content_audit_3",
+      "mode": "independent_read_only",
+      "article_files_modified": false,
+      "status": "passed_with_disclosure_limits",
+      "entries": [
+        {
+          "id": "affc25e8e162",
+          "path": "papers/gpt/document-affc25e8e162/README.md",
+          "article_sha256": "b0fefc86927741f70b8f55bcdc89545f4b5bd1082ae2520f4b4a22006886b892",
+          "pdf_pages_read": [
+            4,
+            5,
+            6,
+            9,
+            10,
+            11
+          ],
+          "blog_url": "https://openai.com/index/introducing-gpt-5-4/",
+          "blog_locators": [
+            "Computer use and vision",
+            "Tool search",
+            "Coding / fast mode",
+            "Evaluation settings"
+          ],
+          "verified_claims": [
+            "原图像素与边长为同时约束，本文s式明确补充推导，并未声称官方resize实现",
+            "MCP Atlas 250任务、36服务器为同模型工具配置比较，47%为总token差异",
+            "MMMU-Pro xhigh / OmniDocBench none分开",
+            "Table5/7/8的数值、改善与回退均匹配"
+          ],
+          "limits": [
+            "没有通读38页中的其他附录；未独立复现模型或MCP任务",
+            "发布博客通过官方网页提取阅读，独立审查未重新下载HTML原字节"
+          ],
+          "article_reading": "Read all seven README sections",
+          "structure": {
+            "module_rows": 6,
+            "principle_subsections": [
+              "### 4.1 扩大视觉输入预算：保留定位所需的细节",
+              "### 4.2 视觉操作闭环：动作必须经过环境反馈检验",
+              "### 4.3 Tool search：减少工具定义占据的上下文",
+              "### 4.4 保留用户工作：区分任务完成与正确回退"
+            ],
+            "subsection_chinese_characters": [
+              241,
+              257,
+              246,
+              238
+            ],
+            "architecture_characters": 725,
+            "principles_characters": 1953
+          },
+          "source_roles_original_bytes": "passed",
+          "source_verification_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 2,
+            "html_original_bytes": 1,
+            "primary_sources_verified": 1,
+            "explicit_supplemental_sources_verified": 1
+          },
+          "original_figures_viewed": [
+            {
+              "path": "papers/gpt/document-affc25e8e162/figures/original-p009-table-5.png",
+              "sha256": "59508274dd1ac441f2a0608afc0a6fcf0c183a957c3bfa5b5ae649a50a0a287c",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            },
+            {
+              "path": "papers/gpt/document-affc25e8e162/figures/original-p010-table-7.png",
+              "sha256": "1424cdece7084faebc6a67d685b8426230204e4f0ea66869af1434204e4a7ad8",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            },
+            {
+              "path": "papers/gpt/document-affc25e8e162/figures/original-p010-table-8.png",
+              "sha256": "7f0047c54393d4ec8812c9f1c11c1f286a9555e795ee55e48b917d950f129eb2",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            }
+          ],
+          "findings": []
+        },
+        {
+          "id": "42bb90895c3a",
+          "path": "papers/gpt/document-42bb90895c3a/README.md",
+          "article_sha256": "4e4ec491227db569fb10526d8aeedc2b2921359b6dfa972fe546a5ea4e35f1cf",
+          "pdf_pages_read": [
+            2,
+            3,
+            6,
+            10,
+            11,
+            14,
+            68
+          ],
+          "blog_url": "https://openai.com/index/gpt-5-6/",
+          "blog_locators": [
+            "Efficient by default, maximum performance on demand",
+            "Scaling safety and security with capability",
+            "Main tables: Coding / Computer use"
+          ],
+          "verified_claims": [
+            "三档模型、reasoning effort与ultra并行代理明确分开",
+            "四代理默认与部分16代理设置来自blog，未写成MoE结构",
+            "激活分类器明确只披露Sol/Terra，未泛化Luna",
+            "图文安全与Avoidance only/联合正确性数值匹配，700000 GPU小时仅红队预算",
+            "主能力表DeepSWE、Terminal-Bench、OSWorld2.0三档数值匹配"
+          ],
+          "limits": [
+            "未通读完整系统卡的所有风险评测与附录",
+            "官方网页为本次公开页面提取；未对博客做字节级历史对照"
+          ],
+          "article_reading": "Read all seven README sections",
+          "structure": {
+            "module_rows": 6,
+            "principle_subsections": [
+              "### 4.1 模型档位与思考预算是两条不同的扩展轴",
+              "### 4.2 程序化工具调用：让程序处理大量中间结果",
+              "### 4.3 并行代理：墙钟时间与总计算量分开看",
+              "### 4.4 将操作正确性纳入训练：避免“不出错但不完成”",
+              "### 4.5 激活检查与推理检查：主模型之外的系统机制"
+            ],
+            "subsection_chinese_characters": [
+              239,
+              285,
+              198,
+              175,
+              198
+            ],
+            "architecture_characters": 693,
+            "principles_characters": 1979
+          },
+          "source_roles_original_bytes": "passed",
+          "source_verification_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          },
+          "original_figures_viewed": [
+            {
+              "path": "papers/gpt/document-42bb90895c3a/figures/original-p010-vision-table.png",
+              "sha256": "dd4b61c73bcee48c95ad2156b0c9fe778c1118c16fa28494d3ca5bf220612b54",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            },
+            {
+              "path": "papers/gpt/document-42bb90895c3a/figures/original-p011-avoidance-table.png",
+              "sha256": "9f049c8ebc0998d1639928c0098869a8596257fd8b64b4626f245e9e822abcd0",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            }
+          ],
+          "findings": []
+        },
+        {
+          "id": "3e6d0908a22e",
+          "path": "papers/gpt/document-3e6d0908a22e/README.md",
+          "article_sha256": "38d38267b7be1ddf1ff18e8599c96905835018df271ed593ec87a1a64cb34750",
+          "pdf_pages_read": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "blog_url": null,
+          "blog_locators": [],
+          "verified_claims": [
+            "8月4日更正后正文Table1/2为当前结果，未使用附录旧值",
+            "真实语音主模型情感依赖回退与mini性内容回退保留",
+            "全部卡中评测包含delegation；独立模型缺工具/code执行范围准确",
+            "全双工公式F标概念函数而非已披露控制器，ASR评测转写未冒称推理结构"
+          ],
+          "limits": [
+            "7页原文已通读；没有可复现权重、声学结构或交互延迟消融",
+            "表内分数为公开安全响应结果，非全部真实流量发生率"
+          ],
+          "article_reading": "Read all seven README sections",
+          "structure": {
+            "module_rows": 5,
+            "principle_subsections": [
+              "### 4.1 全双工：在时间上同时组织倾听与响应",
+              "### 4.2 模型委派：区分语音主模型与完整体验",
+              "### 4.3 连续系统检查：约束作用于正在展开的对话",
+              "### 4.4 两类语音评测：定向挑战集与真实发生率不同"
+            ],
+            "subsection_chinese_characters": [
+              260,
+              286,
+              214,
+              180
+            ],
+            "architecture_characters": 567,
+            "principles_characters": 1503
+          },
+          "source_roles_original_bytes": "passed",
+          "source_verification_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          },
+          "original_figures_viewed": [
+            {
+              "path": "papers/gpt/document-3e6d0908a22e/figures/original-p004-table-1.png",
+              "sha256": "9073201e318074048de37be109a0da1005bd9150e404200e08c33d4dd882225a",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            },
+            {
+              "path": "papers/gpt/document-3e6d0908a22e/figures/original-p005-table-2.png",
+              "sha256": "f423ea5824bbd31aec1746d27231e674ef4ac04906c39243392d8359c075638e",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            }
+          ],
+          "findings": []
+        },
+        {
+          "id": "0e63abfcb13e",
+          "path": "papers/gpt/document-0e63abfcb13e/README.md",
+          "article_sha256": "e7515c5defc0519738e7a164b999e0d639b659d6cd8f5442283b987403b9fb41",
+          "pdf_pages_read": [
+            4,
+            7,
+            18,
+            19,
+            20,
+            46
+          ],
+          "blog_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+          "blog_locators": [
+            "Near-Astra intelligence for a fifth of the price",
+            "Professional work",
+            "Computer use",
+            "Factuality"
+          ],
+          "verified_claims": [
+            "same types of data and training的类型限定准确，未推断相同数据/权重/蒸馏",
+            "Figure10实际像素2.08%/4.92%/1.50%，指标是搜索不可用说明失败而非幻觉率",
+            "现实应用新版本挑难限制保留，不能混同Astra旧卡版本",
+            "单价与任务成本区分；OSWorld2.0 offline partial reward版本与7/2.1百分点准确",
+            "Table4图文响应指标数值匹配"
+          ],
+          "limits": [
+            "未通读48页所有附录，Astra完整原卡未在本次重新审查",
+            "博客通过本次官方网页提取阅读，未对其HTML作历史字节核验"
+          ],
+          "article_reading": "Read all seven README sections",
+          "structure": {
+            "module_rows": 5,
+            "principle_subsections": [
+              "### 4.1 能力与成本一起比较：区分 token 单价和任务总成本",
+              "### 4.2 视觉专业工作流：保留证据与操作的关联",
+              "### 4.3 搜索失效时说明限制：把证据缺失纳入评价",
+              "### 4.4 在现实应用中约束代理：正确目标还需要正确边界"
+            ],
+            "subsection_chinese_characters": [
+              294,
+              255,
+              254,
+              236
+            ],
+            "architecture_characters": 589,
+            "principles_characters": 1934
+          },
+          "source_roles_original_bytes": "passed",
+          "source_verification_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          },
+          "original_figures_viewed": [
+            {
+              "path": "papers/gpt/document-0e63abfcb13e/figures/original-p007-table-4.png",
+              "sha256": "af217972b1176f83d13eb350e620d68780d73859b42f835b9dd25fb3b102f0f2",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            },
+            {
+              "path": "papers/gpt/document-0e63abfcb13e/figures/original-p018-figure-10.png",
+              "sha256": "0a4813b814126306bbb7c360260c223b5a2fd713c9e874c723ddc7bb994f3405",
+              "pixel_review": "Actually viewed with view_image; caption/header/full rows or axes/model labels intact, no surrounding full-page prose"
+            }
+          ],
+          "findings": []
+        }
+      ],
+      "findings": [],
+      "summary": {
+        "articles": 4,
+        "original_figures_actually_viewed": 9,
+        "substantive_issues_found": 0,
+        "structural_issues": 0,
+        "math_expressions": 37
+      },
+      "math_validation": {
+        "status": "passed",
+        "engine": "MathJax3.2.2 base+ams",
+        "expressions": 37,
+        "failures": [],
+        "limits": "TeX compilation and HTML boundary only; scientific meaning is reviewed against the named sources."
+      }
+    },
+    "global_sample_with_resolved_findings": {
+      "review_date": "2026-10-13",
+      "reviewer": "content_audit_3",
+      "mode": "independent_read_only_sample",
+      "article_files_modified": false,
+      "status": "findings_resolved_with_scoped_review",
+      "scope_note": "仅4篇定向实质抽核，不是全库或四份原文全量事实核验",
+      "findings": [
+        {
+          "id": "sample-1",
+          "paper_id": "aa88a8d81e68",
+          "severity": "factual_error",
+          "status": "resolved_after_independent_follow_up",
+          "location": "README §7 GPQA Diamond /12B IT",
+          "observed": "39.6",
+          "expected": "40.9",
+          "evidence": "固定2503.19786v1 PDF p6 Table6；view_image所见原裁图同值",
+          "suggestion": "将12B GPQA值改为40.9，并同步文章hash记录"
+        },
+        {
+          "id": "sample-2",
+          "paper_id": "136ad0bf6010",
+          "severity": "asset_crop",
+          "status": "resolved_after_independent_follow_up",
+          "location": "figures/original-p007-table-2.png",
+          "observed": "caption最后一行protocol of HierText [57].底部截断；表头及数值完整",
+          "inspected_asset_sha256": "83bae8e2bea1faab302ba7ec78eed82aa0bb3f3168ef6e1f249aa1f3d43b2769",
+          "inspected_crop_bbox": [
+            60,
+            82,
+            535,
+            202
+          ],
+          "suggestion": "略扩大下边界，视觉复看完整caption并同步manifest哈希"
+        },
+        {
+          "id": "sample-3",
+          "paper_id": "136ad0bf6010",
+          "severity": "explanation_gap",
+          "status": "resolved_after_independent_follow_up",
+          "location": "README §3 Gemma2/prefill描述",
+          "observed": "没有明确输入图像+文字prefix双向、输出suffix因果的注意力边界",
+          "evidence": "Pali2v1 p2 §3沿用相同建模；Pali1固定2407.07726v2 p3 Figure2/§3.1明确full input attention与suffixautoregressivemask",
+          "suggestion": "补一句继承的Prefix-LM机制，附固定前作来源；避免只写自回归补全而让读者以为全序列三角mask"
+        }
+      ],
+      "entries": [
+        {
+          "id": "aa88a8d81e68",
+          "path": "papers/gemma/arxiv-2503.19786/README.md",
+          "article_sha256_at_record_time": "d03fbd72b617daa5ce85750ea461338171b96e7e8a4ed38fd9823facb17ac9d2",
+          "article_reading": "Read all seven README sections; factual checking limited to the locators listed",
+          "source_sha256": "b2793d288d6672f8d6a03f65370bb4a48d607f54937a22fc7d9f727435795305",
+          "source_version": "2503.19786v1",
+          "source_pages_read": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "locators": [
+            "§2 pp2–3 architecture/1B boundary",
+            "§3 p4 post-training",
+            "§5.2–5.5 pp6–8 attention/long-context/vision/distillation",
+            "Table6 p6"
+          ],
+          "key_checks": [
+            "5local:1global，首层local；1B无视觉且32K，其余视觉型号128K",
+            "冻结417M视觉encoder、896输入4x4平均池化256token；多crop不共占256",
+            "蒸馏256 logits按概率抽样而非top256；QAT约5000步",
+            "P&S表注PT/4-shot与正文IT冲突已明确保留，最终IT表另外呈现"
+          ],
+          "results_checked": [
+            "Table6中MMMU/MMLU-Pro/MATH/Global MMLU-Lite三档数值匹配",
+            "GPQA 12B原图及提取均40.9，初查README39.6为抄录错误"
+          ],
+          "limits": [
+            "未全读25页附录；本次仅对指定机制及所列结果作实质核对"
+          ],
+          "original_assets_actually_viewed": [
+            {
+              "path": "papers/gemma/arxiv-2503.19786/figures/original-p006-table-6.png",
+              "sha256_at_record_time": "d9cc3a8afaa800d0a87d287ffbd92522b285f0eaa641e2e6355cbef81837d97b",
+              "pixel_review": "Actually viewed with view_image",
+              "issue": null
+            }
+          ],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 7,
+            "principle_subsections": [
+              "### 4.1 五局部一全局：让长上下文的缓存只在部分层增长",
+              "### 4.2 高分辨率编码与平均池化：在细节和序列成本之间分工",
+              "### 4.3 Pan & Scan：用多个视图恢复整图缩放丢失的细节",
+              "### 4.4 稀疏教师分布蒸馏与量化感知微调"
+            ],
+            "subsection_chinese_characters": [
+              339,
+              195,
+              266,
+              279
+            ],
+            "architecture_characters": 975,
+            "principles_characters": 2324
+          },
+          "source_bytes_and_roles": "passed",
+          "source_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          }
+        },
+        {
+          "id": "c7a2cc906589",
+          "path": "papers/gemma/document-c7a2cc906589/README.md",
+          "article_sha256_at_record_time": "b0fe4ef2f6cfb839e173506a954edab146170e069d0e982d4031852c09b5ede9",
+          "article_reading": "Read all seven README sections; factual checking limited to the locators listed",
+          "source_sha256": "f0466fb94598b0923ed3817d7d9f13a0c138836ad5e1ecc596a03a117f694937",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "source_pages_read": null,
+          "locators": [
+            "固定官方博客完整技术正文：What’s new / MatFormer / PLE / KV Cache sharing / Audio understanding / MobileNet-V5",
+            "固定HF模型卡c1221e9c62e34a43ab7ffacd1be0ea71f126ef10：Model Information / Model Data / Implementation / Evaluation tables"
+          ],
+          "key_checks": [
+            "E2B/E4B有效约2B/4B与总约5B/8B不同；PLE图5.44B=1.91+.3+.68+2.55",
+            "E4B35层/E2B30层原图与FFN8192–16384博客一致；运行时弹性切换尚非发布实现",
+            "PLE CPU/缓存参数放置与模态按需加载分开，未声称完整应用只需1.91B权重",
+            "共享中层local/global K/V给上层；2x为prefill，13x为特定Pixel Edge TPU视觉encoder",
+            "图像256token、音频每秒6.25、30秒发布边界与32K总预算吻合"
+          ],
+          "results_checked": [
+            "固定卡Reasoning table HellaSwag PT10-shot72.2/78.6",
+            "Multilingual table MGSM53.1/60.7、Global-MMLU55.1/60.3匹配",
+            "STEM GPQA24.8/23.7与Additional HumanEval66.5/75.0、MMLU-Pro40.5/50.6匹配"
+          ],
+          "limits": [
+            "未读取受限config/weights；原模型卡结果为Markdown表，未假称存在原文PDF结果图",
+            "没有重新运行端侧效率实验"
+          ],
+          "original_assets_actually_viewed": [
+            {
+              "path": "papers/gemma/document-c7a2cc906589/figures/official-matformer.jpg",
+              "sha256_at_record_time": "85d414079fb04187a63df46e42391dd376ee7f213a8b4f7885047edbb131b2bd",
+              "pixel_review": "Actually viewed with view_image",
+              "issue": null
+            },
+            {
+              "path": "papers/gemma/document-c7a2cc906589/figures/official-ple.jpg",
+              "sha256_at_record_time": "0f22e230f32c987d7a34116bc3e7446e9d11dc59fbb393d511008077338644f5",
+              "pixel_review": "Actually viewed with view_image",
+              "issue": null
+            }
+          ],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 7,
+            "principle_subsections": [
+              "### 4.1 MatFormer：联合训练嵌套子网，而非推理时随意删除参数",
+              "### 4.2 PLE：把参数容量与加速器常驻内存拆开",
+              "### 4.3 KV sharing：让上层复用中间层的历史表示",
+              "### 4.4 多模态低 token 表示：控制输入预算仍要保留模态差异"
+            ],
+            "subsection_chinese_characters": [
+              273,
+              288,
+              165,
+              228
+            ],
+            "architecture_characters": 929,
+            "principles_characters": 2140
+          },
+          "source_bytes_and_roles": "passed",
+          "source_statistics": {
+            "html_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          }
+        },
+        {
+          "id": "136ad0bf6010",
+          "path": "papers/paligemma/arxiv-2412.03555/README.md",
+          "article_sha256_at_record_time": "fadb60e1541a4549ca83c759d5ea50f1b9dd83be94d0e9de8ea34b7edb8aa509",
+          "article_reading": "Read all seven README sections; factual checking limited to the locators listed",
+          "source_sha256": "4edfa3741ad3f6be5bfec1c495dfdc82efc362809384697ebd7c6a20bcbde6b4",
+          "source_version": "2412.03555v1",
+          "source_pages_read": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "locators": [
+            "§3 pp2–3 model/training",
+            "§4.1 pp4–6 scaling/transfer LR",
+            "§4.2–4.8 pp5–9 downstream tasks/data",
+            "Table2 p7 OCR result",
+            "Inherited modeling reference PaliGemma2407.07726v2 p3 Figure2/§3.1 and p4"
+          ],
+          "key_checks": [
+            "SigLIP400m/14+linear+Gemma2，256/1024/4096视觉token，无固定查询压缩",
+            "联合更新全部参数、1B样本后50M/10M高分辨率适配，softcapping迁移关闭",
+            "预训练标签未用商业大VLM，医学迁移明确另用Gemini1.5Pro去既往胸片提及，口径分层正确",
+            "学习率网格、验证选型再训练、型号/分辨率结果均保留",
+            "继承Prefix-LM由Pali2p2same modeling与Pali1v2p3明确：图像与输入prefix相互可见，suffix自回归；现文章只写前缀prefill，可补机制解释"
+          ],
+          "results_checked": [
+            "Table2原图75.9/74.2 F1及HTS74.5/72.4一致",
+            "Table3 PubTabNet S-TEDS97.6低于97.9已如实保留",
+            "Table4–7分子94.8/乐谱SER2.3/DOCCI20.3及28.4/VSR79.8核对一致"
+          ],
+          "limits": [
+            "未全读31页附录；只补读被继承的Pali1v2 pp3–4而非全篇",
+            "OCR结果表数值完整，但所见裁图最后一行caption底部截断"
+          ],
+          "original_assets_actually_viewed": [
+            {
+              "path": "papers/paligemma/arxiv-2412.03555/figures/original-p007-table-2.png",
+              "sha256_at_record_time": "83bae8e2bea1faab302ba7ec78eed82aa0bb3f3168ef6e1f249aa1f3d43b2769",
+              "pixel_review": "Actually viewed with view_image",
+              "issue": "sample-2"
+            }
+          ],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 6,
+            "principle_subsections": [
+              "### 4.1 控制变量比较：扩大语言模型还是增加图像细节",
+              "### 4.2 分阶段提升分辨率：避免全程支付最高视觉成本",
+              "### 4.3 将空间与专业任务转成可生成的结构序列",
+              "### 4.4 迁移学习率与规模：更大的模型需要重新调节更新幅度"
+            ],
+            "subsection_chinese_characters": [
+              227,
+              208,
+              252,
+              198
+            ],
+            "architecture_characters": 844,
+            "principles_characters": 2034
+          },
+          "source_bytes_and_roles": "passed",
+          "source_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          }
+        },
+        {
+          "id": "52e049b1bc3a",
+          "path": "papers/hunyuan/arxiv-2511.19575/README.md",
+          "article_sha256_at_record_time": "3ccdaf55184d620fb61a4c927dd83e56edf52ccaef158b455ed1743c48291a16",
+          "article_reading": "Read all seven README sections; factual checking limited to the locators listed",
+          "source_sha256": "44e92e446215734ee7c20fcf2cfef6ad997be55d5f91c120dbf95675cee9628a",
+          "source_version": "2511.19575v1",
+          "source_pages_read": [
+            5,
+            6,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "locators": [
+            "§3 pp5–6 model design",
+            "§4.1.1 p6 spotting coordinate protocol",
+            "§5.1 pp9–10 four-stage pretraining/Table2",
+            "§5.2.1–5.2.3 pp10–11 curation/reward/GRPO Eq1",
+            "§6 pp11–13 Table3–6"
+          ],
+          "key_checks": [
+            "固定v1原始模型与后续1.5明确分开；SigLIP-v2-400M、adaptivelearnablepooling、稠密Hunyuan0.5B匹配",
+            "XD-RoPE文字/高/宽/时间四子空间；quad协议是两个对角点归一到0–1000",
+            "四阶段50/300/80/24B、8K/8K/32K/32K与冻结/解冻安排吻合，之后另有GRPO",
+            "spotting IoU分配后1-NED、未匹配零；VQA语义0/1、翻译0–5重校准、格式/超长零奖励一致",
+            "紧凑GRPO式保持maximize、clippedratio、组内advantage与KL约束，未冒造超参"
+          ],
+          "results_checked": [
+            "Table4 OmniDocBench94.10、Wild85.21、DocML91.03及text0.042 vsPaddle0.039匹配",
+            "Table5 Cards92.29/Receipts92.53/Subtitles92.87/OCRBench860匹配",
+            "Table6 DoTA83.48低于Gemini2.5Flash85.60的边界保留"
+          ],
+          "limits": [
+            "未全读35页报告与任务附录；本次只核v1指定机制、训练表及结果范围",
+            "没有模型执行、奖励实现或GRPO训练复现"
+          ],
+          "original_assets_actually_viewed": [
+            {
+              "path": "papers/hunyuan/arxiv-2511.19575/figures/parsing-results.png",
+              "sha256_at_record_time": "344a3987f14354ffe4e2998bff8e85171fe45be5115b1cd5b7005b315ca88e95",
+              "pixel_review": "Actually viewed with view_image",
+              "issue": null
+            }
+          ],
+          "structure_issues": [],
+          "structure_metrics": {
+            "module_rows": 5,
+            "principle_subsections": [
+              "### 4.1 原生分辨率与压缩接口各自承担不同任务",
+              "### 4.2 XD-RoPE与结构化空间输出",
+              "### 4.3 任务适配奖励：同时约束内容与格式",
+              "### 4.4 GRPO把任务评分转成策略更新"
+            ],
+            "subsection_chinese_characters": [
+              183,
+              171,
+              203,
+              151
+            ],
+            "architecture_characters": 893,
+            "principles_characters": 1696
+          },
+          "source_bytes_and_roles": "passed",
+          "source_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          }
+        }
+      ],
+      "supplemental_verified": {
+        "path": "source/papers/c7a2cc906589/supplemental/source.md",
+        "sha256": "9abba3d9811d38df10311cc3f24c52317a9edb50d390945e5a70802750b227b8",
+        "expected_sha256": "9abba3d9811d38df10311cc3f24c52317a9edb50d390945e5a70802750b227b8"
+      },
+      "summary": {
+        "articles_sampled": 4,
+        "pdf_primary_reports_targeted": 3,
+        "official_blog_body_read": 1,
+        "fixed_HF_model_card_selected_sections": 1,
+        "inherited_predecessor_reference_pages_read": 2,
+        "original_assets_actually_viewed": 5,
+        "factual_errors": 1,
+        "crop_defects": 1,
+        "explanation_gaps": 1,
+        "math_expressions": 28
+      },
+      "math_validation": {
+        "status": "passed",
+        "engine": "MathJax3.2.2 base+ams",
+        "expressions": 28,
+        "failures": [],
+        "limits": "TeX compilation and HTML boundary only; scientific meaning is reviewed against the named sources."
+      },
+      "follow_up_reviews": [
+        {
+          "review_date": "2026-10-13",
+          "mode": "independent_read_only_fix_verification",
+          "article_files_modified": false,
+          "results": [
+            {
+              "finding_id": "sample-1",
+              "status": "resolved",
+              "path": "papers/gemma/arxiv-2503.19786/README.md",
+              "article_sha256": "254a0f8a0f7d1162d64ab1cd7a04924c0ccb10f8be5df3b0e77dbed40d4a5348",
+              "check": "Reread corrected GPQA row, now40.9, matching previously inspected fixedv1 Table6"
+            },
+            {
+              "finding_id": "sample-2",
+              "status": "resolved",
+              "path": "papers/paligemma/arxiv-2412.03555/figures/original-p007-table-2.png",
+              "new_asset_sha256": "365a12b97295270d20078f7ad034a6ab7395ffcc1b62466d6fb7854578c529c5",
+              "new_crop_bbox": [
+                60,
+                82,
+                535,
+                218
+              ],
+              "check": "Actually viewed revised PNG pixels; final protocol of HierText[57] caption line fully visible with margin, all rows/headers retained; earlier cropped SHA retained in original finding"
+            },
+            {
+              "finding_id": "sample-3",
+              "status": "resolved",
+              "path": "papers/paligemma/arxiv-2412.03555/README.md",
+              "article_sha256": "75b013ba1d520dacb6f563b995d41c6c24c98f7df245a45c9d7479b489bd3649",
+              "check": "Reread explicit input-prefix bidirectional / output-suffix causal boundary; source inheritance fixedPaliGemma v2 p3 cited; language-side update distinguished from standalone SigLIP image encoder"
+            }
+          ]
+        }
+      ]
+    },
+    "closed_models_directed_passages": {
+      "date": "2026-10-13",
+      "reviewer": "root",
+      "status": "passed_with_scope_limits",
+      "entries": [
+        {
+          "id": "28803263c0f6",
+          "title": "Claude 4 System Card",
+          "path": "papers/claude/document-28803263c0f6/README.md",
+          "article_sha256_at_review": "f93effdb8589f4640f30bd6db7cd05654df3553f0425e462c7352ad49fc97a62",
+          "scope": "Read architecture/principles passages and the named cached primary PDF pages; not a full-document review.",
+          "primary_pdf_pages_read": [
+            7,
+            20
+          ],
+          "claims_checked": [
+            "Small-model thought summaries are a separate output mechanism; most thoughts are still displayed in full.",
+            "Prompt-injection result 71 to89 and69 to86 is scoped to600 malicious computer-use cases and combined RL/runtime measures."
+          ],
+          "findings": []
+        },
+        {
+          "id": "783cf6ffbfbf",
+          "title": "Claude Opus 5.5 System Card",
+          "path": "papers/claude/document-783cf6ffbfbf/README.md",
+          "article_sha256_at_review": "9b241aa4e34fe4889ff99ab44c777169d5b59b7904f1d43bb2b9af0c0719fcb9",
+          "scope": "Read architecture/principles passages and the named cached primary PDF pages; not a full-document review.",
+          "primary_pdf_pages_read": [
+            205,
+            206
+          ],
+          "claims_checked": [
+            "Partial credit weights checkpoints; strict success requires every checkpoint. The equation is explicitly explanatory.",
+            "OSWorld setting is108 tasks,1080p,500 steps,max effort,five pass@1 runs,100K compaction; reported81.8/48.7 are distinct scoring rules."
+          ],
+          "findings": []
+        },
+        {
+          "id": "9e94a9ffe555",
+          "title": "Gemini 3 Flash Model Card",
+          "path": "papers/gemini/document-9e94a9ffe555/README.md",
+          "article_sha256_at_review": "801ca137bdde376817702386d7cc7eec9c9bbfd82183dc12eb2400ef24e92590",
+          "scope": "Read architecture/principles passages and the named cached primary PDF pages; not a full-document review.",
+          "primary_pdf_pages_read": [
+            2,
+            3
+          ],
+          "claims_checked": [
+            "Inputs text,image,audio,video;1M input and64K output. Text-only output is not claimed to be generative audio/video.",
+            "Based on Gemini3Pro does not establish an undisclosed distillation objective; TPU,JAX,Pathways statements are source-grounded."
+          ],
+          "findings": []
+        }
+      ],
+      "limits": "Directed independent source spot-checks only; scientific correctness of unlisted claims is not asserted."
+    },
+    "cn_sample": {
+      "date": "2026-10-13",
+      "reviewer": "content_audit_3",
+      "mode": "independent_read_only_targeted_sample",
+      "status": "passed_with_disclosure_limits",
+      "article_files_modified": false,
+      "scope_note": "Only §3/§4 and representative §7 numbers in three entries; not full articles or whole-repository factual verification.",
+      "findings": [],
+      "entries": [
+        {
+          "id": "cd5d2d305595",
+          "pdf_pages_targeted": [
+            5,
+            6,
+            7,
+            8,
+            11,
+            12,
+            13,
+            17,
+            18,
+            19,
+            39,
+            40,
+            41
+          ],
+          "reading_detail": "Read architecture pp5–8, configuration Table2 p11, optimization Eq1–3 pp12–13, VLM post-training §4.2 pp17–19, Tables7/8 p40 and video protocol p41; p39 only the multimodal benchmark/protocol paragraphs, not the preceding text benchmark table in depth.",
+          "locators": [
+            "§2.1–2.4 pp5–8",
+            "Table2 p11",
+            "§3.4.1–3.4.2 Eq1–3 pp12–13",
+            "§4.2 pp17–19",
+            "§8.2 / Tables7–8 pp39–41"
+          ],
+          "checks": [
+            "模态隔离router、共享attention及共享expert范围与Table2大模型—/小模型2吻合；宽度1/3的66%仅单视觉token FFN",
+            "空间2x2重排/时间2x重排及静态图特征复制统一接口、像素时间戳与3D/1DRoPE边界吻合",
+            "归一router列向量正交式准确，1e-3解耦且不按学习率缩放；balanced loss分子仅监督文字、分母全长准确",
+            "VL三阶段SFT+GRPO/DAPO启发项没有误用文本UPO",
+            "§7非思考MMBench86.9/90.8、OCR885/883、VideoMME74.4/66.8与79.7/70.0，思考MMMU61.8/70.0、VisualPuzzle36.9/46.3和o1对照均匹配"
+          ],
+          "limits": [
+            "未复审72页的其他纯文本、部署与附录部分",
+            "静态图复制的原文更精确说复制image feature；现文作为合成两帧逻辑接口可读，不据此推断ViT运行两次"
+          ],
+          "path": "papers/ernie/document-cd5d2d305595/README.md",
+          "article_sha256_at_review": "efdd99a40443761c1241279796eba9bb46f7e367b5e08feaa9818a6e58140d35",
+          "source_version": "official-source-snapshot-2026-10-13",
+          "source_sha256": "7ab20ebf5cb908779d6e334aa8894ccc66f799eda51677e56d9b832b0cc383a6",
+          "source_cache_bytes_and_roles": "passed",
+          "source_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          },
+          "original_crop_viewed": {
+            "path": "papers/ernie/document-cd5d2d305595/figures/non-thinking-results.png",
+            "sha256": "622bdce2f0437465da6e54cdda43195c6e19406f493a6d189a42b1c0426b3146",
+            "pdf_page": 40,
+            "crop_bbox": [
+              70,
+              68,
+              530,
+              398
+            ],
+            "pixel_review": "Actually viewed with view_image; full table/header/model columns/all rows and caption retained; no full page prose"
+          },
+          "findings": []
+        },
+        {
+          "id": "76e3de9b2ed3",
+          "pdf_pages_targeted": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "reading_detail": "Read §2 architecture and Figure2 pp3–4, §3.1.2/§3.2/§3.3 pp5–6, and original Tables2–8 pp6–9 for the selected mechanisms and representative numbers.",
+          "locators": [
+            "§2 / Figure2 pp3–4",
+            "§3.1.2 p5",
+            "§3.2–3.3 pp5–6",
+            "Tables2–8 pp6–9"
+          ],
+          "checks": [
+            "Visual head线性softmax、VET期望嵌入的说明式与原文机制一致，未把视觉词解释为对象文字标签",
+            "NaViT由SigLIP2-so400m-patch16-512初始化；P1位置插值/RoPE关闭，P2每block开启；总像素上下界准确",
+            "DPO全参及NLL辅助、GRPO只更新LLM/冻结视觉、选择题转填空均有原文支撑",
+            "OpenCompass73.9/78.3、MMMU59.8/71.2、MathVista81.4/83.4、OCRv2/ChartQAPro/grounding/video代表数字匹配，作者复测星号与原报告值边界保留"
+          ],
+          "limits": [
+            "未读30页中后续定性示例附录；不核全部数据源或运行权重",
+            "说明式的W/b为线性映射通用记号，不据此证明具体bias参数配置"
+          ],
+          "path": "papers/ovis/arxiv-2508.11737/README.md",
+          "article_sha256_at_review": "5aeb532ff4766cbf36b5c104221c6cb3b47ca9510f2b502bb47191df264045c5",
+          "source_version": "2508.11737v1",
+          "source_sha256": "a5c8146196b48f24350fb81803c96face4ba1b42e46bdfa2a76ecc7e72d50978",
+          "source_cache_bytes_and_roles": "passed",
+          "source_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          },
+          "original_crop_viewed": {
+            "path": "papers/ovis/arxiv-2508.11737/figures/opencompass-results.png",
+            "sha256": "84d4105bac53518c2fa937e9e82eb8414e6c3d8aae5804c5ef38b4ba84be74e0",
+            "pdf_page": 7,
+            "crop_bbox": [
+              70,
+              68,
+              527,
+              248
+            ],
+            "pixel_review": "Actually viewed with view_image; full table/header/model columns/all rows and caption retained; no full page prose"
+          },
+          "findings": []
+        },
+        {
+          "id": "86d1cc655950",
+          "pdf_pages_targeted": [
+            4,
+            7,
+            8,
+            9,
+            10,
+            12,
+            15,
+            16,
+            17,
+            18
+          ],
+          "reading_detail": "Read architecture §2.1 p4, PPO/GAE/reward and sequential/parallel RL pp7–10, inference setup p12, original Table3 p15, and ablation/RL dynamics pp16–18. Only these requested mechanisms and selected outcomes were checked, not the full50-page report.",
+          "locators": [
+            "§2.1 p4",
+            "§3.2.1–3.2.4 Eq1–3 pp7–10",
+            "§4.1 p12",
+            "Table3 p15",
+            "§5.1–5.2 pp16–18"
+          ],
+          "checks": [
+            "PE-lang1.8B+Qwen3-8B、728global/504local、两stride2的16倍位置压缩、patch行newline与1DRoPE准确；300M仅消融",
+            "GAE公式上下限/TD项、gamma=lambda1、actorcritic2e-6/5e-6及截断比率C8匹配，未把省略标准IS写成没有任何修正",
+            "四次验证、24rolloutsomeaccept、600RLVR/300RLHF/500PaCoRe预算与onpolicy区别吻合",
+            "PaCoRe16SeRe轨迹、评测64K/128K、不是多数票；补充概率式明确非原创优化目标",
+            "Table3 MMMU78.11/80.11、MathVision70.81/75.95、MathVista83.97/85.50、Hallusion64.91/64.54、AIME87.66/94.43等选值匹配",
+            "固定论文原句OSWorld在官网表明为OSWorld-G；现文正确限定grounding，未冒称完整任务成功率",
+            "官方HF News再次核对Qwen3VL-8B文本max_tokens32K勘误，现文保留自家固定值、不据旧对照下强结论"
+          ],
+          "supplemental_read": {
+            "url": "https://huggingface.co/stepfun-ai/Step3-VL-10B",
+            "observed_date": "2026-10-13",
+            "locator": "News & Updates / Metric Correction; comparison table OSWorld-G",
+            "method": "Read-only web extraction of official model card; raw/main URL inaccessible, normal page accessible",
+            "limits": "Live official page, no independent pinned revision or original-byte cache claimed in this review"
+          },
+          "limits": [
+            "未读PaCoRe附录或完整50页报告；未运行训练/推理",
+            "外部裁判效果按作者报告，不证明器化；未核验内部教师权重"
+          ],
+          "path": "papers/step/arxiv-2601.09668/README.md",
+          "article_sha256_at_review": "69661275434405378df69a35b2522fffce4e141fbf2742f128eab5c98fdc17ee",
+          "source_version": "2601.09668v1",
+          "source_sha256": "275790c48e9821cfbcf073e83c050936a8b82783ec428fc71090a37b7ab544bf",
+          "source_cache_bytes_and_roles": "passed",
+          "source_statistics": {
+            "pdf_original_bytes": 1,
+            "original_source_objects_verified": 1,
+            "primary_sources_verified": 1
+          },
+          "original_crop_viewed": {
+            "path": "papers/step/arxiv-2601.09668/figures/reasoning-results.png",
+            "sha256": "3e303aebc8f5044cb7a0d14a349ae3b6968b0a9dba04b65dcd9d18508ee9c87a",
+            "pdf_page": 15,
+            "crop_bbox": [
+              70,
+              84,
+              530,
+              760
+            ],
+            "pixel_review": "Actually viewed with view_image; full table/header/model columns/all rows and caption retained; no full page prose"
+          },
+          "findings": []
+        }
+      ],
+      "summary": {
+        "articles_sampled": 3,
+        "original_crops_actually_viewed": 3,
+        "substantive_errors_found": 0,
+        "formulas_in_checked_sections": 31
+      },
+      "math_validation": {
+        "status": "passed",
+        "engine": "MathJax3.2.2 base+ams",
+        "expressions": 31,
+        "failures": [],
+        "limits": "TeX compilation and HTML boundary only; scientific meaning is reviewed against the named sources."
+      }
+    }
+  },
+  "post_review_changes": "Deterministic navigation/formatting and labeled architecture rendering; GPT5.4 long inline bound moved to a display fence for375px layout. Final article hashes are listed above; review snapshots retain their actual earlier hashes.",
+  "limits": "Every article has its author source-reading and asset-inspection record. Independent reviews cover only the explicitly named articles, pages and claims; shape/hash/math checks are not full factual verification or experimental reproduction. Closed-model undisclosed internals remain explicitly undisclosed."
+}

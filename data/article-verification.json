@@ -1,12 +1,12 @@
 {
-  "total": 272,
+  "total": 306,
   "states": {
-    "complete": 271,
+    "complete": 305,
     "source_unavailable": 1
   },
   "completed_with_integrity_issues": 0,
-  "original_assets": 1516,
-  "derived_assets": 62,
+  "original_assets": 1588,
+  "derived_assets": 83,
   "entries": [
     {
       "id": "0809c95bdef1",
@@ -114,6 +114,18 @@
         "principle_subsections": 3
       },
       "assets": 9,
+      "derived_assets": 1
+    },
+    {
+      "id": "fbed0d7612b3",
+      "status": "complete",
+      "destination": "papers/aya-vision/arxiv-2505.08751",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 4
+      },
+      "assets": 3,
       "derived_assets": 1
     },
     {
@@ -354,6 +366,66 @@
         "principle_subsections": 4
       },
       "assets": 6,
+      "derived_assets": 1
+    },
+    {
+      "id": "380e510956a2",
+      "status": "complete",
+      "destination": "papers/claude/document-380e510956a2",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
+      "assets": 1,
+      "derived_assets": 1
+    },
+    {
+      "id": "2c9bf7e5f94a",
+      "status": "complete",
+      "destination": "papers/claude/document-2c9bf7e5f94a",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
+      "assets": 1,
+      "derived_assets": 1
+    },
+    {
+      "id": "28803263c0f6",
+      "status": "complete",
+      "destination": "papers/claude/document-28803263c0f6",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
+      "assets": 1,
+      "derived_assets": 1
+    },
+    {
+      "id": "92907841db82",
+      "status": "complete",
+      "destination": "papers/claude/document-92907841db82",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
+      "assets": 1,
+      "derived_assets": 1
+    },
+    {
+      "id": "783cf6ffbfbf",
+      "status": "complete",
+      "destination": "papers/claude/document-783cf6ffbfbf",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
+      "assets": 1,
       "derived_assets": 1
     },
     {
@@ -693,6 +765,18 @@
       "derived_assets": 0
     },
     {
+      "id": "cd5d2d305595",
+      "status": "complete",
+      "destination": "papers/ernie/document-cd5d2d305595",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 5
+      },
+      "assets": 3,
+      "derived_assets": 0
+    },
+    {
       "id": "85842e4c40d6",
       "status": "complete",
       "destination": "papers/eve/arxiv-2406.11832",
@@ -717,6 +801,18 @@
       "derived_assets": 0
     },
     {
+      "id": "63ad52ff7529",
+      "status": "complete",
+      "destination": "papers/fastvlm/arxiv-2412.13303",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 4
+      },
+      "assets": 3,
+      "derived_assets": 0
+    },
+    {
       "id": "9393822c356b",
       "status": "complete",
       "destination": "papers/ferret/arxiv-2310.07704",
@@ -738,6 +834,18 @@
         "principle_subsections": 3
       },
       "assets": 5,
+      "derived_assets": 0
+    },
+    {
+      "id": "1bb20f4fc0ff",
+      "status": "complete",
+      "destination": "papers/florence/arxiv-2311.06242",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
+      "assets": 3,
       "derived_assets": 0
     },
     {
@@ -777,6 +885,18 @@
       "derived_assets": 1
     },
     {
+      "id": "222ef6a5de3d",
+      "status": "complete",
+      "destination": "papers/gemini/document-222ef6a5de3d",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
+      "assets": 1,
+      "derived_assets": 1
+    },
+    {
       "id": "8c1dda86c921",
       "status": "complete",
       "destination": "papers/gemini/document-8c1dda86c921",
@@ -786,6 +906,30 @@
         "principle_subsections": 3
       },
       "assets": 4,
+      "derived_assets": 1
+    },
+    {
+      "id": "fd75097b0235",
+      "status": "complete",
+      "destination": "papers/gemini/document-fd75097b0235",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
+      "assets": 1,
+      "derived_assets": 1
+    },
+    {
+      "id": "9e94a9ffe555",
+      "status": "complete",
+      "destination": "papers/gemini/document-9e94a9ffe555",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 3
+      },
+      "assets": 1,
       "derived_assets": 1
     },
     {
@@ -822,6 +966,30 @@
         "principle_subsections": 3
       },
       "assets": 3,
+      "derived_assets": 1
+    },
+    {
+      "id": "aa88a8d81e68",
+      "status": "complete",
+      "destination": "papers/gemma/arxiv-2503.19786",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 4
+      },
+      "assets": 3,
+      "derived_assets": 1
+    },
+    {
+      "id": "c7a2cc906589",
+      "status": "complete",
+      "destination": "papers/gemma/document-c7a2cc906589",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 4
+      },
+      "assets": 2,
       "derived_assets": 1
     },
     {
@@ -871,6 +1039,18 @@
       },
       "assets": 4,
       "derived_assets": 0
+    },
+    {
+      "id": "51404279a064",
+      "status": "complete",
+      "destination": "papers/glm/document-51404279a064",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
+      "assets": 1,
+      "derived_assets": 1
     },
     {
       "id": "e213666dcb0d",
@@ -969,6 +1149,42 @@
       "derived_assets": 1
     },
     {
+      "id": "affc25e8e162",
+      "status": "complete",
+      "destination": "papers/gpt/document-affc25e8e162",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
+      "assets": 3,
+      "derived_assets": 1
+    },
+    {
+      "id": "3e6d0908a22e",
+      "status": "complete",
+      "destination": "papers/gpt/document-3e6d0908a22e",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
+      "assets": 2,
+      "derived_assets": 1
+    },
+    {
+      "id": "42bb90895c3a",
+      "status": "complete",
+      "destination": "papers/gpt/document-42bb90895c3a",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 5
+      },
+      "assets": 2,
+      "derived_assets": 1
+    },
+    {
       "id": "0d9109ba3678",
       "status": "complete",
       "destination": "papers/gpt/document-0d9109ba3678",
@@ -978,6 +1194,18 @@
         "principle_subsections": 4
       },
       "assets": 4,
+      "derived_assets": 1
+    },
+    {
+      "id": "0e63abfcb13e",
+      "status": "complete",
+      "destination": "papers/gpt/document-0e63abfcb13e",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
+      "assets": 2,
       "derived_assets": 1
     },
     {
@@ -1038,6 +1266,18 @@
         "principle_subsections": 3
       },
       "assets": 9,
+      "derived_assets": 0
+    },
+    {
+      "id": "52e049b1bc3a",
+      "status": "complete",
+      "destination": "papers/hunyuan/arxiv-2511.19575",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
+      "assets": 2,
       "derived_assets": 0
     },
     {
@@ -1773,6 +2013,18 @@
       "derived_assets": 0
     },
     {
+      "id": "38bf1faaf3c5",
+      "status": "complete",
+      "destination": "papers/minicpm/document-38bf1faaf3c5",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
+      "assets": 1,
+      "derived_assets": 0
+    },
+    {
       "id": "5679fdac7d01",
       "status": "complete",
       "destination": "papers/minicpm/document-5679fdac7d01",
@@ -1795,6 +2047,30 @@
       },
       "assets": 3,
       "derived_assets": 0
+    },
+    {
+      "id": "eb1014c14dfe",
+      "status": "complete",
+      "destination": "papers/minicpm/document-eb1014c14dfe",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
+      "assets": 3,
+      "derived_assets": 1
+    },
+    {
+      "id": "fd34dfc57d84",
+      "status": "complete",
+      "destination": "papers/minicpm/document-fd34dfc57d84",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
+      "assets": 3,
+      "derived_assets": 1
     },
     {
       "id": "42a19fa4924f",
@@ -1833,6 +2109,30 @@
       "derived_assets": 0
     },
     {
+      "id": "5140df127b74",
+      "status": "complete",
+      "destination": "papers/mistral-pixtral/document-5140df127b74",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 3
+      },
+      "assets": 2,
+      "derived_assets": 1
+    },
+    {
+      "id": "652708f323d7",
+      "status": "complete",
+      "destination": "papers/mistral-pixtral/document-652708f323d7",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 3
+      },
+      "assets": 1,
+      "derived_assets": 1
+    },
+    {
       "id": "6276d6c37ba5",
       "status": "complete",
       "destination": "papers/mistral-pixtral/document-6276d6c37ba5",
@@ -1854,6 +2154,18 @@
         "principle_subsections": 4
       },
       "assets": 4,
+      "derived_assets": 0
+    },
+    {
+      "id": "19d0dc679a0e",
+      "status": "complete",
+      "destination": "papers/mm1/arxiv-2409.20566",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 5
+      },
+      "assets": 3,
       "derived_assets": 0
     },
     {
@@ -1948,6 +2260,18 @@
       "reading_structure": {
         "module_rows": 5,
         "principle_subsections": 3
+      },
+      "assets": 3,
+      "derived_assets": 0
+    },
+    {
+      "id": "f4eeb8422c62",
+      "status": "complete",
+      "destination": "papers/molmo/arxiv-2601.10611",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 5
       },
       "assets": 3,
       "derived_assets": 0
@@ -2133,6 +2457,18 @@
       "derived_assets": 1
     },
     {
+      "id": "a03900c8f0b9",
+      "status": "complete",
+      "destination": "papers/nemotron/arxiv-2511.03929",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 5
+      },
+      "assets": 3,
+      "derived_assets": 0
+    },
+    {
       "id": "9f624d5a9663",
       "status": "complete",
       "destination": "papers/next-chat/arxiv-2311.04498",
@@ -2289,6 +2625,18 @@
       "derived_assets": 0
     },
     {
+      "id": "76e3de9b2ed3",
+      "status": "complete",
+      "destination": "papers/ovis/arxiv-2508.11737",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 5,
+        "principle_subsections": 4
+      },
+      "assets": 2,
+      "derived_assets": 0
+    },
+    {
       "id": "bf191b32aa7d",
       "status": "complete",
       "destination": "papers/pali/arxiv-2310.09199",
@@ -2298,6 +2646,30 @@
         "principle_subsections": 3
       },
       "assets": 6,
+      "derived_assets": 0
+    },
+    {
+      "id": "e3fc1ad19951",
+      "status": "complete",
+      "destination": "papers/paligemma/arxiv-2407.07726",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 7,
+        "principle_subsections": 4
+      },
+      "assets": 3,
+      "derived_assets": 0
+    },
+    {
+      "id": "136ad0bf6010",
+      "status": "complete",
+      "destination": "papers/paligemma/arxiv-2412.03555",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 4
+      },
+      "assets": 3,
       "derived_assets": 0
     },
     {
@@ -2709,6 +3081,30 @@
       "derived_assets": 1
     },
     {
+      "id": "f799e9065399",
+      "status": "complete",
+      "destination": "papers/sensenova/arxiv-2605.12500",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 5
+      },
+      "assets": 3,
+      "derived_assets": 0
+    },
+    {
+      "id": "448cf5cdfd37",
+      "status": "complete",
+      "destination": "papers/sensenova/arxiv-2609.11929",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 5
+      },
+      "assets": 3,
+      "derived_assets": 0
+    },
+    {
       "id": "7d194d7a209f",
       "status": "complete",
       "destination": "papers/sharegpt4v/arxiv-2311.12793",
@@ -2814,6 +3210,18 @@
         "principle_subsections": 3
       },
       "assets": 5,
+      "derived_assets": 1
+    },
+    {
+      "id": "86d1cc655950",
+      "status": "complete",
+      "destination": "papers/step/arxiv-2601.09668",
+      "issues": [],
+      "reading_structure": {
+        "module_rows": 6,
+        "principle_subsections": 5
+      },
+      "assets": 2,
       "derived_assets": 1
     },
     {

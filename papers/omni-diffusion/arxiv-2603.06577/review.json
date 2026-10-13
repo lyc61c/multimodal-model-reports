@@ -40,7 +40,7 @@
     "无逐策略独立消融和完整计时",
     "原文重复行及部分配方不完整"
   ],
-  "article_sha256": "f696b78bc0ec5190609957942dc4f187657a5b8038c54206b98024734d49436e",
+  "article_sha256": "13aa0816683bce722b798024dccdf29f0bbd45b714b952f9b375bcee72d95ff7",
   "checks": [
     "2026-10-09: Replaced full-page screenshots with visually checked, explicitly selected original figure/table crops; non-figure pages removed. Technical claims unchanged."
   ],
@@ -60,14 +60,14 @@
     ]
   },
   "formatting_revision": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "navigation": "Seven stable section anchors, breadcrumb and chronological previous/next links",
     "math_delimiters_converted": 0,
     "strong_emphasis": "Unicode punctuation spacing outside code",
     "scope": "Formatting and navigation only; scientific claims are not verified by this formatter"
   },
   "github_math_revision": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "inline_syntax": "$`TeX`$",
     "display_syntax": "Fenced math blocks, preserving TeX through Markdown parsing",
     "named_operators": "Upright roman names via \\mathrm; no \\operatorname dependency",

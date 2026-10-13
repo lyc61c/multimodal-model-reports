@@ -1,0 +1,59 @@
+{
+  "paper_id": "9e94a9ffe555",
+  "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "b2800104a47322d76d80a72bfb128ba7f0bacffc419ae9bb630eae289c761ba0",
+  "verification_notes": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "b2800104a47322d76d80a72bfb128ba7f0bacffc419ae9bb630eae289c761ba0",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "FlashbasedonPro,thinking levels,1Minput64Ktext output,training references",
+      "locator": "PDF pp.2–3 Model Information/Model Data"
+    },
+    {
+      "claim": "Vision,agent andMRCRscores; no-tools qualifiers and edit-distance units",
+      "locator": "PDF p.4 embedded Evaluation table; crop pixels viewed"
+    },
+    {
+      "claim": "Training data/architecture interpretation explicitly attributed to cited Pro source",
+      "locator": "Supplemental Pro PDF pp.2–4,9"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-benchmark-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+      "scope": "Pro model card pp.1–10 read,used here specifically architecture/data/training pp.2–4,9; cached release.pdf"
+    },
+    {
+      "kind": "additional_source_reading",
+      "source_url": "https://blog.google/products/gemini/gemini-3-flash/",
+      "sha256": "d7ca0fb700cf704481e654c9bb76c0cb96671f7d41bd0cb0ad43ff275e614e6c",
+      "cache_path": "tmp/new-mllm-root/gemini3flashblog/source.html",
+      "scope": "Publication date,thinking/typical-traffic30%token efficiency and3xspeed comparison paragraphs; not evidence of internal network design"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

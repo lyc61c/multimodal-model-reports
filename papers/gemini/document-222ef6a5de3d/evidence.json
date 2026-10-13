@@ -1,0 +1,53 @@
+{
+  "paper_id": "222ef6a5de3d",
+  "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_sha256": "b1575ae4e9dcbc6aef722adab208b9798d26dc39eb2fb63fc7d04bd47b9bd597",
+  "verification_notes": [
+    {
+      "kind": "source_reading",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "sha256": "b1575ae4e9dcbc6aef722adab208b9798d26dc39eb2fb63fc7d04bd47b9bd597",
+      "pdf_pages_actually_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "scope": "Targeted model, training and relevant multimodal/agentic evaluations; references and other safety appendices not claimed fully read."
+    },
+    {
+      "claim": "Multimodal inputs,1048576 context,8192 text output,sparseMoE and experimental images",
+      "locator": "PDF p.2 Model Information"
+    },
+    {
+      "claim": "Multimodal/preference/tool data,filtering,TPU/JAX/Pathways and feedback training",
+      "locator": "PDF pp.3,7 Model Data/Implementation/Mitigations"
+    },
+    {
+      "claim": "MMMU71.7,BLEU39,EgoSchema71.1,MRCR70.5 and baseline differences",
+      "locator": "PDF p.4 Evaluation table; crop pixels viewed"
+    },
+    {
+      "kind": "figure_visual_review",
+      "assets": [
+        "figures/original-benchmark-table.png"
+      ],
+      "scope": "Viewed source page and crop pixels, not inferred from hashes."
+    },
+    {
+      "kind": "disclosure_boundary",
+      "note": "Closed source model. No invented parameter counts, visual token shapes, internal fusion layers or unpublished losses. No model executed."
+    },
+    {
+      "kind": "supplemental_source_reading",
+      "source_url": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/",
+      "scope": "Publication date and Gemini2.0Flash/LiveAPI/agent prototype paragraphs, not all product research sections"
+    }
+  ],
+  "citation_locations": "Nearby official document sections, PDF pages and figure/table labels in README.md; no model execution or experiment reproduction."
+}

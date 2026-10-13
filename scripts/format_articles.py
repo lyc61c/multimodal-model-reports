@@ -262,6 +262,7 @@ def format_article(article, previous, following, family):
         body = re.sub(rf"<!-- {name}:start -->[\s\S]*?<!-- {name}:end -->\n*", "", body)
     # Replace the previous simple breadcrumb, when present.
     body = re.sub(r"\A\[返回[^\n]*\n+", "", body)
+    body = re.sub(r"^\[← [^\n\]]+\]\(\.\./README\.md\) · \[全部论文\]\(\.\./\.\./\.\./reports/paper-reading-guide\.md\)\n+", "", body, flags=re.M)
     for anchor, _ in SECTIONS:
         body = re.sub(rf'^<a id="{anchor}"></a>\n+', "", body, flags=re.M)
     body, conversions = normalize_math(body)

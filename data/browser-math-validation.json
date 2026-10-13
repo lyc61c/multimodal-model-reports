@@ -1,11 +1,11 @@
 {
   "status": "passed",
   "engine": "Headless Microsoft Edge DOM + MathJax 3.2.2 tex-svg base+ams",
-  "articles": 271,
-  "expressions": 2880,
-  "article_manifest_sha256": "513aa950a3214cc0c102aa2ce6dc6a2541813f68eebeee918c91803009f0829c",
-  "rendered": 2880,
-  "preserved": 2880,
+  "articles": 305,
+  "expressions": 3115,
+  "article_manifest_sha256": "d94280b024b3d8cd6f6d5e5f50bf2cfcb07d64845bf2d3001adced5aece8c87a",
+  "rendered": 3115,
+  "preserved": 3115,
   "failures": [],
   "differences": [],
   "regression": {

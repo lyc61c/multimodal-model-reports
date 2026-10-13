@@ -149,7 +149,7 @@ P=\frac{\tfrac12(2a)(4b/5)}{(2a)(2b)}=\frac15.
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：DeepSeek-VL2](../../deepseek/arxiv-2412.10302/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：VITA-1.5 →](../../vita/arxiv-2501.01957/README.md)
+[← 上一篇：FastVLM](../../fastvlm/arxiv-2412.13303/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：VITA-1.5 →](../../vita/arxiv-2501.01957/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

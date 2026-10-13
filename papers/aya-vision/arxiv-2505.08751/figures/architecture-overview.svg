@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1463" viewBox="0 0 720 1463" role="img" aria-labelledby="title desc">
+<title id="title">Aya Vision：一次视觉推理路径（自绘，非原文图）</title>
+<desc id="desc">依据固定报告公开组件自绘，非原文图。；训练后仅语言参数合并；视觉编码器与连接器继承多模态模型。；tile数量上限含12局部块，缩略图另计。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1461" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Aya Vision：一次视觉推理路径</text>
+<path d="M360,230 V263 H191 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,230 V263 H529 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,574 V607 H191 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,746 V779 H360 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M684,349 H702 V779 H360 V812" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,918 V951 H360 V984" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,1090 V1123 H360 V1156" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="648" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="360" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像与文字</text>
+<text x="360" y="190" text-anchor="middle" font-size="20" fill="#475569">单图或多图</text>
+<text x="360" y="215" text-anchor="middle" font-size="20" fill="#475569">23种语言提示</text>
+<rect x="36" y="296" width="310" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="191" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">自适应切图</text>
+<text x="191" y="362" text-anchor="middle" font-size="20" fill="#475569">至多12局部块</text>
+<text x="191" y="387" text-anchor="middle" font-size="20" fill="#475569">另加全局缩略图</text>
+<rect x="374" y="296" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">提示嵌入</text>
+<text x="529" y="362" text-anchor="middle" font-size="20" fill="#475569">多语文字token</text>
+<rect x="36" y="468" width="310" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">SigLIP 2</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">约400M视觉编码器</text>
+<text x="191" y="559" text-anchor="middle" font-size="20" fill="#475569">每幅输入独立提取特征</text>
+<rect x="36" y="640" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="191" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">视觉语言连接器</text>
+<text x="191" y="706" text-anchor="middle" font-size="20" fill="#475569">2×2空间特征通道拼接</text>
+<text x="191" y="731" text-anchor="middle" font-size="20" fill="#475569">两层SwiGLU MLP</text>
+<rect x="36" y="812" width="648" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="360" y="847" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图文序列</text>
+<text x="360" y="878" text-anchor="middle" font-size="20" fill="#475569">图像起止标记</text>
+<text x="360" y="903" text-anchor="middle" font-size="20" fill="#475569">局部/全局tile文字标签</text>
+<rect x="36" y="984" width="648" height="106" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="1019" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">多语语言主干</text>
+<text x="360" y="1050" text-anchor="middle" font-size="20" fill="#475569">8B或32B</text>
+<text x="360" y="1075" text-anchor="middle" font-size="20" fill="#475569">部署前完成语言权重合并</text>
+<rect x="36" y="1156" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="1191" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字回复</text>
+<text x="360" y="1222" text-anchor="middle" font-size="20" fill="#475569">多语视觉理解与交互</text>
+<line x1="36" y1="1310" x2="684" y2="1310" stroke="#e2e8f0"/>
+<text x="36" y="1337" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1368" font-size="17" fill="#64748b">依据固定报告公开组件自绘，非原文图。</text>
+<text x="36" y="1393" font-size="17" fill="#64748b">训练后仅语言参数合并；视觉编码器与连接器继承多模态模型。</text>
+<text x="36" y="1418" font-size="17" fill="#64748b">tile数量上限含12局部块，缩略图另计。</text>
+</g></svg>

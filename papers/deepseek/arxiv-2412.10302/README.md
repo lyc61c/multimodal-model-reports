@@ -176,7 +176,7 @@ HAI-LLM 训练系统按视觉层细分流水线，平衡不同数据并行 rank 
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Apollo](../../apollo/arxiv-2412.10360/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：QVQ-72B-Preview →](../../qwen/document-b615730dc322/README.md)
+[← 上一篇：Apollo](../../apollo/arxiv-2412.10360/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2024) · [下一篇：FastVLM →](../../fastvlm/arxiv-2412.13303/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->

@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "paper_id": "eb1014c14dfe",
+  "title": "MiniCPM-V 4.6",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "image",
+      "title": "图像 / 视频帧",
+      "lines": [
+        "切片与时间采样"
+      ],
+      "row": 0,
+      "col": 0,
+      "kind": "input"
+    },
+    {
+      "id": "text",
+      "title": "问题 / 历史",
+      "lines": [
+        "文字输入"
+      ],
+      "row": 0,
+      "col": 1,
+      "kind": "input"
+    },
+    {
+      "id": "vision",
+      "title": "SigLIP2视觉入口",
+      "lines": [
+        "基于400M视觉组件"
+      ],
+      "row": 1,
+      "col": 0,
+      "kind": "encoder"
+    },
+    {
+      "id": "embed",
+      "title": "文字嵌入",
+      "lines": [
+        "语言输入接口"
+      ],
+      "row": 1,
+      "col": 1,
+      "kind": "bridge"
+    },
+    {
+      "id": "compress",
+      "title": "4× / 16×模式",
+      "lines": [
+        "视觉位置预算可选"
+      ],
+      "row": 2,
+      "col": 0,
+      "kind": "bridge"
+    },
+    {
+      "id": "connector",
+      "title": "视觉语言接口",
+      "lines": [
+        "本指南未列精确内部参数"
+      ],
+      "row": 3,
+      "col": 0,
+      "kind": "unknown"
+    },
+    {
+      "id": "llm",
+      "title": "Qwen3.5-0.8B",
+      "lines": [
+        "完整模型评测标注1.3B"
+      ],
+      "row": 4,
+      "col": 0,
+      "span": 2,
+      "kind": "backbone"
+    },
+    {
+      "id": "answer",
+      "title": "文字回答",
+      "lines": [
+        "图像 / 多图 / 视频问答"
+      ],
+      "row": 5,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "image",
+      "to": "vision",
+      "style": "solid"
+    },
+    {
+      "from": "vision",
+      "to": "compress",
+      "style": "solid"
+    },
+    {
+      "from": "compress",
+      "to": "connector",
+      "style": "solid"
+    },
+    {
+      "from": "connector",
+      "to": "llm",
+      "style": "solid"
+    },
+    {
+      "from": "text",
+      "to": "embed",
+      "style": "solid"
+    },
+    {
+      "from": "embed",
+      "to": "llm",
+      "style": "solid"
+    },
+    {
+      "from": "llm",
+      "to": "answer",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "自绘，仅表示公开输入与连接职责。",
+    "组件内部插层与连接宽度未在指南列出。"
+  ],
+  "sources": [
+    {
+      "url": "https://github.com/OpenBMB/MiniCPM-V/blob/1d6b7d68379974af0375cfdb903613d630da34aa/docs/minicpm_v4dot6_en.md",
+      "locator": "Introduction / Advanced Parameters",
+      "note": "支持组件名称、压缩开关和输入组织；未知细部保留边界。"
+    }
+  ]
+}

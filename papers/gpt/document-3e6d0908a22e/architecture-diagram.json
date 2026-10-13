@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "paper_id": "3e6d0908a22e",
+  "kind": "public_interface",
+  "title": "GPT-Live：公开任务与交互接口",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "audio",
+      "title": "持续到达的用户语音",
+      "kind": "input",
+      "row": 0,
+      "col": 0,
+      "lines": [
+        "停顿、打断与节奏变化"
+      ],
+      "span": 1
+    },
+    {
+      "id": "history",
+      "title": "已有对话上下文",
+      "kind": "input",
+      "row": 0,
+      "col": 1,
+      "lines": [
+        "已听输入与已播输出"
+      ],
+      "span": 1
+    },
+    {
+      "id": "model",
+      "title": "GPT-Live-1 / mini",
+      "kind": "unknown",
+      "row": 1,
+      "col": 0,
+      "lines": [
+        "全双工倾听与响应",
+        "声学编码和生成网络未公开"
+      ],
+      "span": 2
+    },
+    {
+      "id": "speech",
+      "title": "语音响应",
+      "kind": "output",
+      "row": 2,
+      "col": 0,
+      "lines": [
+        "与持续倾听在时间上协同"
+      ],
+      "span": 1
+    },
+    {
+      "id": "delegate",
+      "title": "可选复杂任务委派",
+      "kind": "bridge",
+      "row": 2,
+      "col": 1,
+      "lines": [
+        "将工作交给其他模型"
+      ],
+      "span": 1
+    },
+    {
+      "id": "other",
+      "title": "被委派模型",
+      "kind": "backbone",
+      "row": 3,
+      "col": 1,
+      "lines": [
+        "执行其能力范围内的任务"
+      ],
+      "span": 1
+    },
+    {
+      "id": "feedback",
+      "title": "委派结果返回对话",
+      "kind": "output",
+      "row": 4,
+      "col": 1,
+      "lines": [
+        "完整体验包含委派贡献"
+      ],
+      "span": 1
+    },
+    {
+      "id": "checks",
+      "title": "连续系统检查",
+      "kind": "bridge",
+      "row": 3,
+      "col": 0,
+      "lines": [
+        "对展开中的输入与输出检查",
+        "必要时引导、中断或停止"
+      ],
+      "span": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": "audio",
+      "to": "model"
+    },
+    {
+      "from": "history",
+      "to": "model"
+    },
+    {
+      "from": "model",
+      "to": "speech"
+    },
+    {
+      "from": "model",
+      "to": "delegate"
+    },
+    {
+      "from": "delegate",
+      "to": "other"
+    },
+    {
+      "from": "other",
+      "to": "feedback"
+    },
+    {
+      "from": "model",
+      "to": "checks",
+      "style": "dashed",
+      "entry_side": "left"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+      "locator": "系统卡第1、2、5节，PDF第2–3、6页",
+      "version": "official-source-snapshot-2026-10-13"
+    }
+  ],
+  "notes": [
+    "自绘，非原文图；仅归纳公开功能接口，不代表网络逐层架构。",
+    "方框的图上位置不表示组件的确切执行时序；运行检查可跨多个环节。",
+    "视觉/声学编码、参数量与训练损失未披露；未据一般模型结构补造。"
+  ]
+}

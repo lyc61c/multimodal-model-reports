@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "paper_id": "28803263c0f6",
+  "title": "Claude 4公开接口",
+  "kind": "public_interface",
+  "columns": 2,
+  "nodes": [
+    {
+      "id": "input",
+      "title": "公开输入",
+      "lines": [
+        "图像/屏幕与文字目标",
+        "工具可返回外部观察"
+      ],
+      "row": 0,
+      "col": 0,
+      "span": 2,
+      "kind": "input"
+    },
+    {
+      "id": "core",
+      "title": "多模态推理模型",
+      "lines": [
+        "Opus 4 或 Sonnet 4",
+        "标准/扩展，内部融合未知"
+      ],
+      "row": 1,
+      "col": 0,
+      "span": 2,
+      "kind": "unknown"
+    },
+    {
+      "id": "output",
+      "title": "公开输出",
+      "lines": [
+        "文本或工具请求",
+        "长思考可经独立模型摘要"
+      ],
+      "row": 2,
+      "col": 0,
+      "span": 2,
+      "kind": "output"
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "core",
+      "style": "solid"
+    },
+    {
+      "from": "core",
+      "to": "output",
+      "style": "solid"
+    }
+  ],
+  "notes": [
+    "根据公开资料自绘，非原文图",
+    "仅展示功能接口，方框不是逐层网络",
+    "未公开的视觉编码、融合与参数不作推断"
+  ],
+  "sources": [
+    {
+      "url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+      "locator": "PDF pp.6–7 §1.1",
+      "note": "支持输入、输出、模型定位与披露边界"
+    }
+  ]
+}

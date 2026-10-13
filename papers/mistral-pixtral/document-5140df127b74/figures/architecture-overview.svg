@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1119" viewBox="0 0 720 1119" role="img" aria-labelledby="title desc">
+<title id="title">Pixtral Large 多图理解路径（自绘，非原文图）</title>
+<desc id="desc">自绘，非原文图；只画固定公开配置/实现中的推理模块。；训练数据、冻结次序和训练目标配方未公开，不由推理结构反推。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker></defs>
+<rect x="1" y="1" width="718" height="1117" rx="20" fill="#fff" stroke="#dbe3ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, Segoe UI, sans-serif">
+<text x="36" y="35" font-size="17" fill="#64748b">自绘 · 非原文图 · 模型架构示意</text>
+<text x="360.0" y="75" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Pixtral Large 多图理解路径</text>
+<path d="M191,230 V263 H191 V296" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,402 V435 H191 V468" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M191,574 V607 H360 V640" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M684,177 H702 V705.5 H684" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M360,771 V804 H360 V837" fill="none" stroke="#64748b" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="36" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="191" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">图像输入</text>
+<text x="191" y="190" text-anchor="middle" font-size="20" fill="#475569">配套processor处理</text>
+<rect x="374" y="124" width="310" height="106" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.6"/>
+<text x="529" y="159" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字提示</text>
+<text x="529" y="190" text-anchor="middle" font-size="20" fill="#475569">tokenizer与对话模板</text>
+<rect x="36" y="296" width="310" height="106" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="191" y="331" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">视觉Transformer</text>
+<text x="191" y="362" text-anchor="middle" font-size="20" fill="#475569">40层 / 宽1408 / patch16</text>
+<text x="191" y="387" text-anchor="middle" font-size="20" fill="#475569">按图独立视觉编码</text>
+<rect x="36" y="468" width="310" height="106" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.6"/>
+<text x="191" y="503" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">视觉语言连接</text>
+<text x="191" y="534" text-anchor="middle" font-size="20" fill="#475569">两层MLP + GeLU</text>
+<text x="191" y="559" text-anchor="middle" font-size="20" fill="#475569">映射至12288维</text>
+<rect x="36" y="640" width="648" height="131" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="360" y="675" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">语言主干</text>
+<text x="360" y="706" text-anchor="middle" font-size="20" fill="#475569">图像位置填入连续特征</text>
+<text x="360" y="731" text-anchor="middle" font-size="20" fill="#475569">88层 / 96Q与8KV</text>
+<text x="360" y="756" text-anchor="middle" font-size="20" fill="#475569">128K图文上下文</text>
+<rect x="36" y="837" width="648" height="106" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="1.6"/>
+<text x="360" y="872" text-anchor="middle" font-size="25" font-weight="650" fill="#0f172a">文字输出</text>
+<text x="360" y="903" text-anchor="middle" font-size="20" fill="#475569">自回归回答</text>
+<text x="360" y="928" text-anchor="middle" font-size="20" fill="#475569">公开版本不生成图像</text>
+<line x1="36" y1="991" x2="684" y2="991" stroke="#e2e8f0"/>
+<text x="36" y="1018" font-size="17" fill="#475569">实线：公开信息流　虚线：可选路径或未披露边界</text>
+<text x="36" y="1049" font-size="17" fill="#64748b">自绘，非原文图；只画固定公开配置/实现中的推理模块。</text>
+<text x="36" y="1074" font-size="17" fill="#64748b">训练数据、冻结次序和训练目标配方未公开，不由推理结构反推。</text>
+</g></svg>

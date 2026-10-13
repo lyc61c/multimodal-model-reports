@@ -1,0 +1,28 @@
+{
+  "paper_id": "affc25e8e162",
+  "catalogue_entry_id": "affc25e8e162",
+  "family_slug": "gpt",
+  "title": "GPT-5.4 Thinking System Card",
+  "article_file": "README.md",
+  "article_status": "complete",
+  "source_version": "official-source-snapshot-2026-10-13",
+  "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf",
+  "document_kind": "system_card",
+  "catalogue_group": "model_catalogue",
+  "article_template_version": "1.4",
+  "supplemental_sources": [
+    {
+      "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+      "source_version": "official-source-snapshot-2026-10-13",
+      "source_sha256": "e30071b27353f9913a6eabb03c850ee5d336593ab0387b8acab28f53fa2ad136",
+      "role": "Official release blog: public mechanisms and capability evaluations."
+    }
+  ],
+  "title_zh": "GPT-5.4：高分辨率感知、计算机操作与按需工具检索",
+  "source_sha256": "e1d430988982bb6617c19db37bec03cbefba1771657d5ab57743dbfc53e7aa50",
+  "article_language": "zh-CN",
+  "authored_at": "2026-10-13",
+  "source_first_submission": "2026-03-05",
+  "chinese_characters": 3295,
+  "figures_manifest": "figures-manifest.json"
+}

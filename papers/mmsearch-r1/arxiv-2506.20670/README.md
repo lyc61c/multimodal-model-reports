@@ -159,7 +159,7 @@ MMSearch-R1相对同规模固定RAG提升3.0个百分点，归一化搜索调用
 <!-- article-footer:start -->
 ---
 
-[← 上一篇：Show-o2](../../show-o/arxiv-2506.15564/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Qwen VLo →](../../qwen/document-244376c2123a/README.md)
+[← 上一篇：Show-o2](../../show-o/arxiv-2506.15564/README.md) · [按发表时间浏览](../../../reports/paper-reading-guide.md#year-2025) · [下一篇：Gemma 3n →](../../gemma/document-c7a2cc906589/README.md)
 
 [返回本篇目录](#article-toc) · [返回模型系列](../README.md)
 <!-- article-footer:end -->
